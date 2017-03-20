@@ -1,0 +1,44 @@
+entity {
+  name: "Appraise +2"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 92
+      high: 92
+    }
+  }
+  world: "Generic"
+  description: "The creature gets a racial bonus to appraisal skill checks in certain situation, when dealing with $name."
+  short_description: "+2 racial to appraise if dealing with $name"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+skill_modifier {
+  key: "appraise"
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+      condition: "dealing with $name"
+    }
+  }
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

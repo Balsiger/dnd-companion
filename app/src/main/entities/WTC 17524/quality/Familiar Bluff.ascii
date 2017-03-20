@@ -1,0 +1,33 @@
+entity {
+  name: "Familiar Bluff"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 52
+      high: 52
+    }
+  }
+  world: "Generic"
+  description: "Master gains a +3 bonus on Bluff checks."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

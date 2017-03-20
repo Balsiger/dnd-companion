@@ -1,0 +1,39 @@
+entity {
+  name: "Combat Style"
+  category: "style"
+  category: "combat"
+  synonym: "Style, Combat"
+  reference {
+    name: "17524"
+    pages {
+      low: 48
+      high: 48
+    }
+  }
+  world: "Generic"
+  description: "A character must select one of two combat styles to pursue: archery or two-weapon combat. This choice affects the character\'s class features but does not restrict his selection of feats or special abilities in any way.\n\nIf the character selects archery, he is treated as having the Rapid Shot feat, even if he does not have the normal prerequisites for that feat.\n\nIf the character selects two-weapon combat, he is treated as having the Two-Weapon Fighting feat, even if he does not have the normal prerequisites for that feat.\n\nThe benefits of the character\'s chosen style apply only when he wears light or no armor. He loses all benefits of his combat style when wearing medium or heavy armor."
+  incomplete: "not handled that loosing benefits if wearing medium or heavy armor."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+bonus_feat: "rapid shot"
+bonus_feat: "two weapon defense"
+ac_modifier {
+}

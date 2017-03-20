@@ -1,0 +1,32 @@
+entity {
+  name: "Undead"
+  description: "Dummy entry to be filled later."
+  short_description: "Dummy entry."
+}
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+}
+natural_armor {
+}
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+climate: ANY
+terrain: ANY_TERRAIN
+challenge_rating {
+}
+treasure: NONE_TREASURE
+alignment: LAWFUL_EVIL
+alignment_status: ALWAYS
+language {
+  modifier: AUTOMATIC
+  name: ABOLETH
+}

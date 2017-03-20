@@ -1,0 +1,425 @@
+syntax = "proto3";
+package net.ixitxachitls.companion.proto;
+
+import "value.proto";
+
+message CampaignProto {
+  string id = 1;
+  string name = 2;
+}
+
+message CharacterProto {
+  string id = 1;
+  string name = 2;
+  string race = 3;
+  Gender gender = 4;
+
+  message Level {
+    string name = 1;
+    int32 hp = 2;
+    repeated ParametrizedEntityProto quality = 3;
+    repeated ParametrizedEntityProto feat = 4;
+    Ability ability_increase = 5;
+    repeated string spell_known = 6;
+  }
+  repeated Level level = 5;
+}
+
+message EntityProto {
+  string id = 1;
+  string name = 2;
+  repeated string base = 3;
+  repeated string category = 4;
+  repeated string synonym = 5;
+  repeated ReferenceProto reference = 6;
+  repeated string world = 7;
+  string description = 8;
+  string short_description = 9;
+  string incomplete = 10;
+}
+
+message MonsterProto {
+  EntityProto entity = 1;
+  SizeProto size = 2;
+
+  enum Type {
+    UNKNOWN_TYPE = 0;
+    ABERRATION = 1;
+    ANIMAL = 2;
+    CONSTRUCT = 3;
+    DRAGON = 4;
+    ELEMENTAL = 5;
+    FEY = 6;
+    GIANT = 7;
+    HUMANOID = 8;
+    MAGICAL_BEAST = 9;
+    MONSTROUS_HUMANOID = 10;
+    OOZE = 11;
+    OUTSIDER = 12;
+    PLANT = 13;
+    UNDEAD = 14;
+    VERMIN = 15;
+  }
+  Type type = 3;
+
+  enum Subtype {
+    UNKNOWN_SUBTYPE = 0;
+    NONE_SUBTYPE = 1;
+    AIR = 2;
+    AQUATIC = 3;
+    ARCHON = 4;
+    AUGMENTED = 5;
+    BAATEZU = 6;
+    CHAOTIC = 7;
+    COLD = 8;
+    DWARF = 28;
+    EARTH = 9;
+    ELADRIN = 10;
+    ELF = 11;
+    EVIL = 12;
+    EXTRAPLANAR = 13;
+    FIRE = 14;
+    GOBLINOID = 15;
+    GOOD = 16;
+    GNOME = 27;
+    GNOLL = 29;
+    GUARDINAL = 17;
+    HALFLING = 30;
+    HUMAN = 18;
+    INCORPOREAL = 19;
+    LAWFUL = 20;
+    NATIVE = 21;
+    ORC = 22;
+    REPTILIAN = 23;
+    SHAPECHANGER = 24;
+    SWARM = 25;
+    WATER = 26;
+  }
+  repeated Subtype subtype = 4;
+  DiceProto hit_dice = 5;
+  repeated SpeedProto speed = 6;
+  ModifierProto natural_armor = 7;
+  int32 base_attack = 8;
+
+  message Abilities {
+    int32 strength = 1;
+    int32 dexterity = 2;
+    int32 constitution = 3;
+    int32 wisdom = 4;
+    int32 intelligence = 5;
+    int32 charisma = 6;
+  }
+  Abilities abilities = 9;
+
+  message Saves {
+    int32 fortitude = 1;
+    int32 will = 2;
+    int32 reflex = 3;
+  }
+  Saves saves = 10;
+
+  message Attack {
+    DiceProto attacks = 1;
+
+    enum Mode {
+      UNKNOWN_MODE = 0;
+      TENTACLE = 1;
+      CLAW = 2;
+      BITE = 3;
+      FIST = 4;
+      QUILL = 5;
+      WEAPON = 6;
+      TOUCH = 7;
+      INCORPOREAL_TOUCH = 8;
+      SLAM = 9;
+      STING = 10;
+      SWARM = 11;
+      RAY = 12;
+      HOOF = 13;
+      SNAKES = 14;
+      WEB = 15;
+    }
+    Mode mode = 2;
+
+    enum Style {
+      UNKNOWN_STYLE = 0;
+      MELEE = 1;
+      RANGED = 2;
+    }
+    Style style = 3;
+    DamageProto damage = 4;
+  }
+  repeated Attack primary_attack = 11;
+  repeated Attack secondary_attack = 12;
+  DistanceProto space = 13;
+  DistanceProto reach = 14;
+
+  message Feat {
+    string name = 1;
+    ParametersProto parameters = 2;
+  }
+  repeated Feat feat = 15;
+
+  enum Climate {
+    UNKNOWN_CLIMATE = 0;
+    WARM = 1;
+    COLD_CLIMATE = 2;
+    ANY = 3;
+    TEMPERATE = 4;
+  }
+  Climate climate = 16;
+
+  enum Terrain {
+    UNKNOWN_TERRAIN = 0;
+    FOREST = 1;
+    MARSH = 2;
+    HILLS = 3;
+    MOUNTAIN = 4;
+    DESERT = 5;
+    PLAINS = 6;
+    AQUATIC_TERRAIN = 7;
+    UNDERGROUND = 8;
+    INFERNAL_BATTLEFIELD_OF_ACHERON = 9;
+    INFINITE_LAYERS_OF_THE_ABYSS = 10;
+    ELEMENTAL_PLANE_OF_AIR = 11;
+    ELEMENTAL_PLANE_OF_EARTH = 12;
+    ELEMENTAL_PLANE_OF_FIRE = 13;
+    ELEMENTAL_PLANE_OF_WATER = 14;
+    WINDSWEPT_DEPTHS_OF_PANDEMONIUM = 15;
+    ANY_TERRAIN = 16;
+  }
+  Terrain terrain = 17;
+
+  message Organization {
+    enum Type {
+      UNKNOWN = 0;
+      ANY = 1;
+      BAND = 2;
+      BROOD = 3;
+      COLONY = 4;
+      COVEY = 5;
+      FLIGHT = 6;
+      FLOCK = 7;
+      GANG = 8;
+      HERD = 9;
+      INFESTATION = 10;
+      NEST = 11;
+      PACK = 12;
+      PAIR = 13;
+      PATROL = 14;
+      SLAVER_BROOD = 15;
+      SOLITARY = 16;
+      SQUAD = 17;
+      STORM = 18;
+      SWARM = 19;
+      TANGLE = 20;
+      TROUPE = 21;
+      COMPANY = 22;
+      DOMESTICATED = 23;
+      WARBAND = 24;
+      TRIBE = 25;
+      HUNTING_PARTY = 26;
+      RAIDING_PARTY = 27;
+      TRADING_PARTY = 28;
+      TEAM = 29;
+      CLAN = 30;
+      CLUTCH = 31;
+    }
+    Type type = 1;
+    DiceProto number = 2;
+
+    message Plus {
+      DiceProto number = 1;
+      string text = 2;
+    }
+    repeated Plus plus = 3;
+  }
+  repeated Organization organization = 18;
+  RationalProto challenge_rating = 19;
+
+  enum Treasure {
+    UNKNOWN_TREADSURE = 0;
+    NONE_TREASURE = 1;
+    STANDARD = 2;
+    DOUBLE = 3;
+    TRIPLE = 4;
+    QUADRUPLE = 5;
+  }
+  Treasure treasure = 20;
+  Alignment alignment = 21;
+
+  enum AlignmentStatus {
+    UNKNOWN_ALIGNMENT_STATU = 0;
+    ALWAYS = 1;
+    USUALLY = 2;
+    OFTEN = 3;
+  }
+  AlignmentStatus alignment_status = 22;
+
+  message Advancement {
+    RangeProto range = 1;
+    SizeProto.Size size = 2;
+  }
+  repeated Advancement advancement = 23;
+
+  int32 level_adjustment = 24;
+  bool main_race = 25;
+
+  message Language {
+    enum Modifier {
+      UNKNOWN_MODIFIER = 0;
+      AUTOMATIC = 1;
+      BONUS = 2;
+      SOME = 3;
+      UNDERSTAND = 4;
+    }
+    Modifier modifier = 1;
+
+    enum Name {
+      UNKNOWN_LANGUAGE = 0;
+      ABOLETH = 1;
+      ABYSSAL = 2;
+      AQUAN = 3;
+      AURAN = 4;
+      CELESTIAL = 5;
+      COMMON = 6;
+      DRACONIC = 7;
+      DROW_SIGN = 8;
+      DRUIDIC = 9;
+      DWARVEN = 10;
+      ELVEN = 11;
+      GIANT = 12;
+      GNOME = 13;
+      GOBLIN = 14;
+      GNOLL = 15;
+      HALFLING = 16;
+      IGNAN = 17;
+      INFERNAL = 18;
+      KUO_TOA = 19;
+      ORC = 20;
+      SYLVAN = 21;
+      TERRAN = 22;
+      UNDERCOMMON = 23;
+      NONE = 24;
+      CHONDATHAN = 25;
+      ILLUSKAN = 26;
+    }
+    Name name = 2;
+  }
+  repeated Language language = 26;
+
+  string encounter = 27;
+  string combat = 28;
+  string tactics = 29;
+  string character = 30;
+  string reproduction = 31;
+
+  message Possession {
+    string name = 1;
+    string text = 2;
+    DiceProto count = 3;
+  }
+  repeated Possession possession = 32;
+
+  repeated string proficiency = 33;
+  bool quadruped = 34;
+
+  repeated ParametrizedEntityProto quality = 35;
+
+  message Skill {
+    string name = 1;
+    int32 ranks = 2;
+  }
+  repeated Skill skill = 36;
+}
+
+message LevelProto {
+  EntityProto entity = 1;
+  string abbreviation = 2;
+  string adventures = 3;
+  string characteristics = 4;
+  string alignment_options = 5;
+  string religion = 6;
+  string background = 7;
+  string races = 8;
+  string otherClasses = 9;
+  string role = 10;
+  string important_abilities = 11;
+  repeated Alignment allowed_alignment = 12;
+  DiceProto hit_dice = 13;
+  int32 skill_points = 14;
+  repeated string class_skill = 15;
+  int32 class_skills_any = 16;
+  repeated Proficiency weapon_proficiency = 17;
+  repeated string individual_weapon_proficiency = 18;
+  repeated ArmorType armor_proficiency = 19;
+  repeated LeveledEntityProto quality = 20;
+  repeated int32 base_attack = 21;
+  repeated int32 fortitude_save = 22;
+  repeated int32 reflex_save = 23;
+  repeated int32 will_save = 24;
+  repeated LeveledEntityProto bonusFeat = 25;
+  Ability spell_ability = 26;
+
+  message PerLevel {
+    repeated int32 value = 1;
+  }
+  repeated PerLevel spells_per_day = 27;
+  repeated PerLevel spells_known = 28;
+}
+
+message QualityProto {
+  EntityProto entity = 1;
+
+  enum Type {
+    UNKNOWN = 0;
+    EXTRAORDINARY = 1;
+    SPELL_LIKE = 2;
+    SUPERNATURAL = 3;
+  }
+  Type type = 2;
+  SpeedProto speed = 3;
+  ExpressionProto speed_expression = 4;
+
+  message AbilityModifier {
+    Ability ability = 1;
+    ModifierProto modifier = 2;
+  }
+  repeated AbilityModifier ability_modifier = 5;
+
+  enum Immunity {
+    UNKNOWN_IMMUNITY = 0;
+    SLEEP_SPELLS = 1;
+    SLEEP_EFFECTS = 2;
+  }
+  repeated Immunity immunity = 6;
+  ModifierProto reflex_modifier = 7;
+  ModifierProto will_modifier = 8;
+  ModifierProto fortitude_modifier = 9;
+
+  message KeyedModifier {
+    string key = 1;
+    ModifierProto modifier = 2;
+  }
+  repeated KeyedModifier skill_modifier = 10;
+  ModifierProto attack_modifier = 11;
+  ModifierProto damage_modifier = 12;
+  repeated string bonus_feat = 13;
+  string name_format = 14;
+  ModifierProto ac_modifier = 15;
+}
+
+message ParametrizedEntityProto {
+  string name = 1;
+  string title = 2;
+
+  ParametersProto parameters = 3;
+  int32 per_day = 4;
+  ConditionProto condition = 5;
+}
+
+message LeveledEntityProto {
+  int32 level = 1;
+  ParametrizedEntityProto entity = 2;
+}
+

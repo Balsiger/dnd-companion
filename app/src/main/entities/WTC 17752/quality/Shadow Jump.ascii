@@ -1,0 +1,44 @@
+entity {
+  name: "Shadow Jump"
+  category: "action"
+  category: "attack"
+  category: "aura"
+  category: "communication"
+  category: "health"
+  category: "immunity"
+  category: "option"
+  category: "resistance"
+  category: "sense"
+  category: "vulnerability"
+  synonym: "Jump, Shadow"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 159
+      high: 159
+    }
+  }
+  world: "Generic"
+  description: "At 4th level, a shadowdancer gains the ability to travel between shadows as\n  if by means of a dimension doorspell. The limitation is that the magical\n  transport must begin and end in an area with at least some shadow. A\n  shadowdancer can jump up to a total of 20 feet each day in this way; this may\n  be a single jump of 20 feet or two jumps of 10 feet each. Every two levels\n  higher than 4th, the distance a shadowdancer can jump each day doubles (40\n  feet at 6th, 80 feet at 8th, and 160 feet at 10th). This amount can be split\n  among many jumps, but each one, no matter how small, counts as a 10-foot\n  increment. (A 6th-level shadowdancer who jumps 32 feet cannot jump again\n  until the next day.)"
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

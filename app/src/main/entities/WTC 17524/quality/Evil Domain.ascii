@@ -1,0 +1,37 @@
+entity {
+  name: "Evil Domain"
+  category: "domain"
+  category: "evil"
+  synonym: "Domain, Evil"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 186
+      high: 186
+    }
+  }
+  world: "Generic"
+  description: "Cast evil spells at +1 caster level."
+  incomplete: "+1 class level not currently computed in"
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

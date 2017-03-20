@@ -1,0 +1,34 @@
+entity {
+  name: "Rend"
+  category: "attack"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 153
+      high: 153
+    }
+  }
+  world: "Generic"
+  description: "A creatures that gets a hold latches onto the opponent\'s body and tears the flesh. The attack automatically deals $damage points of damage."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

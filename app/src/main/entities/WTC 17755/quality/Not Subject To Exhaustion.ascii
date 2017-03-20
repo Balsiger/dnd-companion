@@ -1,0 +1,28 @@
+entity {
+  name: "Not Subject To Exhaustion"
+  category: "immunity"
+  category: "exhaustion"
+  world: "Generic"
+  description: "Cannot suffer from Exhaustion."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,34 @@
+entity {
+  name: "Explosion"
+  category: "attack"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 262
+      high: 262
+    }
+  }
+  world: "Generic"
+  description: "A yrthak can fire its sonic lance at the ground, a large rock, a stone wall,\n  or the like to create an explosion of shattered stone. This attack deals 2d6\n  points of piercing damage to all within 10 feet of the effect\342\200\232\303\204\303\264s center.  This\n  counts as a use of the sonic lance attack and thus is usable only once every\n  2 rounds, and never on the round following a sonic lance attack."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

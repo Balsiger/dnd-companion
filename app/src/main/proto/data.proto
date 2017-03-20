@@ -1,0 +1,6 @@
+syntax = "proto3";
+package net.ixitxachitls.companion.proto;
+
+message SettingsProto {
+  string nickname = 1;
+}

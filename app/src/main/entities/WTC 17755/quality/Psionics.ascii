@@ -1,0 +1,34 @@
+entity {
+  name: "Psionics"
+  category: "action"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 8
+      high: 8
+    }
+  }
+  world: "Generic"
+  description: "At will---\\Spell{hypnotic pattern} (DC 15), \\Spell{illusory wall} (DC 17),\n  \\Spell{mirage arcana} (DC 18), \\Spell{persistent image} (DC 18),\n  \\Spell{programmed image} (DC 19), \\Spell{project image} (DC 20), \\Spell{veil}\n  (DC 19). Effective caster level 16th. The save DCs are Charisma-based."
+}
+type: SPELL_LIKE
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

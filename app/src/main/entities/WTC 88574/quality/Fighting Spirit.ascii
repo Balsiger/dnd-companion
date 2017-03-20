@@ -1,0 +1,33 @@
+entity {
+  name: "Fighting Spirit"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 120
+      high: 120
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A spiderstone golem gains a +4 racial bonus on attack rolls (already figured into the statistics above)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

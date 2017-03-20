@@ -1,0 +1,35 @@
+entity {
+  name: "Vermin Traits"
+  category: "option"
+  synonym: "Traits, Vermin"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 317
+      high: 317
+    }
+  }
+  world: "Generic"
+  description: "Mindless (no Intelligence score and immunity to all mindaffecting effects\n  (charms, compulsions, phantasms, patterns, and morale effects)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

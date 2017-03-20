@@ -1,0 +1,35 @@
+entity {
+  name: "Sonic Lance"
+  category: "attack"
+  synonym: "Lance, Sonic"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 262
+      high: 262
+    }
+  }
+  world: "Generic"
+  description: "Once every 2 rounds, a yrthak can focus sonic energy in a ray up to 60 feet\n  long. This is a ranged touch attack that deals 6d6 points of damage to a\n  single target."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

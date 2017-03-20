@@ -1,0 +1,39 @@
+entity {
+  name: "Divine Perseverance"
+  category: "heal"
+  category: "divine"
+  category: "perseverance"
+  category: "dying"
+  category: "die"
+  synonym: "Perseverance, Divine"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 45
+      high: 45
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Once per day, if the creature is brought to -1 lower hit points, she is automatically cured of 1d8 +5 damage."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

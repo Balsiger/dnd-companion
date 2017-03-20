@@ -1,0 +1,35 @@
+entity {
+  name: "Mind Blast"
+  category: "attack"
+  synonym: "Blast, Mind"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 187
+      high: 187
+    }
+  }
+  world: "Generic"
+  description: "This psionic attack is a cone 60 feet long. Anyone caught in this cone must succeed on a DC $dc Will save ore be stunned for 3d4 rounds. \\Monster{Mind Flayers} often hut using this power and then drag off one or two of their stunned victimgs to feed upon. The save DC is Charisma-based. This ability is the equivalent of a 4-th level spell"
+}
+type: SPELL_LIKE
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,34 @@
+entity {
+  name: "Poison Save Bonus"
+  synonym: "Bonus, Poison Save"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 6
+      high: 6
+    }
+  }
+  world: "Forgotten Realms"
+  description: "This gives a $value bonus to Poison saves."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

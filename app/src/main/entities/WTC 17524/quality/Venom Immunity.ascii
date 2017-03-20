@@ -1,0 +1,42 @@
+entity {
+  name: "Venom Immunity"
+  category: "immunity"
+  synonym: "Immunity, Venom"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 37
+      high: 37
+    }
+  }
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 3
+      high: 3
+    }
+  }
+  world: "Generic"
+  description: "The druid has immunity to all poisons."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

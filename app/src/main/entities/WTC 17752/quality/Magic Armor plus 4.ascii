@@ -1,0 +1,37 @@
+entity {
+  name: "Magic Armor plus 4"
+  category: "magical"
+  synonym: "Magic Armor +4"
+  synonym: "Armor +4, Magic"
+  synonym: "+4 Armor"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 216
+      high: 216
+    }
+  }
+  world: "Generic"
+  description: "A standard magical bonus to armor class"
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

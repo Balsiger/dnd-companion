@@ -1,0 +1,34 @@
+entity {
+  name: "Stampede"
+  category: "action"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 313
+      high: 314
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Panicked rothe first attempt to break free of creatures who are harrying or herding them by outrunning them as a herd. If this is impossible, the rothe turn to face their opponents and charge in a solid wedge of packed flesh. They run over anything their size or smaller, dealing $damage damage for each rothe in the stampede."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

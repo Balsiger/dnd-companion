@@ -1,0 +1,35 @@
+entity {
+  name: "Assume Shape"
+  category: "action"
+  synonym: "Shape, Assume"
+  reference {
+    name: "WTC 88547"
+    pages {
+      low: 118
+      high: 118
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A maurezhi can take on the appearance of any humanoid creature whose corpse\n  it has consumed. This ability functions like the alter self spell (caster\n  level 10th), except that the maurezhi can remain in the chosen form\n  indefinitely.  It can assume a new form or return to its own as a standard\n  action."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

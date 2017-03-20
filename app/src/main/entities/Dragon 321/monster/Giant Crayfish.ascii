@@ -1,0 +1,131 @@
+entity {
+  name: "Giant Crayfish"
+  synonym: "Crayfish, Giant"
+  reference {
+    name: "Dragon 321"
+    pages {
+      low: 60
+      high: 60
+    }
+  }
+  world: "Generic"
+  short_description: "A giant version of a natural crayfish"
+}
+size {
+  size: LARGE
+  modifier: LONG
+}
+type: VERMIN
+subtype: AQUATIC
+hit_dice {
+  number: 4
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+}
+speed {
+  mode: SWIM
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 9
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 3
+abilities {
+  strength: 20
+  dexterity: 7
+  constitution: 16
+  wisdom: 12
+  intelligence: -1
+  charisma: 1
+}
+saves {
+}
+primary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: CLAW
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+        modifier: 5
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+feat {
+  name: "Run"
+  parameters {
+  }
+}
+climate: WARM
+terrain: AQUATIC_TERRAIN
+organization {
+  type: SOLITARY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 3
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS
+advancement {
+  range {
+    low: 5
+    high: 9
+  }
+  size: LARGE
+}
+advancement {
+  range {
+    low: 8
+    high: 12
+  }
+  size: HUGE
+}
+language {
+  name: NONE
+}
+encounter: "This massive creature rises from the waters, its large\n                    pincers clacking excitedly as it moves toward you. A\n                    six-limbed, lowbodied crustacean, it holds its large,\n                    narrow claws in front of its body as it moves."
+combat: "Giant crayfish line in wait by heavily trafficked areas,\n                    covering themselves with muck from the lake bottom. They\n                    erupt from the water to ambush prey. While somewhat\n                    ungainly on land, they are capable of great speed in\n                    water. Some crayfish attempt to kill prey on land, but few\n                    ever engage in protracted combat out of the water. Upon\n                    meeting any significant resistance, the giant crayfish\n                    attempts to grapple a single target and drag it under\n                    water, where the environment greatly favors the predator."
+skill {
+  name: "Swim"
+}

@@ -1,0 +1,41 @@
+entity {
+  name: "Attach"
+  category: "action"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 237
+      high: 237
+    }
+  }
+  reference {
+    name: "WTC 17867"
+    pages {
+      low: 148
+      high: 148
+    }
+  }
+  world: "Generic"
+  description: "If the creature hits with its attack, it uses parts of its body to latch\n  onto the opponent\'s body. An attached creatures looses its Dexterity bonus to\n  AC.\n\n  An attached creature can be struck with a weapon or grappled itself. To\n  remove an attached creature through grappling, the opponent must achieve a\n  pin against the creature."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

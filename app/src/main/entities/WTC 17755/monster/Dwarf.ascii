@@ -1,0 +1,227 @@
+entity {
+  name: "Dwarf"
+  world: "Generic"
+  description: "Dwarves are noble warriors who excel at metalcraft, stoneworking, and war. They tend to be serious, determined, and very honorable.\n\nDwarves favor earth tones in their clothing and prefer simple and functional garb. The skin can be very dark, but it is always some shade of tan or brown. Hair color can be black, gray, or brown. Dwarves average 4 feet tall and weigh as much as adult humans.\n\nDwarves prefer to spend their time making masterpieces of stone, steel, and precious metals. They create durable weapons, craft beautiful jewelry, and cut superior gems. However, they consider it\nbad taste to flaunt wealth, so few wear jewelry other than one simple piece.\n\nDwarves speak Dwarven. Most who travel outside dwarven lands (as traders, mercenaries, or adventurers) know the Common tongue, while warriors in the dwarven cities usually learn Goblin to better interrogate and spy on those evil denizens of the deep caves.\n\nMost dwarves encountered outside their home are warriors."
+  short_description: "Noble warriors that excel at metalcraft, stoneworking, and war."
+}
+size {
+  size: MEDIUM
+  modifier: TALL
+}
+type: HUMANOID
+subtype: DWARF
+hit_dice {
+  number: 1
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+}
+natural_armor {
+}
+base_attack: 1
+abilities {
+  strength: 13
+  dexterity: 11
+  constitution: 14
+  wisdom: 9
+  intelligence: 10
+  charisma: 6
+}
+saves {
+  fortitude: 4
+  will: 1
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: WEAPON
+  style: MELEE
+  damage {
+    damage {
+      base {
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+feat {
+  name: "Weapon Focus"
+  parameters {
+    text {
+      name: "qualifier"
+      text: "dwarven waraxe"
+    }
+  }
+}
+climate: TEMPERATE
+terrain: MOUNTAIN
+challenge_rating {
+}
+language {
+  modifier: AUTOMATIC
+  name: DWARVEN
+}
+language {
+  modifier: BONUS
+  name: GIANT
+}
+language {
+  modifier: BONUS
+  name: GNOLL
+}
+language {
+  modifier: BONUS
+  name: GOBLIN
+}
+language {
+  modifier: BONUS
+  name: ORC
+}
+language {
+  modifier: BONUS
+  name: TERRAN
+}
+language {
+  modifier: BONUS
+  name: UNDERCOMMON
+}
+encounter: "Stocky, broad of body and extremely muscular, the short figure before you may lack in height but not in physical strength or presence. Wrapped in metal armor and armed with a waraxe, the humanoid has light brown skin, ruddy cheeks, and bright eyes, with black hair and a long, carefully groomed beard and mustache."
+combat: "Dwarves are experts in combat, effectively using their environment and executing well-planned group attacks. They rarely use magic in fights, since they have few wizards or sorcerers (but dwarven clerics throw themselves into battle as heartily as their fellow warriors). If they have time to prepare, they may build deadfalls or other traps involving stone. In addition to the dwarven waraxe and thrown hammer, dwarves also use warhammers, picks, shortbows, heavy crossbows, and maces."
+quality {
+  name: "darkvision"
+  parameters {
+    text {
+      name: "range"
+      text: "60 ft"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "stonecunning"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "weapon familiarity"
+  parameters {
+    text {
+      name: "name"
+      text: "Dwarven Waraxe"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "weapon familiarity"
+  parameters {
+    text {
+      name: "name"
+      text: "Urgrosh"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "stability"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "poison save +2"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell save +2"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "attack bonus +1"
+  parameters {
+    text {
+      name: "name"
+      text: "orcs (including half-orcs) and goblinoids (including goblins, hobgoblins, and bugbears)"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "dodge +4"
+  parameters {
+    text {
+      name: "name"
+      text: "creatures of the giant type (such as ogres, trolls, and hill giants)"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "appraise +2"
+  parameters {
+    text {
+      name: "name"
+      text: "related to stone or metal items"
+    }
+  }
+  condition {
+  }
+}
+skill {
+  name: "appraise"
+  ranks: 2
+}
+skill {
+  name: "craft (blacksmithing)"
+  ranks: 2
+}
+skill {
+  name: "craft (stonemasonry)"
+  ranks: 2
+}
+skill {
+  name: "listen"
+  ranks: 3
+}
+skill {
+  name: "spot"
+  ranks: 3
+}

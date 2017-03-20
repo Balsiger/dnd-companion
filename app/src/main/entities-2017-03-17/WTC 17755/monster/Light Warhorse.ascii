@@ -1,0 +1,90 @@
+name: "Light Warhorse"
+category: "light"
+synonym: "Warhorse, Light"
+description: "These animals or similar to light horses but are trained and bred for strength and aggression. They usually are not ready for warfare before age three. A light warhorse can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.\n\n\\bold{Carrying Capacity:} A light load for a light warhorse is up to 230 pounds; a medium load, 231\342\200\223460 pounds; and a heavy load, 461\342\200\223690 pounds. A light warhorse can drag 3,450 pounds."
+short_description: "A light, war trained horse."
+size {
+}
+hit_dice {
+  number: 3
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 60
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 4
+    type: GENERAL
+  }
+}
+base_attack: 2
+abilities {
+  strength: 16
+  dexterity: 13
+  constitution: 17
+  wisdom: 13
+  intelligence: 2
+  charisma: 6
+}
+saves {
+  fortitude: 6
+  will: 2
+  reflex: 4
+}
+primary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: HOOF
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 4
+      }
+      condition {
+      }
+    }
+  }
+}
+secondary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 3
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+challenge_rating {
+  leader: 1
+}
+skill {
+  name: "listen"
+  ranks: 3
+}
+skill {
+  name: "spot"
+  ranks: 3
+}

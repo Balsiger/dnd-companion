@@ -1,0 +1,35 @@
+entity {
+  name: "Not Subject To Death from Massive Damage"
+  category: "immunity"
+  synonym: "Death from Massive Damage, Not Subject to"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 1
+      high: 1
+    }
+  }
+  world: "Generic"
+  description: "The creature is not subject to death from massive damage."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

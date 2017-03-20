@@ -1,0 +1,80 @@
+name: "Heavy Horse"
+synonym: "Horse, Heavy"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 273
+    high: 273
+  }
+}
+description: "The statistics presented here describe large breeds of working horses such as Clydesdales. These animals are usually ready for heavy work by age three. A heavy horse cannot fight while carrying a rider.\n\n\\bold{Carrying Capacity:} A light load for a heavy horse is up to 200 pounds; a medium load, 201\342\200\223400 pounds; and a heavy load, 401\342\200\223600 pounds. A heavy horse can drag 3,000 pounds."
+size {
+}
+hit_dice {
+  modifier: 3
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 50
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 3
+    type: GENERAL
+  }
+}
+base_attack: 2
+abilities {
+  strength: 16
+  dexterity: 13
+  constitution: 15
+  wisdom: 12
+  intelligence: 2
+  charisma: 6
+}
+saves {
+  fortitude: 5
+  will: 2
+  reflex: 4
+}
+secondary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: HOOF
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+challenge_rating {
+  leader: 1
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS
+skill {
+  name: "listen"
+  ranks: 3
+}
+skill {
+  name: "spot"
+  ranks: 3
+}

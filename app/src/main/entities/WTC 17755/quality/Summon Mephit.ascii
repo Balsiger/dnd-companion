@@ -1,0 +1,45 @@
+entity {
+  name: "Summon Mephit"
+  category: "action"
+  category: "attack"
+  category: "aura"
+  category: "communication"
+  category: "health"
+  category: "immunity"
+  category: "option"
+  category: "resistance"
+  category: "sense"
+  category: "vulnerability"
+  synonym: ""
+  synonym: ""
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 181
+      high: 181
+    }
+  }
+  world: "Generic"
+  description: "Once per day, a mephit can attempt to summon another mephit of the same\n  variety, much as though casting a summon monster spell, but with only a 25%\n  chance of success.  Roll d%: On a failure, no creature answers the summons\n  that day. A mephit that has just been summoned cannot use its own summon\n  ability for 1 hour. This ability is the equivalent of a 2nd-level spell."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

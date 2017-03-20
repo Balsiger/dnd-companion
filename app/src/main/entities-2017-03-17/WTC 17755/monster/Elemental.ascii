@@ -1,0 +1,31 @@
+name: "Elemental"
+category: "elemental"
+world: "Generic"
+description: "Elementals are incarnations of the elements that compose existence. They are as wild and dangerous as the forces that birthed them."
+short_description: "An incarnation of an element."
+size {
+}
+type: ELEMENTAL
+subtype: NONE_SUBTYPE
+hit_dice {
+}
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}
+combat: "Elementals have varied combat abilities and tactics, but all have the same elemental qualities."

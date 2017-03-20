@@ -1,0 +1,43 @@
+entity {
+  name: "Breath Weapon"
+  category: "attack"
+  synonym: "Weapon, Breath"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 182
+      high: 182
+    }
+  }
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 140
+      high: 140
+    }
+  }
+  world: "Generic"
+  description: "The creature can breathe a $range long $type of $name for $damage damage (Reflex save DC $dc half). Once it has used his breath weapon, it must wait $duration before it can do so again."
+  short_description: "Every $duration breath a $type of $name for $damage (Ref DC $dc for half)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

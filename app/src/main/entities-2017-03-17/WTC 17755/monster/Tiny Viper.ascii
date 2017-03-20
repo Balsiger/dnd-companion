@@ -1,0 +1,140 @@
+name: "Tiny Viper"
+category: "snake"
+category: "poison"
+category: "tiny"
+synonym: "Viper, Tiny"
+world: "Generic"
+description: "These creatures range widely in size. They are not particularly aggressive, but will often lash out with a bite attack before attempting to retreat."
+short_description: "A tiny snake."
+size {
+  size: TINY
+  modifier: LONG
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 1
+  dice: 2
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 15
+      }
+    }
+  }
+}
+speed {
+  mode: CLIMB
+  distance {
+    imperial {
+      feet {
+        leader: 15
+      }
+    }
+  }
+}
+speed {
+  mode: SWIM
+  distance {
+    imperial {
+      feet {
+        leader: 15
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 2
+    type: NATURAL_ARMOR
+  }
+}
+abilities {
+  strength: 4
+  dexterity: 17
+  constitution: 11
+  wisdom: 12
+  intelligence: 1
+  charisma: 2
+}
+saves {
+  fortitude: 2
+  reflex: 2
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        modifier: 1
+      }
+      effect: "poison"
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 2
+      nominator: 1
+      denominator: 2
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+    }
+  }
+}
+feat {
+  name: "Weapon Finesse"
+  parameters {
+  }
+}
+climate: TEMPERATE
+terrain: MARSH
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  nominator: 1
+  denominator: 3
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS
+combat: "Viper snakes rely on their venomous bite to kill prey and defend themselves."
+skill {
+  name: "Balance"
+}
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Hide"
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Spot"
+}
+skill {
+  name: "Swim"
+}

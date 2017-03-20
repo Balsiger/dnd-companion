@@ -1,0 +1,37 @@
+name: "Ftr15"
+category: "dummy"
+synonym: "Fighter 15"
+world: "Generic"
+description: "A dummy monster until we have class support."
+short_description: "Dummy monster."
+size {
+}
+hit_dice {
+  number: 15
+  dice: 10
+}
+natural_armor {
+}
+base_attack: 15
+abilities {
+}
+saves {
+  fortitude: 9
+  will: 5
+  reflex: 5
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}

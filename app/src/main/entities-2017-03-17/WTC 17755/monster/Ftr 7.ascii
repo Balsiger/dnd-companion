@@ -1,0 +1,40 @@
+name: "Ftr 7"
+category: "dummy"
+category: "level"
+synonym: "Fighter 7"
+synonym: "7th level Fighter"
+world: "Generic"
+description: "Dummy monster for character class."
+short_description: "Dummy."
+size {
+}
+hit_dice {
+  number: 7
+  dice: 10
+}
+natural_armor {
+}
+base_attack: 7
+abilities {
+}
+saves {
+  fortitude: 5
+  will: 2
+  reflex: 2
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 7
+}

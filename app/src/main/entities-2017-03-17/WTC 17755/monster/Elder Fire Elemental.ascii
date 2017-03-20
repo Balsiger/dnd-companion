@@ -1,0 +1,99 @@
+name: "Elder Fire Elemental"
+synonym: "Elemental, Elder Fire"
+synonym: "Fire Elemental, Elder"
+world: "Generic"
+size {
+  size: HUGE
+  modifier: TALL
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 24
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 60
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 8
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 18
+abilities {
+  strength: 22
+  dexterity: 29
+  wisdom: 11
+  intelligence: 6
+}
+saves {
+  fortitude: 8
+  will: 8
+  reflex: 14
+}
+primary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: SLAM
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 2
+        dice: 8
+      }
+      effect: "2d8 fire"
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 15
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 15
+    }
+  }
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 11
+}
+advancement {
+  range {
+    low: 24
+    high: 48
+  }
+  size: HUGE
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Spot"
+}

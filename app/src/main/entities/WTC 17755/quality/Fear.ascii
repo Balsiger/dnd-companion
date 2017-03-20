@@ -1,0 +1,34 @@
+entity {
+  name: "Fear"
+  category: "attack"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 51
+      high: 51
+    }
+  }
+  world: "Generic"
+  description: "A creature hit by a barbed devil must succeed on a DC 20 Will save or be\n  affected as though by fear (caster level 9th).  Whether or not the save is\n  successful, that creature cannot be affected by that same barbed devil\342\200\232\303\204\303\264s fear\n  ability for 24 hours. The save DC is Charisma-based. "
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

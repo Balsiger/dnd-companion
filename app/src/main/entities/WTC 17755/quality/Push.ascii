@@ -1,0 +1,43 @@
+entity {
+  name: "Push"
+  category: "action"
+  category: "attack"
+  category: "aura"
+  category: "communication"
+  category: "health"
+  category: "immunity"
+  category: "option"
+  category: "resistance"
+  category: "sense"
+  category: "vulnerability"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "An earth elemental can start a bull rush maneuver without provoking an\n  attack of opportunity. The combat modifiers given in Earth Mastery, above,\n  also apply to the elemental\342\200\232\303\204\303\264s opposed Strength checks."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

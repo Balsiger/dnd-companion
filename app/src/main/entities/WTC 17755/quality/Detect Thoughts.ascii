@@ -1,0 +1,35 @@
+entity {
+  name: "Detect Thoughts"
+  category: "action"
+  synonym: "Thoughts, Detect"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 67
+      high: 67
+    }
+  }
+  world: "Generic"
+  description: "The creature can continuously use \\Spell{detect thoughts} as the spell\n  (caster level 18th, Will DC 13 negates). It can suppress or resume this\n  ability as a free action. The save DC is Charisma-based."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

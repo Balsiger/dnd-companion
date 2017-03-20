@@ -1,0 +1,37 @@
+entity {
+  name: "Magic Weapon plus 5"
+  category: "magical"
+  synonym: "Magic Weapon +5"
+  synonym: "Weapon +5, Magic"
+  synonym: "+5 Weapon"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 216
+      high: 216
+    }
+  }
+  world: "Generic"
+  description: "A standard magical bonus to weapon class"
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

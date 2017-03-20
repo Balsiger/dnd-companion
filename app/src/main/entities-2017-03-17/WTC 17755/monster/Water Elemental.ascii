@@ -1,0 +1,46 @@
+name: "Water Elemental"
+synonym: "Elemental, Water"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 98
+    high: 101
+  }
+}
+world: "Generic"
+description: "A water elemental can be as ferocious and powerful as a stormy sea. A water elemental can\'t venture more than 180 feet from the\nbody of water from which it was conjured.\nWater elementals speak Aquan but rarely choose to do so.\nWhen one speaks, its voice sounds like the crashing of waves on a rocky shore or the howls of an ocean gale."
+size {
+}
+type: ELEMENTAL
+subtype: WATER
+hit_dice {
+}
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+climate: ANY
+terrain: ELEMENTAL_PLANE_OF_WATER
+organization {
+  type: SOLITARY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: USUALLY
+language {
+  modifier: AUTOMATIC
+  name: AQUAN
+}
+encounter: "A vortex of water rolls across the ground, though it never seems to crash or lose its shape. The waves cascade and storm around a central, humanoid- shaped whirlpool, with watery appendages that pound with the force of an ocean storm."

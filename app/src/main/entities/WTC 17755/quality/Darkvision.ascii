@@ -1,0 +1,36 @@
+entity {
+  name: "Darkvision"
+  category: "sense"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 8
+      high: 8
+    }
+  }
+  world: "Generic"
+  description: "See in the dark (black & white only) to a distance of $range."
+  short_description: "See in the dark to a distance of $range."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+name_format: "<name> $range"
+ac_modifier {
+}

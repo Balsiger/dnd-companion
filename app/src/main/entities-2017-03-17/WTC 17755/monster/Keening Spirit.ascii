@@ -1,0 +1,65 @@
+name: "Keening Spirit"
+synonym: "Groaning Spirit"
+synonym: "Spirit, Keening"
+synonym: "Spirit, Groaning"
+world: "Forgotten Realms"
+description: "A keening spirit is a kind of ghost, created specifically from the spirit of an evil female elf of any elf subtype. Known for its constant weeping and groaning, the creature is sometimes referred to as a groaning spirit. It shares most of the characteristics of the ghost template described in the Monster Manual except special attacks and special qualities; those it receives are\ndetailed below."
+short_description: "A kind of ghost created from an evil female elf, known for its constant weeping and groaning."
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+}
+speed {
+  mode: FLY
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+}
+abilities {
+}
+saves {
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: INCORPOREAL_TOUCH
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}
+language {
+  modifier: AUTOMATIC
+  name: ABOLETH
+}

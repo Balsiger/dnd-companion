@@ -1,0 +1,53 @@
+entity {
+  name: "Stability"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 92
+      high: 92
+    }
+  }
+  world: "Generic"
+  description: "The creature is exceptionally stable on its feet. It has a +4 bonus on ability checks made to resist being bull rushed or tripped when standing on the ground (but not\nwhen climbing, flying, riding, or otherwise not standing firmly on the ground)."
+  short_description: "+4 on ability checks to resist bull rush or trip."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+ability_modifier {
+  ability: STRENGTH
+  modifier {
+    modifier {
+      value: 4
+      type: GENERAL
+      condition: "resisting bull rush or trip when standing on the ground"
+    }
+  }
+}
+ability_modifier {
+  ability: DEXTERITY
+  modifier {
+    modifier {
+      value: 4
+      type: GENERAL
+      condition: "resisting trip when standing on the ground"
+    }
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

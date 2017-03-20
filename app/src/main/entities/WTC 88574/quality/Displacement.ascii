@@ -1,0 +1,34 @@
+entity {
+  name: "Displacement"
+  category: "aura"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 139
+      high: 139
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Any melee or ranged attack directed at Ripper has a 50% miss chance unless\n  the attacker can locate the beast by some means other than sight. A true\n  seeing effect allows the user to see the beast\342\200\232\303\204\303\264s position, but see\n  invisibility has no effect."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

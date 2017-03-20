@@ -1,0 +1,93 @@
+name: "Human Fighter 3rd"
+synonym: "Fighter, 3rd Human"
+synonym: "3rd Level Fighter, Human"
+description: "A standard third level fighter"
+short_description: "A 3rd level fighter"
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 3
+  dice: 10
+}
+natural_armor {
+}
+base_attack: 3
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Exotic Weapon Proficiency"
+  parameters {
+  }
+}
+feat {
+  name: "Power Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Blind-Fight"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Focus"
+  parameters {
+  }
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 3
+}
+possession {
+  text: "Full Plate"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Heavy Steel Shield"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Bastard Sword = qualities Masterwork Weapon"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Composite Longbow = qualities Masterwork Weapon"
+  count {
+    modifier: 1
+  }
+}
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Jump"
+}

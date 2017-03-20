@@ -1,0 +1,37 @@
+entity {
+  name: "Low-Light Vision"
+  category: "sense"
+  category: "vision"
+  synonym: "Vision, Low-Light"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 311
+      high: 311
+    }
+  }
+  world: "Generic"
+  description: "A creature with low-light vision can see twice as far as a \\Monster{human} in starlight, moonlight, torchlight, and similar conditions of shadowy illumination. It retains the ability to distinguish color and detail under these conditions."
+  short_description: "See twice as far in starlight, moonlight, torchlight or similar."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

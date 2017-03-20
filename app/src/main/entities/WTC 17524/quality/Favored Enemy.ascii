@@ -1,0 +1,92 @@
+entity {
+  name: "Favored Enemy"
+  category: "ranger"
+  category: "class"
+  synonym: "Enemy, Favored"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 47
+      high: 47
+    }
+  }
+  world: "Generic"
+  description: "A character may select a type of creature from among those given on the table below. Due to his extensive study on his chosen type of foe and training in the proper techniques for combating such creatures, the ranger gains a +2 bonus on Bluff, Listen, Sense Motive, Spot, and Survival checks when using these skills against creatures of this type. Likewise, he gets a +2 bonus on weapon damage rolls against such creatures.\n\nIf the ranger chooses humanoids or outsiders as a favored enemy, he must also choose an associated subtype, as indicated on the table. If a specific creature falls into more than one category of favored enemy (for instance, devils are both evil outsiders and lawful outsiders), the ranger\'s bonuses do not stack; he simply uses whichever bonus is higher. See the Monster Manual for more information on types of creatures.\n\nA character can select this quality multiple times and the bonuses for the same enemy stack. \n\n\n\\table[l][l]\n{\\bold{Type (Subtype)}}{\\bold{Examples}}\n{Aberration}{beholder}\n{Animal}{bear}\n{Construct}{golem}\n{Dragon}{black dragon}\n{Elemental}{invisible stalker}\n{Fey}{dryad}\n{Giant}{ogre}\n{Humanoid (aquatic)}{merfolk}\n{Humanoid (dwarf)}{dwarf}\n{Humanoid (elf)}{elf}\n{Humanoid (goblinoid)}{hobgoblin}\n{Humanoid (gnoll)}{gnoll}\n{Humanoid (gnome)}{gnome}\n{Humanoid (halfling)}{halfling}\n{Humanoid (human)}{human}\n{Humanoid (orc)}{orc}\n{Humanoid (reptilian)}{kobold}\n{Magical beast}{displacer beast}\n{Monstrous humanoid}{minotaur}\n{Ooze}{gelatinous cube}\n{Outsider (air)}{arrowhawk}\n{Outsider (chaotic)}{demon}\n{Outsider (earth)}{xorn}\n{Outsider (evil)}{devil}\n{Outsider (fire)}{salamander}\n{Outsider (good)}{angel}\n{Outsider (lawful)}{formian}\n{Outsider (native)}{tiefling}\n{Outsider (water)}{tojanida}\n{Plant}{shambling mound}\n{Undead}{zombie}\n{Vermin}{monsrous spider}\n"
+  incomplete: "Does not check that a ranger has to select an already selected enemy when selecting a new one (cannot select two new enemies at level 5, for example)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+skill_modifier {
+  key: "bluff"
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+      condition: "against $enemy"
+    }
+  }
+}
+skill_modifier {
+  key: "listen"
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+      condition: "against $enemy"
+    }
+  }
+}
+skill_modifier {
+  key: "sense motive"
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+      condition: "against $enemy"
+    }
+  }
+}
+skill_modifier {
+  key: "spot"
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+      condition: "against $enemy"
+    }
+  }
+}
+skill_modifier {
+  key: "Survival"
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+      condition: "against $enemy"
+    }
+  }
+}
+attack_modifier {
+}
+damage_modifier {
+  modifier {
+    value: 2
+    type: GENERAL
+    condition: "against $enemy"
+  }
+}
+ac_modifier {
+}

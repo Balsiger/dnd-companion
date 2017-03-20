@@ -1,0 +1,88 @@
+entity {
+  name: "Elf Traits"
+  category: "racial"
+  category: "elf"
+  synonym: "Traits, Elf"
+  synonym: "Elven Traits"
+  synonym: "Traits, Elven"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 101
+      high: 102
+    }
+  }
+  description: "Elves possess the following racial traits."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+ability_modifier {
+  ability: DEXTERITY
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+    }
+  }
+}
+ability_modifier {
+  ability: CONSTITUTION
+  modifier {
+    modifier {
+      value: -2
+      type: GENERAL
+    }
+  }
+}
+immunity: SLEEP_SPELLS
+immunity: SLEEP_EFFECTS
+reflex_modifier {
+}
+will_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against enchantment spells or effects"
+  }
+}
+fortitude_modifier {
+}
+skill_modifier {
+  key: "listen"
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+    }
+  }
+}
+skill_modifier {
+  key: "search"
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+    }
+  }
+}
+skill_modifier {
+  key: "spot"
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+    }
+  }
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

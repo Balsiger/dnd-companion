@@ -1,0 +1,34 @@
+entity {
+  name: "Pounce"
+  category: "attack"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 118
+      high: 118
+    }
+  }
+  world: "Forgotten Realms"
+  description: "If a maurezhi charges, it can make a full attack even though it has moved."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

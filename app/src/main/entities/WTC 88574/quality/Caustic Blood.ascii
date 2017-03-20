@@ -1,0 +1,35 @@
+entity {
+  name: "Caustic Blood"
+  category: "attack"
+  synonym: "Blood, Caustic"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 123
+      high: 123
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A quth-maren\342\200\232\303\204\303\264s natural attacks deal an additional 1d6 points of acid damage\n  from the creature\342\200\232\303\204\303\264s caustic blood. Any creature hitting a quth-maren with\n  natural weapons or unarmed attacks also takes 1d6 points of acid damage."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

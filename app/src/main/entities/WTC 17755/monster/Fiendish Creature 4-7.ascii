@@ -1,0 +1,32 @@
+entity {
+  name: "Fiendish Creature 4-7"
+  base: "fiendish creature"
+  world: "Generic"
+  description: "A fiendish creature for a base creature with 4 to 7 HD"
+  short_description: "Fiendish creature for 4-7 HD base."
+}
+size {
+}
+hit_dice {
+}
+natural_armor {
+}
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}

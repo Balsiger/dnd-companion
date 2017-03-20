@@ -1,0 +1,35 @@
+entity {
+  name: "Frightful Presence"
+  category: "aura"
+  synonym: "Presence, Frightful"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 145
+      high: 145
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Whenever Glouroth attacks, charges, or flies overhead, every creature within\n  a radius of 180 feet with fewer than 22 HD must make a successful Will save\n  (DC 26) or become shaken for 4d6 rounds (or panicked if it has 4 or fewer\n  HD). Creatures that successfully save are immune to Glouroth\342\200\232\303\204\303\264s frightful\n  presence for one day."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

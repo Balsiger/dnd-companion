@@ -1,0 +1,36 @@
+entity {
+  name: "Spit Web"
+  category: "web"
+  category: "spit"
+  synonym: "Web, Spit"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 120
+      high: 120
+    }
+  }
+  world: "Forgotten Realms"
+  description: "The create can spit forth a web as a ranged touch attack (maximum range 90 feet, range increment 10 feet). A Large or smaller creature hit by this attack is entangled (\342\200\2232 on attack rolls, \342\200\2234 penalty to Dexterity, unable to move). An entangled creature attempting to cast a spell must succeed at a Concentration check (DC 15) to do so. An entangled creature can escape with a successful Escape Artist check (DC 26) or burst the web with a Strength check (DC 32). Both are standard actions. Once the golem spits a web, it can\342\200\231t spit another\none until 1d4 rounds later."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

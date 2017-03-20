@@ -1,0 +1,25 @@
+entity {
+  name: "Aversion to Daylight"
+  description: "\\Monster{Nightshade}s are creatures of utter darkness and loathe all light. If exposed to natural daylight (not merely a daylight spell), they take a -4 penalty on all attack rolls, saving throws, and skill checks. "
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

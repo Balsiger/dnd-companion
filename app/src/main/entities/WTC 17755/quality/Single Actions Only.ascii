@@ -1,0 +1,35 @@
+entity {
+  name: "Single Actions Only"
+  category: "option"
+  synonym: "Action, Singles Only"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 266
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "The creature has poor reflexes and can perform only a single action or\n  attack action each round. A creature can move up to its speed and attack in\n  the same round, but only if it attempts a charge."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

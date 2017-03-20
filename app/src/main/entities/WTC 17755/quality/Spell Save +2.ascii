@@ -1,0 +1,47 @@
+entity {
+  name: "Spell Save +2"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 92
+      high: 92
+    }
+  }
+  description: "The creature gets a +2 racial bonus on saving throws against spells and spell-like effects. "
+  short_description: "+2 racial bonus on saves against spells and spell-like effects"
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against spells or spell-like effects"
+  }
+}
+will_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against spells or spell-like effects"
+  }
+}
+fortitude_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against spells or spell-like effects"
+  }
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

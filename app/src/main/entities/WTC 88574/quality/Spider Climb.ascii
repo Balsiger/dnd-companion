@@ -1,0 +1,35 @@
+entity {
+  name: "Spider Climb"
+  category: "option"
+  synonym: "Climb, Spider"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 134
+      high: 134
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A vampire can climb sheer surfaces as though with a spider climb spell."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

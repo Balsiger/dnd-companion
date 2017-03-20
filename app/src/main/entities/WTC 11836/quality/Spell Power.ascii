@@ -1,0 +1,35 @@
+entity {
+  name: "Spell Power"
+  category: "option"
+  synonym: "Power, Spell"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 53
+      high: 53
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Add this value to the DC for saving throws and caster level checks to\n  overcome spell resistance checks for spells the shadow adept casts from the\n  schools of Enchanment, Illusion, and Necromancy, and spells with the darkness\n  descriptor. This stacks with other spell power effects that affect the\n  specified spells."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

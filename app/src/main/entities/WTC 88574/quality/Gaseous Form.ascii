@@ -1,0 +1,35 @@
+entity {
+  name: "Gaseous Form"
+  category: "action"
+  synonym: "Form, Gaseous"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 134
+      high: 134
+    }
+  }
+  world: "Forgotten Realms"
+  description: "At will, a vampire can assume gaseous form as the spell (caster level 6th),\n  but it can remain gaseous indefinitely and has a fly speed of 20 feet with\n  perfect maneuverability Using this ability is a standard action."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,44 @@
+entity {
+  name: "Petrifying Gaze"
+  category: "action"
+  category: "attack"
+  category: "aura"
+  category: "communication"
+  category: "health"
+  category: "immunity"
+  category: "option"
+  category: "resistance"
+  category: "sense"
+  category: "vulnerability"
+  synonym: "Gaze, Petrifying"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 4
+      high: 4
+    }
+  }
+  world: "Forgotten Realms"
+  description: "The creature can turn a target within 30 feet that meets its gaze to\nstone permanently. A successful Fortitude save (DC $dc) negates the\neffect. Each opponent within range of its gaze attack must attempt a saving\nthrow each round at the beginning of that opponent\'s turn in initiative\norder. The creature can also actively gaze as an attack action by choosing a\ntarget within range, who must then attempt a saving throw.\n\nAverting ones eyes gives a 50% change to avoid the gaze but also gives the creature concealment (20% miss chance). \n\nTurning one\'s back to the creature or wearing a blindfold gives a 100% change to avoid the gaze but gives the creature total concealment (50% miss chance, can attack assumed square only, no attacks of Opportunity)."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

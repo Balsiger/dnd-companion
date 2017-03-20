@@ -1,0 +1,29 @@
+name: "Fiendish Creature 1-3"
+world: "Generic"
+description: "A fiendish creature for a base creature with 1 to 3 HD"
+short_description: "Fiendish creature for 1-3 HD base."
+size {
+}
+hit_dice {
+}
+natural_armor {
+}
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}

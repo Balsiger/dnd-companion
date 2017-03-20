@@ -1,0 +1,35 @@
+entity {
+  name: "Damage Reduction"
+  category: "resistance"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 307
+      high: 308
+    }
+  }
+  world: "Generic"
+  description: "A creature with this special quality ignores damage from most weapons and\n  natural attacks. Wounds heal immediately, or the weapon bounces off\n  harmlessly (in either case, the opponent knows the attack was\n  ineffective). The creature takes normal damage from energy attacks (even\n  non-magical ones), spells, spell-like abilities, and supernatural\n  abilities. A certain kind of weapon can sometimes damage the creature\n  normally, as noted below.\n\n  The entry indicates the amount of damage ignored (usually 5 to 15 points) and\n  the type of weapon that negates the ability. For example, the\n  \\Monster{werewolf}\'s entry reads \'damage reduction 10/silver\': Each time a\n  foe hits a werewolf with a weapon, the damage dealt by that attack is reduced\n  by 10 points (to a minimum of 0). However, a silvered weapon deals full\n  damage.\n\n  Some monsters are vulnerable to piercing, bludgeoning, or slashing\n  damage. For example, \\Monster{Skeleton}s have damage reduction\n  5/bludgeoning. When hit by slashing or piercing weapons, the damage dealt by\n  each attack is reduced by 5 points, but bludgeoning weapons deal full\n  damage.\n\n  Some monsters are vulnerable to certain materials, such as alchemical silver,\n  adamantine, or cold-forged iron. Attacks from weapons that are not made of\n  the correct material have their damage reduced, even if the weapon has an\n  enhancement bonus. Examples: the \\Monster{werewolf}\'s damage reduction\n  10/silver, the \\Monster{iron golem}\'s damage reduction 15/adamantine, and the\n  \\Monster{nymph}\'s damage reduction 10/cold iron.\n\n  Some monsters are vulnerable to magic weapons. Any weapon with at least a +1\n  enhancement bonus on attack and damage rolls overcomes the damage reduction\n  of these monsters. Such creatures\' natural weapons (but not their attacks\n  with weapons) are treated as magic weapons for the purpose of overcoming\n  damage reduction. For example, the \\Monster{gargoyle} has damage reduction\n  10/magic and can strike as a magic weapon for the purpose of overcoming\n  damage reduction.\n\n  A few very powerful monsters, such as the \\Monster{solar} and the\n  \\Monster{tarrasque}, are vulnerable only to epic weapons; that is, magic\n  weapons with at least a +6 enhancement bonus. Such creatures\' natural weapons\n  are also treated as epic weapons for the purpose of overcoming damage\n  reduction.\n\n  Some monsters are vulnerable to chaotic-, evil-, good-, or lawful-aligned\n  weapons. When a cleric casts \\Spell{align weapon}, affected weapons might\n  gain one or more of these properties, and certain magic weapons have these\n  properties as well. For example, many \\Monster{tanar\'ri} demons and\n  \\Monster{baatezu} devils have damage reduction 10/good, while many celestials\n  have damage reduction 10/evil. A creature with an alignment subtype (chaotic,\n  evil, good, or lawful) can overcome this type of damage reduction with its\n  natural weapons and weapons it wields as if the weapon or natural weapons had\n  an alignment (or alignments) that mathc the subtype(s) of the creature. A\n  \\Monster{bearded devil}, for instance, has the evil and lawful subtypes, and\n  thus can overcome damage reduction as if its weapons and natural weapons were\n  evil-aligned and lawful-aligned.\n\n  When a damage reduction entry has a dash (-) after the slash, no weapon\n  negates the damage reduction.\n\n  A few creatures are harmed by more than one kind of weapon. The\n  \\Monster{babau demon}, for example, has damage reduction 10/cold iron or\n  good. Either kind of weapon - cold iron or good - overcomes its damage\n  reduction.\n\n  A few other creatures require combinations of different types of attacks to\n  overcome their damage reduction. The \\Monster{ghaele eladrin} has damage\n  reduction 10/evil and cold iron, meaning that a weapon must be made of\n  cold-forged iron and be evil-aligned in order to overcome the\n  \\Monster{ghaele}\'s damage reduction. A \\Monster{lich} has damage reduction\n  15/bludgeoning and magic, meaning that only bludgeoning weapons with at least\n  a +1 enhancement bonus deal full damage to it. A weapon that falls into one\n  category but not the other is of no help in overcoming the creature\'s damage\n  reduction - a magic sword or a nonmagical mace is no better at harming a\n  \\Monster{lich} than any other weapon."
+  incomplete: "can also be su"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

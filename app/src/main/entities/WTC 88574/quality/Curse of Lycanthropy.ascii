@@ -1,0 +1,35 @@
+entity {
+  name: "Curse of Lycanthropy"
+  category: "health"
+  synonym: "Lycanthropy, Curse of"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 4
+      high: 4
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Any humanoid hit by Thelossa\342\200\232\303\204\303\264s bite attack must succeed at a Fortitude save\n  (DC 14) or contract lycanthropy."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

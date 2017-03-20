@@ -1,0 +1,35 @@
+entity {
+  name: "Energy Drain"
+  category: "attack"
+  synonym: "Drain, Energy"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 252
+      high: 252
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Living creatures hit by a vampire\342\200\232\303\204\303\264s slam attack (or any other natural weapon\n  the vampire might possess) gain two negative levels. For each negative level\n  bestowed, the vampire gains 5 temporary hit points. A vampire can use its\n  energy drain ability once per round."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

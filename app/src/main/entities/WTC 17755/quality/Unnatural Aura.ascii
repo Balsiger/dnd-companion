@@ -1,0 +1,42 @@
+entity {
+  name: "Unnatural Aura"
+  category: "aura"
+  synonym: "Aura, Unnatural"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 1
+      high: 1
+    }
+  }
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 123
+      high: 123
+    }
+  }
+  world: "Generic"
+  description: "Animals, whether wild or domesticated, can sense the unnatural presence of the creature at a distance of $range. They do not willingly approach nearer than that and panic if forced to do so; they remain panicked as long as they are within that range."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

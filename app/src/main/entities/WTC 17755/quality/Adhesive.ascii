@@ -1,0 +1,34 @@
+entity {
+  name: "Adhesive"
+  category: "aura"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 164
+      high: 164
+    }
+  }
+  world: "Generic"
+  description: "\\Monster{Kuo-toas} use their own body oil and other materials to give their shields a finish almost like flypaper, holding fast any creatures or items touching them. Anyone who make an unsuccessful melee attack against a kuo-toa must succeed on a DC 14 Reflex save, or the attacker\'s weapon sticks to the shield and is yanked out of the wielder\'s grasp. Creatures using natural weapons are automatically grappled if they get stuck. A \\Monster{kuo-toa} requires 1 hour and special materials costing 20 gp to coat a shield with adhesive. The adhesive remains good for up to three days or until it actually catches someone or something (in which case the shield can trap no additonal items, since the adhesive is used up). Pulling a stuck weapon or limb from a shield requires a DC 20 Strength check."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

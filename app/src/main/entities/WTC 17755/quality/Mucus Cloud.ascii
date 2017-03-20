@@ -1,0 +1,34 @@
+entity {
+  name: "Mucus Cloud"
+  category: "action"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 8
+      high: 8
+    }
+  }
+  world: "Generic"
+  description: "An \\Monster{aboleth} underwater surrounds itself with a viscous cloud of\n  mucus roughly 1 foot thick. Any creature coming into contact with and\n  inhaling this substance must succeed on a DC 19 Fortitude save or lose the\n  ability to breathe air for the next 3 hours. An affected creatures suffocates\n  in 2d6 minutes if removed from the water. Renewed contact with the mucus\n  cloud and failing another Fortitude save continues the effect for anther 3\n  hours. The save DC is Constitution-based."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

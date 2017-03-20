@@ -1,0 +1,35 @@
+entity {
+  name: "Shadow Defense"
+  category: "resistance"
+  synonym: "Defense, Shadow"
+  reference {
+    name: "WTC 11736"
+    pages {
+      low: 53
+      high: 53
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Add this value to a shadow adept\'s saving throws against spells from the shools of Enchanment, Illusion, and Necromancy, and spells with the darkness descriptior."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

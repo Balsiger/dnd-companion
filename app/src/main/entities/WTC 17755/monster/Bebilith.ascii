@@ -1,0 +1,219 @@
+entity {
+  name: "Bebilith"
+  category: "demon"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 42
+      high: 42
+    }
+  }
+  world: "Generic"
+  description: "Bebiliths are enormous, predatory, arachnid demons that hunt other demons. While they favor preying upon other demons, they aren?t picky?they will stalk and attack any type of creature.\nA bebilith has a body the size of a plow horse, with legs spanning more than 14 feet. It weighs more than two tons.\nBebiliths understand but do not speak Abyssal. Their telepathy allows them to communicate silently with one another."
+}
+size {
+  size: HUGE
+  modifier: TALL
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 12
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 40
+      }
+    }
+  }
+}
+speed {
+  mode: CLIMB
+  distance {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 13
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 12
+abilities {
+  strength: 28
+  dexterity: 12
+  constitution: 26
+  wisdom: 13
+  intelligence: 11
+  charisma: 13
+}
+saves {
+  fortitude: 8
+  will: 8
+  reflex: 8
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 2
+        dice: 6
+      }
+      effect: "poison"
+      condition {
+      }
+    }
+  }
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: WEB
+  style: RANGED
+  damage {
+    damage {
+      base {
+      }
+      condition {
+      }
+    }
+  }
+}
+secondary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: CLAW
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 2
+        dice: 4
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 15
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+feat {
+  name: "Cleave"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Grapple"
+  parameters {
+  }
+}
+feat {
+  name: "Power Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Track"
+  parameters {
+  }
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 10
+}
+treasure: NONE_TREASURE
+alignment: CHAOTIC_EVIL
+alignment_status: ALWAYS
+advancement {
+  range {
+    low: 13
+    high: 18
+  }
+  size: HUGE
+}
+advancement {
+  range {
+    low: 19
+    high: 36
+  }
+  size: GARGANTUAN
+}
+language {
+  modifier: UNDERSTAND
+  name: ABYSSAL
+}
+encounter: "An enormous, misshapen spider stalks out of the darkness. Its forelegs end in wicked barbs, and globs of foul goo drip from its fanged mouth."
+combat: "A bebilith attacks any creature it sees. It usually picks one target and concentrates its attacks on that opponent, using its webs to isolate the target from its comrades. Should the bebilith become overwhelmed by tougher opponents, it often attempts to bite one or more of its victims and retreats, allowing its poison to do its work.\nA bebilith?s natural weapons, as well as any weapons it wields, are treated as chaotic-aligned and evil-aligned for the purpose of overcoming damage reduction."
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Diplomacy"
+}
+skill {
+  name: "Hide"
+}
+skill {
+  name: "Jump"
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Move Silently"
+}
+skill {
+  name: "Search"
+}
+skill {
+  name: "Sense Motive"
+}
+skill {
+  name: "Spot"
+}
+skill {
+  name: "Survival"
+}

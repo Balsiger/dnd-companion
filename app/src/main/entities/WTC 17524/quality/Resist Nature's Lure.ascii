@@ -1,0 +1,42 @@
+entity {
+  name: "Resist Nature\'s Lure"
+  category: "resistance"
+  synonym: "Nature\'s Lure, Resist"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 37
+      high: 37
+    }
+  }
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 3
+      high: 3
+    }
+  }
+  world: "Generic"
+  description: "A druid gains a +4 bonus on saving throws against the spell-like abilities\n  of fey (such as dryads, pixies, and sprites)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

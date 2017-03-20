@@ -1,0 +1,188 @@
+name: "Howler"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 155
+    high: 155
+  }
+}
+world: "Generic"
+description: "Howlers live on planes where chaos and evil hold sway; they originate on the plane of Pandemonium. These beasts hunt in packs, racing through caverns to wear down their prey and rend it to bits.\n\nA howler is about 8 feet long and weighs about 2,000 pounds.\n\nAlthough they are surprisingly intelligent, howlers do not speak\342\200\224they only howl. If there is a language within the howls, as some have suggested, even spells cannot decipher it. Howlers understand Abyssal."
+short_description: "A gaunt, bestial hound with quills."
+size {
+  size: LARGE
+  modifier: TALL
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 6
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 60
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 5
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 6
+abilities {
+  strength: 21
+  dexterity: 17
+  constitution: 15
+  wisdom: 14
+  intelligence: 6
+  charisma: 8
+}
+saves {
+  fortitude: 7
+  will: 7
+  reflex: 8
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 2
+        dice: 8
+      }
+      condition {
+      }
+    }
+  }
+}
+secondary_attack {
+  attacks {
+    number: 1
+    dice: 4
+  }
+  mode: QUILL
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Alertness"
+  parameters {
+  }
+}
+feat {
+  name: "Combat Reflexes"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+climate: ANY
+terrain: WINDSWEPT_DEPTHS_OF_PANDEMONIUM
+organization {
+  type: SOLITARY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: GANG
+  number {
+    number: 1
+    dice: 3
+    modifier: 1
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: PACK
+  number {
+    number: 1
+    dice: 5
+    modifier: 5
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 3
+}
+treasure: NONE_TREASURE
+alignment: LAWFUL_EVIL
+alignment_status: ALWAYS
+advancement {
+  range {
+    low: 7
+    high: 9
+  }
+  size: LARGE
+}
+advancement {
+  range {
+    low: 11
+    high: 18
+  }
+  size: HUGE
+}
+level_adjustment: 3
+language {
+  modifier: UNDERSTAND
+  name: ABYSSAL
+}
+encounter: "This creature looks like some gaunt, bestial hound or feline, with a mane of bristling quills."
+combat: "Howlers attack in groups, for they are cowardly and cruel. They prefer to charge into combat, race out, and then charge in again. A howler\342\200\231s natural weapons, as well as any weapons it wields, are treated as chaotic-aligned and evil-aligned for the purpose of over-\ncoming damage reduction."
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Hide"
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Move Silently"
+}
+skill {
+  name: "Search"
+}
+skill {
+  name: "Spot"
+}
+skill {
+  name: "Survival"
+}

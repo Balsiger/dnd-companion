@@ -1,0 +1,36 @@
+entity {
+  name: "Resistance to Cold"
+  category: "resistance"
+  synonym: "Cold, Resistance to"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 298
+      high: 298
+    }
+  }
+  world: "Generic"
+  description: "A creature with resistance to cold has the ability (usually extraordinary) to ignore $value points of cold damage each round, but it does not have total immunity. It doesn\'t matter whether the damage has a mundane or magical source.\n\nWhen resistance completely negates the damage from an energy attack, the attack does not disrupt a spell.  This resistance does not stack with the resistance that a spell, such as \\Spell{endure elements}, might provide.\n"
+  short_description: "Protect from $value damage per round."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

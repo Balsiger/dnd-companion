@@ -1,0 +1,37 @@
+name: "Fiendish Creature"
+synonym: "Fiendish"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 107
+    high: 108
+  }
+}
+world: "Generic"
+description: "Fiendish creatures dwell on the lower planes, the realms of evil, although they resemble beings found on the Material Plane. They are more fearsome \357\277\274in appearance than their earthly counterparts. \n\nFiendish creatures are often mistaken for halffiends, more powerful creatures that are created when a fiend mates with a noncelestial creature, or\nthrough some foul infernal breeding project.\n\nFiendish\342\200\235 is an inherited template that can be added to any cor- poreal aberration, animal, dragon, fey, giant, humanoid, mag- ical beast, monstrous humanoid, ooze, plant, or\nvermin of nongood alignment (referred to\nhereafter as the base creature).\n\nA fiendish creature uses all the base creature\342\200\231s statistics and abilities except as noted\nhere. Do not recalculate the creature\342\200\231s Hit\nDice, base attack bonus, saves, or skill points if its type changes."
+size {
+}
+hit_dice {
+}
+natural_armor {
+}
+abilities {
+  intelligence: 3
+}
+saves {
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}

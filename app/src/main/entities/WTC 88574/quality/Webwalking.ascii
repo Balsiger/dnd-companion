@@ -1,0 +1,34 @@
+entity {
+  name: "Webwalking"
+  category: "immunity"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 6
+      high: 6
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Rhuallith can ignore web spells and spiderkind webbing as if affected by a\n  freedom of movement spell.  She can walk along webs as if on solid ground (no\n  Balance skill check required)."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

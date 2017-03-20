@@ -1,0 +1,35 @@
+entity {
+  name: "Electric Aura"
+  category: "aura"
+  synonym: "Aura, Electric"
+  reference {
+    name: "WTC 11832"
+    pages {
+      low: 22
+      high: 23
+    }
+  }
+  world: "Generic"
+  description: "Whenever the death kiss is damaged by a slashing or piercing melee weapon, there is a 1% chance per point of damage inflicted by the blow that the creature\'s electric aura will shock the attacker for 1d10 points of damage. A Reflex save (DC 15) avoids the damage. If the blow reduces the death kiss to 0 or fewer hit points, the change increases to 5% per point of damage inflicted by the blow."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

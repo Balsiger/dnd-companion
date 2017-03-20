@@ -1,0 +1,36 @@
+entity {
+  name: "Enlarge Spell"
+  category: "meta magic"
+  category: "feat"
+  category: "enlarge"
+  category: "range"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 41
+      high: 41
+    }
+  }
+  world: "Forgotten Realms"
+  description: "The creature may cast a spell as if it were under the effects of the \\Feat{Enlarge Spell} feat (double range). It does not need to prepare this spell in advance, and it does not increase the casting time or use a higher spell slot. This ability can be used a number of times per day equal to 1 + the creature\'s Charisma bonus (minimum of once per day)."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

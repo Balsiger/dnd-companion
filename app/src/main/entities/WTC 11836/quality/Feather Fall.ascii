@@ -1,0 +1,36 @@
+entity {
+  name: "Feather Fall"
+  category: "option"
+  synonym: "Fall, Feather"
+  synonym: "Feather Fall"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 311
+      high: 311
+    }
+  }
+  world: "Generic"
+  description: "A death tyrant\'s body natural buoyancy grants it a permanent \\SpellRef{feather fall} effect with personal range."
+}
+type: SPELL_LIKE
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,41 @@
+entity {
+  name: "Ftr4"
+  category: "fighter"
+  world: "Generic"
+  description: "Dummy monster for fighter."
+  short_description: "Dummy monster"
+}
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 4
+  dice: 10
+}
+natural_armor {
+}
+base_attack: 4
+abilities {
+}
+saves {
+  fortitude: 4
+  will: 1
+  reflex: 1
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 4
+}

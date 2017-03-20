@@ -1,0 +1,27 @@
+entity {
+  name: "Combat Style: Archery"
+  synonym: "Archery Combat Style"
+  description: "The character is treated as having the Rapid Shot feat, even if he does not have the normal prerequisites for that feat.\n\nThe benefits of the character\'s chosen style apply only when he wears light or no armor. He loses all benefits of his combat style when wearing medium or heavy armor."
+  short_description: "Gain the Rapid Shot feat when wearing no or light armor only."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+bonus_feat: "Rapid Shot"
+ac_modifier {
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Thwart Glyph"
+  synonym: "Glyph, Thwart"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 45
+      high: 45
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Character gains a bonus to all \\Skill{Search} and \\Skill{Disable Device} checks to locate, disable, or bypass magic glyphs, runes, and symbols."
+  incomplete: "Skill adjustments not properly computed (need a modifier dependent on parameters)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

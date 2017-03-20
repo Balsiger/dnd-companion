@@ -1,0 +1,35 @@
+entity {
+  name: "Earth Mastery"
+  category: "aura"
+  synonym: "Mastery, Earth"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "An earth elemental gains a +1 bonus on attack and damage rolls if both it\n  and its foe are touching the ground. If an opponent is airborne or\n  waterborne, the elemental takes a \342\200\232\303\204\303\2544 penalty on attack and damage\n  rolls. (These modifiers are not included in the statistics block.)"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

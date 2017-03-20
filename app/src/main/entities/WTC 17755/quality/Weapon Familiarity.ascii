@@ -1,0 +1,34 @@
+entity {
+  name: "Weapon Familiarity"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 91
+      high: 91
+    }
+  }
+  description: "The creature treats $name weapons as a martial weapon instead of an exotic weapon."
+  short_description: "Treat $name as a martial weapon."
+  incomplete: "This is not yet implemented."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+name_format: "Weapon Familiarity ($name)"
+ac_modifier {
+}

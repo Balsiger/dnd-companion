@@ -1,0 +1,29 @@
+entity {
+  name: "Cannot Be Tripped"
+  category: "trip"
+  category: "immune"
+  synonym: "Tripped, Cannot Be"
+  world: "Generic"
+  description: "The creature cannot be tripped."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

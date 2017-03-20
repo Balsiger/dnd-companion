@@ -1,0 +1,117 @@
+entity {
+  name: "Human Commoner Zombie"
+  synonym: "Zombie, Human Commoner"
+  synonym: "Commoner, Zombie Human"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 265
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "Zombies are not pleasant to look upon. Drawn from their graves, half decayed\n  and partially consumed by worms, they wear the tattered remains of their\n  burial clothes. A rank odor of death hangs heavy in the air around them."
+  short_description: "A human zombie."
+}
+size {
+  size: MEDIUM
+  modifier: TALL
+}
+type: UNDEAD
+hit_dice {
+  number: 2
+  dice: 12
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 2
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 1
+abilities {
+  strength: 12
+  dexterity: 8
+  constitution: -1
+  wisdom: 10
+  intelligence: -1
+  charisma: 1
+}
+saves {
+}
+primary_attack {
+  attacks {
+  }
+  mode: SLAM
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+        modifier: 1
+      }
+      condition {
+      }
+    }
+  }
+}
+primary_attack {
+  attacks {
+  }
+  mode: WEAPON
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+        modifier: 1
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Toughness"
+  parameters {
+  }
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  nominator: 1
+  denominator: 2
+}
+treasure: NONE_TREASURE
+alignment: NEUTRAL_EVIL
+alignment_status: ALWAYS
+language {
+  name: NONE
+}
+combat: "Because of their utter lack of intelligence, the\n                    instructions given to a newly created zombie must be very\n                    simple, such as \'Kill anyone who enters this room\'."
+character: "Zombies are corpses reanimated through dark and sinister\n                    magic. These mindless automatons shamble about, doing their\n                    creator\'s bidding without fear or hesitation."

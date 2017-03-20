@@ -1,0 +1,38 @@
+entity {
+  name: "Negative Healing"
+  category: "Negative"
+  category: "Healing"
+  category: "Cure"
+  category: "Inflict"
+  synonym: "Healing, Negative"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 156
+      high: 156
+    }
+  }
+  world: "Forgotten Realms"
+  description: "The Undying Temple is harmed by positive energy (including cure spells) and healed by negative energy (including inflict spells)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

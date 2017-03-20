@@ -1,0 +1,180 @@
+entity {
+  name: "Gnoll"
+  world: "Generic"
+  description: "Gnolls are hyena-headed, evil humanoids that wander in loose tribes.\n\nMost gnolls have dirty yellow or reddish-brown fur. \n\nA gnoll is a nocturnal carnivore, preferring intelligent creatures for food because they scream more. Gnolls tend to think with their stomachs, and any alliances they make (usually with \\Monster{bugbears}, \\Monster{hobgoblins}, \\Monster{ogres}, \\Monster{orcs}, or \\Monster{trolls}) often fall apart when the gnolls get hungry. They dislike giants and most other humanoids, and they disdain manual labor.\n\nA gnoll is about 7-1/2 feet tall and weighs 300 pounds.\n\nGnolls speak Gnoll.\n"
+  short_description: "A hyena-headed, evil humanoid that wander in loose tribes."
+}
+size {
+  size: MEDIUM
+  modifier: TALL
+}
+type: HUMANOID
+subtype: GNOLL
+hit_dice {
+  number: 2
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 1
+    type: GENERAL
+  }
+}
+base_attack: 1
+abilities {
+  strength: 15
+  dexterity: 10
+  constitution: 13
+  wisdom: 11
+  intelligence: 8
+  charisma: 8
+}
+saves {
+  fortitude: 4
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: WEAPON
+  style: MELEE
+  damage {
+    damage {
+      base {
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+feat {
+  name: "Power Attack"
+  parameters {
+  }
+}
+climate: WARM
+terrain: PLAINS
+organization {
+  type: SOLITARY
+  number {
+  }
+}
+organization {
+  type: PAIR
+  number {
+  }
+}
+organization {
+  type: HUNTING_PARTY
+  number {
+    number: 1
+    dice: 4
+    modifier: 1
+  }
+  plus {
+    number {
+    }
+    text: "1d2 hyenas"
+  }
+}
+organization {
+  type: BAND
+  number {
+    number: 10
+    dice: 10
+  }
+  plus {
+    number {
+    }
+    text: "50% non-combatants, 1 3rd-level sergeant per 20 adults, 1 leader of 4-6 level, 1d4+4 hyenas"
+  }
+}
+organization {
+  type: TRIBE
+  number {
+    number: 20
+    dice: 10
+  }
+  plus {
+    number {
+    }
+    text: "1 3rd-level sergeant per 20 adults, 1d2 lieutenants of 4th or 5th level, 1 leader of 6th to 8th level, 1d6+6 hyenas, underground lairs also have 1d3 trolls"
+  }
+}
+challenge_rating {
+  leader: 1
+}
+treasure: STANDARD
+alignment: CHAOTIC_EVIL
+alignment_status: USUALLY
+level_adjustment: 1
+language {
+  modifier: AUTOMATIC
+  name: GNOLL
+}
+language {
+  modifier: BONUS
+  name: COMMON
+}
+language {
+  modifier: BONUS
+  name: DRACONIC
+}
+language {
+  modifier: BONUS
+  name: ELVEN
+}
+language {
+  modifier: BONUS
+  name: GOBLIN
+}
+language {
+  modifier: BONUS
+  name: ORC
+}
+encounter: "This humanoid is slightly taller than a human. It has gray skin, a furry body, and a head like a hyena\342\200\231s, with a reddish-gray mane."
+combat: "Gnolls like to attack when they have the advantage of numbers, using horde tactics and their physical strength to overwhelm and knock down their opponents. They show little discipline when fighting unless they have a strong leader; at such times, they can maintain ranks and fight as a unit. While they do not usually prepare traps, they do use ambushes and try to attack from a flanking position. Because of its shield, a gnoll\342\200\231s modifier on Hide checks (untrained) is \342\200\2232, which means gnolls always take special care to seek favorable conditions when laying ambushes (such as darkness, cover, or some\nother form of advantageous terrain)."
+character: "A tribe of gnolls is ruled by its strongest member, who uses fear, intimidation, and strength to remain in power. If a chieftain is killed, the stronger members of the tribe fight to be the new chieftain; if these combats take too long or several combatants die, the tribe may break up into a number of bands that go their separate ways. Gnolls revere the phases of the moon, but most tribes have no true clerics.\n\nA band or tribe includes as many noncombatant young as there are adults. Gnoll lairs are fortified surface encampments or underground complexes. Gnolls take prisoners for use as slaves, and any lair will have at least one slave for every ten adults. Slaves (usually humans, orcs, or hobgoblins) suffer a high attrition rate because of the gnolls\342\200\231 appetite.\n\nTheir special patron is the demon lord Yeenoghu, who looks like a gaunt gnoll. Most gnolls serve and revere Yeenoghu rather than worshiping a deity."
+quality {
+  name: "darkvision"
+  parameters {
+    text {
+      name: "range"
+      text: "60 ft"
+    }
+  }
+  condition {
+  }
+}
+skill {
+  name: "listen"
+  ranks: 2
+}
+skill {
+  name: "spot"
+  ranks: 3
+}

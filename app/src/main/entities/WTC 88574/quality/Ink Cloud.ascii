@@ -1,0 +1,35 @@
+entity {
+  name: "Ink Cloud"
+  category: "action"
+  synonym: "Cloud, Ink"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 136
+      high: 136
+    }
+  }
+  world: "Forgotten Realms"
+  description: "An arachnoid giant octopus can emit a cloud of jet-black ink 20 feet wide by\n  20 feet long once per minute as a free action. The cloud provides total\n  concealment, which the octopus normally uses to escape a losing\n  fight. Creatures within the cloud experience the effects of total\n  darkness. "
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

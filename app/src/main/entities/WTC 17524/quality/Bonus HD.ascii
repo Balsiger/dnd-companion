@@ -1,0 +1,35 @@
+entity {
+  name: "Bonus HD"
+  category: "health"
+  synonym: "HD, Bonus"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 36
+      high: 36
+    }
+  }
+  world: "Generic"
+  description: "Extra eight-sided (d8) Hit Dice, each of which gains a Constitution\n  modifier, as normal. Remember that extra Hit Dice improve the animal\n  companion\342\200\232\303\204\303\264s base attack and base save bonuses. An animal companion\342\200\232\303\204\303\264s base\n  attack bonus is the same as that of a druid of a level equal to the animal\342\200\232\303\204\303\264s\n  HD. An animal companion has good Fortitude and Reflex saves (treat it as a\n  character whose level equals the animal\342\200\232\303\204\303\264s HD).  An animal companion gains\n  additional skill points and feats for bonus HD as normal for advancing a\n  monster\342\200\232\303\204\303\264s Hit Dice (see the Monster Manual)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

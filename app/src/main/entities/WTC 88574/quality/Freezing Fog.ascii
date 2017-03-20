@@ -1,0 +1,35 @@
+entity {
+  name: "Freezing Fog"
+  category: "attack"
+  synonym: "Fog, Freezing"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 154
+      high: 154
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Three times per day, Ice can produce an effect similar to that of a \\SpellRef{solid fog} spell, except that it also causes a rime of slippery ice to form on any surface the fog touches, creating the effect of a \\SpellRef{grease} spell. Ice is immune to the \\Spell{grease} effect because of her icewalking ability."
+}
+type: SPELL_LIKE
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

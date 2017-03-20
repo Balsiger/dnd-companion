@@ -1,0 +1,42 @@
+entity {
+  name: "Create Spawn"
+  category: "option"
+  synonym: "Spawn, Create"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 134
+      high: 134
+    }
+  }
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 222
+      high: 222
+    }
+  }
+  world: "Generic"
+  description: "A humanoid or monstrous humanoid $name rises as a spawn under the killers control $duration after $type."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

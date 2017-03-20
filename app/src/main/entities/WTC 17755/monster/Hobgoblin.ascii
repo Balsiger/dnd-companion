@@ -1,0 +1,193 @@
+entity {
+  name: "Hobgoblin"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 153
+      high: 154
+    }
+  }
+  world: "Generic"
+  description: "Hobgoblins are larger cousins of goblins. They are far more aggressive and organized than their smaller relatives and wage a perpetual war with other humanoids, particularly elves.\n\nHobgoblins\342\200\231 hair color ranges from dark reddish-brown to dark gray. They have dark orange or red-orange skin. Large males have blue or red noses. Hobgoblins\342\200\231 eyes are yellowish or dark brown, while their teeth are yellow. Their garments tend to be brightly colored, often blood red with black-tinted leather. Their weaponry is kept polished and in good repair.\n\nHobgoblins speak Goblin and Common.\n\nMost hobgoblins encountered outside their homes are warriors; the information in the statistics block is for one of 1st level."
+  short_description: "The larger cousins of goblins."
+}
+size {
+  size: MEDIUM
+  modifier: TALL
+}
+type: HUMANOID
+subtype: GOBLINOID
+hit_dice {
+  number: 1
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+}
+base_attack: 1
+abilities {
+  strength: 13
+  dexterity: 13
+  constitution: 14
+  wisdom: 9
+  intelligence: 10
+  charisma: 8
+}
+saves {
+  fortitude: 2
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: WEAPON
+  style: MELEE
+  damage {
+    damage {
+      base {
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+feat {
+  name: "Alertness"
+  parameters {
+  }
+}
+climate: WARM
+terrain: HILLS
+organization {
+  type: GANG
+  number {
+    number: 1
+    dice: 6
+    modifier: 3
+  }
+}
+organization {
+  type: BAND
+  number {
+    number: 10
+    dice: 10
+  }
+  plus {
+    number {
+    }
+    text: "50 noncombatants, 1 3rd-level sergeant per 20 adults, 1 leader of 4-6h level"
+  }
+}
+organization {
+  type: WARBAND
+  number {
+    number: 1
+    dice: 15
+    modifier: 9
+  }
+}
+organization {
+  type: TRIBE
+  number {
+    number: 30
+    dice: 10
+  }
+  plus {
+    number {
+    }
+    text: "0 noncombatants plus 1 3rd-level sergeant per 20 adults, 1 or 2 lieutenants of 4th or 5th level, 1 leader of 6th\342\200\2238th level, 2\342\200\2234 dire wolves, and 1\342\200\2234 ogres or 1\342\200\2232 trolls)"
+  }
+}
+challenge_rating {
+  nominator: 1
+  denominator: 2
+}
+treasure: STANDARD
+alignment: LAWFUL_EVIL
+alignment_status: USUALLY
+level_adjustment: 1
+language {
+  modifier: AUTOMATIC
+  name: GOBLIN
+}
+language {
+  modifier: AUTOMATIC
+  name: COMMON
+}
+encounter: "This burly humanoid stands about 6-1/2 feet tall. It has hairy skin, feral eyes, and a flat nose and chin."
+combat: "These creatures have a strong grasp of strategy and tactics and\nare capable of carrying out sophisticated battle plans. Under\nthe leadership of a skilled strategist or tactician, their discipline\ncan prove a deciding factor. Hobgoblins hate elves\nand attack them first, in preference to other opponents.\nSkills: Hobgoblins have a +4 racial bonus on Move Silently\nchecks.\nThe hobgoblin warrior presented here had the following ability\nscores before racial adjustments: Str 13, Dex 11, Con 12,\nInt 10, Wis 9, Cha 8."
+reproduction: "Hobgoblins are a military breed: They live for war and believe strongly in strength and martial prowess as the most desirable qualities for individuals and leaders alike. A hobgoblin leader is likely to be the biggest and strongest in the group, maintaining authority by enforcing strict discipline. Hobgoblins are often leaders among tribes of goblins and orcs, whom they bully and treat as inferiors. Hobgoblin mercenaries sometimes enter the service of wealthy evil humanoids.\n\nHobgoblin society is organized into tribal bands, each intensely jealous of its reputation and status. Meetings between rival bands are likely to erupt in violence if the troops are not restrained. Only an exceptionally powerful leader can force them to cooperate for any length of time. Each band has a distinctive battle standard that it carries into combat to inspire, rally, and signal the troops. Hobgoblin gangs and warbands are almost exclusively male. Bands and tribes include females who help with defense. Noncombatant hobgoblins are children too young to fight effectively.\n\nThese creatures usually make lairs in places that either boast natural defenses or can be fortified. Cavern complexes, dungeons, ruins, and forests are among their favorites. Typical lair defenses include ditches, fences, gates, guard towers, pit traps, and crude catapults or ballistas. \n\nMost hobgoblins revere \\God{Maglubiyet}, who is also the patron deity of goblins."
+possession {
+  text: "longsword"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "javelin"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "studded leather armor"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "light wooden shield"
+  count {
+    modifier: 1
+  }
+}
+quality {
+  name: "darkvision"
+  parameters {
+    text {
+      name: "range"
+      text: "60 ft"
+    }
+  }
+  condition {
+  }
+}
+skill {
+  name: "hide"
+  ranks: 2
+}
+skill {
+  name: "listen"
+  ranks: 2
+}
+skill {
+  name: "move silently"
+  ranks: 2
+}
+skill {
+  name: "spot"
+  ranks: 2
+}

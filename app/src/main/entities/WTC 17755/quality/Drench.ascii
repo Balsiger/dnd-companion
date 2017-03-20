@@ -1,0 +1,34 @@
+entity {
+  name: "Drench"
+  category: "attack"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 100
+      high: 100
+    }
+  }
+  world: "Generic"
+  description: "The elemental\342\200\232\303\204\303\264s touch puts out torches, campfires, exposed lanterns, and\n  other open flames of nonmagical origin if these are of Large size or\n  smaller. The creature can dispel magical fire it touches as dispel magic\n  (caster level equals elemental\342\200\232\303\204\303\264s HD)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,37 @@
+name: "Revenant Shattered Tower Guard"
+synonym: "Shattered Tower Guard, Revenant"
+world: "Forgotten Realms"
+size {
+}
+hit_dice {
+}
+natural_armor {
+}
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}
+treasure: NONE_TREASURE
+alignment: LAWFUL_EVIL
+alignment_status: ALWAYS
+language {
+  modifier: AUTOMATIC
+  name: ABOLETH
+}

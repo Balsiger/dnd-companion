@@ -1,0 +1,28 @@
+entity {
+  name: "Immunity To Fortitude Save Effects"
+  category: "immunity"
+  synonym: "Fortitude Save Effects, Immunity to"
+  world: "Generic"
+  description: "The creature is immune to all fortitude save effects."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

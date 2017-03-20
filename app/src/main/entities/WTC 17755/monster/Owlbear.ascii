@@ -1,0 +1,161 @@
+entity {
+  name: "Owlbear"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 206
+      high: 206
+    }
+  }
+  world: "Generic"
+  description: "An owlbear\'s coat ranges in color from brown-black to yellowish brown; its\n  beak is a dull ivory color. A full-grown male can stand as tall as 8 feet and\n  weight up to 1\'500 pounds. Adventurers who have survived encounters with the\n  creature often speak of the bestial madness they glimpsed in its red-trimmed\n  eyes.\n\n  Owlbears inhabit wilderness areas, making their lairs within tangled forests\n  or in shallow underground caverns. They can be active during they day or\n  night, depending on the habits of available prey. Adults live in mated pairs\n  and hunt in packs, leaving their young in the lair. A lair usually has 1d6\n  young, fetching a price of 3\'000 gp each in many civilized areas. While\n  owlbears cannot be domesticated, they can still be placed in strategically\n  important areas as free-roaming guardians. Professional trainers charge 2\'000\n  gp to rear or train an owlbear (DC 23 for a young creature, DC 30 for an\n  adult)."
+  short_description: "A cross between an bear and an owl."
+}
+size {
+  size: LARGE
+  modifier: TALL
+}
+type: MAGICAL_BEAST
+hit_dice {
+  number: 5
+  dice: 10
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 5
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 5
+abilities {
+  strength: 21
+  dexterity: 12
+  constitution: 21
+  wisdom: 12
+  intelligence: 2
+  charisma: 10
+}
+saves {
+}
+primary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: CLAW
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+        modifier: 5
+      }
+      condition {
+      }
+    }
+  }
+}
+secondary_attack {
+  attacks {
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+        modifier: 2
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Alertness"
+  parameters {
+  }
+}
+feat {
+  name: "Track"
+  parameters {
+  }
+}
+climate: TEMPERATE
+terrain: FOREST
+organization {
+  type: SOLITARY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: PAIR
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: PACK
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 4
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS
+advancement {
+  range {
+    low: 6
+    high: 8
+  }
+  size: LARGE
+}
+advancement {
+  range {
+    low: 9
+    high: 12
+  }
+  size: HUGE
+}
+language {
+  name: NONE
+}
+encounter: "This creature has a thick, shaggy coat of feathers and\n                    fur. Its body is like a bear\'s but it has an avian head\n                    with big, round eyes and a hooked beak."
+combat: "Owlbears attach prey---any creature bigger than a\n                    mouse---on sight, always fighting to the death."
+tactics: "They slash with claws and beak, trying to grab their prey\n                    and rip it apart."
+character: "Owlbears are extraordinarily vicious predators with a\n                    reputation for ferocity, aggression, and sheer ill\n                    temper. The tend to attack nearly anything that moves\n                    without provocation."
+reproduction: "Scholars have long debated the origins of the owlbear. The\n                    most common theory is that a demented wizard created the\n                    first specimen by crossing a giant owl with a bear."
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Spot"
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Earth Glide"
+  category: "option"
+  synonym: "Glide, Earth"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 1
+      high: 1
+    }
+  }
+  world: "Generic"
+  description: "An earth elemental can glide through stone, dirt, or almost any other sort\n  of earth except metal as easily as a fish swims through water. Its burrowing\n  leaves behind no tunnel or hole, nor does it create any ripple or other signs\n  of its presence. A move earth spell cast on an area containing a burrowing\n  earth elemental flings the elemental back 30 feet, stunning the creature for\n  1 round unless it succeeds on a DC 15 Fortitude save."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

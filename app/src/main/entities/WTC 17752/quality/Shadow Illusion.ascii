@@ -1,0 +1,36 @@
+entity {
+  name: "Shadow Illusion"
+  category: "action"
+  synonym: "Illusion, Shadow"
+  synonym: ""
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 195
+      high: 195
+    }
+  }
+  world: "Generic"
+  description: "Can create visual illusions from surrounding shadows. This ability\342\200\232\303\204\303\264s effect\n  is identical to that of the arcane spell \\SpellRef{silent image} and may be\n  employed once per day."
+}
+type: SPELL_LIKE
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

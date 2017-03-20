@@ -1,0 +1,35 @@
+entity {
+  name: "Slippery Mind"
+  category: "resistance"
+  synonym: "Mind, Slippery"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 51
+      high: 51
+    }
+  }
+  world: "Generic"
+  description: "This ability represents the rogue\342\200\232\303\204\303\264s ability to wriggle free from magical\n  effects that would otherwise control or compel her. If a rogue with slippery\n  mind is affected by an enchantment spell or effect and fails her saving\n  throw, she can attempt it again 1 round later at the same DC. She gets only\n  this one extra chance to succeed on her saving throw."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

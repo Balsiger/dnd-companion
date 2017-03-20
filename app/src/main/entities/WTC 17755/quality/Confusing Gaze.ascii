@@ -1,0 +1,35 @@
+entity {
+  name: "Confusing Gaze"
+  category: "attack"
+  synonym: "Gaze, Confusing"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "Confusion as the spell, 30 feet, caster level 8th, Will DC 15 negates. The\n  save DC is Charisma-based."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

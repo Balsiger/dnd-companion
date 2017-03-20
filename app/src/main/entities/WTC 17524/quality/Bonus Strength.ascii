@@ -1,0 +1,35 @@
+entity {
+  name: "Bonus Strength"
+  category: "resistance"
+  synonym: "Strength, Bonus"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 36
+      high: 36
+    }
+  }
+  world: "Generic"
+  description: "Add this value to the creature\'s Strength score."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

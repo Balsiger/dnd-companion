@@ -1,0 +1,36 @@
+entity {
+  name: "Greater Shield of Shadows"
+  category: "resistance"
+  synonym: "Shield of Shadows, Greater"
+  synonym: "Shadows, Greater Shield of"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 53
+      high: 53
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A shadow adept can create a mobile disk of purple-black force as a standard action. The shield of shadows has the effects of a \\SpellRef{Shield} spell and also provides three-quarters concealment (30% miss chance) against attacks from the other side of the shield of shadows. As with the \\Spell{shield} spell, the shadow adept can change the defensive direction of the shield of shadows as a free action one per round on his turn. The shadow adept can see and reach through the shield, so it does not provide cover or concealment to opponents.\n\nThe shield of shadows lasts 1 round per caster level per day and need not be used all at once. Creating or dismissing the shield of shadows is a standard action.\n\nThe Greater Shield of Shadows also grants spell resistance of 12+ the character\'s shadow adept level on attacks against the shadow adept that originate from the other side of the shield, as if the shadow adept were under the effect of a \\SpellRef{Spell Resistance} spell."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

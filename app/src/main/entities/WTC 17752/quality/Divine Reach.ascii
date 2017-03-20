@@ -1,0 +1,34 @@
+entity {
+  name: "Divine Reach"
+  synonym: "Reach, Divine"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 188
+      high: 188
+    }
+  }
+  world: "Generic"
+  description: "A hierophant with this ability can use touch spells on targets up to 30 feet away. If the spell requires a melee touch attack, the hierophant must make a ranged touch attack instead. Divine reach can be selected a second time as a special ability, in which case the range increases to 60 feet."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

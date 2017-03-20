@@ -1,0 +1,35 @@
+entity {
+  name: "See Invisibility"
+  category: "sense"
+  synonym: "Invisibility, See"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 122
+      high: 122
+    }
+  }
+  world: "Forgotten Realms"
+  description: "This ability functions like a \\SpellRef{see invisibility} spell, except that\n  it is always active and its range extends to the limit of the jade spider\342\200\232\303\204\303\264s\n  vision."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

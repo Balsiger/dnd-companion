@@ -1,0 +1,163 @@
+name: "Pegasus"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 1
+    high: 1
+  }
+}
+world: "Generic"
+description: "The \\Monster{Pegasus} is a magnificent winged horse that sometimes serves\n  the cause of good.\n\n  Typical \\Monster{pegasus} stands 6 feet hight at the shoulder, weights 1\'500\n  pounds, and has a wingspan of 20 feet. Rumors tell of some specimens that are\n  brown or black instead of white.\n\n  \\Monster[Pegasus]{Pegasi} cannot speak, but they understand common."
+size {
+  size: LARGE
+  modifier: LONG
+}
+type: MAGICAL_BEAST
+hit_dice {
+  number: 4
+  dice: 10
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 60
+      }
+    }
+  }
+}
+speed {
+  mode: FLY
+  distance {
+    imperial {
+      feet {
+        leader: 120
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 3
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 4
+abilities {
+  strength: 18
+  dexterity: 15
+  constitution: 16
+  wisdom: 13
+  intelligence: 10
+  charisma: 13
+}
+saves {
+}
+primary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: HOOF
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+      }
+      condition {
+      }
+    }
+  }
+}
+secondary_attack {
+  attacks {
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 3
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Flyby Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Iron Will"
+  parameters {
+  }
+}
+climate: TEMPERATE
+terrain: FOREST
+organization {
+  type: SOLITARY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: PAIR
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: HERD
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 3
+}
+treasure: NONE_TREASURE
+alignment: CHAOTIC_GOOD
+alignment_status: USUALLY
+advancement {
+  range {
+    low: 5
+    high: 8
+  }
+  size: LARGE
+}
+level_adjustment: 2
+language {
+  modifier: UNDERSTAND
+  name: COMMON
+}
+encounter: "This creature looks like a horse but has two large,\n                    feathered wings. Its coat and wings are pure white"
+combat: "\\Monster[Pegasus]{Pegasi} attack with their sharp hooves\n                    and powerful bite. Mate pairs and herds attack as a team,\n                    fighting to the death to defend their eggs and young."
+character: "Though highly prized as aerial steeds, pegasi are wild\n                    and shy creatures not easily tamed."
+reproduction: "Pegasi mate for life, building their nests in high,\n                    remove locations. A mated pair have either 1-2 eggs or 1-2\n                    young in their nest."
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Sense Motive"
+}
+skill {
+  name: "Spot"
+}

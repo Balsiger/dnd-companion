@@ -1,0 +1,34 @@
+entity {
+  name: "Leap"
+  category: "action"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 30
+      high: 30
+    }
+  }
+  world: "Generic"
+  description: "A bulette can jump into the air during combat. This allows it to make four\n  claw attacks instead of two, each with a +15 attack bonus, but it cannot\n  bite."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

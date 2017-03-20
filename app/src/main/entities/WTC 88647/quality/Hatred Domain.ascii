@@ -1,0 +1,35 @@
+entity {
+  name: "Hatred Domain"
+  category: "option"
+  synonym: "Domain, Hatred"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 87
+      high: 87
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Choose one opponent. Against that opponent you gain a +2 profane bonus on\n  attack rolls, saving throws, and Armor Class for 1 minute. This supernatural\n  ability is usable once per day as a free action."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

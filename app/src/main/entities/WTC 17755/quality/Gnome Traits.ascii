@@ -1,0 +1,96 @@
+entity {
+  name: "Gnome Traits"
+  synonym: "Traits, Gnome"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 131
+      high: 131
+    }
+  }
+  world: "Generic"
+  description: "Gnomes possess the following racial traits."
+  short_description: "Gnome racial traits."
+  incomplete: "+1 to DC for save vs illusions spells"
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+ability_modifier {
+  ability: CONSTITUTION
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+    }
+  }
+}
+ability_modifier {
+  ability: STRENGTH
+  modifier {
+    modifier {
+      value: -2
+      type: RACIAL
+    }
+  }
+}
+reflex_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against illusions"
+  }
+}
+will_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against illusions"
+  }
+}
+fortitude_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against illusions"
+  }
+}
+skill_modifier {
+  key: "listen"
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+    }
+  }
+}
+skill_modifier {
+  key: "craft alchemy"
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+    }
+  }
+}
+attack_modifier {
+  modifier {
+    value: 4
+    type: DODGE
+    condition: "against giants"
+  }
+}
+damage_modifier {
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "against kobolds or goblinoids"
+  }
+}
+ac_modifier {
+}

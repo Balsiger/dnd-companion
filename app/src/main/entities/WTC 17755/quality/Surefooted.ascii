@@ -1,0 +1,39 @@
+entity {
+  name: "Surefooted"
+  category: "walk"
+  category: "move"
+  world: "Generic"
+  description: "The creature can walk with sure steps, having a smaller change to slip or fall.\n\nIt gets a +2 Dexterity bonus to avoid slipping or falling."
+  short_description: "+2 Dex to avoid slipping or falling"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+ability_modifier {
+  ability: DEXTERITY
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+      condition: "avoiding slipping or falling"
+    }
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

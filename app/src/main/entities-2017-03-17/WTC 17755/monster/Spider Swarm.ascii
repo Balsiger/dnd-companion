@@ -1,0 +1,145 @@
+name: "Spider Swarm"
+category: "swarm"
+category: "spider"
+synonym: "Swarm, Spider"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 239
+    high: 240
+  }
+}
+world: "Generic"
+description: "A spider swarm is a scuttling horde of venomous spiders."
+short_description: "A swarm of venomous spiders."
+size {
+  size: DIMINUTIVE
+  modifier: LONG
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 2
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+}
+speed {
+  mode: CLIMB
+  distance {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+}
+natural_armor {
+}
+base_attack: 1
+abilities {
+  strength: 1
+  dexterity: 17
+  constitution: 10
+  wisdom: 10
+  intelligence: -1
+  charisma: 2
+}
+saves {
+  fortitude: 3
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: SWARM
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+        modifier: 5
+      }
+      effect: "poison"
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+    }
+  }
+}
+climate: WARM
+terrain: FOREST
+organization {
+  type: SOLITARY
+  number {
+    modifier: 1
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: TANGLE
+  number {
+    number: 1
+    dice: 3
+    modifier: 1
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: COLONY
+  number {
+    number: 1
+    dice: 6
+    modifier: 6
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 1
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS
+encounter: "A horrible, scuttling army of hand-sized spiders scrambles forward."
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Spot"
+}

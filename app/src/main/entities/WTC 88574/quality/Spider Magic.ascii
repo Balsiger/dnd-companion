@@ -1,0 +1,35 @@
+entity {
+  name: "Spider Magic"
+  category: "option"
+  synonym: "Magic, Spider"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 6
+      high: 6
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Rhuallith uses her total character level when determining level-based\n  factors (range, duration, and so forth) of her arachnemancer spells."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

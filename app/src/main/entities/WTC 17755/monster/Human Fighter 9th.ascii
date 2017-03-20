@@ -1,0 +1,71 @@
+entity {
+  name: "Human Fighter 9th"
+  base: "human fighter 8th"
+  synonym: "Fighter, 9th Human"
+  synonym: "9th Level Fighter, Human"
+  description: "A standard ninth level fighter"
+  short_description: "A 9th level fighter"
+}
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 9
+  dice: 10
+}
+natural_armor {
+}
+base_attack: 9
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 9
+}
+possession {
+  text: "Full Plate = qualities Magic Armor plus 1"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Heavy Steel Shield = qualities Magic Armor plus 1"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Bastard Sword = qualities Magic Weapon plus 1"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Composite Longbow = qualities Magic Weapon plus 1"
+  count {
+    modifier: 1
+  }
+}
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Jump"
+}

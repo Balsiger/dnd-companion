@@ -1,0 +1,35 @@
+entity {
+  name: "Bonus Natural Armor"
+  category: "resistance"
+  synonym: "Natural Armor, Bonus"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 36
+      high: 36
+    }
+  }
+  world: "Generic"
+  description: "The number noted here is an improvement to the animal companion\342\200\232\303\204\303\264s existing\n  natural armor bonus."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

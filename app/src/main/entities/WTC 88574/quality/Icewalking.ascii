@@ -1,0 +1,34 @@
+entity {
+  name: "Icewalking"
+  category: "resistance"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 154
+      high: 154
+    }
+  }
+  world: "Generic"
+  description: "This ability works like the \\SpellRef{Spider Climb} spell, but the surfaces Ice climbs must be icy. It is always in effect."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

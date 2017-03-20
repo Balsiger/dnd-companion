@@ -1,0 +1,35 @@
+entity {
+  name: "Chaos Caster"
+  category: "option"
+  synonym: "Caster, Chaos"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 186
+      high: 186
+    }
+  }
+  world: "Generic"
+  description: "You cast chaos spells at +1 caster level (from the chaos domain)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

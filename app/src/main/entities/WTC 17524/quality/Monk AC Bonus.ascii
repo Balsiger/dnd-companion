@@ -1,0 +1,75 @@
+entity {
+  name: "Monk AC Bonus"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 40
+      high: 40
+    }
+  }
+  world: "Generic"
+  description: "A monk is highly trained at dodging blows, and she has a sixth sense that lets her avoid even unanticipated attacks. When unarmored and unencumbered, the monk adds her Wisdom bonus (if any) to her AC. \n\nThese bonuses to AC apply even against touch attacks or when the monk is flat-footed. She loses these bonuses when she is immobilized or helpless, when she wears any armor, when she carries a shield, or when she carries a medium or heavy load. "
+  short_description: "A sixth sense that lets a monk avoid unanticipated attacks."
+  incomplete: "does not handle Wisdom score above 27."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "Wisdom above 25"
+  }
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "Wisdom above 23"
+  }
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "Wisdom above 21"
+  }
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "Wisdom above 19"
+  }
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "Wisdom above 17"
+  }
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "Wisdom above 15"
+  }
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "Wisdom above 13"
+  }
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "Wisdom above 11"
+  }
+}

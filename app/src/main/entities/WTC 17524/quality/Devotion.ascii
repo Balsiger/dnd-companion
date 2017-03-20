@@ -1,0 +1,34 @@
+entity {
+  name: "Devotion"
+  category: "resistance"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 36
+      high: 36
+    }
+  }
+  world: "Generic"
+  description: "An animal companion\342\200\232\303\204\303\264s devotion to its master is so complete that it gains a\n  +4 morale bonus on Will saves against enchantment spells and effects."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

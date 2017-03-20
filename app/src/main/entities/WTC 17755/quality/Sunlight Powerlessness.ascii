@@ -1,0 +1,35 @@
+entity {
+  name: "Sunlight Powerlessness"
+  category: "vulnerability"
+  synonym: "Powerlessness, Sunlight"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 232
+      high: 232
+    }
+  }
+  world: "Generic"
+  description: "Spectres are powerless in natural sunlight (not merely a daylightspell) and\n  flee from it. A spectre caught in sunlight cannot attack and can take only a\n  single move or attack action in a round.  "
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

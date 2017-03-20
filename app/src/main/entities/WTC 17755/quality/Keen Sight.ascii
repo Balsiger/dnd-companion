@@ -1,0 +1,35 @@
+entity {
+  name: "Keen Sight"
+  category: "sense"
+  synonym: "Sight, Keen"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 164
+      high: 164
+    }
+  }
+  world: "Generic"
+  description: "\\Monster{Kuo-toas} have excellent vision thanks to their two independently focusing eyes. Their eyesight is so keen that they can spot a moving object or creature even if it is invisible or ethereal. Only by remaining perfectly still can such objects or creatures avoid their notice."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

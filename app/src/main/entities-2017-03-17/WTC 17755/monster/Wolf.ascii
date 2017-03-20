@@ -1,0 +1,168 @@
+name: "Wolf"
+category: "natural"
+category: "animal"
+category: "predator"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 283
+    high: 283
+  }
+}
+world: "Generic"
+description: "Wolves are pack hunters known for their persistence and cunning."
+short_description: "Wolves are pack hunters known for their persistence and cunning."
+size {
+  size: MEDIUM
+  modifier: LONG
+}
+type: ANIMAL
+hit_dice {
+  number: 2
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 50
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 2
+    type: GENERAL
+  }
+}
+base_attack: 1
+abilities {
+  strength: 13
+  dexterity: 15
+  constitution: 15
+  wisdom: 12
+  intelligence: 2
+  charisma: 6
+}
+saves {
+  fortitude: 5
+  will: 1
+  reflex: 5
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+feat {
+  name: "Track"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Focus"
+  parameters {
+    text {
+      name: "qualifier"
+      text: "bite"
+    }
+  }
+}
+climate: TEMPERATE
+terrain: FOREST
+organization {
+  type: SOLITARY
+  number {
+  }
+}
+organization {
+  type: PAIR
+  number {
+  }
+}
+organization {
+  type: PACK
+  number {
+    number: 1
+    dice: 10
+    modifier: 6
+  }
+}
+challenge_rating {
+  leader: 1
+}
+treasure: NONE_TREASURE
+advancement {
+  range {
+    low: 3
+    high: 3
+  }
+}
+advancement {
+  range {
+    low: 4
+    high: 6
+  }
+}
+combat: "A favorite tactic is to send a few individuals against the foe\342\200\231s front\nwhile the rest of the pack circles and attacks from the flanks or rear."
+quality {
+  name: "trip"
+  condition {
+  }
+}
+quality {
+  name: "low-light vision"
+  condition {
+  }
+}
+quality {
+  name: "scent"
+  condition {
+  }
+}
+skill {
+  name: "hide"
+}
+skill {
+  name: "listen"
+  ranks: 2
+}
+skill {
+  name: "move silently"
+  ranks: 1
+}
+skill {
+  name: "spot"
+  ranks: 2
+}
+skill {
+  name: "survival"
+}

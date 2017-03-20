@@ -1,0 +1,131 @@
+entity {
+  name: "Orc"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 203
+      high: 203
+    }
+  }
+  world: "Generic"
+  description: "An orc\'s hair usually is black. It has lupine ears and reddish eyes. Orcs\n  prefer wearing vivid colors that many humans would consider unpleasant, such\n  as blood red, mustard yellow, yellow-green, and deep purple. Their equipment\n  is dirty and unkempt. Ad adult male orc is little over 6 feet tall and weighs\n  about 210 pounds. Females are slightly smaller.\n\n  The language an orc speaks varies slightly from tribe to tribe, but any orc\n  is understandable by someone else who speaks Orc. Some orcs know Goblin or\n  Giant as well.\n\n  Most encountered away from their home are warriors; the information in the\n  statistics block is for one of 1st level."
+  short_description: "The typical orc"
+}
+size {
+  size: MEDIUM
+  modifier: TALL
+}
+type: HUMANOID
+subtype: ORC
+hit_dice {
+  number: 1
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 3
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 1
+abilities {
+  strength: 17
+  dexterity: 11
+  constitution: 12
+  wisdom: 7
+  intelligence: 8
+  charisma: 6
+}
+saves {
+}
+primary_attack {
+  attacks {
+  }
+  mode: WEAPON
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 2
+        dice: 4
+        modifier: 1
+      }
+      condition {
+      }
+    }
+  }
+}
+primary_attack {
+  attacks {
+  }
+  mode: WEAPON
+  style: RANGED
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Alertness"
+  parameters {
+  }
+}
+climate: TEMPERATE
+terrain: HILLS
+organization {
+  type: GANG
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  nominator: 1
+  denominator: 2
+}
+treasure: STANDARD
+alignment: CHAOTIC_EVIL
+alignment_status: OFTEN
+language {
+  name: ORC
+}
+language {
+  modifier: SOME
+  name: GOBLIN
+}
+language {
+  modifier: SOME
+  name: GIANT
+}
+encounter: "This creature looks like a primitive human with gray skin\n                    and coarse hair. It has a stooped posture, low forehead,\n                    and a piglike face with prominent lower canines that\n                    resemble a boar\'s tusks."
+combat: "Orcs are proficient with all simple weapons, preferring\n                    those that cause the most damage in the least time. Many\n                    orcs who take up the \\Class{warrior} or \\Class{fighter}\n                    class also gain proficiency with the falchion or the\n                    greataxe as a martial weapon. "
+tactics: "They enjoy attacking from\n                    conealment and setting ambushes, and they obey the rules of\n                    war (such as honoring a truce) only as long as it is\n                    convenient for them."
+character: "Orcs are aggressive humanoids that raid, pillage, and\n                    battle other creatures. They have a hatred for\n                    \\Monster[elf]{elves} and \\Monster[dwarf]{dwarves} that\n                    began generations ago, and often kill such creatures on\n                    sight.\n\n                    When not actually fighting other creatures, orcs are\n                    usually planning raids or practicing their fighting\n                    skill."
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Spot"
+}

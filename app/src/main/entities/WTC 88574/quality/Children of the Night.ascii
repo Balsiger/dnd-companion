@@ -1,0 +1,35 @@
+entity {
+  name: "Children of the Night"
+  category: "action"
+  synonym: "Night, Children of"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 134
+      high: 134
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Once per day, a vampire can summon 4d8 dire rats, 10d10 bats, or 3d6 wolves\n  as a standard action. These creatures arrive in 2d6 rounds and serve the\n  vampire for up to 1 hour."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,42 @@
+entity {
+  name: "Skr5 of Kiriansalee"
+  synonym: "Divine Seeker 5, 5th level Divine Seeker"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 44
+      high: 45
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A dummy monster until NPC classes are supported."
+}
+size {
+}
+hit_dice {
+  number: 5
+  dice: 6
+}
+base_attack: 3
+abilities {
+}
+saves {
+  fortitude: 1
+  will: 1
+  reflex: 4
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+}

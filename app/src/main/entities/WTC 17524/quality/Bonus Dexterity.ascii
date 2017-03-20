@@ -1,0 +1,35 @@
+entity {
+  name: "Bonus Dexterity"
+  category: "resistance"
+  synonym: "Dexterity, Bonus"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 36
+      high: 36
+    }
+  }
+  world: "Generic"
+  description: "Add this value to the animal companion\342\200\232\303\204\303\264s Dexterity score."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

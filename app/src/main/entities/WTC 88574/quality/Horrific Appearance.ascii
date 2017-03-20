@@ -1,0 +1,35 @@
+entity {
+  name: "Horrific Appearance"
+  category: "aura"
+  synonym: "Appereance, Horrific"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 146
+      high: 146
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Any living creature within 60 feet that views Taharak must succeed at a\n  Fortitude save (DC 18) or immediately take 1d4 points of Strength drain,\n  1d4 points of Dexterity drain, and 1d4 points of Constitution drain. A\n  creature that successfully saves against this effect cannot be affected by\n  Taharak\342\200\232\303\204\303\264s horrific appearance again for one day."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

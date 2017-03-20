@@ -1,0 +1,42 @@
+entity {
+  name: "Blood Drain"
+  category: "action"
+  synonym: "Drain, Blood"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 237
+      high: 237
+    }
+  }
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 134
+      high: 134
+    }
+  }
+  world: "Generic"
+  description: "The creature drains blood, dealing Constitution damage in any round by\n  $name. $notes"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

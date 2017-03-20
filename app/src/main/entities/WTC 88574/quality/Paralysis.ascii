@@ -1,0 +1,34 @@
+entity {
+  name: "Paralysis"
+  category: "attack"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 118
+      high: 118
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Any creature hit by an attack must succeed at a Fortitude save or be\n  paralyzed. The save DC is Charisma-based."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

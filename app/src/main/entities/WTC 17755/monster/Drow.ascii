@@ -1,0 +1,161 @@
+entity {
+  name: "Drow"
+  synonym: "Elf, Dark"
+  synonym: "Dark Elf"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 102
+      high: 104
+    }
+  }
+  world: "Generic"
+  description: "Also known as dark elves, drow are a depraved and evil subterranean offshoot.\nWhite is the most common hair color among drow, but almost any pale shade is possible. Drow tend to be smaller and thinner than other sorts of elves, and their eyes are often a vivid red. Their society is matriarchal and rigidly controlled by the priesthood.\nThe drow\'s patron deity is the spider goddess Lolth. Female drow favor the cleric class rather than wizard and have access to two of the following domains: Chaos, Destruction, Evil, or Trickery.\nDrow usually coat their arrowswith a potent venom."
+}
+size {
+  size: MEDIUM
+  modifier: TALL
+}
+type: HUMANOID
+subtype: ELF
+hit_dice {
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+}
+base_attack: 1
+abilities {
+  strength: 13
+  dexterity: 13
+  wisdom: 9
+  intelligence: 12
+}
+saves {
+  fortitude: 2
+  will: 1
+  reflex: 1
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: WEAPON
+  style: MELEE
+  damage {
+    damage {
+      base {
+      }
+      condition {
+      }
+    }
+  }
+}
+secondary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: WEAPON
+  style: RANGED
+  damage {
+    damage {
+      base {
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 1
+}
+treasure: STANDARD
+alignment: NEUTRAL_EVIL
+alignment_status: USUALLY
+level_adjustment: 2
+language {
+  modifier: AUTOMATIC
+  name: COMMON
+}
+language {
+  modifier: AUTOMATIC
+  name: ELVEN
+}
+language {
+  modifier: AUTOMATIC
+  name: UNDERCOMMON
+}
+language {
+  modifier: BONUS
+  name: ABYSSAL
+}
+language {
+  modifier: BONUS
+  name: AQUAN
+}
+language {
+  modifier: BONUS
+  name: DRACONIC
+}
+language {
+  modifier: BONUS
+  name: DROW_SIGN
+}
+language {
+  modifier: BONUS
+  name: GNOLL
+}
+language {
+  modifier: BONUS
+  name: GOBLIN
+}
+language {
+  modifier: BONUS
+  name: KUO_TOA
+}
+encounter: "This humanoid is slender and shorter than a human. It has jet black skin and white hair."
+skill {
+  name: "Hide"
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Search"
+}
+skill {
+  name: "Spot"
+}

@@ -1,0 +1,34 @@
+entity {
+  name: "Strands"
+  category: "action"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 216
+      high: 216
+    }
+  }
+  world: "Generic"
+  description: "Most encounters with a \\Monster{roper} begin when it fires strong, sticky\n   strands. The creature can have up to six strands at once, and they can\n   strike up to 50 feet away (no range increment).  If a strand is severed, the\n   roper can extrude a new one on its next turn as a free action."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,34 @@
+entity {
+  name: "Flight"
+  category: "option"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 262
+      high: 262
+    }
+  }
+  world: "Generic"
+  description: "The monster can cease or resume flight as a free action."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

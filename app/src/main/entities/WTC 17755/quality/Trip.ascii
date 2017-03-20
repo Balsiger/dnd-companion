@@ -1,0 +1,34 @@
+entity {
+  name: "Trip"
+  category: "attack"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 281
+      high: 281
+    }
+  }
+  world: "Generic"
+  description: "A wolf that hits with a bite attack can attempt to trip the opponent (+$value\n  check modifier) as a free action without making a touch attack or provoking\n  an attack of opportunity. If the attempt fails, the opponent cannot react to\n  trip the wolf.  "
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

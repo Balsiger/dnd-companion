@@ -1,0 +1,27 @@
+entity {
+  name: "Poison"
+  category: "option"
+  world: "Generic"
+  description: "$type, DC $dc, initial damage $initial, secondary damage $secondary. The\n  save DC is Constitution based."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

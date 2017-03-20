@@ -1,0 +1,31 @@
+entity {
+  name: "Racial Skill Bonus"
+  category: "bonus"
+  category: "skill"
+  category: "racial"
+  synonym: "Skill Bonus, Racial"
+  synonym: "Bonus, Racial Skill"
+  world: "Generic"
+  description: "A bonus to a skill due to race."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

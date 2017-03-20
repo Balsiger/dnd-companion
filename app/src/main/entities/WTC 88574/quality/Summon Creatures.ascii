@@ -1,0 +1,36 @@
+entity {
+  name: "Summon Creatures"
+  category: "action"
+  synonym: "Creatures, Summon"
+  synonym: ""
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 1
+      high: 1
+    }
+  }
+  world: "Forgotten Realms"
+  description: "This ability functions like a summon monster spell of the appropriate level,\n  except that it has only a limited chance of success. Once per day a maurezhi\n  can attempt to summon 1d4 ghouls with a 100% chance of success, or 2d4\n  dretches with a 60% chance of success."
+}
+type: SPELL_LIKE
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

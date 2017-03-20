@@ -1,0 +1,35 @@
+entity {
+  name: "See in Darkness"
+  category: "sense"
+  synonym: "Darkness, See in"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 51
+      high: 51
+    }
+  }
+  world: "Generic"
+  description: "All baatezu can see perfectly in darkness of any kind, even that created by\n  a deeper darkness spell."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

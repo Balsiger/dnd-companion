@@ -1,0 +1,36 @@
+entity {
+  name: "Not Subject To Flanking"
+  category: "immunity"
+  synonym: "Flanking, Not Subject to"
+  synonym: "Cannot be Flanked"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 1
+      high: 1
+    }
+  }
+  world: "Generic"
+  description: "The creature cannot be flanked."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

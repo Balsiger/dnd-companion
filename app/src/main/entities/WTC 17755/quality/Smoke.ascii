@@ -1,0 +1,34 @@
+entity {
+  name: "Smoke"
+  category: "action"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 195
+      high: 195
+    }
+  }
+  world: "Generic"
+  description: "During the excitement of battle, a nightmare snorts and neighs with\n  rage. This snorting fills a 15-foot cone with a hot, sulfurous smoke that\n  chokes and blinds opponents. Anyone in the cone must succeed on a DC 16\n  Fortitude save or take a \342\200\232\303\204\303\2542 penalty on all attack and damage rolls until 1d6\n  minutes after leaving the cone. The cone lasts 1 round, and the nightmare\n  uses it once as a free action during its turn each round. The save DC is\n  Constitution-based.\n\n  Because of the smoke it gives off, a nightmare has concealment against\n  creatures 5 feet away and total concealment against creatures 10 feet or\n  farther away. The smoke does not obscure the nightmare\342\200\232\303\204\303\264s vision at all."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

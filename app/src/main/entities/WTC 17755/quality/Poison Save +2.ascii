@@ -1,0 +1,50 @@
+entity {
+  name: "Poison Save +2"
+  synonym: "+2 Poison Save"
+  synonym: "+2 Save, Poison"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 92
+      high: 92
+    }
+  }
+  world: "Generic"
+  description: "The creatures gets a +2 racial bonus to saves against poison."
+  short_description: "+2 racial bonus against poison."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against poison"
+  }
+}
+will_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against poison"
+  }
+}
+fortitude_modifier {
+  modifier {
+    value: 2
+    type: RACIAL
+    condition: "against poison"
+  }
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

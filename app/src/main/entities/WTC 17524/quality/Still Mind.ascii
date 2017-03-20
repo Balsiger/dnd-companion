@@ -1,0 +1,35 @@
+entity {
+  name: "Still Mind"
+  category: "resistance"
+  synonym: "Mind, Still"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 41
+      high: 41
+    }
+  }
+  world: "Generic"
+  description: "A monk of 3rd level or higher gains a +2 bonus on saving throws against\n  spells and effects from the school of enchantment, since her meditation and\n  training improve her resistance to mind-affecting attacks."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

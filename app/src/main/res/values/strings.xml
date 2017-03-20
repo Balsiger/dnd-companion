@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">D&amp;D Companion</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- campaign selection -->
+    <string name="campaign_title">Select a campaign:</string>
+    <string name="campaign_title_empty">
+        No campaigns available.\nYou have to add one to get started.
+    </string>
+    <string name="campaign_delete_title">Delete Campaign</string>
+    <string name="campaign_delete_message">
+        Do you really want to delete this campaign?
+    </string>
+    <string name="delete_campaign_icon">Delete the @string/campaign_add_title</string>
+
+    <!-- campaign edit -->
+    <string name="campaign_add_title">Add Campaign</string>
+    <string name="campaign_edit_title">Edit Campaign</string>
+    <string name="campaign_edit_name">Name</string>
+    <string name="title_activity_campaign">Campaign</string>
+
+    <!-- character selection -->
+    <string name="character_title">Select a character</string>
+    <string name="character_title_empty">
+        No characters available.\nYou have to add one to get started.
+    </string>
+    <string name="character_delete_title">Delete Character</string>
+    <string name="character_delete_message">
+        Do you really want to delete this character?
+    </string>
+    <string name="title_activity_character">Create Character</string>
+
+    <!-- character -->
+    <string name="character_name">Name</string>
+    <string name="character_race">Race</string>
+    <string name="character_gender">Gender</string>
+    <string name="character_label_level">Level</string>
+    <string name="character_select_class">Select Class</string>
+    <string name="character_edit_name">Edit Name</string>
+    <string name="character_edit_race">Edit Race</string>
+    <string name="character_edit_gender">Edit Gender</string>
+    <string name="character_edit_level">Edit Level</string>
+    <string name="character_edit_levels">Edit Levels</string>
+    <string name="character_edit_hp_label">hit points</string>
+    <string name="character_edit_ability_increase_label">increase</string>
+    <string name="hit_points">Hit Points</string>
+    <string name="character_create_title">Create Character</string>
+    <string name="abilityIncreaseTitle">Select Ability to increase</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value"/>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+</resources>

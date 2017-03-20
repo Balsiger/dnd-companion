@@ -1,0 +1,95 @@
+entity {
+  name: "Heavy Warhorse"
+  base: "horse"
+  category: "war"
+  category: "trained"
+  synonym: "Warhorse, Heavy"
+  world: "Generic"
+  description: "These animals are similar to heavy horses but are trained and bred for strength and aggression. A heavy warhorse can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.\n\n\\bold{Carrying Capacity:} A light load for a heavy warhorse is up to 300 pounds; a medium load, 301\342\200\223600 pounds; and a heavy load, 601\342\200\223900 pounds. A heavy warhorse can drag 4,500 pounds.\n"
+  short_description: "A heavy horse trained for fighting."
+}
+size {
+}
+hit_dice {
+  number: 4
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 50
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 4
+    type: GENERAL
+  }
+}
+base_attack: 3
+abilities {
+  strength: 18
+  dexterity: 13
+  constitution: 17
+  wisdom: 13
+  intelligence: 2
+  charisma: 6
+}
+saves {
+  fortitude: 7
+  will: 2
+  reflex: 5
+}
+primary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: HOOF
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+      }
+      condition {
+      }
+    }
+  }
+}
+secondary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 4
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+challenge_rating {
+  leader: 2
+}
+skill {
+  name: "listen"
+  ranks: 4
+}
+skill {
+  name: "spot"
+  ranks: 3
+}

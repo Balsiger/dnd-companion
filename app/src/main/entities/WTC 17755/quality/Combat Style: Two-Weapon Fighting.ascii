@@ -1,0 +1,27 @@
+entity {
+  name: "Combat Style: Two-Weapon Fighting"
+  synonym: "Two-Weapon Fighting Combat Style"
+  description: "If the character selects two-weapon combat, he is treated as having the Two-Weapon Fighting feat, even if he does not have the normal prerequisites for that feat.\n\nThe benefits of the character\'s chosen style apply only when he wears light or no armor. He loses all benefits of his combat style when wearing medium or heavy armor."
+  short_description: "Gain the two-weapon fighting feat when wearing no or light armor."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+bonus_feat: "Two-weapon fighting"
+ac_modifier {
+}

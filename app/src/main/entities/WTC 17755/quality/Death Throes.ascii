@@ -1,0 +1,35 @@
+entity {
+  name: "Death Throes"
+  category: "health"
+  synonym: "Throes, Death"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 41
+      high: 41
+    }
+  }
+  world: "Generic"
+  description: "When killed, a balor explodes in a blinding flash of light that deals 100\n  points of damage to anything within 100 feet (Reflex DC 30 half ). This\n  explosion automatically destroys any weapons the balor is holding. The save\n  DC is Constitution-based."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

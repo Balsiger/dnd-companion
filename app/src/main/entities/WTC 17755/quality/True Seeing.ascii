@@ -1,0 +1,36 @@
+entity {
+  name: "True Seeing"
+  category: "sense"
+  synonym: "True Seeing"
+  synonym: "Seeing, True"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 41
+      high: 41
+    }
+  }
+  world: "Generic"
+  description: "Balors have a continuous true seeing ability, as the spell (caster level 20th)."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

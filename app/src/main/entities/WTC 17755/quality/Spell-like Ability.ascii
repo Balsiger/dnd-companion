@@ -1,0 +1,30 @@
+entity {
+  name: "Spell-like Ability"
+  category: "action"
+  synonym: "Ability, Spell-like"
+  world: "Generic"
+  description: "Can cast the spell \\SpellRef{$name} [[range($day, 1: $day/day, 99: at_will)]]."
+  short_description: "Can cast \\SpellRef{$name} [[range($day, 1: $day/day, 99: at_will)]]."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+name_format: "$name [[range($day, 1: $day/day, 99: at_will)]]"
+ac_modifier {
+}

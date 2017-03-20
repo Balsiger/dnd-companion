@@ -1,0 +1,27 @@
+entity {
+  name: "Constrict"
+  category: "action"
+  world: "Generic"
+  description: "A creature with this special attack can crush an opponent, dealing $damage\n  damage, after making a successful grapple check. If the creature\n  also has the \\Quality{improved grab} ability, it deals constriction damage in\n  addition to damage dealt by the weapon used to grab.\n\n  $notes"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

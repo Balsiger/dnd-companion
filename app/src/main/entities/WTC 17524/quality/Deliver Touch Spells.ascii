@@ -1,0 +1,35 @@
+entity {
+  name: "Deliver Touch Spells"
+  category: "option"
+  synonym: "Touch Spells, Deliver"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 53
+      high: 53
+    }
+  }
+  world: "Generic"
+  description: "The familiar can deliver touch spells for the master. If the master and the\n  familiar are in contact at the time the master casts a touch spell, he can\n  designate his familiar as the \'toucher.\' The familiar can then deliver the\n  touch spell just as the master could. As usual, if the master casts another\n  spell before the touch is delivered, the touch spell dissipates."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,34 @@
+entity {
+  name: "Disease"
+  category: "option"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 1
+      high: 1
+    }
+  }
+  world: "Generic"
+  description: "Filth fever\342\200\232\303\204\303\256bite, Fortitude DC 11, incubation period 1d3 days, damage 1d3\n  Dex and 1d3 Con. The save DC is Constitution-based."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,270 @@
+entity {
+  name: "Stone Giant"
+  category: "giant"
+  synonym: "Giant, Stone"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 124
+      high: 125
+    }
+  }
+  world: "Generic"
+  description: "Stone giants have a largely undeserved reputation as rock-throwing hooligans. In fact, they tend to be somewhat shy around strangers.\n\nStone giants prefer thick leather garments, dyed in shades of brown and gray to match the stone around them.\n\nAdults are about 12 feet tall and weigh about 1,500 pounds. Stone giants can live to be 800 years old.\n\nStone giants may tend to be shy around strangers, but they are by no means timid. Many stone giants have an artistic streak. Some draw and paint scenes of their lives on the walls of their lairs and on tanned hide scrolls. Some are fond of music and play stone flutes and drums. Others make simple jewelry, fashioning painted stone beads into necklaces.\n\nMost stone giants are playful, especially at night. They are fond of rock-throwing contests and other games that test their might. Groups of giants often gather to toss rocks at each other, the losing side being those who are hit more often. Travelers\342\200\231 reports of such contests have given stone giants their reputation for wildness.\n\nA stone giant\342\200\231s bag usually contains 2d12 throwing rocks, 1d4+6 mundane items, and the giant\342\200\231s personal wealth. A stone giant\342\200\231s possessions are neither particularly clean nor particularly dirty, but most of them are made from stone."
+}
+size {
+  size: LARGE
+  modifier: TALL
+}
+type: GIANT
+subtype: EARTH
+hit_dice {
+  number: 14
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 11
+    type: GENERAL
+  }
+}
+base_attack: 10
+abilities {
+  strength: 27
+  dexterity: 15
+  constitution: 19
+  wisdom: 12
+  intelligence: 10
+  charisma: 11
+}
+saves {
+  fortitude: 13
+  will: 7
+  reflex: 6
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: WEAPON
+  style: MELEE
+  damage {
+    damage {
+      base {
+      }
+      condition {
+      }
+    }
+  }
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: SLAM
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 4
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+feat {
+  name: "Combat Reflexes"
+  parameters {
+  }
+}
+feat {
+  name: "Iron Will"
+  parameters {
+  }
+}
+feat {
+  name: "Point Blank Shot"
+  parameters {
+  }
+}
+feat {
+  name: "Power Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Precise Shot"
+  parameters {
+  }
+}
+climate: TEMPERATE
+terrain: MOUNTAIN
+organization {
+  type: SOLITARY
+  number {
+  }
+}
+organization {
+  type: GANG
+  number {
+    number: 1
+    dice: 4
+    modifier: 1
+  }
+}
+organization {
+  type: BAND
+  number {
+    number: 1
+    dice: 4
+    modifier: 5
+  }
+  plus {
+    number {
+    }
+    text: "35% noncombatants"
+  }
+}
+organization {
+  type: HUNTING_PARTY
+  number {
+    number: 1
+    dice: 4
+    modifier: 5
+  }
+  plus {
+    number {
+    }
+    text: "1 elder"
+  }
+}
+organization {
+  type: TRADING_PARTY
+  number {
+    number: 1
+    dice: 4
+    modifier: 5
+  }
+  plus {
+    number {
+    }
+    text: "1 elder"
+  }
+}
+organization {
+  type: RAIDING_PARTY
+  number {
+    number: 1
+    dice: 4
+    modifier: 5
+  }
+  plus {
+    number {
+    }
+    text: "1 elder"
+  }
+}
+challenge_rating {
+  leader: 8
+}
+treasure: STANDARD
+alignment: TRUE_NEUTRAL
+alignment_status: USUALLY
+level_adjustment: 4
+language {
+  modifier: AUTOMATIC
+  name: GIANT
+}
+encounter: "This giant resembles a lean, muscular human. Its hard, hairless flesh is smooth and gray. It has gaunt facial features and deep-sunken, black eyes that makes it seem grim."
+combat: "Stone giants fight from a distance whenever possible, but if they can\342\200\231t avoid melee, they use gigantic clubs chiseled out of stone."
+character: "Stone giants prefer to dwell in deep caves high on rocky, storm swept\nmountains. Usually, groups live fairly close together (no more than a day\342\200\231s travel apart) for a sense of community and protection. Most stone giant lairs have 2d4 neighboring lairs. Some older stone giants choose to live in solitude, meditating and creating artwork. Many of them become elders after several decades.\n\nMost groups of stone giants subsist by hunting, gathering, and herding mountain animals such as sheep or goats. They trade with any other nearby communities, exchanging foodstuffs and stone\ngoods for cloth, pottery, and manufactured items. Groups of evil giants often go raiding or extort tolls from mountain travelers."
+possession {
+  text: "hide armor"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "greatclub (large)"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "rock (large)"
+  count {
+    number: 2
+    dice: 12
+  }
+}
+possession {
+  text: "RANDOM:mundane"
+  count {
+    number: 1
+    dice: 4
+    modifier: 6
+  }
+}
+quality {
+  name: "rock throwing"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "darkvision"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "rock catching"
+  parameters {
+  }
+  condition {
+  }
+}
+skill {
+  name: "climb"
+  ranks: 11
+}
+skill {
+  name: "hide"
+  ranks: 6
+}
+skill {
+  name: "jump"
+  ranks: 11
+}
+skill {
+  name: "spot"
+  ranks: 12
+}

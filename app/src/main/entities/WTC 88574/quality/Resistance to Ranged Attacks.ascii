@@ -1,0 +1,35 @@
+entity {
+  name: "Resistance to Ranged Attacks"
+  category: "resistance"
+  synonym: "Ranged Attacks, Resistance to"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 139
+      high: 139
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A displacer beast gains a +2 resistance bonus on saves against any ranged\n  spell or ranged magical attack that specifically targets it, except for\n  ranged touch attacks."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

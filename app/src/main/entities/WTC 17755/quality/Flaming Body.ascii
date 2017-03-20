@@ -1,0 +1,35 @@
+entity {
+  name: "Flaming Body"
+  category: "aura"
+  synonym: "Body, Flaming"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 41
+      high: 41
+    }
+  }
+  world: "Generic"
+  description: "The body of a balor is wreathed in flame.  Anyone grappling a balor takes\n  6d6 points of fire damage each round."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

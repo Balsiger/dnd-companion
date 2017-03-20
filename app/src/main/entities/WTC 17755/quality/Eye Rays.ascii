@@ -1,0 +1,35 @@
+entity {
+  name: "Eye Rays"
+  category: "attack"
+  synonym: "Rays, Eye"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 26
+      high: 26
+    }
+  }
+  world: "Generic"
+  description: "Each of a beholder\342\200\232\303\204\303\264s ten eye rays resembles a spell cast by a 13th- level\n  caster. Each eye ray has a range of 150 feet and a save DC of 17. The save\n  DCs are Charisma-based. The ten eye rays include: Charm Monster, Charm Person,\n  Disintegrate, Fear, Finger of Death, Flesh to Stone, Inflict Moderate Wounds,\n  Sleep, and Slow."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

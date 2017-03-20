@@ -1,0 +1,41 @@
+entity {
+  name: "Hie3 of Kiaransalee"
+  category: "dummy"
+  world: "Generic"
+  description: "Dummy character class."
+  short_description: "Dummy"
+}
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 3
+  dice: 8
+}
+natural_armor {
+}
+base_attack: 1
+abilities {
+}
+saves {
+  fortitude: 3
+  will: 3
+  reflex: 1
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 3
+}

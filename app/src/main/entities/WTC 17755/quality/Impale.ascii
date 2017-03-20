@@ -1,0 +1,34 @@
+entity {
+  name: "Impale"
+  category: "attack"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 51
+      high: 51
+    }
+  }
+  world: "Generic"
+  description: "A barbed devil deals 3d8+9 points of piercing damage to a grabbed opponent\n  with a successful grapple check."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Plane Shift"
+  category: "action"
+  synonym: "Shift, Plane"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 42
+      high: 42
+    }
+  }
+  world: "Generic"
+  description: "This ability affects only the bebilith. It is otherwise similar to the spell\n   (caster level 12th)."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

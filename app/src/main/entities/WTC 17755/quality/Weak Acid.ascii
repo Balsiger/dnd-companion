@@ -1,0 +1,35 @@
+entity {
+  name: "Weak Acid"
+  category: "attack"
+  synonym: "Acid, Weak"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 203
+      high: 203
+    }
+  }
+  world: "Generic"
+  description: "An ochre jelly secretes a digestive acid that dissolves only flesh. Any\n   melee hit or constrict attack deals acid damage."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

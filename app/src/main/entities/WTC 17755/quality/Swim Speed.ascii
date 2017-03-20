@@ -1,0 +1,35 @@
+entity {
+  name: "Swim Speed"
+  category: "action"
+  synonym: "Speed, Swim"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 306
+      high: 306
+    }
+  }
+  world: "Generic"
+  description: "These creatures always have swim speeds and thus can move in water without\n  making Swim checks"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

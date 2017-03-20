@@ -1,0 +1,33 @@
+entity {
+  name: "Stench"
+  category: "aura type Ex"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 246
+      high: 246
+    }
+  }
+  world: "Forgotten Realms"
+  description: "When a troglodyte is angry or frightened, it secretes an oily, musklike\n  chemical that nearly every form of animal life finds offensive. All living\n  creatures (except troglodytes) within 30 feet of a troglodyte must succeed on\n  a DC 13 Fortitude save or be sickened for 10 rounds. The save DC is\n  Constitution-based. Creatures that successfully save cannot be affected by\n  the same troglodyte\342\200\232\303\204\303\264s stench for 24 hours. A delay poison or neutralize\n  poison spell removes the effect from the sickened creature. Creatures with\n  immunity to poison are unaffected, and creatures resistant to poison receive\n  their normal bonus on their saving throws."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

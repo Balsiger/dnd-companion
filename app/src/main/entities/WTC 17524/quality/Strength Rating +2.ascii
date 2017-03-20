@@ -1,0 +1,47 @@
+entity {
+  name: "Strength Rating +2"
+  category: "strength"
+  category: "rating"
+  synonym: "Rating +2, Strength"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 119
+      high: 119
+    }
+  }
+  world: "Generic"
+  description: "All composite bows are made with a particular strength rating (that is, each requires a minimum Strength modifier to use with proficiency). If your Strength bonus is less than the strength rating of the composite bow, you can\342\200\231t effectively use it, so you take a \342\200\2232 penalty on attacks with it. The default composite longbow requires a Strength modifier of +0 or higher to use with proficiency. A composite longbow can be made with a high strength rating (representing an especially heavy pull) to take advantage of an above-average Strength score; this feature allows you to add your Strength bonus to damage, up to the maximum bonus indicated for the bow. \n\nEach point of Strength bonus granted by the bow adds 100 gp to its cost. For instance, a composite longbow (+1 Str bonus) costs 200 gp, while a composite longbow (+4 Str bonus) costs 500 gp.\n\nFor example, Tordek has a +2 Strength bonus. With a regular composite longbow, he gets no modifier on damage rolls. For 200 gp, he can buy a composite longbow (+1 Str bonus), which lets him add +1 to his damage rolls. For 300 gp, he can buy one that lets him add his entire +2 Strength bonus. Even if he paid 400 gp for a\ncomposite longbow (+3 Str bonus), he would still get only a +2 bonus on damage rolls and takes a \342\200\2232 penalty on attacks with it because\nhis Strength is insufficient to use the weapon to best advantage. The bow can\342\200\231t grant him a higher bonus than he already has. "
+  short_description: "Grants a +2 damage bonus to attacks."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+  modifier {
+    value: -2
+    type: GENERAL
+    condition: "Strength below 14"
+  }
+}
+damage_modifier {
+  modifier {
+    value: 2
+    type: GENERAL
+    condition: "Strength above 14"
+  }
+}
+ac_modifier {
+}

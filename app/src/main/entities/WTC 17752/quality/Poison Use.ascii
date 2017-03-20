@@ -1,0 +1,35 @@
+entity {
+  name: "Poison Use"
+  category: "option"
+  synonym: "Use, Poison"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 181
+      high: 181
+    }
+  }
+  world: "Generic"
+  description: "The character is trained in the use of poison and never risks accidentally\n  poisoning themselves when applying poison to a blade."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

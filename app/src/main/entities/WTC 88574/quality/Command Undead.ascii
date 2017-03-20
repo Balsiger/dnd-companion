@@ -1,0 +1,35 @@
+entity {
+  name: "Command Undead"
+  category: "action"
+  synonym: "Undead, Command"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 123
+      high: 123
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Because the quth-maren was an evil cleric in life, it can command undead as\n  a 5th-level evil cleric. It cannot rebuke undead, but it can dispel turning\n  or bol- ster other undead."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

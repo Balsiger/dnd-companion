@@ -1,0 +1,35 @@
+entity {
+  name: "Spit Blood"
+  category: "action"
+  synonym: "Blood, Spit"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 123
+      high: 123
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Once every 1d4 rounds, as a standard action, a quth-maren can spit a glob of\n  its acidic blood as a grenadelike weapon attack. The quth-maren must make a\n  successful ranged touch attack to hit its target. This attack has a range\n  increment of 10 feet, with a maximum range of 5 range increments. The glob\n  deals 2d6 points of acid damage on a direct hit, and 2 points of splash\n  damage 5 feet of where it lands."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

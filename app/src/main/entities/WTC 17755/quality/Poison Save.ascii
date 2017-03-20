@@ -1,0 +1,29 @@
+entity {
+  name: "Poison Save"
+  category: "resistance"
+  synonym: "Save, Poison"
+  world: "Generic"
+  description: "The creature gets a +$value to saves against Poison."
+  short_description: "+$value for saves against Poison."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

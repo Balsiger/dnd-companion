@@ -1,0 +1,35 @@
+entity {
+  name: "Aura of Despair"
+  category: "aura"
+  synonym: "Despair, Aura of"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 139
+      high: 139
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Zedarr radiates a malign aura that causes every enemy within 10 feet of him\nto suffer a \342\200\232\303\204\303\2542 morale penalty on all saving throws."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

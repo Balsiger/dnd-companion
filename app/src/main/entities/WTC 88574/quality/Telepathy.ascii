@@ -1,0 +1,34 @@
+entity {
+  name: "Telepathy"
+  category: "communication"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 138
+      high: 138
+    }
+  }
+  world: "Forgotten Realms"
+  description: "You can communicate with any creature within $range that has a language."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,100 @@
+entity {
+  name: "Human Fighter 1st"
+  base: "human"
+  synonym: "Fighter, 1st Human"
+  synonym: "1st Level Fighter, Human"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 117
+      high: 117
+    }
+  }
+  description: "A standard first level fighter"
+  short_description: "A 1st level fighter"
+}
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 1
+  dice: 10
+}
+natural_armor {
+}
+base_attack: 1
+abilities {
+  strength: 15
+  dexterity: 13
+  constitution: 14
+  wisdom: 12
+  intelligence: 10
+  charisma: 8
+}
+saves {
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Exotic Weapon Proficiency"
+  parameters {
+  }
+}
+feat {
+  name: "Power Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Blind-Fight"
+  parameters {
+  }
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 1
+}
+treasure: NONE_TREASURE
+possession {
+  text: "Splint Mail"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Heavy Steel Shield"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Bastard Sword = qualities Masterwork Weapon"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Composite Longbow"
+  count {
+    modifier: 1
+  }
+}
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Jump"
+}

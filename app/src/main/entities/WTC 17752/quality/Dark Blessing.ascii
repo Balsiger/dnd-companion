@@ -1,0 +1,35 @@
+entity {
+  name: "Dark Blessing"
+  category: "resistance"
+  synonym: "Blessing, Dark"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 182
+      high: 182
+    }
+  }
+  world: "Generic"
+  description: "A blackguard applies his Charisma modifier (if positive) as a bonus on all\n  saving throws."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

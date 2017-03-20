@@ -1,0 +1,34 @@
+entity {
+  name: "Domination"
+  category: "attack"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 134
+      high: 134
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A vampire can  make a gaze attack against one creature within 30  feet as a\n  standard action.  The target must make a successful Will save (DC as noted in\n  individual  statistics  block)  or  be  affected  as  though  by  a  dominate\n  person spell (caster level  12th)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

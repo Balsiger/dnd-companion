@@ -1,0 +1,35 @@
+entity {
+  name: "Not Subject To Critical Hits"
+  category: "immunity"
+  synonym: "Critical Hits, Not Subject to"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 1
+      high: 1
+    }
+  }
+  world: "Generic"
+  description: "The creature takes no additional damage from critical hits."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

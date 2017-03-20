@@ -1,0 +1,355 @@
+entity {
+  name: "Ranger"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 46
+      high: 49
+    }
+  }
+  world: "Generic"
+  description: "The forests are home to fierce and cunning creatures, such as bloodthirsty owlbears and malicious displacer\nbeasts. But more cunning and powerful than these monsters is the ranger, a skilled hunter and stalker. He knows the woods as if they were his home (as indeed they are), and he knows his prey in deadly detail."
+  short_description: "A skilled hunter and stalker."
+}
+abbreviation: "Rgr"
+adventures: "A ranger often accepts the role of protector, aiding those who live in or travel through the woods. In addition, a ranger carries grudges against certain types of creatures and looks for opportunities to find and destroy them. He may adventure for all the reasons that a fighter does."
+characteristics: "A ranger can use a variety of weapons and is quite capable in combat. His skills allow him to survive in the wilderness, to find his prey, and to avoid detection. He also has special knowledge about certain types of creatures, which makes it easier for him to find and defeat such foes. Finally, an experienced ranger has such a tie to nature that he can actually draw upon natural power to cast divine spells, much as a druid does."
+alignment_options: "Rangers can be of any alignment. Most are good, and such rangers usually function as protectors of the wild areas. In this role, a ranger seeks out and destroys or drives off evil creatures that threaten the wilderness. Good rangers also protect those who travel through the wilderness, serving sometimes as guides and sometimes as unseen guardians. Most rangers are also chaotic, preferring to follow the ebb and flow of nature or of their own hearts instead of rigid rules. Evil rangers, though rare, are much to be feared. They revel in nature?s thoughtless cruelty and seek to emulate her most fearsome predators. They gain divine spells just as good rangers do, for nature herself is indifferent to\ngood and evil."
+religion: "Though a ranger gains his\ndivine spells from the power of nature, he like anyone else may worship a chosen deity. Ehlonna (goddess of the wood- lands) and Obad-Hai (god of nature) are the most common deities revered by,\nthough some prefer more martial deities."
+background: "Some rangers gained their training as part of special military teams, but most learned their skills from solitary masters who accepted them as students and assistants. The rangers of a particular master may count themselves as cohorts, or they may be rivals for the status of best student and thus the rightful heir\nto their master?s fame."
+races: "Elves often choose the ranger?s\npath. They are at home in the woods, and they have the grace to move stealthily. Half-elves who feel their elf parents? connection to the woods are also likely to adopt this class. Humans are often rangers as well, being adaptable enough to learn their way around the woods even if it doesn?t come naturally to them. Half- orcs may find the life of a ranger more comfortable than life among cruel and taunting humans (or orcs). Gnome rangers are more common than gnome fighters, but still they tend to remain in their own lands rather than adventure among ?the big people.? Dwarf rangers are rare, but they can be quite effective. Instead of living in the surface wilderness, they are at home in the endless caverns beneath the earth. Here they hunt down and destroy the enemies of dwarvenkind with the relentless precision for which dwarves are known. Dwarf rangers are often known as cavers. Halfling rangers are highly respected for their ability to help communities of halflings prosper as they pursue their nomadic lifestyle.\n\nAmong the savage humanoids, only gnolls are commonly rangers, using their skills to slyly stalk their prey."
+otherClasses: "Rangers get along well with druids and to some extent with barbarians. They are known to bicker with paladins, mostly because they often share goals but differ in style, tactics, approach, philosophy, and esthetics. Since rangers don?t often look to other people for support or friendship, they find it easy to tolerate people who are quite different from themselves, such as bookish wizards and preachy clerics. They just don?t care enough to get upset about others? differences."
+role: "The ranger?s best role is that of a scout and secondary combatant. Without the heavy armor of the fighter or the staying power of the barbarian, the ranger should focus on opportunistic and ranged attacks. Most rangers user their animal companions as sentries, scouts, or to assist them in melee combat."
+important_abilities: "Dexterity is important for a ranger both because he\ntends to wear light armor and because several ranger skills are based on that ability. Strength is important because rangers frequently get involved in combat. Several ranger skills are based on Wisdom, and a Wisdom score of 14 or higher is required to get access to the most powerful ranger spells. A Wisdom score of 11 or higher is required to cast any ranger spells at all. One of the ranger?s trademark skills, his ability to track foes, is based on Wisdom."
+allowed_alignment: ANY_ALIGNMENT
+hit_dice {
+  number: 1
+  dice: 8
+}
+skill_points: 6
+class_skill: "climb"
+class_skill: "concentration"
+class_skill: "craft"
+class_skill: "handle animal"
+class_skill: "heal"
+class_skill: "hide"
+class_skill: "jump"
+class_skill: "knowledge dungeoneering"
+class_skill: "knowledge geography"
+class_skill: "knowledge nature"
+class_skill: "listen"
+class_skill: "move silently"
+class_skill: "profession"
+class_skill: "ride"
+class_skill: "search"
+class_skill: "spot"
+class_skill: "survival"
+class_skill: "swim"
+class_skill: "use rope"
+weapon_proficiency: SIMPLE
+weapon_proficiency: MARTIAL
+armor_proficiency: LIGHT
+armor_proficiency: SHIELD
+quality {
+  level: 1
+  entity {
+    name: "favored enemy"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 5
+  entity {
+    name: "favored enemy"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 10
+  entity {
+    name: "favored enemy"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 15
+  entity {
+    name: "favored enemy"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 20
+  entity {
+    name: "favored enemy"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  entity {
+    name: "wild empathy"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 2
+  entity {
+    name: "combat style: archery|combat style: two-weapon fighting"
+    parameters {
+    }
+    condition {
+      generic: "wearing light or no armor"
+    }
+  }
+}
+quality {
+  level: 4
+  entity {
+    name: "animal companion"
+    parameters {
+    }
+    condition {
+      generic: "using half level and -3 levels for separate animal companion list"
+    }
+  }
+}
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+fortitude_save: 2
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+reflex_save: 2
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+bonusFeat {
+  level: 1
+  entity {
+    name: "track"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 3
+  entity {
+    name: "endurance"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+spell_ability: WISDOM
+spells_per_day {
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 0
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 2
+  value: 2
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 0
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 2
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 1
+  value: 1
+  value: 1
+  value: 1
+  value: 2
+  value: 3
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}

@@ -1,0 +1,40 @@
+entity {
+  name: "Wiz7"
+  world: "Generic"
+  description: "Dummy monster for character class."
+  short_description: "Dummy monster."
+}
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 7
+  dice: 4
+}
+natural_armor {
+}
+base_attack: 3
+abilities {
+}
+saves {
+  fortitude: 2
+  will: 5
+  reflex: 2
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 7
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Share Spells"
+  category: "aura"
+  synonym: "Spells, Share"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 36
+      high: 36
+    }
+  }
+  world: "Generic"
+  description: "At the creature\'s option, she may have any spell (but not any spell-like\nability) she casts upon herself also affect her animal companion or familiar. The animal\ncompanion or familiar must be within 5 feet of her at the time of casting to receive the\nbenefit. If the spell or effect has a duration other than instantaneous, it\nstops affecting the animal companion or familiar if the companion or familiar moves farther than 5\nfeet away and will not affect the animal again, even if it returns to the\ncreature before the duration expires.  Additionally, the creature may cast a spell\nwith a target of \'You\' on her animal companion or familiar (as a touch range spell)\ninstead of on herself. A creature and her animal companion/familiar can share spells even\nif the spells normally do not affect creatures of the companion\'s/familiar\'s type\n(animal/magical beast)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

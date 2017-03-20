@@ -1,0 +1,33 @@
+entity {
+  name: "Tracking"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 154
+      high: 154
+    }
+  }
+  world: "Generic"
+  description: "The creature gets a bonus for tracking."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,29 @@
+entity {
+  name: "Cannot Grapple"
+  category: "grapple"
+  category: "unable"
+  synonym: "Grapple, Cannot"
+  world: "Generic"
+  description: "The creature cannot grapple another."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,183 @@
+entity {
+  name: "Spiderstone Golem"
+  category: "golem"
+  category: "spider"
+  synonym: "Golem, Spiderstone"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 120
+      high: 121
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A spiderstone golem is an obsid- ian construct with the combat prowess of a trained fighter. Animated by a demonic spirit from the Demonweb Pits, this creature is both more evil and more unpredictable than most other kinds of golem.\n\nA spiderstone golem appears as a statue of a male four-armed drow, standing 9 feet tall and weighing 2,000 pounds. It is carved from obsidian, so it has a smooth, glassy surface marred by occasional sharp fractures. When inactive, it usually stands with its arms folded across its chest."
+}
+size {
+  size: LARGE
+  modifier: TALL
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 18
+  dice: 10
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+speed {
+  mode: CLIMB
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 15
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 18
+abilities {
+  strength: 20
+  dexterity: 15
+  constitution: -1
+  wisdom: 11
+  intelligence: -1
+  charisma: 3
+}
+saves {
+  fortitude: 11
+  will: 6
+  reflex: 6
+}
+primary_attack {
+  attacks {
+    modifier: 4
+  }
+  mode: SLAM
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+        modifier: 2
+      }
+      condition {
+      }
+    }
+  }
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: TOUCH
+  style: RANGED
+  damage {
+    damage {
+      base {
+      }
+      effect: "web"
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+feat {
+  name: "Cleave"
+  parameters {
+  }
+}
+feat {
+  name: "Dodge"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+feat {
+  name: "Mobility"
+  parameters {
+  }
+}
+feat {
+  name: "Power Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Spring Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Sunder"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Focus"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Specialization"
+  parameters {
+  }
+}
+climate: ANY
+terrain: UNDERGROUND
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 18
+}
+treasure: NONE_TREASURE
+alignment: NEUTRAL_EVIL
+alignment_status: ALWAYS
+advancement {
+  range {
+    low: 18
+    high: 36
+  }
+  size: LARGE
+}
+combat: "Spiderstone golems have an innate understanding of combat, and they conduct themselves in melee as if they were trained fighters. A spiderstone golem uses its four fists to pummel opponents and spits webs to entangle spellcasters and archers."

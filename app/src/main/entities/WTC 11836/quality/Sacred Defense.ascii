@@ -1,0 +1,35 @@
+entity {
+  name: "Sacred Defense"
+  category: "resistance"
+  synonym: "Defense, Sacred"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 43
+      high: 43
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Add this value (+1 at 2nd level, +2 at 4th level) to the divine champion\'s\nsaving throws against divine spells, as well as spell-like and supernatural\nabilities of outsider."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Rat Empathy"
+  category: "communication"
+  synonym: "Empathy, Rat"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 148
+      high: 148
+    }
+  }
+  world: "Generic"
+  description: "The creature has a +4 racial bonus on checks to influence a rat\342\200\232\303\204\303\264s\n  attitude. She can communicate simple concepts and (if the animal is friendly)\n  commands."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

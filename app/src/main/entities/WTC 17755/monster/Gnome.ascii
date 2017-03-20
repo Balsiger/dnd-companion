@@ -1,0 +1,205 @@
+entity {
+  name: "Gnome"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 131
+      high: 132
+    }
+  }
+  world: "Generic"
+  description: "Gnomes are inveterate explorers, tricksters, and inventors. They have a knack for both illusion and alchemy.\n\nGnomes stand 3 to 3-1/2 feet tall and weigh 40 to 45 pounds. Their skin color ranges from dark tan to woody brown, their hair is fair, and their eyes can be any shade of blue. Gnome males prefer short, carefully trimmed beards. Gnomes generallywear leather or earth tones, though theydecorate their clothes with intricatestitching or fine jewelry. Gnomes reach adulthood at about age 40, and they live about 350 years, though some can live almost 500 years.\n\nGnomes are inquisitive. They love to learn by personal experience. At times they\342\200\231re even reckless. Their curiosity makes them skilled engineers, as they are always trying new ways to build things. Sometimes a gnome pulls a prank just to see how the individuals involved will react.\n\nGnomes speak their own language, Gnome. Most gnomes who travel outside gnome lands (as traders, tinkers, or adventurers) know Common, while warriors in gnome settlements usually learn Goblin.\n\nMost gnomes encountered outside their home are warriors; the information in the statistics block is for one of 1st level."
+  short_description: "Gnomes are inveterate explorers, tricksters, and inventors"
+}
+size {
+  size: SMALL
+  modifier: TALL
+}
+type: HUMANOID
+subtype: GNOME
+hit_dice {
+  number: 1
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+}
+natural_armor {
+}
+base_attack: 1
+abilities {
+  strength: 11
+  dexterity: 11
+  constitution: 14
+  wisdom: 9
+  intelligence: 10
+  charisma: 8
+}
+saves {
+  fortitude: 4
+  will: -1
+}
+space {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+challenge_rating {
+}
+language {
+  modifier: AUTOMATIC
+  name: COMMON
+}
+language {
+  modifier: AUTOMATIC
+  name: GNOLL
+}
+language {
+  modifier: BONUS
+  name: DRACONIC
+}
+language {
+  modifier: BONUS
+  name: DWARVEN
+}
+language {
+  modifier: BONUS
+  name: ELVEN
+}
+language {
+  modifier: BONUS
+  name: GIANT
+}
+language {
+  modifier: BONUS
+  name: GOBLIN
+}
+language {
+  modifier: BONUS
+  name: ORC
+}
+encounter: "This humanoid stands a little more than half as high as a human. It has\na compact build, dark tan skin, fair hair, and large eyes."
+quality {
+  name: "gnome traits"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "low-light vision"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "weapon familiarity"
+  parameters {
+    text {
+      name: "weapon"
+      text: "gnome hammer"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "duration"
+      text: "1 minute"
+    }
+    text {
+      name: "condition"
+      text: "burrowing mammals only"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+    text {
+      name: "spell"
+      text: "speak with animals"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "condition"
+      text: "CHA 10"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+    text {
+      name: "spell"
+      text: "dancing lights"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "condition"
+      text: "CHA 10"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+    text {
+      name: "spell"
+      text: "ghoust sound"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "condition"
+      text: "CHA 10"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+    text {
+      name: "spell"
+      text: "prestidigitation."
+    }
+  }
+  condition {
+  }
+}
+skill {
+  name: "appraise"
+}

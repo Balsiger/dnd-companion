@@ -1,0 +1,72 @@
+entity {
+  name: "Sor10 of Force"
+  category: "sorcerer"
+  category: "force"
+  world: "Forgotten Realms"
+  description: "A simple placeholder for a sorcerer of force of tenth level, until character classes are properly supported."
+  short_description: "Placeholder until character classes are supported."
+}
+size {
+}
+hit_dice {
+  number: 10
+  dice: 4
+}
+base_attack: 5
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Alertness"
+  parameters {
+  }
+}
+feat {
+  name: "Martial Weapon Proficiency"
+  parameters {
+  }
+}
+feat {
+  name: "Rapid Shot"
+  parameters {
+  }
+}
+feat {
+  name: "Spell Focus"
+  parameters {
+  }
+}
+feat {
+  name: "Spell Penetration"
+  parameters {
+  }
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 10
+}
+skill {
+  name: "Concentration"
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Spellcraft"
+}
+skill {
+  name: "Spot"
+}

@@ -1,0 +1,28 @@
+entity {
+  name: "Immunity to Critical Hits"
+  category: "immunity"
+  synonym: "Critical Hits, Immunity to"
+  world: "Generic"
+  description: "The creature is immune to all critical hits."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,68 @@
+name: "Human Fighter 8th"
+synonym: "Fighter, 8th Human"
+synonym: "8th Level Fighter, Human"
+description: "A standard eighth level fighter"
+short_description: "A 8th level fighter"
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 8
+  dice: 10
+}
+natural_armor {
+}
+base_attack: 8
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 8
+}
+possession {
+  text: "Full Plate = qualities Magic Armor plus 1"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Heavy Steel Shield = qualities Magic Armor plus 1"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Bastard Sword = qualities Magic Weapon plus 1"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Composite Longbow = qualities Masterwork Weapon"
+  count {
+    modifier: 1
+  }
+}
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Jump"
+}

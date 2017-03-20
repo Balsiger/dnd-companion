@@ -1,0 +1,33 @@
+entity {
+  name: "Amphibious"
+  reference {
+    name: "Dragon 321"
+    pages {
+      low: 60
+      high: 60
+    }
+  }
+  world: "Generic"
+  description: "Although aquatic, the creature can survive indefinitely on land."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Turning Immunity"
+  category: "immunity"
+  synonym: "Immunity, Turning"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 125
+      high: 125
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A revenant cannot be turned or rebuked by clerics or paladins. "
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

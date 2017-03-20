@@ -1,0 +1,29 @@
+entity {
+  name: "Cannot Be Bull Rushed"
+  category: "bull rush"
+  category: "immune"
+  synonym: "Bull Rushed, Cannot Be"
+  world: "Generic"
+  description: "The creature cannot be bull rushed."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

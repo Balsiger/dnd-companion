@@ -1,0 +1,44 @@
+entity {
+  name: "Wild Empathy"
+  category: "communication"
+  synonym: "Empathy, Wild"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 35
+      high: 35
+    }
+  }
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 3
+      high: 3
+    }
+  }
+  world: "Generic"
+  description: "The character can use body language, vocalizations, and demeanor to improve the\n  attitude of an animal (such as a bear or a monitor lizard). This ability\n  functions just like a Diplomacy check made to improve the attitude of a\n  person. The character rolls 1d20 and adds her relevant level\n  and her Charisma modifier to determine the wild empathy check result. The\n  typical domestic animal has a starting attitude of indifferent, while wild\n  animals are usually unfriendly.\n\n  To use wild empathy, the character and the animal must be able to study each\n  other, which means that they must be within 30 feet of one another under\n  normal conditions. Generally, influencing an animal in this way takes 1\n  minute but, as with influencing people, it might take more or less time.  \n\nA\n  character can also use this ability to influence a magical beast with an\n  Intelligence score of 1 or 2 (such as a basilisk or a girallon), but she\n  takes a -4 penalty on the check."
+  short_description: "Change the attitude of animals with a Charisma check."
+  incomplete: "action possible with this power not modeled"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

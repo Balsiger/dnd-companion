@@ -1,0 +1,35 @@
+entity {
+  name: "Empathic Link"
+  category: "communication"
+  synonym: "Link, Empathic"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 53
+      high: 53
+    }
+  }
+  world: "Generic"
+  description: "The master has an empathic link with his familiar out to a distance of up to\n1 mile. The master cannot see through the familiar\'s eyes, but they can\ncommunicate empathically. Because of the limited nature of the link, only\ngeneral emotional content (such as fear, hunger, happiness, curiosity) can be\ncommunicated. Note that the low Intelligence of a low-level master\'s familiar\nlimits what the creature is able to communicate or understand, and even\nintelligent familiars see the world differently from humans, so\nmisunderstandings are always possible.\n\nBecause of this empathic link, the master has the same connection to an item\nor place that his familiar does. For instance, if his familiar has seen a\nroom, the master can teleport into that room as if he has seen it too."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

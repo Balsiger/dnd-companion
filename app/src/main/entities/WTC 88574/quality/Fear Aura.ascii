@@ -1,0 +1,45 @@
+entity {
+  name: "Fear Aura"
+  category: "action"
+  category: "attack"
+  category: "aura"
+  category: "communication"
+  category: "health"
+  category: "immunity"
+  category: "option"
+  category: "resistance"
+  category: "sense"
+  category: "vulnerability"
+  synonym: ""
+  synonym: ""
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 125
+      high: 125
+    }
+  }
+  world: "Forgotten Realms"
+  description: "A keening spirit is shrouded in a dreadful aura of death and evil. Any\ncreature within a 60-foot radius that looks at it must succeed at a Will\nsave (DC 10 + 1/2 keening spirit\'s HD + keening spirit\'s Charisma modifier)\nor be affected as though by a fearspell cast by a sorcerer of the keening\nspirit\'s character level."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

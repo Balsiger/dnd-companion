@@ -1,0 +1,332 @@
+entity {
+  name: "Barbarian"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 24
+      high: 26
+    }
+  }
+  world: "Generic"
+  description: "From the frozen wastes of the north and the hellish jungles of the south come brave, even reckless, warriors. Civilized people call them barbarians or berserkers and suspect them of mayhem, impiety, and atrocities. These \'barbarians\', however, have proven their mettle and their value to those who would be their allies. To enemies who underestimated them, they have proved their cunning, resourcefulness, persistence, and mercilessness."
+  short_description: "A brave, even reckless warrior."
+}
+abbreviation: "Bbn"
+adventures: "Adventuring is the best chance barbarians have of finding a place in a civilized society. They\342\200\231re not well suited to the monotony of guard duty or other mundane tasks. Barbarians also have no trouble with the dangers, the uncertainties, and the wandering that adventuring involves. They may adventure to defeat hated enemies. They have a noted distaste for that which they consider unnatural, including undead, demons, and devils."
+characteristics: "The barbarian is an excellent warrior. Where the fighter?s skill in combat comes from training and discipline, however, the barbarian has a powerful rage. While in this berserk fury, he becomes stronger and tougher, better able to defeat his foes and withstand their attacks. These rages leave him winded, and he has the energy for only a few such spectacular displays per day, but those few rages are usually sufficient. He is at home in the wild, and he runs at great speed."
+alignment_options: "Barbarians are never lawful. They may be honorable, but at heart they are wild. This wildness is their strength, and it could not live in a lawful soul. At best, barbarians of chaotic alignment are free and expressive. At worst, they are thoughtlessly destructive."
+religion: "Some barbarians distrust established religions and prefer an intuitive, natural relationship to the cosmos over formal worship. Others devote themselves to powerful deities, such as Kord (god of strength), Obad-Hai (god of nature), or Erythnul (god of slaughter). A barbarian is capable of fierce devotion to his god."
+background: "Barbarians come from uncivilized lands or from barbaric tribes on the outskirts of civilization. A barbarian adventu- rer may have been lured to the settled lands by the promise of riches, may have escaped after being captured in his homeland and sold into \'civilized\' slavery, may have been recruited as a soldier, or may have been driven out of his homeland by invaders. Barbarians share no bond with each other unless they come from the same tribe or land. In fact, they think of themselves not as barbarians but as warriors."
+races: "Human barbarians come from the distant wild lands on the edge of civilization. Most half-orc barbarians lived among orcs before abandoning them for human lands. Dwarf barbarians are rare, usually hailing from dwarven kingdoms that have fallen into barbarism as a result of recurrent war with goblinoids, orcs, and giants. Barbarians of other races are very rare.\n\nAmong the brutal humanoids, barbarians are more common than fighters. Orcs and ogres are especially likely to be barbarians."
+otherClasses: "As people of the wild, barbarians are most com- fortable in the company of rangers, druids, and clerics of nature deities, such as Obad-Hai or Ehlonna. Many barbarians admire the talents and spontaneity of bards, and some are enthusiastic lovers of music. Barbarians don?t trust that which they don?t understand, and that includes wizardry, which they call ?book magic.? They find sor- cerers more understandable than wizards, but maybe that?s just because sorcerers tend to be more charismatic. Monks, with their studied, practiced, deliberate approach to combat, sometimes have a hard time seeing eye to eye with barbarians, but members of these classes aren?t necessarily hostile to each other. Barbarians have no special attitudes toward fighters, paladins, clerics, or rogues."
+role: "A barbarian?s typical primary role in a group of adventurers is as a front-line combat specialist. No other character can match his sheer toughness. He can also serve as a good scout, thanks to his speed, skill selection, and trap sense."
+important_abilities: "Strength is important for barbarians because of its role\nin combat, and several barbarian class skills are based on Strength. Dexterity is also useful to barbarians, especially those who wear light armor. Wisdom is also important for several of the barbarian?s class skills. A high Constitution score lets a barbarian rage longer (and live longer, because it gives him more hit points)."
+allowed_alignment: CHAOTIC_EVIL
+allowed_alignment: CHOATIC_NETURAL
+allowed_alignment: CHAOTIC_GOOD
+allowed_alignment: NEUTRAL_EVIL
+allowed_alignment: TRUE_NEUTRAL
+allowed_alignment: CHAOTIC_GOOD
+hit_dice {
+  number: 1
+  dice: 12
+}
+skill_points: 4
+class_skill: "Climb"
+class_skill: "Craft"
+class_skill: "Handle Animal"
+class_skill: "Intimidate"
+class_skill: "Jump"
+class_skill: "Listen"
+class_skill: "Ride"
+class_skill: "Survival"
+class_skill: "Swim"
+weapon_proficiency: SIMPLE
+weapon_proficiency: MARTIAL
+armor_proficiency: LIGHT
+quality {
+  level: 1
+  entity {
+    name: "Rage"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 4
+  entity {
+    name: "Rage"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 8
+  entity {
+    name: "Rage"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 12
+  entity {
+    name: "Rage"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 16
+  entity {
+    name: "Rage"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 19
+  entity {
+    name: "Rage"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  entity {
+    name: "Fast Movement"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  entity {
+    name: "Illiteracy"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 2
+  entity {
+    name: "Uncanny Dodge"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 3
+  entity {
+    name: "Trap Sense"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 5
+  entity {
+    name: "Improved Uncanny Dodge"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 6
+  entity {
+    name: "Trap Sense"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 9
+  entity {
+    name: "Trap Sense"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 12
+  entity {
+    name: "Trap Sense"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 15
+  entity {
+    name: "Trap Sense"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 18
+  entity {
+    name: "Trap Sense"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+fortitude_save: 2
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}

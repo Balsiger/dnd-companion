@@ -1,0 +1,41 @@
+entity {
+  name: "Clr17"
+  category: "dummy"
+  world: "Generic"
+  description: "Dummy character class."
+  short_description: "Dummy"
+}
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 17
+  dice: 8
+}
+natural_armor {
+}
+base_attack: 12
+abilities {
+}
+saves {
+  fortitude: 10
+  will: 5
+  reflex: 10
+}
+space {
+}
+reach {
+}
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 17
+}

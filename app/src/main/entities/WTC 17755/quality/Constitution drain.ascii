@@ -1,0 +1,25 @@
+entity {
+  name: "Constitution drain"
+  description: "Living creatures hit by a \\Mnster{wraith}\'s incorporeal touch attack must succeed on a DC $dc Fortitude save or take $damage points of Constitution drain. The save DC is Charisma-based. On each such successful attack, the wraith gains 5 temporary hit points."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

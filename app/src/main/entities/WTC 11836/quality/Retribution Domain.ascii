@@ -1,0 +1,37 @@
+entity {
+  name: "Retribution Domain"
+  category: "domain"
+  category: "retribution"
+  synonym: "Domain, Retribution"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 65
+      high: 65
+    }
+  }
+  world: "Forgotten Realms"
+  description: "If you have been harmed by someone in combat, you may make a strike of vengeance with a melee or ranged weapon against that individual on your next action. If this attack hits, deal maximum damage. You may use this supernatural ability once per day.\n\n"
+  incomplete: "Quality for strike of vengeance not automatically added."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

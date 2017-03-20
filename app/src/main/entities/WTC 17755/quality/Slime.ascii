@@ -1,0 +1,34 @@
+entity {
+  name: "Slime"
+  category: "action"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 8
+      high: 8
+    }
+  }
+  world: "Generic"
+  description: "A blow from an \\Monster{aboleth}\'s tentacle can cause a terrible\n  affliction. A creature hit by a tentacle must succeed on a DC 19 Fortitude\n  save or begin to transform over the next 1d4+1 minutes, the skin gradually\n  becoming a clear, slimy membrane. An afflicted creature must remain moisted\n  with cool, fresh water or take 1d12 points of damage every 10 minutes. The\n  slime reduces the creature\'s natural armor bonus by 1 (but never to less than\n  0). The save DC is Constitution-based.\n\n  A \\Spell{remove disease} spell cast before the transformation is complete\n  will restore an afflicted creature to normal. Afterward, however only a\n  \\Spell{heal} or \\Spell{mass heal} spell can reverse the affliction."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

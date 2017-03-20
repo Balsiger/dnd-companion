@@ -1,0 +1,137 @@
+name: "Rat Swarm"
+category: "swarm"
+category: "rat"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 239
+    high: 239
+  }
+}
+world: "Generic"
+description: "A rat swarm is a mass of teeming, famished, disease-ridden rats. A swarm is composed of individuals very much like the rat described on page 278, but in such great numbers, rats can become implacable hunters capable of killing a human with hundreds of bites.\n\nA rat swarm sometimes can be found in the sewers and foundations of human cities."
+short_description: "A swarm of rats."
+size {
+  size: TINY
+  modifier: LONG
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 4
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 15
+      }
+    }
+  }
+}
+speed {
+  mode: CLIMB
+  distance {
+    imperial {
+      feet {
+        leader: 15
+      }
+    }
+  }
+}
+natural_armor {
+}
+base_attack: 3
+abilities {
+  strength: 2
+  dexterity: 15
+  constitution: 10
+  wisdom: 12
+  intelligence: 2
+  charisma: 2
+}
+saves {
+  fortitude: 4
+  will: 1
+  reflex: 4
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: SWARM
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+        modifier: 4
+      }
+      effect: "disease"
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+    }
+  }
+}
+feat {
+  name: "Alertness"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Finesse"
+  parameters {
+  }
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 2
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS
+encounter: "A squirming, squeaking horde of feral rats surges closer, teeth glistening in their slavering jaws."
+skill {
+  name: "Balance"
+}
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Hide"
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Spot"
+}
+skill {
+  name: "Swim"
+}

@@ -1,0 +1,26 @@
+entity {
+  name: "Good Swimmer"
+  world: "Generic"
+  description: "The creature has a special racial bonus on any \\Skill{swim} check to perform\n  some special action or to avoid a hazard. It can always choose to take 10 on\n  a \\Skill{swim} check, even if distracted or endangered. It can use the run\n  action while swimming in a straight line."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

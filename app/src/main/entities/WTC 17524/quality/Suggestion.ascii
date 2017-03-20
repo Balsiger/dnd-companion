@@ -1,0 +1,35 @@
+entity {
+  name: "Suggestion"
+  category: "action"
+  synonym: "Suggestion"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 29
+      high: 29
+    }
+  }
+  world: "Generic"
+  description: "A bard of 6th level or higher with 9 or more ranks in a Perform skill can\n  make a suggestion (as the spell) to a creature that he has already fascinated\n  (see above). Using this ability does not break the bard\342\200\232\303\204\303\264s concentration on\n  the fascinate effect, nor does it allow a second saving throw against the\n  fascinate effect. Making a suggestion doesn\342\200\232\303\204\303\264t count against a bard\342\200\232\303\204\303\264s daily\n  limit on bardic music performances. A Will saving throw (DC 10 + 1/2 bard\342\200\232\303\204\303\264s\n  level + bard\342\200\232\303\204\303\264s Cha modifier) negates the effect. This ability affects only a\n  single creature (but see mass suggestion, below). Suggestion is an enchanment\n  (compulsion), mind-affecting, language dependent ability."
+}
+type: SPELL_LIKE
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,27 @@
+entity {
+  name: "Weapon Proficiency"
+  world: "Generic"
+  description: "The character is proficient in the named weapon."
+  incomplete: "attack penalty for non proficient weapon not computed."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

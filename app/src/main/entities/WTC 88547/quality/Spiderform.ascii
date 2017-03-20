@@ -1,0 +1,34 @@
+entity {
+  name: "Spiderform"
+  category: "action"
+  reference {
+    name: "WTC 88547"
+    pages {
+      low: 6
+      high: 6
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Rhuallith can change her form to that of a monstrous spider of any size,\n  from Diminutive to Gargantuan. This supernatural ability works like the spell\n  polymorph self. The change can last no more than 80 minutes, but during that\n  time, she can shift back and forth between the spider form and her real form\n  as desired (the shift requires a standard action)."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

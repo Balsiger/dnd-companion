@@ -1,0 +1,210 @@
+entity {
+  name: "Orb Wraith"
+  category: "wraith"
+  category: "negative energy"
+  synonym: "Wraith, Orb"
+  world: "Forgotten Realms"
+  description: "An orb wraith is an undead monstrosity formed when six or more ordinary \\Monster{wraiths} come together in an area of powerful negative energy. They are common on the \\Place{Negative Energy Plane}, but most natives of the \\Place{Material Plane} encounter them within localized areas of negative energy, like the orb at the heart of the \\Place{Undying Temple} - hence their common name.\n\nAn orb wraith looks like a vaguely humanoid mass of darkness. Different features - faces, limbs, and glowing red eyes - shift and surface within the creature at different times. Bolts of purple-black negative energy spark within its body, like lightning within a looming thundercloud."
+  short_description: "An undead monstrosity formed by six or more ordinary \\Monster{wraiths}."
+}
+size {
+  size: HUGE
+  modifier: TALL
+}
+type: UNDEAD
+subtype: INCORPOREAL
+hit_dice {
+  number: 30
+  dice: 12
+}
+speed {
+  mode: FLY
+  distance {
+    imperial {
+      feet {
+        leader: 60
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 7
+    type: DEFLECTION
+  }
+}
+base_attack: 16
+abilities {
+  strength: -1
+  dexterity: 14
+  constitution: -1
+  wisdom: 18
+  intelligence: 18
+  charisma: 25
+}
+saves {
+  fortitude: 10
+  will: 17
+  reflex: 10
+}
+primary_attack {
+  attacks {
+    modifier: 2
+  }
+  mode: INCORPOREAL_TOUCH
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+      }
+      effect: "1d6 Constitution drain"
+      condition {
+      }
+    }
+  }
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: RAY
+  style: RANGED
+  damage {
+    damage {
+      base {
+      }
+      effect: "1d4 negative levels"
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+feat {
+  name: "Alertness"
+  parameters {
+  }
+}
+feat {
+  name: "Blind-Fight"
+  parameters {
+  }
+}
+feat {
+  name: "Combat Reflexes"
+  parameters {
+  }
+}
+feat {
+  name: "Dodge"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Critical"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Critical"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+feat {
+  name: "Mobility"
+  parameters {
+  }
+}
+feat {
+  name: "Spring Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Focus"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Focus"
+  parameters {
+  }
+}
+climate: ANY
+terrain: UNDERGROUND
+organization {
+  type: SOLITARY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 19
+}
+treasure: NONE_TREASURE
+alignment: CHAOTIC_EVIL
+alignment_status: ALWAYS
+advancement {
+  range {
+    low: 31
+    high: 40
+  }
+  size: HUGE
+}
+advancement {
+  range {
+    low: 41
+    high: 60
+  }
+  size: GARGANTUAN
+}
+language {
+  modifier: AUTOMATIC
+  name: ABOLETH
+}
+encounter: "The creature looks like a vaguely humanoid mass of darkness. Different features - faces, limbs, and glowing red eyes - shift and surface within the creature at different times. Bolts of purple-black negative energy spark within its body, like lightning within a looming thundercloud."
+combat: "An orb wraith can extend two appendages - sometimes looking very much like arms, other times more strongly resembling tentacles or wisps of smoke - to attack in melee. Otherwise, it simply creates an arc of crackling negative energy from its body to that of a nearby target."
+skill {
+  name: "Diplomacy"
+}
+skill {
+  name: "Hide"
+}
+skill {
+  name: "Intimidate"
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Search"
+}
+skill {
+  name: "Sense Motive"
+}
+skill {
+  name: "Spot"
+}

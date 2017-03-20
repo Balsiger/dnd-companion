@@ -1,0 +1,33 @@
+entity {
+  name: "Familiar Alertness"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 53
+      high: 53
+    }
+  }
+  world: "Generic"
+  description: "The presence of the familiar sharpens its master\342\200\231s senses. While a familiar is within arm\342\200\231s reach, the master gains the \\feat{Alertness} feat."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

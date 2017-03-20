@@ -1,0 +1,77 @@
+entity {
+  name: "Half-Elf Traits"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 102
+      high: 103
+    }
+  }
+  description: "Common traits for half-elves.\n\nA half-elf does not have the elf \342\200\231s ability to notice secret doors simply by passing\nnear them, but still get\'s bonuses on listen, search and spot.\n\nHalf-elves get along naturally with all people. This bonus may not apply in situations or settings where half-elves are viewed with distrust (such as isolated human settlements), at the DM\342\200\231s option."
+  short_description: "Common traits for half-elves."
+}
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+skill_modifier {
+  key: "listen"
+  modifier {
+    modifier {
+      value: 1
+      type: RACIAL
+    }
+  }
+}
+skill_modifier {
+  key: "search"
+  modifier {
+    modifier {
+      value: 1
+      type: RACIAL
+    }
+  }
+}
+skill_modifier {
+  key: "spot"
+  modifier {
+    modifier {
+      value: 1
+      type: RACIAL
+    }
+  }
+}
+skill_modifier {
+  key: "diplomacy"
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+    }
+  }
+}
+skill_modifier {
+  key: "gather information"
+  modifier {
+    modifier {
+      value: 2
+      type: RACIAL
+    }
+  }
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Corrosive Slime"
+  category: "aura"
+  synonym: "Slime, Corrosive"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 39
+      high: 39
+    }
+  }
+  world: "Generic"
+  description: "A delver produces a mucuslike slime that contains a highly corrosive\n  substance. The slime is particularly effective against stone.\n\n  A delver\342\200\232\303\204\303\264s mere touch deals 2d6 points of acid damage to organic creatures or\n  objects. Against metallic creatures or objects, a delver\342\200\232\303\204\303\264s slime deals 4d8\n  points of damage, and against stony creatures (including earth elementals) or\n  objects it deals 8d10 points of damage. A slam attack by a delver leaves a\n  patch of slime that deals 2d6 points of damage on contact and another 2d6\n  points of damage in each of the next 2 rounds. A large quantity (at least a\n  quart) of water or weak acid, such as vinegar, washes off the slime.\n\n  An opponent\342\200\232\303\204\303\264s armor and clothing dissolve and become useless immediately\n  unless the wearer succeeds on a DC 22 Reflex save.  Weapons that strike a\n  delver also dissolve immediately unless the wielder succeeds on a DC 22\n  Reflex save.\n\n  A creature attacking a delver with natural weapons takes damage from its\n  slime each time an attack hits unless the creature succeeds on a DC 22 Reflex\n  save. These save DCs are Constitution-based."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

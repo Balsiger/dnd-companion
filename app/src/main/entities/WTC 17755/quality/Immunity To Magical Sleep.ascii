@@ -1,0 +1,28 @@
+entity {
+  name: "Immunity To Magical Sleep"
+  category: "immunity"
+  synonym: "Magical Sleep, Immunity to"
+  world: "Generic"
+  description: "The creature cannot be affected by any magical sleep."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

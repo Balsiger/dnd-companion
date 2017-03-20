@@ -1,0 +1,44 @@
+entity {
+  name: "Shadow Blend"
+  category: "action"
+  category: "attack"
+  category: "aura"
+  category: "communication"
+  category: "health"
+  category: "immunity"
+  category: "option"
+  category: "resistance"
+  category: "sense"
+  category: "vulnerability"
+  synonym: "Blend, Shadow"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 145
+      high: 145
+    }
+  }
+  world: "Generic"
+  description: "During any conditions other than full daylight, Glouroth can disappear into\n  the shadows, giving him nine-tenths concealment. Artificial illumination,\n  even a light or continual flamespell, does not negate this ability, but a\n  daylight spell does."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

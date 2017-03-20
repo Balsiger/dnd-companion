@@ -1,0 +1,35 @@
+entity {
+  name: "Strike of Vengeance"
+  category: "attack"
+  synonym: "Vengeance, Strike of"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 65
+      high: 65
+    }
+  }
+  world: "Forgotten Realms"
+  description: "If you have been harmed by someone in combat, you may make a strike of\n  vengeance with a melee or ranged weapon against that individual on your next\n  attack. If this attack hits, you deal maximum damage. You may use this\n  supernatural ability once per day."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

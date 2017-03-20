@@ -1,0 +1,35 @@
+entity {
+  name: "Speak with Spiders"
+  category: "communication"
+  synonym: "Spiders, Speak with"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 6
+      high: 6
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Rhuallith can freely communicate with any spiderkind creature (see\n\'Spiderkind\' in City of the Spider Queen)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

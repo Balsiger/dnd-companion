@@ -1,0 +1,32 @@
+entity {
+  name: "Dodge +4"
+  world: "Generic"
+  description: "The creature gets a +4 dodge bonus to armor class against $name."
+  short_description: "+4 dodge to AC against $name."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+  modifier {
+    value: 4
+    type: DODGE
+    condition: "against $name"
+  }
+}

@@ -1,0 +1,36 @@
+entity {
+  name: "Negative Energy Touch"
+  category: "action"
+  synonym: "Touch, Negative Energy"
+  synonym: "Energy, Negative Touch"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 144
+      high: 144
+    }
+  }
+  world: "Forgotten Realms"
+  description: "Three times per day, a kir-lanan can empower its touch with negative energy,\n  similar to the chill touch spell. If it hits with a melee touch attack, it\n  deals 2d6 points of damage and 1 point of Strength damage.  A successful\n  Fortitude save negates the Strength damage.  The kir-lanan heals the same\n  number of points of damage as it deals with this attack, though it cannot\n  exceed its normal maximum hit points by this means.\n\n  A kir-lanan can use a claw attack to deliver this negative energy effect, but\n  it must hit with a regular melee attack to do so. It does not regain hit\n  points for the claw damage it in-flicts, just the negative energy damage."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

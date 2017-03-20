@@ -1,0 +1,35 @@
+entity {
+  name: "Defensive Roll"
+  category: "action"
+  synonym: "Roll, Defensive"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 51
+      high: 51
+    }
+  }
+  world: "Generic"
+  description: "The rogue can roll with a potentially lethal blow to take less damage from\n  it than she otherwise would. Once per day, when she would be reduced to 0 or\n  fewer hit points by damage in combat (from a weapon or other blow, not a\n  spell or special ability), the rogue can attempt to roll with the\n  damage. To use this ability, the rogue must attempt a Reflex saving throw (DC\n  = damage dealt). If the save succeeds, she takes only half damage from the\n  blow; if it fails, she takes full damage. She must be aware of the attack and\n  able to react to it in order to execute her defensive roll\342\200\232\303\204\303\256 if she is denied\n  her Dexterity bonus to AC, she can\342\200\232\303\204\303\264t use this ability.  Since this effect\n  would not normally allow a character to make a Reflex save for half damage,\n  the rogue\342\200\232\303\204\303\264s evasion ability does not apply to the defensive roll.  "
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

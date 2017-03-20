@@ -1,0 +1,29 @@
+entity {
+  name: "Spell"
+  category: "action"
+  category: "option"
+  category: "sense"
+  world: "Generic"
+  description: "The creature can cast a spell as a spell-like ability."
+}
+type: SPELL_LIKE
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

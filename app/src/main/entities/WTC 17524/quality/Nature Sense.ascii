@@ -1,0 +1,42 @@
+entity {
+  name: "Nature Sense"
+  category: "sense"
+  synonym: "Sense, Nature"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 36
+      high: 36
+    }
+  }
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 3
+      high: 3
+    }
+  }
+  world: "Generic"
+  description: "A druid gains a +2 bonus on Knowledge (nature) and Survival checks. She can\n  identify plants and animals (their species and special traits) with perfect\n  accuracy. She can determine whether water is safe to drink or dangerous."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

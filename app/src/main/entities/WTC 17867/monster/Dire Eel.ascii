@@ -1,0 +1,143 @@
+entity {
+  name: "Dire Eel"
+  synonym: "Eel, Dire"
+  synonym: "Eel, Giant"
+  synonym: "Giant Eel"
+  reference {
+    name: "WTC 17867"
+    pages {
+      low: 148
+      high: 148
+    }
+  }
+  world: "Generic"
+  description: "The dire eel is a moraylike animal of unusual size. It can reach lengths of\n  20 feet or more and weigh up to 500 pounds. It resembles its smaller\n  relations in other respects."
+  short_description: "A large version of a normal eel."
+}
+size {
+  size: LARGE
+  modifier: LONG
+}
+type: ANIMAL
+subtype: AQUATIC
+hit_dice {
+  number: 6
+  dice: 8
+  modifier: 15
+}
+speed {
+  mode: SWIM
+  distance {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 3
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 4
+abilities {
+  strength: 19
+  dexterity: 13
+  constitution: 14
+  wisdom: 12
+  intelligence: 1
+  charisma: 2
+}
+saves {
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+        modifier: 6
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+feat {
+  name: "Toughness"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Focus"
+  parameters {
+  }
+}
+climate: WARM
+terrain: AQUATIC_TERRAIN
+organization {
+  type: SOLITARY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+organization {
+  type: PAIR
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 3
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS
+advancement {
+  range {
+    low: 7
+    high: 12
+  }
+  size: LARGE
+}
+advancement {
+  range {
+    low: 13
+    high: 18
+  }
+  size: HUGE
+}
+language {
+  name: NONE
+}
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Spot"
+}
+skill {
+  name: "Swim"
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Shadow Shift"
+  category: "action"
+  synonym: "Shift, Shadow"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 36
+      high: 36
+    }
+  }
+  world: "Generic"
+  description: "A cloaker can manipulate shadows. This ability is effective only in shadowy\n  areas and has three possible effects.\n\n  \\bold{Obscure Vision}: The cloaker gains concealment (20% miss chance) for\n  1d4 rounds.\n\n  \\bold{Dancing Images}: This effect duplicates a mirror image spell\n  (caster level 6th).\n\n  \\bold{Silent Image}: This effect duplicates a silent image\n  spell (DC 15, caster level 6th).\n\n  The save DC is Charisma-based."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

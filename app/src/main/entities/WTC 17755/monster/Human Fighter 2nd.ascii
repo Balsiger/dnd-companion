@@ -1,0 +1,91 @@
+entity {
+  name: "Human Fighter 2nd"
+  base: "human fighter 1st"
+  synonym: "Fighter, 2nd Human"
+  synonym: "2nd Level Fighter, Human"
+  description: "A standard second level fighter"
+  short_description: "A 2nd level fighter"
+}
+size {
+}
+type: HUMANOID
+subtype: HUMAN
+hit_dice {
+  number: 2
+  dice: 10
+}
+natural_armor {
+}
+base_attack: 2
+abilities {
+}
+saves {
+}
+space {
+}
+reach {
+}
+feat {
+  name: "Exotic Weapon Proficiency"
+  parameters {
+  }
+}
+feat {
+  name: "Power Attack"
+  parameters {
+  }
+}
+feat {
+  name: "Blind-Fight"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+climate: ANY
+terrain: ANY_TERRAIN
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 2
+}
+possession {
+  text: "Half-Plate"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Heavy Steel Shield"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Bastard Sword = qualities Masterwork Weapon"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "Composite Longbow = qualities Masterwork Weapon"
+  count {
+    modifier: 1
+  }
+}
+skill {
+  name: "Climb"
+}
+skill {
+  name: "Jump"
+}

@@ -1,0 +1,26 @@
+entity {
+  name: "Breathe Water"
+  world: "Generic"
+  description: "The creature is capable of breathing under water (like any fish)."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

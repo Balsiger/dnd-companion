@@ -1,0 +1,144 @@
+name: "Dire Wolf"
+category: "wold"
+category: "dire"
+synonym: "Wolf, Dire"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 65
+    high: 66
+  }
+}
+world: "Generic"
+description: "Dire wolves are efficient pack hunters that will kill anything they can catch.\n\nDire wolves are mottled gray or black, about 9 feet long and weighing some 800 pounds."
+short_description: "A large and vicious version of a wolf."
+size {
+  size: LARGE
+  modifier: LONG
+}
+type: ANIMAL
+subtype: NONE_SUBTYPE
+hit_dice {
+  number: 6
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 50
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 3
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 4
+abilities {
+  strength: 25
+  dexterity: 15
+  constitution: 17
+  wisdom: 12
+  intelligence: 2
+  charisma: 10
+}
+saves {
+  fortitude: 5
+  will: 5
+  reflex: 5
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: BITE
+  style: MELEE
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+        modifier: 3
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+feat {
+  name: "Alertness"
+  parameters {
+  }
+}
+feat {
+  name: "Run"
+  parameters {
+  }
+}
+feat {
+  name: "Track"
+  parameters {
+  }
+}
+feat {
+  name: "Weapon Focus"
+  parameters {
+  }
+}
+climate: TEMPERATE
+terrain: FOREST
+organization {
+  type: ANY
+  number {
+  }
+  plus {
+    number {
+    }
+  }
+}
+challenge_rating {
+  leader: 3
+}
+treasure: NONE_TREASURE
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS
+advancement {
+  range {
+    low: 7
+    high: 18
+  }
+  size: LARGE
+}
+encounter: "This immense gray wolf seems as big as a horse. It has fiery eyes and a thick coat of fur."
+combat: "Dire wolves prefer to attack in packs, surrounding and flanking a foe when they can."
+skill {
+  name: "Listen"
+}
+skill {
+  name: "Move Silently"
+}
+skill {
+  name: "Spot"
+}
+skill {
+  name: "Survival"
+}

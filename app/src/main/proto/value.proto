@@ -1,0 +1,375 @@
+syntax = "proto3";
+package net.ixitxachitls.companion.proto;
+
+message DiceProto
+{
+  int32 number = 1;
+  int32 dice = 2;
+  int32 modifier = 3;
+}
+
+message RationalProto
+{
+  // All the values must be positive!
+  int32 leader = 1;
+  int32 nominator = 2;
+  int32 denominator = 3;
+  bool negative = 4;
+}
+
+message DistanceProto
+{
+  message Metric
+  {
+    RationalProto kilometers = 1;
+    RationalProto meters = 2;
+    RationalProto centimeters = 3;
+  }
+  Metric metric = 1;
+
+  message Imperial
+  {
+    RationalProto miles = 1;
+    RationalProto feet = 2;
+    RationalProto inches = 3;
+  }
+  Imperial imperial = 2;
+}
+
+message SpeedProto
+{
+  enum Mode
+  {
+    UNKNONW_MODE = 0;
+    BURROW = 1;
+    CLIMB = 2;
+    FLY = 3;
+    SWIM = 4;
+    RUN = 5;
+  }
+  Mode mode = 1;
+  DistanceProto distance = 2;
+
+  enum Maneuverability
+  {
+    UNKNOWN_MANEUVERABILITY = 0;
+    PERFECT = 1;
+    GOOD = 2;
+    AVERAGE = 3;
+    POOR = 4;
+    CLUMSY = 5;
+    NONE = 6;
+  }
+  Maneuverability maneuverability = 3;
+}
+
+message SizeProto {
+  enum Size {
+    UNKNOWN_SIZE = 0;
+    FINE = 1;
+    DIMINUTIVE = 2;
+    TINY = 3;
+    SMALL = 4;
+    MEDIUM = 5;
+    LARGE = 6;
+    HUGE = 7;
+    GARGANTUAN = 8;
+    COLOSSAL = 9;
+  }
+  Size size = 1;
+
+  enum Modifier {
+    UNKNOWN_SIZE_MODIFIER = 0;
+    TALL = 1;
+    LONG = 2;
+  }
+  Modifier modifier = 2;
+}
+
+message ModifierProto
+{
+  enum Type
+  {
+    UNKNOWN = 0;
+    DODGE = 1;
+    ARMOR = 2;
+    EQUIPMENT = 3;
+    SHIELD = 4;
+    GENERAL = 5;
+    NATURAL_ARMOR = 6;
+    ABILITY = 7;
+    SIZE = 8;
+    RACIAL = 9;
+    CIRCUMSTANCE = 10;
+    ENHANCEMENT = 11;
+    DEFLECTION = 12;
+    RAGE = 13;
+    COMPETENCE = 14;
+    SYNERGY = 15;
+  }
+
+  message Modifier
+  {
+    int32 value = 1;
+    Type type = 2;
+    string condition = 3;
+  }
+  repeated Modifier modifier = 1;
+}
+
+message DamageProto
+{
+  message Damage
+  {
+    enum Type
+    {
+      UNKNOWN = 0;
+      FIRE = 1;
+      ELECTRICAL = 2;
+      SONIC = 3;
+      WATER = 4;
+      ACID = 5;
+      HOLY = 6;
+      NEGATIVE_ENERGY = 7;
+      NONLETHAL = 8;
+      COLD = 9;
+      STR = 10;
+      DEX = 11;
+      CON = 12;
+      INT = 13;
+      WIS = 14;
+      CHA = 15;
+    }
+
+    DiceProto base = 1;
+    Type type = 2;
+    string effect = 3;
+    ConditionProto condition = 4;
+  }
+  repeated Damage damage = 1;
+}
+
+message ConditionProto
+{
+  string generic = 1;
+  WeaponStyle weapon_style = 2;
+  Ability ability = 3;
+
+  message Limit {
+    enum Operator {
+      ABOVE = 0;
+      ABOVE_OR_EQUAL = 1;
+      EQUAL = 2;
+      BELOW_OR_EQUAL = 3;
+      BELOW = 4;
+    }
+    Operator operator = 1;
+    int32 value = 2;
+  }
+  Limit limit = 4;
+}
+
+message ParametersProto
+{
+  message Distance
+  {
+    string name = 1;
+    DistanceProto distance = 2;
+  }
+  repeated Distance distance = 1;
+
+  message Text
+  {
+    string name = 1;
+    string text= 2;
+  }
+  repeated Text text = 2;
+
+  message Number
+  {
+    string name = 1;
+    int32 number = 2;
+  }
+  repeated Number number = 3;
+
+  message Modifier
+  {
+    string name = 1;
+    ModifierProto modifier = 2;
+  }
+  repeated Modifier modifier = 4;
+
+  message Damage
+  {
+    string name = 1;
+    DamageProto damage = 2;
+  }
+  repeated Damage damage = 5;
+
+  message SpellClassParam
+  {
+    string name = 1;
+    SpellClass spell_class = 2;
+  }
+  repeated SpellClassParam spell_class = 6;
+
+  message SkillSubtypeParam
+  {
+    string name = 1;
+    SkillSubtype skill_subtype = 2;
+  }
+  repeated SkillSubtypeParam skill_subtype = 7;
+}
+
+message ReferenceProto
+{
+  string name = 1;
+  repeated RangeProto pages = 2;
+}
+
+message RangeProto
+{
+  int64 low = 1;
+  int64 high = 2;
+}
+
+message ExpressionProto {
+  enum Operator {
+    NONE = 0;
+    ADD = 1;
+    SUBTRACT = 2;
+    MULTIPLY = 3;
+    DIVIDE = 4;
+    MODULO = 5;
+    MIN = 6;
+    MAX = 7;
+  }
+
+  message Literal {
+    string variable = 1;
+    int32 integer = 2;
+  }
+
+  Operator operator = 1;
+  repeated ExpressionProto operand = 2;
+  Literal literal = 3;
+}
+
+// Shared enums.
+
+enum WeaponStyle {
+  UNKNOWN_STYLE = 0;
+  TWOHANDED_MELEE = 1;
+  ONEHANDED_MELEE = 2;
+  LIGHT_MELEE = 3;
+  UNARMED = 4;
+  RANGED_TOUCH = 5;
+  RANGED = 6;
+  THROWN_TOUCH = 7;
+  THROWN = 8;
+  TOUCH = 9;
+  THROWN_TWO_HANDED = 10;
+}
+
+enum Ability {
+  UNKNOWN = 0;
+  STRENGTH = 1;
+  DEXTERITY = 2;
+  CONSTITUTION = 3;
+  INTELLIGENCE = 4;
+  WISDOM = 5;
+  CHARISMA = 6;
+  NONE = 7;
+}
+
+enum SpellClass {
+  UNKNOWN_SPELL_CLASS = 0;
+  ASSASSIN = 1;
+  BARD = 2;
+  CLERIC = 3;
+  DRUID = 4;
+  PALADIN = 5;
+  RANGER = 6;
+  SORCERER = 7;
+  WIZARD = 8;
+  AIR = 9;
+  ANIMAL = 10;
+  CHAOS = 11;
+  DEATH = 12;
+  DESTRUCTION = 13;
+  DROW = 14;
+  EARTH = 15;
+  EVIL = 16;
+  FIRE = 17;
+  GOOD = 18;
+  HEALING = 19;
+  KNOWLEDGE = 20;
+  LAW = 21;
+  LUCK = 22;
+  MAGIC = 23;
+  PLANT = 24;
+  PROTECTION = 25;
+  STRENGTH_SPELL_CLASS = 26;
+  SUN = 27;
+  TRAVEL = 28;
+  TRICKERY = 29;
+  WAR = 30;
+  WATER = 31;
+}
+
+enum SkillSubtype {
+  UNKNOWN_SKILL_SUBTYPE = 0;
+  DROW_RELIGION = 1;
+  RELIGION = 2;
+  ARCANA = 3;
+  ALCHEMY = 4;
+  ANY_ONE = 5;
+}
+
+enum Proficiency {
+  UNKNOWN_PROFICIENCY = 0;
+  SIMPLE = 1;
+  MARTIAL = 2;
+  EXOCTIC = 3;
+  IMPROVISED = 4;
+  NONE_PROFICIENCY = 5;
+}
+
+enum ArmorType {
+  UNKNOWN_ARMOR = 0;
+  LIGHT = 1;
+  MEDIUM = 2;
+  HEAVY = 3;
+  SHIELD = 4;
+  TOWER_SHIELD = 5;
+  NONE_ARMOR = 6;
+}
+
+enum Alignment {
+  UNKNOWN_ALIGNMENT = 0;
+  LAWFUL_GOOD = 1;
+  NEUTRAL_GOOD = 2;
+  CHAOTIC_GOOD = 3;
+  LAWFUL_NEUTRAL = 4;
+  TRUE_NEUTRAL = 5;
+  CHOATIC_NETURAL = 6;
+  LAWFUL_EVIL = 7;
+  NEUTRAL_EVIL = 8;
+  CHAOTIC_EVIL = 9;
+  ANY_CHAOTIC = 10;
+  ANY_EVIL = 11;
+  ANY_GOOD = 12;
+  ANY_LAWFUL = 13;
+  ANY_ALIGNMENT = 14;
+}
+
+enum Gender {
+  UNKNOWN_GENDER = 0;
+  FEMALE = 1;
+  MALE = 2;
+  NONE_GENDER = 3;
+}
+
+
+
+

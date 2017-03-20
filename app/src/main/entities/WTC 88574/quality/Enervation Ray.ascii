@@ -1,0 +1,38 @@
+entity {
+  name: "Enervation Ray"
+  category: "ray"
+  category: "enevervation"
+  category: "energy"
+  category: "drain"
+  category: "negative levels"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 122
+      high: 122
+    }
+  }
+  world: "Forgotten Realms"
+  description: "The creature can attack with a bolt of negative energy that functions like the \\Spell{enervation} spell. This attack is a ray with a maximum range of 60 feet and no range increment. A creature struck by the ray gains 1d4 negative levels (-1 to attack, saves, skills, ability, level, lasts for 15 hours)."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,35 @@
+entity {
+  name: "Ooze Traits"
+  category: "resistance"
+  synonym: "Traits, Ooze"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 1
+      high: 1
+    }
+  }
+  world: "Generic"
+  description: "Oozes have the following traits:\n   \\list\n   {\\bold{Mindless}: No Intelligence score, and immunity to all mind-\n    affecting effects (charms, compulsions, phantasms, patterns, and\n    morale effects).}\n   {\\bold{Blind} (but have the blindsight special quality), with immunity to\n    gaze attacks, visual effects, illusions, and other attack forms\n    that rely on sight.}\n   {Immunity to poison, sleep effects, paralysis, polymorph, and\n    stunning.}\n  {Not subject to critical hits or flanking.}"
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,29 @@
+entity {
+  name: "Cannot Be Grappled"
+  category: "grapple"
+  category: "immune"
+  synonym: "Grappled, Cannot Be"
+  world: "Generic"
+  description: "The creature cannot be grappled."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

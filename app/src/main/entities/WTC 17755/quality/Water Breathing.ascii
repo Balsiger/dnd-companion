@@ -1,0 +1,35 @@
+entity {
+  name: "Water Breathing"
+  synonym: "Breathing, Water"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 71
+      high: 71
+    }
+  }
+  world: "Generic"
+  description: "The creature can breathe underwater indefinitely and can freely use its breath weapon, spells, and other abilities while submerged."
+  short_description: "Breathe underwater indefinitely and freely use abilities while submerged."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

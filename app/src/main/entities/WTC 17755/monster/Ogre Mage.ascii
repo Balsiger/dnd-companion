@@ -1,0 +1,326 @@
+entity {
+  name: "Ogre Mage"
+  category: "giant"
+  synonym: "Mage, Ogre"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 200
+      high: 200
+    }
+  }
+  world: "Generic"
+  description: "The ogre mage is a more intelligent and dangerous variety of its mundane cousin. Rapacious and cruel by nature, ogre mages often lead organized raids for slaves, treasure, and food.\n\nThese creatures dwell in fortified structures or underground lairs, usually living alone or with a small group of ogre followers. Status among ogre mages is measured by wealth. While they do not generally associate with their own kind, they often undertake raids and schemes in competition with one another to amass the most riches.\n\nAn ogre mage stands about 10 feet tall and weighs up to 700 pounds. Its skin varies in color from light green to light blue, and its hair is black or very dark brown. Ogre mages favor loose, comfortable clothing and lightweight armor.\n\nOgre mages speak Giant and Common."
+  short_description: "A more intelligent and dangerous variety of ogre."
+}
+size {
+  size: LARGE
+  modifier: TALL
+}
+type: GIANT
+subtype: NONE_SUBTYPE
+hit_dice {
+  number: 5
+  dice: 8
+}
+speed {
+  mode: RUN
+  distance {
+    imperial {
+      feet {
+        leader: 40
+      }
+    }
+  }
+}
+speed {
+  mode: FLY
+  distance {
+    imperial {
+      feet {
+        leader: 40
+      }
+    }
+  }
+}
+natural_armor {
+  modifier {
+    value: 5
+    type: NATURAL_ARMOR
+  }
+}
+base_attack: 3
+abilities {
+  strength: 21
+  dexterity: 10
+  constitution: 17
+  wisdom: 14
+  intelligence: 14
+  charisma: 17
+}
+saves {
+  fortitude: 7
+  will: 3
+  reflex: 1
+}
+primary_attack {
+  attacks {
+    modifier: 1
+  }
+  mode: WEAPON
+  damage {
+    damage {
+      base {
+      }
+      condition {
+      }
+    }
+  }
+}
+space {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+feat {
+  name: "Combat Expertise"
+  parameters {
+  }
+}
+feat {
+  name: "Improved Initiative"
+  parameters {
+  }
+}
+climate: COLD_CLIMATE
+terrain: HILLS
+organization {
+  type: SOLITARY
+  number {
+  }
+}
+organization {
+  type: PAIR
+  number {
+  }
+}
+challenge_rating {
+  leader: 8
+}
+treasure: DOUBLE
+alignment: LAWFUL_EVIL
+alignment_status: USUALLY
+level_adjustment: 7
+language {
+  modifier: AUTOMATIC
+  name: COMMON
+}
+language {
+  modifier: AUTOMATIC
+  name: GIANT
+}
+encounter: "This creature looks like a big, demonic human. It has green skin, dark hair, and a pair of short ivory horns protruding from its forehead. The eyes are dark with strikingly white pupils, and its teeth and claws are jet black."
+combat: "Ogre mages rely on their spell-like abilities, resorting to physical combat only when necessary. When faced with obviously superior forces, they prefer to retreat using gaseous form rather than fight a losing battle. Ogre mages hold deep, abiding grudges, however, and the unwise person who crosses one would do well to keep looking over one\342\200\231s shoulder"
+possession {
+  text: "large greatsword"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "large longbow"
+  count {
+    modifier: 1
+  }
+}
+possession {
+  text: "chain shirt"
+  count {
+    modifier: 1
+  }
+}
+quality {
+  name: "darkvision"
+  parameters {
+    text {
+      name: "range"
+      text: "90 ft"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "regeneration"
+  parameters {
+    text {
+      name: "value"
+      text: "5"
+    }
+    text {
+      name: "lethal"
+      text: "fire and acid"
+    }
+    text {
+      name: "regrow"
+      text: "reattach it by holding the severed member to the stump. Reattachment takes 1 minute. If the head or some other vital organ is severed, it must be reattached within 10 minutes or the creature dies. An ogre mage cannot regrow lost body parts."
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "name"
+      text: "cone of cold"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "name"
+      text: "gaseous form"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "name"
+      text: "polymorph"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "name"
+      text: "sleep"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell resistance"
+  parameters {
+    text {
+      name: "value"
+      text: "19"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "low-light vision"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "flight"
+  parameters {
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "name"
+      text: "darkness"
+    }
+    text {
+      name: "day"
+      text: "999"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "name"
+      text: "invisibility"
+    }
+    text {
+      name: "day"
+      text: "999"
+    }
+  }
+  condition {
+  }
+}
+quality {
+  name: "spell-like ability"
+  parameters {
+    text {
+      name: "name"
+      text: "charm person"
+    }
+    text {
+      name: "day"
+      text: "1"
+    }
+  }
+  condition {
+  }
+}
+skill {
+  name: "concentration"
+  ranks: 8
+}
+skill {
+  name: "listen"
+  ranks: 8
+}
+skill {
+  name: "spellcraft"
+  ranks: 8
+}
+skill {
+  name: "spot"
+  ranks: 8
+}

@@ -1,0 +1,28 @@
+entity {
+  name: "Immunity To Dexterity Damage"
+  category: "immunity"
+  synonym: "Dexterity Damage, Immunity to"
+  world: "Generic"
+  description: "The creature is immune to all dexterity damage."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

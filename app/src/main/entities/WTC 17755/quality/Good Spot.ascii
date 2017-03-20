@@ -1,0 +1,26 @@
+entity {
+  name: "Good Spot"
+  world: "Generic"
+  description: "The creature has a special racial bonus on any \\Skill{spot} check."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

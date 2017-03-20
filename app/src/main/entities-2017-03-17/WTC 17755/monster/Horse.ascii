@@ -1,0 +1,78 @@
+name: "Horse"
+category: "domesticated"
+category: "mount"
+category: "beast of burden"
+reference {
+  name: "WTC 17755"
+  pages {
+    low: 273
+    high: 274
+  }
+}
+world: "Generic"
+description: "Horses are widely domesticated for riding and as beasts of burden."
+short_description: "A domesticated beast of burden."
+size {
+  size: LARGE
+  modifier: LONG
+}
+type: ANIMAL
+hit_dice {
+}
+natural_armor {
+}
+abilities {
+}
+saves {
+}
+space {
+  imperial {
+    feet {
+      leader: 10
+    }
+  }
+}
+reach {
+  imperial {
+    feet {
+      leader: 5
+    }
+  }
+}
+feat {
+  name: "Endurance"
+  parameters {
+  }
+}
+feat {
+  name: "Run"
+  parameters {
+  }
+}
+climate: TEMPERATE
+terrain: PLAINS
+organization {
+  type: DOMESTICATED
+  number {
+  }
+}
+challenge_rating {
+}
+quality {
+  name: "low-light vision"
+  condition {
+  }
+}
+quality {
+  name: "scent"
+  condition {
+  }
+}
+skill {
+  name: "listen"
+  ranks: 1
+}
+skill {
+  name: "spot"
+  ranks: 1
+}

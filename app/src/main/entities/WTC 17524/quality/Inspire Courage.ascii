@@ -1,0 +1,44 @@
+entity {
+  name: "Inspire Courage"
+  category: "action"
+  category: "attack"
+  category: "aura"
+  category: "communication"
+  category: "health"
+  category: "immunity"
+  category: "option"
+  category: "resistance"
+  category: "sense"
+  category: "vulnerability"
+  synonym: "Courage, Inspire"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 29
+      high: 29
+    }
+  }
+  world: "Generic"
+  description: "A bard with 3 or more ranks in a Perform skill can use song or poetics to\n  inspire courage in his allies (including himself), bolstering them against\n  fear and improving their combat abilities. To be affected, an ally must be\n  able to hear the bard sing.  The effect lasts for as long as the ally hears\n  the bard sing and for 5 rounds thereafter. An affected ally receives a +1\n  morale bonus on saving throws against charm and fear effects and a +1 morale\n  bonus on attack and weapon damage rolls. At 8th level, and every six bard\n  levels thereafter, this bonus increases by 1 (+2 at 8th, +3 at 14th, and +4\n  at 20th). Inspire courage is a mind-affecting ability.  "
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

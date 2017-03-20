@@ -1,0 +1,35 @@
+entity {
+  name: "Flaming Hooves"
+  category: "action"
+  synonym: "Hooves, Flaming"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 195
+      high: 195
+    }
+  }
+  world: "Generic"
+  description: "A blow from a nightmare\'s hooves sets combustible materials alight."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

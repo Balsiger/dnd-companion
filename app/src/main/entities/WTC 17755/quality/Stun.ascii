@@ -1,0 +1,34 @@
+entity {
+  name: "Stun"
+  category: "attack"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 55
+      high: 55
+    }
+  }
+  world: "Generic"
+  description: "Whenever a horned devil hits with a spiked chain attack, the opponent must\n  succeed on a DC 27 Fortitude save or be stunned for 1d4 rounds. The save DC\n  is Strength-based. This ability is a function of the horned devil, not of\n  the spiked chain."
+}
+type: SUPERNATURAL
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}

@@ -1,0 +1,28 @@
+entity {
+  name: "Immunity To Exhaustion Effects"
+  category: "immunity"
+  synonym: "Exhaustion Effects, Immunity to"
+  world: "Generic"
+  description: "The creature is immune to all exhaustion effects."
+}
+type: EXTRAORDINARY
+speed {
+  distance {
+  }
+}
+speed_expression {
+  literal {
+  }
+}
+reflex_modifier {
+}
+will_modifier {
+}
+fortitude_modifier {
+}
+attack_modifier {
+}
+damage_modifier {
+}
+ac_modifier {
+}
