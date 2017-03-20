@@ -1,0 +1,136 @@
+import org.gradle.internal.os.OperatingSystem
+
+apply plugin: 'com.google.protobuf'
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "net.ixitachitls.companion"
+        minSdkVersion 23
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        jackOptions {
+            enabled true
+        }
+
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        pickFirst 'plugin.xml'
+        pickFirst 'META-INF/DEPENDENCIES'
+        pickFirst 'META-INF/LICENSE'
+        pickFirst 'META-INF/plexus/components.xml'
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.1.0'
+    }
+    plugins {
+        lite {
+            artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
+        }
+        convertProtoData {
+            println('creating binary protos')
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.plugins {
+                lite {
+                }
+            }
+        }
+    }
+}
+
+configurations {
+    protoc
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    Map platformMapping = [
+            (OperatingSystem.WINDOWS): 'windows-x86_32',
+            (OperatingSystem.MAC_OS) : 'osx-x86_32'
+    ].withDefault { 'linux-x86_32' }
+
+    protoc "com.google.protobuf:protoc:3.1.0:${platformMapping.get(OperatingSystem.current())}@exe"
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.google.protobuf:protobuf-java:3.1.0'
+    compile 'com.google.protobuf:protobuf-gradle-plugin:0.8.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    compile 'com.android.support:multidex:1.0.0'
+    testCompile 'junit:junit:4.12'
+}
+
+
+def convertToBinaryProto(inputFile, outputFile, proto) {
+    // make sure the output directory exists
+    def dir = file(outputFile.replaceFirst(/[^\/]*$/, ""))
+    if (!dir.exists()) {
+        println("creating direcoty $dir")
+        dir.mkdirs()
+    }
+
+    if (file(inputFile).lastModified() > file(outputFile).lastModified()) {
+        println("convert $inputFile to $outputFile ($proto)")
+        exec {
+            executable configurations.protoc.singleFile
+            args '--proto_path=' + file('./src/main/proto/')
+            args "--encode=$proto"
+            args file('./src/main/proto/entity.proto')
+
+            standardInput = new FileInputStream(file(inputFile))
+            standardOutput = new FileOutputStream(file(outputFile))
+            errorOutput = System.err
+            //standardOutput = System.out
+        }
+    }
+}
+
+def convertToBinaryProtos(input, type, proto) {
+    FileTree entities = fileTree(input);
+    FileTree filtered = entities.matching {
+        include "**/${type}/*.ascii"
+    }
+
+    filtered.files.each { f ->
+        convertToBinaryProto(f, f.path.replaceFirst(/[^\/]*\/([^\/]*\/${type}\/.*)\.ascii$/, {
+            all, path -> "assets/entities/" + path + ".pb"
+        }), proto)
+    }
+}
+
+task convertProtoData {
+    convertToBinaryProtos('./src/main/entities', 'monster',
+            'net.ixitxachitls.companion.proto.MonsterProto')
+    convertToBinaryProtos('./src/main/entities', 'level',
+            'net.ixitxachitls.companion.proto.LevelProto')
+}
+
