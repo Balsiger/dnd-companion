@@ -90,7 +90,7 @@ public class EditNumberFragment extends EditIntegerFragment {
 
         if (keyCode == KeyEvent.KEYCODE_ENTER) {
           edited(Integer.parseInt(value.getText().toString()));
-          Edits.hideKeyboard(getActivity(), value);
+          Edits.hideKeyboard(view, value);
           return true;
         }
 

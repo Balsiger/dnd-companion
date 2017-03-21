@@ -52,5 +52,6 @@
     <string name="settings_title">Settings</string>
     <string name="settings_nickname_label">Nickname</string>
     <string name="settings_save">Save</string>
+    <string name="settings_initial">Initial setup</string>
 
 </resources>

@@ -24,16 +24,19 @@ package net.ixitxachitls.companion.ui.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.ui.MainActivity;
+import net.ixitxachitls.companion.ui.Setup;
 
 public class SettingsActivity extends Activity {
 
   private Settings settings;
   private TextView nickname;
+  private Button save;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +45,16 @@ public class SettingsActivity extends Activity {
     View container = findViewById(R.id.settings_content);
 
     settings = Settings.load(getApplicationContext()).or(new Settings(""));
-    nickname = setupEditText(container, R.id.nickname, settings.getNickname(),
+    nickname = Setup.editText(container, R.id.nickname, settings.getNickname(),
         R.string.settings_nickname_label, R.color.colorAccent,
-        this::editNickname);
-    setupButton(container, R.id.save, this::save);
+        this::editNickname, this::update);
+    save = Setup.button(container, R.id.save, this::save);
+
+    if (settings.isDefined()) {
+      container.findViewById(R.id.initial).setVisibility(View.INVISIBLE);
+    }
+
+    update();
   }
 
   private void save() {
@@ -59,5 +68,13 @@ public class SettingsActivity extends Activity {
 
   private void editNickname() {
     settings.setNickname(nickname.getText().toString());
+  }
+
+  private void update() {
+    if (nickname.getText().length() > 0) {
+      save.setVisibility(View.VISIBLE);
+    } else {
+      save.setVisibility(View.INVISIBLE);
+    }
   }
 }

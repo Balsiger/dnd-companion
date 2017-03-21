@@ -92,7 +92,7 @@ public class EditTextFragment extends EditStringFragment {
 
         if (keyCode == KeyEvent.KEYCODE_ENTER) {
           edited(value.getText().toString());
-          Edits.hideKeyboard(getActivity(), value);
+          Edits.hideKeyboard(view, value);
           return true;
         }
 

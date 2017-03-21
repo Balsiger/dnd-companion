@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.util;
 
 import android.app.Activity;
 import android.content.Context;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
@@ -38,9 +39,9 @@ public class Edits {
     manager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
   }
 
-  public static void hideKeyboard(Activity activity, EditText edit) {
-    InputMethodManager imm =
-        (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+  public static void hideKeyboard(View view, EditText edit) {
+    InputMethodManager imm = (InputMethodManager)
+        view.getContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
     imm.hideSoftInputFromWindow(edit.getWindowToken(), 0);
   }
 }
