@@ -34,14 +34,14 @@ import android.widget.Toast;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Character;
+import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.proto.Entity;
 
 /**
- * Simple fragmemt to edit a level.
+ * Simple fragmemt to execute a level.
  */
 public class EditLevelFragment extends EditFragment {
   /*
@@ -205,7 +205,7 @@ public class EditLevelFragment extends EditFragment {
     if (mEdit != null) {
       mEdit.edit(mLevel);
     } else {
-      Log.wtf("edit", "listener not set");
+      Log.wtf("execute", "listener not set");
     }
 
     close();

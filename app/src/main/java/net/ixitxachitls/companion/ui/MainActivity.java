@@ -39,17 +39,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.common.base.Optional;
-
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.proto.Entity;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.activities.SettingsActivity;
 import net.ixitxachitls.companion.ui.edit.EditTextFragment;
-import net.ixitxachitls.companion.proto.Entity;
 
 public class MainActivity extends AppCompatActivity
     implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -64,6 +62,9 @@ public class MainActivity extends AppCompatActivity
     setContentView(R.layout.activity_main);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
+
+    Entries.init(this);
+    settings = Settings.load(this).or(new Settings(""));
 
     // Add campaign button.
     FloatingActionButton button = (FloatingActionButton) findViewById(R.id.addCampaign);
@@ -139,6 +140,7 @@ public class MainActivity extends AppCompatActivity
 
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings) {
+      gotoSettings();
       return true;
     }
 
@@ -171,17 +173,18 @@ public class MainActivity extends AppCompatActivity
       findViewById(R.id.campaignsTitleEmpty).setVisibility(View.GONE);
     }
 
-    Entries.init(this);
-    settings = Settings.load(this).or(new Settings(""));
-
     if (!settings.isDefined()) {
-      Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-      MainActivity.this.startActivity(intent);
+      gotoSettings();
     }
   }
 
   @Override
   public void onLoaderReset(Loader<Cursor> loader) {
     campaignsAdapter.swapCursor(null);
+  }
+
+  private void gotoSettings() {
+    Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+    MainActivity.this.startActivity(intent);
   }
 }

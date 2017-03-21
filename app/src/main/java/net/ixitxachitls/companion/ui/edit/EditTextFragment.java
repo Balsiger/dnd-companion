@@ -33,7 +33,7 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.util.Edits;
 
 /**
- * A simple {@link android.app.Fragment} subclass to edit a simple text.
+ * A simple {@link android.app.Fragment} subclass to execute a simple text.
  * Use the {@link EditTextFragment#newInstance} factory method to
  * create an instance of this fragment.
  */

@@ -28,7 +28,6 @@ import com.google.common.base.Optional;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.proto.Entity;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 /**
@@ -39,7 +38,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   public static final int ID = 1;
 
   public Settings(String name) {
-    super(ID, name, DataBaseContentProvider.SETTINGS);
+    super(0, name, DataBaseContentProvider.SETTINGS);
   }
 
   @Override
@@ -67,5 +66,13 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   public boolean isDefined() {
     return !name.isEmpty();
+  }
+
+  public String getNickname() {
+    return name;
+  }
+
+  public void setNickname(String name) {
+    setName(name);
   }
 }

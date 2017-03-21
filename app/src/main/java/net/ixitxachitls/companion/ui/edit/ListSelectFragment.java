@@ -111,7 +111,7 @@ public class ListSelectFragment extends EditFragment {
     if (mEdit != null) {
       mEdit.edit(value, position);
     } else {
-      Log.wtf("edit", "listener not set");
+      Log.wtf("execute", "listener not set");
     }
 
     close();

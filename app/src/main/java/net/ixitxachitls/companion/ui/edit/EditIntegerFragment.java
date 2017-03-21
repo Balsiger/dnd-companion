@@ -43,7 +43,7 @@ public abstract class EditIntegerFragment extends EditFragment {
     if (mEdit != null) {
       mEdit.edit(value);
     } else {
-      Log.wtf("edit", "listener not set");
+      Log.wtf("execute", "listener not set");
     }
 
     close();

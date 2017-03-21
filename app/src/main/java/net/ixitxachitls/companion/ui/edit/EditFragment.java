@@ -71,7 +71,7 @@ public abstract class EditFragment extends DialogFragment {
   public void display(FragmentManager manager) {
     FragmentTransaction transaction = manager.beginTransaction();
     // mTitle is not yet filled.
-    String name = "edit-" + getClass().getSimpleName();
+    String name = "execute-" + getClass().getSimpleName();
     show(transaction, name);
   }
 

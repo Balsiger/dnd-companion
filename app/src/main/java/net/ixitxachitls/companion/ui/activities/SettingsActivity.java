@@ -21,23 +21,43 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.ui.MainActivity;
 
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends Activity {
+
+  private Settings settings;
+  private TextView nickname;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_settings);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
-    setTitle("Settings");
+    setup(savedInstanceState, R.layout.activity_settings, R.string.settings_title);
+    View container = findViewById(R.id.settings_content);
+
+    settings = Settings.load(getApplicationContext()).or(new Settings(""));
+    nickname = setupEditText(container, R.id.nickname, settings.getNickname(),
+        R.string.settings_nickname_label, R.color.colorAccent,
+        this::editNickname);
+    setupButton(container, R.id.save, this::save);
+  }
+
+  private void save() {
+    editNickname();
+
+    if (settings.isDefined()) {
+      Intent intent = new Intent(this, MainActivity.class);
+      this.startActivity(intent);
+    }
+  }
+
+  private void editNickname() {
+    settings.setNickname(nickname.getText().toString());
   }
 }
