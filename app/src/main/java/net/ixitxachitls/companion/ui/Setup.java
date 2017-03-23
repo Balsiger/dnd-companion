@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui;
 
 import android.content.res.ColorStateList;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -42,13 +43,17 @@ public class Setup {
     void execute();
   }
 
+  public static EditText editText(View view, int id, String value, int label, int color) {
+    return editText(view, id, value, label, color, null);
+  }
+
   public static EditText editText(View view, int id, String value, int label, int color,
-                                  Action action) {
+                                  @Nullable Action action) {
     return editText(view, id, value, label, color, action, null);
   }
 
   public static EditText editText(View view, int id, String value, int label, int color,
-                                  Action editAction, @Nullable Action keyAction) {
+                                  @Nullable Action editAction, @Nullable Action keyAction) {
     EditText edit = (EditText) view.findViewById(id);
     edit.setText(value);
     edit.setHint(view.getContext().getString(label));
@@ -61,7 +66,9 @@ public class Setup {
           return false;
 
         if (keyCode == KeyEvent.KEYCODE_ENTER) {
-          editAction.execute();
+          if (editAction != null) {
+            editAction.execute();
+          }
           Edits.hideKeyboard(view, edit);
           return true;
         }
@@ -99,6 +106,19 @@ public class Setup {
     button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
+        action.execute();
+      }
+    });
+
+    return button;
+  }
+
+  public static FloatingActionButton floatingButton(View container, int id, Action action) {
+    FloatingActionButton button = (FloatingActionButton)
+        container.findViewById(id);
+    button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
         action.execute();
       }
     });

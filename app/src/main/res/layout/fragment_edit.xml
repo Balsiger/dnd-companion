@@ -20,25 +20,17 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content"
+              android:layout_height="match_parent"
               android:clickable="true"
-              tools:context="net.ixitxachitls.companion.ui.edit.EditTextFragment"
-              android:orientation="vertical"
-    >
-
-    <!-- TODO: Update blank fragment layout -->
-
+              android:orientation="vertical">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="@android:style/TextAppearance.Material.WindowTitle"
-        android:gravity="center_horizontal"
         android:padding="10dp"
-        android:background="@color/colorCampaign"
-        android:id="@+id/title"/>
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Material.WindowTitle"/>
 
 </LinearLayout>

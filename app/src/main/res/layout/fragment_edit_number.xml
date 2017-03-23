@@ -20,7 +20,6 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -28,7 +27,7 @@
               android:orientation="vertical"
     >
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank fragment layoutId -->
 
 
     <EditText
@@ -38,7 +37,7 @@
         android:ems="10"
         android:gravity="center_vertical|center_horizontal"
         android:padding="10dp"
-        android:backgroundTint="@color/colorCampaign"
+        android:backgroundTint="@color/campaign"
         android:id="@+id/numberValue"/>
 
 </LinearLayout>

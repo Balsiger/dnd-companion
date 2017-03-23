@@ -48,6 +48,10 @@ public abstract class Entry<P extends MessageLite> {
 
   public abstract P toProto();
 
+  public boolean isDefined() {
+    return !name.isEmpty();
+  }
+
   public String getName() {
     return name;
   }

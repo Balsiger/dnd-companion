@@ -4,3 +4,8 @@ package net.ixitxachitls.companion.proto;
 message SettingsProto {
   string nickname = 1;
 }
+
+message CampaignProto {
+  string name = 1;
+  string world = 2;
+}

@@ -29,7 +29,6 @@ import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.ui.MainActivity;
 import net.ixitxachitls.companion.ui.Setup;
 
 public class SettingsActivity extends Activity {
@@ -44,7 +43,7 @@ public class SettingsActivity extends Activity {
     setup(savedInstanceState, R.layout.activity_settings, R.string.settings_title);
     View container = findViewById(R.id.settings_content);
 
-    settings = Settings.load(getApplicationContext()).or(new Settings(""));
+    settings = Settings.get();
     nickname = Setup.editText(container, R.id.nickname, settings.getNickname(),
         R.string.settings_nickname_label, R.color.colorAccent,
         this::editNickname, this::update);

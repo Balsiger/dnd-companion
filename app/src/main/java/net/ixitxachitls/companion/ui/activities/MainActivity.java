@@ -19,7 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui;
+package net.ixitxachitls.companion.ui.activities;
 
 import android.app.LoaderManager;
 import android.content.CursorLoader;
@@ -27,9 +27,6 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,47 +40,43 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.ui.activities.SettingsActivity;
-import net.ixitxachitls.companion.ui.edit.EditTextFragment;
+import net.ixitxachitls.companion.ui.CampaignActivity;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.ListProtoAdapter;
+import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
 
-public class MainActivity extends AppCompatActivity
-    implements LoaderManager.LoaderCallbacks<Cursor> {
+public class MainActivity extends Activity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-  private ListProtoAdapter<Entity.CampaignProto> campaignsAdapter;
+  private ListProtoAdapter<Data.CampaignProto> campaignsAdapter;
   private Settings settings;
+
+  private void init() {
+    Entries.init(this);
+    Settings.init(this);
+
+    settings = Settings.get();
+  }
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    setup(savedInstanceState, R.layout.activity_main, R.string.app_name);
+    View container = findViewById(R.id.activity_main);
 
-    setContentView(R.layout.activity_main);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
+    init();
 
-    Entries.init(this);
-    settings = Settings.load(this).or(new Settings(""));
-
-    // Add campaign button.
-    FloatingActionButton button = (FloatingActionButton) findViewById(R.id.addCampaign);
-    button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        EditTextFragment edit = EditTextFragment.newInstance(R.string.campaign_add_title,
-            R.string.campaign_edit_name, "", R.color.colorCampaign);
-        edit.setListener(MainActivity.this::onEdit);
-        edit.display(getFragmentManager());
-      }
-    });
+    Setup.floatingButton(container, R.id.campaign_add, this::addCampaign);
 
     // Setup list view.
     ListView campaigns = (ListView) findViewById(R.id.campaignsList);
     campaignsAdapter = new ListProtoAdapter<>(this, R.layout.list_item_campaign,
-        new ListProtoAdapter.OnItemClick<Entity.CampaignProto>() {
+        new ListProtoAdapter.OnItemClick<Data.CampaignProto>() {
           @Override
-          public void click(long id, Entity.CampaignProto proto) {
+          public void click(long id, Data.CampaignProto proto) {
             ConfirmationDialog.show(MainActivity.this,
                 getResources().getString(R.string.campaign_delete_title),
                 getResources().getString(R.string.campaign_delete_message),
@@ -104,10 +97,10 @@ public class MainActivity extends AppCompatActivity
                 });
           }
         },
-        Entity.CampaignProto.getDefaultInstance(),
-        new ListProtoAdapter.Binder<Entity.CampaignProto>() {
+        Data.CampaignProto.getDefaultInstance(),
+        new ListProtoAdapter.Binder<Data.CampaignProto>() {
           @Override
-          public void bind(View view, Entity.CampaignProto proto) {
+          public void bind(View view, Data.CampaignProto proto) {
             ((TextView) view.findViewById(R.id.text)).setText(proto.getName());
           }
         });
@@ -186,5 +179,9 @@ public class MainActivity extends AppCompatActivity
   private void gotoSettings() {
     Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
     MainActivity.this.startActivity(intent);
+  }
+
+  private void addCampaign() {
+    EditCampaignFragment.newInstance().display(getFragmentManager());
   }
 }

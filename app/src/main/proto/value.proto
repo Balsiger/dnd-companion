@@ -255,6 +255,28 @@ message ExpressionProto {
   Literal literal = 3;
 }
 
+message CalendarProto
+{
+  message Year {
+    int32 start = 1;
+    int32 end = 2;
+    string name = 3;
+  }
+  repeated Year year = 1;
+
+  message Month {
+    string name = 1;
+    int32 days = 2;
+    int32 leap_years = 3;
+  }
+  repeated Month month = 2;
+
+  int32 days_per_week = 3;
+  int32 hours_per_day = 4;
+  int32 minutes_per_hour = 5;
+  int32 seconds_per_minute = 6;
+}
+
 // Shared enums.
 
 enum WeaponStyle {

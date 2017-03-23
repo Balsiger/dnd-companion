@@ -28,6 +28,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.common.base.Optional;
+
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Entries;
@@ -57,7 +58,7 @@ public class CharacterActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
-    mColor = getColor(R.color.colorCharacter);
+    mColor = getColor(R.color.character);
 
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_character);
@@ -125,7 +126,7 @@ public class CharacterActivity extends AppCompatActivity {
   private boolean editLevel(String value, int position) {
     Optional<Character.Level> level = mCharacter.getLevel(position);
     EditLevelFragment edit = EditLevelFragment.newInstance(R.string.character_edit_level,
-        getColor(R.color.colorCharacter),  level.isPresent()
+        getColor(R.color.character),  level.isPresent()
             ? level.get().toProto() : Entity.CharacterProto.Level.getDefaultInstance(),
         position + 1);
     edit.setListener(v -> updateLevel(v, position));

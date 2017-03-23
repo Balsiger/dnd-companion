@@ -25,6 +25,8 @@ import android.content.Context;
 import android.database.CursorIndexOutOfBoundsException;
 
 import com.google.common.base.Optional;
+import com.google.common.base.Preconditions;
+import com.google.inject.Singleton;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.proto.Data;
@@ -33,12 +35,19 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 /**
  * All the settings value of the user.
  */
+@Singleton
 public class Settings extends StoredEntry<Data.SettingsProto> {
   public static final String TABLE = "settings";
   public static final int ID = 1;
 
-  public Settings(String name) {
+  private static Settings settings = null;
+
+  private Settings(String name) {
     super(0, name, DataBaseContentProvider.SETTINGS);
+  }
+
+  public static void init(Context context) {
+    settings = load(context).or(new Settings(""));
   }
 
   @Override
@@ -48,11 +57,16 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
         .build();
   }
 
-  public static Settings fromProto(Data.SettingsProto proto) {
+  public static Settings get() {
+    Preconditions.checkNotNull(settings);
+    return settings;
+  }
+
+  private static Settings fromProto(Data.SettingsProto proto) {
     return new Settings(proto.getNickname());
   }
 
-  public static Optional<Settings> load(Context context) {
+  private static Optional<Settings> load(Context context) {
     try {
       return Optional.of(fromProto(Data.SettingsProto.getDefaultInstance().getParserForType()
           .parseFrom(loadBytes(context, ID, DataBaseContentProvider.SETTINGS))));

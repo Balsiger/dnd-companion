@@ -38,7 +38,7 @@
         android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:textStyle="normal|bold"
         android:padding="20dp"
-        android:background="@color/colorCampaign"
+        android:background="@color/campaign"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toTopOf="@+id/delete"

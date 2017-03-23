@@ -3,9 +3,33 @@ package net.ixitxachitls.companion.proto;
 
 import "value.proto";
 
-message CampaignProto {
+message EntityProto {
   string id = 1;
   string name = 2;
+  repeated string base = 3;
+  repeated string category = 4;
+  repeated string synonym = 5;
+  repeated ReferenceProto reference = 6;
+  repeated string world = 7;
+  string description = 8;
+  string short_description = 9;
+  string incomplete = 10;
+}
+
+message WorldProto {
+  EntityProto entity = 1;
+  CalendarProto calendar = 2;
+
+  message Names
+  {
+    string race = 1;
+    string region = 2;
+    repeated string male = 3;
+    repeated string female = 4;
+    repeated string surename = 5;
+  }
+  repeated Names names = 3;
+
 }
 
 message CharacterProto {
@@ -23,19 +47,6 @@ message CharacterProto {
     repeated string spell_known = 6;
   }
   repeated Level level = 5;
-}
-
-message EntityProto {
-  string id = 1;
-  string name = 2;
-  repeated string base = 3;
-  repeated string category = 4;
-  repeated string synonym = 5;
-  repeated ReferenceProto reference = 6;
-  repeated string world = 7;
-  string description = 8;
-  string short_description = 9;
-  string incomplete = 10;
 }
 
 message MonsterProto {

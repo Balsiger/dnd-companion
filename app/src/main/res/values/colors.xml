@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="colorCampaign">#F94</color>
-    <color name="colorCharacter">#7ef</color>
+    <color name="campaign">#f94</color>
+    <color name="character">#7ef</color>
 </resources>

@@ -26,38 +26,52 @@ import android.content.Context;
 import com.google.common.base.Optional;
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 /**
  * A campaign with all its data.
  */
-public class Campaign extends StoredEntry<Entity.CampaignProto> {
+public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public static final String TABLE = "campaigns";
+
+  private String world;
 
   public Campaign(long id, String name) {
     super(id, name, DataBaseContentProvider.CAMPAIGNS);
   }
 
   @Override
-  public Entity.CampaignProto toProto() {
-    return Entity.CampaignProto.newBuilder()
+  public Data.CampaignProto toProto() {
+    return Data.CampaignProto.newBuilder()
         .setName(name)
+        .setWorld(world)
         .build();
   }
 
-  public static Campaign fromProto(long id, Entity.CampaignProto proto) {
-    return new Campaign(id, proto.getName());
+  public static Campaign fromProto(long id, Data.CampaignProto proto) {
+    Campaign campaign = new Campaign(id, proto.getName());
+    campaign.world = proto.getWorld();
+
+    return campaign;
   }
 
   public static Optional<Campaign> load(Context context, long id) {
     try {
-      return Optional.of(fromProto(id, Entity.CampaignProto.getDefaultInstance().getParserForType()
+      return Optional.of(fromProto(id, Data.CampaignProto.getDefaultInstance().getParserForType()
           .parseFrom(loadBytes(context, id, DataBaseContentProvider.CAMPAIGNS))));
     } catch (InvalidProtocolBufferException e) {
       e.printStackTrace();
       return Optional.absent();
     }
+  }
+
+  public String getWorld() {
+    return world;
+  }
+
+  public void setWorld(String world) {
+    this.world = world;
   }
 }
