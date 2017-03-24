@@ -44,6 +44,9 @@ public class Level extends Entry<Entity.LevelProto> {
   @Override
   public Entity.LevelProto toProto() {
     return Entity.LevelProto.newBuilder()
+        .setEntity(Entity.EntityProto.newBuilder()
+            .setName(name)
+            .build())
         .build();
   }
 

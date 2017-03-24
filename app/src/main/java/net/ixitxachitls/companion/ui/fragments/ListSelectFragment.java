@@ -19,19 +19,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.edit;
+package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+
+import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.ui.Setup;
 
 import java.util.ArrayList;
 
@@ -39,16 +36,17 @@ import java.util.ArrayList;
  * Simple fragmemt to select an item from a list.
  */
 public class ListSelectFragment extends EditFragment {
+
   private static final String ARG_SELECTED = "selected";
   private static final String ARG_VALUES = "values";
 
-  private String mSelected;
-  private ArrayList<String> mValues;
-  protected @Nullable Edit mEdit;
+  private String selected;
+  private ArrayList<String> values;
+  protected Optional<SelectAction> selectAction = Optional.absent();
 
   @FunctionalInterface
-  public interface Edit {
-    void edit(String value, int position);
+  public interface SelectAction {
+    void select(String value, int position);
   }
 
   public ListSelectFragment() {
@@ -58,14 +56,14 @@ public class ListSelectFragment extends EditFragment {
   public static ListSelectFragment newInstance(int titleId, String selected,
                                                ArrayList<String> values, int color) {
     ListSelectFragment fragment = new ListSelectFragment();
-    Bundle arguments = arguments(titleId, color, selected, values);
+    Bundle arguments = arguments(R.layout.fragment_list_select, titleId, color, selected, values);
     fragment.setArguments(arguments);
     return fragment;
   }
 
-  protected static Bundle arguments(int titleId, int color, String selected,
+  protected static Bundle arguments(int layoutId, int titleId, int color, String selected,
                                     ArrayList<String> values) {
-    Bundle arguments = EditFragment.arguments(titleId, color);
+    Bundle arguments = EditFragment.arguments(layoutId, titleId, color);
     arguments.putString(ARG_SELECTED, selected);
     arguments.putStringArrayList(ARG_VALUES, values);
     return arguments;
@@ -76,45 +74,31 @@ public class ListSelectFragment extends EditFragment {
     super.onCreate(savedInstanceState);
 
     if (getArguments() != null) {
-      mSelected = getArguments().getString(ARG_SELECTED);
-      mValues = getArguments().getStringArrayList(ARG_VALUES);
+      selected = getArguments().getString(ARG_SELECTED);
+      values = getArguments().getStringArrayList(ARG_VALUES);
     } else {
-      mSelected = "";
-      mValues = new ArrayList<>();
+      selected = "";
+      values = new ArrayList<>();
     }
   }
 
   @Override
-  public View onCreateContent(LayoutInflater inflater, ViewGroup container,
-                              Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.fragment_list_select, container, false);
-    final ListView value = (ListView) view.findViewById(R.id.listSelectView);
-    ArrayAdapter<String> itemAdapter =
-        new ArrayAdapter<>(getContext(), R.layout.list_item_select, mValues);
-    value.setAdapter(itemAdapter);
-    value.setSelection(mValues.indexOf(mSelected));
-    value.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-      @Override
-      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        edited(mValues.get(position), position);
-      }
-    });
-
-    return view;
+  public void createContent(View view) {
+    Setup.list(view, R.id.listSelectView, R.layout.list_item_select, values,
+        selected, this::edited);
   }
 
-  public void setListener(Edit edit) {
-    mEdit = edit;
+  public void setSelectListener(SelectAction action) {
+    this.selectAction = Optional.of(action);
   }
 
   protected void edited(String value, int position) {
-    if (mEdit != null) {
-      mEdit.edit(value, position);
+    if (selectAction.isPresent()) {
+      selectAction.get().select(value, position);
     } else {
-      Log.wtf("execute", "listener not set");
+      Log.wtf("select", "listener not set");
     }
 
-    close();
+    save();
   }
-
 }

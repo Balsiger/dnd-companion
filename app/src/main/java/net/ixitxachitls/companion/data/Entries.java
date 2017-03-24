@@ -24,21 +24,26 @@ package net.ixitxachitls.companion.data;
 import android.content.Context;
 import android.support.annotation.Nullable;
 
+import com.google.inject.Singleton;
+
 import net.ixitxachitls.companion.ui.Alert;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Storage place for all entries.
  */
+@Singleton
 public class Entries {
 
   private static final String PATH_ENTITIES = "entities";
 
-  private static @Nullable Entries sSingleton = null;
+  private static @Nullable Entries singleton = null;
 
-  private final Monsters mMonsters = new Monsters();
-  private final Levels mLevels = new Levels();
+  private final Monsters monsters = new Monsters();
+  private final EntriesStore<Level> levels = new EntriesStore(Level.class);
+  private final EntriesStore<World> worlds = new EntriesStore(World.class);
   private final Context mContext;
 
   public Entries(Context context) {
@@ -47,14 +52,14 @@ public class Entries {
   }
 
   public static void init(Context context) {
-    if (sSingleton == null) {
-      sSingleton = new Entries(context);
-      sSingleton.load();
+    if (singleton == null) {
+      singleton = new Entries(context);
+      singleton.load();
     }
   }
 
   public static Entries get() {
-    return sSingleton;
+    return singleton;
   }
 
   public static Context getContext() {
@@ -62,10 +67,15 @@ public class Entries {
   }
 
   public Monsters getMonsters() {
-    return mMonsters;
+    return monsters;
   }
-  public Levels getLevels() {
-    return mLevels;
+
+  public EntriesStore<World> getWorlds() {
+    return worlds;
+  }
+
+  public EntriesStore<Level> getLevels() {
+    return levels;
   }
 
   private void load() {
@@ -78,10 +88,13 @@ public class Entries {
             message = type + ": " + file;
             switch (type) {
               case Monster.TYPE:
-                mMonsters.read(mContext.getAssets(), path + "/" + file);
+                monsters.read(mContext.getAssets(), path + "/" + file);
                 break;
               case Level.TYPE:
-                mLevels.read(mContext.getAssets(), path + "/" + file);
+                levels.read(mContext.getAssets(), path + "/" + file);
+                break;
+              case World.TYPE:
+                worlds.read(mContext.getAssets(), path + "/" + file);
                 break;
               default:
                 Alert.show(mContext, "Loading " + type + ": " + file,
@@ -91,7 +104,8 @@ public class Entries {
           }
         }
       }
-    } catch (IOException e) {
+    } catch (IOException | NoSuchMethodException | IllegalAccessException
+        | InvocationTargetException e) {
       Alert.show(mContext, "Loading " + message,
           "Loading of entries from internal storage failed: " + e);
     }

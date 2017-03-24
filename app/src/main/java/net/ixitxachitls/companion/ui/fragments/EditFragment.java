@@ -25,14 +25,18 @@ import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
 
@@ -46,11 +50,31 @@ public abstract class EditFragment extends DialogFragment {
   private static final String ARG_COLOR = "color";
   private static final int WIDTH = 1000;
 
+  private Optional<SaveAction> save = Optional.absent();
+  private Optional<CancelAction> cancel = Optional.absent();
+
+  // The following values are only filled after onCreate().
   protected int layoutId;
   protected String title;
   protected int color;
 
+  // Required empty constructor, don't add anything here.
   protected EditFragment() {}
+
+  @FunctionalInterface
+  public interface AttachAction {
+    public void attached(EditFragment fragment);
+  }
+
+  @FunctionalInterface
+  public interface CancelAction {
+    public void cancel(EditFragment fragment);
+  }
+
+  @FunctionalInterface
+  public interface SaveAction {
+    public void save(EditFragment fragment);
+  }
 
   protected static Bundle arguments(int layoutId, int titleId, int color) {
     Bundle arguments = new Bundle();
@@ -114,7 +138,43 @@ public abstract class EditFragment extends DialogFragment {
     getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
   }
 
-  protected void close() {
+  @Override
+  public void onAttach(Context context) {
+    super.onAttach(context);
+
+    if (context instanceof AttachAction) {
+      ((AttachAction) context).attached(this);
+    } else {
+      Log.wtf("attach", "context " + context.getClass().getSimpleName()
+          + " does not implement InteractionAction");
+    }
+  }
+
+  public void setCancelListener(CancelAction cancel) {
+    this.cancel = Optional.of(cancel);
+  }
+
+  public void setSaveListener(SaveAction save) {
+    this.save = Optional.of(save);
+  }
+
+  protected void save() {
+    if (save.isPresent()) {
+      save.get().save(this);
+    }
+
+    close();
+  }
+
+  protected void cancel() {
+    if (cancel.isPresent()) {
+      cancel.get().cancel(this);
+    }
+
+    close();
+  }
+
+  private void close() {
     FragmentTransaction transaction = getFragmentManager().beginTransaction();
     transaction.detach(this);
     transaction.commit();

@@ -61,5 +61,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="campaign_edit_world_hint">select world...</string>
     <string name="settings_nickname_note">The nickname is used to identifiy you to other players and DMs.</string>
+    <string name="campaign_select_world">Select world</string>
 
 </resources>

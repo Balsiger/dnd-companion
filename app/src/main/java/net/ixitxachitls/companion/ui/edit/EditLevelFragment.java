@@ -39,6 +39,7 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
 
 /**
  * Simple fragmemt to execute a level.
@@ -146,8 +147,8 @@ public class EditLevelFragment extends EditFragment {
 
   public void editName() {
     ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_select_class,
-        mLevel.getName(), Entries.get().getLevels().getClasses(), mColor);
-    edit.setListener(this::updateName);
+        mLevel.getName(), Entries.get().getLevels().getNames(), mColor);
+    edit.setSelectListener(this::updateName);
     edit.display(getFragmentManager());
   }
 
@@ -162,7 +163,7 @@ public class EditLevelFragment extends EditFragment {
     ListSelectFragment edit = ListSelectFragment.newInstance(
         R.string.abilityIncreaseTitle, mLevel.getAbilityIncrease().getName(), Ability.names(),
         mColor);
-    edit.setListener(this::updateAbilityIncrease);
+    edit.setSelectListener(this::updateAbilityIncrease);
     edit.display(getFragmentManager());
   }
 

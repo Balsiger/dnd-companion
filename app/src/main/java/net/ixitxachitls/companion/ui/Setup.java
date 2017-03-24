@@ -26,11 +26,17 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
 import net.ixitxachitls.companion.util.Edits;
+
+import java.util.ArrayList;
 
 /**
  * Collection of utilities to setup ui elements.
@@ -114,8 +120,7 @@ public class Setup {
   }
 
   public static FloatingActionButton floatingButton(View container, int id, Action action) {
-    FloatingActionButton button = (FloatingActionButton)
-        container.findViewById(id);
+    FloatingActionButton button = (FloatingActionButton) container.findViewById(id);
     button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -124,5 +129,24 @@ public class Setup {
     });
 
     return button;
+  }
+
+  public static ListView list(View container, int id, int itemLayout,
+                              ArrayList<String> values, String selected,
+                              ListSelectFragment.SelectAction action) {
+    ListView list = (ListView) container.findViewById(id);
+    ArrayAdapter<String> itemAdapter =
+        new ArrayAdapter<>(container.getContext(), itemLayout, values);
+    list.setAdapter(itemAdapter);
+    list.setSelection(values.indexOf(selected));
+    list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        action.select(values.get(position), position);
+      }
+    });
+
+
+    return list;
   }
 }

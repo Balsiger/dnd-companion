@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data;
 
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.net.Uri;
 
@@ -32,14 +33,14 @@ import net.ixitxachitls.companion.storage.DataBase;
  * An entry that is stored in the database.
  */
 public abstract class StoredEntry<P extends MessageLite> extends Entry<P> {
-  private long mId;
-  private final Uri mDbUrl;
+  private long id;
+  private final Uri dbUrl;
 
   protected StoredEntry(long id, String name, Uri dbUrl) {
     super(name);
 
-    mId = id;
-    mDbUrl = dbUrl;
+    this.id = id;
+    this.dbUrl = dbUrl;
   }
 
   public ContentValues toValues() {
@@ -52,15 +53,15 @@ public abstract class StoredEntry<P extends MessageLite> extends Entry<P> {
   @Override
   public void setName(String name) {
     super.setName(name);
-    store();
   }
 
-  protected void store() {
-    if (mId == 0) {
-      Entries.getContext().getContentResolver().insert(mDbUrl, toValues());
+  public void store() {
+    if (id == 0) {
+      Uri row = Entries.getContext().getContentResolver().insert(dbUrl, toValues());
+      id = ContentUris.parseId(row);
     } else {
-      Entries.getContext().getContentResolver().update(mDbUrl, toValues(),
-          "id = " + mId, null);
+      Entries.getContext().getContentResolver().update(dbUrl, toValues(),
+          "id = " + id, null);
     }
   }
 }

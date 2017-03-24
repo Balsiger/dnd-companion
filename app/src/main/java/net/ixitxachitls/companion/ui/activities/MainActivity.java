@@ -48,8 +48,10 @@ import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.ListProtoAdapter;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
+import net.ixitxachitls.companion.ui.fragments.EditFragment;
 
-public class MainActivity extends Activity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class MainActivity extends Activity
+    implements LoaderManager.LoaderCallbacks<Cursor>, EditFragment.AttachAction {
 
   private ListProtoAdapter<Data.CampaignProto> campaignsAdapter;
   private Settings settings;
@@ -147,7 +149,9 @@ public class MainActivity extends Activity implements LoaderManager.LoaderCallba
     getContentResolver().insert(DataBaseContentProvider.CAMPAIGNS,
         new Campaign(0, name).toValues());
 
-    // Refresh the list view.
+  }
+
+  private void refresh() {
     getLoaderManager().restartLoader(0, null, this);
   }
 
@@ -183,5 +187,16 @@ public class MainActivity extends Activity implements LoaderManager.LoaderCallba
 
   private void addCampaign() {
     EditCampaignFragment.newInstance().display(getFragmentManager());
+  }
+
+  public void attached(EditFragment fragment) {
+    if (fragment instanceof EditCampaignFragment) {
+      ((EditCampaignFragment)fragment).setSaveListener(this::saveCampaign);
+    }
+  }
+
+  public void saveCampaign(Campaign campaign) {
+    campaign.store();
+    refresh();
   }
 }

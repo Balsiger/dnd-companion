@@ -37,7 +37,7 @@ import net.ixitxachitls.companion.proto.Entity;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.ui.edit.EditLevelFragment;
 import net.ixitxachitls.companion.ui.edit.EditTextFragment;
-import net.ixitxachitls.companion.ui.edit.ListSelectFragment;
+import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
 
 import java.util.ArrayList;
 
@@ -103,14 +103,14 @@ public class CharacterActivity extends AppCompatActivity {
   public void editRace() {
     ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_race,
         mCharacter.getRace(), Entries.get().getMonsters().primaryRaces(), mColor);
-    edit.setListener(this::updateRace);
+    edit.setSelectListener(this::updateRace);
     edit.display(getFragmentManager());
   }
 
   public void editGender() {
     ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_gender,
         mCharacter.getGender().getName(), Gender.names(), mColor);
-    edit.setListener(this::updateGender);
+    edit.setSelectListener(this::updateGender);
     edit.display(getFragmentManager());
   }
 
@@ -119,7 +119,7 @@ public class CharacterActivity extends AppCompatActivity {
     summaries.add("<add level>");
     ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_levels,
         "", summaries, mColor);
-    edit.setListener(this::editLevel);
+    edit.setSelectListener(this::editLevel);
     edit.display(getFragmentManager());
   }
 

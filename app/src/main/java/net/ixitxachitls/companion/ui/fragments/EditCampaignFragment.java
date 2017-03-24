@@ -22,16 +22,19 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.common.base.Optional;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
+import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.Setup;
 
@@ -43,6 +46,14 @@ public class EditCampaignFragment extends EditFragment {
   private static final String ARG_PROTO = "proto";
   private static final String ARG_ID = "id";
 
+  @FunctionalInterface
+  public interface SaveAction {
+    public void save(Campaign campaign);
+  }
+
+  private Optional<SaveAction> saveAction = Optional.absent();
+
+  // The following values are only valid after onCreate().
   private Campaign campaign;
   private EditText name;
   private TextView world;
@@ -70,6 +81,10 @@ public class EditCampaignFragment extends EditFragment {
     return arguments;
   }
 
+  public void setSaveListener(@Nullable SaveAction save) {
+    this.saveAction = Optional.of(save);
+  }
+
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -92,7 +107,7 @@ public class EditCampaignFragment extends EditFragment {
   protected void createContent(View view) {
     name = Setup.editText(view, R.id.edit_name, campaign.getName(), R.string.campaign_edit_name,
         R.color.campaign, null, this::update);
-    world = Setup.textView(view, R.id.world, this::editWorld);
+    world = Setup.textView(view, R.id.world, this::selectWorld);
     if(!campaign.getWorld().isEmpty()) {
       world.setText(campaign.getWorld());
     }
@@ -101,20 +116,42 @@ public class EditCampaignFragment extends EditFragment {
     if (campaign.isDefined()) {
       view.findViewById(R.id.campaign_edit_intro).setVisibility(View.GONE);
     }
+
+    update();
   }
 
-  private void editWorld() {
-    campaign.setWorld(world.getText().toString());
+  private void selectWorld() {
+    ListSelectFragment fragment = ListSelectFragment.newInstance(
+        R.string.campaign_select_world, campaign.getWorld(),
+        Entries.get().getWorlds().getNames(), R.color.campaign);
+    fragment.setSelectListener(this::editWorld);
+    fragment.display(getFragmentManager());
+  }
+
+  private void editWorld(String value, int position) {
+    campaign.setWorld(value);
+    update();
   }
 
   private void update() {
-    if (name.getText().length() == 0) {
+    if (name.getText().length() == 0 || campaign.getWorld().isEmpty()) {
       save.setVisibility(View.INVISIBLE);
     } else {
       save.setVisibility(View.VISIBLE);
     }
+
+    if (!campaign.getWorld().isEmpty()) {
+      world.setText(campaign.getWorld());
+    }
   }
 
-  private void save() {
+  protected void save() {
+    campaign.setName(name.getText().toString());
+
+    if (saveAction.isPresent()) {
+      saveAction.get().save(campaign);
+    }
+
+    super.save();
   }
 }

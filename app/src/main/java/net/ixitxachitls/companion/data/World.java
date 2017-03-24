@@ -21,38 +21,36 @@
 
 package net.ixitxachitls.companion.data;
 
-import android.content.res.AssetManager;
-
-import com.google.common.base.Optional;
-
-import net.ixitxachitls.companion.data.Level;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import net.ixitxachitls.companion.proto.Entity;
 
 /**
- * General information and storage for levels.
+ * Data entity for world information.
  */
-public class Levels {
+public class World extends Entry<Entity.WorldProto> {
 
-  private final Map<String, Level> mLevelsByName = new HashMap<>();
+  public static final String TYPE = "world";
 
-  protected Levels() {
+  protected World(String name) {
+    super(name);
   }
 
-  protected void read(AssetManager assetManager, String file) throws IOException {
-    Level level = Level.fromProto(
-        Level.defaultProto().getParserForType().parseFrom(assetManager.open(file)));
-    mLevelsByName.put(level.getName(), level);
+  public static Entity.WorldProto defaultProto() {
+    return Entity.WorldProto.getDefaultInstance();
   }
 
-  public Optional<Level> get(String name) {
-    return Optional.fromNullable(mLevelsByName.get(name));
+  // TODO: we could actually remove this for all 'base' entries.
+  @Override
+  public Entity.WorldProto toProto() {
+    return Entity.WorldProto.newBuilder()
+        .setEntity(Entity.EntityProto.newBuilder()
+            .setName(name)
+            .build())
+        .build();
   }
 
-  public ArrayList<String> getClasses() {
-    return new ArrayList<>(mLevelsByName.keySet());
+  public static World fromProto(Entity.WorldProto proto) {
+    World world = new World(proto.getEntity().getName());
+
+    return world;
   }
 }

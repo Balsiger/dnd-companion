@@ -23,45 +23,39 @@ package net.ixitxachitls.companion.data;
 
 import android.content.res.AssetManager;
 
-import com.google.common.base.Optional;
-
-import net.ixitxachitls.companion.data.Monster;
-
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Collections;
 
 /**
  * General information and storage for monsters.
  */
-public class Monsters {
+public class Monsters extends EntriesStore<Monster> {
 
-  private final Map<String, Monster> mMonstersByName = new HashMap<>();
-  private ArrayList<String> mPrimaryRaces;
+  private ArrayList<String> primaryRaces = null;
 
-  protected Monsters() {
+  public Monsters() {
+    super(Monster.class);
   }
 
-  protected void read(AssetManager assetManager, String file) throws IOException {
-    Monster monster = Monster.fromProto(
-        Monster.defaultProto().getParserForType().parseFrom(assetManager.open(file)));
-    mMonstersByName.put(monster.getName(), monster);
+  protected void read(AssetManager assetManager, String file)
+      throws InvocationTargetException, NoSuchMethodException, IllegalAccessException, IOException {
+    super.read(assetManager, file);
+    primaryRaces = null;
   }
 
   public ArrayList<String> primaryRaces() {
-    if (mPrimaryRaces == null) {
-      mPrimaryRaces = new ArrayList<>();
+    if (primaryRaces == null) {
+      primaryRaces = new ArrayList<>();
 
-      for (Monster monster : mMonstersByName.values()) {
+      for (Monster monster : byName.values()) {
         if (monster.isPrimaryRace())
-          mPrimaryRaces.add(monster.getName());
+          primaryRaces.add(monster.getName());
       }
-    }
-    return mPrimaryRaces;
-  }
 
-  public Optional<Monster> get(String name) {
-    return Optional.fromNullable(mMonstersByName.get(name));
+      Collections.sort(primaryRaces);
+    }
+    return primaryRaces;
   }
 }
