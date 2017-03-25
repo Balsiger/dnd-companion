@@ -29,8 +29,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
@@ -47,6 +50,11 @@ public class Setup {
   @FunctionalInterface
   public interface Action {
     void execute();
+  }
+
+  @FunctionalInterface
+  public interface SwitchAction {
+    void checked(Switch widget);
   }
 
   public static EditText editText(View view, int id, String value, int label, int color) {
@@ -119,6 +127,18 @@ public class Setup {
     return button;
   }
 
+  public static ImageButton imageButton(View container, int id, Action action) {
+    ImageButton button = (ImageButton) container.findViewById(id);
+    button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        action.execute();
+      }
+    });
+
+    return button;
+  }
+
   public static FloatingActionButton floatingButton(View container, int id, Action action) {
     FloatingActionButton button = (FloatingActionButton) container.findViewById(id);
     button.setOnClickListener(new View.OnClickListener() {
@@ -148,5 +168,18 @@ public class Setup {
 
 
     return list;
+  }
+
+  public static Switch switchButton(View container, int id, SwitchAction action) {
+    Switch button = (Switch) container.findViewById(id);
+
+    button.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener() {
+      @Override
+      public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        action.checked(button);
+      }
+    });
+
+    return button;
   }
 }

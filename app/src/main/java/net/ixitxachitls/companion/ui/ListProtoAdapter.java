@@ -31,7 +31,6 @@ import android.widget.SimpleCursorAdapter;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 
-import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.storage.DataBase;
 
 /**
@@ -41,9 +40,8 @@ import net.ixitxachitls.companion.storage.DataBase;
 public class ListProtoAdapter<P extends MessageLite> extends SimpleCursorAdapter {
 
   private static final String ID = "_id";
-  private OnItemClick<P> mClick;
-  private P mDefaultProto;
-  private Binder<P> mBinder;
+  private P defaultProto;
+  private ContentCreator<P> creator;
 
   @FunctionalInterface
   public interface OnItemClick<P> {
@@ -51,26 +49,25 @@ public class ListProtoAdapter<P extends MessageLite> extends SimpleCursorAdapter
   }
 
   @FunctionalInterface
-  public interface Binder<P> {
-    void bind(View view, P proto);
+  public interface ContentCreator<P> {
+    void create(View view, long id, P proto);
   }
 
-  public ListProtoAdapter(Context context, int layout, OnItemClick<P> click, P defaultProto,
-                          Binder<P> binder) {
+  public ListProtoAdapter(Context context, int layout, P defaultProto, ContentCreator<P> creator) {
     super(context, layout, null, new String [] { ID, DataBase.COLUMN_PROTO }, null, 0);
-    this.mClick = click;
-    mDefaultProto = defaultProto;
-    mBinder = binder;
+    this.defaultProto = defaultProto;
+    this.creator = creator;
   }
 
   @Override
   public void bindView(View view, Context context, Cursor cursor) {
+    long id = cursor.getInt(cursor.getColumnIndex(ID));
     byte[] bytes = cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO));
     try {
       @SuppressWarnings("unchecked")
-      P proto = (P) mDefaultProto.getParserForType().parseFrom(bytes);
+      P proto = (P) defaultProto.getParserForType().parseFrom(bytes);
       view.setTag(proto);
-      mBinder.bind(view, proto);
+      creator.create(view, id, proto);
     } catch (InvalidProtocolBufferException e) {
       Log.e("proto list", "Cannot parse proto from db");
       e.printStackTrace();
@@ -81,13 +78,6 @@ public class ListProtoAdapter<P extends MessageLite> extends SimpleCursorAdapter
   public View getView(int position, View convertView, ViewGroup parent) {
     View view = super.getView(position, convertView, parent);
     long id = getItemId(position);
-    view.findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
-      @Override
-      @SuppressWarnings("unchecked")
-      public void onClick(View v) {
-        mClick.click(id, (P) view.getTag());
-      }
-    });
 
     return view;
   }

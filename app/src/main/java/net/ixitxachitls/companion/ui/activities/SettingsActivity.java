@@ -58,6 +58,7 @@ public class SettingsActivity extends Activity {
 
   private void save() {
     editNickname();
+    settings.store();
 
     if (settings.isDefined()) {
       Intent intent = new Intent(this, MainActivity.class);
@@ -70,7 +71,7 @@ public class SettingsActivity extends Activity {
   }
 
   private void update() {
-    if (nickname.getText().length() > 0) {
+    if (!settings.getNickname().isEmpty() || nickname.getText().length() > 0) {
       save.setVisibility(View.VISIBLE);
     } else {
       save.setVisibility(View.INVISIBLE);

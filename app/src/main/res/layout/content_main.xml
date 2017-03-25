@@ -10,25 +10,15 @@
                 tools:showIn="@layout/activity_main">
 
     <TextView
-        android:text="@string/campaign_title_empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/campaignsTitleEmpty"
-        android:padding="16dp"
-        android:textSize="24sp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        android:text="@string/campaign_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/campaignsTitle"
-        android:padding="16dp"
-        android:textSize="18sp"
-        android:visibility="invisible"
-        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="16dp"
+        android:text="@string/campaign_title"
+        android:textSize="18sp"
+        android:visibility="visible"
         />
 
     <ListView

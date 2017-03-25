@@ -27,14 +27,13 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
@@ -76,34 +75,24 @@ public class MainActivity extends Activity
     // Setup list view.
     ListView campaigns = (ListView) findViewById(R.id.campaignsList);
     campaignsAdapter = new ListProtoAdapter<>(this, R.layout.list_item_campaign,
-        new ListProtoAdapter.OnItemClick<Data.CampaignProto>() {
-          @Override
-          public void click(long id, Data.CampaignProto proto) {
-            ConfirmationDialog.show(MainActivity.this,
-                getResources().getString(R.string.campaign_delete_title),
-                getResources().getString(R.string.campaign_delete_message),
-                new ConfirmationDialog.Callback() {
-                  @Override
-                  public void yes() {
-                    getContentResolver().delete(DataBaseContentProvider.CAMPAIGNS,
-                        "id = " + id, null);
-                    getLoaderManager().restartLoader(0, null, MainActivity.this);
-                    Toast.makeText(MainActivity.this, "The campaign has been deleted",
-                        Toast.LENGTH_SHORT).show();
-                  }
-
-                  @Override
-                  public void no() {
-                    // nothing to do here
-                  }
-                });
-          }
-        },
         Data.CampaignProto.getDefaultInstance(),
-        new ListProtoAdapter.Binder<Data.CampaignProto>() {
+        new ListProtoAdapter.ContentCreator<Data.CampaignProto>() {
           @Override
-          public void bind(View view, Data.CampaignProto proto) {
-            ((TextView) view.findViewById(R.id.text)).setText(proto.getName());
+          public void create(View view, long id, Data.CampaignProto proto) {
+            Campaign campaign = Campaign.fromProto(id, proto);
+            ((TextView) view.findViewById(R.id.name)).setText(campaign.getName());
+            ((TextView) view.findViewById(R.id.world)).setText(campaign.getWorld());
+            if (campaign.isLocal()) {
+              view.findViewById(R.id.local).setVisibility(View.VISIBLE);
+              view.findViewById(R.id.remote).setVisibility(View.GONE);
+              view.findViewById(R.id.publish).setVisibility(View.VISIBLE);
+            } else {
+              view.findViewById(R.id.local).setVisibility(View.GONE);
+              view.findViewById(R.id.remote).setVisibility(View.VISIBLE);
+              view.findViewById(R.id.publish).setVisibility(View.GONE);
+            }
+
+            Setup.switchButton(view, R.id.publish, (w) -> publishCampaign(w, id));
           }
         });
     campaigns.setAdapter(campaignsAdapter);
@@ -117,6 +106,48 @@ public class MainActivity extends Activity
         MainActivity.this.startActivity(intent);
       }
     });
+  }
+
+  private boolean publishing = false;
+  private void publishCampaign(Switch widget, long id) {
+    if (publishing) {
+      return;
+    }
+
+    if (widget.isChecked()) {
+      ConfirmationDialog.show(this,
+          getString(R.string.main_campaign_publish_title),
+          getString(R.string.main_campaign_publish_message),
+          new ConfirmationDialog.Callback() {
+            @Override
+            public void yes() {
+
+            }
+
+            @Override
+            public void no() {
+              publishing = true;
+              widget.toggle();
+              publishing = false;
+            }
+          });
+    } else {
+      ConfirmationDialog.show(this,
+          getString(R.string.main_campaign_unpublish_title),
+          getString(R.string.main_campaign_unpublish_message),
+          new ConfirmationDialog.Callback() {
+            @Override
+            public void yes() {
+            }
+
+            @Override
+            public void no() {
+              publishing = true;
+              widget.toggle();
+              publishing = false;
+            }
+          });
+    }
   }
 
   @Override
@@ -142,15 +173,6 @@ public class MainActivity extends Activity
     return super.onOptionsItemSelected(item);
   }
 
-  public void onEdit(String name) {
-    Log.d("Campaign", "edited campaign to " + name);
-
-    // Add the name to storage.
-    getContentResolver().insert(DataBaseContentProvider.CAMPAIGNS,
-        new Campaign(0, name).toValues());
-
-  }
-
   private void refresh() {
     getLoaderManager().restartLoader(0, null, this);
   }
@@ -165,11 +187,7 @@ public class MainActivity extends Activity
   public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
     campaignsAdapter.swapCursor(data);
 
-    if(!campaignsAdapter.isEmpty()) {
-      findViewById(R.id.campaignsTitle).setVisibility(View.VISIBLE);
-      findViewById(R.id.campaignsTitleEmpty).setVisibility(View.GONE);
-    }
-
+    // Go to other activities if needed.
     if (!settings.isDefined()) {
       gotoSettings();
     }

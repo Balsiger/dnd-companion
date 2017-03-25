@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="on">#9c0</color>
+    <color name="off">#ff3300</color>
+
     <color name="campaign">#f94</color>
     <color name="character">#7ef</color>
 </resources>

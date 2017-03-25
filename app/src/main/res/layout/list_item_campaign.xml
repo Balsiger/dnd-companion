@@ -26,43 +26,67 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/list_item_campaign"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@color/campaign"
                 android:descendantFocusability="blocksDescendants"
-                tools:context="net.ixitachitls.companion.net.ixitxachitls.companion.MainActivity">
+                android:padding="20dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="net.ixitxachitls.companion.ui.activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:tint="#444"
+        app:srcCompat="@drawable/ic_home_black_48dp"/>
+
+    <ImageView
+        android:id="@+id/remote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:tint="#444"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_wifi_black_48dp"/>
 
     <TextView
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/text"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/publish"
+        android:layout_toRightOf="@+id/local"
         android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="24sp"
         android:textStyle="normal|bold"
-        android:padding="20dp"
-        android:background="@color/campaign"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toTopOf="@+id/delete"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="1dp"/>
+        tools:layout_constraintRight_creator="1"/>
 
-    <ImageButton
-        android:layout_width="66dp"
-        android:layout_height="match_parent"
-        android:id="@+id/delete"
-        android:backgroundTint="@android:color/transparent"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_alignParentTop="true"
+    <TextView
+        android:id="@+id/world"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/local"
+        android:layout_toLeftOf="@+id/publish"
+        android:textSize="18sp"/>
+
+    <Switch
+        android:id="@+id/publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/local"
         android:layout_alignParentEnd="true"
-        app:srcCompat="@drawable/ic_delete_black_24dp"
-        android:tint="#444"
-        android:contentDescription="@string/delete_campaign_icon"
-        android:layout_alignBottom="@+id/text"/>
+        android:layout_alignParentTop="true"
+        android:textColorLink="@color/colorPrimary"
+        android:theme="@style/OnOffSwitch"
+        />
 
 </RelativeLayout>

@@ -37,6 +37,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   public static final String TABLE = "campaigns";
 
   private String world;
+  private boolean remote;
 
   public Campaign(long id, String name) {
     super(id, name, DataBaseContentProvider.CAMPAIGNS);
@@ -47,12 +48,14 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return Data.CampaignProto.newBuilder()
         .setName(name)
         .setWorld(world)
+        .setRemote(remote)
         .build();
   }
 
   public static Campaign fromProto(long id, Data.CampaignProto proto) {
     Campaign campaign = new Campaign(id, proto.getName());
     campaign.world = proto.getWorld();
+    campaign.remote = proto.getRemote();
 
     return campaign;
   }
@@ -73,5 +76,24 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public void setWorld(String world) {
     this.world = world;
+  }
+
+  public static Campaign createDefault() {
+    Campaign campaign = new Campaign(1, "Default Campaign");
+    campaign.setWorld("Generic");
+    campaign.makeRemote();
+    return campaign;
+  }
+
+  private void makeRemote() {
+    remote = true;
+  }
+
+  public boolean isDefault() {
+    return getId() == 1;
+  }
+
+  public boolean isLocal() {
+    return !remote;
   }
 }

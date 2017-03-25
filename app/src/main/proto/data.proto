@@ -8,4 +8,5 @@ message SettingsProto {
 message CampaignProto {
   string name = 1;
   string world = 2;
+  bool remote = 3;
 }

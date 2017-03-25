@@ -55,6 +55,10 @@ public abstract class StoredEntry<P extends MessageLite> extends Entry<P> {
     super.setName(name);
   }
 
+  public long getId() {
+    return id;
+  }
+
   public void store() {
     if (id == 0) {
       Uri row = Entries.getContext().getContentResolver().insert(dbUrl, toValues());

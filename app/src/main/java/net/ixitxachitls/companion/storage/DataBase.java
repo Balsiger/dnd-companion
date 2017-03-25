@@ -37,7 +37,7 @@ import net.ixitxachitls.companion.util.Lazy;
  */
 public class DataBase extends SQLiteOpenHelper {
 
-  private static final int VERSION = 3;
+  private static final int VERSION = 4;
   private static final String DATABASE_NAME = "PlayerCompanion";
   public static final String COLUMN_ID = "id";
   public static final String COLUMN_PROTO = "proto";
@@ -86,20 +86,33 @@ public class DataBase extends SQLiteOpenHelper {
 
   @Override
   public void onCreate(SQLiteDatabase db) {
-    db.execSQL(CREATE_CAMPAIGNS);
-    db.execSQL(CREATE_CHARACTERS);
-    db.execSQL(CREATE_SETTINGS);
+    update(db, 0);
+  }
+
+  private void update(SQLiteDatabase db, int version) {
+    switch(version) {
+      case 0: db.execSQL(CREATE_CAMPAIGNS);
+      case 1: db.execSQL(CREATE_CHARACTERS);
+      case 2: db.execSQL(CREATE_SETTINGS);
+      case 3: db.insert(Campaign.TABLE, null, defaultCampaign());
+    }
+  }
+
+  private static ContentValues defaultCampaign() {
+    ContentValues values = new ContentValues();
+    values.put(COLUMN_ID, 1);
+    // Cannot store the campaign directly, as this would require the databse being set up.
+    values.put(COLUMN_PROTO, Campaign.createDefault().toProto().toByteArray());
+    return values;
   }
 
   @Override
   public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-    if (oldVersion == 1 && newVersion >= 2) {
-      db.execSQL(CREATE_CHARACTERS);
-    } if (oldVersion == 2 && newVersion >= 3) {
-      db.execSQL(CREATE_SETTINGS);
-    } else {
+    if (newVersion != VERSION) {
       throw new IllegalArgumentException("don't know how to convert from " + oldVersion + " to "
           + newVersion);
     }
+
+    update(db, oldVersion);
   }
 }
