@@ -1,12 +1,34 @@
 syntax = "proto3";
 package net.ixitxachitls.companion.proto;
 
+import "entity.proto";
+
 message SettingsProto {
   string nickname = 1;
+  string app_id = 2;
 }
 
 message CampaignProto {
   string name = 1;
   string world = 2;
   bool remote = 3;
+  string id = 4;
+  string dm = 5;
+  bool published = 6;
+}
+
+message CompanionMessageProto {
+  string sender = 1;
+  string debug = 2;
+
+  // Server push information.
+  CampaignProto campaign = 3;
+
+  // Client push information.
+  message Welcome {
+    string name = 1;
+    string id = 2;
+  }
+  Welcome welcome = 4;
+  CharacterProto character = 5;
 }

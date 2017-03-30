@@ -29,8 +29,8 @@
     android:layout_height="match_parent"
     android:padding="20dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="net.ixitxachitls.companion.ui.activities.SettingsActivity"
-    tools:showIn="@layout/activity_settings">
+    tools:context="net.ixitxachitls.companion.ui.activities.MainActivity"
+    tools:showIn="@layout/activity_main">
 
     <TextView
         android:id="@+id/initial"

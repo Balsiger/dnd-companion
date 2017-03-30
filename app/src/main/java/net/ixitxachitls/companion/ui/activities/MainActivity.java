@@ -21,45 +21,66 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
-import android.app.LoaderManager;
-import android.content.CursorLoader;
-import android.content.Intent;
-import android.content.Loader;
-import android.database.Cursor;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.net.CompanionMessage;
+import net.ixitxachitls.companion.net.CompanionPublisher;
+import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBase;
-import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.ui.CampaignActivity;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.ListProtoAdapter;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.fragments.CampaignListFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.EditFragment;
+import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
 
-public class MainActivity extends Activity
-    implements LoaderManager.LoaderCallbacks<Cursor>, EditFragment.AttachAction {
+import java.util.List;
+
+public class MainActivity extends Activity implements EditFragment.AttachAction {
 
   private ListProtoAdapter<Data.CampaignProto> campaignsAdapter;
   private Settings settings;
+  private CompanionPublisher companionPublisher;
+  private CompanionSubscriber companionSubscriber;
+  private Handler messageHandler;
+  private MessageChecker messageChecker;
+  private CampaignListFragment campaignListFragment;
+  private SettingsFragment settingsFragment;
+  private TextView status;
+  private Fragment lastFragment;
+  private Fragment currentFragment;
+
+  public enum Fragments { campaigns, settings, };
 
   private void init() {
     Entries.init(this);
-    Settings.init(this);
+    settings = Settings.init(this);
 
-    settings = Settings.get();
+    messageHandler = new Handler();
+    messageChecker = new MessageChecker();
+
+    companionPublisher = CompanionPublisher.init(getApplicationContext());
+    companionSubscriber = CompanionSubscriber.init(getApplicationContext());
+
+    messageChecker.run();
+
+    // Start discovering network services.
+    companionSubscriber.start();
+  }
+
+  public void setStatus(String status) {
+    this.status.setText(status);
   }
 
   @Override
@@ -68,86 +89,19 @@ public class MainActivity extends Activity
     setup(savedInstanceState, R.layout.activity_main, R.string.app_name);
     View container = findViewById(R.id.activity_main);
 
+    // Setup the status first, in case any fragment wants to set something.
+    status = Setup.textView(container, R.id.status, null);
+
     init();
 
-    Setup.floatingButton(container, R.id.campaign_add, this::addCampaign);
-
-    // Setup list view.
-    ListView campaigns = (ListView) findViewById(R.id.campaignsList);
-    campaignsAdapter = new ListProtoAdapter<>(this, R.layout.list_item_campaign,
-        Data.CampaignProto.getDefaultInstance(),
-        new ListProtoAdapter.ContentCreator<Data.CampaignProto>() {
-          @Override
-          public void create(View view, long id, Data.CampaignProto proto) {
-            Campaign campaign = Campaign.fromProto(id, proto);
-            ((TextView) view.findViewById(R.id.name)).setText(campaign.getName());
-            ((TextView) view.findViewById(R.id.world)).setText(campaign.getWorld());
-            if (campaign.isLocal()) {
-              view.findViewById(R.id.local).setVisibility(View.VISIBLE);
-              view.findViewById(R.id.remote).setVisibility(View.GONE);
-              view.findViewById(R.id.publish).setVisibility(View.VISIBLE);
-            } else {
-              view.findViewById(R.id.local).setVisibility(View.GONE);
-              view.findViewById(R.id.remote).setVisibility(View.VISIBLE);
-              view.findViewById(R.id.publish).setVisibility(View.GONE);
-            }
-
-            Setup.switchButton(view, R.id.publish, (w) -> publishCampaign(w, id));
-          }
-        });
-    campaigns.setAdapter(campaignsAdapter);
-    getLoaderManager().initLoader(0, null, this);
-
-    campaigns.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-      @Override
-      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent = new Intent(MainActivity.this, CampaignActivity.class);
-        intent.putExtra(DataBase.COLUMN_ID, id);
-        MainActivity.this.startActivity(intent);
-      }
-    });
+    show(Fragments.campaigns);
   }
 
-  private boolean publishing = false;
-  private void publishCampaign(Switch widget, long id) {
-    if (publishing) {
-      return;
-    }
-
-    if (widget.isChecked()) {
-      ConfirmationDialog.show(this,
-          getString(R.string.main_campaign_publish_title),
-          getString(R.string.main_campaign_publish_message),
-          new ConfirmationDialog.Callback() {
-            @Override
-            public void yes() {
-
-            }
-
-            @Override
-            public void no() {
-              publishing = true;
-              widget.toggle();
-              publishing = false;
-            }
-          });
-    } else {
-      ConfirmationDialog.show(this,
-          getString(R.string.main_campaign_unpublish_title),
-          getString(R.string.main_campaign_unpublish_message),
-          new ConfirmationDialog.Callback() {
-            @Override
-            public void yes() {
-            }
-
-            @Override
-            public void no() {
-              publishing = true;
-              widget.toggle();
-              publishing = false;
-            }
-          });
-    }
+  @Override
+  protected void onDestroy() {
+    companionPublisher.stop();
+    companionSubscriber.stop();
+    super.onDestroy();
   }
 
   @Override
@@ -159,52 +113,50 @@ public class MainActivity extends Activity
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
-    // Handle action bar item clicks here. The action bar will
-    // automatically handle clicks on the Home/Up button, so long
-    // as you specify a parent activity in AndroidManifest.xml.
     int id = item.getItemId();
-
-    //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings) {
-      gotoSettings();
+      show(Fragments.settings);
       return true;
     }
 
     return super.onOptionsItemSelected(item);
   }
 
-  private void refresh() {
-    getLoaderManager().restartLoader(0, null, this);
-  }
+  public void show(Fragments fragment) {
+    lastFragment = currentFragment;
 
-  @Override
-  public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-    return new CursorLoader(this, DataBaseContentProvider.CAMPAIGNS,
-        DataBase.COLUMNS, null, null, null);
-  }
+    switch(fragment) {
+      case campaigns:
+        if (campaignListFragment == null) {
+          campaignListFragment = new CampaignListFragment();
+        }
+        show(campaignListFragment);
+        break;
 
-  @Override
-  public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-    campaignsAdapter.swapCursor(data);
-
-    // Go to other activities if needed.
-    if (!settings.isDefined()) {
-      gotoSettings();
+      case settings:
+        if (settingsFragment == null) {
+          settingsFragment = new SettingsFragment();
+        }
+        show(settingsFragment);
+        break;
     }
   }
 
-  @Override
-  public void onLoaderReset(Loader<Cursor> loader) {
-    campaignsAdapter.swapCursor(null);
+  private void show(Fragment fragment) {
+    lastFragment = currentFragment;
+    currentFragment = fragment;
+    getFragmentManager()
+        .beginTransaction()
+        .replace(R.id.content, fragment)
+        .commit();
   }
 
-  private void gotoSettings() {
-    Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-    MainActivity.this.startActivity(intent);
-  }
-
-  private void addCampaign() {
-    EditCampaignFragment.newInstance().display(getFragmentManager());
+  public void showLast() {
+    if (lastFragment != null) {
+      show(lastFragment);
+    } else {
+      setStatus("Cannot show last fragment if there is none.");
+    }
   }
 
   public void attached(EditFragment fragment) {
@@ -215,6 +167,59 @@ public class MainActivity extends Activity
 
   public void saveCampaign(Campaign campaign) {
     campaign.store();
-    refresh();
+    //refresh();
+  }
+
+  private class MessageChecker implements Runnable {
+
+    public static final int DELAY_MILLIS = 1_000;
+
+    @Override
+    public void run() {
+      try {
+        // Chek for messages from server.
+        List<CompanionMessage> clientMessages = companionSubscriber.receive();
+        for (CompanionMessage serverMessage : clientMessages) {
+          handleClientMessage(serverMessage);
+        }
+
+        List<CompanionMessage> serverMessages = companionPublisher.receive();
+        for (CompanionMessage serverMessage : serverMessages) {
+          handleServerMessage(serverMessage);
+        }
+
+        if (clientMessages.isEmpty() && serverMessages.isEmpty()) {
+          setStatus("No new messages.");
+        }
+      } finally {
+        messageHandler.postDelayed(messageChecker, DELAY_MILLIS);
+      }
+    }
+  }
+
+  private void handleClientMessage(CompanionMessage message) {
+    if (message.getProto().hasWelcome()) {
+      Toast.makeText(getApplicationContext(), "Client " + message.getName() + " has connected!",
+          Toast.LENGTH_LONG).show();
+    }
+
+    if (!message.getProto().getDebug().isEmpty()) {
+      Toast.makeText(getApplicationContext(),
+          message.getName() + ": " + message.getProto().getDebug(),
+          Toast.LENGTH_LONG).show();
+    }
+  }
+
+  private void handleServerMessage(CompanionMessage message) {
+    if (message.getProto().hasWelcome()) {
+      Toast.makeText(getApplicationContext(), "Server " + message.getName() + " has connected!",
+          Toast.LENGTH_LONG).show();
+    }
+
+    if (!message.getProto().getDebug().isEmpty()) {
+      Toast.makeText(getApplicationContext(),
+          message.getName() + ": " + message.getProto().getDebug(),
+          Toast.LENGTH_LONG).show();
+    }
   }
 }

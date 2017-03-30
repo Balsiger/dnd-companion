@@ -26,8 +26,11 @@ import android.content.Context;
 import com.google.common.base.Optional;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+
+import java.util.Random;
 
 /**
  * A campaign with all its data.
@@ -36,26 +39,83 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public static final String TABLE = "campaigns";
 
+  private static final int RANDOM_LENGTH = 20;
+  private static final Random random = new Random();
+
+  private String campaignId;
   private String world;
+  private String dm;
   private boolean remote;
+  private boolean published;
 
   public Campaign(long id, String name) {
     super(id, name, DataBaseContentProvider.CAMPAIGNS);
+    campaignId = Settings.get().getAppId() + "-" + id;
+  }
+
+  public String getWorld() {
+    return world;
+  }
+
+  public boolean isDefault() {
+    return getId() == 1;
+  }
+
+  public boolean isLocal() {
+    return !remote || isDefault();
+  }
+
+  public boolean isPublished() {
+    return published;
+  }
+
+  public void setWorld(String world) {
+    this.world = world;
+  }
+
+  public void publish() {
+    CompanionPublisher.get().publish(this);
+    published = true;
+    store();
   }
 
   @Override
   public Data.CampaignProto toProto() {
     return Data.CampaignProto.newBuilder()
+        .setId(campaignId)
         .setName(name)
         .setWorld(world)
         .setRemote(remote)
+        .setPublished(published)
+        .setDm(dm)
         .build();
+  }
+
+  public void unpublish() {
+    CompanionPublisher.get().unpublish(this);
+    published = false;
+    store();
+  }
+
+  private void makeRemote() {
+    remote = true;
+  }
+
+  public static Campaign createDefault() {
+    Campaign campaign = new Campaign(1, "Default Campaign");
+    campaign.setWorld("Generic");
+    campaign.makeRemote();
+    return campaign;
   }
 
   public static Campaign fromProto(long id, Data.CampaignProto proto) {
     Campaign campaign = new Campaign(id, proto.getName());
+    campaign.campaignId =
+        proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
     campaign.world = proto.getWorld();
     campaign.remote = proto.getRemote();
+    campaign.dm = proto.getDm();
+    campaign.published = proto.getPublished();
 
     return campaign;
   }
@@ -68,32 +128,5 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
       e.printStackTrace();
       return Optional.absent();
     }
-  }
-
-  public String getWorld() {
-    return world;
-  }
-
-  public void setWorld(String world) {
-    this.world = world;
-  }
-
-  public static Campaign createDefault() {
-    Campaign campaign = new Campaign(1, "Default Campaign");
-    campaign.setWorld("Generic");
-    campaign.makeRemote();
-    return campaign;
-  }
-
-  private void makeRemote() {
-    remote = true;
-  }
-
-  public boolean isDefault() {
-    return getId() == 1;
-  }
-
-  public boolean isLocal() {
-    return !remote;
   }
 }

@@ -37,7 +37,7 @@ import net.ixitxachitls.companion.util.Lazy;
  */
 public class DataBase extends SQLiteOpenHelper {
 
-  private static final int VERSION = 4;
+  private static final int VERSION = 5;
   private static final String DATABASE_NAME = "PlayerCompanion";
   public static final String COLUMN_ID = "id";
   public static final String COLUMN_PROTO = "proto";
@@ -95,6 +95,7 @@ public class DataBase extends SQLiteOpenHelper {
       case 1: db.execSQL(CREATE_CHARACTERS);
       case 2: db.execSQL(CREATE_SETTINGS);
       case 3: db.insert(Campaign.TABLE, null, defaultCampaign());
+      case 4: db.insert(Settings.TABLE, null, Settings.defaultSettings());
     }
   }
 

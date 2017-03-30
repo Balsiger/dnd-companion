@@ -98,19 +98,21 @@ public class Setup {
     return edit;
   }
 
-  public static TextView textView(View container, int id, int labelId, Action action) {
+  public static TextView textView(View container, int id, int labelId, @Nullable Action action) {
     textView(container, labelId, action);
     return textView(container, id, action);
   }
 
-  public static TextView textView(View container, int id, Action action) {
+  public static TextView textView(View container, int id, @Nullable Action action) {
     TextView view = (TextView) container.findViewById(id);
-    view.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        action.execute();
-      }
-    });
+    if (action != null) {
+      view.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          action.execute();
+        }
+      });
+    }
 
     return view;
   }

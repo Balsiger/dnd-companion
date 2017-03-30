@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="net.ixitachitls.companion">
 
+    <!-- requried permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
@@ -33,11 +36,6 @@
         <activity
             android:name="net.ixitxachitls.companion.ui.CharacterActivity"
             android:label="@string/title_activity_character"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-            android:name="net.ixitxachitls.companion.ui.activities.SettingsActivity"
-            android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

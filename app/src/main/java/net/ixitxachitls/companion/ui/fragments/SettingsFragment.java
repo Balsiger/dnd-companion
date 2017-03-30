@@ -19,41 +19,48 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.activities;
+package net.ixitxachitls.companion.ui.fragments;
 
-import android.content.Intent;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.activities.MainActivity;
 
-public class SettingsActivity extends Activity {
-
+/**
+ * Fragment for displaying settings values.
+ */
+public class SettingsFragment extends Fragment {
   private Settings settings;
   private TextView nickname;
   private Button save;
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setup(savedInstanceState, R.layout.activity_settings, R.string.settings_title);
-    View container = findViewById(R.id.settings_content);
+  public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                           Bundle savedInstanceState) {
+    ConstraintLayout view = (ConstraintLayout)
+        inflater.inflate(R.layout.fragment_settings, container, false);
 
     settings = Settings.get();
-    nickname = Setup.editText(container, R.id.nickname, settings.getNickname(),
+    nickname = Setup.editText(view, R.id.nickname, settings.getNickname(),
         R.string.settings_nickname_label, R.color.colorAccent,
         this::editNickname, this::update);
-    save = Setup.button(container, R.id.save, this::save);
+    save = Setup.button(view, R.id.save, this::save);
 
     if (settings.isDefined()) {
-      container.findViewById(R.id.initial).setVisibility(View.INVISIBLE);
+      view.findViewById(R.id.initial).setVisibility(View.INVISIBLE);
     }
 
     update();
+    return view;
   }
 
   private void save() {
@@ -61,17 +68,16 @@ public class SettingsActivity extends Activity {
     settings.store();
 
     if (settings.isDefined()) {
-      Intent intent = new Intent(this, MainActivity.class);
-      this.startActivity(intent);
+      ((MainActivity) getActivity()).showLast();
     }
   }
 
-  private void editNickname() {
+  protected void editNickname() {
     settings.setNickname(nickname.getText().toString());
   }
 
-  private void update() {
-    if (!settings.getNickname().isEmpty() || nickname.getText().length() > 0) {
+  protected void update() {
+    if (nickname.getText().length() > 0) {
       save.setVisibility(View.VISIBLE);
     } else {
       save.setVisibility(View.INVISIBLE);

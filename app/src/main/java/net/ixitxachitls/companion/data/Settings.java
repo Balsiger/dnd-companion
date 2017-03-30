@@ -21,16 +21,21 @@
 
 package net.ixitxachitls.companion.data;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.CursorIndexOutOfBoundsException;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
+import com.google.common.base.Strings;
 import com.google.inject.Singleton;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+
+import java.util.UUID;
 
 /**
  * All the settings value of the user.
@@ -42,18 +47,35 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   private static Settings settings = null;
 
+  private String appId;
+
   private Settings(String name) {
-    super(0, name, DataBaseContentProvider.SETTINGS);
+    super(ID, name, DataBaseContentProvider.SETTINGS);
+
+    if (Strings.isNullOrEmpty(appId)) {
+      appId = UUID.randomUUID().toString();
+    }
   }
 
-  public static void init(Context context) {
+  public static ContentValues defaultSettings() {
+    ContentValues values = new ContentValues();
+    values.put(DataBase.COLUMN_ID, ID);
+    values.put(DataBase.COLUMN_PROTO,
+        Data.SettingsProto.newBuilder().build().toByteArray());
+
+    return values;
+  }
+
+  public static Settings init(Context context) {
     settings = load(context).or(new Settings(""));
+    return settings;
   }
 
   @Override
   public Data.SettingsProto toProto() {
     return Data.SettingsProto.newBuilder()
         .setNickname(name)
+        .setAppId(appId)
         .build();
   }
 
@@ -63,7 +85,10 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   }
 
   private static Settings fromProto(Data.SettingsProto proto) {
-    return new Settings(proto.getNickname());
+    Settings settings = new Settings(proto.getNickname());
+    settings.appId = proto.getAppId();
+
+    return settings;
   }
 
   private static Optional<Settings> load(Context context) {
@@ -84,6 +109,10 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   public String getNickname() {
     return name;
+  }
+
+  public String getAppId() {
+    return appId;
   }
 
   public void setNickname(String name) {
