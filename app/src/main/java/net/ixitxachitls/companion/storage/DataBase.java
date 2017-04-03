@@ -101,7 +101,7 @@ public class DataBase extends SQLiteOpenHelper {
 
   private static ContentValues defaultCampaign() {
     ContentValues values = new ContentValues();
-    values.put(COLUMN_ID, 1);
+    values.put(COLUMN_ID, Campaign.DEFAULT_CAMPAIGN_ID);
     // Cannot store the campaign directly, as this would require the databse being set up.
     values.put(COLUMN_PROTO, Campaign.createDefault().toProto().toByteArray());
     return values;

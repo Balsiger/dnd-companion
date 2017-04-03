@@ -32,6 +32,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -50,6 +51,11 @@ public class Setup {
   @FunctionalInterface
   public interface Action {
     void execute();
+  }
+
+  @FunctionalInterface
+  public interface SelectAction {
+    void select(int position);
   }
 
   @FunctionalInterface
@@ -98,21 +104,23 @@ public class Setup {
     return edit;
   }
 
-  public static TextView textView(View container, int id, int labelId, @Nullable Action action) {
+  public static TextView textView(View container, int id) {
+    return (TextView) container.findViewById(id);
+  }
+
+  public static TextView textView(View container, int id, int labelId, Action action) {
     textView(container, labelId, action);
     return textView(container, id, action);
   }
 
-  public static TextView textView(View container, int id, @Nullable Action action) {
-    TextView view = (TextView) container.findViewById(id);
-    if (action != null) {
-      view.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+  public static TextView textView(View container, int id, Action action) {
+    TextView view = textView(container, id);
+    view.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
           action.execute();
         }
-      });
-    }
+    });
 
     return view;
   }
@@ -129,16 +137,36 @@ public class Setup {
     return button;
   }
 
+  public static ImageButton imageButton(View container, int id) {
+    return (ImageButton) container.findViewById(id);
+  }
+
   public static ImageButton imageButton(View container, int id, Action action) {
-    ImageButton button = (ImageButton) container.findViewById(id);
+    ImageButton button = imageButton(container, id);
     button.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
-        action.execute();
-      }
+          action.execute();
+        }
     });
 
     return button;
+  }
+
+  public static ImageView imageView(View container, int id) {
+    return (ImageView) container.findViewById(id);
+  }
+
+  public static ImageView imageView(View container, int id, Action action) {
+    ImageView view = imageView(container, id);
+    view.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+          action.execute();
+        }
+    });
+
+    return view;
   }
 
   public static FloatingActionButton floatingButton(View container, int id, Action action) {
@@ -168,6 +196,19 @@ public class Setup {
       }
     });
 
+    return list;
+  }
+
+  public static <T> ListView listView(View container, int id, ListAdapter<T> itemAdapter,
+                                      SelectAction action) {
+    ListView list = (ListView) container.findViewById(id);
+    list.setAdapter(itemAdapter);
+    list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        action.select(position);
+      }
+    });
 
     return list;
   }

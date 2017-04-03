@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.ui.activities;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,15 +33,16 @@ import android.widget.Toast;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
+import net.ixitxachitls.companion.data.Campaigns;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.ui.ListProtoAdapter;
 import net.ixitxachitls.companion.ui.Setup;
-import net.ixitxachitls.companion.ui.fragments.CampaignListFragment;
+import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
+import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
+import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.EditFragment;
 import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
@@ -49,23 +51,24 @@ import java.util.List;
 
 public class MainActivity extends Activity implements EditFragment.AttachAction {
 
-  private ListProtoAdapter<Data.CampaignProto> campaignsAdapter;
-  private Settings settings;
   private CompanionPublisher companionPublisher;
   private CompanionSubscriber companionSubscriber;
   private Handler messageHandler;
   private MessageChecker messageChecker;
-  private CampaignListFragment campaignListFragment;
-  private SettingsFragment settingsFragment;
-  private TextView status;
-  private Fragment lastFragment;
-  private Fragment currentFragment;
 
-  public enum Fragments { campaigns, settings, };
+  // UI elements.
+  private TextView status;
+
+  // Fragments.
+  private CompanionFragment currentFragment;
+  private CampaignFragment campaignFragment;
+  private CampaignsFragment campaignsFragment;
+  private SettingsFragment settingsFragment;
 
   private void init() {
+    Settings.init(this);
     Entries.init(this);
-    settings = Settings.init(this);
+    Campaigns.load(this);
 
     messageHandler = new Handler();
     messageChecker = new MessageChecker();
@@ -94,7 +97,11 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
 
     init();
 
-    show(Fragments.campaigns);
+    if (!Settings.get().isDefined()) {
+      show(CompanionFragment.Fragments.settings);
+    } else {
+      show(CompanionFragment.Fragments.campaigns);
+    }
   }
 
   @Override
@@ -115,48 +122,56 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
   public boolean onOptionsItemSelected(MenuItem item) {
     int id = item.getItemId();
     if (id == R.id.action_settings) {
-      show(Fragments.settings);
+      show(CompanionFragment.Fragments.settings);
       return true;
     }
 
     return super.onOptionsItemSelected(item);
   }
 
-  public void show(Fragments fragment) {
-    lastFragment = currentFragment;
-
+  public Fragment show(CompanionFragment.Fragments fragment) {
     switch(fragment) {
-      case campaigns:
-        if (campaignListFragment == null) {
-          campaignListFragment = new CampaignListFragment();
-        }
-        show(campaignListFragment);
-        break;
-
       case settings:
         if (settingsFragment == null) {
           settingsFragment = new SettingsFragment();
         }
-        show(settingsFragment);
-        break;
+        return show(settingsFragment);
+
+      default:
+      case campaigns:
+        if (campaignsFragment == null) {
+          campaignsFragment = new CampaignsFragment();
+        }
+        return show(campaignsFragment);
+
+      case campaign:
+        if (campaignFragment == null) {
+          campaignFragment = new CampaignFragment();
+        }
+        return show(campaignFragment);
     }
   }
 
-  private void show(Fragment fragment) {
-    lastFragment = currentFragment;
-    currentFragment = fragment;
+  private Fragment show(CompanionFragment fragment) {
     getFragmentManager()
         .beginTransaction()
+        .addToBackStack(null)
         .replace(R.id.content, fragment)
         .commit();
+    getFragmentManager().executePendingTransactions();
+    fragment.refresh();
+    currentFragment = fragment;
+    return fragment;
+  }
+
+  public void showCampaign(Campaign campaign) {
+    show(CompanionFragment.Fragments.campaign);
+    campaignFragment.showCampaign(campaign);
   }
 
   public void showLast() {
-    if (lastFragment != null) {
-      show(lastFragment);
-    } else {
-      setStatus("Cannot show last fragment if there is none.");
-    }
+    getFragmentManager().popBackStackImmediate();
+    refresh();
   }
 
   public void attached(EditFragment fragment) {
@@ -167,7 +182,7 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
 
   public void saveCampaign(Campaign campaign) {
     campaign.store();
-    //refresh();
+    campaignsFragment.refresh();
   }
 
   private class MessageChecker implements Runnable {
@@ -189,7 +204,7 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
         }
 
         if (clientMessages.isEmpty() && serverMessages.isEmpty()) {
-          setStatus("No new messages.");
+          Log.d("Main", "No new messages.");
         }
       } finally {
         messageHandler.postDelayed(messageChecker, DELAY_MILLIS);
@@ -222,4 +237,9 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
           Toast.LENGTH_LONG).show();
     }
   }
+
+  public void refresh() {
+    currentFragment.refresh();
+  }
+
 }

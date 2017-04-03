@@ -24,10 +24,12 @@ package net.ixitxachitls.companion.ui.fragments;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.StringRes;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +41,7 @@ import android.widget.TextView;
 import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 /**
  * Base for all the edit fragments for the companion.
@@ -76,7 +79,8 @@ public abstract class EditFragment extends DialogFragment {
     public void save(EditFragment fragment);
   }
 
-  protected static Bundle arguments(int layoutId, int titleId, int color) {
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int color) {
     Bundle arguments = new Bundle();
     arguments.putInt(ARG_LAYOUT, layoutId);
     arguments.putInt(ARG_TITLE, titleId);
@@ -101,10 +105,19 @@ public abstract class EditFragment extends DialogFragment {
   }
 
   public void display(FragmentManager manager) {
+    manager
+        .beginTransaction()
+        .addToBackStack(null)
+        .add(this, null)
+        .commit();
+    manager.executePendingTransactions();
+
+    /*
     FragmentTransaction transaction = manager.beginTransaction();
     // title is not yet filled.
     String name = "execute-" + getClass().getSimpleName();
     show(transaction, name);
+    */
   }
 
   @Override
@@ -135,7 +148,9 @@ public abstract class EditFragment extends DialogFragment {
       width = ViewGroup.LayoutParams.MATCH_PARENT;
     }
 
-    getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
+    ViewGroup.LayoutParams params = getView().getLayoutParams();
+    params.width = width;
+    getView().setLayoutParams(params);
   }
 
   @Override
@@ -175,9 +190,9 @@ public abstract class EditFragment extends DialogFragment {
   }
 
   private void close() {
-    FragmentTransaction transaction = getFragmentManager().beginTransaction();
-    transaction.detach(this);
-    transaction.commit();
+    MainActivity activity = (MainActivity) getActivity();
+    getFragmentManager().popBackStackImmediate();
+    activity.refresh();
   }
 
   protected abstract void createContent(View view);

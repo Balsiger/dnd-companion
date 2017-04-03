@@ -10,7 +10,7 @@ android {
         applicationId "net.ixitachitls.companion"
         minSdkVersion 23
         targetSdkVersion 25
-        versionCode 9
+        versionCode 11
         versionName "Aasimar"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions {

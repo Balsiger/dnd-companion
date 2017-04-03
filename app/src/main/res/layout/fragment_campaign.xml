@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (c) 2017-{2017} Peter Balsiger
   ~ All rights reserved
@@ -19,75 +20,102 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             xmlns:app="http://schemas.android.com/apk/res-auto"
-                                             xmlns:tools="http://schemas.android.com/tools"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="wrap_content"
-                                             android:elevation="24dp"
-                                             android:padding="10dp"
-                                             tools:context="net.ixitxachitls.companion.ui.fragments.EditCampaignFragment">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_campaign"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <TextView
-        android:id="@+id/campaign_edit_intro"
-        android:layout_width="0dp"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="34dp"
-        android:text="@string/campaign_edit_intro"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1"
-        app:layout_constraintHorizontal_bias="1.0"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
-
-    <EditText
-        android:id="@+id/edit_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
+        android:background="@color/campaign"
+        android:paddingBottom="10dp"
+        android:paddingEnd="60dp"
+        android:paddingStart="60dp"
+        android:paddingTop="20dp"
+        android:text="TextView"
         android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campaign_edit_intro"
-        app:layout_constraintHorizontal_bias="0.507"/>
+        android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/world"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/campaign_edit_world_hint"
-        android:textSize="24sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_name"/>
-
-    <Button
-        android:id="@+id/save"
+    <ImageView
+        android:id="@+id/remote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/settings_save"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/world"/>
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentTop="false"
+        android:layout_alignStart="@+id/title"
+        android:layout_alignTop="@+id/title"
+        android:layout_marginStart="10dp"
+        android:tint="#444"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_wifi_black_48dp"/>
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/title"
+        android:layout_alignTop="@+id/title"
+        android:layout_marginStart="10dp"
+        android:clickable="true"
+        android:tint="#444"
+        app:srcCompat="@drawable/ic_home_black_48dp"/>
+
+    <ImageButton
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignEnd="@+id/title"
+        android:layout_alignTop="@+id/title"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/campaign_button_delete"
+        android:elevation="0dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:tint="#444"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_delete_black_24dp"/>
+
+    <TextView
+        android:id="@+id/campaign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/title"
+        android:background="@color/campaign2"
+        android:padding="10dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp"
+        android:text="TextView"
+        android:textSize="18sp"/>
+
+    <ListView
+        android:id="@+id/characters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/campaign"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/campaign">
+
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/characters"
+        android:layout_alignEnd="@+id/characters"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:backgroundTint="@color/character"
+        app:srcCompat="@drawable/ic_add_white_24dp"/>
+
+</RelativeLayout>

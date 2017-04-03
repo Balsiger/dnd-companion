@@ -19,67 +19,65 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui;
+package net.ixitxachitls.companion.ui.fragments;
 
 import android.app.LoaderManager;
 import android.content.CursorLoader;
-import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
+import net.ixitxachitls.companion.data.Campaigns;
 import net.ixitxachitls.companion.proto.Entity;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.ui.activities.MainActivity;
+import net.ixitxachitls.companion.ui.CampaignPublisher;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.ListProtoAdapter;
+import net.ixitxachitls.companion.ui.Setup;
 
-public class CampaignActivity extends AppCompatActivity
+/**
+ * A fragment displaying campaign information.
+ */
+public class CampaignFragment extends CompanionFragment
     implements LoaderManager.LoaderCallbacks<Cursor> {
 
   private Campaign campaign;
   private ListProtoAdapter<Entity.CharacterProto> charactersAdapter;
+  private ImageButton delete;
+  private TextView title;
+  private TextView subtitle;
+  private ImageView local;
+  private ImageView remote;
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                           Bundle savedInstanceState) {
+    RelativeLayout view = (RelativeLayout)
+        inflater.inflate(R.layout.fragment_campaign, container, false);
 
-    campaign = Campaign.load(getApplicationContext(),
-        getIntent().getLongExtra(DataBase.COLUMN_ID, 0)).or(new Campaign(0, "not found"));
-
-    setContentView(R.layout.activity_campaign);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
-
-    View container = findViewById(R.id.container);
-    ImageButton delete = Setup.imageButton(container, R.id.button_delete, this::deleteCampaign);
-    if (campaign.isDefault()) {
-      delete.setVisibility(View.GONE);
-    }
-
-    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.add_character);
-    fab.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-        openCharacter(0);
-      }
-    });
-
-    setTitle(campaign.getName());
+    title = Setup.textView(view, R.id.title);
+    subtitle = Setup.textView(view, R.id.campaign);
+    delete = Setup.imageButton(view, R.id.button_delete, this::deleteCampaign);
+    local = Setup.imageView(view, R.id.local);
+    remote = Setup.imageView(view, R.id.remote);
+    Setup.floatingButton(view, R.id.add_character, this::createCharacter);
 
     // Setup list view.
-    ListView characters = (ListView) findViewById(R.id.charactersList);
-    charactersAdapter = new ListProtoAdapter<>(this, R.layout.list_item_character,
+    ListView characters = (ListView) view.findViewById(R.id.characters);
+    charactersAdapter = new ListProtoAdapter<>(getContext(), R.layout.list_item_character,
         /*
         new ListProtoAdapter.OnItemClick<Entity.CharacterProto>() {
           @Override
@@ -117,24 +115,63 @@ public class CampaignActivity extends AppCompatActivity
     characters.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        CampaignActivity.this.openCharacter(id);
+        openCharacter(id);
       }
     });
+
+    showCampaign(Campaigns.get().getCampaign(""));
+    return view;
   }
 
-  private void deleteCampaign() {
-    ConfirmationDialog.show(this,
+  public void showCampaign(Campaign campaign) {
+    this.campaign = campaign;
+
+    if (campaign.isDefault()) {
+      delete.setVisibility(View.GONE);
+    } else {
+      delete.setVisibility(View.VISIBLE);
+    }
+
+    title.setText(campaign.getName());
+    subtitle.setText(campaign.getWorld() + ", " + campaign.getDm());
+    if (campaign.isLocal()) {
+      local.setVisibility(View.VISIBLE);
+      remote.setVisibility(View.INVISIBLE);
+
+      local.setColorFilter(getResources().getColor(
+          campaign.isPublished() ? R.color.on : R.color.off, null));
+      local.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+          if (campaign.isDefault()) {
+            // Cannot publish default campaign.
+            return;
+          }
+
+          local.setColorFilter(getResources().getColor(
+              campaign.isPublished() ? R.color.off : R.color.on, null));
+          CampaignPublisher.toggle(getContext(), campaign,
+              () -> local.setColorFilter(getResources().getColor(
+                  campaign.isPublished() ? R.color.off : R.color.on, null)));
+        }
+      });
+    } else {
+      local.setVisibility(View.INVISIBLE);
+      remote.setVisibility(View.VISIBLE);
+    }
+  }
+
+  protected void deleteCampaign() {
+    ConfirmationDialog.show(getContext(),
         getResources().getString(R.string.campaign_delete_title),
         getResources().getString(R.string.campaign_delete_message),
         new ConfirmationDialog.Callback() {
           @Override
           public void yes() {
-            getContentResolver().delete(DataBaseContentProvider.CAMPAIGNS,
-                "id = " + campaign.getId(), null);
-            Toast.makeText(CampaignActivity.this, getString(R.string.campaign_deleted),
+            Campaigns.get().remove(campaign);
+            Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
                 Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(CampaignActivity.this, MainActivity.class);
-            CampaignActivity.this.startActivity(intent);
+            show(CompanionFragment.Fragments.campaigns);
           }
 
           @Override
@@ -144,38 +181,31 @@ public class CampaignActivity extends AppCompatActivity
         });
   }
 
+  private void createCharacter() {
+    openCharacter(0);
+  }
+
   private void openCharacter(long id) {
+    /*
     Intent intent = new Intent(CampaignActivity.this, CharacterActivity.class);
     intent.putExtra(DataBase.COLUMN_ID, id);
     startActivity(intent);
+    */
   }
 
   @Override
   public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-    return new CursorLoader(this, DataBaseContentProvider.CHARACTERS,
+    return new CursorLoader(getActivity(), DataBaseContentProvider.CHARACTERS,
         DataBase.COLUMNS, null, null, null);
   }
 
   @Override
   public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
     charactersAdapter.swapCursor(data);
-
-    if(!charactersAdapter.isEmpty()) {
-      findViewById(R.id.charactersTitle).setVisibility(View.VISIBLE);
-      findViewById(R.id.charactersTitleEmpty).setVisibility(View.GONE);
-    }
   }
 
   @Override
   public void onLoaderReset(Loader<Cursor> loader) {
     charactersAdapter.swapCursor(null);
   }
-
-  @Override
-  public void onResume() {
-    super.onResume();
-
-    // Refresh the list view.
-    getLoaderManager().restartLoader(0, null, this);
-   }
 }

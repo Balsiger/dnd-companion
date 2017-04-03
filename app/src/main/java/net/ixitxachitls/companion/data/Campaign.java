@@ -21,16 +21,9 @@
 
 package net.ixitxachitls.companion.data;
 
-import android.content.Context;
-
-import com.google.common.base.Optional;
-import com.google.protobuf.InvalidProtocolBufferException;
-
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-
-import java.util.Random;
 
 /**
  * A campaign with all its data.
@@ -38,15 +31,13 @@ import java.util.Random;
 public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public static final String TABLE = "campaigns";
-
-  private static final int RANDOM_LENGTH = 20;
-  private static final Random random = new Random();
+  public static final int DEFAULT_CAMPAIGN_ID = 1;
 
   private String campaignId;
-  private String world;
-  private String dm;
-  private boolean remote;
-  private boolean published;
+  private String world = "";
+  private String dm = "";
+  private boolean remote = false;
+  private boolean published = false;
 
   public Campaign(long id, String name) {
     super(id, name, DataBaseContentProvider.CAMPAIGNS);
@@ -55,6 +46,14 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public String getWorld() {
     return world;
+  }
+
+  public String getDm() {
+    return dm;
+  }
+
+  public String getCampaignId() {
+    return campaignId;
   }
 
   public boolean isDefault() {
@@ -97,14 +96,13 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     store();
   }
 
-  private void makeRemote() {
-    remote = true;
+  public static Campaign createNew() {
+    return new Campaign(0, "");
   }
 
   public static Campaign createDefault() {
     Campaign campaign = new Campaign(1, "Default Campaign");
     campaign.setWorld("Generic");
-    campaign.makeRemote();
     return campaign;
   }
 
@@ -120,13 +118,10 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return campaign;
   }
 
-  public static Optional<Campaign> load(Context context, long id) {
-    try {
-      return Optional.of(fromProto(id, Data.CampaignProto.getDefaultInstance().getParserForType()
-          .parseFrom(loadBytes(context, id, DataBaseContentProvider.CAMPAIGNS))));
-    } catch (InvalidProtocolBufferException e) {
-      e.printStackTrace();
-      return Optional.absent();
-    }
+  @Override
+  public void store() {
+    super.store();
+
+    Campaigns.get().ensureAdded(this);
   }
 }

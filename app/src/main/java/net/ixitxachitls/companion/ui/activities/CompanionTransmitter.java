@@ -47,10 +47,12 @@ public class CompanionTransmitter {
   private final Thread senderThread;
   private final Receiver receiver;
   private final Thread receiverThread;
+  private String name;
   private final Socket socket;
 
 
-  public CompanionTransmitter(Socket socket) {
+  public CompanionTransmitter(String name, Socket socket) {
+    this.name = name;
     this.socket = socket;
     this.sender = new Sender();
     this.receiver = new Receiver();
@@ -87,17 +89,18 @@ public class CompanionTransmitter {
     }
 
     public void send(Data.CompanionMessageProto message) {
-      try(DataOutputStream out =
-              new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()))) {
+      try {
+        DataOutputStream out =
+            new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
         byte []data = message.toByteArray();
         out.writeInt(data.length);
         out.write(message.toByteArray());
         out.flush();
-        Log.d("Transmitter", "Client sent message: " + message);
+        Log.d("Transmitter", name + " sent message: " + message);
       } catch (UnknownHostException e) {
-        Log.d("Transmitter", "Unknown Host", e);
+        Log.d("Transmitter", name + ": Unknown Host", e);
       } catch (IOException e) {
-        Log.d("Transmitter", "I/O Exception", e);
+        Log.d("Transmitter", name + ": I/O Exception", e);
       }
     }
   }
@@ -108,16 +111,17 @@ public class CompanionTransmitter {
     @Override
     public void run() {
       while (!Thread.currentThread().isInterrupted()) {
-        try (DataInputStream input =
-                 new DataInputStream(new BufferedInputStream(socket.getInputStream()))) {
+        try {
+          DataInputStream input =
+              new DataInputStream(new BufferedInputStream(socket.getInputStream()));
           int length = input.readInt();
           byte[] data = new byte[length];
           input.read(data);
           Data.CompanionMessageProto message = Data.CompanionMessageProto.parseFrom(data);
-          Log.d("Transmitter", "Read from the stream: " + message);
+          Log.d("Transmitter", name + " read from the stream: " + message.toString());
           queue.put(message);
         } catch (IOException | InterruptedException e) {
-          Log.e("Transmitter", "Server loop error: ", e);
+          Log.e("Transmitter", name + " receiver loop error: ", e);
           break;
         }
       }
@@ -125,12 +129,12 @@ public class CompanionTransmitter {
   }
 
   public void send(Data.CompanionMessageProto message) {
-    Log.d("Transmitter", "enqueing message");
+    Log.d("Transmitter", name + ": enqueing message");
     sender.queue.add(message);
   }
 
   public @Nullable Data.CompanionMessageProto receive() {
-    Log.d("Transmitter", "trying to receive message");
+    Log.d("Transmitter", name + ": trying to receive message");
     return receiver.queue.poll();
   }
 }

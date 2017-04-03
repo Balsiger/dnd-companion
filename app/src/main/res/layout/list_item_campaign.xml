@@ -75,18 +75,6 @@
         android:layout_below="@+id/name"
         android:layout_marginLeft="10dp"
         android:layout_toEndOf="@+id/local"
-        android:layout_toLeftOf="@+id/publish"
         android:textSize="18sp"/>
-
-    <Switch
-        android:id="@+id/publish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/local"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:textColorLink="@color/colorPrimary"
-        android:theme="@style/OnOffSwitch"
-        />
 
 </RelativeLayout>

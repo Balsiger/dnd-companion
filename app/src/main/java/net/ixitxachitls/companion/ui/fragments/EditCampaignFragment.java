@@ -22,20 +22,21 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.common.base.Optional;
-import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
+import net.ixitxachitls.companion.data.Campaigns;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.Setup;
 
 /**
@@ -43,7 +44,6 @@ import net.ixitxachitls.companion.ui.Setup;
  */
 public class EditCampaignFragment extends EditFragment {
 
-  private static final String ARG_PROTO = "proto";
   private static final String ARG_ID = "id";
 
   @FunctionalInterface
@@ -62,22 +62,21 @@ public class EditCampaignFragment extends EditFragment {
   public EditCampaignFragment() {}
 
   public static EditCampaignFragment newInstance() {
-    return newInstance(0, Data.CampaignProto.getDefaultInstance());
+    return newInstance("");
   }
 
-  public static EditCampaignFragment newInstance(int id, Data.CampaignProto proto) {
+  public static EditCampaignFragment newInstance(String id) {
     EditCampaignFragment fragment = new EditCampaignFragment();
-    fragment.setArguments(arguments(R.layout.fragment_campaign,
-        proto.getName().isEmpty() ? R.string.campaign_title_add : R.string.campaign_title_edit,
-        R.color.campaign, id, proto));
+    fragment.setArguments(arguments(R.layout.fragment_edit_campaign,
+        id.isEmpty() ? R.string.campaign_title_add : R.string.campaign_title_edit,
+        R.color.campaign, id));
     return fragment;
   }
 
-  protected static Bundle arguments(int layoutId, int titleId, int colorId,
-                                    int id, Data.CampaignProto proto) {
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String campaignId) {
     Bundle arguments = EditFragment.arguments(layoutId, titleId, colorId);
-    arguments.putByteArray(ARG_PROTO, proto.toByteArray());
-    arguments.putInt(ARG_ID, id);
+    arguments.putString(ARG_ID, campaignId);
     return arguments;
   }
 
@@ -90,16 +89,10 @@ public class EditCampaignFragment extends EditFragment {
     super.onCreate(savedInstanceState);
 
     if (getArguments() != null) {
-      try {
-        int id = getArguments().getInt(ARG_ID);
-        campaign = Campaign.fromProto(id,
-            Data.CampaignProto.parseFrom(getArguments().getByteArray(ARG_PROTO)));
-      } catch (InvalidProtocolBufferException e) {
-        Toast.makeText(getContext(), "Cannot parse proto: " + e, Toast.LENGTH_SHORT).show();
-        campaign = new Campaign(0, "");
-      }
+      String id = getArguments().getString(ARG_ID);
+      campaign = Campaigns.get().getCampaign(id);
     } else {
-      campaign = new Campaign(0, "");
+      campaign = Campaign.createNew();
     }
   }
 
@@ -133,7 +126,7 @@ public class EditCampaignFragment extends EditFragment {
     update();
   }
 
-  private void update() {
+  protected void update() {
     if (name.getText().length() == 0 || campaign.getWorld().isEmpty()) {
       save.setVisibility(View.INVISIBLE);
     } else {

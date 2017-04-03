@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.view.LayoutInflater;
@@ -33,12 +32,11 @@ import android.widget.TextView;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.ui.Setup;
-import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 /**
  * Fragment for displaying settings values.
  */
-public class SettingsFragment extends Fragment {
+public class SettingsFragment extends CompanionFragment {
   private Settings settings;
   private TextView nickname;
   private Button save;
@@ -68,7 +66,7 @@ public class SettingsFragment extends Fragment {
     settings.store();
 
     if (settings.isDefined()) {
-      ((MainActivity) getActivity()).showLast();
+      showLast();
     }
   }
 

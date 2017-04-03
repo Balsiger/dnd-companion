@@ -29,6 +29,7 @@ import android.util.Log;
 
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,14 +42,12 @@ import java.util.Map;
 public class CompanionSubscriber {
   private static CompanionSubscriber singleton;
   private final NsdManager manager;
-  private NsdManager.DiscoveryListener discoveryListener;
   private @Nullable NsdManager.ResolveListener resolveListener;
   private Map<String, CompanionClient> clientById = new HashMap<>();
   private Map<String, String> nameById = new HashMap<>();
 
   private CompanionSubscriber(Context context) {
     this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
-    this.discoveryListener = new CompanionDiscoveryListener();
   }
 
   // TODO: Determine if singleton works and is necessary.
@@ -62,7 +61,9 @@ public class CompanionSubscriber {
   }
 
   public void start() {
-    manager.discoverServices(CompanionPublisher.TYPE, NsdManager.PROTOCOL_DNS_SD, discoveryListener);
+    Log.d("Subscriber", "Trying to find a companion");
+    manager.discoverServices(CompanionPublisher.TYPE, NsdManager.PROTOCOL_DNS_SD,
+        new CompanionDiscoveryListener());
   }
 
   public void stop() {
@@ -85,11 +86,8 @@ public class CompanionSubscriber {
     @Override
     public void onServiceFound(NsdServiceInfo service) {
       Log.d("Subscriber", "Service discovery success: " + service);
-
       if (!service.getServiceType().startsWith(CompanionPublisher.TYPE)) {
         Log.d("Subscriber", "Unknown Service Type: " + service.getServiceType());
-      } else if (service.getServiceName().equals(Settings.get().getNickname())) {
-        Log.d("Subscriber", "Service with the same nickname ignored");
       } else  {
         Log.d("Subscriber", "resolving service " + service);
         resolveListener = new CompanionResolveListener();
@@ -133,7 +131,8 @@ public class CompanionSubscriber {
     public void onServiceResolved(NsdServiceInfo serviceInfo) {
       Log.e("Subscriber", "Resolve Succeeded. " + serviceInfo);
 
-      if (serviceInfo.getServiceName().endsWith(Settings.get().getNickname())) {
+      if (!Misc.onEmulator() // Allow to find itself on emulator.
+          && serviceInfo.getServiceName().endsWith(Settings.get().getNickname())) {
         Log.d("Subscriber", "Same Nickname, ignored.");
         return;
       }
@@ -155,6 +154,7 @@ public class CompanionSubscriber {
 
   public List<CompanionMessage> receive() {
     List<CompanionMessage> messages = new ArrayList<>();
+
     for (Map.Entry<String, CompanionClient> client : clientById.entrySet()) {
       Data.CompanionMessageProto message = client.getValue().receive();
       if (message != null) {

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
- *
+s *
  * This file is part of the Player Companion.
  *
  * The Player Companion is free software; you can redistribute it and/or

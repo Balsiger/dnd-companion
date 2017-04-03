@@ -27,6 +27,8 @@ import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.google.common.base.Strings;
+
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Settings;
 
@@ -40,7 +42,7 @@ import java.util.List;
  */
 public class CompanionPublisher {
 
-  public static final String TYPE = "_http._tcp";
+  public static final String TYPE = "_companion._tcp";
   private static CompanionPublisher singleton;
 
   private final NsdManager manager;
@@ -74,12 +76,13 @@ public class CompanionPublisher {
       }
     }
 
+    Log.d("Publisher", "published campaign " + campaign.getName());
     campaigns.add(campaign);
   }
 
   public void unpublish(Campaign campaign) {
     campaigns.remove(campaign);
-    if (campaigns.isEmpty()) {
+    if (campaigns.isEmpty() && !Strings.isNullOrEmpty(name)) {
       manager.unregisterService(registrationListener);
       registrationListener = null;
       server.stop();
@@ -101,6 +104,7 @@ public class CompanionPublisher {
 
   public void stop() {
     if (name != null) {
+      Log.d("Publisher", "unregistering " + service);
       manager.unregisterService(registrationListener);
     }
   }

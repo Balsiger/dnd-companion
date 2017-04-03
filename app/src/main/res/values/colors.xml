@@ -5,9 +5,10 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="status">#fea</color>
-    <color name="on">#2c0</color>
-    <color name="off">#f30</color>
+    <color name="on">#570</color>
+    <color name="off">#920</color>
 
     <color name="campaign">#f94</color>
+    <color name="campaign2">#fc5</color>
     <color name="character">#7ef</color>
 </resources>

@@ -52,7 +52,7 @@ public class CompanionClient {
   public void start() {
     Log.d("Client", "starting client");
     try {
-      transmitter = new CompanionTransmitter(new Socket(address, port));
+      transmitter = new CompanionTransmitter("client", new Socket(address, port));
       transmitter.start();
       transmitter.send(Data.CompanionMessageProto.newBuilder()
           .setDebug("This is the client sending information")
