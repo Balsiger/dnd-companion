@@ -89,10 +89,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/title"
-        android:background="@color/campaign2"
+        android:background="@color/campaign"
         android:padding="10dp"
         android:paddingEnd="20dp"
-        android:paddingStart="20dp"
+        android:paddingStart="60dp"
         android:text="TextView"
         android:textSize="18sp"/>
 
