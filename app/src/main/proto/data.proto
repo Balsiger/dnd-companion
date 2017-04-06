@@ -21,14 +21,16 @@ message CompanionMessageProto {
   string sender = 1;
   string debug = 2;
 
-  // Server push information.
-  CampaignProto campaign = 3;
-
-  // Client push information.
+  // General information.
   message Welcome {
     string name = 1;
     string id = 2;
   }
   Welcome welcome = 4;
+
+  // Server push information.
+  CampaignProto campaign = 3;
+
+  // Client push information
   CharacterProto character = 5;
 }

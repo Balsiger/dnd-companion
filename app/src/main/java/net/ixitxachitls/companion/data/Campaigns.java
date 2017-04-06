@@ -50,7 +50,7 @@ public class Campaigns {
   private Context context;
   private Map<Long, Campaign> campaignsByStorageId = new HashMap<>();
   private Map<String, Campaign> campaignsByCampaignId = new HashMap<>();
-  private List<Campaign> campaignsSorted = new ArrayList<>();
+  private List<Campaign> campaigns = new ArrayList<>();
 
   public Campaigns(Context context) {
     this.context = context;
@@ -69,6 +69,9 @@ public class Campaigns {
 
     Log.d("Campaigns", "loading campaigns");
     singleton = new Campaigns(context);
+
+    // Add the default campaign.
+    singleton.add(Campaign.createDefault());
 
     Cursor cursor = context.getContentResolver().query(
         DataBaseContentProvider.CAMPAIGNS, DataBase.COLUMNS, null, null, null);
@@ -99,19 +102,29 @@ public class Campaigns {
   }
 
   private void add(Campaign campaign) {
-    campaignsSorted.add(campaign);
+    campaigns.add(campaign);
     campaignsByStorageId.put(campaign.getId(), campaign);
     campaignsByCampaignId.put(campaign.getCampaignId(), campaign);
   }
 
   public void ensureAdded(Campaign campaign) {
-    if (!campaignsByStorageId.containsKey(campaign.getId())) {
+    if (!campaignsByCampaignId.containsKey(campaign.getCampaignId())) {
       add(campaign);
     }
   }
 
+  public void addOrUpdate(Campaign campaign) {
+    if (campaignsByCampaignId.containsKey(campaign.getCampaignId())) {
+      Campaign existingCampaign = campaignsByCampaignId.get(campaign.getCampaignId());
+      campaign.setId(existingCampaign.getId());
+      campaigns.remove(existingCampaign);
+    }
+
+    add(campaign);
+  }
+
   public void remove(Campaign campaign) {
-    campaignsSorted.remove(campaign);
+    campaigns.remove(campaign);
     campaignsByStorageId.remove(campaign.getId());
     campaignsByCampaignId.remove(campaign.getCampaignId());
 
@@ -120,8 +133,19 @@ public class Campaigns {
   }
 
   public List<Campaign> getCampaigns() {
-    Collections.sort(campaignsSorted, new CampaignComparator());
-    return campaignsSorted;
+    Collections.sort(campaigns, new CampaignComparator());
+    return campaigns;
+  }
+
+  public List<Campaign> getLocalCampaigns() {
+    List<Campaign> filtered = new ArrayList<>();
+    for (Campaign campaign : campaigns) {
+      if (campaign.isLocal() && !campaign.isDefault()) {
+        filtered.add(campaign);
+      }
+    }
+
+    return filtered;
   }
 
   private class CampaignComparator implements Comparator<Campaign> {

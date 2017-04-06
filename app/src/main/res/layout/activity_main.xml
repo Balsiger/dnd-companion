@@ -26,8 +26,16 @@
                 android:layout_height="wrap_content"
                 android:background="?attr/colorPrimary"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
-                app:title="D&amp;D Companion"
-                />
+                app:title="D&amp;D Companion">
+
+                <ImageView
+                    android:id="@+id/online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_lightbulb_outline_black_24dp"/>
+            </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.AppBarLayout>
 
@@ -53,5 +61,19 @@
             android:textSize="18sp"/>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/online_status"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_weight="1"
+        android:background="@color/status"
+        android:padding="10dp"
+        android:text="Updating online status..."
+        android:textSize="18sp"
+        android:visibility="gone"/>
 
 </android.support.design.widget.CoordinatorLayout>

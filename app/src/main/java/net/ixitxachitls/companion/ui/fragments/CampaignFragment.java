@@ -40,6 +40,7 @@ import android.widget.Toast;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Campaigns;
+import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Entity;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -126,39 +127,7 @@ public class CampaignFragment extends CompanionFragment
   public void showCampaign(Campaign campaign) {
     this.campaign = campaign;
 
-    if (campaign.isDefault()) {
-      delete.setVisibility(View.GONE);
-    } else {
-      delete.setVisibility(View.VISIBLE);
-    }
-
-    title.setText(campaign.getName());
-    subtitle.setText(campaign.getWorld() + ", " + campaign.getDm());
-    if (campaign.isLocal()) {
-      local.setVisibility(View.VISIBLE);
-      remote.setVisibility(View.INVISIBLE);
-
-      local.setColorFilter(getResources().getColor(
-          campaign.isPublished() ? R.color.on : R.color.off, null));
-      local.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-          if (campaign.isDefault()) {
-            // Cannot publish default campaign.
-            return;
-          }
-
-          local.setColorFilter(getResources().getColor(
-              campaign.isPublished() ? R.color.off : R.color.on, null));
-          CampaignPublisher.toggle(getContext(), campaign,
-              () -> local.setColorFilter(getResources().getColor(
-                  campaign.isPublished() ? R.color.off : R.color.on, null)));
-        }
-      });
-    } else {
-      local.setVisibility(View.INVISIBLE);
-      remote.setVisibility(View.VISIBLE);
-    }
+    refresh();
   }
 
   protected void deleteCampaign() {
@@ -191,6 +160,43 @@ public class CampaignFragment extends CompanionFragment
     intent.putExtra(DataBase.COLUMN_ID, id);
     startActivity(intent);
     */
+  }
+
+  @Override
+  public void refresh() {
+    if (campaign.isDefault() || campaign.isPublished()) {
+      delete.setVisibility(View.GONE);
+    } else {
+      delete.setVisibility(View.VISIBLE);
+    }
+
+    title.setText(campaign.getName());
+    subtitle.setText(campaign.getWorld() + ", " + campaign.getDm());
+    if (campaign.isLocal()) {
+      local.setVisibility(View.VISIBLE);
+      remote.setVisibility(View.INVISIBLE);
+
+      local.setColorFilter(getResources().getColor(
+          campaign.isDefault() ? R.color.out : campaign.isPublished() ? R.color.on : R.color.off,
+          null));
+      local.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+          // Cannot publish default campaign.
+          if (!campaign.isDefault()) {
+            CampaignPublisher.toggle(getContext(), campaign, CampaignFragment.this::refresh,
+                CampaignPublisher.EmptyCancelAction);
+          }
+        }
+      });
+    } else {
+      local.setVisibility(View.INVISIBLE);
+      remote.setVisibility(View.VISIBLE);
+
+      remote.setColorFilter(getResources().getColor(
+          CompanionSubscriber.get().isServerActive(campaign.getServerId())
+              ? R.color.on : R.color.off, null));
+    }
   }
 
   @Override

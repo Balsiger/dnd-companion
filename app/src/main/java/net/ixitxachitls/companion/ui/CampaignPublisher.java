@@ -32,33 +32,44 @@ import net.ixitxachitls.companion.data.Campaign;
 public class CampaignPublisher {
 
   @FunctionalInterface
+  public interface OKAction {
+    public void ok();
+  }
+
+  @FunctionalInterface
   public interface CancelAction {
     public void cancel();
   }
 
+  public static OKAction EmptyOkAction = () -> {};
+  public static CancelAction EmptyCancelAction = () -> {};
+
   private CampaignPublisher() {}
 
-  public static void toggle(Context context, Campaign campaign, CancelAction action) {
+  public static void toggle(Context context, Campaign campaign, OKAction okAction,
+                            CancelAction cancelAction) {
     if (campaign.isPublished()) {
-      unpublish(context, campaign, action);
+      unpublish(context, campaign, okAction, cancelAction);
     } else {
-      publish(context, campaign, action);
+      publish(context, campaign, okAction, cancelAction);
     }
   }
 
-  public static void publish(Context context, Campaign campaign, CancelAction action) {
+  public static void publish(Context context, Campaign campaign, OKAction okAction,
+                             CancelAction cancelAction) {
     ConfirmationDialog.show(context,
         context.getString(R.string.main_campaign_publish_title),
         context.getString(R.string.main_campaign_publish_message),
-        campaign::publish,
-        action::cancel);
+        () -> { campaign.publish(); okAction.ok(); },
+        cancelAction::cancel);
   }
 
-  public static void unpublish(Context context, Campaign campaign, CancelAction action) {
+  public static void unpublish(Context context, Campaign campaign, OKAction okAction,
+                               CancelAction cancelAction) {
     ConfirmationDialog.show(context,
         context.getString(R.string.main_campaign_unpublish_title),
         context.getString(R.string.main_campaign_unpublish_message),
-        campaign::unpublish,
-        action::cancel);
+        () -> { campaign.unpublish(); okAction.ok(); },
+        cancelAction::cancel);
   }
 }

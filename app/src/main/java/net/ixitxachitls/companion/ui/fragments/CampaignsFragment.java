@@ -32,6 +32,7 @@ import android.widget.TextView;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Campaigns;
+import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
@@ -77,8 +78,12 @@ public class CampaignsFragment extends CompanionFragment {
                     }
                   }
                 } else {
-                  view.findViewById(R.id.local).setVisibility(View.INVISIBLE);
-                  view.findViewById(R.id.remote).setVisibility(View.VISIBLE);
+                  local.setVisibility(View.INVISIBLE);
+                  remote.setVisibility(View.VISIBLE);
+
+                  remote.setColorFilter(getResources().getColor(
+                      CompanionSubscriber.get().isServerActive(campaign.getServerId())
+                          ? R.color.on : R.color.off, null));
                 }
               }
             });
@@ -99,11 +104,8 @@ public class CampaignsFragment extends CompanionFragment {
       return;
     }
 
-    view.setColorFilter(getResources().getColor(
-        campaign.isPublished() ? R.color.off : R.color.on, null));
-    CampaignPublisher.toggle(getContext(), campaign,
-        () -> view.setColorFilter(getResources().getColor(
-            campaign.isPublished() ? R.color.off : R.color.on, null)));
+    CampaignPublisher.toggle(getContext(), campaign, this::refresh,
+        CampaignPublisher.EmptyCancelAction);
   }
 
   @Override

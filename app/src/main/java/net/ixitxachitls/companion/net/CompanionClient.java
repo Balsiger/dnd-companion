@@ -21,8 +21,9 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.support.annotation.Nullable;
 import android.util.Log;
+
+import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.CompanionTransmitter;
@@ -68,9 +69,9 @@ public class CompanionClient {
 
   }
 
-  public @Nullable Data.CompanionMessageProto receive() {
+  public Optional<Data.CompanionMessageProto> receive() {
     if (transmitter == null) {
-      return null;
+      return Optional.absent();
     }
 
     return transmitter.receive();

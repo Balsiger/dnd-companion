@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data;
 
+import com.google.common.base.Strings;
+
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -31,17 +33,16 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public static final String TABLE = "campaigns";
-  public static final int DEFAULT_CAMPAIGN_ID = 1;
+  public static final int DEFAULT_CAMPAIGN_ID = -1;
 
-  private String campaignId;
+  private String campaignId = "";
   private String world = "";
   private String dm = "";
   private boolean remote = false;
   private boolean published = false;
 
-  public Campaign(long id, String name) {
+  private Campaign(long id, String name) {
     super(id, name, DataBaseContentProvider.CAMPAIGNS);
-    campaignId = Settings.get().getAppId() + "-" + id;
   }
 
   public String getWorld() {
@@ -56,8 +57,12 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return campaignId;
   }
 
+  public String getServerId() {
+    return campaignId.replaceAll("-\\d+-remote$", "");
+  }
+
   public boolean isDefault() {
-    return getId() == 1;
+    return getId() == DEFAULT_CAMPAIGN_ID;
   }
 
   public boolean isLocal() {
@@ -101,7 +106,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public static Campaign createDefault() {
-    Campaign campaign = new Campaign(1, "Default Campaign");
+    Campaign campaign = new Campaign(DEFAULT_CAMPAIGN_ID, "Default Campaign");
     campaign.setWorld("Generic");
     return campaign;
   }
@@ -118,9 +123,35 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return campaign;
   }
 
+  public static Campaign fromRemoteProto(Data.CampaignProto proto) {
+    Campaign campaign = fromProto(0, proto);
+    campaign.campaignId += "-remote";
+    campaign.remote = true;
+
+    return campaign;
+  }
+
+  public static Campaign fromProto(String campaignId, Data.CampaignProto proto) {
+    return null;
+  }
+
+  private static Campaign setData(Campaign campaign, Data.CampaignProto proto) {
+    campaign.world = proto.getWorld();
+    campaign.remote = proto.getRemote();
+    campaign.dm = proto.getDm();
+    campaign.published = proto.getPublished();
+
+    return campaign;
+  }
+
   @Override
   public void store() {
     super.store();
+    if (Strings.isNullOrEmpty(campaignId)) {
+      // Now we finally have an id.
+      campaignId = Settings.get().getAppId() + "-" + getId();
+      super.store();
+    }
 
     Campaigns.get().ensureAdded(this);
   }

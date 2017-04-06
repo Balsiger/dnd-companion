@@ -67,7 +67,7 @@
     <string name="campaign_default_name">Default Campaign</string>
     <string name="campaign_publish">publish</string>
     <string name="main_campaign_publish_title">Publish Campaign</string>
-    <string name="main_campaign_publish_message">Are you sure you want to publish the campaign on the local network? This will unpublish any currently published campaign.</string>
+    <string name="main_campaign_publish_message">Are you sure you want to publish the campaign on the local network?</string>
     <string name="main_campaign_unpublish_title">Unpublish Campaign</string>
     <string name="main_campaign_unpublish_message">Are you sure you want to unpublish the campaign? This will make it inaccessible for your players.</string>
 

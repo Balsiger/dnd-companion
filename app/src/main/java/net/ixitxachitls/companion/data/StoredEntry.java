@@ -55,8 +55,12 @@ public abstract class StoredEntry<P extends MessageLite> extends Entry<P> {
     super.setName(name);
   }
 
-  public long getId() {
+  protected long getId() {
     return id;
+  }
+
+  protected void setId(long id) {
+    this.id = id;
   }
 
   public void store() {

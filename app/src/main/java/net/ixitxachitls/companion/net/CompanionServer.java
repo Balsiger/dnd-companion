@@ -24,6 +24,8 @@ package net.ixitxachitls.companion.net;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.CompanionTransmitter;
@@ -33,6 +35,7 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -83,6 +86,10 @@ public class CompanionServer implements Runnable {
     return socket.getInetAddress();
   }
 
+  public Collection<String> connectedNames() {
+    return namesById.values();
+  }
+
   @Override
   public void run() {
       Log.d("Server", "ServerSocket Created, awaiting connection on "
@@ -121,13 +128,13 @@ public class CompanionServer implements Runnable {
     List<CompanionMessage> messages = new ArrayList<>();
 
     for (Map.Entry<String, CompanionTransmitter> transmitter : transmittersById.entrySet()) {
-      Data.CompanionMessageProto message = transmitter.getValue().receive();
-      if (message != null) {
+      Optional<Data.CompanionMessageProto> message = transmitter.getValue().receive();
+      if (message.isPresent()) {
         String id;
         String name;
-        if (message.hasWelcome()) {
-          id = message.getWelcome().getId();
-          name = message.getWelcome().getName();
+        if (message.get().hasWelcome()) {
+          id = message.get().getWelcome().getId();
+          name = message.get().getWelcome().getName();
 
           transmittersById.remove(transmitter.getKey());
           transmittersById.put(id, transmitter.getValue());
@@ -136,10 +143,27 @@ public class CompanionServer implements Runnable {
           id = transmitter.getKey();
           name = namesById.getOrDefault(id, "(unknown)");
         }
-        messages.add(new CompanionMessage(id, name, message));
+        messages.add(new CompanionMessage(id, name, message.get()));
       }
     }
 
     return messages;
+  }
+
+  public void sendAll(CompanionMessage message) {
+    for (String id : transmittersById.keySet()) {
+      send(id, message);
+    }
+  }
+
+  public void send(String id, CompanionMessage message) {
+    CompanionTransmitter transmitter = transmittersById.get(id);
+    if (transmitter == null) {
+      Log.e("Server", "No transmitter found for '" + id + "', message not sent.");
+      return;
+    }
+
+    Log.d("Server", "sending message: " + message.toString());
+    transmitter.send(message.getProto());
   }
 }

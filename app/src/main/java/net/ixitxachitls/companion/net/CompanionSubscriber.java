@@ -27,6 +27,9 @@ import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.google.common.base.Joiner;
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.util.Misc;
@@ -41,6 +44,8 @@ import java.util.Map;
  */
 public class CompanionSubscriber {
   private static CompanionSubscriber singleton;
+  private static Joiner LINE_JOINER = Joiner.on("\n");
+
   private final NsdManager manager;
   private @Nullable NsdManager.ResolveListener resolveListener;
   private Map<String, CompanionClient> clientById = new HashMap<>();
@@ -48,6 +53,19 @@ public class CompanionSubscriber {
 
   private CompanionSubscriber(Context context) {
     this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
+  }
+
+  public String getOnlineStatus() {
+    if (nameById.isEmpty()) {
+      return "Not connected to any servers.";
+    } else {
+      List<String> lines = new ArrayList<>();
+      for (String name : nameById.values()) {
+        lines.add("Server " + name + " connected.");
+      }
+
+      return LINE_JOINER.join(lines);
+    }
   }
 
   // TODO: Determine if singleton works and is necessary.
@@ -58,6 +76,14 @@ public class CompanionSubscriber {
 
   public static CompanionSubscriber get() {
     return singleton;
+  }
+
+  public boolean isServerActive(String serverId) {
+    return clientById.containsKey(serverId);
+  }
+
+  public boolean isOnline() {
+    return !clientById.isEmpty();
   }
 
   public void start() {
@@ -156,13 +182,13 @@ public class CompanionSubscriber {
     List<CompanionMessage> messages = new ArrayList<>();
 
     for (Map.Entry<String, CompanionClient> client : clientById.entrySet()) {
-      Data.CompanionMessageProto message = client.getValue().receive();
-      if (message != null) {
+      Optional<Data.CompanionMessageProto> message = client.getValue().receive();
+      if (message.isPresent()) {
         String id;
         String name;
-        if (message.hasWelcome()) {
-          id = message.getWelcome().getId();
-          name = message.getWelcome().getName();
+        if (message.get().hasWelcome()) {
+          id = message.get().getWelcome().getId();
+          name = message.get().getWelcome().getName();
           clientById.remove(client.getKey());
           clientById.put(id, client.getValue());
           nameById.put(id, name);
@@ -170,7 +196,7 @@ public class CompanionSubscriber {
           id = client.getKey();
           name = nameById.getOrDefault(id, "(unknown)");
         }
-        messages.add(new CompanionMessage(id, name, message));
+        messages.add(new CompanionMessage(id, name, message.get()));
       }
     }
 

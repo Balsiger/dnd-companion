@@ -51,10 +51,6 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   private Settings(String name) {
     super(ID, name, DataBaseContentProvider.SETTINGS);
-
-    if (Strings.isNullOrEmpty(appId)) {
-      appId = UUID.randomUUID().toString();
-    }
   }
 
   public static ContentValues defaultSettings() {
@@ -68,7 +64,15 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   public static Settings init(Context context) {
     settings = load(context).or(new Settings(""));
+    settings.ensureAppId();
     return settings;
+  }
+
+  private void ensureAppId() {
+    if (Strings.isNullOrEmpty(appId)) {
+      appId = UUID.randomUUID().toString();
+      store();
+    }
   }
 
   @Override

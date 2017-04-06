@@ -21,8 +21,9 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
-import android.support.annotation.Nullable;
 import android.util.Log;
+
+import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.proto.Data;
 
@@ -133,8 +134,8 @@ public class CompanionTransmitter {
     sender.queue.add(message);
   }
 
-  public @Nullable Data.CompanionMessageProto receive() {
+  public Optional<Data.CompanionMessageProto> receive() {
     Log.d("Transmitter", name + ": trying to receive message");
-    return receiver.queue.poll();
+    return Optional.fromNullable(receiver.queue.poll());
   }
 }

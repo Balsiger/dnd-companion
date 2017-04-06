@@ -27,10 +27,12 @@ import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.proto.Data;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -43,6 +45,7 @@ import java.util.List;
 public class CompanionPublisher {
 
   public static final String TYPE = "_companion._tcp";
+  private static final Joiner LINE_JOINER = Joiner.on("\n");
   private static CompanionPublisher singleton;
 
   private final NsdManager manager;
@@ -57,6 +60,21 @@ public class CompanionPublisher {
     this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
   }
 
+  public String getOnlineStatus() {
+    if (server == null) {
+      return "Currently nothing published";
+    } else {
+      List<String> lines = new ArrayList<>();
+
+      lines.add("Server published as " + service.getServiceName());
+      for (String name : server.connectedNames()) {
+        lines.add("Client " + name + " connected.");
+      }
+
+      return LINE_JOINER.join(lines);
+    }
+  }
+
   public static CompanionPublisher init(Context context) {
     singleton = new CompanionPublisher(context);
     return singleton;
@@ -66,18 +84,43 @@ public class CompanionPublisher {
     return singleton;
   }
 
-  public void publish(Campaign campaign) {
-    name = Settings.get().getNickname();
+  public boolean isOnline() {
+    return server != null;
+  }
 
-    if (server == null) {
-      server = new CompanionServer();
-      if (server.start()) {
-        register(name, server.getAddress(), server.getPort());
-      }
+  public void publish(Campaign campaign) {
+    if (campaigns.contains(campaign)) {
+      // Already published.
+      return;
     }
+
+    ensureServerStarted();
+    server.sendAll(new CompanionMessage(Settings.get().getAppId(), Settings.get().getName(),
+        Data.CompanionMessageProto.newBuilder()
+            .setCampaign(campaign.toProto())
+            .build()));
 
     Log.d("Publisher", "published campaign " + campaign.getName());
     campaigns.add(campaign);
+  }
+
+  private void ensureServerStarted() {
+    if (server == null) {
+      server = new CompanionServer();
+      if (server.start()) {
+        name = Settings.get().getNickname();
+        register(name, server.getAddress(), server.getPort());
+      }
+    }
+  }
+
+  public void republish(List<Campaign> campaigns, String clientId) {
+    ensureServerStarted();
+    for (Campaign campaign : campaigns) {
+      server.send(clientId, new CompanionMessage(Settings.get().getAppId(),
+          Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
+          .setCampaign(campaign.toProto()).build()));
+    }
   }
 
   public void unpublish(Campaign campaign) {
