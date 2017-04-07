@@ -19,47 +19,18 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.fragments;
+package net.ixitxachitls.companion.data;
 
-import android.app.Fragment;
-
-import net.ixitxachitls.companion.ui.activities.MainActivity;
+import android.content.Context;
 
 /**
- * Base fragment for all our non-dialog fragments
+ * Base for all stored entry collections.
  */
-public abstract class CompanionFragment extends Fragment {
-  public enum Type { settings, campaigns, campaign, character, };
+public class StoredEntries {
 
-  private final Type type;
+  protected Context context;
 
-  CompanionFragment(Type type) {
-    this.type = type;
-  }
-
-  public Type getType() {
-    return type;
-  }
-
-  protected void show(Type fragment) {
-    ((MainActivity) getActivity()).show(fragment);
-  }
-
-  protected void showLast() {
-    ((MainActivity) getActivity()).showLast();
-  }
-
-  protected MainActivity getMain() {
-    // There is only one activity.
-    return (MainActivity) getActivity();
-  }
-
-  public abstract void refresh();
-
-  @Override
-  public void onResume() {
-    super.onResume();
-
-    refresh();
+  protected StoredEntries(Context context) {
+    this.context = context;
   }
 }

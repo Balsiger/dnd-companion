@@ -21,18 +21,12 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-import android.app.LoaderManager;
-import android.content.CursorLoader;
-import android.content.Loader;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,28 +34,34 @@ import android.widget.Toast;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Campaigns;
+import net.ixitxachitls.companion.data.Character;
+import net.ixitxachitls.companion.data.Characters;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
-import net.ixitxachitls.companion.proto.Entity;
-import net.ixitxachitls.companion.storage.DataBase;
-import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
-import net.ixitxachitls.companion.ui.ListProtoAdapter;
+import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A fragment displaying campaign information.
  */
-public class CampaignFragment extends CompanionFragment
-    implements LoaderManager.LoaderCallbacks<Cursor> {
+public class CampaignFragment extends CompanionFragment {
 
   private Campaign campaign;
-  private ListProtoAdapter<Entity.CharacterProto> charactersAdapter;
+  private List<Character> characters = new ArrayList<>();
+  private ListAdapter<Character> charactersAdapter;
   private ImageButton delete;
   private TextView title;
   private TextView subtitle;
   private ImageView local;
   private ImageView remote;
+
+  public CampaignFragment() {
+    super(Type.campaign);
+  }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,58 +69,26 @@ public class CampaignFragment extends CompanionFragment
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
-    title = Setup.textView(view, R.id.title);
-    subtitle = Setup.textView(view, R.id.campaign);
+    title = Setup.textView(view, R.id.title, this::edit);
+    subtitle = Setup.textView(view, R.id.subtitle, this::edit);
     delete = Setup.imageButton(view, R.id.button_delete, this::deleteCampaign);
     local = Setup.imageView(view, R.id.local);
     remote = Setup.imageView(view, R.id.remote);
     Setup.floatingButton(view, R.id.add_character, this::createCharacter);
 
     // Setup list view.
-    ListView characters = (ListView) view.findViewById(R.id.characters);
-    charactersAdapter = new ListProtoAdapter<>(getContext(), R.layout.list_item_character,
-        /*
-        new ListProtoAdapter.OnItemClick<Entity.CharacterProto>() {
+    charactersAdapter = new ListAdapter<>(container.getContext(),
+        R.layout.list_item_character, characters,
+        new ListAdapter.ViewBinder<Character>() {
           @Override
-          public void click(long id, Entity.CharacterProto proto) {
-            ConfirmationDialog.show(CampaignActivity.this,
-                getString(R.string.character_delete_title),
-                getString(R.string.character_delete_message),
-                new ConfirmationDialog.Callback() {
-                  @Override
-                  public void yes() {
-                    getContentResolver().delete(DataBaseContentProvider.CHARACTERS, "id = " + id,
-                        null);
-                    getLoaderManager().restartLoader(0, null, CampaignActivity.this);
-                    Toast.makeText(CampaignActivity.this, "The character has been deleted",
-                        Toast.LENGTH_SHORT).show();
-                  }
-
-                  @Override
-                  public void no() {
-                    // nothing to do here
-                  }
-                });
-          }
-        },*/
-        Entity.CharacterProto.getDefaultInstance(),
-        new ListProtoAdapter.ContentCreator<Entity.CharacterProto>() {
-          @Override
-          public void create(View view, long id, Entity.CharacterProto proto) {
-            ((TextView) view.findViewById(R.id.text)).setText(proto.getName());
+          public void bind(View view, Character item, int position) {
+            Setup.textView(view, R.id.name).setText(item.getName());
           }
         });
-    characters.setAdapter(charactersAdapter);
-    getLoaderManager().initLoader(0, null, this);
 
-    characters.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-      @Override
-      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        openCharacter(id);
-      }
-    });
+    Setup.listView(view, R.id.characters, charactersAdapter,
+        (i) -> getMain().showCharacter(characters.get(i)));
 
-    showCampaign(Campaigns.get().getCampaign(""));
     return view;
   }
 
@@ -128,6 +96,14 @@ public class CampaignFragment extends CompanionFragment
     this.campaign = campaign;
 
     refresh();
+  }
+
+  private void edit() {
+    if (campaign.isDefault() || !campaign.isLocal()) {
+      return;
+    }
+
+    EditCampaignFragment.newInstance(campaign.getCampaignId()).display(getFragmentManager());
   }
 
   protected void deleteCampaign() {
@@ -140,7 +116,7 @@ public class CampaignFragment extends CompanionFragment
             Campaigns.get().remove(campaign);
             Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
                 Toast.LENGTH_SHORT).show();
-            show(CompanionFragment.Fragments.campaigns);
+            show(Type.campaigns);
           }
 
           @Override
@@ -151,19 +127,15 @@ public class CampaignFragment extends CompanionFragment
   }
 
   private void createCharacter() {
-    openCharacter(0);
-  }
-
-  private void openCharacter(long id) {
-    /*
-    Intent intent = new Intent(CampaignActivity.this, CharacterActivity.class);
-    intent.putExtra(DataBase.COLUMN_ID, id);
-    startActivity(intent);
-    */
+    getMain().showCharacter(Character.createNew(campaign.getCampaignId()));
   }
 
   @Override
   public void refresh() {
+    if (campaign == null) {
+      return;
+    }
+
     if (campaign.isDefault() || campaign.isPublished()) {
       delete.setVisibility(View.GONE);
     } else {
@@ -197,21 +169,11 @@ public class CampaignFragment extends CompanionFragment
           CompanionSubscriber.get().isServerActive(campaign.getServerId())
               ? R.color.on : R.color.off, null));
     }
-  }
 
-  @Override
-  public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-    return new CursorLoader(getActivity(), DataBaseContentProvider.CHARACTERS,
-        DataBase.COLUMNS, null, null, null);
-  }
-
-  @Override
-  public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-    charactersAdapter.swapCursor(data);
-  }
-
-  @Override
-  public void onLoaderReset(Loader<Cursor> loader) {
-    charactersAdapter.swapCursor(null);
+    if (charactersAdapter != null) {
+      characters.clear();
+      characters.addAll(Characters.get().getCharacters(campaign.getCampaignId()));
+      charactersAdapter.notifyDataSetChanged();
+    }
   }
 }

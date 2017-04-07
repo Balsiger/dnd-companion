@@ -24,39 +24,31 @@ package net.ixitxachitls.companion.ui.activities;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
+import android.support.annotation.Nullable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
-import net.ixitxachitls.companion.data.Campaigns;
-import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
+import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.EditFragment;
 import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
 
-import java.util.List;
+public class MainActivity extends CompanionActivity implements EditFragment.AttachAction {
 
-public class MainActivity extends Activity implements EditFragment.AttachAction {
-
-  private CompanionPublisher companionPublisher;
-  private CompanionSubscriber companionSubscriber;
-  private Handler messageHandler;
-  private MessageChecker messageChecker;
+  private static final String SAVE_FRAGMENT = "fragment";
 
   // UI elements.
   private TextView status;
@@ -64,36 +56,20 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
   private TextView onlineStatus;
 
   // Fragments.
-  private CompanionFragment currentFragment;
-  private CampaignFragment campaignFragment;
-  private CampaignsFragment campaignsFragment;
-  private SettingsFragment settingsFragment;
+  private static CompanionFragment currentFragment;
+  private static CampaignFragment campaignFragment;
+  private static CampaignsFragment campaignsFragment;
+  private static SettingsFragment settingsFragment;
+  private static CharacterFragment characterFragment;
 
-  private void init() {
-    Entries.init(this);
-    Settings.init(this);
-    Campaigns.load(this);
-
-    messageHandler = new Handler();
-    messageChecker = new MessageChecker();
-
-    companionPublisher = CompanionPublisher.init(getApplicationContext());
-    companionSubscriber = CompanionSubscriber.init(getApplicationContext());
-
-    messageChecker.run();
-
-    // Start discovering network services.
-    companionSubscriber.start();
-  }
-
-  public void setStatus(String status) {
-    this.status.setText(status);
+  public void status(String message) {
+    this.status.setText(message);
   }
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setup(savedInstanceState, R.layout.activity_main, R.string.app_name);
+  protected void onCreate(@Nullable Bundle state) {
+    super.onCreate(state);
+    setup(state, R.layout.activity_main, R.string.app_name);
     View container = findViewById(R.id.activity_main);
 
     // Setup the status first, in case any fragment wants to set something.
@@ -101,12 +77,29 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
     online = Setup.imageView(container, R.id.online, this::toggleOnlineStatus);
     onlineStatus = Setup.textView(container, R.id.online_status, null);
 
-    init();
+    if (state == null || state.getString(SAVE_FRAGMENT) == null) {
+      show();
+    } else {
+      show(CompanionFragment.Type.valueOf(state.getString(SAVE_FRAGMENT)));
+    }
+  }
+
+  @Override
+  protected void onSaveInstanceState(Bundle bundle) {
+    bundle.putString(SAVE_FRAGMENT, currentFragment.getType().toString());
+
+    // TODO: also save this in settings?
+  }
+
+  public void show() {
+    if (currentFragment != null) {
+      show(currentFragment);
+    }
 
     // Show the default campign to be able to come back to it.
-    show(CompanionFragment.Fragments.campaigns);
+    show(CompanionFragment.Type.campaigns);
     if (!Settings.get().isDefined()) {
-      show(CompanionFragment.Fragments.settings);
+      show(CompanionFragment.Type.settings);
     }
   }
 
@@ -116,13 +109,6 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
     } else {
       onlineStatus.setVisibility(View.GONE);
     }
-  }
-
-  @Override
-  protected void onDestroy() {
-    companionPublisher.stop();
-    companionSubscriber.stop();
-    super.onDestroy();
   }
 
   @Override
@@ -136,20 +122,26 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
   public boolean onOptionsItemSelected(MenuItem item) {
     int id = item.getItemId();
     if (id == R.id.action_settings) {
-      show(CompanionFragment.Fragments.settings);
+      show(CompanionFragment.Type.settings);
       return true;
     }
 
     return super.onOptionsItemSelected(item);
   }
 
-  public Fragment show(CompanionFragment.Fragments fragment) {
+  public Fragment show(CompanionFragment.Type fragment) {
     switch(fragment) {
       case settings:
         if (settingsFragment == null) {
           settingsFragment = new SettingsFragment();
         }
         return show(settingsFragment);
+
+      case character:
+        if (characterFragment == null) {
+          characterFragment = new CharacterFragment();
+        }
+        return show(characterFragment);
 
       default:
       case campaigns:
@@ -182,8 +174,13 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
   }
 
   public void showCampaign(Campaign campaign) {
-    show(CompanionFragment.Fragments.campaign);
+    show(CompanionFragment.Type.campaign);
     campaignFragment.showCampaign(campaign);
+  }
+
+  public void showCharacter(Character character) {
+    show(CompanionFragment.Type.character);
+    characterFragment.showCharacter(character);
   }
 
   public void showLast() {
@@ -202,69 +199,7 @@ public class MainActivity extends Activity implements EditFragment.AttachAction 
     campaignsFragment.refresh();
   }
 
-  private class MessageChecker implements Runnable {
-
-    public static final int DELAY_MILLIS = 1_000;
-
-    @Override
-    public void run() {
-      try {
-        // Chek for messages from servers.
-        List<CompanionMessage> clientMessages = companionSubscriber.receive();
-        for (CompanionMessage serverMessage : clientMessages) {
-          handleMessagesFromServer(serverMessage);
-        }
-
-        // Handle message from clients.
-        List<CompanionMessage> serverMessages = companionPublisher.receive();
-        for (CompanionMessage serverMessage : serverMessages) {
-          handleMessagesFromClient(serverMessage);
-        }
-
-        if (clientMessages.isEmpty() && serverMessages.isEmpty()) {
-          Log.d("Main", "No new messages.");
-        }
-      } finally {
-        messageHandler.postDelayed(messageChecker, DELAY_MILLIS);
-      }
-    }
-  }
-
-  private void handleMessagesFromServer(CompanionMessage message) {
-    if (message.getProto().hasWelcome()) {
-      Toast.makeText(getApplicationContext(), "Client " + message.getName() + " has connected!",
-          Toast.LENGTH_LONG).show();
-    }
-
-    if (message.getProto().hasCampaign()) {
-      Campaign campaign = Campaign.fromRemoteProto(message.getProto().getCampaign());
-      Campaigns.get().addOrUpdate(campaign);
-      Log.d("Main", "received campaign " + campaign.getName());
-      refresh();
-    }
-
-    if (!message.getProto().getDebug().isEmpty()) {
-      Toast.makeText(getApplicationContext(),
-          message.getName() + ": " + message.getProto().getDebug(),
-          Toast.LENGTH_LONG).show();
-    }
-  }
-
-  private void handleMessagesFromClient(CompanionMessage message) {
-    if (message.getProto().hasWelcome()) {
-      CompanionPublisher.get().republish(Campaigns.get().getLocalCampaigns(),
-          message.getId());
-      Toast.makeText(getApplicationContext(), "Server " + message.getName() + " has connected!",
-          Toast.LENGTH_LONG).show();
-    }
-
-    if (!message.getProto().getDebug().isEmpty()) {
-      Toast.makeText(getApplicationContext(),
-          message.getName() + ": " + message.getProto().getDebug(),
-          Toast.LENGTH_LONG).show();
-    }
-  }
-
+  @Override
   public void refresh() {
     online.setColorFilter(getResources().getColor(
         CompanionSubscriber.get().isOnline() || CompanionPublisher.get().isOnline()

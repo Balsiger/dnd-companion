@@ -21,9 +21,136 @@
 
 package net.ixitxachitls.companion.data;
 
-/**
- * Created by balsiger on 4/6/17.
- */
+import android.content.Context;
+import android.database.Cursor;
+import android.util.Log;
+import android.widget.Toast;
 
-public class Characters {
+import com.google.common.base.Preconditions;
+import com.google.common.collect.LinkedListMultimap;
+import com.google.common.collect.Multimap;
+import com.google.protobuf.InvalidProtocolBufferException;
+
+import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBase;
+import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Information and storage for all characters.
+ */
+public class Characters extends StoredEntries {
+  private static Characters singleton;
+
+  private Map<Long, Character> characterById = new HashMap<>();
+  private Multimap<String, Character> charactersByCamppaignId = LinkedListMultimap.create();
+
+  private Characters(Context context) {
+    super(context);
+  }
+
+  public static Characters get() {
+    Preconditions.checkNotNull(singleton, "Characters have to be loaded!");
+    return singleton;
+  }
+
+  public static Characters load(Context context) {
+    if (singleton != null) {
+      Log.d("Characters", "characters already loaded");
+      return singleton;
+    }
+
+    Log.d("Characters", "loading characters");
+    singleton = new Characters(context);
+
+    Cursor cursor = context.getContentResolver().query(
+        DataBaseContentProvider.CHARACTERS, DataBase.COLUMNS, null, null, null);
+    cursor.moveToFirst();
+    do {
+      try {
+        Character character =
+            Character.fromProto(cursor.getLong(cursor.getColumnIndex("_id")),
+                Data.CharacterProto.getDefaultInstance().getParserForType()
+                    .parseFrom(cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO))));
+        singleton.add(character);
+      } catch (InvalidProtocolBufferException e) {
+        Log.e("Campaigns", "Cannot parse proto for campaign: " + e);
+        Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
+      }
+    } while(cursor.moveToNext());
+
+    return singleton;
+  }
+
+  public Character getCharacter(String id) {
+    if (id.isEmpty()) {
+      return Character.createNew("");
+    }
+
+    Preconditions.checkArgument(characterById.containsKey(id));
+    return characterById.get(id);
+  }
+
+  private void add(Character character) {
+    characterById.put(character.getId(), character);
+    charactersByCamppaignId.put(character.getCampaignId(), character);
+  }
+
+  public void addOrUpdate(Character character) {
+    if (characterById.containsKey(character.getId())) {
+      Character existingCharacter = characterById.get(character.getId());
+      character.setId(existingCharacter.getId());
+      characterById.remove(existingCharacter.getId());
+      charactersByCamppaignId.remove(existingCharacter.getCampaignId(),
+          existingCharacter);
+    }
+
+    add(character);
+  }
+
+  public void remove(Character character) {
+    characterById.remove(character.getId());
+    charactersByCamppaignId.remove(character.getCampaignId(), character);
+
+    context.getContentResolver().delete(DataBaseContentProvider.CHARACTERS,
+        "id = " + character.getId(), null);
+  }
+
+  public List<Character> getCharacters() {
+    List<Character> characters = new ArrayList<>(characterById.values());
+    Collections.sort(characters, new CharacterComparator());
+    return characters;
+  }
+
+  public List<Character> getCharacters(String campaignId) {
+    List<Character> characters = new ArrayList<>(charactersByCamppaignId.get(campaignId));
+    Collections.sort(characters, new CharacterComparator());
+    return characters;
+  }
+
+  private class CharacterComparator implements Comparator<Character> {
+    @Override
+    public int compare(Character first, Character second) {
+      if (first.getId() == second.getId())
+        return 0;
+
+      int compare = first.getName().compareTo(second.getName());
+      if (compare != 0) {
+        return compare;
+      }
+
+      return Long.compare(first.getId(), second.getId());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+      return false;
+    }
+  }
 }

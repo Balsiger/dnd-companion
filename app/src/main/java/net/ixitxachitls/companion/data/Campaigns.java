@@ -52,7 +52,7 @@ public class Campaigns {
   private Map<String, Campaign> campaignsByCampaignId = new HashMap<>();
   private List<Campaign> campaigns = new ArrayList<>();
 
-  public Campaigns(Context context) {
+  private Campaigns(Context context) {
     this.context = context;
   }
 

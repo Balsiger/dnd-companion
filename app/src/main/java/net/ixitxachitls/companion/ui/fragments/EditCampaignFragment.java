@@ -73,6 +73,17 @@ public class EditCampaignFragment extends EditFragment {
     return fragment;
   }
 
+  /*
+  public static EditCampaignFragment newInstance(Campaign campaign) {
+    EditCampaignFragment fragment = new EditCampaignFragment();
+    fragment.campaign = campaign;
+    layoutId =;
+    titleId = ;
+    colorId = ;
+    return fragment;
+  }
+*/
+
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int colorId, String campaignId) {
     Bundle arguments = EditFragment.arguments(layoutId, titleId, colorId);
@@ -95,6 +106,7 @@ public class EditCampaignFragment extends EditFragment {
       campaign = Campaign.createNew();
     }
   }
+
 
   @Override
   protected void createContent(View view) {

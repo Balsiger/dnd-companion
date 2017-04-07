@@ -28,7 +28,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -38,15 +38,21 @@ import java.util.List;
 /**
  * Character represenatation.
  */
-public class Character extends StoredEntry<Entity.CharacterProto> {
+public class Character extends StoredEntry<Data.CharacterProto> {
   public static final String TABLE = "characters";
 
+  private String campaignId;
   private Optional<Monster> mRace = Optional.absent();
   private Gender mGender = Gender.UNKNOWN;
   private List<Level> mLevels = new ArrayList<>();
 
-  public Character(long id, String name) {
+  public Character(long id, String name, String campaignId) {
     super(id, name, DataBaseContentProvider.CHARACTERS);
+    this.campaignId = campaignId;
+  }
+
+  public String getCampaignId() {
+    return campaignId;
   }
 
   public String getRace() {
@@ -66,6 +72,10 @@ public class Character extends StoredEntry<Entity.CharacterProto> {
     store();
   }
 
+  public static Character createNew(String campaignId) {
+    return new Character(0, "", campaignId);
+  }
+
   public Optional<Level> getLevel(int number) {
     if (mLevels.size() > number) {
       return Optional.of(mLevels.get(number));
@@ -75,9 +85,10 @@ public class Character extends StoredEntry<Entity.CharacterProto> {
   }
 
   @Override
-  public Entity.CharacterProto toProto() {
-    Entity.CharacterProto.Builder proto = Entity.CharacterProto.newBuilder()
+  public Data.CharacterProto toProto() {
+    Data.CharacterProto.Builder proto = Data.CharacterProto.newBuilder()
         .setName(name)
+        .setCampaignId(campaignId)
         .setGender(mGender.toProto());
 
     if (mRace.isPresent()) {
@@ -91,11 +102,12 @@ public class Character extends StoredEntry<Entity.CharacterProto> {
     return proto.build();
   }
 
-  public static Character fromProto(long id, Entity.CharacterProto proto) {
-    Character character = new Character(id, proto.getName());
+  public static Character fromProto(long id, Data.CharacterProto proto) {
+    Character character = new Character(id, proto.getName(), proto.getCampaignId());
+    character.campaignId = proto.getCampaignId();
     character.mRace = Entries.get().getMonsters().get(proto.getRace());
     character.mGender = Gender.fromProto(proto.getGender());
-    for (Entity.CharacterProto.Level level : proto.getLevelList()) {
+    for (Data.CharacterProto.Level level : proto.getLevelList()) {
       character.mLevels.add(Character.fromProto(level));
     }
 
@@ -108,7 +120,7 @@ public class Character extends StoredEntry<Entity.CharacterProto> {
     }
 
     try {
-      return Optional.of(fromProto(id, Entity.CharacterProto.getDefaultInstance().getParserForType()
+      return Optional.of(fromProto(id, Data.CharacterProto.getDefaultInstance().getParserForType()
           .parseFrom(loadBytes(Entries.getContext(), id, DataBaseContentProvider.CHARACTERS))));
     } catch (InvalidProtocolBufferException e) {
       e.printStackTrace();
@@ -163,7 +175,7 @@ public class Character extends StoredEntry<Entity.CharacterProto> {
     return names;
   }
 
-  public static class Level extends Entry<Entity.CharacterProto.Level> {
+  public static class Level extends Entry<Data.CharacterProto.Level> {
 
     private int mHp;
     private Ability mAbilityIncrease;
@@ -181,8 +193,8 @@ public class Character extends StoredEntry<Entity.CharacterProto> {
     }
 
     @Override
-    public Entity.CharacterProto.Level toProto() {
-      return Entity.CharacterProto.Level.newBuilder()
+    public Data.CharacterProto.Level toProto() {
+      return Data.CharacterProto.Level.newBuilder()
           .setName(name)
           .setHp(mHp)
           .setAbilityIncrease(mAbilityIncrease.toProto())
@@ -215,7 +227,7 @@ public class Character extends StoredEntry<Entity.CharacterProto> {
     }
   }
 
-  public static Level fromProto(Entity.CharacterProto.Level proto) {
+  public static Level fromProto(Data.CharacterProto.Level proto) {
     Level level = new Level(proto.getName());
     level.mHp = proto.getHp();
     level.mAbilityIncrease = Ability.fromProto(proto.getAbilityIncrease());

@@ -111,13 +111,6 @@ public abstract class EditFragment extends DialogFragment {
         .add(this, null)
         .commit();
     manager.executePendingTransactions();
-
-    /*
-    FragmentTransaction transaction = manager.beginTransaction();
-    // title is not yet filled.
-    String name = "execute-" + getClass().getSimpleName();
-    show(transaction, name);
-    */
   }
 
   @Override

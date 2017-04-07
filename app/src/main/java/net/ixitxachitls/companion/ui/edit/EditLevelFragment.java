@@ -38,7 +38,7 @@ import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
 
 /**
@@ -67,7 +67,7 @@ public class EditLevelFragment extends EditFragment {
   }
 
   public static EditLevelFragment newInstance(int titleId, int color,
-                                              Entity.CharacterProto.Level levelProto, int level) {
+                                              Data.CharacterProto.Level levelProto, int level) {
     EditLevelFragment fragment = new EditLevelFragment();
     Bundle args = arguments(titleId, color, levelProto, level);
     fragment.setArguments(args);
@@ -75,7 +75,7 @@ public class EditLevelFragment extends EditFragment {
   }
 
   protected static Bundle arguments(int titleId, int color,
-                                    Entity.CharacterProto.Level levelProto, int level) {
+                                    Data.CharacterProto.Level levelProto, int level) {
     Bundle arguments = EditFragment.arguments(titleId, color);
     arguments.putByteArray(ARG_PROTO, levelProto.toByteArray());
     arguments.putInt(ARG_LEVEL, level);
@@ -89,7 +89,7 @@ public class EditLevelFragment extends EditFragment {
     if (getArguments() != null) {
       try {
         mLevel = Character.fromProto(
-            Entity.CharacterProto.Level.parseFrom(getArguments().getByteArray(ARG_PROTO)));
+            Data.CharacterProto.Level.parseFrom(getArguments().getByteArray(ARG_PROTO)));
       } catch (InvalidProtocolBufferException e) {
         Toast.makeText(getContext(), "Cannot parse proto: " + e, Toast.LENGTH_SHORT).show();
         mLevel = new Character.Level("");

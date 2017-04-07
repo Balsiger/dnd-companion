@@ -33,7 +33,7 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.enums.Gender;
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.ui.edit.EditLevelFragment;
 import net.ixitxachitls.companion.ui.edit.EditTextFragment;
@@ -66,7 +66,7 @@ public class CharacterActivity extends AppCompatActivity {
     setSupportActionBar(toolbar);
 
     mCharacter =
-        Character.load(getIntent().getLongExtra(DataBase.COLUMN_ID, 0)).or(new Character(0, ""));
+        Character.load(getIntent().getLongExtra(DataBase.COLUMN_ID, 0)).or(new Character(0, "", ""));
 
     findViewById(R.id.characterNameLabel).setOnClickListener(new View.OnClickListener() {
       @Override
@@ -127,7 +127,7 @@ public class CharacterActivity extends AppCompatActivity {
     Optional<Character.Level> level = mCharacter.getLevel(position);
     EditLevelFragment edit = EditLevelFragment.newInstance(R.string.character_edit_level,
         getColor(R.color.character),  level.isPresent()
-            ? level.get().toProto() : Entity.CharacterProto.Level.getDefaultInstance(),
+            ? level.get().toProto() : Data.CharacterProto.Level.getDefaultInstance(),
         position + 1);
     edit.setListener(v -> updateLevel(v, position));
     edit.display(getFragmentManager());

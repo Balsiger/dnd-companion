@@ -45,7 +45,12 @@ import java.util.List;
  */
 public class CampaignsFragment extends CompanionFragment {
 
+  private List<Campaign> campaigns = new ArrayList<>();
   private ListAdapter<Campaign> campaignsAdapter;
+
+  public CampaignsFragment() {
+    super(Type.campaigns);
+  }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,7 +58,6 @@ public class CampaignsFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign_list, container, false);
     // Copy the campaign list to prevent unexpected changes in the list.
-    List<Campaign> campaigns = new ArrayList<>(Campaigns.get().getCampaigns());
     campaignsAdapter =
         new ListAdapter<>(container.getContext(), R.layout.list_item_campaign, campaigns,
             new ListAdapter.ViewBinder<Campaign>() {
@@ -88,7 +92,7 @@ public class CampaignsFragment extends CompanionFragment {
               }
             });
     Setup.listView(view, R.id.campaignsList, campaignsAdapter,
-        (i) -> showCampaign(campaigns.get(i)));
+        (i) -> getMain().showCampaign(campaigns.get(i)));
 
     Setup.floatingButton(view, R.id.campaign_add, this::addCampaign);
 
@@ -109,17 +113,10 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   @Override
-  public void onResume() {
-    super.onResume();
-
-    refresh();
-  }
-
-  @Override
   public void refresh() {
     if (campaignsAdapter != null) {
-      campaignsAdapter.clear();
-      campaignsAdapter.addAll(Campaigns.get().getCampaigns());
+      campaigns.clear();
+      campaigns.addAll(Campaigns.get().getCampaigns());
       campaignsAdapter.notifyDataSetChanged();
     }
   }

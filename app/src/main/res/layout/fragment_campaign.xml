@@ -28,28 +28,45 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:id="@+id/title"
+    <LinearLayout
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/campaign"
+        android:orientation="vertical"
         android:paddingBottom="10dp"
         android:paddingEnd="60dp"
-        android:paddingStart="60dp"
-        android:paddingTop="20dp"
-        android:text="TextView"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:paddingStart="78dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/title"
+            android:text="TextView"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/remote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/title"
+        android:layout_alignBottom="@+id/title_bar"
         android:layout_alignParentTop="false"
-        android:layout_alignStart="@+id/title"
-        android:layout_alignTop="@+id/title"
-        android:layout_marginStart="10dp"
+        android:layout_alignStart="@+id/title_bar"
+        android:layout_alignTop="@+id/title_bar"
+        android:layout_marginStart="20dp"
         android:tint="#444"
         android:visibility="visible"
         app:srcCompat="@drawable/ic_wifi_black_48dp"/>
@@ -58,11 +75,11 @@
         android:id="@+id/local"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/title"
+        android:layout_alignBottom="@+id/title_bar"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/title"
-        android:layout_alignTop="@+id/title"
-        android:layout_marginStart="10dp"
+        android:layout_alignStart="@+id/title_bar"
+        android:layout_alignTop="@+id/title_bar"
+        android:layout_marginStart="20dp"
         android:clickable="true"
         android:tint="#444"
         app:srcCompat="@drawable/ic_home_black_48dp"/>
@@ -71,9 +88,9 @@
         android:id="@+id/button_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/title"
-        android:layout_alignEnd="@+id/title"
-        android:layout_alignTop="@+id/title"
+        android:layout_alignBottom="@+id/title_bar"
+        android:layout_alignEnd="@+id/title_bar"
+        android:layout_alignTop="@+id/title_bar"
         android:background="@android:color/transparent"
         android:contentDescription="@string/campaign_button_delete"
         android:elevation="0dp"
@@ -83,27 +100,15 @@
         android:visibility="visible"
         app:srcCompat="@drawable/ic_delete_black_24dp"/>
 
-    <TextView
-        android:id="@+id/campaign"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/title"
-        android:background="@color/campaign"
-        android:padding="10dp"
-        android:paddingEnd="20dp"
-        android:paddingStart="60dp"
-        android:text="TextView"
-        android:textSize="18sp"/>
-
     <ListView
         android:id="@+id/characters"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/campaign"
+        android:layout_below="@+id/title_bar"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/campaign">
+        android:layout_toEndOf="@+id/title_bar"
+        >
 
     </ListView>
 

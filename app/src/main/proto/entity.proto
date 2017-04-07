@@ -32,23 +32,6 @@ message WorldProto {
 
 }
 
-message CharacterProto {
-  string id = 1;
-  string name = 2;
-  string race = 3;
-  Gender gender = 4;
-
-  message Level {
-    string name = 1;
-    int32 hp = 2;
-    repeated ParametrizedEntityProto quality = 3;
-    repeated ParametrizedEntityProto feat = 4;
-    Ability ability_increase = 5;
-    repeated string spell_known = 6;
-  }
-  repeated Level level = 5;
-}
-
 message MonsterProto {
   EntityProto entity = 1;
   SizeProto size = 2;

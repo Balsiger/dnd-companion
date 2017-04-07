@@ -21,45 +21,46 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-import android.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
-import net.ixitxachitls.companion.ui.activities.MainActivity;
+import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.data.Character;
 
 /**
- * Base fragment for all our non-dialog fragments
+ * Fragment for displaying character information.
  */
-public abstract class CompanionFragment extends Fragment {
-  public enum Type { settings, campaigns, campaign, character, };
+public class CharacterFragment extends CompanionFragment {
+  private Character character;
 
-  private final Type type;
-
-  CompanionFragment(Type type) {
-    this.type = type;
+  public CharacterFragment() {
+    super(Type.character);
   }
-
-  public Type getType() {
-    return type;
-  }
-
-  protected void show(Type fragment) {
-    ((MainActivity) getActivity()).show(fragment);
-  }
-
-  protected void showLast() {
-    ((MainActivity) getActivity()).showLast();
-  }
-
-  protected MainActivity getMain() {
-    // There is only one activity.
-    return (MainActivity) getActivity();
-  }
-
-  public abstract void refresh();
 
   @Override
-  public void onResume() {
-    super.onResume();
+  public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                           Bundle savedInstanceState) {
+    RelativeLayout view = (RelativeLayout)
+        inflater.inflate(R.layout.fragment_character, container, false);
+
+    return view;
+  }
+
+  public void showCharacter(Character character) {
+    this.character = character;
 
     refresh();
+  }
+
+  @Override
+  public void refresh() {
+    if (character == null) {
+      return;
+    }
+
+
   }
 }

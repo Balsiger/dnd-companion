@@ -22,21 +22,25 @@
 package net.ixitxachitls.companion.ui.activities;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import net.ixitachitls.companion.R;
 
 /**
- * Base activity for all companion activities.
+ * Base class for all activities in the companion.
  */
-public class Activity extends AppCompatActivity {
+public abstract class CompanionActivity extends AppCompatActivity {
 
   /** Setup the activity. */
-  protected void setup(Bundle state, int id, int titleId) {
+  protected void setup(@Nullable Bundle state, int id, int titleId) {
     setContentView(id);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     setTitle(getString(titleId));
   }
+
+  public abstract void status(String message);
+  public abstract void refresh();
 }

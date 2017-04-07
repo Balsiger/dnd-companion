@@ -41,6 +41,10 @@ public class SettingsFragment extends CompanionFragment {
   private TextView nickname;
   private Button save;
 
+  public SettingsFragment() {
+    super(Type.settings);
+  }
+
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
@@ -50,14 +54,14 @@ public class SettingsFragment extends CompanionFragment {
     settings = Settings.get();
     nickname = Setup.editText(view, R.id.nickname, settings.getNickname(),
         R.string.settings_nickname_label, R.color.colorAccent,
-        this::editNickname, this::update);
+        this::editNickname, this::refresh);
     save = Setup.button(view, R.id.save, this::save);
 
     if (settings.isDefined()) {
       view.findViewById(R.id.initial).setVisibility(View.INVISIBLE);
     }
 
-    update();
+    refresh();
     return view;
   }
 
@@ -74,7 +78,8 @@ public class SettingsFragment extends CompanionFragment {
     settings.setNickname(nickname.getText().toString());
   }
 
-  protected void update() {
+  @Override
+  public void refresh() {
     if (nickname.getText().length() > 0) {
       save.setVisibility(View.VISIBLE);
     } else {
