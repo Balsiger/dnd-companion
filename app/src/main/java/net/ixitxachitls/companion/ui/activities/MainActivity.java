@@ -21,10 +21,14 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,11 +47,13 @@ import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
+import net.ixitxachitls.companion.ui.fragments.EditCharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.EditFragment;
 import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
 
 public class MainActivity extends CompanionActivity implements EditFragment.AttachAction {
 
+  private static final String TAG = "Main";
   private static final String SAVE_FRAGMENT = "fragment";
 
   // UI elements.
@@ -68,6 +74,7 @@ public class MainActivity extends CompanionActivity implements EditFragment.Atta
 
   @Override
   protected void onCreate(@Nullable Bundle state) {
+    Log.d(TAG, "onCreate");
     super.onCreate(state);
     setup(state, R.layout.activity_main, R.string.app_name);
     View container = findViewById(R.id.activity_main);
@@ -87,8 +94,6 @@ public class MainActivity extends CompanionActivity implements EditFragment.Atta
   @Override
   protected void onSaveInstanceState(Bundle bundle) {
     bundle.putString(SAVE_FRAGMENT, currentFragment.getType().toString());
-
-    // TODO: also save this in settings?
   }
 
   public void show() {
@@ -191,12 +196,19 @@ public class MainActivity extends CompanionActivity implements EditFragment.Atta
   public void attached(EditFragment fragment) {
     if (fragment instanceof EditCampaignFragment) {
       ((EditCampaignFragment)fragment).setSaveListener(this::saveCampaign);
+    } else if (fragment instanceof EditCharacterFragment) {
+      ((EditCharacterFragment)fragment).setSaveListener(this::saveCharacter);
     }
   }
 
   public void saveCampaign(Campaign campaign) {
     campaign.store();
     campaignsFragment.refresh();
+  }
+
+  public void saveCharacter(Character character) {
+    character.store();
+    campaignFragment.refresh();
   }
 
   @Override
@@ -209,5 +221,24 @@ public class MainActivity extends CompanionActivity implements EditFragment.Atta
     onlineStatus.setText(publisherStatus + "\n\n" + subscriberStatus);
 
     currentFragment.refresh();
+  }
+
+  @Override
+  public void onlineBleep() {
+    Log.d(TAG, "online bleep");
+    ValueAnimator animator = ValueAnimator.ofObject(new ArgbEvaluator(),
+        getResources().getColor(R.color.bright, null),
+        getResources().getColor(R.color.light, null));
+    animator.setDuration(250);
+    animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+      @Override
+      public void onAnimationUpdate(ValueAnimator animation) {
+        Integer color = (Integer) animation.getAnimatedValue();
+        if (color != null) {
+          online.setColorFilter(color);
+        }
+      }
+    });
+    animator.start();
   }
 }

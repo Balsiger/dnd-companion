@@ -46,6 +46,7 @@ import java.util.Map;
  * Information and storage for all characters.
  */
 public class Characters extends StoredEntries {
+  private static final String TAG = "Characters";
   private static Characters singleton;
 
   private Map<Long, Character> characterById = new HashMap<>();
@@ -71,8 +72,7 @@ public class Characters extends StoredEntries {
 
     Cursor cursor = context.getContentResolver().query(
         DataBaseContentProvider.CHARACTERS, DataBase.COLUMNS, null, null, null);
-    cursor.moveToFirst();
-    do {
+    while (cursor.moveToNext()) {
       try {
         Character character =
             Character.fromProto(cursor.getLong(cursor.getColumnIndex("_id")),
@@ -83,14 +83,14 @@ public class Characters extends StoredEntries {
         Log.e("Campaigns", "Cannot parse proto for campaign: " + e);
         Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
       }
-    } while(cursor.moveToNext());
+    }
 
     return singleton;
   }
 
-  public Character getCharacter(String id) {
+  public Character getCharacter(String id, String campaignId) {
     if (id.isEmpty()) {
-      return Character.createNew("");
+      return Character.createNew(campaignId);
     }
 
     Preconditions.checkArgument(characterById.containsKey(id));
@@ -129,9 +129,39 @@ public class Characters extends StoredEntries {
   }
 
   public List<Character> getCharacters(String campaignId) {
+    if (Campaigns.get().getCampaign(campaignId).isDefault()) {
+      return getOrphanedCharacters();
+    }
+
     List<Character> characters = new ArrayList<>(charactersByCamppaignId.get(campaignId));
     Collections.sort(characters, new CharacterComparator());
     return characters;
+  }
+
+  public List<Character> getOrphanedCharacters() {
+    List<Character> characters = new ArrayList<>();
+
+    for (String campaignId : charactersByCamppaignId.keySet()) {
+      if (!Campaigns.get().hasCampaign(campaignId)) {
+        characters.addAll(charactersByCamppaignId.get(campaignId));
+      }
+    }
+
+    return characters;
+  }
+
+  public void publish() {
+    Log.d(TAG, "publishing all characters");
+    for (Character character : getCharacters()) {
+      character.publish();
+    }
+  }
+
+  public void publish(String campaignId) {
+    Log.d(TAG, "publishing characters of campaign " + campaignId);
+    for (Character character : getCharacters(campaignId)) {
+      character.publish();
+    }
   }
 
   private class CharacterComparator implements Comparator<Character> {

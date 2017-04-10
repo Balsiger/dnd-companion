@@ -45,6 +45,8 @@ import java.util.Map;
  */
 public class Campaigns {
 
+  private static final String TAG = "Campaigns";
+
   private static Campaigns singleton;
 
   private Context context;
@@ -63,11 +65,11 @@ public class Campaigns {
 
   public static Campaigns load(Context context) {
     if (singleton != null) {
-      Log.d("Campaigns", "campaigns already loaded");
+      Log.d(TAG, "campaigns already loaded");
       return singleton;
     }
 
-    Log.d("Campaigns", "loading campaigns");
+    Log.d(TAG, "loading campaigns");
     singleton = new Campaigns(context);
 
     // Add the default campaign.
@@ -84,7 +86,7 @@ public class Campaigns {
                     .parseFrom(cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO))));
         singleton.add(campaign);
       } catch (InvalidProtocolBufferException e) {
-        Log.e("Campaigns", "Cannot parse proto for campaign: " + e);
+        Log.e(TAG, "Cannot parse proto for campaign: " + e);
         Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
       }
     } while(cursor.moveToNext());
@@ -99,6 +101,10 @@ public class Campaigns {
 
     Preconditions.checkArgument(campaignsByCampaignId.containsKey(id));
     return campaignsByCampaignId.get(id);
+  }
+
+  public boolean hasCampaign(String id) {
+    return campaignsByCampaignId.containsKey(id);
   }
 
   private void add(Campaign campaign) {
@@ -146,6 +152,15 @@ public class Campaigns {
     }
 
     return filtered;
+  }
+
+  public void publish() {
+    Log.d(TAG, "publishing all campaigns");
+    for (Campaign campaign : campaigns) {
+      if (campaign.isPublished()) {
+        campaign.publish();
+      }
+    }
   }
 
   private class CampaignComparator implements Comparator<Campaign> {

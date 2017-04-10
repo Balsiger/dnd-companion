@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,6 +59,7 @@ public class CampaignFragment extends CompanionFragment {
   private TextView subtitle;
   private ImageView local;
   private ImageView remote;
+  private FloatingActionButton addCharacter;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -74,7 +76,7 @@ public class CampaignFragment extends CompanionFragment {
     delete = Setup.imageButton(view, R.id.button_delete, this::deleteCampaign);
     local = Setup.imageView(view, R.id.local);
     remote = Setup.imageView(view, R.id.remote);
-    Setup.floatingButton(view, R.id.add_character, this::createCharacter);
+    addCharacter = Setup.floatingButton(view, R.id.add_character, this::createCharacter);
 
     // Setup list view.
     charactersAdapter = new ListAdapter<>(container.getContext(),
@@ -82,7 +84,12 @@ public class CampaignFragment extends CompanionFragment {
         new ListAdapter.ViewBinder<Character>() {
           @Override
           public void bind(View view, Character item, int position) {
-            Setup.textView(view, R.id.name).setText(item.getName());
+            if (campaign.isLocal()) {
+              Setup.textView(view, R.id.name).setText(item.getName()
+                  + " (" + item.getPlayerName() + ")");
+            } else {
+              Setup.textView(view, R.id.name).setText(item.getName());
+            }
           }
         });
 
@@ -127,7 +134,7 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void createCharacter() {
-    getMain().showCharacter(Character.createNew(campaign.getCampaignId()));
+    EditCharacterFragment.newInstance("", campaign.getCampaignId()).display(getFragmentManager());
   }
 
   @Override
@@ -168,6 +175,12 @@ public class CampaignFragment extends CompanionFragment {
       remote.setColorFilter(getResources().getColor(
           CompanionSubscriber.get().isServerActive(campaign.getServerId())
               ? R.color.on : R.color.off, null));
+    }
+
+    if (campaign.isLocal() && !campaign.isDefault()) {
+      addCharacter.setVisibility(View.GONE);
+    } else {
+      addCharacter.setVisibility(View.VISIBLE);
     }
 
     if (charactersAdapter != null) {

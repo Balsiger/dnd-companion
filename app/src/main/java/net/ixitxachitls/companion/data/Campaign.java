@@ -79,8 +79,10 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public void publish() {
     CompanionPublisher.get().publish(this);
-    published = true;
-    store();
+    if (!published) {
+      published = true;
+      store();
+    }
   }
 
   @Override
@@ -154,5 +156,8 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     }
 
     Campaigns.get().ensureAdded(this);
+    if (published) {
+      CompanionPublisher.get().publish(this);
+    }
   }
 }

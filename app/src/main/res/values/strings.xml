@@ -70,5 +70,7 @@
     <string name="main_campaign_publish_message">Are you sure you want to publish the campaign on the local network?</string>
     <string name="main_campaign_unpublish_title">Unpublish Campaign</string>
     <string name="main_campaign_unpublish_message">Are you sure you want to unpublish the campaign? This will make it inaccessible for your players.</string>
+    <string name="edit_character_add">Add Character</string>
+    <string name="edit_character_edit">Edit Character</string>
 
 </resources>

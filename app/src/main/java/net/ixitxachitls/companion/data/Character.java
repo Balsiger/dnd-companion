@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data;
 
+import android.util.Log;
+
 import com.google.common.base.Optional;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
@@ -28,6 +30,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
+import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Strings;
@@ -40,8 +43,11 @@ import java.util.List;
  */
 public class Character extends StoredEntry<Data.CharacterProto> {
   public static final String TABLE = "characters";
+  private static final String TAG = "Characters";
 
-  private String campaignId;
+  private String characterId = "";
+  private String campaignId = "";
+  private String playerName = "";
   private Optional<Monster> mRace = Optional.absent();
   private Gender mGender = Gender.UNKNOWN;
   private List<Level> mLevels = new ArrayList<>();
@@ -62,6 +68,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     return "";
   }
 
+  public String getPlayerName() {
+    return playerName;
+  }
+
   public void setRace(String name) {
     mRace = Entries.get().getMonsters().get(name);
     store();
@@ -70,6 +80,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   public void setGender(Gender gender) {
     mGender = gender;
     store();
+  }
+
+  public void localize() {
+    campaignId = campaignId.replaceAll("-remote$", "");
   }
 
   public static Character createNew(String campaignId) {
@@ -87,8 +101,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   @Override
   public Data.CharacterProto toProto() {
     Data.CharacterProto.Builder proto = Data.CharacterProto.newBuilder()
+        .setId(characterId)
         .setName(name)
         .setCampaignId(campaignId)
+        .setPlayer(playerName)
         .setGender(mGender.toProto());
 
     if (mRace.isPresent()) {
@@ -104,11 +120,17 @@ public class Character extends StoredEntry<Data.CharacterProto> {
 
   public static Character fromProto(long id, Data.CharacterProto proto) {
     Character character = new Character(id, proto.getName(), proto.getCampaignId());
+    character.characterId = proto.getId();
     character.campaignId = proto.getCampaignId();
     character.mRace = Entries.get().getMonsters().get(proto.getRace());
     character.mGender = Gender.fromProto(proto.getGender());
+    character.playerName = proto.getPlayer();
     for (Data.CharacterProto.Level level : proto.getLevelList()) {
       character.mLevels.add(Character.fromProto(level));
+    }
+
+    if (character.playerName.isEmpty()) {
+      character.playerName = Settings.get().getNickname();
     }
 
     return character;
@@ -233,5 +255,25 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     level.mAbilityIncrease = Ability.fromProto(proto.getAbilityIncrease());
 
     return level;
+  }
+
+  @Override
+  public void store() {
+    playerName = Settings.get().getNickname();
+
+    super.store();
+    if (com.google.common.base.Strings.isNullOrEmpty(campaignId)) {
+      // Now we finally have an id.
+      characterId = campaignId + "-" + getId();
+      super.store();
+    }
+
+    Characters.get().addOrUpdate(this);
+    CompanionSubscriber.get().publish(this);
+  }
+
+  public void publish() {
+    Log.d(TAG, "publishing character " + getName());
+    CompanionSubscriber.get().publish(this);
   }
 }

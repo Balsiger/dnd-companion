@@ -43,4 +43,5 @@ public abstract class CompanionActivity extends AppCompatActivity {
 
   public abstract void status(String message);
   public abstract void refresh();
+  public abstract void onlineBleep();
 }

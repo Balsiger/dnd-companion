@@ -31,6 +31,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import net.ixitxachitls.companion.data.Campaign;
+import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Campaigns;
 import net.ixitxachitls.companion.data.Characters;
 import net.ixitxachitls.companion.data.Entries;
@@ -75,6 +76,11 @@ public class CompanionApplication extends MultiDexApplication
 
     // Start discovering network services.
     companionSubscriber.start();
+
+    registerActivityLifecycleCallbacks(this);
+
+    Campaigns.get().publish();
+    Characters.get().publish();
   }
 
   private class MessageChecker implements Runnable {
@@ -83,6 +89,15 @@ public class CompanionApplication extends MultiDexApplication
 
     @Override
     public void run() {
+      if (currentActivity != null) {
+        currentActivity.runOnUiThread(new Runnable() {
+          @Override
+          public void run() {
+            currentActivity.onlineBleep();
+          }
+        });
+      }
+
       try {
         // Chek for messages from servers.
         List<CompanionMessage> clientMessages = companionSubscriber.receive();
@@ -118,6 +133,8 @@ public class CompanionApplication extends MultiDexApplication
       if (currentActivity != null) {
         currentActivity.refresh();
       }
+
+      Characters.get().publish(campaign.getCampaignId());
     }
 
     if (!message.getProto().getDebug().isEmpty()) {
@@ -133,6 +150,14 @@ public class CompanionApplication extends MultiDexApplication
           message.getId());
       Toast.makeText(getApplicationContext(), "Server " + message.getName() + " has connected!",
           Toast.LENGTH_LONG).show();
+    }
+
+    if (message.getProto().hasCharacter()) {
+      Log.d(TAG, "received character " + message.getProto().getCharacter().getName()
+          + " from " + message.getName());
+      Character character = Character.fromProto(0, message.getProto().getCharacter());
+      character.localize();
+      Characters.get().addOrUpdate(character);
     }
 
     if (!message.getProto().getDebug().isEmpty()) {

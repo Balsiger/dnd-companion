@@ -77,9 +77,6 @@ public class CampaignsFragment extends CompanionFragment {
                   if (!campaign.isDefault()) {
                     local.setColorFilter(getResources().getColor(
                         campaign.isPublished() ? R.color.on : R.color.off, null));
-                    if (campaign.isPublished()) {
-                      campaign.publish();
-                    }
                   }
                 } else {
                   local.setVisibility(View.INVISIBLE);

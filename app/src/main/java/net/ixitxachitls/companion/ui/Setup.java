@@ -118,8 +118,10 @@ public class Setup {
     view.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
+        if (action != null) {
           action.execute();
         }
+      }
     });
 
     return view;

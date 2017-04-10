@@ -31,6 +31,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.data.Campaign;
+import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
 
@@ -89,11 +90,6 @@ public class CompanionPublisher {
   }
 
   public void publish(Campaign campaign) {
-    if (campaigns.contains(campaign)) {
-      // Already published.
-      return;
-    }
-
     ensureServerStarted();
     server.sendAll(new CompanionMessage(Settings.get().getAppId(), Settings.get().getName(),
         Data.CompanionMessageProto.newBuilder()

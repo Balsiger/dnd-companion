@@ -30,6 +30,7 @@ import android.util.Log;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.util.Misc;
@@ -43,6 +44,7 @@ import java.util.Map;
  * Subscriber for campaign information.
  */
 public class CompanionSubscriber {
+  private static final String TAG = "Subscriber";
   private static CompanionSubscriber singleton;
   private static Joiner LINE_JOINER = Joiner.on("\n");
 
@@ -68,6 +70,23 @@ public class CompanionSubscriber {
     }
   }
 
+  public void publish(Character character) {
+    String id = extractServerId(character.getCampaignId());
+    CompanionClient client = clientById.get(id);
+    if (client != null) {
+      client.send(Data.CompanionMessageProto.newBuilder()
+          .setCharacter(character.toProto())
+          .build());
+      Log.d(TAG, "character " + character.getName() + " published.");
+    } else {
+      Log.d(TAG, "cannot find client with id '" + id + "'");
+    }
+  }
+
+  public static String extractServerId(String id) {
+    return id.replaceAll("-\\d+-remote", "");
+  }
+
   // TODO: Determine if singleton works and is necessary.
   public static CompanionSubscriber init(Context context) {
     singleton = new CompanionSubscriber(context);
@@ -87,7 +106,7 @@ public class CompanionSubscriber {
   }
 
   public void start() {
-    Log.d("Subscriber", "Trying to find a companion");
+    Log.d(TAG, "Trying to find a companion");
     manager.discoverServices(CompanionPublisher.TYPE, NsdManager.PROTOCOL_DNS_SD,
         new CompanionDiscoveryListener());
   }
@@ -105,17 +124,17 @@ public class CompanionSubscriber {
 
     @Override
     public void onDiscoveryStarted(String regType) {
-      Log.d("Subscriber", "Service discovery started");
+      Log.d(TAG, "Service discovery started");
       started = true;
     }
 
     @Override
     public void onServiceFound(NsdServiceInfo service) {
-      Log.d("Subscriber", "Service discovery success: " + service);
+      Log.d(TAG, "Service discovery success: " + service);
       if (!service.getServiceType().startsWith(CompanionPublisher.TYPE)) {
-        Log.d("Subscriber", "Unknown Service Type: " + service.getServiceType());
+        Log.d(TAG, "Unknown Service Type: " + service.getServiceType());
       } else  {
-        Log.d("Subscriber", "resolving service " + service);
+        Log.d(TAG, "resolving service " + service);
         resolveListener = new CompanionResolveListener();
         manager.resolveService(service, resolveListener);
       }
@@ -123,17 +142,17 @@ public class CompanionSubscriber {
 
     @Override
     public void onServiceLost(NsdServiceInfo service) {
-      Log.e("Subscriber", "service lost" + service);
+      Log.e(TAG, "service lost" + service);
     }
 
     @Override
     public void onDiscoveryStopped(String serviceType) {
-      Log.i("Subscriber", "Discovery stopped: " + serviceType);
+      Log.i(TAG, "Discovery stopped: " + serviceType);
     }
 
     @Override
     public void onStartDiscoveryFailed(String serviceType, int errorCode) {
-      Log.e("Subscriber", "Discovery failed: Error code:" + errorCode);
+      Log.e(TAG, "Discovery failed: Error code:" + errorCode);
       if (started) {
         manager.stopServiceDiscovery(this);
       }
@@ -141,7 +160,7 @@ public class CompanionSubscriber {
 
     @Override
     public void onStopDiscoveryFailed(String serviceType, int errorCode) {
-      Log.e("Subscriber", "Discovery failed: Error code:" + errorCode);
+      Log.e(TAG, "Discovery failed: Error code:" + errorCode);
       manager.stopServiceDiscovery(this);
     }
   }
@@ -150,16 +169,16 @@ public class CompanionSubscriber {
 
     @Override
     public void onResolveFailed(NsdServiceInfo serviceInfo, int errorCode) {
-      Log.e("Subscriber", "Resolve failed" + errorCode);
+      Log.e(TAG, "Resolve failed" + errorCode);
     }
 
     @Override
     public void onServiceResolved(NsdServiceInfo serviceInfo) {
-      Log.e("Subscriber", "Resolve Succeeded. " + serviceInfo);
+      Log.e(TAG, "Resolve Succeeded. " + serviceInfo);
 
       if (!Misc.onEmulator() // Allow to find itself on emulator.
           && serviceInfo.getServiceName().endsWith(Settings.get().getNickname())) {
-        Log.d("Subscriber", "Same Nickname, ignored.");
+        Log.d(TAG, "Same Nickname, ignored.");
         return;
       }
 

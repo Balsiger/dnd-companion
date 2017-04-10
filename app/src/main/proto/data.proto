@@ -34,6 +34,7 @@ message CharacterProto {
   }
   repeated Level level = 5;
   string campaign_id = 6;
+  string player = 7;
 }
 
 message CompanionMessageProto {
