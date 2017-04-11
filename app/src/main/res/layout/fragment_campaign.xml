@@ -28,63 +28,54 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/campaign"
         android:orientation="vertical"
-        android:paddingBottom="20dp"
-        android:paddingEnd="60dp"
-        android:paddingStart="78dp"
-        android:paddingTop="20dp">
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:tint="#444"
+            app:srcCompat="@drawable/ic_home_black_48dp"/>
+
+        <ImageView
+            android:id="@+id/remote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:tint="#444"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_wifi_black_48dp"/>
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:foregroundTint="#000"
-            android:text="TextView"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/local"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
             android:textSize="24sp"
-            android:textStyle="bold"/>
+            android:textStyle="normal|bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
 
         <TextView
             android:id="@+id/subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_below="@+id/title"
-            android:foregroundTint="#000"
-            android:text="TextView"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/local"
             android:textSize="18sp"/>
 
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/remote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/title_bar"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/title_bar"
-        android:layout_alignTop="@+id/title_bar"
-        android:layout_marginStart="20dp"
-        android:tint="#444"
-        android:visibility="visible"
-        app:srcCompat="@drawable/ic_wifi_black_48dp"/>
-
-    <ImageView
-        android:id="@+id/local"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/title_bar"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/title_bar"
-        android:layout_alignTop="@+id/title_bar"
-        android:layout_marginStart="20dp"
-        android:clickable="true"
-        android:tint="#444"
-        app:srcCompat="@drawable/ic_home_black_48dp"/>
+    </RelativeLayout>
 
     <ImageButton
         android:id="@+id/button_delete"
