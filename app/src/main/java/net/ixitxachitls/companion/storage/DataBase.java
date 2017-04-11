@@ -94,7 +94,6 @@ public class DataBase extends SQLiteOpenHelper {
       case 0: db.execSQL(CREATE_CAMPAIGNS);
       case 1: db.execSQL(CREATE_CHARACTERS);
       case 2: db.execSQL(CREATE_SETTINGS);
-      case 3: db.insert(Campaign.TABLE, null, defaultCampaign());
       case 4: db.insert(Settings.TABLE, null, Settings.defaultSettings());
     }
   }

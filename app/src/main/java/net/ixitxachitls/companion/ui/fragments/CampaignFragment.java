@@ -84,7 +84,7 @@ public class CampaignFragment extends CompanionFragment {
         new ListAdapter.ViewBinder<Character>() {
           @Override
           public void bind(View view, Character item, int position) {
-            if (campaign.isLocal()) {
+            if (campaign.isLocal() && !campaign.isDefault()) {
               Setup.textView(view, R.id.name).setText(item.getName()
                   + " (" + item.getPlayerName() + ")");
             } else {

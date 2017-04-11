@@ -77,8 +77,7 @@ public class Campaigns {
 
     Cursor cursor = context.getContentResolver().query(
         DataBaseContentProvider.CAMPAIGNS, DataBase.COLUMNS, null, null, null);
-    cursor.moveToFirst();
-    do {
+    while(cursor.moveToNext()) {
       try {
         Campaign campaign =
             Campaign.fromProto(cursor.getLong(cursor.getColumnIndex("_id")),
@@ -89,7 +88,7 @@ public class Campaigns {
         Log.e(TAG, "Cannot parse proto for campaign: " + e);
         Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
       }
-    } while(cursor.moveToNext());
+    }
 
     return singleton;
   }

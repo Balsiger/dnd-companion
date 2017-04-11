@@ -24,6 +24,8 @@ package net.ixitxachitls.companion.ui;
 import android.content.res.ColorStateList;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -38,7 +40,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
-import net.ixitxachitls.companion.util.Edits;
 
 import java.util.ArrayList;
 
@@ -73,33 +74,23 @@ public class Setup {
   }
 
   public static EditText editText(View view, int id, String value, int label, int color,
-                                  @Nullable Action editAction, @Nullable Action keyAction) {
+                                  @Nullable Action editAction, @Nullable Action changeAction) {
     EditText edit = (EditText) view.findViewById(id);
     edit.setText(value);
     edit.setHint(view.getContext().getString(label));
     edit.setBackgroundTintList(ColorStateList.valueOf(color));
-    edit.setOnKeyListener(new View.OnKeyListener() {
-      @Override
-      public boolean onKey(View v, int keyCode, KeyEvent event) {
-        // Ignore key downs to not treat things twice.
-        if (event.getAction() != KeyEvent.ACTION_UP)
+    if (changeAction != null) {
+      edit.addTextChangedListener(new TextChangeWatcher(changeAction));
+    }
+    if (editAction != null) {
+      edit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        @Override
+        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+          editAction.execute();
           return false;
-
-        if (keyCode == KeyEvent.KEYCODE_ENTER) {
-          if (editAction != null) {
-            editAction.execute();
-          }
-          Edits.hideKeyboard(view, edit);
-          return true;
         }
-
-        if (keyAction != null) {
-          keyAction.execute();
-        }
-
-        return false;
-      }
-    });
+      });
+    }
 
     return edit;
   }
@@ -226,5 +217,27 @@ public class Setup {
     });
 
     return button;
+  }
+
+  private static class TextChangeWatcher implements TextWatcher {
+
+    private Action action;
+
+    public TextChangeWatcher(Action action) {
+      this.action = action;
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+      action.execute();
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+    }
   }
 }

@@ -80,10 +80,12 @@ public class SettingsFragment extends CompanionFragment {
 
   @Override
   public void refresh() {
-    if (nickname.getText().length() > 0) {
-      save.setVisibility(View.VISIBLE);
-    } else {
-      save.setVisibility(View.INVISIBLE);
+    if (nickname != null) {
+      if (nickname.getText().length() > 0) {
+        save.setVisibility(View.VISIBLE);
+      } else {
+        save.setVisibility(View.INVISIBLE);
+      }
     }
   }
 }

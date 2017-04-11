@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:background="@color/campaign"
         android:orientation="vertical"
-        android:paddingBottom="10dp"
+        android:paddingBottom="20dp"
         android:paddingEnd="60dp"
         android:paddingStart="78dp"
         android:paddingTop="20dp">
@@ -43,6 +43,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:foregroundTint="#000"
             android:text="TextView"
             android:textSize="24sp"
             android:textStyle="bold"/>
@@ -53,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/title"
+            android:foregroundTint="#000"
             android:text="TextView"
             android:textSize="18sp"/>
 
@@ -63,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/title_bar"
-        android:layout_alignParentTop="false"
+        android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/title_bar"
         android:layout_alignTop="@+id/title_bar"
         android:layout_marginStart="20dp"
