@@ -27,7 +27,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.google.common.base.Preconditions;
-import com.google.common.collect.LinkedListMultimap;
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.protobuf.InvalidProtocolBufferException;
 
@@ -49,8 +49,8 @@ public class Characters extends StoredEntries {
   private static final String TAG = "Characters";
   private static Characters singleton;
 
-  private Map<Long, Character> characterById = new HashMap<>();
-  private Multimap<String, Character> charactersByCamppaignId = LinkedListMultimap.create();
+  private Map<String, Character> characterByCharacterId = new HashMap<>();
+  private Multimap<String, Character> charactersByCamppaignId = HashMultimap.create();
 
   private Characters(Context context) {
     super(context);
@@ -88,25 +88,30 @@ public class Characters extends StoredEntries {
     return singleton;
   }
 
-  public Character getCharacter(String id, String campaignId) {
-    if (id.isEmpty()) {
+  public Character getCharacter(String characterId, String campaignId) {
+    if (characterId.isEmpty()) {
       return Character.createNew(campaignId);
     }
 
-    Preconditions.checkArgument(characterById.containsKey(id));
-    return characterById.get(id);
+    Preconditions.checkArgument(characterByCharacterId.containsKey(characterId));
+    return characterByCharacterId.get(characterId);
   }
 
   private void add(Character character) {
-    characterById.put(character.getId(), character);
+    if (characterByCharacterId.containsKey(character.getCharacterId())) {
+      throw new IllegalArgumentException("Character '" + character.getName()
+          + "' and '" + characterByCharacterId.get(character.getCharacterId()).getName()
+          + "' share the same id '" + character.getCharacterId() + "'");
+    }
+    characterByCharacterId.put(character.getCharacterId(), character);
     charactersByCamppaignId.put(character.getCampaignId(), character);
   }
 
   public void addOrUpdate(Character character) {
-    if (characterById.containsKey(character.getId())) {
-      Character existingCharacter = characterById.get(character.getId());
+    if (characterByCharacterId.containsKey(character.getCharacterId())) {
+      Character existingCharacter = characterByCharacterId.get(character.getCharacterId());
       character.setId(existingCharacter.getId());
-      characterById.remove(existingCharacter.getId());
+      characterByCharacterId.remove(existingCharacter.getCharacterId());
       charactersByCamppaignId.remove(existingCharacter.getCampaignId(),
           existingCharacter);
     }
@@ -115,7 +120,7 @@ public class Characters extends StoredEntries {
   }
 
   public void remove(Character character) {
-    characterById.remove(character.getId());
+    characterByCharacterId.remove(character.getCharacterId());
     charactersByCamppaignId.remove(character.getCampaignId(), character);
 
     context.getContentResolver().delete(DataBaseContentProvider.CHARACTERS,
@@ -123,7 +128,7 @@ public class Characters extends StoredEntries {
   }
 
   public List<Character> getCharacters() {
-    List<Character> characters = new ArrayList<>(characterById.values());
+    List<Character> characters = new ArrayList<>(characterByCharacterId.values());
     Collections.sort(characters, new CharacterComparator());
     return characters;
   }
@@ -142,7 +147,8 @@ public class Characters extends StoredEntries {
     List<Character> characters = new ArrayList<>();
 
     for (String campaignId : charactersByCamppaignId.keySet()) {
-      if (!Campaigns.get().hasCampaign(campaignId)) {
+      if (!Campaigns.get().hasCampaign(campaignId)
+          || Campaigns.get().getCampaign(campaignId).isDefault()) {
         characters.addAll(charactersByCamppaignId.get(campaignId));
       }
     }

@@ -90,7 +90,11 @@ public class EditCampaignFragment extends EditFragment {
 
     if (getArguments() != null) {
       String id = getArguments().getString(ARG_ID);
-      campaign = Campaigns.get().getCampaign(id);
+      if (id.isEmpty()) {
+        campaign = Campaign.createNew();
+      } else {
+        campaign = Campaigns.get().getCampaign(id);
+      }
     } else {
       campaign = Campaign.createNew();
     }

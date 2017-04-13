@@ -50,6 +50,7 @@ public class Campaigns {
   private static Campaigns singleton;
 
   private Context context;
+  private Campaign defaultCampaign;
   private Map<Long, Campaign> campaignsByStorageId = new HashMap<>();
   private Map<String, Campaign> campaignsByCampaignId = new HashMap<>();
   private List<Campaign> campaigns = new ArrayList<>();
@@ -73,7 +74,8 @@ public class Campaigns {
     singleton = new Campaigns(context);
 
     // Add the default campaign.
-    singleton.add(Campaign.createDefault());
+    singleton.defaultCampaign = Campaign.createDefault();
+    singleton.add(singleton.defaultCampaign);
 
     Cursor cursor = context.getContentResolver().query(
         DataBaseContentProvider.CAMPAIGNS, DataBase.COLUMNS, null, null, null);
@@ -95,7 +97,7 @@ public class Campaigns {
 
   public Campaign getCampaign(String id) {
     if (id.isEmpty()) {
-      return Campaign.createNew();
+      return defaultCampaign;
     }
 
     Preconditions.checkArgument(campaignsByCampaignId.containsKey(id));

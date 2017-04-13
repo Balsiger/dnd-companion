@@ -72,6 +72,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     return playerName;
   }
 
+  public String getCharacterId() {
+    return characterId;
+  }
+
   public void setRace(String name) {
     mRace = Entries.get().getMonsters().get(name);
     store();
@@ -83,6 +87,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   }
 
   public void localize() {
+    characterId = characterId.replaceAll("-remote-", "-");
     campaignId = campaignId.replaceAll("-remote$", "");
   }
 
@@ -120,8 +125,9 @@ public class Character extends StoredEntry<Data.CharacterProto> {
 
   public static Character fromProto(long id, Data.CharacterProto proto) {
     Character character = new Character(id, proto.getName(), proto.getCampaignId());
-    character.characterId = proto.getId();
     character.campaignId = proto.getCampaignId();
+    character.characterId =
+        proto.getId().isEmpty() ? character.campaignId + "-" + id : proto.getId();
     character.mRace = Entries.get().getMonsters().get(proto.getRace());
     character.mGender = Gender.fromProto(proto.getGender());
     character.playerName = proto.getPlayer();
@@ -262,7 +268,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     playerName = Settings.get().getNickname();
 
     super.store();
-    if (com.google.common.base.Strings.isNullOrEmpty(campaignId)) {
+    if (com.google.common.base.Strings.isNullOrEmpty(characterId)) {
       // Now we finally have an id.
       characterId = campaignId + "-" + getId();
       super.store();

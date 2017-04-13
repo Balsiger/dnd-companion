@@ -25,7 +25,6 @@ import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -41,6 +40,8 @@ import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
@@ -131,7 +132,21 @@ public class MainActivity extends CompanionActivity implements EditFragment.Atta
       return true;
     }
 
+    if (id == R.id.action_reset) {
+      ConfirmationDialog.create(this)
+          .title("Reset All Data")
+          .message("Do you really want to delete all data? This step cannot be undone!")
+          .yes(this::reset)
+          .show();
+      return true;
+    }
+
     return super.onOptionsItemSelected(item);
+  }
+
+  private void reset() {
+    getContentResolver().delete(DataBaseContentProvider.CAMPAIGNS, null, null);
+    getContentResolver().delete(DataBaseContentProvider.CHARACTERS, null, null);
   }
 
   public Fragment show(CompanionFragment.Type fragment) {

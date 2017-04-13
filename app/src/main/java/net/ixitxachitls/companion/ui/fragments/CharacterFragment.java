@@ -26,15 +26,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.data.Campaign;
+import net.ixitxachitls.companion.data.Campaigns;
 import net.ixitxachitls.companion.data.Character;
+import net.ixitxachitls.companion.ui.Setup;
 
 /**
  * Fragment for displaying character information.
  */
 public class CharacterFragment extends CompanionFragment {
   private Character character;
+  private Campaign campaign;
+
+  // UI elements.
+  private TextView title;
+  private TextView subtitle;
 
   public CharacterFragment() {
     super(Type.character);
@@ -46,13 +55,26 @@ public class CharacterFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
+    title = Setup.textView(view, R.id.title, this::edit);
+    subtitle = Setup.textView(view, R.id.subtitle, this::edit);
+
     return view;
   }
 
   public void showCharacter(Character character) {
     this.character = character;
+    this.campaign = Campaigns.get().getCampaign(character.getCampaignId());
 
     refresh();
+  }
+
+  private void edit() {
+    if (!campaign.isDefault() && campaign.isLocal()) {
+      return;
+    }
+
+    EditCharacterFragment.newInstance(character.getCharacterId(), character.getCampaignId())
+        .display(getFragmentManager());
   }
 
   @Override
@@ -61,6 +83,7 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-
+    title.setText(character.getName() + " / " + character.getCharacterId());
+    subtitle.setText("not yet done");
   }
 }

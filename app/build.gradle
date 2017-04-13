@@ -7,10 +7,10 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "net.ixitachitls.companion"
+        applicationId "net.ixitxachitls.companion"
         minSdkVersion 23
         targetSdkVersion 25
-        versionCode 22
+        versionCode 24
         versionName "Aasimar"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions {

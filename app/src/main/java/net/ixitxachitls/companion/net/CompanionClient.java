@@ -47,7 +47,9 @@ public class CompanionClient {
   }
 
   public void send(Data.CompanionMessageProto message) {
-    transmitter.send(message);
+    if (transmitter != null) {
+      transmitter.send(message);
+    }
   }
 
   public void start() {

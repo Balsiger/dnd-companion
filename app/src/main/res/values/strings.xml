@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">D&amp;D Companion</string>
+
+    <!-- menu strings -->
     <string name="action_settings">Settings</string>
+    <string name="action_reset">Reset</string>
 
     <!-- campaign selection -->
     <string name="campaign_title">Select a campaign:</string>

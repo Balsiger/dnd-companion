@@ -53,6 +53,8 @@ public class CampaignFragment extends CompanionFragment {
 
   private Campaign campaign;
   private List<Character> characters = new ArrayList<>();
+
+  // UI elements.
   private ListAdapter<Character> charactersAdapter;
   private ImageButton delete;
   private TextView title;
@@ -149,7 +151,7 @@ public class CampaignFragment extends CompanionFragment {
       delete.setVisibility(View.VISIBLE);
     }
 
-    title.setText(campaign.getName());
+    title.setText(campaign.getName() + " / " + campaign.getCampaignId());
     subtitle.setText(campaign.getWorld() + ", " + campaign.getDm());
     if (campaign.isLocal()) {
       local.setVisibility(View.VISIBLE);

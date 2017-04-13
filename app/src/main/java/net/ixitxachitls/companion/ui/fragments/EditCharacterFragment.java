@@ -38,7 +38,6 @@ import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Campaigns;
 import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Characters;
-import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.ui.Setup;
 
 /**
