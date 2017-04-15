@@ -64,6 +64,10 @@ public class Setup {
     void checked(Switch widget);
   }
 
+  public static EditText editText(View view, int id, String value) {
+    return editText(view, id, value, 0, 0);
+  }
+
   public static EditText editText(View view, int id, String value, int label, int color) {
     return editText(view, id, value, label, color, null);
   }
@@ -77,8 +81,12 @@ public class Setup {
                                   @Nullable Action editAction, @Nullable Action changeAction) {
     EditText edit = (EditText) view.findViewById(id);
     edit.setText(value);
-    edit.setHint(view.getContext().getString(label));
-    edit.setBackgroundTintList(ColorStateList.valueOf(color));
+    if (label > 0) {
+      edit.setHint(view.getContext().getString(label));
+    }
+    if (color > 0) {
+      edit.setBackgroundTintList(ColorStateList.valueOf(color));
+    }
     if (changeAction != null) {
       edit.addTextChangedListener(new TextChangeWatcher(changeAction));
     }

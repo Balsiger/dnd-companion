@@ -27,9 +27,6 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -39,42 +36,39 @@ import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Campaigns;
 import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Characters;
-import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.enums.Gender;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.EditAbility;
 
 /**
- * Fragment for editing a character (main values).
+ * Dialog fragment to edit the abilities of a character or monster.
  */
-public class EditCharacterFragment extends EditFragment {
+public class EditAbilitiesFragment extends EditFragment {
 
   private static final String ARG_ID = "id";
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
+
+  // Ui elements.
+  private EditAbility strength;
+  private EditAbility constitution;
+  private EditAbility dexterity;
+  private EditAbility intelligence;
+  private EditAbility wisdom;
+  private EditAbility charisma;
 
   @FunctionalInterface
   public interface SaveAction {
     public void save(Character character);
   }
 
-  private Optional<SaveAction> saveAction = Optional.absent();
-
-  // The following values are only valid after onCreate().
-  private Character character;
+  private Optional<SaveAction> saveAction;
   private Campaign campaign;
+  private Character character;
 
-  // UI elements.
-  private EditText name;
-  private TextView gender;
-  private TextView race;
-  private Button save;
+  public EditAbilitiesFragment() {}
 
-  public EditCharacterFragment() {}
-
-  public static EditCharacterFragment newInstance(String characterId, String campaignId) {
-    EditCharacterFragment fragment = new EditCharacterFragment();
-    fragment.setArguments(arguments(R.layout.fragment_edit_character,
-        characterId.isEmpty() ? R.string.edit_character_add : R.string.edit_character_edit,
-        R.color.character, characterId, campaignId));
+  public static EditAbilitiesFragment newInstance(String characterId, String campaignId) {
+    EditAbilitiesFragment fragment = new EditAbilitiesFragment();
+    fragment.setArguments(arguments(R.layout.fragment_edit_abilities,
+        R.string.edit_abilities, R.color.character, characterId, campaignId));
     return fragment;
   }
 
@@ -102,65 +96,37 @@ public class EditCharacterFragment extends EditFragment {
 
   @Override
   protected void createContent(View view) {
-    name = Setup.editText(view, R.id.edit_name, character.getName(), R.string.campaign_edit_name,
-        R.color.character, null, this::update);
-    gender = Setup.textView(view, R.id.edit_gender, this::editGender);
-    race = Setup.textView(view, R.id.edit_race, this::editRace);
-    save = Setup.button(view, R.id.save, this::save);
+    strength = (EditAbility) view.findViewById(R.id.strength);
+    constitution = (EditAbility) view.findViewById(R.id.constitution);
+    dexterity = (EditAbility) view.findViewById(R.id.dexterity);
+    intelligence = (EditAbility) view.findViewById(R.id.intelligence);
+    wisdom = (EditAbility) view.findViewById(R.id.wisdom);
+    charisma = (EditAbility) view.findViewById(R.id.charisma);
+
+    strength.setValue(6);
+    constitution.setValue(7);
+    dexterity.setValue(8);
+    intelligence.setValue(9);
+    wisdom.setValue(10);
+    charisma.setValue(11);
 
     update();
-  }
-
-  public void editGender() {
-    ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_gender,
-        character.getGender().getName(), Gender.names(), R.color.character);
-    edit.setSelectListener(this::updateGender);
-    edit.display(getFragmentManager());
-  }
-
-  private boolean updateGender(String value, int position) {
-    character.setGender(Gender.fromName(value));
-    update();
-
-    return true;
-  }
-
-  public void editRace() {
-    ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_race,
-        character.getRace(), Entries.get().getMonsters().primaryRaces(), R.color.character);
-    edit.setSelectListener(this::updateRace);
-    edit.display(getFragmentManager());
-  }
-
-  private boolean updateRace(String value, int position) {
-    character.setRace(value);
-    update();
-
-    return true;
   }
 
   protected void update() {
-    if (name.getText().length() == 0
-        && character.getGender() != Gender.UNKNOWN
-        && !character.getRace().isEmpty()) {
-      save.setVisibility(View.INVISIBLE);
-    } else {
-      save.setVisibility(View.VISIBLE);
-    }
+    update(strength);
+    update(dexterity);
+    update(constitution);
+    update(intelligence);
+    update(wisdom);
+    update(charisma);
+  }
 
-    if (character.getGender() != Gender.UNKNOWN) {
-      gender.setText(character.getGender().getName());
-    }
-
-    if (!character.getRace().isEmpty()) {
-      race.setText(character.getRace());
-    }
+  private void update(EditAbility ability) {
   }
 
   @Override
   protected void save() {
-    character.setName(name.getText().toString());
-
     if (saveAction.isPresent()) {
       saveAction.get().save(character);
     }

@@ -92,6 +92,8 @@ public class CampaignFragment extends CompanionFragment {
             } else {
               Setup.textView(view, R.id.name).setText(item.getName());
             }
+            Setup.textView(view, R.id.gender_race).setText(
+                item.getGender().getName() + " " + item.getRace());
           }
         });
 

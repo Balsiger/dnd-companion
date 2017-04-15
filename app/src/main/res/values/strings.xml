@@ -43,8 +43,8 @@
     <string name="character_label_level">Level</string>
     <string name="character_select_class">Select Class</string>
     <string name="character_edit_name">Edit Name</string>
-    <string name="character_edit_race">Edit Race</string>
-    <string name="character_edit_gender">Edit Gender</string>
+    <string name="character_edit_race">Select Race</string>
+    <string name="character_edit_gender">Select Gender</string>
     <string name="character_edit_level">Edit Level</string>
     <string name="character_edit_levels">Edit Levels</string>
     <string name="character_edit_hp_label">hit points</string>
@@ -75,5 +75,6 @@
     <string name="main_campaign_unpublish_message">Are you sure you want to unpublish the campaign? This will make it inaccessible for your players.</string>
     <string name="edit_character_add">Add Character</string>
     <string name="edit_character_edit">Edit Character</string>
+    <string name="edit_abilities">Edit Abilities</string>
 
 </resources>

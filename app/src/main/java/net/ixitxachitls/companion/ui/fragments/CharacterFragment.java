@@ -44,6 +44,7 @@ public class CharacterFragment extends CompanionFragment {
   // UI elements.
   private TextView title;
   private TextView subtitle;
+  private TextView strength;
 
   public CharacterFragment() {
     super(Type.character);
@@ -55,8 +56,10 @@ public class CharacterFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
-    title = Setup.textView(view, R.id.title, this::edit);
-    subtitle = Setup.textView(view, R.id.subtitle, this::edit);
+    title = Setup.textView(view, R.id.title, this::editBase);
+    subtitle = Setup.textView(view, R.id.subtitle, this::editBase);
+    Setup.textView(view, R.id.strength_label, this::editAbilities);
+    strength = Setup.textView(view, R.id.strength, this::editAbilities);
 
     return view;
   }
@@ -68,13 +71,26 @@ public class CharacterFragment extends CompanionFragment {
     refresh();
   }
 
-  private void edit() {
-    if (!campaign.isDefault() && campaign.isLocal()) {
+  private void editBase() {
+    if (!canEdit()) {
       return;
     }
 
     EditCharacterFragment.newInstance(character.getCharacterId(), character.getCampaignId())
         .display(getFragmentManager());
+  }
+
+  private void editAbilities() {
+    if (!canEdit()) {
+      return;
+    }
+
+    EditAbilitiesFragment.newInstance(character.getCharacterId(), character.getCampaignId())
+        .display(getFragmentManager());
+  }
+
+  public boolean canEdit() {
+    return campaign.isDefault() || !campaign.isLocal();
   }
 
   @Override
@@ -84,6 +100,6 @@ public class CharacterFragment extends CompanionFragment {
     }
 
     title.setText(character.getName() + " / " + character.getCharacterId());
-    subtitle.setText("not yet done");
+    subtitle.setText(character.getGender().getName() + " " + character.getRace());
   }
 }

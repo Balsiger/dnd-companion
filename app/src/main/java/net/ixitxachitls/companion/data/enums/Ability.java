@@ -72,4 +72,10 @@ public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
     return Enums.fromName(name, values());
   }
 
+  public static int modifier(int value) {
+    if(value < 0)
+      return 0;
+
+    return (int) (value / 2) - 5;
+  }
 }

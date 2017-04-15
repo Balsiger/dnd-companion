@@ -213,3 +213,4 @@ skill {
 skill {
   name: "appraise"
 }
+main_race: true
