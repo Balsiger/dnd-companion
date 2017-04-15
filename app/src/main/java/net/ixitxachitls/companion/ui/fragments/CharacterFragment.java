@@ -32,6 +32,7 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Campaign;
 import net.ixitxachitls.companion.data.Campaigns;
 import net.ixitxachitls.companion.data.Character;
+import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.Setup;
 
 /**
@@ -45,6 +46,11 @@ public class CharacterFragment extends CompanionFragment {
   private TextView title;
   private TextView subtitle;
   private TextView strength;
+  private TextView dexterity;
+  private TextView constitution;
+  private TextView intelligence;
+  private TextView wisdom;
+  private TextView charisma;
 
   public CharacterFragment() {
     super(Type.character);
@@ -60,6 +66,16 @@ public class CharacterFragment extends CompanionFragment {
     subtitle = Setup.textView(view, R.id.subtitle, this::editBase);
     Setup.textView(view, R.id.strength_label, this::editAbilities);
     strength = Setup.textView(view, R.id.strength, this::editAbilities);
+    Setup.textView(view, R.id.dexterity_label, this::editAbilities);
+    dexterity = Setup.textView(view, R.id.dexterity, this::editAbilities);
+    Setup.textView(view, R.id.constitution_label, this::editAbilities);
+    constitution = Setup.textView(view, R.id.constitution, this::editAbilities);
+    Setup.textView(view, R.id.intelligence_label, this::editAbilities);
+    intelligence = Setup.textView(view, R.id.intelligence, this::editAbilities);
+    Setup.textView(view, R.id.wisdom_label, this::editAbilities);
+    wisdom = Setup.textView(view, R.id.wisdom, this::editAbilities);
+    Setup.textView(view, R.id.charisma_label, this::editAbilities);
+    charisma = Setup.textView(view, R.id.charisma, this::editAbilities);
 
     return view;
   }
@@ -101,5 +117,17 @@ public class CharacterFragment extends CompanionFragment {
 
     title.setText(character.getName() + " / " + character.getCharacterId());
     subtitle.setText(character.getGender().getName() + " " + character.getRace());
+    strength.setText(
+        character.getStrength() + " (" + Ability.modifier(character.getStrength()) + ")");
+    dexterity.setText(
+        character.getDexterity() + " (" + Ability.modifier(character.getDexterity()) + ")");
+    constitution.setText(
+        character.getConstitution() + " (" + Ability.modifier(character.getConstitution()) + ")");
+    intelligence.setText(
+        character.getIntelligence() + " (" + Ability.modifier(character.getIntelligence()) + ")");
+    wisdom.setText(
+        character.getWisdom() + " (" + Ability.modifier(character.getWisdom()) + ")");
+    charisma.setText(
+        character.getCharisma() + " (" + Ability.modifier(character.getCharisma()) + ")");
   }
 }

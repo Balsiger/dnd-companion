@@ -24,11 +24,9 @@ package net.ixitxachitls.companion.ui.fragments;
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.view.View;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitachitls.companion.R;
@@ -54,12 +52,6 @@ public class EditAbilitiesFragment extends EditFragment {
   private EditAbility wisdom;
   private EditAbility charisma;
 
-  @FunctionalInterface
-  public interface SaveAction {
-    public void save(Character character);
-  }
-
-  private Optional<SaveAction> saveAction;
   private Campaign campaign;
   private Character character;
 
@@ -80,10 +72,6 @@ public class EditAbilitiesFragment extends EditFragment {
     return arguments;
   }
 
-  public void setSaveListener(@Nullable SaveAction save) {
-    this.saveAction = Optional.of(save);
-  }
-
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -97,40 +85,36 @@ public class EditAbilitiesFragment extends EditFragment {
   @Override
   protected void createContent(View view) {
     strength = (EditAbility) view.findViewById(R.id.strength);
-    constitution = (EditAbility) view.findViewById(R.id.constitution);
+    strength.setOnChange(this::change);
     dexterity = (EditAbility) view.findViewById(R.id.dexterity);
+    dexterity.setOnChange(this::change);
+    constitution = (EditAbility) view.findViewById(R.id.constitution);
+    constitution.setOnChange(this::change);
     intelligence = (EditAbility) view.findViewById(R.id.intelligence);
+    intelligence.setOnChange(this::change);
     wisdom = (EditAbility) view.findViewById(R.id.wisdom);
+    wisdom.setOnChange(this::change);
     charisma = (EditAbility) view.findViewById(R.id.charisma);
-
-    strength.setValue(6);
-    constitution.setValue(7);
-    dexterity.setValue(8);
-    intelligence.setValue(9);
-    wisdom.setValue(10);
-    charisma.setValue(11);
+    charisma.setOnChange(this::change);
 
     update();
   }
 
+  private void change() {
+    character.setStrength(strength.getValue());
+    character.setDexterity(dexterity.getValue());
+    character.setConstitution(constitution.getValue());
+    character.setIntelligence(intelligence.getValue());
+    character.setWisdom(wisdom.getValue());
+    character.setCharisma(charisma.getValue());
+  }
+
   protected void update() {
-    update(strength);
-    update(dexterity);
-    update(constitution);
-    update(intelligence);
-    update(wisdom);
-    update(charisma);
-  }
-
-  private void update(EditAbility ability) {
-  }
-
-  @Override
-  protected void save() {
-    if (saveAction.isPresent()) {
-      saveAction.get().save(character);
-    }
-
-    super.save();
+    strength.setValue(character.getStrength());
+    dexterity.setValue(character.getDexterity());
+    constitution.setValue(character.getConstitution());
+    intelligence.setValue(character.getIntelligence());
+    wisdom.setValue(character.getWisdom());
+    charisma.setValue(character.getCharisma());
   }
 }

@@ -41,6 +41,7 @@ import net.ixitxachitls.companion.ui.Setup;
 public class EditAbility extends LinearLayout {
 
   private String label;
+  private Setup.Action change;
 
   // UI elements.
   private EditText edit;
@@ -50,6 +51,10 @@ public class EditAbility extends LinearLayout {
     super(context, attributes);
 
     init(attributes);
+  }
+
+  public void setOnChange(Setup.Action action) {
+    this.change = action;
   }
 
   private void init(AttributeSet attributes) {
@@ -64,7 +69,7 @@ public class EditAbility extends LinearLayout {
     Setup.textView(view, R.id.label).setText(label);
     Setup.button(view, R.id.minus, this::minus);
     Setup.button(view, R.id.plus, this::plus);
-    edit = Setup.editText(view, R.id.value, "");
+    edit = Setup.editText(view, R.id.value, "", this::update);
     modifier = Setup.textView(view, R.id.modifier);
   }
 
@@ -79,16 +84,23 @@ public class EditAbility extends LinearLayout {
   }
 
   public int getValue() {
+    if (edit.getText().toString().isEmpty()) {
+      return 0;
+    }
+
     return Integer.parseInt(edit.getText().toString());
   }
 
   public void setValue(int value) {
     edit.setText(String.valueOf(value));
-    update();
   }
 
   private void update() {
     int bonus = Ability.modifier(getValue());
     modifier.setText("(" + (bonus < 0 ? bonus : "+" + bonus) + ")");
+
+    if (change != null) {
+      change.execute();
+    }
   }
 }

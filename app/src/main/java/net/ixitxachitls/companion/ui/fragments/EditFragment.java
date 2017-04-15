@@ -188,5 +188,12 @@ public abstract class EditFragment extends DialogFragment {
     activity.refresh();
   }
 
+  @Override
+  public void onDestroyView() {
+    super.onDestroyView();
+    MainActivity activity = (MainActivity) getActivity();
+    activity.refresh();
+  }
+
   protected abstract void createContent(View view);
 }

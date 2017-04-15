@@ -100,6 +100,7 @@ public class CampaignFragment extends CompanionFragment {
     Setup.listView(view, R.id.characters, charactersAdapter,
         (i) -> getMain().showCharacter(characters.get(i)));
 
+
     return view;
   }
 

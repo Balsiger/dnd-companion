@@ -76,5 +76,8 @@
     <string name="edit_character_add">Add Character</string>
     <string name="edit_character_edit">Edit Character</string>
     <string name="edit_abilities">Edit Abilities</string>
+    <string name="double_arrow_left">&#171;</string>
+    <string name="double_arrow_right">&#187;</string>
+    <string name="edit_campaign_date">Select Campaign Date</string>
 
 </resources>

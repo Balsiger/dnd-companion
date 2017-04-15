@@ -68,6 +68,10 @@ public class Setup {
     return editText(view, id, value, 0, 0);
   }
 
+  public static EditText editText(View view, int id, String value, Action action) {
+    return editText(view, id, value, 0, 0, action);
+  }
+
   public static EditText editText(View view, int id, String value, int label, int color) {
     return editText(view, id, value, label, color, null);
   }

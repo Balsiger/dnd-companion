@@ -50,6 +50,12 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   private String playerName = "";
   private Optional<Monster> mRace = Optional.absent();
   private Gender mGender = Gender.UNKNOWN;
+  private int strength;
+  private int constitution;
+  private int dexterity;
+  private int intelligence;
+  private int wisdom;
+  private int charisma;
   private List<Level> mLevels = new ArrayList<>();
 
   public Character(long id, String name, String campaignId) {
@@ -86,6 +92,72 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     store();
   }
 
+  public int getStrength() {
+    return strength;
+  }
+
+  public void setStrength(int strength) {
+    if (this.strength != strength) {
+      this.strength = strength;
+      store();
+    }
+  }
+
+  public int getConstitution() {
+    return constitution;
+  }
+
+  public void setConstitution(int constitution) {
+    if (this.constitution != constitution) {
+      this.constitution = constitution;
+      store();
+    }
+  }
+
+  public int getDexterity() {
+    return dexterity;
+  }
+
+  public void setDexterity(int dexterity) {
+    if (this.dexterity != dexterity) {
+      this.dexterity = dexterity;
+      store();
+    }
+  }
+
+  public int getIntelligence() {
+    return intelligence;
+  }
+
+  public void setIntelligence(int intelligence) {
+    if (this.intelligence != intelligence) {
+      this.intelligence = intelligence;
+      store();
+    }
+  }
+
+  public int getWisdom() {
+    return wisdom;
+  }
+
+  public void setWisdom(int wisdom) {
+    if (this.wisdom != wisdom) {
+      this.wisdom = wisdom;
+      store();
+    }
+  }
+
+  public int getCharisma() {
+    return charisma;
+  }
+
+  public void setCharisma(int charisma) {
+    if (this.charisma != charisma) {
+      this.charisma = charisma;
+      store();
+    }
+  }
+
   public void localize() {
     characterId = characterId.replaceAll("-remote-", "-");
     campaignId = campaignId.replaceAll("-remote$", "");
@@ -110,7 +182,15 @@ public class Character extends StoredEntry<Data.CharacterProto> {
         .setName(name)
         .setCampaignId(campaignId)
         .setPlayer(playerName)
-        .setGender(mGender.toProto());
+        .setGender(mGender.toProto())
+        .setAbilities(Data.CharacterProto.Abilities.newBuilder()
+            .setStrength(strength)
+            .setDexterity(dexterity)
+            .setConstitution(constitution)
+            .setIntelligence(intelligence)
+            .setWisdom(wisdom)
+            .setCharisma(charisma)
+            .build());
 
     if (mRace.isPresent()) {
       proto.setRace(mRace.get().getName());
@@ -131,6 +211,13 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     character.mRace = Entries.get().getMonsters().get(proto.getRace());
     character.mGender = Gender.fromProto(proto.getGender());
     character.playerName = proto.getPlayer();
+    character.strength = proto.getAbilities().getStrength();
+    character.dexterity = proto.getAbilities().getDexterity();
+    character.constitution = proto.getAbilities().getConstitution();
+    character.intelligence = proto.getAbilities().getIntelligence();
+    character.wisdom = proto.getAbilities().getWisdom();
+    character.charisma = proto.getAbilities().getCharisma();
+
     for (Data.CharacterProto.Level level : proto.getLevelList()) {
       character.mLevels.add(Character.fromProto(level));
     }

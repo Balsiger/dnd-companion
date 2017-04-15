@@ -35,6 +35,16 @@ message CharacterProto {
   repeated Level level = 5;
   string campaign_id = 6;
   string player = 7;
+
+  message Abilities {
+    int32 strength = 1;
+    int32 dexterity = 2;
+    int32 constitution = 3;
+    int32 intelligence = 4;
+    int32 wisdom = 5;
+    int32 charisma = 6;
+  }
+  Abilities abilities = 8;
 }
 
 message CompanionMessageProto {
