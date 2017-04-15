@@ -154,7 +154,7 @@ public class CampaignFragment extends CompanionFragment {
       delete.setVisibility(View.VISIBLE);
     }
 
-    title.setText(campaign.getName() + " / " + campaign.getCampaignId());
+    title.setText(campaign.getName());
     subtitle.setText(campaign.getWorld() + ", " + campaign.getDm());
     if (campaign.isLocal()) {
       local.setVisibility(View.VISIBLE);

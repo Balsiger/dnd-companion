@@ -115,7 +115,7 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    title.setText(character.getName() + " / " + character.getCharacterId());
+    title.setText(character.getName());
     subtitle.setText(character.getGender().getName() + " " + character.getRace());
     strength.setText(
         character.getStrength() + " (" + Ability.modifier(character.getStrength()) + ")");
