@@ -30,10 +30,9 @@ import android.net.Uri;
 
 import com.google.common.base.Strings;
 
-import net.ixitxachitls.companion.data.Campaign;
-import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.storage.DataBase;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Character;
 
 import java.util.List;
 

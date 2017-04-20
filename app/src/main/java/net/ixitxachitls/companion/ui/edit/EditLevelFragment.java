@@ -34,9 +34,9 @@ import android.widget.Toast;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Level;
+import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;

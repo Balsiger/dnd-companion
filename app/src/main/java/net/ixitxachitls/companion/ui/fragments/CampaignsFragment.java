@@ -30,8 +30,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Campaign;
-import net.ixitxachitls.companion.data.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ListAdapter;
@@ -64,7 +64,7 @@ public class CampaignsFragment extends CompanionFragment {
               @Override
               public void bind(View view, Campaign campaign, int position) {
                 ((TextView) view.findViewById(R.id.name)).setText(campaign.getName());
-                ((TextView) view.findViewById(R.id.world)).setText(campaign.getWorld());
+                ((TextView) view.findViewById(R.id.world)).setText(subtitle(campaign));
 
                 ImageView local = Setup.imageView(view, R.id.local);
                 Setup.imageView(view, R.id.local,
@@ -107,6 +107,14 @@ public class CampaignsFragment extends CompanionFragment {
 
     CampaignPublisher.toggle(getContext(), campaign, this::refresh,
         CampaignPublisher.EmptyCancelAction);
+  }
+
+  private String subtitle(Campaign campaign) {
+    if (campaign.getDate().isEmpty()) {
+      return campaign.getWorld();
+    }
+
+    return campaign.getWorld() + ", " + campaign.getDate();
   }
 
   @Override

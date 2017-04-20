@@ -30,10 +30,10 @@ import android.view.View;
 import com.google.common.base.Preconditions;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Campaign;
-import net.ixitxachitls.companion.data.Campaigns;
-import net.ixitxachitls.companion.data.Character;
-import net.ixitxachitls.companion.data.Characters;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.views.EditAbility;
 
 /**

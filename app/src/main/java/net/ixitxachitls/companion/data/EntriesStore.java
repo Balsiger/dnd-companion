@@ -55,11 +55,13 @@ public class EntriesStore<T extends Entry<? extends MessageLite>> {
     names = null;
   }
 
+  @SuppressWarnings("unchecked")
   private T fromProto(InputStream file)
       throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
       InvalidProtocolBufferException {
     MessageLite proto = defaultProto().getParserForType().parseFrom(file);
-    return (T) entryClass.getMethod("fromProto", proto.getClass()).invoke(null, proto);
+    T entry = (T) entryClass.getMethod("fromProto", proto.getClass()).invoke(null, proto);
+    return entry;
   }
 
   private MessageLite defaultProto()

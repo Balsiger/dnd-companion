@@ -102,6 +102,12 @@ public class Setup {
           return false;
         }
       });
+      edit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        @Override
+        public void onFocusChange(View v, boolean hasFocus) {
+          editAction.execute();
+        }
+      });
     }
 
     return edit;

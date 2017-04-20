@@ -19,7 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data;
+package net.ixitxachitls.companion.data.dynamics;
 
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -27,12 +27,13 @@ import android.net.Uri;
 
 import com.google.protobuf.MessageLite;
 
+import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.storage.DataBase;
 
 /**
  * An entry that is stored in the database.
  */
-public abstract class StoredEntry<P extends MessageLite> extends Entry<P> {
+public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P> {
   private long id;
   private final Uri dbUrl;
 

@@ -27,9 +27,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
-import net.ixitxachitls.companion.data.Campaign;
-import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.util.Lazy;
 
 /**
@@ -96,14 +96,6 @@ public class DataBase extends SQLiteOpenHelper {
       case 2: db.execSQL(CREATE_SETTINGS);
       case 4: db.insert(Settings.TABLE, null, Settings.defaultSettings());
     }
-  }
-
-  private static ContentValues defaultCampaign() {
-    ContentValues values = new ContentValues();
-    values.put(COLUMN_ID, Campaign.DEFAULT_CAMPAIGN_ID);
-    // Cannot store the campaign directly, as this would require the databse being set up.
-    values.put(COLUMN_PROTO, Campaign.createDefault().toProto().toByteArray());
-    return values;
   }
 
   @Override

@@ -21,13 +21,30 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.TextView;
+
+import com.google.common.base.Optional;
+import com.google.common.base.Preconditions;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.values.Calendar;
+import net.ixitxachitls.companion.data.values.CampaignDate;
+import net.ixitxachitls.companion.ui.Setup;
 
 /**
  * Fragment for editing a campaign date.
@@ -35,6 +52,16 @@ import net.ixitachitls.companion.R;
 public class CampaignDateFragment extends EditFragment {
 
   private static final String ARG_ID = "id";
+
+  private Campaign campaign;
+  private GridView grid;
+  private DateAdapter adapter = new DateAdapter();
+  private EditText year;
+  private TextView month;
+  private int yearShown = 0;
+  private int monthShown = 1;
+  private EditText hours;
+  private EditText minutes;
 
   public CampaignDateFragment() {}
 
@@ -52,59 +79,204 @@ public class CampaignDateFragment extends EditFragment {
     return arguments;
   }
 
-  /*
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.get().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
-    character = Characters.get().getCharacter(getArguments().getString(ARG_ID),
-        campaign.getCampaignId());
+    campaign = Campaigns.get().getCampaign(getArguments().getString(ARG_ID));
+    monthShown = campaign.getDate().getMonth();
+    yearShown = campaign.getDate().getYear();
   }
 
-*/
   @Override
   protected void createContent(View view) {
-  /*
-    strength = (EditAbility) view.findViewById(R.id.strength);
-    constitution = (EditAbility) view.findViewById(R.id.constitution);
-    dexterity = (EditAbility) view.findViewById(R.id.dexterity);
-    intelligence = (EditAbility) view.findViewById(R.id.intelligence);
-    wisdom = (EditAbility) view.findViewById(R.id.wisdom);
-    charisma = (EditAbility) view.findViewById(R.id.charisma);
+    year = Setup.editText(view, R.id.year, String.valueOf(yearShown), this::editYear);
+    Setup.textView(view, R.id.year_minus, this::yearMinus);
+    Setup.textView(view, R.id.year_plus, this::yearPlus);
+    month = Setup.textView(view, R.id.month);
+    Setup.textView(view, R.id.month_minus, this::monthMinus);
+    Setup.textView(view, R.id.month_plus, this::monthPlus);
 
-    strength.setValue(6);
-    constitution.setValue(7);
-    dexterity.setValue(8);
-    intelligence.setValue(9);
-    wisdom.setValue(10);
-    charisma.setValue(11);
+    grid = (GridView) view.findViewById(R.id.days);
+    grid.setAdapter(adapter);
+    grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        selectDay(position + 1);
+      }
+    });
+
+    hours = Setup.editText(view, R.id.hours, "", this::editTime);
+    hours.setFilters(new InputFilter [] { new MaxFilter(campaign.getCalendar().getHoursPerDay()) });
+    hours.setSelectAllOnFocus(true);
+    minutes = Setup.editText(view, R.id.minutes, "", this::editTime);
+    minutes.setFilters(new InputFilter []
+        { new MaxFilter(campaign.getCalendar().getMinutesPerHour()) });
+    Setup.button(view, R.id.plus_1, () -> addMinutes(1));
+    Setup.button(view, R.id.plus_5, () -> addMinutes(5));
+    Setup.button(view, R.id.plus_15, () -> addMinutes(15));
+    Setup.button(view, R.id.plus_30, () -> addMinutes(30));
+    Setup.button(view, R.id.plus_60, () -> addMinutes(60));
+    Setup.button(view, R.id.night, this::night);
 
     update();
-    */
   }
-  /*
+
+  public void night() {
+    campaign.setDate(campaign.getDate().nextMorning());
+    update();
+  }
+
+  public void addMinutes(int minutes) {
+    campaign.setDate(campaign.getDate().addMinutes(minutes));
+    update();
+  }
+
+  private void editTime() {
+    campaign.setDate(campaign.getDate().fromDate(Integer.parseInt(hours.getText().toString()),
+        Integer.parseInt(minutes.getText().toString())));
+    update();
+  }
+
+  private void selectDay(int day) {
+    campaign.setDate(campaign.getDate().fromDate(yearShown, monthShown, day));
+    update();
+  }
+
+  private void editYear() {
+    yearShown = Integer.parseInt(year.getText().toString() );
+  }
+
+  private void yearMinus() {
+    yearShown--;
+    update();
+  }
+
+  private void yearPlus() {
+    yearShown++;
+    update();
+  }
+
+  private void monthMinus() {
+    monthShown--;
+    if (monthShown <= 0) {
+      monthShown = campaign.getCalendar().getMonths().size();
+      yearShown--;
+    }
+
+    update();
+  }
+
+  private void monthPlus() {
+    monthShown++;
+    if (monthShown > campaign.getCalendar().getMonths().size()) {
+      monthShown = 1;
+      yearShown++;
+    }
+
+    update();
+  }
+
+  private String formatYear(int number) {
+    Optional<Calendar.Year> calendarYear = campaign.getCalendar().getYear(number);
+    if (calendarYear.isPresent()) {
+      return calendarYear.get().getName() + " (" + number + ")";
+    } else {
+      return String.valueOf(number);
+    }
+  }
+
+  private String formatMonth(int number) {
+    return campaign.getCalendar().getMonth(number).getName();
+  }
 
   protected void update() {
-    update(strength);
-    update(dexterity);
-    update(constitution);
-    update(intelligence);
-    update(wisdom);
-    update(charisma);
+    year.setText(String.valueOf(yearShown));
+    year.setHint(formatYear(yearShown));
+    month.setText(formatMonth(monthShown));
+    hours.setText(campaign.getDate().getHoursFormatted());
+    minutes.setText(campaign.getDate().getMinutesFormatted());
+
+    grid.setAdapter(adapter);
   }
 
-  private void update(EditAbility ability) {
+  protected boolean isCurrent(int day) {
+    CampaignDate date = campaign.getDate();
+    return date.getDay() == day && date.getMonth() == monthShown && date.getYear() == yearShown;
   }
 
   @Override
   protected void save() {
-    if (saveAction.isPresent()) {
-      saveAction.get().save(character);
-    }
-
     super.save();
   }
-*/
+
+  private class DateAdapter extends BaseAdapter {
+    @Override
+    public int getCount() {
+      return campaign.getCalendar().getMonth(monthShown).getDays();
+    }
+
+    @Override
+    public Object getItem(int position) {
+      return null;
+    }
+
+    @Override
+    public long getItemId(int position) {
+      return 0;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+      TextView text;
+      if (convertView == null) {
+        text = new TextView(parent.getContext());
+        text.setTextSize(24);
+        text.setPadding(20, 40, 20, 40);
+        text.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+      } else {
+        text = (TextView) convertView;
+      }
+
+      int day = position + 1;
+      if (isCurrent(day)) {
+        text.setTypeface(null, Typeface.BOLD);
+        text.setBackgroundColor(getResources().getColor(R.color.selected, null));
+      } else {
+        text.setTypeface(null, Typeface.NORMAL);
+        text.setBackgroundColor(getResources().getColor(R.color.cell, null));
+      }
+
+      text.setText(String.valueOf(day));
+
+      return text;
+    }
+  }
+
+  private static class MaxFilter implements InputFilter {
+
+    private int min, max;
+
+    public MaxFilter(int max) {
+      this.max = max;
+    }
+
+    @Override
+    public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart,
+                               int dend) {
+      try {
+        String value = dest.toString().substring(0, dstart)
+            + source.toString().substring(start, end)
+            + dest.toString().substring(dend, dest.toString().length());
+        int input = Integer.parseInt(value);
+        if (input < max) {
+          return null;
+        }
+      } catch (NumberFormatException e) {
+      }
+
+      return "";
+    }
+  }
 }

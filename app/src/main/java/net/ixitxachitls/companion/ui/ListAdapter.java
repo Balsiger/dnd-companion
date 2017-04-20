@@ -36,7 +36,6 @@ import java.util.List;
  */
 public class ListAdapter<T> extends ArrayAdapter<T> {
   private final LayoutInflater inflator;
-  private final Context context;
   private final int layout;
   private final List<T> items;
   private final ViewBinder<T> binder;
@@ -51,7 +50,6 @@ public class ListAdapter<T> extends ArrayAdapter<T> {
     super(context, layout, items);
 
     this.inflator = LayoutInflater.from(context);
-    this.context = context;
     this.layout = layout;
     this.items = items;
     this.binder = binder;

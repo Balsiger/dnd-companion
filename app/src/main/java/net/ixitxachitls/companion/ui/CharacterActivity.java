@@ -30,7 +30,7 @@ import android.widget.TextView;
 import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Character;
+import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.ui.edit.EditLevelFragment;
@@ -43,7 +43,6 @@ public class CharacterActivity extends AppCompatActivity {
   private int mColor;
   private Character mCharacter;
   private TextView mLevel;
-  private ListSelectFragment mLevelsEdit;
 
   @FunctionalInterface
   interface EditListener {

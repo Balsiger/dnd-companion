@@ -21,12 +21,13 @@
 
 package net.ixitxachitls.companion.data;
 
+import net.ixitxachitls.companion.data.dynamics.DynamicEntry;
 import net.ixitxachitls.companion.proto.Entity;
 
 /**
  * The representation of a monster.
  */
-public class Level extends Entry<Entity.LevelProto> {
+public class Level extends DynamicEntry<Entity.LevelProto> {
 
   public static final String TYPE = "level";
 
@@ -36,9 +37,6 @@ public class Level extends Entry<Entity.LevelProto> {
 
   public static Entity.LevelProto defaultProto() {
     return Entity.LevelProto.getDefaultInstance();
-  }
-
-  public Level() {
   }
 
   @Override

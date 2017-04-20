@@ -33,10 +33,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Campaign;
-import net.ixitxachitls.companion.data.Campaigns;
-import net.ixitxachitls.companion.data.Character;
-import net.ixitxachitls.companion.data.Characters;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
@@ -62,6 +62,7 @@ public class CampaignFragment extends CompanionFragment {
   private ImageView local;
   private ImageView remote;
   private FloatingActionButton addCharacter;
+  private TextView date;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -79,6 +80,7 @@ public class CampaignFragment extends CompanionFragment {
     local = Setup.imageView(view, R.id.local);
     remote = Setup.imageView(view, R.id.remote);
     addCharacter = Setup.floatingButton(view, R.id.add_character, this::createCharacter);
+    date = Setup.textView(view, R.id.date, this::showDateFragment);
 
     // Setup list view.
     charactersAdapter = new ListAdapter<>(container.getContext(),
@@ -104,6 +106,12 @@ public class CampaignFragment extends CompanionFragment {
     return view;
   }
 
+  public void showDateFragment() {
+    if (campaign.isLocal()) {
+      CampaignDateFragment.newInstance(campaign.getCampaignId()).display(getFragmentManager());
+    }
+  }
+
   public void showCampaign(Campaign campaign) {
     this.campaign = campaign;
 
@@ -119,23 +127,18 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   protected void deleteCampaign() {
-    ConfirmationDialog.show(getContext(),
-        getResources().getString(R.string.campaign_delete_title),
-        getResources().getString(R.string.campaign_delete_message),
-        new ConfirmationDialog.Callback() {
-          @Override
-          public void yes() {
-            Campaigns.get().remove(campaign);
-            Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
-                Toast.LENGTH_SHORT).show();
-            show(Type.campaigns);
-          }
+    ConfirmationDialog.create(getContext())
+        .title(getResources().getString(R.string.campaign_delete_title))
+        .message(getResources().getString(R.string.campaign_delete_message))
+        .yes(this::deleteCampaignOk)
+        .show();
+  }
 
-          @Override
-          public void no() {
-            // nothing to do here
-          }
-        });
+  private void deleteCampaignOk() {
+    Campaigns.get().remove(campaign);
+    Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
+        Toast.LENGTH_SHORT).show();
+    show(Type.campaigns);
   }
 
   private void createCharacter() {
@@ -181,6 +184,8 @@ public class CampaignFragment extends CompanionFragment {
           CompanionSubscriber.get().isServerActive(campaign.getServerId())
               ? R.color.on : R.color.off, null));
     }
+
+    date.setText(campaign.getDate().toString());
 
     if (campaign.isLocal() && !campaign.isDefault()) {
       addCharacter.setVisibility(View.GONE);

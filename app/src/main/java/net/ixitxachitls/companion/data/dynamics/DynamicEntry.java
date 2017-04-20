@@ -19,38 +19,19 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data;
+package net.ixitxachitls.companion.data.dynamics;
 
-import net.ixitxachitls.companion.proto.Entity;
+import com.google.protobuf.MessageLite;
+
+import net.ixitxachitls.companion.data.Entry;
 
 /**
- * Data entity for world information.
+ * A dynamic, changable entry.
  */
-public class World extends Entry<Entity.WorldProto> {
-
-  public static final String TYPE = "world";
-
-  protected World(String name) {
+public abstract class DynamicEntry<P extends MessageLite> extends Entry<P> {
+  public DynamicEntry(String name) {
     super(name);
   }
 
-  public static Entity.WorldProto defaultProto() {
-    return Entity.WorldProto.getDefaultInstance();
-  }
-
-  // TODO: we could actually remove this for all 'base' entries.
-  @Override
-  public Entity.WorldProto toProto() {
-    return Entity.WorldProto.newBuilder()
-        .setEntity(Entity.EntityProto.newBuilder()
-            .setName(name)
-            .build())
-        .build();
-  }
-
-  public static World fromProto(Entity.WorldProto proto) {
-    World world = new World(proto.getEntity().getName());
-
-    return world;
-  }
+  public abstract P toProto();
 }

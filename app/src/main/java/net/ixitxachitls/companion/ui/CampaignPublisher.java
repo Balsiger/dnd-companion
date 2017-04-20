@@ -24,7 +24,7 @@ package net.ixitxachitls.companion.ui;
 import android.content.Context;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
 
 /**
  * Supporter class used to publish or unpublish a campaign.
@@ -57,19 +57,21 @@ public class CampaignPublisher {
 
   public static void publish(Context context, Campaign campaign, OKAction okAction,
                              CancelAction cancelAction) {
-    ConfirmationDialog.show(context,
-        context.getString(R.string.main_campaign_publish_title),
-        context.getString(R.string.main_campaign_publish_message),
-        () -> { campaign.publish(); okAction.ok(); },
-        cancelAction::cancel);
+    ConfirmationDialog.create(context)
+        .title(context.getString(R.string.main_campaign_publish_title))
+        .message(context.getString(R.string.main_campaign_publish_message))
+        .yes(() -> { campaign.publish(); okAction.ok(); })
+        .no(cancelAction::cancel)
+        .show();
   }
 
   public static void unpublish(Context context, Campaign campaign, OKAction okAction,
                                CancelAction cancelAction) {
-    ConfirmationDialog.show(context,
-        context.getString(R.string.main_campaign_unpublish_title),
-        context.getString(R.string.main_campaign_unpublish_message),
-        () -> { campaign.unpublish(); okAction.ok(); },
-        cancelAction::cancel);
+    ConfirmationDialog.create(context)
+        .title(context.getString(R.string.main_campaign_unpublish_title))
+        .message(context.getString(R.string.main_campaign_unpublish_message))
+        .yes(() -> { campaign.unpublish(); okAction.ok(); })
+        .no(cancelAction::cancel)
+        .show();
   }
 }

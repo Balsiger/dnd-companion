@@ -19,7 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data;
+package net.ixitxachitls.companion.data.dynamics;
 
 import android.util.Log;
 
@@ -28,6 +28,9 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Monster;
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
@@ -290,7 +293,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     return names;
   }
 
-  public static class Level extends Entry<Data.CharacterProto.Level> {
+  public static class Level extends DynamicEntry<Data.CharacterProto.Level> {
 
     private int mHp;
     private Ability mAbilityIncrease;

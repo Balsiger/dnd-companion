@@ -51,7 +51,7 @@ public abstract class EditFragment extends DialogFragment {
   private static final String ARG_LAYOUT = "layout";
   private static final String ARG_TITLE = "title";
   private static final String ARG_COLOR = "color";
-  private static final int WIDTH = 1000;
+  private static final int WIDTH = 1500;
 
   private Optional<SaveAction> save = Optional.absent();
   private Optional<CancelAction> cancel = Optional.absent();
@@ -192,6 +192,7 @@ public abstract class EditFragment extends DialogFragment {
   public void onDestroyView() {
     super.onDestroyView();
     MainActivity activity = (MainActivity) getActivity();
+    getFragmentManager().popBackStack();
     activity.refresh();
   }
 

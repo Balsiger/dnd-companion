@@ -16,6 +16,15 @@ message CampaignProto {
   string id = 4;
   string dm = 5;
   bool published = 6;
+
+  message Date {
+    int32 year = 1;
+    int32 month = 2;
+    int32 day = 3;
+    int32 hour = 4;
+    int32 minute = 5;
+  }
+  Date date = 7;
 }
 
 message CharacterProto {

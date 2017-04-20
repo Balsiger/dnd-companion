@@ -33,7 +33,6 @@ import net.ixitxachitls.companion.storage.DataBase;
 /**
  * Base class for all entries.
  */
-
 public abstract class Entry<P extends MessageLite> {
 
   protected String name;
@@ -45,8 +44,6 @@ public abstract class Entry<P extends MessageLite> {
   protected Entry(String name) {
     this.name = name;
   }
-
-  public abstract P toProto();
 
   public boolean isDefined() {
     return !name.isEmpty();

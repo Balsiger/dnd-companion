@@ -19,18 +19,17 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data;
+package net.ixitxachitls.companion.data.statics;
 
-import android.content.Context;
+import com.google.protobuf.MessageLite;
+
+import net.ixitxachitls.companion.data.Entry;
 
 /**
- * Base for all stored entry collections.
+ * An entry that cannot be changed once created.
  */
-public class StoredEntries {
-
-  protected Context context;
-
-  protected StoredEntries(Context context) {
-    this.context = context;
+public abstract class StaticEntry<P extends MessageLite> extends Entry<P> {
+  public StaticEntry(String name) {
+    super(name);
   }
 }

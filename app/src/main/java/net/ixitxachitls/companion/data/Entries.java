@@ -26,6 +26,7 @@ import android.support.annotation.Nullable;
 
 import com.google.inject.Singleton;
 
+import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.ui.Alert;
 
 import java.io.IOException;

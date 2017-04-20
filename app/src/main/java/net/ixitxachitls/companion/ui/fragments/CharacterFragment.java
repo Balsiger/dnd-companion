@@ -29,9 +29,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Campaign;
-import net.ixitxachitls.companion.data.Campaigns;
-import net.ixitxachitls.companion.data.Character;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.Setup;
 

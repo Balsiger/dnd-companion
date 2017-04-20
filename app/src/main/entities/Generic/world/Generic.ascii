@@ -5,6 +5,9 @@ entity {
   short_description: "A generic world"
 }
 calendar {
+  year {
+    start: 2017;
+  }
   month {
     name: "January"
     days: 31

@@ -31,6 +31,7 @@ import com.google.common.base.Strings;
 import com.google.inject.Singleton;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.data.dynamics.StoredEntry;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;

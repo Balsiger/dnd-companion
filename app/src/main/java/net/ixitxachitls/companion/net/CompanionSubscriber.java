@@ -30,8 +30,8 @@ import android.util.Log;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 
-import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.util.Misc;
 

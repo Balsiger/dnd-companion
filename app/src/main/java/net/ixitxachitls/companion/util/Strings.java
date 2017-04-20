@@ -28,6 +28,50 @@ import com.google.common.base.Joiner;
  */
 public class Strings {
   public static final Joiner COMMA_JOINER = Joiner.on(", ");
+  private static final String SPACES =
+      "                                                                      "
+          + "                                                                     "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      "
+          + "                                                                      ";
+  private static final String ZEROES =
+      "000000000000000000000000000000000000000000000000000000000000000000000000"
+          + "0000000000000000000000000000000000000000000000000000000000000000000000"
+          + "0000000000000000000000000000000000000000000000000000000000000000000000"
+          + "0000000000000000000000000000000000000000000000000000000000000000000000";
 
   private Strings() {}
+
+  public static String pad(String inText, int inLength, boolean inLeft)
+  {
+    if(inText.length() >= inLength)
+      return inText;
+
+    if(inLeft)
+      return SPACES.substring(0, inLength - inText.length()) + inText;
+    else
+      return inText + SPACES.substring(0, inLength - inText.length());
+  }
+
+  public static String pad(long inNumber, int inLength, boolean inLeft)
+  {
+    String text = Long.toString(inNumber);
+
+    if(text.length() >= inLength)
+      return text;
+
+    if(inLeft)
+      return ZEROES.substring(0, inLength - text.length()) + text;
+    else
+      return text + SPACES.substring(0, inLength - text.length());
+  }
 }

@@ -36,6 +36,7 @@ import net.ixitachitls.companion.R;
 /**
  * Fragment for editing values.
  */
+@Deprecated
 public abstract class EditFragment extends DialogFragment {
 
   private static final String ARG_TITLE = "title";

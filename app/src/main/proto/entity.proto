@@ -29,7 +29,6 @@ message WorldProto {
     repeated string surename = 5;
   }
   repeated Names names = 3;
-
 }
 
 message MonsterProto {

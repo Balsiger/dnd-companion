@@ -19,10 +19,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data;
+package net.ixitxachitls.companion.data.dynamics;
 
+import com.google.common.base.Optional;
 import com.google.common.base.Strings;
 
+import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.statics.World;
+import net.ixitxachitls.companion.data.values.Calendar;
+import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -36,25 +42,36 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   public static final int DEFAULT_CAMPAIGN_ID = -1;
 
   private String campaignId = "";
-  private String world = "";
+  private World world;
   private String dm = "";
   private boolean remote = false;
   private boolean published = false;
+  private CampaignDate date;
 
   private Campaign(long id, String name) {
     super(id, name, DataBaseContentProvider.CAMPAIGNS);
+    world = Entries.get().getWorlds().get("Generic").get();
+    date = new CampaignDate(world.getCalendar());
   }
 
   public String getWorld() {
-    return world;
+    return world.getName();
   }
 
   public String getDm() {
     return dm;
   }
 
+  public Calendar getCalendar() {
+    return world.getCalendar();
+  }
+
   public String getCampaignId() {
     return campaignId;
+  }
+
+  public CampaignDate getDate() {
+    return date;
   }
 
   public String getServerId() {
@@ -73,8 +90,18 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return published;
   }
 
-  public void setWorld(String world) {
-    this.world = world;
+  public void setWorld(String name) {
+    Optional<World> world = Entries.get().getWorlds().get(name);
+    if (world.isPresent())
+      this.world = world.get();
+    else
+      // We "know" it should be there.
+      this.world = Entries.get().getWorlds().get("Generic").get();
+  }
+
+  public void setDate(CampaignDate date) {
+    this.date = date;
+    store();
   }
 
   public void publish() {
@@ -90,10 +117,11 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return Data.CampaignProto.newBuilder()
         .setId(campaignId)
         .setName(name)
-        .setWorld(world)
+        .setWorld(world.getName())
         .setRemote(remote)
         .setPublished(published)
         .setDm(dm)
+        .setDate(date.toProto())
         .build();
   }
 
@@ -117,10 +145,12 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     Campaign campaign = new Campaign(id, proto.getName());
     campaign.campaignId =
         proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
-    campaign.world = proto.getWorld();
+    campaign.world = Entries.get().getWorlds().get(proto.getWorld())
+      .or(Entries.get().getWorlds().get("Generic").get());
     campaign.remote = proto.getRemote();
     campaign.dm = proto.getDm();
     campaign.published = proto.getPublished();
+    campaign.date = CampaignDate.fromProto(campaign.getCalendar(), proto.getDate());
 
     return campaign;
   }
@@ -129,19 +159,6 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     Campaign campaign = fromProto(0, proto);
     campaign.campaignId += "-remote";
     campaign.remote = true;
-
-    return campaign;
-  }
-
-  public static Campaign fromProto(String campaignId, Data.CampaignProto proto) {
-    return null;
-  }
-
-  private static Campaign setData(Campaign campaign, Data.CampaignProto proto) {
-    campaign.world = proto.getWorld();
-    campaign.remote = proto.getRemote();
-    campaign.dm = proto.getDm();
-    campaign.published = proto.getPublished();
 
     return campaign;
   }

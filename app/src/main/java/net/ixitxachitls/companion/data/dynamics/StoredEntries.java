@@ -19,35 +19,18 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data;
+package net.ixitxachitls.companion.data.dynamics;
 
-import net.ixitxachitls.companion.proto.Entity;
+import android.content.Context;
 
 /**
- * The representation of a monster.
+ * Base for all stored entry collections.
  */
-public class Monster extends Entry<Entity.MonsterProto> {
+public class StoredEntries {
 
-  public static final String TYPE = "monster";
+  protected Context context;
 
-  private boolean mPrimaryRace;
-
-  protected Monster(String name) {
-    super(name);
-  }
-
-  public static Entity.MonsterProto defaultProto() {
-    return Entity.MonsterProto.getDefaultInstance();
-  }
-
-  public static Monster fromProto(Entity.MonsterProto proto) {
-    Monster monster = new Monster(proto.getEntity().getName());
-    monster.mPrimaryRace = proto.getMainRace();
-
-    return monster;
-  }
-
-  public boolean isPrimaryRace() {
-    return mPrimaryRace;
+  protected StoredEntries(Context context) {
+    this.context = context;
   }
 }

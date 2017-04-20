@@ -19,35 +19,38 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data;
+package net.ixitxachitls.companion.data.statics;
 
+import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.proto.Entity;
 
 /**
- * The representation of a monster.
+ * Data entity for world information.
  */
-public class Monster extends Entry<Entity.MonsterProto> {
+public class World extends StaticEntry<Entity.WorldProto> {
 
-  public static final String TYPE = "monster";
+  public static final String TYPE = "world";
 
-  private boolean mPrimaryRace;
+  private final Calendar calendar;
 
-  protected Monster(String name) {
+  protected World(String name, Calendar calendar) {
     super(name);
+
+    this.calendar = calendar;
   }
 
-  public static Entity.MonsterProto defaultProto() {
-    return Entity.MonsterProto.getDefaultInstance();
+  public Calendar getCalendar() {
+    return calendar;
   }
 
-  public static Monster fromProto(Entity.MonsterProto proto) {
-    Monster monster = new Monster(proto.getEntity().getName());
-    monster.mPrimaryRace = proto.getMainRace();
-
-    return monster;
+  public static Entity.WorldProto defaultProto() {
+    return Entity.WorldProto.getDefaultInstance();
   }
 
-  public boolean isPrimaryRace() {
-    return mPrimaryRace;
+  public static World fromProto(Entity.WorldProto proto) {
+    World world = new World(proto.getEntity().getName(),
+        Calendar.fromProto(proto.getCalendar()));
+
+    return world;
   }
 }

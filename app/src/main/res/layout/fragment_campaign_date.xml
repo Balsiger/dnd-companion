@@ -36,7 +36,7 @@
         android:id="@+id/year_minus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/campaign"
+        android:background="@color/campaign2"
         android:paddingBottom="10dp"
         android:paddingEnd="10dp"
         android:paddingStart="20dp"
@@ -46,13 +46,14 @@
         android:textSize="24sp"
         android:textStyle="bold"/>
 
-    <TextView
+    <EditText
         android:id="@+id/year"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/campaign"
+        android:background="@color/campaign2"
         android:padding="10dp"
+        android:inputType="number"
         android:text="Year"
         android:textAlignment="center"
         android:textColor="@android:color/black"
@@ -63,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:background="@color/campaign"
+        android:background="@color/campaign2"
         android:paddingBottom="10dp"
         android:paddingEnd="20dp"
         android:paddingStart="10dp"
@@ -84,7 +85,7 @@
         android:id="@+id/month_minus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/campaign"
+        android:background="@color/campaign2"
         android:paddingBottom="10dp"
         android:paddingEnd="10dp"
         android:paddingStart="20dp"
@@ -99,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/campaign"
+        android:background="@color/campaign2"
         android:padding="10dp"
         android:text="Month"
         android:textAlignment="center"
@@ -111,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:background="@color/campaign"
+        android:background="@color/campaign2"
         android:paddingBottom="10dp"
         android:paddingEnd="20dp"
         android:paddingStart="10dp"
@@ -123,7 +124,114 @@
   </LinearLayout>
 
   <GridView
+      android:id="@+id/days"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
+      android:layout_height="match_parent"
+      android:layout_margin="10dp"
+      android:layout_weight="1"
+      android:background="@color/white"
+      android:columnWidth="70dp"
+      android:horizontalSpacing="5dp"
+      android:numColumns="auto_fit"
+      android:stretchMode="columnWidth"
+      android:textAlignment="center"
+      android:verticalSpacing="5dp"/>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:orientation="horizontal"
+      android:padding="20dp">
+
+    <EditText
+        android:id="@+id/hours"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:selectAllOnFocus="true"
+        android:textSize="36sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=":"
+        android:textSize="36sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/minutes"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:selectAllOnFocus="true"
+        android:textSize="36sp"
+        android:textStyle="bold"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:orientation="horizontal"
+      android:padding="20dp">
+
+    <Button
+        android:id="@+id/plus_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="+1"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/plus_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="+5"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/plus_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="+15"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/plus_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="+30"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/plus_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="+60"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/night"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="night"
+        android:textSize="18sp"/>
+
+  </LinearLayout>
 
 </LinearLayout>

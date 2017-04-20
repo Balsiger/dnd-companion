@@ -30,9 +30,8 @@ import android.util.Log;
 import com.google.common.base.Joiner;
 import com.google.common.base.Strings;
 
-import net.ixitxachitls.companion.data.Campaign;
-import net.ixitxachitls.companion.data.Character;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.net.InetAddress;
