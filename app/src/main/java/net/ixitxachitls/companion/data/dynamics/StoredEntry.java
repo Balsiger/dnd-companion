@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 
 import com.google.protobuf.MessageLite;
 
@@ -36,6 +37,7 @@ import net.ixitxachitls.companion.storage.DataBase;
 public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P> {
   private long id;
   private final Uri dbUrl;
+  private @Nullable P proto = null;
 
   protected StoredEntry(long id, String name, Uri dbUrl) {
     super(name);
@@ -44,9 +46,9 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     this.dbUrl = dbUrl;
   }
 
-  public ContentValues toValues() {
+  private static ContentValues toValues(MessageLite proto) {
     ContentValues values = new ContentValues();
-    values.put(DataBase.COLUMN_PROTO, toProto().toByteArray());
+    values.put(DataBase.COLUMN_PROTO, proto.toByteArray());
 
     return values;
   }
@@ -64,13 +66,22 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     this.id = id;
   }
 
-  public void store() {
+  public boolean store() {
+    P newProto = toProto();
+
+    if (newProto.equals(proto)) {
+      return false;
+    }
+
     if (id == 0) {
-      Uri row = Entries.getContext().getContentResolver().insert(dbUrl, toValues());
+      Uri row = Entries.getContext().getContentResolver().insert(dbUrl, toValues(newProto));
       id = ContentUris.parseId(row);
     } else {
-      Entries.getContext().getContentResolver().update(dbUrl, toValues(),
+      Entries.getContext().getContentResolver().update(dbUrl, toValues(newProto),
           "id = " + id, null);
     }
+
+    proto = newProto;
+    return true;
   }
 }

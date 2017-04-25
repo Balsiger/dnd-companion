@@ -33,7 +33,7 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBase;
-import net.ixitxachitls.companion.ui.edit.EditLevelFragment;
+import net.ixitxachitls.companion.ui.dialogs.EditLevelDialog;
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
 
 import java.util.ArrayList;
@@ -87,8 +87,8 @@ public class CharacterActivity extends AppCompatActivity {
 
   private boolean editLevel(String value, int position) {
     Optional<Character.Level> level = mCharacter.getLevel(position);
-    EditLevelFragment edit = EditLevelFragment.newInstance(R.string.character_edit_level,
-        getColor(R.color.character),  level.isPresent()
+    EditLevelDialog edit = EditLevelDialog.newInstance(R.string.character_edit_level,
+        R.color.character,  level.isPresent()
             ? level.get().toProto() : Data.CharacterProto.Level.getDefaultInstance(),
         position + 1);
     edit.setListener(v -> updateLevel(v, position));

@@ -27,11 +27,14 @@ import com.google.common.base.Strings;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.statics.World;
+import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+
+import java.util.List;
 
 /**
  * A campaign with all its data.
@@ -47,11 +50,13 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   private boolean remote = false;
   private boolean published = false;
   private CampaignDate date;
+  private Battle battle;
 
   private Campaign(long id, String name) {
     super(id, name, DataBaseContentProvider.CAMPAIGNS);
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar());
+    battle = new Battle(this);
   }
 
   public String getWorld() {
@@ -70,8 +75,16 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return campaignId;
   }
 
+  public List<Character> getCharacters() {
+    return Characters.get().getCharacters(getCampaignId());
+  }
+
   public CampaignDate getDate() {
     return date;
+  }
+
+  public Battle getBattle() {
+    return battle;
   }
 
   public String getServerId() {
@@ -122,6 +135,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
         .setPublished(published)
         .setDm(dm)
         .setDate(date.toProto())
+        .setBattle(battle.toProto())
         .build();
   }
 
@@ -151,6 +165,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     campaign.dm = proto.getDm();
     campaign.published = proto.getPublished();
     campaign.date = CampaignDate.fromProto(campaign.getCalendar(), proto.getDate());
+    campaign.battle = Battle.fromProto(campaign, proto.getBattle());
 
     return campaign;
   }
@@ -164,17 +179,21 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   @Override
-  public void store() {
-    super.store();
+  public boolean store() {
+    boolean changed = super.store();
     if (Strings.isNullOrEmpty(campaignId)) {
       // Now we finally have an id.
       campaignId = Settings.get().getAppId() + "-" + getId();
       super.store();
     }
 
-    Campaigns.get().ensureAdded(this);
-    if (published) {
-      CompanionPublisher.get().publish(this);
+    if (changed) {
+      Campaigns.get().ensureAdded(this);
+      if (published) {
+        CompanionPublisher.get().publish(this);
+      }
     }
+
+    return changed;
   }
 }

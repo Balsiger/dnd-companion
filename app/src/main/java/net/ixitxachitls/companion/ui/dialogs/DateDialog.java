@@ -19,7 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.fragments;
+package net.ixitxachitls.companion.ui.dialogs;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -28,6 +28,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.text.InputFilter;
 import android.text.Spanned;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -49,8 +50,9 @@ import net.ixitxachitls.companion.ui.Setup;
 /**
  * Fragment for editing a campaign date.
  */
-public class CampaignDateFragment extends EditFragment {
+public class DateDialog extends Dialog {
 
+  private static final String TAG = "DateDialog";
   private static final String ARG_ID = "id";
 
   private Campaign campaign;
@@ -63,18 +65,18 @@ public class CampaignDateFragment extends EditFragment {
   private EditText hours;
   private EditText minutes;
 
-  public CampaignDateFragment() {}
+  public DateDialog() {}
 
-  public static CampaignDateFragment newInstance(String campaignId) {
-    CampaignDateFragment fragment = new CampaignDateFragment();
-    fragment.setArguments(arguments(R.layout.fragment_campaign_date,
+  public static DateDialog newInstance(String campaignId) {
+    DateDialog dialog = new DateDialog();
+    dialog.setArguments(arguments(R.layout.dialog_campaign_date,
         R.string.edit_campaign_date, R.color.campaign, campaignId));
-    return fragment;
+    return dialog;
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int colorId, String campaignId) {
-    Bundle arguments = EditFragment.arguments(layoutId, titleId, colorId);
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
     arguments.putString(ARG_ID, campaignId);
     return arguments;
   }
@@ -145,7 +147,11 @@ public class CampaignDateFragment extends EditFragment {
   }
 
   private void editYear() {
-    yearShown = Integer.parseInt(year.getText().toString() );
+    try {
+      yearShown = Integer.parseInt(year.getText().toString());
+    } catch(NumberFormatException e) {
+      Log.d(TAG, "Invalid year: " + year.getText());
+    }
   }
 
   private void yearMinus() {

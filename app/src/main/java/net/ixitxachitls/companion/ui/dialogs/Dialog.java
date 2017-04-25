@@ -19,7 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.fragments;
+package net.ixitxachitls.companion.ui.dialogs;
 
 import android.app.DialogFragment;
 import android.app.Fragment;
@@ -46,7 +46,7 @@ import net.ixitxachitls.companion.ui.activities.MainActivity;
 /**
  * Base for all the edit fragments for the companion.
  */
-public abstract class EditFragment extends DialogFragment {
+public abstract class Dialog extends DialogFragment {
 
   private static final String ARG_LAYOUT = "layout";
   private static final String ARG_TITLE = "title";
@@ -62,21 +62,21 @@ public abstract class EditFragment extends DialogFragment {
   protected int color;
 
   // Required empty constructor, don't add anything here.
-  protected EditFragment() {}
+  protected Dialog() {}
 
   @FunctionalInterface
   public interface AttachAction {
-    public void attached(EditFragment fragment);
+    public void attached(Dialog fragment);
   }
 
   @FunctionalInterface
   public interface CancelAction {
-    public void cancel(EditFragment fragment);
+    public void cancel(Dialog fragment);
   }
 
   @FunctionalInterface
   public interface SaveAction {
-    public void save(EditFragment fragment);
+    public void save(Dialog fragment);
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
@@ -192,7 +192,7 @@ public abstract class EditFragment extends DialogFragment {
   public void onDestroyView() {
     super.onDestroyView();
     MainActivity activity = (MainActivity) getActivity();
-    getFragmentManager().popBackStack();
+    //getFragmentManager().popBackStack();
     activity.refresh();
   }
 

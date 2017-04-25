@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ Copyright (c) 2017-{2017} Peter Balsiger
   ~ All rights reserved
@@ -19,19 +20,9 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<resources>
-  <declare-styleable name="EditAbility">
-    <attr name="label" format="string"/>
-  </declare-styleable>
-
-  <declare-styleable name="TitleView">
-    <attr name="title" format="string"/>
-    <attr name="subtitle" format="string"/>
-    <attr name="color" format="color"/>
-    <attr name="dark" format="boolean"/>
-  </declare-styleable>
-
-  <declare-styleable name="DiceView">
-    <attr name="modifier_label" format="string"/>
-  </declare-styleable>
-</resources>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+  <solid android:color="#FFFFFF"/>
+  <stroke android:width="3dip" android:color="#B1BCBE" />
+  <corners android:radius="10dip"/>
+  <padding android:left="0dip" android:top="0dip" android:right="0dip" android:bottom="0dip" />
+</shape>

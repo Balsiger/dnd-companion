@@ -34,7 +34,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
-      android:paddingBottom="20dp"
+      android:paddingBottom="30dp"
       app:label="STR"/>
 
   <view

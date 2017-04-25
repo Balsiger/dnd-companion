@@ -29,7 +29,7 @@ import net.ixitxachitls.companion.ui.activities.MainActivity;
  * Base fragment for all our non-dialog fragments
  */
 public abstract class CompanionFragment extends Fragment {
-  public enum Type { settings, campaigns, campaign, character, };
+  public enum Type { settings, campaigns, campaign, character, battle, };
 
   private final Type type;
 

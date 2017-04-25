@@ -68,7 +68,7 @@ public class ConfirmationDialog {
   }
 
   public ConfirmationDialog no(Action action) {
-    dialog.setPositiveButton(android.R.string.no, new DialogInterface.OnClickListener() {
+    dialog.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
       @Override
       public void onClick(DialogInterface dialog, int whichButton) {
         action.execute();

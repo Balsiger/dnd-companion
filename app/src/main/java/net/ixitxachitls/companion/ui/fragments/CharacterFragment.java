@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +52,7 @@ public class CharacterFragment extends CompanionFragment {
   private TextView intelligence;
   private TextView wisdom;
   private TextView charisma;
+  private FloatingActionButton battle;
 
   public CharacterFragment() {
     super(Type.character);
@@ -77,7 +79,15 @@ public class CharacterFragment extends CompanionFragment {
     Setup.textView(view, R.id.charisma_label, this::editAbilities);
     charisma = Setup.textView(view, R.id.charisma, this::editAbilities);
 
+    battle = Setup.floatingButton(view, R.id.battle, this::gotoBattle);
+
     return view;
+  }
+
+  private void gotoBattle() {
+    if (canEdit()) {
+      getMain().showBattle(character);
+    }
   }
 
   public void showCharacter(Character character) {
@@ -101,7 +111,7 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    EditAbilitiesFragment.newInstance(character.getCharacterId(), character.getCampaignId())
+    EditAbilitiesDialog.newInstance(character.getCharacterId(), character.getCampaignId())
         .display(getFragmentManager());
   }
 
@@ -129,5 +139,7 @@ public class CharacterFragment extends CompanionFragment {
         character.getWisdom() + " (" + Ability.modifier(character.getWisdom()) + ")");
     charisma.setText(
         character.getCharisma() + " (" + Ability.modifier(character.getCharisma()) + ")");
+
+    battle.setVisibility(canEdit() ? View.VISIBLE : View.GONE);
   }
 }

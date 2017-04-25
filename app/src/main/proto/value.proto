@@ -392,6 +392,13 @@ enum Gender {
   NONE_GENDER = 3;
 }
 
+enum BattleStatus {
+  ENDED = 0;
+  STARTING = 1;
+  SURPRISED = 2;
+  ONGOING = 3;
+}
+
 
 
 

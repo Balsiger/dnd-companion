@@ -38,11 +38,12 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 /**
  * Fragment for editing a campaign
  */
-public class EditCampaignFragment extends EditFragment {
+public class EditCampaignFragment extends Dialog {
 
   private static final String ARG_ID = "id";
 
@@ -75,7 +76,7 @@ public class EditCampaignFragment extends EditFragment {
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int colorId, String campaignId) {
-    Bundle arguments = EditFragment.arguments(layoutId, titleId, colorId);
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
     arguments.putString(ARG_ID, campaignId);
     return arguments;
   }

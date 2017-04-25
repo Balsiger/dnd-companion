@@ -34,12 +34,13 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.views.EditAbility;
 
 /**
  * Dialog fragment to edit the abilities of a character or monster.
  */
-public class EditAbilitiesFragment extends EditFragment {
+public class EditAbilitiesDialog extends Dialog {
 
   private static final String ARG_ID = "id";
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
@@ -55,18 +56,18 @@ public class EditAbilitiesFragment extends EditFragment {
   private Campaign campaign;
   private Character character;
 
-  public EditAbilitiesFragment() {}
+  public EditAbilitiesDialog() {}
 
-  public static EditAbilitiesFragment newInstance(String characterId, String campaignId) {
-    EditAbilitiesFragment fragment = new EditAbilitiesFragment();
-    fragment.setArguments(arguments(R.layout.fragment_edit_abilities,
+  public static EditAbilitiesDialog newInstance(String characterId, String campaignId) {
+    EditAbilitiesDialog fragment = new EditAbilitiesDialog();
+    fragment.setArguments(arguments(R.layout.dialog_edit_abilities,
         R.string.edit_abilities, R.color.character, characterId, campaignId));
     return fragment;
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int colorId, String characterId, String campaignId) {
-    Bundle arguments = EditFragment.arguments(layoutId, titleId, colorId);
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
     arguments.putString(ARG_ID, characterId);
     arguments.putString(ARG_CAMPAIGN_ID, campaignId);
     return arguments;

@@ -29,13 +29,14 @@ import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 import java.util.ArrayList;
 
 /**
  * Simple fragmemt to select an item from a list.
  */
-public class ListSelectFragment extends EditFragment {
+public class ListSelectFragment extends Dialog {
 
   private static final String ARG_SELECTED = "selected";
   private static final String ARG_VALUES = "values";
@@ -63,7 +64,7 @@ public class ListSelectFragment extends EditFragment {
 
   protected static Bundle arguments(int layoutId, int titleId, int color, String selected,
                                     ArrayList<String> values) {
-    Bundle arguments = EditFragment.arguments(layoutId, titleId, color);
+    Bundle arguments = Dialog.arguments(layoutId, titleId, color);
     arguments.putString(ARG_SELECTED, selected);
     arguments.putStringArrayList(ARG_VALUES, values);
     return arguments;

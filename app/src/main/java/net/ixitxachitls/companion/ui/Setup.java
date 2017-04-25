@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui;
 
 import android.content.res.ColorStateList;
+import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.text.Editable;
@@ -36,6 +37,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.NumberPicker;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -192,7 +194,7 @@ public class Setup {
     return button;
   }
 
-  public static ListView list(View container, int id, int itemLayout,
+  public static ListView list(View container, @IdRes int id, int itemLayout,
                               ArrayList<String> values, String selected,
                               ListSelectFragment.SelectAction action) {
     ListView list = (ListView) container.findViewById(id);
@@ -209,6 +211,19 @@ public class Setup {
 
     return list;
   }
+
+  public static NumberPicker numberPicker(View container, @IdRes int id, Action action) {
+    NumberPicker picker = (NumberPicker) container.findViewById(id);
+    picker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+      @Override
+      public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+        action.execute();
+      }
+    });
+
+    return picker;
+  }
+
 
   public static <T> ListView listView(View container, int id, ListAdapter<T> itemAdapter,
                                       SelectAction action) {

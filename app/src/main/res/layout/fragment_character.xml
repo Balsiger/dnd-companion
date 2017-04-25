@@ -28,189 +28,200 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <RelativeLayout
-        android:id="@+id/title_bar"
+  <RelativeLayout
+      android:id="@+id/title_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/character"
+      android:orientation="vertical"
+      android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/character"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:textAppearance="@android:style/TextAppearance.Material.Large"
-            android:textSize="24sp"
-            android:textStyle="normal|bold"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
-
-        <TextView
-            android:id="@+id/subtitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/title"
-            android:textSize="18sp"/>
-
-    </RelativeLayout>
+        android:layout_alignParentTop="true"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <TextView
-        android:id="@+id/strength_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title_bar"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="26dp"
-        android:text="STR"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/strength"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/strength_label"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/strength_label"
-        android:text="10 (+0)"
-        android:textSize="24sp"/>
-
-    <TextView
-        android:id="@+id/dexterity_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/strength"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="26dp"
-        android:text="DEX"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/dexterity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/dexterity_label"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/dexterity_label"
-        android:text="10 (+0)"
-        android:textSize="24sp"/>
-
-    <TextView
-        android:id="@+id/constitution_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/dexterity"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="26dp"
-        android:text="CON"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/constitution"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/constitution_label"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/constitution_label"
-        android:text="10 (+0)"
-        android:textSize="24sp"/>
-
-    <TextView
-        android:id="@+id/intelligence_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/constitution"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="26dp"
-        android:text="INT"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/intelligence"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/intelligence_label"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/intelligence_label"
-        android:text="10 (+0)"
-        android:textSize="24sp"/>
-
-    <TextView
-        android:id="@+id/wisdom_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/intelligence"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="26dp"
-        android:text="WIS"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/wisdom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/wisdom_label"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/wisdom_label"
-        android:text="10 (+0)"
-        android:textSize="24sp"/>
-
-    <TextView
-        android:id="@+id/charisma_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/wisdom"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="26dp"
-        android:text="CHR"
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/charisma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/charisma_label"
-        android:layout_below="@+id/title_bar"
-        android:layout_toEndOf="@+id/charisma_label"
-        android:text="10 (+0)"
-        android:textSize="24sp"/>
-
-    <TextView
-        android:id="@+id/characterLevelLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/strength_label"
-        android:layout_marginTop="50dp"
-        android:text="@string/character_label_level"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:id="@+id/characterLevelValue"
+        android:id="@+id/subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/strength_label"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="50dp"
+        android:layout_below="@+id/title"
         android:textSize="18sp"/>
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/strength_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/title_bar"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="26dp"
+      android:text="STR"
+      android:textSize="18sp"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/strength"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/strength_label"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/strength_label"
+      android:text="10 (+0)"
+      android:textSize="24sp"/>
+
+  <TextView
+      android:id="@+id/dexterity_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/strength"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="26dp"
+      android:text="DEX"
+      android:textSize="18sp"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/dexterity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/dexterity_label"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/dexterity_label"
+      android:text="10 (+0)"
+      android:textSize="24sp"/>
+
+  <TextView
+      android:id="@+id/constitution_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/dexterity"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="26dp"
+      android:text="CON"
+      android:textSize="18sp"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/constitution"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/constitution_label"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/constitution_label"
+      android:text="10 (+0)"
+      android:textSize="24sp"/>
+
+  <TextView
+      android:id="@+id/intelligence_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/constitution"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="26dp"
+      android:text="INT"
+      android:textSize="18sp"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/intelligence"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/intelligence_label"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/intelligence_label"
+      android:text="10 (+0)"
+      android:textSize="24sp"/>
+
+  <TextView
+      android:id="@+id/wisdom_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/intelligence"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="26dp"
+      android:text="WIS"
+      android:textSize="18sp"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/wisdom"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/wisdom_label"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/wisdom_label"
+      android:text="10 (+0)"
+      android:textSize="24sp"/>
+
+  <TextView
+      android:id="@+id/charisma_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/wisdom"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="26dp"
+      android:text="CHR"
+      android:textSize="18sp"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/charisma"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/charisma_label"
+      android:layout_below="@+id/title_bar"
+      android:layout_toEndOf="@+id/charisma_label"
+      android:text="10 (+0)"
+      android:textSize="24sp"/>
+
+  <TextView
+      android:id="@+id/characterLevelLabel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/strength_label"
+      android:layout_marginTop="50dp"
+      android:text="@string/character_label_level"
+      android:textSize="18sp"/>
+
+  <TextView
+      android:id="@+id/characterLevelValue"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/strength_label"
+      android:layout_marginStart="75dp"
+      android:layout_marginTop="50dp"
+      android:textSize="18sp"/>
+
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/battle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_gravity="bottom|end"
+      android:layout_margin="@dimen/fab_margin"
+      app:backgroundTint="@color/battle"
+      app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
 
 </RelativeLayout>

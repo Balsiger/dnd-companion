@@ -43,16 +43,17 @@ import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.dialogs.Dialog;
+import net.ixitxachitls.companion.ui.fragments.BattleFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCharacterFragment;
-import net.ixitxachitls.companion.ui.fragments.EditFragment;
 import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
 
-public class MainActivity extends CompanionActivity implements EditFragment.AttachAction {
+public class MainActivity extends CompanionActivity implements Dialog.AttachAction {
 
   private static final String TAG = "Main";
   private static final String SAVE_FRAGMENT = "fragment";
@@ -68,6 +69,7 @@ public class MainActivity extends CompanionActivity implements EditFragment.Atta
   private static CampaignsFragment campaignsFragment;
   private static SettingsFragment settingsFragment;
   private static CharacterFragment characterFragment;
+  private static BattleFragment battleFragment;
 
   public void status(String message) {
     this.status.setText(message);
@@ -175,6 +177,12 @@ public class MainActivity extends CompanionActivity implements EditFragment.Atta
           campaignFragment = new CampaignFragment();
         }
         return show(campaignFragment);
+
+      case battle:
+        if (battleFragment == null) {
+          battleFragment = new BattleFragment();
+        }
+        return show(battleFragment);
     }
   }
 
@@ -203,12 +211,22 @@ public class MainActivity extends CompanionActivity implements EditFragment.Atta
     characterFragment.showCharacter(character);
   }
 
+  public void showBattle(Campaign campaign) {
+    show(CompanionFragment.Type.battle);
+    battleFragment.setCampaign(campaign);
+  }
+
+  public void showBattle(Character character) {
+    show(CompanionFragment.Type.battle);
+    battleFragment.setCharacter(character);
+  }
+
   public void showLast() {
     getFragmentManager().popBackStackImmediate();
     refresh();
   }
 
-  public void attached(EditFragment fragment) {
+  public void attached(Dialog fragment) {
     if (fragment instanceof EditCampaignFragment) {
       ((EditCampaignFragment)fragment).setSaveListener(this::saveCampaign);
     } else if (fragment instanceof EditCharacterFragment) {

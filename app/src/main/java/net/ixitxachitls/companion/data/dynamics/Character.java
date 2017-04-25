@@ -47,6 +47,7 @@ import java.util.List;
 public class Character extends StoredEntry<Data.CharacterProto> {
   public static final String TABLE = "characters";
   private static final String TAG = "Characters";
+  private static final int NO_INITIATIVE = 200;
 
   private String characterId = "";
   private String campaignId = "";
@@ -60,6 +61,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   private int wisdom;
   private int charisma;
   private List<Level> mLevels = new ArrayList<>();
+  private int initiative = NO_INITIATIVE;
 
   public Character(long id, String name, String campaignId) {
     super(id, name, DataBaseContentProvider.CHARACTERS);
@@ -161,9 +163,27 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     }
   }
 
-  public void localize() {
-    characterId = characterId.replaceAll("-remote-", "-");
-    campaignId = campaignId.replaceAll("-remote$", "");
+  public boolean hasInitiative() {
+    return initiative != NO_INITIATIVE;
+  }
+
+  public int getInitiative() {
+    return initiative;
+  }
+
+  public int initiativeModifier() {
+    // TODO: this needs treatment of things like feats and items.
+    return Ability.modifier(dexterity);
+  }
+
+  public void clearBattle() {
+    this.initiative = NO_INITIATIVE;
+    store();
+  }
+
+  public void setBattle(int initiative) {
+    this.initiative = initiative;
+    store();
   }
 
   public static Character createNew(String campaignId) {
@@ -193,6 +213,9 @@ public class Character extends StoredEntry<Data.CharacterProto> {
             .setIntelligence(intelligence)
             .setWisdom(wisdom)
             .setCharisma(charisma)
+            .build())
+        .setBattle(Data.CharacterProto.Battle.newBuilder()
+            .setInitiative(initiative)
             .build());
 
     if (mRace.isPresent()) {
@@ -206,11 +229,18 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     return proto.build();
   }
 
+  public static Character fromRemoteProto(Data.CharacterProto proto) {
+    return fromProto(0, proto.toBuilder()
+        .setCampaignId(proto.getCampaignId().replaceAll("-remote$", ""))
+        .setId(proto.getId() + "=remote")
+        .build());
+  }
+
   public static Character fromProto(long id, Data.CharacterProto proto) {
     Character character = new Character(id, proto.getName(), proto.getCampaignId());
     character.campaignId = proto.getCampaignId();
     character.characterId =
-        proto.getId().isEmpty() ? character.campaignId + "-" + id : proto.getId();
+        proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
     character.mRace = Entries.get().getMonsters().get(proto.getRace());
     character.mGender = Gender.fromProto(proto.getGender());
     character.playerName = proto.getPlayer();
@@ -220,6 +250,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     character.intelligence = proto.getAbilities().getIntelligence();
     character.wisdom = proto.getAbilities().getWisdom();
     character.charisma = proto.getAbilities().getCharisma();
+    character.initiative = proto.hasBattle() ? proto.getBattle().getInitiative() : NO_INITIATIVE;
 
     for (Data.CharacterProto.Level level : proto.getLevelList()) {
       character.mLevels.add(Character.fromProto(level));
@@ -354,18 +385,22 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   }
 
   @Override
-  public void store() {
+  public boolean store() {
     playerName = Settings.get().getNickname();
 
-    super.store();
+    boolean changed = super.store();
     if (com.google.common.base.Strings.isNullOrEmpty(characterId)) {
       // Now we finally have an id.
-      characterId = campaignId + "-" + getId();
-      super.store();
+      characterId = Settings.get().getAppId() + "-" + getId();
+      changed = super.store();
     }
 
-    Characters.get().addOrUpdate(this);
-    CompanionSubscriber.get().publish(this);
+    if (changed) {
+      Characters.get().addOrUpdate(this);
+      CompanionSubscriber.get().publish(this);
+    }
+
+    return changed;
   }
 
   public void publish() {

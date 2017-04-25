@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,6 +64,7 @@ public class CampaignFragment extends CompanionFragment {
   private ImageView remote;
   private FloatingActionButton addCharacter;
   private TextView date;
+  private FloatingActionButton battle;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -80,6 +82,7 @@ public class CampaignFragment extends CompanionFragment {
     local = Setup.imageView(view, R.id.local);
     remote = Setup.imageView(view, R.id.remote);
     addCharacter = Setup.floatingButton(view, R.id.add_character, this::createCharacter);
+    battle = Setup.floatingButton(view, R.id.battle, this::startBattle);
     date = Setup.textView(view, R.id.date, this::showDateFragment);
 
     // Setup list view.
@@ -106,9 +109,15 @@ public class CampaignFragment extends CompanionFragment {
     return view;
   }
 
+  private void startBattle() {
+    if (campaign.isLocal()) {
+      getMain().showBattle(campaign);
+    }
+  }
+
   public void showDateFragment() {
     if (campaign.isLocal()) {
-      CampaignDateFragment.newInstance(campaign.getCampaignId()).display(getFragmentManager());
+      DateDialog.newInstance(campaign.getCampaignId()).display(getFragmentManager());
     }
   }
 
@@ -189,8 +198,10 @@ public class CampaignFragment extends CompanionFragment {
 
     if (campaign.isLocal() && !campaign.isDefault()) {
       addCharacter.setVisibility(View.GONE);
+      battle.setVisibility(View.VISIBLE);
     } else {
       addCharacter.setVisibility(View.VISIBLE);
+      battle.setVisibility(View.GONE);
     }
 
     if (charactersAdapter != null) {

@@ -10,12 +10,15 @@
   <color name="bright">#ff0</color>
   <color name="light">#dd0</color>
   <color name="out">#444</color>
+  <color name="cell">#ccc</color>
+  <color name="selected">#ebf</color>
+  <color name="white">#fff</color>
 
   <color name="campaign">#f94</color>
   <color name="campaign2">#fc5</color>
   <color name="character">#7ef</color>
+  <color name="monster">#290</color>
 
-  <color name="cell">#ccc</color>
-  <color name="selected">#ebf</color>
-  <color name="white">#fff</color>
+  <color name="battle">#800</color>
+
 </resources>

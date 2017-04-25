@@ -42,11 +42,12 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 /**
  * Fragment for editing a character (main values).
  */
-public class EditCharacterFragment extends EditFragment {
+public class EditCharacterFragment extends Dialog {
 
   private static final String ARG_ID = "id";
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
@@ -80,7 +81,7 @@ public class EditCharacterFragment extends EditFragment {
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int colorId, String characterId, String campaignId) {
-    Bundle arguments = EditFragment.arguments(layoutId, titleId, colorId);
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
     arguments.putString(ARG_ID, characterId);
     arguments.putString(ARG_CAMPAIGN_ID, campaignId);
     return arguments;

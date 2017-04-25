@@ -155,8 +155,7 @@ public class CompanionApplication extends MultiDexApplication
     if (message.getProto().hasCharacter()) {
       Log.d(TAG, "received character " + message.getProto().getCharacter().getName()
           + " from " + message.getName());
-      Character character = Character.fromProto(0, message.getProto().getCharacter());
-      character.localize();
+      Character character = Character.fromRemoteProto(message.getProto().getCharacter());
       Characters.get().addOrUpdate(character);
     }
 

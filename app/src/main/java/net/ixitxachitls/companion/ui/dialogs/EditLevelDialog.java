@@ -19,15 +19,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.edit;
+package net.ixitxachitls.companion.ui.dialogs;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.ColorRes;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,12 +39,13 @@ import net.ixitxachitls.companion.data.Level;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.ui.edit.EditNumberFragment;
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
 
 /**
  * Simple fragmemt to execute a level.
  */
-public class EditLevelFragment extends EditFragment {
+public class EditLevelDialog extends Dialog {
   /*
   repeated ParametrizedEntityProto quality = 3;
   repeated ParametrizedEntityProto feat = 4;
@@ -55,28 +56,28 @@ public class EditLevelFragment extends EditFragment {
   private static final String ARG_PROTO = "proto";
   private static final String ARG_LEVEL = "level";
 
-  private Character.Level mLevel;
-  private int mLevelNumber;
-  private TextView mName;
-  private TextView mHp;
-  private @Nullable TextView mAbilityIncrease;
-  private Edit mEdit;
+  private Character.Level level;
+  private int levelNumber;
+  private TextView name;
+  private TextView hp;
+  private @Nullable TextView abilityIncrease;
+  private Edit edit;
 
-  public EditLevelFragment() {
+  public EditLevelDialog() {
     // Required empty public constructor
   }
 
-  public static EditLevelFragment newInstance(int titleId, int color,
-                                              Data.CharacterProto.Level levelProto, int level) {
-    EditLevelFragment fragment = new EditLevelFragment();
+  public static EditLevelDialog newInstance(@StringRes int titleId, @ColorRes int color,
+                                            Data.CharacterProto.Level levelProto, int level) {
+    EditLevelDialog fragment = new EditLevelDialog();
     Bundle args = arguments(titleId, color, levelProto, level);
     fragment.setArguments(args);
     return fragment;
   }
 
-  protected static Bundle arguments(int titleId, int color,
+  protected static Bundle arguments(@StringRes int titleId, @ColorRes int color,
                                     Data.CharacterProto.Level levelProto, int level) {
-    Bundle arguments = EditFragment.arguments(titleId, color);
+    Bundle arguments = Dialog.arguments(R.layout.fragment_edit_level, titleId, color);
     arguments.putByteArray(ARG_PROTO, levelProto.toByteArray());
     arguments.putInt(ARG_LEVEL, level);
     return arguments;
@@ -88,27 +89,25 @@ public class EditLevelFragment extends EditFragment {
 
     if (getArguments() != null) {
       try {
-        mLevel = Character.fromProto(
+        level = Character.fromProto(
             Data.CharacterProto.Level.parseFrom(getArguments().getByteArray(ARG_PROTO)));
       } catch (InvalidProtocolBufferException e) {
         Toast.makeText(getContext(), "Cannot parse proto: " + e, Toast.LENGTH_SHORT).show();
-        mLevel = new Character.Level("");
+        level = new Character.Level("");
       }
-      mLevelNumber = getArguments().getInt(ARG_LEVEL);
+      levelNumber = getArguments().getInt(ARG_LEVEL);
     } else {
-      mLevel = new Character.Level("");
-      mLevelNumber = 1;
+      level = new Character.Level("");
+      levelNumber = 1;
     }
   }
 
   @Override
-  public View onCreateContent(LayoutInflater inflater, ViewGroup container,
-                              Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.fragment_edit_level, container, false);
-    mName = setupTextView(view, R.id.name, this::editName);
-    mHp = setupTextView(view, R.id.hp, R.id.hp_label, this::editHp);
-    if (Level.hasAbilityIncrease(mLevelNumber) || mLevel.hasAbilityIncrease()) {
-      mAbilityIncrease = setupTextView(view, R.id.abilityIncrease, R.id.abilityIncreaseLabel,
+  public void createContent(View view) {
+    name = setupTextView(view, R.id.name, this::editName);
+    hp = setupTextView(view, R.id.hp, R.id.hp_label, this::editHp);
+    if (Level.hasAbilityIncrease(levelNumber) || level.hasAbilityIncrease()) {
+      abilityIncrease = setupTextView(view, R.id.abilityIncrease, R.id.abilityIncreaseLabel,
           this::editAbilityIncrease);
     } else {
       view.findViewById(R.id.abilityIncrease).setVisibility(View.GONE);
@@ -116,7 +115,6 @@ public class EditLevelFragment extends EditFragment {
     }
 
     update();
-    return view;
   }
 
   @FunctionalInterface
@@ -142,57 +140,57 @@ public class EditLevelFragment extends EditFragment {
   }
 
   public void setListener(Edit edit) {
-    mEdit = edit;
+    this.edit = edit;
   }
 
   public void editName() {
     ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_select_class,
-        mLevel.getName(), Entries.get().getLevels().getNames(), mColor);
+        level.getName(), Entries.get().getLevels().getNames(), color);
     edit.setSelectListener(this::updateName);
     edit.display(getFragmentManager());
   }
 
   public void editHp() {
     EditNumberFragment edit = EditNumberFragment.newInstance(R.string.hit_points,
-        R.string.hit_points, mLevel.getHp(), mColor);
+        R.string.hit_points, level.getHp(), color);
     edit.setListener(this::updateHp);
     edit.display(getFragmentManager());
   }
 
   private void editAbilityIncrease() {
     ListSelectFragment edit = ListSelectFragment.newInstance(
-        R.string.abilityIncreaseTitle, mLevel.getAbilityIncrease().getName(), Ability.names(),
-        mColor);
+        R.string.abilityIncreaseTitle, level.getAbilityIncrease().getName(), Ability.names(),
+        color);
     edit.setSelectListener(this::updateAbilityIncrease);
     edit.display(getFragmentManager());
   }
 
   private void updateName(String value, int position) {
-    mLevel.setName(value);
+    level.setName(value);
     update();
   }
 
   private void updateHp(int value) {
-    mLevel.setHp(value);
+    level.setHp(value);
     update();
   }
 
   private void updateAbilityIncrease(String value, int position) {
-    mLevel.setAbilityIncrease(Ability.fromName(value));
+    level.setAbilityIncrease(Ability.fromName(value));
     update();
   }
 
   private void update() {
-    if (mLevel.getName().isEmpty()) {
-      mName.setText("<" + getString(R.string.character_select_class) + ">");
+    if (level.getName().isEmpty()) {
+      name.setText("<" + getString(R.string.character_select_class) + ">");
     } else {
-      mName.setText(mLevel.getName());
+      name.setText(level.getName());
     }
 
-    mHp.setText(String.valueOf(mLevel.getHp()));
+    hp.setText(String.valueOf(level.getHp()));
 
-    if (mAbilityIncrease != null) {
-      mAbilityIncrease.setText(mLevel.getAbilityIncrease().getName());
+    if (abilityIncrease != null) {
+      abilityIncrease.setText(level.getAbilityIncrease().getName());
     }
   }
 
@@ -203,13 +201,12 @@ public class EditLevelFragment extends EditFragment {
 
   @Override
   public void onDismiss(DialogInterface dialog) {
-    if (mEdit != null) {
-      mEdit.edit(mLevel);
+    if (edit != null) {
+      edit.edit(level);
     } else {
       Log.wtf("execute", "listener not set");
     }
 
-    close();
     super.onDismiss(dialog);
   }
 }

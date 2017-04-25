@@ -25,6 +25,22 @@ message CampaignProto {
     int32 minute = 5;
   }
   Date date = 7;
+
+  message Battle {
+    BattleStatus status = 1;
+    int32 turn = 2;
+    repeated string initiative_order = 3;
+
+    message Combatant {
+      string name = 1;
+      int32 initiative_modifier = 2;
+      bool monster = 3;
+      bool waiting = 4;
+    }
+    repeated Combatant combatant = 4;
+    int32 current_combatant_index = 5;
+  }
+  Battle battle = 8;
 }
 
 message CharacterProto {
@@ -54,6 +70,11 @@ message CharacterProto {
     int32 charisma = 6;
   }
   Abilities abilities = 8;
+
+  message Battle {
+    int32 initiative = 1;
+  }
+  Battle battle = 9;
 }
 
 message CompanionMessageProto {

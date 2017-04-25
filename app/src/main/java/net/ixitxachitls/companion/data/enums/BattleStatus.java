@@ -26,19 +26,19 @@ import net.ixitxachitls.companion.proto.Value;
 import java.util.ArrayList;
 
 /**
- * Representation of a gender of an entity (character, npc, monster, ...).
+ * Status of a battle.
  */
-public enum Gender implements Enums.Named, Enums.Proto<Value.Gender> {
-  UNKNOWN("Unknown", "U", Value.Gender.UNKNOWN_GENDER),
-  FEMALE("Female", "F", Value.Gender.FEMALE),
-  MALE("Male", "M", Value.Gender.MALE),
-  OTHER("Other", "O", Value.Gender.NONE_GENDER);
+public enum BattleStatus implements Enums.Named, Enums.Proto<Value.BattleStatus> {
+  ENDED("Ended", "E", Value.BattleStatus.ENDED),
+  STARTING("Starting", "S", Value.BattleStatus.STARTING),
+  SURPRISED("Surprised", "U", Value.BattleStatus.SURPRISED),
+  ONGOING("Ongoing", "O", Value.BattleStatus.ONGOING);
 
   private final String name;
   private final String shortName;
-  private final Value.Gender proto;
+  private final Value.BattleStatus proto;
 
-  Gender(String name, String shortName, Value.Gender proto) {
+  BattleStatus(String name, String shortName, Value.BattleStatus proto) {
     this.name = name;
     this.shortName = shortName;
     this.proto = proto;
@@ -52,11 +52,11 @@ public enum Gender implements Enums.Named, Enums.Proto<Value.Gender> {
     return shortName;
   }
 
-  public Value.Gender toProto() {
+  public Value.BattleStatus toProto() {
     return proto;
   }
 
-  public static Gender fromProto(Value.Gender proto) {
+  public static BattleStatus fromProto(Value.BattleStatus proto) {
     return Enums.fromProto(proto, values());
   }
 
@@ -64,7 +64,7 @@ public enum Gender implements Enums.Named, Enums.Proto<Value.Gender> {
     return Enums.names(values());
   }
 
-  public static Gender fromName(String name) {
+  public static BattleStatus fromName(String name) {
     return Enums.fromName(name, values());
   }
 }
