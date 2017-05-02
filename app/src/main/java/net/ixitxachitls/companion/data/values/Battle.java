@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
 import net.ixitxachitls.companion.proto.Data;
@@ -42,6 +44,7 @@ public class Battle {
   private BattleStatus status;
   private int turn;
   private int currentCombatantIndex = 0;
+  private Optional<String> lastMonsterName = Optional.absent();
 
   public Battle(Campaign campaign) {
     this(campaign, BattleStatus.ENDED, 0, 0, Collections.emptyList());
@@ -77,6 +80,7 @@ public class Battle {
   }
 
   public void addMonster(String name, int initiativeModifier) {
+    lastMonsterName = Optional.of(name);
     combatants.add(new Combatant(name, RANDOM.nextInt(20) + initiativeModifier, true, false));
     campaign.store();
   }
@@ -140,6 +144,10 @@ public class Battle {
     status = BattleStatus.ENDED;
     combatants.clear();
     campaign.store();
+  }
+
+  public Optional<String> getLastMonsterName() {
+    return lastMonsterName;
   }
 
   public void removeCombatant() {

@@ -56,6 +56,8 @@ public class CompanionApplication extends MultiDexApplication
   private static Handler messageHandler;
   private static MessageChecker messageChecker;
   private @Nullable CompanionActivity currentActivity;
+  private int campaignStatusCount = 0;
+  private int characterStatusCount = 0;
 
   @Override
   public void onCreate() {
@@ -130,9 +132,8 @@ public class CompanionApplication extends MultiDexApplication
       Campaign campaign = Campaign.fromRemoteProto(message.getProto().getCampaign());
       Campaigns.get().addOrUpdate(campaign);
       Log.d(TAG, "received campaign " + campaign.getName());
-      if (currentActivity != null) {
-        currentActivity.refresh();
-      }
+      status(++campaignStatusCount + ": received campaign " + campaign.getName());
+      refresh();
 
       Characters.get().publish(campaign.getCampaignId());
     }
@@ -157,12 +158,28 @@ public class CompanionApplication extends MultiDexApplication
           + " from " + message.getName());
       Character character = Character.fromRemoteProto(message.getProto().getCharacter());
       Characters.get().addOrUpdate(character);
+      status(++characterStatusCount + ": received character "
+          + message.getProto().getCharacter().getName()
+          + " from " + message.getName());
+      refresh();
     }
 
     if (!message.getProto().getDebug().isEmpty()) {
       Toast.makeText(getApplicationContext(),
           message.getName() + ": " + message.getProto().getDebug(),
           Toast.LENGTH_LONG).show();
+    }
+  }
+
+  private void status(String message) {
+    if (currentActivity != null) {
+      currentActivity.status(message);
+    }
+  }
+
+  private void refresh() {
+    if (currentActivity != null) {
+      currentActivity.refresh();
     }
   }
 

@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
-import android.animation.ArgbEvaluator;
-import android.animation.ValueAnimator;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -31,7 +29,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
@@ -52,6 +49,7 @@ import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
+import net.ixitxachitls.companion.ui.views.IconView;
 
 public class MainActivity extends CompanionActivity implements Dialog.AttachAction {
 
@@ -60,7 +58,7 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
 
   // UI elements.
   private TextView status;
-  private ImageView online;
+  private IconView online;
   private TextView onlineStatus;
 
   // Fragments.
@@ -84,7 +82,8 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
 
     // Setup the status first, in case any fragment wants to set something.
     status = Setup.textView(container, R.id.status, null);
-    online = Setup.imageView(container, R.id.online, this::toggleOnlineStatus);
+    online = (IconView) container.findViewById(R.id.online);
+    online.setAction(this::toggleOnlineStatus);
     onlineStatus = Setup.textView(container, R.id.online_status, null);
 
     if (state == null || state.getString(SAVE_FRAGMENT) == null) {
@@ -95,7 +94,16 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
   }
 
   @Override
+  protected void onDestroy() {
+    super.onDestroy();
+
+    //currentFragment = null;
+  }
+
+  @Override
   protected void onSaveInstanceState(Bundle bundle) {
+    super.onSaveInstanceState(bundle);
+
     bundle.putString(SAVE_FRAGMENT, currentFragment.getType().toString());
   }
 
@@ -190,8 +198,8 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
     FragmentTransaction transaction = getFragmentManager()
         .beginTransaction();
 
-    if (currentFragment != null) {
-      transaction.addToBackStack(null);
+    if (currentFragment != null && fragment != currentFragment) {
+      transaction.addToBackStack(fragment.getClass().getSimpleName());
     }
 
     transaction.replace(R.id.content, fragment).commit();
@@ -258,20 +266,6 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
 
   @Override
   public void onlineBleep() {
-    Log.d(TAG, "online bleep");
-    ValueAnimator animator = ValueAnimator.ofObject(new ArgbEvaluator(),
-        getResources().getColor(R.color.bright, null),
-        getResources().getColor(R.color.light, null));
-    animator.setDuration(250);
-    animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-      @Override
-      public void onAnimationUpdate(ValueAnimator animation) {
-        Integer color = (Integer) animation.getAnimatedValue();
-        if (color != null) {
-          online.setColorFilter(color);
-        }
-      }
-    });
-    animator.start();
+    online.bleep();
   }
 }

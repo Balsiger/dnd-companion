@@ -34,51 +34,36 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.ui.Setup;
 
 /**
- * Widget for displaying a title and subtitle.
+ * View to show a single ability.
  */
-public class TitleView extends LinearLayout {
+public class AbilityView extends LinearLayout {
 
   // UI elements.
-  private TextView title;
-  private TextView subtitle;
+  private TextView value;
+  private TextView modifier;
 
-  public TitleView(Context context) {
-    super(context);
-  }
-
-  public TitleView(Context context, @Nullable AttributeSet attributes) {
+  public AbilityView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
     init(attributes);
   }
 
-  private void init(AttributeSet attributes) {
-    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.TitleView);
+  private void init(@Nullable AttributeSet attributes) {
+    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.AbilityView );
 
-    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_title, null, false);
-    view.setLayoutParams(new LinearLayout.LayoutParams(
-        LinearLayout.LayoutParams.MATCH_PARENT,
-        LinearLayout.LayoutParams.WRAP_CONTENT));
+    View view = LayoutInflater.from(getContext())
+        .inflate(R.layout.view_ability, null, false);
+    ((TextView) view.findViewById(R.id.name))
+        .setText(array.getString(R.styleable.AbilityView_attribute_name));
+    value = Setup.textView(view, R.id.value);
+    modifier = Setup.textView(view, R.id.modifier);
+
     addView(view);
-
-    title = (TextView) Setup.textView(view, R.id.title);
-    title.setText(array.getString(R.styleable.TitleView_title));
-    subtitle = (TextView) Setup.textView(view, R.id.subtitle);
-    subtitle.setText(array.getString(R.styleable.TitleView_subtitle));
-    view.setBackgroundColor(array.getColor(R.styleable.TitleView_color,
-        getResources().getColor(R.color.white, null)));
-    if (array.getBoolean(R.styleable.TitleView_dark, false)) {
-      title.setTextColor(getResources().getColor(R.color.white, null));
-      subtitle.setTextColor(getResources().getColor(R.color.white, null));
-    }
   }
 
-  public void setTitle(String text) {
-    title.setText(text);
-  }
-
-  public void setSubtitle(String text) {
-    subtitle.setText(text);
+  public void setValue(int value, int modifier) {
+    this.value.setText(String.valueOf(value));
+    this.modifier.setText("(" + modifier + ")");
   }
 
   public void setAction(Setup.Action action) {

@@ -26,8 +26,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,12 +35,14 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
+import net.ixitxachitls.companion.ui.views.IconView;
+import net.ixitxachitls.companion.ui.views.NetworkIcon;
+import net.ixitxachitls.companion.ui.views.TitleView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,11 +57,9 @@ public class CampaignFragment extends CompanionFragment {
 
   // UI elements.
   private ListAdapter<Character> charactersAdapter;
-  private ImageButton delete;
-  private TextView title;
-  private TextView subtitle;
-  private ImageView local;
-  private ImageView remote;
+  private IconView delete;
+  private TitleView title;
+  private NetworkIcon networkIcon;
   private FloatingActionButton addCharacter;
   private TextView date;
   private FloatingActionButton battle;
@@ -73,14 +71,16 @@ public class CampaignFragment extends CompanionFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
+    super.onCreateView(inflater, container, savedInstanceState);
+
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
-    title = Setup.textView(view, R.id.title, this::edit);
-    subtitle = Setup.textView(view, R.id.subtitle, this::edit);
-    delete = Setup.imageButton(view, R.id.button_delete, this::deleteCampaign);
-    local = Setup.imageView(view, R.id.local);
-    remote = Setup.imageView(view, R.id.remote);
+    title = (TitleView) view.findViewById(R.id.title);
+    title.setAction(this::edit);
+    delete = (IconView) view.findViewById(R.id.button_delete);
+    delete.setAction(this::deleteCampaign);
+    networkIcon = (NetworkIcon) view.findViewById(R.id.network);
     addCharacter = Setup.floatingButton(view, R.id.add_character, this::createCharacter);
     battle = Setup.floatingButton(view, R.id.battle, this::startBattle);
     date = Setup.textView(view, R.id.date, this::showDateFragment);
@@ -104,7 +104,6 @@ public class CampaignFragment extends CompanionFragment {
 
     Setup.listView(view, R.id.characters, charactersAdapter,
         (i) -> getMain().showCharacter(characters.get(i)));
-
 
     return view;
   }
@@ -156,9 +155,17 @@ public class CampaignFragment extends CompanionFragment {
 
   @Override
   public void refresh() {
+    super.refresh();
+
     if (campaign == null) {
       return;
     }
+
+    Campaign newCampaign = Campaigns.get().getCampaign(campaign.getCampaignId());
+    if (newCampaign != campaign) {
+      networkIcon.bleep();
+    }
+    campaign = newCampaign;
 
     if (campaign.isDefault() || campaign.isPublished()) {
       delete.setVisibility(View.GONE);
@@ -166,16 +173,14 @@ public class CampaignFragment extends CompanionFragment {
       delete.setVisibility(View.VISIBLE);
     }
 
-    title.setText(campaign.getName());
-    subtitle.setText(campaign.getWorld() + ", " + campaign.getDm());
+    title.setTitle(campaign.getName());
+    title.setSubtitle(campaign.getWorld() + ", " + campaign.getDm());
+    networkIcon.setLocation(campaign.isLocal());
+    if (!campaign.isDefault()) {
+      networkIcon.setStatus(campaign.isPublished());
+    }
     if (campaign.isLocal()) {
-      local.setVisibility(View.VISIBLE);
-      remote.setVisibility(View.INVISIBLE);
-
-      local.setColorFilter(getResources().getColor(
-          campaign.isDefault() ? R.color.out : campaign.isPublished() ? R.color.on : R.color.off,
-          null));
-      local.setOnClickListener(new View.OnClickListener() {
+      networkIcon.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
           // Cannot publish default campaign.
@@ -185,13 +190,6 @@ public class CampaignFragment extends CompanionFragment {
           }
         }
       });
-    } else {
-      local.setVisibility(View.INVISIBLE);
-      remote.setVisibility(View.VISIBLE);
-
-      remote.setColorFilter(getResources().getColor(
-          CompanionSubscriber.get().isServerActive(campaign.getServerId())
-              ? R.color.on : R.color.off, null));
     }
 
     date.setText(campaign.getDate().toString());

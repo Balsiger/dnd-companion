@@ -34,4 +34,17 @@
   <declare-styleable name="DiceView">
     <attr name="modifier_label" format="string"/>
   </declare-styleable>
+
+  <declare-styleable name="AbilityView">
+    <attr name="attribute_name" format="string"/>
+  </declare-styleable>
+
+  <declare-styleable name="IconView">
+    <attr name="bleep_bright" format="color"/>
+    <attr name="bleep_dark" format="color"/>
+    <attr name="bleep_duration" format="integer"/>
+    <attr name="pulse_bright" format="color"/>
+    <attr name="pulse_dark" format="color"/>
+    <attr name="pulse_duration" format="integer"/>
+  </declare-styleable>
 </resources>

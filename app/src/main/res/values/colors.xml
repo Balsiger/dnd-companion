@@ -6,6 +6,7 @@
 
   <color name="status">#ffeeaa</color>
   <color name="on">#570</color>
+  <color name="onBright">#92cc00</color>
   <color name="off">#920</color>
   <color name="bright">#ff0</color>
   <color name="light">#dd0</color>

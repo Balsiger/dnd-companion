@@ -20,29 +20,14 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:padding="10dp">
+<resources>
 
-  <TextView
-      android:id="@+id/title"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentTop="true"
-      android:layout_toEndOf="@+id/local"
-      android:text="... title ..."
-      android:textAppearance="@style/LargeText"
-      android:textStyle="normal|bold"/>
+  <style name="LargeText" parent="">
+    <item name="android:textSize">24sp</item>
+  </style>
 
-  <TextView
-      android:id="@+id/subtitle"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/title"
-      android:layout_toEndOf="@+id/local"
-      android:text="... subtitle ..."
-      android:textAppearance="@style/SmallText"/>
+  <style name="SmallText" parent="">
+    <item name="android:textSize">18sp</item>
+  </style>
 
-</LinearLayout>
+</resources>

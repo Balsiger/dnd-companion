@@ -27,14 +27,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.AbilityView;
+import net.ixitxachitls.companion.ui.views.TitleView;
 
 /**
  * Fragment for displaying character information.
@@ -44,14 +46,13 @@ public class CharacterFragment extends CompanionFragment {
   private Campaign campaign;
 
   // UI elements.
-  private TextView title;
-  private TextView subtitle;
-  private TextView strength;
-  private TextView dexterity;
-  private TextView constitution;
-  private TextView intelligence;
-  private TextView wisdom;
-  private TextView charisma;
+  private TitleView title;
+  private AbilityView strength;
+  private AbilityView dexterity;
+  private AbilityView constitution;
+  private AbilityView intelligence;
+  private AbilityView wisdom;
+  private AbilityView charisma;
   private FloatingActionButton battle;
 
   public CharacterFragment() {
@@ -64,20 +65,20 @@ public class CharacterFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
-    title = Setup.textView(view, R.id.title, this::editBase);
-    subtitle = Setup.textView(view, R.id.subtitle, this::editBase);
-    Setup.textView(view, R.id.strength_label, this::editAbilities);
-    strength = Setup.textView(view, R.id.strength, this::editAbilities);
-    Setup.textView(view, R.id.dexterity_label, this::editAbilities);
-    dexterity = Setup.textView(view, R.id.dexterity, this::editAbilities);
-    Setup.textView(view, R.id.constitution_label, this::editAbilities);
-    constitution = Setup.textView(view, R.id.constitution, this::editAbilities);
-    Setup.textView(view, R.id.intelligence_label, this::editAbilities);
-    intelligence = Setup.textView(view, R.id.intelligence, this::editAbilities);
-    Setup.textView(view, R.id.wisdom_label, this::editAbilities);
-    wisdom = Setup.textView(view, R.id.wisdom, this::editAbilities);
-    Setup.textView(view, R.id.charisma_label, this::editAbilities);
-    charisma = Setup.textView(view, R.id.charisma, this::editAbilities);
+    title = (TitleView) view.findViewById(R.id.title);
+    title.setAction(this::editBase);
+    strength = (AbilityView) view.findViewById(R.id.strength);
+    strength.setAction(this::editAbilities);
+    dexterity = (AbilityView) view.findViewById(R.id.dexterity);
+    dexterity.setAction(this::editAbilities);
+    constitution = (AbilityView) view.findViewById(R.id.constitution);
+    constitution.setAction(this::editAbilities);
+    intelligence = (AbilityView) view.findViewById(R.id.intelligence);
+    intelligence.setAction(this::editAbilities);
+    wisdom = (AbilityView) view.findViewById(R.id.wisdom);
+    wisdom.setAction(this::editAbilities);
+    charisma = (AbilityView) view.findViewById(R.id.charisma);
+    charisma.setAction(this::editAbilities);
 
     battle = Setup.floatingButton(view, R.id.battle, this::gotoBattle);
 
@@ -121,24 +122,33 @@ public class CharacterFragment extends CompanionFragment {
 
   @Override
   public void refresh() {
+    super.refresh();
+
     if (character == null) {
       return;
     }
 
-    title.setText(character.getName());
-    subtitle.setText(character.getGender().getName() + " " + character.getRace());
-    strength.setText(
-        character.getStrength() + " (" + Ability.modifier(character.getStrength()) + ")");
-    dexterity.setText(
-        character.getDexterity() + " (" + Ability.modifier(character.getDexterity()) + ")");
-    constitution.setText(
-        character.getConstitution() + " (" + Ability.modifier(character.getConstitution()) + ")");
-    intelligence.setText(
-        character.getIntelligence() + " (" + Ability.modifier(character.getIntelligence()) + ")");
-    wisdom.setText(
-        character.getWisdom() + " (" + Ability.modifier(character.getWisdom()) + ")");
-    charisma.setText(
-        character.getCharisma() + " (" + Ability.modifier(character.getCharisma()) + ")");
+    Character newCharacter =
+        Characters.get().getCharacter(character.getCharacterId(), campaign.getCampaignId());
+    if (newCharacter != character) {
+
+    }
+    character = newCharacter;
+    if (campaign != null) {
+      campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
+    }
+
+    title.setTitle(character.getName());
+    title.setSubtitle(character.getGender().getName() + " " + character.getRace());
+    strength.setValue(character.getStrength(), Ability.modifier(character.getStrength()));
+    dexterity.setValue(character.getDexterity(), Ability.modifier(character.getDexterity()));
+    constitution.setValue(character.getConstitution(),
+        Ability.modifier(character.getConstitution()));
+    intelligence.setValue(character.getIntelligence(),
+        Ability.modifier(character.getIntelligence()));
+    wisdom.setValue(character.getWisdom(), Ability.modifier(character.getWisdom()));
+    charisma.setValue(character.getCharisma(), Ability.modifier(character.getCharisma())
+    );
 
     battle.setVisibility(canEdit() ? View.VISIBLE : View.GONE);
   }

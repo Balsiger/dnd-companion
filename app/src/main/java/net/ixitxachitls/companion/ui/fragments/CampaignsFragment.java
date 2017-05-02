@@ -25,17 +25,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.NetworkIcon;
+import net.ixitxachitls.companion.ui.views.TitleView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,28 +62,17 @@ public class CampaignsFragment extends CompanionFragment {
             new ListAdapter.ViewBinder<Campaign>() {
               @Override
               public void bind(View view, Campaign campaign, int position) {
-                ((TextView) view.findViewById(R.id.name)).setText(campaign.getName());
-                ((TextView) view.findViewById(R.id.world)).setText(subtitle(campaign));
+                TitleView title = (TitleView) view.findViewById(R.id.title);
+                title.setTitle(campaign.getName());
+                title.setSubtitle(subtitle(campaign));
 
-                ImageView local = Setup.imageView(view, R.id.local);
-                Setup.imageView(view, R.id.local,
-                    () -> publishCampaign(local, campaign));
-                ImageView remote = Setup.imageView(view, R.id.remote);
-                if (campaign.isLocal()) {
-                  local.setVisibility(View.VISIBLE);
-                  remote.setVisibility(View.INVISIBLE);
-
-                  if (!campaign.isDefault()) {
-                    local.setColorFilter(getResources().getColor(
-                        campaign.isPublished() ? R.color.on : R.color.off, null));
-                  }
-                } else {
-                  local.setVisibility(View.INVISIBLE);
-                  remote.setVisibility(View.VISIBLE);
-
-                  remote.setColorFilter(getResources().getColor(
-                      CompanionSubscriber.get().isServerActive(campaign.getServerId())
-                          ? R.color.on : R.color.off, null));
+                NetworkIcon networkIcon = (NetworkIcon) view.findViewById(R.id.network);
+                networkIcon.setLocation(campaign.isLocal());
+                if (!campaign.isDefault()) {
+                  networkIcon.setStatus(campaign.isPublished());
+                }
+                if (campaign.isLocal() && !campaign.isDefault()) {
+                  networkIcon.setAction(() -> publishCampaign(campaign));
                 }
               }
             });
@@ -100,8 +88,8 @@ public class CampaignsFragment extends CompanionFragment {
     EditCampaignFragment.newInstance().display(getFragmentManager());
   }
 
-  private void publishCampaign(ImageView view, Campaign campaign) {
-    if (campaign.isDefault()) {
+  private void publishCampaign(Campaign campaign) {
+    if (campaign.isDefault() || !campaign.isLocal()) {
       return;
     }
 
@@ -119,6 +107,8 @@ public class CampaignsFragment extends CompanionFragment {
 
   @Override
   public void refresh() {
+    super.refresh();
+
     if (campaignsAdapter != null) {
       campaigns.clear();
       campaigns.addAll(Campaigns.get().getCampaigns());

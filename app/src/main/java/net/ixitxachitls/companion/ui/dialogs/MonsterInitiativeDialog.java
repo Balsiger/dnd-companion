@@ -44,6 +44,7 @@ public class MonsterInitiativeDialog extends Dialog {
 
   private static final String ARG_CAMPAIGN_ID = "campaign-id";
   private static final String ARG_MONSTER_ID = "monster-id";
+  private static final String DEFAULT_NAME = "Monsters";
 
   private Campaign campaign;
   private int monsterId;
@@ -81,7 +82,7 @@ public class MonsterInitiativeDialog extends Dialog {
 
   @Override
   protected void createContent(View view) {
-    name = Setup.editText(view, R.id.name, "Monsters", this::edit);
+    name = Setup.editText(view, R.id.name, makeName(), this::edit);
     modifier = Setup.numberPicker(view, R.id.modifier, this::edit);
     modifier.setMaxValue(20 + 20);
     modifier.setMinValue(0);
@@ -108,5 +109,34 @@ public class MonsterInitiativeDialog extends Dialog {
 
     campaign.getBattle().addMonster(name.getText().toString(), modifier.getValue() - 20);
     save();
+  }
+
+  private String makeName() {
+    if (campaign == null) {
+      return DEFAULT_NAME;
+    }
+
+    String name = campaign.getBattle().getLastMonsterName().or("");
+    if (name.isEmpty()) {
+      return DEFAULT_NAME;
+    }
+
+    String []parts = name.split(" ");
+    if (parts.length == 1) {
+      return name + " 2";
+    }
+
+    try {
+      int number = Integer.parseInt(parts[parts.length - 1]) + 1;
+      String result = "";
+      for (int i = 0; i < parts.length - 1; i++) {
+        result += parts[i] + " ";
+      }
+
+      result += number;
+      return result;
+    } catch (NumberFormatException e) {
+      return name + " 2";
+    }
   }
 }

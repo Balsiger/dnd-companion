@@ -30,50 +30,28 @@
                 android:layout_marginBottom="2dp"
                 android:background="@color/campaign"
                 android:descendantFocusability="blocksDescendants"
-                android:padding="20dp"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 tools:context="net.ixitxachitls.companion.ui.activities.MainActivity">
 
-    <ImageView
-        android:id="@+id/local"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+    <view
+        android:id="@+id/network"
+        class="net.ixitxachitls.companion.ui.views.NetworkIcon"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
         android:tint="#444"
+        app:bleep_bright="@color/onBright"
+        app:bleep_dark="@color/on"
         app:srcCompat="@drawable/ic_home_black_48dp"/>
 
-    <ImageView
-        android:id="@+id/remote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:tint="#444"
-        android:visibility="gone"
-        app:srcCompat="@drawable/ic_wifi_black_48dp"/>
-
-    <TextView
-        android:id="@+id/name"
+    <view
+        android:id="@+id/title"
+        class="net.ixitxachitls.companion.ui.views.TitleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/local"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:textSize="24sp"
-        android:textStyle="normal|bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"/>
-
-    <TextView
-        android:id="@+id/world"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:layout_marginLeft="10dp"
-        android:layout_toEndOf="@+id/local"
-        android:textSize="18sp"/>
+        android:layout_toRightOf="@+id/network"
+        app:color="@color/campaign"/>
 
 </RelativeLayout>

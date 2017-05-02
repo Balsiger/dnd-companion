@@ -22,6 +22,9 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.support.annotation.CallSuper;
+import android.util.Log;
 
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
@@ -35,6 +38,7 @@ public abstract class CompanionFragment extends Fragment {
 
   CompanionFragment(Type type) {
     this.type = type;
+    setRetainInstance(true);
   }
 
   public Type getType() {
@@ -54,7 +58,16 @@ public abstract class CompanionFragment extends Fragment {
     return (MainActivity) getActivity();
   }
 
-  public abstract void refresh();
+  @CallSuper
+  public void refresh() {
+    Log.d("Fragment", "refreshing " + getClass().getSimpleName());
+
+    FragmentManager fm = getFragmentManager();
+
+    for(int i = 0; i < fm.getBackStackEntryCount(); i++){
+      Log.d("Fragment", "Found fragment: " + fm.getBackStackEntryAt(i).getName());
+    }
+  };
 
   @Override
   public void onResume() {

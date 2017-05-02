@@ -118,8 +118,16 @@ public class BattleFragment extends CompanionFragment {
 
   @Override
   public void refresh() {
+    super.refresh();
+
     if (campaign == null) {
       return;
+    }
+
+    campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
+    if (character != null) {
+      character =
+          Characters.get().getCharacter(character.getCharacterId(), campaign.getCampaignId());
     }
 
     addMonster.setVisibility(GONE);
