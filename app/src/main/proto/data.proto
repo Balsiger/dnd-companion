@@ -7,6 +7,7 @@ import "entity.proto";
 message SettingsProto {
   string nickname = 1;
   string app_id = 2;
+  bool show_status = 3;
 }
 
 message CampaignProto {

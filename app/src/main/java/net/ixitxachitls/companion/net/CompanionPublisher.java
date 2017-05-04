@@ -30,6 +30,7 @@ import android.util.Log;
 import com.google.common.base.Joiner;
 import com.google.common.base.Strings;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.proto.Data;
@@ -49,6 +50,7 @@ public class CompanionPublisher {
   private static CompanionPublisher singleton;
 
   private final NsdManager manager;
+  private CompanionApplication application;
 
   private @Nullable String name;
   private @Nullable NsdServiceInfo service;
@@ -56,27 +58,13 @@ public class CompanionPublisher {
   private @Nullable CompanionServer server;
   private @Nullable List<Campaign> campaigns = new ArrayList<>();
 
-  private CompanionPublisher(Context context) {
+  private CompanionPublisher(Context context, CompanionApplication application) {
     this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
+    this.application = application;
   }
 
-  public String getOnlineStatus() {
-    if (server == null) {
-      return "Currently nothing published";
-    } else {
-      List<String> lines = new ArrayList<>();
-
-      lines.add("Server published as " + service.getServiceName());
-      for (String name : server.connectedNames()) {
-        lines.add("Client " + name + " connected.");
-      }
-
-      return LINE_JOINER.join(lines);
-    }
-  }
-
-  public static CompanionPublisher init(Context context) {
-    singleton = new CompanionPublisher(context);
+  public static CompanionPublisher init(Context context, CompanionApplication application) {
+    singleton = new CompanionPublisher(context, application);
     return singleton;
   }
 
@@ -105,6 +93,7 @@ public class CompanionPublisher {
       if (server.start()) {
         name = Settings.get().getNickname();
         register(name, server.getAddress(), server.getPort());
+        application.serverStarted();
       }
     }
   }
@@ -125,6 +114,7 @@ public class CompanionPublisher {
       registrationListener = null;
       server.stop();
       server = null;
+      application.serverStopped();
     }
   }
 

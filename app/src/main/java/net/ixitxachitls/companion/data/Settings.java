@@ -49,9 +49,18 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private static Settings settings = null;
 
   private String appId;
+  private boolean showStatus = false;
 
   private Settings(String name) {
     super(ID, name, DataBaseContentProvider.SETTINGS);
+  }
+
+  public void setDebugStatus(boolean showStatus) {
+    this.showStatus = showStatus;
+  }
+
+  public boolean showStatus() {
+    return showStatus;
   }
 
   public static ContentValues defaultSettings() {
@@ -81,6 +90,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return Data.SettingsProto.newBuilder()
         .setNickname(name)
         .setAppId(appId)
+        .setShowStatus(showStatus)
         .build();
   }
 
@@ -92,6 +102,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private static Settings fromProto(Data.SettingsProto proto) {
     Settings settings = new Settings(proto.getNickname());
     settings.appId = proto.getAppId();
+    settings.showStatus = proto.getShowStatus();
 
     return settings;
   }

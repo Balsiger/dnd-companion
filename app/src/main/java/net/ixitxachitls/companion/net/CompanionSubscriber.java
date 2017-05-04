@@ -57,19 +57,6 @@ public class CompanionSubscriber {
     this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
   }
 
-  public String getOnlineStatus() {
-    if (nameById.isEmpty()) {
-      return "Not connected to any servers.";
-    } else {
-      List<String> lines = new ArrayList<>();
-      for (String name : nameById.values()) {
-        lines.add("Server " + name + " connected.");
-      }
-
-      return LINE_JOINER.join(lines);
-    }
-  }
-
   public void publish(Character character) {
     String id = extractServerId(character.getCampaignId());
     CompanionClient client = clientById.get(id);

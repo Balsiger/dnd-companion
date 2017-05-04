@@ -36,9 +36,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static android.content.ContentValues.TAG;
 
@@ -49,8 +49,8 @@ public class CompanionServer implements Runnable {
 
   private @Nullable ServerSocket socket;
   private Thread thread;
-  private Map<String, CompanionTransmitter> transmittersById = new HashMap<>();
-  private Map<String, String> namesById = new HashMap<>();
+  private Map<String, CompanionTransmitter> transmittersById = new ConcurrentHashMap<>();
+  private Map<String, String> namesById = new ConcurrentHashMap<>();
 
   public CompanionServer() {
     this.thread = new Thread(this);

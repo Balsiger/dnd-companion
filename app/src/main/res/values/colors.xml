@@ -14,6 +14,8 @@
   <color name="cell">#ccc</color>
   <color name="selected">#ebf</color>
   <color name="white">#fff</color>
+  <color name="red">#800</color>
+  <color name="brightRed">#f00</color>
 
   <color name="campaign">#f94</color>
   <color name="campaign2">#fc5</color>

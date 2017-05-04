@@ -21,110 +21,52 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.net.CompanionPublisher;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
-import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
-import net.ixitxachitls.companion.ui.fragments.BattleFragment;
-import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
-import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
-import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.EditCharacterFragment;
-import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
-import net.ixitxachitls.companion.ui.views.IconView;
+import net.ixitxachitls.companion.ui.views.StatusView;
 
 public class MainActivity extends CompanionActivity implements Dialog.AttachAction {
 
   private static final String TAG = "Main";
-  private static final String SAVE_FRAGMENT = "fragment";
 
   // UI elements.
-  private TextView status;
-  private IconView online;
-  private TextView onlineStatus;
-
-  // Fragments.
-  private static CompanionFragment currentFragment;
-  private static CampaignFragment campaignFragment;
-  private static CampaignsFragment campaignsFragment;
-  private static SettingsFragment settingsFragment;
-  private static CharacterFragment characterFragment;
-  private static BattleFragment battleFragment;
-
-  public void status(String message) {
-    this.status.setText(message);
-  }
+  private StatusView status;
+  //private IconView online;
+  //private TextView onlineStatus;
 
   @Override
   protected void onCreate(@Nullable Bundle state) {
-    Log.d(TAG, "onCreate");
     super.onCreate(state);
-    setup(state, R.layout.activity_main, R.string.app_name);
+    Log.d(TAG, "onCreate");
+
+    CompanionFragments.init(getFragmentManager());
+
+    setContentView(R.layout.activity_main);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
+    setTitle(getString(R.string.app_name));
+
     View container = findViewById(R.id.activity_main);
 
     // Setup the status first, in case any fragment wants to set something.
-    status = Setup.textView(container, R.id.status, null);
-    online = (IconView) container.findViewById(R.id.online);
-    online.setAction(this::toggleOnlineStatus);
-    onlineStatus = Setup.textView(container, R.id.online_status, null);
+    status = (StatusView) container.findViewById(R.id.status);
 
-    if (state == null || state.getString(SAVE_FRAGMENT) == null) {
-      show();
-    } else {
-      show(CompanionFragment.Type.valueOf(state.getString(SAVE_FRAGMENT)));
-    }
-  }
-
-  @Override
-  protected void onDestroy() {
-    super.onDestroy();
-
-    //currentFragment = null;
-  }
-
-  @Override
-  protected void onSaveInstanceState(Bundle bundle) {
-    super.onSaveInstanceState(bundle);
-
-    bundle.putString(SAVE_FRAGMENT, currentFragment.getType().toString());
-  }
-
-  public void show() {
-    if (currentFragment != null) {
-      show(currentFragment);
-    }
-
-    // Show the default campign to be able to come back to it.
-    show(CompanionFragment.Type.campaigns);
-    if (!Settings.get().isDefined()) {
-      show(CompanionFragment.Type.settings);
-    }
-  }
-
-  private void toggleOnlineStatus() {
-    if (onlineStatus.getVisibility() == View.GONE) {
-      onlineStatus.setVisibility(View.VISIBLE);
-    } else {
-      onlineStatus.setVisibility(View.GONE);
-    }
+    CompanionFragments.get().show();
   }
 
   @Override
@@ -138,7 +80,7 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
   public boolean onOptionsItemSelected(MenuItem item) {
     int id = item.getItemId();
     if (id == R.id.action_settings) {
-      show(CompanionFragment.Type.settings);
+      CompanionFragments.get().show(CompanionFragment.Type.settings);
       return true;
     }
 
@@ -159,81 +101,6 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
     getContentResolver().delete(DataBaseContentProvider.CHARACTERS, null, null);
   }
 
-  public Fragment show(CompanionFragment.Type fragment) {
-    switch(fragment) {
-      case settings:
-        if (settingsFragment == null) {
-          settingsFragment = new SettingsFragment();
-        }
-        return show(settingsFragment);
-
-      case character:
-        if (characterFragment == null) {
-          characterFragment = new CharacterFragment();
-        }
-        return show(characterFragment);
-
-      default:
-      case campaigns:
-        if (campaignsFragment == null) {
-          campaignsFragment = new CampaignsFragment();
-        }
-        return show(campaignsFragment);
-
-      case campaign:
-        if (campaignFragment == null) {
-          campaignFragment = new CampaignFragment();
-        }
-        return show(campaignFragment);
-
-      case battle:
-        if (battleFragment == null) {
-          battleFragment = new BattleFragment();
-        }
-        return show(battleFragment);
-    }
-  }
-
-  private Fragment show(CompanionFragment fragment) {
-    FragmentTransaction transaction = getFragmentManager()
-        .beginTransaction();
-
-    if (currentFragment != null && fragment != currentFragment) {
-      transaction.addToBackStack(fragment.getClass().getSimpleName());
-    }
-
-    transaction.replace(R.id.content, fragment).commit();
-    getFragmentManager().executePendingTransactions();
-    fragment.refresh();
-    currentFragment = fragment;
-    return fragment;
-  }
-
-  public void showCampaign(Campaign campaign) {
-    show(CompanionFragment.Type.campaign);
-    campaignFragment.showCampaign(campaign);
-  }
-
-  public void showCharacter(Character character) {
-    show(CompanionFragment.Type.character);
-    characterFragment.showCharacter(character);
-  }
-
-  public void showBattle(Campaign campaign) {
-    show(CompanionFragment.Type.battle);
-    battleFragment.setCampaign(campaign);
-  }
-
-  public void showBattle(Character character) {
-    show(CompanionFragment.Type.battle);
-    battleFragment.setCharacter(character);
-  }
-
-  public void showLast() {
-    getFragmentManager().popBackStackImmediate();
-    refresh();
-  }
-
   public void attached(Dialog fragment) {
     if (fragment instanceof EditCampaignFragment) {
       ((EditCampaignFragment)fragment).setSaveListener(this::saveCampaign);
@@ -244,28 +111,56 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
 
   public void saveCampaign(Campaign campaign) {
     campaign.store();
-    campaignsFragment.refresh();
+    CompanionFragments.get().refresh();
   }
 
   public void saveCharacter(Character character) {
     character.store();
-    campaignFragment.refresh();
+    CompanionFragments.get().refresh();
   }
 
   @Override
   public void refresh() {
-    online.setColorFilter(getResources().getColor(
-        CompanionSubscriber.get().isOnline() || CompanionPublisher.get().isOnline()
-            ? R.color.light : R.color.out, null));
-    String publisherStatus = CompanionPublisher.get().getOnlineStatus();
-    String subscriberStatus = CompanionSubscriber.get().getOnlineStatus();
-    onlineStatus.setText(publisherStatus + "\n\n" + subscriberStatus);
+    CompanionFragments.get().refresh();
+  }
 
-    currentFragment.refresh();
+  @Override
+  public void status(String message) {
+    status.addMessage(message);
   }
 
   @Override
   public void onlineBleep() {
-    online.bleep();
+    status.heartbeat();
+  }
+
+  @Override
+  public void addClientConnection(String name) {
+    status.addClientConnection(name);
+  }
+
+  @Override
+  public void updateClientConnection(String name) {
+    status.updateClientConnection(name);
+  }
+
+  @Override
+  public void addServerConnection(String name) {
+    status.addServerConnection(name);
+  }
+
+  @Override
+  public void updateServerConnection(String name) {
+    status.updateServerConnection(name);
+  }
+
+  @Override
+  public void startServer() {
+    status.startServer();
+  }
+
+  @Override
+  public void stopServer() {
+    status.stopServer();
   }
 }

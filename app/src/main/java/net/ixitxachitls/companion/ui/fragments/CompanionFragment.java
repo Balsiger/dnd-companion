@@ -22,16 +22,17 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.support.annotation.CallSuper;
 import android.util.Log;
 
-import net.ixitxachitls.companion.ui.activities.MainActivity;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 /**
  * Base fragment for all our non-dialog fragments
  */
 public abstract class CompanionFragment extends Fragment {
+  private static final String TAG = "Fragment";
+
   public enum Type { settings, campaigns, campaign, character, battle, };
 
   private final Type type;
@@ -46,33 +47,20 @@ public abstract class CompanionFragment extends Fragment {
   }
 
   protected void show(Type fragment) {
-    ((MainActivity) getActivity()).show(fragment);
-  }
-
-  protected void showLast() {
-    ((MainActivity) getActivity()).showLast();
-  }
-
-  protected MainActivity getMain() {
-    // There is only one activity.
-    return (MainActivity) getActivity();
+    CompanionFragments.get().show(fragment);
   }
 
   @CallSuper
   public void refresh() {
-    Log.d("Fragment", "refreshing " + getClass().getSimpleName());
-
-    FragmentManager fm = getFragmentManager();
-
-    for(int i = 0; i < fm.getBackStackEntryCount(); i++){
-      Log.d("Fragment", "Found fragment: " + fm.getBackStackEntryAt(i).getName());
-    }
-  };
+    Log.d(TAG, "refreshing " + getClass().getSimpleName());
+  }
 
   @Override
   public void onResume() {
     super.onResume();
 
+    Log.d(TAG, "resumed fragment " + getClass().getSimpleName());
+    CompanionFragments.get().resumed(this);
     refresh();
   }
 }

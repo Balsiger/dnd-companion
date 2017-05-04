@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017-{2017} Peter Balsiger
+  ~ All rights reserved
+  ~
+  ~ This file is part of the Player Companion.
+  ~
+  ~ The Player Companion is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ The Player Companion is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with the Player Companion; if not, write to the Free Software
+  ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="1000dp"
+              android:layout_height="wrap_content"
+              android:background="@color/status"
+              android:orientation="vertical"
+              android:padding="10dp">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="horizontal">
+
+    <view
+        android:id="@+id/online"
+        class="net.ixitxachitls.companion.ui.views.IconView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        app:bleep_bright="@color/brightRed"
+        app:bleep_dark="@color/red"
+        app:srcCompat="@drawable/ic_favorite_black_24dp"/>
+
+    <LinearLayout
+        android:id="@+id/connections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <ScrollView
+      android:id="@+id/messages_scroll"
+      android:layout_width="match_parent"
+      android:gravity="bottom"
+      android:layout_height="100dp"
+      android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/messages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingBottom="20dp"
+        android:theme="@style/SmallText"/>
+  </ScrollView>
+
+</LinearLayout>

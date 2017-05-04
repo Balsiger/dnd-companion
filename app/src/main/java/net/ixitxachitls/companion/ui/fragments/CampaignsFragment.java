@@ -33,6 +33,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.NetworkIcon;
 import net.ixitxachitls.companion.ui.views.TitleView;
 
@@ -77,7 +78,7 @@ public class CampaignsFragment extends CompanionFragment {
               }
             });
     Setup.listView(view, R.id.campaignsList, campaignsAdapter,
-        (i) -> getMain().showCampaign(campaigns.get(i)));
+        (i) -> CompanionFragments.get().showCampaign(campaigns.get(i)));
 
     Setup.floatingButton(view, R.id.campaign_add, this::addCampaign);
 

@@ -56,8 +56,7 @@ public class CompanionApplication extends MultiDexApplication
   private static Handler messageHandler;
   private static MessageChecker messageChecker;
   private @Nullable CompanionActivity currentActivity;
-  private int campaignStatusCount = 0;
-  private int characterStatusCount = 0;
+  private boolean serverStarted = false;
 
   @Override
   public void onCreate() {
@@ -71,7 +70,7 @@ public class CompanionApplication extends MultiDexApplication
     messageHandler = new Handler();
     messageChecker = new MessageChecker();
 
-    companionPublisher = CompanionPublisher.init(getApplicationContext());
+    companionPublisher = CompanionPublisher.init(getApplicationContext(), this);
     companionSubscriber = CompanionSubscriber.init(getApplicationContext());
 
     messageChecker.run();
@@ -124,18 +123,18 @@ public class CompanionApplication extends MultiDexApplication
 
   private void handleMessagesFromServer(CompanionMessage message) {
     if (message.getProto().hasWelcome()) {
-      Toast.makeText(getApplicationContext(), "Client " + message.getName() + " has connected!",
-          Toast.LENGTH_LONG).show();
+      currentActivity.addServerConnection(message.getName());
     }
 
     if (message.getProto().hasCampaign()) {
       Campaign campaign = Campaign.fromRemoteProto(message.getProto().getCampaign());
       Campaigns.get().addOrUpdate(campaign);
       Log.d(TAG, "received campaign " + campaign.getName());
-      status(++campaignStatusCount + ": received campaign " + campaign.getName());
+      status("received campaign " + campaign.getName());
       refresh();
 
       Characters.get().publish(campaign.getCampaignId());
+      currentActivity.updateServerConnection(message.getName());
     }
 
     if (!message.getProto().getDebug().isEmpty()) {
@@ -149,8 +148,7 @@ public class CompanionApplication extends MultiDexApplication
     if (message.getProto().hasWelcome()) {
       CompanionPublisher.get().republish(Campaigns.get().getLocalCampaigns(),
           message.getId());
-      Toast.makeText(getApplicationContext(), "Server " + message.getName() + " has connected!",
-          Toast.LENGTH_LONG).show();
+      currentActivity.addClientConnection(message.getName());
     }
 
     if (message.getProto().hasCharacter()) {
@@ -158,9 +156,10 @@ public class CompanionApplication extends MultiDexApplication
           + " from " + message.getName());
       Character character = Character.fromRemoteProto(message.getProto().getCharacter());
       Characters.get().addOrUpdate(character);
-      status(++characterStatusCount + ": received character "
+      status("received character "
           + message.getProto().getCharacter().getName()
           + " from " + message.getName());
+      currentActivity.updateClientConnection(message.getName());
       refresh();
     }
 
@@ -174,6 +173,22 @@ public class CompanionApplication extends MultiDexApplication
   private void status(String message) {
     if (currentActivity != null) {
       currentActivity.status(message);
+    }
+  }
+
+  public void serverStopped() {
+    if (currentActivity != null) {
+      currentActivity.startServer();
+    } else {
+      serverStarted = false;
+    }
+  }
+
+  public void serverStarted() {
+    if (currentActivity != null) {
+      currentActivity.stopServer();
+    } else {
+      serverStarted = true;
     }
   }
 
@@ -195,6 +210,11 @@ public class CompanionApplication extends MultiDexApplication
 
   @Override
   public void onActivityResumed(Activity activity) {
+    if (serverStarted) {
+      currentActivity.startServer();
+    } else {
+      currentActivity.stopServer();
+    }
   }
 
   @Override

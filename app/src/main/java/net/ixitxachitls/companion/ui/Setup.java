@@ -22,7 +22,9 @@
 package net.ixitxachitls.companion.ui;
 
 import android.content.res.ColorStateList;
+import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.text.Editable;
@@ -32,6 +34,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -57,6 +60,11 @@ public class Setup {
   }
 
   @FunctionalInterface
+  public interface CheckAction {
+    void checked(boolean checked);
+  }
+
+  @FunctionalInterface
   public interface SelectAction {
     void select(int position);
   }
@@ -66,25 +74,45 @@ public class Setup {
     void checked(Switch widget);
   }
 
-  public static EditText editText(View view, int id, String value) {
+  public static CheckBox checkBox(View view, @IdRes int id, boolean checked, CheckAction action) {
+    CheckBox checkBox = checkBox(view, id, checked);
+    checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+      @Override
+      public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        action.checked(isChecked);
+      }
+    });
+    return checkBox;
+  }
+
+  public static CheckBox checkBox(View view, @IdRes int id, boolean checked) {
+    CheckBox checkBox = (CheckBox) view.findViewById(id);
+    checkBox.setChecked(checked);
+
+    return checkBox;
+  }
+
+  public static EditText editText(View view, @IdRes int id, String value) {
     return editText(view, id, value, 0, 0);
   }
 
-  public static EditText editText(View view, int id, String value, Action action) {
+  public static EditText editText(View view, @IdRes int id, String value, Action action) {
     return editText(view, id, value, 0, 0, action);
   }
 
-  public static EditText editText(View view, int id, String value, int label, int color) {
+  public static EditText editText(View view, @IdRes int id, String value, @IdRes int label,
+                                  @ColorRes int color) {
     return editText(view, id, value, label, color, null);
   }
 
-  public static EditText editText(View view, int id, String value, int label, int color,
-                                  @Nullable Action action) {
+  public static EditText editText(View view, @IdRes int id, String value, @IdRes int label,
+                                  @ColorRes int color, @Nullable Action action) {
     return editText(view, id, value, label, color, action, null);
   }
 
-  public static EditText editText(View view, int id, String value, int label, int color,
-                                  @Nullable Action editAction, @Nullable Action changeAction) {
+  public static EditText editText(View view, @IdRes int id, String value, @IdRes int label,
+                                  @ColorRes int color, @Nullable Action editAction,
+                                  @Nullable Action changeAction) {
     EditText edit = (EditText) view.findViewById(id);
     edit.setText(value);
     if (label > 0) {
@@ -115,16 +143,23 @@ public class Setup {
     return edit;
   }
 
-  public static TextView textView(View container, int id) {
+  public static TextView textView(View container, @IdRes int id) {
     return (TextView) container.findViewById(id);
   }
 
-  public static TextView textView(View container, int id, int labelId, Action action) {
+  public static TextView textView(View container, @IdRes int id, String text) {
+    TextView textView = textView(container, id);
+    textView.setText(text);
+
+    return textView;
+  }
+
+  public static TextView textView(View container, @IdRes int id, @IdRes int labelId, Action action) {
     textView(container, labelId, action);
     return textView(container, id, action);
   }
 
-  public static TextView textView(View container, int id, Action action) {
+  public static TextView textView(View container, @IdRes int id, Action action) {
     TextView view = textView(container, id);
     view.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -138,7 +173,7 @@ public class Setup {
     return view;
   }
 
-  public static Button button(View container, int id, Action action) {
+  public static Button button(View container, @IdRes int id, Action action) {
     Button button = (Button) container.findViewById(id);
     button.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -150,11 +185,11 @@ public class Setup {
     return button;
   }
 
-  public static ImageButton imageButton(View container, int id) {
+  public static ImageButton imageButton(View container, @IdRes int id) {
     return (ImageButton) container.findViewById(id);
   }
 
-  public static ImageButton imageButton(View container, int id, Action action) {
+  public static ImageButton imageButton(View container, @IdRes int id, Action action) {
     ImageButton button = imageButton(container, id);
     button.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -166,11 +201,11 @@ public class Setup {
     return button;
   }
 
-  public static ImageView imageView(View container, int id) {
+  public static ImageView imageView(View container, @IdRes int id) {
     return (ImageView) container.findViewById(id);
   }
 
-  public static ImageView imageView(View container, int id, Action action) {
+  public static ImageView imageView(View container, @IdRes int id, Action action) {
     ImageView view = imageView(container, id);
     view.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -182,7 +217,7 @@ public class Setup {
     return view;
   }
 
-  public static FloatingActionButton floatingButton(View container, int id, Action action) {
+  public static FloatingActionButton floatingButton(View container, @IdRes int id, Action action) {
     FloatingActionButton button = (FloatingActionButton) container.findViewById(id);
     button.setOnClickListener(new View.OnClickListener() {
       @Override
@@ -194,7 +229,7 @@ public class Setup {
     return button;
   }
 
-  public static ListView list(View container, @IdRes int id, int itemLayout,
+  public static ListView list(View container, @IdRes int id, @LayoutRes int itemLayout,
                               ArrayList<String> values, String selected,
                               ListSelectFragment.SelectAction action) {
     ListView list = (ListView) container.findViewById(id);
@@ -225,7 +260,7 @@ public class Setup {
   }
 
 
-  public static <T> ListView listView(View container, int id, ListAdapter<T> itemAdapter,
+  public static <T> ListView listView(View container, @IdRes int id, ListAdapter<T> itemAdapter,
                                       SelectAction action) {
     ListView list = (ListView) container.findViewById(id);
     list.setAdapter(itemAdapter);
@@ -239,7 +274,7 @@ public class Setup {
     return list;
   }
 
-  public static Switch switchButton(View container, int id, SwitchAction action) {
+  public static Switch switchButton(View container, @IdRes int id, SwitchAction action) {
     Switch button = (Switch) container.findViewById(id);
 
     button.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener() {

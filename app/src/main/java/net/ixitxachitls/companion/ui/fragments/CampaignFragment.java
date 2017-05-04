@@ -39,6 +39,7 @@ import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.NetworkIcon;
@@ -103,14 +104,14 @@ public class CampaignFragment extends CompanionFragment {
         });
 
     Setup.listView(view, R.id.characters, charactersAdapter,
-        (i) -> getMain().showCharacter(characters.get(i)));
+        (i) -> CompanionFragments.get().showCharacter(characters.get(i)));
 
     return view;
   }
 
   private void startBattle() {
     if (campaign.isLocal()) {
-      getMain().showBattle(campaign);
+      CompanionFragments.get().showBattle(campaign);
     }
   }
 

@@ -27,19 +27,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 /**
  * Fragment for displaying settings values.
  */
 public class SettingsFragment extends CompanionFragment {
   private Settings settings;
+
+  // UI elements.
   private TextView nickname;
   private Button save;
+  private CheckBox status;
 
   public SettingsFragment() {
     super(Type.settings);
@@ -55,6 +60,7 @@ public class SettingsFragment extends CompanionFragment {
     nickname = Setup.editText(view, R.id.nickname, settings.getNickname(),
         R.string.settings_nickname_label, R.color.colorAccent,
         this::editNickname, this::refresh);
+    status = Setup.checkBox(view, R.id.status, settings.showStatus());
     save = Setup.button(view, R.id.save, this::save);
 
     if (settings.isDefined()) {
@@ -67,10 +73,11 @@ public class SettingsFragment extends CompanionFragment {
 
   private void save() {
     editNickname();
+    settings.setDebugStatus(status.isChecked());
     settings.store();
 
     if (settings.isDefined()) {
-      showLast();
+      CompanionFragments.get().showLast();
     }
   }
 
@@ -80,6 +87,8 @@ public class SettingsFragment extends CompanionFragment {
 
   @Override
   public void refresh() {
+    super.refresh();
+
     if (nickname != null) {
       if (nickname.getText().length() > 0) {
         save.setVisibility(View.VISIBLE);

@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.TitleView;
 
@@ -87,7 +88,7 @@ public class CharacterFragment extends CompanionFragment {
 
   private void gotoBattle() {
     if (canEdit()) {
-      getMain().showBattle(character);
+      CompanionFragments.get().showBattle(character);
     }
   }
 

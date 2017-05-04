@@ -47,4 +47,7 @@
     <attr name="pulse_dark" format="color"/>
     <attr name="pulse_duration" format="integer"/>
   </declare-styleable>
+
+  <declare-styleable name="StatusView">
+  </declare-styleable>
 </resources>

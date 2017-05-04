@@ -21,27 +21,19 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
-import net.ixitachitls.companion.R;
 
 /**
  * Base class for all activities in the companion.
  */
 public abstract class CompanionActivity extends AppCompatActivity {
-
-  /** Setup the activity. */
-  protected void setup(@Nullable Bundle state, int id, int titleId) {
-    setContentView(id);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
-    setTitle(getString(titleId));
-  }
-
   public abstract void status(String message);
   public abstract void refresh();
   public abstract void onlineBleep();
+  public abstract void addClientConnection(String name);
+  public abstract void updateClientConnection(String name);
+  public abstract void addServerConnection(String name);
+  public abstract void updateServerConnection(String name);
+  public abstract void startServer();
+  public abstract void stopServer();
 }
