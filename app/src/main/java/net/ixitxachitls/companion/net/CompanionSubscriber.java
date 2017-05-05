@@ -27,7 +27,6 @@ import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.data.Settings;
@@ -46,7 +45,6 @@ import java.util.Map;
 public class CompanionSubscriber {
   private static final String TAG = "Subscriber";
   private static CompanionSubscriber singleton;
-  private static Joiner LINE_JOINER = Joiner.on("\n");
 
   private final NsdManager manager;
   private @Nullable NsdManager.ResolveListener resolveListener;

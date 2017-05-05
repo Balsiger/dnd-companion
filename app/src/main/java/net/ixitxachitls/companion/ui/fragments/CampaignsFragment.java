@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.NetworkIcon;
 import net.ixitxachitls.companion.ui.views.TitleView;
 
@@ -57,7 +58,6 @@ public class CampaignsFragment extends CompanionFragment {
                            Bundle savedInstanceState) {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign_list, container, false);
-    // Copy the campaign list to prevent unexpected changes in the list.
     campaignsAdapter =
         new ListAdapter<>(container.getContext(), R.layout.list_item_campaign, campaigns,
             new ListAdapter.ViewBinder<Campaign>() {
@@ -86,7 +86,7 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void addCampaign() {
-    EditCampaignFragment.newInstance().display(getFragmentManager());
+    EditCampaignDialog.newInstance().display(getFragmentManager());
   }
 
   private void publishCampaign(Campaign campaign) {

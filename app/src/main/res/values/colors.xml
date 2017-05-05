@@ -23,5 +23,6 @@
   <color name="monster">#290</color>
 
   <color name="battle">#800</color>
+  <color name="battleBright">#b00</color>
 
 </resources>

@@ -41,6 +41,9 @@ import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
+import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
+import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
+import net.ixitxachitls.companion.ui.views.ActionButton;
 import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.NetworkIcon;
 import net.ixitxachitls.companion.ui.views.TitleView;
@@ -63,7 +66,7 @@ public class CampaignFragment extends CompanionFragment {
   private NetworkIcon networkIcon;
   private FloatingActionButton addCharacter;
   private TextView date;
-  private FloatingActionButton battle;
+  private ActionButton battle;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -83,8 +86,8 @@ public class CampaignFragment extends CompanionFragment {
     delete.setAction(this::deleteCampaign);
     networkIcon = (NetworkIcon) view.findViewById(R.id.network);
     addCharacter = Setup.floatingButton(view, R.id.add_character, this::createCharacter);
-    battle = Setup.floatingButton(view, R.id.battle, this::startBattle);
-    date = Setup.textView(view, R.id.date, this::showDateFragment);
+    battle = Setup.actionButton(view, R.id.battle, this::startBattle);
+    date = Setup.textView(view, R.id.date, this::editDate);
 
     // Setup list view.
     charactersAdapter = new ListAdapter<>(container.getContext(),
@@ -92,14 +95,13 @@ public class CampaignFragment extends CompanionFragment {
         new ListAdapter.ViewBinder<Character>() {
           @Override
           public void bind(View view, Character item, int position) {
+            TitleView title = (TitleView) view.findViewById(R.id.title);
             if (campaign.isLocal() && !campaign.isDefault()) {
-              Setup.textView(view, R.id.name).setText(item.getName()
-                  + " (" + item.getPlayerName() + ")");
+              title.setTitle(item.getName() + " (" + item.getPlayerName() + ")");
             } else {
-              Setup.textView(view, R.id.name).setText(item.getName());
+              title.setTitle(item.getName());
             }
-            Setup.textView(view, R.id.gender_race).setText(
-                item.getGender().getName() + " " + item.getRace());
+            title.setSubtitle(item.getGender().getName() + " " + item.getRace());
           }
         });
 
@@ -115,16 +117,16 @@ public class CampaignFragment extends CompanionFragment {
     }
   }
 
-  public void showDateFragment() {
-    if (campaign.isLocal()) {
-      DateDialog.newInstance(campaign.getCampaignId()).display(getFragmentManager());
-    }
-  }
-
   public void showCampaign(Campaign campaign) {
     this.campaign = campaign;
 
     refresh();
+  }
+
+  private void editDate() {
+    if (campaign.isLocal()) {
+      DateDialog.newInstance(campaign.getCampaignId()).display(getFragmentManager());
+    }
   }
 
   private void edit() {
@@ -132,7 +134,7 @@ public class CampaignFragment extends CompanionFragment {
       return;
     }
 
-    EditCampaignFragment.newInstance(campaign.getCampaignId()).display(getFragmentManager());
+    EditCampaignDialog.newInstance(campaign.getCampaignId()).display(getFragmentManager());
   }
 
   protected void deleteCampaign() {
@@ -151,7 +153,7 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void createCharacter() {
-    EditCharacterFragment.newInstance("", campaign.getCampaignId()).display(getFragmentManager());
+    EditCharacterDialog.newInstance("", campaign.getCampaignId()).display(getFragmentManager());
   }
 
   @Override
@@ -162,11 +164,7 @@ public class CampaignFragment extends CompanionFragment {
       return;
     }
 
-    Campaign newCampaign = Campaigns.get().getCampaign(campaign.getCampaignId());
-    if (newCampaign != campaign) {
-      networkIcon.bleep();
-    }
-    campaign = newCampaign;
+    campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
 
     if (campaign.isDefault() || campaign.isPublished()) {
       delete.setVisibility(View.GONE);
@@ -208,5 +206,7 @@ public class CampaignFragment extends CompanionFragment {
       characters.addAll(Characters.get().getCharacters(campaign.getCampaignId()));
       charactersAdapter.notifyDataSetChanged();
     }
+
+    battle.pulse(!campaign.getBattle().isEnded());
   }
 }

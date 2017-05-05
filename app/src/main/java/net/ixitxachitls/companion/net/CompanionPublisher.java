@@ -27,7 +27,6 @@ import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.google.common.base.Joiner;
 import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -46,7 +45,6 @@ import java.util.List;
 public class CompanionPublisher {
 
   public static final String TYPE = "_companion._tcp";
-  private static final Joiner LINE_JOINER = Joiner.on("\n");
   private static CompanionPublisher singleton;
 
   private final NsdManager manager;

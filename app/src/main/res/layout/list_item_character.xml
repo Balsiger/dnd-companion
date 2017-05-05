@@ -29,40 +29,15 @@
                 android:layout_marginBottom="2dp"
                 android:background="@color/character"
                 android:descendantFocusability="blocksDescendants"
-                android:padding="20dp"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                tools:context="net.ixitachitls.companion.net.ixitxachitls.companion.MainActivity">
+                tools:context="net.ixitxachitls.companion.MainActivity">
 
-    <TextView
-        android:id="@+id/name"
+    <view
+        android:id="@+id/title"
+        class="net.ixitxachitls.companion.ui.views.TitleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:textSize="24sp"
-        android:textStyle="normal|bold"
-        app:layout_constraintBottom_toTopOf="@+id/delete"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"/>
-
-    <TextView
-        android:id="@+id/gender_race"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="false"
-        android:layout_below="@+id/name"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/delete"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"/>
+        android:layout_toRightOf="@+id/network"
+        app:color="@color/character"/>
 
 </RelativeLayout>

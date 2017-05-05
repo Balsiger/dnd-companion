@@ -43,6 +43,9 @@
     <attr name="bleep_bright" format="color"/>
     <attr name="bleep_dark" format="color"/>
     <attr name="bleep_duration" format="integer"/>
+  </declare-styleable>
+
+  <declare-styleable name="ActionButton">
     <attr name="pulse_bright" format="color"/>
     <attr name="pulse_dark" format="color"/>
     <attr name="pulse_duration" format="integer"/>

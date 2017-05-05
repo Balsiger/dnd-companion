@@ -57,10 +57,6 @@ public class CompanionClient {
     try {
       transmitter = new CompanionTransmitter("client", new Socket(address, port));
       transmitter.start();
-      transmitter.send(Data.CompanionMessageProto.newBuilder()
-          .setDebug("This is the client sending information")
-          .build());
-
     } catch (IOException e) {
       Log.e("Client", "cannot open client socket: " + e);
       e.printStackTrace();

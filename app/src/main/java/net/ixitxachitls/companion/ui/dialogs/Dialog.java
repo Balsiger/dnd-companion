@@ -24,21 +24,18 @@ package net.ixitxachitls.companion.ui.dialogs;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.CallSuper;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
@@ -53,9 +50,6 @@ public abstract class Dialog extends DialogFragment {
   private static final String ARG_COLOR = "color";
   private static final int WIDTH = 1500;
 
-  private Optional<SaveAction> save = Optional.absent();
-  private Optional<CancelAction> cancel = Optional.absent();
-
   // The following values are only filled after onCreate().
   protected int layoutId;
   protected String title;
@@ -63,21 +57,6 @@ public abstract class Dialog extends DialogFragment {
 
   // Required empty constructor, don't add anything here.
   protected Dialog() {}
-
-  @FunctionalInterface
-  public interface AttachAction {
-    public void attached(Dialog fragment);
-  }
-
-  @FunctionalInterface
-  public interface CancelAction {
-    public void cancel(Dialog fragment);
-  }
-
-  @FunctionalInterface
-  public interface SaveAction {
-    public void save(Dialog fragment);
-  }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int color) {
@@ -146,39 +125,8 @@ public abstract class Dialog extends DialogFragment {
     getView().setLayoutParams(params);
   }
 
-  @Override
-  public void onAttach(Context context) {
-    super.onAttach(context);
-
-    if (context instanceof AttachAction) {
-      ((AttachAction) context).attached(this);
-    } else {
-      Log.wtf("attach", "context " + context.getClass().getSimpleName()
-          + " does not implement InteractionAction");
-    }
-  }
-
-  public void setCancelListener(CancelAction cancel) {
-    this.cancel = Optional.of(cancel);
-  }
-
-  public void setSaveListener(SaveAction save) {
-    this.save = Optional.of(save);
-  }
-
+  @CallSuper
   protected void save() {
-    if (save.isPresent()) {
-      save.get().save(this);
-    }
-
-    close();
-  }
-
-  protected void cancel() {
-    if (cancel.isPresent()) {
-      cancel.get().cancel(this);
-    }
-
     close();
   }
 

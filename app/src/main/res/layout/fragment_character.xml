@@ -31,7 +31,6 @@
   <view
       android:id="@+id/title"
       class="net.ixitxachitls.companion.ui.views.TitleView"
-      id="@+id/view2"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       app:color="@color/character"/>
@@ -104,8 +103,6 @@
       android:id="@+id/characterLevelLabel"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_alignTop="@+id/constitution"
-      android:layout_toStartOf="@+id/dexterity"
       android:text="@string/character_label_level"
       android:textColor="@android:color/holo_red_light"
       android:textSize="18sp"/>
@@ -115,14 +112,14 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_alignParentStart="true"
-      android:layout_below="@+id/strength_label"
       android:layout_marginStart="75dp"
       android:layout_marginTop="50dp"
       android:textColor="@android:color/holo_red_light"
       android:textSize="18sp"/>
 
-  <android.support.design.widget.FloatingActionButton
+  <view
       android:id="@+id/battle"
+      class="net.ixitxachitls.companion.ui.views.ActionButton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_alignParentBottom="true"
@@ -130,6 +127,8 @@
       android:layout_gravity="bottom|end"
       android:layout_margin="@dimen/fab_margin"
       app:backgroundTint="@color/battle"
+      app:pulse_bright="@color/battleBright"
+      app:pulse_dark="@color/battle"
       app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
 
 </RelativeLayout>

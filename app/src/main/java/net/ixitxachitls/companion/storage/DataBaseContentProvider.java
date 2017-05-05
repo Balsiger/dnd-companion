@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.storage;
 
 import android.content.ContentProvider;
+import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.UriMatcher;
@@ -106,5 +107,10 @@ public class DataBaseContentProvider extends ContentProvider {
   @Override
   public int update(Uri uri, ContentValues values, String selection, String[] selectionArguments) {
     return db.update(uri.getLastPathSegment(), values, selection, selectionArguments);
+  }
+
+  public static void reset(ContentResolver contentResolver) {
+    contentResolver.delete(CAMPAIGNS, null, null);
+    contentResolver.delete(CHARACTERS, null, null);
   }
 }

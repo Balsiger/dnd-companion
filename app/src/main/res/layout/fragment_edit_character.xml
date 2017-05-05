@@ -26,7 +26,7 @@
                                              android:layout_height="wrap_content"
                                              android:elevation="24dp"
                                              android:padding="10dp"
-                                             tools:context="net.ixitxachitls.companion.ui.fragments.EditCharacterFragment">
+                                             tools:context="net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog">
 
     <EditText
         android:id="@+id/edit_name"

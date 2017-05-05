@@ -19,40 +19,30 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.fragments;
+package net.ixitxachitls.companion.ui.dialogs;
 
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.common.base.Optional;
-
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.ui.Setup;
-import net.ixitxachitls.companion.ui.dialogs.Dialog;
+import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
 
 /**
  * Fragment for editing a campaign
  */
-public class EditCampaignFragment extends Dialog {
+public class EditCampaignDialog extends Dialog {
 
   private static final String ARG_ID = "id";
-
-  @FunctionalInterface
-  public interface SaveAction {
-    public void save(Campaign campaign);
-  }
-
-  private Optional<SaveAction> saveAction = Optional.absent();
 
   // The following values are only valid after onCreate().
   private Campaign campaign;
@@ -60,14 +50,14 @@ public class EditCampaignFragment extends Dialog {
   private TextView world;
   private Button save;
 
-  public EditCampaignFragment() {}
+  public EditCampaignDialog() {}
 
-  public static EditCampaignFragment newInstance() {
+  public static EditCampaignDialog newInstance() {
     return newInstance("");
   }
 
-  public static EditCampaignFragment newInstance(String id) {
-    EditCampaignFragment fragment = new EditCampaignFragment();
+  public static EditCampaignDialog newInstance(String id) {
+    EditCampaignDialog fragment = new EditCampaignDialog();
     fragment.setArguments(arguments(R.layout.fragment_edit_campaign,
         id.isEmpty() ? R.string.campaign_title_add : R.string.campaign_title_edit,
         R.color.campaign, id));
@@ -79,10 +69,6 @@ public class EditCampaignFragment extends Dialog {
     Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
     arguments.putString(ARG_ID, campaignId);
     return arguments;
-  }
-
-  public void setSaveListener(@Nullable SaveAction save) {
-    this.saveAction = Optional.of(save);
   }
 
   @Override
@@ -146,10 +132,7 @@ public class EditCampaignFragment extends Dialog {
 
   protected void save() {
     campaign.setName(name.getText().toString());
-
-    if (saveAction.isPresent()) {
-      saveAction.get().save(campaign);
-    }
+    campaign.store();
 
     super.save();
   }

@@ -30,24 +30,17 @@ import android.view.MenuItem;
 import android.view.View;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
-import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
-import net.ixitxachitls.companion.ui.fragments.EditCampaignFragment;
-import net.ixitxachitls.companion.ui.fragments.EditCharacterFragment;
 import net.ixitxachitls.companion.ui.views.StatusView;
 
-public class MainActivity extends CompanionActivity implements Dialog.AttachAction {
+public class MainActivity extends CompanionActivity {
 
   private static final String TAG = "Main";
 
   // UI elements.
   private StatusView status;
-  //private IconView online;
-  //private TextView onlineStatus;
 
   @Override
   protected void onCreate(@Nullable Bundle state) {
@@ -72,7 +65,7 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.menu_campaign_selection, menu);
+    getMenuInflater().inflate(R.menu.menu_main, menu);
     return true;
   }
 
@@ -88,35 +81,12 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
       ConfirmationDialog.create(this)
           .title("Reset All Data")
           .message("Do you really want to delete all data? This step cannot be undone!")
-          .yes(this::reset)
+          .yes(() -> DataBaseContentProvider.reset(getContentResolver()))
           .show();
       return true;
     }
 
     return super.onOptionsItemSelected(item);
-  }
-
-  private void reset() {
-    getContentResolver().delete(DataBaseContentProvider.CAMPAIGNS, null, null);
-    getContentResolver().delete(DataBaseContentProvider.CHARACTERS, null, null);
-  }
-
-  public void attached(Dialog fragment) {
-    if (fragment instanceof EditCampaignFragment) {
-      ((EditCampaignFragment)fragment).setSaveListener(this::saveCampaign);
-    } else if (fragment instanceof EditCharacterFragment) {
-      ((EditCharacterFragment)fragment).setSaveListener(this::saveCharacter);
-    }
-  }
-
-  public void saveCampaign(Campaign campaign) {
-    campaign.store();
-    CompanionFragments.get().refresh();
-  }
-
-  public void saveCharacter(Character character) {
-    character.store();
-    CompanionFragments.get().refresh();
   }
 
   @Override
@@ -130,7 +100,7 @@ public class MainActivity extends CompanionActivity implements Dialog.AttachActi
   }
 
   @Override
-  public void onlineBleep() {
+  public void heartbeat() {
     status.heartbeat();
   }
 

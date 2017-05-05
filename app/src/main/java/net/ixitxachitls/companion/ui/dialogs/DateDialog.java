@@ -262,7 +262,7 @@ public class DateDialog extends Dialog {
 
   private static class MaxFilter implements InputFilter {
 
-    private int min, max;
+    private int max;
 
     public MaxFilter(int max) {
       this.max = max;

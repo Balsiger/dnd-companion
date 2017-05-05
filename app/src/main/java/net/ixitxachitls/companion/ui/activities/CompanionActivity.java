@@ -29,7 +29,7 @@ import android.support.v7.app.AppCompatActivity;
 public abstract class CompanionActivity extends AppCompatActivity {
   public abstract void status(String message);
   public abstract void refresh();
-  public abstract void onlineBleep();
+  public abstract void heartbeat();
   public abstract void addClientConnection(String name);
   public abstract void updateClientConnection(String name);
   public abstract void addServerConnection(String name);

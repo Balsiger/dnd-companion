@@ -22,10 +22,11 @@
 package net.ixitxachitls.companion.ui;
 
 import android.content.res.ColorStateList;
-import android.support.annotation.ColorRes;
+import android.support.annotation.ColorInt;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.support.design.widget.FloatingActionButton;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -45,6 +46,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
+import net.ixitxachitls.companion.ui.views.ActionButton;
 
 import java.util.ArrayList;
 
@@ -100,18 +102,18 @@ public class Setup {
     return editText(view, id, value, 0, 0, action);
   }
 
-  public static EditText editText(View view, @IdRes int id, String value, @IdRes int label,
-                                  @ColorRes int color) {
+  public static EditText editText(View view, @IdRes int id, String value, @StringRes int label,
+                                  @ColorInt int color) {
     return editText(view, id, value, label, color, null);
   }
 
-  public static EditText editText(View view, @IdRes int id, String value, @IdRes int label,
-                                  @ColorRes int color, @Nullable Action action) {
+  public static EditText editText(View view, @IdRes int id, String value, @StringRes int label,
+                                  @ColorInt int color, @Nullable Action action) {
     return editText(view, id, value, label, color, action, null);
   }
 
-  public static EditText editText(View view, @IdRes int id, String value, @IdRes int label,
-                                  @ColorRes int color, @Nullable Action editAction,
+  public static EditText editText(View view, @IdRes int id, String value, @StringRes int label,
+                                  @ColorInt int color, @Nullable Action editAction,
                                   @Nullable Action changeAction) {
     EditText edit = (EditText) view.findViewById(id);
     edit.setText(value);
@@ -215,6 +217,18 @@ public class Setup {
     });
 
     return view;
+  }
+
+  public static ActionButton actionButton(View container, @IdRes int id, Action action) {
+    ActionButton button = (ActionButton) container.findViewById(id);
+    button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        action.execute();
+      }
+    });
+
+    return button;
   }
 
   public static FloatingActionButton floatingButton(View container, @IdRes int id, Action action) {

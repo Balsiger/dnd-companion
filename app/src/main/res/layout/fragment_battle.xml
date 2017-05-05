@@ -1,0 +1,137 @@
+<!--
+  ~ Copyright (c) 2017-{2017} Peter Balsiger
+  ~ All rights reserved
+  ~
+  ~ This file is part of the Player Companion.
+  ~
+  ~ The Player Companion is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ The Player Companion is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with the Player Companion; if not, write to the Free Software
+  ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/fragment_battle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="net.ixitxachitls.companion.ui.fragments.BattleFragment">
+
+  <view
+      android:id="@+id/title"
+      class="net.ixitxachitls.companion.ui.views.TitleView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:color="@color/battle"
+      app:dark="true"
+      app:subtitle="we are crushing them"
+      app:title="Battle"/>
+
+  <TextView
+      android:id="@+id/turn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/title"
+      android:padding="20dp"
+      android:text="Not started"
+      android:textAlignment="center"
+      android:textSize="30sp"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/status"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/turn"
+      android:padding="20dp"
+      android:text="... status ..."
+      android:textAlignment="center"
+      android:textSize="18sp"/>
+
+  <LinearLayout
+      android:id="@+id/buttons"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/status"
+      android:layout_centerHorizontal="true"
+      android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:text="Start"/>
+
+    <Button
+        android:id="@+id/battle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:text="Battle"/>
+
+    <Button
+        android:id="@+id/add_monster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:text="Add Monster"/>
+
+    <Button
+        android:id="@+id/end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:text="End"/>
+  </LinearLayout>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/buttons"
+      android:layout_marginTop="10dp"
+      >
+
+    <LinearLayout
+        android:id="@+id/characters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="400dp"
+        android:orientation="vertical">
+    </LinearLayout>
+  </ScrollView>
+
+  <view
+      android:id="@+id/dice"
+      class="net.ixitxachitls.companion.ui.views.DiceView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/buttons"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:padding="20dp"
+      app:modifier_label="@string/label_initiative_modifier"/>
+
+</RelativeLayout>

@@ -43,8 +43,8 @@ public class Entries {
   private static @Nullable Entries singleton = null;
 
   private final Monsters monsters = new Monsters();
-  private final EntriesStore<Level> levels = new EntriesStore(Level.class);
-  private final EntriesStore<World> worlds = new EntriesStore(World.class);
+  private final EntriesStore<Level> levels = new EntriesStore<>(Level.class);
+  private final EntriesStore<World> worlds = new EntriesStore<>(World.class);
   private final Context mContext;
 
   public Entries(Context context) {

@@ -19,19 +19,17 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.fragments;
+package net.ixitxachitls.companion.ui.dialogs;
 
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitachitls.companion.R;
@@ -42,22 +40,15 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.ui.Setup;
-import net.ixitxachitls.companion.ui.dialogs.Dialog;
+import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
 
 /**
  * Fragment for editing a character (main values).
  */
-public class EditCharacterFragment extends Dialog {
+public class EditCharacterDialog extends Dialog {
 
   private static final String ARG_ID = "id";
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
-
-  @FunctionalInterface
-  public interface SaveAction {
-    public void save(Character character);
-  }
-
-  private Optional<SaveAction> saveAction = Optional.absent();
 
   // The following values are only valid after onCreate().
   private Character character;
@@ -69,10 +60,10 @@ public class EditCharacterFragment extends Dialog {
   private TextView race;
   private Button save;
 
-  public EditCharacterFragment() {}
+  public EditCharacterDialog() {}
 
-  public static EditCharacterFragment newInstance(String characterId, String campaignId) {
-    EditCharacterFragment fragment = new EditCharacterFragment();
+  public static EditCharacterDialog newInstance(String characterId, String campaignId) {
+    EditCharacterDialog fragment = new EditCharacterDialog();
     fragment.setArguments(arguments(R.layout.fragment_edit_character,
         characterId.isEmpty() ? R.string.edit_character_add : R.string.edit_character_edit,
         R.color.character, characterId, campaignId));
@@ -85,10 +76,6 @@ public class EditCharacterFragment extends Dialog {
     arguments.putString(ARG_ID, characterId);
     arguments.putString(ARG_CAMPAIGN_ID, campaignId);
     return arguments;
-  }
-
-  public void setSaveListener(@Nullable SaveAction save) {
-    this.saveAction = Optional.of(save);
   }
 
   @Override
@@ -161,10 +148,7 @@ public class EditCharacterFragment extends Dialog {
   @Override
   protected void save() {
     character.setName(name.getText().toString());
-
-    if (saveAction.isPresent()) {
-      saveAction.get().save(character);
-    }
+    character.store();
 
     super.save();
   }

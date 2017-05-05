@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +35,9 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
+import net.ixitxachitls.companion.ui.views.ActionButton;
 import net.ixitxachitls.companion.ui.views.TitleView;
 
 /**
@@ -54,7 +55,7 @@ public class CharacterFragment extends CompanionFragment {
   private AbilityView intelligence;
   private AbilityView wisdom;
   private AbilityView charisma;
-  private FloatingActionButton battle;
+  private ActionButton battle;
 
   public CharacterFragment() {
     super(Type.character);
@@ -81,12 +82,12 @@ public class CharacterFragment extends CompanionFragment {
     charisma = (AbilityView) view.findViewById(R.id.charisma);
     charisma.setAction(this::editAbilities);
 
-    battle = Setup.floatingButton(view, R.id.battle, this::gotoBattle);
+    battle = Setup.actionButton(view, R.id.battle, this::showBattle);
 
     return view;
   }
 
-  private void gotoBattle() {
+  private void showBattle() {
     if (canEdit()) {
       CompanionFragments.get().showBattle(character);
     }
@@ -104,7 +105,7 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    EditCharacterFragment.newInstance(character.getCharacterId(), character.getCampaignId())
+    EditCharacterDialog.newInstance(character.getCharacterId(), character.getCampaignId())
         .display(getFragmentManager());
   }
 
@@ -129,12 +130,7 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    Character newCharacter =
-        Characters.get().getCharacter(character.getCharacterId(), campaign.getCampaignId());
-    if (newCharacter != character) {
-
-    }
-    character = newCharacter;
+    character = Characters.get().getCharacter(character.getCharacterId(), campaign.getCampaignId());
     if (campaign != null) {
       campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
     }
@@ -148,9 +144,9 @@ public class CharacterFragment extends CompanionFragment {
     intelligence.setValue(character.getIntelligence(),
         Ability.modifier(character.getIntelligence()));
     wisdom.setValue(character.getWisdom(), Ability.modifier(character.getWisdom()));
-    charisma.setValue(character.getCharisma(), Ability.modifier(character.getCharisma())
-    );
+    charisma.setValue(character.getCharisma(), Ability.modifier(character.getCharisma()));
 
     battle.setVisibility(canEdit() ? View.VISIBLE : View.GONE);
+    battle.pulse(!campaign.getBattle().isEnded());
   }
 }

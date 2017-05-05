@@ -94,7 +94,7 @@ public class CompanionApplication extends MultiDexApplication
         currentActivity.runOnUiThread(new Runnable() {
           @Override
           public void run() {
-            currentActivity.onlineBleep();
+            currentActivity.heartbeat();
           }
         });
       }
@@ -210,10 +210,10 @@ public class CompanionApplication extends MultiDexApplication
 
   @Override
   public void onActivityResumed(Activity activity) {
+    // Don't mark the server as stopped if it has not been started. This prevents displaying a
+    // server that might never be used by the user.
     if (serverStarted) {
       currentActivity.startServer();
-    } else {
-      currentActivity.stopServer();
     }
   }
 
