@@ -91,7 +91,7 @@ public class EditCharacterDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     name = Setup.editText(view, R.id.edit_name, character.getName(), R.string.campaign_edit_name,
-        R.color.character, null, this::update);
+        getResources().getColor(R.color.character, null), null, this::update);
     gender = Setup.textView(view, R.id.edit_gender, this::editGender);
     race = Setup.textView(view, R.id.edit_race, this::editRace);
     save = Setup.button(view, R.id.save, this::save);

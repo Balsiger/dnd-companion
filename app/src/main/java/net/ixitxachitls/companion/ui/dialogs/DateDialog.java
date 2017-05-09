@@ -118,7 +118,6 @@ public class DateDialog extends Dialog {
     Setup.button(view, R.id.plus_1, () -> addMinutes(1));
     Setup.button(view, R.id.plus_5, () -> addMinutes(5));
     Setup.button(view, R.id.plus_15, () -> addMinutes(15));
-    Setup.button(view, R.id.plus_30, () -> addMinutes(30));
     Setup.button(view, R.id.plus_60, () -> addMinutes(60));
     Setup.button(view, R.id.night, this::night);
 
@@ -237,9 +236,9 @@ public class DateDialog extends Dialog {
     public View getView(int position, View convertView, ViewGroup parent) {
       TextView text;
       if (convertView == null) {
-        text = new TextView(parent.getContext());
-        text.setTextSize(24);
-        text.setPadding(20, 40, 20, 40);
+        text = new TextView(parent.getContext(), null, R.style.LargeText);
+        text.setTypeface(Typeface.DEFAULT_BOLD);
+        text.setPadding(10, 20, 10, 20);
         text.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
       } else {
         text = (TextView) convertView;

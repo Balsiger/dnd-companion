@@ -42,21 +42,21 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/title"
-      android:padding="20dp"
+      android:padding="10dp"
       android:text="Not started"
       android:textAlignment="center"
-      android:textSize="30sp"
-      android:textStyle="bold"/>
+      android:textStyle="bold"
+      android:theme="@style/LargeText"/>
 
   <TextView
       android:id="@+id/status"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/turn"
-      android:padding="20dp"
+      android:padding="5dp"
       android:text="... status ..."
       android:textAlignment="center"
-      android:textSize="18sp"/>
+      android:theme="@style/SmallText"/>
 
   <LinearLayout
       android:id="@+id/buttons"
@@ -126,12 +126,14 @@
   <view
       android:id="@+id/dice"
       class="net.ixitxachitls.companion.ui.views.DiceView"
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/buttons"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="10dp"
-      android:padding="20dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="5dp"
       app:modifier_label="@string/label_initiative_modifier"/>
 
 </RelativeLayout>

@@ -112,17 +112,15 @@ public abstract class Dialog extends DialogFragment {
   }
 
   @Override
-  public void onResume() {
-    super.onResume();
+  public void onStart() {
+    super.onStart();
 
-    int width = WIDTH;
-    if (Resources.getSystem().getDisplayMetrics().widthPixels <= WIDTH) {
+    int width = Resources.getSystem().getDisplayMetrics().widthPixels;
+    if (width < WIDTH) {
       width = ViewGroup.LayoutParams.MATCH_PARENT;
     }
 
-    ViewGroup.LayoutParams params = getView().getLayoutParams();
-    params.width = width;
-    getView().setLayoutParams(params);
+    getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
   }
 
   @CallSuper

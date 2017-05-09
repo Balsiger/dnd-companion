@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -66,8 +67,9 @@ public class DiceView extends LinearLayout {
   private void init(@Nullable AttributeSet attributes) {
     TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.DiceView );
 
-    View view = LayoutInflater.from(getContext())
-        .inflate(R.layout.view_dice, null, false);
+    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_dice, null, false);
+    view.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+        ViewGroup.LayoutParams.WRAP_CONTENT));
     Setup.textView(view, R.id.label).setText(array.getString(R.styleable.DiceView_modifier_label));
     modifierView = (TextView) Setup.textView(view, R.id.modifier);
     random = (Button) Setup.button(view, R.id.random, this::selectRandom);
@@ -129,8 +131,8 @@ public class DiceView extends LinearLayout {
     public View getView(int position, View convertView, ViewGroup parent) {
       TextView text;
       if (convertView == null) {
-        text = new TextView(parent.getContext());
-        text.setTextSize(24);
+        text = new TextView(parent.getContext(), null, R.style.LargeText);
+        text.setTypeface(Typeface.DEFAULT_BOLD);
         text.setPadding(20, 40, 20, 40);
         text.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         text.setBackgroundColor(getResources().getColor(R.color.cell, null));

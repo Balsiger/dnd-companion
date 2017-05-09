@@ -167,14 +167,14 @@ public class CompanionFragments {
   public void showBattle(Campaign campaign) {
     show(CompanionFragment.Type.battle);
     if (battleFragment.isPresent()) {
-      battleFragment.get().setCampaign(campaign);
+      battleFragment.get().forCampaign(campaign);
     }
   }
 
   public void showBattle(Character character) {
     show(CompanionFragment.Type.battle);
     if (battleFragment.isPresent()) {
-      battleFragment.get().setCharacter(character);
+      battleFragment.get().forCharacter(character);
     }
   }
 

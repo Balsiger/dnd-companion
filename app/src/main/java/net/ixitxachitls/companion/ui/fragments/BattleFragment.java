@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +29,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -52,7 +53,7 @@ import static android.view.View.GONE;
 public class BattleFragment extends CompanionFragment {
 
   private Campaign campaign;
-  private @Nullable Character character;
+  private Optional<Character> character = Optional.absent();
 
   // UI elements.
   private TextView turn;
@@ -83,6 +84,35 @@ public class BattleFragment extends CompanionFragment {
     dice = (DiceView) view.findViewById(R.id.dice);
 
     return view;
+  }
+
+  public void forCampaign(Campaign campaign) {
+    if (this.campaign == campaign) {
+      return;
+    }
+
+    this.campaign = campaign;
+    this.character = Optional.absent();
+
+    refresh();
+  }
+
+  public void forCharacter(Character character) {
+    if (this.character == Optional.of(character)) {
+      return;
+    }
+
+    this.character = Optional.of(character);
+    this.campaign = Campaigns.get().getCampaign(character.getCampaignId());
+
+    refresh();
+  }
+
+  private void setInitiative(int initiative) {
+    if (character.isPresent()) {
+      character.get().setBattle(initiative);
+      refresh();
+    }
   }
 
   private void start() {
@@ -125,9 +155,9 @@ public class BattleFragment extends CompanionFragment {
     }
 
     campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
-    if (character != null) {
-      character =
-          Characters.get().getCharacter(character.getCharacterId(), campaign.getCampaignId());
+    if (character.isPresent()) {
+      character = Optional.of(Characters.get().getCharacter(character.get().getCharacterId(),
+          campaign.getCampaignId()));
     }
 
     addMonster.setVisibility(GONE);
@@ -156,31 +186,31 @@ public class BattleFragment extends CompanionFragment {
   }
 
   private void refreshPlayer() {
-    if (character == null || campaign == null) {
+    if (!character.isPresent()) {
       return;
     }
 
     Battle battle = campaign.getBattle();
     if (battle.isEnded()) {
       status.setText("Nothing to see here, please move on. Battle has ended or not yet started.");
-      character.clearBattle();
-    } else if (battle.isStarting() && !character.hasInitiative()) {
+      character.get().clearBattle();
+    } else if (battle.isStarting() && !character.get().hasInitiative()) {
       status.setText("Battle is starting, select your iniiative...");
-      dice.setModifier(character.initiativeModifier());
+      dice.setModifier(character.get().initiativeModifier());
       dice.setDice(20);
       dice.setVisibility(View.VISIBLE);
       dice.setSelectAction(this::setInitiative);
-    } else if (battle.isStarting() && character.hasInitiative()) {
+    } else if (battle.isStarting() && character.get().hasInitiative()) {
       status.setText("Battle is starting, you have to wait your turn...");
     } else if (battle.isSurprised()) {
-      character.clearBattle();
+      character.get().clearBattle();
       if (isMyTurn()) {
         status.setText("You are in the surprise round and it's your turn!");
       } else {
         status.setText("You are in the surprise round, please wait your turn.");
       }
     } else if (battle.isOngoing()) {
-      character.clearBattle();
+      character.get().clearBattle();
       if (isMyTurn()) {
         status.setText("You are in battle and it's your turn!.");
       } else {
@@ -190,7 +220,7 @@ public class BattleFragment extends CompanionFragment {
   }
 
   public boolean isMyTurn() {
-    return campaign.getBattle().getCurrentCombatant().getName().equals(character.getName());
+    return campaign.getBattle().getCurrentCombatant().getName().equals(character.get().getName());
   }
 
   public void refreshDM() {
@@ -264,34 +294,5 @@ public class BattleFragment extends CompanionFragment {
     }
 
     return true;
-  }
-
-  public void setCampaign(Campaign campaign) {
-    if (this.campaign == campaign) {
-      return;
-    }
-
-    this.campaign = campaign;
-    this.character = null;
-
-    refresh();
-  }
-
-  public void setCharacter(Character character) {
-    if (this.character == character) {
-      return;
-    }
-
-    setCampaign(Campaigns.get().getCampaign(character.getCampaignId()));
-    this.character = character;
-
-    refresh();
-  }
-
-  private void setInitiative(int initiative) {
-    if (character != null) {
-      character.setBattle(initiative);
-      refresh();
-    }
   }
 }

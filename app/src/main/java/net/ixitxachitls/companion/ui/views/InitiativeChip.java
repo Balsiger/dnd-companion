@@ -63,9 +63,6 @@ public class InitiativeChip extends LinearLayout {
     }
 
     Setup.button(view, R.id.done, this::done).setVisibility(active ? VISIBLE : GONE);
-    Setup.button(view, R.id.ready, this::ready)
-        .setVisibility(active && !battle.currentIsWaiting() && !battle.currentIsLast()
-            ? VISIBLE : GONE);
     Setup.button(view, R.id.delay, this::delay)
         .setVisibility(active && !battle.currentIsWaiting() && !battle.currentIsLast()
             ? VISIBLE : GONE);
@@ -76,11 +73,6 @@ public class InitiativeChip extends LinearLayout {
 
   private void done() {
     battle.combatantDone();
-    fragment.refresh();
-  }
-
-  private void ready() {
-    battle.combatantLater();
     fragment.refresh();
   }
 

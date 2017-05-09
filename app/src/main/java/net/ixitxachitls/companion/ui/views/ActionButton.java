@@ -51,6 +51,12 @@ public class ActionButton extends FloatingActionButton {
     init(attributes);
   }
 
+  public ActionButton(Context context, AttributeSet attributes, int defStyleAttr) {
+    super(context, attributes, defStyleAttr);
+
+    init(attributes);
+  }
+
   private void init(AttributeSet attributes) {
     TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.ActionButton);
 

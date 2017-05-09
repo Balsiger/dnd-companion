@@ -43,8 +43,8 @@
         android:paddingTop="10dp"
         android:text="&lt;&lt;"
         android:textColor="#000"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:theme="@style/LargeText"/>
 
     <EditText
         android:id="@+id/year"
@@ -52,12 +52,12 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/campaign2"
-        android:padding="10dp"
         android:inputType="number"
+        android:padding="10dp"
         android:text="Year"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="24sp"/>
+        android:theme="@style/LargeText"/>
 
     <TextView
         android:id="@+id/year_plus"
@@ -71,8 +71,8 @@
         android:paddingTop="10dp"
         android:text="&gt;&gt;"
         android:textColor="#000"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:theme="@style/LargeText"/>
   </LinearLayout>
 
   <LinearLayout
@@ -92,8 +92,8 @@
         android:paddingTop="10dp"
         android:text="&lt;"
         android:textColor="#000"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:theme="@style/LargeText"/>
 
     <TextView
         android:id="@+id/month"
@@ -105,7 +105,7 @@
         android:text="Month"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="24sp"/>
+        android:theme="@style/LargeText"/>
 
     <TextView
         android:id="@+id/month_plus"
@@ -119,8 +119,8 @@
         android:paddingTop="10dp"
         android:text="&gt;"
         android:textColor="#000"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:theme="@style/LargeText"/>
   </LinearLayout>
 
   <GridView
@@ -130,9 +130,9 @@
       android:layout_margin="10dp"
       android:layout_weight="1"
       android:background="@color/white"
-      android:columnWidth="70dp"
+      android:columnWidth="50dp"
       android:horizontalSpacing="5dp"
-      android:numColumns="auto_fit"
+      android:numColumns="5"
       android:stretchMode="columnWidth"
       android:textAlignment="center"
       android:verticalSpacing="5dp"/>
@@ -142,38 +142,37 @@
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
       android:orientation="horizontal"
-      android:padding="20dp">
+      android:padding="5dp">
 
     <EditText
         android:id="@+id/hours"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:ems="10"
         android:inputType="numberSigned"
         android:selectAllOnFocus="true"
-        android:textSize="36sp"
-        android:textStyle="bold"/>
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:theme="@style/LargeText"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:text=":"
-        android:textSize="36sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:theme="@style/LargeText"/>
 
     <EditText
         android:id="@+id/minutes"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:ems="10"
         android:inputType="numberSigned"
         android:selectAllOnFocus="true"
-        android:textSize="36sp"
-        android:textStyle="bold"/>
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:theme="@style/LargeText"/>
 
   </LinearLayout>
 
@@ -182,7 +181,7 @@
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
       android:orientation="horizontal"
-      android:padding="20dp">
+      android:padding="5dp">
 
     <Button
         android:id="@+id/plus_1"
@@ -209,14 +208,6 @@
         android:textSize="18sp"/>
 
     <Button
-        android:id="@+id/plus_30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="+30"
-        android:textSize="18sp"/>
-
-    <Button
         android:id="@+id/plus_60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -229,7 +220,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="night"
+        android:text="+N"
         android:textSize="18sp"/>
 
   </LinearLayout>

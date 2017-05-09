@@ -117,10 +117,10 @@ public class Setup {
                                   @Nullable Action changeAction) {
     EditText edit = (EditText) view.findViewById(id);
     edit.setText(value);
-    if (label > 0) {
+    if (label != 0) {
       edit.setHint(view.getContext().getString(label));
     }
-    if (color > 0) {
+    if (color != 0) {
       edit.setBackgroundTintList(ColorStateList.valueOf(color));
     }
     if (changeAction != null) {
