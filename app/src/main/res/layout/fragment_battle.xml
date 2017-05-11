@@ -105,6 +105,7 @@
         android:layout_margin="5dp"
         android:layout_weight="1"
         android:text="End"/>
+
   </LinearLayout>
 
   <ScrollView
@@ -120,6 +121,7 @@
         android:layout_height="match_parent"
         android:minHeight="400dp"
         android:orientation="vertical">
+
     </LinearLayout>
   </ScrollView>
 
@@ -135,5 +137,27 @@
       android:paddingRight="10dp"
       android:paddingTop="5dp"
       app:modifier_label="@string/label_initiative_modifier"/>
+
+  <LinearLayout
+      android:id="@+id/initiative"
+      android:layout_width="200dp"
+      android:layout_height="200dp"
+      android:layout_below="@+id/buttons"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="50dp"
+      android:background="@drawable/round"
+      android:backgroundTint="@color/battle"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/initiativeNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="10"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+        android:textStyle="bold"/>
+  </LinearLayout>
 
 </RelativeLayout>

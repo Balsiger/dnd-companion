@@ -28,61 +28,35 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.Setup;
-import net.ixitxachitls.companion.ui.fragments.BattleFragment;
 
 /**
  * A chip with rounded corners and a text.
  */
 public class InitiativeChip extends LinearLayout {
 
-  private TextView name;
-  private BattleFragment fragment;
-  private Battle battle;
-
-  public InitiativeChip(Context context, BattleFragment fragment, Battle battle, String name,
-                        boolean monster, boolean ready, boolean active) {
+  public InitiativeChip(Context context, String name, int initiative, boolean monster,
+                        boolean ready) {
     super(context);
-    this.fragment = fragment;
-    this.battle = battle;
 
-    init(name, monster, ready, active);
+    init(name, initiative, monster, ready);
   }
 
-  private void init(String name, boolean monster, boolean ready, boolean active) {
+  private void init(String name, int initiative, boolean monster, boolean ready) {
     View view = LayoutInflater.from(getContext())
-        .inflate(R.layout.view_chip, null, false);
+        .inflate(R.layout.view_chip_initiative, null, false);
     view.findViewById(R.id.back).setBackgroundTintList(
         getResources().getColorStateList(monster ? R.color.monster : R.color.character, null));
 
-    this.name = (TextView) Setup.textView(view, R.id.name);
-    this.name.setText(name);
+    TextView text = Setup.textView(view, R.id.name);
+    text.setText(name);
+
     if (!ready) {
-      this.name.setTextColor(getResources().getColor(R.color.cell, null));
+      text.setTextColor(getResources().getColor(R.color.cell, null));
+    } else {
+      Setup.textView(view, R.id.initiative, "initiative " + initiative);
     }
 
-    Setup.button(view, R.id.done, this::done).setVisibility(active ? VISIBLE : GONE);
-    Setup.button(view, R.id.delay, this::delay)
-        .setVisibility(active && !battle.currentIsWaiting() && !battle.currentIsLast()
-            ? VISIBLE : GONE);
-    Setup.button(view, R.id.remove, this::remove).setVisibility(active && monster ? VISIBLE : GONE);
-
     addView(view);
-  }
-
-  private void done() {
-    battle.combatantDone();
-    fragment.refresh();
-  }
-
-  private void delay() {
-    battle.combatantLater();
-    fragment.refresh();
-  }
-
-  private void remove() {
-    battle.removeCombatant();
-    fragment.refresh();
   }
 }

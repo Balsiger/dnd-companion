@@ -51,6 +51,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   private boolean published = false;
   private CampaignDate date;
   private Battle battle;
+  private int nextBattleNumber = 0;
 
   private Campaign(long id, String name) {
     super(id, name, DataBaseContentProvider.CAMPAIGNS);
@@ -85,10 +86,6 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public Battle getBattle() {
     return battle;
-  }
-
-  public String getServerId() {
-    return campaignId.replaceAll("-\\d+-remote$", "");
   }
 
   public boolean isDefault() {
@@ -136,6 +133,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
         .setDm(dm)
         .setDate(date.toProto())
         .setBattle(battle.toProto())
+        .setNextBattleNumber(nextBattleNumber)
         .build();
   }
 
@@ -166,6 +164,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     campaign.published = proto.getPublished();
     campaign.date = CampaignDate.fromProto(campaign.getCalendar(), proto.getDate());
     campaign.battle = Battle.fromProto(campaign, proto.getBattle());
+    campaign.nextBattleNumber = proto.getNextBattleNumber();
 
     return campaign;
   }

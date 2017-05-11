@@ -21,11 +21,13 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -64,6 +66,8 @@ public class BattleFragment extends CompanionFragment {
   private DiceView dice;
   private Button end;
   private Button battleButton;
+  private LinearLayout initiative;
+  private TextView initiativeNumber;
 
   public BattleFragment() {
     super(Type.battle);
@@ -74,14 +78,16 @@ public class BattleFragment extends CompanionFragment {
                            Bundle savedInstanceState) {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_battle, container, false);
-    turn = (TextView) Setup.textView(view, R.id.turn);
-    status = (TextView) Setup.textView(view, R.id.status);
-    start = (Button) Setup.button(view, R.id.start, this::start);
-    battleButton = (Button) Setup.button(view, R.id.battle, this::battle);
-    end = (Button) Setup.button(view, R.id.end, this::end);
-    addMonster = (Button) Setup.button(view, R.id.add_monster, this::addMonster);
+    turn = Setup.textView(view, R.id.turn);
+    status = Setup.textView(view, R.id.status);
+    start = Setup.button(view, R.id.start, this::start);
+    battleButton = Setup.button(view, R.id.battle, this::battle);
+    end = Setup.button(view, R.id.end, this::end);
+    addMonster = Setup.button(view, R.id.add_monster, this::addMonster);
     charactersBox = (LinearLayout) view.findViewById(R.id.characters);
     dice = (DiceView) view.findViewById(R.id.dice);
+    initiative = (LinearLayout) view.findViewById(R.id.initiative);
+    initiativeNumber = Setup.textView(view, R.id.initiativeNumber, this::changeInitiative);
 
     return view;
   }
@@ -110,9 +116,17 @@ public class BattleFragment extends CompanionFragment {
 
   private void setInitiative(int initiative) {
     if (character.isPresent()) {
-      character.get().setBattle(initiative);
+      character.get().setBattle(initiative, campaign.getBattle().getNumber());
       refresh();
     }
+  }
+
+  private void changeInitiative() {
+    if (!campaign.getBattle().isStarting()) {
+      return;
+    }
+
+    setInitiative(Character.NO_INITIATIVE);
   }
 
   private void start() {
@@ -154,10 +168,12 @@ public class BattleFragment extends CompanionFragment {
       return;
     }
 
-    campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
     if (character.isPresent()) {
       character = Optional.of(Characters.get().getCharacter(character.get().getCharacterId(),
           campaign.getCampaignId()));
+      campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
+    } else {
+      campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
     }
 
     addMonster.setVisibility(GONE);
@@ -166,6 +182,8 @@ public class BattleFragment extends CompanionFragment {
     battleButton.setVisibility(GONE);
     end.setVisibility(GONE);
     charactersBox.setVisibility(GONE);
+    initiative.setVisibility(GONE);
+
 
     if (campaign.isLocal()) {
       refreshDM();
@@ -193,7 +211,6 @@ public class BattleFragment extends CompanionFragment {
     Battle battle = campaign.getBattle();
     if (battle.isEnded()) {
       status.setText("Nothing to see here, please move on. Battle has ended or not yet started.");
-      character.get().clearBattle();
     } else if (battle.isStarting() && !character.get().hasInitiative()) {
       status.setText("Battle is starting, select your iniiative...");
       dice.setModifier(character.get().initiativeModifier());
@@ -202,19 +219,23 @@ public class BattleFragment extends CompanionFragment {
       dice.setSelectAction(this::setInitiative);
     } else if (battle.isStarting() && character.get().hasInitiative()) {
       status.setText("Battle is starting, you have to wait your turn...");
-    } else if (battle.isSurprised()) {
-      character.get().clearBattle();
+      initiative.setVisibility(View.VISIBLE);
+      initiativeNumber.setText(String.valueOf(character.get().getInitiative()));
+    } else if (battle.isSurprised() || battle.isOngoing()) {
+      initiative.setVisibility(View.VISIBLE);
+      initiativeNumber.setText(String.valueOf(character.get().getInitiative()));
       if (isMyTurn()) {
-        status.setText("You are in the surprise round and it's your turn!");
+        status.setText(battle.isSurprised()
+            ? "You are in the surprise round and it's your turn!"
+            : "You are in battle and it's your turn!.");
+        initiative.getBackground().setColorFilter(getResources().getColor(R.color.on, null),
+            PorterDuff.Mode.SRC);
       } else {
-        status.setText("You are in the surprise round, please wait your turn.");
-      }
-    } else if (battle.isOngoing()) {
-      character.get().clearBattle();
-      if (isMyTurn()) {
-        status.setText("You are in battle and it's your turn!.");
-      } else {
-        status.setText("You are in battle, please wait your turn.");
+        status.setText(battle.isSurprised()
+            ? "You are in the surprise round, please wait your turn."
+            : "You are in battle, please wait your turn.");
+        initiative.getBackground().setColorFilter(getResources().getColor(R.color.off, null),
+            PorterDuff.Mode.DST);
       }
     }
   }
@@ -243,9 +264,8 @@ public class BattleFragment extends CompanionFragment {
       // Make sure all characters are stored as combatants.
       boolean allDone = true;
       for (Character character : campaign.getCharacters()) {
-        if (character.hasInitiative()) {
-          battle.addCharacter(character.getName(), character.getInitiative());
-        } else {
+        battle.addCharacter(character.getName(), character.getInitiative());
+        if (!character.hasInitiative()) {
           allDone = false;
         }
       }
@@ -267,19 +287,47 @@ public class BattleFragment extends CompanionFragment {
     List<Battle.Combatant> combatants =
         battle.isStarting() ? battle.combatantsByInitiative() : battle.combatants();
     for (Battle.Combatant combatant : combatants) {
-      InitiativeChip chip = new InitiativeChip(getContext(), this, battle, combatant.getName() + "/" + combatant.getInitiative(),
-          combatant.isMonster(), isReady(combatant),
-          (battle.isSurprised() || battle.isOngoing()) && i == battle.getCurrentCombatantIndex());
-      charactersBox.addView(chip);
+      InitiativeChip chip = new InitiativeChip(getContext(), combatant.getName(),
+          combatant.getInitiative(), combatant.isMonster(), isReady(combatant)
+      );
 
-      if (i == battle.getCurrentCombatantIndex()) {
-        View view= new View(getContext());
-        view.setBackgroundColor(getResources().getColor(R.color.battle, null));
-        view.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 5));
-        charactersBox.addView(view);
+      if ((battle.isOngoing() || battle.isSurprised()) && i == battle.getCurrentCombatantIndex()) {
+        LinearLayout current = createCurrentCombatant(combatant.isMonster());
+        ((FrameLayout) current.findViewById(R.id.content)).addView(chip);
+        charactersBox.addView(current);
+      } else {
+        charactersBox.addView(chip);
       }
       i++;
     }
+  }
+
+  private LinearLayout createCurrentCombatant(boolean showRemove) {
+    LinearLayout current = (LinearLayout) LayoutInflater.from(getContext())
+        .inflate(R.layout.view_battle_current, null);
+    Setup.button(current, R.id.next, this::next);
+    Setup.button(current, R.id.delay, this::delay);
+
+    if (showRemove) {
+      Setup.button(current, R.id.remove, this::remove);
+    }
+
+    return current;
+  }
+
+  private void next() {
+    campaign.getBattle().combatantDone();
+    refresh();
+  }
+
+  private void delay() {
+    campaign.getBattle().combatantLater();
+    refresh();
+  }
+
+  private void remove() {
+    campaign.getBattle().removeCombatant();
+    refresh();
   }
 
   public boolean isReady(Battle.Combatant combatant) {

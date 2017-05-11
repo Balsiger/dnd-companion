@@ -40,8 +40,10 @@ message CampaignProto {
     }
     repeated Combatant combatant = 4;
     int32 current_combatant_index = 5;
+    int32 number = 6;
   }
   Battle battle = 8;
+  int32 next_battle_number = 9;
 }
 
 message CharacterProto {
@@ -74,6 +76,7 @@ message CharacterProto {
 
   message Battle {
     int32 initiative = 1;
+    int32 number = 2;
   }
   Battle battle = 9;
 }

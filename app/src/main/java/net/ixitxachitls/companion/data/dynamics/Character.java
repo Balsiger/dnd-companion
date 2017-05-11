@@ -47,7 +47,7 @@ import java.util.List;
 public class Character extends StoredEntry<Data.CharacterProto> {
   public static final String TABLE = "characters";
   private static final String TAG = "Characters";
-  private static final int NO_INITIATIVE = 200;
+  public static final int NO_INITIATIVE = 200;
 
   private String characterId = "";
   private String campaignId = "";
@@ -62,6 +62,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   private int charisma;
   private List<Level> mLevels = new ArrayList<>();
   private int initiative = NO_INITIATIVE;
+  private int battleNumber = 0;
 
   public Character(long id, String name, String campaignId) {
     super(id, name, DataBaseContentProvider.CHARACTERS);
@@ -163,8 +164,13 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     }
   }
 
+  public int getBattleNumber() {
+    return battleNumber;
+  }
+
   public boolean hasInitiative() {
-    return initiative != NO_INITIATIVE;
+    return initiative != NO_INITIATIVE
+        && battleNumber == Campaigns.get().getCampaign(getCampaignId()).getBattle().getNumber();
   }
 
   public int getInitiative() {
@@ -176,13 +182,9 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     return Ability.modifier(dexterity);
   }
 
-  public void clearBattle() {
-    this.initiative = NO_INITIATIVE;
-    store();
-  }
-
-  public void setBattle(int initiative) {
+  public void setBattle(int initiative, int number) {
     this.initiative = initiative;
+    this.battleNumber = number;
     store();
   }
 
@@ -216,6 +218,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
             .build())
         .setBattle(Data.CharacterProto.Battle.newBuilder()
             .setInitiative(initiative)
+            .setNumber(battleNumber)
             .build());
 
     if (mRace.isPresent()) {
@@ -251,6 +254,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     character.wisdom = proto.getAbilities().getWisdom();
     character.charisma = proto.getAbilities().getCharisma();
     character.initiative = proto.hasBattle() ? proto.getBattle().getInitiative() : NO_INITIATIVE;
+    character.battleNumber = proto.getBattle().getNumber();
 
     for (Data.CharacterProto.Level level : proto.getLevelList()) {
       character.mLevels.add(Character.fromProto(level));

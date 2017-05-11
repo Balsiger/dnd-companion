@@ -40,6 +40,7 @@ public class Battle {
   private static final Random RANDOM = new Random();
 
   private final Campaign campaign;
+  private int number;
   private final List<Combatant> combatants = new ArrayList<>();
   private BattleStatus status;
   private int turn;
@@ -47,12 +48,13 @@ public class Battle {
   private Optional<String> lastMonsterName = Optional.absent();
 
   public Battle(Campaign campaign) {
-    this(campaign, BattleStatus.ENDED, 0, 0, Collections.emptyList());
+    this(campaign, 0, BattleStatus.ENDED, 0, 0, Collections.emptyList());
   }
 
-  private Battle(Campaign campaign, BattleStatus status, int turn, int currentCombatantIndex,
+  private Battle(Campaign campaign, int number, BattleStatus status, int turn, int currentCombatantIndex,
                 List<Combatant> combatants) {
     this.campaign = campaign;
+    this.number = number;
     this.status = status;
     this.turn = turn;
     this.currentCombatantIndex = currentCombatantIndex;
@@ -77,6 +79,10 @@ public class Battle {
 
   public int getTurn() {
     return turn;
+  }
+
+  public int getNumber() {
+    return number;
   }
 
   public void addMonster(String name, int initiativeModifier) {
@@ -109,6 +115,8 @@ public class Battle {
   public void battle() {
     turn = 0;
     status = BattleStatus.SURPRISED;
+    currentCombatantIndex = 0;
+    campaign.store();
   }
 
   public void combatantDone() {
@@ -157,6 +165,7 @@ public class Battle {
 
   public void start() {
     status = BattleStatus.STARTING;
+    number++;
     combatants.clear();
     campaign.store();
   }
@@ -171,6 +180,7 @@ public class Battle {
     Data.CampaignProto.Battle.Builder proto = Data.CampaignProto.Battle.newBuilder()
         .setStatus(status.toProto())
         .setTurn(turn)
+        .setNumber(number)
         .setCurrentCombatantIndex(currentCombatantIndex);
 
     for (Combatant combatant : combatants()) {
@@ -185,8 +195,8 @@ public class Battle {
     for (Data.CampaignProto.Battle.Combatant combatant : proto.getCombatantList()) {
       combatants.add(Combatant.fromProto(combatant));
     }
-    return new Battle(campaign, BattleStatus.fromProto(proto.getStatus()), proto.getTurn(),
-        proto.getCurrentCombatantIndex(), combatants);
+    return new Battle(campaign, proto.getNumber(), BattleStatus.fromProto(proto.getStatus()),
+        proto.getTurn(), proto.getCurrentCombatantIndex(), combatants);
   }
 
   public boolean currentIsLast() {
