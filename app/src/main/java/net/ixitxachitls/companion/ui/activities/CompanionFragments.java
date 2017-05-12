@@ -43,7 +43,7 @@ import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
  * Manager for companion fragments.
  */
 public class CompanionFragments {
-  private static final String TAG = "Fragment";
+  private static final String TAG = "Fragments";
   private static CompanionFragments singleton;
 
   private final FragmentManager fragmentManager;
@@ -129,7 +129,11 @@ public class CompanionFragments {
     }
 
     FragmentTransaction transaction = fragmentManager.beginTransaction();
-    transaction.addToBackStack(fragment.getClass().getSimpleName());
+    Log.d(TAG, "Adding to backstack " + fragment.getClass().getSimpleName());
+    if (currentFragment.isPresent()) {
+      // Don't add the first page to backstack to prevent having a empty page on back.
+      transaction.addToBackStack(fragment.getClass().getSimpleName());
+    }
     transaction.replace(R.id.content, fragment).commit();
     fragmentManager.executePendingTransactions();
     fragment.refresh();

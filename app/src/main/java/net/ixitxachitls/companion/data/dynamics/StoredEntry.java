@@ -25,6 +25,7 @@ import android.content.ContentUris;
 import android.content.ContentValues;
 import android.net.Uri;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.google.protobuf.MessageLite;
 
@@ -35,6 +36,7 @@ import net.ixitxachitls.companion.storage.DataBase;
  * An entry that is stored in the database.
  */
 public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P> {
+  private static final String TAG = "StoredEntry";
   private long id;
   private final Uri dbUrl;
   private @Nullable P proto = null;
@@ -70,6 +72,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     P newProto = toProto();
 
     if (newProto.equals(proto)) {
+      Log.d(TAG, "no changes for " + getClass().getSimpleName() + "/" + getName());
       return false;
     }
 
@@ -82,6 +85,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     }
 
     proto = newProto;
+    Log.d(TAG, "stored changes for " + getClass().getSimpleName() + "/" + getName());
     return true;
   }
 }
