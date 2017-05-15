@@ -21,29 +21,46 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+
+import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.ActionButton;
+import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
+
+import java.io.IOException;
+
+import static android.app.Activity.RESULT_OK;
 
 /**
  * Fragment for displaying character information.
  */
 public class CharacterFragment extends CompanionFragment {
+
+  private final String TAG = "CharacterFragment";
+  private final int PICK_IMAGE = 1;
+
   private Character character;
   private Campaign campaign;
 
@@ -56,6 +73,7 @@ public class CharacterFragment extends CompanionFragment {
   private AbilityView wisdom;
   private AbilityView charisma;
   private ActionButton battle;
+  private RoundImageView image;
 
   public CharacterFragment() {
     super(Type.character);
@@ -67,6 +85,8 @@ public class CharacterFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
+    image = (RoundImageView) view.findViewById(R.id.image);
+    image.setAction(this::editImage);
     title = (TitleView) view.findViewById(R.id.title);
     title.setAction(this::editBase);
     strength = (AbilityView) view.findViewById(R.id.strength);
@@ -109,6 +129,33 @@ public class CharacterFragment extends CompanionFragment {
         .display(getFragmentManager());
   }
 
+  private void editImage() {
+    Intent intent = new Intent();
+    // Show only images, no videos or anything else
+    intent.setType("image/*");
+    intent.setAction(Intent.ACTION_GET_CONTENT);
+    // Always show the chooser (if there are multiple options available)
+    startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+  }
+
+  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    if (requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
+        data != null && data.getData() != null) {
+      try {
+        Uri uri = data.getData();
+        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+        Images.get().save(Character.TABLE, character.getCharacterId(), bitmap);
+        image.setImageBitmap(bitmap);
+      } catch (IOException e) {
+        Log.e(TAG, "Cannot load image bitmap", e);
+        e.printStackTrace();
+      }
+    }
+  }
+
   private void editAbilities() {
     if (!canEdit()) {
       return;
@@ -135,6 +182,10 @@ public class CharacterFragment extends CompanionFragment {
       campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
     }
 
+    Optional<Bitmap> bitmap = Images.get().load(Character.TABLE, character.getCharacterId());
+    if (bitmap.isPresent()) {
+      image.setImageBitmap(bitmap.get());
+    }
     title.setTitle(character.getName());
     title.setSubtitle(character.getGender().getName() + " " + character.getRace());
     strength.setValue(character.getStrength(), Ability.modifier(character.getStrength()));

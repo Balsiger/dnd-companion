@@ -30,7 +30,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.ImageView;
+
+import net.ixitxachitls.companion.ui.Setup;
 
 /**
  * An image view that shows the image round.
@@ -61,5 +64,14 @@ public class RoundImageView extends ImageView {
       drawable.draw(canvas);
       return bitmap;
     }
+  }
+
+  public void setAction(Setup.Action action) {
+    setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        action.execute();
+      }
+    });
   }
 }

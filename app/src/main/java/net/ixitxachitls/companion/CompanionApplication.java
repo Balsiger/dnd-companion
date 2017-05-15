@@ -36,6 +36,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
@@ -64,6 +65,7 @@ public class CompanionApplication extends MultiDexApplication
 
     Entries.init(this);
     Settings.init(this);
+    Images.load(this);
     Campaigns.load(this);
     Characters.load(this);
 
