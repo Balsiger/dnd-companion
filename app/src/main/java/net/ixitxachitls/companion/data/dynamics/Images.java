@@ -41,6 +41,7 @@ import java.io.IOException;
 public class Images extends StoredEntries {
 
   private static final String TAG = "Images";
+  private static final int MAX = 500;
 
   private static Images singleton;
 
@@ -65,7 +66,9 @@ public class Images extends StoredEntries {
     return singleton;
   }
 
-  public void save(String type, String id, Bitmap bitmap) {
+  public Bitmap save(String type, String id, Bitmap bitmap) {
+    bitmap = scale(bitmap);
+
     File file = file(type, id);
     FileOutputStream out = null;
     try {
@@ -80,12 +83,14 @@ public class Images extends StoredEntries {
         Log.e(TAG, "Cannot close output image", e);
       }
     }
+
+    return bitmap;
   }
 
   public Optional<Bitmap> load(String type, String id) {
     File file = file(type, id);
     try {
-      return Optional.of(BitmapFactory.decodeStream(new FileInputStream(file)));
+      return Optional.fromNullable(BitmapFactory.decodeStream(new FileInputStream(file)));
     } catch (FileNotFoundException e) {
       return Optional.absent();
     }
@@ -93,5 +98,17 @@ public class Images extends StoredEntries {
 
   private File file(String type, String id) {
     return new File(context.getExternalFilesDir(type), id + ".png");
+  }
+
+  private Bitmap scale(Bitmap bitmap) {
+    // Scale bitmap down if it's too large.
+    if (bitmap.getWidth() <= MAX && bitmap.getHeight() <= MAX) {
+      return bitmap;
+    }
+
+    float factor = (bitmap.getWidth() > bitmap.getHeight()
+        ? bitmap.getWidth() : bitmap.getHeight()) / MAX;
+    return Bitmap.createScaledBitmap(bitmap, (int) (bitmap.getWidth() / factor),
+        (int) (bitmap.getHeight() / factor), false);
   }
 }

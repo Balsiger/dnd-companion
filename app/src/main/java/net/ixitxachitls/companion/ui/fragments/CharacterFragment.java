@@ -147,7 +147,7 @@ public class CharacterFragment extends CompanionFragment {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        Images.get().save(Character.TABLE, character.getCharacterId(), bitmap);
+        bitmap = Images.get().save(Character.TABLE, character.getCharacterId(), bitmap);
         image.setImageBitmap(bitmap);
       } catch (IOException e) {
         Log.e(TAG, "Cannot load image bitmap", e);

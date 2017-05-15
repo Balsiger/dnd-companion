@@ -39,10 +39,10 @@
         android:id="@+id/image"
         class="net.ixitxachitls.companion.ui.views.RoundImageView"
         android:layout_width="70dp"
-        android:layout_height="match_parent"
-        android:layout_margin="5dp"
-        android:src="@drawable/ic_person_black_48dp"
-        />
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.05"
+        android:src="@drawable/ic_person_black_48dp"/>
 
     <view
         android:id="@+id/title"
