@@ -28,17 +28,35 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-  <view
-      android:id="@+id/title"
-      class="net.ixitxachitls.companion.ui.views.TitleView"
+  <LinearLayout
+      android:id="@+id/bar"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      app:color="@color/character"/>
+      android:background="@color/character"
+      android:orientation="horizontal">
+
+    <view
+        android:id="@+id/image"
+        class="net.ixitxachitls.companion.ui.views.RoundImageView"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_person_black_48dp"
+        />
+
+    <view
+        android:id="@+id/title"
+        class="net.ixitxachitls.companion.ui.views.TitleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:color="@color/character"/>
+  </LinearLayout>
 
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/title"
+      android:layout_below="@+id/bar"
       android:layout_centerInParent="true"
       android:layout_marginTop="10dp"
       android:orientation="horizontal">
@@ -98,24 +116,6 @@
         app:attribute_name="CHA"/>
   </LinearLayout>
 
-
-  <TextView
-      android:id="@+id/characterLevelLabel"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="@string/character_label_level"
-      android:textColor="@android:color/holo_red_light"
-      android:textSize="18sp"/>
-
-  <TextView
-      android:id="@+id/characterLevelValue"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentStart="true"
-      android:layout_marginStart="75dp"
-      android:layout_marginTop="50dp"
-      android:textColor="@android:color/holo_red_light"
-      android:textSize="18sp"/>
 
   <view
       android:id="@+id/battle"

@@ -134,7 +134,7 @@ public class CompanionFragments {
       // Don't add the first page to backstack to prevent having a empty page on back.
       transaction.addToBackStack(fragment.getClass().getSimpleName());
     }
-    transaction.replace(R.id.content, fragment).commit();
+    transaction.replace(R.id.content, fragment).commitAllowingStateLoss();
     fragmentManager.executePendingTransactions();
     fragment.refresh();
     return fragment;

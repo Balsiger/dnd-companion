@@ -28,11 +28,6 @@
             android:authorities="net.ixitxachitls.companion">
         </provider>
 
-        <activity
-            android:name="net.ixitxachitls.companion.ui.CharacterActivity"
-            android:label="@string/title_activity_character"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
     </application>
 
 </manifest>
