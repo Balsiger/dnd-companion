@@ -33,6 +33,7 @@ import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+import net.ixitxachitls.companion.util.Ids;
 
 import java.util.List;
 
@@ -41,7 +42,9 @@ import java.util.List;
  */
 public class Campaign extends StoredEntry<Data.CampaignProto> {
 
-  public static final String TABLE = "campaigns";
+  public static final String TYPE = "campaigns";
+  public static final String TABLE_LOCAL = TYPE + "-local";
+  public static final String TABLE_REMOTE = TYPE + "-remote";
   public static final int DEFAULT_CAMPAIGN_ID = -1;
 
   private String campaignId = "";
@@ -171,7 +174,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public static Campaign fromRemoteProto(Data.CampaignProto proto) {
     Campaign campaign = fromProto(0, proto);
-    campaign.campaignId += "-remote";
+    campaign.campaignId = Ids.makeLocal(campaign.campaignId);
     campaign.remote = true;
 
     return campaign;

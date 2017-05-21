@@ -22,18 +22,23 @@
 package net.ixitxachitls.companion.net;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.common.base.Optional;
+import com.google.protobuf.ByteString;
 
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.util.Ids;
 import net.ixitxachitls.companion.util.Misc;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -56,7 +61,7 @@ public class CompanionSubscriber {
   }
 
   public void publish(Character character) {
-    String id = extractServerId(character.getCampaignId());
+    String id = Ids.extractServerId(character.getCampaignId());
     CompanionClient client = clientById.get(id);
     if (client != null) {
       client.send(Data.CompanionMessageProto.newBuilder()
@@ -68,8 +73,16 @@ public class CompanionSubscriber {
     }
   }
 
-  public static String extractServerId(String id) {
-    return id.replaceAll("-\\d+-remote", "");
+  public void publishImage(Data.CompanionMessageProto.Image image) {
+    CompanionClient client = clientById.get(Ids.extractServerId(image.getCampaignId()));
+    if (client != null) {
+      client.send(Data.CompanionMessageProto.newBuilder()
+          .setImage(image)
+          .build());
+      Log.d(TAG, "image for " + image.getType() + " " + image.getId() + " published.");
+    } else {
+      Log.d(TAG, "cannot find client with id '" + image.getCampaignId() + "'");
+    }
   }
 
   // TODO: Determine if singleton works and is necessary.
@@ -186,21 +199,23 @@ public class CompanionSubscriber {
     List<CompanionMessage> messages = new ArrayList<>();
 
     for (Map.Entry<String, CompanionClient> client : clientById.entrySet()) {
-      Optional<Data.CompanionMessageProto> message = client.getValue().receive();
-      if (message.isPresent()) {
-        String id;
-        String name;
-        if (message.get().hasWelcome()) {
-          id = message.get().getWelcome().getId();
-          name = message.get().getWelcome().getName();
-          clientById.remove(client.getKey());
-          clientById.put(id, client.getValue());
-          nameById.put(id, name);
-        } else {
-          id = client.getKey();
-          name = nameById.getOrDefault(id, "(unknown)");
+      for (Optional<Data.CompanionMessageProto> message = client.getValue().receive();
+           message.isPresent(); message = client.getValue().receive()) {
+        if (message.isPresent()) {
+          String id;
+          String name;
+          if (message.get().hasWelcome()) {
+            id = message.get().getWelcome().getId();
+            name = message.get().getWelcome().getName();
+            clientById.remove(client.getKey());
+            clientById.put(id, client.getValue());
+            nameById.put(id, name);
+          } else {
+            id = client.getKey();
+            name = nameById.getOrDefault(id, "(unknown)");
+          }
+          messages.add(new CompanionMessage(id, name, message.get()));
         }
-        messages.add(new CompanionMessage(id, name, message.get()));
       }
     }
 

@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -47,52 +48,71 @@ public class Campaigns {
 
   private static final String TAG = "Campaigns";
 
-  private static Campaigns singleton;
+  private static Campaigns local;
+  private static Campaigns remote;
 
-  private Context context;
+  private final Context context;
+  private final Uri table;
   private Campaign defaultCampaign;
-  private Map<Long, Campaign> campaignsByStorageId = new HashMap<>();
-  private Map<String, Campaign> campaignsByCampaignId = new HashMap<>();
-  private List<Campaign> campaigns = new ArrayList<>();
+  private final Map<Long, Campaign> campaignsByStorageId = new HashMap<>();
+  private final Map<String, Campaign> campaignsByCampaignId = new HashMap<>();
+  private final List<Campaign> campaigns = new ArrayList<>();
 
-  private Campaigns(Context context) {
+  private Campaigns(Context context, Uri table) {
     this.context = context;
-  }
+    this.table = table;
 
-  public static Campaigns get() {
-    Preconditions.checkNotNull(singleton, "Campaigns have to be loaded!");
-    return singleton;
-  }
-
-  public static Campaigns load(Context context) {
-    if (singleton != null) {
-      Log.d(TAG, "campaigns already loaded");
-      return singleton;
-    }
-
-    Log.d(TAG, "loading campaigns");
-    singleton = new Campaigns(context);
-
-    // Add the default campaign.
-    singleton.defaultCampaign = Campaign.createDefault();
-    singleton.add(singleton.defaultCampaign);
-
-    Cursor cursor = context.getContentResolver().query(
-        DataBaseContentProvider.CAMPAIGNS, DataBase.COLUMNS, null, null, null);
+    Cursor cursor = context.getContentResolver().query(table, DataBase.COLUMNS, null, null, null);
     while(cursor.moveToNext()) {
       try {
         Campaign campaign =
             Campaign.fromProto(cursor.getLong(cursor.getColumnIndex("_id")),
                 Data.CampaignProto.getDefaultInstance().getParserForType()
                     .parseFrom(cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO))));
-        singleton.add(campaign);
+        add(campaign);
       } catch (InvalidProtocolBufferException e) {
         Log.e(TAG, "Cannot parse proto for campaign: " + e);
         Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
       }
     }
+  }
 
-    return singleton;
+  public static Campaigns local() {
+    Preconditions.checkNotNull(local, "local campaigns have to be loaded!");
+    return local;
+  }
+
+  public static Campaigns remote() {
+    Preconditions.checkNotNull(remote, "remote campaigns have to be loaded!");
+    return remote;
+  }
+
+  public static Campaigns loadLocal(Context context) {
+    if (local != null) {
+      Log.d(TAG, "local campaigns already loaded");
+      return local;
+    }
+
+    Log.d(TAG, "loading lcoal campaigns");
+    local = new Campaigns(context, DataBaseContentProvider.CAMPAIGNS_LOCAL);
+
+    // Add the default campaign.
+    local.defaultCampaign = Campaign.createDefault();
+    local.add(local.defaultCampaign);
+
+    return local;
+  }
+
+  public static Campaigns loadRemote(Context context) {
+    if (remote != null) {
+      Log.d(TAG, "remote campaigns already loaded");
+      return remote;
+    }
+
+    Log.d(TAG, "loading lcoal campaigns");
+    remote = new Campaigns(context, DataBaseContentProvider.CAMPAIGNS_REMOTE);
+
+    return remote;
   }
 
   public Campaign getCampaign(String id) {
@@ -123,11 +143,12 @@ public class Campaigns {
   public void addOrUpdate(Campaign campaign) {
     if (campaignsByCampaignId.containsKey(campaign.getCampaignId())) {
       Campaign existingCampaign = campaignsByCampaignId.get(campaign.getCampaignId());
-      campaign.setId(existingCampaign.getId());
+      campaign.mergeFrom(existingCampaign);
       campaigns.remove(existingCampaign);
     }
 
     add(campaign);
+    campaign.store();
   }
 
   public void remove(Campaign campaign) {
@@ -135,8 +156,7 @@ public class Campaigns {
     campaignsByStorageId.remove(campaign.getId());
     campaignsByCampaignId.remove(campaign.getCampaignId());
 
-    context.getContentResolver().delete(DataBaseContentProvider.CAMPAIGNS,
-        "id = " + campaign.getId(), null);
+    context.getContentResolver().delete(table, "id = " + campaign.getId(), null);
   }
 
   public List<Campaign> getCampaigns() {
@@ -144,10 +164,10 @@ public class Campaigns {
     return campaigns;
   }
 
-  public List<Campaign> getLocalCampaigns() {
+  public List<Campaign> getCampaigns(String serverId) {
     List<Campaign> filtered = new ArrayList<>();
     for (Campaign campaign : campaigns) {
-      if (campaign.isLocal() && !campaign.isDefault()) {
+      if (campaign.getCampaignId().startsWith(serverId)) {
         filtered.add(campaign);
       }
     }

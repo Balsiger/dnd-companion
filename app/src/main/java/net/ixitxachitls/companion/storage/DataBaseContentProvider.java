@@ -44,8 +44,14 @@ public class DataBaseContentProvider extends ContentProvider {
 
   public static final String CONTENT = "content://";
   public static final String AUTHORITY = "net.ixitxachitls.companion";
-  public static final Uri CAMPAIGNS = Uri.parse(CONTENT + AUTHORITY + "/" + Campaign.TABLE);
-  public static final Uri CHARACTERS = Uri.parse(CONTENT + AUTHORITY + "/" + Character.TABLE);
+  public static final Uri CAMPAIGNS_LOCAL =
+      Uri.parse(CONTENT + AUTHORITY + "/" + Campaign.TABLE_LOCAL);
+  public static final Uri CAMPAIGNS_REMOTE =
+      Uri.parse(CONTENT + AUTHORITY + "/" + Campaign.TABLE_REMOTE);
+  public static final Uri CHARACTERS_LOCAL =
+      Uri.parse(CONTENT + AUTHORITY + "/" + Character.TABLE_LOCAL);
+  public static final Uri CHARACTERS_REMOTE =
+      Uri.parse(CONTENT + AUTHORITY + "/" + Character.TABLE_REMOTE);
   public static final Uri SETTINGS = Uri.parse(CONTENT + AUTHORITY + "/" + Settings.TABLE);
 
   private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);

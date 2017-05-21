@@ -28,6 +28,10 @@ import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
+import com.google.protobuf.ByteString;
+
+import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.proto.Data;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -66,6 +70,13 @@ public class Images extends StoredEntries {
     return singleton;
   }
 
+  public Bitmap saveAndPublish(String campaignId, String type, String id, Bitmap bitmap) {
+    bitmap = save(type, id, bitmap);
+    publish(campaignId, type, id, bitmap);
+
+    return bitmap;
+  }
+
   public Bitmap save(String type, String id, Bitmap bitmap) {
     bitmap = scale(bitmap);
 
@@ -73,7 +84,7 @@ public class Images extends StoredEntries {
     FileOutputStream out = null;
     try {
       out = new FileOutputStream(file);
-      bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
+      bitmap.compress(Bitmap.CompressFormat.JPEG, 50, out);
     } catch (Exception e) {
       Log.e(TAG, "Cannot write image bitmap", e);
     } finally {
@@ -84,8 +95,10 @@ public class Images extends StoredEntries {
       }
     }
 
+    Log.d(TAG, "Saved image " + type + " " + id);
     return bitmap;
   }
+
 
   public Optional<Bitmap> load(String type, String id) {
     File file = file(type, id);
@@ -96,8 +109,19 @@ public class Images extends StoredEntries {
     }
   }
 
+  private void publish(String campaignId, String type, String id, Bitmap bitmap) {
+    CompanionSubscriber.get().publishImage(toProto(campaignId, type, id, bitmap));
+  }
+
+  public void publish(String campaignId, String type, String id) {
+    Optional<Bitmap> bitmap = load(type, id);
+    if (bitmap.isPresent()) {
+      publish(campaignId, type, id, bitmap.get());
+    }
+  }
+
   private File file(String type, String id) {
-    return new File(context.getExternalFilesDir(type), id + ".png");
+    return new File(context.getExternalFilesDir(type), id + ".jpg");
   }
 
   private Bitmap scale(Bitmap bitmap) {
@@ -107,8 +131,28 @@ public class Images extends StoredEntries {
     }
 
     float factor = (bitmap.getWidth() > bitmap.getHeight()
-        ? bitmap.getWidth() : bitmap.getHeight()) / MAX;
+        ? bitmap.getWidth() : bitmap.getHeight()) / (float) MAX;
     return Bitmap.createScaledBitmap(bitmap, (int) (bitmap.getWidth() / factor),
         (int) (bitmap.getHeight() / factor), false);
+  }
+
+  private static Data.CompanionMessageProto.Image toProto(String campaignId, String type, String id,
+                                                         Bitmap bitmap) {
+    return Data.CompanionMessageProto.Image.newBuilder()
+        .setCampaignId(campaignId)
+        .setType(type)
+        .setId(id)
+        .setImage(Images.asByteString(bitmap))
+        .build();
+  }
+
+  public static ByteString asByteString(Bitmap bitmap) {
+    ByteString.Output out = ByteString.newOutput();
+    bitmap.compress(Bitmap.CompressFormat.JPEG, 0, out);
+    return out.toByteString();
+  }
+
+  public static Bitmap asBitmap(ByteString bytes) {
+    return BitmapFactory.decodeStream(bytes.newInput());
   }
 }

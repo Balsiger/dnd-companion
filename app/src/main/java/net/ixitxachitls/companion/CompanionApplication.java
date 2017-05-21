@@ -40,7 +40,9 @@ import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
+import net.ixitxachitls.companion.util.Ids;
 
 import java.util.List;
 
@@ -126,6 +128,11 @@ public class CompanionApplication extends MultiDexApplication
   private void handleMessagesFromServer(CompanionMessage message) {
     if (message.getProto().hasWelcome()) {
       currentActivity.addServerConnection(message.getName());
+
+      // Republish all client content for the server's campaigns.
+      for (Campaign campaign : Campaigns.get().getCampaigns(message.getId())) {
+        Characters.get().publish(campaign.getCampaignId());
+      }
     }
 
     if (message.getProto().hasCampaign()) {
@@ -135,7 +142,6 @@ public class CompanionApplication extends MultiDexApplication
       status("received campaign " + campaign.getName());
       refresh();
 
-      Characters.get().publish(campaign.getCampaignId());
       currentActivity.updateServerConnection(message.getName());
     }
 
@@ -162,6 +168,15 @@ public class CompanionApplication extends MultiDexApplication
           + message.getProto().getCharacter().getName()
           + " from " + message.getName());
       currentActivity.updateClientConnection(message.getName());
+      refresh();
+    }
+
+    if (message.getProto().hasImage()) {
+      Log.d(TAG, "received image for " + message.getProto().getImage().getType()
+          + " " + message.getProto().getImage().getId());
+      Data.CompanionMessageProto.Image image = message.getProto().getImage();
+      Images.get().save(image.getType(), Ids.makeRemote(image.getId()),
+          Images.asBitmap(image.getImage()));
       refresh();
     }
 

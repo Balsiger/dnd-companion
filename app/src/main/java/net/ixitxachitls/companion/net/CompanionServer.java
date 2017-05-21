@@ -128,22 +128,24 @@ public class CompanionServer implements Runnable {
     List<CompanionMessage> messages = new ArrayList<>();
 
     for (Map.Entry<String, CompanionTransmitter> transmitter : transmittersById.entrySet()) {
-      Optional<Data.CompanionMessageProto> message = transmitter.getValue().receive();
-      if (message.isPresent()) {
-        String id;
-        String name;
-        if (message.get().hasWelcome()) {
-          id = message.get().getWelcome().getId();
-          name = message.get().getWelcome().getName();
+      for (Optional<Data.CompanionMessageProto> message = transmitter.getValue().receive();
+           message.isPresent(); message = transmitter.getValue().receive()) {
+        if (message.isPresent()) {
+          String id;
+          String name;
+          if (message.get().hasWelcome()) {
+            id = message.get().getWelcome().getId();
+            name = message.get().getWelcome().getName();
 
-          transmittersById.remove(transmitter.getKey());
-          transmittersById.put(id, transmitter.getValue());
-          namesById.put(id, name);
-        } else {
-          id = transmitter.getKey();
-          name = namesById.getOrDefault(id, "(unknown)");
+            transmittersById.remove(transmitter.getKey());
+            transmittersById.put(id, transmitter.getValue());
+            namesById.put(id, name);
+          } else {
+            id = transmitter.getKey();
+            name = namesById.getOrDefault(id, "(unknown)");
+          }
+          messages.add(new CompanionMessage(id, name, message.get()));
         }
-        messages.add(new CompanionMessage(id, name, message.get()));
       }
     }
 

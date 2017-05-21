@@ -45,7 +45,9 @@ import java.util.List;
  * Character represenatation.
  */
 public class Character extends StoredEntry<Data.CharacterProto> {
-  public static final String TABLE = "characters";
+  public static final String TYPE = "characters";
+  public static final String TABLE_LOCAL = TYPE + "-local";
+  public static final String TABLE_REMOTE = TYPE + "-remote";
   private static final String TAG = "Characters";
   public static final int NO_INITIATIVE = 200;
 

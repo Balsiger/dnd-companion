@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -47,45 +48,65 @@ import java.util.Map;
  */
 public class Characters extends StoredEntries {
   private static final String TAG = "Characters";
-  private static Characters singleton;
 
-  private Map<String, Character> characterByCharacterId = new HashMap<>();
-  private Multimap<String, Character> charactersByCamppaignId = HashMultimap.create();
+  private static Characters local;
+  private static Characters remote;
 
-  private Characters(Context context) {
+  private final Uri table;
+  private final Map<String, Character> characterByCharacterId = new HashMap<>();
+  private final Multimap<String, Character> charactersByCamppaignId = HashMultimap.create();
+
+  private Characters(Context context, Uri table) {
     super(context);
-  }
+    this.table = table;
 
-  public static Characters get() {
-    Preconditions.checkNotNull(singleton, "Characters have to be loaded!");
-    return singleton;
-  }
-
-  public static Characters load(Context context) {
-    if (singleton != null) {
-      Log.d("Characters", "characters already loaded");
-      return singleton;
-    }
-
-    Log.d("Characters", "loading characters");
-    singleton = new Characters(context);
-
-    Cursor cursor = context.getContentResolver().query(
-        DataBaseContentProvider.CHARACTERS, DataBase.COLUMNS, null, null, null);
+    Cursor cursor = context.getContentResolver().query(table, DataBase.COLUMNS, null, null, null);
     while (cursor.moveToNext()) {
       try {
         Character character =
             Character.fromProto(cursor.getLong(cursor.getColumnIndex("_id")),
                 Data.CharacterProto.getDefaultInstance().getParserForType()
                     .parseFrom(cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO))));
-        singleton.add(character);
+        add(character);
       } catch (InvalidProtocolBufferException e) {
         Log.e("Campaigns", "Cannot parse proto for campaign: " + e);
         Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
       }
     }
+  }
 
-    return singleton;
+  public static Characters getLocal() {
+    Preconditions.checkNotNull(local, "local characters have to be loaded!");
+    return local;
+  }
+
+  public static Characters getRemote() {
+    Preconditions.checkNotNull(local, "remote characters have to be loaded!");
+    return remote;
+  }
+
+  public static Characters loadLocal(Context context) {
+    if (local != null) {
+      Log.d("Characters", "local characters already loaded");
+      return local;
+    }
+
+    Log.d("Characters", "loading local characters");
+    local = new Characters(context, DataBaseContentProvider.CHARACTERS_LOCAL);
+
+    return local;
+  }
+
+  public static Characters loadRemote(Context context) {
+    if (remote != null) {
+      Log.d("Characters", "remote characters already loaded");
+      return remote;
+    }
+
+    Log.d("Characters", "loading remote characters");
+    remote = new Characters(context, DataBaseContentProvider.CHARACTERS_REMOTE);
+
+    return remote;
   }
 
   public Character getCharacter(String characterId, String campaignId) {
@@ -110,21 +131,21 @@ public class Characters extends StoredEntries {
   public void addOrUpdate(Character character) {
     if (characterByCharacterId.containsKey(character.getCharacterId())) {
       Character existingCharacter = characterByCharacterId.get(character.getCharacterId());
-      character.setId(existingCharacter.getId());
+      character.mergeFrom(existingCharacter);
       characterByCharacterId.remove(existingCharacter.getCharacterId());
       charactersByCamppaignId.remove(existingCharacter.getCampaignId(),
           existingCharacter);
     }
 
     add(character);
+    character.store();
   }
 
   public void remove(Character character) {
     characterByCharacterId.remove(character.getCharacterId());
     charactersByCamppaignId.remove(character.getCampaignId(), character);
 
-    context.getContentResolver().delete(DataBaseContentProvider.CHARACTERS,
-        "id = " + character.getId(), null);
+    context.getContentResolver().delete(table, "id = " + character.getId(), null);
   }
 
   public List<Character> getCharacters() {
@@ -160,6 +181,7 @@ public class Characters extends StoredEntries {
     Log.d(TAG, "publishing all characters");
     for (Character character : getCharacters()) {
       character.publish();
+      Images.get().publish(character.getCampaignId(), Character.TABLE, character.getCharacterId());
     }
   }
 

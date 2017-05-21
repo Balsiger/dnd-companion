@@ -45,6 +45,7 @@ import java.util.List;
 public class CompanionPublisher {
 
   public static final String TYPE = "_companion._tcp";
+  public static final String TAG = "Publisher";
   private static CompanionPublisher singleton;
 
   private final NsdManager manager;
@@ -81,7 +82,7 @@ public class CompanionPublisher {
             .setCampaign(campaign.toProto())
             .build()));
 
-    Log.d("Publisher", "published campaign " + campaign.getName());
+    Log.d(TAG, "published campaign " + campaign.getName());
     campaigns.add(campaign);
   }
 
@@ -123,14 +124,14 @@ public class CompanionPublisher {
     this.service.setHost(address);
     this.service.setPort(port);
 
-    Log.d("Publisher", "registering " + service);
+    Log.d(TAG, "registering " + service);
     registrationListener = new CompanionRegistrationListener();
     manager.registerService(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
   }
 
   public void stop() {
     if (name != null) {
-      Log.d("Publisher", "unregistering " + service);
+      Log.d(TAG, "unregistering " + service);
       manager.unregisterService(registrationListener);
     }
   }

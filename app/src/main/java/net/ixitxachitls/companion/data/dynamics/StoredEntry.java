@@ -64,8 +64,9 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     return id;
   }
 
-  protected void setId(long id) {
-    this.id = id;
+  public void mergeFrom(StoredEntry<P> other) {
+    this.id = other.id;
+    this.proto = other.proto;
   }
 
   public boolean store() {

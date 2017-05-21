@@ -73,7 +73,7 @@ public class CompanionTransmitter {
 
   private class Sender implements Runnable {
     private BlockingQueue<Data.CompanionMessageProto> queue;
-    private int CAPACITY = 10;
+    private int CAPACITY = 1000;
 
     public Sender() {
       queue = new ArrayBlockingQueue<>(CAPACITY);
@@ -122,7 +122,7 @@ public class CompanionTransmitter {
           Log.d("Transmitter", name + " read from the stream: " + message.toString());
           queue.put(message);
         } catch (IOException | InterruptedException e) {
-          Log.e("Transmitter", name + " receiver loop error: ", e);
+          Log.e("Transmitter", name + " receiver error: ", e);
           break;
         }
       }
