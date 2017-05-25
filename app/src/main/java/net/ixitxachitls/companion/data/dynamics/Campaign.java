@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import com.google.common.base.Optional;
-import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
@@ -33,7 +32,6 @@ import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.util.Ids;
 
 import java.util.List;
 
@@ -43,21 +41,20 @@ import java.util.List;
 public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public static final String TYPE = "campaigns";
-  public static final String TABLE_LOCAL = TYPE + "-local";
-  public static final String TABLE_REMOTE = TYPE + "-remote";
+  public static final String TABLE_LOCAL = TYPE + "_local";
+  public static final String TABLE_REMOTE = TYPE + "_remote";
   public static final int DEFAULT_CAMPAIGN_ID = -1;
 
-  private String campaignId = "";
   private World world;
   private String dm = "";
-  private boolean remote = false;
   private boolean published = false;
   private CampaignDate date;
   private Battle battle;
   private int nextBattleNumber = 0;
 
-  private Campaign(long id, String name) {
-    super(id, name, DataBaseContentProvider.CAMPAIGNS);
+  private Campaign(long id, String name, boolean local) {
+    super(id, Settings.get().getAppId() + "-" + id, name, local,
+    local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE);
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar());
     battle = new Battle(this);
@@ -76,11 +73,11 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public String getCampaignId() {
-    return campaignId;
+    return getEntryId();
   }
 
   public List<Character> getCharacters() {
-    return Characters.get().getCharacters(getCampaignId());
+    return Characters.get(isLocal()).getCharacters(getCampaignId());
   }
 
   public CampaignDate getDate() {
@@ -93,10 +90,6 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public boolean isDefault() {
     return getId() == DEFAULT_CAMPAIGN_ID;
-  }
-
-  public boolean isLocal() {
-    return !remote || isDefault();
   }
 
   public boolean isPublished() {
@@ -118,20 +111,21 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public void publish() {
-    CompanionPublisher.get().publish(this);
     if (!published) {
       published = true;
+      // Storing will also publish the updated campaign.
       store();
+    } else {
+      CompanionPublisher.get().publish(this);
     }
   }
 
   @Override
   public Data.CampaignProto toProto() {
     return Data.CampaignProto.newBuilder()
-        .setId(campaignId)
+        .setId(getEntryId())
         .setName(name)
         .setWorld(world.getName())
-        .setRemote(remote)
         .setPublished(published)
         .setDm(dm)
         .setDate(date.toProto())
@@ -141,28 +135,27 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public void unpublish() {
-    CompanionPublisher.get().unpublish(this);
     published = false;
     store();
+    CompanionPublisher.get().unpublish(this);
   }
 
   public static Campaign createNew() {
-    return new Campaign(0, "");
+    return new Campaign(0, "", true);
   }
 
   public static Campaign createDefault() {
-    Campaign campaign = new Campaign(DEFAULT_CAMPAIGN_ID, "Default Campaign");
+    Campaign campaign = new Campaign(DEFAULT_CAMPAIGN_ID, "Default Campaign", true);
     campaign.setWorld("Generic");
     return campaign;
   }
 
-  public static Campaign fromProto(long id, Data.CampaignProto proto) {
-    Campaign campaign = new Campaign(id, proto.getName());
-    campaign.campaignId =
+  public static Campaign fromProto(long id, boolean local, Data.CampaignProto proto) {
+    Campaign campaign = new Campaign(id, proto.getName(), local);
+    campaign.entryId =
         proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
     campaign.world = Entries.get().getWorlds().get(proto.getWorld())
       .or(Entries.get().getWorlds().get("Generic").get());
-    campaign.remote = proto.getRemote();
     campaign.dm = proto.getDm();
     campaign.published = proto.getPublished();
     campaign.date = CampaignDate.fromProto(campaign.getCalendar(), proto.getDate());
@@ -172,26 +165,12 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return campaign;
   }
 
-  public static Campaign fromRemoteProto(Data.CampaignProto proto) {
-    Campaign campaign = fromProto(0, proto);
-    campaign.campaignId = Ids.makeLocal(campaign.campaignId);
-    campaign.remote = true;
-
-    return campaign;
-  }
-
   @Override
   public boolean store() {
     boolean changed = super.store();
-    if (Strings.isNullOrEmpty(campaignId)) {
-      // Now we finally have an id.
-      campaignId = Settings.get().getAppId() + "-" + getId();
-      super.store();
-    }
-
     if (changed) {
-      Campaigns.get().ensureAdded(this);
-      if (published) {
+      Campaigns.get(isLocal()).add(this);
+      if (isLocal() && published) {
         CompanionPublisher.get().publish(this);
       }
     }

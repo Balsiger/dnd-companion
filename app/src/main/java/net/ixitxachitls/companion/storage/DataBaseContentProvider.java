@@ -116,7 +116,9 @@ public class DataBaseContentProvider extends ContentProvider {
   }
 
   public static void reset(ContentResolver contentResolver) {
-    contentResolver.delete(CAMPAIGNS, null, null);
-    contentResolver.delete(CHARACTERS, null, null);
+    contentResolver.delete(CAMPAIGNS_LOCAL, null, null);
+    contentResolver.delete(CAMPAIGNS_REMOTE, null, null);
+    contentResolver.delete(CHARACTERS_LOCAL, null, null);
+    contentResolver.delete(CHARACTERS_REMOTE, null, null);
   }
 }

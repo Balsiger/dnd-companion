@@ -52,7 +52,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private boolean showStatus = false;
 
   private Settings(String name) {
-    super(ID, name, DataBaseContentProvider.SETTINGS);
+    super(ID, String.valueOf(ID), name, true, DataBaseContentProvider.SETTINGS);
   }
 
   public void setDebugStatus(boolean showStatus) {

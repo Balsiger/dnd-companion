@@ -24,27 +24,35 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.net.Uri;
-import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.storage.DataBase;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * An entry that is stored in the database.
  */
 public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P> {
   private static final String TAG = "StoredEntry";
-  private long id;
-  private final Uri dbUrl;
-  private @Nullable P proto = null;
+  private static final Map<String, MessageLite> PROTO_CACHE = new ConcurrentHashMap<>();
 
-  protected StoredEntry(long id, String name, Uri dbUrl) {
+  private long id;
+  protected String entryId;
+  private final Uri dbUrl;
+  private final boolean local;
+
+  protected StoredEntry(long id, String entryId, String name, boolean local, Uri dbUrl) {
     super(name);
 
     this.id = id;
+    this.entryId = entryId;
+    this.local = local;
     this.dbUrl = dbUrl;
   }
 
@@ -53,6 +61,10 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     values.put(DataBase.COLUMN_PROTO, proto.toByteArray());
 
     return values;
+  }
+
+  public void setId(long id) {
+    this.id = id;
   }
 
   @Override
@@ -64,29 +76,40 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     return id;
   }
 
-  public void mergeFrom(StoredEntry<P> other) {
-    this.id = other.id;
-    this.proto = other.proto;
+  public boolean isLocal() {
+    return local;
+  }
+
+  public String getEntryId() {
+    return entryId;
   }
 
   public boolean store() {
-    P newProto = toProto();
+    // TODO: move the new proto to a map per id to make it global for all entry objects.
+    P proto = toProto();
 
-    if (newProto.equals(proto)) {
+    String key = protoCacheKey();
+    if (proto.equals(PROTO_CACHE.get(key))) {
       Log.d(TAG, "no changes for " + getClass().getSimpleName() + "/" + getName());
       return false;
     }
 
     if (id == 0) {
-      Uri row = Entries.getContext().getContentResolver().insert(dbUrl, toValues(newProto));
+      Uri row = Entries.getContext().getContentResolver().insert(dbUrl, toValues(proto));
       id = ContentUris.parseId(row);
-    } else {
-      Entries.getContext().getContentResolver().update(dbUrl, toValues(newProto),
-          "id = " + id, null);
+      entryId = Settings.get().getAppId() + "-" + id;
     }
 
-    proto = newProto;
+    // Store it again if id made us change the entry id above.
+    Entries.getContext().getContentResolver().update(dbUrl, toValues(proto),
+        "id = " + id, null);
+
+    PROTO_CACHE.put(key, proto);
     Log.d(TAG, "stored changes for " + getClass().getSimpleName() + "/" + getName());
     return true;
+  }
+
+  private String protoCacheKey() {
+    return entryId + "-" + isLocal() + "-" + getClass().getSimpleName();
   }
 }

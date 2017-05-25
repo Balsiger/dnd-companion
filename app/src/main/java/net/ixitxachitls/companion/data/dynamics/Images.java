@@ -42,32 +42,54 @@ import java.io.IOException;
 /**
  * Storage for all dynamic images of entries.
  */
-public class Images extends StoredEntries {
+public class Images {
 
   private static final String TAG = "Images";
   private static final int MAX = 500;
 
-  private static Images singleton;
+  private static Images local;
+  private static Images remote;
 
-  protected Images(Context context) {
-    super(context);
+  private final Context context;
+  private final boolean isLocal;
+
+  protected Images(Context context, boolean isLocal) {
+    this.context = context;
+    this.isLocal = isLocal;
   }
 
-  public static Images get() {
-    Preconditions.checkNotNull(singleton, "Characters have to be loaded!");
-    return singleton;
+  public static Images local() {
+    Preconditions.checkNotNull(local, "local images have to be loaded!");
+    return local;
   }
 
-  public static Images load(Context context) {
-    if (singleton != null) {
-      Log.d(TAG, "images already loaded");
-      return singleton;
+  public static Images remote() {
+    Preconditions.checkNotNull(remote, "remote images have to be loaded!");
+    return remote;
+  }
+
+  public static Images get(boolean local) {
+    return local ? Images.local : Images.remote;
+  }
+
+  public static void load(Context context) {
+    if (local != null) {
+      Log.d(TAG, "local images already loaded");
+    } else {
+      Log.d(TAG, "loading local images");
+      local = new Images(context, true);
     }
 
-    Log.d(TAG, "loading images");
-    singleton = new Images(context);
+    if (remote != null) {
+      Log.d(TAG, "remote images already loaded");
+    } else {
+      Log.d(TAG, "loading remote images");
+      remote = new Images(context, false);
+    }
+  }
 
-    return singleton;
+  public boolean isLocal() {
+    return isLocal;
   }
 
   public Bitmap saveAndPublish(String campaignId, String type, String id, Bitmap bitmap) {
@@ -121,7 +143,8 @@ public class Images extends StoredEntries {
   }
 
   private File file(String type, String id) {
-    return new File(context.getExternalFilesDir(type), id + ".jpg");
+    return new File(context.getExternalFilesDir(type + (isLocal() ? "-local" : "-remote")),
+        id + ".jpg");
   }
 
   private Bitmap scale(Bitmap bitmap) {

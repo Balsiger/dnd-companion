@@ -22,91 +22,73 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Information and storage for all characters.
  */
-public class Characters extends StoredEntries {
+public class Characters extends StoredEntries<Character> {
   private static final String TAG = "Characters";
 
   private static Characters local;
   private static Characters remote;
 
-  private final Uri table;
-  private final Map<String, Character> characterByCharacterId = new HashMap<>();
-  private final Multimap<String, Character> charactersByCamppaignId = HashMultimap.create();
-
-  private Characters(Context context, Uri table) {
-    super(context);
-    this.table = table;
-
-    Cursor cursor = context.getContentResolver().query(table, DataBase.COLUMNS, null, null, null);
-    while (cursor.moveToNext()) {
-      try {
-        Character character =
-            Character.fromProto(cursor.getLong(cursor.getColumnIndex("_id")),
-                Data.CharacterProto.getDefaultInstance().getParserForType()
-                    .parseFrom(cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO))));
-        add(character);
-      } catch (InvalidProtocolBufferException e) {
-        Log.e("Campaigns", "Cannot parse proto for campaign: " + e);
-        Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
-      }
-    }
+  private Characters(Context context, boolean local) {
+    super(context, local ?
+        DataBaseContentProvider.CHARACTERS_LOCAL : DataBaseContentProvider.CHARACTERS_REMOTE,
+        local);
   }
 
-  public static Characters getLocal() {
+  public static Characters local() {
     Preconditions.checkNotNull(local, "local characters have to be loaded!");
     return local;
   }
 
-  public static Characters getRemote() {
+  public static Characters remote() {
     Preconditions.checkNotNull(local, "remote characters have to be loaded!");
     return remote;
   }
 
-  public static Characters loadLocal(Context context) {
+  public static Characters get(boolean local) {
+    return local ? Characters.local : Characters.remote;
+  }
+
+  public static void load(Context context) {
+    loadLocal(context);
+    loadRemote(context);
+  }
+
+  private static void loadLocal(Context context) {
     if (local != null) {
       Log.d("Characters", "local characters already loaded");
-      return local;
+      return;
     }
 
     Log.d("Characters", "loading local characters");
-    local = new Characters(context, DataBaseContentProvider.CHARACTERS_LOCAL);
-
-    return local;
+    local = new Characters(context, true);
   }
 
-  public static Characters loadRemote(Context context) {
+  private static void loadRemote(Context context) {
     if (remote != null) {
       Log.d("Characters", "remote characters already loaded");
-      return remote;
+      return;
     }
 
     Log.d("Characters", "loading remote characters");
-    remote = new Characters(context, DataBaseContentProvider.CHARACTERS_REMOTE);
-
-    return remote;
+    remote = new Characters(context, false);
   }
 
   public Character getCharacter(String characterId, String campaignId) {
@@ -114,65 +96,38 @@ public class Characters extends StoredEntries {
       return Character.createNew(campaignId);
     }
 
-    Preconditions.checkArgument(characterByCharacterId.containsKey(characterId));
-    return characterByCharacterId.get(characterId);
-  }
-
-  private void add(Character character) {
-    if (characterByCharacterId.containsKey(character.getCharacterId())) {
-      throw new IllegalArgumentException("Character '" + character.getName()
-          + "' and '" + characterByCharacterId.get(character.getCharacterId()).getName()
-          + "' share the same id '" + character.getCharacterId() + "'");
-    }
-    characterByCharacterId.put(character.getCharacterId(), character);
-    charactersByCamppaignId.put(character.getCampaignId(), character);
-  }
-
-  public void addOrUpdate(Character character) {
-    if (characterByCharacterId.containsKey(character.getCharacterId())) {
-      Character existingCharacter = characterByCharacterId.get(character.getCharacterId());
-      character.mergeFrom(existingCharacter);
-      characterByCharacterId.remove(existingCharacter.getCharacterId());
-      charactersByCamppaignId.remove(existingCharacter.getCampaignId(),
-          existingCharacter);
-    }
-
-    add(character);
-    character.store();
-  }
-
-  public void remove(Character character) {
-    characterByCharacterId.remove(character.getCharacterId());
-    charactersByCamppaignId.remove(character.getCampaignId(), character);
-
-    context.getContentResolver().delete(table, "id = " + character.getId(), null);
+    return get(characterId);
   }
 
   public List<Character> getCharacters() {
-    List<Character> characters = new ArrayList<>(characterByCharacterId.values());
+    List<Character> characters = new ArrayList<>(getAll());
     Collections.sort(characters, new CharacterComparator());
     return characters;
   }
 
   public List<Character> getCharacters(String campaignId) {
-    if (Campaigns.get().getCampaign(campaignId).isDefault()) {
+    if (Campaigns.get(!isLocal()).getCampaign(campaignId).isDefault()) {
       return getOrphanedCharacters();
     }
 
-    List<Character> characters = new ArrayList<>(charactersByCamppaignId.get(campaignId));
+    List<Character> characters = new ArrayList<>();
+    for (Character character : getAll()) {
+      if (character.getCampaignId().equals(campaignId)) {
+        characters.add(character);
+      }
+    }
     Collections.sort(characters, new CharacterComparator());
     return characters;
   }
 
   public List<Character> getOrphanedCharacters() {
     List<Character> characters = new ArrayList<>();
-
-    for (String campaignId : charactersByCamppaignId.keySet()) {
-      if (!Campaigns.get().hasCampaign(campaignId)
-          || Campaigns.get().getCampaign(campaignId).isDefault()) {
-        characters.addAll(charactersByCamppaignId.get(campaignId));
+    for (Character character : getAll()) {
+      if (!Campaigns.get(isLocal()).has(character.getCampaignId())) {
+        characters.add(character);
       }
     }
+    Collections.sort(characters, new CharacterComparator());
 
     return characters;
   }
@@ -181,7 +136,7 @@ public class Characters extends StoredEntries {
     Log.d(TAG, "publishing all characters");
     for (Character character : getCharacters()) {
       character.publish();
-      Images.get().publish(character.getCampaignId(), Character.TABLE, character.getCharacterId());
+      Images.get(character.isLocal()).publish(character.getCampaignId(), Character.TYPE, character.getCharacterId());
     }
   }
 
@@ -191,6 +146,19 @@ public class Characters extends StoredEntries {
       character.publish();
     }
   }
+
+  protected Optional<Character> parseEntry(long id, byte[] blob) {
+    try {
+      return Optional.of(
+          Character.fromProto(id, isLocal(), Data.CharacterProto.getDefaultInstance().getParserForType()
+              .parseFrom(blob)));
+    } catch (InvalidProtocolBufferException e) {
+      Log.e(TAG, "Cannot parse proto for campaign: " + e);
+      Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
+      return Optional.absent();
+    }
+  }
+
 
   private class CharacterComparator implements Comparator<Character> {
     @Override

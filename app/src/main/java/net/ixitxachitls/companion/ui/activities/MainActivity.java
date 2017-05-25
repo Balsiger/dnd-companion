@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
@@ -59,6 +61,13 @@ public class MainActivity extends CompanionActivity {
     // Setup the status first, in case any fragment wants to set something.
     status = (StatusView) container.findViewById(R.id.status);
 
+    try {
+      PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+      status("version " + packageInfo.versionName + " #" + packageInfo.versionCode);
+    } catch (PackageManager.NameNotFoundException e) {
+      status("cannot get version information");
+    }
+
     CompanionFragments.get().show();
   }
 
@@ -96,7 +105,11 @@ public class MainActivity extends CompanionActivity {
 
   @Override
   public void status(String message) {
-    status.addMessage(message);
+    runOnUiThread(new Runnable() {
+      public void run() {
+        status.addMessage(message);
+      }
+    });
   }
 
   @Override

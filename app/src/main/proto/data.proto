@@ -13,7 +13,6 @@ message SettingsProto {
 message CampaignProto {
   string name = 1;
   string world = 2;
-  bool remote = 3;
   string id = 4;
   string dm = 5;
   bool published = 6;

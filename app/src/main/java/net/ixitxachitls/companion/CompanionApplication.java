@@ -42,7 +42,6 @@ import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
-import net.ixitxachitls.companion.util.Ids;
 
 import java.util.List;
 
@@ -75,7 +74,7 @@ public class CompanionApplication extends MultiDexApplication
     messageChecker = new MessageChecker();
 
     companionPublisher = CompanionPublisher.init(getApplicationContext(), this);
-    companionSubscriber = CompanionSubscriber.init(getApplicationContext());
+    companionSubscriber = CompanionSubscriber.init(getApplicationContext(), this);
 
     messageChecker.run();
 
@@ -84,8 +83,8 @@ public class CompanionApplication extends MultiDexApplication
 
     registerActivityLifecycleCallbacks(this);
 
-    Campaigns.get().publish();
-    Characters.get().publish();
+    Campaigns.local().publish();
+    Characters.local().publish();
   }
 
   private class MessageChecker implements Runnable {
@@ -130,14 +129,15 @@ public class CompanionApplication extends MultiDexApplication
       currentActivity.addServerConnection(message.getName());
 
       // Republish all client content for the server's campaigns.
-      for (Campaign campaign : Campaigns.get().getCampaigns(message.getId())) {
-        Characters.get().publish(campaign.getCampaignId());
+      for (Campaign campaign : Campaigns.remote().getCampaigns(message.getId())) {
+        Characters.local().publish(campaign.getCampaignId());
       }
     }
 
     if (message.getProto().hasCampaign()) {
-      Campaign campaign = Campaign.fromRemoteProto(message.getProto().getCampaign());
-      Campaigns.get().addOrUpdate(campaign);
+      Campaign campaign = Campaign.fromProto(0, false, message.getProto().getCampaign());
+      Campaigns.remote().add(campaign);
+      campaign.store();
       Log.d(TAG, "received campaign " + campaign.getName());
       status("received campaign " + campaign.getName());
       refresh();
@@ -154,7 +154,7 @@ public class CompanionApplication extends MultiDexApplication
 
   private void handleMessagesFromClient(CompanionMessage message) {
     if (message.getProto().hasWelcome()) {
-      CompanionPublisher.get().republish(Campaigns.get().getLocalCampaigns(),
+      CompanionPublisher.get().republish(Campaigns.local().getCampaigns(),
           message.getId());
       currentActivity.addClientConnection(message.getName());
     }
@@ -162,8 +162,9 @@ public class CompanionApplication extends MultiDexApplication
     if (message.getProto().hasCharacter()) {
       Log.d(TAG, "received character " + message.getProto().getCharacter().getName()
           + " from " + message.getName());
-      Character character = Character.fromRemoteProto(message.getProto().getCharacter());
-      Characters.get().addOrUpdate(character);
+      Character character = Character.fromProto(0, false, message.getProto().getCharacter());
+      Characters.remote().add(character);
+      character.store();
       status("received character "
           + message.getProto().getCharacter().getName()
           + " from " + message.getName());
@@ -175,8 +176,7 @@ public class CompanionApplication extends MultiDexApplication
       Log.d(TAG, "received image for " + message.getProto().getImage().getType()
           + " " + message.getProto().getImage().getId());
       Data.CompanionMessageProto.Image image = message.getProto().getImage();
-      Images.get().save(image.getType(), Ids.makeRemote(image.getId()),
-          Images.asBitmap(image.getImage()));
+      Images.remote().save(image.getType(), image.getId(), Images.asBitmap(image.getImage()));
       refresh();
     }
 
@@ -187,7 +187,7 @@ public class CompanionApplication extends MultiDexApplication
     }
   }
 
-  private void status(String message) {
+  public void status(String message) {
     if (currentActivity != null) {
       currentActivity.status(message);
     }

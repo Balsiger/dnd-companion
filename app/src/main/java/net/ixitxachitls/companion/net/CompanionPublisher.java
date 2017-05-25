@@ -32,10 +32,10 @@ import com.google.common.base.Strings;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.net.InetAddress;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -55,7 +55,6 @@ public class CompanionPublisher {
   private @Nullable NsdServiceInfo service;
   private @Nullable NsdManager.RegistrationListener registrationListener;
   private @Nullable CompanionServer server;
-  private @Nullable List<Campaign> campaigns = new ArrayList<>();
 
   private CompanionPublisher(Context context, CompanionApplication application) {
     this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
@@ -83,13 +82,14 @@ public class CompanionPublisher {
             .build()));
 
     Log.d(TAG, "published campaign " + campaign.getName());
-    campaigns.add(campaign);
+    application.status("sent campaign " + campaign.getName());
   }
 
   private void ensureServerStarted() {
     if (server == null) {
       server = new CompanionServer();
       if (server.start()) {
+        application.status("starting server");
         name = Settings.get().getNickname();
         register(name, server.getAddress(), server.getPort());
         application.serverStarted();
@@ -100,6 +100,12 @@ public class CompanionPublisher {
   public void republish(List<Campaign> campaigns, String clientId) {
     ensureServerStarted();
     for (Campaign campaign : campaigns) {
+      if (campaign.isDefault() || !campaign.isPublished()) {
+        continue;
+      }
+
+      Log.d(TAG, "republished campaign " + campaign.getName());
+      application.status("sent (republish) campaign " + campaign.getName());
       server.send(clientId, new CompanionMessage(Settings.get().getAppId(),
           Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
           .setCampaign(campaign.toProto()).build()));
@@ -107,13 +113,8 @@ public class CompanionPublisher {
   }
 
   public void unpublish(Campaign campaign) {
-    campaigns.remove(campaign);
-    if (campaigns.isEmpty() && !Strings.isNullOrEmpty(name)) {
-      manager.unregisterService(registrationListener);
-      registrationListener = null;
-      server.stop();
-      server = null;
-      application.serverStopped();
+    if (!Strings.isNullOrEmpty(name) && !Campaigns.local().hasAnyPublished()) {
+      stop();
     }
   }
 
@@ -125,6 +126,7 @@ public class CompanionPublisher {
     this.service.setPort(port);
 
     Log.d(TAG, "registering " + service);
+    application.status("registering service " + service);
     registrationListener = new CompanionRegistrationListener();
     manager.registerService(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
   }
@@ -132,7 +134,12 @@ public class CompanionPublisher {
   public void stop() {
     if (name != null) {
       Log.d(TAG, "unregistering " + service);
+      application.status("unregistering service " + service);
       manager.unregisterService(registrationListener);
+      registrationListener = null;
+      server.stop();
+      server = null;
+      application.serverStopped();
     }
   }
 

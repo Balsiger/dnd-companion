@@ -80,7 +80,7 @@ public class EditCampaignDialog extends Dialog {
       if (id.isEmpty()) {
         campaign = Campaign.createNew();
       } else {
-        campaign = Campaigns.get().getCampaign(id);
+        campaign = Campaigns.local().getCampaign(id);
       }
     } else {
       campaign = Campaign.createNew();

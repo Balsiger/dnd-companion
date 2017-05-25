@@ -26,7 +26,6 @@ import android.util.Log;
 import com.google.common.base.Optional;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
-import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Monster;
@@ -46,12 +45,11 @@ import java.util.List;
  */
 public class Character extends StoredEntry<Data.CharacterProto> {
   public static final String TYPE = "characters";
-  public static final String TABLE_LOCAL = TYPE + "-local";
-  public static final String TABLE_REMOTE = TYPE + "-remote";
+  public static final String TABLE_LOCAL = TYPE + "_local";
+  public static final String TABLE_REMOTE = TYPE + "_remote";
   private static final String TAG = "Characters";
   public static final int NO_INITIATIVE = 200;
 
-  private String characterId = "";
   private String campaignId = "";
   private String playerName = "";
   private Optional<Monster> mRace = Optional.absent();
@@ -66,8 +64,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   private int initiative = NO_INITIATIVE;
   private int battleNumber = 0;
 
-  public Character(long id, String name, String campaignId) {
-    super(id, name, DataBaseContentProvider.CHARACTERS);
+  public Character(long id, String name, String campaignId, boolean local) {
+    super(id, Settings.get().getAppId() + "-" + id, name, local,
+        local ? DataBaseContentProvider.CHARACTERS_LOCAL
+            : DataBaseContentProvider.CHARACTERS_REMOTE);
     this.campaignId = campaignId;
   }
 
@@ -87,7 +87,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   }
 
   public String getCharacterId() {
-    return characterId;
+    return entryId;
   }
 
   public void setRace(String name) {
@@ -172,7 +172,8 @@ public class Character extends StoredEntry<Data.CharacterProto> {
 
   public boolean hasInitiative() {
     return initiative != NO_INITIATIVE
-        && battleNumber == Campaigns.get().getCampaign(getCampaignId()).getBattle().getNumber();
+        && battleNumber == Campaigns.get(!isLocal())
+        .getCampaign(getCampaignId()).getBattle().getNumber();
   }
 
   public int getInitiative() {
@@ -191,7 +192,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   }
 
   public static Character createNew(String campaignId) {
-    return new Character(0, "", campaignId);
+    return new Character(0, "", campaignId, true);
   }
 
   public Optional<Level> getLevel(int number) {
@@ -205,7 +206,7 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   @Override
   public Data.CharacterProto toProto() {
     Data.CharacterProto.Builder proto = Data.CharacterProto.newBuilder()
-        .setId(characterId)
+        .setId(entryId)
         .setName(name)
         .setCampaignId(campaignId)
         .setPlayer(playerName)
@@ -234,17 +235,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     return proto.build();
   }
 
-  public static Character fromRemoteProto(Data.CharacterProto proto) {
-    return fromProto(0, proto.toBuilder()
-        .setCampaignId(proto.getCampaignId().replaceAll("-remote$", ""))
-        .setId(proto.getId() + "=remote")
-        .build());
-  }
-
-  public static Character fromProto(long id, Data.CharacterProto proto) {
-    Character character = new Character(id, proto.getName(), proto.getCampaignId());
+  public static Character fromProto(long id, boolean local, Data.CharacterProto proto) {
+    Character character = new Character(id, proto.getName(), proto.getCampaignId(), local);
     character.campaignId = proto.getCampaignId();
-    character.characterId =
+    character.entryId =
         proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
     character.mRace = Entries.get().getMonsters().get(proto.getRace());
     character.mGender = Gender.fromProto(proto.getGender());
@@ -267,20 +261,6 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     }
 
     return character;
-  }
-
-  public static Optional<Character> load(long id) {
-    if (id == 0) {
-      return Optional.absent();
-    }
-
-    try {
-      return Optional.of(fromProto(id, Data.CharacterProto.getDefaultInstance().getParserForType()
-          .parseFrom(loadBytes(Entries.getContext(), id, DataBaseContentProvider.CHARACTERS))));
-    } catch (InvalidProtocolBufferException e) {
-      e.printStackTrace();
-      return Optional.absent();
-    }
   }
 
   public Gender getGender() {
@@ -392,18 +372,16 @@ public class Character extends StoredEntry<Data.CharacterProto> {
 
   @Override
   public boolean store() {
-    playerName = Settings.get().getNickname();
-
-    boolean changed = super.store();
-    if (com.google.common.base.Strings.isNullOrEmpty(characterId)) {
-      // Now we finally have an id.
-      characterId = Settings.get().getAppId() + "-" + getId();
-      changed = super.store();
+    if (playerName.isEmpty()) {
+      playerName = Settings.get().getNickname();
     }
 
+    boolean changed = super.store();
     if (changed) {
-      Characters.get().addOrUpdate(this);
-      CompanionSubscriber.get().publish(this);
+      Characters.get(isLocal()).add(this);
+      if (isLocal()) {
+        CompanionSubscriber.get().publish(this);
+      }
     }
 
     return changed;

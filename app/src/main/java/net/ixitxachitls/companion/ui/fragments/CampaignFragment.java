@@ -146,7 +146,7 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void deleteCampaignOk() {
-    Campaigns.get().remove(campaign);
+    Campaigns.local().remove(campaign);
     Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
         Toast.LENGTH_SHORT).show();
     show(Type.campaigns);
@@ -164,7 +164,7 @@ public class CampaignFragment extends CompanionFragment {
       return;
     }
 
-    campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
+    campaign = Campaigns.get(campaign.isLocal()).getCampaign(campaign.getCampaignId());
 
     if (campaign.isDefault() || campaign.isPublished()) {
       delete.setVisibility(View.GONE);
@@ -203,7 +203,8 @@ public class CampaignFragment extends CompanionFragment {
 
     if (charactersAdapter != null) {
       characters.clear();
-      characters.addAll(Characters.get().getCharacters(campaign.getCampaignId()));
+      characters.addAll(Characters.get(!campaign.isLocal())
+          .getCharacters(campaign.getCampaignId()));
       charactersAdapter.notifyDataSetChanged();
     }
 

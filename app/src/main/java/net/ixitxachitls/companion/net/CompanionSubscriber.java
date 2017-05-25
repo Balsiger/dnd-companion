@@ -22,27 +22,24 @@
 package net.ixitxachitls.companion.net;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.common.base.Optional;
-import com.google.protobuf.ByteString;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.util.Ids;
 import net.ixitxachitls.companion.util.Misc;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Subscriber for campaign information.
@@ -51,12 +48,14 @@ public class CompanionSubscriber {
   private static final String TAG = "Subscriber";
   private static CompanionSubscriber singleton;
 
+  private CompanionApplication application;
   private final NsdManager manager;
   private @Nullable NsdManager.ResolveListener resolveListener;
-  private Map<String, CompanionClient> clientById = new HashMap<>();
-  private Map<String, String> nameById = new HashMap<>();
+  private Map<String, CompanionClient> clientById = new ConcurrentHashMap<>();
+  private Map<String, String> nameById = new ConcurrentHashMap<>();
 
-  private CompanionSubscriber(Context context) {
+  private CompanionSubscriber(Context context, CompanionApplication application) {
+    this.application = application;
     this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
   }
 
@@ -68,6 +67,7 @@ public class CompanionSubscriber {
           .setCharacter(character.toProto())
           .build());
       Log.d(TAG, "character " + character.getName() + " published.");
+      application.status("sent character " + character.getName());
     } else {
       Log.d(TAG, "cannot find client with id '" + id + "'");
     }
@@ -80,14 +80,15 @@ public class CompanionSubscriber {
           .setImage(image)
           .build());
       Log.d(TAG, "image for " + image.getType() + " " + image.getId() + " published.");
+      application.status("sent image for " + image.getType());
     } else {
       Log.d(TAG, "cannot find client with id '" + image.getCampaignId() + "'");
     }
   }
 
   // TODO: Determine if singleton works and is necessary.
-  public static CompanionSubscriber init(Context context) {
-    singleton = new CompanionSubscriber(context);
+  public static CompanionSubscriber init(Context context, CompanionApplication application) {
+    singleton = new CompanionSubscriber(context, application);
     return singleton;
   }
 
@@ -133,6 +134,7 @@ public class CompanionSubscriber {
         Log.d(TAG, "Unknown Service Type: " + service.getServiceType());
       } else  {
         Log.d(TAG, "resolving service " + service);
+        application.status("found service " + service);
         resolveListener = new CompanionResolveListener();
         manager.resolveService(service, resolveListener);
       }
@@ -181,11 +183,13 @@ public class CompanionSubscriber {
       }
 
       // Start a client to communicate.
+      application.status("service connected for " + serviceInfo);
       CompanionClient client = new CompanionClient(serviceInfo.getHost(), serviceInfo.getPort());
       client.start();
       clientById.put("startup-" + clientById.keySet().size(), client);
 
       // Send a welcome message to the server.
+      application.status("sending welcome message");
       client.send(Data.CompanionMessageProto.newBuilder()
           .setWelcome(Data.CompanionMessageProto.Welcome.newBuilder()
               .setId(Settings.get().getAppId())

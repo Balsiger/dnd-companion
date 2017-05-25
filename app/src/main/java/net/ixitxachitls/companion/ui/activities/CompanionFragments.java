@@ -46,7 +46,7 @@ public class CompanionFragments {
   private static final String TAG = "Fragments";
   private static CompanionFragments singleton;
 
-  private final FragmentManager fragmentManager;
+  private FragmentManager fragmentManager;
   private Optional<CompanionFragment> currentFragment = Optional.absent();
   private Optional<CampaignFragment> campaignFragment = Optional.absent();
   private Optional<CampaignsFragment> campaignsFragment = Optional.absent();
@@ -65,6 +65,9 @@ public class CompanionFragments {
   public static void init(FragmentManager fragmentManager) {
     if (singleton == null) {
       singleton = new CompanionFragments(fragmentManager);
+    } else {
+      singleton.fragmentManager = fragmentManager;
+      singleton.currentFragment = Optional.absent();
     }
   }
 
@@ -150,7 +153,11 @@ public class CompanionFragments {
 
   public void showLast() {
     Log.d(TAG, "showing last fragment");
-    fragmentManager.popBackStackImmediate();
+    if (fragmentManager.getBackStackEntryCount() > 0) {
+      fragmentManager.popBackStackImmediate();
+    } else {
+      show(CompanionFragment.Type.campaigns);
+    }
     refresh();
   }
 

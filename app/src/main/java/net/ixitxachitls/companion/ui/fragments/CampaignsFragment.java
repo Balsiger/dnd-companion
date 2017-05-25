@@ -112,7 +112,8 @@ public class CampaignsFragment extends CompanionFragment {
 
     if (campaignsAdapter != null) {
       campaigns.clear();
-      campaigns.addAll(Campaigns.get().getCampaigns());
+      campaigns.addAll(Campaigns.local().getCampaigns());
+      campaigns.addAll(Campaigns.remote().getCampaigns());
       campaignsAdapter.notifyDataSetChanged();
     }
   }

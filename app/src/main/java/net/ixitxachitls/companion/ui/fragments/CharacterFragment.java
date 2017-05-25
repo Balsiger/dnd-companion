@@ -115,7 +115,7 @@ public class CharacterFragment extends CompanionFragment {
 
   public void showCharacter(Character character) {
     this.character = character;
-    this.campaign = Campaigns.get().getCampaign(character.getCampaignId());
+    this.campaign = Campaigns.get(!character.isLocal()).getCampaign(character.getCampaignId());
 
     refresh();
   }
@@ -147,8 +147,8 @@ public class CharacterFragment extends CompanionFragment {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        bitmap = Images.get().saveAndPublish(character.getCampaignId(), Character.TABLE,
-            character.getCharacterId(), bitmap);
+        bitmap = Images.get(character.isLocal()).saveAndPublish(character.getCampaignId(),
+            Character.TYPE, character.getCharacterId(), bitmap);
         image.setImageBitmap(bitmap);
       } catch (IOException e) {
         Log.e(TAG, "Cannot load image bitmap", e);
@@ -178,12 +178,14 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    character = Characters.get().getCharacter(character.getCharacterId(), campaign.getCampaignId());
+    character = Characters.get(character.isLocal())
+        .getCharacter(character.getCharacterId(), campaign.getCampaignId());
     if (campaign != null) {
-      campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
+      campaign = Campaigns.get(campaign.isLocal()).getCampaign(campaign.getCampaignId());
     }
 
-    Optional<Bitmap> bitmap = Images.get().load(Character.TABLE, character.getCharacterId());
+    Optional<Bitmap> bitmap =
+        Images.get(character.isLocal()).load(Character.TYPE, character.getCharacterId());
     if (bitmap.isPresent()) {
       image.setImageBitmap(bitmap.get());
     }

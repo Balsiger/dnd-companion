@@ -37,20 +37,22 @@ import net.ixitxachitls.companion.util.Lazy;
  */
 public class DataBase extends SQLiteOpenHelper {
 
-  private static final int VERSION = 5;
+  private static final int VERSION = 1;
   private static final String DATABASE_NAME = "PlayerCompanion";
   public static final String COLUMN_ID = "id";
   public static final String COLUMN_PROTO = "proto";
 
-  public static final String CREATE_CAMPAIGNS = "CREATE TABLE " + Campaign.TABLE
-      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY,"
-      + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CHARACTERS = "CREATE TABLE " + Character.TABLE
-      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY,"
-      + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_SETTINGS = "CREATE TABLE " + Settings.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY,"
       + COLUMN_PROTO + " BLOB);";
+  public static final String CREATE_CAMPAIGNS_LOCAL = "CREATE TABLE " + Campaign.TABLE_LOCAL
+      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
+  public static final String CREATE_CAMPAIGNS_REMOTE = "CREATE TABLE " + Campaign.TABLE_REMOTE
+      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
+  public static final String CREATE_CHARACTERS_LOCAL = "CREATE TABLE " + Character.TABLE_LOCAL
+      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
+  public static final String CREATE_CHARACTERS_REMOTE = "CREATE TABLE " + Character.TABLE_REMOTE
+      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
 
   public static final String COLUMNS[] = {
       COLUMN_ID + " _id",
@@ -91,10 +93,16 @@ public class DataBase extends SQLiteOpenHelper {
 
   private void update(SQLiteDatabase db, int version) {
     switch(version) {
-      case 0: db.execSQL(CREATE_CAMPAIGNS);
-      case 1: db.execSQL(CREATE_CHARACTERS);
-      case 2: db.execSQL(CREATE_SETTINGS);
-      case 4: db.insert(Settings.TABLE, null, Settings.defaultSettings());
+      default:
+      case 1:
+      case 0:
+        db.execSQL(CREATE_SETTINGS);
+        db.execSQL(CREATE_CAMPAIGNS_LOCAL);
+        db.execSQL(CREATE_CAMPAIGNS_REMOTE);
+        db.execSQL(CREATE_CHARACTERS_LOCAL);
+        db.execSQL(CREATE_CHARACTERS_REMOTE);
+        db.insert(Settings.TABLE, null, Settings.defaultSettings());
+
     }
   }
 

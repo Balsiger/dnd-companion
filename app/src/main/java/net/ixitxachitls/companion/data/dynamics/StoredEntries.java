@@ -22,15 +22,73 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
+
+import com.google.common.base.Optional;
+import com.google.common.base.Preconditions;
+
+import net.ixitxachitls.companion.storage.DataBase;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Base for all stored entry collections.
  */
-public class StoredEntries {
+public abstract class StoredEntries<E extends StoredEntry<?>> {
 
-  protected Context context;
+  protected final Context context;
+  protected final Uri table;
+  protected final boolean local;
+  protected final Map<String, E> entriesById = new HashMap<>();
 
-  protected StoredEntries(Context context) {
+  protected StoredEntries(Context context, Uri table, boolean local) {
     this.context = context;
+    this.table = table;
+    this.local = local;
+
+    Cursor cursor = context.getContentResolver().query(table, DataBase.COLUMNS, null, null, null);
+    while(cursor.moveToNext()) {
+      Optional<E> entry = parseEntry(cursor.getLong(cursor.getColumnIndex("_id")),
+          cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO)));
+      if (entry.isPresent()) {
+        add(entry.get());
+      }
+    }
   }
+
+  public boolean has(String id) {
+    return entriesById.containsKey(id);
+  }
+
+  public boolean isLocal() {
+    return local;
+  }
+
+  public E get(String id) {
+    Preconditions.checkArgument(entriesById.containsKey(id));
+    return entriesById.get(id);
+  }
+
+  public Collection<E> getAll() {
+    return entriesById.values();
+  }
+
+  public void add(E entry) {
+    if (entriesById.containsKey(entry.getEntryId())) {
+      // Update the id of the new entry to the old.
+      entry.setId(entriesById.get(entry.getEntryId()).getId());
+    }
+
+    entriesById.put(entry.getEntryId(), entry);
+  }
+
+  public void remove(E entry) {
+    entriesById.remove(entry.getEntryId());
+    context.getContentResolver().delete(table, "id = " + entry.getId(), null);
+  }
+
+  protected abstract Optional<E> parseEntry(long id, byte[] blob);
 }

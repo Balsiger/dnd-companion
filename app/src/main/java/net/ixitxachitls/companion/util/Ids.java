@@ -30,13 +30,7 @@ public class Ids {
   private static final String REMOTE_SUFFIX = "-remote";
 
   public static String extractServerId(String id) {
-    return id.replaceAll("-\\d+" + REMOTE_SUFFIX + "$", "");
-  }
-  public static String makeLocal(String id) {
-    return id.replaceAll(REMOTE_SUFFIX + "$", "");
+    return id.replaceAll("-\\d+$", "");
   }
 
-  public static String makeRemote(String id) {
-    return id + REMOTE_SUFFIX;
-  }
 }

@@ -78,8 +78,8 @@ public class EditAbilitiesDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.get().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
-    character = Characters.get().getCharacter(getArguments().getString(ARG_ID),
+    campaign = Campaigns.remote().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
+    character = Characters.local().getCharacter(getArguments().getString(ARG_ID),
         campaign.getCampaignId());
   }
 

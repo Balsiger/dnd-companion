@@ -109,7 +109,7 @@ public class BattleFragment extends CompanionFragment {
     }
 
     this.character = Optional.of(character);
-    this.campaign = Campaigns.get().getCampaign(character.getCampaignId());
+    this.campaign = Campaigns.get(!character.isLocal()).getCampaign(character.getCampaignId());
 
     refresh();
   }
@@ -133,7 +133,8 @@ public class BattleFragment extends CompanionFragment {
     if (campaign.isLocal()) {
       campaign.getBattle().start();
 
-      for (Character character : Characters.get().getCharacters(campaign.getCampaignId())) {
+      for (Character character : Characters.get(!campaign.isLocal())
+          .getCharacters(campaign.getCampaignId())) {
         campaign.getBattle().addCharacter(character.getName(), 0);
       }
 
@@ -169,12 +170,11 @@ public class BattleFragment extends CompanionFragment {
     }
 
     if (character.isPresent()) {
-      character = Optional.of(Characters.get().getCharacter(character.get().getCharacterId(),
-          campaign.getCampaignId()));
-      campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
-    } else {
-      campaign = Campaigns.get().getCampaign(campaign.getCampaignId());
+      character = Optional.of(Characters.get(character.get().isLocal())
+          .getCharacter(character.get().getCharacterId(),
+              campaign.getCampaignId()));
     }
+    campaign = Campaigns.get(campaign.isLocal()).getCampaign(campaign.getCampaignId());
 
     addMonster.setVisibility(GONE);
     dice.setVisibility(GONE);
@@ -335,7 +335,8 @@ public class BattleFragment extends CompanionFragment {
       return true;
     }
 
-    for (Character character : Characters.get().getCharacters(campaign.getCampaignId())) {
+    for (Character character : Characters.get(!campaign.isLocal())
+        .getCharacters(campaign.getCampaignId())) {
       if (character.getName().equals(combatant.getName())) {
         return character.hasInitiative();
       }

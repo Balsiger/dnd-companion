@@ -151,6 +151,7 @@ public class Battle {
   public void end() {
     status = BattleStatus.ENDED;
     combatants.clear();
+    lastMonsterName = Optional.absent();
     campaign.store();
   }
 

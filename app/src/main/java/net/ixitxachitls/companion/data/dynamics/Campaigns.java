@@ -22,59 +22,37 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Access to and utilities for camapigns.
  */
-public class Campaigns {
+public class Campaigns extends StoredEntries<Campaign> {
 
   private static final String TAG = "Campaigns";
 
   private static Campaigns local;
   private static Campaigns remote;
 
-  private final Context context;
-  private final Uri table;
   private Campaign defaultCampaign;
-  private final Map<Long, Campaign> campaignsByStorageId = new HashMap<>();
-  private final Map<String, Campaign> campaignsByCampaignId = new HashMap<>();
-  private final List<Campaign> campaigns = new ArrayList<>();
 
-  private Campaigns(Context context, Uri table) {
-    this.context = context;
-    this.table = table;
-
-    Cursor cursor = context.getContentResolver().query(table, DataBase.COLUMNS, null, null, null);
-    while(cursor.moveToNext()) {
-      try {
-        Campaign campaign =
-            Campaign.fromProto(cursor.getLong(cursor.getColumnIndex("_id")),
-                Data.CampaignProto.getDefaultInstance().getParserForType()
-                    .parseFrom(cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO))));
-        add(campaign);
-      } catch (InvalidProtocolBufferException e) {
-        Log.e(TAG, "Cannot parse proto for campaign: " + e);
-        Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
-      }
-    }
+  private Campaigns(Context context, boolean local) {
+    super(context,
+        local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE,
+        local);
   }
 
   public static Campaigns local() {
@@ -87,32 +65,37 @@ public class Campaigns {
     return remote;
   }
 
-  public static Campaigns loadLocal(Context context) {
+  public static Campaigns get(boolean local) {
+    return local ? Campaigns.local : Campaigns.remote;
+  }
+
+  public static void load(Context context) {
+    loadLocal(context);
+    loadRemote(context);
+  }
+
+  private static void loadLocal(Context context) {
     if (local != null) {
       Log.d(TAG, "local campaigns already loaded");
-      return local;
+      return;
     }
 
     Log.d(TAG, "loading lcoal campaigns");
-    local = new Campaigns(context, DataBaseContentProvider.CAMPAIGNS_LOCAL);
+    local = new Campaigns(context, true);
 
     // Add the default campaign.
     local.defaultCampaign = Campaign.createDefault();
     local.add(local.defaultCampaign);
-
-    return local;
   }
 
-  public static Campaigns loadRemote(Context context) {
+  private static void loadRemote(Context context) {
     if (remote != null) {
       Log.d(TAG, "remote campaigns already loaded");
-      return remote;
+      return;
     }
 
     Log.d(TAG, "loading lcoal campaigns");
-    remote = new Campaigns(context, DataBaseContentProvider.CAMPAIGNS_REMOTE);
-
-    return remote;
+    remote = new Campaigns(context, false);
   }
 
   public Campaign getCampaign(String id) {
@@ -120,37 +103,32 @@ public class Campaigns {
       return defaultCampaign;
     }
 
-    Preconditions.checkArgument(campaignsByCampaignId.containsKey(id));
-    return campaignsByCampaignId.get(id);
+    return get(id);
   }
 
-  public boolean hasCampaign(String id) {
-    return campaignsByCampaignId.containsKey(id);
+  public boolean hasAnyPublished() {
+    if (!isLocal()) {
+      return false;
+    }
+
+    for (Campaign campaign : entriesById.values()) {
+      if (campaign.isPublished()) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
+  /*
   private void add(Campaign campaign) {
     campaigns.add(campaign);
     campaignsByStorageId.put(campaign.getId(), campaign);
     campaignsByCampaignId.put(campaign.getCampaignId(), campaign);
   }
+  */
 
-  public void ensureAdded(Campaign campaign) {
-    if (!campaignsByCampaignId.containsKey(campaign.getCampaignId())) {
-      add(campaign);
-    }
-  }
-
-  public void addOrUpdate(Campaign campaign) {
-    if (campaignsByCampaignId.containsKey(campaign.getCampaignId())) {
-      Campaign existingCampaign = campaignsByCampaignId.get(campaign.getCampaignId());
-      campaign.mergeFrom(existingCampaign);
-      campaigns.remove(existingCampaign);
-    }
-
-    add(campaign);
-    campaign.store();
-  }
-
+  /*
   public void remove(Campaign campaign) {
     campaigns.remove(campaign);
     campaignsByStorageId.remove(campaign.getId());
@@ -158,15 +136,17 @@ public class Campaigns {
 
     context.getContentResolver().delete(table, "id = " + campaign.getId(), null);
   }
+  */
 
   public List<Campaign> getCampaigns() {
+    List<Campaign> campaigns = new ArrayList<>(getAll());
     Collections.sort(campaigns, new CampaignComparator());
     return campaigns;
   }
 
   public List<Campaign> getCampaigns(String serverId) {
     List<Campaign> filtered = new ArrayList<>();
-    for (Campaign campaign : campaigns) {
+    for (Campaign campaign : getAll()) {
       if (campaign.getCampaignId().startsWith(serverId)) {
         filtered.add(campaign);
       }
@@ -177,10 +157,23 @@ public class Campaigns {
 
   public void publish() {
     Log.d(TAG, "publishing all campaigns");
-    for (Campaign campaign : campaigns) {
-      if (campaign.isPublished()) {
+    for (Campaign campaign : getAll()) {
+      if (!campaign.isDefault() && campaign.isPublished()) {
         campaign.publish();
       }
+    }
+  }
+
+  protected Optional<Campaign> parseEntry(long id, byte[] blob) {
+    try {
+      return Optional.of(
+          Campaign.fromProto(id, isLocal(),
+              Data.CampaignProto.getDefaultInstance().getParserForType()
+                  .parseFrom(blob)));
+    } catch (InvalidProtocolBufferException e) {
+      Log.e(TAG, "Cannot parse proto for campaign: " + e);
+      Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
+      return Optional.absent();
     }
   }
 
