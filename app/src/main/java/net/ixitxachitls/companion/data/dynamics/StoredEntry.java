@@ -31,6 +31,7 @@ import com.google.protobuf.MessageLite;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.storage.DataBase;
+import net.ixitxachitls.companion.util.Ids;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -82,6 +83,10 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
 
   public String getEntryId() {
     return entryId;
+  }
+
+  public String getServerId() {
+    return Ids.extractServerId(entryId);
   }
 
   public boolean store() {

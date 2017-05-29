@@ -30,6 +30,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.common.base.Optional;
+
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -44,8 +46,9 @@ public class EditCampaignDialog extends Dialog {
 
   private static final String ARG_ID = "id";
 
+  private Optional<Campaign> campaign = Optional.absent();
+
   // The following values are only valid after onCreate().
-  private Campaign campaign;
   private EditText name;
   private TextView world;
   private Button save;
@@ -78,62 +81,72 @@ public class EditCampaignDialog extends Dialog {
     if (getArguments() != null) {
       String id = getArguments().getString(ARG_ID);
       if (id.isEmpty()) {
-        campaign = Campaign.createNew();
+        campaign = Optional.of(Campaign.createNew());
       } else {
         campaign = Campaigns.local().getCampaign(id);
       }
     } else {
-      campaign = Campaign.createNew();
+      campaign = Optional.of(Campaign.createNew());
     }
   }
 
 
   @Override
   protected void createContent(View view) {
-    name = Setup.editText(view, R.id.edit_name, campaign.getName(), R.string.campaign_edit_name,
-        R.color.campaign, null, this::update);
-    world = Setup.textView(view, R.id.world, this::selectWorld);
-    if(!campaign.getWorld().isEmpty()) {
-      world.setText(campaign.getWorld());
-    }
-    save = Setup.button(view, R.id.save, this::save);
+    if (campaign.isPresent()) {
+      name = Setup.editText(view, R.id.edit_name, campaign.get().getName(), R.string.campaign_edit_name,
+          getResources().getColor(R.color.campaign, null), null, this::update);
+      world = Setup.textView(view, R.id.world, this::selectWorld);
+      if (!campaign.get().getWorld().isEmpty()) {
+        world.setText(campaign.get().getWorld());
+      }
+      save = Setup.button(view, R.id.save, this::save);
 
-    if (campaign.isDefined()) {
-      view.findViewById(R.id.campaign_edit_intro).setVisibility(View.GONE);
+      if (campaign.get().isDefined()) {
+        view.findViewById(R.id.campaign_edit_intro).setVisibility(View.GONE);
+      }
     }
 
     update();
   }
 
   private void selectWorld() {
-    ListSelectFragment fragment = ListSelectFragment.newInstance(
-        R.string.campaign_select_world, campaign.getWorld(),
-        Entries.get().getWorlds().getNames(), R.color.campaign);
-    fragment.setSelectListener(this::editWorld);
-    fragment.display(getFragmentManager());
+    if (campaign.isPresent()) {
+      ListSelectFragment fragment = ListSelectFragment.newInstance(
+          R.string.campaign_select_world, campaign.get().getWorld(),
+          Entries.get().getWorlds().getNames(), R.color.campaign);
+      fragment.setSelectListener(this::editWorld);
+      fragment.display(getFragmentManager());
+    }
   }
 
   private void editWorld(String value, int position) {
-    campaign.setWorld(value);
-    update();
+    if (campaign.isPresent()) {
+      campaign.get().setWorld(value);
+      update();
+    }
   }
 
   protected void update() {
-    if (name.getText().length() == 0 || campaign.getWorld().isEmpty()) {
-      save.setVisibility(View.INVISIBLE);
-    } else {
-      save.setVisibility(View.VISIBLE);
-    }
+    if (campaign.isPresent()) {
+      if (name.getText().length() == 0 || campaign.get().getWorld().isEmpty()) {
+        save.setVisibility(View.INVISIBLE);
+      } else {
+        save.setVisibility(View.VISIBLE);
+      }
 
-    if (!campaign.getWorld().isEmpty()) {
-      world.setText(campaign.getWorld());
+      if (!campaign.get().getWorld().isEmpty()) {
+        world.setText(campaign.get().getWorld());
+      }
     }
   }
 
   protected void save() {
-    campaign.setName(name.getText().toString());
-    campaign.store();
+    if (campaign.isPresent()) {
+      campaign.get().setName(name.getText().toString());
+      campaign.get().store();
 
-    super.save();
+      super.save();
+    }
   }
 }

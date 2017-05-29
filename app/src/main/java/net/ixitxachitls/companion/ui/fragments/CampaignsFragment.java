@@ -70,7 +70,7 @@ public class CampaignsFragment extends CompanionFragment {
                 NetworkIcon networkIcon = (NetworkIcon) view.findViewById(R.id.network);
                 networkIcon.setLocation(campaign.isLocal());
                 if (!campaign.isDefault()) {
-                  networkIcon.setStatus(campaign.isPublished());
+                  networkIcon.setStatus(campaign.isOnline());
                 }
                 if (campaign.isLocal() && !campaign.isDefault()) {
                   networkIcon.setAction(() -> publishCampaign(campaign));

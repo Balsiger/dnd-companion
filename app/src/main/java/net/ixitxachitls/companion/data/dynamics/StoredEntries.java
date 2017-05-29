@@ -26,7 +26,6 @@ import android.database.Cursor;
 import android.net.Uri;
 
 import com.google.common.base.Optional;
-import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.storage.DataBase;
 
@@ -67,9 +66,8 @@ public abstract class StoredEntries<E extends StoredEntry<?>> {
     return local;
   }
 
-  public E get(String id) {
-    Preconditions.checkArgument(entriesById.containsKey(id));
-    return entriesById.get(id);
+  public Optional<E> get(String id) {
+    return Optional.fromNullable(entriesById.get(id));
   }
 
   public Collection<E> getAll() {

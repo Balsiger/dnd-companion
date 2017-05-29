@@ -30,6 +30,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 
+import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitachitls.companion.R;
@@ -46,7 +47,7 @@ public class MonsterInitiativeDialog extends Dialog {
   private static final String ARG_MONSTER_ID = "monster-id";
   private static final String DEFAULT_NAME = "Monsters";
 
-  private Campaign campaign;
+  private Optional<Campaign> campaign = Optional.absent();
   private int monsterId;
 
   // Ui elements;
@@ -102,21 +103,21 @@ public class MonsterInitiativeDialog extends Dialog {
   }
 
   private void add() {
-    if (monsterId > 0) {
+    if (monsterId > 0 || !campaign.isPresent()) {
       // Already added.
       return;
     }
 
-    campaign.getBattle().addMonster(name.getText().toString(), modifier.getValue() - 20);
+    campaign.get().getBattle().addMonster(name.getText().toString(), modifier.getValue() - 20);
     save();
   }
 
   private String makeName() {
-    if (campaign == null) {
+    if (!campaign.isPresent()) {
       return DEFAULT_NAME;
     }
 
-    String name = campaign.getBattle().getLastMonsterName().or("");
+    String name = campaign.get().getBattle().getLastMonsterName().or("");
     if (name.isEmpty()) {
       return DEFAULT_NAME;
     }

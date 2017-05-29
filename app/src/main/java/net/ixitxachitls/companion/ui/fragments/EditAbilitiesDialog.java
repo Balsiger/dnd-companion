@@ -27,6 +27,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.view.View;
 
+import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitachitls.companion.R;
@@ -53,8 +54,8 @@ public class EditAbilitiesDialog extends Dialog {
   private EditAbility wisdom;
   private EditAbility charisma;
 
-  private Campaign campaign;
-  private Character character;
+  private Optional<Campaign> campaign = Optional.absent();
+  private Optional<Character> character = Optional.absent();
 
   public EditAbilitiesDialog() {}
 
@@ -79,8 +80,12 @@ public class EditAbilitiesDialog extends Dialog {
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     campaign = Campaigns.remote().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
-    character = Characters.local().getCharacter(getArguments().getString(ARG_ID),
-        campaign.getCampaignId());
+    if (campaign.isPresent()) {
+      character = Characters.local().getCharacter(getArguments().getString(ARG_ID),
+          campaign.get().getCampaignId());
+    } else {
+      character = Optional.absent();
+    }
   }
 
   @Override
@@ -102,20 +107,24 @@ public class EditAbilitiesDialog extends Dialog {
   }
 
   private void change() {
-    character.setStrength(strength.getValue());
-    character.setDexterity(dexterity.getValue());
-    character.setConstitution(constitution.getValue());
-    character.setIntelligence(intelligence.getValue());
-    character.setWisdom(wisdom.getValue());
-    character.setCharisma(charisma.getValue());
+    if (character.isPresent()) {
+      character.get().setStrength(strength.getValue());
+      character.get().setDexterity(dexterity.getValue());
+      character.get().setConstitution(constitution.getValue());
+      character.get().setIntelligence(intelligence.getValue());
+      character.get().setWisdom(wisdom.getValue());
+      character.get().setCharisma(charisma.getValue());
+    }
   }
 
   protected void update() {
-    strength.setValue(character.getStrength());
-    dexterity.setValue(character.getDexterity());
-    constitution.setValue(character.getConstitution());
-    intelligence.setValue(character.getIntelligence());
-    wisdom.setValue(character.getWisdom());
-    charisma.setValue(character.getCharisma());
+    if (character.isPresent()) {
+      strength.setValue(character.get().getStrength());
+      dexterity.setValue(character.get().getDexterity());
+      constitution.setValue(character.get().getConstitution());
+      intelligence.setValue(character.get().getIntelligence());
+      wisdom.setValue(character.get().getWisdom());
+      charisma.setValue(character.get().getCharisma());
+    }
   }
 }

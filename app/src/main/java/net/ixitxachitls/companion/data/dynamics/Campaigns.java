@@ -94,9 +94,9 @@ public class Campaigns extends StoredEntries<Campaign> {
     remote = new Campaigns(context, false);
   }
 
-  public Campaign getCampaign(String id) {
+  public Optional<Campaign> getCampaign(String id) {
     if (id.isEmpty() || id.endsWith("--1")) {
-      return defaultCampaign;
+      return Optional.of(defaultCampaign);
     }
 
     return get(id);
@@ -115,24 +115,6 @@ public class Campaigns extends StoredEntries<Campaign> {
 
     return false;
   }
-
-  /*
-  private void add(Campaign campaign) {
-    campaigns.add(campaign);
-    campaignsByStorageId.put(campaign.getId(), campaign);
-    campaignsByCampaignId.put(campaign.getCampaignId(), campaign);
-  }
-  */
-
-  /*
-  public void remove(Campaign campaign) {
-    campaigns.remove(campaign);
-    campaignsByStorageId.remove(campaign.getId());
-    campaignsByCampaignId.remove(campaign.getCampaignId());
-
-    context.getContentResolver().delete(table, "id = " + campaign.getId(), null);
-  }
-  */
 
   public List<Campaign> getCampaigns() {
     List<Campaign> campaigns = new ArrayList<>(getAll());

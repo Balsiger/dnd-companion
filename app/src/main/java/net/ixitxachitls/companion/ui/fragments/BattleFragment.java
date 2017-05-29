@@ -54,7 +54,7 @@ import static android.view.View.GONE;
  */
 public class BattleFragment extends CompanionFragment {
 
-  private Campaign campaign;
+  private Optional<Campaign> campaign = Optional.absent();
   private Optional<Character> character = Optional.absent();
 
   // UI elements.
@@ -93,11 +93,11 @@ public class BattleFragment extends CompanionFragment {
   }
 
   public void forCampaign(Campaign campaign) {
-    if (this.campaign == campaign) {
+    if (this.campaign.orNull() == campaign) {
       return;
     }
 
-    this.campaign = campaign;
+    this.campaign = Optional.of(campaign);
     this.character = Optional.absent();
 
     refresh();
@@ -115,14 +115,14 @@ public class BattleFragment extends CompanionFragment {
   }
 
   private void setInitiative(int initiative) {
-    if (character.isPresent()) {
-      character.get().setBattle(initiative, campaign.getBattle().getNumber());
+    if (character.isPresent() && campaign.isPresent()) {
+      character.get().setBattle(initiative, campaign.get().getBattle().getNumber());
       refresh();
     }
   }
 
   private void changeInitiative() {
-    if (!campaign.getBattle().isStarting()) {
+    if (!campaign.isPresent() || !campaign.get().getBattle().isStarting()) {
       return;
     }
 
@@ -130,12 +130,12 @@ public class BattleFragment extends CompanionFragment {
   }
 
   private void start() {
-    if (campaign.isLocal()) {
-      campaign.getBattle().start();
+    if (campaign.isPresent() && campaign.get().isLocal()) {
+      campaign.get().getBattle().start();
 
-      for (Character character : Characters.get(!campaign.isLocal())
-          .getCharacters(campaign.getCampaignId())) {
-        campaign.getBattle().addCharacter(character.getName(), 0);
+      for (Character character : Characters.get(!campaign.get().isLocal())
+          .getCharacters(campaign.get().getCampaignId())) {
+        campaign.get().getBattle().addCharacter(character.getName(), 0);
       }
 
       refresh();
@@ -143,38 +143,40 @@ public class BattleFragment extends CompanionFragment {
   }
 
   private void battle() {
-    if (campaign.isLocal()) {
-      campaign.getBattle().battle();
+    if (campaign.isPresent() && campaign.get().isLocal()) {
+      campaign.get().getBattle().battle();
       refresh();
     }
   }
 
   private void end() {
-    if (campaign.isLocal()) {
-      campaign.getBattle().end();
+    if (campaign.isPresent() && campaign.get().isLocal()) {
+      campaign.get().getBattle().end();
       refresh();
     }
   }
 
   private void addMonster() {
-    MonsterInitiativeDialog.newInstance(campaign.getCampaignId(), -1)
-        .display(getFragmentManager());
+    if (campaign.isPresent()) {
+      MonsterInitiativeDialog.newInstance(campaign.get().getCampaignId(), -1)
+          .display(getFragmentManager());
+    }
   }
 
   @Override
   public void refresh() {
     super.refresh();
 
-    if (campaign == null) {
+    if (!campaign.isPresent()) {
       return;
     }
 
     if (character.isPresent()) {
-      character = Optional.of(Characters.get(character.get().isLocal())
+      character = Characters.get(character.get().isLocal())
           .getCharacter(character.get().getCharacterId(),
-              campaign.getCampaignId()));
+              campaign.get().getCampaignId());
     }
-    campaign = Campaigns.get(campaign.isLocal()).getCampaign(campaign.getCampaignId());
+    campaign = Campaigns.get(campaign.get().isLocal()).getCampaign(campaign.get().getCampaignId());
 
     addMonster.setVisibility(GONE);
     dice.setVisibility(GONE);
@@ -185,13 +187,13 @@ public class BattleFragment extends CompanionFragment {
     initiative.setVisibility(GONE);
 
 
-    if (campaign.isLocal()) {
+    if (campaign.get().isLocal()) {
       refreshDM();
     } else {
       refreshPlayer();
     }
 
-    Battle battle = campaign.getBattle();
+    Battle battle = campaign.get().getBattle();
     if (battle.isStarting()) {
       turn.setText("Starting");
     } else if (battle.isSurprised()) {
@@ -204,11 +206,11 @@ public class BattleFragment extends CompanionFragment {
   }
 
   private void refreshPlayer() {
-    if (!character.isPresent()) {
+    if (!character.isPresent() || !campaign.isPresent()) {
       return;
     }
 
-    Battle battle = campaign.getBattle();
+    Battle battle = campaign.get().getBattle();
     if (battle.isEnded()) {
       status.setText("Nothing to see here, please move on. Battle has ended or not yet started.");
     } else if (battle.isStarting() && !character.get().hasInitiative()) {
@@ -241,15 +243,17 @@ public class BattleFragment extends CompanionFragment {
   }
 
   public boolean isMyTurn() {
-    return campaign.getBattle().getCurrentCombatant().getName().equals(character.get().getName());
+    return campaign.isPresent()
+        && campaign.get().getBattle().getCurrentCombatant().getName().equals(
+            character.get().getName());
   }
 
   public void refreshDM() {
-    if (campaign == null) {
+    if (!campaign.isPresent()) {
       return;
     }
 
-    Battle battle = campaign.getBattle();
+    Battle battle = campaign.get().getBattle();
     charactersBox.removeAllViews();
 
     if (battle.isEnded()) {
@@ -263,7 +267,7 @@ public class BattleFragment extends CompanionFragment {
 
       // Make sure all characters are stored as combatants.
       boolean allDone = true;
-      for (Character character : campaign.getCharacters()) {
+      for (Character character : campaign.get().getCharacters()) {
         battle.addCharacter(character.getName(), character.getInitiative());
         if (!character.hasInitiative()) {
           allDone = false;
@@ -316,18 +320,24 @@ public class BattleFragment extends CompanionFragment {
   }
 
   private void next() {
-    campaign.getBattle().combatantDone();
-    refresh();
+    if (campaign.isPresent()) {
+      campaign.get().getBattle().combatantDone();
+      refresh();
+    }
   }
 
   private void delay() {
-    campaign.getBattle().combatantLater();
-    refresh();
+    if (campaign.isPresent()) {
+      campaign.get().getBattle().combatantLater();
+      refresh();
+    }
   }
 
   private void remove() {
-    campaign.getBattle().removeCombatant();
-    refresh();
+    if (campaign.isPresent()) {
+      campaign.get().getBattle().removeCombatant();
+      refresh();
+    }
   }
 
   public boolean isReady(Battle.Combatant combatant) {
@@ -335,10 +345,12 @@ public class BattleFragment extends CompanionFragment {
       return true;
     }
 
-    for (Character character : Characters.get(!campaign.isLocal())
-        .getCharacters(campaign.getCampaignId())) {
-      if (character.getName().equals(combatant.getName())) {
-        return character.hasInitiative();
+    if (campaign.isPresent()) {
+      for (Character character : Characters.get(!campaign.get().isLocal())
+          .getCharacters(campaign.get().getCampaignId())) {
+        if (character.getName().equals(combatant.getName())) {
+          return character.hasInitiative();
+        }
       }
     }
 

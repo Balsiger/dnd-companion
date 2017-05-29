@@ -30,6 +30,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.common.base.Optional;
+
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -56,7 +58,7 @@ import java.util.List;
  */
 public class CampaignFragment extends CompanionFragment {
 
-  private Campaign campaign;
+  private Optional<Campaign> campaign = Optional.absent();
   private List<Character> characters = new ArrayList<>();
 
   // UI elements.
@@ -96,7 +98,9 @@ public class CampaignFragment extends CompanionFragment {
           @Override
           public void bind(View view, Character item, int position) {
             TitleView title = (TitleView) view.findViewById(R.id.title);
-            if (campaign.isLocal() && !campaign.isDefault()) {
+            if (campaign.isPresent()
+                && campaign.get().isLocal()
+                && !campaign.get().isDefault()) {
               title.setTitle(item.getName() + " (" + item.getPlayerName() + ")");
             } else {
               title.setTitle(item.getName());
@@ -112,29 +116,29 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void startBattle() {
-    if (campaign.isLocal()) {
-      CompanionFragments.get().showBattle(campaign);
+    if (campaign.isPresent() && campaign.get().isLocal()) {
+      CompanionFragments.get().showBattle(campaign.get());
     }
   }
 
   public void showCampaign(Campaign campaign) {
-    this.campaign = campaign;
+    this.campaign = Optional.of(campaign);
 
     refresh();
   }
 
   private void editDate() {
-    if (campaign.isLocal()) {
-      DateDialog.newInstance(campaign.getCampaignId()).display(getFragmentManager());
+    if (campaign.isPresent() && campaign.get().isLocal()) {
+      DateDialog.newInstance(campaign.get().getCampaignId()).display(getFragmentManager());
     }
   }
 
   private void edit() {
-    if (campaign.isDefault() || !campaign.isLocal()) {
+    if (!campaign.isPresent() || campaign.get().isDefault() || !campaign.get().isLocal()) {
       return;
     }
 
-    EditCampaignDialog.newInstance(campaign.getCampaignId()).display(getFragmentManager());
+    EditCampaignDialog.newInstance(campaign.get().getCampaignId()).display(getFragmentManager());
   }
 
   protected void deleteCampaign() {
@@ -146,25 +150,30 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void deleteCampaignOk() {
-    Campaigns.local().remove(campaign);
-    Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
-        Toast.LENGTH_SHORT).show();
-    show(Type.campaigns);
+    if (campaign.isPresent()) {
+      Campaigns.local().remove(campaign.get());
+      Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
+          Toast.LENGTH_SHORT).show();
+      show(Type.campaigns);
+    }
   }
 
   private void createCharacter() {
-    EditCharacterDialog.newInstance("", campaign.getCampaignId()).display(getFragmentManager());
+    if (campaign.isPresent()) {
+      EditCharacterDialog.newInstance("",
+          campaign.get().getCampaignId()).display(getFragmentManager());
+    }
   }
 
   @Override
   public void refresh() {
     super.refresh();
 
-    if (campaign == null) {
+    if (!campaign.isPresent()) {
       return;
     }
 
-    campaign = Campaigns.get(campaign.isLocal()).getCampaign(campaign.getCampaignId());
+    campaign = Campaigns.get(campaign.get().isLocal()).getCampaign(campaign.get().getCampaignId());
 
     if (canDeleteCampaign()) {
       delete.setVisibility(View.VISIBLE);
@@ -172,28 +181,28 @@ public class CampaignFragment extends CompanionFragment {
       delete.setVisibility(View.GONE);
     }
 
-    title.setTitle(campaign.getName());
-    title.setSubtitle(campaign.getWorld() + ", " + campaign.getDm());
-    networkIcon.setLocation(campaign.isLocal());
-    if (!campaign.isDefault()) {
-      networkIcon.setStatus(campaign.isPublished());
+    title.setTitle(campaign.get().getName());
+    title.setSubtitle(campaign.get().getWorld() + ", " + campaign.get().getDm());
+    networkIcon.setLocation(campaign.get().isLocal());
+    if (!campaign.get().isDefault()) {
+      networkIcon.setStatus(campaign.get().isOnline());
     }
-    if (campaign.isLocal()) {
+    if (campaign.get().isLocal()) {
       networkIcon.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
           // Cannot publish default campaign.
-          if (!campaign.isDefault()) {
-            CampaignPublisher.toggle(getContext(), campaign, CampaignFragment.this::refresh,
+          if (campaign.isPresent() && !campaign.get().isDefault()) {
+            CampaignPublisher.toggle(getContext(), campaign.get(), CampaignFragment.this::refresh,
                 CampaignPublisher.EmptyCancelAction);
           }
         }
       });
     }
 
-    date.setText(campaign.getDate().toString());
+    date.setText(campaign.get().getDate().toString());
 
-    if (campaign.isLocal() && !campaign.isDefault()) {
+    if (campaign.get().isLocal() && !campaign.get().isDefault()) {
       addCharacter.setVisibility(View.GONE);
       battle.setVisibility(View.VISIBLE);
     } else {
@@ -203,23 +212,23 @@ public class CampaignFragment extends CompanionFragment {
 
     if (charactersAdapter != null) {
       characters.clear();
-      characters.addAll(Characters.get(campaign.isDefault() || !campaign.isLocal())
-          .getCharacters(campaign.getCampaignId()));
+      characters.addAll(Characters.get(campaign.get().isDefault() || !campaign.get().isLocal())
+          .getCharacters(campaign.get().getCampaignId()));
       charactersAdapter.notifyDataSetChanged();
     }
 
-    battle.pulse(!campaign.getBattle().isEnded());
+    battle.pulse(!campaign.get().getBattle().isEnded());
   }
 
   private boolean canDeleteCampaign() {
-    if (campaign.isDefault()) {
+    if (campaign.get().isDefault()) {
       return false;
     }
 
-    if (campaign.isLocal()) {
-      return !campaign.isPublished();
+    if (campaign.get().isLocal()) {
+      return !campaign.get().isPublished();
     }
 
-    return Characters.local().getCharacters(campaign.getCampaignId()).isEmpty();
+    return Characters.local().getCharacters(campaign.get().getCampaignId()).isEmpty();
   }
 }

@@ -31,6 +31,7 @@ import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.util.Ids;
@@ -110,6 +111,14 @@ public class CompanionSubscriber {
 
     clientByService.clear();
     clientById.clear();
+  }
+
+  public boolean isOnline(String id) {
+    return clientById.containsKey(id);
+  }
+
+  public boolean isOnline(Campaign campaign) {
+    return isOnline(campaign.getServerId());
   }
 
   private class CompanionDiscoveryListener implements NsdManager.DiscoveryListener {

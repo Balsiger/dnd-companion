@@ -27,8 +27,6 @@ package net.ixitxachitls.companion.util;
 public class Ids {
   private Ids() {}
 
-  private static final String REMOTE_SUFFIX = "-remote";
-
   public static String extractServerId(String id) {
     return id.replaceAll("-\\d+$", "");
   }

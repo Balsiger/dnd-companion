@@ -91,9 +91,9 @@ public class Characters extends StoredEntries<Character> {
     remote = new Characters(context, false);
   }
 
-  public Character getCharacter(String characterId, String campaignId) {
+  public Optional<Character> getCharacter(String characterId, String campaignId) {
     if (characterId.isEmpty()) {
-      return Character.createNew(campaignId);
+      return Optional.of(Character.createNew(campaignId));
     }
 
     return get(characterId);
@@ -106,7 +106,8 @@ public class Characters extends StoredEntries<Character> {
   }
 
   public List<Character> getCharacters(String campaignId) {
-    if (Campaigns.get(!isLocal()).getCampaign(campaignId).isDefault()) {
+    Optional<Campaign> campaign = Campaigns.get(!isLocal()).getCampaign(campaignId);
+    if (campaign.isPresent() && campaign.get().isDefault()) {
       return getOrphanedCharacters();
     }
 

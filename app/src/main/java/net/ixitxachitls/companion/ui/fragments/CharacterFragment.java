@@ -64,8 +64,8 @@ public class CharacterFragment extends CompanionFragment {
   private final String TAG = "CharacterFragment";
   private final int PICK_IMAGE = 1;
 
-  private Character character;
-  private Campaign campaign;
+  private Optional<Character> character = Optional.absent();
+  private Optional<Campaign> campaign = Optional.absent();
 
   // UI elements.
   private TitleView title;
@@ -122,32 +122,34 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   private void deleteCharacterOk() {
-    Characters.get(character.isLocal()).remove(character);
-    Toast.makeText(getActivity(), getString(R.string.character_deleted),
-        Toast.LENGTH_SHORT).show();
-    show(Type.campaign);
+    if (character.isPresent()) {
+      Characters.get(character.get().isLocal()).remove(character.get());
+      Toast.makeText(getActivity(), getString(R.string.character_deleted),
+          Toast.LENGTH_SHORT).show();
+      show(Type.campaign);
+    }
   }
 
   private void showBattle() {
-    if (canEdit()) {
-      CompanionFragments.get().showBattle(character);
+    if (canEdit() && character.isPresent()) {
+      CompanionFragments.get().showBattle(character.get());
     }
   }
 
   public void showCharacter(Character character) {
-    this.character = character;
+    this.character = Optional.of(character);
     this.campaign = Campaigns.get(!character.isLocal()).getCampaign(character.getCampaignId());
 
     refresh();
   }
 
   private void editBase() {
-    if (!canEdit()) {
+    if (!canEdit() || !character.isPresent()) {
       return;
     }
 
-    EditCharacterDialog.newInstance(character.getCharacterId(), character.getCampaignId())
-        .display(getFragmentManager());
+    EditCharacterDialog.newInstance(character.get().getCharacterId(),
+        character.get().getCampaignId()).display(getFragmentManager());
   }
 
   private void editImage() {
@@ -164,12 +166,13 @@ public class CharacterFragment extends CompanionFragment {
     super.onActivityResult(requestCode, resultCode, data);
 
     if (requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
-        data != null && data.getData() != null) {
+        data != null && data.getData() != null && character.isPresent()) {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        bitmap = Images.get(character.isLocal()).saveAndPublish(character.getCampaignId(),
-            Character.TYPE, character.getCharacterId(), bitmap);
+        bitmap =
+            Images.get(character.get().isLocal()).saveAndPublish(character.get().getCampaignId(),
+                Character.TYPE, character.get().getCharacterId(), bitmap);
         image.setImageBitmap(bitmap);
       } catch (IOException e) {
         Log.e(TAG, "Cannot load image bitmap", e);
@@ -179,49 +182,51 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   private void editAbilities() {
-    if (!canEdit()) {
+    if (!canEdit() || !character.isPresent()) {
       return;
     }
 
-    EditAbilitiesDialog.newInstance(character.getCharacterId(), character.getCampaignId())
-        .display(getFragmentManager());
+    EditAbilitiesDialog.newInstance(character.get().getCharacterId(),
+        character.get().getCampaignId()).display(getFragmentManager());
   }
 
   public boolean canEdit() {
-    return campaign.isDefault() || !campaign.isLocal();
+    return campaign.isPresent() && (campaign.get().isDefault() || !campaign.get().isLocal());
   }
 
   @Override
   public void refresh() {
     super.refresh();
 
-    if (character == null) {
+    if (!character.isPresent() || !campaign.isPresent()) {
       return;
     }
 
-    character = Characters.get(character.isLocal())
-        .getCharacter(character.getCharacterId(), campaign.getCampaignId());
-    if (campaign != null) {
-      campaign = Campaigns.get(campaign.isLocal()).getCampaign(campaign.getCampaignId());
-    }
+    character = Characters.get(character.get().isLocal())
+        .getCharacter(character.get().getCharacterId(), campaign.get().getCampaignId());
+    campaign = Campaigns.get(campaign.get().isLocal()).getCampaign(campaign.get().getCampaignId());
 
     Optional<Bitmap> bitmap =
-        Images.get(character.isLocal()).load(Character.TYPE, character.getCharacterId());
+        Images.get(character.get().isLocal()).load(Character.TYPE, character.get().getCharacterId());
     if (bitmap.isPresent()) {
       image.setImageBitmap(bitmap.get());
     }
-    title.setTitle(character.getName());
-    title.setSubtitle(character.getGender().getName() + " " + character.getRace());
-    strength.setValue(character.getStrength(), Ability.modifier(character.getStrength()));
-    dexterity.setValue(character.getDexterity(), Ability.modifier(character.getDexterity()));
-    constitution.setValue(character.getConstitution(),
-        Ability.modifier(character.getConstitution()));
-    intelligence.setValue(character.getIntelligence(),
-        Ability.modifier(character.getIntelligence()));
-    wisdom.setValue(character.getWisdom(), Ability.modifier(character.getWisdom()));
-    charisma.setValue(character.getCharisma(), Ability.modifier(character.getCharisma()));
+    title.setTitle(character.get().getName());
+    title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());
+    strength.setValue(character.get().getStrength(),
+        Ability.modifier(character.get().getStrength()));
+    dexterity.setValue(character.get().getDexterity(),
+        Ability.modifier(character.get().getDexterity()));
+    constitution.setValue(character.get().getConstitution(),
+        Ability.modifier(character.get().getConstitution()));
+    intelligence.setValue(character.get().getIntelligence(),
+        Ability.modifier(character.get().getIntelligence()));
+    wisdom.setValue(character.get().getWisdom(),
+        Ability.modifier(character.get().getWisdom()));
+    charisma.setValue(character.get().getCharisma(),
+        Ability.modifier(character.get().getCharisma()));
 
     battle.setVisibility(canEdit() ? View.VISIBLE : View.GONE);
-    battle.pulse(!campaign.getBattle().isEnded());
+    battle.pulse(!campaign.get().getBattle().isEnded());
   }
 }

@@ -55,7 +55,8 @@ public class DateDialog extends Dialog {
   private static final String TAG = "DateDialog";
   private static final String ARG_ID = "id";
 
-  private Campaign campaign;
+  private Optional<Campaign> campaign = Optional.absent();
+
   private GridView grid;
   private DateAdapter adapter = new DateAdapter();
   private EditText year;
@@ -87,8 +88,10 @@ public class DateDialog extends Dialog {
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     campaign = Campaigns.local().getCampaign(getArguments().getString(ARG_ID));
-    monthShown = campaign.getDate().getMonth();
-    yearShown = campaign.getDate().getYear();
+    if (campaign.isPresent()) {
+      monthShown = campaign.get().getDate().getMonth();
+      yearShown = campaign.get().getDate().getYear();
+    }
   }
 
   @Override
@@ -109,40 +112,52 @@ public class DateDialog extends Dialog {
       }
     });
 
-    hours = Setup.editText(view, R.id.hours, "", this::editTime);
-    hours.setFilters(new InputFilter [] { new MaxFilter(campaign.getCalendar().getHoursPerDay()) });
-    hours.setSelectAllOnFocus(true);
-    minutes = Setup.editText(view, R.id.minutes, "", this::editTime);
-    minutes.setFilters(new InputFilter []
-        { new MaxFilter(campaign.getCalendar().getMinutesPerHour()) });
-    Setup.button(view, R.id.plus_1, () -> addMinutes(1));
-    Setup.button(view, R.id.plus_5, () -> addMinutes(5));
-    Setup.button(view, R.id.plus_15, () -> addMinutes(15));
-    Setup.button(view, R.id.plus_60, () -> addMinutes(60));
-    Setup.button(view, R.id.night, this::night);
+    if (campaign.isPresent()) {
+      hours = Setup.editText(view, R.id.hours, "", this::editTime);
+      hours.setFilters(new InputFilter[] {
+          new MaxFilter(campaign.get().getCalendar().getHoursPerDay()) });
+      hours.setSelectAllOnFocus(true);
+      minutes = Setup.editText(view, R.id.minutes, "", this::editTime);
+      minutes.setFilters(new InputFilter[]
+          {new MaxFilter(campaign.get().getCalendar().getMinutesPerHour())});
+      Setup.button(view, R.id.plus_1, () -> addMinutes(1));
+      Setup.button(view, R.id.plus_5, () -> addMinutes(5));
+      Setup.button(view, R.id.plus_15, () -> addMinutes(15));
+      Setup.button(view, R.id.plus_60, () -> addMinutes(60));
+      Setup.button(view, R.id.night, this::night);
+    }
 
     update();
   }
 
   public void night() {
-    campaign.setDate(campaign.getDate().nextMorning());
-    update();
+    if (campaign.isPresent()) {
+      campaign.get().setDate(campaign.get().getDate().nextMorning());
+      update();
+    }
   }
 
   public void addMinutes(int minutes) {
-    campaign.setDate(campaign.getDate().addMinutes(minutes));
-    update();
+    if (campaign.isPresent()) {
+      campaign.get().setDate(campaign.get().getDate().addMinutes(minutes));
+      update();
+    }
   }
 
   private void editTime() {
-    campaign.setDate(campaign.getDate().fromDate(Integer.parseInt(hours.getText().toString()),
-        Integer.parseInt(minutes.getText().toString())));
-    update();
+    if (campaign.isPresent()) {
+      campaign.get().setDate(campaign.get().getDate().fromDate(
+          Integer.parseInt(hours.getText().toString()),
+          Integer.parseInt(minutes.getText().toString())));
+      update();
+    }
   }
 
   private void selectDay(int day) {
-    campaign.setDate(campaign.getDate().fromDate(yearShown, monthShown, day));
-    update();
+    if (campaign.isPresent()) {
+      campaign.get().setDate(campaign.get().getDate().fromDate(yearShown, monthShown, day));
+      update();
+    }
   }
 
   private void editYear() {
@@ -164,27 +179,34 @@ public class DateDialog extends Dialog {
   }
 
   private void monthMinus() {
-    monthShown--;
-    if (monthShown <= 0) {
-      monthShown = campaign.getCalendar().getMonths().size();
-      yearShown--;
+    if (campaign.isPresent()) {
+      monthShown--;
+      if (monthShown <= 0) {
+        monthShown = campaign.get().getCalendar().getMonths().size();
+        yearShown--;
+      }
     }
 
     update();
   }
 
   private void monthPlus() {
-    monthShown++;
-    if (monthShown > campaign.getCalendar().getMonths().size()) {
-      monthShown = 1;
-      yearShown++;
+    if (campaign.isPresent()) {
+      monthShown++;
+      if (monthShown > campaign.get().getCalendar().getMonths().size()) {
+        monthShown = 1;
+        yearShown++;
+      }
     }
 
     update();
   }
 
   private String formatYear(int number) {
-    Optional<Calendar.Year> calendarYear = campaign.getCalendar().getYear(number);
+    Optional<Calendar.Year> calendarYear = Optional.absent();
+    if (campaign.isPresent()) {
+      calendarYear = campaign.get().getCalendar().getYear(number);
+    }
     if (calendarYear.isPresent()) {
       return calendarYear.get().getName() + " (" + number + ")";
     } else {
@@ -193,22 +215,32 @@ public class DateDialog extends Dialog {
   }
 
   private String formatMonth(int number) {
-    return campaign.getCalendar().getMonth(number).getName();
+    if (campaign.isPresent()) {
+      return campaign.get().getCalendar().getMonth(number).getName();
+    } else {
+      return String.valueOf(number);
+    }
   }
 
   protected void update() {
-    year.setText(String.valueOf(yearShown));
-    year.setHint(formatYear(yearShown));
-    month.setText(formatMonth(monthShown));
-    hours.setText(campaign.getDate().getHoursFormatted());
-    minutes.setText(campaign.getDate().getMinutesFormatted());
+    if (campaign.isPresent()) {
+      year.setText(String.valueOf(yearShown));
+      year.setHint(formatYear(yearShown));
+      month.setText(formatMonth(monthShown));
+      hours.setText(campaign.get().getDate().getHoursFormatted());
+      minutes.setText(campaign.get().getDate().getMinutesFormatted());
+    }
 
     grid.setAdapter(adapter);
   }
 
   protected boolean isCurrent(int day) {
-    CampaignDate date = campaign.getDate();
-    return date.getDay() == day && date.getMonth() == monthShown && date.getYear() == yearShown;
+    if (campaign.isPresent()) {
+      CampaignDate date = campaign.get().getDate();
+      return date.getDay() == day && date.getMonth() == monthShown && date.getYear() == yearShown;
+    } else {
+      return false;
+    }
   }
 
   @Override
@@ -219,7 +251,11 @@ public class DateDialog extends Dialog {
   private class DateAdapter extends BaseAdapter {
     @Override
     public int getCount() {
-      return campaign.getCalendar().getMonth(monthShown).getDays();
+      if (campaign.isPresent()) {
+        return campaign.get().getCalendar().getMonth(monthShown).getDays();
+      } else {
+        return 0;
+      }
     }
 
     @Override

@@ -30,6 +30,7 @@ import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionPublisher;
+import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -95,6 +96,19 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   public boolean isPublished() {
     return published;
   }
+
+  public boolean isOnline() {
+    if (!isPublished()) {
+      return false;
+    }
+
+    if (isLocal()) {
+      return CompanionPublisher.get().isOnline();
+    } else {
+      return CompanionSubscriber.get().isOnline(this);
+    }
+  }
+
 
   public void setWorld(String name) {
     Optional<World> world = Entries.get().getWorlds().get(name);

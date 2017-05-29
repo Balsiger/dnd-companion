@@ -171,9 +171,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   }
 
   public boolean hasInitiative() {
+    Optional<Campaign> campaign = Campaigns.get(!isLocal()).getCampaign(getCampaignId());
     return initiative != NO_INITIATIVE
-        && battleNumber == Campaigns.get(!isLocal())
-        .getCampaign(getCampaignId()).getBattle().getNumber();
+        && campaign.isPresent()
+        && battleNumber == campaign.get().getBattle().getNumber();
   }
 
   public int getInitiative() {

@@ -30,6 +30,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitachitls.companion.R;
@@ -51,8 +52,8 @@ public class EditCharacterDialog extends Dialog {
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
 
   // The following values are only valid after onCreate().
-  private Character character;
-  private Campaign campaign;
+  private Optional<Character> character = Optional.absent();
+  private Optional<Campaign> campaign = Optional.absent();
 
   // UI elements.
   private EditText name;
@@ -84,72 +85,94 @@ public class EditCharacterDialog extends Dialog {
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     campaign = Campaigns.remote().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
-    character = Characters.local().getCharacter(getArguments().getString(ARG_ID),
-        campaign.getCampaignId());
+    if (campaign.isPresent()) {
+      character = Characters.local().getCharacter(getArguments().getString(ARG_ID),
+          campaign.get().getCampaignId());
+    } else {
+      character = Optional.absent();
+    }
   }
 
   @Override
   protected void createContent(View view) {
-    name = Setup.editText(view, R.id.edit_name, character.getName(), R.string.campaign_edit_name,
-        getResources().getColor(R.color.character, null), null, this::update);
-    gender = Setup.textView(view, R.id.edit_gender, this::editGender);
-    race = Setup.textView(view, R.id.edit_race, this::editRace);
-    save = Setup.button(view, R.id.save, this::save);
+    if (character.isPresent()) {
+      name = Setup.editText(view, R.id.edit_name, character.get().getName(), R.string.campaign_edit_name,
+          getResources().getColor(R.color.character, null), null, this::update);
+      gender = Setup.textView(view, R.id.edit_gender, this::editGender);
+      race = Setup.textView(view, R.id.edit_race, this::editRace);
+      save = Setup.button(view, R.id.save, this::save);
+    }
 
     update();
   }
 
   public void editGender() {
-    ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_gender,
-        character.getGender().getName(), Gender.names(), R.color.character);
-    edit.setSelectListener(this::updateGender);
-    edit.display(getFragmentManager());
+    if (character.isPresent()) {
+      ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_gender,
+          character.get().getGender().getName(), Gender.names(), R.color.character);
+      edit.setSelectListener(this::updateGender);
+      edit.display(getFragmentManager());
+    }
   }
 
   private boolean updateGender(String value, int position) {
-    character.setGender(Gender.fromName(value));
-    update();
+    if (character.isPresent()) {
+      character.get().setGender(Gender.fromName(value));
+      update();
 
-    return true;
+      return true;
+    }
+
+    return false;
   }
 
   public void editRace() {
-    ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_race,
-        character.getRace(), Entries.get().getMonsters().primaryRaces(), R.color.character);
-    edit.setSelectListener(this::updateRace);
-    edit.display(getFragmentManager());
+    if (character.isPresent()) {
+      ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_race,
+          character.get().getRace(), Entries.get().getMonsters().primaryRaces(), R.color.character);
+      edit.setSelectListener(this::updateRace);
+      edit.display(getFragmentManager());
+    }
   }
 
   private boolean updateRace(String value, int position) {
-    character.setRace(value);
-    update();
+    if (character.isPresent()) {
+      character.get().setRace(value);
+      update();
 
-    return true;
+      return true;
+    }
+
+    return false;
   }
 
   protected void update() {
-    if (name.getText().length() == 0
-        && character.getGender() != Gender.UNKNOWN
-        && !character.getRace().isEmpty()) {
-      save.setVisibility(View.INVISIBLE);
-    } else {
-      save.setVisibility(View.VISIBLE);
-    }
+    if (character.isPresent()) {
+      if (name.getText().length() == 0
+          && character.get().getGender() != Gender.UNKNOWN
+          && !character.get().getRace().isEmpty()) {
+        save.setVisibility(View.INVISIBLE);
+      } else {
+        save.setVisibility(View.VISIBLE);
+      }
 
-    if (character.getGender() != Gender.UNKNOWN) {
-      gender.setText(character.getGender().getName());
-    }
+      if (character.get().getGender() != Gender.UNKNOWN) {
+        gender.setText(character.get().getGender().getName());
+      }
 
-    if (!character.getRace().isEmpty()) {
-      race.setText(character.getRace());
+      if (!character.get().getRace().isEmpty()) {
+        race.setText(character.get().getRace());
+      }
     }
   }
 
   @Override
   protected void save() {
-    character.setName(name.getText().toString());
-    character.store();
+    if (character.isPresent()) {
+      character.get().setName(name.getText().toString());
+      character.get().store();
 
-    super.save();
+      super.save();
+    }
   }
 }
