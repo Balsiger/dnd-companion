@@ -53,7 +53,7 @@ public class CompanionSubscriber {
   private final NsdManager manager;
   private @Nullable NsdManager.ResolveListener resolveListener;
   private Map<String, CompanionClient> clientById = new ConcurrentHashMap<>();
-  private Map<NsdServiceInfo, CompanionClient> clientByService = new ConcurrentHashMap<>();
+  private Map<String, CompanionClient> clientByName = new ConcurrentHashMap<>();
   private Map<String, String> nameById = new ConcurrentHashMap<>();
 
   private CompanionSubscriber(Context context, CompanionApplication application) {
@@ -105,11 +105,11 @@ public class CompanionSubscriber {
   }
 
   public void stop() {
-    for (CompanionClient client : clientByService.values()) {
+    for (CompanionClient client : clientByName.values()) {
       client.stop();
     }
 
-    clientByService.clear();
+    clientByName.clear();
     clientById.clear();
   }
 
@@ -146,15 +146,17 @@ public class CompanionSubscriber {
 
     @Override
     public void onServiceLost(NsdServiceInfo service) {
-      Log.e(TAG, "service lost" + service);
-      application.status("service lost " + service);
-      CompanionClient client = clientByService.remove(service);
+      Log.e(TAG, "service lost" + service.getServiceName());
+      application.status("service lost " + service.getServiceName());
+      CompanionClient client = clientByName.remove(service.getServiceName());
       for (String id : clientById.keySet()) {
         if (clientById.get(id) == client) {
           clientById.remove(id);
           break;
         }
       }
+
+      application.refresh();
     }
 
     @Override
@@ -203,7 +205,7 @@ public class CompanionSubscriber {
       application.status("service connected for " + serviceInfo);
       CompanionClient client = new CompanionClient(serviceInfo.getHost(), serviceInfo.getPort());
       client.start();
-      clientByService.put(serviceInfo, client);
+      clientByName.put(serviceInfo.getServiceName(), client);
 
       // Send a welcome message to the server.
       application.status("sending welcome message to server");
@@ -219,7 +221,7 @@ public class CompanionSubscriber {
   public List<CompanionMessage> receive() {
     List<CompanionMessage> messages = new ArrayList<>();
 
-    for (CompanionClient client : clientByService.values()) {
+    for (CompanionClient client : clientByName.values()) {
       for (Optional<Data.CompanionMessageProto> message = client.receive();
            message.isPresent(); message = client.receive()) {
         if (message.isPresent()) {

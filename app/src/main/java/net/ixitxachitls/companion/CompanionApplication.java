@@ -211,9 +211,14 @@ public class CompanionApplication extends MultiDexApplication
     }
   }
 
-  private void refresh() {
+  public void refresh() {
     if (currentActivity != null) {
-      currentActivity.refresh();
+      currentActivity.runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+          currentActivity.refresh();
+        }
+      });
     }
   }
 
