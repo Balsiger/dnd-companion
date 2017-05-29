@@ -33,7 +33,8 @@
   <string name="character_delete_title">Delete Character</string>
   <string name="character_delete_message">
         Do you really want to delete this character?
-    </string>
+  </string>
+  <string name="character_deleted">The character has been deleted.</string>
   <string name="title_activity_character">Create Character</string>
 
   <!-- character -->

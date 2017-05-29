@@ -144,6 +144,7 @@ public class Characters extends StoredEntries<Character> {
     Log.d(TAG, "publishing characters of campaign " + campaignId);
     for (Character character : getCharacters(campaignId)) {
       character.publish();
+      Images.local().publish(campaignId, Character.TYPE, character.getCharacterId());
     }
   }
 
@@ -159,6 +160,11 @@ public class Characters extends StoredEntries<Character> {
     }
   }
 
+  @Override
+  public void remove(Character character){
+    super.remove(character);
+    Images.get(isLocal()).remove(Character.TYPE, character.getCharacterId());
+  }
 
   private class CharacterComparator implements Comparator<Character> {
     @Override

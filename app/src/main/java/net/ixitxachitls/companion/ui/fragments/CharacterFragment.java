@@ -31,6 +31,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.common.base.Optional;
 
@@ -41,11 +42,13 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.ActionButton;
+import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
 
@@ -74,6 +77,7 @@ public class CharacterFragment extends CompanionFragment {
   private AbilityView charisma;
   private ActionButton battle;
   private RoundImageView image;
+  private IconView delete;
 
   public CharacterFragment() {
     super(Type.character);
@@ -89,6 +93,8 @@ public class CharacterFragment extends CompanionFragment {
     image.setAction(this::editImage);
     title = (TitleView) view.findViewById(R.id.title);
     title.setAction(this::editBase);
+    delete = (IconView) view.findViewById(R.id.delete);
+    delete.setAction(this::delete);
     strength = (AbilityView) view.findViewById(R.id.strength);
     strength.setAction(this::editAbilities);
     dexterity = (AbilityView) view.findViewById(R.id.dexterity);
@@ -105,6 +111,21 @@ public class CharacterFragment extends CompanionFragment {
     battle = Setup.actionButton(view, R.id.battle, this::showBattle);
 
     return view;
+  }
+
+  private void delete() {
+    ConfirmationDialog.create(getContext())
+        .title(getResources().getString(R.string.character_delete_title))
+        .message(getResources().getString(R.string.character_delete_message))
+        .yes(this::deleteCharacterOk)
+        .show();
+  }
+
+  private void deleteCharacterOk() {
+    Characters.get(character.isLocal()).remove(character);
+    Toast.makeText(getActivity(), getString(R.string.character_deleted),
+        Toast.LENGTH_SHORT).show();
+    show(Type.campaign);
   }
 
   private void showBattle() {

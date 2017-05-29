@@ -44,13 +44,12 @@ import java.util.concurrent.TransferQueue;
  */
 public class CompanionTransmitter {
 
+  private final String name;
+  private final Socket socket;
   private final Sender sender;
   private final Thread senderThread;
   private final Receiver receiver;
   private final Thread receiverThread;
-  private String name;
-  private final Socket socket;
-
 
   public CompanionTransmitter(String name, Socket socket) {
     this.name = name;

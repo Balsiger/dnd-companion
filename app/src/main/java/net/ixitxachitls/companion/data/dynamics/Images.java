@@ -131,6 +131,11 @@ public class Images {
     }
   }
 
+  public void remove(String type, String id) {
+    File file = file(type, id);
+    file.delete();
+  }
+
   private void publish(String campaignId, String type, String id, Bitmap bitmap) {
     CompanionSubscriber.get().publishImage(toProto(campaignId, type, id, bitmap));
   }

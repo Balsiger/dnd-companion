@@ -47,7 +47,7 @@ public class Campaigns extends StoredEntries<Campaign> {
   private static Campaigns local;
   private static Campaigns remote;
 
-  private Campaign defaultCampaign;
+  public static final Campaign defaultCampaign = Campaign.createDefault();
 
   private Campaigns(Context context, boolean local) {
     super(context,
@@ -82,10 +82,6 @@ public class Campaigns extends StoredEntries<Campaign> {
 
     Log.d(TAG, "loading lcoal campaigns");
     local = new Campaigns(context, true);
-
-    // Add the default campaign.
-    local.defaultCampaign = Campaign.createDefault();
-    local.add(local.defaultCampaign);
   }
 
   private static void loadRemote(Context context) {
@@ -99,7 +95,7 @@ public class Campaigns extends StoredEntries<Campaign> {
   }
 
   public Campaign getCampaign(String id) {
-    if (id.isEmpty()) {
+    if (id.isEmpty() || id.endsWith("--1")) {
       return defaultCampaign;
     }
 

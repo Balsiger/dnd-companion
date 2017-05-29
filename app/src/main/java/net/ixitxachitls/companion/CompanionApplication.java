@@ -126,6 +126,7 @@ public class CompanionApplication extends MultiDexApplication
 
   private void handleMessagesFromServer(CompanionMessage message) {
     if (message.getProto().hasWelcome()) {
+      status("received welcome from server " + message.getName());
       currentActivity.addServerConnection(message.getName());
 
       // Republish all client content for the server's campaigns.
@@ -154,6 +155,7 @@ public class CompanionApplication extends MultiDexApplication
 
   private void handleMessagesFromClient(CompanionMessage message) {
     if (message.getProto().hasWelcome()) {
+      status("received welcome from client " + message.getName());
       CompanionPublisher.get().republish(Campaigns.local().getCampaigns(),
           message.getId());
       currentActivity.addClientConnection(message.getName());

@@ -85,15 +85,16 @@ public class CompanionPublisher {
     application.status("sent campaign " + campaign.getName());
   }
 
-  private void ensureServerStarted() {
+  public void ensureServerStarted() {
     if (server == null) {
       server = new CompanionServer();
-      if (server.start()) {
-        application.status("starting server");
-        name = Settings.get().getNickname();
-        register(name, server.getAddress(), server.getPort());
-        application.serverStarted();
-      }
+    }
+
+    if (name == null && server.start()) {
+      application.status("starting server");
+      name = Settings.get().getNickname();
+      register(name, server.getAddress(), server.getPort());
+      application.serverStarted();
     }
   }
 
@@ -139,6 +140,7 @@ public class CompanionPublisher {
       registrationListener = null;
       server.stop();
       server = null;
+      name = null;
       application.serverStopped();
     }
   }

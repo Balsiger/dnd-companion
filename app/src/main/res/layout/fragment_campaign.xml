@@ -53,13 +53,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/network"
-        android:layout_toStartOf="@+id/button_delete"
+        android:layout_toStartOf="@+id/delete"
         app:color="@color/campaign"
         app:subtitle="... campaign world. ..."
         app:title="... campaign name ..."/>
 
     <view
-        android:id="@+id/button_delete"
+        android:id="@+id/delete"
         class="net.ixitxachitls.companion.ui.views.IconView"
         android:layout_width="@dimen/iconSize"
         android:layout_height="@dimen/iconSize"

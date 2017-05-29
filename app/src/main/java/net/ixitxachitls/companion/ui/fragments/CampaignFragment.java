@@ -82,7 +82,7 @@ public class CampaignFragment extends CompanionFragment {
 
     title = (TitleView) view.findViewById(R.id.title);
     title.setAction(this::edit);
-    delete = (IconView) view.findViewById(R.id.button_delete);
+    delete = (IconView) view.findViewById(R.id.delete);
     delete.setAction(this::deleteCampaign);
     networkIcon = (NetworkIcon) view.findViewById(R.id.network);
     addCharacter = Setup.floatingButton(view, R.id.add_character, this::createCharacter);
@@ -166,10 +166,10 @@ public class CampaignFragment extends CompanionFragment {
 
     campaign = Campaigns.get(campaign.isLocal()).getCampaign(campaign.getCampaignId());
 
-    if (campaign.isDefault() || campaign.isPublished()) {
-      delete.setVisibility(View.GONE);
-    } else {
+    if (canDeleteCampaign()) {
       delete.setVisibility(View.VISIBLE);
+    } else {
+      delete.setVisibility(View.GONE);
     }
 
     title.setTitle(campaign.getName());
@@ -203,11 +203,23 @@ public class CampaignFragment extends CompanionFragment {
 
     if (charactersAdapter != null) {
       characters.clear();
-      characters.addAll(Characters.get(!campaign.isLocal())
+      characters.addAll(Characters.get(campaign.isDefault() || !campaign.isLocal())
           .getCharacters(campaign.getCampaignId()));
       charactersAdapter.notifyDataSetChanged();
     }
 
     battle.pulse(!campaign.getBattle().isEnded());
+  }
+
+  private boolean canDeleteCampaign() {
+    if (campaign.isDefault()) {
+      return false;
+    }
+
+    if (campaign.isLocal()) {
+      return !campaign.isPublished();
+    }
+
+    return Characters.local().getCharacters(campaign.getCampaignId()).isEmpty();
   }
 }

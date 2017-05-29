@@ -35,6 +35,7 @@ import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.ui.Setup;
 
 import java.util.HashMap;
@@ -69,6 +70,7 @@ public class StatusView extends LinearLayout {
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));
     online = (IconView) view.findViewById(R.id.online);
+    online.setAction(this::restart);
     messagesScroll = (ScrollView) view.findViewById(R.id.messages_scroll);
     messages = Setup.textView(view, R.id.messages);
     messages.setMovementMethod(new ScrollingMovementMethod());
@@ -167,6 +169,17 @@ public class StatusView extends LinearLayout {
     }
 
     connection.off();
+  }
+
+  boolean started = true;
+  private void restart() {
+    if (started) {
+      CompanionPublisher.get().stop();
+    } else {
+      CompanionPublisher.get().ensureServerStarted();
+    }
+
+    started = !started;
   }
 
   private String serverName() {

@@ -52,6 +52,7 @@ public class CompanionSubscriber {
   private final NsdManager manager;
   private @Nullable NsdManager.ResolveListener resolveListener;
   private Map<String, CompanionClient> clientById = new ConcurrentHashMap<>();
+  private Map<NsdServiceInfo, CompanionClient> clientByService = new ConcurrentHashMap<>();
   private Map<String, String> nameById = new ConcurrentHashMap<>();
 
   private CompanionSubscriber(Context context, CompanionApplication application) {
@@ -80,7 +81,7 @@ public class CompanionSubscriber {
           .setImage(image)
           .build());
       Log.d(TAG, "image for " + image.getType() + " " + image.getId() + " published.");
-      application.status("sent image for " + image.getType());
+      application.status("sent image for " + image.getType() + " " + image.getId());
     } else {
       Log.d(TAG, "cannot find client with id '" + image.getCampaignId() + "'");
     }
@@ -96,14 +97,6 @@ public class CompanionSubscriber {
     return singleton;
   }
 
-  public boolean isServerActive(String serverId) {
-    return clientById.containsKey(serverId);
-  }
-
-  public boolean isOnline() {
-    return !clientById.isEmpty();
-  }
-
   public void start() {
     Log.d(TAG, "Trying to find a companion");
     manager.discoverServices(CompanionPublisher.TYPE, NsdManager.PROTOCOL_DNS_SD,
@@ -111,10 +104,11 @@ public class CompanionSubscriber {
   }
 
   public void stop() {
-    for (CompanionClient client : clientById.values()) {
+    for (CompanionClient client : clientByService.values()) {
       client.stop();
     }
 
+    clientByService.clear();
     clientById.clear();
   }
 
@@ -124,6 +118,7 @@ public class CompanionSubscriber {
     @Override
     public void onDiscoveryStarted(String regType) {
       Log.d(TAG, "Service discovery started");
+      application.status("service discovery started");
       started = true;
     }
 
@@ -143,16 +138,26 @@ public class CompanionSubscriber {
     @Override
     public void onServiceLost(NsdServiceInfo service) {
       Log.e(TAG, "service lost" + service);
+      application.status("service lost " + service);
+      CompanionClient client = clientByService.remove(service);
+      for (String id : clientById.keySet()) {
+        if (clientById.get(id) == client) {
+          clientById.remove(id);
+          break;
+        }
+      }
     }
 
     @Override
     public void onDiscoveryStopped(String serviceType) {
       Log.i(TAG, "Discovery stopped: " + serviceType);
+      application.status("discovery stopped " + serviceType);
     }
 
     @Override
     public void onStartDiscoveryFailed(String serviceType, int errorCode) {
       Log.e(TAG, "Discovery failed: Error code:" + errorCode);
+      application.status("start discovery failed " + errorCode);
       if (started) {
         manager.stopServiceDiscovery(this);
       }
@@ -161,6 +166,7 @@ public class CompanionSubscriber {
     @Override
     public void onStopDiscoveryFailed(String serviceType, int errorCode) {
       Log.e(TAG, "Discovery failed: Error code:" + errorCode);
+      application.status("stop discovery failed " + errorCode);
       manager.stopServiceDiscovery(this);
     }
   }
@@ -170,11 +176,13 @@ public class CompanionSubscriber {
     @Override
     public void onResolveFailed(NsdServiceInfo serviceInfo, int errorCode) {
       Log.e(TAG, "Resolve failed" + errorCode);
+      application.status("service resolve failed " + errorCode);
     }
 
     @Override
     public void onServiceResolved(NsdServiceInfo serviceInfo) {
       Log.e(TAG, "Resolve Succeeded. " + serviceInfo);
+      application.status("service resolved succeeded for " + serviceInfo);
 
       if (!Misc.onEmulator() // Allow to find itself on emulator.
           && serviceInfo.getServiceName().endsWith(Settings.get().getNickname())) {
@@ -186,10 +194,10 @@ public class CompanionSubscriber {
       application.status("service connected for " + serviceInfo);
       CompanionClient client = new CompanionClient(serviceInfo.getHost(), serviceInfo.getPort());
       client.start();
-      clientById.put("startup-" + clientById.keySet().size(), client);
+      clientByService.put(serviceInfo, client);
 
       // Send a welcome message to the server.
-      application.status("sending welcome message");
+      application.status("sending welcome message to server");
       client.send(Data.CompanionMessageProto.newBuilder()
           .setWelcome(Data.CompanionMessageProto.Welcome.newBuilder()
               .setId(Settings.get().getAppId())
@@ -202,20 +210,19 @@ public class CompanionSubscriber {
   public List<CompanionMessage> receive() {
     List<CompanionMessage> messages = new ArrayList<>();
 
-    for (Map.Entry<String, CompanionClient> client : clientById.entrySet()) {
-      for (Optional<Data.CompanionMessageProto> message = client.getValue().receive();
-           message.isPresent(); message = client.getValue().receive()) {
+    for (CompanionClient client : clientByService.values()) {
+      for (Optional<Data.CompanionMessageProto> message = client.receive();
+           message.isPresent(); message = client.receive()) {
         if (message.isPresent()) {
           String id;
           String name;
           if (message.get().hasWelcome()) {
             id = message.get().getWelcome().getId();
             name = message.get().getWelcome().getName();
-            clientById.remove(client.getKey());
-            clientById.put(id, client.getValue());
+            clientById.put(id, client);
             nameById.put(id, name);
           } else {
-            id = client.getKey();
+            id = keyForClient(client);
             name = nameById.getOrDefault(id, "(unknown)");
           }
           messages.add(new CompanionMessage(id, name, message.get()));
@@ -224,5 +231,15 @@ public class CompanionSubscriber {
     }
 
     return messages;
+  }
+
+  private String keyForClient(CompanionClient client) {
+    for (Map.Entry<String, CompanionClient> entry : clientById.entrySet()) {
+      if (entry.getValue() == client) {
+        return entry.getKey();
+      }
+    }
+
+    return "(unknown)";
   }
 }

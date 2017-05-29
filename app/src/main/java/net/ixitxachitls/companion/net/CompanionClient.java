@@ -64,7 +64,6 @@ public class CompanionClient {
   }
 
   public void stop() {
-
   }
 
   public Optional<Data.CompanionMessageProto> receive() {

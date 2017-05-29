@@ -70,6 +70,10 @@ public class CompanionServer implements Runnable {
   }
 
   public void stop() {
+    for (CompanionTransmitter transmitter : transmittersById.values()) {
+      transmitter.stop();
+    }
+
     thread.interrupt();
     try {
       socket.close();
@@ -97,6 +101,7 @@ public class CompanionServer implements Runnable {
 
       while (!Thread.currentThread().isInterrupted()) {
         try {
+          Log.d("socket", "socket" + socket);
           Socket transmissionSocket = socket.accept();
           CompanionTransmitter transmitter = new CompanionTransmitter("server", transmissionSocket);
           // Temporarily store the transmitter without id until we get the welcome message.

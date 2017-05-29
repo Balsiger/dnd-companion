@@ -30,10 +30,9 @@
       android:id="@+id/status"
       class="net.ixitxachitls.companion.ui.views.IconView"
       android:layout_width="wrap_content"
-      android:layout_height="20dp"
+      android:layout_height="25dp"
       android:layout_gravity="bottom|start|end"
       android:layout_marginStart="10dp"
-      android:layout_weight="1"
       app:bleep_bright="@color/onBright"
       app:bleep_dark="@color/on"
       app:srcCompat="@drawable/ic_account_circle_black_18dp"/>
@@ -41,9 +40,8 @@
   <TextView
       android:id="@+id/name"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="bottom"
-      android:layout_weight="1"
+      android:layout_height="25dp"
+      android:gravity="center_vertical"
       android:paddingStart="5dp"
       android:text="... name ..."
       android:theme="@style/SmallText"/>
