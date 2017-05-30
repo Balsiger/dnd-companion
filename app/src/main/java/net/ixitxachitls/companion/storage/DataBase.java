@@ -38,7 +38,7 @@ import net.ixitxachitls.companion.util.Lazy;
 public class DataBase extends SQLiteOpenHelper {
 
   private static final int VERSION = 1;
-  private static final String DATABASE_NAME = "PlayerCompanion";
+  private static final String DATABASE_NAME = "RPGCompanion";
   public static final String COLUMN_ID = "id";
   public static final String COLUMN_PROTO = "proto";
 

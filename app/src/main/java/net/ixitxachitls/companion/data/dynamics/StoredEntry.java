@@ -102,7 +102,9 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     if (id == 0) {
       Uri row = Entries.getContext().getContentResolver().insert(dbUrl, toValues(proto));
       id = ContentUris.parseId(row);
-      entryId = Settings.get().getAppId() + "-" + id;
+      if (isLocal()) {
+        entryId = Settings.get().getAppId() + "-" + id;
+      }
       proto = toProto();
     }
 

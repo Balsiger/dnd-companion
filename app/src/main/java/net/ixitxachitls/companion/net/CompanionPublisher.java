@@ -126,16 +126,16 @@ public class CompanionPublisher {
     this.service.setHost(address);
     this.service.setPort(port);
 
-    Log.d(TAG, "registering " + service);
-    application.status("registering service " + service);
+    Log.d(TAG, "registering " + service.getServiceName());
+    application.status("registering service " + service.getServiceName());
     registrationListener = new CompanionRegistrationListener();
     manager.registerService(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
   }
 
   public void stop() {
     if (name != null) {
-      Log.d(TAG, "unregistering " + service);
-      application.status("unregistering service " + service);
+      Log.d(TAG, "unregistering " + service.getServiceName());
+      application.status("unregistering service " + service.getServiceName());
       manager.unregisterService(registrationListener);
       registrationListener = null;
       server.stop();
