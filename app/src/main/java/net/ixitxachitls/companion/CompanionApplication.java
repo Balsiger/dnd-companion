@@ -136,7 +136,9 @@ public class CompanionApplication extends MultiDexApplication
     }
 
     if (message.getProto().hasCampaign()) {
-      Campaign campaign = Campaign.fromProto(0, false, message.getProto().getCampaign());
+      Campaign campaign = Campaign.fromProto(
+          Campaigns.remote().getIdFor(message.getProto().getCampaign().getId()),
+          false, message.getProto().getCampaign());
       // Storing will also add the campaign if it's changed.
       campaign.store();
       Log.d(TAG, "received campaign " + campaign.getName());
@@ -164,7 +166,10 @@ public class CompanionApplication extends MultiDexApplication
     if (message.getProto().hasCharacter()) {
       Log.d(TAG, "received character " + message.getProto().getCharacter().getName()
           + " from " + message.getName());
-      Character character = Character.fromProto(0, false, message.getProto().getCharacter());
+      Character character = Character.fromProto(
+          Characters.remote().getIdFor(message.getProto().getCharacter().getId()),
+          false, message.getProto().getCharacter());
+      // Storing will also add the character if it's changed.
       character.store();
       status("received character "
           + message.getProto().getCharacter().getName()

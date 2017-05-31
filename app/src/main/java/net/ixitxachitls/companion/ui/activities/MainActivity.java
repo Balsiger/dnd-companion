@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -30,17 +31,32 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.data.drive.DriveStorage;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.views.StatusView;
 
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends CompanionActivity {
 
+  public static final int RESOLVE_DRIVE_CONNECTION_CODE = 42;
   private static final String TAG = "Main";
 
+  private DriveStorage driveStorage;
   // UI elements.
   private StatusView status;
 
@@ -50,6 +66,7 @@ public class MainActivity extends CompanionActivity {
     Log.d(TAG, "onCreate");
 
     CompanionFragments.init(getFragmentManager());
+    driveStorage = new DriveStorage(this);
 
     setContentView(R.layout.activity_main);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -86,6 +103,28 @@ public class MainActivity extends CompanionActivity {
       return true;
     }
 
+    if (id == R.id.action_export) {
+      List<DriveStorage.File> files = new ArrayList<>();
+      // Export local campaigns.
+      for (Campaign campaign : Campaigns.local().getCampaigns()) {
+        files.add(new DriveStorage.TextFile(campaign.getName() + ".campaign",
+            "text/plain", campaign.toProto().toString()));
+      }
+      // Export local characters.
+      for (Character character : Characters.local().getCharacters()) {
+        files.add(new DriveStorage.TextFile(character.getName() + ".character",
+            "text/plain", character.toProto().toString()));
+        Optional<InputStream> image =
+            Images.local().read(Character.TYPE, character.getCharacterId());
+        if (image.isPresent()) {
+          files.add(new DriveStorage.BinaryFile(character.getName() + ".character.jpg",
+              "image/jpeg", image.get()));
+        }
+      }
+
+      driveStorage.export(files);
+    }
+
     if (id == R.id.action_reset) {
       ConfirmationDialog.create(this)
           .title("Reset All Data")
@@ -108,6 +147,15 @@ public class MainActivity extends CompanionActivity {
     runOnUiThread(new Runnable() {
       public void run() {
         status.addMessage(message);
+      }
+    });
+  }
+
+  public void toast(String message) {
+    runOnUiThread(new Runnable() {
+      @Override
+      public void run() {
+        Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
       }
     });
   }
@@ -145,5 +193,16 @@ public class MainActivity extends CompanionActivity {
   @Override
   public void stopServer() {
     status.stopServer();
+  }
+
+  @Override
+  protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+    switch (requestCode) {
+      case RESOLVE_DRIVE_CONNECTION_CODE:
+        if (resultCode == RESULT_OK) {
+          driveStorage.connect();
+        }
+        break;
+    }
   }
 }

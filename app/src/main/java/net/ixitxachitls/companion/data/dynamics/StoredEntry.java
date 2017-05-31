@@ -90,9 +90,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
   }
 
   public boolean store() {
-    // TODO: move the new proto to a map per id to make it global for all entry objects.
     P proto = toProto();
-
     String key = protoCacheKey();
     if (proto.equals(PROTO_CACHE.get(key))) {
       Log.d(TAG, "no changes for " + getClass().getSimpleName() + "/" + getName());

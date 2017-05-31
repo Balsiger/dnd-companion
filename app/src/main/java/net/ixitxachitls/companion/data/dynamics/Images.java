@@ -38,6 +38,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Storage for all dynamic images of entries.
@@ -126,6 +127,15 @@ public class Images {
     File file = file(type, id);
     try {
       return Optional.fromNullable(BitmapFactory.decodeStream(new FileInputStream(file)));
+    } catch (FileNotFoundException e) {
+      return Optional.absent();
+    }
+  }
+
+  public Optional<InputStream> read(String type, String id) {
+    File file = file(type, id);
+    try {
+      return Optional.of(new FileInputStream(file));
     } catch (FileNotFoundException e) {
       return Optional.absent();
     }

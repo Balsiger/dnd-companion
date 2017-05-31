@@ -62,6 +62,15 @@ public abstract class StoredEntries<E extends StoredEntry<?>> {
     return entriesById.containsKey(id);
   }
 
+  public long getIdFor(String id) {
+    Optional<E> entry = get(id);
+    if (entry.isPresent()) {
+      return entry.get().getId();
+    } else {
+      return 0;
+    }
+  }
+
   public boolean isLocal() {
     return local;
   }

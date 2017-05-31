@@ -81,5 +81,7 @@
   <string name="battle_title">Battle</string>
   <string name="title_monster_initiative">Select Monster Initiative</string>
   <string name="label_initiative_modifier">Initiative Modifier</string>
+  <string name="action_export">Export to Drive</string>
+  <string name="action_import">Import from Drive</string>
 
 </resources>
