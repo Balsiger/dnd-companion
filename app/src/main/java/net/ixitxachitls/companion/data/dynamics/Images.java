@@ -191,6 +191,10 @@ public class Images {
   }
 
   public static Bitmap asBitmap(ByteString bytes) {
-    return BitmapFactory.decodeStream(bytes.newInput());
+    return asBitmap(bytes.newInput());
+  }
+
+  public static Bitmap asBitmap(InputStream input) {
+    return BitmapFactory.decodeStream(input);
   }
 }

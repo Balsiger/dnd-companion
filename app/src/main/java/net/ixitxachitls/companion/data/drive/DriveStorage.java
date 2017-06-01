@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.data.drive;
 
 import android.content.IntentSender;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -34,10 +33,20 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.drive.Drive;
 import com.google.android.gms.drive.DriveApi;
 import com.google.android.gms.drive.DriveContents;
+import com.google.android.gms.drive.DriveFile;
 import com.google.android.gms.drive.DriveFolder;
+import com.google.android.gms.drive.Metadata;
 import com.google.android.gms.drive.MetadataChangeSet;
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
+import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Images;
+import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 import java.io.IOException;
@@ -45,6 +54,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -53,14 +64,14 @@ import java.util.List;
 public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
   private final MainActivity activity;
   private Optional<GoogleApiClient> googleApiClient = Optional.absent();
-  private List<File> files;
+  public List<Task> tasks = new ArrayList<>();
 
   public DriveStorage(MainActivity activity) {
     this.activity = activity;
   }
 
-  public void export(List<File> files) {
-    this.files = files;
+  public synchronized void start(Task task) {
+    tasks.add(task);
     connect();
   }
 
@@ -74,118 +85,241 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
           .build());
     }
 
-    if (!googleApiClient.get().isConnected() && !googleApiClient.get().isConnecting()) {
-      activity.status("connecting to drive...");
+    if (googleApiClient.get().isConnected()) {
+      process();
+    } else if (!googleApiClient.get().isConnecting()) {
+      activity.status("connecting to Google Drive...");
       googleApiClient.get().connect();
+    }
+  }
+
+  private synchronized void process() {
+    if (googleApiClient.isPresent()) {
+      for (Iterator<Task> i = tasks.iterator(); i.hasNext(); ) {
+        i.next().start(googleApiClient.get(), activity);
+        i.remove();
+      }
     } else {
-      exportFiles();
+      activity.toast("Google API client not avaiable.");
     }
   }
 
   @Override
   public void onConnected(@Nullable Bundle bundle) {
-    activity.status("connected to drive");
-    exportFiles();
-  }
-
-  private void exportFiles() {
-    // Start storing information.
-    if (googleApiClient.isPresent()) {
-      Drive.DriveApi.getRootFolder(googleApiClient.get())
-          .createFolder(googleApiClient.get(), new MetadataChangeSet.Builder()
-              .setTitle("RPG Companion").build())
-          .setResultCallback(
-              new ResolvingResultCallbacks<DriveFolder.DriveFolderResult>(activity, 0) {
-                @Override
-                public void onSuccess(DriveFolder.DriveFolderResult result) {
-                  write(result.getDriveFolder());
-                }
-
-                @Override
-                public void onUnresolvableFailure(Status status) {
-                  activity.toast("Cannot create folder in Drive.");
-                }
-              });
-    }
-  }
-
-  private void write(DriveFolder folder) {
-    activity.status("writing data to drive");
-    if (googleApiClient.isPresent()) {
-      for (File file : files) {
-        Drive.DriveApi.newDriveContents(googleApiClient.get()).setResultCallback(
-            new ResolvingResultCallbacks<DriveApi.DriveContentsResult>(activity, 0) {
-              @Override
-              public void onSuccess(@NonNull DriveApi.DriveContentsResult result) {
-                DriveContents contents = result.getDriveContents();
-                file.write(contents.getOutputStream());
-                folder.createFile(googleApiClient.get(),
-                    new MetadataChangeSet.Builder()
-                        .setTitle(file.name)
-                        .setMimeType(file.mimeType)
-                        .build(), contents)
-                    .setResultCallback(
-                        new ResolvingResultCallbacks<DriveFolder.DriveFileResult>(activity, 0) {
-                          @Override
-                          public void onSuccess(@NonNull DriveFolder.DriveFileResult result) {
-                            activity.status("file " + file.name + " written");
-                          }
-
-                          @Override
-                          public void onUnresolvableFailure(@NonNull Status status) {
-                            activity.toast("could not write file " + file.name);
-                          }
-                        });
-              }
-
-              @Override
-              public void onUnresolvableFailure(@NonNull Status status) {
-                activity.toast("cannot create file contents for " + file.name);
-              }
-            }
-        );
-      }
-    }
+    activity.status("connected to Google Drive");
+    process();
   }
 
   @Override
   public void onConnectionSuspended(int i) {
-    activity.status("connection to drive suspended");
+    activity.status("connection to Google Drive suspended");
   }
 
   @Override
-  public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-    activity.status("connection to drive failed");
+  public void onConnectionFailed(ConnectionResult connectionResult) {
+    activity.status("connection to Google Drive failed");
     if (connectionResult.hasResolution()) {
       try {
         connectionResult.startResolutionForResult(activity,
             MainActivity.RESOLVE_DRIVE_CONNECTION_CODE);
       } catch (IntentSender.SendIntentException e) {
-        // Unable to resolve, message user appropriately
+        activity.toast("Cannot export data to Google Drive!");
       }
     } else {
       GooglePlayServicesUtil.getErrorDialog(connectionResult.getErrorCode(), activity, 0).show();
     }
   }
 
+  public static abstract class Task {
+    public abstract void start(GoogleApiClient client, MainActivity activity);
+  }
+
+  public static class Export extends Task {
+    private final List<File> files;
+    private boolean started = false;
+
+    public Export(List<File> files) {
+      this.files = ImmutableList.copyOf(files);
+    }
+
+    @Override
+    public void start(GoogleApiClient client, MainActivity activity) {
+      if (started) {
+        return;
+      } else {
+        started = true;
+      }
+
+      if (files.isEmpty()) {
+        activity.toast("All files already exported.");
+        return;
+      }
+
+      Drive.DriveApi.getRootFolder(client)
+          .createFolder(client, new MetadataChangeSet.Builder()
+              .setTitle("RPG Companion")
+              .build())
+          .setResultCallback(
+              new ResolvingResultCallbacks<DriveFolder.DriveFolderResult>(activity, 0) {
+                @Override
+                public void onSuccess(DriveFolder.DriveFolderResult result) {write(client, activity, result.getDriveFolder());
+                }
+
+                @Override
+                public void onUnresolvableFailure(Status status) {
+                  activity.toast("Cannot create folder in Google Drive.");
+                }
+              });
+    }
+
+    private void write(GoogleApiClient client, MainActivity activity, DriveFolder folder) {
+      activity.status("writing data to Google Drive");
+      for (File file : files) {
+        Drive.DriveApi.newDriveContents(client).setResultCallback(
+            new ResolvingResultCallbacks<DriveApi.DriveContentsResult>(activity, 0) {
+              @Override
+              public void onSuccess(DriveApi.DriveContentsResult result) {
+                DriveContents contents = result.getDriveContents();
+                file.write(contents.getOutputStream());
+                folder.createFile(client,
+                    new MetadataChangeSet.Builder()
+                        .setTitle(file.name)
+                        .setMimeType(file.mimeType)
+                        .setDescription(file.id)
+                        .build(), contents)
+                    .setResultCallback(
+                        new ResolvingResultCallbacks<DriveFolder.DriveFileResult>(activity, 0) {
+                          @Override
+                          public void onSuccess(DriveFolder.DriveFileResult result) {
+                            activity.status("file " + file.name + " written");
+                          }
+
+                          @Override
+                          public void onUnresolvableFailure(Status status) {
+                            activity.toast("could not write file " + file.name);
+                          }
+                        });
+              }
+
+              @Override
+              public void onUnresolvableFailure(Status status) {
+                activity.toast("cannot create file contents for " + file.name);
+              }
+            }
+        );
+      }
+    }
+
+  }
+
+  public static class SelectImportFolder extends Task {
+
+    public SelectImportFolder() {}
+
+    @Override
+    public void start(GoogleApiClient client, MainActivity activity) {
+      IntentSender intent = Drive.DriveApi.newOpenFileActivityBuilder()
+          .setActivityTitle("Select directory to import.")
+          .setMimeType(new String[]{"application/vnd.google-apps.folder"})
+          .build(client);
+      try {
+        activity.startIntentSenderForResult(intent, MainActivity.DRIVE_IMPORT_OPEN_CODE, null,
+            0, 0, 0);
+      } catch (IntentSender.SendIntentException e) {
+        activity.toast("Importing from Google Drive failed: " + e);
+      }
+    }
+  }
+
+  public static class Import extends Task {
+    private final DriveFolder folder;
+
+    public Import(DriveFolder folder) {
+      this.folder = folder;
+    }
+
+    @Override
+    public void start(GoogleApiClient client, MainActivity activity) {
+      folder.listChildren(client)
+          .setResultCallback(
+              new ResolvingResultCallbacks<DriveApi.MetadataBufferResult>(activity, 0) {
+                @Override
+                public void onSuccess(DriveApi.MetadataBufferResult result) {
+                  for (Metadata meta : result.getMetadataBuffer()) {
+                    if (!meta.isFolder()) {
+                      if (meta.getTitle().endsWith(".campaign")
+                          || meta.getTitle().endsWith(".character")
+                          || meta.getTitle().endsWith(".character.jpg")) {
+                        read(client, activity, meta);
+                      }
+                    }
+                  }
+                }
+
+                @Override
+                public void onUnresolvableFailure(Status status) {
+                  activity.toast("Could not get files in selected folder.");
+                }
+              });
+
+    }
+
+    private void read(GoogleApiClient client, MainActivity activity, Metadata meta) {
+      meta.getDriveId().asDriveFile().open(client, DriveFile.MODE_READ_ONLY, null)
+          .setResultCallback(
+              new ResolvingResultCallbacks<DriveApi.DriveContentsResult>(activity, 0) {
+                @Override
+                public void onSuccess(DriveApi.DriveContentsResult result) {
+                  activity.status("reading file " + meta.getTitle());
+                  try {
+                    if (meta.getTitle().endsWith(".campaign")) {
+                      Data.CampaignProto proto = Data.CampaignProto.getDefaultInstance()
+                          .getParserForType()
+                          .parseFrom(result.getDriveContents().getInputStream());
+                      Campaign.fromProto(Campaigns.local().getIdFor(proto.getId()), true, proto)
+                          .store();
+                    } else if (meta.getTitle().endsWith(".character")) {
+                      Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance()
+                          .getParserForType()
+                          .parseFrom(result.getDriveContents().getInputStream());
+                      Character.fromProto(Characters.local().getIdFor(proto.getId()), true, proto)
+                          .store();
+                    } else if (meta.getTitle().endsWith(".character.jpg")) {
+                      Images.local().save(Character.TYPE, meta.getDescription(),
+                          Images.asBitmap(result.getDriveContents().getInputStream()));
+                    }
+                  } catch (InvalidProtocolBufferException e) {
+                    activity.toast("Reading of file " + meta.getTitle() + " failed!");
+                  }
+                }
+
+                @Override
+                public void onUnresolvableFailure(Status status) {
+                  activity.toast("could not import Google Drive file " + meta.getTitle());
+                }
+              });
+    }
+  }
+
   public static abstract class File {
     private final String name;
+    private final String id;
     private final String mimeType;
 
-    public File(String name, String mimeType) {
+    public File(String name, String id, String mimeType) {
       this.name = name;
+      this.id = id;
       this.mimeType = mimeType;
     }
 
     protected abstract boolean write(OutputStream output);
-
   }
 
   public static class TextFile extends File {
     private final String content;
 
-    public TextFile(String name, String mimeType, String content) {
-      super(name, mimeType);
+    public TextFile(String name, String id, String mimeType, String content) {
+      super(name, id, mimeType);
       this.content = content;
     }
 
@@ -202,10 +336,30 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
 
   public static class BinaryFile extends File {
 
+    private final byte[] contents;
+
+    public BinaryFile(String name, String id, String mimeType, byte[] contents) {
+      super(name, id, mimeType);
+      this.contents = contents;
+    }
+
+    @Override
+    protected boolean write(OutputStream output) {
+      try {
+        output.write(contents);
+        return true;
+      } catch (IOException e) {
+        return false;
+      }
+    }
+  }
+
+  public static class StreamFile extends File {
+
     private final InputStream input;
 
-    public BinaryFile(String name, String mimeType, InputStream input) {
-      super(name, mimeType);
+    public StreamFile(String name, String id, String mimeType, InputStream input) {
+      super(name, id, mimeType);
       this.input = input;
     }
 
