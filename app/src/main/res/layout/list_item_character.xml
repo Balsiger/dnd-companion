@@ -30,14 +30,23 @@
                 android:background="@color/character"
                 android:descendantFocusability="blocksDescendants"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                tools:context="net.ixitxachitls.companion.MainActivity">
+                tools:context="net.ixitxachitls.companion.ui.activities.MainActivity">
+
+    <view
+        android:id="@+id/image"
+        class="net.ixitxachitls.companion.ui.views.RoundImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_person_black_48dp"/>
 
     <view
         android:id="@+id/title"
         class="net.ixitxachitls.companion.ui.views.TitleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/network"
+        android:layout_toEndOf="@+id/image"
         app:color="@color/character"/>
 
 </RelativeLayout>

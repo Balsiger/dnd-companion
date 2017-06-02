@@ -21,11 +21,13 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +39,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.ListAdapter;
@@ -96,16 +99,22 @@ public class CampaignFragment extends CompanionFragment {
         R.layout.list_item_character, characters,
         new ListAdapter.ViewBinder<Character>() {
           @Override
-          public void bind(View view, Character item, int position) {
+          public void bind(View view, Character character, int position) {
             TitleView title = (TitleView) view.findViewById(R.id.title);
             if (campaign.isPresent()
                 && campaign.get().isLocal()
                 && !campaign.get().isDefault()) {
-              title.setTitle(item.getName() + " (" + item.getPlayerName() + ")");
+              title.setTitle(character.getName() + " (" + character.getPlayerName() + ")");
             } else {
-              title.setTitle(item.getName());
+              title.setTitle(character.getName());
             }
-            title.setSubtitle(item.getGender().getName() + " " + item.getRace());
+            title.setSubtitle(character.getGender().getName() + " " + character.getRace());
+            ImageView image = (ImageView) view.findViewById(R.id.image);
+            Optional<Bitmap> bitmap =
+                Images.get(character.isLocal()).load(Character.TYPE, character.getCharacterId());
+            if (bitmap.isPresent()) {
+              image.setImageBitmap(bitmap.get());
+            }
           }
         });
 

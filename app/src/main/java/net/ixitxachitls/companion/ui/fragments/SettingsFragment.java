@@ -58,7 +58,7 @@ public class SettingsFragment extends CompanionFragment {
 
     settings = Settings.get();
     nickname = Setup.editText(view, R.id.nickname, settings.getNickname(),
-        R.string.settings_nickname_label, R.color.colorAccent,
+        R.string.settings_nickname_label, getResources().getColor(R.color.colorAccent, null),
         this::editNickname, this::refresh);
     status = Setup.checkBox(view, R.id.status, settings.showStatus());
     save = Setup.button(view, R.id.save, this::save);

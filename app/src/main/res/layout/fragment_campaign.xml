@@ -66,9 +66,9 @@
         android:layout_alignParentBottom="false"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/campaign_button_delete"
-        android:paddingEnd="10dp"
         android:tint="#444"
         android:visibility="visible"
         app:srcCompat="@drawable/ic_delete_black_24dp"/>
