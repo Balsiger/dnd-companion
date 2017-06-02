@@ -90,6 +90,11 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     return entryId;
   }
 
+  public void setCampaignId(String campaignId) {
+    this.campaignId = campaignId;
+    store();
+  }
+
   public void setRace(String name) {
     mRace = Entries.get().getMonsters().get(name);
     store();

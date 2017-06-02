@@ -101,19 +101,24 @@ public class CampaignFragment extends CompanionFragment {
           @Override
           public void bind(View view, Character character, int position) {
             TitleView title = (TitleView) view.findViewById(R.id.title);
-            if (campaign.isPresent()
-                && campaign.get().isLocal()
-                && !campaign.get().isDefault()) {
-              title.setTitle(character.getName() + " (" + character.getPlayerName() + ")");
-            } else {
-              title.setTitle(character.getName());
-            }
             title.setSubtitle(character.getGender().getName() + " " + character.getRace());
             ImageView image = (ImageView) view.findViewById(R.id.image);
             Optional<Bitmap> bitmap =
                 Images.get(character.isLocal()).load(Character.TYPE, character.getCharacterId());
             if (bitmap.isPresent()) {
               image.setImageBitmap(bitmap.get());
+            }
+            IconView move = (IconView) view.findViewById(R.id.move);
+
+            if (campaign.isPresent()
+                && campaign.get().isLocal()
+                && !campaign.get().isDefault()) {
+              title.setTitle(character.getName() + " (" + character.getPlayerName() + ")");
+              move.setVisibility(View.GONE);
+            } else {
+              title.setTitle(character.getName());
+              move.setVisibility(View.VISIBLE);
+              move.setAction(() -> move(character));
             }
           }
         });
@@ -174,6 +179,23 @@ public class CampaignFragment extends CompanionFragment {
     }
   }
 
+  private void move(Character character) {
+    ListSelectFragment fragment = ListSelectFragment.newInstance(
+        R.string.character_select_campaign, "", Campaigns.remote().getCampaignNames(),
+        R.color.campaign);
+    fragment.setSelectListener((String value, int position) -> move(character, position));
+    fragment.display(getFragmentManager());
+  }
+
+  private void move(Character character, int position) {
+    Campaign campaign;
+    if (position == 0) {
+      campaign = Campaigns.defaultCampaign;
+    } else {
+      campaign = Campaigns.remote().getCampaigns().get(position - 1);
+    }
+    character.setCampaignId(campaign.getCampaignId());
+  }
   @Override
   public void refresh() {
     super.refresh();

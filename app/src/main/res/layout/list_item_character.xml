@@ -32,21 +32,33 @@
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 tools:context="net.ixitxachitls.companion.ui.activities.MainActivity">
 
-    <view
-        android:id="@+id/image"
-        class="net.ixitxachitls.companion.ui.views.RoundImageView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/ic_person_black_48dp"/>
+  <view
+      android:id="@+id/image"
+      class="net.ixitxachitls.companion.ui.views.RoundImageView"
+      android:layout_width="70dp"
+      android:layout_height="70dp"
+      android:layout_centerVertical="true"
+      android:layout_gravity="center_vertical"
+      android:src="@drawable/ic_person_black_48dp"/>
 
-    <view
-        android:id="@+id/title"
-        class="net.ixitxachitls.companion.ui.views.TitleView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/image"
-        app:color="@color/character"/>
+  <view
+      android:id="@+id/title"
+      class="net.ixitxachitls.companion.ui.views.TitleView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/image"
+      android:layout_toStartOf="@+id/move"
+      app:color="@color/character"/>
+
+  <view
+      android:id="@+id/move"
+      class="net.ixitxachitls.companion.ui.views.IconView"
+      android:layout_width="@dimen/iconSize"
+      android:layout_height="@dimen/iconSize"
+      android:layout_alignParentEnd="true"
+      android:layout_centerVertical="true"
+      android:layout_gravity="center_vertical"
+      android:layout_marginEnd="10dp"
+      android:src="@drawable/ic_launch_black_24dp"/>
 
 </RelativeLayout>

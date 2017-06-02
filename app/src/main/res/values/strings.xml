@@ -83,5 +83,6 @@
   <string name="label_initiative_modifier">Initiative Modifier</string>
   <string name="action_export">Export to Drive</string>
   <string name="action_import">Import from Drive</string>
+  <string name="character_select_campaign">Select campaign to move to</string>
 
 </resources>

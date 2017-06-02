@@ -122,6 +122,17 @@ public class Campaigns extends StoredEntries<Campaign> {
     return campaigns;
   }
 
+  public ArrayList<String> getCampaignNames() {
+    ArrayList<String> names = new ArrayList<>();
+
+    names.add(defaultCampaign.getName());
+    for (Campaign campaign : getAll()) {
+      names.add(campaign.getName());
+    }
+
+    return names;
+  }
+
   public List<Campaign> getCampaigns(String serverId) {
     List<Campaign> filtered = new ArrayList<>();
     for (Campaign campaign : getAll()) {
