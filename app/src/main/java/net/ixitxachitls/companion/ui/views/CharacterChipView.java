@@ -22,37 +22,33 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.graphics.Bitmap;
+
+import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Images;
 
 /**
- * A chip with rounded corners and a text.
+ * Chip representation of a character.
  */
-public class InitiativeChip extends ChipView {
+public class CharacterChipView extends ChipView {
 
-  public InitiativeChip(Context context, String id, String name, int initiative, boolean monster,
-                        boolean ready) {
-    super(context, R.drawable.ic_person_black_48dp, monster ? R.color.monster : R.color.character);
+  public CharacterChipView(Context context, Character character, int initiative, boolean ready) {
+    super(context, R.drawable.ic_person_black_48dp, R.color.character);
 
-    init(id, name, initiative, monster, ready);
-  }
-
-  private void init(String id, String name, int initiative, boolean monster, boolean ready) {
-    View view = LayoutInflater.from(getContext())
-        .inflate(R.layout.view_chip_content_initiative, null, false);
-    view.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-        ViewGroup.LayoutParams.WRAP_CONTENT));
-
-    this.name.setText(name);
-
-    if (!ready) {
-      this.name.setTextColor(getResources().getColor(R.color.cell, null));
-    } else {
-      subtitle.setText("initiative " + initiative);
+    name.setText(character.getName());
+    Optional<Bitmap> bitmap =
+        Images.get(character.isLocal()).load(Character.TYPE, character.getCharacterId());
+    if (bitmap.isPresent()) {
+      image.setImageBitmap(bitmap.get());
     }
 
+    if (ready) {
+      subtitle.setText("init " + initiative);
+    } else {
+      name.setTextColor(getResources().getColor(R.color.cell, null));
+    }
   }
 }

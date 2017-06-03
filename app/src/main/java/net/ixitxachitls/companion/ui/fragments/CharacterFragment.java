@@ -204,6 +204,10 @@ public class CharacterFragment extends CompanionFragment {
 
     character = Characters.get(character.get().isLocal())
         .getCharacter(character.get().getCharacterId(), campaign.get().getCampaignId());
+    if (!character.isPresent()) {
+      return;
+    }
+
     campaign = Campaigns.get(campaign.get().isLocal()).getCampaign(campaign.get().getCampaignId());
 
     Optional<Bitmap> bitmap =

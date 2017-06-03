@@ -205,6 +205,9 @@ public class CampaignFragment extends CompanionFragment {
     }
 
     campaign = Campaigns.get(campaign.get().isLocal()).getCampaign(campaign.get().getCampaignId());
+    if (!campaign.isPresent()) {
+      return;
+    }
 
     if (canDeleteCampaign()) {
       delete.setVisibility(View.VISIBLE);

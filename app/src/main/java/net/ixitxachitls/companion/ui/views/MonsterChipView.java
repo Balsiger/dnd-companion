@@ -22,37 +22,18 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import net.ixitachitls.companion.R;
 
 /**
- * A chip with rounded corners and a text.
+ * Chip for displaying monster information.
  */
-public class InitiativeChip extends ChipView {
+public class MonsterChipView extends ChipView {
 
-  public InitiativeChip(Context context, String id, String name, int initiative, boolean monster,
-                        boolean ready) {
-    super(context, R.drawable.ic_person_black_48dp, monster ? R.color.monster : R.color.character);
-
-    init(id, name, initiative, monster, ready);
-  }
-
-  private void init(String id, String name, int initiative, boolean monster, boolean ready) {
-    View view = LayoutInflater.from(getContext())
-        .inflate(R.layout.view_chip_content_initiative, null, false);
-    view.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-        ViewGroup.LayoutParams.WRAP_CONTENT));
+  public MonsterChipView(Context context, String name, int initiative) {
+    super(context, R.drawable.ic_perm_identity_black_24dp, R.color.monster);
 
     this.name.setText(name);
-
-    if (!ready) {
-      this.name.setTextColor(getResources().getColor(R.color.cell, null));
-    } else {
-      subtitle.setText("initiative " + initiative);
-    }
-
+    this.subtitle.setText("init " + initiative);
   }
 }

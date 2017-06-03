@@ -36,6 +36,7 @@ message CampaignProto {
       int32 initiative_modifier = 2;
       bool monster = 3;
       bool waiting = 4;
+      string id = 5;
     }
     repeated Combatant combatant = 4;
     int32 current_combatant_index = 5;

@@ -42,8 +42,10 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
+import net.ixitxachitls.companion.ui.views.CharacterChipView;
+import net.ixitxachitls.companion.ui.views.ChipView;
 import net.ixitxachitls.companion.ui.views.DiceView;
-import net.ixitxachitls.companion.ui.views.InitiativeChip;
+import net.ixitxachitls.companion.ui.views.MonsterChipView;
 
 import java.util.List;
 
@@ -135,7 +137,7 @@ public class BattleFragment extends CompanionFragment {
 
       for (Character character : Characters.get(!campaign.get().isLocal())
           .getCharacters(campaign.get().getCampaignId())) {
-        campaign.get().getBattle().addCharacter(character.getName(), 0);
+        campaign.get().getBattle().addCharacter(character.getCharacterId(), character.getName(), 0);
       }
 
       refresh();
@@ -268,7 +270,8 @@ public class BattleFragment extends CompanionFragment {
       // Make sure all characters are stored as combatants.
       boolean allDone = true;
       for (Character character : campaign.get().getCharacters()) {
-        battle.addCharacter(character.getName(), character.getInitiative());
+        battle.addCharacter(character.getCharacterId(), character.getName(),
+            character.getInitiative());
         if (!character.hasInitiative()) {
           allDone = false;
         }
@@ -291,9 +294,20 @@ public class BattleFragment extends CompanionFragment {
     List<Battle.Combatant> combatants =
         battle.isStarting() ? battle.combatantsByInitiative() : battle.combatants();
     for (Battle.Combatant combatant : combatants) {
-      InitiativeChip chip = new InitiativeChip(getContext(), combatant.getName(),
-          combatant.getInitiative(), combatant.isMonster(), isReady(combatant)
-      );
+      ChipView chip;
+      if (combatant.isMonster()) {
+        chip = new MonsterChipView(getContext(), combatant.getName(),
+            combatant.getInitiative());
+      } else {
+        Optional<Character> character = Characters.remote().get(combatant.getId());
+        if (character.isPresent()) {
+          chip = new CharacterChipView(getContext(), character.get(), combatant.getInitiative(),
+              isReady(combatant));
+        } else {
+          toast("Could not get character for " + combatant.getName());
+          continue;
+        }
+      }
 
       if ((battle.isOngoing() || battle.isSurprised()) && i == battle.getCurrentCombatantIndex()) {
         LinearLayout current = createCurrentCombatant(combatant.isMonster());

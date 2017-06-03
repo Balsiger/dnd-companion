@@ -33,37 +33,32 @@
       android:orientation="horizontal"
       android:padding="10dp">
 
-    <view
+    <net.ixitxachitls.companion.ui.views.RoundImageView
         android:id="@+id/image"
-        class="net.ixitxachitls.companion.ui.views.RoundImageView"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/ic_person_black_48dp"/>
+        android:layout_gravity="center_vertical"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="10dp"
+                  android:orientation="vertical">
 
       <TextView
           android:id="@+id/name"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_gravity="center_horizontal"
           android:text="... text ..."
-          android:textAlignment="center"
+          android:textAlignment="viewStart"
           android:textStyle="normal|bold"
           android:theme="@style/LargeText"/>
 
       <TextView
-          android:id="@+id/initiative"
+          android:id="@+id/subtitle"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_gravity="center_horizontal"
-          android:text="@string/chip_wait_selection"
           android:theme="@style/SmallText"/>
+
     </LinearLayout>
 
   </LinearLayout>

@@ -124,6 +124,10 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   }
 
   public String getNickname() {
+    if (name == null || name.isEmpty()) {
+      return getAppId();
+    }
+
     return name;
   }
 

@@ -26,6 +26,7 @@ import android.support.annotation.CallSuper;
 import android.util.Log;
 
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 /**
  * Base fragment for all our non-dialog fragments
@@ -44,6 +45,10 @@ public abstract class CompanionFragment extends Fragment {
 
   public Type getType() {
     return type;
+  }
+
+  public void toast(String message) {
+    ((MainActivity) getActivity()).toast(message);
   }
 
   protected void show(Type fragment) {

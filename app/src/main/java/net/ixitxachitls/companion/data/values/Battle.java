@@ -87,11 +87,11 @@ public class Battle {
 
   public void addMonster(String name, int initiativeModifier) {
     lastMonsterName = Optional.of(name);
-    combatants.add(new Combatant(name, RANDOM.nextInt(20) + initiativeModifier, true, false));
+    combatants.add(new Combatant("", name, RANDOM.nextInt(20) + initiativeModifier, true, false));
     campaign.store();
   }
 
-  public void addCharacter(String name, int initiativeModifier) {
+  public void addCharacter(String characterId, String name, int initiativeModifier) {
     for (Iterator<Combatant> i = combatants.iterator(); i.hasNext(); ) {
       Combatant combatant = i.next();
       if (!combatant.isMonster() && combatant.getName().equals(name)) {
@@ -100,7 +100,7 @@ public class Battle {
       }
     }
 
-    combatants.add(new Combatant(name, initiativeModifier, false, false));
+    combatants.add(new Combatant(characterId, name, initiativeModifier, false, false));
     campaign.store();
   }
 
@@ -209,16 +209,22 @@ public class Battle {
   }
 
   public static class Combatant implements Comparable<Combatant> {
+    private final String id;
     private final String name;
     private final int initiative;
     private final boolean monster;
     private boolean waiting;
 
-    private Combatant(String name, int initiative, boolean monster, boolean waiting) {
+    private Combatant(String id, String name, int initiative, boolean monster, boolean waiting) {
+      this.id = id;
       this.name = name;
       this.initiative = initiative;
       this.monster = monster;
       this.waiting = waiting;
+    }
+
+    public String getId() {
+      return id;
     }
 
     public String getName() {
@@ -248,6 +254,7 @@ public class Battle {
 
     public Data.CampaignProto.Battle.Combatant toProto() {
       return Data.CampaignProto.Battle.Combatant.newBuilder()
+          .setId(id)
           .setName(name)
           .setInitiativeModifier(initiative)
           .setMonster(monster)
@@ -256,8 +263,8 @@ public class Battle {
     }
 
     public static Combatant fromProto(Data.CampaignProto.Battle.Combatant proto) {
-      return new Combatant(proto.getName(), proto.getInitiativeModifier(), proto.getMonster(),
-          proto.getWaiting());
+      return new Combatant(proto.getId(), proto.getName(), proto.getInitiativeModifier(),
+          proto.getMonster(), proto.getWaiting());
     }
   }
 }
