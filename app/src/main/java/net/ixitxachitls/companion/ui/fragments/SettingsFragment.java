@@ -57,7 +57,8 @@ public class SettingsFragment extends CompanionFragment {
         inflater.inflate(R.layout.fragment_settings, container, false);
 
     settings = Settings.get();
-    nickname = Setup.editText(view, R.id.nickname, settings.getNickname(),
+    nickname = Setup.editText(view, R.id.nickname,
+        settings.isDefined() ? settings.getNickname() : "",
         R.string.settings_nickname_label, getResources().getColor(R.color.colorAccent, null),
         this::editNickname, this::refresh);
     status = Setup.checkBox(view, R.id.status, settings.showStatus());

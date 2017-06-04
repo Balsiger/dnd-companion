@@ -36,11 +36,16 @@ import net.ixitxachitls.companion.data.dynamics.Images;
 public class CharacterChipView extends ChipView {
 
   public CharacterChipView(Context context, Character character, int initiative, boolean ready) {
+    this(context, character.getCharacterId(), character.getName(), initiative, ready,
+        character.isLocal());
+  }
+
+  public CharacterChipView(Context context, String id, String name, int initiative, boolean ready,
+                           boolean local) {
     super(context, R.drawable.ic_person_black_48dp, R.color.character);
 
-    name.setText(character.getName());
-    Optional<Bitmap> bitmap =
-        Images.get(character.isLocal()).load(Character.TYPE, character.getCharacterId());
+    this.name.setText(name);
+    Optional<Bitmap> bitmap = Images.get(local).load(Character.TYPE, id);
     if (bitmap.isPresent()) {
       image.setImageBitmap(bitmap.get());
     }
@@ -48,7 +53,7 @@ public class CharacterChipView extends ChipView {
     if (ready) {
       subtitle.setText("init " + initiative);
     } else {
-      name.setTextColor(getResources().getColor(R.color.cell, null));
+      this.name.setTextColor(getResources().getColor(R.color.cell, null));
     }
   }
 }

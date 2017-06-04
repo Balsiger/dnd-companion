@@ -5,14 +5,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.3"
     defaultConfig {
         // There is a typo in the application id. Changing that requires a new entry in the play
         // store. We should do this when we rename the app.
         applicationId "net.ixitachitls.companion"
         minSdkVersion 23
         targetSdkVersion 25
-        versionCode 56
+        versionCode 60
         versionName "Aasimar"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions {

@@ -226,8 +226,8 @@ public class BattleFragment extends CompanionFragment {
       initiative.setVisibility(View.VISIBLE);
       initiativeNumber.setText(String.valueOf(character.get().getInitiative()));
     } else if (battle.isSurprised() || battle.isOngoing()) {
-      initiative.setVisibility(View.VISIBLE);
-      initiativeNumber.setText(String.valueOf(character.get().getInitiative()));
+      initiative.setVisibility(View.GONE);
+      charactersBox.setVisibility(View.VISIBLE);
       if (isMyTurn()) {
         status.setText(battle.isSurprised()
             ? "You are in the surprise round and it's your turn!"
@@ -241,6 +241,8 @@ public class BattleFragment extends CompanionFragment {
         initiative.getBackground().setColorFilter(getResources().getColor(R.color.off, null),
             PorterDuff.Mode.DST);
       }
+
+      renderCharactersBox(battle);
     }
   }
 
@@ -256,7 +258,6 @@ public class BattleFragment extends CompanionFragment {
     }
 
     Battle battle = campaign.get().getBattle();
-    charactersBox.removeAllViews();
 
     if (battle.isEnded()) {
       status.setText("Battle has ended or did not yet begin.");
@@ -277,6 +278,8 @@ public class BattleFragment extends CompanionFragment {
         }
       }
 
+      renderCharactersBox(battle);
+
       if (allDone) {
         battleButton.setVisibility(View.VISIBLE);
       }
@@ -288,29 +291,41 @@ public class BattleFragment extends CompanionFragment {
       } else {
         status.setText("Normal round, move and standard action each.");
       }
-    }
 
+      renderCharactersBox(battle);
+    }
+  }
+
+  private void renderCharactersBox(Battle battle) {
+    charactersBox.removeAllViews();
+
+    boolean isDM = campaign.isPresent() && campaign.get().isLocal();
     int i = 0;
     List<Battle.Combatant> combatants =
         battle.isStarting() ? battle.combatantsByInitiative() : battle.combatants();
     for (Battle.Combatant combatant : combatants) {
       ChipView chip;
       if (combatant.isMonster()) {
-        chip = new MonsterChipView(getContext(), combatant.getName(),
+        chip = new MonsterChipView(getContext(), isDM ? combatant.getName() : "Monster",
             combatant.getInitiative());
       } else {
-        Optional<Character> character = Characters.remote().get(combatant.getId());
-        if (character.isPresent()) {
-          chip = new CharacterChipView(getContext(), character.get(), combatant.getInitiative(),
-              isReady(combatant));
+        if (isDM) {
+          Optional<Character> character = Characters.remote().get(combatant.getId());
+          if (character.isPresent()) {
+            chip = new CharacterChipView(getContext(), character.get(), combatant.getInitiative(),
+                isReady(combatant));
+          } else {
+            toast("Could not get character for " + combatant.getName());
+            continue;
+          }
         } else {
-          toast("Could not get character for " + combatant.getName());
-          continue;
+          chip = new CharacterChipView(getContext(), combatant.getId(), combatant.getName(),
+              combatant.getInitiative(), isReady(combatant), false);
         }
       }
 
       if ((battle.isOngoing() || battle.isSurprised()) && i == battle.getCurrentCombatantIndex()) {
-        LinearLayout current = createCurrentCombatant(combatant.isMonster());
+        LinearLayout current = createCurrentCombatant(isDM, combatant.isMonster());
         ((FrameLayout) current.findViewById(R.id.content)).addView(chip);
         charactersBox.addView(current);
       } else {
@@ -320,15 +335,16 @@ public class BattleFragment extends CompanionFragment {
     }
   }
 
-  private LinearLayout createCurrentCombatant(boolean showRemove) {
+  private LinearLayout createCurrentCombatant(boolean showButtons, boolean showRemove) {
     LinearLayout current = (LinearLayout) LayoutInflater.from(getContext())
         .inflate(R.layout.view_battle_current, null);
-    Setup.button(current, R.id.next, this::next);
-    Setup.button(current, R.id.delay, this::delay);
+    Setup.button(current, R.id.next, this::next)
+        .setVisibility(showButtons ? View.VISIBLE : View.GONE);
+    Setup.button(current, R.id.delay, this::delay)
+        .setVisibility(showButtons ? View.VISIBLE : View.GONE);
 
-    if (showRemove) {
-      Setup.button(current, R.id.remove, this::remove);
-    }
+    Setup.button(current, R.id.remove, this::remove)
+        .setVisibility(showButtons && showRemove ? View.VISIBLE : View.GONE);
 
     return current;
   }
