@@ -12,7 +12,7 @@ android {
         applicationId "net.ixitachitls.companion"
         minSdkVersion 23
         targetSdkVersion 25
-        versionCode 60
+        versionCode 63
         versionName "Aasimar"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions {
@@ -89,6 +89,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'org.jetbrains:annotations:15.0'
     compile 'com.google.android.gms:play-services-drive:10.2.6'
+    compile 'com.google.android:flexbox:0.2.6'
 }
 
 

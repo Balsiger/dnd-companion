@@ -71,6 +71,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     this.campaignId = campaignId;
   }
 
+  public Optional<Character> refresh() {
+    return Characters.get(isLocal()).get(entryId);
+  }
+
   public String getCampaignId() {
     return campaignId;
   }

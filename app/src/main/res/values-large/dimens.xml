@@ -25,4 +25,8 @@
   <dimen name="design_fab_size_normal">54dp</dimen>
   <dimen name="fab_margin">16dp</dimen>
 
+  <!-- Chip dimensions. -->
+  <dimen name="chipIcon">50dp</dimen>
+  <dimen name="chipWidth">150dp</dimen>
+
 </resources>

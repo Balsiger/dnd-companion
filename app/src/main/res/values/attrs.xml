@@ -54,8 +54,4 @@
   <declare-styleable name="StatusView">
   </declare-styleable>
 
-  <declare-styleable name="ChipView">
-    <attr name="default_image" format="reference"></attr>
-    <attr name="background_color" format="color"></attr>
-  </declare-styleable>
 </resources>

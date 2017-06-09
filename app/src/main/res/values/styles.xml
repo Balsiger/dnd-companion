@@ -8,6 +8,10 @@
     <item name="android:textSize">12sp</item>
   </style>
 
+  <style name="TinyText" parent="">
+    <item name="android:textSize">10sp</item>
+  </style>
+
   <style name="IconSize" parent="">
     <item name="android:layout_height">24dp</item>
   </style>

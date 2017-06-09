@@ -61,6 +61,10 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     battle = new Battle(this);
   }
 
+  public Optional<Campaign> refresh() {
+    return Campaigns.get(isLocal()).get(entryId);
+  }
+
   public String getWorld() {
     return world.getName();
   }
@@ -78,7 +82,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public List<Character> getCharacters() {
-    return Characters.get(isLocal()).getCharacters(getCampaignId());
+    return Characters.get(!isLocal()).getCharacters(getCampaignId());
   }
 
   public CampaignDate getDate() {

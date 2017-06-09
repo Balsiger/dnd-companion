@@ -88,6 +88,17 @@ public class CompanionSubscriber {
     }
   }
 
+  public void sendWelcome() {
+    for (CompanionClient client : clientById.values()) {
+      client.send(Data.CompanionMessageProto.newBuilder()
+          .setWelcome(Data.CompanionMessageProto.Welcome.newBuilder()
+              .setId(Settings.get().getAppId())
+              .setName(Settings.get().getNickname())
+              .build())
+          .build());
+    }
+  }
+
   // TODO: Determine if singleton works and is necessary.
   public static CompanionSubscriber init(Context context, CompanionApplication application) {
     singleton = new CompanionSubscriber(context, application);

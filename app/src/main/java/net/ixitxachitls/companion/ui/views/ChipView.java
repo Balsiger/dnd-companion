@@ -22,53 +22,51 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewStub;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 
 /**
- * A chip with rounded corners and a text.
+ * A small chip
  */
 public class ChipView extends LinearLayout {
 
-  protected TextView name;
-  protected TextView subtitle;
-  protected RoundImageView image;
+  private static final int PADDING_SELECT = 10;
+
+  private final LinearLayout container;
+  private final LinearLayout back;
+  protected final TextView name;
+  protected final TextView subtitle;
+  protected final RoundImageView image;
+  protected final ViewStub details;
 
   public ChipView(Context context, @DrawableRes int defaultImage,
-                  @ColorRes int backgroundColor) {
+                  String name, String subtitle, @ColorRes int backgroundColor) {
     super(context);
 
-    init(defaultImage, backgroundColor);
-  }
+    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, null, false);
 
-  public ChipView(Context context, @Nullable AttributeSet attributes) {
-    super(context, attributes);
-
-    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.IconView);
-    @DrawableRes int defaultImage = array.getInt(R.styleable.ChipView_default_image, 0);
-    @ColorRes int backgroundColor = array.getColor(R.styleable.ChipView_background_color, 0);
-
-    init(defaultImage, backgroundColor);
-  }
-
-  private void init(@DrawableRes int defaultImage, @ColorRes int backgroundColor) {
-    View view =
-        LayoutInflater.from(getContext()).inflate(R.layout.view_chip, null, false);
-    view.findViewById(R.id.back).setBackgroundTintList(
+    this.container = (LinearLayout) view.findViewById(R.id.container);
+    this.back = (LinearLayout) view.findViewById(R.id.back);
+    back.setBackgroundTintList(
         getResources().getColorStateList(backgroundColor, null));
+    this.name = (TextView) view.findViewById(R.id.name);
+    this.name.setText(name);
+    this.subtitle = (TextView) view.findViewById(R.id.subtitle);
+    if (subtitle.isEmpty()) {
+      this.subtitle.setVisibility(GONE);
+    } else {
+      this.subtitle.setText(subtitle);
+    }
+    this.image = (RoundImageView) view.findViewById(R.id.image);
+    this.details = (ViewStub) view.findViewById(R.id.details);
 
-    name = (TextView) view.findViewById(R.id.name);
-    subtitle = (TextView) view.findViewById(R.id.subtitle);
-    image = (RoundImageView) view.findViewById(R.id.image);
     if (defaultImage > 0) {
       image.setImageDrawable(getResources().getDrawable(defaultImage, null));
     } else {
@@ -76,5 +74,30 @@ public class ChipView extends LinearLayout {
     }
 
     addView(view);
+  }
+
+  public void disabled() {
+    name.setTextColor(getResources().getColor(R.color.disabled, null));
+    subtitle.setTextColor(getResources().getColor(R.color.disabled, null));
+  }
+
+  public void select() {
+    back.setElevation(2 * PADDING_SELECT);
+    container.setPadding(container.getPaddingLeft() - PADDING_SELECT,
+        container.getPaddingTop() - PADDING_SELECT,
+        container.getPaddingRight(),
+        container.getPaddingBottom());
+  }
+
+  public void on() {
+    setBackground(R.color.on);
+  }
+
+  public void off() {
+    setBackground(R.color.off);
+  }
+
+  public void setBackground(@ColorRes int color) {
+    setBackgroundColor(getResources().getColor(color, null));
   }
 }

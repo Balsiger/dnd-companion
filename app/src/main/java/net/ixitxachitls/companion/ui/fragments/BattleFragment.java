@@ -27,7 +27,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -42,10 +42,8 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
-import net.ixitxachitls.companion.ui.views.CharacterChipView;
 import net.ixitxachitls.companion.ui.views.ChipView;
 import net.ixitxachitls.companion.ui.views.DiceView;
-import net.ixitxachitls.companion.ui.views.MonsterChipView;
 
 import java.util.List;
 
@@ -64,12 +62,16 @@ public class BattleFragment extends CompanionFragment {
   private TextView status;
   private Button start;
   private Button addMonster;
-  private LinearLayout charactersBox;
+  private LinearLayout characters;
+  private HorizontalScrollView charactersScroll;
   private DiceView dice;
   private Button end;
   private Button battleButton;
   private LinearLayout initiative;
   private TextView initiativeNumber;
+  private Button next;
+  private Button delay;
+  private Button remove;
 
   public BattleFragment() {
     super(Type.battle);
@@ -86,10 +88,14 @@ public class BattleFragment extends CompanionFragment {
     battleButton = Setup.button(view, R.id.battle, this::battle);
     end = Setup.button(view, R.id.end, this::end);
     addMonster = Setup.button(view, R.id.add_monster, this::addMonster);
-    charactersBox = (LinearLayout) view.findViewById(R.id.characters);
+    characters = (LinearLayout) view.findViewById(R.id.characters);
+    charactersScroll = (HorizontalScrollView) view.findViewById(R.id.charactersScroll);
     dice = (DiceView) view.findViewById(R.id.dice);
     initiative = (LinearLayout) view.findViewById(R.id.initiative);
     initiativeNumber = Setup.textView(view, R.id.initiativeNumber, this::changeInitiative);
+    next = Setup.button(view, R.id.next, this::next);
+    delay = Setup.button(view, R.id.delay, this::delay);
+    remove = Setup.button(view, R.id.remove, this::remove);
 
     return view;
   }
@@ -137,7 +143,8 @@ public class BattleFragment extends CompanionFragment {
 
       for (Character character : Characters.get(!campaign.get().isLocal())
           .getCharacters(campaign.get().getCampaignId())) {
-        campaign.get().getBattle().addCharacter(character.getCharacterId(), character.getName(), 0);
+        campaign.get().getBattle().refreshCombatant(character.getCharacterId(), character.getName(),
+            Character.NO_INITIATIVE);
       }
 
       refresh();
@@ -185,7 +192,7 @@ public class BattleFragment extends CompanionFragment {
     start.setVisibility(GONE);
     battleButton.setVisibility(GONE);
     end.setVisibility(GONE);
-    charactersBox.setVisibility(GONE);
+    characters.setVisibility(GONE);
     initiative.setVisibility(GONE);
 
 
@@ -227,7 +234,7 @@ public class BattleFragment extends CompanionFragment {
       initiativeNumber.setText(String.valueOf(character.get().getInitiative()));
     } else if (battle.isSurprised() || battle.isOngoing()) {
       initiative.setVisibility(View.GONE);
-      charactersBox.setVisibility(View.VISIBLE);
+      characters.setVisibility(View.VISIBLE);
       if (isMyTurn()) {
         status.setText(battle.isSurprised()
             ? "You are in the surprise round and it's your turn!"
@@ -242,7 +249,7 @@ public class BattleFragment extends CompanionFragment {
             PorterDuff.Mode.DST);
       }
 
-      renderCharactersBox(battle);
+      renderCharactersBox(battle, battle.isSurprised() || battle.isOngoing());
     }
   }
 
@@ -266,87 +273,89 @@ public class BattleFragment extends CompanionFragment {
       end.setVisibility(View.VISIBLE);
       addMonster.setVisibility(View.VISIBLE);
       status.setText("Battle is starting...");
-      charactersBox.setVisibility(View.VISIBLE);
+      characters.setVisibility(View.VISIBLE);
 
       // Make sure all characters are stored as combatants.
       boolean allDone = true;
       for (Character character : campaign.get().getCharacters()) {
-        battle.addCharacter(character.getCharacterId(), character.getName(),
+        battle.refreshCombatant(character.getCharacterId(), character.getName(),
             character.getInitiative());
         if (!character.hasInitiative()) {
           allDone = false;
+          break;
         }
       }
 
-      renderCharactersBox(battle);
+      renderCharactersBox(battle, false);
 
       if (allDone) {
         battleButton.setVisibility(View.VISIBLE);
       }
     } else if (battle.isSurprised() || battle.isOngoing()) {
       end.setVisibility(View.VISIBLE);
-      charactersBox.setVisibility(View.VISIBLE);
+      characters.setVisibility(View.VISIBLE);
       if (battle.isSurprised()) {
         status.setText("Surprise round, a single standard action each only.");
       } else {
         status.setText("Normal round, move and standard action each.");
       }
 
-      renderCharactersBox(battle);
+      renderCharactersBox(battle, true);
     }
   }
 
-  private void renderCharactersBox(Battle battle) {
-    charactersBox.removeAllViews();
+  private void renderCharactersBox(Battle battle, boolean battleRunning) {
+    // Replace combatants as characters might have changed.
+    if (campaign.isPresent()) {
+      battle.refreshCombatants();
+    }
+    characters.removeAllViews();
+    characters.setVisibility(View.VISIBLE);
 
     boolean isDM = campaign.isPresent() && campaign.get().isLocal();
+    next.setVisibility(battleRunning && isDM ? View.VISIBLE : GONE);
+    delay.setVisibility(battleRunning && isDM && !battle.currentIsLast() ? View.VISIBLE : GONE);
+    remove.setVisibility(GONE);
+
     int i = 0;
     List<Battle.Combatant> combatants =
         battle.isStarting() ? battle.combatantsByInitiative() : battle.combatants();
     for (Battle.Combatant combatant : combatants) {
       ChipView chip;
       if (combatant.isMonster()) {
-        chip = new MonsterChipView(getContext(), isDM ? combatant.getName() : "Monster",
-            combatant.getInitiative());
+        chip = new ChipView(getContext(), R.drawable.ic_perm_identity_black_24dp,
+            isDM ? combatant.getName() : "Monster", "init " + combatant.getInitiative(),
+            R.color.monster);
       } else {
-        if (isDM) {
-          Optional<Character> character = Characters.remote().get(combatant.getId());
-          if (character.isPresent()) {
-            chip = new CharacterChipView(getContext(), character.get(), combatant.getInitiative(),
-                isReady(combatant));
-          } else {
-            toast("Could not get character for " + combatant.getName());
-            continue;
-          }
-        } else {
-          chip = new CharacterChipView(getContext(), combatant.getId(), combatant.getName(),
-              combatant.getInitiative(), isReady(combatant), false);
-        }
+        chip = new ChipView(getContext(), R.drawable.ic_person_black_48dp,
+            combatant.getName(),
+            combatant.getInitiative() == Character.NO_INITIATIVE
+                ? "" : "init " + combatant.getInitiative(), R.color.character);
       }
+
+      if (!isReady(combatant)) {
+        chip.disabled();
+      }
+
+      characters.addView(chip);
 
       if ((battle.isOngoing() || battle.isSurprised()) && i == battle.getCurrentCombatantIndex()) {
-        LinearLayout current = createCurrentCombatant(isDM, combatant.isMonster());
-        ((FrameLayout) current.findViewById(R.id.content)).addView(chip);
-        charactersBox.addView(current);
-      } else {
-        charactersBox.addView(chip);
+        chip.select();
+        if (battleRunning && isDM && combatant.isMonster()) {
+          remove.setVisibility(View.VISIBLE);
+        }
+
+        // Scroll to the chip.
+        charactersScroll.post(new Runnable() {
+          @Override
+          public void run() {
+            charactersScroll.smoothScrollTo(chip.getLeft(), 0);
+          }
+        });
       }
+
       i++;
     }
-  }
-
-  private LinearLayout createCurrentCombatant(boolean showButtons, boolean showRemove) {
-    LinearLayout current = (LinearLayout) LayoutInflater.from(getContext())
-        .inflate(R.layout.view_battle_current, null);
-    Setup.button(current, R.id.next, this::next)
-        .setVisibility(showButtons ? View.VISIBLE : View.GONE);
-    Setup.button(current, R.id.delay, this::delay)
-        .setVisibility(showButtons ? View.VISIBLE : View.GONE);
-
-    Setup.button(current, R.id.remove, this::remove)
-        .setVisibility(showButtons && showRemove ? View.VISIBLE : View.GONE);
-
-    return current;
   }
 
   private void next() {

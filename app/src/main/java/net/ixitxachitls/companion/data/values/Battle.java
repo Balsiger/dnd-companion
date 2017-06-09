@@ -24,12 +24,13 @@ package net.ixitxachitls.companion.data.values;
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -91,18 +92,36 @@ public class Battle {
     campaign.store();
   }
 
-  public void addCharacter(String characterId, String name, int initiativeModifier) {
-    for (Iterator<Combatant> i = combatants.iterator(); i.hasNext(); ) {
-      Combatant combatant = i.next();
-      if (!combatant.isMonster() && combatant.getName().equals(name)) {
-        i.remove();
-        break;
+  public void refreshCombatant(String characterId, String name, int initiativeModifier) {
+    for (int i = 0; i < combatants.size(); i++) {
+      Combatant existing = combatants.get(i);
+      if (existing.id.equals(characterId) && existing.name.equals(name)) {
+        combatants.set(i, new Combatant(characterId, name, initiativeModifier, existing.monster,
+            existing.waiting));
+        return;
       }
     }
 
     combatants.add(new Combatant(characterId, name, initiativeModifier, false, false));
     campaign.store();
   }
+
+  public void refreshCombatants() {
+    for (int i = 0; i < combatants.size(); i++) {
+      Combatant existing = combatants.get(i);
+      if (!existing.isMonster()) {
+        Optional<Character> character = Characters.get(!campaign.isLocal()).get(existing.id);
+        if (character.isPresent()) {
+          combatants.set(i,
+              new Combatant(existing.id, existing.name, character.get().getInitiative(), false,
+                  existing.waiting));
+        }
+      }
+    }
+
+    campaign.store();
+  }
+
 
   public int getCurrentCombatantIndex() {
     return currentCombatantIndex;
@@ -132,6 +151,11 @@ public class Battle {
   }
 
   public void combatantLater() {
+    if (currentCombatantIndex + 1 >= combatants.size()) {
+      // Cannot be later.
+      return;
+    }
+
     Combatant combatant = combatants.remove(currentCombatantIndex);
     combatants.add(currentCombatantIndex + 1, combatant);
     combatant.setWaiting(true);

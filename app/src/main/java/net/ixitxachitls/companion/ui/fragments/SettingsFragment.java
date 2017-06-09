@@ -32,6 +32,7 @@ import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
@@ -79,6 +80,7 @@ public class SettingsFragment extends CompanionFragment {
 
     if (settings.isDefined()) {
       CompanionFragments.get().showLast();
+      CompanionSubscriber.get().sendWelcome();
     }
   }
 

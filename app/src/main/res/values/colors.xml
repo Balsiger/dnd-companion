@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#3F51B5</color>
-  <color name="colorPrimaryDark">#303F9F</color>
-  <color name="colorAccent">#FF4081</color>
+
+  <!-- Primary colors. -->
+  <color name="primary">#1a237e</color>
+  <color name="colorPrimary">@color/primary</color>
+  <color name="primaryDark">#000051</color>
+  <color name="colorPrimaryDark">@color/primaryDark</color>
+  <color name="primaryLight">#534bae</color>
+  <color name="primaryText">#ffffff</color>
+  <color name="primaryBack">#e1e2e1</color>
+  <color name="primaryAccent">#FF4081</color>
+  <color name="colorAccent">@color/primaryAccent</color>
+
+  <!-- Type specific colors. -->
+  <color name="campaign">#ff8f00</color>
+  <color name="campaignDark">#c56000</color>
+  <color name="campaignLight">#ffc046</color>
+  <color name="campaignText">#000000</color>
+
+  <color name="character">#4dd0e1</color>
+  <color name="characterDark">#009faf</color>
+  <color name="characterLight">#88ffff</color>
+  <color name="characterText">#000000</color>
+
+  <color name="monster">#7cb342</color>
+  <color name="monsterDark">#4b830d</color>
+  <color name="monsterLight">#aee571</color>
+  <color name="monsterText">#000000</color>
+
+  <!-- Colors for icon status and changes. -->
+
 
   <color name="status">#ffeeaa</color>
   <color name="on">#570</color>
@@ -12,15 +39,11 @@
   <color name="light">#dd0</color>
   <color name="out">#444</color>
   <color name="cell">#ccc</color>
+  <color name="disabled">#888</color>
   <color name="selected">#ebf</color>
   <color name="white">#fff</color>
   <color name="red">#800</color>
   <color name="brightRed">#f00</color>
-
-  <color name="campaign">#f94</color>
-  <color name="campaign2">#fc5</color>
-  <color name="character">#7ef</color>
-  <color name="monster">#290</color>
 
   <color name="battle">#800</color>
   <color name="battleBright">#b00</color>
