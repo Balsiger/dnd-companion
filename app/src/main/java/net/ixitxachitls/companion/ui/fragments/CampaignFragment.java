@@ -217,10 +217,7 @@ public class CampaignFragment extends CompanionFragment {
 
     title.setTitle(campaign.get().getName());
     title.setSubtitle(campaign.get().getWorld() + ", " + campaign.get().getDm());
-    networkIcon.setLocation(campaign.get().isLocal());
-    if (!campaign.get().isDefault()) {
-      networkIcon.setStatus(campaign.get().isOnline());
-    }
+    networkIcon.setStatus(campaign.get().isLocal(), campaign.get().isOnline());
     if (campaign.get().isLocal()) {
       networkIcon.setOnClickListener(new View.OnClickListener() {
         @Override

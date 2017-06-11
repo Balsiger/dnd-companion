@@ -27,31 +27,56 @@
                 android:id="@+id/list_item_campaign"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
                 android:background="@color/campaign"
-                android:descendantFocusability="blocksDescendants"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 tools:context="net.ixitxachitls.companion.ui.activities.MainActivity">
+
+  <LinearLayout
+      android:id="@+id/left"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_marginStart="10dp"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="DM"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal"/>
 
     <view
         android:id="@+id/network"
         class="net.ixitxachitls.companion.ui.views.NetworkIcon"
-        android:layout_width="@dimen/iconSize"
-        android:layout_height="@dimen/iconSize"
+        android:layout_width="@dimen/iconSizeSmall"
+        android:layout_height="@dimen/iconSizeSmall"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginStart="10dp"
+        android:layout_gravity="center_horizontal"
         android:tint="#444"
         app:bleep_bright="@color/onBright"
         app:bleep_dark="@color/on"
         app:srcCompat="@drawable/ic_home_black_48dp"/>
+  </LinearLayout>
 
-    <view
-        android:id="@+id/title"
-        class="net.ixitxachitls.companion.ui.views.TitleView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/network"
-        app:color="@color/campaign"/>
+  <View
+      android:id="@+id/delimiter"
+      android:layout_width="2dp"
+      android:layout_height="50dp"
+      android:layout_centerVertical="true"
+      android:layout_marginStart="15dp"
+      android:layout_toEndOf="@+id/left"
+      android:background="#444"/>
+
+  <view
+      android:id="@+id/title"
+      class="net.ixitxachitls.companion.ui.views.TitleView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_toEndOf="@+id/delimiter"
+      app:color="@color/campaign"/>
 
 </RelativeLayout>

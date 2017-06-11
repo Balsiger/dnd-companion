@@ -23,7 +23,11 @@ package net.ixitxachitls.companion.ui.activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.transition.Fade;
+import android.transition.TransitionInflater;
+import android.transition.TransitionSet;
 import android.util.Log;
+import android.view.View;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Strings;
@@ -44,6 +48,12 @@ import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
  */
 public class CompanionFragments {
   private static final String TAG = "Fragments";
+
+  private static final String TRANSITION_NAME = "sharedMove";
+  private static int EXIT_FADE_DURATION_MS = 100;
+  private static int ENTER_FADE_DURATION_MS = 100;
+  private static int MOVE_DURATION_MS = 200;
+
   private static CompanionFragments singleton;
 
   private FragmentManager fragmentManager;
@@ -77,54 +87,56 @@ public class CompanionFragments {
 
   public void show() {
     if (currentFragment.isPresent()) {
-      show(currentFragment.get());
+      show(currentFragment.get(), Optional.absent());
     } else {
       // Show the default campaign to be able to come back to it.
-      show(CompanionFragment.Type.campaigns);
+      show(CompanionFragment.Type.campaigns, Optional.absent());
 
       // Show settings if not yet defined
       if (!Settings.get().isDefined()) {
-        show(CompanionFragment.Type.settings);
+        show(CompanionFragment.Type.settings, Optional.absent());
       }
     }
   }
 
-  public CompanionFragment show(CompanionFragment.Type fragment) {
+  public CompanionFragment show(CompanionFragment.Type fragment, Optional<View> sharedElement) {
     switch(fragment) {
       case settings:
         if (!settingsFragment.isPresent()) {
           settingsFragment = Optional.of(new SettingsFragment());
         }
-        return show(settingsFragment.get());
+        return show(settingsFragment.get(), sharedElement);
 
       case character:
         if (!characterFragment.isPresent()) {
           characterFragment = Optional.of(new CharacterFragment());
         }
-        return show(characterFragment.get());
+        return show(characterFragment.get(), sharedElement);
 
       default:
       case campaigns:
         if (!campaignsFragment.isPresent()) {
           campaignsFragment = Optional.of(new CampaignsFragment());
         }
-        return show(campaignsFragment.get());
+        return show(campaignsFragment.get(), sharedElement);
 
       case campaign:
         if (!campaignFragment.isPresent()) {
           campaignFragment = Optional.of(new CampaignFragment());
         }
-        return show(campaignFragment.get());
+
+        return show(campaignFragment.get(), sharedElement);
 
       case battle:
         if (!battleFragment.isPresent()) {
           battleFragment = Optional.of(new BattleFragment());
         }
-        return show(battleFragment.get());
+        return show(battleFragment.get(), sharedElement);
     }
   }
 
-  public CompanionFragment show(CompanionFragment fragment) {
+  private CompanionFragment show(CompanionFragment fragment,
+                                 Optional<View> sharedTransitionElement) {
     Log.d(TAG, "showing fragment " + fragment.getClass().getSimpleName());
     if (fragment == currentFragment.orNull()) {
       fragment.refresh();
@@ -137,6 +149,29 @@ public class CompanionFragments {
       // Don't add the first page to backstack to prevent having a empty page on back.
       transaction.addToBackStack(fragment.getClass().getSimpleName());
     }
+
+    // Shared element transition trial.
+    if (sharedTransitionElement.isPresent()) {
+      currentFragment.get().setExitTransition(fade(ENTER_FADE_DURATION_MS, 0));
+      currentFragment.get().setReenterTransition(fade(ENTER_FADE_DURATION_MS,
+          EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
+
+      TransitionSet transition = new TransitionSet();
+      transition.addTransition(TransitionInflater.from(currentFragment.get().getContext())
+          .inflateTransition(android.R.transition.move));
+      transition.setDuration(MOVE_DURATION_MS);
+      transition.setStartDelay(EXIT_FADE_DURATION_MS);
+      fragment.setSharedElementEnterTransition(transition);
+
+      sharedTransitionElement.get().setTransitionName(TRANSITION_NAME);
+
+      fragment.setEnterTransition(fade(ENTER_FADE_DURATION_MS,
+          EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
+      fragment.setReturnTransition(fade(ENTER_FADE_DURATION_MS, 0));
+
+      transaction.addSharedElement(sharedTransitionElement.get(), TRANSITION_NAME);
+    }
+
     transaction.replace(R.id.content, fragment).commitAllowingStateLoss();
     fragmentManager.executePendingTransactions();
     fragment.refresh();
@@ -147,7 +182,7 @@ public class CompanionFragments {
     if (Strings.isNullOrEmpty(typeName)) {
       show();
     } else {
-      show(CompanionFragment.Type.valueOf(typeName));
+      show(CompanionFragment.Type.valueOf(typeName), Optional.absent());
     }
   }
 
@@ -156,34 +191,34 @@ public class CompanionFragments {
     if (fragmentManager.getBackStackEntryCount() > 0) {
       fragmentManager.popBackStackImmediate();
     } else {
-      show(CompanionFragment.Type.campaigns);
+      show(CompanionFragment.Type.campaigns, Optional.absent());
     }
     refresh();
   }
 
-  public void showCampaign(Campaign campaign) {
-    show(CompanionFragment.Type.campaign);
+  public void showCampaign(Campaign campaign, Optional<View> shared) {
+    show(CompanionFragment.Type.campaign, shared);
     if (campaignFragment.isPresent()) {
       campaignFragment.get().showCampaign(campaign);
     }
   }
 
   public void showCharacter(Character character) {
-    show(CompanionFragment.Type.character);
+    show(CompanionFragment.Type.character, Optional.absent());
     if (characterFragment.isPresent()) {
       characterFragment.get().showCharacter(character);
     }
   }
 
   public void showBattle(Campaign campaign) {
-    show(CompanionFragment.Type.battle);
+    show(CompanionFragment.Type.battle, Optional.absent());
     if (battleFragment.isPresent()) {
       battleFragment.get().forCampaign(campaign);
     }
   }
 
   public void showBattle(Character character) {
-    show(CompanionFragment.Type.battle);
+    show(CompanionFragment.Type.battle, Optional.absent());
     if (battleFragment.isPresent()) {
       battleFragment.get().forCharacter(character);
     }
@@ -196,4 +231,10 @@ public class CompanionFragments {
     }
   }
 
+  private Fade fade(int duration, int delay) {
+    Fade fade = new Fade();
+    fade.setStartDelay(delay);
+    fade.setDuration(duration);
+    return fade;
+  }
 }

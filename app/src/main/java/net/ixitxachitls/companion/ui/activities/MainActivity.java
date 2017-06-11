@@ -102,7 +102,7 @@ public class MainActivity extends CompanionActivity {
   public boolean onOptionsItemSelected(MenuItem item) {
     int id = item.getItemId();
     if (id == R.id.action_settings) {
-      CompanionFragments.get().show(CompanionFragment.Type.settings);
+      CompanionFragments.get().show(CompanionFragment.Type.settings, Optional.absent());
       return true;
     }
 

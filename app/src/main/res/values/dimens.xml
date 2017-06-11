@@ -21,6 +21,7 @@
 
 <resources>
   <dimen name="iconSize">24dp</dimen>
+  <dimen name="iconSizeSmall">18dp</dimen>
   <dimen name="design_fab_size_normal">36dp</dimen>
   <dimen name="fab_margin">10dp</dimen>
 

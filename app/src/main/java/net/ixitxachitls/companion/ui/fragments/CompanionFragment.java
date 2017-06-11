@@ -25,6 +25,8 @@ import android.app.Fragment;
 import android.support.annotation.CallSuper;
 import android.util.Log;
 
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
@@ -52,7 +54,7 @@ public abstract class CompanionFragment extends Fragment {
   }
 
   protected void show(Type fragment) {
-    CompanionFragments.get().show(fragment);
+    CompanionFragments.get().show(fragment, Optional.absent());
   }
 
   @CallSuper

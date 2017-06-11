@@ -57,6 +57,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   public void setDebugStatus(boolean showStatus) {
     this.showStatus = showStatus;
+    store();
   }
 
   public boolean showStatus() {

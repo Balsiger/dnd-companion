@@ -44,7 +44,6 @@ public class ListAdapter<T> extends ArrayAdapter<T> {
     public void bind(View view, T item, int position);
   }
 
-
   public ListAdapter(Context context, @LayoutRes int layout, List<T> items,
                      ViewBinder<T> binder) {
     super(context, layout, items);

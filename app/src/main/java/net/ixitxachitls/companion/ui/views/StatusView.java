@@ -48,6 +48,8 @@ public class StatusView extends LinearLayout {
 
   private static final String TAG = "StatusView";
 
+  boolean started = true;
+
   // UI elements.
   private IconView online;
   private TextView messages;
@@ -75,6 +77,12 @@ public class StatusView extends LinearLayout {
     messages = Setup.textView(view, R.id.messages);
     messages.setMovementMethod(new ScrollingMovementMethod());
     connections = (LinearLayout) view.findViewById(R.id.connections);
+    connections.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        toggleDebug();
+      }
+    });
 
     addView(view);
     update();
@@ -82,6 +90,11 @@ public class StatusView extends LinearLayout {
 
   private void update() {
     messagesScroll.setVisibility(Settings.get().showStatus() ? VISIBLE : GONE);
+  }
+
+  private void toggleDebug() {
+    Settings.get().setDebugStatus(!Settings.get().showStatus());
+    update();
   }
 
   public void heartbeat() {
@@ -171,7 +184,6 @@ public class StatusView extends LinearLayout {
     connection.off();
   }
 
-  boolean started = true;
   private void restart() {
     if (started) {
       CompanionPublisher.get().stop();

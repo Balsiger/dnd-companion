@@ -36,15 +36,15 @@ public class NetworkIcon extends IconView {
     super(context, attributes);
   }
 
-  public void setLocation(boolean isLocal) {
-    if (isLocal) {
-      setImageResource(R.drawable.ic_home_black_48dp);
+  public void setStatus(boolean isLocal, boolean isOn) {
+    if (isLocal && isOn) {
+      setImageResource(R.drawable.ic_signal_wifi_4_bar_black_24dp);
+    } else if (isLocal && !isOn) {
+      setImageResource(R.drawable.ic_signal_wifi_off_black_24dp);
+    } else if (isOn) {
+      setImageResource(R.drawable.ic_cloud_black_24dp);
     } else {
-      setImageResource(R.drawable.ic_wifi_black_48dp);
+      setImageResource(R.drawable.ic_cloud_off_black_24dp);
     }
-  }
-
-  public void setStatus(boolean isOn) {
-    setColorFilter(getResources().getColor(isOn ? R.color.on : R.color.off, null));
   }
 }

@@ -6,12 +6,19 @@
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <ListView
+    <ScrollView
+        android:id="@+id/campaignsScroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/campaignsList"
-        android:layout_alignParentStart="true">
-    </ListView>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/campaigns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/campaign_add"

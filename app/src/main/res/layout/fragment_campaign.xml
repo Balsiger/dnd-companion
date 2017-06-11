@@ -34,7 +34,7 @@
       android:layout_height="wrap_content"
       android:background="@color/campaign"
       android:orientation="vertical"
-      >
+      android:transitionName="sharedMove">
 
     <view
         android:id="@+id/network"

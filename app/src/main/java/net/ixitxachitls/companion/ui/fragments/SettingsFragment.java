@@ -27,7 +27,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
@@ -45,7 +44,6 @@ public class SettingsFragment extends CompanionFragment {
   // UI elements.
   private TextView nickname;
   private Button save;
-  private CheckBox status;
 
   public SettingsFragment() {
     super(Type.settings);
@@ -62,7 +60,6 @@ public class SettingsFragment extends CompanionFragment {
         settings.isDefined() ? settings.getNickname() : "",
         R.string.settings_nickname_label, getResources().getColor(R.color.colorAccent, null),
         this::editNickname, this::refresh);
-    status = Setup.checkBox(view, R.id.status, settings.showStatus());
     save = Setup.button(view, R.id.save, this::save);
 
     if (settings.isDefined()) {
@@ -75,7 +72,6 @@ public class SettingsFragment extends CompanionFragment {
 
   private void save() {
     editNickname();
-    settings.setDebugStatus(status.isChecked());
     settings.store();
 
     if (settings.isDefined()) {

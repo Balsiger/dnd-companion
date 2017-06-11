@@ -87,6 +87,10 @@ public class Setup {
     return checkBox;
   }
 
+  public static <T extends View> T view(View view, @IdRes int id) {
+    return (T) view.findViewById(id);
+  }
+
   public static CheckBox checkBox(View view, @IdRes int id, boolean checked) {
     CheckBox checkBox = (CheckBox) view.findViewById(id);
     checkBox.setChecked(checked);

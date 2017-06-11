@@ -25,18 +25,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.ui.CampaignPublisher;
-import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
-import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
-import net.ixitxachitls.companion.ui.views.NetworkIcon;
-import net.ixitxachitls.companion.ui.views.TitleView;
+import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,8 +43,9 @@ import java.util.List;
  */
 public class CampaignsFragment extends CompanionFragment {
 
+  private LinearLayout campaignsView;
+
   private List<Campaign> campaigns = new ArrayList<>();
-  private ListAdapter<Campaign> campaignsAdapter;
 
   public CampaignsFragment() {
     super(Type.campaigns);
@@ -57,29 +55,9 @@ public class CampaignsFragment extends CompanionFragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     RelativeLayout view = (RelativeLayout)
-        inflater.inflate(R.layout.fragment_campaign_list, container, false);
-    campaignsAdapter =
-        new ListAdapter<>(container.getContext(), R.layout.list_item_campaign, campaigns,
-            new ListAdapter.ViewBinder<Campaign>() {
-              @Override
-              public void bind(View view, Campaign campaign, int position) {
-                TitleView title = (TitleView) view.findViewById(R.id.title);
-                title.setTitle(campaign.getName());
-                title.setSubtitle(subtitle(campaign));
+        inflater.inflate(R.layout.fragment_campaigns, container, false);
 
-                NetworkIcon networkIcon = (NetworkIcon) view.findViewById(R.id.network);
-                networkIcon.setLocation(campaign.isLocal());
-                if (!campaign.isDefault()) {
-                  networkIcon.setStatus(campaign.isOnline());
-                }
-                if (campaign.isLocal() && !campaign.isDefault()) {
-                  networkIcon.setAction(() -> publishCampaign(campaign));
-                }
-              }
-            });
-    Setup.listView(view, R.id.campaignsList, campaignsAdapter,
-        (i) -> CompanionFragments.get().showCampaign(campaigns.get(i)));
-
+    campaignsView = (LinearLayout) view.findViewById(R.id.campaigns);
     Setup.floatingButton(view, R.id.campaign_add, this::addCampaign);
 
     return view;
@@ -89,33 +67,20 @@ public class CampaignsFragment extends CompanionFragment {
     EditCampaignDialog.newInstance().display(getFragmentManager());
   }
 
-  private void publishCampaign(Campaign campaign) {
-    if (campaign.isDefault() || !campaign.isLocal()) {
-      return;
-    }
-
-    CampaignPublisher.toggle(getContext(), campaign, this::refresh,
-        CampaignPublisher.EmptyCancelAction);
-  }
-
-  private String subtitle(Campaign campaign) {
-    if (campaign.getDate().isEmpty()) {
-      return campaign.getWorld();
-    }
-
-    return campaign.getWorld() + ", " + campaign.getDate();
-  }
-
   @Override
   public void refresh() {
     super.refresh();
 
-    if (campaignsAdapter != null) {
-      campaigns.clear();
-      campaigns.add(Campaigns.defaultCampaign);
-      campaigns.addAll(Campaigns.local().getCampaigns());
-      campaigns.addAll(Campaigns.remote().getCampaigns());
-      campaignsAdapter.notifyDataSetChanged();
+    campaigns.clear();
+    campaigns.add(Campaigns.defaultCampaign);
+    campaigns.addAll(Campaigns.local().getCampaigns());
+    campaigns.addAll(Campaigns.remote().getCampaigns());
+
+    if (campaignsView != null) {
+      campaignsView.removeAllViews();
+      for (Campaign campaign : campaigns) {
+        campaignsView.addView(new CampaignTitleView(getContext(), campaign));
+      }
     }
   }
 }
