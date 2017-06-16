@@ -35,6 +35,8 @@ import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  * A campaign with all its data.
@@ -52,17 +54,19 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   private CampaignDate date;
   private Battle battle;
   private int nextBattleNumber = 0;
+  private SortedSet<Character> party = new TreeSet<Character>();
 
   private Campaign(long id, String name, boolean local) {
     super(id, Settings.get().getAppId() + "-" + id, name, local,
     local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE);
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar());
+    dm = Settings.get().getNickname();
     battle = new Battle(this);
   }
 
-  public Optional<Campaign> refresh() {
-    return Campaigns.get(isLocal()).get(entryId);
+  public Campaign refresh() {
+    return Campaigns.get(isLocal()).get(entryId).or(this);
   }
 
   public String getWorld() {
@@ -113,7 +117,6 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     }
   }
 
-
   public void setWorld(String name) {
     Optional<World> world = Entries.get().getWorlds().get(name);
     if (world.isPresent())
@@ -121,6 +124,8 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     else
       // We "know" it should be there.
       this.world = Entries.get().getWorlds().get("Generic").get();
+
+    this.date.setCalendar(world.get().getCalendar());
   }
 
   public void setDate(CampaignDate date) {

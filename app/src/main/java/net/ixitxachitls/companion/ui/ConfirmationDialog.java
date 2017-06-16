@@ -26,6 +26,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.support.annotation.Nullable;
 
+import net.ixitachitls.companion.R;
+
 /**
  * Simple dialog to show a confirmation and waiting for a users yes or not.
  */
@@ -40,7 +42,7 @@ public class ConfirmationDialog {
   }
 
   public ConfirmationDialog(Context context) {
-    this.dialog = new AlertDialog.Builder(context);
+    this.dialog = new AlertDialog.Builder(context, R.style.AlertTheme);
     this.dialog
         .setIcon(android.R.drawable.ic_dialog_alert)
         .setPositiveButton(android.R.string.yes, null)

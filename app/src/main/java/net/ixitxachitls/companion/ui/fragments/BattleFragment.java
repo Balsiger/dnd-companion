@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
+import net.ixitxachitls.companion.ui.views.CharacterChipView;
 import net.ixitxachitls.companion.ui.views.ChipView;
 import net.ixitxachitls.companion.ui.views.DiceView;
 
@@ -325,12 +326,18 @@ public class BattleFragment extends CompanionFragment {
       if (combatant.isMonster()) {
         chip = new ChipView(getContext(), R.drawable.ic_perm_identity_black_24dp,
             isDM ? combatant.getName() : "Monster", "init " + combatant.getInitiative(),
-            R.color.monster);
+            R.color.monster, 0);
       } else {
-        chip = new ChipView(getContext(), R.drawable.ic_person_black_48dp,
-            combatant.getName(),
-            combatant.getInitiative() == Character.NO_INITIATIVE
-                ? "" : "init " + combatant.getInitiative(), R.color.character);
+        Optional<Character> character =
+            Characters.get(!campaign.get().isLocal()).get(combatant.getId());
+        if (character.isPresent()) {
+          chip = new CharacterChipView(getContext(), character.get());
+        } else {
+          chip = new ChipView(getContext(), R.drawable.ic_person_black_48dp,
+              combatant.getName(),
+              combatant.getInitiative() == Character.NO_INITIATIVE
+                  ? "" : "init " + combatant.getInitiative(), R.color.character, 0);
+        }
       }
 
       if (!isReady(combatant)) {

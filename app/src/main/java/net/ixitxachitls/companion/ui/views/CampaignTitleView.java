@@ -22,18 +22,17 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-
-import com.google.common.base.Optional;
+import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
-import net.ixitxachitls.companion.ui.Setup;
-import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.Wrapper;
 
 /**
  * View for a campaign title.
@@ -41,13 +40,26 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 public class CampaignTitleView extends LinearLayout {
 
   private Campaign campaign;
-  private final TitleView title;
-  private final NetworkIcon networkIcon;
+
+  // Ui elements.
+  private TitleView title;
+  private NetworkIcon networkIcon;
+  private TextView dm;
 
   public CampaignTitleView(Context context, Campaign campaign) {
     super(context);
-    this.campaign = campaign;
 
+    setup();
+    setCampaign(campaign);
+  }
+
+  public CampaignTitleView(Context context, AttributeSet attributes) {
+    super(context, attributes);
+
+    setup();
+  }
+
+  private void setup() {
     RelativeLayout view = (RelativeLayout)
         LayoutInflater.from(getContext()).inflate(R.layout.view_campaign_title, null, false);
     // Adding the margin in the xml layout does not work.
@@ -55,36 +67,29 @@ public class CampaignTitleView extends LinearLayout {
         ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
     params.setMargins(0, 0, 0, 2);
     view.setLayoutParams(params);
-    title = Setup.view(view, R.id.title);
-    title.setAction(this::select);
-    networkIcon = Setup.view(view, R.id.network);
-    if (campaign.isDefault()) {
-      networkIcon.setVisibility(INVISIBLE);
-    }
 
-    if (!campaign.isLocal() || campaign.isDefault()) {
-      view.findViewById(R.id.dm).setVisibility(GONE);
-    }
+    title = (TitleView) view.findViewById(R.id.title);
+    networkIcon = (NetworkIcon) view.findViewById(R.id.network);
+    dm = (TextView) view.findViewById(R.id.dm);
 
     addView(view);
+  }
 
+  public void setCampaign(Campaign campaign) {
+    this.campaign = campaign;
     refresh();
   }
 
   private String subtitle(Campaign campaign) {
     if (campaign.isDefault()) {
-      return "";
+      return "Playground and orphaned characters";
     }
 
-    if (campaign.getDate().isEmpty()) {
-      return campaign.getWorld();
-    }
-
-    return campaign.getWorld() + ", " + campaign.getDate();
+    return campaign.getWorld() + ", " + campaign.getDm();
   }
 
-  private void select() {
-    CompanionFragments.get().showCampaign(campaign, Optional.of(this));
+  public void setAction(Wrapper.Action action) {
+    title.setAction(action);
   }
 
   private void publish() {
@@ -97,7 +102,15 @@ public class CampaignTitleView extends LinearLayout {
   }
 
   public void refresh() {
-    campaign = campaign.refresh().or(campaign);
+    campaign = campaign.refresh();
+
+    if (campaign.isDefault()) {
+      networkIcon.setVisibility(INVISIBLE);
+    }
+
+    if (!campaign.isLocal() || campaign.isDefault()) {
+      dm.setVisibility(INVISIBLE);
+    }
 
     title.setTitle(campaign.getName());
     title.setSubtitle(subtitle(campaign));

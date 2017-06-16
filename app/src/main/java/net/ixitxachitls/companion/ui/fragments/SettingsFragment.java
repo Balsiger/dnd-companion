@@ -32,7 +32,7 @@ import android.widget.TextView;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.Wrapper;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 /**
@@ -42,8 +42,8 @@ public class SettingsFragment extends CompanionFragment {
   private Settings settings;
 
   // UI elements.
-  private TextView nickname;
-  private Button save;
+  private Wrapper<TextView> nickname;
+  private Wrapper<Button> save;
 
   public SettingsFragment() {
     super(Type.settings);
@@ -56,11 +56,15 @@ public class SettingsFragment extends CompanionFragment {
         inflater.inflate(R.layout.fragment_settings, container, false);
 
     settings = Settings.get();
-    nickname = Setup.editText(view, R.id.nickname,
-        settings.isDefined() ? settings.getNickname() : "",
-        R.string.settings_nickname_label, getResources().getColor(R.color.colorAccent, null),
-        this::editNickname, this::refresh);
-    save = Setup.button(view, R.id.save, this::save);
+
+    nickname = Wrapper.wrap(view, R.id.nickname);
+    nickname.text(settings.isDefined() ? settings.getNickname() : "")
+        .label(R.string.settings_nickname_label)
+        .backgroundColor(R.color.colorAccent)
+        .onEdit(this::editNickname)
+        .onChange(this::refresh);
+    save = Wrapper.wrap(view, R.id.save);
+    save.onClick(this::save);
 
     if (settings.isDefined()) {
       view.findViewById(R.id.initial).setVisibility(View.INVISIBLE);
@@ -81,7 +85,7 @@ public class SettingsFragment extends CompanionFragment {
   }
 
   protected void editNickname() {
-    settings.setNickname(nickname.getText().toString());
+    settings.setNickname(nickname.get().getText().toString());
   }
 
   @Override
@@ -89,10 +93,10 @@ public class SettingsFragment extends CompanionFragment {
     super.refresh();
 
     if (nickname != null) {
-      if (nickname.getText().length() > 0) {
-        save.setVisibility(View.VISIBLE);
+      if (nickname.get().getText().length() > 0) {
+        save.get().setVisibility(View.VISIBLE);
       } else {
-        save.setVisibility(View.INVISIBLE);
+        save.get().setVisibility(View.INVISIBLE);
       }
     }
   }

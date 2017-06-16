@@ -33,6 +33,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.net.InetAddress;
@@ -110,7 +111,23 @@ public class CompanionPublisher {
       server.send(clientId, new CompanionMessage(Settings.get().getAppId(),
           Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
           .setCampaign(campaign.toProto()).build()));
+
+      for (Character character : campaign.getCharacters()) {
+        if (clientId.equals(character.getServerId())){
+          Log.d(TAG, "republished character " + character.getName());
+          server.send(clientId, new CompanionMessage(Settings.get().getAppId(),
+              Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
+              .setCharacter(character.toProto()).build()));
+        }
+      }
     }
+  }
+
+  public void update(Character character, String characterClientId) {
+    ensureServerStarted();
+    server.sendMost(new CompanionMessage(Settings.get().getAppId(),
+        Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
+        .setCharacter(character.toProto()).build()), characterClientId);
   }
 
   public void unpublish(Campaign campaign) {

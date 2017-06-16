@@ -54,4 +54,8 @@
   <declare-styleable name="StatusView">
   </declare-styleable>
 
+  <declare-styleable name="RoundImageView">
+    <attr name="radius" format="dimension"/>
+  </declare-styleable>
+
 </resources>

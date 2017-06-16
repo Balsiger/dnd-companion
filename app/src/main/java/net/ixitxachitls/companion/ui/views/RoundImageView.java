@@ -22,48 +22,53 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.ImageView;
 
+import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.ui.Setup;
 
 /**
  * An image view that shows the image round.
  */
-public class RoundImageView extends ImageView {
+public class RoundImageView extends android.support.v7.widget.AppCompatImageView {
+
+  private final float radius;
 
   public RoundImageView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
+
+    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.RoundImageView);
+    radius = array.getDimension(R.styleable.RoundImageView_radius, -1.0f);
   }
 
   @Override
   public void setImageDrawable(Drawable draw) {
     Bitmap bitmap = computeBitmap(draw);
     RoundedBitmapDrawable drawable = RoundedBitmapDrawableFactory.create(getResources(), bitmap);
-    drawable.setCircular(true);
     drawable.setAntiAlias(true);
+    if (radius <= 0) {
+      drawable.setCircular(true);
+    } else {
+      drawable.setCornerRadius(bitmap.getHeight() * radius / 100);
+    }
     super.setImageDrawable(drawable);
   }
 
   private Bitmap computeBitmap(Drawable drawable) {
-    if (drawable instanceof BitmapDrawable) {
-      return ((BitmapDrawable) drawable).getBitmap();
-    } else {
-      Bitmap bitmap = Bitmap.createBitmap(Math.max(2, drawable.getIntrinsicWidth()),
-          Math.max(2, drawable.getIntrinsicHeight()), Bitmap.Config.ARGB_8888);
-      Canvas canvas = new Canvas(bitmap);
-      drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-      drawable.draw(canvas);
-      return bitmap;
-    }
+    Bitmap bitmap = Bitmap.createBitmap(Math.max(2, drawable.getIntrinsicWidth()),
+        Math.max(2, drawable.getIntrinsicHeight()), Bitmap.Config.ARGB_8888);
+    Canvas canvas = new Canvas(bitmap);
+    drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+    drawable.draw(canvas);
+    return bitmap;
   }
 
   public void setAction(Setup.Action action) {

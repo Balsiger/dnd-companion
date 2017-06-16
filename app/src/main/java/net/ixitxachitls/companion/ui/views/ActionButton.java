@@ -35,9 +35,8 @@ import android.widget.Toast;
 import net.ixitachitls.companion.R;
 
 /**
- * Created by balsiger on 5/5/17.
+ * Special floating action button that allows to pulse the icon.
  */
-
 public class ActionButton extends FloatingActionButton {
   private int pulseBrightColor;
   private int pulseDarkColor;
@@ -66,6 +65,7 @@ public class ActionButton extends FloatingActionButton {
   }
 
   public void pulse(boolean start) {
+    if (true) return;
     if (pulseBrightColor == 0 || pulseDarkColor == 0) {
       Toast.makeText(getContext(), "Cannot set bleep without defining colors", Toast.LENGTH_LONG)
           .show();

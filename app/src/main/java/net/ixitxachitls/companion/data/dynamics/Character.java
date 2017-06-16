@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.graphics.Bitmap;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.google.common.base.Optional;
@@ -43,7 +45,7 @@ import java.util.List;
 /**
  * Character represenatation.
  */
-public class Character extends StoredEntry<Data.CharacterProto> {
+public class Character extends StoredEntry<Data.CharacterProto> implements Comparable<Character> {
   public static final String TYPE = "characters";
   public static final String TABLE_LOCAL = TYPE + "_local";
   public static final String TABLE_REMOTE = TYPE + "_remote";
@@ -380,6 +382,10 @@ public class Character extends StoredEntry<Data.CharacterProto> {
     return level;
   }
 
+  public Optional<Bitmap> loadImage() {
+    return Images.get(isLocal()).load(Character.TYPE, getCharacterId());
+  };
+
   @Override
   public boolean store() {
     if (playerName.isEmpty()) {
@@ -400,5 +406,15 @@ public class Character extends StoredEntry<Data.CharacterProto> {
   public void publish() {
     Log.d(TAG, "publishing character " + getName());
     CompanionSubscriber.get().publish(this);
+  }
+
+  @Override
+  public int compareTo(@NonNull Character that) {
+    int name = this.name.compareTo(that.name);
+    if (name != 0) {
+      return name;
+    }
+
+    return this.getCharacterId().compareTo(that.getCharacterId());
   }
 }

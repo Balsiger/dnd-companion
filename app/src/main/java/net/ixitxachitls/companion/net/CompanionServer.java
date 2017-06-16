@@ -163,6 +163,14 @@ public class CompanionServer implements Runnable {
     }
   }
 
+  public void sendMost(CompanionMessage message, String clientId) {
+    for (String id : transmittersById.keySet()) {
+      if (!id.equals(clientId)) {
+        send(id, message);
+      }
+    }
+  }
+
   public void send(String id, CompanionMessage message) {
     CompanionTransmitter transmitter = transmittersById.get(id);
     if (transmitter == null) {

@@ -148,6 +148,19 @@ public class CompanionApplication extends MultiDexApplication
       currentActivity.updateServerConnection(message.getName());
     }
 
+    if (message.getProto().hasCharacter()) {
+      Character character = Character.fromProto(
+          Characters.remote().getIdFor(message.getProto().getCharacter().getId()),
+          false, message.getProto().getCharacter());
+      // Storing will also add the campaign if it's changed.
+      character.store();
+      Log.d(TAG, "received character " + character.getName());
+      status("received character " + character.getName());
+      refresh();
+
+      currentActivity.updateServerConnection(message.getName());
+    }
+
     if (!message.getProto().getDebug().isEmpty()) {
       Toast.makeText(getApplicationContext(),
           message.getName() + ": " + message.getProto().getDebug(),
@@ -175,6 +188,10 @@ public class CompanionApplication extends MultiDexApplication
           + message.getProto().getCharacter().getName()
           + " from " + message.getName());
       currentActivity.updateClientConnection(message.getName());
+
+      // Send the character update to the other clients.
+      CompanionPublisher.get().update(character, message.getId());
+
       refresh();
     }
 

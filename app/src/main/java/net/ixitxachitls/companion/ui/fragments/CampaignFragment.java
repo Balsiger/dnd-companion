@@ -28,6 +28,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,38 +41,37 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Images;
-import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.Wrapper;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
 import net.ixitxachitls.companion.ui.views.ActionButton;
+import net.ixitxachitls.companion.ui.views.CampaignTitleView;
+import net.ixitxachitls.companion.ui.views.CharacterChipView;
 import net.ixitxachitls.companion.ui.views.IconView;
-import net.ixitxachitls.companion.ui.views.NetworkIcon;
 import net.ixitxachitls.companion.ui.views.TitleView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A fragment displaying campaign information.
- */
+/** A fragment displaying campaign information. */
 public class CampaignFragment extends CompanionFragment {
 
   private Optional<Campaign> campaign = Optional.absent();
   private List<Character> characters = new ArrayList<>();
 
   // UI elements.
+  private CampaignTitleView title;
   private ListAdapter<Character> charactersAdapter;
   private IconView delete;
-  private TitleView title;
-  private NetworkIcon networkIcon;
-  private FloatingActionButton addCharacter;
-  private TextView date;
-  private ActionButton battle;
+  private Wrapper<FloatingActionButton> addCharacter;
+  private Wrapper<TextView> date;
+  private Wrapper<ActionButton> battle;
+  private LinearLayout party;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -85,14 +85,17 @@ public class CampaignFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
-    title = (TitleView) view.findViewById(R.id.title);
+    title = (CampaignTitleView) view.findViewById(R.id.title);
     title.setAction(this::edit);
     delete = (IconView) view.findViewById(R.id.delete);
     delete.setAction(this::deleteCampaign);
-    networkIcon = (NetworkIcon) view.findViewById(R.id.network);
-    addCharacter = Setup.floatingButton(view, R.id.add_character, this::createCharacter);
-    battle = Setup.actionButton(view, R.id.battle, this::startBattle);
-    date = Setup.textView(view, R.id.date, this::editDate);
+    party = (LinearLayout) view.findViewById(R.id.party);
+    addCharacter = Wrapper.wrap(view, R.id.add_character);
+    addCharacter.onClick(this::createCharacter);
+    battle = Wrapper.wrap(view, R.id.battle);
+    battle.onClick(this::startBattle);
+    date = Wrapper.wrap(view, R.id.date);
+    date.onClick(this::editDate);
 
     // Setup list view.
     charactersAdapter = new ListAdapter<>(container.getContext(),
@@ -209,46 +212,50 @@ public class CampaignFragment extends CompanionFragment {
       return;
     }
 
+    title.setCampaign(campaign.get());
+
     if (canDeleteCampaign()) {
       delete.setVisibility(View.VISIBLE);
     } else {
       delete.setVisibility(View.GONE);
     }
 
-    title.setTitle(campaign.get().getName());
-    title.setSubtitle(campaign.get().getWorld() + ", " + campaign.get().getDm());
-    networkIcon.setStatus(campaign.get().isLocal(), campaign.get().isOnline());
-    if (campaign.get().isLocal()) {
-      networkIcon.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-          // Cannot publish default campaign.
-          if (campaign.isPresent() && !campaign.get().isDefault()) {
-            CampaignPublisher.toggle(getContext(), campaign.get(), CampaignFragment.this::refresh,
-                CampaignPublisher.EmptyCancelAction);
-          }
-        }
-      });
-    }
-
-    date.setText(campaign.get().getDate().toString());
+    date.text(campaign.get().getDate().toString());
 
     if (campaign.get().isLocal() && !campaign.get().isDefault()) {
-      addCharacter.setVisibility(View.GONE);
-      battle.setVisibility(View.VISIBLE);
+      addCharacter.gone();
+      battle.visible();
     } else {
-      addCharacter.setVisibility(View.VISIBLE);
-      battle.setVisibility(View.GONE);
+      addCharacter.visible();
+      battle.gone();
     }
 
     if (charactersAdapter != null) {
       characters.clear();
-      characters.addAll(Characters.get(campaign.get().isDefault() || !campaign.get().isLocal())
-          .getCharacters(campaign.get().getCampaignId()));
+      if (campaign.get().isDefault()) {
+        characters.addAll(Characters.local().getCharacters(campaign.get().getCampaignId()));
+      } else if (campaign.get().isLocal()) {
+        characters.addAll(Characters.remote().getCharacters(campaign.get().getCampaignId()));
+      } else {
+        characters.addAll(Characters.local().getCharacters(campaign.get().getCampaignId()));
+        characters.addAll(Characters.remote().getCharacters(campaign.get().getCampaignId()));
+      }
       charactersAdapter.notifyDataSetChanged();
     }
 
-    battle.pulse(!campaign.get().getBattle().isEnded());
+    battle.get().pulse(!campaign.get().getBattle().isEnded());
+
+    party.removeAllViews();
+    for (Character character : characters) {
+      CharacterChipView chip = new CharacterChipView(getContext(), character);
+      chip.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          CompanionFragments.get().showCharacter(character);
+        }
+      });
+      party.addView(chip);
+    }
   }
 
   private boolean canDeleteCampaign() {

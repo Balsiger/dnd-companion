@@ -35,11 +35,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.NumberPicker;
 import android.widget.Switch;
@@ -53,6 +49,7 @@ import java.util.ArrayList;
 /**
  * Collection of utilities to setup ui elements.
  */
+@Deprecated // User Wrapper instead.
 public class Setup {
   private Setup() {}
 
@@ -76,39 +73,12 @@ public class Setup {
     void checked(Switch widget);
   }
 
-  public static CheckBox checkBox(View view, @IdRes int id, boolean checked, CheckAction action) {
-    CheckBox checkBox = checkBox(view, id, checked);
-    checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-      @Override
-      public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        action.checked(isChecked);
-      }
-    });
-    return checkBox;
-  }
-
   public static <T extends View> T view(View view, @IdRes int id) {
     return (T) view.findViewById(id);
   }
 
-  public static CheckBox checkBox(View view, @IdRes int id, boolean checked) {
-    CheckBox checkBox = (CheckBox) view.findViewById(id);
-    checkBox.setChecked(checked);
-
-    return checkBox;
-  }
-
-  public static EditText editText(View view, @IdRes int id, String value) {
-    return editText(view, id, value, 0, 0);
-  }
-
   public static EditText editText(View view, @IdRes int id, String value, Action action) {
     return editText(view, id, value, 0, 0, action);
-  }
-
-  public static EditText editText(View view, @IdRes int id, String value, @StringRes int label,
-                                  @ColorInt int color) {
-    return editText(view, id, value, label, color, null);
   }
 
   public static EditText editText(View view, @IdRes int id, String value, @StringRes int label,
@@ -191,38 +161,6 @@ public class Setup {
     return button;
   }
 
-  public static ImageButton imageButton(View container, @IdRes int id) {
-    return (ImageButton) container.findViewById(id);
-  }
-
-  public static ImageButton imageButton(View container, @IdRes int id, Action action) {
-    ImageButton button = imageButton(container, id);
-    button.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-          action.execute();
-        }
-    });
-
-    return button;
-  }
-
-  public static ImageView imageView(View container, @IdRes int id) {
-    return (ImageView) container.findViewById(id);
-  }
-
-  public static ImageView imageView(View container, @IdRes int id, Action action) {
-    ImageView view = imageView(container, id);
-    view.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-          action.execute();
-        }
-    });
-
-    return view;
-  }
-
   public static ActionButton actionButton(View container, @IdRes int id, Action action) {
     ActionButton button = (ActionButton) container.findViewById(id);
     button.setOnClickListener(new View.OnClickListener() {
@@ -290,19 +228,6 @@ public class Setup {
     });
 
     return list;
-  }
-
-  public static Switch switchButton(View container, @IdRes int id, SwitchAction action) {
-    Switch button = (Switch) container.findViewById(id);
-
-    button.setOnCheckedChangeListener(new Switch.OnCheckedChangeListener() {
-      @Override
-      public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        action.checked(button);
-      }
-    });
-
-    return button;
   }
 
   private static class TextChangeWatcher implements TextWatcher {

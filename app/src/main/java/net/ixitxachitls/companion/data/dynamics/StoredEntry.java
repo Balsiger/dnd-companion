@@ -118,4 +118,31 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
   private String protoCacheKey() {
     return entryId + "-" + isLocal() + "-" + getClass().getSimpleName();
   }
+
+  @Override
+  public boolean equals(Object other) {
+    if (this == other) {
+      return true;
+    }
+
+    if (other == null || getClass() != other.getClass()) {
+      return false;
+    }
+
+    StoredEntry<P> that = (StoredEntry<P>) other;
+
+    if (local != that.local) {
+      return false;
+    }
+
+    return entryId.equals(that.entryId);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = entryId.hashCode();
+    result = 31 * result + (local ? 1 : 0);
+
+    return result;
+  }
 }

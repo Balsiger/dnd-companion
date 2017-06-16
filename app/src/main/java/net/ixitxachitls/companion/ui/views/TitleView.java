@@ -32,6 +32,7 @@ import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.Wrapper;
 
 /**
  * Widget for displaying a title and subtitle.
@@ -81,7 +82,7 @@ public class TitleView extends LinearLayout {
     subtitle.setText(text);
   }
 
-  public void setAction(Setup.Action action) {
+  public void setAction(Wrapper.Action action) {
     setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {

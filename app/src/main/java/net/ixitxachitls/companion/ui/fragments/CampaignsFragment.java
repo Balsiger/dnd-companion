@@ -28,10 +28,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.google.common.base.Optional;
+
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.Wrapper;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 
@@ -43,7 +46,7 @@ import java.util.List;
  */
 public class CampaignsFragment extends CompanionFragment {
 
-  private LinearLayout campaignsView;
+  private Wrapper<LinearLayout> campaignsView;
 
   private List<Campaign> campaigns = new ArrayList<>();
 
@@ -57,8 +60,8 @@ public class CampaignsFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaigns, container, false);
 
-    campaignsView = (LinearLayout) view.findViewById(R.id.campaigns);
-    Setup.floatingButton(view, R.id.campaign_add, this::addCampaign);
+    campaignsView = Wrapper.wrap(view, R.id.campaigns);
+    Wrapper.wrap(view, R.id.campaign_add).onClick(this::addCampaign);
 
     return view;
   }
@@ -77,9 +80,11 @@ public class CampaignsFragment extends CompanionFragment {
     campaigns.addAll(Campaigns.remote().getCampaigns());
 
     if (campaignsView != null) {
-      campaignsView.removeAllViews();
+      campaignsView.get().removeAllViews();
       for (Campaign campaign : campaigns) {
-        campaignsView.addView(new CampaignTitleView(getContext(), campaign));
+        CampaignTitleView title = new CampaignTitleView(getContext(), campaign);
+        title.setAction(() -> CompanionFragments.get().showCampaign(campaign, Optional.of(title)));
+        campaignsView.get().addView(title);
       }
     }
   }

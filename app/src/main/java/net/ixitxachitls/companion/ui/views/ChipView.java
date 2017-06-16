@@ -22,15 +22,18 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewStub;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.ui.Wrapper;
 
 /**
  * A small chip
@@ -39,65 +42,49 @@ public class ChipView extends LinearLayout {
 
   private static final int PADDING_SELECT = 10;
 
-  private final LinearLayout container;
-  private final LinearLayout back;
-  protected final TextView name;
-  protected final TextView subtitle;
+  protected final Wrapper<RelativeLayout> container;
+  protected final Wrapper<TextView> name;
+  protected final Wrapper<TextView> subtitle;
   protected final RoundImageView image;
-  protected final ViewStub details;
 
   public ChipView(Context context, @DrawableRes int defaultImage,
-                  String name, String subtitle, @ColorRes int backgroundColor) {
+                  String name, String subtitle, @ColorRes int chipColor,
+                  @ColorRes int backgroundColor) {
     super(context);
+    Log.d("CHIP", "creating chip");
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, null, false);
 
-    this.container = (LinearLayout) view.findViewById(R.id.container);
-    this.back = (LinearLayout) view.findViewById(R.id.back);
-    back.setBackgroundTintList(
-        getResources().getColorStateList(backgroundColor, null));
-    this.name = (TextView) view.findViewById(R.id.name);
-    this.name.setText(name);
-    this.subtitle = (TextView) view.findViewById(R.id.subtitle);
+    this.container = Wrapper.wrap(view, R.id.container);
+    container.backgroundColor(backgroundColor);
+    this.name = Wrapper.wrap(view, R.id.name);
+    this.name.text(name).backgroundColor(chipColor);
+
+    this.subtitle = Wrapper.wrap(view, R.id.subtitle);
+    this.subtitle.text(subtitle).backgroundColor(chipColor);
     if (subtitle.isEmpty()) {
-      this.subtitle.setVisibility(GONE);
+      this.subtitle.gone();
     } else {
-      this.subtitle.setText(subtitle);
+      this.subtitle.visible();
     }
+
     this.image = (RoundImageView) view.findViewById(R.id.image);
-    this.details = (ViewStub) view.findViewById(R.id.details);
 
     if (defaultImage > 0) {
-      image.setImageDrawable(getResources().getDrawable(defaultImage, null));
-    } else {
-      image.setVisibility(INVISIBLE);
+      Drawable drawable = getResources().getDrawable(defaultImage, null);
+      drawable.setTint(getResources().getColor(chipColor, null));
+      image.setImageDrawable(drawable);
     }
 
     addView(view);
   }
 
   public void disabled() {
-    name.setTextColor(getResources().getColor(R.color.disabled, null));
-    subtitle.setTextColor(getResources().getColor(R.color.disabled, null));
+    name.textColor(R.color.disabled);
+    subtitle.textColor(R.color.disabled);
   }
 
   public void select() {
-    back.setElevation(2 * PADDING_SELECT);
-    container.setPadding(container.getPaddingLeft() - PADDING_SELECT,
-        container.getPaddingTop() - PADDING_SELECT,
-        container.getPaddingRight(),
-        container.getPaddingBottom());
-  }
-
-  public void on() {
-    setBackground(R.color.on);
-  }
-
-  public void off() {
-    setBackground(R.color.off);
-  }
-
-  public void setBackground(@ColorRes int color) {
-    setBackgroundColor(getResources().getColor(color, null));
+    container.elevate(PADDING_SELECT);
   }
 }

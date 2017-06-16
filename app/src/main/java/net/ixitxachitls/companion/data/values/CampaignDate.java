@@ -34,7 +34,7 @@ public class CampaignDate {
   private static final int NIGHT_HOURS = 8;
   private static final int MORNING_HOURS = 6;
 
-  private final Calendar calendar;
+  private Calendar calendar;
   private int year;
   private int month;
   private int day;
@@ -187,6 +187,10 @@ public class CampaignDate {
 
   public CampaignDate addMinutes(int minutes) {
     return manipulate(0, 0, 0, 0, minutes);
+  }
+
+  public void setCalendar(Calendar calendar) {
+    this.calendar = calendar;
   }
 
   private CampaignDate manipulate(int years, int months, int days, int hours, int minutes) {
