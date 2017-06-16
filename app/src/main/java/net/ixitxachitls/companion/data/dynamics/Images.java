@@ -46,7 +46,7 @@ import java.io.InputStream;
 public class Images {
 
   private static final String TAG = "Images";
-  private static final int MAX = 500;
+  public static final int MAX = 500;
 
   private static Images local;
   private static Images remote;

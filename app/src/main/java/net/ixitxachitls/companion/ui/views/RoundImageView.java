@@ -33,6 +33,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.ui.Setup;
 
 /**
@@ -40,13 +41,17 @@ import net.ixitxachitls.companion.ui.Setup;
  */
 public class RoundImageView extends android.support.v7.widget.AppCompatImageView {
 
-  private final float radius;
+  private final int radius;
+  private final int width;
+  private final int height;
 
   public RoundImageView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
     TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.RoundImageView);
-    radius = array.getDimension(R.styleable.RoundImageView_radius, -1.0f);
+    width = array.getInt(R.styleable.RoundImageView_width_px, Images.MAX);
+    height = array.getInt(R.styleable.RoundImageView_height_px, Images.MAX);
+    radius = array.getInt(R.styleable.RoundImageView_radius_percents, -1);
   }
 
   @Override
@@ -63,8 +68,8 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
   }
 
   private Bitmap computeBitmap(Drawable drawable) {
-    Bitmap bitmap = Bitmap.createBitmap(Math.max(2, drawable.getIntrinsicWidth()),
-        Math.max(2, drawable.getIntrinsicHeight()), Bitmap.Config.ARGB_8888);
+    Bitmap bitmap = Bitmap.createBitmap(width > 0 ? width : Images.MAX,
+        height > 0 ? height : Images.MAX, Bitmap.Config.ARGB_8888);
     Canvas canvas = new Canvas(bitmap);
     drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
     drawable.draw(canvas);

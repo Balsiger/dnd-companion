@@ -55,7 +55,9 @@
   </declare-styleable>
 
   <declare-styleable name="RoundImageView">
-    <attr name="radius" format="dimension"/>
+    <attr name="radius_percents" format="integer"/>
+    <attr name="height_px" format="integer"/>
+    <attr name="width_px" format="integer"/>
   </declare-styleable>
 
 </resources>
