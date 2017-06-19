@@ -25,7 +25,6 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -51,17 +50,16 @@ public class ChipView extends LinearLayout {
                   String name, String subtitle, @ColorRes int chipColor,
                   @ColorRes int backgroundColor) {
     super(context);
-    Log.d("CHIP", "creating chip");
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, null, false);
 
     this.container = Wrapper.wrap(view, R.id.container);
     container.backgroundColor(backgroundColor);
     this.name = Wrapper.wrap(view, R.id.name);
-    this.name.text(name).backgroundColor(chipColor);
+    this.name.text(name).backgroundColor(chipColor).noWrap();
 
     this.subtitle = Wrapper.wrap(view, R.id.subtitle);
-    this.subtitle.text(subtitle).backgroundColor(chipColor);
+    this.subtitle.text(subtitle).backgroundColor(chipColor).noWrap();
     if (subtitle.isEmpty()) {
       this.subtitle.gone();
     } else {

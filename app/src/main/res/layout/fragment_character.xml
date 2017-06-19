@@ -51,20 +51,35 @@
         android:layout_weight="1"
         app:color="@color/character"/>
 
-    <view
-        android:id="@+id/delete"
-        class="net.ixitxachitls.companion.ui.views.IconView"
-        android:layout_width="@dimen/iconSize"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:layout_marginEnd="10dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/campaign_button_delete"
-        android:tint="#444"
-        android:visibility="visible"
-        app:srcCompat="@drawable/ic_delete_black_24dp"/>
+        android:orientation="horizontal">
+
+      <view
+          android:id="@+id/delete"
+          class="net.ixitxachitls.companion.ui.views.IconView"
+          android:layout_width="@dimen/iconSize"
+          android:layout_height="@dimen/iconSize"
+          android:background="@android:color/transparent"
+          android:contentDescription="@string/campaign_button_delete"
+          android:tint="#444"
+          android:visibility="visible"
+          app:srcCompat="@drawable/ic_delete_black_24dp"/>
+
+      <view
+          android:id="@+id/move"
+          class="net.ixitxachitls.companion.ui.views.IconView"
+          android:layout_width="@dimen/iconSize"
+          android:layout_height="@dimen/iconSize"
+          android:background="@android:color/transparent"
+          android:contentDescription="@string/campaign_button_move"
+          android:tint="#444"
+          android:visibility="visible"
+          app:srcCompat="@drawable/ic_launch_black_24dp"/>
+    </LinearLayout>
 
   </LinearLayout>
 

@@ -25,6 +25,7 @@ import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
@@ -136,6 +137,15 @@ public class Wrapper<V extends View> {
         view.getPaddingTop() - elevation,
         view.getPaddingRight(),
         view.getPaddingBottom());
+
+    return this;
+  }
+
+  public Wrapper<V> noWrap() {
+    if (view instanceof TextView) {
+      ((TextView) view).setMaxLines(1);
+      ((TextView) view).setEllipsize(TextUtils.TruncateAt.END);
+    }
 
     return this;
   }

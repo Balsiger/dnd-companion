@@ -85,5 +85,6 @@
   <string name="action_import">Import from Drive</string>
   <string name="character_select_campaign">Select campaign to move to</string>
   <string name="chip_wait_selection">Waiting for selection</string>
+  <string name="campaign_button_move">Move character to other campaign</string>
 
 </resources>

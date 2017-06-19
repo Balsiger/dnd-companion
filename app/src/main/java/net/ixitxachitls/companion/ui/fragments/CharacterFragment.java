@@ -78,6 +78,7 @@ public class CharacterFragment extends CompanionFragment {
   private ActionButton battle;
   private RoundImageView image;
   private IconView delete;
+  private IconView move;
 
   public CharacterFragment() {
     super(Type.character);
@@ -95,6 +96,8 @@ public class CharacterFragment extends CompanionFragment {
     title.setAction(this::editBase);
     delete = (IconView) view.findViewById(R.id.delete);
     delete.setAction(this::delete);
+    move = (IconView) view.findViewById(R.id.move);
+    move.setAction(this::move);
     strength = (AbilityView) view.findViewById(R.id.strength);
     strength.setAction(this::editAbilities);
     dexterity = (AbilityView) view.findViewById(R.id.dexterity);
@@ -127,6 +130,28 @@ public class CharacterFragment extends CompanionFragment {
       Toast.makeText(getActivity(), getString(R.string.character_deleted),
           Toast.LENGTH_SHORT).show();
       show(Type.campaign);
+    }
+  }
+
+  private void move() {
+    ListSelectFragment fragment = ListSelectFragment.newInstance(
+        R.string.character_select_campaign, "", Campaigns.remote().getCampaignNames(),
+        R.color.campaign);
+    fragment.setSelectListener((String value, int position) -> move(position));
+    fragment.display(getFragmentManager());
+  }
+
+  private void move(int position) {
+    if (character.isPresent()) {
+      Campaign campaign;
+      if (position == 0) {
+        campaign = Campaigns.defaultCampaign;
+      } else {
+        campaign = Campaigns.remote().getCampaigns().get(position - 1);
+      }
+      character.get().setCampaignId(campaign.getCampaignId());
+
+      CompanionFragments.get().showCampaign(campaign, Optional.absent());
     }
   }
 
@@ -217,6 +242,7 @@ public class CharacterFragment extends CompanionFragment {
     }
     title.setTitle(character.get().getName());
     title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());
+    move.setVisibility(character.get().isLocal() ? View.VISIBLE : View.GONE);
     strength.setValue(character.get().getStrength(),
         Ability.modifier(character.get().getStrength()));
     dexterity.setValue(character.get().getDexterity(),

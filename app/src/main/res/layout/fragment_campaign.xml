@@ -65,56 +65,19 @@
       android:padding="10dp"
       android:theme="@style/SmallText"/>
 
-  <LinearLayout
-      android:id="@+id/partyContainer"
+  <view
+      android:id="@+id/party"
+      class="net.ixitxachitls.companion.ui.views.PartyView"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/date"
-      android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/characterLight"
-        android:paddingBottom="5dp"
-        android:paddingStart="10dp"
-        android:paddingTop="5dp"
-        android:text="Party"
-        android:textColor="#444"
-        android:textStyle="bold"
-        android:theme="@style/SmallText"/>
-
-    <HorizontalScrollView
-        android:id="@+id/partyScroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/date"
-        android:background="@color/characterDark">
-
-      <LinearLayout
-          android:id="@+id/party"
-          android:layout_width="match_parent"
-          android:layout_height="130dp"
-          android:minWidth="200dp"
-          android:orientation="horizontal"/>
-    </HorizontalScrollView>
-
-  </LinearLayout>
-
-  <ListView
-      android:id="@+id/characters"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_alignParentStart="true"
-      android:layout_below="@+id/partyContainer"
-      android:layout_centerVertical="true"/>
+      android:layout_below="@+id/date"/>
 
   <android.support.design.widget.FloatingActionButton
       android:id="@+id/add_character"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_alignBottom="@+id/characters"
-      android:layout_alignEnd="@+id/characters"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
       android:layout_gravity="bottom|end"
       android:layout_margin="@dimen/fab_margin"
       app:backgroundTint="@color/character"

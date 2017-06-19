@@ -130,6 +130,13 @@ public class CompanionPublisher {
         .setCharacter(character.toProto()).build()), characterClientId);
   }
 
+  public void update(Data.CompanionMessageProto.Image image, String characterClientId) {
+    ensureServerStarted();
+    server.sendMost(new CompanionMessage(Settings.get().getAppId(),
+        Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
+        .setImage(image).build()), characterClientId);
+  }
+
   public void unpublish(Campaign campaign) {
     if (!Strings.isNullOrEmpty(name) && !Campaigns.local().hasAnyPublished()) {
       stop();

@@ -44,5 +44,10 @@ public class CharacterChipView extends ChipView {
       BitmapDrawable drawable = new BitmapDrawable(getResources(), bitmap.get());
       image.setImageDrawable(drawable);
     }
+
+    if (character.isLocal()) {
+      name.backgroundColor(R.color.characterLight);
+      subtitle.backgroundColor(R.color.characterLight);
+    }
   }
 }

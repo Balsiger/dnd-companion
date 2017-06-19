@@ -326,7 +326,7 @@ public class BattleFragment extends CompanionFragment {
       if (combatant.isMonster()) {
         chip = new ChipView(getContext(), R.drawable.ic_perm_identity_black_24dp,
             isDM ? combatant.getName() : "Monster", "init " + combatant.getInitiative(),
-            R.color.monster, 0);
+            R.color.monster, R.color.monsterDark);
       } else {
         Optional<Character> character =
             Characters.get(!campaign.get().isLocal()).get(combatant.getId());
@@ -336,7 +336,8 @@ public class BattleFragment extends CompanionFragment {
           chip = new ChipView(getContext(), R.drawable.ic_person_black_48dp,
               combatant.getName(),
               combatant.getInitiative() == Character.NO_INITIATIVE
-                  ? "" : "init " + combatant.getInitiative(), R.color.character, 0);
+                  ? "" : "init " + combatant.getInitiative(), R.color.character,
+              R.color.characterDark);
         }
       }
 

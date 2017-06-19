@@ -94,12 +94,12 @@ public class ListSelectFragment extends Dialog {
   }
 
   protected void edited(String value, int position) {
+    save();
+
     if (selectAction.isPresent()) {
       selectAction.get().select(value, position);
     } else {
       Log.wtf("select", "listener not set");
     }
-
-    save();
   }
 }

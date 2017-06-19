@@ -60,7 +60,6 @@ public class SettingsFragment extends CompanionFragment {
     nickname = Wrapper.wrap(view, R.id.nickname);
     nickname.text(settings.isDefined() ? settings.getNickname() : "")
         .label(R.string.settings_nickname_label)
-        .backgroundColor(R.color.colorAccent)
         .onEdit(this::editNickname)
         .onChange(this::refresh);
     save = Wrapper.wrap(view, R.id.save);

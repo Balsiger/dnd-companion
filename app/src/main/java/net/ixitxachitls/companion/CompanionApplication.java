@@ -200,6 +200,9 @@ public class CompanionApplication extends MultiDexApplication
           + " " + message.getProto().getImage().getId());
       Data.CompanionMessageProto.Image image = message.getProto().getImage();
       Images.remote().save(image.getType(), image.getId(), Images.asBitmap(image.getImage()));
+
+      // Send the image update to the other clients.
+      CompanionPublisher.get().update(image, message.getId());
       refresh();
     }
 
