@@ -20,12 +20,15 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
 
+\
+
   <TextView
+      android:id="@+id/title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:background="@color/characterLight"
@@ -37,11 +40,100 @@
       android:textStyle="bold"
       android:theme="@style/SmallText"/>
 
+  <LinearLayout
+      android:id="@+id/actions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/scroll"
+      android:background="@color/battle"
+      android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/battle"
+        android:foregroundTintMode="src_over"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:tint="@color/monster"
+        app:srcCompat="@drawable/ic_add_black_24dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="#ccc"/>
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/battle"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:tint="@color/cell"
+        app:srcCompat="@drawable/ic_navigate_next_black_24dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="#ccc"/>
+
+    <ImageButton
+        android:id="@+id/delay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/battle"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:tint="@color/cell"
+        app:srcCompat="@drawable/ic_access_time_black_24dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="#ccc"/>
+
+    <ImageButton
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/battle"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:tint="@color/cell"
+        app:srcCompat="@drawable/ic_stop_black_24dp"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="#ccc"/>
+
+  </LinearLayout>
+
   <HorizontalScrollView
       android:id="@+id/scroll"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="@color/characterDark">
+      android:layout_below="@+id/title"
+      android:background="@color/characterDark"
+      android:minHeight="50dp">
 
     <LinearLayout
         android:id="@+id/party"
@@ -51,4 +143,18 @@
         android:orientation="horizontal"/>
   </HorizontalScrollView>
 
-</LinearLayout>
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/start_battle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/scroll"
+      android:layout_alignEnd="@+id/scroll"
+      android:layout_alignParentBottom="false"
+      android:layout_alignParentEnd="false"
+      android:layout_below="@+id/scroll"
+      android:layout_marginEnd="@dimen/fab_margin"
+      android:layout_marginTop="@dimen/fab_margin_negative"
+      app:backgroundTint="@color/battle"
+      app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
+
+</RelativeLayout>

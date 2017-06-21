@@ -23,10 +23,15 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.transition.TransitionManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.google.common.base.Optional;
 
@@ -35,6 +40,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,19 +50,34 @@ import java.util.List;
  */
 public class PartyView extends LinearLayout {
   private final List<Character> characters = new ArrayList<>();
+
+  private final ViewGroup view;
   private final LinearLayout party;
+  private final Wrapper<FloatingActionButton> startBattle;
+  private final Wrapper<LinearLayout> actions;
+  private final Wrapper<ImageButton> add;
+  private final Wrapper<ImageButton> next;
+  private final Wrapper<ImageButton> delay;
+  private final Wrapper<ImageButton> stop;
 
   private Optional<Campaign> campaign = Optional.absent();
 
   public PartyView(Context context, @Nullable AttributeSet attrs) {
     super(context, attrs);
 
-    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_party, null, false);
+    view = (ViewGroup) LayoutInflater.from(getContext()).inflate(R.layout.view_party, null, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));
 
     party = (LinearLayout) view.findViewById(R.id.party);
+    startBattle = Wrapper.wrap(view, R.id.start_battle);
+    startBattle.onClick(this::startBattle);
+    actions = Wrapper.wrap(view, R.id.actions);
+    add = Wrapper.wrap(view, R.id.add_monster);
+    next = Wrapper.wrap(view, R.id.next);
+    delay = Wrapper.wrap(view, R.id.delay);
+    stop = Wrapper.wrap(view, R.id.stop);
 
     addView(view);
   }
@@ -66,8 +87,23 @@ public class PartyView extends LinearLayout {
     refresh();
   }
 
+  private void startBattle() {
+    if (!campaign.isPresent()) {
+      return;
+    }
+
+    // Setup the ui elements.
+    TransitionManager.beginDelayedTransition(view);
+    startBattle.gone();
+    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) actions.get().getLayoutParams();
+    params.removeRule(RelativeLayout.ALIGN_BOTTOM);
+    params.addRule(RelativeLayout.BELOW, R.id.scroll);
+    actions.visible();
+  }
+
   public void refresh() {
     characters.clear();
+    party.removeAllViews();
 
     if (campaign.isPresent()) {
       if (campaign.get().isDefault()) {
@@ -78,18 +114,19 @@ public class PartyView extends LinearLayout {
         characters.addAll(Characters.local().getCharacters(campaign.get().getCampaignId()));
         characters.addAll(Characters.remote().getCharacters(campaign.get().getCampaignId()));
       }
-    }
 
-    party.removeAllViews();
-    for (Character character : characters) {
-      CharacterChipView chip = new CharacterChipView(getContext(), character);
-      chip.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+      for (Character character : characters) {
+        CharacterChipView chip = new CharacterChipView(getContext(), character);
+        chip.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
           CompanionFragments.get().showCharacter(character);
         }
-      });
-      party.addView(chip);
+        });
+        party.addView(chip);
+      }
     }
+
+    startBattle.visible(campaign.isPresent() && campaign.get().isLocal());
   }
 }

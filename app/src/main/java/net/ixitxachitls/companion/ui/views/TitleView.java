@@ -32,7 +32,7 @@ import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.ui.Setup;
-import net.ixitxachitls.companion.ui.Wrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Widget for displaying a title and subtitle.

@@ -33,10 +33,10 @@ import com.google.common.base.Optional;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.ui.Wrapper;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
 import java.util.List;

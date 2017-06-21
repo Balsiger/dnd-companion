@@ -32,7 +32,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.ui.Wrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * A small chip
@@ -42,8 +43,8 @@ public class ChipView extends LinearLayout {
   private static final int PADDING_SELECT = 10;
 
   protected final Wrapper<RelativeLayout> container;
-  protected final Wrapper<TextView> name;
-  protected final Wrapper<TextView> subtitle;
+  protected final TextWrapper<TextView> name;
+  protected final TextWrapper<TextView> subtitle;
   protected final RoundImageView image;
 
   public ChipView(Context context, @DrawableRes int defaultImage,
@@ -51,15 +52,15 @@ public class ChipView extends LinearLayout {
                   @ColorRes int backgroundColor) {
     super(context);
 
-    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, null, false);
+    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, this, false);
 
     this.container = Wrapper.wrap(view, R.id.container);
     container.backgroundColor(backgroundColor);
-    this.name = Wrapper.wrap(view, R.id.name);
+    this.name = TextWrapper.wrap(view, R.id.name);
     this.name.text(name).backgroundColor(chipColor).noWrap();
 
-    this.subtitle = Wrapper.wrap(view, R.id.subtitle);
-    this.subtitle.text(subtitle).backgroundColor(chipColor).noWrap();
+    this.subtitle = TextWrapper.wrap(view, R.id.subtitle);
+    this.subtitle.noWrap().text(subtitle).backgroundColor(chipColor).noWrap();
     if (subtitle.isEmpty()) {
       this.subtitle.gone();
     } else {

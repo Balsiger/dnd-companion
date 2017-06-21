@@ -27,13 +27,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
-import net.ixitxachitls.companion.ui.Wrapper;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Fragment for displaying settings values.
@@ -42,7 +43,7 @@ public class SettingsFragment extends CompanionFragment {
   private Settings settings;
 
   // UI elements.
-  private Wrapper<TextView> nickname;
+  private EditTextWrapper<EditText> nickname;
   private Wrapper<Button> save;
 
   public SettingsFragment() {
@@ -57,7 +58,7 @@ public class SettingsFragment extends CompanionFragment {
 
     settings = Settings.get();
 
-    nickname = Wrapper.wrap(view, R.id.nickname);
+    nickname = EditTextWrapper.wrap(view, R.id.nickname);
     nickname.text(settings.isDefined() ? settings.getNickname() : "")
         .label(R.string.settings_nickname_label)
         .onEdit(this::editNickname)

@@ -39,7 +39,6 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.ListAdapter;
-import net.ixitxachitls.companion.ui.Wrapper;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
@@ -48,6 +47,8 @@ import net.ixitxachitls.companion.ui.views.ActionButton;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.PartyView;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +64,7 @@ public class CampaignFragment extends CompanionFragment {
   private ListAdapter<Character> charactersAdapter;
   private IconView delete;
   private Wrapper<FloatingActionButton> addCharacter;
-  private Wrapper<TextView> date;
+  private TextWrapper<TextView> date;
   private Wrapper<ActionButton> battle;
   private PartyView party;
 
@@ -88,7 +89,7 @@ public class CampaignFragment extends CompanionFragment {
     addCharacter.onClick(this::createCharacter);
     battle = Wrapper.wrap(view, R.id.battle);
     battle.onClick(this::startBattle);
-    date = Wrapper.wrap(view, R.id.date);
+    date = TextWrapper.wrap(view, R.id.date);
     date.onClick(this::editDate);
 
     return view;
