@@ -31,7 +31,6 @@
   <view
       android:id="@+id/title"
       class="net.ixitxachitls.companion.ui.views.CampaignTitleView"
-      id="@+id/view2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:transitionName="sharedMove"
@@ -93,7 +92,7 @@
       android:layout_gravity="bottom|end"
       android:layout_margin="@dimen/fab_margin"
       app:backgroundTint="@color/battle"
-      app:pulse_bright="@color/battleBright"
+      app:pulse_bright="@color/battleLight"
       app:pulse_dark="@color/battle"
       app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
 

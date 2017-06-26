@@ -62,6 +62,7 @@
         app:srcCompat="@drawable/ic_add_black_24dp"/>
 
     <View
+        android:id="@+id/delimiter_add"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
@@ -81,6 +82,7 @@
         app:srcCompat="@drawable/ic_navigate_next_black_24dp"/>
 
     <View
+        android:id="@+id/delimiter_next"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
@@ -100,6 +102,7 @@
         app:srcCompat="@drawable/ic_access_time_black_24dp"/>
 
     <View
+        android:id="@+id/delimiter_delay"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
@@ -119,6 +122,7 @@
         app:srcCompat="@drawable/ic_stop_black_24dp"/>
 
     <View
+        android:id="@+id/delimiter_stop"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
@@ -142,6 +146,19 @@
         android:minWidth="200dp"
         android:orientation="horizontal"/>
   </HorizontalScrollView>
+
+  <view
+      android:id="@+id/initiative"
+      class="net.ixitxachitls.companion.ui.views.DiceView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/scroll"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="5dp"
+      app:modifier_label="@string/label_initiative_modifier"/>
 
   <android.support.design.widget.FloatingActionButton
       android:id="@+id/start_battle"

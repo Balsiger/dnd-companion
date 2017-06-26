@@ -27,6 +27,7 @@ import android.net.Uri;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.storage.DataBase;
 
 import java.util.Collection;
@@ -69,6 +70,10 @@ public abstract class StoredEntries<E extends StoredEntry<?>> {
     } else {
       return 0;
     }
+  }
+
+  public static boolean isLocalId(String characterId) {
+    return characterId.startsWith(Settings.get().getAppId());
   }
 
   public boolean isLocal() {

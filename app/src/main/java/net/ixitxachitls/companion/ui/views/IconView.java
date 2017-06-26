@@ -31,7 +31,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * A view to display an icon.
@@ -55,7 +55,7 @@ public class IconView extends android.support.v7.widget.AppCompatImageView {
     bleepDuration = array.getInteger(R.styleable.IconView_bleep_duration, 250);
   }
 
-  public void setAction(Setup.Action action) {
+  public void setAction(Wrapper.Action action) {
     setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {

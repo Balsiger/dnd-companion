@@ -113,8 +113,10 @@ public class Battle {
         Optional<Character> character = Characters.get(!campaign.isLocal()).get(existing.id);
         if (character.isPresent()) {
           combatants.set(i,
-              new Combatant(existing.id, existing.name, character.get().getInitiative(), false,
-                  existing.waiting));
+              new Combatant(existing.id, existing.name,
+                  character.get().getBattleNumber() == number ?
+                      character.get().getInitiative() : Character.NO_INITIATIVE,
+                  false, existing.waiting));
         }
       }
     }
@@ -128,7 +130,15 @@ public class Battle {
   }
 
   public Combatant getCurrentCombatant() {
-    return combatants.get(currentCombatantIndex);
+    if (currentCombatantIndex < combatants.size()) {
+      return combatants.get(currentCombatantIndex);
+    }
+
+    if (!combatants.isEmpty()) {
+      return combatants.get(0);
+    }
+
+    return new Combatant("", "Invalid", Character.NO_INITIATIVE, true, false);
   }
 
   public void battle() {
@@ -247,6 +257,14 @@ public class Battle {
       this.waiting = waiting;
     }
 
+    private Combatant(Character character, boolean isWaiting) {
+      this.id = character.getCharacterId();
+      this.name = character.getName();
+      this.initiative = character.getInitiative();
+      this.monster = false;
+      this.waiting = isWaiting;
+    }
+
     public String getId() {
       return id;
     }
@@ -257,6 +275,10 @@ public class Battle {
 
     public int getInitiative() {
       return initiative;
+    }
+
+    public boolean hasInitiative() {
+      return initiative != Character.NO_INITIATIVE;
     }
 
     public boolean isMonster() {

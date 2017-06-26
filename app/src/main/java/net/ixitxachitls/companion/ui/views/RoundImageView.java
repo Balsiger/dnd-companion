@@ -34,7 +34,7 @@ import android.view.View;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Images;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * An image view that shows the image round.
@@ -76,7 +76,7 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     return bitmap;
   }
 
-  public void setAction(Setup.Action action) {
+  public void setAction(Wrapper.Action action) {
     setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {

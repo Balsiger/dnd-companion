@@ -35,8 +35,6 @@ import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 /**
  * A campaign with all its data.
@@ -54,7 +52,6 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   private CampaignDate date;
   private Battle battle;
   private int nextBattleNumber = 0;
-  private SortedSet<Character> party = new TreeSet<Character>();
 
   private Campaign(long id, String name, boolean local) {
     super(id, Settings.get().getAppId() + "-" + id, name, local,

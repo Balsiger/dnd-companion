@@ -40,8 +40,10 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.enums.Gender;
-import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Fragment for editing a character (main values).
@@ -56,10 +58,10 @@ public class EditCharacterDialog extends Dialog {
   private Optional<Campaign> campaign = Optional.absent();
 
   // UI elements.
-  private EditText name;
-  private TextView gender;
-  private TextView race;
-  private Button save;
+  private EditTextWrapper<EditText> name;
+  private TextWrapper<TextView> gender;
+  private TextWrapper<TextView> race;
+  private Wrapper<Button> save;
 
   public EditCharacterDialog() {}
 
@@ -96,11 +98,14 @@ public class EditCharacterDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     if (character.isPresent()) {
-      name = Setup.editText(view, R.id.edit_name, character.get().getName(), R.string.campaign_edit_name,
-          getResources().getColor(R.color.character, null), null, this::update);
-      gender = Setup.textView(view, R.id.edit_gender, this::editGender);
-      race = Setup.textView(view, R.id.edit_race, this::editRace);
-      save = Setup.button(view, R.id.save, this::save);
+      name = EditTextWrapper.wrap(view, R.id.edit_name)
+          .text(character.get().getName())
+          .label(R.string.campaign_edit_name)
+          .backgroundColor(R.color.character)
+          .onChange(this::update);
+      gender = TextWrapper.wrap(view, R.id.edit_gender).onClick(this::editGender);
+      race = TextWrapper.wrap(view, R.id.edit_race).onClick(this::editRace);
+      save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
     }
 
     update();
@@ -151,17 +156,17 @@ public class EditCharacterDialog extends Dialog {
       if (name.getText().length() == 0
           && character.get().getGender() != Gender.UNKNOWN
           && !character.get().getRace().isEmpty()) {
-        save.setVisibility(View.INVISIBLE);
+        save.invisible();
       } else {
-        save.setVisibility(View.VISIBLE);
+        save.visible();
       }
 
       if (character.get().getGender() != Gender.UNKNOWN) {
-        gender.setText(character.get().getGender().getName());
+        gender.text(character.get().getGender().getName());
       }
 
       if (!character.get().getRace().isEmpty()) {
-        race.setText(character.get().getRace());
+        race.text(character.get().getRace());
       }
     }
   }

@@ -31,7 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -40,8 +40,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 public class TitleView extends LinearLayout {
 
   // UI elements.
-  private TextView title;
-  private TextView subtitle;
+  private TextWrapper<TextView> title;
+  private TextWrapper<TextView> subtitle;
 
   public TitleView(Context context) {
     super(context);
@@ -62,24 +62,24 @@ public class TitleView extends LinearLayout {
         LinearLayout.LayoutParams.WRAP_CONTENT));
     addView(view);
 
-    title = (TextView) Setup.textView(view, R.id.title);
-    title.setText(array.getString(R.styleable.TitleView_title));
-    subtitle = (TextView) Setup.textView(view, R.id.subtitle);
-    subtitle.setText(array.getString(R.styleable.TitleView_subtitle));
+    title = TextWrapper.wrap(view, R.id.title)
+        .text(array.getString(R.styleable.TitleView_title));
+    subtitle = TextWrapper.wrap(view, R.id.subtitle)
+        .text(array.getString(R.styleable.TitleView_subtitle));
     view.setBackgroundColor(array.getColor(R.styleable.TitleView_color,
         getResources().getColor(R.color.white, null)));
     if (array.getBoolean(R.styleable.TitleView_dark, false)) {
-      title.setTextColor(getResources().getColor(R.color.white, null));
-      subtitle.setTextColor(getResources().getColor(R.color.white, null));
+      title.textColor(R.color.white);
+      subtitle.textColor(R.color.white);
     }
   }
 
   public void setTitle(String text) {
-    title.setText(text);
+    title.text(text);
   }
 
   public void setSubtitle(String text) {
-    subtitle.setText(text);
+    subtitle.text(text);
   }
 
   public void setAction(Wrapper.Action action) {

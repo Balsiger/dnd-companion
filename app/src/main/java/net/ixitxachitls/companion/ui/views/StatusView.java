@@ -36,7 +36,7 @@ import android.widget.TextView;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionPublisher;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,7 +52,7 @@ public class StatusView extends LinearLayout {
 
   // UI elements.
   private IconView online;
-  private TextView messages;
+  private TextWrapper<TextView> messages;
   private LinearLayout connections;
   private Map<String, ConnectionView> clientConnectionsByName = new HashMap<>();
   private Map<String, ConnectionView> serverConnectionsByName = new HashMap<>();
@@ -74,8 +74,8 @@ public class StatusView extends LinearLayout {
     online = (IconView) view.findViewById(R.id.online);
     online.setAction(this::restart);
     messagesScroll = (ScrollView) view.findViewById(R.id.messages_scroll);
-    messages = Setup.textView(view, R.id.messages);
-    messages.setMovementMethod(new ScrollingMovementMethod());
+    messages = TextWrapper.wrap(view, R.id.messages);
+    messages.get().setMovementMethod(new ScrollingMovementMethod());
     connections = (LinearLayout) view.findViewById(R.id.connections);
     connections.setOnClickListener(new OnClickListener() {
       @Override
@@ -116,7 +116,7 @@ public class StatusView extends LinearLayout {
       return;
     }
 
-    messages.setText(messages.getText() + message + "\n");
+    messages.text(messages.getText() + message + "\n");
     messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
   }
 

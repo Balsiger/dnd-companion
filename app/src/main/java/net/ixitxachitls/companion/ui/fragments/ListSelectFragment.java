@@ -24,11 +24,13 @@ package net.ixitxachitls.companion.ui.fragments;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 import java.util.ArrayList;
@@ -85,8 +87,17 @@ public class ListSelectFragment extends Dialog {
 
   @Override
   public void createContent(View view) {
-    Setup.list(view, R.id.listSelectView, R.layout.list_item_select, values,
-        selected, this::edited);
+    ListView list = (ListView) view.findViewById(R.id.listSelectView);
+    ArrayAdapter<String> itemAdapter =
+        new ArrayAdapter<>(view.getContext(), R.layout.list_item_select, values);
+    list.setAdapter(itemAdapter);
+    list.setSelection(values.indexOf(selected));
+    list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        edited(values.get(position), position);
+      }
+    });
   }
 
   public void setSelectListener(SelectAction action) {

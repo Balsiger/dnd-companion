@@ -45,7 +45,9 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Fragment for editing a campaign date.
@@ -59,12 +61,13 @@ public class DateDialog extends Dialog {
 
   private GridView grid;
   private DateAdapter adapter = new DateAdapter();
-  private EditText year;
-  private TextView month;
+  private EditTextWrapper<EditText> year;
+  private TextWrapper<TextView> month;
+  private EditTextWrapper<EditText> hours;
+  private EditTextWrapper<EditText> minutes;
+
   private int yearShown = 0;
   private int monthShown = 1;
-  private EditText hours;
-  private EditText minutes;
 
   public DateDialog() {}
 
@@ -96,12 +99,13 @@ public class DateDialog extends Dialog {
 
   @Override
   protected void createContent(View view) {
-    year = Setup.editText(view, R.id.year, String.valueOf(yearShown), this::editYear);
-    Setup.textView(view, R.id.year_minus, this::yearMinus);
-    Setup.textView(view, R.id.year_plus, this::yearPlus);
-    month = Setup.textView(view, R.id.month);
-    Setup.textView(view, R.id.month_minus, this::monthMinus);
-    Setup.textView(view, R.id.month_plus, this::monthPlus);
+    year = EditTextWrapper.wrap(view, R.id.year);
+    year.text(yearShown).onClick(this::editYear);
+    Wrapper.wrap(view, R.id.year_minus).onClick(this::yearMinus);
+    Wrapper.wrap(view, R.id.year_plus).onClick(this::yearPlus);
+    month = TextWrapper.wrap(view, R.id.month);
+    Wrapper.wrap(view, R.id.month_minus).onClick(this::monthMinus);
+    Wrapper.wrap(view, R.id.month_plus).onClick(this::monthPlus);
 
     grid = (GridView) view.findViewById(R.id.days);
     grid.setAdapter(adapter);
@@ -113,18 +117,20 @@ public class DateDialog extends Dialog {
     });
 
     if (campaign.isPresent()) {
-      hours = Setup.editText(view, R.id.hours, "", this::editTime);
-      hours.setFilters(new InputFilter[] {
+      hours = EditTextWrapper.wrap(view, R.id.hours);
+      hours.text("").onClick(this::editTime);
+      hours.get().setFilters(new InputFilter[] {
           new MaxFilter(campaign.get().getCalendar().getHoursPerDay()) });
-      hours.setSelectAllOnFocus(true);
-      minutes = Setup.editText(view, R.id.minutes, "", this::editTime);
-      minutes.setFilters(new InputFilter[]
+      hours.get().setSelectAllOnFocus(true);
+      minutes = EditTextWrapper.wrap(view, R.id.minutes);
+      minutes.text("").onClick(this::editTime);
+      minutes.get().setFilters(new InputFilter[]
           {new MaxFilter(campaign.get().getCalendar().getMinutesPerHour())});
-      Setup.button(view, R.id.plus_1, () -> addMinutes(1));
-      Setup.button(view, R.id.plus_5, () -> addMinutes(5));
-      Setup.button(view, R.id.plus_15, () -> addMinutes(15));
-      Setup.button(view, R.id.plus_60, () -> addMinutes(60));
-      Setup.button(view, R.id.night, this::night);
+      Wrapper.wrap(view, R.id.plus_1).onClick(() -> addMinutes(1));
+      Wrapper.wrap(view, R.id.plus_5).onClick(() -> addMinutes(5));
+      Wrapper.wrap(view, R.id.plus_15).onClick(() -> addMinutes(15));
+      Wrapper.wrap(view, R.id.plus_60).onClick(() -> addMinutes(60));
+      Wrapper.wrap(view, R.id.night).onClick(this::night);
     }
 
     update();
@@ -147,8 +153,8 @@ public class DateDialog extends Dialog {
   private void editTime() {
     if (campaign.isPresent()) {
       campaign.get().setDate(campaign.get().getDate().fromDate(
-          Integer.parseInt(hours.getText().toString()),
-          Integer.parseInt(minutes.getText().toString())));
+          Integer.parseInt(hours.getText()),
+          Integer.parseInt(minutes.getText())));
       update();
     }
   }
@@ -162,7 +168,7 @@ public class DateDialog extends Dialog {
 
   private void editYear() {
     try {
-      yearShown = Integer.parseInt(year.getText().toString());
+      yearShown = Integer.parseInt(year.getText());
     } catch(NumberFormatException e) {
       Log.d(TAG, "Invalid year: " + year.getText());
     }
@@ -224,11 +230,11 @@ public class DateDialog extends Dialog {
 
   protected void update() {
     if (campaign.isPresent()) {
-      year.setText(String.valueOf(yearShown));
-      year.setHint(formatYear(yearShown));
-      month.setText(formatMonth(monthShown));
-      hours.setText(campaign.get().getDate().getHoursFormatted());
-      minutes.setText(campaign.get().getDate().getMinutesFormatted());
+      year.text(String.valueOf(yearShown));
+      year.label(formatYear(yearShown));
+      month.text(formatMonth(monthShown));
+      hours.text(campaign.get().getDate().getHoursFormatted());
+      minutes.text(campaign.get().getDate().getMinutesFormatted());
     }
 
     grid.setAdapter(adapter);

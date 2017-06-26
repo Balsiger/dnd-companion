@@ -35,10 +35,8 @@ import com.google.common.base.Optional;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
-import net.ixitxachitls.companion.ui.ListAdapter;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
@@ -50,18 +48,13 @@ import net.ixitxachitls.companion.ui.views.PartyView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /** A fragment displaying campaign information. */
 public class CampaignFragment extends CompanionFragment {
 
   private Optional<Campaign> campaign = Optional.absent();
-  private List<Character> characters = new ArrayList<>();
 
   // UI elements.
   private CampaignTitleView title;
-  private ListAdapter<Character> charactersAdapter;
   private IconView delete;
   private Wrapper<FloatingActionButton> addCharacter;
   private TextWrapper<TextView> date;

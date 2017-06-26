@@ -36,8 +36,10 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Fragment for editing a campaign
@@ -49,9 +51,9 @@ public class EditCampaignDialog extends Dialog {
   private Optional<Campaign> campaign = Optional.absent();
 
   // The following values are only valid after onCreate().
-  private EditText name;
-  private TextView world;
-  private Button save;
+  private EditTextWrapper<EditText> name;
+  private TextWrapper<TextView> world;
+  private Wrapper<Button> save;
 
   public EditCampaignDialog() {}
 
@@ -80,7 +82,7 @@ public class EditCampaignDialog extends Dialog {
 
     if (getArguments() != null) {
       String id = getArguments().getString(ARG_ID);
-      if (id.isEmpty()) {
+      if (id == null || id.isEmpty()) {
         campaign = Optional.of(Campaign.createNew());
       } else {
         campaign = Campaigns.local().getCampaign(id);
@@ -94,13 +96,18 @@ public class EditCampaignDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     if (campaign.isPresent()) {
-      name = Setup.editText(view, R.id.edit_name, campaign.get().getName(), R.string.campaign_edit_name,
-          getResources().getColor(R.color.campaign, null), null, this::update);
-      world = Setup.textView(view, R.id.world, this::selectWorld);
+      name = EditTextWrapper.wrap(view, R.id.edit_name)
+          .text(campaign.get().getName())
+          .label(R.string.campaign_edit_name)
+          .backgroundColor(R.color.campaign)
+          .onChange(this::update);
+      world = TextWrapper.wrap(view, R.id.world)
+          .onClick(this::selectWorld);
       if (!campaign.get().getWorld().isEmpty()) {
-        world.setText(campaign.get().getWorld());
+        world.text(campaign.get().getWorld());
       }
-      save = Setup.button(view, R.id.save, this::save);
+      save = Wrapper.wrap(view, R.id.save);
+      save.onClick(this::save);
 
       if (campaign.get().isDefined()) {
         view.findViewById(R.id.campaign_edit_intro).setVisibility(View.GONE);
@@ -130,20 +137,20 @@ public class EditCampaignDialog extends Dialog {
   protected void update() {
     if (campaign.isPresent()) {
       if (name.getText().length() == 0 || campaign.get().getWorld().isEmpty()) {
-        save.setVisibility(View.INVISIBLE);
+        save.invisible();
       } else {
-        save.setVisibility(View.VISIBLE);
+        save.visible();
       }
 
       if (!campaign.get().getWorld().isEmpty()) {
-        world.setText(campaign.get().getWorld());
+        world.text(campaign.get().getWorld());
       }
     }
   }
 
   protected void save() {
     if (campaign.isPresent()) {
-      campaign.get().setName(name.getText().toString());
+      campaign.get().setName(name.getText());
       campaign.get().store();
 
       super.save();

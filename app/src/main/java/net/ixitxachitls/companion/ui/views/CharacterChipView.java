@@ -36,8 +36,8 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 public class CharacterChipView extends ChipView {
 
   public CharacterChipView(Context context, Character character) {
-    super(context, R.drawable.ic_person_black_48dp_inverted, character.getName(), "",
-        character.isLocal() ? R.color.characterLight : R.color.character, R.color.characterDark);
+    super(context, character.getCharacterId(), character.getName(), "", R.color.character,
+        R.color.characterDark);
 
     Optional<Bitmap> bitmap = character.loadImage();
     if (bitmap.isPresent()) {

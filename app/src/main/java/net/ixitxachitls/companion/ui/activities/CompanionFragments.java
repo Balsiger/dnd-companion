@@ -36,7 +36,6 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.ui.fragments.BattleFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
@@ -62,7 +61,6 @@ public class CompanionFragments {
   private Optional<CampaignsFragment> campaignsFragment = Optional.absent();
   private Optional<SettingsFragment> settingsFragment = Optional.absent();
   private Optional<CharacterFragment> characterFragment = Optional.absent();
-  private Optional<BattleFragment> battleFragment = Optional.absent();
 
   private CompanionFragments(FragmentManager fragmentManager) {
     this.fragmentManager = fragmentManager;
@@ -83,6 +81,10 @@ public class CompanionFragments {
 
   public static CompanionFragments get() {
     return singleton;
+  }
+
+  public FragmentManager getFragmentManager() {
+    return fragmentManager;
   }
 
   public void show() {
@@ -126,12 +128,6 @@ public class CompanionFragments {
         }
 
         return show(campaignFragment.get(), sharedElement);
-
-      case battle:
-        if (!battleFragment.isPresent()) {
-          battleFragment = Optional.of(new BattleFragment());
-        }
-        return show(battleFragment.get(), sharedElement);
     }
   }
 
@@ -207,20 +203,6 @@ public class CompanionFragments {
     show(CompanionFragment.Type.character, Optional.absent());
     if (characterFragment.isPresent()) {
       characterFragment.get().showCharacter(character);
-    }
-  }
-
-  public void showBattle(Campaign campaign) {
-    show(CompanionFragment.Type.battle, Optional.absent());
-    if (battleFragment.isPresent()) {
-      battleFragment.get().forCampaign(campaign);
-    }
-  }
-
-  public void showBattle(Character character) {
-    show(CompanionFragment.Type.battle, Optional.absent());
-    if (battleFragment.isPresent()) {
-      battleFragment.get().forCharacter(character);
     }
   }
 

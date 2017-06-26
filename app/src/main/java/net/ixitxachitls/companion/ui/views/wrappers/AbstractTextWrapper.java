@@ -87,6 +87,10 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
     return (W) this;
   }
 
+  public String getText() {
+    return view.getText().toString();
+  }
+
   private static class TextChangeWatcher implements TextWatcher {
 
     private final Wrapper.Action action;

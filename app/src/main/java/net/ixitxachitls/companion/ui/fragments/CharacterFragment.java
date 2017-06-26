@@ -43,7 +43,6 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
-import net.ixitxachitls.companion.ui.Setup;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
@@ -51,6 +50,7 @@ import net.ixitxachitls.companion.ui.views.ActionButton;
 import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.io.IOException;
 
@@ -75,7 +75,7 @@ public class CharacterFragment extends CompanionFragment {
   private AbilityView intelligence;
   private AbilityView wisdom;
   private AbilityView charisma;
-  private ActionButton battle;
+  private Wrapper<ActionButton> battle;
   private RoundImageView image;
   private IconView delete;
   private IconView move;
@@ -111,7 +111,7 @@ public class CharacterFragment extends CompanionFragment {
     charisma = (AbilityView) view.findViewById(R.id.charisma);
     charisma.setAction(this::editAbilities);
 
-    battle = Setup.actionButton(view, R.id.battle, this::showBattle);
+    battle = Wrapper.<ActionButton>wrap(view, R.id.battle).onClick(this::showBattle);
 
     return view;
   }
@@ -256,7 +256,6 @@ public class CharacterFragment extends CompanionFragment {
     charisma.setValue(character.get().getCharisma(),
         Ability.modifier(character.get().getCharisma()));
 
-    battle.setVisibility(canEdit() ? View.VISIBLE : View.GONE);
-    battle.pulse(!campaign.get().getBattle().isEnded());
+    battle.visible(canEdit());
   }
 }

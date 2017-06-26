@@ -37,7 +37,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Random;
 
@@ -54,26 +55,26 @@ public class DiceView extends LinearLayout {
   private final DiceAdapter adapter = new DiceAdapter();
 
   // UI elements.
-  private TextView modifierView;
   private GridView grid;
-  private Button random;
+
+  private final TextWrapper<TextView> label;
+  private final TextWrapper<TextView> modifierView;
+  private final Wrapper<Button> random;
 
   public DiceView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    init(attributes);
-  }
-
-  private void init(@Nullable AttributeSet attributes) {
     TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.DiceView );
 
-    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_dice, null, false);
+    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_dice, this, false);
     view.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
         ViewGroup.LayoutParams.WRAP_CONTENT));
-    Setup.textView(view, R.id.label).setText(array.getString(R.styleable.DiceView_modifier_label));
-    modifierView = (TextView) Setup.textView(view, R.id.modifier);
-    random = (Button) Setup.button(view, R.id.random, this::selectRandom);
 
+    label = TextWrapper.wrap(view, R.id.label);
+    label.text(array.getString(R.styleable.DiceView_modifier_label));
+    modifierView = TextWrapper.wrap(view, R.id.modifier);
+    random = Wrapper.wrap(view, R.id.random);
+    random.onClick(this::selectRandom);
     grid = (GridView) view.findViewById(R.id.numbers);
     grid.setAdapter(adapter);
     grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -100,9 +101,13 @@ public class DiceView extends LinearLayout {
     this.action = action;
   }
 
+  public void setLabel(String text) {
+    label.text(text);
+  }
+
   public void setModifier(int modifier) {
     this.modifier = modifier;
-    this.modifierView.setText(modifier >= 0 ? "+" + modifier : String.valueOf(modifier));
+    this.modifierView.text(modifier >= 0 ? "+" + modifier : String.valueOf(modifier));
   }
 
   public void setDice(int dice) {

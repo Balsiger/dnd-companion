@@ -27,7 +27,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
 /**
  * View displaying a network connection and it's status.
@@ -54,7 +54,7 @@ public class ConnectionView extends LinearLayout {
     if (server) {
       icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_computer_black_24dp, null));
     }
-    Setup.textView(view, R.id.name, name);
+    TextWrapper.wrap(view, R.id.name).text(name);
 
     addView(view);
   }

@@ -33,7 +33,9 @@ import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Widget for editing a single ability
@@ -41,11 +43,11 @@ import net.ixitxachitls.companion.ui.Setup;
 public class EditAbility extends LinearLayout {
 
   private String label;
-  private Setup.Action change;
+  private Wrapper.Action change;
 
   // UI elements.
-  private EditText edit;
-  private TextView modifier;
+  private EditTextWrapper<EditText> edit;
+  private TextWrapper<TextView> modifier;
 
   public EditAbility(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
@@ -53,7 +55,7 @@ public class EditAbility extends LinearLayout {
     init(attributes);
   }
 
-  public void setOnChange(Setup.Action action) {
+  public void setOnChange(Wrapper.Action action) {
     this.change = action;
   }
 
@@ -66,38 +68,39 @@ public class EditAbility extends LinearLayout {
         null, false);
     addView(view);
 
-    Setup.textView(view, R.id.label).setText(label);
-    Setup.button(view, R.id.minus, this::minus);
-    Setup.button(view, R.id.plus, this::plus);
-    edit = Setup.editText(view, R.id.value, "", this::update);
-    modifier = Setup.textView(view, R.id.modifier);
+    TextWrapper.wrap(view, R.id.label).text(label);
+    Wrapper.wrap(view, R.id.minus).onClick(this::minus);
+    Wrapper.wrap(view, R.id.plus).onClick(this::plus);
+    edit = EditTextWrapper.wrap(view, R.id.value);
+    edit.text("").onClick(this::update);
+    modifier = TextWrapper.wrap(view, R.id.modifier);
   }
 
   private void plus() {
-    edit.setText(String.valueOf(getValue() + 1));
+    edit.text(String.valueOf(getValue() + 1));
     update();
   }
 
   private void minus() {
-    edit.setText(String.valueOf(getValue() - 1));
+    edit.text(String.valueOf(getValue() - 1));
     update();
   }
 
   public int getValue() {
-    if (edit.getText().toString().isEmpty()) {
+    if (edit.getText().isEmpty()) {
       return 0;
     }
 
-    return Integer.parseInt(edit.getText().toString());
+    return Integer.parseInt(edit.getText());
   }
 
   public void setValue(int value) {
-    edit.setText(String.valueOf(value));
+    edit.text(String.valueOf(value));
   }
 
   private void update() {
     int bonus = Ability.modifier(getValue());
-    modifier.setText("(" + (bonus < 0 ? bonus : "+" + bonus) + ")");
+    modifier.text("(" + (bonus < 0 ? bonus : "+" + bonus) + ")");
 
     if (change != null) {
       change.execute();

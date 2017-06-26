@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -40,17 +39,19 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  */
 public class ChipView extends LinearLayout {
 
-  private static final int PADDING_SELECT = 10;
+  private static final int PADDING_SELECT = 5;
+
+  private final String dataId;
 
   protected final Wrapper<RelativeLayout> container;
   protected final TextWrapper<TextView> name;
   protected final TextWrapper<TextView> subtitle;
   protected final RoundImageView image;
 
-  public ChipView(Context context, @DrawableRes int defaultImage,
-                  String name, String subtitle, @ColorRes int chipColor,
-                  @ColorRes int backgroundColor) {
+  public ChipView(Context context, String dataId, String name, String subtitle,
+                  @ColorRes int chipColor, @ColorRes int backgroundColor) {
     super(context);
+    this.dataId = dataId;
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, this, false);
 
@@ -60,20 +61,14 @@ public class ChipView extends LinearLayout {
     this.name.text(name).backgroundColor(chipColor).noWrap();
 
     this.subtitle = TextWrapper.wrap(view, R.id.subtitle);
-    this.subtitle.noWrap().text(subtitle).backgroundColor(chipColor).noWrap();
-    if (subtitle.isEmpty()) {
-      this.subtitle.gone();
-    } else {
-      this.subtitle.visible();
-    }
+    this.subtitle.noWrap().backgroundColor(chipColor).noWrap();
+    setSubtitle(subtitle);
 
     this.image = (RoundImageView) view.findViewById(R.id.image);
 
-    if (defaultImage > 0) {
-      Drawable drawable = getResources().getDrawable(defaultImage, null);
-      drawable.setTint(getResources().getColor(chipColor, null));
-      image.setImageDrawable(drawable);
-    }
+    Drawable drawable = getResources().getDrawable(R.drawable.ic_person_black_48dp_inverted, null);
+    drawable.setTint(getResources().getColor(chipColor, null));
+    image.setImageDrawable(drawable);
 
     addView(view);
   }
@@ -83,7 +78,28 @@ public class ChipView extends LinearLayout {
     subtitle.textColor(R.color.disabled);
   }
 
+  public void setBackground(@ColorRes int color) {
+    container.backgroundColor(color);
+  }
+
+  public void setSubtitle(String text) {
+    subtitle.text(text);
+    if (text.isEmpty()) {
+      this.subtitle.gone();
+    } else {
+      this.subtitle.visible();
+    }
+  }
+
   public void select() {
     container.elevate(PADDING_SELECT);
+  }
+
+  public void unselect() {
+    container.elevate(-PADDING_SELECT);
+  }
+
+  public String getDataId() {
+    return dataId;
   }
 }

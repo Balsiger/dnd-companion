@@ -28,6 +28,11 @@
   <color name="monsterLight">#aee571</color>
   <color name="monsterText">#000000</color>
 
+  <color name="battle">#b71c1c</color>
+  <color name="battleLight">#f05545</color>
+  <color name="battleDark">#7f0000</color>
+  <color name="battleText">#ffffff</color>
+
   <!-- Colors for icon status and changes. -->
 
 
@@ -45,7 +50,5 @@
   <color name="red">#800</color>
   <color name="brightRed">#f00</color>
 
-  <color name="battle">#800</color>
-  <color name="battleBright">#b00</color>
 
 </resources>

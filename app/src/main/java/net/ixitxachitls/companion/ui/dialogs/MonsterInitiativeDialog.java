@@ -36,7 +36,8 @@ import com.google.common.base.Preconditions;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Dialog to enter monster initiative stats.
@@ -51,9 +52,9 @@ public class MonsterInitiativeDialog extends Dialog {
   private int monsterId;
 
   // Ui elements;
-  private EditText name;
-  private NumberPicker modifier;
-  private Button add;
+  private EditTextWrapper<EditText> name;
+  private Wrapper<NumberPicker> modifier;
+  private Wrapper<Button> add;
 
   public MonsterInitiativeDialog() {}
 
@@ -83,20 +84,28 @@ public class MonsterInitiativeDialog extends Dialog {
 
   @Override
   protected void createContent(View view) {
-    name = Setup.editText(view, R.id.name, makeName(), this::edit);
-    modifier = Setup.numberPicker(view, R.id.modifier, this::edit);
-    modifier.setMaxValue(20 + 20);
-    modifier.setMinValue(0);
-    modifier.setValue(20);
-    modifier.setFormatter(new NumberPicker.Formatter() {
+    name = EditTextWrapper.wrap(view, R.id.name);
+    name.text(makeName()).onClick(this::edit);
+    modifier = Wrapper.wrap(view, R.id.modifier);
+    modifier.get().setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+      @Override
+      public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+        edit();
+      }
+    });
+    modifier.get().setMaxValue(20 + 20);
+    modifier.get().setMinValue(0);
+    modifier.get().setValue(20);
+    modifier.get().setFormatter(new NumberPicker.Formatter() {
       @Override
       public String format(int index) {
         return Integer.toString(index - 20);
       }
     });
 
-    add = Setup.button(view, R.id.add, this::add);
-    add.setVisibility(monsterId > 0 ? View.GONE : View.VISIBLE);
+    add = Wrapper.wrap(view, R.id.add);
+    add.onClick(this::add);
+    add.visible(monsterId <= 0);
   }
 
   private void edit() {
@@ -108,7 +117,8 @@ public class MonsterInitiativeDialog extends Dialog {
       return;
     }
 
-    campaign.get().getBattle().addMonster(name.getText().toString(), modifier.getValue() - 20);
+    campaign.get().getBattle().addMonster(name.getText().toString(),
+        modifier.get().getValue() - 20);
     save();
   }
 

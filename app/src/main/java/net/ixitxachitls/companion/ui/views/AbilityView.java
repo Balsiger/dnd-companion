@@ -31,7 +31,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
-import net.ixitxachitls.companion.ui.Setup;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * View to show a single ability.
@@ -39,8 +40,8 @@ import net.ixitxachitls.companion.ui.Setup;
 public class AbilityView extends LinearLayout {
 
   // UI elements.
-  private TextView value;
-  private TextView modifier;
+  private TextWrapper<TextView> value;
+  private TextWrapper<TextView> modifier;
 
   public AbilityView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
@@ -55,18 +56,18 @@ public class AbilityView extends LinearLayout {
         .inflate(R.layout.view_ability, null, false);
     ((TextView) view.findViewById(R.id.name))
         .setText(array.getString(R.styleable.AbilityView_attribute_name));
-    value = Setup.textView(view, R.id.value);
-    modifier = Setup.textView(view, R.id.modifier);
+    value = TextWrapper.wrap(view, R.id.value);
+    modifier = TextWrapper.wrap(view, R.id.modifier);
 
     addView(view);
   }
 
   public void setValue(int value, int modifier) {
-    this.value.setText(String.valueOf(value));
-    this.modifier.setText("(" + modifier + ")");
+    this.value.text(String.valueOf(value));
+    this.modifier.text("(" + modifier + ")");
   }
 
-  public void setAction(Setup.Action action) {
+  public void setAction(Wrapper.Action action) {
     setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View v) {
