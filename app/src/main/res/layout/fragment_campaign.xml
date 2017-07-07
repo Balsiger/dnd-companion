@@ -28,37 +28,56 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-  <view
-      android:id="@+id/title"
-      class="net.ixitxachitls.companion.ui.views.CampaignTitleView"
+  <LinearLayout
+      android:id="@+id/titlebar"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:transitionName="sharedMove"
-      />
+      android:orientation="horizontal"
+      android:transitionName="sharedMove">
 
-  <view
-      android:id="@+id/delete"
-      class="net.ixitxachitls.companion.ui.views.IconView"
-      android:layout_width="@dimen/iconSize"
-      android:layout_height="@dimen/iconSize"
-      android:layout_above="@+id/title"
-      android:layout_alignBottom="@+id/title"
-      android:layout_alignParentBottom="false"
-      android:layout_alignParentRight="true"
-      android:layout_alignTop="@+id/title"
-      android:layout_centerVertical="true"
-      android:layout_marginEnd="10dp"
-      android:background="@android:color/transparent"
-      android:contentDescription="@string/campaign_button_delete"
-      android:tint="#444"
-      android:visibility="visible"
-      app:srcCompat="@drawable/ic_delete_black_24dp"/>
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/campaign"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+
+    <view
+        android:id="@+id/title"
+        class="net.ixitxachitls.companion.ui.views.CampaignTitleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+
+    <view
+        android:id="@+id/delete"
+        class="net.ixitxachitls.companion.ui.views.IconView"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="0"
+        android:background="@color/campaign"
+        android:contentDescription="@string/campaign_button_delete"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:tint="#444"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_delete_black_24dp"/>
+
+  </LinearLayout>
 
   <TextView
       android:id="@+id/date"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/title"
+      android:layout_below="@+id/titlebar"
       android:layout_marginTop="-2dp"
       android:background="@color/campaignLight"
       android:padding="10dp"
@@ -70,30 +89,5 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/date"/>
-
-  <android.support.design.widget.FloatingActionButton
-      android:id="@+id/add_character"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_alignParentEnd="true"
-      android:layout_gravity="bottom|end"
-      android:layout_margin="@dimen/fab_margin"
-      app:backgroundTint="@color/character"
-      app:srcCompat="@drawable/ic_add_white_24dp"/>
-
-  <view
-      android:id="@+id/battle"
-      class="net.ixitxachitls.companion.ui.views.ActionButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_alignParentEnd="true"
-      android:layout_gravity="bottom|end"
-      android:layout_margin="@dimen/fab_margin"
-      app:backgroundTint="@color/battle"
-      app:pulse_bright="@color/battleLight"
-      app:pulse_dark="@color/battle"
-      app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
 
 </RelativeLayout>

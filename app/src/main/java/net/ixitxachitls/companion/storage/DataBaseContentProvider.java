@@ -121,5 +121,8 @@ public class DataBaseContentProvider extends ContentProvider {
     contentResolver.delete(CAMPAIGNS_REMOTE, null, null);
     contentResolver.delete(CHARACTERS_LOCAL, null, null);
     contentResolver.delete(CHARACTERS_REMOTE, null, null);
+
+    // Close the app.
+    System.exit(0);
   }
 }

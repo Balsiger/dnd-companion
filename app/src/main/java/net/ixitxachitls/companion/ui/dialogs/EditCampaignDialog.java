@@ -99,7 +99,7 @@ public class EditCampaignDialog extends Dialog {
       name = EditTextWrapper.wrap(view, R.id.edit_name)
           .text(campaign.get().getName())
           .label(R.string.campaign_edit_name)
-          .backgroundColor(R.color.campaign)
+          .lineColor(R.color.campaign)
           .onChange(this::update);
       world = TextWrapper.wrap(view, R.id.world)
           .onClick(this::selectWorld);
@@ -123,7 +123,7 @@ public class EditCampaignDialog extends Dialog {
           R.string.campaign_select_world, campaign.get().getWorld(),
           Entries.get().getWorlds().getNames(), R.color.campaign);
       fragment.setSelectListener(this::editWorld);
-      fragment.display(getFragmentManager());
+      fragment.display();
     }
   }
 

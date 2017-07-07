@@ -85,7 +85,7 @@ public class MonsterInitiativeDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     name = EditTextWrapper.wrap(view, R.id.name);
-    name.text(makeName()).onClick(this::edit);
+    name.text(makeName()).onClick(this::edit).lineColor(R.color.monster);
     modifier = Wrapper.wrap(view, R.id.modifier);
     modifier.get().setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
       @Override

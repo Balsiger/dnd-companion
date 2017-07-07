@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.ui.views.wrappers;
 
+import android.content.res.ColorStateList;
+import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
 import android.view.View;
@@ -46,6 +48,12 @@ public final class EditTextWrapper<V extends EditText>
 
   public EditTextWrapper<V> label(String label) {
     view.setHint(label);
+
+    return this;
+  }
+
+  public EditTextWrapper<V> lineColor(@ColorRes int color) {
+    view.setBackgroundTintList(ColorStateList.valueOf(view.getResources().getColor(color, null)));
 
     return this;
   }

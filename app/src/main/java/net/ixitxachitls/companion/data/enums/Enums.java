@@ -31,8 +31,7 @@ import java.util.ArrayList;
 
 public class Enums {
 
-  public static <E extends Named> ArrayList<String> names(E []values)
-  {
+  public static <E extends Named> ArrayList<String> names(E []values) {
     ArrayList<String> names = new ArrayList<>();
     for(E value : values)
       names.add(value.getName());
@@ -40,8 +39,29 @@ public class Enums {
     return names;
   }
 
-  public static <E extends Named> E fromName(String name, E []values)
-  {
+  public static <E extends Named> ArrayList<String> names(E []values, E ... without) {
+    ArrayList<String> names = new ArrayList<>();
+    for (E value : values) {
+      if (contains(without, value)) {
+        continue;
+      }
+      names.add(value.getName());
+    }
+
+    return names;
+  }
+
+  private static <E extends Named> boolean contains(E [] values, E check) {
+    for (E value : values) {
+      if (value == check) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  public static <E extends Named> E fromName(String name, E []values) {
     for(E value : values)
       if (value.getName().equals(name))
         return value;
@@ -65,8 +85,7 @@ public class Enums {
     String getShortName();
   }
 
-  public interface Proto<P extends Internal.EnumLite>
-  {
+  public interface Proto<P extends Internal.EnumLite> {
     P toProto();
   }
 }

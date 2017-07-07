@@ -88,7 +88,7 @@ public class Battle {
 
   public void addMonster(String name, int initiativeModifier) {
     lastMonsterName = Optional.of(name);
-    combatants.add(new Combatant("", name, RANDOM.nextInt(20) + initiativeModifier, true, false));
+    combatants.add(new Combatant(name, name, RANDOM.nextInt(20) + initiativeModifier, true, false));
     campaign.store();
   }
 
@@ -111,6 +111,10 @@ public class Battle {
       Combatant existing = combatants.get(i);
       if (!existing.isMonster()) {
         Optional<Character> character = Characters.get(!campaign.isLocal()).get(existing.id);
+        if (character.isPresent()) {
+          character = Characters.get(campaign.isLocal()).get(existing.id);
+        }
+
         if (character.isPresent()) {
           combatants.set(i,
               new Combatant(existing.id, existing.name,
@@ -145,6 +149,7 @@ public class Battle {
     turn = 0;
     status = BattleStatus.SURPRISED;
     currentCombatantIndex = 0;
+    Collections.sort(combatants);
     campaign.store();
   }
 
@@ -202,12 +207,6 @@ public class Battle {
     status = BattleStatus.STARTING;
     number++;
     combatants.clear();
-    campaign.store();
-  }
-
-  public void startSurpriseRound() {
-    status = BattleStatus.SURPRISED;
-    Collections.sort(combatants);
     campaign.store();
   }
 

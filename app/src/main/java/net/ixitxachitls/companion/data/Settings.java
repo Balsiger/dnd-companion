@@ -57,7 +57,6 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   public void setDebugStatus(boolean showStatus) {
     this.showStatus = showStatus;
-    store();
   }
 
   public boolean showStatus() {
@@ -91,7 +90,6 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return Data.SettingsProto.newBuilder()
         .setNickname(name)
         .setAppId(appId)
-        .setShowStatus(showStatus)
         .build();
   }
 
@@ -103,7 +101,6 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private static Settings fromProto(Data.SettingsProto proto) {
     Settings settings = new Settings(proto.getNickname());
     settings.appId = proto.getAppId();
-    settings.showStatus = proto.getShowStatus();
 
     return settings;
   }
@@ -116,6 +113,10 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
       e.printStackTrace();
       return Optional.absent();
     } catch (CursorIndexOutOfBoundsException e) {
+      // For some reason, the default settings are not there anymore. Let's restore them.
+      Entries.getContext().getContentResolver().insert(DataBaseContentProvider.SETTINGS,
+          Settings.defaultSettings());
+
       return Optional.absent();
     }
   }

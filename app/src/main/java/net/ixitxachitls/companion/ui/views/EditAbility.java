@@ -71,8 +71,8 @@ public class EditAbility extends LinearLayout {
     TextWrapper.wrap(view, R.id.label).text(label);
     Wrapper.wrap(view, R.id.minus).onClick(this::minus);
     Wrapper.wrap(view, R.id.plus).onClick(this::plus);
-    edit = EditTextWrapper.wrap(view, R.id.value);
-    edit.text("").onClick(this::update);
+    edit = EditTextWrapper.wrap(view, R.id.value)
+        .text("").onClick(this::update).onChange(this::update);
     modifier = TextWrapper.wrap(view, R.id.modifier);
   }
 

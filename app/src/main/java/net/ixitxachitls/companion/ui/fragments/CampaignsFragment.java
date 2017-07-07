@@ -67,7 +67,7 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void addCampaign() {
-    EditCampaignDialog.newInstance().display(getFragmentManager());
+    EditCampaignDialog.newInstance().display();
   }
 
   @Override

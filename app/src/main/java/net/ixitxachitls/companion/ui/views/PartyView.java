@@ -29,9 +29,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.common.base.Optional;
@@ -43,7 +41,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
+import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -64,15 +62,9 @@ public class PartyView extends LinearLayout {
   private final LinearLayout party;
   private final TextWrapper<TextView> title;
   private final Wrapper<FloatingActionButton> startBattle;
-  private final Wrapper<LinearLayout> actions;
-  private final Wrapper<ImageButton> add;
-  private final Wrapper<View> addDelimiter;
-  private final Wrapper<ImageButton> next;
-  private final Wrapper<View> nextDelimiter;
-  private final Wrapper<ImageButton> delay;
-  private final Wrapper<View> delayDelimiter;
-  private final Wrapper<ImageButton> stop;
-  private final Wrapper<View> stopDelimiter;
+  private final BattleViewDM battleViewDM;
+  private final BattleViewPlayer battleViewPlayer;
+  private final Wrapper<FloatingActionButton> addCharacter;
   private final DiceView initiative;
 
   private Optional<Campaign> campaign = Optional.absent();
@@ -80,7 +72,7 @@ public class PartyView extends LinearLayout {
   public PartyView(Context context, @Nullable AttributeSet attrs) {
     super(context, attrs);
 
-    view = (ViewGroup) LayoutInflater.from(getContext()).inflate(R.layout.view_party, null, false);
+    view = (ViewGroup) LayoutInflater.from(getContext()).inflate(R.layout.view_party, this, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -90,28 +82,23 @@ public class PartyView extends LinearLayout {
     scroll = Wrapper.wrap(view, R.id.scroll);
     startBattle = Wrapper.wrap(view, R.id.start_battle);
     startBattle.onClick(this::setupBattle);
-    actions = Wrapper.wrap(view, R.id.actions);
-    add = Wrapper.wrap(view, R.id.add);
-    add.onClick(this::addMonster);
-    addDelimiter = Wrapper.wrap(view, R.id.delimiter_add);
-    next = Wrapper.wrap(view, R.id.next);
-    next.onClick(this::nextCombatant);
-    nextDelimiter = Wrapper.wrap(view, R.id.delimiter_next);
-    delay = Wrapper.wrap(view, R.id.delay);
-    delayDelimiter = Wrapper.wrap(view, R.id.delimiter_delay);
-    stop = Wrapper.wrap(view, R.id.stop);
-    stop.onClick(this::stopBattle);
-    stopDelimiter = Wrapper.wrap(view, R.id.delimiter_stop);
+
+    battleViewDM = new BattleViewDM(context, this);
+    battleViewPlayer = new BattleViewPlayer(context, this);
+    view.addView(battleViewDM, 0);
+    view.addView(battleViewPlayer, 0);
+
+    addCharacter = Wrapper.wrap(view, R.id.add_character);
+    addCharacter.onClick(this::createCharacter);
     initiative = (DiceView) view.findViewById(R.id.initiative);
     initiative.setDice(20);
 
     addView(view);
   }
 
-  private void nextCombatant() {
+  private void createCharacter() {
     if (campaign.isPresent()) {
-      campaign.get().getBattle().combatantDone();
-      refresh();
+      EditCharacterDialog.newInstance("", campaign.get().getCampaignId()).display();
     }
   }
 
@@ -119,6 +106,8 @@ public class PartyView extends LinearLayout {
     this.campaign = campaign;
     this.characters.clear();
     party.removeAllViews();
+    battleViewDM.setCampaign(campaign);
+    battleViewPlayer.setCampaign(campaign);
 
     refresh();
   }
@@ -137,23 +126,7 @@ public class PartyView extends LinearLayout {
           Character.NO_INITIATIVE);
     }
 
-    TransitionManager.beginDelayedTransition(view);
-    refresh();
-  }
-
-  private void stopBattle() {
-    if (campaign.isPresent() && campaign.get().isLocal()) {
-      campaign.get().getBattle().end();
-      TransitionManager.beginDelayedTransition(view);
-      refresh();
-    }
-  }
-
-  private void addMonster() {
-    if (campaign.isPresent()) {
-      MonsterInitiativeDialog.newInstance(campaign.get().getCampaignId(), -1)
-          .display(CompanionFragments.get().getFragmentManager());
-    }
+    refreshWithTransition();
   }
 
   private static List<Character> party(Campaign campaign) {
@@ -177,7 +150,23 @@ public class PartyView extends LinearLayout {
     return chips;
   }
 
+  public void refreshWithTransition() {
+    TransitionManager.beginDelayedTransition(view);
+    refresh();
+  }
+
   public void refresh() {
+    battleViewDM.refresh();
+    battleViewPlayer.refresh();
+
+
+    if (!campaign.isPresent() || !campaign.get().getBattle().isEnded()
+        || (campaign.get().isLocal() && !campaign.get().isDefault())) {
+      addCharacter.gone();
+    } else {
+      addCharacter.visible();
+    }
+
     if (campaign.isPresent()) {
       characters = party(campaign.get());
 
@@ -199,10 +188,11 @@ public class PartyView extends LinearLayout {
       ChipView chip = chips.get(character.getCharacterId());
       if (chip == null) {
         chip = new CharacterChipView(getContext(), character);
+        final ChipView finalChip = chip;
         chip.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
-            CompanionFragments.get().showCharacter(character);
+            CompanionFragments.get().showCharacter(character, Optional.of(finalChip));
           }
         });
       }
@@ -212,26 +202,16 @@ public class PartyView extends LinearLayout {
       party.addView(chip);
     }
 
+    title.text("Party");
     title.backgroundColor(R.color.characterLight);
     scroll.backgroundColor(R.color.characterDark);
-    RelativeLayout.LayoutParams params =
-        (RelativeLayout.LayoutParams) actions.get().getLayoutParams();
-    if (campaign.get().isLocal()) {
-      startBattle.visible();
-      params.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.scroll);
-      params.removeRule(RelativeLayout.BELOW);
-      initiative.setVisibility(GONE);
-    } else {
-      startBattle.gone();
-      params.addRule(RelativeLayout.BELOW, R.id.scroll);
-      params.removeRule(RelativeLayout.ALIGN_BOTTOM);
-      initiative.setVisibility(GONE);
-    }
+    initiative.setVisibility(GONE);
+    startBattle.visible(campaign.get().isLocal() && !campaign.get().isDefault());
   }
 
   private static Optional<Character> needsInitiative(List<Character> characters) {
     for (Character character : characters) {
-      if (!character.hasInitiative()) {
+      if (!character.hasInitiative() && character.isLocal()) {
         return Optional.of(character);
       }
     }
@@ -250,7 +230,9 @@ public class PartyView extends LinearLayout {
       battle.battle();
     }
 
-    for (Battle.Combatant combatant : battle.combatantsByInitiative()) {
+    List<Battle.Combatant> combatants = campaign.get().getBattle().isStarting()
+        ? battle.combatantsByInitiative() : battle.combatants();
+    for (Battle.Combatant combatant : combatants) {
       ChipView chip = chips.get(combatant.getId());
       if (chip == null) {
         if (combatant.isMonster()) {
@@ -264,10 +246,11 @@ public class PartyView extends LinearLayout {
               Characters.get(!campaign.get().isLocal()).get(combatant.getId());
           if (character.isPresent()) {
             chip = new CharacterChipView(getContext(), character.get());
+            final ChipView finalChip = chip;
             chip.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
-                CompanionFragments.get().showCharacter(character.get());
+                CompanionFragments.get().showCharacter(character.get(), Optional.of(title.get()));
               }
             });
           }
@@ -296,26 +279,11 @@ public class PartyView extends LinearLayout {
         .backgroundColor(R.color.battleLight);
     scroll.backgroundColor(R.color.battleDark);
 
-    // Actions.
-    RelativeLayout.LayoutParams params =
-        (RelativeLayout.LayoutParams) actions.get().getLayoutParams();
     if (campaign.get().isLocal()) {
       startBattle.gone();
-      params.removeRule(RelativeLayout.ALIGN_BOTTOM);
-      params.addRule(RelativeLayout.BELOW, R.id.scroll);
-      add.visible(battle.isStarting());
-      addDelimiter.visible(battle.isStarting());
-      next.visible(battle.isSurprised() || battle.isOngoing());
-      nextDelimiter.visible(battle.isSurprised() || battle.isOngoing());
-      delay.visible(battle.isOngoing());
-      delayDelimiter.visible(battle.isOngoing());
-      stop.visible(!battle.isEnded());
-      stopDelimiter.visible(battle.isSurprised() || battle.isOngoing());
       initiative.setVisibility(GONE);
     } else {
       startBattle.gone();
-      params.removeRule(RelativeLayout.BELOW);
-      params.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.scroll);
       Optional<Character> initCharacter = needsInitiative(characters);
 
       if (initCharacter.isPresent()) {
@@ -327,7 +295,7 @@ public class PartyView extends LinearLayout {
           TransitionManager.beginDelayedTransition(view);
           battle.refreshCombatant(initCharacter.get().getCharacterId(),
               initCharacter.get().getName(), i);
-          refresh();
+          refreshWithTransition();
         });
       } else {
         initiative.setVisibility(GONE);

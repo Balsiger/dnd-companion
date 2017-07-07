@@ -30,6 +30,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -46,7 +47,6 @@ import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
-import net.ixitxachitls.companion.ui.views.ActionButton;
 import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
@@ -75,10 +75,10 @@ public class CharacterFragment extends CompanionFragment {
   private AbilityView intelligence;
   private AbilityView wisdom;
   private AbilityView charisma;
-  private Wrapper<ActionButton> battle;
   private RoundImageView image;
   private IconView delete;
   private IconView move;
+  private Wrapper<LinearLayout> back;
 
   public CharacterFragment() {
     super(Type.character);
@@ -90,6 +90,7 @@ public class CharacterFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
+    back = Wrapper.<LinearLayout>wrap(view, R.id.back).onClick(this::back);
     image = (RoundImageView) view.findViewById(R.id.image);
     image.setAction(this::editImage);
     title = (TitleView) view.findViewById(R.id.title);
@@ -111,9 +112,11 @@ public class CharacterFragment extends CompanionFragment {
     charisma = (AbilityView) view.findViewById(R.id.charisma);
     charisma.setAction(this::editAbilities);
 
-    battle = Wrapper.<ActionButton>wrap(view, R.id.battle).onClick(this::showBattle);
-
     return view;
+  }
+
+  private void back() {
+    CompanionFragments.get().show(Type.campaign, Optional.of(back.get()));
   }
 
   private void delete() {
@@ -138,7 +141,7 @@ public class CharacterFragment extends CompanionFragment {
         R.string.character_select_campaign, "", Campaigns.remote().getCampaignNames(),
         R.color.campaign);
     fragment.setSelectListener((String value, int position) -> move(position));
-    fragment.display(getFragmentManager());
+    fragment.display();
   }
 
   private void move(int position) {
@@ -155,12 +158,6 @@ public class CharacterFragment extends CompanionFragment {
     }
   }
 
-  private void showBattle() {
-    if (canEdit() && character.isPresent()) {
-      CompanionFragments.get().showBattle(character.get());
-    }
-  }
-
   public void showCharacter(Character character) {
     this.character = Optional.of(character);
     this.campaign = Campaigns.get(!character.isLocal()).getCampaign(character.getCampaignId());
@@ -174,7 +171,7 @@ public class CharacterFragment extends CompanionFragment {
     }
 
     EditCharacterDialog.newInstance(character.get().getCharacterId(),
-        character.get().getCampaignId()).display(getFragmentManager());
+        character.get().getCampaignId()).display();
   }
 
   private void editImage() {
@@ -195,9 +192,9 @@ public class CharacterFragment extends CompanionFragment {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        bitmap =
-            Images.get(character.get().isLocal()).saveAndPublish(character.get().getCampaignId(),
-                Character.TYPE, character.get().getCharacterId(), bitmap);
+        bitmap = Images.get(character.get().isLocal())
+            .saveAndPublish(character.get().getCampaignId(), Character.TYPE,
+                character.get().getCharacterId(), bitmap);
         image.setImageBitmap(bitmap);
       } catch (IOException e) {
         Log.e(TAG, "Cannot load image bitmap", e);
@@ -212,7 +209,7 @@ public class CharacterFragment extends CompanionFragment {
     }
 
     EditAbilitiesDialog.newInstance(character.get().getCharacterId(),
-        character.get().getCampaignId()).display(getFragmentManager());
+        character.get().getCampaignId()).display();
   }
 
   public boolean canEdit() {
@@ -255,7 +252,5 @@ public class CharacterFragment extends CompanionFragment {
         Ability.modifier(character.get().getWisdom()));
     charisma.setValue(character.get().getCharisma(),
         Ability.modifier(character.get().getCharisma()));
-
-    battle.visible(canEdit());
   }
 }

@@ -186,7 +186,7 @@ public class Images {
 
   public static ByteString asByteString(Bitmap bitmap) {
     ByteString.Output out = ByteString.newOutput();
-    bitmap.compress(Bitmap.CompressFormat.JPEG, 0, out);
+    bitmap.compress(Bitmap.CompressFormat.JPEG, 50, out);
     return out.toByteString();
   }
 

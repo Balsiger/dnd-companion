@@ -48,13 +48,21 @@
         app:bleep_dark="@color/red"
         app:srcCompat="@drawable/ic_favorite_black_24dp"/>
 
-    <LinearLayout
-        android:id="@+id/connections"
+    <HorizontalScrollView
+        android:id="@+id/connections_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp">
-    </LinearLayout>
+        >
+
+      <LinearLayout
+          android:id="@+id/connections"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:padding="5dp">
+      </LinearLayout>
+
+    </HorizontalScrollView>
 
   </LinearLayout>
 

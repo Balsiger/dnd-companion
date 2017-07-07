@@ -27,6 +27,7 @@ import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.HashMultiset;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 
 import net.ixitxachitls.companion.data.Entries;
@@ -406,6 +407,10 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public void publish() {
     Log.d(TAG, "publishing character " + getName());
     CompanionSubscriber.get().publish(this);
+  }
+
+  public List<String> conditionHistoryNames() {
+    return ImmutableList.of("first", "second", "third");
   }
 
   @Override

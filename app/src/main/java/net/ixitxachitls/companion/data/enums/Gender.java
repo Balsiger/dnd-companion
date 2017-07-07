@@ -61,7 +61,7 @@ public enum Gender implements Enums.Named, Enums.Proto<Value.Gender> {
   }
 
   public static ArrayList<String> names() {
-    return Enums.names(values());
+    return Enums.names(values(), UNKNOWN);
   }
 
   public static Gender fromName(String name) {

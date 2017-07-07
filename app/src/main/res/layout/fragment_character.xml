@@ -29,11 +29,39 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
   <LinearLayout
+      android:id="@+id/back"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/campaign"
+      android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/iconSizeSmall"
+        android:layout_height="@dimen/iconSizeSmall"
+        android:layout_gravity="center_vertical"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+
+    <TextView
+        android:id="@+id/campaign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:text="TextView"
+        android:theme="@style/SmallText"/>
+  </LinearLayout>
+
+  <LinearLayout
       android:id="@+id/bar"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_below="@+id/back"
       android:background="@color/character"
-      android:orientation="horizontal">
+      android:orientation="horizontal"
+      android:transitionName="sharedMove">
 
     <view
         android:id="@+id/image"
@@ -146,19 +174,5 @@
         app:attribute_name="CHA"/>
   </LinearLayout>
 
-
-  <view
-      android:id="@+id/battle"
-      class="net.ixitxachitls.companion.ui.views.ActionButton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_alignParentEnd="true"
-      android:layout_gravity="bottom|end"
-      android:layout_margin="@dimen/fab_margin"
-      app:backgroundTint="@color/battle"
-      app:pulse_bright="@color/battleLight"
-      app:pulse_dark="@color/battle"
-      app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
 
 </RelativeLayout>

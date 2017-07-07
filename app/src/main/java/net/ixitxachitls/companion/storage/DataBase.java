@@ -37,7 +37,7 @@ import net.ixitxachitls.companion.util.Lazy;
  */
 public class DataBase extends SQLiteOpenHelper {
 
-  private static final int VERSION = 1;
+  private static final int VERSION = 2;
   private static final String DATABASE_NAME = "RPGCompanion";
   public static final String COLUMN_ID = "id";
   public static final String COLUMN_PROTO = "proto";
@@ -91,18 +91,18 @@ public class DataBase extends SQLiteOpenHelper {
     update(db, 0);
   }
 
-  private void update(SQLiteDatabase db, int version) {
-    switch(version) {
-      default:
-      case 1:
-      case 0:
-        db.execSQL(CREATE_SETTINGS);
-        db.execSQL(CREATE_CAMPAIGNS_LOCAL);
-        db.execSQL(CREATE_CAMPAIGNS_REMOTE);
-        db.execSQL(CREATE_CHARACTERS_LOCAL);
-        db.execSQL(CREATE_CHARACTERS_REMOTE);
-        db.insert(Settings.TABLE, null, Settings.defaultSettings());
 
+  private void update(SQLiteDatabase db, int version) {
+    if (version <= 0) {
+      db.execSQL(CREATE_SETTINGS);
+      db.execSQL(CREATE_CAMPAIGNS_LOCAL);
+      db.execSQL(CREATE_CAMPAIGNS_REMOTE);
+      db.execSQL(CREATE_CHARACTERS_LOCAL);
+      db.execSQL(CREATE_CHARACTERS_REMOTE);
+    }
+
+    if (version <= 1) {
+      db.insert(Settings.TABLE, null, Settings.defaultSettings());
     }
   }
 

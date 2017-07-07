@@ -42,16 +42,21 @@ public class ChipView extends LinearLayout {
   private static final int PADDING_SELECT = 5;
 
   private final String dataId;
+  private final int chipColor;
+  private final int backgroundColor;
 
   protected final Wrapper<RelativeLayout> container;
   protected final TextWrapper<TextView> name;
   protected final TextWrapper<TextView> subtitle;
   protected final RoundImageView image;
+  private boolean disabled = false;
 
   public ChipView(Context context, String dataId, String name, String subtitle,
                   @ColorRes int chipColor, @ColorRes int backgroundColor) {
     super(context);
     this.dataId = dataId;
+    this.chipColor = chipColor;
+    this.backgroundColor = backgroundColor;
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, this, false);
 
@@ -74,6 +79,7 @@ public class ChipView extends LinearLayout {
   }
 
   public void disabled() {
+    disabled = true;
     name.textColor(R.color.disabled);
     subtitle.textColor(R.color.disabled);
   }
@@ -92,11 +98,13 @@ public class ChipView extends LinearLayout {
   }
 
   public void select() {
-    container.elevate(PADDING_SELECT);
+    name.backgroundColor(backgroundColor);
+    subtitle.backgroundColor(backgroundColor);
   }
 
   public void unselect() {
-    container.elevate(-PADDING_SELECT);
+    name.backgroundColor(chipColor);
+    subtitle.backgroundColor(chipColor);
   }
 
   public String getDataId() {

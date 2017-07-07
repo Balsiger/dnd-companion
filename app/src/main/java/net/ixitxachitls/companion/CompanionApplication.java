@@ -37,6 +37,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Images;
+import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
@@ -149,14 +150,16 @@ public class CompanionApplication extends MultiDexApplication
     }
 
     if (message.getProto().hasCharacter()) {
-      Character character = Character.fromProto(
-          Characters.remote().getIdFor(message.getProto().getCharacter().getId()),
-          false, message.getProto().getCharacter());
-      // Storing will also add the campaign if it's changed.
-      character.store();
-      Log.d(TAG, "received character " + character.getName());
-      status("received character " + character.getName());
-      refresh();
+      if (!StoredEntries.isLocalId(message.getProto().getCharacter().getId())) {
+        Character character = Character.fromProto(
+            Characters.remote().getIdFor(message.getProto().getCharacter().getId()),
+            false, message.getProto().getCharacter());
+        // Storing will also add the character if it's changed.
+        character.store();
+        Log.d(TAG, "received character " + character.getName());
+        status("received character " + character.getName());
+        refresh();
+      }
 
       currentActivity.updateServerConnection(message.getName());
     }

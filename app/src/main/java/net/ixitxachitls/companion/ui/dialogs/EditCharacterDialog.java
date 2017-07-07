@@ -101,7 +101,7 @@ public class EditCharacterDialog extends Dialog {
       name = EditTextWrapper.wrap(view, R.id.edit_name)
           .text(character.get().getName())
           .label(R.string.campaign_edit_name)
-          .backgroundColor(R.color.character)
+          .lineColor(R.color.character)
           .onChange(this::update);
       gender = TextWrapper.wrap(view, R.id.edit_gender).onClick(this::editGender);
       race = TextWrapper.wrap(view, R.id.edit_race).onClick(this::editRace);
@@ -116,7 +116,7 @@ public class EditCharacterDialog extends Dialog {
       ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_gender,
           character.get().getGender().getName(), Gender.names(), R.color.character);
       edit.setSelectListener(this::updateGender);
-      edit.display(getFragmentManager());
+      edit.display();
     }
   }
 
@@ -136,7 +136,7 @@ public class EditCharacterDialog extends Dialog {
       ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_race,
           character.get().getRace(), Entries.get().getMonsters().primaryRaces(), R.color.character);
       edit.setSelectListener(this::updateRace);
-      edit.display(getFragmentManager());
+      edit.display();
     }
   }
 

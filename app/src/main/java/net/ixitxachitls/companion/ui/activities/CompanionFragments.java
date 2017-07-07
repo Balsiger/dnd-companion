@@ -23,8 +23,8 @@ package net.ixitxachitls.companion.ui.activities;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.transition.ChangeBounds;
 import android.transition.Fade;
-import android.transition.TransitionInflater;
 import android.transition.TransitionSet;
 import android.util.Log;
 import android.view.View;
@@ -36,6 +36,7 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
@@ -152,14 +153,9 @@ public class CompanionFragments {
       currentFragment.get().setReenterTransition(fade(ENTER_FADE_DURATION_MS,
           EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
 
-      TransitionSet transition = new TransitionSet();
-      transition.addTransition(TransitionInflater.from(currentFragment.get().getContext())
-          .inflateTransition(android.R.transition.move));
-      transition.setDuration(MOVE_DURATION_MS);
-      transition.setStartDelay(EXIT_FADE_DURATION_MS);
-      fragment.setSharedElementEnterTransition(transition);
-
+      fragment.setSharedElementEnterTransition(new ChangeBounds());
       sharedTransitionElement.get().setTransitionName(TRANSITION_NAME);
+      fragment.setSharedElementReturnTransition(new ChangeBounds());
 
       fragment.setEnterTransition(fade(ENTER_FADE_DURATION_MS,
           EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
@@ -172,6 +168,13 @@ public class CompanionFragments {
     fragmentManager.executePendingTransactions();
     fragment.refresh();
     return fragment;
+  }
+
+  public class SharedTransition extends TransitionSet {
+    public SharedTransition() {
+      setOrdering(ORDERING_TOGETHER);
+      addTransition(new ChangeBounds());
+    }
   }
 
   public void show(String typeName) {
@@ -199,8 +202,8 @@ public class CompanionFragments {
     }
   }
 
-  public void showCharacter(Character character) {
-    show(CompanionFragment.Type.character, Optional.absent());
+  public void showCharacter(Character character, Optional<View> shared) {
+    show(CompanionFragment.Type.character, shared);
     if (characterFragment.isPresent()) {
       characterFragment.get().showCharacter(character);
     }
@@ -218,5 +221,10 @@ public class CompanionFragments {
     fade.setStartDelay(delay);
     fade.setDuration(duration);
     return fade;
+  }
+
+  public void display(Dialog dialog) {
+    fragmentManager.beginTransaction().addToBackStack(null).add(dialog, null).commit();
+    fragmentManager.executePendingTransactions();
   }
 }

@@ -37,6 +37,7 @@ import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -53,10 +54,11 @@ public class StatusView extends LinearLayout {
   // UI elements.
   private IconView online;
   private TextWrapper<TextView> messages;
-  private LinearLayout connections;
+  private ScrollView messagesScroll;
+  private Wrapper<LinearLayout> connections;
+  private Wrapper<ScrollView> connectionsScroll;
   private Map<String, ConnectionView> clientConnectionsByName = new HashMap<>();
   private Map<String, ConnectionView> serverConnectionsByName = new HashMap<>();
-  private ScrollView messagesScroll;
 
   public StatusView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
@@ -74,15 +76,11 @@ public class StatusView extends LinearLayout {
     online = (IconView) view.findViewById(R.id.online);
     online.setAction(this::restart);
     messagesScroll = (ScrollView) view.findViewById(R.id.messages_scroll);
-    messages = TextWrapper.wrap(view, R.id.messages);
+    messages = TextWrapper.wrap(view, R.id.messages).onClick(this::toggleDebug);
     messages.get().setMovementMethod(new ScrollingMovementMethod());
-    connections = (LinearLayout) view.findViewById(R.id.connections);
-    connections.setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        toggleDebug();
-      }
-    });
+    connections = Wrapper.<LinearLayout>wrap(view, R.id.connections).onClick(this::toggleDebug);
+    connectionsScroll = Wrapper.<ScrollView>wrap(view, R.id.connections_scroll)
+        .onClick(this::toggleDebug);
 
     addView(view);
     update();
@@ -112,10 +110,6 @@ public class StatusView extends LinearLayout {
   }
 
   public void addMessage(String message) {
-    if (!Settings.get().showStatus()) {
-      return;
-    }
-
     messages.text(messages.getText() + message + "\n");
     messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
   }
@@ -128,7 +122,7 @@ public class StatusView extends LinearLayout {
 
     ConnectionView connection = new ConnectionView(getContext(), name, false);
     clientConnectionsByName.put(name, connection);
-    connections.addView(connection);
+    connections.get().addView(connection);
   }
 
   public void addServerConnection(String name) {
@@ -139,7 +133,7 @@ public class StatusView extends LinearLayout {
 
     ConnectionView connection = new ConnectionView(getContext(), name, true);
     serverConnectionsByName.put(name, connection);
-    connections.addView(connection);
+    connections.get().addView(connection);
   }
 
   public void updateClientConnection(String name) {
@@ -168,7 +162,7 @@ public class StatusView extends LinearLayout {
     if (connection == null) {
       connection = new ConnectionView(getContext(), name, true);
       serverConnectionsByName.put(name, connection);
-      connections.addView(connection);
+      connections.get().addView(connection);
     }
 
     connection.on();

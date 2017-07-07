@@ -27,64 +27,82 @@
               android:orientation="vertical"
               android:padding="20dp">
 
-  <view
-      android:id="@+id/strength"
-      class="net.ixitxachitls.companion.ui.views.EditAbility"
-      layout_weight="1"
+  <ScrollView
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:paddingBottom="30dp"
-      app:label="STR"/>
+      android:layout_height="match_parent">
 
-  <view
-      android:id="@+id/dexterity"
-      class="net.ixitxachitls.companion.ui.views.EditAbility"
-      layout_weight="1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:paddingBottom="20dp"
-      app:label="DEX"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-  <view
-      android:id="@+id/constitution"
-      class="net.ixitxachitls.companion.ui.views.EditAbility"
-      layout_weight="1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:paddingBottom="20dp"
-      app:label="CON"/>
+      <view
+          android:id="@+id/strength"
+          class="net.ixitxachitls.companion.ui.views.EditAbility"
+          layout_weight="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:paddingBottom="30dp"
+          app:label="STR"/>
 
-  <view
-      android:id="@+id/intelligence"
-      class="net.ixitxachitls.companion.ui.views.EditAbility"
-      layout_weight="1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:paddingBottom="20dp"
-      app:label="INT"/>
+      <view
+          android:id="@+id/dexterity"
+          class="net.ixitxachitls.companion.ui.views.EditAbility"
+          layout_weight="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:paddingBottom="20dp"
+          app:label="DEX"/>
 
-  <view
-      android:id="@+id/wisdom"
-      class="net.ixitxachitls.companion.ui.views.EditAbility"
-      layout_weight="1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:paddingBottom="20dp"
-      app:label="WIS"/>
+      <view
+          android:id="@+id/constitution"
+          class="net.ixitxachitls.companion.ui.views.EditAbility"
+          layout_weight="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:paddingBottom="20dp"
+          app:label="CON"/>
 
-  <view
-      android:id="@+id/charisma"
-      class="net.ixitxachitls.companion.ui.views.EditAbility"
-      layout_weight="1"
+      <view
+          android:id="@+id/intelligence"
+          class="net.ixitxachitls.companion.ui.views.EditAbility"
+          layout_weight="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:paddingBottom="20dp"
+          app:label="INT"/>
+
+      <view
+          android:id="@+id/wisdom"
+          class="net.ixitxachitls.companion.ui.views.EditAbility"
+          layout_weight="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:paddingBottom="20dp"
+          app:label="WIS"/>
+
+      <view
+          android:id="@+id/charisma"
+          class="net.ixitxachitls.companion.ui.views.EditAbility"
+          layout_weight="1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:paddingBottom="20dp"
+          app:label="CHR"/>
+    </LinearLayout>
+  </ScrollView>
+
+  <Button
+      android:id="@+id/save"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
-      android:paddingBottom="20dp"
-      app:label="CHR"/>
+      android:text="Save"/>
 
 </LinearLayout>

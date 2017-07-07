@@ -22,8 +22,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.app.DialogFragment;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
@@ -33,11 +31,11 @@ import android.support.annotation.StringRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewParent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 /**
@@ -54,6 +52,8 @@ public abstract class Dialog extends DialogFragment {
   protected int layoutId;
   protected String title;
   protected int color;
+
+  private View content;
 
   // Required empty constructor, don't add anything here.
   protected Dialog() {}
@@ -83,13 +83,8 @@ public abstract class Dialog extends DialogFragment {
     }
   }
 
-  public void display(FragmentManager manager) {
-    manager
-        .beginTransaction()
-        .addToBackStack(null)
-        .add(this, null)
-        .commit();
-    manager.executePendingTransactions();
+  public void display() {
+    CompanionFragments.get().display(this);
   }
 
   @Override
@@ -100,13 +95,9 @@ public abstract class Dialog extends DialogFragment {
     titleView.setText(title);
     titleView.setBackgroundColor(getResources().getColor(color, null));
 
-    View content = inflater.inflate(layoutId, container, false);
+    content = inflater.inflate(layoutId, container, false);
     createContent(content);
-    view.addView(content, 1);
-
-    ViewParent a = view.getParent();
-    Fragment b = getParentFragment();
-    ViewParent c = content.getParent();
+    view.addView(content);
 
     return view;
   }
@@ -115,12 +106,14 @@ public abstract class Dialog extends DialogFragment {
   public void onStart() {
     super.onStart();
 
-    int width = Resources.getSystem().getDisplayMetrics().widthPixels;
-    if (width < WIDTH) {
-      width = ViewGroup.LayoutParams.MATCH_PARENT;
-    }
+    if (content != null && content.getLayoutParams().width == ViewGroup.LayoutParams.MATCH_PARENT) {
+      int width = Resources.getSystem().getDisplayMetrics().widthPixels;
+      if (width < WIDTH) {
+        width = ViewGroup.LayoutParams.MATCH_PARENT;
+      }
 
-    getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
+      getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
+    }
   }
 
   @CallSuper

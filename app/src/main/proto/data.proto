@@ -7,7 +7,6 @@ import "entity.proto";
 message SettingsProto {
   string nickname = 1;
   string app_id = 2;
-  bool show_status = 3;
 }
 
 message CampaignProto {
@@ -79,6 +78,14 @@ message CharacterProto {
     int32 number = 2;
   }
   Battle battle = 9;
+
+  message TimedCondition {
+    int32 rounds = 1;
+    repeated string character_id = 2;
+    string text = 3;
+  }
+  repeated TimedCondition timed_condition = 10;
+  repeated TimedCondition timed_condition_history = 11;
 }
 
 message CompanionMessageProto {

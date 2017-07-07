@@ -100,7 +100,7 @@ public class DateDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     year = EditTextWrapper.wrap(view, R.id.year);
-    year.text(yearShown).onClick(this::editYear);
+    year.text(String.valueOf(yearShown)).onClick(this::editYear);
     Wrapper.wrap(view, R.id.year_minus).onClick(this::yearMinus);
     Wrapper.wrap(view, R.id.year_plus).onClick(this::yearPlus);
     month = TextWrapper.wrap(view, R.id.month);
