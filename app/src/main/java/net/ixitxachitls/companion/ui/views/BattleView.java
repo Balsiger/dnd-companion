@@ -33,14 +33,16 @@ import com.google.common.base.Optional;
 
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
+import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * View representing battle information (and buttons) for a party view.
  */
-public class BattleViewDM extends LinearLayout {
+public class BattleView extends LinearLayout {
 
   private final PartyView party;
   private Optional<Campaign> campaign;
@@ -50,17 +52,19 @@ public class BattleViewDM extends LinearLayout {
   private final Wrapper<Button> next;
   private final Wrapper<Button> delay;
   private final Wrapper<Button> stop;
+  private final Wrapper<Button> timed;
   private final Wrapper<View> addDelimiter;
   private final Wrapper<View> nextDelimiter;
   private final Wrapper<View> delayDelimiter;
   private final Wrapper<View> stopDelimiter;
+  private final Wrapper<View> timedDelimiter;
 
-  public BattleViewDM(Context context, PartyView party) {
+  public BattleView(Context context, PartyView party) {
     super(context);
 
     this.party = party;
 
-    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle_dm, party, false);
+    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, party, false);
     setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -73,12 +77,14 @@ public class BattleViewDM extends LinearLayout {
     delayDelimiter = Wrapper.wrap(view, R.id.delimiter_delay);
     stop = Wrapper.<Button>wrap(view, R.id.stop).onClick(this::stopBattle);
     stopDelimiter = Wrapper.wrap(view, R.id.delimiter_stop);
+    timed = Wrapper.<Button>wrap(view, R.id.timed).onClick(this::addTimed);
+    timedDelimiter = Wrapper.wrap(view, R.id.delimiter_timed);
 
     addView(view);
   }
 
   public void setCampaign(Optional<Campaign> campaign) {
-    if (campaign.isPresent() && campaign.get().isLocal()) {
+    if (campaign.isPresent()) {
       this.campaign = campaign;
     } else {
       this.campaign = Optional.absent();
@@ -118,25 +124,46 @@ public class BattleViewDM extends LinearLayout {
     }
   }
 
+  private void addTimed() {
+    if (currentCharacterIsLocal()) {
+      TimedConditionDialog.newInstance(campaign.get().getBattle().getCurrentCombatant().getId(),
+          campaign.get().getBattle().getTurn())
+          .display();
+    }
+  }
+
   public void refresh() {
     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) getLayoutParams();
     if (inBattle()) {
       Battle battle = campaign.get().getBattle();
       params.removeRule(RelativeLayout.ALIGN_BOTTOM);
       params.addRule(RelativeLayout.BELOW, R.id.scroll);
-      add.visible(battle.isStarting());
-      addDelimiter.visible(battle.isStarting());
-      next.visible(battle.isSurprised() || battle.isOngoing());
-      nextDelimiter.visible(battle.isSurprised() || battle.isOngoing());
-      boolean canDelay =
-          battle.isOngoing() && !battle.currentIsLast() && !battle.currentIsWaiting();
+      boolean isDM = campaign.get().isDefault() || campaign.get().isLocal();
+      add.visible(isDM && battle.isStarting());
+      addDelimiter.visible(isDM && battle.isStarting());
+      next.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
+      nextDelimiter.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
+      boolean canDelay = isDM && battle.isOngoing()
+          && !battle.currentIsLast() && !battle.currentIsWaiting();
       delay.visible(canDelay);
       delayDelimiter.visible(canDelay);
-      stop.visible(!battle.isEnded());
-      stopDelimiter.visible(battle.isSurprised() || battle.isOngoing());
+      stop.visible(isDM && !battle.isEnded());
+      stopDelimiter.visible(isDM && battle.isSurprised() || battle.isOngoing());
+      timed.visible(currentCharacterIsLocal());
+      timedDelimiter.visible(currentCharacterIsLocal());
     } else {
       params.removeRule(RelativeLayout.BELOW);
       params.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.scroll);
     }
+  }
+
+
+  private boolean currentCharacterIsLocal() {
+    if (!campaign.isPresent() || !inBattle()) {
+      return false;
+    }
+
+    Battle.Combatant current = campaign.get().getBattle().getCurrentCombatant();
+    return !current.isMonster() && StoredEntries.isLocalId(current.getId());
   }
 }

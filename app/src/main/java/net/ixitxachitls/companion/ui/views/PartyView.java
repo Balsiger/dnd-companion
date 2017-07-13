@@ -32,6 +32,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
@@ -44,11 +45,14 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * View representing a whole party.
@@ -62,10 +66,10 @@ public class PartyView extends LinearLayout {
   private final LinearLayout party;
   private final TextWrapper<TextView> title;
   private final Wrapper<FloatingActionButton> startBattle;
-  private final BattleViewDM battleViewDM;
-  private final BattleViewPlayer battleViewPlayer;
+  private final BattleView battleView;
   private final Wrapper<FloatingActionButton> addCharacter;
   private final DiceView initiative;
+  private final TextWrapper<TextView> conditions;
 
   private Optional<Campaign> campaign = Optional.absent();
 
@@ -83,15 +87,14 @@ public class PartyView extends LinearLayout {
     startBattle = Wrapper.wrap(view, R.id.start_battle);
     startBattle.onClick(this::setupBattle);
 
-    battleViewDM = new BattleViewDM(context, this);
-    battleViewPlayer = new BattleViewPlayer(context, this);
-    view.addView(battleViewDM, 0);
-    view.addView(battleViewPlayer, 0);
+    battleView = new BattleView(context, this);
+    view.addView(battleView, 0);
 
     addCharacter = Wrapper.wrap(view, R.id.add_character);
     addCharacter.onClick(this::createCharacter);
     initiative = (DiceView) view.findViewById(R.id.initiative);
     initiative.setDice(20);
+    conditions = TextWrapper.wrap(view, R.id.conditions);
 
     addView(view);
   }
@@ -106,8 +109,7 @@ public class PartyView extends LinearLayout {
     this.campaign = campaign;
     this.characters.clear();
     party.removeAllViews();
-    battleViewDM.setCampaign(campaign);
-    battleViewPlayer.setCampaign(campaign);
+    battleView.setCampaign(campaign);
 
     refresh();
   }
@@ -131,7 +133,20 @@ public class PartyView extends LinearLayout {
 
   private static List<Character> party(Campaign campaign) {
     List<Character> characters = campaign.getCharacters();
-    if (!campaign.isLocal()) {
+
+    if (Misc.onEmulator()) {
+      // Don't add characters that are already there.
+      Set<String> ids = new HashSet<>();
+      for (Character character : characters) {
+        ids.add(character.getCharacterId());
+      }
+
+      for (Character character : Characters.remote().getCharacters(campaign.getCampaignId())) {
+        if (!ids.contains(character.getCharacterId())) {
+          characters.add(character);
+        }
+      }
+    } else {
       characters.addAll(Characters.remote().getCharacters(campaign.getCampaignId()));
     }
 
@@ -156,16 +171,9 @@ public class PartyView extends LinearLayout {
   }
 
   public void refresh() {
-    battleViewDM.refresh();
-    battleViewPlayer.refresh();
+    battleView.refresh();
 
-
-    if (!campaign.isPresent() || !campaign.get().getBattle().isEnded()
-        || (campaign.get().isLocal() && !campaign.get().isDefault())) {
-      addCharacter.gone();
-    } else {
-      addCharacter.visible();
-    }
+    addCharacter.visible(campaign.isPresent() && campaign.get().getBattle().isEnded());
 
     if (campaign.isPresent()) {
       characters = party(campaign.get());
@@ -207,6 +215,7 @@ public class PartyView extends LinearLayout {
     scroll.backgroundColor(R.color.characterDark);
     initiative.setVisibility(GONE);
     startBattle.visible(campaign.get().isLocal() && !campaign.get().isDefault());
+    conditions.gone();
   }
 
   private static Optional<Character> needsInitiative(List<Character> characters) {
@@ -301,6 +310,24 @@ public class PartyView extends LinearLayout {
         initiative.setVisibility(GONE);
       }
     }
+
+    conditions.text(conditions(battle.getCurrentCombatant().getId()));
+  }
+
+  private String conditions(String currentId) {
+    List<String> conditions = new ArrayList<>();
+
+    for (Character character : characters) {
+      for (Character.TimedCondition condition : character.conditionsFor(currentId)) {
+        int remainingRounds = condition.getEndRound() - campaign.get().getBattle().getTurn();
+        if (remainingRounds > 0) {
+          conditions.add(condition.getText() + " (" + character.getName() + "), " +
+              remainingRounds + " rounds");
+        }
+      }
+    }
+
+    return Joiner.on("\n").join(conditions);
   }
 
   private boolean battleReady(List<Character> characters) {

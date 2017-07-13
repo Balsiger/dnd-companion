@@ -100,7 +100,7 @@ public class DateDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     year = EditTextWrapper.wrap(view, R.id.year);
-    year.text(String.valueOf(yearShown)).onClick(this::editYear);
+    year.text(String.valueOf(yearShown)).onClick(this::editYear).onChange(this::editYear);
     Wrapper.wrap(view, R.id.year_minus).onClick(this::yearMinus);
     Wrapper.wrap(view, R.id.year_plus).onClick(this::yearPlus);
     month = TextWrapper.wrap(view, R.id.month);
@@ -117,13 +117,13 @@ public class DateDialog extends Dialog {
     });
 
     if (campaign.isPresent()) {
-      hours = EditTextWrapper.wrap(view, R.id.hours);
-      hours.text("").onClick(this::editTime);
+      hours = EditTextWrapper.wrap(view, R.id.hours)
+          .text("").onClick(this::editTime).onChange(this::editTime);
       hours.get().setFilters(new InputFilter[] {
           new MaxFilter(campaign.get().getCalendar().getHoursPerDay()) });
       hours.get().setSelectAllOnFocus(true);
-      minutes = EditTextWrapper.wrap(view, R.id.minutes);
-      minutes.text("").onClick(this::editTime);
+      minutes = EditTextWrapper.wrap(view, R.id.minutes)
+          .text("").onClick(this::editTime).onChange(this::editTime);
       minutes.get().setFilters(new InputFilter[]
           {new MaxFilter(campaign.get().getCalendar().getMinutesPerHour())});
       Wrapper.wrap(view, R.id.plus_1).onClick(() -> addMinutes(1));

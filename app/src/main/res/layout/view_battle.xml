@@ -110,5 +110,24 @@
       android:layout_margin="5dp"
       android:background="#ccc"/>
 
+  <ImageButton
+      android:id="@+id/timed"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/battle"
+      android:paddingBottom="5dp"
+      android:paddingEnd="10dp"
+      android:paddingStart="10dp"
+      android:paddingTop="5dp"
+      app:srcCompat="@drawable/ic_hourglass_full_white_24dp"/>
+
+  <View
+      android:id="@+id/delimiter_timed"
+      android:layout_width="1dp"
+      android:layout_height="match_parent"
+      android:layout_centerVertical="true"
+      android:layout_margin="5dp"
+      android:background="#ccc"/>
+
 </LinearLayout>
 

@@ -41,6 +41,7 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -52,6 +53,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public static final String TABLE_REMOTE = TYPE + "_remote";
   private static final String TAG = "Characters";
   public static final int NO_INITIATIVE = 200;
+  private static final int MAX_HISTORY = 20;
 
   private String campaignId = "";
   private String playerName = "";
@@ -66,12 +68,24 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   private List<Level> mLevels = new ArrayList<>();
   private int initiative = NO_INITIATIVE;
   private int battleNumber = 0;
+  private List<Character.TimedCondition> conditions = new ArrayList<>();
+  private List<Character.TimedCondition> conditionsHistory = new ArrayList<>();
 
   public Character(long id, String name, String campaignId, boolean local) {
     super(id, Settings.get().getAppId() + "-" + id, name, local,
         local ? DataBaseContentProvider.CHARACTERS_LOCAL
             : DataBaseContentProvider.CHARACTERS_REMOTE);
     this.campaignId = campaignId;
+  }
+
+  public Optional<TimedCondition> getHistoryCondition(String text) {
+    for (TimedCondition condition : conditionsHistory) {
+      if (text.equalsIgnoreCase(condition.text)) {
+        return Optional.of(condition);
+      }
+    }
+
+    return Optional.absent();
   }
 
   public Optional<Character> refresh() {
@@ -201,6 +215,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public void setBattle(int initiative, int number) {
     this.initiative = initiative;
     this.battleNumber = number;
+    this.conditions.clear();
     store();
   }
 
@@ -214,6 +229,17 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return Optional.absent();
+  }
+
+  public Collection<? extends TimedCondition> conditionsFor(String characterId) {
+    List<TimedCondition> matchingConditions = new ArrayList<>();
+    for (TimedCondition condition : conditions) {
+      if (condition.characterIds.contains(characterId)) {
+        matchingConditions.add(condition);
+      }
+    }
+
+    return matchingConditions;
   }
 
   @Override
@@ -235,7 +261,9 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
         .setBattle(Data.CharacterProto.Battle.newBuilder()
             .setInitiative(initiative)
             .setNumber(battleNumber)
-            .build());
+            .addAllTimedCondition(convertConditions(conditions))
+            .build())
+        .addAllTimedConditionHistory(convertConditions(conditionsHistory));
 
     if (mRace.isPresent()) {
       proto.setRace(mRace.get().getName());
@@ -246,6 +274,17 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return proto.build();
+  }
+
+  private List<Data.CharacterProto.TimedCondition>
+  convertConditions(List<Character.TimedCondition> conditions) {
+    List<Data.CharacterProto.TimedCondition> protos = new ArrayList<>();
+
+    for (Character.TimedCondition condition : conditions) {
+      protos.add(condition.toProto());
+    }
+
+    return protos;
   }
 
   public static Character fromProto(long id, boolean local, Data.CharacterProto proto) {
@@ -264,6 +303,8 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     character.charisma = proto.getAbilities().getCharisma();
     character.initiative = proto.hasBattle() ? proto.getBattle().getInitiative() : NO_INITIATIVE;
     character.battleNumber = proto.getBattle().getNumber();
+    character.conditions = convert(proto.getBattle().getTimedConditionList());
+    character.conditionsHistory = convert(proto.getTimedConditionHistoryList());
 
     for (Data.CharacterProto.Level level : proto.getLevelList()) {
       character.mLevels.add(Character.fromProto(level));
@@ -274,6 +315,16 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return character;
+  }
+
+  private static List<TimedCondition> convert(List<Data.CharacterProto.TimedCondition> protos) {
+    List<TimedCondition> conditions = new ArrayList<>();
+
+    for (Data.CharacterProto.TimedCondition proto : protos) {
+      conditions.add(TimedCondition.fromProto(proto));
+    }
+
+    return conditions;
   }
 
   public Gender getGender() {
@@ -321,6 +372,62 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return names;
+  }
+
+  public void addTimedCondition(Character.TimedCondition condition) {
+    conditions.add(condition);
+    conditionsHistory.add(condition);
+    conditionsHistory =
+        conditionsHistory.subList(0, Math.min(conditionsHistory.size(), MAX_HISTORY));
+    store();
+  }
+
+  public static class TimedCondition extends DynamicEntry<Data.CharacterProto.TimedCondition> {
+
+    private final int rounds;
+    private final int endRound;
+    private final ImmutableList<String> characterIds;
+    private final String text;
+
+    public TimedCondition(int rounds, int endRound, List<String> characterIds, String text) {
+      super(text);
+
+      this.rounds = rounds;
+      this.endRound = endRound;
+      this.characterIds = ImmutableList.copyOf(characterIds);
+      this.text = text;
+    }
+
+    public int getRounds() {
+      return rounds;
+    }
+
+    public ImmutableList<String> getCharacterIds() {
+      return characterIds;
+    }
+
+    public String getText() {
+      return text;
+    }
+
+    public int getEndRound() {
+      return endRound;
+    }
+
+    @Override
+    public Data.CharacterProto.TimedCondition toProto() {
+      return Data.CharacterProto.TimedCondition.newBuilder()
+          .setRounds(rounds)
+          .setEndRound(endRound)
+          .addAllCharacterId(characterIds)
+          .setText(text)
+          .build();
+    }
+
+    public static TimedCondition fromProto(Data.CharacterProto.TimedCondition proto) {
+      return new TimedCondition(proto.getRounds(), proto.getEndRound(), proto.getCharacterIdList(),
+          proto.getText());
+    }
   }
 
   public static class Level extends DynamicEntry<Data.CharacterProto.Level> {
@@ -410,7 +517,13 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public List<String> conditionHistoryNames() {
-    return ImmutableList.of("first", "second", "third");
+    List<String> names = new ArrayList<>();
+
+    for (TimedCondition condition : conditionsHistory) {
+      names.add(condition.text);
+    }
+
+    return names;
   }
 
   @Override

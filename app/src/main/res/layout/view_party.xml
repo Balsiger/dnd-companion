@@ -81,12 +81,12 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_alignBaseline="@+id/scroll"
-      android:layout_alignEnd="@+id/scroll"
       android:layout_alignParentBottom="false"
       android:layout_alignParentEnd="false"
       android:layout_below="@+id/scroll"
       android:layout_marginEnd="@dimen/fab_margin"
       android:layout_marginTop="@dimen/fab_margin_negative"
+      android:layout_toLeftOf="@+id/add_character"
       app:backgroundTint="@color/battle"
       app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
 
@@ -103,6 +103,17 @@
       android:layout_marginTop="@dimen/fab_margin_negative"
       app:backgroundTint="@color/character"
       app:srcCompat="@drawable/ic_add_white_24dp"/>
+
+  <TextView
+      android:id="@+id/conditions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/scroll"
+      android:layout_marginTop="30dp"
+      android:orientation="vertical"
+      android:padding="10dp"
+      android:theme="@style/LargeText">
+  </TextView>
 
 
 </RelativeLayout>
