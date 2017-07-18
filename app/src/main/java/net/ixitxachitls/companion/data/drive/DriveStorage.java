@@ -276,13 +276,13 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                       Data.CampaignProto proto = Data.CampaignProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      Campaign.fromProto(Campaigns.local().getIdFor(proto.getId()), true, proto)
+                      Campaign.fromProto(Campaigns.getLocalIdFor(proto.getId()), true, proto)
                           .store();
                     } else if (meta.getTitle().endsWith(".character")) {
                       Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      Character.fromProto(Characters.local().getIdFor(proto.getId()), true, proto)
+                      Character.fromProto(Characters.getLocalIdFor(proto.getId()), true, proto)
                           .store();
                     } else if (meta.getTitle().endsWith(".character.jpg")) {
                       Images.local().save(Character.TYPE, meta.getDescription(),

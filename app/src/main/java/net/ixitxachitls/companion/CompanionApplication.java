@@ -84,8 +84,8 @@ public class CompanionApplication extends MultiDexApplication
 
     registerActivityLifecycleCallbacks(this);
 
-    Campaigns.local().publish();
-    Characters.local().publish();
+    Campaigns.publish();
+    Characters.publish();
   }
 
   private class MessageChecker implements Runnable {
@@ -131,14 +131,14 @@ public class CompanionApplication extends MultiDexApplication
       currentActivity.addServerConnection(message.getName());
 
       // Republish all client content for the server's campaigns.
-      for (Campaign campaign : Campaigns.remote().getCampaigns(message.getId())) {
-        Characters.local().publish(campaign.getCampaignId());
+      for (Campaign campaign : Campaigns.getCampaigns(message.getId())) {
+        Characters.publish(campaign.getCampaignId());
       }
     }
 
     if (message.getProto().hasCampaign()) {
       Campaign campaign = Campaign.fromProto(
-          Campaigns.remote().getIdFor(message.getProto().getCampaign().getId()),
+          Campaigns.getRemoteIdFor(message.getProto().getCampaign().getId()),
           false, message.getProto().getCampaign());
       // Storing will also add the campaign if it's changed.
       campaign.store();
@@ -152,7 +152,7 @@ public class CompanionApplication extends MultiDexApplication
     if (message.getProto().hasCharacter()) {
       if (!StoredEntries.isLocalId(message.getProto().getCharacter().getId())) {
         Character character = Character.fromProto(
-            Characters.remote().getIdFor(message.getProto().getCharacter().getId()),
+            Characters.getRemoteIdFor(message.getProto().getCharacter().getId()),
             false, message.getProto().getCharacter());
         // Storing will also add the character if it's changed.
         character.store();
@@ -174,7 +174,7 @@ public class CompanionApplication extends MultiDexApplication
   private void handleMessagesFromClient(CompanionMessage message) {
     if (message.getProto().hasWelcome()) {
       status("received welcome from client " + message.getName());
-      CompanionPublisher.get().republish(Campaigns.local().getCampaigns(),
+      CompanionPublisher.get().republish(Campaigns.getLocalCampaigns(),
           message.getId());
       currentActivity.addClientConnection(message.getName());
     }
@@ -183,7 +183,7 @@ public class CompanionApplication extends MultiDexApplication
       Log.d(TAG, "received character " + message.getProto().getCharacter().getName()
           + " from " + message.getName());
       Character character = Character.fromProto(
-          Characters.remote().getIdFor(message.getProto().getCharacter().getId()),
+          Characters.getRemoteIdFor(message.getProto().getCharacter().getId()),
           false, message.getProto().getCharacter());
       // Storing will also add the character if it's changed.
       character.store();

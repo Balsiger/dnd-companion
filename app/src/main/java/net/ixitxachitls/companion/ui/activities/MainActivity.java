@@ -48,6 +48,7 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.views.StatusView;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -62,6 +63,7 @@ public class MainActivity extends CompanionActivity {
   private DriveStorage driveStorage;
   // UI elements.
   private StatusView status;
+  private Menu menu;
 
   @Override
   protected void onCreate(@Nullable Bundle state) {
@@ -93,8 +95,14 @@ public class MainActivity extends CompanionActivity {
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
+    this.menu = menu;
+
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.menu_main, menu);
+
+    menu.findItem(R.id.action_local).setVisible(Misc.onEmulator() && !Misc.emulatingLocal());
+    menu.findItem(R.id.action_remote).setVisible(Misc.onEmulator() && Misc.emulatingLocal());
+
     return true;
   }
 
@@ -109,7 +117,7 @@ public class MainActivity extends CompanionActivity {
     if (id == R.id.action_export) {
       List<DriveStorage.File> files = new ArrayList<>();
       // Export local campaigns.
-      for (Campaign campaign : Campaigns.local().getCampaigns()) {
+      for (Campaign campaign : Campaigns.getLocalCampaigns()) {
         files.add(new DriveStorage.TextFile(campaign.getName() + ".campaign.txt",
             campaign.getCampaignId(), "text/plain", "# This file will not be re-imported."
             + campaign.toProto().toString()));
@@ -117,7 +125,7 @@ public class MainActivity extends CompanionActivity {
             campaign.getCampaignId(), "application/x-protobuf", campaign.toProto().toByteArray()));
       }
       // Export local characters.
-      for (Character character : Characters.local().getCharacters()) {
+      for (Character character : Characters.getLocalCharacters()) {
         files.add(new DriveStorage.TextFile(character.getName() + ".character.txt",
             character.getCharacterId(), "text/plain", "# This file will not be re-imported."
             + character.toProto().toString()));
@@ -145,6 +153,18 @@ public class MainActivity extends CompanionActivity {
           .yes(() -> DataBaseContentProvider.reset(getContentResolver()))
           .show();
       return true;
+    }
+
+    if (id == R.id.action_local) {
+      Misc.emulateLocal();
+      menu.findItem(R.id.action_local).setVisible(Misc.onEmulator() && !Misc.emulatingLocal());
+      menu.findItem(R.id.action_remote).setVisible(Misc.onEmulator() && Misc.emulatingLocal());
+    }
+
+    if (id == R.id.action_remote) {
+      Misc.emulateRemote();
+      menu.findItem(R.id.action_local).setVisible(Misc.onEmulator() && !Misc.emulatingLocal());
+      menu.findItem(R.id.action_remote).setVisible(Misc.onEmulator() && Misc.emulatingLocal());
     }
 
     return super.onOptionsItemSelected(item);

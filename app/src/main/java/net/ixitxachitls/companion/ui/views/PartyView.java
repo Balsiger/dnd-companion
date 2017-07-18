@@ -42,17 +42,14 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
+import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
-import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * View representing a whole party.
@@ -101,7 +98,7 @@ public class PartyView extends LinearLayout {
 
   private void createCharacter() {
     if (campaign.isPresent()) {
-      EditCharacterDialog.newInstance("", campaign.get().getCampaignId()).display();
+      CharacterDialog.newInstance("", campaign.get().getCampaignId()).display();
     }
   }
 
@@ -132,25 +129,7 @@ public class PartyView extends LinearLayout {
   }
 
   private static List<Character> party(Campaign campaign) {
-    List<Character> characters = campaign.getCharacters();
-
-    if (Misc.onEmulator()) {
-      // Don't add characters that are already there.
-      Set<String> ids = new HashSet<>();
-      for (Character character : characters) {
-        ids.add(character.getCharacterId());
-      }
-
-      for (Character character : Characters.remote().getCharacters(campaign.getCampaignId())) {
-        if (!ids.contains(character.getCharacterId())) {
-          characters.add(character);
-        }
-      }
-    } else {
-      characters.addAll(Characters.remote().getCharacters(campaign.getCampaignId()));
-    }
-
-    return characters;
+    return campaign.getCharacters();
   }
 
   private static Map<String, ChipView> removeChips(ViewGroup view) {
@@ -203,11 +182,11 @@ public class PartyView extends LinearLayout {
             CompanionFragments.get().showCharacter(character, Optional.of(finalChip));
           }
         });
+        party.addView(chip);
       }
 
       chip.setBackground(R.color.characterDark);
       chip.setSubtitle("");
-      party.addView(chip);
     }
 
     title.text("Party");
@@ -251,8 +230,7 @@ public class PartyView extends LinearLayout {
                 R.color.monster, R.color.monsterDark);
           }
         } else {
-          Optional<Character> character =
-              Characters.get(!campaign.get().isLocal()).get(combatant.getId());
+          Optional<Character> character = Characters.getCharacter(combatant.getId());
           if (character.isPresent()) {
             chip = new CharacterChipView(getContext(), character.get());
             final ChipView finalChip = chip;
@@ -278,6 +256,7 @@ public class PartyView extends LinearLayout {
         } else {
           chip.unselect();
         }
+
         party.addView(chip);
       }
     }
@@ -288,27 +267,22 @@ public class PartyView extends LinearLayout {
         .backgroundColor(R.color.battleLight);
     scroll.backgroundColor(R.color.battleDark);
 
-    if (campaign.get().isLocal()) {
-      startBattle.gone();
-      initiative.setVisibility(GONE);
-    } else {
-      startBattle.gone();
-      Optional<Character> initCharacter = needsInitiative(characters);
+    startBattle.gone();
+    Optional<Character> initCharacter = needsInitiative(characters);
 
-      if (initCharacter.isPresent()) {
-        initiative.setVisibility(VISIBLE);
-        initiative.setLabel("Initiative for " + initCharacter.get().getName());
-        initiative.setModifier(initCharacter.get().initiativeModifier());
-        initiative.setSelectAction(i -> {
-          initCharacter.get().setBattle(i, battle.getNumber());
-          TransitionManager.beginDelayedTransition(view);
-          battle.refreshCombatant(initCharacter.get().getCharacterId(),
-              initCharacter.get().getName(), i);
-          refreshWithTransition();
-        });
-      } else {
-        initiative.setVisibility(GONE);
-      }
+    if (initCharacter.isPresent()) {
+      initiative.setVisibility(VISIBLE);
+      initiative.setLabel("Initiative for " + initCharacter.get().getName());
+      initiative.setModifier(initCharacter.get().initiativeModifier());
+      initiative.setSelectAction(i -> {
+        initCharacter.get().setBattle(i, battle.getNumber());
+        TransitionManager.beginDelayedTransition(view);
+        battle.refreshCombatant(initCharacter.get().getCharacterId(),
+            initCharacter.get().getName(), i);
+        refreshWithTransition();
+      });
+    } else {
+      initiative.setVisibility(GONE);
     }
 
     conditions.text(conditions(battle.getCurrentCombatant().getId()));

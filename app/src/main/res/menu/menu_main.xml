@@ -22,4 +22,14 @@
         android:orderInCategory="100"
         android:title="@string/action_reset"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_local"
+        android:orderInCategory="100"
+        android:title="@string/action_local"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_remote"
+        android:orderInCategory="100"
+        android:title="@string/action_remote"
+        app:showAsAction="never" />
 </menu>

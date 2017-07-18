@@ -89,7 +89,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public Optional<Character> refresh() {
-    return Characters.get(isLocal()).get(entryId);
+    return Characters.getCharacter(entryId);
   }
 
   public String getCampaignId() {
@@ -197,7 +197,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public boolean hasInitiative() {
-    Optional<Campaign> campaign = Campaigns.get(!isLocal()).getCampaign(getCampaignId());
+    Optional<Campaign> campaign = Campaigns.getCampaign(getCampaignId());
     return initiative != NO_INITIATIVE
         && campaign.isPresent()
         && battleNumber == campaign.get().getBattle().getNumber();
@@ -502,7 +502,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
 
     boolean changed = super.store();
     if (changed) {
-      Characters.get(isLocal()).add(this);
+      Characters.addCharacter(isLocal(), this);
       if (isLocal()) {
         CompanionSubscriber.get().publish(this);
       }

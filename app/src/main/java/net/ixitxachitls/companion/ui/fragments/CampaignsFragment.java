@@ -37,6 +37,7 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,14 +77,20 @@ public class CampaignsFragment extends CompanionFragment {
 
     campaigns.clear();
     campaigns.add(Campaigns.defaultCampaign);
-    campaigns.addAll(Campaigns.local().getCampaigns());
-    campaigns.addAll(Campaigns.remote().getCampaigns());
+    campaigns.addAll(Campaigns.getCampaigns());
 
     if (campaignsView != null) {
       campaignsView.get().removeAllViews();
       for (Campaign campaign : campaigns) {
         CampaignTitleView title = new CampaignTitleView(getContext(), campaign);
-        title.setAction(() -> CompanionFragments.get().showCampaign(campaign, Optional.of(title)));
+        title.setAction(() -> {
+          if (Misc.onEmulator() && !campaign.isLocal()) {
+            Misc.emulateRemote();
+          } else {
+            Misc.emulateLocal();
+          }
+          CompanionFragments.get().showCampaign(campaign, Optional.of(title));
+        });
         campaignsView.get().addView(title);
       }
     }

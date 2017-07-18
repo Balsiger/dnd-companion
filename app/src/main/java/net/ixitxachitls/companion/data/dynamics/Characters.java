@@ -35,7 +35,9 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Information and storage for all characters.
@@ -52,17 +54,96 @@ public class Characters extends StoredEntries<Character> {
         local);
   }
 
-  public static Characters local() {
+  public static Optional<Character> getCharacter(String characterId) {
+    return local.get(characterId).or(remote.get(characterId));
+  }
+
+  public static Optional<Character> getCharacter(String characterId, String campaignId) {
+    if (characterId.isEmpty()) {
+      return Optional.of(Character.createNew(campaignId));
+    }
+
+    return getCharacter(characterId);
+  }
+
+  public static List<Character> getLocalCharacters() {
+    List<Character> characters = new ArrayList<>(local.getAll());
+    Collections.sort(characters, new CharacterComparator());
+    return characters;
+  }
+
+  public static List<Character> getAllCharacters(String campaignId) {
+    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId);
+    if (campaign.isPresent() && campaign.get().isDefault()) {
+      return local.getOrphanedCharacters();
+    }
+
+    List<Character> characters = local.getCharacters(campaignId);
+    Set<String> ids = new HashSet<>();
+    for (Character character : characters) {
+      ids.add(character.getCharacterId());
+    }
+    for (Character character : remote.getCharacters(campaignId)) {
+      if (!ids.contains(character.getCharacterId())) {
+        characters.add(character);
+      }
+    }
+
+    Collections.sort(characters, new CharacterComparator());
+    return characters;
+  }
+
+  public static List<Character> getLocalCharacters(String campaignId) {
+    return local.getCharacters(campaignId);
+  }
+
+  public static boolean hasLocalCharacters(String campaignId) {
+    return !local.getCharacters(campaignId).isEmpty();
+  }
+
+  public static void publish() {
+    Log.d(TAG, "publishing all local characters");
+    for (Character character : Characters.getLocalCharacters()) {
+      character.publish();
+      Images.get(character.isLocal()).publish(character.getCampaignId(), Character.TYPE, character.getCharacterId());
+    }
+  }
+
+  public static void addCharacter(boolean local, Character character) {
+    Characters.get(local).add(character);
+  }
+
+  public static void removeCharacter(Character character) {
+    local.remove(character);
+  }
+
+  public static void publish(String campaignId) {
+    Log.d(TAG, "publishing characters of campaign " + campaignId);
+    for (Character character : Characters.getLocalCharacters(campaignId)) {
+      character.publish();
+      Images.local().publish(campaignId, Character.TYPE, character.getCharacterId());
+    }
+  }
+
+  public static long getLocalIdFor(String campaignId) {
+    return local().getIdFor(campaignId);
+  }
+
+  public static long getRemoteIdFor(String campaignId) {
+    return remote().getIdFor(campaignId);
+  }
+
+  private static Characters local() {
     Preconditions.checkNotNull(local, "local characters have to be loaded!");
     return local;
   }
 
-  public static Characters remote() {
+  private static Characters remote() {
     Preconditions.checkNotNull(local, "remote characters have to be loaded!");
     return remote;
   }
 
-  public static Characters get(boolean local) {
+  private static Characters get(boolean local) {
     return local ? Characters.local : Characters.remote;
   }
 
@@ -91,22 +172,8 @@ public class Characters extends StoredEntries<Character> {
     remote = new Characters(context, false);
   }
 
-  public Optional<Character> getCharacter(String characterId, String campaignId) {
-    if (characterId.isEmpty()) {
-      return Optional.of(Character.createNew(campaignId));
-    }
-
-    return get(characterId);
-  }
-
-  public List<Character> getCharacters() {
-    List<Character> characters = new ArrayList<>(getAll());
-    Collections.sort(characters, new CharacterComparator());
-    return characters;
-  }
-
-  public List<Character> getCharacters(String campaignId) {
-    Optional<Campaign> campaign = Campaigns.get(!isLocal()).getCampaign(campaignId);
+  private List<Character> getCharacters(String campaignId) {
+    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId);
     if (campaign.isPresent() && campaign.get().isDefault()) {
       return getOrphanedCharacters();
     }
@@ -121,7 +188,7 @@ public class Characters extends StoredEntries<Character> {
     return characters;
   }
 
-  public List<Character> getOrphanedCharacters() {
+  private List<Character> getOrphanedCharacters() {
     List<Character> characters = new ArrayList<>();
     for (Character character : getAll()) {
       if (!Campaigns.get(isLocal()).has(character.getCampaignId())) {
@@ -131,22 +198,6 @@ public class Characters extends StoredEntries<Character> {
     Collections.sort(characters, new CharacterComparator());
 
     return characters;
-  }
-
-  public void publish() {
-    Log.d(TAG, "publishing all characters");
-    for (Character character : getCharacters()) {
-      character.publish();
-      Images.get(character.isLocal()).publish(character.getCampaignId(), Character.TYPE, character.getCharacterId());
-    }
-  }
-
-  public void publish(String campaignId) {
-    Log.d(TAG, "publishing characters of campaign " + campaignId);
-    for (Character character : getCharacters(campaignId)) {
-      character.publish();
-      Images.local().publish(campaignId, Character.TYPE, character.getCharacterId());
-    }
   }
 
   protected Optional<Character> parseEntry(long id, byte[] blob) {
@@ -162,12 +213,12 @@ public class Characters extends StoredEntries<Character> {
   }
 
   @Override
-  public void remove(Character character){
+  public void remove(Character character) {
     super.remove(character);
     Images.get(isLocal()).remove(Character.TYPE, character.getCharacterId());
   }
 
-  private class CharacterComparator implements Comparator<Character> {
+  private static class CharacterComparator implements Comparator<Character> {
     @Override
     public int compare(Character first, Character second) {
       if (first.getId() == second.getId())

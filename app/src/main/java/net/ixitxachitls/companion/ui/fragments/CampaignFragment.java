@@ -130,7 +130,7 @@ public class CampaignFragment extends CompanionFragment {
       return;
     }
 
-    campaign = Campaigns.get(campaign.get().isLocal()).getCampaign(campaign.get().getCampaignId());
+    campaign = Campaigns.getCampaign(campaign.get().getCampaignId());
     if (!campaign.isPresent()) {
       return;
     }
@@ -157,6 +157,6 @@ public class CampaignFragment extends CompanionFragment {
       return !campaign.get().isPublished();
     }
 
-    return Characters.local().getCharacters(campaign.get().getCampaignId()).isEmpty();
+    return !Characters.hasLocalCharacters(campaign.get().getCampaignId());
   }
 }

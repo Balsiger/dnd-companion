@@ -45,7 +45,7 @@ import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.dialogs.EditCharacterDialog;
+import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
@@ -129,7 +129,7 @@ public class CharacterFragment extends CompanionFragment {
 
   private void deleteCharacterOk() {
     if (character.isPresent()) {
-      Characters.get(character.get().isLocal()).remove(character.get());
+      Characters.removeCharacter(character.get());
       Toast.makeText(getActivity(), getString(R.string.character_deleted),
           Toast.LENGTH_SHORT).show();
       show(Type.campaign);
@@ -138,7 +138,7 @@ public class CharacterFragment extends CompanionFragment {
 
   private void move() {
     ListSelectFragment fragment = ListSelectFragment.newInstance(
-        R.string.character_select_campaign, "", Campaigns.remote().getCampaignNames(),
+        R.string.character_select_campaign, "", Campaigns.getCampaignNames(),
         R.color.campaign);
     fragment.setSelectListener((String value, int position) -> move(position));
     fragment.display();
@@ -150,7 +150,7 @@ public class CharacterFragment extends CompanionFragment {
       if (position == 0) {
         campaign = Campaigns.defaultCampaign;
       } else {
-        campaign = Campaigns.remote().getCampaigns().get(position - 1);
+        campaign = Campaigns.getCampaigns().get(position - 1);
       }
       character.get().setCampaignId(campaign.getCampaignId());
 
@@ -160,7 +160,7 @@ public class CharacterFragment extends CompanionFragment {
 
   public void showCharacter(Character character) {
     this.character = Optional.of(character);
-    this.campaign = Campaigns.get(!character.isLocal()).getCampaign(character.getCampaignId());
+    this.campaign = Campaigns.getCampaign(character.getCampaignId());
 
     refresh();
   }
@@ -170,7 +170,7 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    EditCharacterDialog.newInstance(character.get().getCharacterId(),
+    CharacterDialog.newInstance(character.get().getCharacterId(),
         character.get().getCampaignId()).display();
   }
 
@@ -208,12 +208,12 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    EditAbilitiesDialog.newInstance(character.get().getCharacterId(),
+    AbilitiesDialog.newInstance(character.get().getCharacterId(),
         character.get().getCampaignId()).display();
   }
 
   public boolean canEdit() {
-    return campaign.isPresent() && (campaign.get().isDefault() || !campaign.get().isLocal());
+    return campaign.isPresent() && character.isPresent() && character.get().isLocal();
   }
 
   @Override
@@ -224,13 +224,13 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    character = Characters.get(character.get().isLocal())
-        .getCharacter(character.get().getCharacterId(), campaign.get().getCampaignId());
+    character = Characters.getCharacter(character.get().getCharacterId(),
+        campaign.get().getCampaignId());
     if (!character.isPresent()) {
       return;
     }
 
-    campaign = Campaigns.get(campaign.get().isLocal()).getCampaign(campaign.get().getCampaignId());
+    campaign = Campaigns.getCampaign(campaign.get().getCampaignId());
 
     Optional<Bitmap> bitmap =
         Images.get(character.get().isLocal()).load(Character.TYPE, character.get().getCharacterId());

@@ -90,7 +90,7 @@ public class DateDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.local().getCampaign(getArguments().getString(ARG_ID));
+    campaign = Campaigns.getLocalCampaign(getArguments().getString(ARG_ID));
     if (campaign.isPresent()) {
       monthShown = campaign.get().getDate().getMonth();
       yearShown = campaign.get().getDate().getYear();

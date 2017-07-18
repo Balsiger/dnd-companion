@@ -83,7 +83,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public List<Character> getCharacters() {
-    return Characters.get(!isLocal() || isDefault()).getCharacters(getCampaignId());
+    return Characters.getAllCharacters(getCampaignId());
   }
 
   public CampaignDate getDate() {

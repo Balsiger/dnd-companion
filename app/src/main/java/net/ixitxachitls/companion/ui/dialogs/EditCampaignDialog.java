@@ -85,7 +85,7 @@ public class EditCampaignDialog extends Dialog {
       if (id == null || id.isEmpty()) {
         campaign = Optional.of(Campaign.createNew());
       } else {
-        campaign = Campaigns.local().getCampaign(id);
+        campaign = Campaigns.getLocalCampaign(id);
       }
     } else {
       campaign = Optional.of(Campaign.createNew());

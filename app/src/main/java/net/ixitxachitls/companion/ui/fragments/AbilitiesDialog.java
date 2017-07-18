@@ -44,7 +44,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 /**
  * Dialog fragment to edit the abilities of a character or monster.
  */
-public class EditAbilitiesDialog extends Dialog {
+public class AbilitiesDialog extends Dialog {
 
   private static final String ARG_ID = "id";
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
@@ -61,10 +61,10 @@ public class EditAbilitiesDialog extends Dialog {
   private Optional<Character> character = Optional.absent();
   private Wrapper<Button> save;
 
-  public EditAbilitiesDialog() {}
+  public AbilitiesDialog() {}
 
-  public static EditAbilitiesDialog newInstance(String characterId, String campaignId) {
-    EditAbilitiesDialog fragment = new EditAbilitiesDialog();
+  public static AbilitiesDialog newInstance(String characterId, String campaignId) {
+    AbilitiesDialog fragment = new AbilitiesDialog();
     fragment.setArguments(arguments(R.layout.dialog_edit_abilities,
         R.string.edit_abilities, R.color.character, characterId, campaignId));
     return fragment;
@@ -83,9 +83,9 @@ public class EditAbilitiesDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.remote().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
+    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
     if (campaign.isPresent()) {
-      character = Characters.local().getCharacter(getArguments().getString(ARG_ID),
+      character = Characters.getCharacter(getArguments().getString(ARG_ID),
           campaign.get().getCampaignId());
     } else {
       character = Optional.absent();

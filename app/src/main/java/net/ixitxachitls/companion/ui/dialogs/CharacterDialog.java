@@ -48,7 +48,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 /**
  * Fragment for editing a character (main values).
  */
-public class EditCharacterDialog extends Dialog {
+public class CharacterDialog extends Dialog {
 
   private static final String ARG_ID = "id";
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
@@ -63,10 +63,10 @@ public class EditCharacterDialog extends Dialog {
   private TextWrapper<TextView> race;
   private Wrapper<Button> save;
 
-  public EditCharacterDialog() {}
+  public CharacterDialog() {}
 
-  public static EditCharacterDialog newInstance(String characterId, String campaignId) {
-    EditCharacterDialog fragment = new EditCharacterDialog();
+  public static CharacterDialog newInstance(String characterId, String campaignId) {
+    CharacterDialog fragment = new CharacterDialog();
     fragment.setArguments(arguments(R.layout.fragment_edit_character,
         characterId.isEmpty() ? R.string.edit_character_add : R.string.edit_character_edit,
         R.color.character, characterId, campaignId));
@@ -86,9 +86,9 @@ public class EditCharacterDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.remote().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
+    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
     if (campaign.isPresent()) {
-      character = Characters.local().getCharacter(getArguments().getString(ARG_ID),
+      character = Characters.getCharacter(getArguments().getString(ARG_ID),
           campaign.get().getCampaignId());
     } else {
       character = Optional.absent();

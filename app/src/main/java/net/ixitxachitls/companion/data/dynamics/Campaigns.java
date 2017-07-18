@@ -31,6 +31,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -55,23 +56,102 @@ public class Campaigns extends StoredEntries<Campaign> {
         local);
   }
 
-  public static Campaigns local() {
-    Preconditions.checkNotNull(local, "local campaigns have to be loaded!");
-    return local;
-  }
-
-  public static Campaigns remote() {
-    Preconditions.checkNotNull(remote, "remote campaigns have to be loaded!");
-    return remote;
-  }
-
   public static Campaigns get(boolean local) {
     return local ? Campaigns.local : Campaigns.remote;
+  }
+
+  public static Optional<Campaign> getCampaign(String campaignId) {
+    if (Misc.onEmulator() && !Misc.emulatingLocal()) {
+      return Campaigns.remote.get(campaignId);
+    }
+
+    Optional<Campaign> campaign = Campaigns.local().get(campaignId);
+    if (campaign.isPresent()) {
+      return campaign;
+    }
+
+    return Campaigns.remote().get(campaignId);
+  }
+
+  public static Optional<Campaign> getLocalCampaign(String campaignId) {
+    return Campaigns.local().get(campaignId);
+  }
+
+  public static boolean hasAnyPublished() {
+    for (Campaign campaign : local.entriesById.values()) {
+      if (campaign.isPublished()) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  public static List<Campaign> getLocalCampaigns() {
+    List<Campaign> campaigns = new ArrayList<>(local().getAll());
+    Collections.sort(campaigns, new CampaignComparator());
+    return campaigns;
+  }
+
+  public static List<Campaign> getCampaigns() {
+    List<Campaign> campaigns = new ArrayList<>(local().getAll());
+    campaigns.addAll(remote().getAll());
+    Collections.sort(campaigns, new CampaignComparator());
+    return campaigns;
+  }
+
+  public static List<Campaign> getCampaigns(String serverId) {
+    List<Campaign> filtered = new ArrayList<>();
+    for (Campaign campaign : Campaigns.getCampaigns()) {
+      if (campaign.getCampaignId().startsWith(serverId)) {
+        filtered.add(campaign);
+      }
+    }
+
+    return filtered;
+  }
+
+  public static ArrayList<String> getCampaignNames() {
+    ArrayList<String> names = new ArrayList<>();
+
+    names.add(defaultCampaign.getName());
+    for (Campaign campaign : Campaigns.getCampaigns()) {
+      names.add(campaign.getName());
+    }
+
+    return names;
+  }
+
+  public static void publish() {
+    Log.d(TAG, "publishing all campaigns");
+    for (Campaign campaign : local.getAll()) {
+      if (!campaign.isDefault() && campaign.isPublished()) {
+        campaign.publish();
+      }
+    }
   }
 
   public static void load(Context context) {
     loadLocal(context);
     loadRemote(context);
+  }
+
+  public static long getLocalIdFor(String campaignId) {
+    return local().getIdFor(campaignId);
+  }
+
+  public static long getRemoteIdFor(String campaignId) {
+    return remote().getIdFor(campaignId);
+  }
+
+  private static Campaigns local() {
+    Preconditions.checkNotNull(local, "local campaigns have to be loaded!");
+    return local;
+  }
+
+  private static Campaigns remote() {
+    Preconditions.checkNotNull(remote, "remote campaigns have to be loaded!");
+    return remote;
   }
 
   private static void loadLocal(Context context) {
@@ -94,65 +174,6 @@ public class Campaigns extends StoredEntries<Campaign> {
     remote = new Campaigns(context, false);
   }
 
-  public Optional<Campaign> getCampaign(String id) {
-    if (id.isEmpty() || id.endsWith("--1")) {
-      return Optional.of(defaultCampaign);
-    }
-
-    return get(id);
-  }
-
-  public boolean hasAnyPublished() {
-    if (!isLocal()) {
-      return false;
-    }
-
-    for (Campaign campaign : entriesById.values()) {
-      if (campaign.isPublished()) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  public List<Campaign> getCampaigns() {
-    List<Campaign> campaigns = new ArrayList<>(getAll());
-    Collections.sort(campaigns, new CampaignComparator());
-    return campaigns;
-  }
-
-  public ArrayList<String> getCampaignNames() {
-    ArrayList<String> names = new ArrayList<>();
-
-    names.add(defaultCampaign.getName());
-    for (Campaign campaign : getAll()) {
-      names.add(campaign.getName());
-    }
-
-    return names;
-  }
-
-  public List<Campaign> getCampaigns(String serverId) {
-    List<Campaign> filtered = new ArrayList<>();
-    for (Campaign campaign : getAll()) {
-      if (campaign.getCampaignId().startsWith(serverId)) {
-        filtered.add(campaign);
-      }
-    }
-
-    return filtered;
-  }
-
-  public void publish() {
-    Log.d(TAG, "publishing all campaigns");
-    for (Campaign campaign : getAll()) {
-      if (!campaign.isDefault() && campaign.isPublished()) {
-        campaign.publish();
-      }
-    }
-  }
-
   protected Optional<Campaign> parseEntry(long id, byte[] blob) {
     try {
       return Optional.of(
@@ -166,7 +187,7 @@ public class Campaigns extends StoredEntries<Campaign> {
     }
   }
 
-  private class CampaignComparator implements Comparator<Campaign> {
+  private static class CampaignComparator implements Comparator<Campaign> {
     @Override
     public int compare(Campaign first, Campaign second) {
       if (first.getId() == second.getId())

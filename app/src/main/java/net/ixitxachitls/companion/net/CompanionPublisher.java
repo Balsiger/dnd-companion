@@ -138,7 +138,7 @@ public class CompanionPublisher {
   }
 
   public void unpublish(Campaign campaign) {
-    if (!Strings.isNullOrEmpty(name) && !Campaigns.local().hasAnyPublished()) {
+    if (!Strings.isNullOrEmpty(name) && !Campaigns.hasAnyPublished()) {
       stop();
     }
   }

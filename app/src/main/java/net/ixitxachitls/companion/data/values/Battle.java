@@ -52,8 +52,8 @@ public class Battle {
     this(campaign, 0, BattleStatus.ENDED, 0, 0, Collections.emptyList());
   }
 
-  private Battle(Campaign campaign, int number, BattleStatus status, int turn, int currentCombatantIndex,
-                List<Combatant> combatants) {
+  private Battle(Campaign campaign, int number, BattleStatus status, int turn,
+                 int currentCombatantIndex, List<Combatant> combatants) {
     this.campaign = campaign;
     this.number = number;
     this.status = status;
@@ -110,11 +110,7 @@ public class Battle {
     for (int i = 0; i < combatants.size(); i++) {
       Combatant existing = combatants.get(i);
       if (!existing.isMonster()) {
-        Optional<Character> character = Characters.get(!campaign.isLocal()).get(existing.id);
-        if (character.isPresent()) {
-          character = Characters.get(campaign.isLocal()).get(existing.id);
-        }
-
+        Optional<Character> character = Characters.getCharacter(existing.id);
         if (character.isPresent()) {
           combatants.set(i,
               new Combatant(existing.id, existing.name,

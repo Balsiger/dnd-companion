@@ -24,12 +24,27 @@ package net.ixitxachitls.companion.util;
 import android.os.Build;
 
 /**
- * Various static small misc functions.
+ * Various static small functions.
  */
 public class Misc {
+
+  private static boolean emulateLocal = true;
+
   private Misc() {}
 
   public static boolean onEmulator() {
     return Build.PRODUCT.equals("sdk_google_phone_x86");
+  }
+
+  public static boolean emulatingLocal() {
+    return emulateLocal;
+  }
+
+  public static void emulateLocal() {
+    emulateLocal = true;
+  }
+
+  public static void emulateRemote() {
+    emulateLocal = false;
   }
 }

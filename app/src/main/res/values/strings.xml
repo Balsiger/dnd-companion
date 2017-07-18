@@ -4,6 +4,10 @@
   <!-- menu strings -->
   <string name="action_settings">Settings</string>
   <string name="action_reset">Reset</string>
+  <string name="action_export">Export to Drive</string>
+  <string name="action_import">Import from Drive</string>
+  <string name="action_local">Swtich to local</string>
+  <string name="action_remote">Switch to remote</string>
 
   <!-- campaign selection -->
   <string name="campaign_title">Select a campaign:</string>
@@ -84,8 +88,6 @@
   <string name="battle_title">Battle</string>
   <string name="title_monster_initiative">Select Monster Initiative</string>
   <string name="label_initiative_modifier">Initiative Modifier</string>
-  <string name="action_export">Export to Drive</string>
-  <string name="action_import">Import from Drive</string>
   <string name="character_select_campaign">Select campaign to move to</string>
   <string name="chip_wait_selection">Waiting for selection</string>
   <string name="campaign_button_move">Move character to other campaign</string>
