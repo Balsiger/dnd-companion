@@ -24,44 +24,45 @@
               android:layout_width="wrap_content"
               android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/label"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="STR"
-        android:textStyle="bold"
-        android:theme="@style/LargeText"/>
+  <TextView
+      android:id="@+id/label"
+      android:layout_width="50dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="STR"
+      android:textStyle="bold"
+      android:theme="@style/LargeText"/>
 
-    <Button
-        android:id="@+id/minus"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:theme="@style/LargeText"/>
+  <Button
+      android:id="@+id/minus"
+      android:layout_width="50dp"
+      android:layout_height="wrap_content"
+      android:text="-"
+      android:theme="@style/LargeText"/>
 
-    <EditText
-        android:id="@+id/value"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberSigned"
-        android:text="10"
-        android:textAlignment="center"
-        android:theme="@style/LargeText"/>
+  <EditText
+      android:id="@+id/value"
+      android:layout_width="50dp"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:selectAllOnFocus="true"
+      android:inputType="numberSigned"
+      android:text="10"
+      android:textAlignment="center"
+      android:theme="@style/LargeText"/>
 
-    <TextView
-        android:id="@+id/modifier"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:text="+0"
-        android:textAlignment="center"
-        android:theme="@style/LargeText"/>
+  <TextView
+      android:id="@+id/modifier"
+      android:layout_width="75dp"
+      android:layout_height="wrap_content"
+      android:text="+0"
+      android:textAlignment="center"
+      android:theme="@style/LargeText"/>
 
-    <Button
-        android:id="@+id/plus"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text="+"
-        android:theme="@style/LargeText"/>
+  <Button
+      android:id="@+id/plus"
+      android:layout_width="50dp"
+      android:layout_height="wrap_content"
+      android:text="+"
+      android:theme="@style/LargeText"/>
 </LinearLayout>

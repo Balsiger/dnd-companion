@@ -43,6 +43,7 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
+import net.ixitxachitls.companion.ui.dialogs.XPDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -65,6 +66,7 @@ public class PartyView extends LinearLayout {
   private final Wrapper<FloatingActionButton> startBattle;
   private final BattleView battleView;
   private final Wrapper<FloatingActionButton> addCharacter;
+  private final Wrapper<FloatingActionButton> xp;
   private final DiceView initiative;
   private final TextWrapper<TextView> conditions;
 
@@ -87,8 +89,10 @@ public class PartyView extends LinearLayout {
     battleView = new BattleView(context, this);
     view.addView(battleView, 0);
 
-    addCharacter = Wrapper.wrap(view, R.id.add_character);
-    addCharacter.onClick(this::createCharacter);
+    addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)
+        .onClick(this::createCharacter);
+    xp = Wrapper.<FloatingActionButton>wrap(view, R.id.xp)
+        .onClick(this::chooseXp);
     initiative = (DiceView) view.findViewById(R.id.initiative);
     initiative.setDice(20);
     conditions = TextWrapper.wrap(view, R.id.conditions);
@@ -99,6 +103,12 @@ public class PartyView extends LinearLayout {
   private void createCharacter() {
     if (campaign.isPresent()) {
       CharacterDialog.newInstance("", campaign.get().getCampaignId()).display();
+    }
+  }
+
+  private void chooseXp() {
+    if (campaign.isPresent()) {
+      XPDialog.newInstance(campaign.get().getCampaignId()).display();
     }
   }
 
@@ -153,6 +163,8 @@ public class PartyView extends LinearLayout {
     battleView.refresh();
 
     addCharacter.visible(campaign.isPresent() && campaign.get().getBattle().isEnded());
+    xp.visible(campaign.isPresent() && campaign.get().getBattle().isEnded()
+        && campaign.get().isLocal());
 
     if (campaign.isPresent()) {
       characters = party(campaign.get());

@@ -115,6 +115,10 @@ public class CompanionTransmitter {
           DataInputStream input =
               new DataInputStream(new BufferedInputStream(socket.getInputStream()));
           int length = input.readInt();
+          if (length > 1_000_000) {
+            throw new IllegalArgumentException("Cannot read message with size of " + length
+                + " from stream!");
+          }
           byte[] data = new byte[length];
           input.read(data);
           Data.CompanionMessageProto message = Data.CompanionMessageProto.parseFrom(data);
