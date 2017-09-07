@@ -23,11 +23,14 @@ package net.ixitxachitls.companion.util;
 
 import com.google.common.base.Joiner;
 
+import java.util.Date;
+
 /**
  * Utilities for handling strings.
  */
 public class Strings {
   public static final Joiner COMMA_JOINER = Joiner.on(", ");
+  public static final Joiner NEWLINE_JOINER = Joiner.on("\n");
   private static final String SPACES =
       "                                                                      "
           + "                                                                     "
@@ -50,6 +53,19 @@ public class Strings {
           + "0000000000000000000000000000000000000000000000000000000000000000000000";
 
   private Strings() {}
+
+  public static String formatAgo(long time) {
+    long seconds = (new Date().getTime() - time) / 1000;
+
+    if (seconds < 60) {
+      return seconds + "s";
+    }
+
+    long minutes = seconds / 60;
+    seconds = seconds % 60;
+
+    return minutes + "m " + seconds + "s";
+  }
 
   public static String pad(String inText, int inLength, boolean inLeft)
   {

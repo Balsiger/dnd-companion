@@ -30,9 +30,9 @@ public abstract class CompanionActivity extends AppCompatActivity {
   public abstract void status(String message);
   public abstract void refresh();
   public abstract void heartbeat();
-  public abstract void addClientConnection(String name);
+  public abstract void addClientConnection(String id, String name);
   public abstract void updateClientConnection(String name);
-  public abstract void addServerConnection(String name);
+  public abstract void addServerConnection(String id, String name);
   public abstract void updateServerConnection(String name);
   public abstract void startServer();
   public abstract void stopServer();

@@ -27,7 +27,15 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.net.CompanionPublisher;
+import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.ui.dialogs.ConnectionStatusDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.util.Strings;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * View displaying a network connection and it's status.
@@ -36,27 +44,62 @@ public class ConnectionView extends LinearLayout {
 
   private static final int OFFLINE_BEATS = 100;
 
+  private String id;
+  private String name;
   private int heartbeats = OFFLINE_BEATS;
 
   // UI elements.
   private IconView icon;
+  private boolean server;
 
-  public ConnectionView(Context context, String name, boolean server) {
+  public ConnectionView(Context context, String id, String name, boolean server) {
     super(context);
 
-    init(name, server);
+    init(id, name, server);
   }
 
-  private void init(String name, boolean server) {
-    View view = LayoutInflater.from(getContext())
-        .inflate(R.layout.view_connection, null, false);
+  private void init(String id, String name, boolean server) {
+    this.id = id;
+    this.name = name;
+    this.server = server;
+
+    View view = LayoutInflater.from(getContext()).inflate(R.layout.view_connection, null, false);
     icon = (IconView) view.findViewById(R.id.status);
     if (server) {
       icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_computer_black_24dp, null));
     }
     TextWrapper.wrap(view, R.id.name).text(name);
 
+    view.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        showMessages();
+      }
+    });
+
     addView(view);
+  }
+
+  private void showMessages() {
+    CompanionApplication app = (CompanionApplication) getContext().getApplicationContext();
+    List<String> messages = new ArrayList<>();
+    if (server) {
+      messages.addAll(CompanionPublisher.get().getSenderList(id));
+      if (app.getServerMessageProcessor().isPresent()) {
+        messages.addAll(app.getServerMessageProcessor().get().receivedMessages());
+      } else {
+        messages.add("No server message processor");
+      }
+    } else {
+      messages.addAll(CompanionSubscriber.get().getSenderList(id));
+      if (app.getClientMessageProcessor().isPresent()) {
+        messages.addAll(app.getClientMessageProcessor().get().receivedMessages());
+      } else {
+        messages.add("No client message processor");
+      }
+    }
+
+    ConnectionStatusDialog.newInstance(name, Strings.NEWLINE_JOINER.join(messages)).display();
   }
 
   public void heartbeat() {

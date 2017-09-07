@@ -43,7 +43,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
   private static final String TAG = "StoredEntry";
   private static final Map<String, MessageLite> PROTO_CACHE = new ConcurrentHashMap<>();
 
-  private long id;
+  protected long id;
   protected String entryId;
   private final Uri dbUrl;
   private final boolean local;
@@ -106,7 +106,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
       proto = toProto();
     }
 
-    // Store it again if id made us change the entry id above.
+    // Store it (again if id made us change the entry id above).
     Entries.getContext().getContentResolver().update(dbUrl, toValues(proto),
         "id = " + id, null);
 

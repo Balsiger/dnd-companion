@@ -45,6 +45,7 @@ public abstract class Dialog extends DialogFragment {
 
   private static final String ARG_LAYOUT = "layout";
   private static final String ARG_TITLE = "title";
+  private static final String ARG_TITLE_STRING = "title-string";
   private static final String ARG_COLOR = "color";
   private static final int WIDTH = 1500;
 
@@ -68,13 +69,25 @@ public abstract class Dialog extends DialogFragment {
     return arguments;
   }
 
+  protected static Bundle arguments(@LayoutRes int layoutId, String title, @ColorRes int color) {
+    Bundle arguments = new Bundle();
+    arguments.putInt(ARG_LAYOUT, layoutId);
+    arguments.putString(ARG_TITLE_STRING, title);
+    arguments.putInt(ARG_COLOR, color);
+
+    return arguments;
+  }
+
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     if (getArguments() != null) {
       layoutId = getArguments().getInt(ARG_LAYOUT);
-      title = getString(getArguments().getInt(ARG_TITLE));
+      title = getArguments().getString(ARG_TITLE_STRING);
+      if (title == null || title.isEmpty()) {
+        title = getString(getArguments().getInt(ARG_TITLE));
+      }
       color = getArguments().getInt(ARG_COLOR);
     } else {
       layoutId = 0;

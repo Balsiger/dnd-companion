@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
+import android.view.MotionEvent;
 import android.view.View;
 
 /**
@@ -47,6 +48,21 @@ class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
       @Override
       public void onClick(View v) {
         action.execute();
+      }
+    });
+
+    return (W) this;
+  }
+
+  public W onTouch(Wrapper.Action action, int onAction) {
+    view.setOnTouchListener(new View.OnTouchListener() {
+      @Override
+      public boolean onTouch(View v, MotionEvent event) {
+        if (event.getAction() == onAction) {
+          action.execute();
+          return true;
+        }
+        return false;
       }
     });
 

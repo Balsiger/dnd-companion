@@ -27,39 +27,17 @@
               android:padding="20dp">
 
 
-  <LinearLayout
+  <ScrollView
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal">
+      android:layout_height="300dp">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingEnd="10dp"
-        android:paddingTop="10dp"
-        android:text="Encounter"
-        android:theme="@style/LargeText"/>
-
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
+        android:id="@+id/messages"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
-
-      <LinearLayout
-          android:id="@+id/ecls"
-          android:layout_width="wrap_content"
-          android:layout_height="100dp"
-          android:orientation="horizontal">
-
-      </LinearLayout>
-    </HorizontalScrollView>
-
-  </LinearLayout>
+        android:text="TextView"
+        android:theme="@style/SmallText"/>
+  </ScrollView>
 
   <Button
       android:id="@+id/save"
@@ -67,6 +45,7 @@
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
       android:layout_margin="10dp"
-      android:text="Award"
+      android:text="Close"
       android:theme="@style/LargeText"/>
+
 </LinearLayout>

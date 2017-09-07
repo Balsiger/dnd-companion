@@ -43,12 +43,6 @@ message CampaignProto {
   }
   Battle battle = 8;
   int32 next_battle_number = 9;
-
-  message XP {
-    string character_id = 1;
-    int32 xp = 2;
-  }
-  repeated XP xp_award = 10;
 }
 
 message CharacterProto {
@@ -98,28 +92,48 @@ message CharacterProto {
 }
 
 message CompanionMessageProto {
-  string sender = 1;
-  string debug = 2;
+  int64 id = 1;
+  string sender = 2;
+  string receiver = 3;
 
-  // General information.
+  enum Priority {
+    NORMAL = 0;
+    LOW = 1;
+    HIGH = 2;
+  };
+  Priority priority = 4;
+
   message Welcome {
     string name = 1;
     string id = 2;
   }
-  Welcome welcome = 4;
 
-  // Server push information.
-  CampaignProto campaign = 3;
-
-  // Client push information.
-  CharacterProto character = 5;
-
-  // Server and client push information.
   message Image {
     string campaign_id = 1;
     string type = 2;
     string id = 3;
     bytes image = 4;
   }
-  Image image = 6;
+
+  oneof payload {
+    string debug = 5;
+    Welcome welcome = 6;
+    CampaignProto campaign = 7; // From server only.
+    CharacterProto character = 8; // From client only.
+    Image image = 9;
+    int64 ack = 10;
+  }
+}
+
+message ScheduledMessageProto {
+  enum State {
+    WAITING = 0;
+    PENDING = 1;
+    SENT = 2;
+    ACKED = 3;
+  }
+  State state = 1;
+  int64 last_interaction = 2;
+
+  CompanionMessageProto message = 3;
 }

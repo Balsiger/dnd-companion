@@ -25,7 +25,11 @@ import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -33,6 +37,10 @@ import com.google.common.base.Preconditions;
 import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.rules.XP;
+
+import java.util.List;
 
 /**
  * Dialog for selecting XP rewards.
@@ -40,21 +48,9 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 public class XPDialog extends Dialog {
 
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
+  private static final int MAX_ECL = 30;
 
   private Optional<Campaign> campaign = Optional.absent();
-
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
-  }
-
-  @Override
-  protected void createContent(View view) {
-
-  }
 
   public static XPDialog newInstance(String campaignId) {
     XPDialog dialog = new XPDialog();
@@ -68,5 +64,43 @@ public class XPDialog extends Dialog {
     Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
     arguments.putString(ARG_CAMPAIGN_ID, campaignId);
     return arguments;
+  }
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
+    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
+  }
+
+  @Override
+  protected void createContent(View view) {
+    ViewGroup ecls = (ViewGroup) view.findViewById(R.id.ecls);
+    LayoutInflater inflator = LayoutInflater.from(getContext());
+    for (int i = 1; i <= MAX_ECL; i++) {
+      final int index = i;
+      LinearLayout container = (LinearLayout) inflator.inflate(R.layout.view_ecl, null);
+      TextView ecl = (TextView) container.findViewById(R.id.ecl);
+      ecl.setText(String.valueOf(index));
+      ecl.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          awardEcl(index);
+        }
+      });
+      ecls.addView(container);
+    }
+  }
+
+  private void awardEcl(int level) {
+    if (campaign.isPresent()) {
+      List<Character> characters = campaign.get().getCharacters();
+      int partySize = characters.size();
+      for (Character character : characters) {
+        int xp = XP.xpAward(level, character.getLevel(), partySize);
+        campaign.get().awardXp(character, xp);
+      }
+    }
   }
 }

@@ -25,23 +25,21 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
 import android.support.multidex.MultiDexApplication;
-import android.util.Log;
-import android.widget.Toast;
+
+import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Images;
-import net.ixitxachitls.companion.data.dynamics.StoredEntries;
+import net.ixitxachitls.companion.net.ClientMessageProcessor;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.net.ScheduledMessages;
+import net.ixitxachitls.companion.net.ServerMessageProcessor;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
 import java.util.List;
@@ -58,8 +56,10 @@ public class CompanionApplication extends MultiDexApplication
   private static CompanionSubscriber companionSubscriber;
   private static Handler messageHandler;
   private static MessageChecker messageChecker;
-  private @Nullable CompanionActivity currentActivity;
+  private Optional<CompanionActivity> currentActivity = Optional.absent();
   private boolean serverStarted = false;
+  private Optional<ClientMessageProcessor> clientMessageProcessor = Optional.absent();
+  private Optional<ServerMessageProcessor> serverMessageProcessor = Optional.absent();
 
   @Override
   public void onCreate() {
@@ -67,6 +67,7 @@ public class CompanionApplication extends MultiDexApplication
 
     Entries.init(this);
     Settings.init(this);
+    ScheduledMessages.init(this);
     Images.load(this);
     Campaigns.load(this);
     Characters.load(this);
@@ -74,7 +75,7 @@ public class CompanionApplication extends MultiDexApplication
     messageHandler = new Handler();
     messageChecker = new MessageChecker();
 
-    companionPublisher = CompanionPublisher.init(getApplicationContext(), this);
+    companionPublisher = CompanionPublisher.init(this);
     companionSubscriber = CompanionSubscriber.init(getApplicationContext(), this);
 
     messageChecker.run();
@@ -94,30 +95,34 @@ public class CompanionApplication extends MultiDexApplication
 
     @Override
     public void run() {
-      if (currentActivity != null) {
-        currentActivity.runOnUiThread(new Runnable() {
+      if (currentActivity.isPresent()) {
+        currentActivity.get().runOnUiThread(new Runnable() {
           @Override
           public void run() {
-            currentActivity.heartbeat();
+            currentActivity.get().heartbeat();
           }
         });
       }
 
       try {
+        // Send waiting messages.
+        CompanionPublisher.get().sendWaiting();
+        CompanionSubscriber.get().sendWaiting();
+
         // Chek for messages from servers.
-        List<CompanionMessage> clientMessages = companionSubscriber.receive();
-        for (CompanionMessage serverMessage : clientMessages) {
-          handleMessagesFromServer(serverMessage);
+        if (clientMessageProcessor.isPresent()) {
+          List<CompanionMessage> clientMessages = companionSubscriber.receive();
+          for (CompanionMessage serverMessage : clientMessages) {
+            clientMessageProcessor.get().process(serverMessage);
+          }
         }
 
         // Handle message from clients.
-        List<CompanionMessage> serverMessages = companionPublisher.receive();
-        for (CompanionMessage serverMessage : serverMessages) {
-          handleMessagesFromClient(serverMessage);
-        }
-
-        if (clientMessages.isEmpty() && serverMessages.isEmpty()) {
-          Log.d(TAG, "No new messages.");
+        if (serverMessageProcessor.isPresent()) {
+          List<CompanionMessage> serverMessages = companionPublisher.receive();
+          for (CompanionMessage serverMessage : serverMessages) {
+            serverMessageProcessor.get().process(serverMessage);
+          }
         }
       } finally {
         messageHandler.postDelayed(messageChecker, DELAY_MILLIS);
@@ -125,134 +130,59 @@ public class CompanionApplication extends MultiDexApplication
     }
   }
 
-  private void handleMessagesFromServer(CompanionMessage message) {
-    if (message.getProto().hasWelcome()) {
-      status("received welcome from server " + message.getName());
-      currentActivity.addServerConnection(message.getName());
-
-      // Republish all client content for the server's campaigns.
-      for (Campaign campaign : Campaigns.getCampaigns(message.getId())) {
-        Characters.publish(campaign.getCampaignId());
-      }
-    }
-
-    if (message.getProto().hasCampaign()) {
-      Campaign campaign = Campaign.fromProto(
-          Campaigns.getRemoteIdFor(message.getProto().getCampaign().getId()),
-          false, message.getProto().getCampaign());
-      // Storing will also add the campaign if it's changed.
-      campaign.store();
-      Log.d(TAG, "received campaign " + campaign.getName());
-      status("received campaign " + campaign.getName());
-      refresh();
-
-      currentActivity.updateServerConnection(message.getName());
-    }
-
-    if (message.getProto().hasCharacter()) {
-      if (!StoredEntries.isLocalId(message.getProto().getCharacter().getId())) {
-        Character character = Character.fromProto(
-            Characters.getRemoteIdFor(message.getProto().getCharacter().getId()),
-            false, message.getProto().getCharacter());
-        // Storing will also add the character if it's changed.
-        character.store();
-        Log.d(TAG, "received character " + character.getName());
-        status("received character " + character.getName());
-        refresh();
-      }
-
-      currentActivity.updateServerConnection(message.getName());
-    }
-
-    if (!message.getProto().getDebug().isEmpty()) {
-      Toast.makeText(getApplicationContext(),
-          message.getName() + ": " + message.getProto().getDebug(),
-          Toast.LENGTH_LONG).show();
-    }
-  }
-
-  private void handleMessagesFromClient(CompanionMessage message) {
-    if (message.getProto().hasWelcome()) {
-      status("received welcome from client " + message.getName());
-      CompanionPublisher.get().republish(Campaigns.getLocalCampaigns(),
-          message.getId());
-      currentActivity.addClientConnection(message.getName());
-    }
-
-    if (message.getProto().hasCharacter()) {
-      Log.d(TAG, "received character " + message.getProto().getCharacter().getName()
-          + " from " + message.getName());
-      Character character = Character.fromProto(
-          Characters.getRemoteIdFor(message.getProto().getCharacter().getId()),
-          false, message.getProto().getCharacter());
-      // Storing will also add the character if it's changed.
-      character.store();
-      status("received character "
-          + message.getProto().getCharacter().getName()
-          + " from " + message.getName());
-      currentActivity.updateClientConnection(message.getName());
-
-      // Send the character update to the other clients.
-      CompanionPublisher.get().update(character, message.getId());
-
-      refresh();
-    }
-
-    if (message.getProto().hasImage()) {
-      Log.d(TAG, "received image for " + message.getProto().getImage().getType()
-          + " " + message.getProto().getImage().getId());
-      Data.CompanionMessageProto.Image image = message.getProto().getImage();
-      Images.remote().save(image.getType(), image.getId(), Images.asBitmap(image.getImage()));
-
-      // Send the image update to the other clients.
-      CompanionPublisher.get().update(image, message.getId());
-      refresh();
-    }
-
-    if (!message.getProto().getDebug().isEmpty()) {
-      Toast.makeText(getApplicationContext(),
-          message.getName() + ": " + message.getProto().getDebug(),
-          Toast.LENGTH_LONG).show();
-    }
-  }
-
   public void status(String message) {
-    if (currentActivity != null) {
-      currentActivity.status(message);
+    if (currentActivity.isPresent()) {
+      currentActivity.get().status(message);
     }
   }
 
   public void serverStopped() {
-    if (currentActivity != null) {
-      currentActivity.startServer();
+    if (currentActivity.isPresent()) {
+      currentActivity.get().startServer();
     } else {
       serverStarted = false;
     }
   }
 
   public void serverStarted() {
-    if (currentActivity != null) {
-      currentActivity.stopServer();
+    if (currentActivity.isPresent()) {
+      currentActivity.get().stopServer();
     } else {
       serverStarted = true;
     }
   }
 
   public void refresh() {
-    if (currentActivity != null) {
-      currentActivity.runOnUiThread(new Runnable() {
+    if (currentActivity.isPresent()) {
+      currentActivity.get().runOnUiThread(new Runnable() {
         @Override
         public void run() {
-          currentActivity.refresh();
+          currentActivity.get().refresh();
         }
       });
     }
   }
 
+  public void updateClientConnection(String name) {
+    if (currentActivity.isPresent()) {
+      currentActivity.get().updateClientConnection(name);
+    }
+  }
+
+  public Optional<ClientMessageProcessor> getClientMessageProcessor() {
+    return clientMessageProcessor;
+  }
+
+  public Optional<ServerMessageProcessor> getServerMessageProcessor() {
+    return serverMessageProcessor;
+  }
+
   // Activity lifecyle callbacks.
   @Override
   public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-    currentActivity = (CompanionActivity) activity;
+    currentActivity = Optional.of((CompanionActivity) activity);
+    clientMessageProcessor = Optional.of(new ClientMessageProcessor((CompanionActivity) activity));
+    serverMessageProcessor = Optional.of(new ServerMessageProcessor((CompanionActivity) activity));
   }
 
   @Override
@@ -263,8 +193,8 @@ public class CompanionApplication extends MultiDexApplication
   public void onActivityResumed(Activity activity) {
     // Don't mark the server as stopped if it has not been started. This prevents displaying a
     // server that might never be used by the user.
-    if (serverStarted) {
-      currentActivity.startServer();
+    if (serverStarted && currentActivity.isPresent()) {
+      currentActivity.get().startServer();
     }
   }
 

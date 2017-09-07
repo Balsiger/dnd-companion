@@ -28,7 +28,9 @@ import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -56,7 +58,7 @@ public class StatusView extends LinearLayout {
   private TextWrapper<TextView> messages;
   private ScrollView messagesScroll;
   private Wrapper<LinearLayout> connections;
-  private Wrapper<ScrollView> connectionsScroll;
+  private Wrapper<HorizontalScrollView> connectionsScroll;
   private Map<String, ConnectionView> clientConnectionsByName = new HashMap<>();
   private Map<String, ConnectionView> serverConnectionsByName = new HashMap<>();
 
@@ -79,8 +81,8 @@ public class StatusView extends LinearLayout {
     messages = TextWrapper.wrap(view, R.id.messages).onClick(this::toggleDebug);
     messages.get().setMovementMethod(new ScrollingMovementMethod());
     connections = Wrapper.<LinearLayout>wrap(view, R.id.connections).onClick(this::toggleDebug);
-    connectionsScroll = Wrapper.<ScrollView>wrap(view, R.id.connections_scroll)
-        .onClick(this::toggleDebug);
+    connectionsScroll = Wrapper.<HorizontalScrollView>wrap(view, R.id.connections_scroll)
+        .onTouch(this::toggleDebug, MotionEvent.ACTION_UP);
 
     addView(view);
     update();
@@ -114,24 +116,24 @@ public class StatusView extends LinearLayout {
     messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
   }
 
-  public void addClientConnection(String name) {
+  public void addClientConnection(String id, String name) {
     if (clientConnectionsByName.containsKey(name)) {
       Log.d(TAG, "trying to add second connection for " + name);
       return;
     }
 
-    ConnectionView connection = new ConnectionView(getContext(), name, false);
+    ConnectionView connection = new ConnectionView(getContext(), id, name, false);
     clientConnectionsByName.put(name, connection);
     connections.get().addView(connection);
   }
 
-  public void addServerConnection(String name) {
+  public void addServerConnection(String id, String name) {
     if (serverConnectionsByName.containsKey(name)) {
       Log.d(TAG, "trying to add second connection for " + name);
       return;
     }
 
-    ConnectionView connection = new ConnectionView(getContext(), name, true);
+    ConnectionView connection = new ConnectionView(getContext(), id, name, true);
     serverConnectionsByName.put(name, connection);
     connections.get().addView(connection);
   }
@@ -160,7 +162,7 @@ public class StatusView extends LinearLayout {
     String name = serverName();
     ConnectionView connection = serverConnectionsByName.get(name);
     if (connection == null) {
-      connection = new ConnectionView(getContext(), name, true);
+      connection = new ConnectionView(getContext(), Settings.get().getAppId(), name, true);
       serverConnectionsByName.put(name, connection);
       connections.get().addView(connection);
     }
@@ -182,7 +184,7 @@ public class StatusView extends LinearLayout {
     if (started) {
       CompanionPublisher.get().stop();
     } else {
-      CompanionPublisher.get().ensureServerStarted();
+      CompanionPublisher.get().ensureServer();
     }
 
     started = !started;

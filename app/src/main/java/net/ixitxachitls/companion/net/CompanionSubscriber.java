@@ -33,11 +33,13 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.util.Ids;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -55,24 +57,48 @@ public class CompanionSubscriber {
   private Map<String, CompanionClient> clientById = new ConcurrentHashMap<>();
   private Map<String, CompanionClient> clientByName = new ConcurrentHashMap<>();
   private Map<String, String> nameById = new ConcurrentHashMap<>();
+  private final Map<String, MessageScheduler> schedulersByRecpient = new HashMap<>();
 
   private CompanionSubscriber(Context context, CompanionApplication application) {
     this.application = application;
     this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
   }
 
+  public void sendWaiting() {
+    for (MessageScheduler scheduler : schedulersByRecpient.values()) {
+      Optional<ScheduledMessage> message = scheduler.nextWaiting();
+      if (message.isPresent()) {
+        CompanionClient client = clientById.get(message.get().getRecipient());
+        // If the client is not currently available, the message will automatically be
+        // retried in one minute.
+        if (client != null) {
+          Log.d(TAG, "sending " + message);
+          client.send(message.get().toMessage().getProto());
+          application.status("sent " + message);
+          application.updateClientConnection(Settings.get().getNickname());
+        }
+      }
+    }
+  }
+
+  public List<String> getSenderList(String id) {
+    List<String> list = new ArrayList<>();
+
+    for (MessageScheduler scheduler : schedulersByRecpient.values()) {
+      list.addAll(scheduler.scheduledMessages(id));
+    }
+
+    return list;
+  }
+
   public void publish(Character character) {
     String id = Ids.extractServerId(character.getCampaignId());
-    CompanionClient client = clientById.get(id);
-    if (client != null) {
-      client.send(Data.CompanionMessageProto.newBuilder()
-          .setCharacter(character.toProto())
-          .build());
-      Log.d(TAG, "character " + character.getName() + " published.");
-      application.status("sent character " + character.getName());
-    } else {
-      Log.d(TAG, "cannot find client with id '" + id + "'");
-    }
+    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+        .setCharacter(character.toProto())
+        .setSender(Settings.get().getAppId())
+        .setReceiver(id)
+        .build();
+    setupScheduler(id).schedule(proto);
   }
 
   public void publishImage(Data.CompanionMessageProto.Image image) {
@@ -99,7 +125,6 @@ public class CompanionSubscriber {
     }
   }
 
-  // TODO: Determine if singleton works and is necessary.
   public static CompanionSubscriber init(Context context, CompanionApplication application) {
     singleton = new CompanionSubscriber(context, application);
     return singleton;
@@ -238,7 +263,7 @@ public class CompanionSubscriber {
         if (message.isPresent()) {
           String id;
           String name;
-          if (message.get().hasWelcome()) {
+          if (message.get().getPayloadCase() == Data.CompanionMessageProto.PayloadCase.WELCOME) {
             id = message.get().getWelcome().getId();
             name = message.get().getWelcome().getName();
             clientById.put(id, client);
@@ -263,5 +288,15 @@ public class CompanionSubscriber {
     }
 
     return "(unknown)";
+  }
+
+  private MessageScheduler setupScheduler(String serverId) {
+    MessageScheduler scheduler = schedulersByRecpient.get(serverId);
+    if (scheduler == null) {
+      scheduler = new MessageScheduler(serverId);
+      schedulersByRecpient.put(serverId, scheduler);
+    }
+
+    return scheduler;
   }
 }

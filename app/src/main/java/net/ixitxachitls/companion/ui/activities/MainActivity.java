@@ -199,18 +199,23 @@ public class MainActivity extends CompanionActivity {
   }
 
   @Override
-  public void addClientConnection(String name) {
-    status.addClientConnection(name);
+  public void addClientConnection(String id, String name) {
+    status.addClientConnection(id, name);
   }
 
   @Override
   public void updateClientConnection(String name) {
-    status.updateClientConnection(name);
+    runOnUiThread(new Runnable() {
+      @Override
+      public void run() {
+        status.updateClientConnection(name);
+      }
+    });
   }
 
   @Override
-  public void addServerConnection(String name) {
-    status.addServerConnection(name);
+  public void addServerConnection(String id, String name) {
+    status.addServerConnection(id, name);
   }
 
   @Override
@@ -221,11 +226,13 @@ public class MainActivity extends CompanionActivity {
   @Override
   public void startServer() {
     status.startServer();
+    refresh();
   }
 
   @Override
   public void stopServer() {
     status.stopServer();
+    refresh();
   }
 
   @Override

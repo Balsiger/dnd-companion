@@ -58,14 +58,15 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   private String campaignId = "";
   private String playerName = "";
   private Optional<Monster> mRace = Optional.absent();
-  private Gender mGender = Gender.UNKNOWN;
+  private Gender gender = Gender.UNKNOWN;
   private int strength;
   private int constitution;
   private int dexterity;
   private int intelligence;
   private int wisdom;
   private int charisma;
-  private List<Level> mLevels = new ArrayList<>();
+  private List<Level> levels = new ArrayList<>();
+  private int xp = 0;
   private int initiative = NO_INITIATIVE;
   private int battleNumber = 0;
   private List<Character.TimedCondition> conditions = new ArrayList<>();
@@ -113,17 +114,14 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
 
   public void setCampaignId(String campaignId) {
     this.campaignId = campaignId;
-    store();
   }
 
   public void setRace(String name) {
     mRace = Entries.get().getMonsters().get(name);
-    store();
   }
 
   public void setGender(Gender gender) {
-    mGender = gender;
-    store();
+    this.gender = gender;
   }
 
   public int getStrength() {
@@ -133,7 +131,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public void setStrength(int strength) {
     if (this.strength != strength) {
       this.strength = strength;
-      store();
     }
   }
 
@@ -144,7 +141,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public void setConstitution(int constitution) {
     if (this.constitution != constitution) {
       this.constitution = constitution;
-      store();
     }
   }
 
@@ -155,7 +151,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public void setDexterity(int dexterity) {
     if (this.dexterity != dexterity) {
       this.dexterity = dexterity;
-      store();
     }
   }
 
@@ -166,7 +161,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public void setIntelligence(int intelligence) {
     if (this.intelligence != intelligence) {
       this.intelligence = intelligence;
-      store();
     }
   }
 
@@ -177,7 +171,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public void setWisdom(int wisdom) {
     if (this.wisdom != wisdom) {
       this.wisdom = wisdom;
-      store();
     }
   }
 
@@ -188,7 +181,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   public void setCharisma(int charisma) {
     if (this.charisma != charisma) {
       this.charisma = charisma;
-      store();
     }
   }
 
@@ -216,7 +208,14 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     this.initiative = initiative;
     this.battleNumber = number;
     this.conditions.clear();
-    store();
+  }
+
+  public void setXp(int xp) {
+    this.xp = xp;
+  }
+
+  public int getXp() {
+    return xp;
   }
 
   public static Character createNew(String campaignId) {
@@ -224,8 +223,8 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public Optional<Level> getLevel(int number) {
-    if (mLevels.size() > number) {
-      return Optional.of(mLevels.get(number));
+    if (levels.size() > number) {
+      return Optional.of(levels.get(number));
     }
 
     return Optional.absent();
@@ -249,7 +248,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
         .setName(name)
         .setCampaignId(campaignId)
         .setPlayer(playerName)
-        .setGender(mGender.toProto())
+        .setGender(gender.toProto())
         .setAbilities(Data.CharacterProto.Abilities.newBuilder()
             .setStrength(strength)
             .setDexterity(dexterity)
@@ -263,13 +262,14 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
             .setNumber(battleNumber)
             .addAllTimedCondition(convertConditions(conditions))
             .build())
-        .addAllTimedConditionHistory(convertConditions(conditionsHistory));
+        .addAllTimedConditionHistory(convertConditions(conditionsHistory))
+        .setXp(xp);
 
     if (mRace.isPresent()) {
       proto.setRace(mRace.get().getName());
     }
 
-    for (Level level : mLevels) {
+    for (Level level : levels) {
       proto.addLevel(level.toProto());
     }
 
@@ -293,7 +293,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     character.entryId =
         proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
     character.mRace = Entries.get().getMonsters().get(proto.getRace());
-    character.mGender = Gender.fromProto(proto.getGender());
+    character.gender = Gender.fromProto(proto.getGender());
     character.playerName = proto.getPlayer();
     character.strength = proto.getAbilities().getStrength();
     character.dexterity = proto.getAbilities().getDexterity();
@@ -305,9 +305,10 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     character.battleNumber = proto.getBattle().getNumber();
     character.conditions = convert(proto.getBattle().getTimedConditionList());
     character.conditionsHistory = convert(proto.getTimedConditionHistoryList());
+    character.xp = proto.getXp();
 
     for (Data.CharacterProto.Level level : proto.getLevelList()) {
-      character.mLevels.add(Character.fromProto(level));
+      character.levels.add(Character.fromProto(level));
     }
 
     if (character.playerName.isEmpty()) {
@@ -328,27 +329,37 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public Gender getGender() {
-    return mGender;
+    return gender;
   }
 
   public void setLevel(int index, Level level) {
-    if(mLevels.size() > index) {
-      mLevels.set(index, level);
-      store();
+    if(levels.size() > index) {
+      levels.set(index, level);
     } else {
       addLevel(level);
     }
   }
 
   public void addLevel(Character.Level level) {
-    mLevels.add(level);
-    store();
+    levels.add(level);
+  }
+
+  public int getLevel() {
+    return levels.size();
+  }
+
+  // TODO: remove this once we properly support level objets.
+  public void setLevel(int level) {
+    levels.clear();
+    for (int i = 0; i < level; i++) {
+      addLevel(new Character.Level("Barbarian"));
+    }
   }
 
   public ArrayList<String> levelSummaries() {
     ArrayList<String> summaries = new ArrayList<>();
 
-    for (Character.Level level : mLevels) {
+    for (Character.Level level : levels) {
       summaries.add(level.summary());
     }
 
@@ -367,7 +378,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
 
   private Multiset<String> countedLevelNames() {
     Multiset<String> names = HashMultiset.create();
-    for (Level level : mLevels) {
+    for (Level level : levels) {
       names.add(level.getName());
     }
 
@@ -379,7 +390,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     conditionsHistory.add(condition);
     conditionsHistory =
         conditionsHistory.subList(0, Math.min(conditionsHistory.size(), MAX_HISTORY));
-    store();
   }
 
   public static class TimedCondition extends DynamicEntry<Data.CharacterProto.TimedCondition> {
@@ -432,60 +442,60 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
 
   public static class Level extends DynamicEntry<Data.CharacterProto.Level> {
 
-    private int mHp;
-    private Ability mAbilityIncrease;
+    private int hp;
+    private Ability abilityIncrease;
 
     public Level(String name) {
       super(name);
     }
 
     public int getHp() {
-      return mHp;
+      return hp;
     }
 
     public void setHp(int hp) {
-      mHp = hp;
+      this.hp = hp;
     }
 
     @Override
     public Data.CharacterProto.Level toProto() {
       return Data.CharacterProto.Level.newBuilder()
           .setName(name)
-          .setHp(mHp)
-          .setAbilityIncrease(mAbilityIncrease.toProto())
+          .setHp(hp)
+          //.setAbilityIncrease(abilityIncrease.toProto())
           .build();
     }
 
     public String summary() {
       List<String> parts = new ArrayList<>();
-      if(mHp > 0) {
-        parts.add(mHp + " hp");
+      if(hp > 0) {
+        parts.add(hp + " hp");
       }
 
       if(hasAbilityIncrease()) {
-        parts.add("+1 " + mAbilityIncrease.getShortName());
+        parts.add("+1 " + abilityIncrease.getShortName());
       }
 
       return name + (parts.isEmpty() ? "" : " (" + Strings.COMMA_JOINER.join(parts) + ")");
     }
 
     public boolean hasAbilityIncrease() {
-      return mAbilityIncrease != Ability.NONE && mAbilityIncrease != Ability.UNKNOWN;
+      return abilityIncrease != Ability.NONE && abilityIncrease != Ability.UNKNOWN;
     }
 
     public Ability getAbilityIncrease() {
-      return mAbilityIncrease;
+      return abilityIncrease;
     }
 
     public void setAbilityIncrease(Ability ability) {
-      mAbilityIncrease = ability;
+      abilityIncrease = ability;
     }
   }
 
   public static Level fromProto(Data.CharacterProto.Level proto) {
     Level level = new Level(proto.getName());
-    level.mHp = proto.getHp();
-    level.mAbilityIncrease = Ability.fromProto(proto.getAbilityIncrease());
+    level.hp = proto.getHp();
+    level.abilityIncrease = Ability.fromProto(proto.getAbilityIncrease());
 
     return level;
   }
@@ -524,6 +534,10 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return names;
+  }
+
+  public void awardXp(int xp) {
+
   }
 
   @Override

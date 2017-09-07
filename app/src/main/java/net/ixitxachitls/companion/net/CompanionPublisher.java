@@ -27,43 +27,54 @@ import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.google.common.base.Strings;
+import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.net.InetAddress;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Class to publish data to the local network.
  */
 public class CompanionPublisher {
 
-  public static final String TYPE = "_companion._tcp";
   public static final String TAG = "Publisher";
+  public static final String TYPE = "_companion._tcp";
+
   private static CompanionPublisher singleton;
 
+  private final CompanionApplication application;
+  private Optional<CompanionServer> server = Optional.absent();
+  private Optional<String> name = Optional.absent();
   private final NsdManager manager;
-  private CompanionApplication application;
+  private @Nullable NsdServiceInfo service = null;
+  private @Nullable CompanionRegistrationListener registrationListener;
+  private final Map<String, MessageScheduler> schedulersByRecpient = new HashMap<>();
 
-  private @Nullable String name;
-  private @Nullable NsdServiceInfo service;
-  private @Nullable NsdManager.RegistrationListener registrationListener;
-  private @Nullable CompanionServer server;
-
-  private CompanionPublisher(Context context, CompanionApplication application) {
-    this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
+  private CompanionPublisher(CompanionApplication application) {
     this.application = application;
+    this.manager = (NsdManager) application.getSystemService(Context.NSD_SERVICE);
+
+    // Setup stored messages.
+    for (ScheduledMessage message
+        : ScheduledMessages.get().getMessagesBySender(Settings.get().getAppId())) {
+      setupScheduler(message.getRecipient());
+    }
   }
 
-  public static CompanionPublisher init(Context context, CompanionApplication application) {
-    singleton = new CompanionPublisher(context, application);
+  public static CompanionPublisher init(CompanionApplication application) {
+    singleton = new CompanionPublisher(application);
     return singleton;
   }
 
@@ -71,76 +82,148 @@ public class CompanionPublisher {
     return singleton;
   }
 
+  public void sendWaiting() {
+    for (MessageScheduler scheduler : schedulersByRecpient.values()) {
+      Optional<ScheduledMessage> message = scheduler.nextWaiting();
+      if (message.isPresent()) {
+        Log.d(TAG, "sending " + message);
+        ensureServer();
+        server.get().send(message.get().getRecipient(), message.get().toMessage());
+        application.updateClientConnection(getRecipientName(message.get().getRecipient()));
+      }
+    }
+  }
+
+  public String getRecipientName(String id) {
+    if (server.isPresent()) {
+      return server.get().getNameForId(id);
+    }
+
+    return id;
+  }
+
   public boolean isOnline() {
-    return server != null;
+    return server.isPresent();
+  }
+
+  public List<String> getSenderList(String id) {
+    List<String> list = new ArrayList<>();
+
+    for (MessageScheduler scheduler : schedulersByRecpient.values()) {
+      list.addAll(scheduler.scheduledMessages(id));
+    }
+
+    return list;
   }
 
   public void publish(Campaign campaign) {
-    ensureServerStarted();
-    server.sendAll(new CompanionMessage(Settings.get().getAppId(), Settings.get().getName(),
-        Data.CompanionMessageProto.newBuilder()
-            .setCampaign(campaign.toProto())
-            .build()));
+    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+        .setCampaign(campaign.toProto())
+        .setSender(Settings.get().getAppId())
+        .build();
+
+    for (Character character : Characters.getAllCharacters(campaign.getCampaignId())) {
+      schedule(character.getServerId(), proto);
+    }
 
     Log.d(TAG, "published campaign " + campaign.getName());
     application.status("sent campaign " + campaign.getName());
   }
 
-  public void ensureServerStarted() {
-    if (server == null) {
-      server = new CompanionServer();
+  public void update(Character updatedCharacter, String characterClientId) {
+    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+        .setCharacter(updatedCharacter.toProto())
+        .setSender(Settings.get().getAppId())
+        .build();
+
+    for (Character character
+        : Characters.getAllCharacters(updatedCharacter.getCampaignId())) {
+      // Only update the character on clients that don't own it.
+      if (!characterClientId.equals(character.getServerId())) {
+        schedule(character.getServerId(), proto);
+      }
+    }
+  }
+
+  public void update(Data.CompanionMessageProto.Image image, String characterClientId) {
+    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+        .setImage(image)
+        .setSender(Settings.get().getAppId())
+        .build();
+
+    for (Character character
+        : Characters.getAllCharacters(image.getCampaignId())) {
+      // Only update the character on clients that don't own it.
+      if (!characterClientId.equals(character.getServerId())) {
+        schedule(character.getServerId(), proto);
+      }
+    }
+  }
+
+  public void unpublish(Campaign campaign) {
+    /*
+    if (!Strings.isNullOrEmpty(name) && !Campaigns.hasAnyPublished()) {
+      stop();
     }
 
-    if (name == null && server.start()) {
+    // also send a deletion request to clients
+    */
+  }
+
+  private void schedule(String recipientId, Data.CompanionMessageProto proto) {
+    setupScheduler(recipientId).schedule(proto);
+  }
+
+  private MessageScheduler setupScheduler(String recipientId) {
+    MessageScheduler scheduler = schedulersByRecpient.get(recipientId);
+    if (scheduler == null) {
+      scheduler = new MessageScheduler(recipientId);
+      schedulersByRecpient.put(recipientId, scheduler);
+    }
+
+    return scheduler;
+  }
+
+  public void ensureServer() {
+    if (!server.isPresent()) {
+      server = Optional.of(new CompanionServer(application));
+    }
+
+    if (!name.isPresent() && server.get().start()) {
       application.status("starting server");
-      name = Settings.get().getNickname();
-      register(name, server.getAddress(), server.getPort());
+      name = Optional.of(Settings.get().getNickname());
+      register(name.get(), server.get().getAddress(), server.get().getPort());
       application.serverStarted();
     }
   }
 
-  public void republish(List<Campaign> campaigns, String clientId) {
-    ensureServerStarted();
-    for (Campaign campaign : campaigns) {
-      if (campaign.isDefault() || !campaign.isPublished()) {
-        continue;
-      }
-
-      Log.d(TAG, "republished campaign " + campaign.getName());
-      application.status("sent (republish) campaign " + campaign.getName());
-      server.send(clientId, new CompanionMessage(Settings.get().getAppId(),
-          Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
-          .setCampaign(campaign.toProto()).build()));
-
-      for (Character character : campaign.getCharacters()) {
-        if (clientId.equals(character.getServerId())){
-          Log.d(TAG, "republished character " + character.getName());
-          server.send(clientId, new CompanionMessage(Settings.get().getAppId(),
-              Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
-              .setCharacter(character.toProto()).build()));
-        }
-      }
+  public void stop() {
+    if (name.isPresent()) {
+      Log.d(TAG, "unregistering " + service.getServiceName());
+      application.status("unregistering service " + service.getServiceName());
+      manager.unregisterService(registrationListener);
+      registrationListener = null;
+      server.get().stop();
+      server = Optional.absent();
+      name = Optional.absent();
+      application.serverStopped();
     }
   }
 
-  public void update(Character character, String characterClientId) {
-    ensureServerStarted();
-    server.sendMost(new CompanionMessage(Settings.get().getAppId(),
-        Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
-        .setCharacter(character.toProto()).build()), characterClientId);
-  }
-
-  public void update(Data.CompanionMessageProto.Image image, String characterClientId) {
-    ensureServerStarted();
-    server.sendMost(new CompanionMessage(Settings.get().getAppId(),
-        Settings.get().getNickname(), Data.CompanionMessageProto.newBuilder()
-        .setImage(image).build()), characterClientId);
-  }
-
-  public void unpublish(Campaign campaign) {
-    if (!Strings.isNullOrEmpty(name) && !Campaigns.hasAnyPublished()) {
-      stop();
+  public List<CompanionMessage> receive() {
+    if (server.isPresent()) {
+      return server.get().receive();
     }
+
+    return Collections.emptyList();
+  }
+
+  public void ack(String remoteId, long messageId) {
+    /*
+    server.send(remoteId, new CompanionMessage(Data.CompanionMessageProto.newBuilder()
+        .setAck(messageId)
+        .build()));
+        */
   }
 
   private void register(String name, InetAddress address, int port) {
@@ -156,31 +239,10 @@ public class CompanionPublisher {
     manager.registerService(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
   }
 
-  public void stop() {
-    if (name != null) {
-      Log.d(TAG, "unregistering " + service.getServiceName());
-      application.status("unregistering service " + service.getServiceName());
-      manager.unregisterService(registrationListener);
-      registrationListener = null;
-      server.stop();
-      server = null;
-      name = null;
-      application.serverStopped();
-    }
-  }
-
-  public List<CompanionMessage> receive() {
-    if (server == null) {
-      return Collections.emptyList();
-    }
-
-    return server.receive();
-  }
-
   private class CompanionRegistrationListener implements  NsdManager.RegistrationListener {
     @Override
     public void onServiceRegistered(NsdServiceInfo NsdServiceInfo) {
-      name = NsdServiceInfo.getServiceName();
+      name = Optional.of(NsdServiceInfo.getServiceName());
     }
 
     @Override

@@ -21,28 +21,35 @@
 
 package net.ixitxachitls.companion.net;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
 
 /**
  * A message transmitted between client and server.
  */
 public class CompanionMessage {
-  private final String id;
-  private final String name;
+  private final String senderId;
+  private final String senderName;
   private final Data.CompanionMessageProto proto;
 
-  public CompanionMessage(String id, String name, Data.CompanionMessageProto proto) {
-    this.id = id;
-    this.name = name;
+  public CompanionMessage(Data.CompanionMessageProto proto) {
+    this.senderId = Settings.get().getAppId();
+    this.senderName = Settings.get().getNickname();
     this.proto = proto;
   }
 
-  public String getId() {
-    return id;
+  public CompanionMessage(String id, String name, Data.CompanionMessageProto proto) {
+    this.senderId = id;
+    this.senderName = name;
+    this.proto = proto;
   }
 
-  public String getName() {
-    return name;
+  public String getSenderId() {
+    return senderId;
+  }
+
+  public String getSenderName() {
+    return senderName;
   }
 
   public Data.CompanionMessageProto getProto() {

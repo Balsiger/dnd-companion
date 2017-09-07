@@ -26,6 +26,7 @@ import android.util.Log;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.CompanionTransmitter;
@@ -51,8 +52,10 @@ public class CompanionServer implements Runnable {
   private Thread thread;
   private Map<String, CompanionTransmitter> transmittersById = new ConcurrentHashMap<>();
   private Map<String, String> namesById = new ConcurrentHashMap<>();
+  private CompanionApplication application;
 
-  public CompanionServer() {
+  public CompanionServer(CompanionApplication application) {
+    this.application = application;
     this.thread = new Thread(this);
   }
 
@@ -109,6 +112,7 @@ public class CompanionServer implements Runnable {
           transmitter.start();
 
           // Send a welcome message to the client.
+          application.status("sending welcome message to client");
           transmitter.send(Data.CompanionMessageProto.newBuilder()
               .setWelcome(Data.CompanionMessageProto.Welcome.newBuilder()
                   .setId(Settings.get().getAppId())
@@ -138,13 +142,15 @@ public class CompanionServer implements Runnable {
         if (message.isPresent()) {
           String id;
           String name;
-          if (message.get().hasWelcome()) {
+          // Handle welcome message.
+          if (message.get().getPayloadCase() == Data.CompanionMessageProto.PayloadCase.WELCOME) {
             id = message.get().getWelcome().getId();
             name = message.get().getWelcome().getName();
 
             transmittersById.remove(transmitter.getKey());
             transmittersById.put(id, transmitter.getValue());
             namesById.put(id, name);
+            application.status("Received welcome message from client " + name);
           } else {
             id = transmitter.getKey();
             name = namesById.getOrDefault(id, "(unknown)");
@@ -157,20 +163,6 @@ public class CompanionServer implements Runnable {
     return messages;
   }
 
-  public void sendAll(CompanionMessage message) {
-    for (String id : transmittersById.keySet()) {
-      send(id, message);
-    }
-  }
-
-  public void sendMost(CompanionMessage message, String clientId) {
-    for (String id : transmittersById.keySet()) {
-      if (!id.equals(clientId)) {
-        send(id, message);
-      }
-    }
-  }
-
   public void send(String id, CompanionMessage message) {
     CompanionTransmitter transmitter = transmittersById.get(id);
     if (transmitter == null) {
@@ -180,5 +172,13 @@ public class CompanionServer implements Runnable {
 
     Log.d("Server", "sending message: " + message.toString());
     transmitter.send(message.getProto());
+  }
+
+  public String getNameForId(String id) {
+    if (namesById.containsKey(id)) {
+      return namesById.get(id);
+    }
+
+    return id;
   }
 }

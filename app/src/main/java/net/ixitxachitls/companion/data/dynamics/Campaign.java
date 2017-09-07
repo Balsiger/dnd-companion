@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -52,6 +53,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   private CampaignDate date;
   private Battle battle;
   private int nextBattleNumber = 0;
+  private List<XPAward> xpAwards = new ArrayList<>();
 
   private Campaign(long id, String name, boolean local) {
     super(id, Settings.get().getAppId() + "-" + id, name, local,
@@ -60,6 +62,10 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     date = new CampaignDate(world.getCalendar());
     dm = Settings.get().getNickname();
     battle = new Battle(this);
+  }
+
+  public void awardXp(Character character, int xp) {
+    xpAwards.add(new XPAward(character.getCharacterId(), xp));
   }
 
   public Campaign refresh() {
@@ -196,5 +202,15 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     }
 
     return changed;
+  }
+
+  private static class XPAward {
+    private String characterId;
+    private int xp;
+
+    private XPAward(String characterId, int xp) {
+      this.characterId = characterId;
+      this.xp = xp;
+    }
   }
 }

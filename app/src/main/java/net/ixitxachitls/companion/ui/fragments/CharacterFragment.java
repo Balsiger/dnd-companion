@@ -43,6 +43,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
@@ -50,6 +51,8 @@ import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.io.IOException;
@@ -78,6 +81,9 @@ public class CharacterFragment extends CompanionFragment {
   private RoundImageView image;
   private IconView delete;
   private IconView move;
+  private EditTextWrapper xp;
+  private TextWrapper xpNext;
+  private EditTextWrapper level;
   private Wrapper<LinearLayout> back;
 
   public CharacterFragment() {
@@ -111,8 +117,24 @@ public class CharacterFragment extends CompanionFragment {
     wisdom.setAction(this::editAbilities);
     charisma = (AbilityView) view.findViewById(R.id.charisma);
     charisma.setAction(this::editAbilities);
+    xp = EditTextWrapper.wrap(view, R.id.xp)
+        .lineColor(R.color.character)
+        .onChange(this::changeXp);
+    xpNext = TextWrapper.wrap(view, R.id.xp_next);
+    level = EditTextWrapper.wrap(view, R.id.level)
+        .lineColor(R.color.character)
+        .onChange(this::changeLevel);
 
     return view;
+  }
+
+  @Override
+  public void onPause() {
+    super.onPause();
+
+    if (character.isPresent()) {
+      character.get().store();
+    }
   }
 
   private void back() {
@@ -181,6 +203,18 @@ public class CharacterFragment extends CompanionFragment {
     intent.setAction(Intent.ACTION_GET_CONTENT);
     // Always show the chooser (if there are multiple options available)
     startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+  }
+
+  private void changeXp() {
+    if (character.isPresent() && !xp.getText().isEmpty()) {
+      character.get().setXp(Integer.parseInt(xp.getText()));
+    }
+  }
+
+  private void changeLevel() {
+    if (character.isPresent() && !level.getText().isEmpty()) {
+      character.get().setLevel(Integer.parseInt(level.getText()));
+    }
   }
 
   @Override
@@ -252,5 +286,8 @@ public class CharacterFragment extends CompanionFragment {
         Ability.modifier(character.get().getWisdom()));
     charisma.setValue(character.get().getCharisma(),
         Ability.modifier(character.get().getCharisma()));
+    xp.text(String.valueOf(character.get().getXp()));
+    xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel()) + ")");
+    level.text(String.valueOf(character.get().getLevel()));
   }
 }

@@ -64,9 +64,6 @@ public class IconView extends android.support.v7.widget.AppCompatImageView {
     });
   }
 
-  public void pulse(Boolean start) {
-  }
-
   public void bleep() {
     if (bleepBrightColor == 0 || bleepDarkColor == 0) {
       Toast.makeText(getContext(), "Cannot set bleep without defining colors", Toast.LENGTH_LONG)

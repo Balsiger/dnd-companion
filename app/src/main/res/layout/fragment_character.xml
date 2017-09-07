@@ -113,6 +113,7 @@
   </LinearLayout>
 
   <LinearLayout
+      android:id="@+id/abilities"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/bar"
@@ -173,6 +174,71 @@
         android:layout_margin="10dp"
         android:layout_weight="1"
         app:attribute_name="CHA"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/Xps"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/abilities"
+      android:layout_marginStart="13dp"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/xp"
+        android:padding="10dp"
+        android:text="XP"
+        android:theme="@style/LargeText"/>
+
+    <EditText
+        android:id="@+id/xp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:inputType="numberSigned"
+        android:theme="@style/LargeText"/>
+
+    <TextView
+        android:id="@+id/xp_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:elevation="14dp"
+        android:padding="10dp"
+        android:theme="@style/SmallText"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/temp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/Xps"
+      android:layout_marginStart="13dp"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/level"
+        android:padding="10dp"
+        android:text="Level"
+        android:textStyle="italic"
+        android:theme="@style/LargeText"/>
+
+    <EditText
+        android:id="@+id/level"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:inputType="numberSigned"
+        android:theme="@style/LargeText"/>
+
+    s
   </LinearLayout>
 
 
