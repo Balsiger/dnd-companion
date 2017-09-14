@@ -152,6 +152,7 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
       default:
         return false;
 
+      case XP_AWARD:
       case CAMPAIGN_DELETE:
         return true;
     }
@@ -239,6 +240,10 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
       case WELCOME:
         return message + proto.getWelcome().getName();
+
+      case XP_AWARD:
+        return message + proto.getXpAward().getCharacterId() + "/"
+            + proto.getXpAward().getXpAward();
 
       default:
         return message + "unknown";

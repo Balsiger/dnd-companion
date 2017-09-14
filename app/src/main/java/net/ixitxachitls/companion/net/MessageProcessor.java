@@ -87,6 +87,13 @@ public abstract class MessageProcessor {
             message.getProto().getCampaignDelete());
         break;
 
+      case XP_AWARD:
+        handleXpAward(message.getSenderId(), message.getProto().getId(),
+            message.getProto().getXpAward().getCampaignId(),
+            message.getProto().getXpAward().getCharacterId(),
+            message.getProto().getXpAward().getXpAward());
+        break;
+
       default:
       case PAYLOAD_NOT_SET:
         handleInvalid(message.getSenderId(), message.getSenderName(), message.getProto().getId());
@@ -100,6 +107,11 @@ public abstract class MessageProcessor {
     if (received.size() > MAX_RECEIVED_SIZE) {
       received.removeLast();
     }
+  }
+
+  protected void handleXpAward(String senderId, long messageId, String campaignId,
+                               String characterId, int xp) {
+    throw new UnsupportedOperationException();
   }
 
   public List<String> receivedMessages() {

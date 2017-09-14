@@ -116,6 +116,12 @@ message CompanionMessageProto {
     bytes image = 4;
   }
 
+  message Xp {
+    string campaign_id = 1;
+    string character_id = 2;
+    int32 xp_award = 3;
+  }
+
   oneof payload {
     string debug = 5;
     Welcome welcome = 6;
@@ -124,6 +130,7 @@ message CompanionMessageProto {
     Image image = 9;
     int64 ack = 10;
     string campaign_delete = 11;
+    Xp xp_award = 12;
   }
 }
 

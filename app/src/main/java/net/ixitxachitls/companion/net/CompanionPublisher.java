@@ -178,6 +178,20 @@ public class CompanionPublisher {
     }
   }
 
+  public void awardXp(Campaign campaign, Character character, int xp) {
+    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+        .setXpAward(Data.CompanionMessageProto.Xp.newBuilder()
+            .setCampaignId(campaign.getCampaignId())
+            .setCharacterId(character.getCharacterId())
+            .setXpAward(xp)
+            .build())
+        .setSender(Settings.get().getAppId())
+        .setId(Settings.get().getNextMessageId())
+        .build();
+
+    schedule(character.getServerId(), proto);
+  }
+
   public void unpublish(Campaign campaign) {
     if (name.isPresent() && !Campaigns.hasAnyPublished() && isIdle()) {
       //stop();

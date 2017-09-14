@@ -23,9 +23,14 @@ package net.ixitxachitls.companion.net;
 
 import android.util.Log;
 
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
 /**
@@ -66,5 +71,25 @@ public class ClientMessageProcessor extends MessageProcessor {
     mainActivity.addServerConnection(remoteId, remoteName);
 
     // send a welcome message back?
+  }
+
+  @Override
+  protected void handleXpAward(String senderId, long messageId, String campaignId,
+                               String characterId, int xp) {
+    Optional<Character> character = Characters.getCharacter(characterId, campaignId);
+    if (character.isPresent()) {
+      new ConfirmationDialog(mainActivity)
+          .title("XP Award")
+          .message("Congratulation!\n"
+              + "Your DM has granted " + character.get().getName() + " " + xp + " XP!")
+          .yes(() -> addXpAward(senderId, messageId, character.get(), xp))
+          .show();
+    }
+  }
+
+  private void addXpAward(String senderId, long messageId, Character character, int xp) {
+    character.addXp(xp);
+    ack(senderId, messageId);
+    refresh();
   }
 }

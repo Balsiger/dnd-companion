@@ -101,6 +101,8 @@ public class XPDialog extends Dialog {
         int xp = XP.xpAward(level, character.getLevel(), partySize);
         campaign.get().awardXp(character, xp);
       }
+
+      save();
     }
   }
 }

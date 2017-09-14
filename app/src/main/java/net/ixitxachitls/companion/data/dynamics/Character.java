@@ -214,6 +214,11 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     this.xp = xp;
   }
 
+  public void addXp(int xp) {
+    this.xp += xp;
+    store();
+  }
+
   public int getXp() {
     return xp;
   }
