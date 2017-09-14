@@ -119,6 +119,10 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     return entryId + "-" + isLocal() + "-" + getClass().getSimpleName();
   }
 
+  protected void remove() {
+    PROTO_CACHE.remove(protoCacheKey());
+  }
+
   @Override
   public boolean equals(Object other) {
     if (this == other) {

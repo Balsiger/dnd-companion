@@ -117,11 +117,9 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
   public boolean mayOverwrite() {
     switch (proto.getPayloadCase()) {
       default:
-      case WELCOME:
-      case DEBUG:
-      case ACK:
         return false;
 
+      case CAMPAIGN_DELETE:
       case CHARACTER:
       case CAMPAIGN:
       case IMAGE:
@@ -133,10 +131,10 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
   public boolean overwrites(ScheduledMessage other) {
     switch (proto.getPayloadCase()) {
       default:
-      case WELCOME:
-      case DEBUG:
-      case ACK:
         return false;
+
+      case CAMPAIGN_DELETE:
+        return proto.getCampaignDelete().equals(other.proto.getCampaignDelete());
 
       case CAMPAIGN:
         return proto.getCampaign().getId().equals(other.proto.getCampaign().getId());
@@ -149,8 +147,22 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     }
   }
 
+  public boolean requiresAck() {
+    switch (proto.getPayloadCase()) {
+      default:
+        return false;
+
+      case CAMPAIGN_DELETE:
+        return true;
+    }
+  }
+
   public Data.CompanionMessageProto.PayloadCase getType() {
     return proto.getPayloadCase();
+  }
+
+  public long getMessageId() {
+    return proto.getId();
   }
 
   public String getSender() {
@@ -216,6 +228,7 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
     switch (proto.getPayloadCase()) {
       case CAMPAIGN:
+      case CAMPAIGN_DELETE:
         return message + proto.getCampaign().getName();
 
       case CHARACTER:

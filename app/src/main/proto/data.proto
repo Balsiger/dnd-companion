@@ -7,6 +7,7 @@ import "entity.proto";
 message SettingsProto {
   string nickname = 1;
   string app_id = 2;
+  int64 last_message_id = 3;
 }
 
 message CampaignProto {
@@ -122,6 +123,7 @@ message CompanionMessageProto {
     CharacterProto character = 8; // From client only.
     Image image = 9;
     int64 ack = 10;
+    string campaign_delete = 11;
   }
 }
 

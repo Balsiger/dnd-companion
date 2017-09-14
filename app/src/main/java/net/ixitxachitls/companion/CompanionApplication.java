@@ -91,7 +91,7 @@ public class CompanionApplication extends MultiDexApplication
 
   private class MessageChecker implements Runnable {
 
-    public static final int DELAY_MILLIS = 1_000;
+    public static final int DELAY_MILLIS = 5_000;
 
     @Override
     public void run() {

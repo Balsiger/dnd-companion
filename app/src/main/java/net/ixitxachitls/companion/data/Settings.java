@@ -49,6 +49,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private static Settings settings = null;
 
   private String appId;
+  private long lastMessageId = 1;
   private boolean showStatus = false;
 
   private Settings(String name) {
@@ -90,6 +91,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return Data.SettingsProto.newBuilder()
         .setNickname(name)
         .setAppId(appId)
+        .setLastMessageId(lastMessageId)
         .build();
   }
 
@@ -101,6 +103,12 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private static Settings fromProto(Data.SettingsProto proto) {
     Settings settings = new Settings(proto.getNickname());
     settings.appId = proto.getAppId();
+    settings.lastMessageId = proto.getLastMessageId();
+
+    // Don't use 0 as it could be confused with an unset message id.
+    if (settings.lastMessageId == 0) {
+      settings.lastMessageId = 1;
+    }
 
     return settings;
   }
@@ -139,5 +147,12 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   public void setNickname(String name) {
     setName(name);
+  }
+
+  public long getNextMessageId() {
+    lastMessageId++;
+    store();
+
+    return lastMessageId;
   }
 }

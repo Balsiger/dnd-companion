@@ -22,7 +22,7 @@
 package net.ixitxachitls.companion.net;
 
 import com.google.common.base.Optional;
-import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
@@ -44,12 +44,11 @@ public class MessageScheduler {
   private final String recipientId;
   private final Multimap<Data.CompanionMessageProto.PayloadCase, ScheduledMessage> waiting =
       LinkedHashMultimap.create();
-  private final Map<Data.CompanionMessageProto.PayloadCase, ScheduledMessage> pending =
-      new HashMap<>();
+  private final Map<Long, ScheduledMessage> pending = new HashMap<>();
   private final Multimap<Data.CompanionMessageProto.PayloadCase, ScheduledMessage> sent =
-      HashMultimap.create();
+      LinkedHashMultimap.create();
   private final Multimap<Data.CompanionMessageProto.PayloadCase, ScheduledMessage> acknowledged =
-      HashMultimap.create();
+      LinkedHashMultimap.create();
 
   public MessageScheduler(String recipientId) {
     this.recipientId = recipientId;
@@ -62,7 +61,7 @@ public class MessageScheduler {
           waiting.put(message.getType(), message);
 
         case PENDING:
-          pending.put(message.getType(), message);
+          pending.put(message.getMessageId(), message);
           break;
 
         case SENT:
@@ -109,17 +108,35 @@ public class MessageScheduler {
 
     for (Iterator<ScheduledMessage> i = waiting.values().iterator(); i.hasNext(); ) {
       ScheduledMessage message = i.next();
+
+      // Ignore messages that are already pending.
       if (pending.containsKey(message.getType())) {
         continue;
       }
 
       i.remove();
-      markSent(message);
+      if (message.requiresAck()) {
+        markPending(message);
+      } else {
+        markSent(message);
+      }
 
       return Optional.of(message);
     }
 
     return Optional.absent();
+  }
+
+  public void ack(long messageId) {
+    ScheduledMessage message = pending.get(messageId);
+    if (message != null) {
+      pending.remove(message);
+      markAcked(message);
+    }
+  }
+
+  public boolean isIdle() {
+    return waiting.isEmpty() && pending.isEmpty();
   }
 
   private void markWaiting(ScheduledMessage message) {
@@ -141,14 +158,14 @@ public class MessageScheduler {
 
   private void markPending(ScheduledMessage message) {
     message.markPending();
-    pending.put(message.getType(), message);
+    pending.put(message.getMessageId(), message);
   }
 
   public List<String> scheduledMessages(String id) {
     List<String> list = new ArrayList<>();
 
-    addMessages(list, pending.values(), id);
     addMessages(list, waiting.values(), id);
+    addMessages(list, pending.values(), id);
     addMessages(list, sent.values(), id);
     addMessages(list, acknowledged.values(), id);
 
@@ -156,8 +173,8 @@ public class MessageScheduler {
   }
 
   private void addMessages(List<String> list, Collection<ScheduledMessage> messages,
-                                 String id) {
-    for (ScheduledMessage message : messages) {
+                           String id) {
+    for (ScheduledMessage message : ImmutableList.copyOf(messages).reverse()) {
       if (message.toProto().getMessage().getSender().equals(id)) {
         list.add(message.toSenderString());
       }

@@ -40,20 +40,7 @@ public class ClientMessageProcessor extends MessageProcessor {
   }
 
   @Override
-  public void process(CompanionMessage message) {
-    switch (message.getProto().getPayloadCase()) {
-      case CAMPAIGN:
-        handleCampaign(message.getSenderId(), message.getSenderName(), message.getProto().getId(),
-            message.getProto().getCampaign());
-
-        break;
-
-      default:
-        super.process(message);
-    }
-  }
-
-  private void handleCampaign(String senderId, String senderName, long id,
+  protected void handleCampaign(String senderId, String senderName, long id,
                               Data.CampaignProto campaignProto) {
     Campaign campaign = Campaign.fromProto(Campaigns.getRemoteIdFor(campaignProto.getId()),
         false, campaignProto);
@@ -62,6 +49,13 @@ public class ClientMessageProcessor extends MessageProcessor {
     campaign.store();
     Log.d(TAG, "received campaign " + campaign.getName());
     status("received campaign " + campaign.getName());
+    refresh();
+  }
+
+  @Override
+  protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
+    Campaigns.get(false).remove(campaignId);
+    ack(senderId, messageId);
     refresh();
   }
 

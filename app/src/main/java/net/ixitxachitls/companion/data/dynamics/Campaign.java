@@ -204,6 +204,13 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return changed;
   }
 
+  public void delete() {
+    if (isLocal()) {
+      CompanionPublisher.get().delete(this);
+    }
+    Campaigns.get(isLocal()).remove(this);
+  }
+
   private static class XPAward {
     private String characterId;
     private int xp;

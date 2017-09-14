@@ -152,6 +152,10 @@ public class DateDialog extends Dialog {
 
   private void editTime() {
     if (campaign.isPresent()) {
+      if (hours.getText().isEmpty() || minutes.getText().isEmpty()) {
+        return;
+      }
+
       campaign.get().setDate(campaign.get().getDate().fromDate(
           Integer.parseInt(hours.getText()),
           Integer.parseInt(minutes.getText())));

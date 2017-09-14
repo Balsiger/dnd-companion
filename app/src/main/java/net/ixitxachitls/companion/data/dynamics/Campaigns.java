@@ -61,6 +61,10 @@ public class Campaigns extends StoredEntries<Campaign> {
   }
 
   public static Optional<Campaign> getCampaign(String campaignId) {
+    if (defaultCampaign.getCampaignId().equals(campaignId)) {
+      return Optional.of(defaultCampaign);
+    }
+
     if (Misc.onEmulator() && !Misc.emulatingLocal()) {
       return Campaigns.remote.get(campaignId);
     }

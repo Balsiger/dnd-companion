@@ -32,6 +32,7 @@ import com.google.common.base.Optional;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
@@ -39,10 +40,13 @@ import net.ixitxachitls.companion.proto.Data;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Class to publish data to the local network.
@@ -84,12 +88,15 @@ public class CompanionPublisher {
 
   public void sendWaiting() {
     for (MessageScheduler scheduler : schedulersByRecpient.values()) {
-      Optional<ScheduledMessage> message = scheduler.nextWaiting();
-      if (message.isPresent()) {
-        Log.d(TAG, "sending " + message);
-        ensureServer();
-        server.get().send(message.get().getRecipient(), message.get().toMessage());
-        application.updateClientConnection(getRecipientName(message.get().getRecipient()));
+      for (Optional<ScheduledMessage> message = scheduler.nextWaiting();
+           message.isPresent();
+           message = scheduler.nextWaiting()) {
+        if (message.isPresent()) {
+          Log.d(TAG, "sending " + message);
+          ensureServer();
+          server.get().send(message.get().getRecipient(), message.get().toMessage());
+          application.updateClientConnection(getRecipientName(message.get().getRecipient()));
+        }
       }
     }
   }
@@ -122,12 +129,23 @@ public class CompanionPublisher {
         .setSender(Settings.get().getAppId())
         .build();
 
-    for (Character character : Characters.getAllCharacters(campaign.getCampaignId())) {
-      schedule(character.getServerId(), proto);
-    }
+    schedule(clientIds(campaign), proto);
 
     Log.d(TAG, "published campaign " + campaign.getName());
     application.status("sent campaign " + campaign.getName());
+  }
+
+  public void delete(Campaign campaign) {
+    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+        .setSender(Settings.get().getAppId())
+        .setId(Settings.get().getNextMessageId())
+        .setCampaignDelete(campaign.getCampaignId())
+        .build();
+
+    schedule(clientIds(campaign), proto);
+
+    Log.d(TAG, "deleted campaign " + campaign.getName());
+    application.status("sent campaign deletion " + campaign.getName());
   }
 
   public void update(Character updatedCharacter, String characterClientId) {
@@ -161,13 +179,45 @@ public class CompanionPublisher {
   }
 
   public void unpublish(Campaign campaign) {
-    /*
-    if (!Strings.isNullOrEmpty(name) && !Campaigns.hasAnyPublished()) {
-      stop();
+    if (name.isPresent() && !Campaigns.hasAnyPublished() && isIdle()) {
+      //stop();
+    }
+  }
+
+  private boolean isIdle() {
+    for (MessageScheduler scheduler : schedulersByRecpient.values()) {
+      if (!scheduler.isIdle()) {
+        return false;
+      }
     }
 
-    // also send a deletion request to clients
-    */
+    return true;
+  }
+
+  private Set<String> clientIds(Campaign campaign) {
+    Set<String> ids = new HashSet<>();
+    ids.addAll(clientIds());
+
+    for (Character character
+        : Characters.getAllCharacters(campaign.getCampaignId())) {
+      ids.add(character.getServerId());
+    }
+
+    return ids;
+  }
+
+  private Collection<String> clientIds() {
+    if (server.isPresent()) {
+      return server.get().connectedIds();
+    }
+
+    return Collections.emptyList();
+  }
+
+  private void schedule(Iterable<String> recipients, Data.CompanionMessageProto proto) {
+    for (String recipient : recipients) {
+      schedule(recipient, proto);
+    }
   }
 
   private void schedule(String recipientId, Data.CompanionMessageProto proto) {
@@ -218,12 +268,8 @@ public class CompanionPublisher {
     return Collections.emptyList();
   }
 
-  public void ack(String remoteId, long messageId) {
-    /*
-    server.send(remoteId, new CompanionMessage(Data.CompanionMessageProto.newBuilder()
-        .setAck(messageId)
-        .build()));
-        */
+  public void ack(String recipientId, long messageId) {
+    setupScheduler(recipientId).ack(messageId);
   }
 
   private void register(String name, InetAddress address, int port) {

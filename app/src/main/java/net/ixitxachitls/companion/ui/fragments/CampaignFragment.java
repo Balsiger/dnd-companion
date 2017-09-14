@@ -115,7 +115,7 @@ public class CampaignFragment extends CompanionFragment {
 
   private void deleteCampaignOk() {
     if (campaign.isPresent()) {
-      Campaigns.get(campaign.get().isLocal()).remove(campaign.get());
+      campaign.get().delete();
       Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
           Toast.LENGTH_SHORT).show();
       show(Type.campaigns);

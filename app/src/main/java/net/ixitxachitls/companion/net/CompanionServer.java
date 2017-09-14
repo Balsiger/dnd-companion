@@ -93,6 +93,10 @@ public class CompanionServer implements Runnable {
     return socket.getInetAddress();
   }
 
+  public Collection<String> connectedIds() {
+    return namesById.keySet();
+  }
+
   public Collection<String> connectedNames() {
     return namesById.values();
   }

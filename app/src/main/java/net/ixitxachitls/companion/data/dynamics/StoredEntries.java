@@ -98,8 +98,16 @@ public abstract class StoredEntries<E extends StoredEntry<?>> {
   }
 
   public void remove(E entry) {
+    entry.remove();
     entriesById.remove(entry.getEntryId());
     context.getContentResolver().delete(table, "id = " + entry.getId(), null);
+  }
+
+  public void remove(String entryId) {
+    E entry = entriesById.get(entryId);
+    if (entry != null) {
+      remove(entry);
+    }
   }
 
   protected abstract Optional<E> parseEntry(long id, byte[] blob);

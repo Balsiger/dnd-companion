@@ -65,8 +65,13 @@ public abstract class MessageProcessor {
         handleWelcome(message.getSenderId(), message.getSenderName());
         break;
 
+      case CAMPAIGN:
+        handleCampaign(message.getSenderId(), message.getSenderName(), message.getProto().getId(),
+            message.getProto().getCampaign());
+        break;
+
       case CHARACTER:
-        handleCharacter(message.getProto().getCharacter());
+        handleCharacter(message);
         break;
 
       case IMAGE:
@@ -74,6 +79,12 @@ public abstract class MessageProcessor {
         break;
 
       case ACK:
+        handleAck(message.getSenderName(), message.getProto().getAck());
+        break;
+
+      case CAMPAIGN_DELETE:
+        handleCampaignDeletion(message.getSenderId(), message.getProto().getId(),
+            message.getProto().getCampaignDelete());
         break;
 
       default:
@@ -95,10 +106,24 @@ public abstract class MessageProcessor {
     List<String> messages = new ArrayList<>();
 
     for (CompanionMessage message : received) {
-      messages.add(message.getSenderName() + ": " + ScheduledMessage.toString(message.getProto()));
+      messages.add("from " + message.getSenderName() + ": " +
+          ScheduledMessage.toString(message.getProto()));
     }
 
     return messages;
+  }
+
+  protected void handleCampaign(String senderId, String senderName, long id,
+                              Data.CampaignProto campaignProto) {
+    throw new UnsupportedOperationException();
+  }
+
+  protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
+    throw new UnsupportedOperationException();
+  }
+
+  protected void handleAck(String recipientId, long messageId) {
+    throw new UnsupportedOperationException();
   }
 
   private void handleImage(String senderId, Data.CompanionMessageProto.Image imageProto) {
@@ -117,7 +142,7 @@ public abstract class MessageProcessor {
     ack(senderId, messageId);
   }
 
-  private void handleDebug(String senderId, String senderName, long messageId, String debug) {
+  protected void handleDebug(String senderId, String senderName, long messageId, String debug) {
     if (!debug.isEmpty()) {
       Toast.makeText(mainActivity.getApplicationContext(),
           senderName + ": " + debug, Toast.LENGTH_LONG).show();
@@ -125,10 +150,11 @@ public abstract class MessageProcessor {
     }
   }
 
-  private void handleCharacter(Data.CharacterProto characterProto) {
-    if (!StoredEntries.isLocalId(characterProto.getId())) {
+  protected void handleCharacter(CompanionMessage message) {
+    if (!StoredEntries.isLocalId(message.getProto().getCharacter().getId())) {
       Character character = Character.fromProto(
-          Characters.getRemoteIdFor(characterProto.getId()), false, characterProto);
+          Characters.getRemoteIdFor(message.getProto().getCharacter().getId()), false,
+          message.getProto().getCharacter());
       // Storing will also add the character if it's changed.
       character.store();
       Log.d(TAG, "received character " + character.getName());
@@ -150,7 +176,7 @@ public abstract class MessageProcessor {
 
   }
 
-  private void ack(String remoteId, long messageId) {
+  protected void ack(String remoteId, long messageId) {
     CompanionPublisher.get().ack(remoteId, messageId);
   }
 

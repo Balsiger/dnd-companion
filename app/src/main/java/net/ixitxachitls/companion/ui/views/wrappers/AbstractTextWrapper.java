@@ -94,6 +94,7 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
   private static class TextChangeWatcher implements TextWatcher {
 
     private final Wrapper.Action action;
+    private boolean changing = false;
 
     public TextChangeWatcher(Wrapper.Action action) {
       this.action = action;
@@ -105,7 +106,14 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
+      // Prevent actions from changing text and triggering an endless loop.
+      if (changing) {
+        return;
+      }
+
+      changing = true;
       action.execute();
+      changing = false;
     }
 
     @Override

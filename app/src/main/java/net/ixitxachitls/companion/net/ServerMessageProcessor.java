@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.net;
 
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
@@ -34,19 +35,13 @@ public class ServerMessageProcessor extends MessageProcessor {
   }
 
   @Override
-  public void process(CompanionMessage message) {
-    switch (message.getProto().getPayloadCase()) {
-
-      case CHARACTER:
-        handleCharacter(message);
-
-      default:
-        super.process(message);
-    }
+  protected void handleAck(String recipientId, long messageId) {
+    CompanionPublisher.get().ack(recipientId, messageId);
   }
 
-  private void handleCharacter(CompanionMessage message) {
-    super.process(message);
+  @Override
+  protected void handleCharacter(CompanionMessage message) {
+    super.handleCharacter(message);
 
     // Send the character update to the other clients.
     Character character = Character.fromProto(
@@ -60,5 +55,8 @@ public class ServerMessageProcessor extends MessageProcessor {
     status("received welcome from client " + remoteName);
     super.handleWelcome(remoteId, remoteName);
     mainActivity.addClientConnection(remoteId, remoteName);
+
+    // Publish all local campaigns to that client.
+    Campaigns.publish();
   }
 }
