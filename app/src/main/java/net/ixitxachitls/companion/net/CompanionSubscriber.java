@@ -101,6 +101,17 @@ public class CompanionSubscriber {
     setupScheduler(id).schedule(proto);
   }
 
+  public void delete(Character character) {
+    String id = Ids.extractServerId(character.getCampaignId());
+    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+        .setId(Settings.get().getNextMessageId())
+        .setSender(Settings.get().getAppId())
+        .setReceiver(id)
+        .setCharacterDelete(character.getCharacterId())
+        .build();
+    setupScheduler(id).schedule(proto);
+  }
+
   public void publishImage(Data.CompanionMessageProto.Image image) {
     CompanionClient client = clientById.get(Ids.extractServerId(image.getCampaignId()));
     if (client != null) {
@@ -278,6 +289,14 @@ public class CompanionSubscriber {
     }
 
     return messages;
+  }
+
+  public void sendAck(String recipientId, long messageId) {
+    setupScheduler(recipientId).schedule(Data.CompanionMessageProto.newBuilder()
+        .setSender(Settings.get().getAppId())
+        .setId(messageId)
+        .setAck(messageId)
+        .build());
   }
 
   private String keyForClient(CompanionClient client) {

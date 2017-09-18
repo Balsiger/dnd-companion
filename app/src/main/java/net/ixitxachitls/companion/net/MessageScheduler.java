@@ -130,7 +130,7 @@ public class MessageScheduler {
   public void ack(long messageId) {
     ScheduledMessage message = pending.get(messageId);
     if (message != null) {
-      pending.remove(message);
+      pending.remove(messageId);
       markAcked(message);
     }
   }

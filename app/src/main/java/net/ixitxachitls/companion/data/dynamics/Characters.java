@@ -29,6 +29,8 @@ import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.net.CompanionPublisher;
+import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -115,6 +117,8 @@ public class Characters extends StoredEntries<Character> {
 
   public static void removeCharacter(Character character) {
     local.remove(character);
+    CompanionPublisher.get().delete(character);
+    CompanionSubscriber.get().delete(character);
   }
 
   public static void publish(String campaignId) {
@@ -131,6 +135,10 @@ public class Characters extends StoredEntries<Character> {
 
   public static long getRemoteIdFor(String campaignId) {
     return remote().getIdFor(campaignId);
+  }
+
+  public static void removeRemote(String characterId) {
+    remote().remove(characterId);
   }
 
   private static Characters local() {

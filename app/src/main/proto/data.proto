@@ -131,6 +131,7 @@ message CompanionMessageProto {
     int64 ack = 10;
     string campaign_delete = 11;
     Xp xp_award = 12;
+    string character_delete = 13;
   }
 }
 

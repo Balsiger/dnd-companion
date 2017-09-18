@@ -79,12 +79,17 @@ public abstract class MessageProcessor {
         break;
 
       case ACK:
-        handleAck(message.getSenderName(), message.getProto().getAck());
+        handleAck(message.getSenderId(), message.getProto().getAck());
         break;
 
       case CAMPAIGN_DELETE:
         handleCampaignDeletion(message.getSenderId(), message.getProto().getId(),
             message.getProto().getCampaignDelete());
+        break;
+
+      case CHARACTER_DELETE:
+        handleCharacterDeletion(message.getSenderId(), message.getProto().getId(),
+            message.getProto().getCharacterDelete());
         break;
 
       case XP_AWARD:
@@ -134,6 +139,12 @@ public abstract class MessageProcessor {
     throw new UnsupportedOperationException();
   }
 
+  protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
+    Characters.removeRemote(characterId);
+    CompanionSubscriber.get().sendAck(senderId, messageId);
+    refresh();
+  }
+
   protected void handleAck(String recipientId, long messageId) {
     throw new UnsupportedOperationException();
   }
@@ -151,14 +162,12 @@ public abstract class MessageProcessor {
   private void handleInvalid(String senderId, String senderName, long messageId) {
     Toast.makeText(mainActivity.getApplicationContext(),
         senderName + ": Unknown message ignored", Toast.LENGTH_LONG).show();
-    ack(senderId, messageId);
   }
 
   protected void handleDebug(String senderId, String senderName, long messageId, String debug) {
     if (!debug.isEmpty()) {
       Toast.makeText(mainActivity.getApplicationContext(),
           senderName + ": " + debug, Toast.LENGTH_LONG).show();
-      ack(senderId, messageId);
     }
   }
 
@@ -186,10 +195,6 @@ public abstract class MessageProcessor {
     //CompanionPublisher.get().republish(Campaigns.getLocalCampaigns(),
     //    message.getSenderId());
 
-  }
-
-  protected void ack(String remoteId, long messageId) {
-    CompanionPublisher.get().ack(remoteId, messageId);
   }
 
   public void status(String message) {

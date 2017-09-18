@@ -148,6 +148,19 @@ public class CompanionPublisher {
     application.status("sent campaign deletion " + campaign.getName());
   }
 
+  public void delete(Character character) {
+    Optional<Campaign> campaign = Campaigns.getCampaign(character.getCampaignId());
+    if (campaign.isPresent()) {
+      Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+          .setSender(Settings.get().getAppId())
+          .setId(Settings.get().getNextMessageId())
+          .setCharacterDelete(character.getCharacterId())
+          .build();
+
+      schedule(clientIds(campaign.get()), proto);
+    }
+  }
+
   public void update(Character updatedCharacter, String characterClientId) {
     Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
         .setCharacter(updatedCharacter.toProto())
@@ -196,6 +209,10 @@ public class CompanionPublisher {
     if (name.isPresent() && !Campaigns.hasAnyPublished() && isIdle()) {
       //stop();
     }
+  }
+
+  public void ack(String recipientId, long messageId) {
+    setupScheduler(recipientId).ack(messageId);
   }
 
   private boolean isIdle() {
@@ -280,10 +297,6 @@ public class CompanionPublisher {
     }
 
     return Collections.emptyList();
-  }
-
-  public void ack(String recipientId, long messageId) {
-    setupScheduler(recipientId).ack(messageId);
   }
 
   private void register(String name, InetAddress address, int port) {

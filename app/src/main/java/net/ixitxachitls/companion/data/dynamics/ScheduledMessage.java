@@ -229,11 +229,16 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
     switch (proto.getPayloadCase()) {
       case CAMPAIGN:
-      case CAMPAIGN_DELETE:
         return message + proto.getCampaign().getName();
+
+      case CAMPAIGN_DELETE:
+        return message + proto.getCampaignDelete();
 
       case CHARACTER:
         return message + proto.getCharacter().getName();
+
+      case CHARACTER_DELETE:
+        return message + proto.getCharacterDelete();
 
       case IMAGE:
         return message + proto.getImage().getId();
@@ -244,6 +249,9 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
       case XP_AWARD:
         return message + proto.getXpAward().getCharacterId() + "/"
             + proto.getXpAward().getXpAward();
+
+      case ACK:
+        return message + proto.getAck();
 
       default:
         return message + "unknown";

@@ -60,7 +60,7 @@ public class ClientMessageProcessor extends MessageProcessor {
   @Override
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
     Campaigns.get(false).remove(campaignId);
-    ack(senderId, messageId);
+    CompanionSubscriber.get().sendAck(senderId, messageId);
     refresh();
   }
 
@@ -89,7 +89,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   private void addXpAward(String senderId, long messageId, Character character, int xp) {
     character.addXp(xp);
-    ack(senderId, messageId);
+    CompanionSubscriber.get().sendAck(senderId, messageId);
     refresh();
   }
 }
