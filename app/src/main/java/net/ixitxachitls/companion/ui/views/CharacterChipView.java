@@ -22,13 +22,13 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 
 import com.google.common.base.Optional;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Image;
 
 /**
  * A chip displaying character information.
@@ -39,9 +39,10 @@ public class CharacterChipView extends ChipView {
     super(context, character.getCharacterId(), character.getName(), "", R.color.character,
         R.color.characterDark);
 
-    Optional<Bitmap> bitmap = character.loadImage();
-    if (bitmap.isPresent()) {
-      BitmapDrawable drawable = new BitmapDrawable(getResources(), bitmap.get());
+    Optional<Image> characterImage = character.loadImage();
+    if (characterImage.isPresent()) {
+      BitmapDrawable drawable = new BitmapDrawable(getResources(),
+          characterImage.get().getBitmap());
       image.setImageDrawable(drawable);
     }
 

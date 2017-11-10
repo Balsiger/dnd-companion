@@ -25,6 +25,7 @@ import android.util.Log;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.CompanionTransmitter;
 
@@ -39,16 +40,34 @@ public class CompanionClient {
   private CompanionTransmitter transmitter;
   private final InetAddress address;
   private final int port;
+  private String serverId;
+  private String serverName;
 
   public CompanionClient(InetAddress address, int port) {
     Log.d("Client", "creating client to " + address + ":" + port);
     this.address = address;
     this.port = port;
+    this.serverId = "";
+    this.serverName = "";
   }
 
-  public void send(Data.CompanionMessageProto message) {
+  public void send(CompanionMessageData message) {
     if (transmitter != null) {
-      transmitter.send(message);
+      Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+          .setHeader(Data.CompanionMessageProto.Header.newBuilder()
+              .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
+                  .setId(Settings.get().getAppId())
+                  .setName(Settings.get().getNickname())
+                  .build())
+              .setReceiver(Data.CompanionMessageProto.Header.Id.newBuilder()
+                  .setId(serverId)
+                  .setName(serverName)
+                  .build())
+              .build())
+          .setData(message.toProto())
+          .build();
+
+      transmitter.send(proto);
     }
   }
 
@@ -66,11 +85,22 @@ public class CompanionClient {
   public void stop() {
   }
 
-  public Optional<Data.CompanionMessageProto> receive() {
+  public Optional<CompanionMessage> receive() {
     if (transmitter == null) {
       return Optional.absent();
     }
 
-    return transmitter.receive();
+    Optional<Data.CompanionMessageProto> message = transmitter.receive();
+    if (!message.isPresent()) {
+      return Optional.absent();
+    }
+
+    if (message.get().getData().getPayloadCase()
+        == Data.CompanionMessageProto.Payload.PayloadCase.WELCOME) {
+      this.serverId = message.get().getData().getWelcome().getId();
+      this.serverName = message.get().getData().getWelcome().getName();
+    }
+
+    return Optional.of(CompanionMessage.fromProto(message.get()));
   }
 }

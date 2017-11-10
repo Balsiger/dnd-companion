@@ -118,10 +118,18 @@ public class CompanionServer implements Runnable {
           // Send a welcome message to the client.
           application.status("sending welcome message to client");
           transmitter.send(Data.CompanionMessageProto.newBuilder()
-              .setWelcome(Data.CompanionMessageProto.Welcome.newBuilder()
-                  .setId(Settings.get().getAppId())
-                  .setName(Settings.get().getNickname())
+              .setHeader(Data.CompanionMessageProto.Header.newBuilder()
+                  .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
+                      .setId(Settings.get().getAppId())
+                      .setName(Settings.get().getNickname())
+                      .build())
+                  // Don't know anything about the client yet.
                   .build())
+              .setData(Data.CompanionMessageProto.Payload.newBuilder()
+                  .setWelcome(Data.CompanionMessageProto.Payload.Welcome.newBuilder()
+                      .setId(Settings.get().getAppId())
+                      .setName(Settings.get().getNickname())
+                      .build()))
               .build());
           Log.d("Server", "Connected.");
         } catch (IOException e) {
@@ -144,22 +152,19 @@ public class CompanionServer implements Runnable {
       for (Optional<Data.CompanionMessageProto> message = transmitter.getValue().receive();
            message.isPresent(); message = transmitter.getValue().receive()) {
         if (message.isPresent()) {
-          String id;
-          String name;
           // Handle welcome message.
-          if (message.get().getPayloadCase() == Data.CompanionMessageProto.PayloadCase.WELCOME) {
-            id = message.get().getWelcome().getId();
-            name = message.get().getWelcome().getName();
+          if (message.get().getData().getPayloadCase()
+              == Data.CompanionMessageProto.Payload.PayloadCase.WELCOME) {
+            String id = message.get().getData().getWelcome().getId();
+            String name = message.get().getData().getWelcome().getName();
 
             transmittersById.remove(transmitter.getKey());
             transmittersById.put(id, transmitter.getValue());
             namesById.put(id, name);
             application.status("Received welcome message from client " + name);
-          } else {
-            id = transmitter.getKey();
-            name = namesById.getOrDefault(id, "(unknown)");
           }
-          messages.add(new CompanionMessage(id, name, message.get()));
+
+          messages.add(CompanionMessage.fromProto(message.get()));
         }
       }
     }
@@ -167,15 +172,30 @@ public class CompanionServer implements Runnable {
     return messages;
   }
 
-  public void send(String id, CompanionMessage message) {
-    CompanionTransmitter transmitter = transmittersById.get(id);
+  public boolean send(String recieverId, long messageId, CompanionMessageData message) {
+    CompanionTransmitter transmitter = transmittersById.get(recieverId);
     if (transmitter == null) {
-      Log.e("Server", "No transmitter found for '" + id + "', message not sent.");
-      return;
+      Log.e("Server", "No transmitter found for '" + recieverId + "', message not sent.");
+      return false;
     }
 
     Log.d("Server", "sending message: " + message.toString());
-    transmitter.send(message.getProto());
+    transmitter.send(Data.CompanionMessageProto.newBuilder()
+        .setHeader(Data.CompanionMessageProto.Header.newBuilder()
+            .setId(messageId)
+            .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
+                .setId(Settings.get().getAppId())
+                .setName(Settings.get().getNickname())
+                .build())
+            .setReceiver(Data.CompanionMessageProto.Header.Id.newBuilder()
+                .setId(recieverId)
+                .setName(namesById.get(recieverId))
+                .build())
+            .build())
+        .setData(message.toProto())
+        .build());
+
+    return true;
   }
 
   public String getNameForId(String id) {

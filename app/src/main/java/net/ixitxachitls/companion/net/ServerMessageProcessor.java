@@ -21,17 +21,27 @@
 
 package net.ixitxachitls.companion.net;
 
+import android.util.Log;
+
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
 /**
  * Processor on the server to process client messages.
  */
 public class ServerMessageProcessor extends MessageProcessor {
+  private static final String TAG = "SrvMsgProc";
+
   public ServerMessageProcessor(CompanionActivity mainActivity) {
     super(mainActivity);
+  }
+
+  public void process(String receiverId, long messageId, CompanionMessageData message) {
+    process(Settings.get().getAppId(), Settings.get().getNickname(), receiverId, messageId,
+        message);
   }
 
   @Override
@@ -40,14 +50,20 @@ public class ServerMessageProcessor extends MessageProcessor {
   }
 
   @Override
-  protected void handleCharacter(CompanionMessage message) {
-    super.handleCharacter(message);
+  protected void handleCharacter(String senderId, Character character) {
+    super.handleCharacter(senderId, character);
 
     // Send the character update to the other clients.
-    Character character = Character.fromProto(
-        Characters.getRemoteIdFor(message.getProto().getCharacter().getId()), false,
-        message.getProto().getCharacter());
-    CompanionPublisher.get().update(character, message.getSenderId());
+    CompanionPublisher.get().update(character, senderId);
+  }
+
+  protected void handleImage(String senderId, Image image) {
+    Log.d(TAG, "received image for " + image.getType() + " " + image.getId());
+    image.save(false);
+
+    // Send the image update to the other clients.
+    CompanionPublisher.get().update(senderId, image);
+    refresh();
   }
 
   @Override

@@ -69,6 +69,19 @@ class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
+  public W onFocusLost(Wrapper.Action action) {
+    view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+      @Override
+      public void onFocusChange(View v, boolean hasFocus) {
+        if (!hasFocus) {
+          action.execute();
+        }
+      }
+    });
+
+    return (W) this;
+  }
+
   public W elevate(int elevation) {
     view.setElevation(2 * elevation);
     view.setPadding(view.getPaddingLeft() - elevation,

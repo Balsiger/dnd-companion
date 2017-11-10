@@ -30,17 +30,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.common.base.Optional;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
@@ -81,9 +84,9 @@ public class CharacterFragment extends CompanionFragment {
   private RoundImageView image;
   private IconView delete;
   private IconView move;
-  private EditTextWrapper xp;
-  private TextWrapper xpNext;
-  private EditTextWrapper level;
+  private EditTextWrapper<EditText> xp;
+  private TextWrapper<TextView> xpNext;
+  private EditTextWrapper<EditText> level;
   private Wrapper<LinearLayout> back;
 
   public CharacterFragment() {
@@ -117,6 +120,7 @@ public class CharacterFragment extends CompanionFragment {
     wisdom.setAction(this::editAbilities);
     charisma = (AbilityView) view.findViewById(R.id.charisma);
     charisma.setAction(this::editAbilities);
+
     xp = EditTextWrapper.wrap(view, R.id.xp)
         .lineColor(R.color.character)
         .onChange(this::changeXp);
@@ -226,10 +230,9 @@ public class CharacterFragment extends CompanionFragment {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        bitmap = Images.get(character.get().isLocal())
-            .saveAndPublish(character.get().getCampaignId(), Character.TYPE,
-                character.get().getCharacterId(), bitmap);
-        image.setImageBitmap(bitmap);
+        Image characterImage = new Image(Character.TYPE, character.get().getCharacterId(), bitmap);
+        characterImage.saveAndPublish(character.get().isLocal(), character.get().getCampaignId());
+        image.setImageBitmap(characterImage.getBitmap());
       } catch (IOException e) {
         Log.e(TAG, "Cannot load image bitmap", e);
         e.printStackTrace();
@@ -266,10 +269,10 @@ public class CharacterFragment extends CompanionFragment {
 
     campaign = Campaigns.getCampaign(campaign.get().getCampaignId());
 
-    Optional<Bitmap> bitmap =
-        Images.get(character.get().isLocal()).load(Character.TYPE, character.get().getCharacterId());
-    if (bitmap.isPresent()) {
-      image.setImageBitmap(bitmap.get());
+    Optional<Image> characterImage = Images.get(character.get().isLocal()).load(
+        Character.TYPE, character.get().getCharacterId());
+    if (characterImage.isPresent()) {
+      image.setImageBitmap(characterImage.get().getBitmap());
     }
     title.setTitle(character.get().getName());
     title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());

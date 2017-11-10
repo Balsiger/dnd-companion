@@ -40,7 +40,7 @@ import android.widget.TextView;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.values.Calendar;
@@ -59,7 +59,7 @@ public class DateDialog extends Dialog {
 
   private Optional<Campaign> campaign = Optional.absent();
 
-  private GridView grid;
+  private GridView days;
   private DateAdapter adapter = new DateAdapter();
   private EditTextWrapper<EditText> year;
   private TextWrapper<TextView> month;
@@ -68,6 +68,9 @@ public class DateDialog extends Dialog {
 
   private int yearShown = 0;
   private int monthShown = 1;
+  private int dayShown = 1;
+  private int hoursShown = 0;
+  private int minutesShown = 0;
 
   public DateDialog() {}
 
@@ -92,8 +95,7 @@ public class DateDialog extends Dialog {
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     campaign = Campaigns.getLocalCampaign(getArguments().getString(ARG_ID));
     if (campaign.isPresent()) {
-      monthShown = campaign.get().getDate().getMonth();
-      yearShown = campaign.get().getDate().getYear();
+      from(campaign.get().getDate());
     }
   }
 
@@ -107,9 +109,9 @@ public class DateDialog extends Dialog {
     Wrapper.wrap(view, R.id.month_minus).onClick(this::monthMinus);
     Wrapper.wrap(view, R.id.month_plus).onClick(this::monthPlus);
 
-    grid = (GridView) view.findViewById(R.id.days);
-    grid.setAdapter(adapter);
-    grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    days = (GridView) view.findViewById(R.id.days);
+    days.setAdapter(adapter);
+    days.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         selectDay(position + 1);
@@ -118,12 +120,12 @@ public class DateDialog extends Dialog {
 
     if (campaign.isPresent()) {
       hours = EditTextWrapper.wrap(view, R.id.hours)
-          .text("").onClick(this::editTime).onChange(this::editTime);
+          .text(String.valueOf(hoursShown)).onClick(this::editTime).onChange(this::editTime);
       hours.get().setFilters(new InputFilter[] {
           new MaxFilter(campaign.get().getCalendar().getHoursPerDay()) });
       hours.get().setSelectAllOnFocus(true);
       minutes = EditTextWrapper.wrap(view, R.id.minutes)
-          .text("").onClick(this::editTime).onChange(this::editTime);
+          .text(String.valueOf(minutesShown)).onClick(this::editTime).onChange(this::editTime);
       minutes.get().setFilters(new InputFilter[]
           {new MaxFilter(campaign.get().getCalendar().getMinutesPerHour())});
       Wrapper.wrap(view, R.id.plus_1).onClick(() -> addMinutes(1));
@@ -133,41 +135,46 @@ public class DateDialog extends Dialog {
       Wrapper.wrap(view, R.id.night).onClick(this::night);
     }
 
-    update();
   }
 
-  public void night() {
+  private void from(CampaignDate date) {
+    monthShown = date.getMonth();
+    yearShown = date.getYear();
+    dayShown = date.getDay();
+    hoursShown = date.getHour();
+    minutesShown = date.getMinute();
+  }
+
+  private void night() {
     if (campaign.isPresent()) {
-      campaign.get().setDate(campaign.get().getDate().nextMorning());
+      from(campaign.get().getDate().nextMorning());
       update();
     }
   }
 
   public void addMinutes(int minutes) {
     if (campaign.isPresent()) {
-      campaign.get().setDate(campaign.get().getDate().addMinutes(minutes));
+      from(campaign.get().getDate().addMinutes(minutes));
       update();
     }
   }
 
   private void editTime() {
-    if (campaign.isPresent()) {
-      if (hours.getText().isEmpty() || minutes.getText().isEmpty()) {
-        return;
-      }
+    if (hours.getText().isEmpty() || minutes.getText().isEmpty()) {
+      return;
+    }
 
-      campaign.get().setDate(campaign.get().getDate().fromDate(
-          Integer.parseInt(hours.getText()),
-          Integer.parseInt(minutes.getText())));
-      update();
+    try {
+      hoursShown = Integer.parseInt(hours.getText());
+      minutesShown = Integer.parseInt(minutes.getText());
+    } catch(NumberFormatException e) {
+      Log.d(TAG, "Invalid time: " + hours.getText() + ":" + minutes.getText());
     }
   }
 
   private void selectDay(int day) {
-    if (campaign.isPresent()) {
-      campaign.get().setDate(campaign.get().getDate().fromDate(yearShown, monthShown, day));
-      update();
-    }
+    dayShown = day;
+    update();
   }
 
   private void editYear() {
@@ -196,7 +203,6 @@ public class DateDialog extends Dialog {
         yearShown--;
       }
     }
-
     update();
   }
 
@@ -208,7 +214,6 @@ public class DateDialog extends Dialog {
         yearShown++;
       }
     }
-
     update();
   }
 
@@ -232,30 +237,31 @@ public class DateDialog extends Dialog {
     }
   }
 
-  protected void update() {
-    if (campaign.isPresent()) {
-      year.text(String.valueOf(yearShown));
-      year.label(formatYear(yearShown));
-      month.text(formatMonth(monthShown));
-      hours.text(campaign.get().getDate().getHoursFormatted());
-      minutes.text(campaign.get().getDate().getMinutesFormatted());
+  private String formatTime(int number) {
+    if (number < 10) {
+      return "0" + number;
     }
 
-    grid.setAdapter(adapter);
-  }
-
-  protected boolean isCurrent(int day) {
-    if (campaign.isPresent()) {
-      CampaignDate date = campaign.get().getDate();
-      return date.getDay() == day && date.getMonth() == monthShown && date.getYear() == yearShown;
-    } else {
-      return false;
-    }
+    return String.valueOf(number);
   }
 
   @Override
-  protected void save() {
-    super.save();
+  public void onDestroyView() {
+    if (campaign.isPresent()) {
+      campaign.get().setDate(campaign.get().getDate()
+          .from(yearShown, monthShown, dayShown, hoursShown, minutesShown));
+    }
+
+    super.onDestroyView();
+  }
+
+  protected void update() {
+    year.text(String.valueOf(yearShown));
+    year.label(formatYear(yearShown));
+    month.text(formatMonth(monthShown));
+    hours.text(formatTime(hoursShown));
+    minutes.text(formatTime(minutesShown));
+    days.setAdapter(adapter);
   }
 
   private class DateAdapter extends BaseAdapter {
@@ -264,7 +270,7 @@ public class DateDialog extends Dialog {
       if (campaign.isPresent()) {
         return campaign.get().getCalendar().getMonth(monthShown).getDays();
       } else {
-        return 0;
+        return 30;
       }
     }
 
@@ -291,7 +297,7 @@ public class DateDialog extends Dialog {
       }
 
       int day = position + 1;
-      if (isCurrent(day)) {
+      if (day == dayShown) {
         text.setTypeface(null, Typeface.BOLD);
         text.setBackgroundColor(getResources().getColor(R.color.selected, null));
       } else {

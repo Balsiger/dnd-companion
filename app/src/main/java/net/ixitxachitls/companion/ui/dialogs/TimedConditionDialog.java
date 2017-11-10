@@ -37,7 +37,7 @@ import android.widget.LinearLayout;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
@@ -55,7 +55,6 @@ import java.util.Map;
  */
 public class TimedConditionDialog extends Dialog {
 
-  private static final String TAG = "TimedConditionDialog";
   private static final String ARG_ID = "id";
   private static final String ARG_ROUND = "round";
 
@@ -64,7 +63,6 @@ public class TimedConditionDialog extends Dialog {
   private int currentRound = 0;
 
   private EditTextWrapper<AutoCompleteTextView> condition;
-  private Wrapper<Button> save;
   private Wrapper<LinearLayout> party;
   private Map<String, CheckBox> checkboxesByCharacterId = new HashMap<>();
   private EditTextWrapper<EditText> rounds;
@@ -112,7 +110,7 @@ public class TimedConditionDialog extends Dialog {
     });
     rounds = EditTextWrapper.wrap(view, R.id.rounds).lineColor(R.color.character);
     party = Wrapper.<LinearLayout>wrap(view, R.id.party);
-    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
+    Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
 
     if (character.isPresent()) {
       ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),

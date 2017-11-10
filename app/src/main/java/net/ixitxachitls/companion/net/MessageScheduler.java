@@ -26,8 +26,8 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
-import net.ixitxachitls.companion.proto.Data;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -42,13 +42,13 @@ import java.util.Map;
 public class MessageScheduler {
 
   private final String recipientId;
-  private final Multimap<Data.CompanionMessageProto.PayloadCase, ScheduledMessage> waiting =
-      LinkedHashMultimap.create();
+  private final Multimap<CompanionMessageData.Type, ScheduledMessage>
+      waiting = LinkedHashMultimap.create();
   private final Map<Long, ScheduledMessage> pending = new HashMap<>();
-  private final Multimap<Data.CompanionMessageProto.PayloadCase, ScheduledMessage> sent =
-      LinkedHashMultimap.create();
-  private final Multimap<Data.CompanionMessageProto.PayloadCase, ScheduledMessage> acknowledged =
-      LinkedHashMultimap.create();
+  private final Multimap<CompanionMessageData.Type, ScheduledMessage>
+      sent = LinkedHashMultimap.create();
+  private final Multimap<CompanionMessageData.Type, ScheduledMessage>
+      acknowledged = LinkedHashMultimap.create();
 
   public MessageScheduler(String recipientId) {
     this.recipientId = recipientId;
@@ -58,7 +58,7 @@ public class MessageScheduler {
         : ScheduledMessages.get().getMessagesByReceiver(recipientId)) {
       switch (message.getState()) {
         case WAITING:
-          waiting.put(message.getType(), message);
+          waiting.put(message.getData().getType(), message);
 
         case PENDING:
           pending.put(message.getMessageId(), message);
@@ -66,12 +66,12 @@ public class MessageScheduler {
 
         case SENT:
           toRemove.add(message);
-          sent.put(message.getType(), message);
+          sent.put(message.getData().getType(), message);
           break;
 
         case ACKED:
           toRemove.add(message);
-          acknowledged.put(message.getType(), message);
+          acknowledged.put(message.getData().getType(), message);
           break;
       }
     }
@@ -82,18 +82,18 @@ public class MessageScheduler {
     }
   }
 
-  public void schedule(Data.CompanionMessageProto proto) {
-    // TODO: handle proto messages differently and split id, sender, receiver from
-    // actual payload to not have to change the proto here.
-    ScheduledMessage message =
-        new ScheduledMessage(proto.toBuilder().setReceiver(recipientId).build());
+  public void schedule(CompanionMessageData data) {
+    ScheduledMessage message = new ScheduledMessage(
+        new CompanionMessage(Settings.get().getAppId(), Settings.get().getNickname(),
+            recipientId, data.requiresAck() ? Settings.get().getNextMessageId() : 0,
+            data));
     message.store();
 
     if (message.mayOverwrite()) {
-      waiting.removeAll(proto.getPayloadCase());
+      waiting.removeAll(data.getType());
     }
 
-    waiting.put(proto.getPayloadCase(), message);
+    waiting.put(data.getType(), message);
   }
 
   public Optional<ScheduledMessage> nextWaiting() {
@@ -110,10 +110,11 @@ public class MessageScheduler {
       ScheduledMessage message = i.next();
 
       // Ignore messages that are already pending.
-      if (pending.containsKey(message.getType())) {
+      if (pending.containsKey(message.getData().getType())) {
         continue;
       }
 
+      // this does not seem to work as expected?
       i.remove();
       if (message.requiresAck()) {
         markPending(message);
@@ -141,19 +142,19 @@ public class MessageScheduler {
 
   private void markWaiting(ScheduledMessage message) {
     message.markWaiting();
-    waiting.put(message.getType(), message);
+    waiting.put(message.getData().getType(), message);
   }
 
   private void markAcked(ScheduledMessage message) {
     message.markAck();
     ScheduledMessages.get().remove(message);
-    acknowledged.put(message.getType(), message);
+    acknowledged.put(message.getData().getType(), message);
   }
 
   private void markSent(ScheduledMessage message) {
     message.markSent();
     ScheduledMessages.get().remove(message);
-    sent.put(message.getType(), message);
+    sent.put(message.getData().getType(), message);
   }
 
   private void markPending(ScheduledMessage message) {
@@ -175,7 +176,7 @@ public class MessageScheduler {
   private void addMessages(List<String> list, Collection<ScheduledMessage> messages,
                            String id) {
     for (ScheduledMessage message : ImmutableList.copyOf(messages).reverse()) {
-      if (message.toProto().getMessage().getSender().equals(id)) {
+      if (message.getSenderId().equals(id)) {
         list.add(message.toSenderString());
       }
     }

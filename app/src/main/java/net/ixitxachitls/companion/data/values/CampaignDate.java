@@ -78,12 +78,16 @@ public class CampaignDate {
     return hour * this.calendar.getMinutesPerHour() + minute;
   }
 
-  public CampaignDate fromDate(int year, int month, int day) {
+  public CampaignDate fromTime(int year, int month, int day) {
     return new CampaignDate(this.calendar, year, month, day, this.hour, this.minute);
   }
 
-  public CampaignDate fromDate(int hours, int minutes) {
+  public CampaignDate fromTime(int hours, int minutes) {
     return new CampaignDate(this.calendar, this.year, this.month, this.day, hours, minutes);
+  }
+
+  public CampaignDate from(int year, int month, int day, int hours, int minutes) {
+    return new CampaignDate(this.calendar, year, month, day, hours, minutes);
   }
 
   public int getYear()

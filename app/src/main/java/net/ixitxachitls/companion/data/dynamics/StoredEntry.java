@@ -123,6 +123,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     PROTO_CACHE.remove(protoCacheKey());
   }
 
+  @SuppressWarnings("unchecked")
   @Override
   public boolean equals(Object other) {
     if (this == other) {

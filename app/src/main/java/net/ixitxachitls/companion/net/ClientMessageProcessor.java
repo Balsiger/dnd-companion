@@ -25,11 +25,13 @@ import android.util.Log;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
@@ -44,12 +46,20 @@ public class ClientMessageProcessor extends MessageProcessor {
     super(activity);
   }
 
-  @Override
-  protected void handleCampaign(String senderId, String senderName, long id,
-                              Data.CampaignProto campaignProto) {
-    Campaign campaign = Campaign.fromProto(Campaigns.getRemoteIdFor(campaignProto.getId()),
-        false, campaignProto);
+  public void process(String senderId, String senderName, long messageId,
+                      CompanionMessageData message) {
+    process(senderId, senderName, Settings.get().getAppId(), messageId, message);
+  }
 
+  @Override
+  protected void handleImage(String senderId, Image image) {
+    Log.d(TAG, "received image for " + image.getType() + " " + image.getId());
+    image.save(false);
+    refresh();
+  }
+
+  @Override
+  protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
     // Storing will also add the campaign if it's changed.
     campaign.store();
     Log.d(TAG, "received campaign " + campaign.getName());
@@ -69,27 +79,30 @@ public class ClientMessageProcessor extends MessageProcessor {
     status("received welcome from server " + remoteName);
     super.handleWelcome(remoteId, remoteName);
     mainActivity.addServerConnection(remoteId, remoteName);
-
-    // send a welcome message back?
   }
 
   @Override
-  protected void handleXpAward(String senderId, long messageId, String campaignId,
-                               String characterId, int xp) {
-    Optional<Character> character = Characters.getCharacter(characterId, campaignId);
+  protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
+    Optional<Character> character = award.getCharacter();
     if (character.isPresent()) {
       new ConfirmationDialog(mainActivity)
           .title("XP Award")
           .message("Congratulation!\n"
-              + "Your DM has granted " + character.get().getName() + " " + xp + " XP!")
-          .yes(() -> addXpAward(senderId, messageId, character.get(), xp))
+              + "Your DM has granted " + character.get().getName() + " " + award.getXp() + " XP!")
+          .yes(() -> addXpAward(senderId, messageId, character.get().getCharacterId(),
+              award.getXp()))
+          .no(() -> inFlightMessages.remove(createKey(receiverId, senderId, messageId)))
           .show();
     }
   }
 
-  private void addXpAward(String senderId, long messageId, Character character, int xp) {
-    character.addXp(xp);
-    CompanionSubscriber.get().sendAck(senderId, messageId);
-    refresh();
+  private void addXpAward(String senderId, long messageId, String characterId, int xp) {
+    Optional<Character> character = Characters.getCharacter(characterId);
+    if (character.isPresent()) {
+      character.get().addXp(xp);
+      CompanionSubscriber.get().sendAck(senderId, messageId);
+      refresh();
+      character = Characters.getCharacter(characterId);
+    }
   }
 }

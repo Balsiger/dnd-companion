@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
-import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -505,7 +504,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     return level;
   }
 
-  public Optional<Bitmap> loadImage() {
+  public Optional<Image> loadImage() {
     return Images.get(isLocal()).load(Character.TYPE, getCharacterId());
   };
 
@@ -539,10 +538,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return names;
-  }
-
-  public void awardXp(int xp) {
-
   }
 
   @Override

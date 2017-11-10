@@ -21,27 +21,27 @@
 
 package net.ixitxachitls.companion.net;
 
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.proto.Data;
 
 /**
- * A message transmitted between client and server.
+ * Wrapper for a companion message with data and all necessary routing information.
  */
 public class CompanionMessage {
+
   private final String senderId;
   private final String senderName;
-  private final Data.CompanionMessageProto proto;
+  private final String recieverId;
+  private final long messageId;
+  private final CompanionMessageData data;
 
-  public CompanionMessage(Data.CompanionMessageProto proto) {
-    this.senderId = Settings.get().getAppId();
-    this.senderName = Settings.get().getNickname();
-    this.proto = proto;
-  }
-
-  public CompanionMessage(String id, String name, Data.CompanionMessageProto proto) {
-    this.senderId = id;
-    this.senderName = name;
-    this.proto = proto;
+  public CompanionMessage(String senderId, String senderName,
+                          String recieverId, long messageId,
+                          CompanionMessageData data) {
+    this.senderId = senderId;
+    this.senderName = senderName;
+    this.recieverId = recieverId;
+    this.messageId = messageId;
+    this.data = data;
   }
 
   public String getSenderId() {
@@ -52,7 +52,63 @@ public class CompanionMessage {
     return senderName;
   }
 
-  public Data.CompanionMessageProto getProto() {
-    return proto;
+  public String getRecieverId() {
+    return recieverId;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    CompanionMessage that = (CompanionMessage) o;
+
+    if (messageId != that.messageId) return false;
+    if (!senderId.equals(that.senderId)) return false;
+    if (!senderName.equals(that.senderName)) return false;
+    if (!recieverId.equals(that.recieverId)) return false;
+    return data.equals(that.data);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = senderId.hashCode();
+    result = 31 * result + senderName.hashCode();
+    result = 31 * result + recieverId.hashCode();
+    result = 31 * result + (int) (messageId ^ (messageId >>> 32));
+    result = 31 * result + data.hashCode();
+    return result;
+  }
+
+  public long getMessageId() {
+    return messageId;
+  }
+
+  public CompanionMessageData getData() {
+    return data;
+  }
+
+  public Data.CompanionMessageProto toProto() {
+    return Data.CompanionMessageProto.newBuilder()
+        .setHeader(Data.CompanionMessageProto.Header.newBuilder()
+            .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
+                .setId(senderId)
+                .setName(senderName)
+                .build())
+            .setReceiver(Data.CompanionMessageProto.Header.Id.newBuilder()
+                .setId(recieverId)
+                .build())
+            .setId(messageId)
+            .build())
+        .setData(data.toProto())
+        .build();
+  }
+
+  public static CompanionMessage fromProto(Data.CompanionMessageProto proto) {
+    return new CompanionMessage(proto.getHeader().getSender().getId(),
+        proto.getHeader().getSender().getName(),
+        proto.getHeader().getReceiver().getId(),
+        proto.getHeader().getId(),
+        CompanionMessageData.fromProto(proto.getData()));
   }
 }

@@ -21,18 +21,14 @@
 
 package net.ixitxachitls.companion.ui.views;
 
-import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
-import android.widget.Toast;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 
 /**
  * Special floating action button that allows to pulse the icon.
@@ -66,6 +62,7 @@ public class ActionButton extends FloatingActionButton {
 
   public void pulse(boolean start) {
     if (true) return;
+    /*
     if (pulseBrightColor == 0 || pulseDarkColor == 0) {
       Toast.makeText(getContext(), "Cannot set bleep without defining colors", Toast.LENGTH_LONG)
           .show();
@@ -107,5 +104,6 @@ public class ActionButton extends FloatingActionButton {
         sizeAnimator.end();
       }
     }
+    */
   }
 }

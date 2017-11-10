@@ -21,8 +21,11 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.support.annotation.Nullable;
+
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessage;
+import net.ixitxachitls.companion.net.CompanionMessageData;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -40,43 +43,41 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
   public enum State { WAITING, PENDING, SENT, ACKED };
 
+  private final CompanionMessage message;
   private State state;
   private long lastInteraction;
-  private Data.CompanionMessageProto proto;
 
-  public ScheduledMessage(Data.CompanionMessageProto message) {
-    this(State.WAITING, new Date().getTime(), message);
+  public ScheduledMessage(CompanionMessage message) {
+    this(0, State.WAITING, new Date().getTime(), message);
   }
 
-  public ScheduledMessage(State state, long lastInteraction,
-                          Data.CompanionMessageProto message) {
-    super(message.getId(), Settings.get().getAppId() + "-" + message.getId(),
+  private ScheduledMessage(long id, State state, long lastInteraction, CompanionMessage message) {
+    super(id, Settings.get().getAppId() + "-" + message.getMessageId(),
         "message", true, DataBaseContentProvider.MESSAGES);
 
-    this.id = message.getId();
+    this.message = message;
     this.state = state;
     this.lastInteraction = lastInteraction;
-    this.proto = message;
+  }
+
+  public CompanionMessageData getData() {
+    return message.getData();
   }
 
   public boolean isLate() {
     return new Date().getTime() - lastInteraction > LATE_MS;
   }
 
-  public boolean matches(String senderId, String receiverId) {
-    return proto.getSender().equals(senderId) && proto.getReceiver().equals(receiverId);
+  public boolean matches(String senderId, String recieverId) {
+    return message.getSenderId().equals(senderId) && message.getRecieverId().equals(recieverId);
   }
 
   @Override
   public Data.ScheduledMessageProto toProto() {
-    if (proto.getId() != id) {
-      proto = proto.toBuilder().setId(id).build();
-    }
-
     return Data.ScheduledMessageProto.newBuilder()
         .setState(convert(state))
         .setLastInteraction(lastInteraction)
-        .setMessage(proto)
+        .setMessage(message.toProto())
         .build();
   }
 
@@ -84,8 +85,8 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     return state;
   }
 
-  public CompanionMessage toMessage() {
-    return new CompanionMessage(proto);
+  public CompanionMessage getMessage() {
+    return message;
   }
 
   public void markSent() {
@@ -110,68 +111,37 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     store();
   }
 
+  public void markUpdated() {
+    updateLastInteraction();
+    store();
+  }
+
   private void updateLastInteraction() {
     lastInteraction = new Date().getTime();
   }
 
   public boolean mayOverwrite() {
-    switch (proto.getPayloadCase()) {
-      default:
-        return false;
-
-      case CAMPAIGN_DELETE:
-      case CHARACTER:
-      case CAMPAIGN:
-      case IMAGE:
-      case PAYLOAD_NOT_SET:
-        return true;
-    }
+    return message.getData().mayOverwrite();
   }
 
   public boolean overwrites(ScheduledMessage other) {
-    switch (proto.getPayloadCase()) {
-      default:
-        return false;
-
-      case CAMPAIGN_DELETE:
-        return proto.getCampaignDelete().equals(other.proto.getCampaignDelete());
-
-      case CAMPAIGN:
-        return proto.getCampaign().getId().equals(other.proto.getCampaign().getId());
-
-      case CHARACTER:
-        return proto.getCharacter().getId().equals(other.proto.getCharacter().getId());
-
-      case IMAGE:
-        return proto.getImage().getId().equals(other.proto.getImage().getId());
-    }
+    return message.getData().overwrites(other.message.getData());
   }
 
   public boolean requiresAck() {
-    switch (proto.getPayloadCase()) {
-      default:
-        return false;
-
-      case XP_AWARD:
-      case CAMPAIGN_DELETE:
-        return true;
-    }
-  }
-
-  public Data.CompanionMessageProto.PayloadCase getType() {
-    return proto.getPayloadCase();
+    return message.getData().requiresAck();
   }
 
   public long getMessageId() {
-    return proto.getId();
+    return message.getMessageId();
   }
 
-  public String getSender() {
-    return proto.getSender();
+  public String getSenderId() {
+    return message.getSenderId();
   }
 
-  public String getRecipient() {
-    return proto.getReceiver();
+  public String getRecieverId() {
+    return message.getRecieverId();
   }
 
   private Data.ScheduledMessageProto.State convert(State state) {
@@ -191,9 +161,9 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     }
   }
 
-  public static ScheduledMessage fromProto(Data.ScheduledMessageProto proto) {
-    return new ScheduledMessage(convert(proto.getState()), proto.getLastInteraction(),
-        proto.getMessage());
+  public static ScheduledMessage fromProto(long id, Data.ScheduledMessageProto proto) {
+    return new ScheduledMessage(id, convert(proto.getState()), proto.getLastInteraction(),
+        CompanionMessage.fromProto(proto.getMessage()));
   }
 
   private static State convert(Data.ScheduledMessageProto.State state) {
@@ -215,51 +185,17 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
   }
 
   public String toSenderString() {
-    return toString() + " to " + CompanionPublisher.get().getRecipientName(proto.getReceiver())
+    return toString() + " to " + CompanionPublisher.get().getRecipientName(getRecieverId())
         + " (" + Strings.formatAgo(lastInteraction) + ")";
   }
 
   @Override
   public String toString() {
-    return state + " - " + ScheduledMessage.toString(proto);
-  }
-
-  public static String toString(Data.CompanionMessageProto proto) {
-    String message = proto.getPayloadCase() + " - ";
-
-    switch (proto.getPayloadCase()) {
-      case CAMPAIGN:
-        return message + proto.getCampaign().getName();
-
-      case CAMPAIGN_DELETE:
-        return message + proto.getCampaignDelete();
-
-      case CHARACTER:
-        return message + proto.getCharacter().getName();
-
-      case CHARACTER_DELETE:
-        return message + proto.getCharacterDelete();
-
-      case IMAGE:
-        return message + proto.getImage().getId();
-
-      case WELCOME:
-        return message + proto.getWelcome().getName();
-
-      case XP_AWARD:
-        return message + proto.getXpAward().getCharacterId() + "/"
-            + proto.getXpAward().getXpAward();
-
-      case ACK:
-        return message + proto.getAck();
-
-      default:
-        return message + "unknown";
-    }
+    return state + " - " + message;
   }
 
   @Override
-  public boolean equals(Object other) {
+  public boolean equals(@Nullable Object other) {
     if (!super.equals(other)) return false;
     if (this == other) return true;
     if (other == null || getClass() != other.getClass()) return false;
@@ -267,9 +203,9 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
     ScheduledMessage that = (ScheduledMessage) other;
 
-    if (lastInteraction != that.lastInteraction) return false;
-    if (state != that.state) return false;
-    return proto.equals(that.proto);
+    return lastInteraction == that.lastInteraction
+        && state == that.state
+        && message.equals(that.message);
   }
 
   @Override
@@ -277,7 +213,7 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     int result = super.hashCode();
     result = 31 * result + state.hashCode();
     result = 31 * result + (int) (lastInteraction ^ (lastInteraction >>> 32));
-    result = 31 * result + proto.hashCode();
+    result = 31 * result + message.hashCode();
     return result;
   }
 }

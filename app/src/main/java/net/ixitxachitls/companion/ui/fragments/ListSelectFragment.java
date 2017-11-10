@@ -30,7 +30,7 @@ import android.widget.ListView;
 
 import com.google.common.base.Optional;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 import java.util.ArrayList;

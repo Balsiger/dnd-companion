@@ -25,18 +25,21 @@ import android.util.Log;
 import android.widget.Toast;
 
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Images;
-import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
+import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * The class responsible to process and handle messages from client or server.
@@ -47,91 +50,93 @@ public abstract class MessageProcessor {
   private static final int MAX_RECEIVED_SIZE = 50;
 
   protected final CompanionActivity mainActivity;
-  private final Deque<CompanionMessage> received = new ArrayDeque<>();
-
+  private final Deque<RecievedMessage> received = new ArrayDeque<>();
+  protected final Set<String> inFlightMessages =
+      Collections.newSetFromMap(new ConcurrentHashMap<>());
 
   public MessageProcessor(CompanionActivity mainActivity) {
     this.mainActivity = mainActivity;
   }
 
-  public void process(CompanionMessage message) {
-    switch (message.getProto().getPayloadCase()) {
+  protected void process(String senderId, String senderName, String receiverId, long messageId,
+                         CompanionMessageData message) {
+
+    if (message.requiresAck()) {
+      String key = createKey(senderId, receiverId, messageId);
+      if (inFlightMessages.contains(key)) {
+        Log.w(TAG, "ignoring message in flight");
+        return;
+      } else {
+        inFlightMessages.add(key);
+      }
+    }
+
+    switch (message.getType()) {
       case DEBUG:
-        handleDebug(message.getSenderId(), message.getSenderName(), message.getProto().getId(),
-            message.getProto().getDebug());
+        handleDebug(senderId, senderName, messageId, message.getDebug());
         break;
 
       case WELCOME:
-        handleWelcome(message.getSenderId(), message.getSenderName());
+        handleWelcome(senderId, senderName);
         break;
 
       case CAMPAIGN:
-        handleCampaign(message.getSenderId(), message.getSenderName(), message.getProto().getId(),
-            message.getProto().getCampaign());
+        handleCampaign(senderId, senderName, messageId, message.getCampaign());
         break;
 
       case CHARACTER:
-        handleCharacter(message);
+        handleCharacter(senderId, message.getCharacter());
         break;
 
       case IMAGE:
-        handleImage(message.getSenderId(), message.getProto().getImage());
+        handleImage(senderId, message.getImage());
         break;
 
       case ACK:
-        handleAck(message.getSenderId(), message.getProto().getAck());
+        handleAck(senderId, message.getAck());
         break;
 
       case CAMPAIGN_DELETE:
-        handleCampaignDeletion(message.getSenderId(), message.getProto().getId(),
-            message.getProto().getCampaignDelete());
+        handleCampaignDeletion(senderId, messageId, message.getCampaignDelete());
         break;
 
       case CHARACTER_DELETE:
-        handleCharacterDeletion(message.getSenderId(), message.getProto().getId(),
-            message.getProto().getCharacterDelete());
+        handleCharacterDeletion(senderId, messageId, message.getCharacterDelete());
         break;
 
       case XP_AWARD:
-        handleXpAward(message.getSenderId(), message.getProto().getId(),
-            message.getProto().getXpAward().getCampaignId(),
-            message.getProto().getXpAward().getCharacterId(),
-            message.getProto().getXpAward().getXpAward());
+        handleXpAward(receiverId, senderId, messageId, message.getXpAward());
         break;
 
       default:
-      case PAYLOAD_NOT_SET:
-        handleInvalid(message.getSenderId(), message.getSenderName(), message.getProto().getId());
+        handleInvalid(senderName);
         break;
     }
 
     mainActivity.updateClientConnection(Settings.get().getNickname());
-    mainActivity.updateServerConnection(message.getSenderName());
+    mainActivity.updateServerConnection(senderName);
 
-    received.addFirst(message);
+    received.addFirst(new RecievedMessage(senderName, message));
     if (received.size() > MAX_RECEIVED_SIZE) {
       received.removeLast();
     }
   }
 
-  protected void handleXpAward(String senderId, long messageId, String campaignId,
-                               String characterId, int xp) {
-    throw new UnsupportedOperationException();
+  protected String createKey(String senderId, String receiverId, long messageId) {
+    return senderId + ":" + receiverId + ":" + messageId;
   }
 
   public List<String> receivedMessages() {
     List<String> messages = new ArrayList<>();
 
-    for (CompanionMessage message : received) {
-      messages.add("from " + message.getSenderName() + ": " +
-          ScheduledMessage.toString(message.getProto()));
+    for (RecievedMessage message : received) {
+      messages.add("from " + message.senderName + ": " + message);
     }
 
     return messages;
   }
 
-  protected void handleCampaign(String senderId, String senderName, long id,
-                              Data.CampaignProto campaignProto) {
+  protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
     throw new UnsupportedOperationException();
   }
 
@@ -149,17 +154,15 @@ public abstract class MessageProcessor {
     throw new UnsupportedOperationException();
   }
 
-  private void handleImage(String senderId, Data.CompanionMessageProto.Image imageProto) {
-    Log.d(TAG, "received image for " + imageProto.getType() + " " + imageProto.getId());
-    Images.remote().save(imageProto.getType(), imageProto.getId(),
-        Images.asBitmap(imageProto.getImage()));
-
-    // Send the image update to the other clients.
-    CompanionPublisher.get().update(imageProto, senderId);
-    refresh();
+  protected void handleImage(String senderId, Image image) {
+    throw new UnsupportedOperationException();
   }
 
-  private void handleInvalid(String senderId, String senderName, long messageId) {
+  protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
+    throw new UnsupportedOperationException();
+  }
+
+  private void handleInvalid(String senderName) {
     Toast.makeText(mainActivity.getApplicationContext(),
         senderName + ": Unknown message ignored", Toast.LENGTH_LONG).show();
   }
@@ -171,11 +174,8 @@ public abstract class MessageProcessor {
     }
   }
 
-  protected void handleCharacter(CompanionMessage message) {
-    if (!StoredEntries.isLocalId(message.getProto().getCharacter().getId())) {
-      Character character = Character.fromProto(
-          Characters.getRemoteIdFor(message.getProto().getCharacter().getId()), false,
-          message.getProto().getCharacter());
+  protected void handleCharacter(String senderId, Character character) {
+    if (!StoredEntries.isLocalId(character.getCharacterId())) {
       // Storing will also add the character if it's changed.
       character.store();
       Log.d(TAG, "received character " + character.getName());
@@ -208,5 +208,15 @@ public abstract class MessageProcessor {
         mainActivity.refresh();
       }
     });
+  }
+
+  public static class RecievedMessage {
+    private final String senderName;
+    private final CompanionMessageData message;
+
+    public RecievedMessage(String senderName, CompanionMessageData message) {
+      this.senderName = senderName;
+      this.message = message;
+    }
   }
 }

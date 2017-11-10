@@ -27,19 +27,17 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.views.EditAbility;
-import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Dialog fragment to edit the abilities of a character or monster.
@@ -59,7 +57,6 @@ public class AbilitiesDialog extends Dialog {
 
   private Optional<Campaign> campaign = Optional.absent();
   private Optional<Character> character = Optional.absent();
-  private Wrapper<Button> save;
 
   public AbilitiesDialog() {}
 
@@ -106,7 +103,6 @@ public class AbilitiesDialog extends Dialog {
     wisdom.setOnChange(this::change);
     charisma = (EditAbility) view.findViewById(R.id.charisma);
     charisma.setOnChange(this::change);
-    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
 
     // Setup the layout parameters again after adding dynamic content.
     view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,

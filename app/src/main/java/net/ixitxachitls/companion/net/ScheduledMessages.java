@@ -65,7 +65,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
   @Override
   protected Optional<ScheduledMessage> parseEntry(long id, byte[] blob) {
     try {
-      return Optional.of(ScheduledMessage.fromProto(Data.ScheduledMessageProto
+      return Optional.of(ScheduledMessage.fromProto(id, Data.ScheduledMessageProto
           .getDefaultInstance().getParserForType().parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
       Log.e(TAG, "Cannot parse proto for message: " + e);
@@ -90,7 +90,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
     List<ScheduledMessage> messages = new ArrayList<>();
 
     for (ScheduledMessage message : getAll()) {
-      if (message.getSender().equals(senderId)) {
+      if (message.getSenderId().equals(senderId)) {
         messages.add(message);
       }
     }

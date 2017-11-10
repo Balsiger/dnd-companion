@@ -28,16 +28,10 @@ import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
-import com.google.protobuf.ByteString;
-
-import net.ixitxachitls.companion.net.CompanionSubscriber;
-import net.ixitxachitls.companion.proto.Data;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 
 /**
@@ -46,7 +40,6 @@ import java.io.InputStream;
 public class Images {
 
   private static final String TAG = "Images";
-  public static final int MAX = 500;
 
   private static Images local;
   private static Images remote;
@@ -93,40 +86,15 @@ public class Images {
     return isLocal;
   }
 
-  public Bitmap saveAndPublish(String campaignId, String type, String id, Bitmap bitmap) {
-    bitmap = save(type, id, bitmap);
-    publish(campaignId, type, id, bitmap);
-
-    return bitmap;
-  }
-
-  public Bitmap save(String type, String id, Bitmap bitmap) {
-    bitmap = scale(bitmap);
-
+  public Optional<Image> load(String type, String id) {
     File file = file(type, id);
-    FileOutputStream out = null;
     try {
-      out = new FileOutputStream(file);
-      bitmap.compress(Bitmap.CompressFormat.JPEG, 50, out);
-    } catch (Exception e) {
-      Log.e(TAG, "Cannot write image bitmap", e);
-    } finally {
-      try {
-        out.close();
-      } catch (IOException e) {
-        Log.e(TAG, "Cannot close output image", e);
+      Bitmap bitmap = BitmapFactory.decodeStream(new FileInputStream(file));
+      if (bitmap == null) {
+        return Optional.absent();
       }
-    }
 
-    Log.d(TAG, "Saved image " + type + " " + id);
-    return bitmap;
-  }
-
-
-  public Optional<Bitmap> load(String type, String id) {
-    File file = file(type, id);
-    try {
-      return Optional.fromNullable(BitmapFactory.decodeStream(new FileInputStream(file)));
+      return Optional.of(new Image(type, id, bitmap));
     } catch (FileNotFoundException e) {
       return Optional.absent();
     }
@@ -146,14 +114,10 @@ public class Images {
     file.delete();
   }
 
-  private void publish(String campaignId, String type, String id, Bitmap bitmap) {
-    CompanionSubscriber.get().publishImage(toProto(campaignId, type, id, bitmap));
-  }
-
-  public void publish(String campaignId, String type, String id) {
-    Optional<Bitmap> bitmap = load(type, id);
-    if (bitmap.isPresent()) {
-      publish(campaignId, type, id, bitmap.get());
+  public void publishImageFor(Character character) {
+    Optional<Image> image = load(Character.TYPE, character.getCharacterId());
+    if (image.isPresent()) {
+      image.get().publish(character.getCampaignId());
     }
   }
 
@@ -162,39 +126,7 @@ public class Images {
         id + ".jpg");
   }
 
-  private Bitmap scale(Bitmap bitmap) {
-    // Scale bitmap down if it's too large.
-    if (bitmap.getWidth() <= MAX && bitmap.getHeight() <= MAX) {
-      return bitmap;
-    }
-
-    float factor = (bitmap.getWidth() > bitmap.getHeight()
-        ? bitmap.getWidth() : bitmap.getHeight()) / (float) MAX;
-    return Bitmap.createScaledBitmap(bitmap, (int) (bitmap.getWidth() / factor),
-        (int) (bitmap.getHeight() / factor), false);
-  }
-
-  private static Data.CompanionMessageProto.Image toProto(String campaignId, String type, String id,
-                                                         Bitmap bitmap) {
-    return Data.CompanionMessageProto.Image.newBuilder()
-        .setCampaignId(campaignId)
-        .setType(type)
-        .setId(id)
-        .setImage(Images.asByteString(bitmap))
-        .build();
-  }
-
-  public static ByteString asByteString(Bitmap bitmap) {
-    ByteString.Output out = ByteString.newOutput();
-    bitmap.compress(Bitmap.CompressFormat.JPEG, 50, out);
-    return out.toByteString();
-  }
-
-  public static Bitmap asBitmap(ByteString bytes) {
-    return asBitmap(bytes.newInput());
-  }
-
-  public static Bitmap asBitmap(InputStream input) {
-    return BitmapFactory.decodeStream(input);
+  protected File file(Image image) {
+    return file(image.getType(), image.getId());
   }
 }

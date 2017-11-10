@@ -26,8 +26,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import net.ixitachitls.companion.R;
 import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.dialogs.ConnectionStatusDialog;

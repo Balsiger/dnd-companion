@@ -33,8 +33,8 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
-import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.util.Ids;
 import net.ixitxachitls.companion.util.Misc;
 
@@ -56,7 +56,6 @@ public class CompanionSubscriber {
   private @Nullable NsdManager.ResolveListener resolveListener;
   private Map<String, CompanionClient> clientById = new ConcurrentHashMap<>();
   private Map<String, CompanionClient> clientByName = new ConcurrentHashMap<>();
-  private Map<String, String> nameById = new ConcurrentHashMap<>();
   private final Map<String, MessageScheduler> schedulersByRecpient = new HashMap<>();
 
   private CompanionSubscriber(Context context, CompanionApplication application) {
@@ -68,12 +67,12 @@ public class CompanionSubscriber {
     for (MessageScheduler scheduler : schedulersByRecpient.values()) {
       Optional<ScheduledMessage> message = scheduler.nextWaiting();
       if (message.isPresent()) {
-        CompanionClient client = clientById.get(message.get().getRecipient());
+        CompanionClient client = clientById.get(message.get().getRecieverId());
         // If the client is not currently available, the message will automatically be
         // retried in one minute.
         if (client != null) {
           Log.d(TAG, "sending " + message);
-          client.send(message.get().toMessage().getProto());
+          client.send(message.get().getData());
           application.status("sent " + message);
           application.updateClientConnection(Settings.get().getNickname());
         }
@@ -93,46 +92,29 @@ public class CompanionSubscriber {
 
   public void publish(Character character) {
     String id = Ids.extractServerId(character.getCampaignId());
-    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-        .setCharacter(character.toProto())
-        .setSender(Settings.get().getAppId())
-        .setReceiver(id)
-        .build();
-    setupScheduler(id).schedule(proto);
+    setupScheduler(id).schedule(CompanionMessageData.from(character));
   }
 
   public void delete(Character character) {
     String id = Ids.extractServerId(character.getCampaignId());
-    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-        .setId(Settings.get().getNextMessageId())
-        .setSender(Settings.get().getAppId())
-        .setReceiver(id)
-        .setCharacterDelete(character.getCharacterId())
-        .build();
-    setupScheduler(id).schedule(proto);
+    setupScheduler(id).schedule(CompanionMessageData.fromDelete(character));
   }
 
-  public void publishImage(Data.CompanionMessageProto.Image image) {
-    CompanionClient client = clientById.get(Ids.extractServerId(image.getCampaignId()));
+  public void publish(String campaignId, Image image) {
+    CompanionClient client = clientById.get(Ids.extractServerId(campaignId));
     if (client != null) {
-      client.send(Data.CompanionMessageProto.newBuilder()
-          .setImage(image)
-          .build());
+      client.send(CompanionMessageData.from(image));
       Log.d(TAG, "image for " + image.getType() + " " + image.getId() + " published.");
       application.status("sent image for " + image.getType() + " " + image.getId());
     } else {
-      Log.d(TAG, "cannot find client with id '" + image.getCampaignId() + "'");
+      Log.d(TAG, "cannot find client with id '" + campaignId + "'");
     }
   }
 
   public void sendWelcome() {
     for (CompanionClient client : clientById.values()) {
-      client.send(Data.CompanionMessageProto.newBuilder()
-          .setWelcome(Data.CompanionMessageProto.Welcome.newBuilder()
-              .setId(Settings.get().getAppId())
-              .setName(Settings.get().getNickname())
-              .build())
-          .build());
+      client.send(CompanionMessageData.fromWelcome(Settings.get().getAppId(),
+          Settings.get().getNickname()));
     }
   }
 
@@ -256,12 +238,8 @@ public class CompanionSubscriber {
 
       // Send a welcome message to the server.
       application.status("sending welcome message to server");
-      client.send(Data.CompanionMessageProto.newBuilder()
-          .setWelcome(Data.CompanionMessageProto.Welcome.newBuilder()
-              .setId(Settings.get().getAppId())
-              .setName(Settings.get().getNickname())
-              .build())
-          .build());
+      client.send(CompanionMessageData.fromWelcome(Settings.get().getAppId(),
+          Settings.get().getNickname()));
     }
   }
 
@@ -269,21 +247,14 @@ public class CompanionSubscriber {
     List<CompanionMessage> messages = new ArrayList<>();
 
     for (CompanionClient client : clientByName.values()) {
-      for (Optional<Data.CompanionMessageProto> message = client.receive();
+      for (Optional<CompanionMessage> message = client.receive();
            message.isPresent(); message = client.receive()) {
+
         if (message.isPresent()) {
-          String id;
-          String name;
-          if (message.get().getPayloadCase() == Data.CompanionMessageProto.PayloadCase.WELCOME) {
-            id = message.get().getWelcome().getId();
-            name = message.get().getWelcome().getName();
-            clientById.put(id, client);
-            nameById.put(id, name);
-          } else {
-            id = keyForClient(client);
-            name = nameById.getOrDefault(id, "(unknown)");
+          if (message.get().getData().getType() == CompanionMessageData.Type.WELCOME) {
+            clientById.put(message.get().getData().getWelcomeId(), client);
           }
-          messages.add(new CompanionMessage(id, name, message.get()));
+          messages.add(message.get());
         }
       }
     }
@@ -292,11 +263,7 @@ public class CompanionSubscriber {
   }
 
   public void sendAck(String recipientId, long messageId) {
-    setupScheduler(recipientId).schedule(Data.CompanionMessageProto.newBuilder()
-        .setSender(Settings.get().getAppId())
-        .setId(messageId)
-        .setAck(messageId)
-        .build());
+    setupScheduler(recipientId).schedule(CompanionMessageData.fromAck(messageId));
   }
 
   private String keyForClient(CompanionClient client) {

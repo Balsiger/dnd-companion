@@ -93,46 +93,56 @@ message CharacterProto {
 }
 
 message CompanionMessageProto {
-  int64 id = 1;
-  string sender = 2;
-  string receiver = 3;
+  message Header {
+    int64 id = 1;
 
-  enum Priority {
-    NORMAL = 0;
-    LOW = 1;
-    HIGH = 2;
-  };
-  Priority priority = 4;
+    message Id {
+      string id = 1;
+      string name = 2;
+    }
+    Id sender = 2;
+    Id receiver = 3;
 
-  message Welcome {
-    string name = 1;
-    string id = 2;
+    enum Priority {
+      NORMAL = 0;
+      LOW = 1;
+      HIGH = 2;
+    };
+    Priority priority = 4;
   }
+  Header header = 1;
 
-  message Image {
-    string campaign_id = 1;
-    string type = 2;
-    string id = 3;
-    bytes image = 4;
-  }
+  message Payload {
+    message Welcome {
+      string name = 1;
+      string id = 2;
+    }
 
-  message Xp {
-    string campaign_id = 1;
-    string character_id = 2;
-    int32 xp_award = 3;
-  }
+    message Image {
+      string type = 1;
+      string id = 2;
+      bytes image = 3;
+    }
 
-  oneof payload {
-    string debug = 5;
-    Welcome welcome = 6;
-    CampaignProto campaign = 7; // From server only.
-    CharacterProto character = 8; // From client only.
-    Image image = 9;
-    int64 ack = 10;
-    string campaign_delete = 11;
-    Xp xp_award = 12;
-    string character_delete = 13;
+    message Xp {
+      string campaign_id = 1;
+      string character_id = 2;
+      int32 xp_award = 3;
+    }
+
+    oneof payload {
+      string debug = 1;
+      Welcome welcome = 2;
+      int64 ack = 3;
+      CampaignProto campaign = 4; // From server only.
+      string campaign_delete = 5;
+      CharacterProto character = 6; // From client only.
+      string character_delete = 7;
+      Image image = 8;
+      Xp xp_award = 9;
+    }
   }
+  Payload data = 2;
 }
 
 message ScheduledMessageProto {

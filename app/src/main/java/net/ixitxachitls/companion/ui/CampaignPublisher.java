@@ -23,7 +23,7 @@ package net.ixitxachitls.companion.ui;
 
 import android.content.Context;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 
 /**

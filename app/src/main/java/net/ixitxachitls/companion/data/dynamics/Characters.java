@@ -107,7 +107,7 @@ public class Characters extends StoredEntries<Character> {
     Log.d(TAG, "publishing all local characters");
     for (Character character : Characters.getLocalCharacters()) {
       character.publish();
-      Images.get(character.isLocal()).publish(character.getCampaignId(), Character.TYPE, character.getCharacterId());
+      Images.get(character.isLocal()).publishImageFor(character);
     }
   }
 
@@ -125,7 +125,7 @@ public class Characters extends StoredEntries<Character> {
     Log.d(TAG, "publishing characters of campaign " + campaignId);
     for (Character character : Characters.getLocalCharacters(campaignId)) {
       character.publish();
-      Images.local().publish(campaignId, Character.TYPE, character.getCharacterId());
+      Images.get(character.isLocal()).publishImageFor(character);
     }
   }
 

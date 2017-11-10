@@ -26,7 +26,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.support.annotation.Nullable;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 
 /**
  * Simple dialog to show a confirmation and waiting for a users yes or not.

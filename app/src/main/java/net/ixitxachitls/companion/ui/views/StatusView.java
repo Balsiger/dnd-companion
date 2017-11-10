@@ -35,7 +35,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -58,7 +58,6 @@ public class StatusView extends LinearLayout {
   private TextWrapper<TextView> messages;
   private ScrollView messagesScroll;
   private Wrapper<LinearLayout> connections;
-  private Wrapper<HorizontalScrollView> connectionsScroll;
   private Map<String, ConnectionView> clientConnectionsByName = new HashMap<>();
   private Map<String, ConnectionView> serverConnectionsByName = new HashMap<>();
 
@@ -81,7 +80,7 @@ public class StatusView extends LinearLayout {
     messages = TextWrapper.wrap(view, R.id.messages).onClick(this::toggleDebug);
     messages.get().setMovementMethod(new ScrollingMovementMethod());
     connections = Wrapper.<LinearLayout>wrap(view, R.id.connections).onClick(this::toggleDebug);
-    connectionsScroll = Wrapper.<HorizontalScrollView>wrap(view, R.id.connections_scroll)
+    Wrapper.<HorizontalScrollView>wrap(view, R.id.connections_scroll)
         .onTouch(this::toggleDebug, MotionEvent.ACTION_UP);
 
     addView(view);

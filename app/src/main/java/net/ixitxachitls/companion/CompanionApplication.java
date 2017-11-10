@@ -50,8 +50,6 @@ import java.util.List;
 public class CompanionApplication extends MultiDexApplication
   implements Application.ActivityLifecycleCallbacks {
 
-  private static String TAG = "App";
-
   private static CompanionPublisher companionPublisher;
   private static CompanionSubscriber companionSubscriber;
   private static Handler messageHandler;
@@ -111,17 +109,20 @@ public class CompanionApplication extends MultiDexApplication
 
         // Chek for messages from servers.
         if (clientMessageProcessor.isPresent()) {
-          List<CompanionMessage> clientMessages = companionSubscriber.receive();
-          for (CompanionMessage serverMessage : clientMessages) {
-            clientMessageProcessor.get().process(serverMessage);
+          List<CompanionMessage> serverMessages = companionSubscriber.receive();
+          for (CompanionMessage serverMessage : serverMessages) {
+            clientMessageProcessor.get().process(serverMessage.getSenderId(),
+                serverMessage.getSenderName(), serverMessage.getMessageId(),
+                serverMessage.getData());
           }
         }
 
         // Handle message from clients.
         if (serverMessageProcessor.isPresent()) {
-          List<CompanionMessage> serverMessages = companionPublisher.receive();
-          for (CompanionMessage serverMessage : serverMessages) {
-            serverMessageProcessor.get().process(serverMessage);
+          List<CompanionMessage> clientMessages = companionPublisher.receive();
+          for (CompanionMessage clientMessage : clientMessages) {
+            serverMessageProcessor.get().process(clientMessage.getRecieverId(),
+                clientMessage.getMessageId(), clientMessage.getData());
           }
         }
       } finally {

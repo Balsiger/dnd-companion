@@ -31,7 +31,7 @@ import android.widget.RelativeLayout;
 
 import com.google.common.base.Optional;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.values.Battle;

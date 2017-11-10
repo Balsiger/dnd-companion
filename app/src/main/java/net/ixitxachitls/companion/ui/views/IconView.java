@@ -30,7 +30,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**

@@ -27,6 +27,7 @@ import android.support.annotation.StringRes;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -95,6 +96,7 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
 
     private final Wrapper.Action action;
     private boolean changing = false;
+    private boolean first = false;
 
     public TextChangeWatcher(Wrapper.Action action) {
       this.action = action;
@@ -102,12 +104,16 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+      Log.d("before", "before");
     }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
       // Prevent actions from changing text and triggering an endless loop.
-      if (changing) {
+      // Ignore the first trigger, as this comes from the first initilization, when
+      // we don't have any valid data yet.
+      if (changing || first) {
+        first = false;
         return;
       }
 
@@ -118,6 +124,7 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
 
     @Override
     public void afterTextChanged(Editable s) {
+      Log.d("after", "after");
     }
   }
 }

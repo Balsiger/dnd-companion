@@ -35,8 +35,9 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.data.dynamics.XpAward;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -73,7 +74,7 @@ public class CompanionPublisher {
     // Setup stored messages.
     for (ScheduledMessage message
         : ScheduledMessages.get().getMessagesBySender(Settings.get().getAppId())) {
-      setupScheduler(message.getRecipient());
+      setupScheduler(message.getRecieverId());
     }
   }
 
@@ -94,8 +95,12 @@ public class CompanionPublisher {
         if (message.isPresent()) {
           Log.d(TAG, "sending " + message);
           ensureServer();
-          server.get().send(message.get().getRecipient(), message.get().toMessage());
-          application.updateClientConnection(getRecipientName(message.get().getRecipient()));
+          // The messasge is already marked as sent or pending (depending on ack).
+          // Thus, even if sending fails, we don't need to do anything. Pending message
+          // will automatically be resent and sent messages can be safely ignored.
+          server.get().send(message.get().getRecieverId(), message.get().getMessageId(),
+              message.get().getData());
+          application.updateClientConnection(getRecipientName(message.get().getRecieverId()));
         }
       }
     }
@@ -124,25 +129,18 @@ public class CompanionPublisher {
   }
 
   public void publish(Campaign campaign) {
-    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-        .setCampaign(campaign.toProto())
-        .setSender(Settings.get().getAppId())
-        .build();
+    CompanionMessageData data = CompanionMessageData.from(campaign);
 
-    schedule(clientIds(campaign), proto);
+    schedule(clientIds(campaign), data);
 
     Log.d(TAG, "published campaign " + campaign.getName());
     application.status("sent campaign " + campaign.getName());
   }
 
   public void delete(Campaign campaign) {
-    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-        .setSender(Settings.get().getAppId())
-        .setId(Settings.get().getNextMessageId())
-        .setCampaignDelete(campaign.getCampaignId())
-        .build();
+    CompanionMessageData data = CompanionMessageData.fromDelete(campaign);
 
-    schedule(clientIds(campaign), proto);
+    schedule(clientIds(campaign), data);
 
     Log.d(TAG, "deleted campaign " + campaign.getName());
     application.status("sent campaign deletion " + campaign.getName());
@@ -151,58 +149,42 @@ public class CompanionPublisher {
   public void delete(Character character) {
     Optional<Campaign> campaign = Campaigns.getCampaign(character.getCampaignId());
     if (campaign.isPresent()) {
-      Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-          .setSender(Settings.get().getAppId())
-          .setId(Settings.get().getNextMessageId())
-          .setCharacterDelete(character.getCharacterId())
-          .build();
-
-      schedule(clientIds(campaign.get()), proto);
+      CompanionMessageData data = CompanionMessageData.fromDelete(character);
+      schedule(clientIds(campaign.get()), data);
     }
   }
 
   public void update(Character updatedCharacter, String characterClientId) {
-    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-        .setCharacter(updatedCharacter.toProto())
-        .setSender(Settings.get().getAppId())
-        .build();
-
+    CompanionMessageData data = CompanionMessageData.from(updatedCharacter);
     for (Character character
         : Characters.getAllCharacters(updatedCharacter.getCampaignId())) {
       // Only update the character on clients that don't own it.
       if (!characterClientId.equals(character.getServerId())) {
-        schedule(character.getServerId(), proto);
+        schedule(character.getServerId(), data);
       }
     }
   }
 
-  public void update(Data.CompanionMessageProto.Image image, String characterClientId) {
-    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-        .setImage(image)
-        .setSender(Settings.get().getAppId())
-        .build();
+  public void update(String clientId, Image image) {
+    CompanionMessageData data = CompanionMessageData.from(image);
 
-    for (Character character
-        : Characters.getAllCharacters(image.getCampaignId())) {
-      // Only update the character on clients that don't own it.
-      if (!characterClientId.equals(character.getServerId())) {
-        schedule(character.getServerId(), proto);
+    // Figure out which campaign this image belongs to.
+    Optional<Character> imageCharacter = Characters.getCharacter(image.getId());
+    if (imageCharacter.isPresent()) {
+      for (Character character :
+          Characters.getAllCharacters(imageCharacter.get().getCampaignId())) {
+        // Only update the character on clients that don't own it.
+        if (!clientId.equals(character.getServerId())) {
+          schedule(character.getServerId(), data);
+        }
       }
     }
   }
 
   public void awardXp(Campaign campaign, Character character, int xp) {
-    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-        .setXpAward(Data.CompanionMessageProto.Xp.newBuilder()
-            .setCampaignId(campaign.getCampaignId())
-            .setCharacterId(character.getCharacterId())
-            .setXpAward(xp)
-            .build())
-        .setSender(Settings.get().getAppId())
-        .setId(Settings.get().getNextMessageId())
-        .build();
-
-    schedule(character.getServerId(), proto);
+    CompanionMessageData data = CompanionMessageData.from(
+        new XpAward(character.getCharacterId(), campaign.getCampaignId(), xp));
+    schedule(character.getServerId(), data);
   }
 
   public void unpublish(Campaign campaign) {
@@ -245,14 +227,15 @@ public class CompanionPublisher {
     return Collections.emptyList();
   }
 
-  private void schedule(Iterable<String> recipients, Data.CompanionMessageProto proto) {
+  private void schedule(Iterable<String> recipients, CompanionMessageData data) {
+    ensureServer();
     for (String recipient : recipients) {
-      schedule(recipient, proto);
+      setupScheduler(recipient).schedule(data);
     }
   }
 
-  private void schedule(String recipientId, Data.CompanionMessageProto proto) {
-    setupScheduler(recipientId).schedule(proto);
+  private void schedule(String recipientId, CompanionMessageData data) {
+    setupScheduler(recipientId).schedule(data);
   }
 
   private MessageScheduler setupScheduler(String recipientId) {

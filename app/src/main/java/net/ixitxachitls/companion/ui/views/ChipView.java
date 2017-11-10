@@ -30,7 +30,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import net.ixitachitls.companion.R;
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -38,8 +38,6 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  * A small chip
  */
 public class ChipView extends LinearLayout {
-
-  private static final int PADDING_SELECT = 5;
 
   private final String dataId;
   private final int chipColor;
@@ -49,7 +47,6 @@ public class ChipView extends LinearLayout {
   protected final TextWrapper<TextView> name;
   protected final TextWrapper<TextView> subtitle;
   protected final RoundImageView image;
-  private boolean disabled = false;
 
   public ChipView(Context context, String dataId, String name, String subtitle,
                   @ColorRes int chipColor, @ColorRes int backgroundColor) {
@@ -79,7 +76,6 @@ public class ChipView extends LinearLayout {
   }
 
   public void disabled() {
-    disabled = true;
     name.textColor(R.color.disabled);
     subtitle.textColor(R.color.disabled);
   }

@@ -45,7 +45,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Images;
+import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
@@ -285,8 +285,8 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                       Character.fromProto(Characters.getLocalIdFor(proto.getId()), true, proto)
                           .store();
                     } else if (meta.getTitle().endsWith(".character.jpg")) {
-                      Images.local().save(Character.TYPE, meta.getDescription(),
-                          Images.asBitmap(result.getDriveContents().getInputStream()));
+                      new Image(Character.TYPE, meta.getDescription(),
+                          Image.asBitmap(result.getDriveContents().getInputStream()));
                     }
                   } catch (InvalidProtocolBufferException e) {
                     activity.toast("Reading of file " + meta.getTitle() + " failed!");

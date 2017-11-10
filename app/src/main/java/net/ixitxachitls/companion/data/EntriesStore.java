@@ -56,6 +56,7 @@ public class EntriesStore<T extends Entry<? extends MessageLite>> {
   }
 
 
+  @SuppressWarnings("unchecked")
   private T fromProto(InputStream file)
       throws NoSuchMethodException, IllegalAccessException, InvocationTargetException,
       InvalidProtocolBufferException {
