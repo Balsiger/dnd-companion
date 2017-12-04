@@ -21,8 +21,9 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-import android.app.Fragment;
+//import android.app.Fragment;
 import android.support.annotation.CallSuper;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 
 import com.google.common.base.Optional;

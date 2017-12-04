@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.arch.lifecycle.ViewModel;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
@@ -37,7 +38,7 @@ import java.util.Map;
 /**
  * Base for all stored entry collections.
  */
-public abstract class StoredEntries<E extends StoredEntry<?>> {
+public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel {
 
   protected final Context context;
   protected final Uri table;

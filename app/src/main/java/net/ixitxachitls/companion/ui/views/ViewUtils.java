@@ -19,14 +19,24 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui;
+package net.ixitxachitls.companion.ui.views;
+
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.support.v4.app.FragmentActivity;
 
 /**
- * Collection of utilities to setup ui elements.
+ * Static utitlity methods for views.
  */
-@Deprecated // User Wrapper instead.
-public class Setup {
-  private Setup() {}
+public class ViewUtils {
 
-
+  public static FragmentActivity getActivity(Context context) {
+    while (context instanceof ContextWrapper) {
+      if (context instanceof FragmentActivity) {
+        return (FragmentActivity)context;
+      }
+      context = ((ContextWrapper)context).getBaseContext();
+    }
+    return null;
+  }
 }

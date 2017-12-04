@@ -21,10 +21,12 @@
 
 package net.ixitxachitls.companion.ui.views;
 
+import android.arch.lifecycle.LiveData;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.transition.TransitionManager;
+import android.support.v4.app.Fragment;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +37,7 @@ import android.widget.TextView;
 import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -56,9 +59,14 @@ import java.util.Map;
  * View representing a whole party.
  */
 public class PartyView extends LinearLayout {
-  private List<Character> characters = new ArrayList<>();
 
+  private static final String TAG = "PartyView";
 
+  // External data.
+  private LiveData<ImmutableList<Character>> characters;
+  private Optional<Campaign> campaign = Optional.absent();
+
+  // UI.
   private final ViewGroup view;
   private final Wrapper<View> scroll;
   private final LinearLayout party;
@@ -70,12 +78,10 @@ public class PartyView extends LinearLayout {
   private final DiceView initiative;
   private final TextWrapper<TextView> conditions;
 
-  private Optional<Campaign> campaign = Optional.absent();
-
   public PartyView(Context context, @Nullable AttributeSet attrs) {
     super(context, attrs);
 
-    view = (ViewGroup) LayoutInflater.from(getContext()).inflate(R.layout.view_party, this, false);
+    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_party, this, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -112,11 +118,17 @@ public class PartyView extends LinearLayout {
     }
   }
 
-  public void setCampaign(Optional<Campaign> campaign) {
-    this.campaign = campaign;
-    this.characters.clear();
+  public void setup(Fragment fragment, Campaign campaign) {
+    // TODO(merlin): Reenable this once we really don't set the campaign multiple times.
+    //if (this.campaign.isPresent()) {
+    //  throw new IllegalStateException("Campaign already set");
+    //}
+
+    this.campaign = Optional.of(campaign);
+    this.characters = party(campaign);
+    this.characters.observe(fragment, data -> { refresh(); });
     party.removeAllViews();
-    battleView.setCampaign(campaign);
+    battleView.setCampaign(this.campaign);
 
     refresh();
   }
@@ -130,7 +142,7 @@ public class PartyView extends LinearLayout {
     Battle battle = campaign.get().getBattle();
     battle.start();
 
-    for (Character character : characters) {
+    for (Character character : characters.getValue()) {
       battle.refreshCombatant(character.getCharacterId(), character.getName(),
           Character.NO_INITIATIVE);
     }
@@ -138,8 +150,8 @@ public class PartyView extends LinearLayout {
     refreshWithTransition();
   }
 
-  private static List<Character> party(Campaign campaign) {
-    return campaign.getCharacters();
+  private static LiveData<ImmutableList<Character>> party(Campaign campaign) {
+    return campaign.getCharactersLive();
   }
 
   private static Map<String, ChipView> removeChips(ViewGroup view) {
@@ -183,7 +195,7 @@ public class PartyView extends LinearLayout {
     Preconditions.checkArgument(campaign.isPresent());
 
     // Refresh the chips, without recreation to get some smooth, animated updates.
-    for (Character character : characters) {
+    for (Character character : characters.getValue()) {
       ChipView chip = chips.get(character.getCharacterId());
       if (chip == null) {
         chip = new CharacterChipView(getContext(), character);
@@ -194,9 +206,9 @@ public class PartyView extends LinearLayout {
             CompanionFragments.get().showCharacter(character, Optional.of(finalChip));
           }
         });
-        party.addView(chip);
       }
 
+      party.addView(chip);
       chip.setBackground(R.color.characterDark);
       chip.setSubtitle("");
     }
@@ -226,7 +238,7 @@ public class PartyView extends LinearLayout {
     Battle battle = campaign.get().getBattle();
     battle.refreshCombatants();
 
-    if (campaign.get().isLocal() && battle.isStarting() && battleReady(characters)) {
+    if (campaign.get().isLocal() && battle.isStarting() && battleReady(characters.getValue())) {
       battle.battle();
     }
 
@@ -242,14 +254,14 @@ public class PartyView extends LinearLayout {
                 R.color.monster, R.color.monsterDark);
           }
         } else {
-          Optional<Character> character = Characters.getCharacter(combatant.getId());
-          if (character.isPresent()) {
-            chip = new CharacterChipView(getContext(), character.get());
+          LiveData<Optional<Character>> character = Characters.getCharacter(combatant.getId());
+          if (character.getValue().isPresent()) {
+            chip = new CharacterChipView(getContext(), character.getValue().get());
             final ChipView finalChip = chip;
             chip.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
-                CompanionFragments.get().showCharacter(character.get(), Optional.of(title.get()));
+                CompanionFragments.get().showCharacter(character.getValue().get(), Optional.of(title.get()));
               }
             });
           }
@@ -280,7 +292,7 @@ public class PartyView extends LinearLayout {
     scroll.backgroundColor(R.color.battleDark);
 
     startBattle.gone();
-    Optional<Character> initCharacter = needsInitiative(characters);
+    Optional<Character> initCharacter = needsInitiative(characters.getValue());
 
     if (initCharacter.isPresent()) {
       initiative.setVisibility(VISIBLE);
@@ -303,7 +315,7 @@ public class PartyView extends LinearLayout {
   private String conditions(String currentId) {
     List<String> conditions = new ArrayList<>();
 
-    for (Character character : characters) {
+    for (Character character : characters.getValue()) {
       for (Character.TimedCondition condition : character.conditionsFor(currentId)) {
         int remainingRounds = condition.getEndRound() - campaign.get().getBattle().getTurn();
         if (remainingRounds > 0) {

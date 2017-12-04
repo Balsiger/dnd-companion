@@ -145,7 +145,7 @@ public class CampaignFragment extends CompanionFragment {
 
     date.text(campaign.get().getDate().toString());
 
-    party.setCampaign(campaign);
+    party.setup(this, campaign.get());
   }
 
   private boolean canDeleteCampaign() {
@@ -157,6 +157,6 @@ public class CampaignFragment extends CompanionFragment {
       return !campaign.get().isPublished();
     }
 
-    return !Characters.hasLocalCharacters(campaign.get().getCampaignId());
+    return !Characters.hasLocalCampaignCharacters(campaign.get().getCampaignId());
   }
 }

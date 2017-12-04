@@ -21,8 +21,8 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
 import android.transition.TransitionSet;

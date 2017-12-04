@@ -27,38 +27,82 @@
               android:padding="20dp">
 
 
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:paddingBottom="2dp"
+      android:text="Encounter Level"
+      android:theme="@style/SmallText"/>
+
+  <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:paddingBottom="2dp"
+      android:paddingTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/ecls"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+  </HorizontalScrollView>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="5dp"
+      android:layout_marginTop="10dp"
+      android:layout_weight="0"
+      android:text="Party"
+      android:theme="@style/SmallText"/>
+
+  <LinearLayout
+      android:id="@+id/party"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:orientation="vertical"
+      >
+
+  </LinearLayout>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="5dp"
+      android:layout_marginTop="10dp"
+      android:layout_weight="0"
+      android:text="Fixed XP"
+      android:theme="@style/SmallText"/>
+
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:orientation="horizontal">
+      android:layout_weight="0"
+      android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingEnd="10dp"
-        android:paddingTop="10dp"
-        android:text="Encounter"
-        android:theme="@style/LargeText"/>
-
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/fixed_1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
+        android:layout_marginBottom="5dp"
+        android:layout_weight="0"
+        android:orientation="horizontal">
 
-      <LinearLayout
-          android:id="@+id/ecls"
-          android:layout_width="wrap_content"
-          android:layout_height="100dp"
-          android:orientation="horizontal">
+    </LinearLayout>
 
-      </LinearLayout>
-    </HorizontalScrollView>
+    <LinearLayout
+        android:id="@+id/fixed_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
 
+    </LinearLayout>
   </LinearLayout>
 
   <Button
@@ -67,6 +111,8 @@
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
       android:layout_margin="10dp"
+      android:layout_weight="1"
       android:text="Award"
       android:theme="@style/LargeText"/>
+
 </LinearLayout>

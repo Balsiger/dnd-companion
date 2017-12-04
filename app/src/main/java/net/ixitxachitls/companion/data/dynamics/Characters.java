@@ -21,12 +21,15 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.net.CompanionPublisher;
@@ -35,11 +38,13 @@ import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Information and storage for all characters.
@@ -50,114 +55,183 @@ public class Characters extends StoredEntries<Character> {
   private static Characters local;
   private static Characters remote;
 
-  private Characters(Context context, boolean local) {
-    super(context, local ?
-        DataBaseContentProvider.CHARACTERS_LOCAL : DataBaseContentProvider.CHARACTERS_REMOTE,
-        local);
-  }
+  // Data.
+  private static Map<String, String> campaignIdsByCharacterId = new ConcurrentHashMap<>();
 
-  public static Optional<Character> getCharacter(String characterId) {
-    return local.get(characterId).or(remote.get(characterId));
-  }
+  // Live data storages.
+  private static Map<String, MutableLiveData<ImmutableList<Character>>> charactersByCampaignId
+      = new ConcurrentHashMap<>();
+  private static Map<String, MutableLiveData<Optional<Character>>> charactersByCharacterId
+      = new ConcurrentHashMap<>();
 
-  public static Optional<Character> getCharacter(String characterId, String campaignId) {
-    if (characterId.isEmpty()) {
-      return Optional.of(Character.createNew(campaignId));
+  private static MutableLiveData<ImmutableList<Character>> allCharacters = new MutableLiveData<>();
+
+  // Data accessors.
+
+  public static LiveData<Optional<Character>> getCharacter(String characterId) {
+    if (!charactersByCharacterId.containsKey(characterId)) {
+      MutableLiveData<Optional<Character>> character = new MutableLiveData<>();
+      character.setValue(local.get(characterId).or(remote.get(characterId)));
+      charactersByCharacterId.put(characterId, character);
     }
 
-    return getCharacter(characterId);
+    return charactersByCharacterId.get(characterId);
   }
 
-  public static List<Character> getLocalCharacters() {
-    List<Character> characters = new ArrayList<>(local.getAll());
-    Collections.sort(characters, new CharacterComparator());
-    return characters;
+  public static LiveData<Optional<Character>> createCharacter(String campaignId) {
+    MutableLiveData<Optional<Character>> live = new MutableLiveData<>();
+    Character character = Character.createNew(campaignId);
+    live.setValue(Optional.of(character));
+    charactersByCharacterId.put(character.getCharacterId(), live);
+
+    return live;
   }
 
-  public static List<Character> getAllCharacters(String campaignId) {
-    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId);
-    if (campaign.isPresent() && campaign.get().isDefault()) {
-      return local.getOrphanedCharacters();
-    }
-
-    List<Character> characters = local.getCharacters(campaignId);
-    Set<String> ids = new HashSet<>();
-    for (Character character : characters) {
-      ids.add(character.getCharacterId());
-    }
-    for (Character character : remote.getCharacters(campaignId)) {
-      if (!ids.contains(character.getCharacterId())) {
-        characters.add(character);
-      }
-    }
-
-    Collections.sort(characters, new CharacterComparator());
-    return characters;
+  public static LiveData<ImmutableList<Character>> getLocalCampaignCharacters() {
+    return local.getCharacters();
   }
 
-  public static List<Character> getLocalCharacters(String campaignId) {
+  public static List<Character> getLocalCampaignCharacters(String campaignId) {
     return local.getCharacters(campaignId);
   }
 
-  public static boolean hasLocalCharacters(String campaignId) {
+  public static boolean hasLocalCampaignCharacters(String campaignId) {
     return !local.getCharacters(campaignId).isEmpty();
   }
 
-  public static void publish() {
-    Log.d(TAG, "publishing all local characters");
-    for (Character character : Characters.getLocalCharacters()) {
-      character.publish();
-      Images.get(character.isLocal()).publishImageFor(character);
-    }
+  public static LiveData<ImmutableList<Character>> getRemoteCharacters() {
+    return remote.getCharacters();
   }
+
+  public static List<Character> getRemoteCampaignCharacters(String campaignId) {
+    return remote.getCharacters(campaignId);
+  }
+
+  public static boolean hasRemoteCampaignCharacters(String campaignId) {
+    return !remote.getCharacters(campaignId).isEmpty();
+  }
+
+  public static LiveData<ImmutableList<Character>> getCampaignCharacters(String campaignId) {
+    synchronized (charactersByCampaignId) {
+      if (!charactersByCampaignId.containsKey(campaignId)) {
+        MutableLiveData<ImmutableList<Character>> data = new MutableLiveData<>();
+        data.setValue(ImmutableList.copyOf(campaignCharacters(campaignId)));
+        charactersByCampaignId.put(campaignId, data);
+      }
+    }
+
+    return charactersByCampaignId.get(campaignId);
+  }
+
+  public static long getLocalIdFor(String characterId) {
+    return local().getIdFor(characterId);
+  }
+
+  public static long getRemoteIdFor(String characterId) {
+    return remote().getIdFor(characterId);
+  }
+
+  // Data mutations.
 
   public static void addCharacter(boolean local, Character character) {
     Characters.get(local).add(character);
+    updateCharacter(character);
+  }
+
+  public static void updateCharacter(Character character) {
+    String campaignId = campaignIdsByCharacterId.get(character.getCharacterId());
+    if (character.getCampaignId().equals(campaignId)) {
+      // Update characters by campaign to singla that once of it's characters changed
+      // (if you need more fine grained updates, get live data for individual characters.)
+      updateCampaign(character.getCampaignId());
+    } else if (campaignId == null) {
+      // Update campaign and all characters for this newly added character.
+      campaignIdsByCharacterId.put(character.getCharacterId(), character.getCampaignId());
+      updateCampaign(character.getCampaignId());
+      ImmutableList.Builder<Character> characters = new ImmutableList.Builder<>();
+      characters.addAll(allCharacters.getValue());
+      characters.add(character);
+      allCharacters.setValue(characters.build());
+    } else {
+      // Update characters by campaign if the character was moved to a different campaign.
+      updateCampaign(campaignId);
+      updateCampaign(character.getCampaignId());
+    }
+
+    // Update all live data for the individual character.
+    if (charactersByCharacterId.containsKey(character.getCharacterId())) {
+      charactersByCharacterId.get(character.getCharacterId()).setValue(Optional.of(character));
+    }
   }
 
   public static void removeCharacter(Character character) {
     local.remove(character);
+
+    // Unpublish the character.
     CompanionPublisher.get().delete(character);
     CompanionSubscriber.get().delete(character);
+
+    // Update live data.
+    campaignIdsByCharacterId.remove(character.getCharacterId());
+    updateCampaign(character.getCampaignId());
+    if (charactersByCharacterId.containsKey(character.getCharacterId())) {
+      charactersByCharacterId.get(character.getCharacterId()).setValue(Optional.absent());
+    }
   }
 
-  public static void publish(String campaignId) {
-    Log.d(TAG, "publishing characters of campaign " + campaignId);
-    for (Character character : Characters.getLocalCharacters(campaignId)) {
+  public static void removeRemote(String characterId) {
+    remote().remove(characterId);
+
+    // Update live data.
+    String campaignId = campaignIdsByCharacterId.get(characterId);
+    if (campaignId != null) {
+      campaignIdsByCharacterId.remove(characterId);
+      updateCampaign(campaignId);
+    }
+    if (charactersByCharacterId.containsKey(characterId)) {
+      charactersByCharacterId.get(characterId).setValue(Optional.absent());
+    }
+  }
+
+  // Publishing characters.
+
+  public static void publish() {
+    Log.d(TAG, "publishing all local characters");
+    for (Character character : Characters.getLocalCampaignCharacters().getValue()) {
       character.publish();
       Images.get(character.isLocal()).publishImageFor(character);
     }
   }
 
-  public static long getLocalIdFor(String campaignId) {
-    return local().getIdFor(campaignId);
+  public static void publish(String campaignId) {
+    Log.d(TAG, "publishing characters of campaign " + campaignId);
+    for (Character character : Characters.getLocalCampaignCharacters(campaignId)) {
+      character.publish();
+      Images.get(character.isLocal()).publishImageFor(character);
+    }
   }
 
-  public static long getRemoteIdFor(String campaignId) {
-    return remote().getIdFor(campaignId);
-  }
+  // Private methods.
 
-  public static void removeRemote(String characterId) {
-    remote().remove(characterId);
-  }
-
-  private static Characters local() {
-    Preconditions.checkNotNull(local, "local characters have to be loaded!");
-    return local;
-  }
-
-  private static Characters remote() {
-    Preconditions.checkNotNull(local, "remote characters have to be loaded!");
-    return remote;
-  }
-
-  private static Characters get(boolean local) {
-    return local ? Characters.local : Characters.remote;
-  }
-
+  // While this method is public, it should only be called in the main application.
   public static void load(Context context) {
     loadLocal(context);
     loadRemote(context);
+  }
+
+  private Characters(Context context, boolean local) {
+    super(context, local ?
+            DataBaseContentProvider.CHARACTERS_LOCAL : DataBaseContentProvider.CHARACTERS_REMOTE,
+        local);
+
+    // Fill live data storages (the remaining storages will be filled on a per use bases, to allow
+    // to serve live data for future characters as well.
+    Collection<Character> all = getAll();
+    allCharacters.setValue(ImmutableList.copyOf(all));
+
+    for (Character character : all) {
+      campaignIdsByCharacterId.put(character.getCharacterId(), character.getCampaignId());
+    }
   }
 
   private static void loadLocal(Context context) {
@@ -180,34 +254,76 @@ public class Characters extends StoredEntries<Character> {
     remote = new Characters(context, false);
   }
 
-  private List<Character> getCharacters(String campaignId) {
+  private static Characters local() {
+    Preconditions.checkNotNull(local, "local characters have to be loaded!");
+    return local;
+  }
+
+  private static Characters remote() {
+    Preconditions.checkNotNull(local, "remote characters have to be loaded!");
+    return remote;
+  }
+
+  private static Characters get(boolean local) {
+    return local ? Characters.local : Characters.remote;
+  }
+
+  private static ImmutableList<Character> campaignCharacters(String campaignId) {
     Optional<Campaign> campaign = Campaigns.getCampaign(campaignId);
     if (campaign.isPresent() && campaign.get().isDefault()) {
-      return getOrphanedCharacters();
+      return local.getOrphanedCharacters();
     }
 
+    List<Character> characters = local.getCharacters(campaignId);
+    Set<String> ids = new HashSet<>();
+    for (Character character : characters) {
+      ids.add(character.getCharacterId());
+    }
+
+    // Add the remote characters we don't already have.
+    for (Character character : remote.getCharacters(campaignId)) {
+      if (!ids.contains(character.getCharacterId())) {
+        characters.add(character);
+      }
+    }
+
+    return ImmutableList.copyOf(characters);
+  }
+
+  private static void updateCampaign(String campaignId) {
+    if (charactersByCampaignId.containsKey(campaignId)) {
+      charactersByCampaignId.get(campaignId).setValue(campaignCharacters(campaignId));
+    }
+  }
+
+  // Member methods.
+
+  private LiveData<ImmutableList<Character>> getCharacters() {
+    return allCharacters;
+  }
+
+  private List<Character> getCharacters(String campaignId) {
     List<Character> characters = new ArrayList<>();
     for (Character character : getAll()) {
       if (character.getCampaignId().equals(campaignId)) {
         characters.add(character);
       }
     }
-    Collections.sort(characters, new CharacterComparator());
     return characters;
   }
 
-  private List<Character> getOrphanedCharacters() {
-    List<Character> characters = new ArrayList<>();
+  private ImmutableList<Character> getOrphanedCharacters() {
+    ImmutableList.Builder<Character> characters = new ImmutableList.Builder<>();
     for (Character character : getAll()) {
       if (!Campaigns.get(isLocal()).has(character.getCampaignId())) {
         characters.add(character);
       }
     }
-    Collections.sort(characters, new CharacterComparator());
 
-    return characters;
+    return characters.build();
   }
 
+  @Override
   protected Optional<Character> parseEntry(long id, byte[] blob) {
     try {
       return Optional.of(

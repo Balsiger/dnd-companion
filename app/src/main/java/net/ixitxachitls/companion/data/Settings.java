@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.CursorIndexOutOfBoundsException;
@@ -50,18 +52,12 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
 
   private String appId;
   private long lastMessageId = 1;
-  private boolean showStatus = false;
+  private MutableLiveData<Boolean> showStatus = new MutableLiveData<>();
 
   private Settings(String name) {
     super(ID, String.valueOf(ID), name, true, DataBaseContentProvider.SETTINGS);
-  }
 
-  public void setDebugStatus(boolean showStatus) {
-    this.showStatus = showStatus;
-  }
-
-  public boolean showStatus() {
-    return showStatus;
+    showStatus.setValue(false);
   }
 
   public static ContentValues defaultSettings() {
@@ -154,5 +150,13 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     store();
 
     return lastMessageId;
+  }
+
+  public void setDebugStatus(boolean showStatus) {
+    this.showStatus.setValue(showStatus);
+  }
+
+  public LiveData<Boolean> shouldShowStatus() {
+    return showStatus;
   }
 }

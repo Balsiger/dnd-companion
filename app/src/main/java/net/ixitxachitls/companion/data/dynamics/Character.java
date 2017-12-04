@@ -88,10 +88,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     return Optional.absent();
   }
 
-  public Optional<Character> refresh() {
-    return Characters.getCharacter(entryId);
-  }
-
   public String getCampaignId() {
     return campaignId;
   }

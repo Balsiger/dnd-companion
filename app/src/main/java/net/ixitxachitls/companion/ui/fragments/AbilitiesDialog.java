@@ -27,6 +27,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
@@ -38,6 +39,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.views.EditAbility;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Dialog fragment to edit the abilities of a character or monster.
@@ -82,8 +84,7 @@ public class AbilitiesDialog extends Dialog {
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
     if (campaign.isPresent()) {
-      character = Characters.getCharacter(getArguments().getString(ARG_ID),
-          campaign.get().getCampaignId());
+      character = Characters.getCharacter(getArguments().getString(ARG_ID)).getValue();
     } else {
       character = Optional.absent();
     }
@@ -103,6 +104,7 @@ public class AbilitiesDialog extends Dialog {
     wisdom.setOnChange(this::change);
     charisma = (EditAbility) view.findViewById(R.id.charisma);
     charisma.setOnChange(this::change);
+    Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
 
     // Setup the layout parameters again after adding dynamic content.
     view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,

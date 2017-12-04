@@ -45,7 +45,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 public class BattleView extends LinearLayout {
 
   private final PartyView party;
-  private Optional<Campaign> campaign;
+  private Optional<Campaign> campaign = Optional.absent();
 
   private final ViewGroup view;
   private final Wrapper<Button> add;

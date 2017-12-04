@@ -99,6 +99,9 @@ public class CompanionClient {
         == Data.CompanionMessageProto.Payload.PayloadCase.WELCOME) {
       this.serverId = message.get().getData().getWelcome().getId();
       this.serverName = message.get().getData().getWelcome().getName();
+
+      // Resend local characters.
+      CompanionPublisher.get().republishLocalCharacters(Settings.get().getAppId());
     }
 
     return Optional.of(CompanionMessage.fromProto(message.get()));

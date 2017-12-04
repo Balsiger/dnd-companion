@@ -256,12 +256,14 @@ public class DateDialog extends Dialog {
   }
 
   protected void update() {
-    year.text(String.valueOf(yearShown));
-    year.label(formatYear(yearShown));
-    month.text(formatMonth(monthShown));
-    hours.text(formatTime(hoursShown));
-    minutes.text(formatTime(minutesShown));
-    days.setAdapter(adapter);
+    if (campaign.isPresent()) {
+      year.text(String.valueOf(yearShown));
+      year.label(formatYear(yearShown));
+      month.text(formatMonth(monthShown));
+      hours.text(formatTime(hoursShown));
+      minutes.text(formatTime(minutesShown));
+      days.setAdapter(adapter);
+    }
   }
 
   private class DateAdapter extends BaseAdapter {

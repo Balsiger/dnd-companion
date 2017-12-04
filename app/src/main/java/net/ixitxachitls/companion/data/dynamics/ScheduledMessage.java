@@ -203,8 +203,7 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
     ScheduledMessage that = (ScheduledMessage) other;
 
-    return lastInteraction == that.lastInteraction
-        && state == that.state
+    return state == that.state
         && message.equals(that.message);
   }
 
@@ -212,7 +211,6 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
   public int hashCode() {
     int result = super.hashCode();
     result = 31 * result + state.hashCode();
-    result = 31 * result + (int) (lastInteraction ^ (lastInteraction >>> 32));
     result = 31 * result + message.hashCode();
     return result;
   }

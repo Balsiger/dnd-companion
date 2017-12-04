@@ -21,7 +21,10 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.arch.lifecycle.LiveData;
+
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
@@ -41,11 +44,16 @@ import java.util.List;
  */
 public class Campaign extends StoredEntry<Data.CampaignProto> {
 
+  // Constants.
   public static final String TYPE = "campaigns";
   public static final String TABLE_LOCAL = TYPE + "_local";
   public static final String TABLE_REMOTE = TYPE + "_remote";
   public static final int DEFAULT_CAMPAIGN_ID = -1;
 
+  // External Data.
+  private LiveData<List<Character>> characters;
+
+  // Values.
   private World world;
   private String dm = "";
   private boolean published = false;
@@ -55,11 +63,38 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   private Campaign(long id, String name, boolean local) {
     super(id, Settings.get().getAppId() + "-" + id, name, local,
-    local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE);
+        local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE);
+
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar());
     dm = Settings.get().getNickname();
     battle = new Battle(this);
+  }
+
+  public int getMaxPartyLevel() {
+    int max = 0;
+    for (Character character : getCharacters()) {
+      max = Math.max(max, character.getLevel());
+    }
+
+    return max;
+  }
+
+  public int getMinPartyLevel() {
+    int min = Integer.MAX_VALUE;
+    for (Character character : getCharacters()) {
+      min = Math.min(min, character.getLevel());
+    }
+
+    if (min == Integer.MAX_VALUE) {
+      return 0;
+    }
+
+    return min;
+  }
+
+  public boolean isCloseECL(int level) {
+    return getMinPartyLevel() <= level && getMaxPartyLevel() >= level;
   }
 
   public void awardXp(Character character, int xp) {
@@ -78,6 +113,10 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return dm;
   }
 
+  public boolean amDM(){
+    return dm.equals(Settings.get().getNickname());
+  }
+
   public Calendar getCalendar() {
     return world.getCalendar();
   }
@@ -87,7 +126,11 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public List<Character> getCharacters() {
-    return Characters.getAllCharacters(getCampaignId());
+    return Characters.getCampaignCharacters(getCampaignId()).getValue();
+  }
+
+  public LiveData<ImmutableList<Character>> getCharactersLive() {
+    return Characters.getCampaignCharacters(getCampaignId());
   }
 
   public CampaignDate getDate() {

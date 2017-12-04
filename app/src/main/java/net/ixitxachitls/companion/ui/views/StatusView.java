@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
 import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
@@ -49,26 +48,27 @@ import java.util.Map;
  */
 public class StatusView extends LinearLayout {
 
+  // Constants.
   private static final String TAG = "StatusView";
 
-  boolean started = true;
+  // External data.
+  private final Settings settings;
 
   // UI elements.
-  private IconView online;
-  private TextWrapper<TextView> messages;
-  private ScrollView messagesScroll;
-  private Wrapper<LinearLayout> connections;
-  private Map<String, ConnectionView> clientConnectionsByName = new HashMap<>();
-  private Map<String, ConnectionView> serverConnectionsByName = new HashMap<>();
+  private final IconView online;
+  private final TextWrapper<TextView> messages;
+  private final ScrollView messagesScroll;
+  private final Wrapper<LinearLayout> connections;
+  private final Map<String, ConnectionView> clientConnectionsByName = new HashMap<>();
+  private final Map<String, ConnectionView> serverConnectionsByName = new HashMap<>();
+
+  // Values.
+  private boolean started = true;
 
   public StatusView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    init(attributes);
-  }
-
-  private void init(AttributeSet attributes) {
-    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.StatusView);
+    settings = Settings.get();
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_status, null, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
@@ -83,17 +83,14 @@ public class StatusView extends LinearLayout {
     Wrapper.<HorizontalScrollView>wrap(view, R.id.connections_scroll)
         .onTouch(this::toggleDebug, MotionEvent.ACTION_UP);
 
-    addView(view);
-    update();
-  }
+    settings.shouldShowStatus().observe(ViewUtils.getActivity(context), data -> {
+        messagesScroll.setVisibility(data ? VISIBLE : GONE); });
 
-  private void update() {
-    messagesScroll.setVisibility(Settings.get().showStatus() ? VISIBLE : GONE);
+    addView(view);
   }
 
   private void toggleDebug() {
-    Settings.get().setDebugStatus(!Settings.get().showStatus());
-    update();
+    settings.setDebugStatus(!settings.shouldShowStatus().getValue());
   }
 
   public void heartbeat() {
@@ -106,8 +103,6 @@ public class StatusView extends LinearLayout {
     for (ConnectionView connection : serverConnectionsByName.values()) {
       connection.heartbeat();
     }
-
-    update();
   }
 
   public void addMessage(String message) {
@@ -183,7 +178,7 @@ public class StatusView extends LinearLayout {
     if (started) {
       CompanionPublisher.get().stop();
     } else {
-      CompanionPublisher.get().ensureServer();
+      CompanionPublisher.get().start();
     }
 
     started = !started;

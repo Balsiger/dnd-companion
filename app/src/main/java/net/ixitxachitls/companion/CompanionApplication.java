@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.net.ScheduledMessages;
 import net.ixitxachitls.companion.net.ServerMessageProcessor;
 import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -58,6 +59,7 @@ public class CompanionApplication extends MultiDexApplication
   private boolean serverStarted = false;
   private Optional<ClientMessageProcessor> clientMessageProcessor = Optional.absent();
   private Optional<ServerMessageProcessor> serverMessageProcessor = Optional.absent();
+  private final List<String> pendingMessages = new ArrayList<>();
 
   @Override
   public void onCreate() {
@@ -89,7 +91,7 @@ public class CompanionApplication extends MultiDexApplication
 
   private class MessageChecker implements Runnable {
 
-    public static final int DELAY_MILLIS = 5_000;
+    public static final int DELAY_MILLIS = 1_000;
 
     @Override
     public void run() {
@@ -132,8 +134,12 @@ public class CompanionApplication extends MultiDexApplication
   }
 
   public void status(String message) {
+    pendingMessages.add(message);
     if (currentActivity.isPresent()) {
-      currentActivity.get().status(message);
+      for (String pending : pendingMessages) {
+        currentActivity.get().status(pending);
+      }
+      pendingMessages.clear();
     }
   }
 

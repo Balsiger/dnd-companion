@@ -83,7 +83,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
-    Optional<Character> character = award.getCharacter();
+    Optional<Character> character = Characters.getCharacter(award.getCharacterId()).getValue();
     if (character.isPresent()) {
       new ConfirmationDialog(mainActivity)
           .title("XP Award")
@@ -97,12 +97,12 @@ public class ClientMessageProcessor extends MessageProcessor {
   }
 
   private void addXpAward(String senderId, long messageId, String characterId, int xp) {
-    Optional<Character> character = Characters.getCharacter(characterId);
+    Optional<Character> character = Characters.getCharacter(characterId).getValue();
     if (character.isPresent()) {
       character.get().addXp(xp);
       CompanionSubscriber.get().sendAck(senderId, messageId);
       refresh();
-      character = Characters.getCharacter(characterId);
+      character = Characters.getCharacter(characterId).getValue();
     }
   }
 }

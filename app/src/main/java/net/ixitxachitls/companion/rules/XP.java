@@ -116,6 +116,6 @@ public class XP {
       return xpForLevel(20);
     }
 
-    return xpByLevel[level + 1];
+    return xpByLevel[level];
   }
 }

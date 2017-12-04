@@ -137,6 +137,28 @@ public class CompanionPublisher {
     application.status("sent campaign " + campaign.getName());
   }
 
+  public void republish(String recipientId) {
+    for (Campaign campaign : Campaigns.getCampaigns()) {
+      if (campaign.isLocal() && campaign.isPublished()) {
+        schedule(recipientId, CompanionMessageData.from(campaign));
+
+        for (Character character : campaign.getCharacters()) {
+          update(character, recipientId);
+        }
+      }
+    }
+  }
+
+  public void republishLocalCharacters(String recipientId) {
+    for (Campaign campaign : Campaigns.getCampaigns()) {
+      for (Character character : campaign.getCharacters()) {
+        if (character.isLocal()) {
+          update(character, recipientId);
+        }
+      }
+    }
+  }
+
   public void delete(Campaign campaign) {
     CompanionMessageData data = CompanionMessageData.fromDelete(campaign);
 
@@ -157,7 +179,7 @@ public class CompanionPublisher {
   public void update(Character updatedCharacter, String characterClientId) {
     CompanionMessageData data = CompanionMessageData.from(updatedCharacter);
     for (Character character
-        : Characters.getAllCharacters(updatedCharacter.getCampaignId())) {
+        : Characters.getCampaignCharacters(updatedCharacter.getCampaignId()).getValue()) {
       // Only update the character on clients that don't own it.
       if (!characterClientId.equals(character.getServerId())) {
         schedule(character.getServerId(), data);
@@ -169,10 +191,10 @@ public class CompanionPublisher {
     CompanionMessageData data = CompanionMessageData.from(image);
 
     // Figure out which campaign this image belongs to.
-    Optional<Character> imageCharacter = Characters.getCharacter(image.getId());
+    Optional<Character> imageCharacter = Characters.getCharacter(image.getId()).getValue();
     if (imageCharacter.isPresent()) {
       for (Character character :
-          Characters.getAllCharacters(imageCharacter.get().getCampaignId())) {
+          Characters.getCampaignCharacters(imageCharacter.get().getCampaignId()).getValue()) {
         // Only update the character on clients that don't own it.
         if (!clientId.equals(character.getServerId())) {
           schedule(character.getServerId(), data);
@@ -212,7 +234,7 @@ public class CompanionPublisher {
     ids.addAll(clientIds());
 
     for (Character character
-        : Characters.getAllCharacters(campaign.getCampaignId())) {
+        : Characters.getCampaignCharacters(campaign.getCampaignId()).getValue()) {
       ids.add(character.getServerId());
     }
 
@@ -261,6 +283,12 @@ public class CompanionPublisher {
     }
   }
 
+  public void start() {
+    if (Campaigns.hasAnyPublished()) {
+      ensureServer();
+    }
+  }
+
   public void stop() {
     if (name.isPresent()) {
       Log.d(TAG, "unregistering " + service.getServiceName());
@@ -299,18 +327,22 @@ public class CompanionPublisher {
     @Override
     public void onServiceRegistered(NsdServiceInfo NsdServiceInfo) {
       name = Optional.of(NsdServiceInfo.getServiceName());
+      application.status("service registered");
     }
 
     @Override
     public void onRegistrationFailed(NsdServiceInfo arg0, int arg1) {
+      application.status("registering of service failed!");
     }
 
     @Override
     public void onServiceUnregistered(NsdServiceInfo arg0) {
+      application.status("service unregistered.");
     }
 
     @Override
     public void onUnregistrationFailed(NsdServiceInfo serviceInfo, int errorCode) {
+      application.status("unregistering service failed.");
     }
   }
 }

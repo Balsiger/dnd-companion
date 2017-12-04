@@ -70,7 +70,7 @@ public class MainActivity extends CompanionActivity {
     super.onCreate(state);
     Log.d(TAG, "onCreate");
 
-    CompanionFragments.init(getFragmentManager());
+    CompanionFragments.init(getSupportFragmentManager());
     driveStorage = new DriveStorage(this);
 
     setContentView(R.layout.activity_main);
@@ -125,7 +125,7 @@ public class MainActivity extends CompanionActivity {
             campaign.getCampaignId(), "application/x-protobuf", campaign.toProto().toByteArray()));
       }
       // Export local characters.
-      for (Character character : Characters.getLocalCharacters()) {
+      for (Character character : Characters.getLocalCampaignCharacters().getValue()) {
         files.add(new DriveStorage.TextFile(character.getName() + ".character.txt",
             character.getCharacterId(), "text/plain", "# This file will not be re-imported."
             + character.toProto().toString()));

@@ -102,6 +102,7 @@ public class Battle {
       }
     }
 
+    // No combatant to refresh was found.
     combatants.add(new Combatant(characterId, name, initiativeModifier, false, false));
     campaign.store();
   }
@@ -110,7 +111,7 @@ public class Battle {
     for (int i = 0; i < combatants.size(); i++) {
       Combatant existing = combatants.get(i);
       if (!existing.isMonster()) {
-        Optional<Character> character = Characters.getCharacter(existing.id);
+        Optional<Character> character = Characters.getCharacter(existing.id).getValue();
         if (character.isPresent()) {
           combatants.set(i,
               new Combatant(existing.id, existing.name,
@@ -123,6 +124,7 @@ public class Battle {
 
     campaign.store();
   }
+
 
 
   public int getCurrentCombatantIndex() {

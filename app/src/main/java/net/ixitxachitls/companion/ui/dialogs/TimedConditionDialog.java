@@ -89,7 +89,7 @@ public class TimedConditionDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    character = Characters.getCharacter(getArguments().getString(ARG_ID));
+    character = Characters.getCharacter(getArguments().getString(ARG_ID)).getValue();
     currentRound = getArguments().getInt(ARG_ROUND);
     if (character.isPresent()) {
       campaign = Campaigns.getCampaign(character.get().getCampaignId());

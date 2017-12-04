@@ -106,6 +106,10 @@ public class CharacterFragment extends CompanionFragment {
     title.setAction(this::editBase);
     delete = (IconView) view.findViewById(R.id.delete);
     delete.setAction(this::delete);
+    if (character.isPresent() && !character.get().isLocal() &&
+        campaign.isPresent() && !campaign.get().amDM()) {
+      delete.setVisibility(View.GONE);
+    }
     move = (IconView) view.findViewById(R.id.move);
     move.setAction(this::move);
     strength = (AbilityView) view.findViewById(R.id.strength);
@@ -201,12 +205,14 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   private void editImage() {
-    Intent intent = new Intent();
-    // Show only images, no videos or anything else
-    intent.setType("image/*");
-    intent.setAction(Intent.ACTION_GET_CONTENT);
-    // Always show the chooser (if there are multiple options available)
-    startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+    if (character.isPresent() && character.get().isLocal()) {
+      Intent intent = new Intent();
+      // Show only images, no videos or anything else
+      intent.setType("image/*");
+      intent.setAction(Intent.ACTION_GET_CONTENT);
+      // Always show the chooser (if there are multiple options available)
+      startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+    }
   }
 
   private void changeXp() {
@@ -261,8 +267,7 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    character = Characters.getCharacter(character.get().getCharacterId(),
-        campaign.get().getCampaignId());
+    character = Characters.getCharacter(character.get().getCharacterId()).getValue();
     if (!character.isPresent()) {
       return;
     }

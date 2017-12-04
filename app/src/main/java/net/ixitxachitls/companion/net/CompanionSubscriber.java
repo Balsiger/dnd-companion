@@ -179,7 +179,7 @@ public class CompanionSubscriber {
       application.status("service lost " + service.getServiceName());
       CompanionClient client = clientByName.remove(service.getServiceName());
       for (String id : clientById.keySet()) {
-        if (clientById.get(id) == client) {
+        if (clientById.get(id).equals(client)) {
           clientById.remove(id);
           break;
         }

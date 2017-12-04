@@ -23,8 +23,14 @@ package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
+import net.ixitxachitls.companion.ui.Alert;
 
 /**
  * Abstact base wrapper.
@@ -32,9 +38,16 @@ import android.view.View;
 class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   protected final V view;
 
+  public enum Margin { LEFT, RIGHT, TOP, BOTTOM };
+  public enum Padding { LEFT, RIGHT, TOP, BOTTOM, ALL, LEFT_RIGHT, TOP_BOTTOM };
+
   @SuppressWarnings("unchecked")
   protected AbstractWrapper(View parent, @IdRes int id) {
     this.view = (V) parent.findViewById(id);
+  }
+
+  protected AbstractWrapper(V view) {
+    this.view = view;
   }
 
   public W backgroundColor(@ColorRes int color) {
@@ -43,11 +56,130 @@ class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
+  private int dpToPx(int dp) {
+    DisplayMetrics metrics = view.getContext().getResources().getDisplayMetrics();
+    return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, metrics);
+  }
+
+  public W padding(Padding position, int paddingDp) {
+    int paddingPx = dpToPx(paddingDp);
+    int left = view.getPaddingLeft();
+    int top = view.getPaddingTop();
+    int right = view.getPaddingRight();
+    int bottom = view.getPaddingBottom();
+
+    switch (position) {
+      case LEFT:
+        left = paddingPx;
+        break;
+
+      case RIGHT:
+        right = paddingPx;
+        break;
+
+      case TOP:
+        top = paddingPx;
+        break;
+
+      case BOTTOM:
+        bottom = paddingPx;
+        break;
+
+      case ALL:
+        left = paddingPx;
+        right = paddingPx;
+        top = paddingPx;
+        bottom = paddingPx;
+        break;
+
+      case LEFT_RIGHT:
+        left = paddingPx;
+        right = paddingPx;
+        break;
+
+      case TOP_BOTTOM:
+        top = paddingPx;
+        bottom = paddingPx;
+        break;
+    }
+
+    view.setPadding(left, top, right, bottom);
+
+    return (W) this;
+  }
+
+  // NOTE: This method _MUST_ be called after adding the view to the parent.
+  @SuppressWarnings("unchecked")
+  public W margin(Margin position, int marginDp) {
+    int marginPx = dpToPx(marginDp);
+    int left = 0;
+    int top = 0;
+    int right = 0;
+    int bottom = 0;
+
+    switch (position) {
+      case LEFT:
+        left = marginPx;
+        break;
+
+      case RIGHT:
+        right = marginPx;
+        break;
+
+      case TOP:
+        top = marginPx;
+        break;
+
+      case BOTTOM:
+        bottom = marginPx;
+        break;
+    }
+
+    ViewGroup.LayoutParams params = view.getLayoutParams();
+    if (params instanceof ViewGroup.MarginLayoutParams) {
+      ((ViewGroup.MarginLayoutParams) params).setMargins(left, top, right, bottom);
+    } else {
+      Alert.show(view.getContext(), "Rendering error",
+          "Layout params " + params.getClass() + " not supported. Margin not set.");
+    }
+
+    view.setLayoutParams(params);
+
+    return (W) this;
+  }
+
+  // NOTE: This method _MUST_ be called after adding the view to the parent.
+  public W weight(float weight) {
+    ViewGroup.LayoutParams params = view.getLayoutParams();
+    if (params instanceof LinearLayout.LayoutParams) {
+      ((LinearLayout.LayoutParams) params).weight = weight;
+    } else {
+      Alert.show(view.getContext(), "Rendering error",
+          "Layout params " + params.getClass() + " not supported. Weight not set.");
+    }
+
+
+    return (W) this;
+  }
+
+
   public W onClick(Wrapper.Action action) {
     view.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         action.execute();
+      }
+    });
+
+    return (W) this;
+  }
+
+  public W onLongClick(Wrapper.Action action) {
+    view.setOnLongClickListener(new View.OnLongClickListener() {
+      @Override
+      public boolean onLongClick(View v) {
+        action.execute();
+        return true;
       }
     });
 

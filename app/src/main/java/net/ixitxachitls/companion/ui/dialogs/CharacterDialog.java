@@ -88,8 +88,12 @@ public class CharacterDialog extends Dialog {
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
     if (campaign.isPresent()) {
-      character = Characters.getCharacter(getArguments().getString(ARG_ID),
-          campaign.get().getCampaignId());
+      String characterId = getArguments().getString(ARG_ID);
+      if (characterId.isEmpty()) {
+        character = Characters.createCharacter(campaign.get().getCampaignId()).getValue();
+      } else {
+        character = Characters.getCharacter(characterId).getValue();
+      }
     } else {
       character = Optional.absent();
     }

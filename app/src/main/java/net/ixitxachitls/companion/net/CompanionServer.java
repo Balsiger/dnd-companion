@@ -62,6 +62,7 @@ public class CompanionServer implements Runnable {
   public boolean start() {
     try {
       socket = new ServerSocket(0);
+      application.status("starting server...");
       thread.start();
     } catch (IOException e) {
       Log.e(TAG, "Error creating ServerSocket: ", e);
@@ -73,6 +74,7 @@ public class CompanionServer implements Runnable {
   }
 
   public void stop() {
+    application.status("stopping server...");
     for (CompanionTransmitter transmitter : transmittersById.values()) {
       transmitter.stop();
     }
@@ -103,40 +105,43 @@ public class CompanionServer implements Runnable {
 
   @Override
   public void run() {
-      Log.d("Server", "ServerSocket Created, awaiting connection on "
-          + socket.getInetAddress() + ":" + socket.getLocalPort());
+    application.status("starting server thread");
+    Log.d("Server", "ServerSocket Created, awaiting connection on "
+        + socket.getInetAddress() + ":" + socket.getLocalPort());
 
-      while (!Thread.currentThread().isInterrupted()) {
-        try {
-          Log.d("socket", "socket" + socket);
-          Socket transmissionSocket = socket.accept();
-          CompanionTransmitter transmitter = new CompanionTransmitter("server", transmissionSocket);
-          // Temporarily store the transmitter without id until we get the welcome message.
-          transmittersById.put("startup-" + transmittersById.keySet().size(), transmitter);
-          transmitter.start();
+    while (!Thread.currentThread().isInterrupted()) {
+      try {
+        Log.d("socket", "socket" + socket);
+        Socket transmissionSocket = socket.accept();
+        CompanionTransmitter transmitter = new CompanionTransmitter("server", transmissionSocket);
+        // Temporarily store the transmitter without id until we get the welcome message.
+        transmittersById.put("startup-" + transmittersById.keySet().size(), transmitter);
+        transmitter.start();
+        application.status("client connected, setting up transmitter");
 
-          // Send a welcome message to the client.
-          application.status("sending welcome message to client");
-          transmitter.send(Data.CompanionMessageProto.newBuilder()
-              .setHeader(Data.CompanionMessageProto.Header.newBuilder()
-                  .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
-                      .setId(Settings.get().getAppId())
-                      .setName(Settings.get().getNickname())
-                      .build())
-                  // Don't know anything about the client yet.
-                  .build())
-              .setData(Data.CompanionMessageProto.Payload.newBuilder()
-                  .setWelcome(Data.CompanionMessageProto.Payload.Welcome.newBuilder()
-                      .setId(Settings.get().getAppId())
-                      .setName(Settings.get().getNickname())
-                      .build()))
-              .build());
-          Log.d("Server", "Connected.");
-        } catch (IOException e) {
-          Log.d("Server", "io exception when waiting for connections: " + e);
-          e.printStackTrace();
-        }
+        // Send a welcome message to the client.
+        application.status("sending welcome message to client");
+        transmitter.send(Data.CompanionMessageProto.newBuilder()
+            .setHeader(Data.CompanionMessageProto.Header.newBuilder()
+                .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
+                    .setId(Settings.get().getAppId())
+                    .setName(Settings.get().getNickname())
+                    .build())
+                // Don't know anything about the client yet.
+                .build())
+            .setData(Data.CompanionMessageProto.Payload.newBuilder()
+                .setWelcome(Data.CompanionMessageProto.Payload.Welcome.newBuilder()
+                    .setId(Settings.get().getAppId())
+                    .setName(Settings.get().getNickname())
+                    .build()))
+            .build());
+
+        Log.d("Server", "Connected.");
+      } catch (IOException e) {
+        Log.d("Server", "io exception when waiting for connections: " + e);
+        e.printStackTrace();
       }
+    }
 
     for (CompanionTransmitter transmitter : transmittersById.values()) {
       transmitter.stop();
@@ -162,6 +167,9 @@ public class CompanionServer implements Runnable {
             transmittersById.put(id, transmitter.getValue());
             namesById.put(id, name);
             application.status("Received welcome message from client " + name);
+
+            // Resend published campaigns and characters.
+            CompanionPublisher.get().republish(id);
           }
 
           messages.add(CompanionMessage.fromProto(message.get()));

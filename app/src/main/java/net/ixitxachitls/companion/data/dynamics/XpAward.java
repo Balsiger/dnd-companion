@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.proto.Data;
 
 /**
@@ -41,10 +39,6 @@ public class XpAward {
 
   public String getCampaignId() {
     return campaignId;
-  }
-
-  public Optional<Character> getCharacter() {
-    return Characters.getCharacter(characterId, campaignId);
   }
 
   public String getCharacterId() {

@@ -21,10 +21,12 @@
 
 package net.ixitxachitls.companion.ui.dialogs;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +41,12 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.rules.XP;
+import net.ixitxachitls.companion.ui.views.XPCharacterView;
+import net.ixitxachitls.companion.ui.views.XPFixedView;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,6 +58,11 @@ public class XPDialog extends Dialog {
   private static final int MAX_ECL = 30;
 
   private Optional<Campaign> campaign = Optional.absent();
+  private final List<TextWrapper<TextView>> eclViews = new ArrayList<>();
+  private int selectedECL = 0;
+  private LinearLayout characterContainer;
+  private LinearLayout fixed1;
+  private LinearLayout fixed2;
 
   public static XPDialog newInstance(String campaignId) {
     XPDialog dialog = new XPDialog();
@@ -76,33 +88,114 @@ public class XPDialog extends Dialog {
 
   @Override
   protected void createContent(View view) {
-    ViewGroup ecls = (ViewGroup) view.findViewById(R.id.ecls);
-    LayoutInflater inflator = LayoutInflater.from(getContext());
-    for (int i = 1; i <= MAX_ECL; i++) {
-      final int index = i;
-      LinearLayout container = (LinearLayout) inflator.inflate(R.layout.view_ecl, null);
-      TextView ecl = (TextView) container.findViewById(R.id.ecl);
-      ecl.setText(String.valueOf(index));
-      ecl.setOnClickListener(new View.OnClickListener() {
+    if (campaign.isPresent()) {
+      ViewGroup ecls = (ViewGroup) view.findViewById(R.id.ecls);
+      LayoutInflater inflator = LayoutInflater.from(getContext());
+      for (int i = 1; i <= MAX_ECL; i++) {
+        // Don't display this if characters would not get xp anyway.
+        if (XP.xpAward(i, campaign.get().getMinPartyLevel(), 1) <= 0
+            && XP.xpAward(i, campaign.get().getMaxPartyLevel(), 1) <= 0) {
+          eclViews.add(null);
+          continue;
+        }
+
+        final int index = i;
+        LinearLayout container = (LinearLayout) inflator.inflate(R.layout.view_ecl, null);
+        TextWrapper<TextView> ecl = TextWrapper.wrap(container, R.id.ecl).text(String.valueOf(index))
+            .onClick(() -> selectEcl(index));
+        if (campaign.get().isCloseECL(i)) {
+          ecl.get().setTypeface(Typeface.DEFAULT_BOLD);
+        }
+        if (selectedECL == i) {
+          ecl.backgroundColor(R.color.colorAccent);
+        }
+        ecls.addView(container);
+        eclViews.add(ecl);
+        Wrapper.wrap(view, R.id.save).onClick(this::awardEcl);
+      }
+
+      characterContainer = (LinearLayout) view.findViewById(R.id.party);
+      for (Character character : campaign.get().getCharacters()) {
+        characterContainer.addView(new XPCharacterView(getContext(), this, character));
+      }
+
+      characterContainer.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-          awardEcl(index);
+          Log.d("GURU", "clicked");
         }
       });
-      ecls.addView(container);
+
+      fixed1 = (LinearLayout) view.findViewById(R.id.fixed_1);
+      fixed2 = (LinearLayout) view.findViewById(R.id.fixed_2);
+      fixed1.addView(new XPFixedView(getContext(), this, 5));
+      fixed1.addView(new XPFixedView(getContext(), this, 10));
+      fixed1.addView(new XPFixedView(getContext(), this, 25));
+      fixed1.addView(new XPFixedView(getContext(), this, 50, false));
+      fixed2.addView(new XPFixedView(getContext(), this, 100));
+      fixed2.addView(new XPFixedView(getContext(), this, 250));
+      fixed2.addView(new XPFixedView(getContext(), this, 500));
+      fixed2.addView(new XPFixedView(getContext(), this, 1000, false));
     }
   }
 
-  private void awardEcl(int level) {
-    if (campaign.isPresent()) {
-      List<Character> characters = campaign.get().getCharacters();
-      int partySize = characters.size();
-      for (Character character : characters) {
-        int xp = XP.xpAward(level, character.getLevel(), partySize);
-        campaign.get().awardXp(character, xp);
-      }
-
-      save();
+  private void selectEcl(int level) {
+    if (selectedECL > 0) {
+      eclViews.get(selectedECL - 1).backgroundColor(R.color.cell);
     }
+    selectedECL = level;
+    eclViews.get(selectedECL - 1).backgroundColor(R.color.colorAccent);
+
+    refresh();
+  }
+
+  public void refresh() {
+    int selectedCharacters = selectedCharacters();
+    int fixedXp = selectedCharacters > 0 ? fixedXP() / selectedCharacters : 0;
+    for (int i = 0; i < characterContainer.getChildCount(); i++) {
+      XPCharacterView view = (XPCharacterView) characterContainer.getChildAt(i);
+      if (view.isSelected()) {
+        view.setXP(fixedXp + XP.xpAward(selectedECL, view.getLevel(), selectedCharacters));
+      } else {
+        view.setXP(0);
+      }
+    }
+  }
+
+  private int fixedXP() {
+    return fixedXP(fixed1) + fixedXP(fixed2);
+  }
+
+  private int fixedXP(LinearLayout layout) {
+    int total = 0;
+    for (int i = 0; i < layout.getChildCount(); i++) {
+      XPFixedView view = (XPFixedView) layout.getChildAt(i);
+      total += view.getValue();
+    }
+
+    return total;
+  }
+
+  private int selectedCharacters() {
+    int selected = 0;
+    for (int i = 0; i < characterContainer.getChildCount(); i++) {
+      XPCharacterView view = (XPCharacterView) characterContainer.getChildAt(i);
+      if (view.isSelected()) {
+        selected++;
+      }
+    }
+
+    return selected;
+  }
+
+  private void awardEcl() {
+    if (campaign.isPresent()) {
+      for (int i = 0; i < characterContainer.getChildCount(); i++) {
+        XPCharacterView view = (XPCharacterView) characterContainer.getChildAt(i);
+        campaign.get().awardXp(view.getCharacter(), view.getXP());
+      }
+    }
+
+    save();
   }
 }

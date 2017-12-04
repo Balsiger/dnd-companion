@@ -19,29 +19,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.views.wrappers;
+package net.ixitxachitls.companion.models;
 
-import android.support.annotation.IdRes;
-import android.view.View;
-import android.widget.TextView;
+import android.arch.lifecycle.ViewModel;
 
 /**
- * Wrapper for text views.
+ * Created by balsiger on 11/27/17.
  */
-public final class TextWrapper<V extends TextView> extends AbstractTextWrapper<V, TextWrapper<V>> {
-  private TextWrapper(View parent, @IdRes int id) {
-    super(parent, id);
-  }
+public class CharacterModel extends ViewModel {
+  private void ensure() {
 
-  private TextWrapper(V view) {
-    super(view);
-  }
-
-  public static <V extends TextView> TextWrapper<V> wrap(View parent, @IdRes int id) {
-    return new TextWrapper<>(parent, id);
-  }
-
-  public static <V extends TextView> TextWrapper<V> wrap(V view) {
-    return new TextWrapper<>(view);
   }
 }

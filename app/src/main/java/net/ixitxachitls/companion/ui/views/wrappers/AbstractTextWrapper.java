@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.ui.views.wrappers;
 
+import android.graphics.Typeface;
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
@@ -28,6 +29,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -38,8 +40,14 @@ import android.widget.TextView;
 class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W>>
     extends AbstractWrapper<V, W> {
 
+  public enum Align { LEFT, RIGHT, CENTER };
+
   protected AbstractTextWrapper(View parent, @IdRes int id) {
     super(parent, id);
+  }
+
+  protected AbstractTextWrapper(V view) {
+    super(view);
   }
 
   @SuppressWarnings("unchecked")
@@ -52,6 +60,36 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
 
   public W text(@StringRes int text) {
     return text(view.getContext().getString(text));
+  }
+
+  public W ems(int ems) {
+    view.setEms(ems);
+
+    return (W) this;
+  }
+
+  public W align(Align align) {
+    switch (align) {
+      case LEFT:
+        view.setTextAlignment(Gravity.LEFT);
+        break;
+
+      case RIGHT:
+        view.setGravity(Gravity.RIGHT);
+        break;
+
+      case CENTER:
+        view.setGravity(Gravity.CENTER);
+        break;
+    }
+
+    return (W) this;
+  }
+
+  public W bold() {
+    view.setTypeface(Typeface.DEFAULT_BOLD);
+
+    return (W) this;
   }
 
   @SuppressWarnings("unchecked")
