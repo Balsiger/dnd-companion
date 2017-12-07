@@ -82,7 +82,7 @@ public class AbilitiesDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
+    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
     if (campaign.isPresent()) {
       character = Characters.getCharacter(getArguments().getString(ARG_ID)).getValue();
     } else {

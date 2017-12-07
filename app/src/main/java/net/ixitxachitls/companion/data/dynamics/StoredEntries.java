@@ -25,6 +25,7 @@ import android.arch.lifecycle.ViewModel;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 
 import com.google.common.base.Optional;
 
@@ -89,7 +90,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
     return entriesById.values();
   }
 
-  public void add(E entry) {
+  protected void add(E entry) {
     if (entriesById.containsKey(entry.getEntryId())) {
       // Update the id of the new entry to the old.
       entry.setId(entriesById.get(entry.getEntryId()).getId());
@@ -98,17 +99,20 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
     entriesById.put(entry.getEntryId(), entry);
   }
 
-  public void remove(E entry) {
+  protected void remove(E entry) {
     entry.remove();
     entriesById.remove(entry.getEntryId());
     context.getContentResolver().delete(table, "id = " + entry.getId(), null);
   }
 
-  public void remove(String entryId) {
+  @Nullable
+  protected E remove(String entryId) {
     E entry = entriesById.get(entryId);
     if (entry != null) {
       remove(entry);
     }
+
+    return entry;
   }
 
   protected abstract Optional<E> parseEntry(long id, byte[] blob);

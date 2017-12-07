@@ -86,7 +86,7 @@ public class CharacterDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
+    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
     if (campaign.isPresent()) {
       String characterId = getArguments().getString(ARG_ID);
       if (characterId.isEmpty()) {
@@ -117,14 +117,14 @@ public class CharacterDialog extends Dialog {
 
   public void editGender() {
     if (character.isPresent()) {
-      ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_gender,
+      ListSelectFragment edit = ListSelectFragment.newStringInstance(R.string.character_edit_gender,
           character.get().getGender().getName(), Gender.names(), R.color.character);
       edit.setSelectListener(this::updateGender);
       edit.display();
     }
   }
 
-  private boolean updateGender(String value, int position) {
+  private boolean updateGender(String value) {
     if (character.isPresent()) {
       character.get().setGender(Gender.fromName(value));
       update();
@@ -137,14 +137,14 @@ public class CharacterDialog extends Dialog {
 
   public void editRace() {
     if (character.isPresent()) {
-      ListSelectFragment edit = ListSelectFragment.newInstance(R.string.character_edit_race,
+      ListSelectFragment edit = ListSelectFragment.newStringInstance(R.string.character_edit_race,
           character.get().getRace(), Entries.get().getMonsters().primaryRaces(), R.color.character);
       edit.setSelectListener(this::updateRace);
       edit.display();
     }
   }
 
-  private boolean updateRace(String value, int position) {
+  private boolean updateRace(String value) {
     if (character.isPresent()) {
       character.get().setRace(value);
       update();

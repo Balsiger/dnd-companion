@@ -78,7 +78,7 @@ public class MonsterInitiativeDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getLocalCampaign(getArguments().getString(ARG_CAMPAIGN_ID));
+    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
     monsterId = getArguments().getInt(ARG_MONSTER_ID);
   }
 

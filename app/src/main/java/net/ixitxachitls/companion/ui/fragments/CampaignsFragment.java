@@ -77,7 +77,8 @@ public class CampaignsFragment extends CompanionFragment {
 
     campaigns.clear();
     campaigns.add(Campaigns.defaultCampaign);
-    campaigns.addAll(Campaigns.getCampaigns());
+    campaigns.addAll(Campaigns.getLocalCampaigns().getValue());
+    campaigns.addAll(Campaigns.getRemoteCampaigns().getValue());
 
     if (campaignsView != null) {
       campaignsView.get().removeAllViews();

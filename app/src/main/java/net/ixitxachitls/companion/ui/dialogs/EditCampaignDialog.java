@@ -85,7 +85,7 @@ public class EditCampaignDialog extends Dialog {
       if (id == null || id.isEmpty()) {
         campaign = Optional.of(Campaign.createNew());
       } else {
-        campaign = Campaigns.getLocalCampaign(id);
+        campaign = Campaigns.getCampaign(id).getValue();
       }
     } else {
       campaign = Optional.of(Campaign.createNew());
@@ -119,7 +119,7 @@ public class EditCampaignDialog extends Dialog {
 
   private void selectWorld() {
     if (campaign.isPresent()) {
-      ListSelectFragment fragment = ListSelectFragment.newInstance(
+      ListSelectFragment fragment = ListSelectFragment.newStringInstance(
           R.string.campaign_select_world, campaign.get().getWorld(),
           Entries.get().getWorlds().getNames(), R.color.campaign);
       fragment.setSelectListener(this::editWorld);
@@ -127,7 +127,7 @@ public class EditCampaignDialog extends Dialog {
     }
   }
 
-  private void editWorld(String value, int position) {
+  private void editWorld(String value) {
     if (campaign.isPresent()) {
       campaign.get().setWorld(value);
       update();

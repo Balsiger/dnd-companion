@@ -92,7 +92,7 @@ public class TimedConditionDialog extends Dialog {
     character = Characters.getCharacter(getArguments().getString(ARG_ID)).getValue();
     currentRound = getArguments().getInt(ARG_ROUND);
     if (character.isPresent()) {
-      campaign = Campaigns.getCampaign(character.get().getCampaignId());
+      campaign = Campaigns.getCampaign(character.get().getCampaignId()).getValue();
     }
   }
 

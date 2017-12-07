@@ -22,6 +22,8 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -34,6 +36,8 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.stream.Collectors;
 
 /**
  * Simple fragmemt to select an item from a list.
@@ -44,20 +48,58 @@ public class ListSelectFragment extends Dialog {
   private static final String ARG_VALUES = "values";
 
   private String selected;
-  private ArrayList<String> values;
+  private ArrayList<Entry> values;
   protected Optional<SelectAction> selectAction = Optional.absent();
 
   @FunctionalInterface
   public interface SelectAction {
-    void select(String value, int position);
+    void select(String id);
+  }
+
+  public static class Entry implements Parcelable {
+    private final String name;
+    private final String id;
+
+    public static final Parcelable.Creator<Entry> CREATOR
+        = new Parcelable.Creator<Entry>() {
+      public Entry createFromParcel(Parcel parcel) {
+        return new Entry(parcel.readString(), parcel.readString());
+      }
+
+      public Entry[] newArray(int size) {
+        return new Entry[size];
+      }
+    };
+
+    public Entry(String name, String id) {
+      this.name = name;
+      this.id = id;
+    }
+
+    @Override
+    public int describeContents() {
+      return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int flags) {
+      parcel.writeString(name);
+      parcel.writeString(id);
+    }
   }
 
   public ListSelectFragment() {
     // Required empty public constructor
   }
 
+  public static ListSelectFragment newStringInstance(int titleId, String selected,
+                                                     Collection<String> values, int color) {
+    return newInstance(titleId, selected,
+        values.stream().map(m -> new Entry(m, m)).collect(Collectors.toList()), color);
+  }
+
   public static ListSelectFragment newInstance(int titleId, String selected,
-                                               ArrayList<String> values, int color) {
+                                               Collection<Entry> values, int color) {
     ListSelectFragment fragment = new ListSelectFragment();
     Bundle arguments = arguments(R.layout.fragment_list_select, titleId, color, selected, values);
     fragment.setArguments(arguments);
@@ -65,10 +107,10 @@ public class ListSelectFragment extends Dialog {
   }
 
   protected static Bundle arguments(int layoutId, int titleId, int color, String selected,
-                                    ArrayList<String> values) {
+                                    Collection<Entry> values) {
     Bundle arguments = Dialog.arguments(layoutId, titleId, color);
     arguments.putString(ARG_SELECTED, selected);
-    arguments.putStringArrayList(ARG_VALUES, values);
+    arguments.putParcelableArrayList(ARG_VALUES, new ArrayList<Entry>(values));
     return arguments;
   }
 
@@ -78,7 +120,7 @@ public class ListSelectFragment extends Dialog {
 
     if (getArguments() != null) {
       selected = getArguments().getString(ARG_SELECTED);
-      values = getArguments().getStringArrayList(ARG_VALUES);
+      values = getArguments().getParcelableArrayList(ARG_VALUES);
     } else {
       selected = "";
       values = new ArrayList<>();
@@ -89,7 +131,8 @@ public class ListSelectFragment extends Dialog {
   public void createContent(View view) {
     ListView list = (ListView) view.findViewById(R.id.listSelectView);
     ArrayAdapter<String> itemAdapter =
-        new ArrayAdapter<>(view.getContext(), R.layout.list_item_select, values);
+        new ArrayAdapter<>(view.getContext(), R.layout.list_item_select,
+            values.stream().map(m -> m.name).collect(Collectors.toList()));
     list.setAdapter(itemAdapter);
     list.setSelection(values.indexOf(selected));
     list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -104,11 +147,11 @@ public class ListSelectFragment extends Dialog {
     this.selectAction = Optional.of(action);
   }
 
-  protected void edited(String value, int position) {
+  protected void edited(Entry value, int position) {
     save();
 
     if (selectAction.isPresent()) {
-      selectAction.get().select(value, position);
+      selectAction.get().select(value.id);
     } else {
       Log.wtf("select", "listener not set");
     }

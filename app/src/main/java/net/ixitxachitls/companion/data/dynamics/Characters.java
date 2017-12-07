@@ -64,7 +64,7 @@ public class Characters extends StoredEntries<Character> {
   private static Map<String, MutableLiveData<Optional<Character>>> charactersByCharacterId
       = new ConcurrentHashMap<>();
 
-  private static MutableLiveData<ImmutableList<Character>> allCharacters = new MutableLiveData<>();
+  private MutableLiveData<ImmutableList<Character>> allCharacters = new MutableLiveData<>();
 
   // Data accessors.
 
@@ -87,12 +87,8 @@ public class Characters extends StoredEntries<Character> {
     return live;
   }
 
-  public static LiveData<ImmutableList<Character>> getLocalCampaignCharacters() {
+  public static LiveData<ImmutableList<Character>> getLocalCharacters() {
     return local.getCharacters();
-  }
-
-  public static List<Character> getLocalCampaignCharacters(String campaignId) {
-    return local.getCharacters(campaignId);
   }
 
   public static boolean hasLocalCampaignCharacters(String campaignId) {
@@ -101,10 +97,6 @@ public class Characters extends StoredEntries<Character> {
 
   public static LiveData<ImmutableList<Character>> getRemoteCharacters() {
     return remote.getCharacters();
-  }
-
-  public static List<Character> getRemoteCampaignCharacters(String campaignId) {
-    return remote.getCharacters(campaignId);
   }
 
   public static boolean hasRemoteCampaignCharacters(String campaignId) {
@@ -148,10 +140,11 @@ public class Characters extends StoredEntries<Character> {
       // Update campaign and all characters for this newly added character.
       campaignIdsByCharacterId.put(character.getCharacterId(), character.getCampaignId());
       updateCampaign(character.getCampaignId());
+      MutableLiveData<ImmutableList<Character>> all = get(character.isLocal()).allCharacters;
       ImmutableList.Builder<Character> characters = new ImmutableList.Builder<>();
-      characters.addAll(allCharacters.getValue());
+      characters.addAll(all.getValue());
       characters.add(character);
-      allCharacters.setValue(characters.build());
+      all.setValue(characters.build());
     } else {
       // Update characters by campaign if the character was moved to a different campaign.
       updateCampaign(campaignId);
@@ -197,7 +190,7 @@ public class Characters extends StoredEntries<Character> {
 
   public static void publish() {
     Log.d(TAG, "publishing all local characters");
-    for (Character character : Characters.getLocalCampaignCharacters().getValue()) {
+    for (Character character : Characters.getLocalCharacters().getValue()) {
       character.publish();
       Images.get(character.isLocal()).publishImageFor(character);
     }
@@ -269,7 +262,7 @@ public class Characters extends StoredEntries<Character> {
   }
 
   private static ImmutableList<Character> campaignCharacters(String campaignId) {
-    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId);
+    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId).getValue();
     if (campaign.isPresent() && campaign.get().isDefault()) {
       return local.getOrphanedCharacters();
     }
@@ -288,6 +281,14 @@ public class Characters extends StoredEntries<Character> {
     }
 
     return ImmutableList.copyOf(characters);
+  }
+
+  private static List<Character> getLocalCampaignCharacters(String campaignId) {
+    return local.getCharacters(campaignId);
+  }
+
+  private static List<Character> remoteCampaignCharacters(String campaignId) {
+    return remote.getCharacters(campaignId);
   }
 
   private static void updateCampaign(String campaignId) {

@@ -21,12 +21,15 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
+import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.proto.Data;
@@ -34,15 +37,15 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Access to and utilities for camapigns.
  */
 public class Campaigns extends StoredEntries<Campaign> {
-
   private static final String TAG = "Campaigns";
 
   private static Campaigns local;
@@ -50,39 +53,34 @@ public class Campaigns extends StoredEntries<Campaign> {
 
   public static final Campaign defaultCampaign = Campaign.createDefault();
 
-  private Campaigns(Context context, boolean local) {
-    super(context,
-        local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE,
-        local);
-  }
+  // Live data storages.
+  private static Map<String, MutableLiveData<Optional<Campaign>>> campaignByCampaignId =
+      new ConcurrentHashMap<>();
 
-  public static Campaigns get(boolean local) {
-    return local ? Campaigns.local : Campaigns.remote;
-  }
+  private MutableLiveData<ImmutableList<Campaign>> allCampaigns = new MutableLiveData<>();
 
-  public static Optional<Campaign> getCampaign(String campaignId) {
-    if (defaultCampaign.getCampaignId().equals(campaignId)) {
-      return Optional.of(defaultCampaign);
+  // Data accessors.
+
+  public static LiveData<Optional<Campaign>> getCampaign(String campaignId) {
+    if (!campaignByCampaignId.containsKey(campaignId)) {
+      MutableLiveData<Optional<Campaign>> campaign = new MutableLiveData<>();
+      campaign.setValue(campaign(campaignId));
+      campaignByCampaignId.put(campaignId, campaign);
     }
 
-    if (Misc.onEmulator() && !Misc.emulatingLocal()) {
-      return Campaigns.remote.get(campaignId);
-    }
-
-    Optional<Campaign> campaign = Campaigns.local().get(campaignId);
-    if (campaign.isPresent()) {
-      return campaign;
-    }
-
-    return Campaigns.remote().get(campaignId);
+    return campaignByCampaignId.get(campaignId);
   }
 
-  public static Optional<Campaign> getLocalCampaign(String campaignId) {
-    return Campaigns.local().get(campaignId);
+  public static LiveData<ImmutableList<Campaign>> getLocalCampaigns() {
+    return local.getCampaigns();
+  }
+
+  public static LiveData<ImmutableList<Campaign>> getRemoteCampaigns() {
+    return remote.getCampaigns();
   }
 
   public static boolean hasAnyPublished() {
-    for (Campaign campaign : local.entriesById.values()) {
+    for (Campaign campaign : local.getAll()) {
       if (campaign.isPublished()) {
         return true;
       }
@@ -91,22 +89,15 @@ public class Campaigns extends StoredEntries<Campaign> {
     return false;
   }
 
-  public static List<Campaign> getLocalCampaigns() {
-    List<Campaign> campaigns = new ArrayList<>(local().getAll());
-    Collections.sort(campaigns, new CampaignComparator());
-    return campaigns;
+  // TODO(merlin): Try to get rid of this?
+  public static Campaigns get(boolean local) {
+    return local ? Campaigns.local : Campaigns.remote;
   }
 
-  public static List<Campaign> getCampaigns() {
-    List<Campaign> campaigns = new ArrayList<>(local().getAll());
-    campaigns.addAll(remote().getAll());
-    Collections.sort(campaigns, new CampaignComparator());
-    return campaigns;
-  }
-
-  public static List<Campaign> getCampaigns(String serverId) {
+  // This is not live data.
+  public static List<Campaign> getCampaignsByServer(String serverId) {
     List<Campaign> filtered = new ArrayList<>();
-    for (Campaign campaign : Campaigns.getCampaigns()) {
+    for (Campaign campaign : remote.getCampaigns().getValue()) {
       if (campaign.getCampaignId().startsWith(serverId)) {
         filtered.add(campaign);
       }
@@ -115,16 +106,57 @@ public class Campaigns extends StoredEntries<Campaign> {
     return filtered;
   }
 
-  public static ArrayList<String> getCampaignNames() {
-    ArrayList<String> names = new ArrayList<>();
+  // This is not live data.
+  public static List<Campaign> getAllCampaigns() {
+    List<Campaign> campaigns = local.getCampaigns().getValue();
+    campaigns.addAll(remote.getCampaigns().getValue());
+    return campaigns;
+  }
 
-    names.add(defaultCampaign.getName());
-    for (Campaign campaign : Campaigns.getCampaigns()) {
-      names.add(campaign.getName());
+  public static long getLocalIdFor(String campaignId) {
+    return local().getIdFor(campaignId);
+  }
+
+  public static long getRemoteIdFor(String campaignId) {
+    return remote().getIdFor(campaignId);
+  }
+
+  // Data mutations.
+
+  public static void updateCampaign(Campaign campaign) {
+    if (campaignByCampaignId.containsKey(campaign.getCampaignId())) {
+      campaignByCampaignId.get(campaign.getCampaignId()).setValue(Optional.of(campaign));
+    }
+  }
+
+  public static void addCampaign(Campaign campaign) {
+    // Might also need adding somewhere else?
+    updateCampaign(campaign);
+
+    List<Campaign> campaigns =
+        new ArrayList<>(Campaigns.get(campaign.isLocal()).allCampaigns.getValue());
+    campaigns.add(campaign);
+    Campaigns.get(campaign.isLocal()).allCampaigns.setValue(ImmutableList.copyOf(campaigns));
+  }
+
+  public static void removeCampaign(String campaignId) {
+    Campaign campaign = local.remove(campaignId);
+    removeCampaign(campaign);
+  }
+
+  public static void removeCampaign(Campaign campaign) {
+    local.remove(campaign);
+    if (campaignByCampaignId.containsKey(campaign.getCampaignId())) {
+      campaignByCampaignId.get(campaign.getCampaignId()).setValue(Optional.absent());
     }
 
-    return names;
+    List<Campaign> campaigns =
+        new ArrayList<>(Campaigns.get(campaign.isLocal()).allCampaigns.getValue());
+    campaigns.remove(campaign);
+    Campaigns.get(campaign.isLocal()).allCampaigns.setValue(ImmutableList.copyOf(campaigns));
   }
+Ø
+  // Publishing.
 
   public static void publish() {
     Log.d(TAG, "publishing all campaigns");
@@ -135,17 +167,38 @@ public class Campaigns extends StoredEntries<Campaign> {
     }
   }
 
+  // Member methods.
+
+  private LiveData<ImmutableList<Campaign>> getCampaigns() {
+    return allCampaigns;
+  }
+
+  // Private metbods.
+
+  private Campaigns(Context context, boolean local) {
+    super(context,
+        local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE,
+        local);
+
+    allCampaigns.setValue(ImmutableList.copyOf(getAll()));
+  }
+
+  // This should only be called from the main activity.
   public static void load(Context context) {
     loadLocal(context);
     loadRemote(context);
   }
 
-  public static long getLocalIdFor(String campaignId) {
-    return local().getIdFor(campaignId);
-  }
+  private static Optional<Campaign> campaign(String campaignId) {
+    if (defaultCampaign.getCampaignId().equals(campaignId)) {
+      return Optional.of(defaultCampaign);
+    }
 
-  public static long getRemoteIdFor(String campaignId) {
-    return remote().getIdFor(campaignId);
+    if (Misc.onEmulator() && !Misc.emulatingLocal()) {
+      return remote.get(campaignId);
+    }
+
+    return local.get(campaignId).or(remote.get(campaignId));
   }
 
   private static Campaigns local() {

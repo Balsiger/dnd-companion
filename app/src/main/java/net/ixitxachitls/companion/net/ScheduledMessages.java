@@ -97,4 +97,8 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
 
     return messages;
   }
+
+  public void remove(ScheduledMessage message) {
+    super.remove(message);
+  }
 }

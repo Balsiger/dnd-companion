@@ -69,7 +69,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
-    Campaigns.get(false).remove(campaignId);
+    Campaigns.get(false).removeCampaign(campaignId);
     CompanionSubscriber.get().sendAck(senderId, messageId);
     refresh();
   }

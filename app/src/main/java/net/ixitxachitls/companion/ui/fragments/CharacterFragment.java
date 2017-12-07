@@ -59,6 +59,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -168,29 +169,29 @@ public class CharacterFragment extends CompanionFragment {
 
   private void move() {
     ListSelectFragment fragment = ListSelectFragment.newInstance(
-        R.string.character_select_campaign, "", Campaigns.getCampaignNames(),
+        R.string.character_select_campaign, "",
+        Campaigns.getAllCampaigns().stream()
+            .map(m -> new ListSelectFragment.Entry(m.getName(), m.getCampaignId()))
+            .collect(Collectors.toList()),
         R.color.campaign);
-    fragment.setSelectListener((String value, int position) -> move(position));
+    fragment.setSelectListener(this::move);
     fragment.display();
   }
 
-  private void move(int position) {
+  private void move(String campaignId) {
     if (character.isPresent()) {
-      Campaign campaign;
-      if (position == 0) {
-        campaign = Campaigns.defaultCampaign;
-      } else {
-        campaign = Campaigns.getCampaigns().get(position - 1);
-      }
-      character.get().setCampaignId(campaign.getCampaignId());
+      character.get().setCampaignId(campaignId);
+    }
 
-      CompanionFragments.get().showCampaign(campaign, Optional.absent());
+    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId).getValue();
+    if (campaign.isPresent()) {
+      CompanionFragments.get().showCampaign(campaign.get(), Optional.absent());
     }
   }
 
   public void showCharacter(Character character) {
     this.character = Optional.of(character);
-    this.campaign = Campaigns.getCampaign(character.getCampaignId());
+    this.campaign = Campaigns.getCampaign(character.getCampaignId()).getValue();
 
     refresh();
   }
@@ -272,7 +273,7 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    campaign = Campaigns.getCampaign(campaign.get().getCampaignId());
+    campaign = Campaigns.getCampaign(campaign.get().getCampaignId()).getValue();
 
     Optional<Image> characterImage = Images.get(character.get().isLocal()).load(
         Character.TYPE, character.get().getCharacterId());

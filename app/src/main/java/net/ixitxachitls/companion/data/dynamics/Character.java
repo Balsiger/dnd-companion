@@ -184,7 +184,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public boolean hasInitiative() {
-    Optional<Campaign> campaign = Campaigns.getCampaign(getCampaignId());
+    Optional<Campaign> campaign = Campaigns.getCampaign(getCampaignId()).getValue();
     return initiative != NO_INITIATIVE
         && campaign.isPresent()
         && battleNumber == campaign.get().getBattle().getNumber();

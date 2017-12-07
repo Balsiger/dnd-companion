@@ -130,7 +130,7 @@ public class CampaignFragment extends CompanionFragment {
       return;
     }
 
-    campaign = Campaigns.getCampaign(campaign.get().getCampaignId());
+    campaign = Campaigns.getCampaign(campaign.get().getCampaignId()).getValue();
     if (!campaign.isPresent()) {
       return;
     }
