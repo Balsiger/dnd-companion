@@ -155,7 +155,7 @@ public class Campaigns extends StoredEntries<Campaign> {
     campaigns.remove(campaign);
     Campaigns.get(campaign.isLocal()).allCampaigns.setValue(ImmutableList.copyOf(campaigns));
   }
-Ø
+
   // Publishing.
 
   public static void publish() {

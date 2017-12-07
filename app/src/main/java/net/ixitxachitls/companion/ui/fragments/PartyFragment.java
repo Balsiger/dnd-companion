@@ -19,15 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.views;
+package net.ixitxachitls.companion.ui.fragments;
 
 import android.arch.lifecycle.LiveData;
-import android.content.Context;
-import android.support.annotation.Nullable;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.transition.TransitionManager;
 import android.support.v4.app.Fragment;
-import android.util.AttributeSet;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +45,10 @@ import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.XPDialog;
+import net.ixitxachitls.companion.ui.views.BattleView;
+import net.ixitxachitls.companion.ui.views.CharacterChipView;
+import net.ixitxachitls.companion.ui.views.ChipView;
+import net.ixitxachitls.companion.ui.views.DiceView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -56,32 +58,37 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * View representing a whole party.
+ * A fragment displaying the complete party of the current campaign.
  */
-public class PartyView extends LinearLayout {
+public class PartyFragment extends Fragment {
 
-  private static final String TAG = "PartyView";
+  private static final String TAG = "PartyFragment";
 
   // External data.
   private LiveData<ImmutableList<Character>> characters;
   private Optional<Campaign> campaign = Optional.absent();
 
   // UI.
-  private final ViewGroup view;
-  private final Wrapper<View> scroll;
-  private final LinearLayout party;
-  private final TextWrapper<TextView> title;
-  private final Wrapper<FloatingActionButton> startBattle;
-  private final BattleView battleView;
-  private final Wrapper<FloatingActionButton> addCharacter;
-  private final Wrapper<FloatingActionButton> xp;
-  private final DiceView initiative;
-  private final TextWrapper<TextView> conditions;
+  private ViewGroup view;
+  private Wrapper<View> scroll;
+  private LinearLayout party;
+  private TextWrapper<TextView> title;
+  private Wrapper<FloatingActionButton> startBattle;
+  private BattleView battleView;
+  private Wrapper<FloatingActionButton> addCharacter;
+  private Wrapper<FloatingActionButton> xp;
+  private DiceView initiative;
+  private TextWrapper<TextView> conditions;
 
-  public PartyView(Context context, @Nullable AttributeSet attrs) {
-    super(context, attrs);
+  public PartyFragment() {
+  }
 
-    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_party, this, false);
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                           Bundle savedInstanceState) {
+    super.onCreateView(inflater, container, savedInstanceState);
+
+    view = (ViewGroup) inflater.inflate(R.layout.view_party, container, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -92,7 +99,7 @@ public class PartyView extends LinearLayout {
     startBattle = Wrapper.wrap(view, R.id.start_battle);
     startBattle.onClick(this::setupBattle);
 
-    battleView = new BattleView(context, this);
+    battleView = new BattleView(getContext(), this);
     view.addView(battleView, 0);
 
     addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)
@@ -103,7 +110,22 @@ public class PartyView extends LinearLayout {
     initiative.setDice(20);
     conditions = TextWrapper.wrap(view, R.id.conditions);
 
-    addView(view);
+    return view;
+  }
+
+  public void setup(Campaign campaign) {
+    // TODO(merlin): Reenable this once we really don't set the campaign multiple times.
+    //if (this.campaign.isPresent()) {
+    //  throw new IllegalStateException("Campaign already set");
+    //}
+
+    this.campaign = Optional.of(campaign);
+    this.characters = party(campaign);
+    this.characters.observe(this, data -> { refresh(); });
+    party.removeAllViews();
+    battleView.setCampaign(this.campaign);
+
+    refresh();
   }
 
   private void createCharacter() {
@@ -116,21 +138,6 @@ public class PartyView extends LinearLayout {
     if (campaign.isPresent()) {
       XPDialog.newInstance(campaign.get().getCampaignId()).display();
     }
-  }
-
-  public void setup(Fragment fragment, Campaign campaign) {
-    // TODO(merlin): Reenable this once we really don't set the campaign multiple times.
-    //if (this.campaign.isPresent()) {
-    //  throw new IllegalStateException("Campaign already set");
-    //}
-
-    this.campaign = Optional.of(campaign);
-    this.characters = party(campaign);
-    this.characters.observe(fragment, data -> { refresh(); });
-    party.removeAllViews();
-    battleView.setCampaign(this.campaign);
-
-    refresh();
   }
 
   private void setupBattle() {
@@ -216,7 +223,7 @@ public class PartyView extends LinearLayout {
     title.text("Party");
     title.backgroundColor(R.color.characterLight);
     scroll.backgroundColor(R.color.characterDark);
-    initiative.setVisibility(GONE);
+    initiative.setVisibility(View.GONE);
     startBattle.visible(campaign.get().isLocal() && !campaign.get().isDefault());
     conditions.gone();
   }
@@ -295,7 +302,7 @@ public class PartyView extends LinearLayout {
     Optional<Character> initCharacter = needsInitiative(characters.getValue());
 
     if (initCharacter.isPresent()) {
-      initiative.setVisibility(VISIBLE);
+      initiative.setVisibility(View.VISIBLE);
       initiative.setLabel("Initiative for " + initCharacter.get().getName());
       initiative.setModifier(initCharacter.get().initiativeModifier());
       initiative.setSelectAction(i -> {
@@ -306,7 +313,7 @@ public class PartyView extends LinearLayout {
         refreshWithTransition();
       });
     } else {
-      initiative.setVisibility(GONE);
+      initiative.setVisibility(View.GONE);
     }
 
     conditions.text(conditions(battle.getCurrentCombatant().getId()));
@@ -341,4 +348,5 @@ public class PartyView extends LinearLayout {
   private boolean inBattleMode() {
     return campaign.isPresent() && !campaign.get().getBattle().isEnded();
   };
+
 }

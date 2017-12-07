@@ -37,6 +37,7 @@ import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
+import net.ixitxachitls.companion.ui.fragments.PartyFragment;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -44,7 +45,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  */
 public class BattleView extends LinearLayout {
 
-  private final PartyView party;
+  private final PartyFragment party;
   private Optional<Campaign> campaign = Optional.absent();
 
   private final ViewGroup view;
@@ -59,12 +60,12 @@ public class BattleView extends LinearLayout {
   private final Wrapper<View> stopDelimiter;
   private final Wrapper<View> timedDelimiter;
 
-  public BattleView(Context context, PartyView party) {
+  public BattleView(Context context, PartyFragment party) {
     super(context);
 
     this.party = party;
 
-    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, party, false);
+    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, (ViewGroup) party.getView(), false);
     setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));

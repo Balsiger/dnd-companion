@@ -42,7 +42,6 @@ import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.IconView;
-import net.ixitxachitls.companion.ui.views.PartyView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -55,7 +54,7 @@ public class CampaignFragment extends CompanionFragment {
   private CampaignTitleView title;
   private IconView delete;
   private TextWrapper<TextView> date;
-  private PartyView party;
+  private PartyFragment party;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -74,7 +73,7 @@ public class CampaignFragment extends CompanionFragment {
     title.setAction(this::edit);
     delete = (IconView) view.findViewById(R.id.delete);
     delete.setAction(this::deleteCampaign);
-    party = (PartyView) view.findViewById(R.id.party);
+    party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     date = TextWrapper.wrap(view, R.id.date);
     date.onClick(this::editDate);
 
@@ -145,7 +144,7 @@ public class CampaignFragment extends CompanionFragment {
 
     date.text(campaign.get().getDate().toString());
 
-    party.setup(this, campaign.get());
+    party.setup(campaign.get());
   }
 
   private boolean canDeleteCampaign() {

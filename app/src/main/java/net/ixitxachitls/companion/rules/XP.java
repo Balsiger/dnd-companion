@@ -104,7 +104,7 @@ public class XP {
       return 2 * xpAward(encounterLevel - 2, characterLevel, partySize);
     }
 
-    return xpByCLandEL[characterLevel - 1][encounterLevel] / partySize;
+    return xpByCLandEL[characterLevel - 1][encounterLevel - 1] / partySize;
   }
 
   public static int xpForLevel(int level) {

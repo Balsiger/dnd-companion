@@ -83,11 +83,12 @@
       android:padding="10dp"
       android:theme="@style/SmallText"/>
 
-  <view
+  <fragment
       android:id="@+id/party"
-      class="net.ixitxachitls.companion.ui.views.PartyView"
+      android:name="net.ixitxachitls.companion.ui.fragments.PartyFragment"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/date"/>
+      android:layout_below="@+id/date"
+      android:tag="party"/>
 
 </RelativeLayout>
