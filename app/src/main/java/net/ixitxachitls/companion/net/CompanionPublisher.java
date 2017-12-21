@@ -138,7 +138,7 @@ public class CompanionPublisher {
   }
 
   public void republish(String recipientId) {
-    for (Campaign campaign : Campaigns.getLocalCampaigns().getValue()) {
+    for (Campaign campaign : Campaigns.getLocalCampaigns()) {
       if (campaign.isLocal() && campaign.isPublished()) {
         schedule(recipientId, CompanionMessageData.from(campaign));
 
@@ -150,7 +150,7 @@ public class CompanionPublisher {
   }
 
   public void republishLocalCharacters(String recipientId) {
-    for (Campaign campaign : Campaigns.getLocalCampaigns().getValue()) {
+    for (Campaign campaign : Campaigns.getLocalCampaigns()) {
       for (Character character : campaign.getCharacters()) {
         if (character.isLocal()) {
           update(character, recipientId);

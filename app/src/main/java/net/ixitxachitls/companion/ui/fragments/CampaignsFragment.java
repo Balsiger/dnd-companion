@@ -29,6 +29,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -39,9 +40,6 @@ import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * The fragment displaying the campaign list
  */
@@ -49,10 +47,10 @@ public class CampaignsFragment extends CompanionFragment {
 
   private Wrapper<LinearLayout> campaignsView;
 
-  private List<Campaign> campaigns = new ArrayList<>();
-
   public CampaignsFragment() {
     super(Type.campaigns);
+
+    Campaigns.getAllCampaignIds().observe(this, this::update);
   }
 
   @Override
@@ -71,19 +69,13 @@ public class CampaignsFragment extends CompanionFragment {
     EditCampaignDialog.newInstance().display();
   }
 
-  @Override
-  public void refresh() {
-    super.refresh();
-
-    campaigns.clear();
-    campaigns.add(Campaigns.defaultCampaign);
-    campaigns.addAll(Campaigns.getLocalCampaigns().getValue());
-    campaigns.addAll(Campaigns.getRemoteCampaigns().getValue());
-
+  private void update(ImmutableList<String> campaignIds) {
     if (campaignsView != null) {
       campaignsView.get().removeAllViews();
-      for (Campaign campaign : campaigns) {
-        CampaignTitleView title = new CampaignTitleView(getContext(), campaign);
+      for (String campaignId : campaignIds) {
+        Campaign campaign = Campaigns.getCampaign(campaignId).getValue().get();
+        CampaignTitleView title = new CampaignTitleView(getContext());
+        title.setCampaign(campaign);
         title.setAction(() -> {
           if (Misc.onEmulator() && !campaign.isLocal()) {
             Misc.emulateRemote();
@@ -95,5 +87,12 @@ public class CampaignsFragment extends CompanionFragment {
         campaignsView.get().addView(title);
       }
     }
+  }
+
+  @Override
+  public void onResume() {
+    super.onResume();
+
+    update(Campaigns.getAllCampaignIds().getValue());
   }
 }

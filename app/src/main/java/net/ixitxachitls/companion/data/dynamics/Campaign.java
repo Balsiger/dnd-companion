@@ -102,7 +102,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public Campaign refresh() {
-    return Campaigns.get(isLocal()).get(entryId).or(this);
+    return Campaigns.getCampaign(entryId, isLocal()).getValue().or(this);
   }
 
   public String getWorld() {
@@ -236,7 +236,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   public boolean store() {
     boolean changed = super.store();
     if (changed) {
-      Campaigns.get(isLocal()).add(this);
+      Campaigns.add(this);
       if (isLocal() && published) {
         CompanionPublisher.get().publish(this);
       }
@@ -245,11 +245,16 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return changed;
   }
 
+  @Override
+  public String toString() {
+    return getName() + " (" + getCampaignId() + "/" + (isLocal() ? "local" : "remote") + ")";
+  }
+
   public void delete() {
     if (isLocal()) {
       CompanionPublisher.get().delete(this);
     }
-    Campaigns.get(isLocal()).remove(this);
+    Campaigns.remove(this);
   }
 
   private static class XPAward {
@@ -260,5 +265,35 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
       this.characterId = characterId;
       this.xp = xp;
     }
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    if (!super.equals(o)) return false;
+
+    Campaign campaign = (Campaign) o;
+
+    if (published != campaign.published) return false;
+    if (nextBattleNumber != campaign.nextBattleNumber) return false;
+    if (!characters.equals(campaign.characters)) return false;
+    if (!world.equals(campaign.world)) return false;
+    if (!dm.equals(campaign.dm)) return false;
+    if (!date.equals(campaign.date)) return false;
+    return battle.equals(campaign.battle);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = super.hashCode();
+    result = 31 * result + characters.hashCode();
+    result = 31 * result + world.hashCode();
+    result = 31 * result + dm.hashCode();
+    result = 31 * result + (published ? 1 : 0);
+    result = 31 * result + date.hashCode();
+    result = 31 * result + battle.hashCode();
+    result = 31 * result + nextBattleNumber;
+    return result;
   }
 }

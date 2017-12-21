@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,10 +30,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
@@ -45,8 +45,9 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  */
 public class BattleView extends LinearLayout {
 
-  private final PartyFragment party;
-  private Optional<Campaign> campaign = Optional.absent();
+  private static final String TAG = "BattleView";
+
+  private Campaign campaign = Campaigns.defaultCampaign;
 
   private final ViewGroup view;
   private final Wrapper<Button> add;
@@ -62,8 +63,6 @@ public class BattleView extends LinearLayout {
 
   public BattleView(Context context, PartyFragment party) {
     super(context);
-
-    this.party = party;
 
     view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, (ViewGroup) party.getView(), false);
     setLayoutParams(new LinearLayout.LayoutParams(
@@ -84,62 +83,58 @@ public class BattleView extends LinearLayout {
     addView(view);
   }
 
-  public void setCampaign(Optional<Campaign> campaign) {
-    if (campaign.isPresent()) {
-      this.campaign = campaign;
-    } else {
-      this.campaign = Optional.absent();
-    }
-
+  public void update(Campaign campaign) {
+    this.campaign = campaign;
     refresh();
   }
 
   private boolean inBattle() {
-    return campaign.isPresent() && !campaign.get().getBattle().isEnded();
+    return !campaign.getBattle().isEnded();
   }
 
   private void addMonster() {
     if (inBattle()) {
-      MonsterInitiativeDialog.newInstance(campaign.get().getCampaignId(), -1).display();
+      MonsterInitiativeDialog.newInstance(campaign.getCampaignId(), -1).display();
     }
   }
 
   private void nextCombatant() {
     if (inBattle()) {
-      campaign.get().getBattle().combatantDone();
-      party.refreshWithTransition();
+      campaign.getBattle().combatantDone();
+      //party.refreshWithTransition();
     }
   }
 
   private void delay() {
     if (inBattle()) {
-      campaign.get().getBattle().combatantLater();
-      party.refreshWithTransition();
+      campaign.getBattle().combatantLater();
+      //party.refreshWithTransition();
     }
   }
 
   private void stopBattle() {
     if (inBattle()) {
-      campaign.get().getBattle().end();
-      party.refreshWithTransition();
+      campaign.getBattle().end();
+      //party.refreshWithTransition();
     }
   }
 
   private void addTimed() {
     if (currentCharacterIsLocal()) {
-      TimedConditionDialog.newInstance(campaign.get().getBattle().getCurrentCombatant().getId(),
-          campaign.get().getBattle().getTurn())
+      TimedConditionDialog.newInstance(campaign.getBattle().getCurrentCombatant().getId(),
+          campaign.getBattle().getTurn())
           .display();
     }
   }
 
   public void refresh() {
+    Log.d(TAG, "refreshing battle view");
     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) getLayoutParams();
     if (inBattle()) {
-      Battle battle = campaign.get().getBattle();
+      Battle battle = campaign.getBattle();
       params.removeRule(RelativeLayout.ALIGN_BOTTOM);
       params.addRule(RelativeLayout.BELOW, R.id.scroll);
-      boolean isDM = campaign.get().isDefault() || campaign.get().isLocal();
+      boolean isDM = campaign.isDefault() || campaign.isLocal();
       add.visible(isDM && battle.isStarting());
       addDelimiter.visible(isDM && battle.isStarting());
       next.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
@@ -150,8 +145,8 @@ public class BattleView extends LinearLayout {
       delayDelimiter.visible(canDelay);
       stop.visible(isDM && !battle.isEnded());
       stopDelimiter.visible(isDM && battle.isSurprised() || battle.isOngoing());
-      timed.visible(currentCharacterIsLocal());
-      timedDelimiter.visible(currentCharacterIsLocal());
+      timed.visible(battle.isOngoing() && currentCharacterIsLocal());
+      timedDelimiter.visible(battle.isOngoing() && currentCharacterIsLocal());
     } else {
       params.removeRule(RelativeLayout.BELOW);
       params.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.scroll);
@@ -160,11 +155,11 @@ public class BattleView extends LinearLayout {
 
 
   private boolean currentCharacterIsLocal() {
-    if (!campaign.isPresent() || !inBattle()) {
+    if (!inBattle()) {
       return false;
     }
 
-    Battle.Combatant current = campaign.get().getBattle().getCurrentCombatant();
+    Battle.Combatant current = campaign.getBattle().getCurrentCombatant();
     return !current.isMonster() && StoredEntries.isLocalId(current.getId());
   }
 }

@@ -97,6 +97,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
     }
 
     entriesById.put(entry.getEntryId(), entry);
+
   }
 
   protected void remove(E entry) {

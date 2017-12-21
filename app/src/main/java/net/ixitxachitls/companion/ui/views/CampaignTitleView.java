@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -39,6 +40,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  */
 public class CampaignTitleView extends LinearLayout {
 
+  private static final String TAG = "CampaignTitleView";
+
   private Campaign campaign;
 
   // Ui elements.
@@ -46,11 +49,10 @@ public class CampaignTitleView extends LinearLayout {
   private NetworkIcon networkIcon;
   private TextView dm;
 
-  public CampaignTitleView(Context context, Campaign campaign) {
+  public CampaignTitleView(Context context) {
     super(context);
 
     setup();
-    setCampaign(campaign);
   }
 
   public CampaignTitleView(Context context, AttributeSet attributes) {
@@ -76,6 +78,7 @@ public class CampaignTitleView extends LinearLayout {
   }
 
   public void setCampaign(Campaign campaign) {
+    Log.d(TAG, "setting campaign " + campaign);
     this.campaign = campaign;
     refresh();
   }
@@ -102,14 +105,17 @@ public class CampaignTitleView extends LinearLayout {
   }
 
   public void refresh() {
-    campaign = campaign.refresh();
-
+    Log.d(TAG, "refreshing campaign title view");
     if (campaign.isDefault()) {
       networkIcon.setVisibility(INVISIBLE);
+    } else {
+      networkIcon.setVisibility(VISIBLE);
     }
 
     if (!campaign.isLocal() || campaign.isDefault()) {
       dm.setVisibility(INVISIBLE);
+    } else {
+      dm.setVisibility(VISIBLE);
     }
 
     title.setTitle(campaign.getName());

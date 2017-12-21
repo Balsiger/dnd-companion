@@ -73,6 +73,7 @@
       android:paddingLeft="10dp"
       android:paddingRight="10dp"
       android:paddingTop="5dp"
+      android:visibility="gone"
       app:modifier_label="@string/label_initiative_modifier"/>
 
   <android.support.design.widget.FloatingActionButton

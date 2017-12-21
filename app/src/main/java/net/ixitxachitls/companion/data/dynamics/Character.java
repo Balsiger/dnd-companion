@@ -203,6 +203,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     this.initiative = initiative;
     this.battleNumber = number;
     this.conditions.clear();
+    store();
   }
 
   public void setXp(int xp) {
@@ -544,5 +545,10 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return this.getCharacterId().compareTo(that.getCharacterId());
+  }
+
+  @Override
+  public String toString() {
+    return getName() + " (" + getCharacterId() + "/" + (isLocal() ? "local" : "remote") + ")";
   }
 }

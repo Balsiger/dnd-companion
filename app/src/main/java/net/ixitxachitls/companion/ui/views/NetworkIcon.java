@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import net.ixitxachitls.companion.R;
 
@@ -32,11 +33,14 @@ import net.ixitxachitls.companion.R;
  */
 public class NetworkIcon extends IconView {
 
+  public static final String TAG = "NetworkIcon";
+
   public NetworkIcon(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
   }
 
   public void setStatus(boolean isLocal, boolean isOn) {
+    Log.d(TAG, "settings static " + (isLocal ? "local" : "remote") + "/" + (isOn ? "on" : "off"));
     if (isLocal && isOn) {
       setImageResource(R.drawable.ic_signal_wifi_4_bar_black_24dp);
     } else if (isLocal && !isOn) {

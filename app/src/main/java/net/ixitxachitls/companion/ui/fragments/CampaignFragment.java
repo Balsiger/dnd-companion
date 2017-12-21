@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,13 +49,14 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 /** A fragment displaying campaign information. */
 public class CampaignFragment extends CompanionFragment {
 
-  private Optional<Campaign> campaign = Optional.absent();
+  private static final String TAG = "CampaignFragment";
+
+  private Campaign campaign = Campaigns.defaultCampaign;
 
   // UI elements.
   private CampaignTitleView title;
   private IconView delete;
   private TextWrapper<TextView> date;
-  private PartyFragment party;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -69,21 +71,32 @@ public class CampaignFragment extends CompanionFragment {
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
     Wrapper.<ImageView>wrap(view, R.id.back).onClick(this::back);
-    title = (CampaignTitleView) view.findViewById(R.id.title);
+    title = view.findViewById(R.id.title);
     title.setAction(this::edit);
-    delete = (IconView) view.findViewById(R.id.delete);
+    delete = view.findViewById(R.id.delete);
     delete.setAction(this::deleteCampaign);
-    party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     date = TextWrapper.wrap(view, R.id.date);
     date.onClick(this::editDate);
+
+    Campaigns.getCurrentCampaignId().observe(this, this::showCampaign);
 
     return view;
   }
 
-  public void showCampaign(Campaign campaign) {
-    this.campaign = Optional.of(campaign);
+  public void showCampaign(String campaignId) {
+    Log.d(TAG, "setting campaign " + campaignId);
 
-    refresh();
+    Campaigns.getCampaign(campaign.getCampaignId()).removeObserver(this::update);
+    Campaigns.getCampaign(campaignId).observe(this, this::update);
+  }
+
+  public void update(Optional<Campaign> campaign) {
+    if (campaign.isPresent()) {
+      this.campaign = campaign.get();
+      title.setCampaign(campaign.get());
+
+      refresh();
+    }
   }
 
   private void back() {
@@ -91,17 +104,17 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void editDate() {
-    if (campaign.isPresent() && campaign.get().isLocal()) {
-      DateDialog.newInstance(campaign.get().getCampaignId()).display();
+    if (campaign.isLocal()) {
+      DateDialog.newInstance(campaign.getCampaignId()).display();
     }
   }
 
   private void edit() {
-    if (!campaign.isPresent() || campaign.get().isDefault() || !campaign.get().isLocal()) {
+    if (campaign.isDefault() || !campaign.isLocal()) {
       return;
     }
 
-    EditCampaignDialog.newInstance(campaign.get().getCampaignId()).display();
+    EditCampaignDialog.newInstance(campaign.getCampaignId()).display();
   }
 
   protected void deleteCampaign() {
@@ -113,28 +126,16 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void deleteCampaignOk() {
-    if (campaign.isPresent()) {
-      campaign.get().delete();
-      Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
-          Toast.LENGTH_SHORT).show();
-      show(Type.campaigns);
-    }
+    campaign.delete();
+    Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
+        Toast.LENGTH_SHORT).show();
+    show(Type.campaigns);
   }
 
   @Override
   public void refresh() {
+    Log.d(TAG, "refreshing campaign fragment");
     super.refresh();
-
-    if (!campaign.isPresent()) {
-      return;
-    }
-
-    campaign = Campaigns.getCampaign(campaign.get().getCampaignId()).getValue();
-    if (!campaign.isPresent()) {
-      return;
-    }
-
-    title.setCampaign(campaign.get());
 
     if (canDeleteCampaign()) {
       delete.setVisibility(View.VISIBLE);
@@ -142,20 +143,18 @@ public class CampaignFragment extends CompanionFragment {
       delete.setVisibility(View.GONE);
     }
 
-    date.text(campaign.get().getDate().toString());
-
-    party.setup(campaign.get());
+    date.text(campaign.getDate().toString());
   }
 
   private boolean canDeleteCampaign() {
-    if (campaign.get().isDefault()) {
+    if (campaign.isDefault()) {
       return false;
     }
 
-    if (campaign.get().isLocal()) {
-      return !campaign.get().isPublished();
+    if (campaign.isLocal()) {
+      return !campaign.isPublished();
     }
 
-    return !Characters.hasLocalCampaignCharacters(campaign.get().getCampaignId());
+    return !Characters.hasLocalCampaignCharacters(campaign.getCampaignId());
   }
 }

@@ -117,7 +117,7 @@ public class MainActivity extends CompanionActivity {
     if (id == R.id.action_export) {
       List<DriveStorage.File> files = new ArrayList<>();
       // Export local campaigns.
-      for (Campaign campaign : Campaigns.getLocalCampaigns().getValue()) {
+      for (Campaign campaign : Campaigns.getLocalCampaigns()) {
         files.add(new DriveStorage.TextFile(campaign.getName() + ".campaign.txt",
             campaign.getCampaignId(), "text/plain", "# This file will not be re-imported."
             + campaign.toProto().toString()));

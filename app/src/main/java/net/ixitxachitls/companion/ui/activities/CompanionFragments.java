@@ -35,6 +35,7 @@ import com.google.common.base.Strings;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
@@ -198,7 +199,8 @@ public class CompanionFragments {
   public void showCampaign(Campaign campaign, Optional<View> shared) {
     show(CompanionFragment.Type.campaign, shared);
     if (campaignFragment.isPresent()) {
-      campaignFragment.get().showCampaign(campaign);
+      Campaigns.changeCurrent(campaign.getCampaignId());
+      campaignFragment.get().showCampaign(campaign.getCampaignId());
     }
   }
 

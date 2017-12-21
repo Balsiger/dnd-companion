@@ -239,6 +239,32 @@ public class Battle {
     return combatants.get(currentCombatantIndex).isWaiting();
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+
+    Battle battle = (Battle) o;
+
+    if (number != battle.number) return false;
+    if (turn != battle.turn) return false;
+    if (currentCombatantIndex != battle.currentCombatantIndex) return false;
+    if (!combatants.equals(battle.combatants)) return false;
+    if (status != battle.status) return false;
+    return lastMonsterName.equals(battle.lastMonsterName);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = number;
+    result = 31 * result + combatants.hashCode();
+    result = 31 * result + status.hashCode();
+    result = 31 * result + turn;
+    result = 31 * result + currentCombatantIndex;
+    result = 31 * result + lastMonsterName.hashCode();
+    return result;
+  }
+
   public static class Combatant implements Comparable<Combatant> {
     private final String id;
     private final String name;

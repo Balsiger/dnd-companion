@@ -138,7 +138,6 @@ public class CompanionTransmitter {
   }
 
   public Optional<Data.CompanionMessageProto> receive() {
-    Log.d("Transmitter", name + ": trying to receive message");
     return Optional.fromNullable(receiver.queue.poll());
   }
 }

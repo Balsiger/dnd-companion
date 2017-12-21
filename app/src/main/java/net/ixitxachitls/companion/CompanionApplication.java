@@ -133,7 +133,7 @@ public class CompanionApplication extends MultiDexApplication
     }
   }
 
-  public void status(String message) {
+  synchronized public void status(String message) {
     pendingMessages.add(message);
     if (currentActivity.isPresent()) {
       for (String pending : pendingMessages) {

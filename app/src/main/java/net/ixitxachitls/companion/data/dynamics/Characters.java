@@ -133,13 +133,15 @@ public class Characters extends StoredEntries<Character> {
   public static void updateCharacter(Character character) {
     String campaignId = campaignIdsByCharacterId.get(character.getCharacterId());
     if (character.getCampaignId().equals(campaignId)) {
-      // Update characters by campaign to singla that once of it's characters changed
-      // (if you need more fine grained updates, get live data for individual characters.)
-      updateCampaign(character.getCampaignId());
+      if (!character.equals(charactersByCharacterId.get(character.getCharacterId()))) {
+        // Update characters by campaign to singla that once of it's characters changed
+        // (if you need more fine grained updates, get live data for individual characters.)
+        updateCharacters(character.getCampaignId());
+      }
     } else if (campaignId == null) {
       // Update campaign and all characters for this newly added character.
       campaignIdsByCharacterId.put(character.getCharacterId(), character.getCampaignId());
-      updateCampaign(character.getCampaignId());
+      updateCharacters(character.getCampaignId());
       MutableLiveData<ImmutableList<Character>> all = get(character.isLocal()).allCharacters;
       ImmutableList.Builder<Character> characters = new ImmutableList.Builder<>();
       characters.addAll(all.getValue());
@@ -147,8 +149,8 @@ public class Characters extends StoredEntries<Character> {
       all.setValue(characters.build());
     } else {
       // Update characters by campaign if the character was moved to a different campaign.
-      updateCampaign(campaignId);
-      updateCampaign(character.getCampaignId());
+      updateCharacters(campaignId);
+      updateCharacters(character.getCampaignId());
     }
 
     // Update all live data for the individual character.
@@ -166,7 +168,7 @@ public class Characters extends StoredEntries<Character> {
 
     // Update live data.
     campaignIdsByCharacterId.remove(character.getCharacterId());
-    updateCampaign(character.getCampaignId());
+    updateCharacters(character.getCampaignId());
     if (charactersByCharacterId.containsKey(character.getCharacterId())) {
       charactersByCharacterId.get(character.getCharacterId()).setValue(Optional.absent());
     }
@@ -179,7 +181,7 @@ public class Characters extends StoredEntries<Character> {
     String campaignId = campaignIdsByCharacterId.get(characterId);
     if (campaignId != null) {
       campaignIdsByCharacterId.remove(characterId);
-      updateCampaign(campaignId);
+      updateCharacters(campaignId);
     }
     if (charactersByCharacterId.containsKey(characterId)) {
       charactersByCharacterId.get(characterId).setValue(Optional.absent());
@@ -291,7 +293,7 @@ public class Characters extends StoredEntries<Character> {
     return remote.getCharacters(campaignId);
   }
 
-  private static void updateCampaign(String campaignId) {
+  private static void updateCharacters(String campaignId) {
     if (charactersByCampaignId.containsKey(campaignId)) {
       charactersByCampaignId.get(campaignId).setValue(campaignCharacters(campaignId));
     }
@@ -316,7 +318,7 @@ public class Characters extends StoredEntries<Character> {
   private ImmutableList<Character> getOrphanedCharacters() {
     ImmutableList.Builder<Character> characters = new ImmutableList.Builder<>();
     for (Character character : getAll()) {
-      if (!Campaigns.get(isLocal()).has(character.getCampaignId())) {
+      if (!Campaigns.has(character.getCampaignId(), isLocal())) {
         characters.add(character);
       }
     }
