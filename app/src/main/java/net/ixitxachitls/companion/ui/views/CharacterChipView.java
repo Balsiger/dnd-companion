@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.Log;
 
 import com.google.common.base.Optional;
 
@@ -34,6 +35,8 @@ import net.ixitxachitls.companion.data.dynamics.Image;
  * A chip displaying character information.
  */
 public class CharacterChipView extends ChipView {
+
+  private static final String TAG = "CharChipView";
 
   public CharacterChipView(Context context, Character character) {
     super(context, character.getCharacterId(), character.getName(), "", R.color.character,
@@ -49,6 +52,21 @@ public class CharacterChipView extends ChipView {
     if (character.isLocal()) {
       name.backgroundColor(R.color.characterLight);
       subtitle.backgroundColor(R.color.characterLight);
+    }
+  }
+
+  public void update(Optional<Character> character) {
+    Log.d(TAG, "updating character " + character);
+    if (character.isPresent()) {
+      name.text(character.get().getName());
+      if (character.get().getInitiative() == Character.NO_INITIATIVE) {
+        setSubtitle("");
+      } else {
+        subtitle.text(String.valueOf(character.get().getInitiative()));
+      }
+    } else {
+      name.text("--deleted--");
+      setSubtitle("");
     }
   }
 }

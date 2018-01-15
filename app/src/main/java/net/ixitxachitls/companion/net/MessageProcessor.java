@@ -145,7 +145,7 @@ public abstract class MessageProcessor {
   }
 
   protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
-    Characters.removeRemote(characterId);
+    Characters.remove(characterId, false);
     CompanionSubscriber.get().sendAck(senderId, messageId);
     refresh();
   }

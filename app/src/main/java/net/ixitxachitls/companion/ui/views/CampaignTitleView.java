@@ -30,6 +30,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
@@ -75,6 +77,12 @@ public class CampaignTitleView extends LinearLayout {
     dm = (TextView) view.findViewById(R.id.dm);
 
     addView(view);
+  }
+
+  public void setLiveCampaign(Optional<Campaign> campaign){
+    if (campaign.isPresent()) {
+      setCampaign(campaign.get());
+    }
   }
 
   public void setCampaign(Campaign campaign) {

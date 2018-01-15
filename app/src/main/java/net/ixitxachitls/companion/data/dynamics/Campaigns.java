@@ -42,8 +42,6 @@ import java.util.stream.Collectors;
 public class Campaigns {
   private static final String TAG = "Campaigns";
 
-  private static final String REMOTE = "REMOTE:";
-
   private static CampaignsData local;
   private static CampaignsData remote;
 
@@ -62,10 +60,6 @@ public class Campaigns {
 
   // Data accessors.
   public static LiveData<Optional<Campaign>> getCampaign(String campaignId) {
-    if (campaignId.startsWith(REMOTE)) {
-      return remote.getCampaign(campaignId.substring(REMOTE.length()));
-    }
-
     if (campaignId.equals(defaultCampaign.getCampaignId())) {
       return liveDefaultCampaign;
     }
@@ -134,7 +128,7 @@ public class Campaigns {
 
   public static LiveData<ImmutableList<String>> getAllCampaignIds() {
     if (allCampaignIds.getValue() == null) {
-      allCampaignIds.setValue(ImmutableList.copyOf(campaignIds()));
+      LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
     }
 
     return allCampaignIds;
@@ -155,7 +149,7 @@ public class Campaigns {
     // the object and need to update UI now, as the campaign actually changed, although
     // the object is already updated.
     Log.d(TAG, "setting current campaign to " + campaignId);
-    currentCampaignId.setValue(campaignId);
+    LiveDataUtils.setValueIfChanged(currentCampaignId, campaignId);
   }
 
   public static void update(Campaign campaign) {
@@ -178,7 +172,7 @@ public class Campaigns {
       remote.add(campaign);
     }
 
-    allCampaignIds.setValue(ImmutableList.copyOf(campaignIds()));
+    LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
   }
 
   public static void remove(String campaignId, boolean isLocal) {
@@ -189,7 +183,7 @@ public class Campaigns {
       remote.remove(campaignId);
     }
 
-    allCampaignIds.setValue(ImmutableList.copyOf(campaignIds()));
+    LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
     if (currentCampaignId.getValue().equals(campaignId)) {
       currentCampaignId.setValue(defaultCampaign.getCampaignId());
     }
@@ -200,7 +194,7 @@ public class Campaigns {
   }
 
   // Publishing.
-
+  // TODO(merlin): This should be moved out of here into the publisher.
   public static void publish() {
     Log.d(TAG, "publishing all campaigns");
     for (Campaign campaign : local.getAll()) {
@@ -228,7 +222,7 @@ public class Campaigns {
     if (Misc.onEmulator()) {
       ids.addAll(remote.getCampaigns()
           .stream()
-          .map(c -> REMOTE + c.getCampaignId())
+          .map(Campaign::getCampaignId)
           .collect(Collectors.toList()));
     } else {
       ids.addAll(remote.getCampaigns()
@@ -243,14 +237,6 @@ public class Campaigns {
   private static Optional<Campaign> campaign(String campaignId) {
     if (defaultCampaign.getCampaignId().equals(campaignId)) {
       return Optional.of(defaultCampaign);
-    }
-
-    if (Misc.onEmulator() && campaignId.startsWith(REMOTE)) {
-      return remote.get(campaignId.substring(REMOTE.length()));
-    }
-
-    if (Misc.onEmulator() && !Misc.emulatingLocal()) {
-      return remote.get(campaignId);
     }
 
     return local.get(campaignId).or(remote.get(campaignId));

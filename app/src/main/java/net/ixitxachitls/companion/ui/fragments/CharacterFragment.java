@@ -160,7 +160,7 @@ public class CharacterFragment extends CompanionFragment {
 
   private void deleteCharacterOk() {
     if (character.isPresent()) {
-      Characters.removeCharacter(character.get());
+      Characters.remove(character.get());
       Toast.makeText(getActivity(), getString(R.string.character_deleted),
           Toast.LENGTH_SHORT).show();
       show(Type.campaign);

@@ -37,6 +37,7 @@ import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
@@ -104,6 +105,10 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public String getCharacterId() {
+    if (!isLocal() && Misc.onEmulator()) {
+      return StoredEntries.REMOTE + entryId;
+    }
+
     return entryId;
   }
 
@@ -203,6 +208,11 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     this.initiative = initiative;
     this.battleNumber = number;
     this.conditions.clear();
+    store();
+  }
+
+  public void clearInitiative() {
+    this.initiative = NO_INITIATIVE;
     store();
   }
 
@@ -513,7 +523,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
 
     boolean changed = super.store();
     if (changed) {
-      Characters.addCharacter(isLocal(), this);
+      Characters.update(this);
       if (isLocal()) {
         CompanionSubscriber.get().publish(this);
       }

@@ -40,6 +40,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.views.XPCharacterView;
 import net.ixitxachitls.companion.ui.views.XPFixedView;
@@ -115,7 +116,8 @@ public class XPDialog extends Dialog {
       }
 
       characterContainer = (LinearLayout) view.findViewById(R.id.party);
-      for (Character character : campaign.get().getCharacters()) {
+      for (String characterId: campaign.get().getCharacterIds().getValue()) {
+        Character character = Characters.getCharacter(characterId).getValue().get();
         characterContainer.addView(new XPCharacterView(getContext(), this, character));
       }
 

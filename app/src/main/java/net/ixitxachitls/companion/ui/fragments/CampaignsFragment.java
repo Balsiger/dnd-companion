@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,12 +41,16 @@ import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * The fragment displaying the campaign list
  */
 public class CampaignsFragment extends CompanionFragment {
 
   private Wrapper<LinearLayout> campaignsView;
+  private Map<String, CampaignTitleView> titlesByCampaignId = new HashMap<>();
 
   public CampaignsFragment() {
     super(Type.campaigns);
@@ -71,17 +76,27 @@ public class CampaignsFragment extends CompanionFragment {
 
   private void update(ImmutableList<String> campaignIds) {
     if (campaignsView != null) {
+      for (Map.Entry<String, CampaignTitleView> entry : titlesByCampaignId.entrySet()) {
+        Campaigns.getCampaign(entry.getKey()).removeObserver(entry.getValue()::setLiveCampaign);
+      }
+
+      titlesByCampaignId.clear();
       campaignsView.get().removeAllViews();
+
+      // TODO(merlin): This could be optmizied by only recreating new campaigns and
+      // removing old ones instead of always recreating all.
       for (String campaignId : campaignIds) {
         Campaign campaign = Campaigns.getCampaign(campaignId).getValue().get();
         CampaignTitleView title = new CampaignTitleView(getContext());
-        title.setCampaign(campaign);
+        titlesByCampaignId.put(campaignId, title);
+        Campaigns.getCampaign(campaignId).observe(this, title::setLiveCampaign);
         title.setAction(() -> {
           if (Misc.onEmulator() && !campaign.isLocal()) {
             Misc.emulateRemote();
           } else {
             Misc.emulateLocal();
           }
+          Log.d("TAG", campaignId);
           CompanionFragments.get().showCampaign(campaign, Optional.of(title));
         });
         campaignsView.get().addView(title);

@@ -125,7 +125,7 @@ public class MainActivity extends CompanionActivity {
             campaign.getCampaignId(), "application/x-protobuf", campaign.toProto().toByteArray()));
       }
       // Export local characters.
-      for (Character character : Characters.getLocalCharacters().getValue()) {
+      for (Character character : Characters.getLocalCharacters()) {
         files.add(new DriveStorage.TextFile(character.getName() + ".character.txt",
             character.getCharacterId(), "text/plain", "# This file will not be re-imported."
             + character.toProto().toString()));

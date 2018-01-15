@@ -33,7 +33,6 @@ import android.widget.RelativeLayout;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
@@ -71,7 +70,7 @@ public class BattleView extends LinearLayout {
 
     add = Wrapper.<Button>wrap(view, R.id.add).onClick(this::addMonster);
     addDelimiter = Wrapper.wrap(view, R.id.delimiter_add);
-    next = Wrapper.<Button>wrap(view, R.id.next).onClick(this::nextCombatant);
+    next = Wrapper.<Button>wrap(view, R.id.next).onClick(this::next);
     nextDelimiter = Wrapper.wrap(view, R.id.delimiter_next);
     delay = Wrapper.<Button>wrap(view, R.id.delay).onClick(this::delay);
     delayDelimiter = Wrapper.wrap(view, R.id.delimiter_delay);
@@ -85,52 +84,11 @@ public class BattleView extends LinearLayout {
 
   public void update(Campaign campaign) {
     this.campaign = campaign;
-    refresh();
-  }
 
-  private boolean inBattle() {
-    return !campaign.getBattle().isEnded();
-  }
-
-  private void addMonster() {
-    if (inBattle()) {
-      MonsterInitiativeDialog.newInstance(campaign.getCampaignId(), -1).display();
-    }
-  }
-
-  private void nextCombatant() {
-    if (inBattle()) {
-      campaign.getBattle().combatantDone();
-      //party.refreshWithTransition();
-    }
-  }
-
-  private void delay() {
-    if (inBattle()) {
-      campaign.getBattle().combatantLater();
-      //party.refreshWithTransition();
-    }
-  }
-
-  private void stopBattle() {
-    if (inBattle()) {
-      campaign.getBattle().end();
-      //party.refreshWithTransition();
-    }
-  }
-
-  private void addTimed() {
-    if (currentCharacterIsLocal()) {
-      TimedConditionDialog.newInstance(campaign.getBattle().getCurrentCombatant().getId(),
-          campaign.getBattle().getTurn())
-          .display();
-    }
-  }
-
-  public void refresh() {
-    Log.d(TAG, "refreshing battle view");
+    Log.d(TAG, "refreshing battle view with " + campaign);
     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) getLayoutParams();
     if (inBattle()) {
+      setVisibility(VISIBLE);
       Battle battle = campaign.getBattle();
       params.removeRule(RelativeLayout.ALIGN_BOTTOM);
       params.addRule(RelativeLayout.BELOW, R.id.scroll);
@@ -145,21 +103,47 @@ public class BattleView extends LinearLayout {
       delayDelimiter.visible(canDelay);
       stop.visible(isDM && !battle.isEnded());
       stopDelimiter.visible(isDM && battle.isSurprised() || battle.isOngoing());
-      timed.visible(battle.isOngoing() && currentCharacterIsLocal());
-      timedDelimiter.visible(battle.isOngoing() && currentCharacterIsLocal());
+      timed.visible(battle.isOngoing());
+      timedDelimiter.visible(battle.isOngoing());
     } else {
       params.removeRule(RelativeLayout.BELOW);
       params.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.scroll);
     }
   }
 
+  private boolean inBattle() {
+    return !campaign.getBattle().isEnded();
+  }
 
-  private boolean currentCharacterIsLocal() {
-    if (!inBattle()) {
-      return false;
+  private void addMonster() {
+    if (inBattle()) {
+      MonsterInitiativeDialog.newInstance(campaign.getCampaignId(), -1).display();
     }
+  }
 
-    Battle.Combatant current = campaign.getBattle().getCurrentCombatant();
-    return !current.isMonster() && StoredEntries.isLocalId(current.getId());
+  private void next() {
+    if (inBattle()) {
+      campaign.getBattle().combatantDone();
+    }
+  }
+
+  private void delay() {
+    if (inBattle()) {
+      campaign.getBattle().combatantLater();
+    }
+  }
+
+  private void stopBattle() {
+    if (inBattle()) {
+      campaign.getBattle().end();
+    }
+  }
+
+  private void addTimed() {
+    if (inBattle()) {
+      TimedConditionDialog.newInstance(campaign.getBattle().getCurrentCombatant().getId(),
+          campaign.getBattle().getTurn())
+          .display();
+    }
   }
 }

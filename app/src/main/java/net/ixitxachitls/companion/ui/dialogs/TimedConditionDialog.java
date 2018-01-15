@@ -118,7 +118,8 @@ public class TimedConditionDialog extends Dialog {
       condition.get().setAdapter(adapter);
 
       if (campaign.isPresent()) {
-        for (Character character : campaign.get().getCharacters()) {
+        for (String characterId : campaign.get().getCharacterIds().getValue()) {
+          Character character = Characters.getCharacter(characterId).getValue().get();
           CheckBox checkbox = new CheckBox(getContext());
           checkbox.setText(character.getName());
           checkbox.setTextAppearance(R.style.LargeText);

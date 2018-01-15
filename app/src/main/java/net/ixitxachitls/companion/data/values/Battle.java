@@ -187,6 +187,14 @@ public class Battle {
 
   public void end() {
     status = BattleStatus.ENDED;
+    for (Combatant combatant : combatants) {
+      if (!combatant.isMonster()) {
+        Optional<Character> character = Characters.getCharacter(combatant.getId()).getValue();
+        if (character.isPresent()) {
+          character.get().clearInitiative();
+        }
+      }
+    }
     combatants.clear();
     lastMonsterName = Optional.absent();
     campaign.store();

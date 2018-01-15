@@ -90,7 +90,8 @@ public class CharacterDialog extends Dialog {
     if (campaign.isPresent()) {
       String characterId = getArguments().getString(ARG_ID);
       if (characterId.isEmpty()) {
-        character = Characters.createCharacter(campaign.get().getCampaignId()).getValue();
+        character = Optional.of(Character.createNew(campaign.get().getCampaignId()));
+        Characters.add(character.get());
       } else {
         character = Characters.getCharacter(characterId).getValue();
       }
@@ -180,7 +181,7 @@ public class CharacterDialog extends Dialog {
     if (character.isPresent()) {
       character.get().setName(name.getText().toString());
       character.get().store();
-
+Ø
       super.save();
     }
   }

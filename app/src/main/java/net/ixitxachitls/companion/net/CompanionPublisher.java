@@ -38,6 +38,7 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
+import net.ixitxachitls.companion.util.Ids;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -142,8 +143,8 @@ public class CompanionPublisher {
       if (campaign.isLocal() && campaign.isPublished()) {
         schedule(recipientId, CompanionMessageData.from(campaign));
 
-        for (Character character : campaign.getCharacters()) {
-          update(character, recipientId);
+        for (String characterId : campaign.getCharacterIds().getValue()) {
+          update(Characters.getCharacter(characterId).getValue().get(), recipientId);
         }
       }
     }
@@ -151,7 +152,8 @@ public class CompanionPublisher {
 
   public void republishLocalCharacters(String recipientId) {
     for (Campaign campaign : Campaigns.getLocalCampaigns()) {
-      for (Character character : campaign.getCharacters()) {
+      for (String characterId : campaign.getCharacterIds().getValue()) {
+        Character character = Characters.getCharacter(characterId).getValue().get();
         if (character.isLocal()) {
           update(character, recipientId);
         }
@@ -178,11 +180,11 @@ public class CompanionPublisher {
 
   public void update(Character updatedCharacter, String characterClientId) {
     CompanionMessageData data = CompanionMessageData.from(updatedCharacter);
-    for (Character character
-        : Characters.getCampaignCharacters(updatedCharacter.getCampaignId()).getValue()) {
+    for (String characterId
+        : Characters.getCampaignCharacterIds(updatedCharacter.getCampaignId()).getValue()) {
       // Only update the character on clients that don't own it.
-      if (!characterClientId.equals(character.getServerId())) {
-        schedule(character.getServerId(), data);
+      if (!characterClientId.equals(characterId)) {
+        schedule(Ids.extractServerId(characterId), data);
       }
     }
   }
@@ -193,11 +195,11 @@ public class CompanionPublisher {
     // Figure out which campaign this image belongs to.
     Optional<Character> imageCharacter = Characters.getCharacter(image.getId()).getValue();
     if (imageCharacter.isPresent()) {
-      for (Character character :
-          Characters.getCampaignCharacters(imageCharacter.get().getCampaignId()).getValue()) {
+      for (String characterId :
+          Characters.getCampaignCharacterIds(imageCharacter.get().getCampaignId()).getValue()) {
         // Only update the character on clients that don't own it.
-        if (!clientId.equals(character.getServerId())) {
-          schedule(character.getServerId(), data);
+        if (!clientId.equals(characterId)) {
+          schedule(Ids.extractServerId(characterId), data);
         }
       }
     }
@@ -233,9 +235,9 @@ public class CompanionPublisher {
     Set<String> ids = new HashSet<>();
     ids.addAll(clientIds());
 
-    for (Character character
-        : Characters.getCampaignCharacters(campaign.getCampaignId()).getValue()) {
-      ids.add(character.getServerId());
+    for (String characterId
+        : Characters.getCampaignCharacterIds(campaign.getCampaignId()).getValue()) {
+      ids.add(Ids.extractServerId(characterId));
     }
 
     return ids;

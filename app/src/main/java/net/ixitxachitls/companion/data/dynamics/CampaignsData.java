@@ -91,7 +91,7 @@ public class CampaignsData extends StoredEntries<Campaign> {
 
     // We need to check for null since ids will be setup only after the super constructor is run.
     if (ids != null) {
-      ids.setValue(ImmutableList.copyOf(ids()));
+      LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids()));
       if (campaignById.containsKey(campaign.getCampaignId())) {
         campaignById.get(campaign.getCampaignId()).setValue(Optional.of(campaign));
       }
@@ -102,7 +102,7 @@ public class CampaignsData extends StoredEntries<Campaign> {
   public Campaign remove(String campaignId) {
     Campaign campaign = super.remove(campaignId);
 
-    ids.setValue(ImmutableList.copyOf(ids()));
+    LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids()));
     if (campaignById.containsKey(campaignId)) {
       campaignById.get(campaignId).setValue(Optional.absent());
     }
@@ -114,7 +114,7 @@ public class CampaignsData extends StoredEntries<Campaign> {
   public void remove(Campaign campaign) {
     super.remove(campaign);
 
-    ids.setValue(ImmutableList.copyOf(ids()));
+    LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids()));
     if (campaignById.containsKey(campaign.getCampaignId())) {
       campaignById.get(campaign.getCampaignId()).setValue(Optional.absent());
     }

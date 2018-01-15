@@ -36,6 +36,7 @@ import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.util.List;
 
@@ -73,7 +74,8 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public int getMaxPartyLevel() {
     int max = 0;
-    for (Character character : getCharacters()) {
+    for (String characterId : getCharacterIds().getValue()) {
+      Character character = Characters.getCharacter(characterId).getValue().get();
       max = Math.max(max, character.getLevel());
     }
 
@@ -82,7 +84,8 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public int getMinPartyLevel() {
     int min = Integer.MAX_VALUE;
-    for (Character character : getCharacters()) {
+    for (String characterId : getCharacterIds().getValue()) {
+      Character character = Characters.getCharacter(characterId).getValue().get();
       min = Math.min(min, character.getLevel());
     }
 
@@ -122,15 +125,15 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public String getCampaignId() {
+    if (!isLocal() && Misc.onEmulator()) {
+      return StoredEntries.REMOTE + getEntryId();
+    }
+
     return getEntryId();
   }
 
-  public List<Character> getCharacters() {
-    return Characters.getCampaignCharacters(getCampaignId()).getValue();
-  }
-
-  public LiveData<ImmutableList<Character>> getCharactersLive() {
-    return Characters.getCampaignCharacters(getCampaignId());
+  public LiveData<ImmutableList<String>> getCharacterIds() {
+    return Characters.getCampaignCharacterIds(getCampaignId());
   }
 
   public CampaignDate getDate() {
@@ -139,6 +142,10 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public Battle getBattle() {
     return battle;
+  }
+
+  public boolean inBattle() {
+    return !battle.isEnded();
   }
 
   public boolean isDefault() {
@@ -236,7 +243,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   public boolean store() {
     boolean changed = super.store();
     if (changed) {
-      Campaigns.add(this);
+      Campaigns.update(this);
       if (isLocal() && published) {
         CompanionPublisher.get().publish(this);
       }

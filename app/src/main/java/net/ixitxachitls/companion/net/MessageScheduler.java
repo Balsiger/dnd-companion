@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.net;
 
+import android.util.Log;
+
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.LinkedHashMultimap;
@@ -40,6 +42,8 @@ import java.util.Map;
  * A scheduler for messages to a single recipient.
  */
 public class MessageScheduler {
+
+  private static final String TAG = "MsgSchdlr";
 
   private final String recipientId;
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
@@ -83,6 +87,7 @@ public class MessageScheduler {
   }
 
   public void schedule(CompanionMessageData data) {
+    Log.d(TAG, "scheduling to " + recipientId + ": " + data);
     ScheduledMessage message = new ScheduledMessage(
         new CompanionMessage(Settings.get().getAppId(), Settings.get().getNickname(),
             recipientId, data.requiresAck() ? Settings.get().getNextMessageId() : 0,
@@ -90,10 +95,42 @@ public class MessageScheduler {
     message.store();
 
     if (message.mayOverwrite()) {
-      waiting.removeAll(data.getType());
+      for (Iterator<ScheduledMessage> i = waiting.get(data.getType()).iterator(); i.hasNext(); ) {
+        CompanionMessageData oldMessage = i.next().getData();
+        if (overwrites(oldMessage, message.getData())) {
+          i.remove();
+        }
+      }
     }
 
     waiting.put(data.getType(), message);
+  }
+
+  private boolean overwrites(CompanionMessageData oldMessage, CompanionMessageData newMessage) {
+    if (!oldMessage.mayOverwrite() || !newMessage.mayOverwrite()
+        || oldMessage.getType() != newMessage.getType()) {
+      return false;
+    }
+
+    switch(oldMessage.getType()) {
+      case CAMPAIGN_DELETE:
+        return oldMessage.getCampaignDelete().equals(newMessage.getCampaignDelete());
+
+      case CHARACTER:
+        return oldMessage.getCharacter().getCharacterId().equals(
+            newMessage.getCharacter().getCharacterId());
+
+      case CAMPAIGN:
+        return oldMessage.getCampaign().getCampaignId().equals(
+            newMessage.getCampaign().getCampaignId());
+
+      case IMAGE:
+        return oldMessage.getImage().getId().equals(newMessage.getImage().getId())
+            && oldMessage.getImage().getType().equals(newMessage.getImage().getType());
+
+      default:
+        return false;
+    }
   }
 
   public Optional<ScheduledMessage> nextWaiting() {

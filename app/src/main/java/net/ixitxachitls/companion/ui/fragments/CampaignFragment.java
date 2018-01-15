@@ -155,6 +155,6 @@ public class CampaignFragment extends CompanionFragment {
       return !campaign.isPublished();
     }
 
-    return !Characters.hasLocalCampaignCharacters(campaign.getCampaignId());
+    return !Characters.hasLocalCharacterForCampaign(campaign.getCampaignId());
   }
 }

@@ -31,14 +31,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
- * A small chip
+ * A small chip representing a character in the game.
  */
 public class ChipView extends LinearLayout {
 
+  private static final String TAG = "ChipView";
   private final String dataId;
   private final int chipColor;
   private final int backgroundColor;
@@ -75,6 +77,10 @@ public class ChipView extends LinearLayout {
     addView(view);
   }
 
+  public void update(Campaign campaign) {
+
+  }
+
   public void disabled() {
     name.textColor(R.color.disabled);
     subtitle.textColor(R.color.disabled);
@@ -84,7 +90,7 @@ public class ChipView extends LinearLayout {
     container.backgroundColor(color);
   }
 
-  public void setSubtitle(String text) {
+  protected void setSubtitle(String text) {
     subtitle.text(text);
     if (text.isEmpty()) {
       this.subtitle.gone();
