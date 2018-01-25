@@ -51,7 +51,7 @@ public class Image {
 
   public Image(String type, String id, Bitmap bitmap) {
     this.type = type;
-    this.id = id;
+    this.id = StoredEntries.sanitize(id);
     this.bitmap = bitmap;
   }
 

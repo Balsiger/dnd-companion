@@ -34,6 +34,7 @@ import com.google.common.base.Strings;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 
 import java.util.List;
@@ -48,6 +49,7 @@ public class DataBaseContentProvider extends ContentProvider {
   public static final String PREFIX = CONTENT + AUTHORITY + "/";
   public static final Uri CAMPAIGNS_LOCAL = Uri.parse(PREFIX + Campaign.TABLE_LOCAL);
   public static final Uri CAMPAIGNS_REMOTE = Uri.parse(PREFIX + Campaign.TABLE_REMOTE);
+  public static final Uri CREATURES_LOCAL = Uri.parse(PREFIX + Creature.TABLE_LOCAL);
   public static final Uri CHARACTERS_LOCAL = Uri.parse(PREFIX + Character.TABLE_LOCAL);
   public static final Uri CHARACTERS_REMOTE = Uri.parse(PREFIX + Character.TABLE_REMOTE);
   public static final Uri SETTINGS = Uri.parse(PREFIX + Settings.TABLE);

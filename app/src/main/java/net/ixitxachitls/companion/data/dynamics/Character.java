@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -30,7 +31,6 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.Monster;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
@@ -47,36 +47,24 @@ import java.util.List;
 /**
  * Character represenatation.
  */
-public class Character extends StoredEntry<Data.CharacterProto> implements Comparable<Character> {
-  public static final String TYPE = "characters";
-  public static final String TABLE_LOCAL = TYPE + "_local";
-  public static final String TABLE_REMOTE = TYPE + "_remote";
-  private static final String TAG = "Characters";
+public class Character extends BaseCreature<Data.CharacterProto> implements Comparable<Character> {
+  public static final String TYPE = "character";
+  public static final String TABLE = "characters";
+  public static final String TABLE_LOCAL = TABLE + "_local";
+  public static final String TABLE_REMOTE = TABLE + "_remote";
+  private static final String TAG = "Character";
   public static final int NO_INITIATIVE = 200;
   private static final int MAX_HISTORY = 20;
 
-  private String campaignId = "";
   private String playerName = "";
-  private Optional<Monster> mRace = Optional.absent();
-  private Gender gender = Gender.UNKNOWN;
-  private int strength;
-  private int constitution;
-  private int dexterity;
-  private int intelligence;
-  private int wisdom;
-  private int charisma;
   private List<Level> levels = new ArrayList<>();
   private int xp = 0;
-  private int initiative = NO_INITIATIVE;
-  private int battleNumber = 0;
-  private List<Character.TimedCondition> conditions = new ArrayList<>();
   private List<Character.TimedCondition> conditionsHistory = new ArrayList<>();
 
   public Character(long id, String name, String campaignId, boolean local) {
-    super(id, Settings.get().getAppId() + "-" + id, name, local,
+    super(id, TYPE, name, local,
         local ? DataBaseContentProvider.CHARACTERS_LOCAL
-            : DataBaseContentProvider.CHARACTERS_REMOTE);
-    this.campaignId = campaignId;
+            : DataBaseContentProvider.CHARACTERS_REMOTE, campaignId);
   }
 
   public Optional<TimedCondition> getHistoryCondition(String text) {
@@ -87,10 +75,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return Optional.absent();
-  }
-
-  public String getCampaignId() {
-    return campaignId;
   }
 
   public String getRace() {
@@ -110,6 +94,16 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     return entryId;
+  }
+
+  @Override
+  public int getInitiative() {
+    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId).getValue();
+    if (campaign.isPresent() && campaign.get().getBattle().getNumber() != battleNumber) {
+      initiative = NO_INITIATIVE;
+    }
+
+    return super.getInitiative();
   }
 
   public void setCampaignId(String campaignId) {
@@ -195,10 +189,6 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
         && battleNumber == campaign.get().getBattle().getNumber();
   }
 
-  public int getInitiative() {
-    return initiative;
-  }
-
   public int initiativeModifier() {
     // TODO: this needs treatment of things like feats and items.
     return Ability.modifier(dexterity);
@@ -230,7 +220,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public static Character createNew(String campaignId) {
-    return new Character(0, "", campaignId, true);
+    return new Character(0, "", StoredEntries.sanitize(campaignId), true);
   }
 
   public Optional<Level> getLevel(int number) {
@@ -255,30 +245,9 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   @Override
   public Data.CharacterProto toProto() {
     Data.CharacterProto.Builder proto = Data.CharacterProto.newBuilder()
-        .setId(entryId)
-        .setName(name)
-        .setCampaignId(campaignId)
-        .setPlayer(playerName)
-        .setGender(gender.toProto())
-        .setAbilities(Data.CharacterProto.Abilities.newBuilder()
-            .setStrength(strength)
-            .setDexterity(dexterity)
-            .setConstitution(constitution)
-            .setIntelligence(intelligence)
-            .setWisdom(wisdom)
-            .setCharisma(charisma)
-            .build())
-        .setBattle(Data.CharacterProto.Battle.newBuilder()
-            .setInitiative(initiative)
-            .setNumber(battleNumber)
-            .addAllTimedCondition(convertConditions(conditions))
-            .build())
+        .setCreature(toCreatureProto())
         .addAllTimedConditionHistory(convertConditions(conditionsHistory))
         .setXp(xp);
-
-    if (mRace.isPresent()) {
-      proto.setRace(mRace.get().getName());
-    }
 
     for (Level level : levels) {
       proto.addLevel(level.toProto());
@@ -287,9 +256,9 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     return proto.build();
   }
 
-  private List<Data.CharacterProto.TimedCondition>
+  private List<Data.CreatureProto.TimedCondition>
   convertConditions(List<Character.TimedCondition> conditions) {
-    List<Data.CharacterProto.TimedCondition> protos = new ArrayList<>();
+    List<Data.CreatureProto.TimedCondition> protos = new ArrayList<>();
 
     for (Character.TimedCondition condition : conditions) {
       protos.add(condition.toProto());
@@ -299,22 +268,10 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
   }
 
   public static Character fromProto(long id, boolean local, Data.CharacterProto proto) {
-    Character character = new Character(id, proto.getName(), proto.getCampaignId(), local);
-    character.campaignId = proto.getCampaignId();
-    character.entryId =
-        proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
-    character.mRace = Entries.get().getMonsters().get(proto.getRace());
-    character.gender = Gender.fromProto(proto.getGender());
+    Character character = new Character(id, proto.getCreature().getName(),
+        proto.getCreature().getCampaignId(), local);
+    character.fromProto(proto.getCreature());
     character.playerName = proto.getPlayer();
-    character.strength = proto.getAbilities().getStrength();
-    character.dexterity = proto.getAbilities().getDexterity();
-    character.constitution = proto.getAbilities().getConstitution();
-    character.intelligence = proto.getAbilities().getIntelligence();
-    character.wisdom = proto.getAbilities().getWisdom();
-    character.charisma = proto.getAbilities().getCharisma();
-    character.initiative = proto.hasBattle() ? proto.getBattle().getInitiative() : NO_INITIATIVE;
-    character.battleNumber = proto.getBattle().getNumber();
-    character.conditions = convert(proto.getBattle().getTimedConditionList());
     character.conditionsHistory = convert(proto.getTimedConditionHistoryList());
     character.xp = proto.getXp();
 
@@ -329,10 +286,10 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     return character;
   }
 
-  private static List<TimedCondition> convert(List<Data.CharacterProto.TimedCondition> protos) {
+  private static List<TimedCondition> convert(List<Data.CreatureProto.TimedCondition> protos) {
     List<TimedCondition> conditions = new ArrayList<>();
 
-    for (Data.CharacterProto.TimedCondition proto : protos) {
+    for (Data.CreatureProto.TimedCondition proto : protos) {
       conditions.add(TimedCondition.fromProto(proto));
     }
 
@@ -403,7 +360,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
         conditionsHistory.subList(0, Math.min(conditionsHistory.size(), MAX_HISTORY));
   }
 
-  public static class TimedCondition extends DynamicEntry<Data.CharacterProto.TimedCondition> {
+  public static class TimedCondition extends DynamicEntry<Data.CreatureProto.TimedCondition> {
 
     private final int rounds;
     private final int endRound;
@@ -436,8 +393,8 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     }
 
     @Override
-    public Data.CharacterProto.TimedCondition toProto() {
-      return Data.CharacterProto.TimedCondition.newBuilder()
+    public Data.CreatureProto.TimedCondition toProto() {
+      return Data.CreatureProto.TimedCondition.newBuilder()
           .setRounds(rounds)
           .setEndRound(endRound)
           .addAllCharacterId(characterIds)
@@ -445,7 +402,7 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
           .build();
     }
 
-    public static TimedCondition fromProto(Data.CharacterProto.TimedCondition proto) {
+    public static TimedCondition fromProto(Data.CreatureProto.TimedCondition proto) {
       return new TimedCondition(proto.getRounds(), proto.getEndRound(), proto.getCharacterIdList(),
           proto.getText());
     }
@@ -511,19 +468,24 @@ public class Character extends StoredEntry<Data.CharacterProto> implements Compa
     return level;
   }
 
-  public Optional<Image> loadImage() {
-    return Images.get(isLocal()).load(Character.TYPE, getCharacterId());
+  public LiveData<Optional<Image>> loadImage() {
+    return Images.get(isLocal()).getImage(Character.TABLE, getCharacterId());
   };
 
   @Override
   public boolean store() {
     if (playerName.isEmpty()) {
+
       playerName = Settings.get().getNickname();
     }
 
     boolean changed = super.store();
     if (changed) {
-      Characters.update(this);
+      if (Characters.has(this)) {
+        Characters.update(this);
+      } else {
+        Characters.add(this);
+      }
       if (isLocal()) {
         CompanionSubscriber.get().publish(this);
       }

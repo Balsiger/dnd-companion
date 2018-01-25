@@ -36,6 +36,8 @@ import com.google.common.base.Preconditions;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Creature;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -117,8 +119,12 @@ public class MonsterInitiativeDialog extends Dialog {
       return;
     }
 
-    campaign.get().getBattle().addMonster(name.getText().toString(),
+    Creature creature = new Creature(0, name.getText(), campaign.get().getCampaignId(),
         modifier.get().getValue() - 20);
+    creature.store();
+    Creatures.add(creature);
+    //campaign.get().getBattle().addMonster(name.getText(),
+    //    modifier.get().getValue() - 20);
     save();
   }
 

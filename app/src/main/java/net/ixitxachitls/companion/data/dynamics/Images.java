@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,6 +35,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Storage for all dynamic images of entries.
@@ -46,6 +50,7 @@ public class Images {
 
   private final Context context;
   private final boolean isLocal;
+  private final Map<String, MutableLiveData<Optional<Image>>> imagesByKey = new HashMap<>();
 
   protected Images(Context context, boolean isLocal) {
     this.context = context;
@@ -86,7 +91,32 @@ public class Images {
     return isLocal;
   }
 
-  public Optional<Image> load(String type, String id) {
+  public boolean hasImage(String id) {
+    return imagesByKey.containsKey(id);
+  }
+
+  public LiveData<Optional<Image>> getImage(String type, String id) {
+    if (!imagesByKey.containsKey(id)) {
+      MutableLiveData<Optional<Image>> image = new MutableLiveData<>();
+      image.setValue(load(type, id));
+      imagesByKey.put(id, image);
+    }
+
+    return imagesByKey.get(id);
+  }
+
+  public static void update(boolean isLocal, Image image) {
+    Images.get(isLocal).update(image);
+  }
+
+  public void update(Image image) {
+    MutableLiveData<Optional<Image>> liveImage = imagesByKey.get(image.getId());
+    if (liveImage != null) {
+      liveImage.setValue(Optional.of(image));
+    }
+  }
+
+  private Optional<Image> load(String type, String id) {
     File file = file(type, id);
     try {
       Bitmap bitmap = BitmapFactory.decodeStream(new FileInputStream(file));
@@ -112,10 +142,14 @@ public class Images {
   public void remove(String type, String id) {
     File file = file(type, id);
     file.delete();
+
+    if (imagesByKey.containsKey(id)) {
+      imagesByKey.get(id).setValue(Optional.absent());
+    }
   }
 
   public void publishImageFor(Character character) {
-    Optional<Image> image = load(Character.TYPE, character.getCharacterId());
+    Optional<Image> image = load(Character.TABLE, character.getCharacterId());
     if (image.isPresent()) {
       image.get().publish(character.getCampaignId());
     }

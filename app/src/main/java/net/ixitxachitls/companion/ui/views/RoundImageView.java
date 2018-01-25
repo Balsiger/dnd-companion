@@ -67,6 +67,10 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     super.setImageDrawable(drawable);
   }
 
+  public void clearImage() {
+    super.setImageResource(R.drawable.ic_person_black_48dp);
+  }
+
   private Bitmap computeBitmap(Drawable drawable) {
     Bitmap bitmap = Bitmap.createBitmap(width > 0 ? width : Image.MAX,
         height > 0 ? height : Image.MAX, Bitmap.Config.ARGB_8888);

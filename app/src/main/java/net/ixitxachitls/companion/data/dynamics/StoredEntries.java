@@ -88,12 +88,8 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
     return Optional.fromNullable(entriesById.get(sanitize(id)));
   }
 
-  protected String sanitize(String id) {
-    return sanitize(id, isLocal());
-  }
-
-  protected static String sanitize(String id, boolean isLocal) {
-    if (!isLocal && id.startsWith(REMOTE)) {
+  protected static String sanitize(String id) {
+    if (id.startsWith(REMOTE)) {
       return id.substring(REMOTE.length());
     }
 
@@ -111,7 +107,6 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
     }
 
     entriesById.put(entry.getEntryId(), entry);
-
   }
 
   protected void remove(E entry) {

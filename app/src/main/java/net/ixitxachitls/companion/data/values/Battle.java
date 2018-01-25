@@ -26,11 +26,13 @@ import com.google.common.base.Optional;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
@@ -42,11 +44,13 @@ public class Battle {
 
   private final Campaign campaign;
   private int number;
-  private final List<Combatant> combatants = new ArrayList<>();
-  private BattleStatus status;
+  private String currentCreatureId = "";
   private int turn;
-  private int currentCombatantIndex = 0;
+  private BattleStatus status;
   private Optional<String> lastMonsterName = Optional.absent();
+
+  private final List<Combatant> combatants = new ArrayList<>();
+  private int currentCombatantIndex = 0;
 
   public Battle(Campaign campaign) {
     this(campaign, 0, BattleStatus.ENDED, 0, 0, Collections.emptyList());
@@ -125,10 +129,15 @@ public class Battle {
     campaign.store();
   }
 
-
-
-  public int getCurrentCombatantIndex() {
-    return currentCombatantIndex;
+  private void resetCharacterInitiatives() {
+    // Reset initiative for all characters.
+    for (String id : campaign.getCharacterIds().getValue()) {
+      Optional<Character> character = Characters.getCharacter(id).getValue();
+      if (character.isPresent()) {
+        combatants.add(new Combatant(id, character.get().getName(), Character.NO_INITIATIVE, false,
+            false));
+      }
+    }
   }
 
   public Combatant getCurrentCombatant() {
@@ -143,7 +152,8 @@ public class Battle {
     return new Combatant("", "Invalid", Character.NO_INITIATIVE, true, false);
   }
 
-  public void battle() {
+  public void startBattle(List<String> combatantIds) {
+    //currentCreatureId = firstCreatureId;
     turn = 0;
     status = BattleStatus.SURPRISED;
     currentCombatantIndex = 0;
@@ -196,6 +206,18 @@ public class Battle {
       }
     }
     combatants.clear();
+
+    for (String characterId : campaign.getCharacterIds().getValue()) {
+      Optional<Character> character = Characters.getCharacter(characterId).getValue();
+      if (character.isPresent()) {
+        character.get().clearInitiative();
+      }
+    }
+
+    for (String creatureId : campaign.getCreatureIds().getValue()) {
+      Creatures.remove(creatureId);
+    }
+
     lastMonsterName = Optional.absent();
     campaign.store();
   }
@@ -212,7 +234,7 @@ public class Battle {
   public void start() {
     status = BattleStatus.STARTING;
     number++;
-    combatants.clear();
+    resetCharacterInitiatives();
     campaign.store();
   }
 
@@ -342,6 +364,50 @@ public class Battle {
     public static Combatant fromProto(Data.CampaignProto.Battle.Combatant proto) {
       return new Combatant(proto.getId(), proto.getName(), proto.getInitiativeModifier(),
           proto.getMonster(), proto.getWaiting());
+    }
+  }
+
+  public static class CharacterBattleComparator implements Comparator<Character> {
+    private Campaign campaign;
+
+    public CharacterBattleComparator(Campaign campaign) {
+      this.campaign = campaign;
+    }
+
+    @Override
+    public int compare(Character first, Character second) {
+      if (first.getCharacterId().equals(second.getCharacterId())) {
+        return 0;
+      }
+
+      int compare = Integer.compare(first.getInitiative(), second.getInitiative());
+      if (compare != 0) {
+        return compare;
+      }
+
+      // If initiative is the same, prefer the higher dexterity.
+      compare = Integer.compare(second.getDexterity(), first.getDexterity());
+      if (compare != 0) {
+        return compare;
+      }
+
+      // As DEX is also the same, use a pseudo random value that is stable for a battle
+      // for comparison.
+      if (campaign.getBattle().getNumber() > 0) {
+        compare = Integer.compare(
+            first.getName().hashCode() % campaign.getBattle().getNumber(),
+            second.getName().hashCode() % campaign.getBattle().getNumber());
+        if (compare != 0) {
+          return compare;
+        }
+      }
+
+      return first.getName().compareTo(second.getName());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+      return false;
     }
   }
 }

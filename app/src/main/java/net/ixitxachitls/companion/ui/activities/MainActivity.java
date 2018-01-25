@@ -132,7 +132,7 @@ public class MainActivity extends CompanionActivity {
         files.add(new DriveStorage.BinaryFile(character.getName() + ".character",
             character.getCharacterId(), "application/x-protobuf", character.toProto().toByteArray()));
         Optional<InputStream> image =
-            Images.local().read(Character.TYPE, character.getCharacterId());
+            Images.local().read(Character.TABLE, character.getCharacterId());
         if (image.isPresent()) {
           files.add(new DriveStorage.StreamFile(character.getName() + ".character.jpg",
               character.getCharacterId(), "image/jpeg", image.get()));
@@ -249,6 +249,9 @@ public class MainActivity extends CompanionActivity {
           driveStorage.start(new DriveStorage.Import(((DriveId) data.getParcelableExtra(
               OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID)).asDriveFolder()));
         }
+
+      default:
+        super.onActivityResult(requestCode, resultCode, data);
     }
   }
 }

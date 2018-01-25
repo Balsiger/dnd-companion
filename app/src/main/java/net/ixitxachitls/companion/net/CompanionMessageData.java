@@ -89,7 +89,7 @@ public class CompanionMessageData {
   }
 
   public Character getCharacter() {
-    return Character.fromProto(Characters.getRemoteIdFor(data.getCharacter().getId()),
+    return Character.fromProto(Characters.getRemoteIdFor(data.getCharacter().getCreature().getId()),
         false, data.getCharacter());
   }
 
@@ -147,7 +147,8 @@ public class CompanionMessageData {
         return data.getCampaign().getId().equals(other.data.getCampaign().getId());
 
       case CHARACTER:
-        return data.getCharacter().getId().equals(other.data.getCharacter().getId());
+        return data.getCharacter().getCreature().getId().equals(
+            other.data.getCharacter().getCreature().getId());
 
       case CHARACTER_DELETE:
         return data.getCharacterDelete().equals(other.data.getCharacterDelete());
@@ -194,7 +195,7 @@ public class CompanionMessageData {
         return message + data.getCampaignDelete();
 
       case CHARACTER:
-        return message + data.getCharacter().getName();
+        return message + data.getCharacter().getCreature().getName();
 
       case CHARACTER_DELETE:
         return message + data.getCharacterDelete();

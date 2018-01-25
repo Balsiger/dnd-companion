@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-{2017} Peter Balsiger
+ * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
  * This file is part of the Player Companion.
@@ -40,47 +40,45 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
- * Data storage for various characters.
+ * Data storage for all creatures (that are not also characters).
  */
-public class CharactersData extends StoredEntries<Character> {
-  private static final String TAG = "CharactersData";
+public class CreaturesData extends StoredEntries<Creature> {
+  private static final String TAG = "CreaturesData";
 
-  private final Map<String, MutableLiveData<Optional<Character>>> characterById =
+  private final Map<String, MutableLiveData<Optional<Creature>>> creatureById =
       new ConcurrentHashMap<>();
-  private final Map<String, MutableLiveData<ImmutableList<String>>> charactersByCampaignId =
+  private final Map<String, MutableLiveData<ImmutableList<String>>> creaturesByCampaignId =
       new ConcurrentHashMap<>();
 
-  public CharactersData(Context context, boolean local) {
-    super(context, local ?
-            DataBaseContentProvider.CHARACTERS_LOCAL : DataBaseContentProvider.CHARACTERS_REMOTE,
-        local);
+  public CreaturesData(Context context) {
+    super(context, DataBaseContentProvider.CREATURES_LOCAL, true);
   }
 
-  public LiveData<Optional<Character>> getCharacter(String characterId) {
-    if (characterById.containsKey(characterId)) {
-      return characterById.get(characterId);
+  public LiveData<Optional<Creature>> getCreature(String creatureId) {
+    if (creatureById.containsKey(creatureId)) {
+      return creatureById.get(creatureId);
     }
 
-    MutableLiveData<Optional<Character>> character = new MutableLiveData<>();
-    characterById.put(characterId, character);
-    character.setValue(get(characterId));
+    MutableLiveData<Optional<Creature>> creature = new MutableLiveData<>();
+    creatureById.put(creatureId, creature);
+    creature.setValue(get(creatureId));
 
-    return character;
+    return creature;
   }
 
-  public boolean hasCharacter(String characterId) {
-    return has(characterId);
+  public boolean hasCreature(String creatureId) {
+    return has(creatureId);
   }
 
-  public List<Character> getCharacters(String campaignId) {
+  public List<Creature> getCreatures(String campaignId) {
     return getAll().stream()
         .filter(c -> c.getCampaignId().equals(campaignId))
         .collect(Collectors.toList());
   }
 
-  public boolean hasCharacterForCampaign(String campaignId) {
-    for (Character character : getAll()) {
-      if (character.getCampaignId().equals(campaignId)) {
+  public boolean hasCreatureForCampaign(String campaignId) {
+    for (Creature creature : getAll()) {
+      if (creature.getCampaignId().equals(campaignId)) {
         return true;
       }
     }
@@ -88,53 +86,52 @@ public class CharactersData extends StoredEntries<Character> {
     return false;
   }
 
-  void update(Character character) {
-    if (characterById.containsKey(character.getCharacterId())) {
-      characterById.get(character.getCharacterId()).setValue(Optional.of(character));
+  void update(Creature creature) {
+    if (creatureById.containsKey(creature.getCreatureId())) {
+      creatureById.get(creature.getCreatureId()).setValue(Optional.of(creature));
     }
   }
 
   @Override
-  public void add(Character character) {
-    super.add(character);
+  public void add(Creature creature) {
+    super.add(creature);
 
     // We need to check for null since ids will be setup only after the super constructor is run.
-    if (charactersByCampaignId != null) {
+    if (creaturesByCampaignId != null) {
       MutableLiveData<ImmutableList<String>> ids =
-          charactersByCampaignId.get(character.getCampaignId());
+          creaturesByCampaignId.get(creature.getCampaignId());
       if (ids == null) {
         ids = new MutableLiveData<>();
-        charactersByCampaignId.put(character.getCampaignId(), ids);
+        creaturesByCampaignId.put(creature.getCampaignId(), ids);
       }
 
-      LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids(character.getCampaignId())));
+      LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids(creature.getCampaignId())));
     }
   }
 
   public List<String> ids(String campaignId) {
-    return getCharacters(campaignId).stream()
-        .map(Character::getCharacterId)
+    return getCreatures(campaignId).stream()
+        .map(Creature::getCreatureId)
         .collect(Collectors.toList());
   }
 
-  public List<Character> orphaned() {
+  public List<Creature> orphaned() {
     return getAll().stream()
-        .filter(CharactersData::isOrphaned)
+        .filter(CreaturesData::isOrphaned)
         .collect(Collectors.toList());
   }
 
-  private static boolean isOrphaned(Character character) {
-    return character.isLocal()
-        && character.getCampaignId().equals(Campaigns.defaultCampaign.getCampaignId())
-        || (!Campaigns.has(character.getCampaignId(), true)
-        && !Campaigns.has(character.getCampaignId(), false));
+  private static boolean isOrphaned(Creature creature) {
+    return creature.getCampaignId().equals(Campaigns.defaultCampaign.getCampaignId())
+        || (!Campaigns.has(creature.getCampaignId(), true)
+            && !Campaigns.has(creature.getCampaignId(), false));
   }
 
   @Override
-  protected Optional<Character> parseEntry(long id, byte[] blob) {
+  protected Optional<Creature> parseEntry(long id, byte[] blob) {
     try {
       return Optional.of(
-          Character.fromProto(id, isLocal(), Data.CharacterProto.getDefaultInstance().getParserForType()
+          Creature.fromProto(id, Data.CreatureProto.getDefaultInstance().getParserForType()
               .parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
       Log.e(TAG, "Cannot parse proto for campaign: " + e);

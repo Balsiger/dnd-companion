@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.google.protobuf.MessageLite;
@@ -44,15 +45,22 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
   private static final Map<String, MessageLite> PROTO_CACHE = new ConcurrentHashMap<>();
 
   protected long id;
+  protected String type;
   protected String entryId;
   private final Uri dbUrl;
   private final boolean local;
 
-  protected StoredEntry(long id, String entryId, String name, boolean local, Uri dbUrl) {
+  protected StoredEntry(long id, String type, String name, boolean local, Uri dbUrl) {
+    this(id, type, null, name, local, dbUrl);
+  }
+
+  protected StoredEntry(long id, String type, @Nullable String entryId, String name, boolean local,
+                        Uri dbUrl) {
     super(name);
 
     this.id = id;
-    this.entryId = entryId;
+    this.type = type;
+    this.entryId = entryId == null ? createId() : entryId;
     this.local = local;
     this.dbUrl = dbUrl;
   }
@@ -91,19 +99,20 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
 
   public boolean store() {
     P proto = toProto();
-    String key = protoCacheKey();
-    if (proto.equals(PROTO_CACHE.get(key))) {
-      Log.d(TAG, "no changes for " + getClass().getSimpleName() + "/" + getName());
-      return false;
-    }
 
     if (id == 0) {
       Uri row = Entries.getContext().getContentResolver().insert(dbUrl, toValues(proto));
       id = ContentUris.parseId(row);
       if (isLocal()) {
-        entryId = Settings.get().getAppId() + "-" + id;
+        entryId = createId();
       }
       proto = toProto();
+    }
+
+    String key = protoCacheKey();
+    if (proto.equals(PROTO_CACHE.get(key))) {
+      Log.d(TAG, "no changes for " + getClass().getSimpleName() + "/" + getName());
+      return false;
     }
 
     // Store it (again if id made us change the entry id above).
@@ -113,6 +122,10 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     PROTO_CACHE.put(key, proto);
     Log.d(TAG, "stored changes for " + getClass().getSimpleName() + "/" + getName());
     return true;
+  }
+
+  private String createId() {
+    return type + "-" + Settings.get().getAppId() + "-" + id;
   }
 
   private String protoCacheKey() {

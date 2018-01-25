@@ -96,6 +96,10 @@ public class Campaigns {
     return campaigns;
   }
 
+  public static boolean has(Campaign campaign) {
+    return has(campaign.getCampaignId(), campaign.isLocal());
+  }
+
   public static boolean has(String campaignId, boolean isLocal) {
     if (isLocal) {
       return local.has(campaignId);

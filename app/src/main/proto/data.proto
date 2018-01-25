@@ -29,7 +29,10 @@ message CampaignProto {
   message Battle {
     BattleStatus status = 1;
     int32 turn = 2;
-    repeated string initiative_order = 3;
+    int32 number = 3;
+    repeated string combatant_id = 4;
+
+    repeated string initiative_order = 10;
 
     message Combatant {
       string name = 1;
@@ -38,31 +41,19 @@ message CampaignProto {
       bool waiting = 4;
       string id = 5;
     }
-    repeated Combatant combatant = 4;
-    int32 current_combatant_index = 5;
-    int32 number = 6;
+    repeated Combatant combatant = 11;
+    int32 current_combatant_index = 12;
   }
   Battle battle = 8;
   int32 next_battle_number = 9;
 }
 
-message CharacterProto {
+message CreatureProto {
   string id = 1;
   string name = 2;
-  string race = 3;
-  Gender gender = 4;
-
-  message Level {
-    string name = 1;
-    int32 hp = 2;
-    repeated ParametrizedEntityProto quality = 3;
-    repeated ParametrizedEntityProto feat = 4;
-    Ability ability_increase = 5;
-    repeated string spell_known = 6;
-  }
-  repeated Level level = 5;
-  string campaign_id = 6;
-  string player = 7;
+  string campaign_id = 3;
+  string race = 4;
+  Gender gender = 5;
 
   message Abilities {
     int32 strength = 1;
@@ -72,7 +63,7 @@ message CharacterProto {
     int32 wisdom = 5;
     int32 charisma = 6;
   }
-  Abilities abilities = 8;
+  Abilities abilities = 6;
 
   message TimedCondition {
     int32 rounds = 1;
@@ -86,10 +77,25 @@ message CharacterProto {
     int32 number = 2;
     repeated TimedCondition timed_condition = 3;
   }
-  Battle battle = 9;
+  Battle battle = 7;
+}
 
-  repeated TimedCondition timed_condition_history = 10;
-  int32 xp = 11;
+message CharacterProto {
+  CreatureProto creature = 1;
+
+  message Level {
+    string name = 1;
+    int32 hp = 2;
+    repeated ParametrizedEntityProto quality = 3;
+    repeated ParametrizedEntityProto feat = 4;
+    Ability ability_increase = 5;
+    repeated string spell_known = 6;
+  }
+  repeated Level level = 2;
+  string player = 3;
+
+  repeated CreatureProto.TimedCondition timed_condition_history = 4;
+  int32 xp = 5;
 }
 
 message CompanionMessageProto {

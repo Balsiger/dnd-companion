@@ -38,6 +38,7 @@ import java.util.Date;
  */
 public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
+  public static final String TYPE = "message";
   public static final String TABLE = "messages";
   private static final long LATE_MS = 60 * 1_000; // 1 minute
 
@@ -52,8 +53,8 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
   }
 
   private ScheduledMessage(long id, State state, long lastInteraction, CompanionMessage message) {
-    super(id, Settings.get().getAppId() + "-" + message.getMessageId(),
-        "message", true, DataBaseContentProvider.MESSAGES);
+    super(id, TYPE, TYPE + "-" + Settings.get().getAppId() + "-" + message.getMessageId(), TYPE,
+        true, DataBaseContentProvider.MESSAGES);
 
     this.message = message;
     this.state = state;

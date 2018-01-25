@@ -28,7 +28,6 @@ public class Ids {
   private Ids() {}
 
   public static String extractServerId(String id) {
-    return id.replaceAll("-\\d+$", "");
+    return id.replaceAll("-\\d+$", "").replaceAll("^.*?-", "");
   }
-
 }

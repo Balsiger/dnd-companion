@@ -46,9 +46,10 @@ import java.util.List;
 public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   // Constants.
-  public static final String TYPE = "campaigns";
-  public static final String TABLE_LOCAL = TYPE + "_local";
-  public static final String TABLE_REMOTE = TYPE + "_remote";
+  public static final String TYPE = "campaign";
+  public static final String TABLE = "campaigns";
+  public static final String TABLE_LOCAL = TABLE + "_local";
+  public static final String TABLE_REMOTE = TABLE + "_remote";
   public static final int DEFAULT_CAMPAIGN_ID = -1;
 
   // External Data.
@@ -63,7 +64,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   private int nextBattleNumber = 0;
 
   private Campaign(long id, String name, boolean local) {
-    super(id, Settings.get().getAppId() + "-" + id, name, local,
+    super(id, TYPE, name, local,
         local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE);
 
     world = Entries.get().getWorlds().get("Generic").get();
@@ -134,6 +135,10 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public LiveData<ImmutableList<String>> getCharacterIds() {
     return Characters.getCampaignCharacterIds(getCampaignId());
+  }
+
+  public LiveData<ImmutableList<String>> getCreatureIds() {
+    return Creatures.getCampaignCreatureIds(getCampaignId());
   }
 
   public CampaignDate getDate() {
@@ -243,7 +248,12 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   public boolean store() {
     boolean changed = super.store();
     if (changed) {
-      Campaigns.update(this);
+      if (Campaigns.has(this)) {
+        Campaigns.update(this);
+      } else {
+        Campaigns.add(this);
+      }
+
       if (isLocal() && published) {
         CompanionPublisher.get().publish(this);
       }

@@ -237,9 +237,10 @@ public class CharacterFragment extends CompanionFragment {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        Image characterImage = new Image(Character.TYPE, character.get().getCharacterId(), bitmap);
+        Image characterImage = new Image(Character.TABLE, character.get().getCharacterId(), bitmap);
         characterImage.saveAndPublish(character.get().isLocal(), character.get().getCampaignId());
         image.setImageBitmap(characterImage.getBitmap());
+        Images.update(character.get().isLocal(), characterImage);
       } catch (IOException e) {
         Log.e(TAG, "Cannot load image bitmap", e);
         e.printStackTrace();
@@ -275,10 +276,12 @@ public class CharacterFragment extends CompanionFragment {
 
     campaign = Campaigns.getCampaign(campaign.get().getCampaignId()).getValue();
 
-    Optional<Image> characterImage = Images.get(character.get().isLocal()).load(
-        Character.TYPE, character.get().getCharacterId());
+    Optional<Image> characterImage = Images.get(character.get().isLocal()).getImage(
+        Character.TABLE, character.get().getCharacterId()).getValue();
     if (characterImage.isPresent()) {
       image.setImageBitmap(characterImage.get().getBitmap());
+    } else {
+      image.clearImage();
     }
     title.setTitle(character.get().getName());
     title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());

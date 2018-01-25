@@ -26,12 +26,12 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorRes;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -41,6 +41,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 public class ChipView extends LinearLayout {
 
   private static final String TAG = "ChipView";
+
   private final String dataId;
   private final int chipColor;
   private final int backgroundColor;
@@ -77,8 +78,13 @@ public class ChipView extends LinearLayout {
     addView(view);
   }
 
-  public void update(Campaign campaign) {
+  public void addTo(ViewGroup group) {
+    ViewGroup parent = (ViewGroup) getParent();
+    if (parent != null) {
+      parent.removeView(this);
+    }
 
+    group.addView(this);
   }
 
   public void disabled() {

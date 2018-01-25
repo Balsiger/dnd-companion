@@ -33,6 +33,7 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.net.ClientMessageProcessor;
 import net.ixitxachitls.companion.net.CompanionMessage;
@@ -71,6 +72,7 @@ public class CompanionApplication extends MultiDexApplication
     Images.load(this);
     Campaigns.load(this);
     Characters.load(this);
+    Creatures.load(this);
 
     messageHandler = new Handler();
     messageChecker = new MessageChecker();

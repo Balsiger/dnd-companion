@@ -55,7 +55,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private MutableLiveData<Boolean> showStatus = new MutableLiveData<>();
 
   private Settings(String name) {
-    super(ID, String.valueOf(ID), name, true, DataBaseContentProvider.SETTINGS);
+    super(ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
 
     showStatus.setValue(false);
   }

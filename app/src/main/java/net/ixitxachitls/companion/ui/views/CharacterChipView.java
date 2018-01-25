@@ -24,49 +24,61 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
+import android.view.View;
 
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 /**
  * A chip displaying character information.
  */
-public class CharacterChipView extends ChipView {
+public class CharacterChipView extends CreatureChipView {
 
   private static final String TAG = "CharChipView";
 
-  public CharacterChipView(Context context, Character character) {
-    super(context, character.getCharacterId(), character.getName(), "", R.color.character,
-        R.color.characterDark);
+  private Character character;
 
-    Optional<Image> characterImage = character.loadImage();
-    if (characterImage.isPresent()) {
-      BitmapDrawable drawable = new BitmapDrawable(getResources(),
-          characterImage.get().getBitmap());
-      image.setImageDrawable(drawable);
-    }
+  public CharacterChipView(Context context, Character character) {
+    super(context, character, R.color.character, R.color.characterDark);
+
+    this.character = character;
 
     if (character.isLocal()) {
       name.backgroundColor(R.color.characterLight);
       subtitle.backgroundColor(R.color.characterLight);
     }
+
+    setOnClickListener(this::onClick);
   }
 
-  public void update(Optional<Character> character) {
+  public void update(Character character) {
+    this.character = character;
+
     Log.d(TAG, "updating character " + character);
-    if (character.isPresent()) {
-      name.text(character.get().getName());
-      if (character.get().getInitiative() == Character.NO_INITIATIVE) {
-        setSubtitle("");
-      } else {
-        subtitle.text(String.valueOf(character.get().getInitiative()));
-      }
-    } else {
-      name.text("--deleted--");
+    this.character = character;
+    name.text(character.getName());
+    if (character.getInitiative() == Character.NO_INITIATIVE) {
       setSubtitle("");
+    } else {
+      setSubtitle(String.valueOf(character.getInitiative()));
     }
+
+    // TODO(merlin): Replace this with the stable sorting order in campaign/battle.
+    sortKey = sortKey(character.getInitiative(), character.getDexterity(),
+        character.getName().hashCode() % ((character.getBattleNumber() + 1) % 100));
+  }
+
+  public void update(Image characterImage) {
+    BitmapDrawable drawable = new BitmapDrawable(getResources(),
+        characterImage.getBitmap());
+      image.setImageDrawable(drawable);
+  }
+
+  private void onClick(View view) {
+    CompanionFragments.get().showCharacter(character, Optional.of(view));
   }
 }

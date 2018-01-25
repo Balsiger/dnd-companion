@@ -67,12 +67,24 @@ public class Characters {
     return remote.getCharacter(characterId);
   }
 
+  public static boolean has(Character character) {
+    return has(character.getCharacterId(), character.isLocal());
+  }
+
+  public static boolean has(String characterId, boolean isLocal) {
+    if (isLocal) {
+      return local.has(characterId);
+    }
+
+    return remote.has(characterId);
+  }
+
   public static boolean hasLocalCharacterForCampaign(String campaignId) {
     return local.hasCharacterForCampaign(campaignId);
   }
 
   public static LiveData<ImmutableList<String>> getCampaignCharacterIds(String campaignId) {
-    campaignId = StoredEntries.sanitize(campaignId, false);
+    campaignId = StoredEntries.sanitize(campaignId);
     if (characterIdsByCampaignId.containsKey(campaignId)) {
       return characterIdsByCampaignId.get(campaignId);
     }
@@ -170,7 +182,7 @@ public class Characters {
       }
     }
 
-    Images.get(character.isLocal()).remove(Character.TYPE, character.getCharacterId());
+    Images.get(character.isLocal()).remove(Character.TABLE, character.getCharacterId());
   }
 
   // Publishing characters.
@@ -202,21 +214,21 @@ public class Characters {
 
   private static void loadLocal(Context context) {
     if (local != null) {
-      Log.d("Characters", "local characters already loaded");
+      Log.d(TAG, "local characters already loaded");
       return;
     }
 
-    Log.d("Characters", "loading local characters");
+    Log.d(TAG, "loading local characters");
     local = new CharactersData(context, true);
   }
 
   private static void loadRemote(Context context) {
     if (remote != null) {
-      Log.d("Characters", "remote characters already loaded");
+      Log.d(TAG, "remote characters already loaded");
       return;
     }
 
-    Log.d("Characters", "loading remote characters");
+    Log.d(TAG, "loading remote characters");
     remote = new CharactersData(context, false);
   }
 
