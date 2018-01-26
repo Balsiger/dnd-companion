@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.util;
 
+import android.util.Log;
+
 import java.util.Random;
 
 /**
@@ -85,6 +87,8 @@ public class Dice {
   }
 
   private static int dX(int dice) {
-    return RANDOM.nextInt(dice) + 1;
+    int number = RANDOM.nextInt(dice) + 1;
+    Log.d("Dice", "d" + dice + " = " + number);
+    return number;
   }
 }

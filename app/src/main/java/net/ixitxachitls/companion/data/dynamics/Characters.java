@@ -84,7 +84,7 @@ public class Characters {
   }
 
   public static LiveData<ImmutableList<String>> getCampaignCharacterIds(String campaignId) {
-    campaignId = StoredEntries.sanitize(campaignId);
+    //campaignId = StoredEntries.sanitize(campaignId);
     if (characterIdsByCampaignId.containsKey(campaignId)) {
       return characterIdsByCampaignId.get(campaignId);
     }

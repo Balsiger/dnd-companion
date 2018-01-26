@@ -23,52 +23,44 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.support.annotation.ColorRes;
-import android.support.annotation.NonNull;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Creature;
+import net.ixitxachitls.companion.data.enums.BattleStatus;
 
 /**
  * Chip view for a creature (monster).
  */
-public class CreatureChipView extends ChipView  implements Comparable<CreatureChipView> {
-
-  @ColorRes private int backgroundColor;
-  protected int sortKey;
+public class CreatureChipView extends ChipView {
 
   public CreatureChipView(Context context, Creature creature) {
-    this(context, creature, R.color.monster, R.color.monsterDark);
-
-    this.sortKey = sortKey(creature.getInitiative(), 0, 0);
+    this(context, creature, R.color.monsterDark, R.color.monsterLight);
   }
 
-  public CreatureChipView(Context context, BaseCreature creature, @ColorRes int chipColor,
-                          @ColorRes int backgroundColor) {
+  protected CreatureChipView(Context context, BaseCreature creature, @ColorRes int chipColor,
+                          @ColorRes int higlightColor) {
     super(context, creature.getCreatureId(), creature.getName(), "init " + creature.getInitiative(),
-        chipColor, backgroundColor);
-
-    this.backgroundColor = backgroundColor;
+        chipColor, higlightColor);
   }
 
-  public void setBattleMode(boolean inBattle) {
-    if (inBattle) {
-      setBackground(R.color.battleDark);
+  public String getCreatureId() {
+    return getDataId();
+  }
+
+  public void setBattleMode(BattleStatus inBattle) {
+    if (inBattle == BattleStatus.ENDED) {
+      setBackground(R.color.cell);
+      setSubtitle("");
     } else {
-      setBackground(backgroundColor);
+      setBackground(R.color.battleDark);
+      if (inBattle != BattleStatus.STARTING) {
+        setSubtitle("")
+      }
     }
   }
 
   protected static int sortKey(int initiative, int dexterity, int random) {
     return 1_00_00 * initiative + 1_00 * dexterity + random;
-  }
-
-  @Override
-  public int compareTo(@NonNull CreatureChipView other) {
-    if (this.getDataId().equals(other.getDataId())) {
-      return 0;
-    }
-
-    return Integer.compare(other.sortKey, sortKey);
   }
 }

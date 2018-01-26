@@ -30,19 +30,8 @@ message CampaignProto {
     BattleStatus status = 1;
     int32 turn = 2;
     int32 number = 3;
-    repeated string combatant_id = 4;
-
-    repeated string initiative_order = 10;
-
-    message Combatant {
-      string name = 1;
-      int32 initiative_modifier = 2;
-      bool monster = 3;
-      bool waiting = 4;
-      string id = 5;
-    }
-    repeated Combatant combatant = 11;
-    int32 current_combatant_index = 12;
+    repeated string creature_id = 4;
+    int32 current_creature_index = 5;
   }
   Battle battle = 8;
   int32 next_battle_number = 9;

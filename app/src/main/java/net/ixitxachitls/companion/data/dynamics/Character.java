@@ -43,6 +43,7 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Character represenatation.
@@ -55,6 +56,7 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   private static final String TAG = "Character";
   public static final int NO_INITIATIVE = 200;
   private static final int MAX_HISTORY = 20;
+  private static final Random RANDOM = new Random();
 
   private String playerName = "";
   private List<Level> levels = new ArrayList<>();
@@ -118,18 +120,10 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     this.gender = gender;
   }
 
-  public int getStrength() {
-    return strength;
-  }
-
   public void setStrength(int strength) {
     if (this.strength != strength) {
       this.strength = strength;
     }
-  }
-
-  public int getConstitution() {
-    return constitution;
   }
 
   public void setConstitution(int constitution) {
@@ -138,18 +132,10 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     }
   }
 
-  public int getDexterity() {
-    return dexterity;
-  }
-
   public void setDexterity(int dexterity) {
     if (this.dexterity != dexterity) {
       this.dexterity = dexterity;
     }
-  }
-
-  public int getIntelligence() {
-    return intelligence;
   }
 
   public void setIntelligence(int intelligence) {
@@ -158,18 +144,10 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     }
   }
 
-  public int getWisdom() {
-    return wisdom;
-  }
-
   public void setWisdom(int wisdom) {
     if (this.wisdom != wisdom) {
       this.wisdom = wisdom;
     }
-  }
-
-  public int getCharisma() {
-    return charisma;
   }
 
   public void setCharisma(int charisma) {
@@ -196,6 +174,7 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
 
   public void setBattle(int initiative, int number) {
     this.initiative = initiative;
+    this.initiativeRandom = RANDOM.nextInt(100_000);
     this.battleNumber = number;
     this.conditions.clear();
     store();

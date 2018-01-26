@@ -38,8 +38,10 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
+import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Dice;
 
 /**
  * Dialog to enter monster initiative stats.
@@ -48,7 +50,6 @@ public class MonsterInitiativeDialog extends Dialog {
 
   private static final String ARG_CAMPAIGN_ID = "campaign-id";
   private static final String ARG_MONSTER_ID = "monster-id";
-  private static final String DEFAULT_NAME = "Monsters";
 
   private Optional<Campaign> campaign = Optional.absent();
   private int monsterId;
@@ -87,14 +88,8 @@ public class MonsterInitiativeDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     name = EditTextWrapper.wrap(view, R.id.name);
-    name.text(makeName()).onClick(this::edit).lineColor(R.color.monster);
+    name.text(makeName()).lineColor(R.color.monster);
     modifier = Wrapper.wrap(view, R.id.modifier);
-    modifier.get().setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-      @Override
-      public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-        edit();
-      }
-    });
     modifier.get().setMaxValue(20 + 20);
     modifier.get().setMinValue(0);
     modifier.get().setValue(20);
@@ -110,9 +105,6 @@ public class MonsterInitiativeDialog extends Dialog {
     add.visible(monsterId <= 0);
   }
 
-  private void edit() {
-  }
-
   private void add() {
     if (monsterId > 0 || !campaign.isPresent()) {
       // Already added.
@@ -120,40 +112,18 @@ public class MonsterInitiativeDialog extends Dialog {
     }
 
     Creature creature = new Creature(0, name.getText(), campaign.get().getCampaignId(),
-        modifier.get().getValue() - 20);
+        Dice.d20() + modifier.get().getValue() - 20);
     creature.store();
     Creatures.add(creature);
-    //campaign.get().getBattle().addMonster(name.getText(),
-    //    modifier.get().getValue() - 20);
+    campaign.get().getBattle().setLastMonsterName(name.getText());
     save();
   }
 
   private String makeName() {
     if (!campaign.isPresent()) {
-      return DEFAULT_NAME;
+      return Battle.DEFAULT_MONSTER_NAME;
     }
 
-    String name = campaign.get().getBattle().getLastMonsterName().or("");
-    if (name.isEmpty()) {
-      return DEFAULT_NAME;
-    }
-
-    String []parts = name.split(" ");
-    if (parts.length == 1) {
-      return name + " 2";
-    }
-
-    try {
-      int number = Integer.parseInt(parts[parts.length - 1]) + 1;
-      String result = "";
-      for (int i = 0; i < parts.length - 1; i++) {
-        result += parts[i] + " ";
-      }
-
-      result += number;
-      return result;
-    } catch (NumberFormatException e) {
-      return name + " 2";
-    }
+    return campaign.get().getBattle().numberedMonsterName();
   }
 }

@@ -51,14 +51,12 @@ import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.XPDialog;
 import net.ixitxachitls.companion.ui.views.BattleView;
 import net.ixitxachitls.companion.ui.views.CharacterChipView;
-import net.ixitxachitls.companion.ui.views.ChipView;
 import net.ixitxachitls.companion.ui.views.CreatureChipView;
 import net.ixitxachitls.companion.ui.views.DiceView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -162,22 +160,15 @@ public class PartyFragment extends Fragment {
             (battle.isSurprised() ? "Surprise" : "Turn " + battle.getTurn()))
             .backgroundColor(R.color.battleLight);
         scroll.backgroundColor(R.color.battleDark);
-
         startBattle.gone();
       } else {
         title.text("Party");
         title.backgroundColor(R.color.characterLight);
-        scroll.backgroundColor(R.color.characterDark);
+        scroll.backgroundColor(R.color.cell);
         initiative.setVisibility(View.GONE);
         startBattle.visible(this.campaign.isLocal() && !this.campaign.isDefault());
         conditions.gone();
       }
-
-      // Refresh the chips to battle mode if necessary.
-      for (CreatureChipView chip : chipsById.values()) {
-        chip.setBattleMode(campaign.get().inBattle());
-      }
-
     }
   }
 
@@ -191,12 +182,13 @@ public class PartyFragment extends Fragment {
       character.getValue().get().loadImage().observe(this, this::updateImage);
       this.characters.add(Characters.getCharacter(characterId).getValue().get());
     }
-    this.characters.sort(new Battle.CharacterBattleComparator(campaign));
+    //this.characters.sort(new Battle.CharacterBattleComparator(campaign));
 
     // Remove all chips for which we don't have characters anymore.
-    for (Map.Entry<String, CreatureChipView> chip : chipsById.entrySet()) {
-      if (!characterIds.contains(chip.getKey())) {
-        chipsById.remove(chip.getValue());
+    for (Iterator<String> i = chipsById.keySet().iterator(); i.hasNext(); ) {
+      String chipId = i.next();
+      if (chipId.startsWith(Character.TYPE) && !characterIds.contains(chipId)) {
+        chipsById.remove(chipId);
       }
     }
 
@@ -221,9 +213,10 @@ public class PartyFragment extends Fragment {
     Log.d(TAG, "updating creatures for " + campaign + ": " + creatureIds);
 
     // Remove all chips for which we don't have creatures anymore.
-    for (Map.Entry<String, CreatureChipView> chip : chipsById.entrySet()) {
-      if (!creatureIds.contains(chip.getKey())) {
-        chipsById.remove(chip.getValue());
+    for (Iterator<String> i = chipsById.keySet().iterator(); i.hasNext(); ) {
+      String chipId = i.next();
+      if (chipId.startsWith(Creature.Type) && !creatureIds.contains(chipId)) {
+        i.remove();
       }
     }
 
@@ -264,15 +257,15 @@ public class PartyFragment extends Fragment {
         chip.update(character.get());
       }
 
-      // Initative could have been changed, thus we might have to resort.
+      // Initiative could have been changed, thus we might have to resort.
       redrawChips();
     }
 
     if (campaign.inBattle()) {
       if (charactersNeedingInitiative.isEmpty()) {
         initiative.setVisibility(View.GONE);
-        if (campaign.isLocal()) {
-          campaign.getBattle().startBattle(ImmutableList.of());
+        if (campaign.isLocal() && campaign.getBattle().isStarting()) {
+          campaign.getBattle().start();
         }
       } else {
         Character initCharacter = charactersNeedingInitiative.values().iterator().next();
@@ -283,30 +276,9 @@ public class PartyFragment extends Fragment {
           TransitionManager.beginDelayedTransition(view);
           Battle battle = campaign.getBattle();
           initCharacter.setBattle(i, battle.getNumber());
-          battle.refreshCombatant(initCharacter.getCharacterId(), initCharacter.getName(), i);
         });
       }
     }
-
-    /*
-    Optional<Character> initCharacter = firstCharacterNeedingInitiative(characters);
-
-    TransitionManager.beginDelayedTransition(view);
-    if (initCharacter.isPresent()) {
-      initiative.setVisibility(View.VISIBLE);
-      initiative.setLabel("Initiative for " + initCharacter.get().getName());
-      initiative.setModifier(initCharacter.get().initiativeModifier());
-      initiative.setSelectAction(i -> {
-        TransitionManager.beginDelayedTransition(view);
-        Battle battle = campaign.getBattle();
-        initCharacter.get().setBattle(i, battle.getNumber());
-        battle.refreshCombatant(initCharacter.get().getCharacterId(),
-            initCharacter.get().getName(), i);
-      });
-    } else {
-      initiative.setVisibility(View.GONE);
-    }
-    */
 
     //conditions.text(conditions(battle.getCurrentCombatant().getId()));
   }
@@ -333,7 +305,7 @@ public class PartyFragment extends Fragment {
       return;
     }
 
-    campaign.getBattle().start();
+    campaign.getBattle().setup();
   }
 
   private void redrawChips() {
@@ -342,10 +314,15 @@ public class PartyFragment extends Fragment {
     TransitionManager.beginDelayedTransition(view);
     party.removeAllViews();
 
-    List<CreatureChipView> chips = new ArrayList<>(chipsById.values());
-    Collections.sort(chips);
-    for (ChipView chip : chips) {
-      chip.addTo(party);
+    List<String> ids = campaign.getBattle().obtainCreatureIds();
+    for (String id : ids) {
+      CreatureChipView chip = chipsById.get(id);
+      if (chip != null) {
+        chip.addTo(party);
+        chip.setBattleMode(campaign.getBattle().getStatus());
+        chip.select(campaign.getBattle().isOngoingOrSurprised()
+            && chip.getCreatureId().equals(campaign.getBattle().getCurrentCreatureId()));
+      }
     }
   }
 
@@ -358,14 +335,6 @@ public class PartyFragment extends Fragment {
 
     return Optional.absent();
   }
-
-    /*
-        if (combatant == battle.getCurrentCombatant()) {
-          chip.select();
-        } else {
-          chip.unselect();
-        }
-    */
 
   private String conditions(String currentId) {
     List<String> conditions = new ArrayList<>();
@@ -382,18 +351,4 @@ public class PartyFragment extends Fragment {
 
     return Joiner.on("\n").join(conditions);
   }
-
-  private boolean battleReady(List<Character> characters) {
-    for (Character character : characters) {
-      if (!character.hasInitiative()) {
-        return false;
-      }
-    }
-
-    return true;
-  }
-
-  private boolean inBattleMode() {
-    return campaign.inBattle();
-  };
 }

@@ -105,6 +105,14 @@ public class ChipView extends LinearLayout {
     }
   }
 
+  public void select(boolean select) {
+    if (select) {
+      select();
+    } else {
+      unselect();
+    }
+  }
+
   public void select() {
     name.backgroundColor(backgroundColor);
     subtitle.backgroundColor(backgroundColor);

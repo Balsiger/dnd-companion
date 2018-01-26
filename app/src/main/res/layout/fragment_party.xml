@@ -43,7 +43,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/title"
-      android:background="@color/characterDark"
+      android:background="@android:color/darker_gray"
       android:minHeight="50dp">
 
     <LinearLayout

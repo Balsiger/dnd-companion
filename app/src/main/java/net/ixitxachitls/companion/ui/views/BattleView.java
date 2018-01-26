@@ -98,7 +98,7 @@ public class BattleView extends LinearLayout {
       next.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
       nextDelimiter.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
       boolean canDelay = isDM && battle.isOngoing()
-          && !battle.currentIsLast() && !battle.currentIsWaiting();
+          && !battle.currentIsLast();
       delay.visible(canDelay);
       delayDelimiter.visible(canDelay);
       stop.visible(isDM && !battle.isEnded());
@@ -123,13 +123,13 @@ public class BattleView extends LinearLayout {
 
   private void next() {
     if (inBattle()) {
-      campaign.getBattle().combatantDone();
+      campaign.getBattle().creatureDone();
     }
   }
 
   private void delay() {
     if (inBattle()) {
-      campaign.getBattle().combatantLater();
+      campaign.getBattle().creatureWait();
     }
   }
 
@@ -141,7 +141,7 @@ public class BattleView extends LinearLayout {
 
   private void addTimed() {
     if (inBattle()) {
-      TimedConditionDialog.newInstance(campaign.getBattle().getCurrentCombatant().getId(),
+      TimedConditionDialog.newInstance(campaign.getBattle().getCurrentCreatureId(),
           campaign.getBattle().getTurn())
           .display();
     }

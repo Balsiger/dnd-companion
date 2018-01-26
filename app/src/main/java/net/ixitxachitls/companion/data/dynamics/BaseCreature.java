@@ -53,6 +53,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   protected int wisdom;
   protected int charisma;
   protected int initiative = NO_INITIATIVE;
+  protected int initiativeRandom = 0;
   protected int battleNumber = 0;
   protected List<Character.TimedCondition> conditions = new ArrayList<>();
 
@@ -73,6 +74,34 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
   public int getInitiative() {
     return initiative;
+  }
+
+  public int getInitiativeRandom() {
+    return initiativeRandom;
+  }
+
+  public int getStrength() {
+    return strength;
+  }
+
+  public int getConstitution() {
+    return constitution;
+  }
+
+  public int getDexterity() {
+    return dexterity;
+  }
+
+  public int getIntelligence() {
+    return intelligence;
+  }
+
+  public int getWisdom() {
+    return wisdom;
+  }
+
+  public int getCharisma() {
+    return charisma;
   }
 
   public Data.CreatureProto toCreatureProto() {

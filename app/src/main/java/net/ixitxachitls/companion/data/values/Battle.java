@@ -23,8 +23,8 @@ package net.ixitxachitls.companion.data.values;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
@@ -34,36 +34,38 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * Representation of a battle in a campaign.
  */
 public class Battle {
-  private static final Random RANDOM = new Random();
+  public static final String DEFAULT_MONSTER_NAME = "Monsters";
 
   private final Campaign campaign;
   private int number;
-  private String currentCreatureId = "";
   private int turn;
   private BattleStatus status;
   private Optional<String> lastMonsterName = Optional.absent();
-
-  private final List<Combatant> combatants = new ArrayList<>();
-  private int currentCombatantIndex = 0;
+  private List<String> creatureIds = new ArrayList<>();
+  private int currentCreatureIndex;
 
   public Battle(Campaign campaign) {
-    this(campaign, 0, BattleStatus.ENDED, 0, 0, Collections.emptyList());
+    this(campaign, 0, BattleStatus.ENDED, 0, Collections.emptyList(), 0);
   }
 
   private Battle(Campaign campaign, int number, BattleStatus status, int turn,
-                 int currentCombatantIndex, List<Combatant> combatants) {
+                 List<String> creatureIds, int currentCreatureIndex) {
     this.campaign = campaign;
     this.number = number;
     this.status = status;
     this.turn = turn;
-    this.currentCombatantIndex = currentCombatantIndex;
-    this.combatants.addAll(combatants);
+    this.currentCreatureIndex = currentCreatureIndex;
+    this.creatureIds.addAll(creatureIds);
+  }
+
+  public BattleStatus getStatus() {
+    return status;
   }
 
   public boolean isEnded() {
@@ -82,6 +84,10 @@ public class Battle {
     return status == BattleStatus.ONGOING;
   }
 
+  public boolean isOngoingOrSurprised() {
+    return isOngoing() || isSurprised();
+  }
+
   public int getTurn() {
     return turn;
   }
@@ -90,152 +96,123 @@ public class Battle {
     return number;
   }
 
-  public void addMonster(String name, int initiativeModifier) {
-    lastMonsterName = Optional.of(name);
-    combatants.add(new Combatant(name, name, RANDOM.nextInt(20) + initiativeModifier, true, false));
-    campaign.store();
-  }
-
-  public void refreshCombatant(String characterId, String name, int initiativeModifier) {
-    for (int i = 0; i < combatants.size(); i++) {
-      Combatant existing = combatants.get(i);
-      if (existing.id.equals(characterId) && existing.name.equals(name)) {
-        combatants.set(i, new Combatant(characterId, name, initiativeModifier, existing.monster,
-            existing.waiting));
-        return;
-      }
+  public String getCurrentCreatureId() {
+    if (currentCreatureIndex < creatureIds.size()) {
+      return creatureIds.get(currentCreatureIndex);
     }
 
-    // No combatant to refresh was found.
-    combatants.add(new Combatant(characterId, name, initiativeModifier, false, false));
-    campaign.store();
+    return creatureIds.get(0);
   }
 
-  public void refreshCombatants() {
-    for (int i = 0; i < combatants.size(); i++) {
-      Combatant existing = combatants.get(i);
-      if (!existing.isMonster()) {
-        Optional<Character> character = Characters.getCharacter(existing.id).getValue();
-        if (character.isPresent()) {
-          combatants.set(i,
-              new Combatant(existing.id, existing.name,
-                  character.get().getBattleNumber() == number ?
-                      character.get().getInitiative() : Character.NO_INITIATIVE,
-                  false, existing.waiting));
-        }
-      }
-    }
-
-    campaign.store();
+  public void setup() {
+    status = BattleStatus.STARTING;
+    number++;
+    store();
   }
 
-  private void resetCharacterInitiatives() {
-    // Reset initiative for all characters.
-    for (String id : campaign.getCharacterIds().getValue()) {
-      Optional<Character> character = Characters.getCharacter(id).getValue();
-      if (character.isPresent()) {
-        combatants.add(new Combatant(id, character.get().getName(), Character.NO_INITIATIVE, false,
-            false));
-      }
-    }
-  }
-
-  public Combatant getCurrentCombatant() {
-    if (currentCombatantIndex < combatants.size()) {
-      return combatants.get(currentCombatantIndex);
-    }
-
-    if (!combatants.isEmpty()) {
-      return combatants.get(0);
-    }
-
-    return new Combatant("", "Invalid", Character.NO_INITIATIVE, true, false);
-  }
-
-  public void startBattle(List<String> combatantIds) {
-    //currentCreatureId = firstCreatureId;
+  public void start() {
+    currentCreatureIndex = 0;
     turn = 0;
+    creatureIds = obtainCreatureIds();
     status = BattleStatus.SURPRISED;
-    currentCombatantIndex = 0;
-    Collections.sort(combatants);
-    campaign.store();
+    store();
   }
 
-  public void combatantDone() {
-    combatants.get(currentCombatantIndex).setWaiting(false);
-    currentCombatantIndex++;
-    if (currentCombatantIndex >= combatants.size()) {
-      currentCombatantIndex = 0;
-      status = BattleStatus.ONGOING;
-      turn++;
+  public List<String> obtainCreatureIds() {
+    // If the battle is ongoing, we don't sort ids anymore, as initative cannot change
+    // anymore (but the order can change by waiting).
+    if (status != BattleStatus.STARTING && status != BattleStatus.ENDED) {
+      return creatureIds;
     }
 
-    campaign.store();
-  }
-
-  public void combatantLater() {
-    if (currentCombatantIndex + 1 >= combatants.size()) {
-      // Cannot be later.
-      return;
+    List<BaseCreature> creatures = new ArrayList<>();
+    for (String id : campaign.getCreatureIds().getValue()) {
+      creatures.add(Creatures.getCreature(id).getValue().get());
+    }
+    for (String id : campaign.getCharacterIds().getValue()) {
+      creatures.add(Characters.getCharacter(id).getValue().get());
     }
 
-    Combatant combatant = combatants.remove(currentCombatantIndex);
-    combatants.add(currentCombatantIndex + 1, combatant);
-    combatant.setWaiting(true);
+    creatures.sort(new InitiativeComparator());
 
+    return creatures.stream().map(BaseCreature::getCreatureId).collect(Collectors.toList());
+  }
+
+  public void creatureDone() {
+    currentCreatureIndex++;
+    if (currentCreatureIndex >= creatureIds.size()) {
+      nextTurn();
+    }
+
+    store();
+  }
+
+  private void nextTurn() {
+    currentCreatureIndex = 0;
+    status = BattleStatus.ONGOING;
+    turn++;
+  }
+
+  public void creatureWait() {
+    if (currentCreatureIndex < creatureIds.size() - 1) {
+      String id = creatureIds.remove(currentCreatureIndex);
+      creatureIds.add(currentCreatureIndex + 1, id);
+    }
+
+    store();
+  }
+
+  private void store() {
     campaign.store();
-  }
-
-  public List<Combatant> combatants() {
-    return Collections.unmodifiableList(combatants);
-  }
-
-  public List<Combatant> combatantsByInitiative() {
-    Collections.sort(combatants);
-    return Collections.unmodifiableList(combatants);
   }
 
   public void end() {
     status = BattleStatus.ENDED;
-    for (Combatant combatant : combatants) {
-      if (!combatant.isMonster()) {
-        Optional<Character> character = Characters.getCharacter(combatant.getId()).getValue();
-        if (character.isPresent()) {
-          character.get().clearInitiative();
-        }
-      }
-    }
-    combatants.clear();
-
-    for (String characterId : campaign.getCharacterIds().getValue()) {
-      Optional<Character> character = Characters.getCharacter(characterId).getValue();
-      if (character.isPresent()) {
-        character.get().clearInitiative();
-      }
-    }
 
     for (String creatureId : campaign.getCreatureIds().getValue()) {
       Creatures.remove(creatureId);
     }
 
     lastMonsterName = Optional.absent();
-    campaign.store();
+    store();
+  }
+
+  public void setLastMonsterName(String name) {
+    this.lastMonsterName = Optional.of(name);
+  }
+
+  public String numberedMonsterName() {
+    if (lastMonsterName.isPresent()) {
+      lastMonsterName = Optional.of(numberName(lastMonsterName.get()));
+    } else {
+      lastMonsterName = Optional.of(DEFAULT_MONSTER_NAME);
+    }
+
+    return lastMonsterName.get();
+  }
+
+  private String numberName(String name) {
+    String []parts = name.split(" ");
+    if (parts.length == 1) {
+      return name + " 2";
+    }
+
+    try {
+      int number = Integer.parseInt(parts[parts.length - 1]) + 1;
+      String result = "";
+      for (int i = 0; i < parts.length - 1; i++) {
+        result += parts[i] + " ";
+      }
+
+      result += number;
+      return result;
+    } catch (NumberFormatException e) {
+      return name + " 2";
+    }
   }
 
   public Optional<String> getLastMonsterName() {
     return lastMonsterName;
-  }
-
-  public void removeCombatant() {
-    combatants.remove(currentCombatantIndex);
-    campaign.store();
-  }
-
-  public void start() {
-    status = BattleStatus.STARTING;
-    number++;
-    resetCharacterInitiatives();
-    campaign.store();
   }
 
   public Data.CampaignProto.Battle toProto() {
@@ -243,30 +220,19 @@ public class Battle {
         .setStatus(status.toProto())
         .setTurn(turn)
         .setNumber(number)
-        .setCurrentCombatantIndex(currentCombatantIndex);
-
-    for (Combatant combatant : combatants()) {
-      proto.addCombatant(combatant.toProto());
-    }
+        .addAllCreatureId(creatureIds)
+        .setCurrentCreatureIndex(currentCreatureIndex);
 
     return proto.build();
   }
 
   public static Battle fromProto(Campaign campaign, Data.CampaignProto.Battle proto) {
-    List<Combatant> combatants = new ArrayList<>();
-    for (Data.CampaignProto.Battle.Combatant combatant : proto.getCombatantList()) {
-      combatants.add(Combatant.fromProto(combatant));
-    }
     return new Battle(campaign, proto.getNumber(), BattleStatus.fromProto(proto.getStatus()),
-        proto.getTurn(), proto.getCurrentCombatantIndex(), combatants);
+        proto.getTurn(), proto.getCreatureIdList(), proto.getCurrentCreatureIndex());
   }
 
   public boolean currentIsLast() {
-    return currentCombatantIndex >= combatants.size() - 1;
-  }
-
-  public boolean currentIsWaiting() {
-    return combatants.get(currentCombatantIndex).isWaiting();
+    return currentCreatureIndex >= creatureIds.size() - 1;
   }
 
   @Override
@@ -278,136 +244,42 @@ public class Battle {
 
     if (number != battle.number) return false;
     if (turn != battle.turn) return false;
-    if (currentCombatantIndex != battle.currentCombatantIndex) return false;
-    if (!combatants.equals(battle.combatants)) return false;
     if (status != battle.status) return false;
+    if (currentCreatureIndex != battle.currentCreatureIndex) return false;
+    if (creatureIds.equals(battle.creatureIds)) return false;
     return lastMonsterName.equals(battle.lastMonsterName);
   }
 
   @Override
   public int hashCode() {
     int result = number;
-    result = 31 * result + combatants.hashCode();
+    result = 31 * result + creatureIds.hashCode();
     result = 31 * result + status.hashCode();
     result = 31 * result + turn;
-    result = 31 * result + currentCombatantIndex;
+    result = 31 * result + currentCreatureIndex;
     result = 31 * result + lastMonsterName.hashCode();
     return result;
   }
 
-  public static class Combatant implements Comparable<Combatant> {
-    private final String id;
-    private final String name;
-    private final int initiative;
-    private final boolean monster;
-    private boolean waiting;
-
-    private Combatant(String id, String name, int initiative, boolean monster, boolean waiting) {
-      this.id = id;
-      this.name = name;
-      this.initiative = initiative;
-      this.monster = monster;
-      this.waiting = waiting;
-    }
-
-    private Combatant(Character character, boolean isWaiting) {
-      this.id = character.getCharacterId();
-      this.name = character.getName();
-      this.initiative = character.getInitiative();
-      this.monster = false;
-      this.waiting = isWaiting;
-    }
-
-    public String getId() {
-      return id;
-    }
-
-    public String getName() {
-      return name;
-    }
-
-    public int getInitiative() {
-      return initiative;
-    }
-
-    public boolean hasInitiative() {
-      return initiative != Character.NO_INITIATIVE;
-    }
-
-    public boolean isMonster() {
-      return monster;
-    }
-
-    public boolean isWaiting() {
-      return waiting;
-    }
-
-    public void setWaiting(boolean waiting) {
-      this.waiting = waiting;
-    }
-
+  private static class InitiativeComparator implements Comparator<BaseCreature> {
     @Override
-    public int compareTo(Combatant other) {
-      return Integer.compare(other.initiative, this.initiative);
-    }
-
-    public Data.CampaignProto.Battle.Combatant toProto() {
-      return Data.CampaignProto.Battle.Combatant.newBuilder()
-          .setId(id)
-          .setName(name)
-          .setInitiativeModifier(initiative)
-          .setMonster(monster)
-          .setWaiting(waiting)
-          .build();
-    }
-
-    public static Combatant fromProto(Data.CampaignProto.Battle.Combatant proto) {
-      return new Combatant(proto.getId(), proto.getName(), proto.getInitiativeModifier(),
-          proto.getMonster(), proto.getWaiting());
-    }
-  }
-
-  public static class CharacterBattleComparator implements Comparator<Character> {
-    private Campaign campaign;
-
-    public CharacterBattleComparator(Campaign campaign) {
-      this.campaign = campaign;
-    }
-
-    @Override
-    public int compare(Character first, Character second) {
-      if (first.getCharacterId().equals(second.getCharacterId())) {
-        return 0;
-      }
-
-      int compare = Integer.compare(first.getInitiative(), second.getInitiative());
+    public int compare(BaseCreature first, BaseCreature second) {
+      int compare = Integer.compare(second.getInitiative(), first.getInitiative());
       if (compare != 0) {
         return compare;
       }
 
-      // If initiative is the same, prefer the higher dexterity.
       compare = Integer.compare(second.getDexterity(), first.getDexterity());
       if (compare != 0) {
         return compare;
       }
 
-      // As DEX is also the same, use a pseudo random value that is stable for a battle
-      // for comparison.
-      if (campaign.getBattle().getNumber() > 0) {
-        compare = Integer.compare(
-            first.getName().hashCode() % campaign.getBattle().getNumber(),
-            second.getName().hashCode() % campaign.getBattle().getNumber());
-        if (compare != 0) {
-          return compare;
-        }
+      compare = Integer.compare(second.getInitiativeRandom(), first.getInitiativeRandom());
+      if (compare != 0) {
+        return compare;
       }
 
       return first.getName().compareTo(second.getName());
-    }
-
-    @Override
-    public boolean equals(Object o) {
-      return false;
     }
   }
 }

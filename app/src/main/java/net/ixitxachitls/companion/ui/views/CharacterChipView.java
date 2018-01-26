@@ -43,13 +43,13 @@ public class CharacterChipView extends CreatureChipView {
   private Character character;
 
   public CharacterChipView(Context context, Character character) {
-    super(context, character, R.color.character, R.color.characterDark);
+    super(context, character, R.color.characterDark, R.color.characterLight);
 
     this.character = character;
 
     if (character.isLocal()) {
-      name.backgroundColor(R.color.characterLight);
-      subtitle.backgroundColor(R.color.characterLight);
+      name.backgroundColor(R.color.character);
+      subtitle.backgroundColor(R.color.character);
     }
 
     setOnClickListener(this::onClick);
@@ -66,10 +66,6 @@ public class CharacterChipView extends CreatureChipView {
     } else {
       setSubtitle(String.valueOf(character.getInitiative()));
     }
-
-    // TODO(merlin): Replace this with the stable sorting order in campaign/battle.
-    sortKey = sortKey(character.getInitiative(), character.getDexterity(),
-        character.getName().hashCode() % ((character.getBattleNumber() + 1) % 100));
   }
 
   public void update(Image characterImage) {
