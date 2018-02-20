@@ -26,10 +26,8 @@ import android.support.annotation.Nullable;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
-import net.ixitxachitls.companion.net.CompanionPublisher;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Date;
 
@@ -40,7 +38,8 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
   public static final String TYPE = "message";
   public static final String TABLE = "messages";
-  private static final long LATE_MS = 60 * 1_000; // 1 minute
+  private static final long LATE_MS = 60 * 1_000; // 1 minute.
+  private static final long OUTDATED_MS = 300 * 24 * 60 * 60 * 1_000; // 300 days.
 
   public enum State { WAITING, PENDING, SENT, ACKED };
 
@@ -67,6 +66,10 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
 
   public boolean isLate() {
     return new Date().getTime() - lastInteraction > LATE_MS;
+  }
+
+  public boolean isOutdated() {
+    return new Date().getTime() - lastInteraction > OUTDATED_MS;
   }
 
   public boolean matches(String senderId, String recieverId) {
@@ -185,11 +188,6 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     }
   }
 
-  public String toSenderString() {
-    return toString() + " to " + CompanionPublisher.get().getRecipientName(getRecieverId())
-        + " (" + Strings.formatAgo(lastInteraction) + ")";
-  }
-
   @Override
   public String toString() {
     return state + " - " + message;
@@ -214,5 +212,58 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     result = 31 * result + state.hashCode();
     result = 31 * result + message.hashCode();
     return result;
+  }
+
+  public static String info(Data.CompanionMessageProto.Header.Id id) {
+    if (!id.getName().isEmpty()) {
+      return id.getName();
+    }
+
+    return id.getId();
+  }
+
+  public static String info(Data.CompanionMessageProto message) {
+    String postfix = "";
+    if (message.getHeader().getId() != 0) {
+      postfix = " (id " + message.getHeader().getId() + ")";
+    }
+    switch (message.getData().getPayloadCase()) {
+      case DEBUG:
+        return "DEBUG - " + message.getData().getDebug() + postfix;
+
+      case WELCOME:
+        return "WELCOME" + postfix;
+
+      case ACK:
+        return "ACK - " + message.getData().getAck() + postfix;
+
+      case CAMPAIGN:
+        return "CAMPAIGN - " + message.getData().getCampaign().getName() + postfix;
+
+      case CAMPAIGN_DELETE:
+        return "CAMPAIGN DELETE - " + message.getData().getCampaignDelete() + postfix;
+
+      case CHARACTER:
+        return "CHARACTER - " + message.getData().getCharacter().getCreature().getName()
+            + postfix;
+
+      case CHARACTER_DELETE:
+        return "CHARACTER DELETE - " + message.getData().getCharacterDelete() + postfix;
+
+      case IMAGE:
+        return "IMAGE - " + message.getData().getImage().getId() + "/"
+            + message.getData().getImage().getType() + postfix;
+
+      case XP_AWARD:
+        return "XP - " + message.getData().getXpAward().getCampaignId() + "/"
+            + message.getData().getXpAward().getCharacterId() + "/"
+            + message.getData().getXpAward().getXpAward() + postfix;
+
+      case PAYLOAD_NOT_SET:
+        return "NOT SET" + postfix;
+
+      default:
+        return "NOT HANDLED!" + postfix;
+    }
   }
 }

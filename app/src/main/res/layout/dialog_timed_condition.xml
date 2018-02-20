@@ -21,47 +21,58 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:padding="20dp">
 
 
-  <AutoCompleteTextView
+  <net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView
       android:id="@+id/condition"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="10dp"
       android:completionThreshold="1"
-      android:theme="@style/LargeText"/>
+      android:theme="@style/LargeText"
+      app:descriptionText="@string/settings_nickname_note"
+      app:labelColor="@color/character"
+      app:labelText="Condition"
+      app:lineColor="@color/character"
+      app:textColor="@color/characterDark"/>
 
-  <LinearLayout
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/rounds"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="10dp"
-      android:orientation="horizontal">
+      android:ems="10"
+      android:inputType="number"
+      android:theme="@style/LargeText"
+      app:lineColor="@color/character"
+      app:labelText="Rounds"
+      app:labelColor="@color/character"
+      app:textColor="@color/characterDark"
+      app:descriptionText="The number of rounds this condition will be active in play."/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rounds"
-        android:theme="@style/LargeText"/>
-
-    <EditText
-        android:id="@+id/rounds"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_weight="1"
-        android:ems="10"
-        android:inputType="number"
-        android:theme="@style/LargeText"/>
-  </LinearLayout>
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      app:descriptionText="The description of the condition. This should explain all details
+                             necessary for a player to know how to deal with this condition."
+      app:labelColor="@color/character"
+      app:labelText="Description"
+      app:lineColor="@color/character"
+      app:minLines="4"
+      app:textColor="@color/characterDark"/>
 
   <LinearLayout
       android:id="@+id/party"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_margin="10dp"
       android:orientation="vertical">
   </LinearLayout>
 
@@ -73,4 +84,5 @@
       android:layout_margin="10dp"
       android:text="Add"
       android:theme="@style/LargeText"/>
+
 </LinearLayout>

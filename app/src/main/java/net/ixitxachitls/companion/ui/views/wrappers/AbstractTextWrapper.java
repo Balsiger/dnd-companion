@@ -22,9 +22,11 @@
 package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.graphics.Typeface;
+import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
+import android.support.annotation.StyleRes;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -71,7 +73,7 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
   public W align(Align align) {
     switch (align) {
       case LEFT:
-        view.setTextAlignment(Gravity.LEFT);
+        view.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
         break;
 
       case RIGHT:
@@ -101,7 +103,19 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
 
   @SuppressWarnings("unchecked")
   public W textColor(@ColorRes int color) {
-    view.setTextColor(view.getResources().getColor(color, null));
+    return textColorValue(view.getResources().getColor(color, null));
+  }
+
+  @SuppressWarnings("unchecked")
+  public W textColorValue(@ColorInt int color) {
+    view.setTextColor(color);
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W textStyle(@StyleRes int style) {
+    view.setTextAppearance(style);
 
     return (W) this;
   }
@@ -122,6 +136,13 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
   @SuppressWarnings("unchecked")
   public W onChange(Wrapper.Action action) {
     view.addTextChangedListener(new TextChangeWatcher(action));
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W enabled(boolean enabled) {
+    view.setEnabled(enabled);
 
     return (W) this;
   }

@@ -63,6 +63,15 @@ public class CampaignTitleView extends LinearLayout {
     setup();
   }
 
+  public void addTo(ViewGroup group) {
+    ViewGroup parent = (ViewGroup) getParent();
+    if (parent != null) {
+      parent.removeView(this);
+    }
+
+    group.addView(this);
+  }
+
   private void setup() {
     RelativeLayout view = (RelativeLayout)
         LayoutInflater.from(getContext()).inflate(R.layout.view_campaign_title, null, false);
@@ -79,7 +88,7 @@ public class CampaignTitleView extends LinearLayout {
     addView(view);
   }
 
-  public void setLiveCampaign(Optional<Campaign> campaign){
+  public void update(Optional<Campaign> campaign){
     if (campaign.isPresent()) {
       setCampaign(campaign.get());
     }

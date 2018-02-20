@@ -28,27 +28,31 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.data.dynamics.Creature;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
+import net.ixitxachitls.companion.rules.Conditions;
+import net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView;
+import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Dialog to select a timed condition for party members.
@@ -58,28 +62,32 @@ public class TimedConditionDialog extends Dialog {
   private static final String ARG_ID = "id";
   private static final String ARG_ROUND = "round";
 
-  private Optional<Character> character = Optional.absent();
+  // State.
+  private Optional<? extends BaseCreature> creature = Optional.absent();
   private Optional<Campaign> campaign = Optional.absent();
   private int currentRound = 0;
+  private boolean predefined = false;
 
-  private EditTextWrapper<AutoCompleteTextView> condition;
+  // UI Elements.
+  private LabelledAutocompleteTextView condition;
   private Wrapper<LinearLayout> party;
-  private Map<String, CheckBox> checkboxesByCharacterId = new HashMap<>();
-  private EditTextWrapper<EditText> rounds;
+  private Map<String, CheckBox> checkboxesByCreatureId = new HashMap<>();
+  private LabelledEditTextView rounds;
+  private LabelledEditTextView description;
 
   public TimedConditionDialog() {}
 
-  public static TimedConditionDialog newInstance(String characterId, int currentRound) {
+  public static TimedConditionDialog newInstance(String creatureId, int currentRound) {
     TimedConditionDialog dialog = new TimedConditionDialog();
     dialog.setArguments(arguments(R.layout.dialog_timed_condition,
-        R.string.edit_timed_condition, R.color.character, characterId, currentRound));
+        R.string.edit_timed_condition, R.color.character, creatureId, currentRound));
     return dialog;
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String characterId, int currentRound) {
+                                    @ColorRes int colorId, String creatureId, int currentRound) {
     Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ID, characterId);
+    arguments.putString(ARG_ID, creatureId);
     arguments.putInt(ARG_ROUND, currentRound);
     return arguments;
   }
@@ -89,81 +97,115 @@ public class TimedConditionDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    character = Characters.getCharacter(getArguments().getString(ARG_ID)).getValue();
+    String id = getArguments().getString(ARG_ID);
+    creature = id.startsWith(Character.TYPE)
+        ? Characters.getCharacter(id).getValue() : Creatures.getCreature(id).getValue();
+
     currentRound = getArguments().getInt(ARG_ROUND);
-    if (character.isPresent()) {
-      campaign = Campaigns.getCampaign(character.get().getCampaignId()).getValue();
+    if (creature.isPresent()) {
+      campaign = Campaigns.getCampaign(creature.get().getCampaignId()).getValue();
     }
   }
 
   @Override
   protected void createContent(View view) {
-    condition = EditTextWrapper.<AutoCompleteTextView>wrap(view, R.id.condition)
-        .lineColor(R.color.character).onChange(this::selectCondition);
-    condition.get().setOnFocusChangeListener(new View.OnFocusChangeListener() {
-      @Override
-      public void onFocusChange(View v, boolean hasFocus) {
-        if (hasFocus) {
-          condition.get().showDropDown();
-        }
-      }
-    });
-    rounds = EditTextWrapper.wrap(view, R.id.rounds).lineColor(R.color.character);
+    condition = view.findViewById(R.id.condition);
+    condition.onChange(this::selectCondition).onFocus(condition::showDropDown);
+    rounds = view.findViewById(R.id.rounds);
+    description = view.findViewById(R.id.description);
     party = Wrapper.<LinearLayout>wrap(view, R.id.party);
     Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
 
-    if (character.isPresent()) {
+    if (creature.isPresent()) {
       ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),
-          R.layout.list_item_select, character.get().conditionHistoryNames());
-      condition.get().setAdapter(adapter);
+          R.layout.list_item_select,
+          conditionNames(creature.get()));
+      condition.setAdapter(adapter);
 
       if (campaign.isPresent()) {
-        for (String characterId : campaign.get().getCharacterIds().getValue()) {
-          Character character = Characters.getCharacter(characterId).getValue().get();
-          CheckBox checkbox = new CheckBox(getContext());
-          checkbox.setText(character.getName());
-          checkbox.setTextAppearance(R.style.LargeText);
-          checkbox.setButtonTintList(ColorStateList.valueOf(view.getResources()
-              .getColor(color, null)));
-          party.get().addView(checkbox);
-          checkboxesByCharacterId.put(character.getCharacterId(), checkbox);
+        for (Character character : campaign.get().getCharacters()) {
+          addCheckbox(view, character.getCharacterId(), character.getName());
+        }
+
+        for (Creature creature : campaign.get().getCreatures()) {
+          addCheckbox(view, creature.getCreatureId(), creature.getName());
         }
       }
     }
   }
 
+  private List<BaseCreature.TimedCondition> conditions(BaseCreature creature) {
+    List<BaseCreature.TimedCondition> conditions = new ArrayList<>();
+
+    if (creature instanceof Character) {
+      conditions.addAll(((Character) creature).getConditionsHistory());
+    }
+
+    conditions.addAll(Conditions.asTimedConditions());
+
+    return conditions;
+  }
+
+  private List<String> conditionNames(BaseCreature creature) {
+    return conditions(creature).stream()
+        .map(BaseCreature.TimedCondition::getName)
+        .collect(Collectors.toList());
+  }
+
+  private void addCheckbox(View view, String creatureId, String name) {
+    CheckBox checkbox = new CheckBox(getContext());
+    checkbox.setText(name);
+    checkbox.setTextAppearance(R.style.LargeText);
+    checkbox.setButtonTintList(ColorStateList.valueOf(view.getResources()
+        .getColor(color, null)));
+    party.get().addView(checkbox);
+    checkboxesByCreatureId.put(creatureId, checkbox);
+  }
+
   private void selectCondition() {
-    if (character.isPresent()) {
+    if (creature.isPresent()) {
       Optional<Character.TimedCondition> selected =
-          character.get().getHistoryCondition(condition.getText());
+          findCondition(creature.get(), condition.getText());
       if (selected.isPresent()) {
-        rounds.text(String.valueOf(selected.get().getRounds()));
+        predefined = selected.get().isPredefined();
+        rounds.text(String.valueOf(selected.get().getRounds()))
+            .enabled(!predefined || selected.get().getRounds() == 0);
+        description.text(selected.get().getDescription()).enabled(!predefined);
         for (String id : selected.get().getCharacterIds()) {
-          if (checkboxesByCharacterId.containsKey(id)) {
-            checkboxesByCharacterId.get(id).setChecked(true);
+          if (checkboxesByCreatureId.containsKey(id)) {
+            checkboxesByCreatureId.get(id).setChecked(true);
           }
         }
       }
     }
   }
 
+  private Optional<BaseCreature.TimedCondition> findCondition(BaseCreature creature, String name) {
+    for (BaseCreature.TimedCondition condition : conditions(creature)) {
+      if (condition.getName().equals(name)) {
+        return Optional.of(condition);
+      }
+    }
+
+    return Optional.absent();
+  }
+
   @Override
   protected void save() {
-    if (character.isPresent() && !condition.getText().isEmpty()) {
+    if (creature.isPresent() && !condition.getText().isEmpty()) {
       List<String> ids = new ArrayList<>();
-      for (Map.Entry<String, CheckBox> entry : checkboxesByCharacterId.entrySet()) {
+      for (Map.Entry<String, CheckBox> entry : checkboxesByCreatureId.entrySet()) {
         if (entry.getValue().isChecked()) {
           ids.add(entry.getKey());
         }
       }
 
-      if (ids.isEmpty() || rounds.getText().isEmpty() || Integer.parseInt(rounds.getText()) <= 0) {
-        return;
+      if (!ids.isEmpty() && !rounds.getText().isEmpty() && Integer.parseInt(rounds.getText()) > 0) {
+        int rounds = Integer.parseInt(this.rounds.getText());
+        creature.get().addTimedCondition(new Character.TimedCondition(
+            rounds, currentRound + rounds + 1, ids, condition.getText(),
+            description.getText(), predefined));
       }
-
-      int rounds = Integer.parseInt(this.rounds.getText());
-      character.get().addTimedCondition(new Character.TimedCondition(
-          rounds, currentRound + rounds,  ids, condition.getText()));
     }
 
     super.save();

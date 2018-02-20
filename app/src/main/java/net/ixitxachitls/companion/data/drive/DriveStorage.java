@@ -88,7 +88,7 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
     if (googleApiClient.get().isConnected()) {
       process();
     } else if (!googleApiClient.get().isConnecting()) {
-      activity.status("connecting to Google Drive...");
+      net.ixitxachitls.companion.Status.log("connecting to Google Drive...");
       googleApiClient.get().connect();
     }
   }
@@ -100,30 +100,30 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
         i.remove();
       }
     } else {
-      activity.toast("Google API client not avaiable.");
+      net.ixitxachitls.companion.Status.toast("Google API client not avaiable.");
     }
   }
 
   @Override
   public void onConnected(@Nullable Bundle bundle) {
-    activity.status("connected to Google Drive");
+    net.ixitxachitls.companion.Status.log("connected to Google Drive");
     process();
   }
 
   @Override
   public void onConnectionSuspended(int i) {
-    activity.status("connection to Google Drive suspended");
+    net.ixitxachitls.companion.Status.log("connection to Google Drive suspended");
   }
 
   @Override
   public void onConnectionFailed(ConnectionResult connectionResult) {
-    activity.status("connection to Google Drive failed");
+    net.ixitxachitls.companion.Status.log("connection to Google Drive failed");
     if (connectionResult.hasResolution()) {
       try {
         connectionResult.startResolutionForResult(activity,
             MainActivity.RESOLVE_DRIVE_CONNECTION_CODE);
       } catch (IntentSender.SendIntentException e) {
-        activity.toast("Cannot export data to Google Drive!");
+        net.ixitxachitls.companion.Status.toast("Cannot export data to Google Drive!");
       }
     } else {
       GooglePlayServicesUtil.getErrorDialog(connectionResult.getErrorCode(), activity, 0).show();
@@ -151,7 +151,7 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
       }
 
       if (files.isEmpty()) {
-        activity.toast("All files already exported.");
+        net.ixitxachitls.companion.Status.toast("All files already exported.");
         return;
       }
 
@@ -162,18 +162,19 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
           .setResultCallback(
               new ResolvingResultCallbacks<DriveFolder.DriveFolderResult>(activity, 0) {
                 @Override
-                public void onSuccess(DriveFolder.DriveFolderResult result) {write(client, activity, result.getDriveFolder());
+                public void onSuccess(DriveFolder.DriveFolderResult result) {
+                  write(client, activity, result.getDriveFolder());
                 }
 
                 @Override
                 public void onUnresolvableFailure(Status status) {
-                  activity.toast("Cannot create folder in Google Drive.");
+                  net.ixitxachitls.companion.Status.toast("Cannot create folder in Google Drive.");
                 }
               });
     }
 
     private void write(GoogleApiClient client, MainActivity activity, DriveFolder folder) {
-      activity.status("writing data to Google Drive");
+      net.ixitxachitls.companion.Status.log("writing data to Google Drive");
       for (File file : files) {
         Drive.DriveApi.newDriveContents(client).setResultCallback(
             new ResolvingResultCallbacks<DriveApi.DriveContentsResult>(activity, 0) {
@@ -191,19 +192,21 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                         new ResolvingResultCallbacks<DriveFolder.DriveFileResult>(activity, 0) {
                           @Override
                           public void onSuccess(DriveFolder.DriveFileResult result) {
-                            activity.status("file " + file.name + " written");
+                            net.ixitxachitls.companion.Status.log("file " + file.name + " written");
                           }
 
                           @Override
                           public void onUnresolvableFailure(Status status) {
-                            activity.toast("could not write file " + file.name);
+                            net.ixitxachitls.companion.Status.toast("could not write file "
+                                + file.name);
                           }
                         });
               }
 
               @Override
               public void onUnresolvableFailure(Status status) {
-                activity.toast("cannot create file contents for " + file.name);
+                net.ixitxachitls.companion.Status.toast("cannot create file contents for "
+                    + file.name);
               }
             }
         );
@@ -226,7 +229,7 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
         activity.startIntentSenderForResult(intent, MainActivity.DRIVE_IMPORT_OPEN_CODE, null,
             0, 0, 0);
       } catch (IntentSender.SendIntentException e) {
-        activity.toast("Importing from Google Drive failed: " + e);
+        net.ixitxachitls.companion.Status.toast("Importing from Google Drive failed: " + e);
       }
     }
   }
@@ -258,7 +261,8 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
 
                 @Override
                 public void onUnresolvableFailure(Status status) {
-                  activity.toast("Could not get files in selected folder.");
+                  net.ixitxachitls.companion.Status.toast(
+                      "Could not get files in selected folder.");
                 }
               });
 
@@ -270,7 +274,7 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
               new ResolvingResultCallbacks<DriveApi.DriveContentsResult>(activity, 0) {
                 @Override
                 public void onSuccess(DriveApi.DriveContentsResult result) {
-                  activity.status("reading file " + meta.getTitle());
+                  net.ixitxachitls.companion.Status.log("reading file " + meta.getTitle());
                   try {
                     if (meta.getTitle().endsWith(".campaign")) {
                       Data.CampaignProto proto = Data.CampaignProto.getDefaultInstance()
@@ -289,13 +293,15 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                           Image.asBitmap(result.getDriveContents().getInputStream()));
                     }
                   } catch (InvalidProtocolBufferException e) {
-                    activity.toast("Reading of file " + meta.getTitle() + " failed!");
+                    net.ixitxachitls.companion.Status.toast("Reading of file " + meta.getTitle()
+                        + " failed!");
                   }
                 }
 
                 @Override
                 public void onUnresolvableFailure(Status status) {
-                  activity.toast("could not import Google Drive file " + meta.getTitle());
+                  net.ixitxachitls.companion.Status.toast("could not import Google Drive file "
+                      + meta.getTitle());
                 }
               });
     }

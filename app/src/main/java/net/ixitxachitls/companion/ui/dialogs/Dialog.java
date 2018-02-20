@@ -137,15 +137,14 @@ public abstract class Dialog extends DialogFragment {
   private void close() {
     MainActivity activity = (MainActivity) getActivity();
     getFragmentManager().popBackStackImmediate();
-    activity.refresh();
+    //activity.refresh();
   }
 
   @Override
   public void onDestroyView() {
     super.onDestroyView();
     MainActivity activity = (MainActivity) getActivity();
-    //getFragmentManager().popBackStack();
-    activity.refresh();
+    //activity.refresh();
   }
 
   protected abstract void createContent(View view);

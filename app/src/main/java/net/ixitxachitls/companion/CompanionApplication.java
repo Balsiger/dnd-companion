@@ -21,13 +21,7 @@
 
 package net.ixitxachitls.companion;
 
-import android.app.Activity;
-import android.app.Application;
-import android.os.Bundle;
-import android.os.Handler;
 import android.support.multidex.MultiDexApplication;
-
-import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
@@ -35,32 +29,11 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Images;
-import net.ixitxachitls.companion.net.ClientMessageProcessor;
-import net.ixitxachitls.companion.net.CompanionMessage;
-import net.ixitxachitls.companion.net.CompanionPublisher;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
-import net.ixitxachitls.companion.net.ScheduledMessages;
-import net.ixitxachitls.companion.net.ServerMessageProcessor;
-import net.ixitxachitls.companion.ui.activities.CompanionActivity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * The main application for the companion.
  */
-public class CompanionApplication extends MultiDexApplication
-  implements Application.ActivityLifecycleCallbacks {
-
-  private static CompanionPublisher companionPublisher;
-  private static CompanionSubscriber companionSubscriber;
-  private static Handler messageHandler;
-  private static MessageChecker messageChecker;
-  private Optional<CompanionActivity> currentActivity = Optional.absent();
-  private boolean serverStarted = false;
-  private Optional<ClientMessageProcessor> clientMessageProcessor = Optional.absent();
-  private Optional<ServerMessageProcessor> serverMessageProcessor = Optional.absent();
-  private final List<String> pendingMessages = new ArrayList<>();
+public class CompanionApplication extends MultiDexApplication {
 
   @Override
   public void onCreate() {
@@ -68,158 +41,10 @@ public class CompanionApplication extends MultiDexApplication
 
     Entries.init(this);
     Settings.init(this);
-    ScheduledMessages.init(this);
-    Images.load(this);
+
     Campaigns.load(this);
+    Images.load(this);
     Characters.load(this);
     Creatures.load(this);
-
-    messageHandler = new Handler();
-    messageChecker = new MessageChecker();
-
-    companionPublisher = CompanionPublisher.init(this);
-    companionSubscriber = CompanionSubscriber.init(getApplicationContext(), this);
-
-    messageChecker.run();
-
-    // Start discovering network services.
-    companionSubscriber.start();
-
-    registerActivityLifecycleCallbacks(this);
-
-    Campaigns.publish();
-    Characters.publish();
-  }
-
-  private class MessageChecker implements Runnable {
-
-    public static final int DELAY_MILLIS = 1_000;
-
-    @Override
-    public void run() {
-      if (currentActivity.isPresent()) {
-        currentActivity.get().runOnUiThread(new Runnable() {
-          @Override
-          public void run() {
-            currentActivity.get().heartbeat();
-          }
-        });
-      }
-
-      try {
-        // Send waiting messages.
-        CompanionPublisher.get().sendWaiting();
-        CompanionSubscriber.get().sendWaiting();
-
-        // Chek for messages from servers.
-        if (clientMessageProcessor.isPresent()) {
-          List<CompanionMessage> serverMessages = companionSubscriber.receive();
-          for (CompanionMessage serverMessage : serverMessages) {
-            clientMessageProcessor.get().process(serverMessage.getSenderId(),
-                serverMessage.getSenderName(), serverMessage.getMessageId(),
-                serverMessage.getData());
-          }
-        }
-
-        // Handle message from clients.
-        if (serverMessageProcessor.isPresent()) {
-          List<CompanionMessage> clientMessages = companionPublisher.receive();
-          for (CompanionMessage clientMessage : clientMessages) {
-            serverMessageProcessor.get().process(clientMessage.getRecieverId(),
-                clientMessage.getMessageId(), clientMessage.getData());
-          }
-        }
-      } finally {
-        messageHandler.postDelayed(messageChecker, DELAY_MILLIS);
-      }
-    }
-  }
-
-  synchronized public void status(String message) {
-    pendingMessages.add(message);
-    if (currentActivity.isPresent()) {
-      for (String pending : pendingMessages) {
-        currentActivity.get().status(pending);
-      }
-      pendingMessages.clear();
-    }
-  }
-
-  public void serverStopped() {
-    if (currentActivity.isPresent()) {
-      currentActivity.get().startServer();
-    } else {
-      serverStarted = false;
-    }
-  }
-
-  public void serverStarted() {
-    if (currentActivity.isPresent()) {
-      currentActivity.get().stopServer();
-    } else {
-      serverStarted = true;
-    }
-  }
-
-  public void refresh() {
-    if (currentActivity.isPresent()) {
-      currentActivity.get().runOnUiThread(new Runnable() {
-        @Override
-        public void run() {
-          currentActivity.get().refresh();
-        }
-      });
-    }
-  }
-
-  public void updateClientConnection(String name) {
-    if (currentActivity.isPresent()) {
-      currentActivity.get().updateClientConnection(name);
-    }
-  }
-
-  public Optional<ClientMessageProcessor> getClientMessageProcessor() {
-    return clientMessageProcessor;
-  }
-
-  public Optional<ServerMessageProcessor> getServerMessageProcessor() {
-    return serverMessageProcessor;
-  }
-
-  // Activity lifecyle callbacks.
-  @Override
-  public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-    currentActivity = Optional.of((CompanionActivity) activity);
-    clientMessageProcessor = Optional.of(new ClientMessageProcessor((CompanionActivity) activity));
-    serverMessageProcessor = Optional.of(new ServerMessageProcessor((CompanionActivity) activity));
-  }
-
-  @Override
-  public void onActivityStarted(Activity activity) {
-  }
-
-  @Override
-  public void onActivityResumed(Activity activity) {
-    // Don't mark the server as stopped if it has not been started. This prevents displaying a
-    // server that might never be used by the user.
-    if (serverStarted && currentActivity.isPresent()) {
-      currentActivity.get().startServer();
-    }
-  }
-
-  @Override
-  public void onActivityPaused(Activity activity) {
-  }
-
-  @Override
-  public void onActivityStopped(Activity activity) {
-  }
-
-  @Override
-  public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
-  }
-
-  @Override
-  public void onActivityDestroyed(Activity activity) {
   }
 }

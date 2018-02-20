@@ -28,7 +28,7 @@ import android.util.Log;
 import com.google.common.base.Optional;
 import com.google.protobuf.ByteString;
 
-import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.io.File;
@@ -67,13 +67,13 @@ public class Image {
     return bitmap;
   }
 
-  public void saveAndPublish(boolean local, String campaignid) {
+  public void saveAndPublish(boolean local) {
     save(local);
-    publish(campaignid);
+    publish();
   }
 
-  public void publish(String campaignId) {
-    CompanionSubscriber.get().publish(campaignId, this);
+  public void publish() {
+    CompanionMessenger.get().send(this);
   }
 
   public Optional<Bitmap> load(boolean local) {

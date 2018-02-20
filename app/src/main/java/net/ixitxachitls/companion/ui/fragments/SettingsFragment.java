@@ -27,13 +27,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -43,7 +42,7 @@ public class SettingsFragment extends CompanionFragment {
   private Settings settings;
 
   // UI elements.
-  private EditTextWrapper<EditText> nickname;
+  private LabelledEditTextView nickname;
   private Wrapper<Button> save;
 
   public SettingsFragment() {
@@ -58,9 +57,8 @@ public class SettingsFragment extends CompanionFragment {
 
     settings = Settings.get();
 
-    nickname = EditTextWrapper.wrap(view, R.id.nickname);
+    nickname = view.findViewById(R.id.nickname);
     nickname.text(settings.isDefined() ? settings.getNickname() : "")
-        .label(R.string.settings_nickname_label)
         .onEdit(this::editNickname)
         .onChange(this::refresh);
     save = Wrapper.wrap(view, R.id.save);
@@ -80,12 +78,12 @@ public class SettingsFragment extends CompanionFragment {
 
     if (settings.isDefined()) {
       CompanionFragments.get().showLast();
-      CompanionSubscriber.get().sendWelcome();
+      CompanionMessenger.get().sendWelcome();
     }
   }
 
   protected void editNickname() {
-    settings.setNickname(nickname.get().getText().toString());
+    settings.setNickname(nickname.getText());
   }
 
   @Override
@@ -93,7 +91,7 @@ public class SettingsFragment extends CompanionFragment {
     super.refresh();
 
     if (nickname != null) {
-      if (nickname.get().getText().length() > 0) {
+      if (nickname.getText().length() > 0) {
         save.get().setVisibility(View.VISIBLE);
       } else {
         save.get().setVisibility(View.INVISIBLE);

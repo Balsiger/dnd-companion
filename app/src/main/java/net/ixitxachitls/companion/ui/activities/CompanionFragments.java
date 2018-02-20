@@ -193,7 +193,6 @@ public class CompanionFragments {
     } else {
       show(CompanionFragment.Type.campaigns, Optional.absent());
     }
-    refresh();
   }
 
   public void showCampaign(Campaign campaign, Optional<View> shared) {
@@ -208,13 +207,6 @@ public class CompanionFragments {
     show(CompanionFragment.Type.character, shared);
     if (characterFragment.isPresent()) {
       characterFragment.get().showCharacter(character);
-    }
-  }
-
-  public void refresh() {
-    if (currentFragment.isPresent()) {
-      Log.d(TAG, "refresh fragment " + currentFragment.get().getClass().getSimpleName());
-      currentFragment.get().refresh();
     }
   }
 

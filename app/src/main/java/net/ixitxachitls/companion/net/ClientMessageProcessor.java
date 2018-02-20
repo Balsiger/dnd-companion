@@ -25,6 +25,8 @@ import android.util.Log;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -33,7 +35,6 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
-import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
 /**
  * Processor specifically for client side message handling.
@@ -42,8 +43,8 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   private static final String TAG = "ClientMsgProc";
 
-  public ClientMessageProcessor(CompanionActivity activity) {
-    super(activity);
+  public ClientMessageProcessor(CompanionApplication application) {
+    super(application);
   }
 
   public void process(String senderId, String senderName, long messageId,
@@ -55,7 +56,6 @@ public class ClientMessageProcessor extends MessageProcessor {
   protected void handleImage(String senderId, Image image) {
     Log.d(TAG, "received image for " + image.getType() + " " + image.getId());
     image.save(false);
-    refresh();
   }
 
   @Override
@@ -64,28 +64,26 @@ public class ClientMessageProcessor extends MessageProcessor {
     campaign.store();
     Log.d(TAG, "received campaign " + campaign.getName());
     status("received campaign " + campaign.getName());
-    refresh();
   }
 
   @Override
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
     Campaigns.remove(campaignId, false);
-    CompanionSubscriber.get().sendAck(senderId, messageId);
-    refresh();
+    CompanionMessenger.get().sendAckToServer(senderId, messageId);
   }
 
   @Override
   protected void handleWelcome(String remoteId, String remoteName) {
     status("received welcome from server " + remoteName);
     super.handleWelcome(remoteId, remoteName);
-    mainActivity.addServerConnection(remoteId, remoteName);
+    Status.addServerConnection(remoteId, remoteName);
   }
 
   @Override
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
     Optional<Character> character = Characters.getCharacter(award.getCharacterId()).getValue();
     if (character.isPresent()) {
-      new ConfirmationDialog(mainActivity)
+      new ConfirmationDialog(application.getApplicationContext())
           .title("XP Award")
           .message("Congratulation!\n"
               + "Your DM has granted " + character.get().getName() + " " + award.getXp() + " XP!")
@@ -100,9 +98,7 @@ public class ClientMessageProcessor extends MessageProcessor {
     Optional<Character> character = Characters.getCharacter(characterId).getValue();
     if (character.isPresent()) {
       character.get().addXp(xp);
-      CompanionSubscriber.get().sendAck(senderId, messageId);
-      refresh();
-      character = Characters.getCharacter(characterId).getValue();
+      CompanionMessenger.get().sendAckToServer(senderId, messageId);
     }
   }
 }

@@ -55,7 +55,7 @@ public class CreatureChipView extends ChipView {
     } else {
       setBackground(R.color.battleDark);
       if (inBattle != BattleStatus.STARTING) {
-        setSubtitle("")
+        setSubtitle("");
       }
     }
   }

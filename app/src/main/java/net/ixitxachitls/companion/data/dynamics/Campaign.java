@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
+import android.support.annotation.NonNull;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
@@ -32,18 +33,18 @@ import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
-import net.ixitxachitls.companion.net.CompanionPublisher;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A campaign with all its data.
  */
-public class Campaign extends StoredEntry<Data.CampaignProto> {
+public class Campaign extends StoredEntry<Data.CampaignProto> implements Comparable<Campaign> {
 
   // Constants.
   public static final String TYPE = "campaign";
@@ -102,11 +103,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public void awardXp(Character character, int xp) {
-    CompanionPublisher.get().awardXp(this, character, xp);
-  }
-
-  public Campaign refresh() {
-    return Campaigns.getCampaign(entryId, isLocal()).getValue().or(this);
+    CompanionMessenger.get().sendXpAward(this, character, xp);
   }
 
   public String getWorld() {
@@ -137,8 +134,20 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     return Characters.getCampaignCharacterIds(getCampaignId());
   }
 
+  public List<Character> getCharacters() {
+    return getCharacterIds().getValue().stream()
+        .map(id -> Characters.getCharacter(id).getValue().get())
+        .collect(Collectors.toList());
+  }
+
   public LiveData<ImmutableList<String>> getCreatureIds() {
     return Creatures.getCampaignCreatureIds(getCampaignId());
+  }
+
+  public List<Creature> getCreatures() {
+    return getCreatureIds().getValue().stream()
+        .map(id -> Creatures.getCreature(id).getValue().get())
+        .collect(Collectors.toList());
   }
 
   public CampaignDate getDate() {
@@ -162,15 +171,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   }
 
   public boolean isOnline() {
-    if (!isPublished()) {
-      return false;
-    }
-
-    if (isLocal()) {
-      return CompanionPublisher.get().isOnline();
-    } else {
-      return CompanionSubscriber.get().isOnline(this);
-    }
+    return CompanionMessenger.get().isOnline(this);
   }
 
   public void setWorld(String name) {
@@ -195,7 +196,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
       // Storing will also publish the updated campaign.
       store();
     } else {
-      CompanionPublisher.get().publish(this);
+      CompanionMessenger.get().send(this);
     }
   }
 
@@ -216,7 +217,8 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
   public void unpublish() {
     published = false;
     store();
-    CompanionPublisher.get().unpublish(this);
+    // We don't unpublish the campaign in the companion server, as the server will be automatically
+    // stoped if there are not more message and no published campaigns.
   }
 
   public static Campaign createNew() {
@@ -255,7 +257,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
       }
 
       if (isLocal() && published) {
-        CompanionPublisher.get().publish(this);
+        CompanionMessenger.get().send(this);
       }
     }
 
@@ -269,7 +271,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
 
   public void delete() {
     if (isLocal()) {
-      CompanionPublisher.get().delete(this);
+      CompanionMessenger.get().sendDeletion(this);
     }
     Campaigns.remove(this);
   }
@@ -312,5 +314,35 @@ public class Campaign extends StoredEntry<Data.CampaignProto> {
     result = 31 * result + battle.hashCode();
     result = 31 * result + nextBattleNumber;
     return result;
+  }
+
+  @Override
+  public int compareTo(@NonNull Campaign other) {
+    if (getCampaignId().equals(other.getCampaignId())) {
+      return 0;
+    }
+
+    if (this.isDefault()) {
+      return -1;
+    }
+
+    if (other.isDefault()) {
+      return +1;
+    }
+
+    int compare = getName().compareToIgnoreCase(other.getName());
+    if (compare != 0) {
+      return compare;
+    }
+
+    if (isLocal() && !other.isLocal()) {
+      return -1;
+    }
+
+    if (!isLocal() && other.isLocal()) {
+      return +1;
+    }
+
+    return getCampaignId().compareTo(other.getCampaignId());
   }
 }

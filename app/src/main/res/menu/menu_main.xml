@@ -23,6 +23,11 @@
         android:title="@string/action_reset"
         app:showAsAction="never" />
     <item
+        android:id="@+id/action_clear_messages"
+        android:orderInCategory="100"
+        android:title="@string/action_clear_messages"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_local"
         android:orderInCategory="100"
         android:title="@string/action_local"

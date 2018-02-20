@@ -73,6 +73,7 @@ public class CharacterFragment extends CompanionFragment {
 
   private Optional<Character> character = Optional.absent();
   private Optional<Campaign> campaign = Optional.absent();
+  private boolean storOnPause = true;
 
   // UI elements.
   private TitleView title;
@@ -97,33 +98,35 @@ public class CharacterFragment extends CompanionFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
+    storOnPause = true;
+
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
     back = Wrapper.<LinearLayout>wrap(view, R.id.back).onClick(this::back);
-    image = (RoundImageView) view.findViewById(R.id.image);
+    image = view.findViewById(R.id.image);
     image.setAction(this::editImage);
-    title = (TitleView) view.findViewById(R.id.title);
+    title = view.findViewById(R.id.title);
     title.setAction(this::editBase);
-    delete = (IconView) view.findViewById(R.id.delete);
+    delete = view.findViewById(R.id.delete);
     delete.setAction(this::delete);
     if (character.isPresent() && !character.get().isLocal() &&
         campaign.isPresent() && !campaign.get().amDM()) {
       delete.setVisibility(View.GONE);
     }
-    move = (IconView) view.findViewById(R.id.move);
+    move = view.findViewById(R.id.move);
     move.setAction(this::move);
-    strength = (AbilityView) view.findViewById(R.id.strength);
+    strength = view.findViewById(R.id.strength);
     strength.setAction(this::editAbilities);
-    dexterity = (AbilityView) view.findViewById(R.id.dexterity);
+    dexterity = view.findViewById(R.id.dexterity);
     dexterity.setAction(this::editAbilities);
-    constitution = (AbilityView) view.findViewById(R.id.constitution);
+    constitution = view.findViewById(R.id.constitution);
     constitution.setAction(this::editAbilities);
-    intelligence = (AbilityView) view.findViewById(R.id.intelligence);
+    intelligence = view.findViewById(R.id.intelligence);
     intelligence.setAction(this::editAbilities);
-    wisdom = (AbilityView) view.findViewById(R.id.wisdom);
+    wisdom = view.findViewById(R.id.wisdom);
     wisdom.setAction(this::editAbilities);
-    charisma = (AbilityView) view.findViewById(R.id.charisma);
+    charisma = view.findViewById(R.id.charisma);
     charisma.setAction(this::editAbilities);
 
     xp = EditTextWrapper.wrap(view, R.id.xp)
@@ -141,7 +144,7 @@ public class CharacterFragment extends CompanionFragment {
   public void onPause() {
     super.onPause();
 
-    if (character.isPresent()) {
+    if (storOnPause && character.isPresent()) {
       character.get().store();
     }
   }
@@ -163,6 +166,8 @@ public class CharacterFragment extends CompanionFragment {
       Characters.remove(character.get());
       Toast.makeText(getActivity(), getString(R.string.character_deleted),
           Toast.LENGTH_SHORT).show();
+
+      storOnPause = false;
       show(Type.campaign);
     }
   }
@@ -238,9 +243,8 @@ public class CharacterFragment extends CompanionFragment {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
         Image characterImage = new Image(Character.TABLE, character.get().getCharacterId(), bitmap);
-        characterImage.saveAndPublish(character.get().isLocal(), character.get().getCampaignId());
+        characterImage.saveAndPublish(character.get().isLocal());
         image.setImageBitmap(characterImage.getBitmap());
-        Images.update(character.get().isLocal(), characterImage);
       } catch (IOException e) {
         Log.e(TAG, "Cannot load image bitmap", e);
         e.printStackTrace();

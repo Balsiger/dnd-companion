@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.net.Uri;
 
 import com.google.common.base.Optional;
+import com.google.common.collect.ImmutableList;
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.data.Entries;
@@ -33,6 +34,7 @@ import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -104,6 +106,23 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return charisma;
   }
 
+
+  public void addTimedCondition(Character.TimedCondition condition) {
+    conditions.add(condition);
+    store();
+  }
+
+  public Collection<? extends TimedCondition> conditionsFor(String characterId) {
+    List<TimedCondition> matchingConditions = new ArrayList<>();
+    for (TimedCondition condition : conditions) {
+      if (condition.characterIds.contains(characterId)) {
+        matchingConditions.add(condition);
+      }
+    }
+
+    return matchingConditions;
+  }
+
   public Data.CreatureProto toCreatureProto() {
     Data.CreatureProto.Builder proto = Data.CreatureProto.newBuilder()
         .setId(entryId)
@@ -149,5 +168,71 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
         .stream()
         .map(Character.TimedCondition::fromProto)
         .collect(Collectors.toList());
+  }
+
+  public static class TimedCondition extends DynamicEntry<Data.CreatureProto.TimedCondition> {
+
+    private final int rounds;
+    private final int endRound;
+    private final ImmutableList<String> characterIds;
+    private final String name;
+    private final String description;
+    private final boolean predefined;
+
+    public TimedCondition(String name, String description) {
+      this(0, 0, ImmutableList.of(), name, description, true);
+    }
+
+    public TimedCondition(int rounds, int endRound, List<String> characterIds, String name,
+                          String description, boolean predefined) {
+      super(name);
+
+      this.rounds = rounds;
+      this.endRound = endRound;
+      this.characterIds = ImmutableList.copyOf(characterIds);
+      this.name = name;
+      this.description = description;
+      this.predefined = predefined;
+    }
+
+    public int getRounds() {
+      return rounds;
+    }
+
+    public ImmutableList<String> getCharacterIds() {
+      return characterIds;
+    }
+
+    public String getName() {
+      return name;
+    }
+
+    public String getDescription() {
+      return description;
+    }
+
+    public int getEndRound() {
+      return endRound;
+    }
+
+    public boolean isPredefined() {
+      return predefined;
+    }
+
+    @Override
+    public Data.CreatureProto.TimedCondition toProto() {
+      return Data.CreatureProto.TimedCondition.newBuilder()
+          .setRounds(rounds)
+          .setEndRound(endRound)
+          .addAllCharacterId(characterIds)
+          .setName(name)
+          .setDescription(description)
+          .build();
+    }
+
+    public static TimedCondition fromProto(Data.CreatureProto.TimedCondition proto) {
+      return new TimedCondition(proto.getRounds(), proto.getEndRound(), proto.getCharacterIdList(),
+          proto.getName(), proto.getDescription(), false);
+    }
   }
 }

@@ -30,9 +30,14 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
@@ -88,6 +93,15 @@ public class BattleView extends LinearLayout {
     Log.d(TAG, "refreshing battle view with " + campaign);
     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) getLayoutParams();
     if (inBattle()) {
+      boolean currentCreatureIsLocal;
+      String currentCreatureId = campaign.getBattle().getCurrentCreatureId();
+      if (currentCreatureId.startsWith(Creature.Type)) {
+        currentCreatureIsLocal = true;
+      } else {
+        Optional<Character> character = Characters.getCharacter(currentCreatureId).getValue();
+        currentCreatureIsLocal = character.isPresent() && character.get().isLocal();
+      }
+
       setVisibility(VISIBLE);
       Battle battle = campaign.getBattle();
       params.removeRule(RelativeLayout.ALIGN_BOTTOM);
@@ -103,8 +117,8 @@ public class BattleView extends LinearLayout {
       delayDelimiter.visible(canDelay);
       stop.visible(isDM && !battle.isEnded());
       stopDelimiter.visible(isDM && battle.isSurprised() || battle.isOngoing());
-      timed.visible(battle.isOngoing());
-      timedDelimiter.visible(battle.isOngoing());
+      timed.visible(currentCreatureIsLocal && battle.isOngoingOrSurprised());
+      timedDelimiter.visible(currentCreatureIsLocal && battle.isOngoingOrSurprised());
     } else {
       params.removeRule(RelativeLayout.BELOW);
       params.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.scroll);

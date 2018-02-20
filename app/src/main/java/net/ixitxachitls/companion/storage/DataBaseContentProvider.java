@@ -25,6 +25,7 @@ import android.content.ContentProvider;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
@@ -37,6 +38,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -116,14 +118,35 @@ public class DataBaseContentProvider extends ContentProvider {
     return db.update(uri.getLastPathSegment(), values, selection, selectionArguments);
   }
 
-  public static void reset(ContentResolver contentResolver) {
+  public static void reset(Context context, ContentResolver contentResolver) {
     contentResolver.delete(SETTINGS, null, null);
     contentResolver.delete(CAMPAIGNS_LOCAL, null, null);
     contentResolver.delete(CAMPAIGNS_REMOTE, null, null);
     contentResolver.delete(CHARACTERS_LOCAL, null, null);
     contentResolver.delete(CHARACTERS_REMOTE, null, null);
+    contentResolver.delete(CREATURES_LOCAL, null, null);
+    contentResolver.delete(MESSAGES, null, null);
+
+    // Delete all files.
+    delete(context.getExternalFilesDir(""));
 
     // Close the app.
     System.exit(0);
+  }
+
+  public static void clearMessages(Context context, ContentResolver contentResolver) {
+    contentResolver.delete(MESSAGES, null, null);
+
+    // Close the app.
+    System.exit(0);
+  }
+
+  private static void delete(File file) {
+    if (file.isDirectory())
+      for (File child : file.listFiles()) {
+        delete(child);
+      }
+
+    file.delete();
   }
 }

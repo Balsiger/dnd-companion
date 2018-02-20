@@ -87,6 +87,10 @@ public class Campaigns {
     return local.getCampaigns();
   }
 
+  public static List<Campaign> getRemoteCampaigns() {
+    return remote.getCampaigns();
+  }
+
   public static List<Campaign> getAllCampaigns() {
     List<Campaign> campaigns = new ArrayList<>();
     campaigns.add(defaultCampaign);

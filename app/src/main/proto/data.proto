@@ -57,8 +57,9 @@ message CreatureProto {
   message TimedCondition {
     int32 rounds = 1;
     repeated string character_id = 2;
-    string text = 3;
+    string name = 3;
     int32 endRound = 4;
+    string description = 5;
   }
 
   message Battle {

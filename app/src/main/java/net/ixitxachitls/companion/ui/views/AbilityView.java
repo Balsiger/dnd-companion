@@ -50,7 +50,7 @@ public class AbilityView extends LinearLayout {
   }
 
   private void init(@Nullable AttributeSet attributes) {
-    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.AbilityView );
+    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.AbilityView);
 
     View view = LayoutInflater.from(getContext())
         .inflate(R.layout.view_ability, null, false);

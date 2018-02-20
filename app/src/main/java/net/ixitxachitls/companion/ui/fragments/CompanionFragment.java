@@ -22,14 +22,15 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 //import android.app.Fragment;
+
 import android.support.annotation.CallSuper;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 /**
  * Base fragment for all our non-dialog fragments
@@ -51,7 +52,7 @@ public abstract class CompanionFragment extends Fragment {
   }
 
   public void toast(String message) {
-    ((MainActivity) getActivity()).toast(message);
+    Status.toast(message);
   }
 
   protected void show(Type fragment) {

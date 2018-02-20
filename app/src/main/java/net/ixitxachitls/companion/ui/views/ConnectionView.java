@@ -28,8 +28,6 @@ import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.net.CompanionPublisher;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
 import net.ixitxachitls.companion.ui.dialogs.ConnectionStatusDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.util.Strings;
@@ -58,13 +56,18 @@ public class ConnectionView extends LinearLayout {
     init(id, name, server);
   }
 
+  public String getName() {
+    return name;
+  }
+
   private void init(String id, String name, boolean server) {
     this.id = id;
     this.name = name;
     this.server = server;
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_connection, null, false);
-    icon = (IconView) view.findViewById(R.id.status);
+    icon = view.findViewById(R.id.status);
+    icon.setColorFilter(getResources().getColor(R.color.on, null));
     if (server) {
       icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_computer_black_24dp, null));
     }
@@ -84,19 +87,19 @@ public class ConnectionView extends LinearLayout {
     CompanionApplication app = (CompanionApplication) getContext().getApplicationContext();
     List<String> messages = new ArrayList<>();
     if (server) {
-      messages.addAll(CompanionPublisher.get().getSenderList(id));
-      if (app.getServerMessageProcessor().isPresent()) {
-        messages.addAll(app.getServerMessageProcessor().get().receivedMessages());
-      } else {
+      //messages.addAll(CompanionServer.get().getSenderList(id));
+      //if (app.getServerMessageProcessor().isPresent()) {
+      //  messages.addAll(app.getServerMessageProcessor().get().receivedMessages());
+      //} else {
         messages.add("No server message processor");
-      }
+      //}
     } else {
-      messages.addAll(CompanionSubscriber.get().getSenderList(id));
-      if (app.getClientMessageProcessor().isPresent()) {
-        messages.addAll(app.getClientMessageProcessor().get().receivedMessages());
-      } else {
+      //messages.addAll(CompanionClients.get().getSenderList(id));
+      //if (app.getClientMessageProcessor().isPresent()) {
+      //  messages.addAll(app.getClientMessageProcessor().get().receivedMessages());
+      //} else {
         messages.add("No client message processor");
-      }
+      //}
     }
 
     ConnectionStatusDialog.newInstance(name, Strings.NEWLINE_JOINER.join(messages)).display();
@@ -111,21 +114,12 @@ public class ConnectionView extends LinearLayout {
   }
 
   public void update() {
+    icon.setColorFilter(getResources().getColor(R.color.on, null));
     icon.bleep();
     heartbeats = OFFLINE_BEATS;
   }
 
   public void out() {
     icon.setColorFilter(getResources().getColor(R.color.out, null));
-  }
-
-  public void on() {
-    icon.setColorFilter(getResources().getColor(R.color.on, null));
-    heartbeats = Integer.MAX_VALUE;
-  }
-
-  public void off() {
-    icon.setColorFilter(getResources().getColor(R.color.off, null));
-    heartbeats = Integer.MAX_VALUE;
   }
 }

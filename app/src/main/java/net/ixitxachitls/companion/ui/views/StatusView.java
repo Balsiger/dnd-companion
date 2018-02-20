@@ -29,6 +29,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -36,7 +37,7 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.net.CompanionPublisher;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -59,8 +60,8 @@ public class StatusView extends LinearLayout {
   private final TextWrapper<TextView> messages;
   private final ScrollView messagesScroll;
   private final Wrapper<LinearLayout> connections;
-  private final Map<String, ConnectionView> clientConnectionsByName = new HashMap<>();
-  private final Map<String, ConnectionView> serverConnectionsByName = new HashMap<>();
+  private final Map<String, ConnectionView> clientConnectionsById = new HashMap<>();
+  private final Map<String, ConnectionView> serverConnectionsById = new HashMap<>();
 
   // Values.
   private boolean started = true;
@@ -76,8 +77,10 @@ public class StatusView extends LinearLayout {
         LinearLayout.LayoutParams.WRAP_CONTENT));
     online = (IconView) view.findViewById(R.id.online);
     online.setAction(this::restart);
-    messagesScroll = (ScrollView) view.findViewById(R.id.messages_scroll);
-    messages = TextWrapper.wrap(view, R.id.messages).onClick(this::toggleDebug);
+    messagesScroll = view.findViewById(R.id.messages_scroll);
+    messages = TextWrapper.wrap(view, R.id.messages)
+        .onClick(this::toggleDebug)
+        .onLongClick(this::clearDebug);
     messages.get().setMovementMethod(new ScrollingMovementMethod());
     connections = Wrapper.<LinearLayout>wrap(view, R.id.connections).onClick(this::toggleDebug);
     Wrapper.<HorizontalScrollView>wrap(view, R.id.connections_scroll)
@@ -93,14 +96,18 @@ public class StatusView extends LinearLayout {
     settings.setDebugStatus(!settings.shouldShowStatus().getValue());
   }
 
-  public void heartbeat() {
+  private void clearDebug() {
+    messages.text("");
+  }
+
+  public void heartBeat() {
     online.bleep();
 
-    for (ConnectionView connection : clientConnectionsByName.values()) {
+    for (ConnectionView connection : clientConnectionsById.values()) {
       connection.heartbeat();
     }
 
-    for (ConnectionView connection : serverConnectionsByName.values()) {
+    for (ConnectionView connection : serverConnectionsById.values()) {
       connection.heartbeat();
     }
   }
@@ -111,85 +118,70 @@ public class StatusView extends LinearLayout {
   }
 
   public void addClientConnection(String id, String name) {
-    if (clientConnectionsByName.containsKey(name)) {
+    if (clientConnectionsById.containsKey(id)) {
       Log.d(TAG, "trying to add second connection for " + name);
       return;
     }
 
     ConnectionView connection = new ConnectionView(getContext(), id, name, false);
-    clientConnectionsByName.put(name, connection);
+    clientConnectionsById.put(id, connection);
     connections.get().addView(connection);
   }
 
+  public void removeClientConnection(String id) {
+    ConnectionView connection = clientConnectionsById.remove(id);
+    if (connection != null) {
+      ((ViewGroup) connection.getParent()).removeView(connection);
+    }
+  }
+
+  public void removeServerConnection(String id) {
+    ConnectionView connection = serverConnectionsById.remove(id);
+    if (connection != null) {
+      ((ViewGroup) connection.getParent()).removeView(connection);
+    }
+  }
+
+  // TODO(merlin): remove id?
   public void addServerConnection(String id, String name) {
-    if (serverConnectionsByName.containsKey(name)) {
+    if (serverConnectionsById.containsKey(id)) {
       Log.d(TAG, "trying to add second connection for " + name);
       return;
     }
 
     ConnectionView connection = new ConnectionView(getContext(), id, name, true);
-    serverConnectionsByName.put(name, connection);
+    serverConnectionsById.put(id, connection);
     connections.get().addView(connection);
   }
 
-  public void updateClientConnection(String name) {
-    ConnectionView connection = clientConnectionsByName.get(name);
+  public void updateClientConnection(String id) {
+    ConnectionView connection = clientConnectionsById.get(id);
     if (connection == null) {
-      Log.d(TAG, "no connection view for " + name);
+      Log.d(TAG, "no connection view for " + id);
       return;
     }
 
     connection.update();
   }
 
-  public void updateServerConnection(String name) {
-    ConnectionView connection = serverConnectionsByName.get(name);
+  public void updateServerConnection(String id) {
+    ConnectionView connection = serverConnectionsById.get(id);
     if (connection == null) {
-      Log.d(TAG, "no connection view for " + name);
+      Log.d(TAG, "no connection view for " + id);
       return;
     }
 
     connection.update();
-  }
-
-  public void startServer() {
-    String name = serverName();
-    ConnectionView connection = serverConnectionsByName.get(name);
-    if (connection == null) {
-      connection = new ConnectionView(getContext(), Settings.get().getAppId(), name, true);
-      serverConnectionsByName.put(name, connection);
-      connections.get().addView(connection);
-    }
-
-    connection.on();
-  }
-
-  public void stopServer() {
-    ConnectionView connection = serverConnectionsByName.get(serverName());
-    if (connection == null) {
-      Log.d(TAG, "no connection view for " + serverName());
-      return;
-    }
-
-    connection.off();
   }
 
   private void restart() {
     if (started) {
-      CompanionPublisher.get().stop();
+      CompanionMessenger.get().stop();
     } else {
-      CompanionPublisher.get().start();
+      CompanionMessenger.get().start();
     }
 
     started = !started;
   }
 
-  private String serverName() {
-    String nickname = Settings.get().getNickname();
-    if (nickname.endsWith("s")) {
-      return nickname + "' server";
-    }
-
-    return nickname + "'s server";
-  }
 }

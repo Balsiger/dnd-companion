@@ -23,11 +23,12 @@ package net.ixitxachitls.companion.net;
 
 import android.util.Log;
 
+import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
 /**
  * Processor on the server to process client messages.
@@ -35,8 +36,8 @@ import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 public class ServerMessageProcessor extends MessageProcessor {
   private static final String TAG = "SrvMsgProc";
 
-  public ServerMessageProcessor(CompanionActivity mainActivity) {
-    super(mainActivity);
+  public ServerMessageProcessor(CompanionApplication application) {
+    super(application);
   }
 
   public void process(String receiverId, long messageId, CompanionMessageData message) {
@@ -46,7 +47,7 @@ public class ServerMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleAck(String recipientId, long messageId) {
-    CompanionPublisher.get().ack(recipientId, messageId);
+    CompanionMessenger.get().sendAckToClient(recipientId, messageId);
   }
 
   @Override
@@ -54,7 +55,7 @@ public class ServerMessageProcessor extends MessageProcessor {
     super.handleCharacter(senderId, character);
 
     // Send the character update to the other clients.
-    CompanionPublisher.get().update(character, senderId);
+    CompanionMessenger.get().send(character);
   }
 
   protected void handleImage(String senderId, Image image) {
@@ -62,15 +63,14 @@ public class ServerMessageProcessor extends MessageProcessor {
     image.save(false);
 
     // Send the image update to the other clients.
-    CompanionPublisher.get().update(senderId, image);
-    refresh();
+    CompanionMessenger.get().send(image);
   }
 
   @Override
   protected void handleWelcome(String remoteId, String remoteName) {
     status("received welcome from client " + remoteName);
     super.handleWelcome(remoteId, remoteName);
-    mainActivity.addClientConnection(remoteId, remoteName);
+    Status.addClientConnection(remoteId, remoteName);
 
     // Publish all local campaigns to that client.
     Campaigns.publish();

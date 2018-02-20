@@ -24,15 +24,14 @@ package net.ixitxachitls.companion.net;
 import android.util.Log;
 
 import com.google.common.base.Optional;
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -48,11 +47,11 @@ public class MessageScheduler {
   private final String recipientId;
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
       waiting = LinkedHashMultimap.create();
-  private final Map<Long, ScheduledMessage> pending = new HashMap<>();
+  private final Map<Long, ScheduledMessage> pendingByMessageId = new HashMap<>();
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
-      sent = LinkedHashMultimap.create();
+      sentByType = LinkedHashMultimap.create();
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
-      acknowledged = LinkedHashMultimap.create();
+      acknowledgedByType = LinkedHashMultimap.create();
 
   public MessageScheduler(String recipientId) {
     this.recipientId = recipientId;
@@ -60,23 +59,28 @@ public class MessageScheduler {
     List<ScheduledMessage> toRemove = new ArrayList<>();
     for (ScheduledMessage message
         : ScheduledMessages.get().getMessagesByReceiver(recipientId)) {
-      switch (message.getState()) {
-        case WAITING:
-          waiting.put(message.getData().getType(), message);
 
-        case PENDING:
-          pending.put(message.getMessageId(), message);
-          break;
+      if (message.isOutdated()) {
+        toRemove.add(message);
+      } else {
+        switch (message.getState()) {
+          case WAITING:
+            waiting.put(message.getData().getType(), message);
 
-        case SENT:
-          toRemove.add(message);
-          sent.put(message.getData().getType(), message);
-          break;
+          case PENDING:
+            pendingByMessageId.put(message.getMessageId(), message);
+            break;
 
-        case ACKED:
-          toRemove.add(message);
-          acknowledged.put(message.getData().getType(), message);
-          break;
+          case SENT:
+            toRemove.add(message);
+            sentByType.put(message.getData().getType(), message);
+            break;
+
+          case ACKED:
+            toRemove.add(message);
+            acknowledgedByType.put(message.getData().getType(), message);
+            break;
+        }
       }
     }
 
@@ -135,7 +139,7 @@ public class MessageScheduler {
 
   public Optional<ScheduledMessage> nextWaiting() {
     // Resend messages that are in pending state for too long.
-    for (Iterator<ScheduledMessage> i = pending.values().iterator(); i.hasNext(); ) {
+    for (Iterator<ScheduledMessage> i = pendingByMessageId.values().iterator(); i.hasNext(); ) {
       ScheduledMessage message = i.next();
       if (message.isLate()) {
         markWaiting(message);
@@ -146,12 +150,6 @@ public class MessageScheduler {
     for (Iterator<ScheduledMessage> i = waiting.values().iterator(); i.hasNext(); ) {
       ScheduledMessage message = i.next();
 
-      // Ignore messages that are already pending.
-      if (pending.containsKey(message.getData().getType())) {
-        continue;
-      }
-
-      // this does not seem to work as expected?
       i.remove();
       if (message.requiresAck()) {
         markPending(message);
@@ -166,15 +164,13 @@ public class MessageScheduler {
   }
 
   public void ack(long messageId) {
-    ScheduledMessage message = pending.get(messageId);
+    ScheduledMessage message = pendingByMessageId.get(messageId);
     if (message != null) {
-      pending.remove(messageId);
+      pendingByMessageId.remove(messageId);
       markAcked(message);
+    } else {
+      Status.log("Ingored ack for unknown message " + messageId + " for " + recipientId);
     }
-  }
-
-  public boolean isIdle() {
-    return waiting.isEmpty() && pending.isEmpty();
   }
 
   private void markWaiting(ScheduledMessage message) {
@@ -185,37 +181,17 @@ public class MessageScheduler {
   private void markAcked(ScheduledMessage message) {
     message.markAck();
     ScheduledMessages.get().remove(message);
-    acknowledged.put(message.getData().getType(), message);
+    acknowledgedByType.put(message.getData().getType(), message);
   }
 
   private void markSent(ScheduledMessage message) {
     message.markSent();
     ScheduledMessages.get().remove(message);
-    sent.put(message.getData().getType(), message);
+    sentByType.put(message.getData().getType(), message);
   }
 
   private void markPending(ScheduledMessage message) {
     message.markPending();
-    pending.put(message.getMessageId(), message);
-  }
-
-  public List<String> scheduledMessages(String id) {
-    List<String> list = new ArrayList<>();
-
-    addMessages(list, waiting.values(), id);
-    addMessages(list, pending.values(), id);
-    addMessages(list, sent.values(), id);
-    addMessages(list, acknowledged.values(), id);
-
-    return list;
-  }
-
-  private void addMessages(List<String> list, Collection<ScheduledMessage> messages,
-                           String id) {
-    for (ScheduledMessage message : ImmutableList.copyOf(messages).reverse()) {
-      if (message.getSenderId().equals(id)) {
-        list.add(message.toSenderString());
-      }
-    }
+    pendingByMessageId.put(message.getMessageId(), message);
   }
 }

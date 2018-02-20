@@ -113,6 +113,7 @@ public class Images {
     MutableLiveData<Optional<Image>> liveImage = imagesByKey.get(image.getId());
     if (liveImage != null) {
       liveImage.setValue(Optional.of(image));
+      image.publish();
     }
   }
 
@@ -151,7 +152,7 @@ public class Images {
   public void publishImageFor(Character character) {
     Optional<Image> image = load(Character.TABLE, character.getCharacterId());
     if (image.isPresent()) {
-      image.get().publish(character.getCampaignId());
+      image.get().publish();
     }
   }
 

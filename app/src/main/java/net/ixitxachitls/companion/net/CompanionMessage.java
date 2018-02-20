@@ -111,4 +111,9 @@ public class CompanionMessage {
         proto.getHeader().getId(),
         CompanionMessageData.fromProto(proto.getData()));
   }
+
+  @Override
+  public String toString() {
+    return senderName + ": " + messageId + " / " + data;
+  }
 }

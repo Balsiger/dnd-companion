@@ -93,5 +93,6 @@
   <string name="campaign_button_move">Move character to other campaign</string>
   <string name="edit_timed_condition">Create a timed condition</string>
   <string name="title_xp_rewards">XP Rewards</string>
+  <string name="action_clear_messages">Clear Messages</string>
 
 </resources>

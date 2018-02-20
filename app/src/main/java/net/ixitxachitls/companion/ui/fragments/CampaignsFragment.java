@@ -21,8 +21,9 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.arch.lifecycle.LiveData;
 import android.os.Bundle;
-import android.util.Log;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,10 @@ import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
 
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -76,30 +80,43 @@ public class CampaignsFragment extends CompanionFragment {
 
   private void update(ImmutableList<String> campaignIds) {
     if (campaignsView != null) {
-      for (Map.Entry<String, CampaignTitleView> entry : titlesByCampaignId.entrySet()) {
-        Campaigns.getCampaign(entry.getKey()).removeObserver(entry.getValue()::setLiveCampaign);
+      // Remove all deleted campaigns.
+      for (Iterator<String> i = titlesByCampaignId.keySet().iterator(); i.hasNext(); ) {
+        String id = i.next();
+        if (!campaignIds.contains(id)) {
+          campaignsView.get().removeView(titlesByCampaignId.get(id));
+          i.remove();
+        }
       }
 
-      titlesByCampaignId.clear();
-      campaignsView.get().removeAllViews();
-
-      // TODO(merlin): This could be optmizied by only recreating new campaigns and
-      // removing old ones instead of always recreating all.
-      for (String campaignId : campaignIds) {
-        Campaign campaign = Campaigns.getCampaign(campaignId).getValue().get();
-        CampaignTitleView title = new CampaignTitleView(getContext());
-        titlesByCampaignId.put(campaignId, title);
-        Campaigns.getCampaign(campaignId).observe(this, title::setLiveCampaign);
-        title.setAction(() -> {
-          if (Misc.onEmulator() && !campaign.isLocal()) {
-            Misc.emulateRemote();
-          } else {
-            Misc.emulateLocal();
+      // Add all new campaigns.
+      for (String id : campaignIds) {
+        if (!titlesByCampaignId.containsKey(id)) {
+          LiveData<Optional<Campaign>> campaign = Campaigns.getCampaign(id);
+          if (campaign.getValue().isPresent()) {
+            CampaignTitleView title = new CampaignTitleView(getContext());
+            titlesByCampaignId.put(id, title);
+            campaign.observe(this, title::update);
+            campaignsView.get().addView(title);
+            title.setAction(() -> {
+              if (Misc.onEmulator() && !campaign.getValue().get().isLocal()) {
+                Misc.emulateRemote();
+              } else {
+                Misc.emulateLocal();
+              }
+              CompanionFragments.get().showCampaign(campaign.getValue().get(), Optional.of(title));
+            });
           }
-          Log.d("TAG", campaignId);
-          CompanionFragments.get().showCampaign(campaign, Optional.of(title));
-        });
-        campaignsView.get().addView(title);
+        }
+      }
+
+      // Sort all the campaigns.
+      TransitionManager.beginDelayedTransition(campaignsView.get());
+      campaignsView.get().removeAllViews();
+      List<Campaign> campaigns = Campaigns.getAllCampaigns();
+      Collections.sort(campaigns);
+      for (Campaign campaign : campaigns) {
+        titlesByCampaignId.get(campaign.getCampaignId()).addTo(campaignsView.get());
       }
     }
   }

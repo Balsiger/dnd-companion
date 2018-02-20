@@ -24,14 +24,16 @@ package net.ixitxachitls.companion.net;
 import android.util.Log;
 import android.widget.Toast;
 
+import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
-import net.ixitxachitls.companion.ui.activities.CompanionActivity;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -49,13 +51,13 @@ public abstract class MessageProcessor {
   private static final String TAG = "MsgProc";
   private static final int MAX_RECEIVED_SIZE = 50;
 
-  protected final CompanionActivity mainActivity;
+  protected final CompanionApplication application;
   private final Deque<RecievedMessage> received = new ArrayDeque<>();
   protected final Set<String> inFlightMessages =
       Collections.newSetFromMap(new ConcurrentHashMap<>());
 
-  public MessageProcessor(CompanionActivity mainActivity) {
-    this.mainActivity = mainActivity;
+  public MessageProcessor(CompanionApplication application) {
+    this.application = application;
   }
 
   protected void process(String senderId, String senderName, String receiverId, long messageId,
@@ -113,8 +115,9 @@ public abstract class MessageProcessor {
         break;
     }
 
-    mainActivity.updateClientConnection(Settings.get().getNickname());
-    mainActivity.updateServerConnection(senderName);
+
+    Status.refreshClientConnection(Settings.get().getNickname());
+    Status.refreshServerConnection(senderName);
 
     received.addFirst(new RecievedMessage(senderName, message));
     if (received.size() > MAX_RECEIVED_SIZE) {
@@ -146,8 +149,7 @@ public abstract class MessageProcessor {
 
   protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
     Characters.remove(characterId, false);
-    CompanionSubscriber.get().sendAck(senderId, messageId);
-    refresh();
+    CompanionMessenger.get().sendAckToServer(senderId, messageId);
   }
 
   protected void handleAck(String recipientId, long messageId) {
@@ -163,13 +165,13 @@ public abstract class MessageProcessor {
   }
 
   private void handleInvalid(String senderName) {
-    Toast.makeText(mainActivity.getApplicationContext(),
+    Toast.makeText(application.getApplicationContext(),
         senderName + ": Unknown message ignored", Toast.LENGTH_LONG).show();
   }
 
   protected void handleDebug(String senderId, String senderName, long messageId, String debug) {
     if (!debug.isEmpty()) {
-      Toast.makeText(mainActivity.getApplicationContext(),
+      Toast.makeText(application.getApplicationContext(),
           senderName + ": " + debug, Toast.LENGTH_LONG).show();
     }
   }
@@ -180,34 +182,19 @@ public abstract class MessageProcessor {
       character.store();
       Log.d(TAG, "received character " + character.getName());
       status("received character " + character.getName());
-
-      refresh();
     }
   }
 
   protected void handleWelcome(String remoteId, String remoteName) {
+    for (Campaign campaign : Campaigns.getCampaignsByServer(remoteId)) {
+      Characters.publish(campaign.getCampaignId());
+    }
 
-    // TODO: ensure this is handled by the general message flows on reconnection.
-    // Republish all client content for the server's campaigns.
-    //for (Campaign campaign : Campaigns.getCampaigns(remoteId)) {
-    //  Characters.publish(campaign.getCampaignId());
-    //}
-    //CompanionPublisher.get().republish(Campaigns.getLocalCampaigns(),
-    //    message.getSenderId());
-
+    CompanionMessenger.get().sendCurrent(remoteId);
   }
 
   public void status(String message) {
-    mainActivity.status(message);
-  }
-
-  public void refresh() {
-    mainActivity.runOnUiThread(new Runnable() {
-      @Override
-      public void run() {
-        mainActivity.refresh();
-      }
-    });
+    Status.log(message);
   }
 
   public static class RecievedMessage {
@@ -217,6 +204,11 @@ public abstract class MessageProcessor {
     public RecievedMessage(String senderName, CompanionMessageData message) {
       this.senderName = senderName;
       this.message = message;
+    }
+
+    @Override
+    public String toString() {
+      return "from " + senderName + ": " + message;
     }
   }
 }

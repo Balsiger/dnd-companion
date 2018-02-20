@@ -23,25 +23,24 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
-import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
@@ -67,16 +66,6 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     super(id, TYPE, name, local,
         local ? DataBaseContentProvider.CHARACTERS_LOCAL
             : DataBaseContentProvider.CHARACTERS_REMOTE, campaignId);
-  }
-
-  public Optional<TimedCondition> getHistoryCondition(String text) {
-    for (TimedCondition condition : conditionsHistory) {
-      if (text.equalsIgnoreCase(condition.text)) {
-        return Optional.of(condition);
-      }
-    }
-
-    return Optional.absent();
   }
 
   public String getRace() {
@@ -199,7 +188,7 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   }
 
   public static Character createNew(String campaignId) {
-    return new Character(0, "", StoredEntries.sanitize(campaignId), true);
+    return new Character(0, "", campaignId, true);
   }
 
   public Optional<Level> getLevel(int number) {
@@ -208,17 +197,6 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     }
 
     return Optional.absent();
-  }
-
-  public Collection<? extends TimedCondition> conditionsFor(String characterId) {
-    List<TimedCondition> matchingConditions = new ArrayList<>();
-    for (TimedCondition condition : conditions) {
-      if (condition.characterIds.contains(characterId)) {
-        matchingConditions.add(condition);
-      }
-    }
-
-    return matchingConditions;
   }
 
   @Override
@@ -332,59 +310,15 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     return names;
   }
 
+  @Override
   public void addTimedCondition(Character.TimedCondition condition) {
-    conditions.add(condition);
     conditionsHistory.add(condition);
-    conditionsHistory =
-        conditionsHistory.subList(0, Math.min(conditionsHistory.size(), MAX_HISTORY));
-  }
-
-  public static class TimedCondition extends DynamicEntry<Data.CreatureProto.TimedCondition> {
-
-    private final int rounds;
-    private final int endRound;
-    private final ImmutableList<String> characterIds;
-    private final String text;
-
-    public TimedCondition(int rounds, int endRound, List<String> characterIds, String text) {
-      super(text);
-
-      this.rounds = rounds;
-      this.endRound = endRound;
-      this.characterIds = ImmutableList.copyOf(characterIds);
-      this.text = text;
+    if (!condition.isPredefined()) {
+      conditionsHistory =
+          conditionsHistory.subList(0, Math.min(conditionsHistory.size(), MAX_HISTORY));
     }
 
-    public int getRounds() {
-      return rounds;
-    }
-
-    public ImmutableList<String> getCharacterIds() {
-      return characterIds;
-    }
-
-    public String getText() {
-      return text;
-    }
-
-    public int getEndRound() {
-      return endRound;
-    }
-
-    @Override
-    public Data.CreatureProto.TimedCondition toProto() {
-      return Data.CreatureProto.TimedCondition.newBuilder()
-          .setRounds(rounds)
-          .setEndRound(endRound)
-          .addAllCharacterId(characterIds)
-          .setText(text)
-          .build();
-    }
-
-    public static TimedCondition fromProto(Data.CreatureProto.TimedCondition proto) {
-      return new TimedCondition(proto.getRounds(), proto.getEndRound(), proto.getCharacterIdList(),
-          proto.getText());
-    }
+    super.addTimedCondition(condition);
   }
 
   public static class Level extends DynamicEntry<Data.CharacterProto.Level> {
@@ -454,7 +388,6 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   @Override
   public boolean store() {
     if (playerName.isEmpty()) {
-
       playerName = Settings.get().getNickname();
     }
 
@@ -466,7 +399,7 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
         Characters.add(this);
       }
       if (isLocal()) {
-        CompanionSubscriber.get().publish(this);
+        CompanionMessenger.get().send(this);
       }
     }
 
@@ -474,18 +407,12 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   }
 
   public void publish() {
-    Log.d(TAG, "publishing character " + getName());
-    CompanionSubscriber.get().publish(this);
+    Status.log("publishing character " + this);
+    CompanionMessenger.get().send(this);
   }
 
-  public List<String> conditionHistoryNames() {
-    List<String> names = new ArrayList<>();
-
-    for (TimedCondition condition : conditionsHistory) {
-      names.add(condition.text);
-    }
-
-    return names;
+  public List<TimedCondition> getConditionsHistory() {
+    return ImmutableList.copyOf(conditionsHistory);
   }
 
   @Override

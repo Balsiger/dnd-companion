@@ -29,8 +29,7 @@ import android.util.Log;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
-import net.ixitxachitls.companion.net.CompanionPublisher;
-import net.ixitxachitls.companion.net.CompanionSubscriber;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -84,7 +83,6 @@ public class Characters {
   }
 
   public static LiveData<ImmutableList<String>> getCampaignCharacterIds(String campaignId) {
-    //campaignId = StoredEntries.sanitize(campaignId);
     if (characterIdsByCampaignId.containsKey(campaignId)) {
       return characterIdsByCampaignId.get(campaignId);
     }
@@ -167,9 +165,7 @@ public class Characters {
     local.remove(character);
 
     // Unpublish the character.
-    // TODO(merlin): This should be moved to the companion publisher.
-    CompanionPublisher.get().delete(character);
-    CompanionSubscriber.get().delete(character);
+    CompanionMessenger.get().sendDeletion(character);
 
     // Update live data.
     if (characterIdsByCampaignId.containsKey(character.getCampaignId())) {

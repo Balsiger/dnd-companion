@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-{2017} Peter Balsiger
+ * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
  * This file is part of the Player Companion.
@@ -19,21 +19,34 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.ui.activities;
+package net.ixitxachitls.companion.ui;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.AlertDialog;
+import android.content.Context;
+
+import net.ixitxachitls.companion.R;
 
 /**
- * Base class for all activities in the companion.
+ * A dialog to show a simple message.
  */
-public abstract class CompanionActivity extends AppCompatActivity {
-  public abstract void status(String message);
-  public abstract void refresh();
-  public abstract void heartbeat();
-  public abstract void addClientConnection(String id, String name);
-  public abstract void updateClientConnection(String name);
-  public abstract void addServerConnection(String id, String name);
-  public abstract void updateServerConnection(String name);
-  public abstract void startServer();
-  public abstract void stopServer();
+public class MessageDialog {
+  private final AlertDialog.Builder dialog;
+
+  public MessageDialog(Context context) {
+    this.dialog = new AlertDialog.Builder(context, R.style.ThemeOverlay_AppCompat_Dialog);
+  }
+
+  public MessageDialog title(String title) {
+    dialog.setTitle(title);
+    return this;
+  }
+
+  public MessageDialog message(String message) {
+    dialog.setMessage(message);
+    return this;
+  }
+
+  public void show() {
+    this.dialog.show();
+  }
 }

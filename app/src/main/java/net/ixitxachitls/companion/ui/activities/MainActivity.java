@@ -26,24 +26,27 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.android.gms.drive.DriveId;
 import com.google.android.gms.drive.OpenFileActivityBuilder;
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Images;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
@@ -54,13 +57,16 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends CompanionActivity {
+public class MainActivity extends AppCompatActivity {
 
   public static final int RESOLVE_DRIVE_CONNECTION_CODE = 1;
   public static final int DRIVE_IMPORT_OPEN_CODE = 2;
+
   private static final String TAG = "Main";
 
   private DriveStorage driveStorage;
+  private CompanionMessenger companionMessenger;
+
   // UI elements.
   private StatusView status;
   private Menu menu;
@@ -80,15 +86,21 @@ public class MainActivity extends CompanionActivity {
 
     View container = findViewById(R.id.activity_main);
 
-    // Setup the status first, in case any fragment wants to set something.
+    // Setup the status first, in case any fragment wants to log something.
     status = (StatusView) container.findViewById(R.id.status);
+    Status.setView(status);
 
     try {
       PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-      status("version " + packageInfo.versionName + " #" + packageInfo.versionCode);
+      Status.log("version " + packageInfo.versionName + " #" + packageInfo.versionCode);
     } catch (PackageManager.NameNotFoundException e) {
-      status("cannot get version information");
+      Status.log("cannot get version information");
     }
+
+    companionMessenger = CompanionMessenger.init((CompanionApplication) getApplication());
+    companionMessenger.start();
+    Campaigns.publish();
+    Characters.publish();
 
     CompanionFragments.get().show();
   }
@@ -150,7 +162,17 @@ public class MainActivity extends CompanionActivity {
       ConfirmationDialog.create(this)
           .title("Reset All Data")
           .message("Do you really want to delete all data? This step cannot be undone!")
-          .yes(() -> DataBaseContentProvider.reset(getContentResolver()))
+          .yes(() -> DataBaseContentProvider.reset(getApplicationContext(), getContentResolver()))
+          .show();
+      return true;
+    }
+
+    if (id == R.id.action_clear_messages) {
+      ConfirmationDialog.create(this)
+          .title("Clear Messages")
+          .message("Do you really want to clear all pending messages? This step cannot be undone!")
+          .yes(() -> DataBaseContentProvider.clearMessages(
+              getApplicationContext(), getContentResolver()))
           .show();
       return true;
     }
@@ -171,68 +193,12 @@ public class MainActivity extends CompanionActivity {
   }
 
   @Override
-  public void refresh() {
-    CompanionFragments.get().refresh();
-  }
+  public void onDestroy() {
+    Status.clearView();
+    Log.d(TAG, "main activity destroyed");
+    companionMessenger.stop();
 
-  @Override
-  public void status(String message) {
-    runOnUiThread(new Runnable() {
-      public void run() {
-        status.addMessage(message);
-      }
-    });
-  }
-
-  public void toast(String message) {
-    runOnUiThread(new Runnable() {
-      @Override
-      public void run() {
-        Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
-      }
-    });
-  }
-
-  @Override
-  public void heartbeat() {
-    status.heartbeat();
-  }
-
-  @Override
-  public void addClientConnection(String id, String name) {
-    status.addClientConnection(id, name);
-  }
-
-  @Override
-  public void updateClientConnection(String name) {
-    runOnUiThread(new Runnable() {
-      @Override
-      public void run() {
-        status.updateClientConnection(name);
-      }
-    });
-  }
-
-  @Override
-  public void addServerConnection(String id, String name) {
-    status.addServerConnection(id, name);
-  }
-
-  @Override
-  public void updateServerConnection(String name) {
-    status.updateServerConnection(name);
-  }
-
-  @Override
-  public void startServer() {
-    status.startServer();
-    refresh();
-  }
-
-  @Override
-  public void stopServer() {
-    status.stopServer();
-    refresh();
+    super.onDestroy();
   }
 
   @Override
