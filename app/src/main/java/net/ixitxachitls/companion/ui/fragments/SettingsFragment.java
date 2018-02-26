@@ -27,6 +27,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+
+import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
@@ -34,6 +37,7 @@ import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Misc;
 
 /**
  * Fragment for displaying settings values.
@@ -43,6 +47,8 @@ public class SettingsFragment extends CompanionFragment {
 
   // UI elements.
   private LabelledEditTextView nickname;
+  private Wrapper<CheckBox> remoteCampaigns;
+  private Wrapper<CheckBox> remoteCharacters;
   private Wrapper<Button> save;
 
   public SettingsFragment() {
@@ -61,6 +67,12 @@ public class SettingsFragment extends CompanionFragment {
     nickname.text(settings.isDefined() ? settings.getNickname() : "")
         .onEdit(this::editNickname)
         .onChange(this::refresh);
+    remoteCampaigns = Wrapper.wrap(view, R.id.remote_campaigns);
+    remoteCampaigns.get().setChecked(settings.useRemoteCampaigns());
+    remoteCampaigns.visible(Misc.onEmulator());
+    remoteCharacters = Wrapper.wrap(view, R.id.remote_characters);
+    remoteCharacters.get().setChecked(settings.useRemoteCharacters());
+    remoteCharacters.visible(Misc.onEmulator());
     save = Wrapper.wrap(view, R.id.save);
     save.onClick(this::save);
 
@@ -74,16 +86,23 @@ public class SettingsFragment extends CompanionFragment {
 
   private void save() {
     editNickname();
+    settings.useRemote(remoteCampaigns.get().isChecked(), remoteCharacters.get().isChecked());
     settings.store();
 
     if (settings.isDefined()) {
-      CompanionFragments.get().showLast();
+      CompanionFragments.get().show(Type.campaigns, Optional.absent());
       CompanionMessenger.get().sendWelcome();
     }
   }
 
   protected void editNickname() {
     settings.setNickname(nickname.getText());
+  }
+
+  @Override
+  public boolean goBack() {
+    CompanionFragments.get().show(Type.campaigns, Optional.absent());
+    return true;
   }
 
   @Override

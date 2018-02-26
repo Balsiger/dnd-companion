@@ -37,7 +37,6 @@ import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
@@ -80,10 +79,6 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   }
 
   public String getCharacterId() {
-    if (!isLocal() && Misc.onEmulator()) {
-      return StoredEntries.REMOTE + entryId;
-    }
-
     return entryId;
   }
 

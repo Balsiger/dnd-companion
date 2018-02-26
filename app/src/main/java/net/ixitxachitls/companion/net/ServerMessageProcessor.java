@@ -40,14 +40,13 @@ public class ServerMessageProcessor extends MessageProcessor {
     super(application);
   }
 
-  public void process(String receiverId, long messageId, CompanionMessageData message) {
-    process(Settings.get().getAppId(), Settings.get().getNickname(), receiverId, messageId,
-        message);
+  public void process(String senderId, String senderName, long messageId, CompanionMessageData message) {
+    process(senderId, senderName, Settings.get().getAppId(), messageId, message);
   }
 
   @Override
-  protected void handleAck(String recipientId, long messageId) {
-    CompanionMessenger.get().sendAckToClient(recipientId, messageId);
+  protected void handleAck(String senderId, long messageId) {
+    CompanionMessenger.get().ackServer(senderId, messageId);
   }
 
   @Override

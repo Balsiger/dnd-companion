@@ -8,6 +8,8 @@ message SettingsProto {
   string nickname = 1;
   string app_id = 2;
   int64 last_message_id = 3;
+  bool remote_campaigns = 4;
+  bool remote_characters = 5;
 }
 
 message CampaignProto {

@@ -29,6 +29,7 @@ import android.util.Log;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 
 import java.util.Collection;
@@ -43,7 +44,6 @@ import java.util.stream.Collectors;
  */
 public class Characters {
   private static final String TAG = "Characters";
-  private static final String REMOTE = "REMOTE:";
 
   private static CharactersData local;
   private static CharactersData remote;
@@ -55,11 +55,7 @@ public class Characters {
   // Data accessors.
 
   public static LiveData<Optional<Character>> getCharacter(String characterId) {
-    if (characterId.startsWith(REMOTE)) {
-      return remote.getCharacter(characterId.substring(REMOTE.length()));
-    }
-
-    if (local.hasCharacter(characterId)) {
+    if (!Settings.get().useRemoteCharacters() && local.hasCharacter(characterId)) {
       return local.getCharacter(characterId);
     }
 
@@ -248,11 +244,7 @@ public class Characters {
     // Only show each charcter once, even if they are locallay and remotely available
     // (mostly for the emulator).
     for (String id : remote.ids(campaignId)) {
-      if (id.startsWith(StoredEntries.REMOTE)) {
-        if (!ids.contains(id.substring(StoredEntries.REMOTE.length()))) {
-          ids.add(id);
-        }
-      } else if (!ids.contains(id)) {
+      if (!ids.contains(id)) {
         ids.add(id);
       }
     }

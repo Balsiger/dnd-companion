@@ -73,9 +73,8 @@ public class CharactersData extends StoredEntries<Character> {
   }
 
   public List<Character> getCharacters(String campaignId) {
-    String id = StoredEntries.sanitize(campaignId);
     return getAll().stream()
-        .filter(c -> c.getCampaignId().equals(id))
+        .filter(c -> c.getCampaignId().equals(campaignId))
         .collect(Collectors.toList());
   }
 

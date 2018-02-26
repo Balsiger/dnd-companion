@@ -59,6 +59,8 @@ public abstract class CompanionFragment extends Fragment {
     CompanionFragments.get().show(fragment, Optional.absent());
   }
 
+  public abstract boolean goBack();
+
   @CallSuper
   public void refresh() {
     Log.d(TAG, "refreshing " + getClass().getSimpleName());

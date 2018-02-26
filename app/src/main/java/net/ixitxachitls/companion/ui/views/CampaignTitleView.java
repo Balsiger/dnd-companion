@@ -25,6 +25,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -36,6 +37,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Misc;
 
 /**
  * View for a campaign title.
@@ -74,16 +76,16 @@ public class CampaignTitleView extends LinearLayout {
 
   private void setup() {
     RelativeLayout view = (RelativeLayout)
-        LayoutInflater.from(getContext()).inflate(R.layout.view_campaign_title, null, false);
+        LayoutInflater.from(getContext()).inflate(R.layout.view_campaign_title, this, false);
     // Adding the margin in the xml layout does not work.
     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
         ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
     params.setMargins(0, 0, 0, 2);
     view.setLayoutParams(params);
 
-    title = (TitleView) view.findViewById(R.id.title);
-    networkIcon = (NetworkIcon) view.findViewById(R.id.network);
-    dm = (TextView) view.findViewById(R.id.dm);
+    title = view.findViewById(R.id.title);
+    networkIcon = view.findViewById(R.id.network);
+    dm = view.findViewById(R.id.dm);
 
     addView(view);
   }
@@ -135,12 +137,32 @@ public class CampaignTitleView extends LinearLayout {
       dm.setVisibility(VISIBLE);
     }
 
-    title.setTitle(campaign.getName());
+    if (Misc.onEmulator()) {
+      title.setTitle(campaign.getName() + " ("
+          + (campaign.isLocal() ? "LOCAL" : "REMOTE") + ")");
+    } else {
+      title.setTitle(campaign.getName());
+    }
     title.setSubtitle(subtitle(campaign));
 
-    networkIcon.setStatus(campaign.isLocal(), campaign.isOnline());
+    networkIcon.setStatus(campaign.isLocal(), campaign.isPublished());
     if (campaign.isLocal() && !campaign.isDefault()) {
       networkIcon.setAction(this::publish);
     }
+  }
+
+  @Override
+  public void removeAllViews() {
+    super.removeAllViews();
+  }
+
+  @Override
+  public void removeAllViewsInLayout() {
+    super.removeAllViewsInLayout();
+  }
+
+  @Override
+  public void removeView(View view) {
+    super.removeView(view);
   }
 }

@@ -101,6 +101,10 @@ public class Battle {
       return creatureIds.get(currentCreatureIndex);
     }
 
+    if (creatureIds.isEmpty()) {
+      return "";
+    }
+
     return creatureIds.get(0);
   }
 

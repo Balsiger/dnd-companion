@@ -28,40 +28,36 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-  <LinearLayout
-      android:id="@+id/back"
+  <TextView
+      android:id="@+id/campaign"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:layout_weight="1"
       android:background="@color/campaign"
-      android:orientation="horizontal">
-
-    <ImageView
-        android:layout_width="@dimen/iconSizeSmall"
-        android:layout_height="@dimen/iconSizeSmall"
-        android:layout_gravity="center_vertical"
-        android:paddingEnd="5dp"
-        android:paddingStart="5dp"
-        app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
-
-    <TextView
-        android:id="@+id/campaign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="1"
-        android:padding="5dp"
-        android:text="TextView"
-        android:theme="@style/SmallText"/>
-  </LinearLayout>
+      android:padding="5dp"
+      android:text="TextView"
+      android:theme="@style/SmallText"/>
 
   <LinearLayout
       android:id="@+id/bar"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/back"
+      android:layout_below="@+id/campaign"
       android:background="@color/character"
       android:orientation="horizontal"
       android:transitionName="sharedMove">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_weight="0"
+        android:clickable="true"
+        app:backgroundTint="@color/character"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
 
     <view
         android:id="@+id/image"
@@ -70,45 +66,48 @@
         android:layout_height="70dp"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="10dp"
+        android:layout_weight="0"
         android:src="@drawable/ic_person_black_48dp"/>
 
     <view
         android:id="@+id/title"
         class="net.ixitxachitls.companion.ui.views.TitleView"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         app:color="@color/character"/>
+  </LinearLayout>
 
-    <LinearLayout
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@+id/bar"
+      android:layout_gravity="center_vertical"
+      android:layout_marginTop="@dimen/fab_margin_negative"
+      android:orientation="horizontal"
+      >
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginEnd="10dp"
-        android:orientation="horizontal">
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        app:backgroundTint="@color/character"
+        app:srcCompat="@drawable/ic_delete_black_24dp"/>
 
-      <view
-          android:id="@+id/delete"
-          class="net.ixitxachitls.companion.ui.views.IconView"
-          android:layout_width="@dimen/iconSize"
-          android:layout_height="@dimen/iconSize"
-          android:background="@android:color/transparent"
-          android:contentDescription="@string/campaign_button_delete"
-          android:tint="#444"
-          android:visibility="visible"
-          app:srcCompat="@drawable/ic_delete_black_24dp"/>
-
-      <view
-          android:id="@+id/move"
-          class="net.ixitxachitls.companion.ui.views.IconView"
-          android:layout_width="@dimen/iconSize"
-          android:layout_height="@dimen/iconSize"
-          android:background="@android:color/transparent"
-          android:contentDescription="@string/campaign_button_move"
-          android:tint="#444"
-          android:visibility="visible"
-          app:srcCompat="@drawable/ic_launch_black_24dp"/>
-    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        app:backgroundTint="@color/character"
+        app:srcCompat="@drawable/ic_launch_black_24dp"/>
 
   </LinearLayout>
 
@@ -118,7 +117,7 @@
       android:layout_height="wrap_content"
       android:layout_below="@+id/bar"
       android:layout_centerInParent="true"
-      android:layout_marginTop="10dp"
+      android:layout_marginTop="32dp"
       android:orientation="horizontal">
 
     <view

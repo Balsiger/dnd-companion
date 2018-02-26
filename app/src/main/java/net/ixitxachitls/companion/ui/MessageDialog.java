@@ -36,6 +36,10 @@ public class MessageDialog {
     this.dialog = new AlertDialog.Builder(context, R.style.ThemeOverlay_AppCompat_Dialog);
   }
 
+  public static MessageDialog create(Context context) {
+    return new MessageDialog(context);
+  }
+
   public MessageDialog title(String title) {
     dialog.setTitle(title);
     return this;

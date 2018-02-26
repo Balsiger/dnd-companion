@@ -25,7 +25,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
-import android.transition.TransitionSet;
 import android.util.Log;
 import android.view.View;
 
@@ -143,12 +142,8 @@ public class CompanionFragments {
 
     FragmentTransaction transaction = fragmentManager.beginTransaction();
     Log.d(TAG, "Adding to backstack " + fragment.getClass().getSimpleName());
-    if (currentFragment.isPresent()) {
-      // Don't add the first page to backstack to prevent having a empty page on back.
-      transaction.addToBackStack(fragment.getClass().getSimpleName());
-    }
 
-    // Shared element transition trial.
+    // Shared element transition.
     if (sharedTransitionElement.isPresent()) {
       currentFragment.get().setExitTransition(fade(ENTER_FADE_DURATION_MS, 0));
       currentFragment.get().setReenterTransition(fade(ENTER_FADE_DURATION_MS,
@@ -171,13 +166,6 @@ public class CompanionFragments {
     return fragment;
   }
 
-  public class SharedTransition extends TransitionSet {
-    public SharedTransition() {
-      setOrdering(ORDERING_TOGETHER);
-      addTransition(new ChangeBounds());
-    }
-  }
-
   public void show(String typeName) {
     if (Strings.isNullOrEmpty(typeName)) {
       show();
@@ -186,13 +174,12 @@ public class CompanionFragments {
     }
   }
 
-  public void showLast() {
-    Log.d(TAG, "showing last fragment");
-    if (fragmentManager.getBackStackEntryCount() > 0) {
-      fragmentManager.popBackStackImmediate();
-    } else {
-      show(CompanionFragment.Type.campaigns, Optional.absent());
+  public boolean goBack() {
+    if (!currentFragment.isPresent()) {
+      return false;
     }
+
+    return currentFragment.get().goBack();
   }
 
   public void showCampaign(Campaign campaign, Optional<View> shared) {
@@ -218,7 +205,7 @@ public class CompanionFragments {
   }
 
   public void display(Dialog dialog) {
-    fragmentManager.beginTransaction().addToBackStack(null).add(dialog, null).commit();
+    fragmentManager.beginTransaction().add(dialog, null).commit();
     fragmentManager.executePendingTransactions();
   }
 }

@@ -75,7 +75,7 @@ public class NsdServer {
     registrationListener = new RegistrationListener();
     manager.registerService(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
 
-    Status.log("nsd server started");
+    Status.log("nsd service registered");
     Status.addServerConnection(Settings.get().getAppId(), name);
     started = true;
   }

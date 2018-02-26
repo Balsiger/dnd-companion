@@ -31,6 +31,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.ui.Alert;
+import net.ixitxachitls.companion.ui.MessageDialog;
 
 /**
  * Abstact base wrapper.
@@ -170,6 +171,13 @@ class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
         action.execute();
       }
     });
+
+    return (W) this;
+  }
+
+  public W description(String name, String description) {
+    onLongClick(()
+        -> MessageDialog.create(get().getContext()).message(description).title(name).show());
 
     return (W) this;
   }

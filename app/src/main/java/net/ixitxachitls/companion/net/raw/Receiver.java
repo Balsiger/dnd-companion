@@ -22,14 +22,11 @@
 package net.ixitxachitls.companion.net.raw;
 
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.proto.Data;
 
-import java.io.BufferedInputStream;
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.concurrent.LinkedTransferQueue;
@@ -40,9 +37,6 @@ import java.util.concurrent.TransferQueue;
  * processing.
  */
 class Receiver implements Runnable {
-
-  private static final String TAG = "Receiver";
-
   private final String name;
   private final Socket socket;
   private final TransferQueue<Data.CompanionMessageProto> queue = new LinkedTransferQueue<>();
@@ -56,26 +50,15 @@ class Receiver implements Runnable {
   public void run() {
     while (!Thread.currentThread().isInterrupted()) {
       try {
-        DataInputStream input =
-            new DataInputStream(new BufferedInputStream(socket.getInputStream()));
-        int length = input.readInt();
-        if (length < 0 || length > 1_000_000) {
-          throw new IllegalArgumentException("Cannot read message with size of " + length
-              + " from stream!");
+        Data.CompanionMessageProto message =
+            Data.CompanionMessageProto.parseDelimitedFrom(socket.getInputStream());
+        if (message != null) {
+          Status.log(name + " received " + ScheduledMessage.info(message) + " from "
+              + ScheduledMessage.info(message.getHeader().getSender()));
+          queue.put(message);
         }
-        byte[] data = new byte[length];
-        int read = input.read(data);
-        if (read != length) {
-          Log.e(TAG, name + ": length of content does not match, expected " + length + " but got "
-              + read);
-        }
-        Data.CompanionMessageProto message = Data.CompanionMessageProto.parseFrom(data);
-        Log.d("Transmitter", name + " read from the stream: " + message.toString());
-        Status.log(name + " received " + ScheduledMessage.info(message) + " from "
-            + ScheduledMessage.info(message.getHeader().getSender()));
-        queue.put(message);
       } catch (IOException | InterruptedException e) {
-        Log.e("Transmitter", name + " receiver error: ", e);
+        Status.log(name + " receiver error: ", e);
         break;
       }
     }

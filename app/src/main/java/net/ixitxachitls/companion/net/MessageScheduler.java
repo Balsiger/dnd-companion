@@ -173,6 +173,42 @@ public class MessageScheduler {
     }
   }
 
+  public void revoke(String id) {
+    revoke(waiting.values(), id);
+    revoke(pendingByMessageId.values(), id);
+  }
+
+  private void revoke(Iterable<ScheduledMessage> messages, String id) {
+    for (Iterator<ScheduledMessage> i = messages.iterator(); i.hasNext(); ) {
+      if (isRevoked(i.next(), id)) {
+        i.remove();
+      }
+    }
+  }
+
+  private boolean isRevoked(ScheduledMessage message, String id) {
+    switch(message.getData().getType()) {
+      case UNKNOWN:
+      case DEBUG:
+      case WELCOME:
+      case ACK:
+      case CAMPAIGN_DELETE:
+      case CHARACTER_DELETE:
+      case XP_AWARD:
+      default:
+        return false;
+
+      case CAMPAIGN:
+        return message.getData().getCampaign().getCampaignId().equals(id);
+
+      case CHARACTER:
+        return message.getData().getCharacter().getCharacterId().equals(id);
+
+      case IMAGE:
+        return message.getData().getImage().getId().equals(id);
+    }
+  }
+
   private void markWaiting(ScheduledMessage message) {
     message.markWaiting();
     waiting.put(message.getData().getType(), message);

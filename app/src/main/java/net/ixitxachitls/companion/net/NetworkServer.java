@@ -60,7 +60,7 @@ public class NetworkServer implements Runnable {
   public boolean start() {
     try {
       socket = new ServerSocket(0);
-      Status.log("starting companion server");
+      Status.log("starting network server");
       thread.start();
     } catch (IOException e) {
       Log.e(TAG, "Error creating ServerSocket: ", e);

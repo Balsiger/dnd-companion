@@ -60,15 +60,42 @@
       app:lineColor="@color/white"
       app:textColor="@color/white"/>
 
+  <CheckBox
+      android:id="@+id/remote_campaigns"
+      android:layout_width="wrap_content"
+      android:layout_height="34dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="24dp"
+      android:buttonTint="@color/white"
+      android:text="Remote Campaigns"
+      android:textColor="@color/white"
+      android:theme="@style/LargeText"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/nickname"/>
+
+  <CheckBox
+      android:id="@+id/remote_characters"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:buttonTint="@color/white"
+      android:text="Remote Characters"
+      android:textColor="@color/white"
+      android:theme="@style/LargeText"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/remote_campaigns"/>
+
   <Button
       android:id="@+id/save"
       android:layout_width="wrap_content"
-      android:layout_height="51dp"
-      android:layout_marginTop="30dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
       android:text="@string/settings_save"
       android:theme="@style/SmallText"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/nickname"/>
+      app:layout_constraintTop_toBottomOf="@+id/remote_characters"/>
+
 
 </android.support.constraint.ConstraintLayout>

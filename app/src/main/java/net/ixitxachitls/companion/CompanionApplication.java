@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion;
 
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.support.multidex.MultiDexApplication;
 
 import net.ixitxachitls.companion.data.Entries;
@@ -29,14 +31,23 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Images;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 
 /**
  * The main application for the companion.
  */
 public class CompanionApplication extends MultiDexApplication {
 
+  private CompanionMessenger messenger;
+
   @Override
   public void onCreate() {
+    try {
+      PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+      Status.log("starting rpg companion version " + packageInfo.versionName + " #" + packageInfo.versionCode);
+    } catch (PackageManager.NameNotFoundException e) {
+      Status.log("starting rpg companion with unknown version");
+    }
     super.onCreate();
 
     Entries.init(this);
@@ -46,5 +57,10 @@ public class CompanionApplication extends MultiDexApplication {
     Images.load(this);
     Characters.load(this);
     Creatures.load(this);
+
+    messenger = CompanionMessenger.init(this);
+    messenger.start(); // Stopping is done in MainActivity.exit();
+    Campaigns.publish();
+    Characters.publish();
   }
 }

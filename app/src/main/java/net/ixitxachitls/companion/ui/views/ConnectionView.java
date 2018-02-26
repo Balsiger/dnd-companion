@@ -40,7 +40,7 @@ import java.util.List;
  */
 public class ConnectionView extends LinearLayout {
 
-  private static final int OFFLINE_BEATS = 100;
+  private static final int OFFLINE_BEATS = 30;
 
   private String id;
   private String name;
@@ -108,9 +108,13 @@ public class ConnectionView extends LinearLayout {
   public void heartbeat() {
     heartbeats--;
 
-    if(heartbeats <= 0) {
+    if(heartbeats == 0) {
       out();
     }
+  }
+
+  public int getHeartbeats() {
+    return heartbeats;
   }
 
   public void update() {

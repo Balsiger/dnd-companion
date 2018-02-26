@@ -21,14 +21,10 @@
 
 package net.ixitxachitls.companion.net.raw;
 
-import android.util.Log;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.proto.Data;
 
-import java.io.BufferedOutputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -39,7 +35,6 @@ import java.util.concurrent.BlockingQueue;
  * A sender running on its own thread to send messages stored in a queue.
  */
 class Sender implements Runnable {
-  public static final String TAG = "Sender";
   private static final int CAPACITY = 100;
 
   private final String name;
@@ -58,7 +53,7 @@ class Sender implements Runnable {
       try {
         send(queue.take());
       } catch (InterruptedException e) {
-        log("interrupted");
+        Status.log("interrupted");
       }
     }
   }
@@ -69,27 +64,13 @@ class Sender implements Runnable {
 
   private void send(Data.CompanionMessageProto message) {
     try {
-      DataOutputStream out =
-          new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
-      byte[] data = message.toByteArray();
-      out.writeInt(data.length);
-      out.write(message.toByteArray());
-      out.flush();
-      log("sent message: " + message);
       Status.log(name + " sent " + ScheduledMessage.info(message) + " to "
           + ScheduledMessage.info(message.getHeader().getReceiver()));
+      message.writeDelimitedTo(socket.getOutputStream());
     } catch (UnknownHostException e) {
-      log("Unknown Host", e);
+      Status.log("Unknown Host: ", e);
     } catch (IOException e) {
-      log("I/O Exception", e);
+      Status.log("I/O Exception", e);
     }
-  }
-
-  private void log(String message) {
-    Log.d(TAG, name + ": " + message);
-  }
-
-  private void log(String message, Exception e) {
-    Log.d(TAG, name + ": " + message, e);
   }
 }

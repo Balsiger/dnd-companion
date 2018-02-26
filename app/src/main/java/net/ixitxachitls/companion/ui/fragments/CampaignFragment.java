@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +43,6 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
-import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -55,8 +55,12 @@ public class CampaignFragment extends CompanionFragment {
 
   // UI elements.
   private CampaignTitleView title;
-  private IconView delete;
   private TextWrapper<TextView> date;
+  private Wrapper<FloatingActionButton> delete;
+  private Wrapper<FloatingActionButton> publish;
+  private Wrapper<FloatingActionButton> unpublish;
+  private Wrapper<FloatingActionButton> edit;
+  private Wrapper<FloatingActionButton> calendar;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -70,11 +74,14 @@ public class CampaignFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
-    Wrapper.<ImageView>wrap(view, R.id.back).onClick(this::back);
+    Wrapper.<ImageView>wrap(view, R.id.back).onClick(this::goBack);
     title = view.findViewById(R.id.title);
     title.setAction(this::edit);
-    delete = view.findViewById(R.id.delete);
-    delete.setAction(this::deleteCampaign);
+    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).onClick(this::deleteCampaign);
+    publish = Wrapper.<FloatingActionButton>wrap(view, R.id.publish).onClick(this::publish);
+    unpublish = Wrapper.<FloatingActionButton>wrap(view, R.id.unpublish).onClick(this::unpublish);
+    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).onClick(this::edit);
+    calendar = Wrapper.<FloatingActionButton>wrap(view, R.id.calendar).onClick(this::editDate);
     date = TextWrapper.wrap(view, R.id.date);
     date.onClick(this::editDate);
 
@@ -95,12 +102,14 @@ public class CampaignFragment extends CompanionFragment {
       this.campaign = campaign.get();
       title.setCampaign(campaign.get());
 
-      refresh();
+      delete.visible(canDeleteCampaign());
+      publish.visible(campaign.get().isLocal() && !campaign.get().isDefault()
+          && !campaign.get().isPublished());
+      unpublish.visible(campaign.get().isLocal() && campaign.get().isPublished());
+      edit.visible(campaign.get().isLocal());
+      calendar.visible(campaign.get().isLocal());
+      date.text(campaign.get().getDate().toString());
     }
-  }
-
-  private void back() {
-    CompanionFragments.get().show(Type.campaigns, Optional.absent());
   }
 
   private void editDate() {
@@ -115,6 +124,22 @@ public class CampaignFragment extends CompanionFragment {
     }
 
     EditCampaignDialog.newInstance(campaign.getCampaignId()).display();
+  }
+
+  private void publish() {
+    if (campaign.isDefault() || !campaign.isLocal()) {
+      return;
+    }
+
+    campaign.publish();
+  }
+
+  private void unpublish() {
+    if (campaign.isDefault() || !campaign.isLocal()) {
+      return;
+    }
+
+    campaign.unpublish();
   }
 
   protected void deleteCampaign() {
@@ -136,14 +161,6 @@ public class CampaignFragment extends CompanionFragment {
   public void refresh() {
     Log.d(TAG, "refreshing campaign fragment");
     super.refresh();
-
-    if (canDeleteCampaign()) {
-      delete.setVisibility(View.VISIBLE);
-    } else {
-      delete.setVisibility(View.GONE);
-    }
-
-    date.text(campaign.getDate().toString());
   }
 
   private boolean canDeleteCampaign() {
@@ -156,5 +173,11 @@ public class CampaignFragment extends CompanionFragment {
     }
 
     return !Characters.hasLocalCharacterForCampaign(campaign.getCampaignId());
+  }
+
+  @Override
+  public boolean goBack() {
+    CompanionFragments.get().show(Type.campaigns, Optional.of(title));
+    return true;
   }
 }

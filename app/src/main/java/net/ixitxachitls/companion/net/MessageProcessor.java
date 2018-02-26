@@ -116,8 +116,8 @@ public abstract class MessageProcessor {
     }
 
 
-    Status.refreshClientConnection(Settings.get().getNickname());
-    Status.refreshServerConnection(senderName);
+    Status.refreshServerConnection(Settings.get().getAppId());
+    Status.refreshClientConnection(senderId);
 
     received.addFirst(new RecievedMessage(senderName, message));
     if (received.size() > MAX_RECEIVED_SIZE) {
@@ -152,7 +152,7 @@ public abstract class MessageProcessor {
     CompanionMessenger.get().sendAckToServer(senderId, messageId);
   }
 
-  protected void handleAck(String recipientId, long messageId) {
+  protected void handleAck(String senderId, long messageId) {
     throw new UnsupportedOperationException();
   }
 

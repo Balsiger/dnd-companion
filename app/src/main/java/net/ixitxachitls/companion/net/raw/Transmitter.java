@@ -25,11 +25,13 @@ import android.util.Log;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.net.SocketException;
 
 /**
  * Class supporting sending and receiving data. The transmitter starts two threads, and
@@ -50,6 +52,12 @@ public class Transmitter {
   }
 
   public Transmitter(String name, Socket socket) {
+    try {
+      socket.setKeepAlive(true);
+    } catch (SocketException e) {
+      Status.log("error when setting keepalive in socket", e);
+    }
+
     this.name = name;
     this.sender = new Sender(name, socket);
     this.receiver = new Receiver(name, socket);

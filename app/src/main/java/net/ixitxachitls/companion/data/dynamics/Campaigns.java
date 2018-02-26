@@ -29,6 +29,7 @@ import android.util.Log;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
@@ -64,15 +65,7 @@ public class Campaigns {
       return liveDefaultCampaign;
     }
 
-    if (local.hasCampaign(campaignId)) {
-      return local.getCampaign(campaignId);
-    }
-
-    return remote.getCampaign(campaignId);
-  }
-
-  public static LiveData<Optional<Campaign>> getCampaign(String campaignId, boolean isLocal) {
-    if (isLocal) {
+    if (!Settings.get().useRemoteCampaigns() && local.hasCampaign(campaignId)) {
       return local.getCampaign(campaignId);
     }
 
@@ -94,7 +87,9 @@ public class Campaigns {
   public static List<Campaign> getAllCampaigns() {
     List<Campaign> campaigns = new ArrayList<>();
     campaigns.add(defaultCampaign);
-    campaigns.addAll(local.getCampaigns());
+    if (!Settings.get().useRemoteCampaigns()) {
+      campaigns.addAll(local.getCampaigns());
+    }
     campaigns.addAll(remote.getCampaigns());
 
     return campaigns;

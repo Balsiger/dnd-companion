@@ -34,19 +34,16 @@ import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
-import net.ixitxachitls.companion.util.Misc;
 
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 /**
  * The fragment displaying the campaign list
@@ -54,7 +51,6 @@ import java.util.Map;
 public class CampaignsFragment extends CompanionFragment {
 
   private Wrapper<LinearLayout> campaignsView;
-  private Map<String, CampaignTitleView> titlesByCampaignId = new HashMap<>();
 
   public CampaignsFragment() {
     super(Type.campaigns);
@@ -80,43 +76,27 @@ public class CampaignsFragment extends CompanionFragment {
 
   private void update(ImmutableList<String> campaignIds) {
     if (campaignsView != null) {
-      // Remove all deleted campaigns.
-      for (Iterator<String> i = titlesByCampaignId.keySet().iterator(); i.hasNext(); ) {
-        String id = i.next();
-        if (!campaignIds.contains(id)) {
-          campaignsView.get().removeView(titlesByCampaignId.get(id));
-          i.remove();
-        }
-      }
+      campaignsView.get().removeAllViews();
 
-      // Add all new campaigns.
-      for (String id : campaignIds) {
-        if (!titlesByCampaignId.containsKey(id)) {
-          LiveData<Optional<Campaign>> campaign = Campaigns.getCampaign(id);
-          if (campaign.getValue().isPresent()) {
-            CampaignTitleView title = new CampaignTitleView(getContext());
-            titlesByCampaignId.put(id, title);
-            campaign.observe(this, title::update);
-            campaignsView.get().addView(title);
-            title.setAction(() -> {
-              if (Misc.onEmulator() && !campaign.getValue().get().isLocal()) {
-                Misc.emulateRemote();
-              } else {
-                Misc.emulateLocal();
-              }
-              CompanionFragments.get().showCampaign(campaign.getValue().get(), Optional.of(title));
-            });
-          }
-        }
-      }
-
-      // Sort all the campaigns.
+      // Sort all the campaigns. We have to recreate the campaigns as the transition away
+      // from this fragment seems to break them.
       TransitionManager.beginDelayedTransition(campaignsView.get());
       campaignsView.get().removeAllViews();
       List<Campaign> campaigns = Campaigns.getAllCampaigns();
       Collections.sort(campaigns);
       for (Campaign campaign : campaigns) {
-        titlesByCampaignId.get(campaign.getCampaignId()).addTo(campaignsView.get());
+        LiveData<Optional<Campaign>> liveCampaign = Campaigns.getCampaign(campaign.getCampaignId());
+        CampaignTitleView title = new CampaignTitleView(getContext());
+        liveCampaign.removeObservers(this);
+        liveCampaign.observe(this, title::update);
+        campaignsView.get().addView(title);
+        title.setAction(() -> {
+          CompanionFragments.get().showCampaign(campaign, Optional.of(title));
+        });
+        if (campaign.getCampaignId().equals(Campaigns.getCurrentCampaignId().getValue())) {
+          title.setTransitionName("sharedMove");
+          Status.log("setting transition name for " + campaign);
+        }
       }
     }
   }
@@ -126,5 +106,10 @@ public class CampaignsFragment extends CompanionFragment {
     super.onResume();
 
     update(Campaigns.getAllCampaignIds().getValue());
+  }
+
+  @Override
+  public boolean goBack() {
+    return false;
   }
 }

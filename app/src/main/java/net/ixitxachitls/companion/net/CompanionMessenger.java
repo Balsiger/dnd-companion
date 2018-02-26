@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
+import net.ixitxachitls.companion.util.Ids;
 
 import java.util.Arrays;
 import java.util.List;
@@ -64,6 +65,14 @@ public class CompanionMessenger implements Runnable {
     serverMessageProcessor = new ServerMessageProcessor(application);
   }
 
+  public static CompanionMessenger getOrInit(CompanionApplication application) {
+    if (singleton != null) {
+      return get();
+    } else {
+      return init(application);
+    }
+  }
+
   public static CompanionMessenger init(CompanionApplication application) {
     if (singleton != null) {
       throw new IllegalStateException("Messenger already initialized!");
@@ -82,6 +91,7 @@ public class CompanionMessenger implements Runnable {
   }
 
   public void start() {
+    Status.log("starting messenger");
     companionClients.start();
     // Only start the server once we actually publish a campaign
 
@@ -89,10 +99,15 @@ public class CompanionMessenger implements Runnable {
   }
 
   public void stop() {
+    Status.log("stopping messenger");
     companionClients.stop();
     companionServer.stop();
 
     handler.removeCallbacks(this);
+  }
+
+  public boolean isRunning() {
+    return companionClients.isStarted();
   }
 
   public boolean isOnline(Campaign campaign) {
@@ -154,24 +169,28 @@ public class CompanionMessenger implements Runnable {
   public void send(Character character) {
     Status.log("sending character " + character + " to all");
     Optional<Campaign> campaign = Campaigns.getCampaign(character.getCampaignId()).getValue();
-    if (campaign.isPresent() && campaign.get().isLocal()) {
-      // If the character is local, we have to send it to all clients for update.
-      // If the character is remote, we got an update from a client and likewise need to update all
-      // clients.
-      if (campaign.get().isPublished()) {
-        // Send the character to all connected clients and all owners of characters in the same
-        // campaign.
-        companionServer.schedule(clientIds(campaign.get(), character.getServerId()),
-            CompanionMessageData.from(character));
+    if (campaign.isPresent()) {
+      if (campaign.get().isLocal()) {
+        // If the character is local, we have to send it to all clients for update.
+        // If the character is remote, we got an update from a client and likewise need to update all
+        // clients.
+        if (campaign.get().isPublished()) {
+          // Send the character to all connected clients and all owners of characters in the same
+          // campaign.
+          companionServer.schedule(clientIds(campaign.get(), character.getServerId()),
+              CompanionMessageData.from(character));
+        }
+      } else {
+        if (character.isLocal()) {
+          // Send the character to the server for redestribution.
+          companionClients.schedule(campaign.get().getServerId(),
+              CompanionMessageData.from(character));
+        } else {
+          Status.log("Cannot publish a remote character for a remote campaign.");
+        }
       }
     } else {
-      if (character.isLocal()) {
-        // Send the character to the server for redestribution.
-        companionClients.schedule(campaign.get().getServerId(),
-            CompanionMessageData.from(character));
-      } else {
-        Status.log("Cannot publish a remote character for a remote campaign.");
-      }
+      Status.log("Campaign not found, character " + character + " not sent");
     }
   }
 
@@ -185,12 +204,16 @@ public class CompanionMessenger implements Runnable {
               Campaigns.getCampaign(character.get().getCampaignId()).getValue();
           if (campaign.isPresent()) {
             if (campaign.get().isLocal() || !character.get().isLocal()) {
-              // Send the image to all known clients.
-              companionServer.schedule(clientIds(campaign.get()), CompanionMessageData.from(image));
-            } else {
-              // Send the image to the server.
-              companionClients.schedule(campaign.get().getServerId(),
+              // Send the image to all known clients, except the owner.
+              companionServer.schedule(
+                  clientIds(campaign.get(), Ids.extractServerId(image.getId())),
                   CompanionMessageData.from(image));
+            } else {
+              // Send the image to the server (unless we are the server as well).
+              if (!campaign.get().getServerId().equals(Settings.get().getAppId())) {
+                companionClients.schedule(campaign.get().getServerId(),
+                    CompanionMessageData.from(image));
+              }
             }
           } else {
             Status.log("cannot find campaign for character image " + image + " of " + character);
@@ -211,6 +234,7 @@ public class CompanionMessenger implements Runnable {
     }
 
     companionServer.schedule(clientIds(campaign), CompanionMessageData.fromDelete(campaign));
+    revoke(campaign.getCampaignId());
     Status.log("deleted campaign " + campaign);
   }
 
@@ -233,6 +257,11 @@ public class CompanionMessenger implements Runnable {
 
   // Images are deleted with the associated entry, thus don't need their own deletion
   // handling.
+
+  private void revoke(String id) {
+    companionServer.revoke(id);
+    companionClients.revoke(id);
+  }
 
   public void sendXpAward(Campaign campaign, Character character, int xp) {
     if (!campaign.isLocal()) {
@@ -288,15 +317,14 @@ public class CompanionMessenger implements Runnable {
       // Chek for messages from servers.
       List<CompanionMessage> serverMessages = companionClients.receive();
       for (CompanionMessage serverMessage : serverMessages) {
-        clientMessageProcessor.process(serverMessage.getSenderId(),
-              serverMessage.getSenderName(), serverMessage.getMessageId(),
-              serverMessage.getData());
+        clientMessageProcessor.process(serverMessage.getSenderId(), serverMessage.getSenderName(),
+            serverMessage.getMessageId(), serverMessage.getData());
       }
 
       // Handle message from clients.
       List<CompanionMessage> clientMessages = companionServer.receive();
       for (CompanionMessage clientMessage : clientMessages) {
-        serverMessageProcessor.process(clientMessage.getRecieverId(),
+        serverMessageProcessor.process(clientMessage.getSenderId(), clientMessage.getSenderName(),
             clientMessage.getMessageId(), clientMessage.getData());
       }
     } finally {

@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.util.Log;
-
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.Status;
@@ -39,40 +37,36 @@ import java.net.InetAddress;
 public class NetworkClient {
   private static final String TAG = "client";
 
-  private final Transmitter transmitter;
+  private Transmitter transmitter;
   private String serverId = "";
   private String serverName = "(not yet known)";
 
-  public NetworkClient(InetAddress address, int port) {
-    try {
-      this.transmitter = new Transmitter("client", address, port);
-    } catch (IOException e) {
-      throw new IllegalStateException("cannot create transmitter for " + address + ":"
-          + port);
-    }
-
-    Log.d(TAG, "creating client to " + address + ":" + port);
-    Status.log("creating client to " + address + ":" + port);
+  public NetworkClient() {
+    Status.log("creating network client");
   }
 
   public String getServerId() {
     return serverId;
   }
 
-  public String getServerName() {
-    return serverName;
-  }
+  public boolean start(InetAddress address, int port) {
+    Status.log("starting client to " + address + ":" + port);
+    try {
+      this.transmitter = new Transmitter("client", address, port);
+    } catch (IOException e) {
+      Status.log("cannot create transmitter for " + address + ":" + port);
+      return false;
+    }
 
-  public void start() {
-    Log.d(TAG, "starting client");
-    Status.log("starting client");
     transmitter.start();
+    return true;
   }
 
   public void stop() {
-    Log.d(TAG, "stopping client");
     Status.log("stopping client");
-    transmitter.stop();
+    if (transmitter != null) {
+      transmitter.stop();
+    }
   }
 
   public void send(CompanionMessageData message) {

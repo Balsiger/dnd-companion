@@ -96,7 +96,7 @@ public class Images {
   }
 
   public LiveData<Optional<Image>> getImage(String type, String id) {
-    if (!imagesByKey.containsKey(id)) {
+    if (!hasImage(id)) {
       MutableLiveData<Optional<Image>> image = new MutableLiveData<>();
       image.setValue(load(type, id));
       imagesByKey.put(id, image);
@@ -111,10 +111,11 @@ public class Images {
 
   public void update(Image image) {
     MutableLiveData<Optional<Image>> liveImage = imagesByKey.get(image.getId());
-    if (liveImage != null) {
-      liveImage.setValue(Optional.of(image));
-      image.publish();
+    if (liveImage == null) {
+      liveImage = new MutableLiveData<>();
     }
+
+    liveImage.setValue(Optional.of(image));
   }
 
   private Optional<Image> load(String type, String id) {

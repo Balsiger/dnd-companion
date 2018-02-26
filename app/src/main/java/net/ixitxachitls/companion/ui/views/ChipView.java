@@ -54,6 +54,7 @@ public class ChipView extends LinearLayout {
   public ChipView(Context context, String dataId, String name, String subtitle,
                   @ColorRes int chipColor, @ColorRes int backgroundColor) {
     super(context);
+
     this.dataId = dataId;
     this.chipColor = chipColor;
     this.backgroundColor = backgroundColor;
@@ -69,7 +70,7 @@ public class ChipView extends LinearLayout {
     this.subtitle.noWrap().backgroundColor(chipColor).noWrap();
     setSubtitle(subtitle);
 
-    this.image = (RoundImageView) view.findViewById(R.id.image);
+    this.image = view.findViewById(R.id.image);
 
     Drawable drawable = getResources().getDrawable(R.drawable.ic_person_black_48dp_inverted, null);
     drawable.setTint(getResources().getColor(chipColor, null));
@@ -85,11 +86,6 @@ public class ChipView extends LinearLayout {
     }
 
     group.addView(this);
-  }
-
-  public void disabled() {
-    name.textColor(R.color.disabled);
-    subtitle.textColor(R.color.disabled);
   }
 
   public void setBackground(@ColorRes int color) {

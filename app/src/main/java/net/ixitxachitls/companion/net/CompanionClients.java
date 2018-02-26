@@ -46,20 +46,30 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
   private final Map<String, NetworkClient> clientsByServerName = new ConcurrentHashMap<>();
   private final Map<String, MessageScheduler> schedulersByServerId = new HashMap<>();
 
+  private boolean started;
+
   public CompanionClients(Context context) {
     this.nsdDiscovery = new NsdDiscovery(context, this);
   }
 
   // Network handling.
   public void start() {
+    Status.log("starting companion clients");
     nsdDiscovery.start();
+    started = true;
   }
 
   public void stop() {
+    Status.log("stopping compaion clients");
     nsdDiscovery.stop();
     clientsByServerName.values().forEach(NetworkClient::stop);
     clientsByServerName.clear();
     clientsByServerId.clear();
+    started = false;
+  }
+
+  public boolean isStarted() {
+    return started;
   }
 
   public void sendWaiting() {
@@ -78,6 +88,10 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
     }
   }
 
+  public void revoke(String id) {
+    schedulersByServerId.values().stream().forEach(s -> s.revoke(id));
+  }
+
   @Override
   public void nsdStarted(String name, InetAddress host, int port) {
     // If there is an existing client, stop it first.
@@ -87,8 +101,11 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
     }
 
     // Start a client to communicate.
-    client = new NetworkClient(host, port);
-    client.start();
+    client = new NetworkClient();
+    if (!client.start(host, port)) {
+      client.stop();
+      client.start(host, port);
+    }
 
     clientsByServerName.put(name, client);
 

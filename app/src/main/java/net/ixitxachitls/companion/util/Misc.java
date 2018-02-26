@@ -28,23 +28,10 @@ import android.os.Build;
  */
 public class Misc {
 
-  private static boolean emulateLocal = true;
-
   private Misc() {}
 
   public static boolean onEmulator() {
     return Build.PRODUCT.equals("sdk_google_phone_x86");
   }
 
-  public static boolean emulatingLocal() {
-    return emulateLocal;
-  }
-
-  public static void emulateLocal() {
-    emulateLocal = true;
-  }
-
-  public static void emulateRemote() {
-    emulateLocal = false;
-  }
 }

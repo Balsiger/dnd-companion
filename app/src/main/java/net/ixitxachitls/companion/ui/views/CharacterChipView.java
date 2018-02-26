@@ -32,6 +32,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.util.Misc;
 
 /**
  * A chip displaying character information.
@@ -43,15 +44,10 @@ public class CharacterChipView extends CreatureChipView {
   private Character character;
 
   public CharacterChipView(Context context, Character character) {
-    super(context, character, R.color.characterDark, R.color.characterLight);
+    super(context, character, character.isLocal() ? R.color.character : R.color.characterDark,
+        R.color.characterLight);
 
     this.character = character;
-
-    if (character.isLocal()) {
-      name.backgroundColor(R.color.character);
-      subtitle.backgroundColor(R.color.character);
-    }
-
     setOnClickListener(this::onClick);
   }
 
@@ -60,7 +56,11 @@ public class CharacterChipView extends CreatureChipView {
 
     Log.d(TAG, "updating character " + character);
     this.character = character;
-    name.text(character.getName());
+    if (Misc.onEmulator()) {
+      name.text((character.isLocal() ? "L" : "R") + "/" + character.getName());
+    } else {
+      name.text(character.getName());
+    }
     if (character.getInitiative() == Character.NO_INITIATIVE) {
       setSubtitle("");
     } else {

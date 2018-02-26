@@ -51,7 +51,7 @@ public class Image {
 
   public Image(String type, String id, Bitmap bitmap) {
     this.type = type;
-    this.id = StoredEntries.sanitize(id);
+    this.id = id;
     this.bitmap = bitmap;
   }
 
@@ -65,11 +65,6 @@ public class Image {
 
   public Bitmap getBitmap() {
     return bitmap;
-  }
-
-  public void saveAndPublish(boolean local) {
-    save(local);
-    publish();
   }
 
   public void publish() {
@@ -103,6 +98,7 @@ public class Image {
       }
     }
 
+    Images.get(local).update(this);
     Log.d(TAG, "Saved image " + type + " " + id);
   }
 
@@ -134,13 +130,14 @@ public class Image {
 
   private static Bitmap scale(Bitmap bitmap) {
     // Scale bitmap down if it's too large.
-    if (bitmap.getWidth() <= MAX && bitmap.getHeight() <= MAX) {
-      return bitmap;
-    }
+    float factor = (float) MAX
+        / (bitmap.getWidth() < bitmap.getHeight() ? bitmap.getWidth() : bitmap.getHeight());
+    // Scale bitmap to the appropriate size.
+    Bitmap scaled = Bitmap.createScaledBitmap(bitmap, (int) (bitmap.getWidth() * factor),
+        (int) (bitmap.getHeight() * factor), false);
 
-    float factor = (bitmap.getWidth() > bitmap.getHeight()
-        ? bitmap.getWidth() : bitmap.getHeight()) / (float) MAX;
-    return Bitmap.createScaledBitmap(bitmap, (int) (bitmap.getWidth() / factor),
-        (int) (bitmap.getHeight() / factor), false);
+    // Crop the image to the desired size.
+    Bitmap cropped = Bitmap.createBitmap(scaled, 0, 0, MAX, MAX);
+    return cropped;
   }
 }

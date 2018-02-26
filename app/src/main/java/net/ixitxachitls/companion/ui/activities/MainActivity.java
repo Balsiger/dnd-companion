@@ -22,8 +22,6 @@
 package net.ixitxachitls.companion.ui.activities;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -37,7 +35,6 @@ import com.google.android.gms.drive.DriveId;
 import com.google.android.gms.drive.OpenFileActivityBuilder;
 import com.google.common.base.Optional;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
@@ -51,7 +48,6 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.views.StatusView;
-import net.ixitxachitls.companion.util.Misc;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -65,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
   private static final String TAG = "Main";
 
   private DriveStorage driveStorage;
-  private CompanionMessenger companionMessenger;
 
   // UI elements.
   private StatusView status;
@@ -89,19 +84,6 @@ public class MainActivity extends AppCompatActivity {
     // Setup the status first, in case any fragment wants to log something.
     status = (StatusView) container.findViewById(R.id.status);
     Status.setView(status);
-
-    try {
-      PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-      Status.log("version " + packageInfo.versionName + " #" + packageInfo.versionCode);
-    } catch (PackageManager.NameNotFoundException e) {
-      Status.log("cannot get version information");
-    }
-
-    companionMessenger = CompanionMessenger.init((CompanionApplication) getApplication());
-    companionMessenger.start();
-    Campaigns.publish();
-    Characters.publish();
-
     CompanionFragments.get().show();
   }
 
@@ -111,9 +93,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.menu_main, menu);
-
-    menu.findItem(R.id.action_local).setVisible(Misc.onEmulator() && !Misc.emulatingLocal());
-    menu.findItem(R.id.action_remote).setVisible(Misc.onEmulator() && Misc.emulatingLocal());
 
     return true;
   }
@@ -177,18 +156,6 @@ public class MainActivity extends AppCompatActivity {
       return true;
     }
 
-    if (id == R.id.action_local) {
-      Misc.emulateLocal();
-      menu.findItem(R.id.action_local).setVisible(Misc.onEmulator() && !Misc.emulatingLocal());
-      menu.findItem(R.id.action_remote).setVisible(Misc.onEmulator() && Misc.emulatingLocal());
-    }
-
-    if (id == R.id.action_remote) {
-      Misc.emulateRemote();
-      menu.findItem(R.id.action_local).setVisible(Misc.onEmulator() && !Misc.emulatingLocal());
-      menu.findItem(R.id.action_remote).setVisible(Misc.onEmulator() && Misc.emulatingLocal());
-    }
-
     return super.onOptionsItemSelected(item);
   }
 
@@ -196,9 +163,30 @@ public class MainActivity extends AppCompatActivity {
   public void onDestroy() {
     Status.clearView();
     Log.d(TAG, "main activity destroyed");
-    companionMessenger.stop();
 
     super.onDestroy();
+  }
+
+  @Override
+  public void onBackPressed() {
+    if (!CompanionFragments.get().goBack()) {
+      ConfirmationDialog.create(this).title("Exit?")
+          .message("Do you really want to exit the RPG Companion?")
+          .no(this::noExit)
+          .yes(this::exit)
+          .show();
+    }
+  }
+
+  private void noExit() {
+    // Nothing to do here, we just ignore the with to exit.
+  }
+
+  private void exit() {
+    CompanionMessenger.get().stop();
+    finishAffinity();
+    finishAndRemoveTask();
+    android.os.Process.killProcess(android.os.Process.myPid());
   }
 
   @Override

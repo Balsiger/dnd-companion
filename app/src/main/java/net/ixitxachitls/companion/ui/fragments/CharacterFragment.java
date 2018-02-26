@@ -26,12 +26,12 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,7 +51,6 @@ import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
-import net.ixitxachitls.companion.ui.views.IconView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
@@ -73,10 +72,11 @@ public class CharacterFragment extends CompanionFragment {
 
   private Optional<Character> character = Optional.absent();
   private Optional<Campaign> campaign = Optional.absent();
-  private boolean storOnPause = true;
+  private boolean storeOnPause = true;
 
   // UI elements.
   private TitleView title;
+  private TextWrapper<TextView> campaignTitle;
   private AbilityView strength;
   private AbilityView dexterity;
   private AbilityView constitution;
@@ -84,12 +84,12 @@ public class CharacterFragment extends CompanionFragment {
   private AbilityView wisdom;
   private AbilityView charisma;
   private RoundImageView image;
-  private IconView delete;
-  private IconView move;
+  private Wrapper<FloatingActionButton> delete;
+  private Wrapper<FloatingActionButton> move;
   private EditTextWrapper<EditText> xp;
   private TextWrapper<TextView> xpNext;
   private EditTextWrapper<EditText> level;
-  private Wrapper<LinearLayout> back;
+  private Wrapper<FloatingActionButton> back;
 
   public CharacterFragment() {
     super(Type.character);
@@ -98,24 +98,27 @@ public class CharacterFragment extends CompanionFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
-    storOnPause = true;
+    super.onCreateView(inflater, container, savedInstanceState);
+
+    storeOnPause = true;
 
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
-    back = Wrapper.<LinearLayout>wrap(view, R.id.back).onClick(this::back);
+    back = Wrapper.<FloatingActionButton>wrap(view, R.id.back).onClick(this::goBack);
     image = view.findViewById(R.id.image);
     image.setAction(this::editImage);
     title = view.findViewById(R.id.title);
     title.setAction(this::editBase);
-    delete = view.findViewById(R.id.delete);
-    delete.setAction(this::delete);
+    campaignTitle = TextWrapper.wrap(view, R.id.campaign);
+    delete = Wrapper.wrap(view, R.id.delete);
+    delete.onClick(this::delete);
     if (character.isPresent() && !character.get().isLocal() &&
         campaign.isPresent() && !campaign.get().amDM()) {
-      delete.setVisibility(View.GONE);
+      delete.gone();
     }
-    move = view.findViewById(R.id.move);
-    move.setAction(this::move);
+    move = Wrapper.wrap(view, R.id.move);
+    move.onClick(this::move);
     strength = view.findViewById(R.id.strength);
     strength.setAction(this::editAbilities);
     dexterity = view.findViewById(R.id.dexterity);
@@ -144,13 +147,16 @@ public class CharacterFragment extends CompanionFragment {
   public void onPause() {
     super.onPause();
 
-    if (storOnPause && character.isPresent()) {
+    if (storeOnPause && character.isPresent()) {
       character.get().store();
     }
   }
 
-  private void back() {
-    CompanionFragments.get().show(Type.campaign, Optional.of(back.get()));
+  @Override
+  public void onResume() {
+    super.onResume();
+
+
   }
 
   private void delete() {
@@ -167,7 +173,7 @@ public class CharacterFragment extends CompanionFragment {
       Toast.makeText(getActivity(), getString(R.string.character_deleted),
           Toast.LENGTH_SHORT).show();
 
-      storOnPause = false;
+      storeOnPause = false;
       show(Type.campaign);
     }
   }
@@ -243,7 +249,8 @@ public class CharacterFragment extends CompanionFragment {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
         Image characterImage = new Image(Character.TABLE, character.get().getCharacterId(), bitmap);
-        characterImage.saveAndPublish(character.get().isLocal());
+        characterImage.save(character.get().isLocal());
+        characterImage.publish();
         image.setImageBitmap(characterImage.getBitmap());
       } catch (IOException e) {
         Log.e(TAG, "Cannot load image bitmap", e);
@@ -289,7 +296,9 @@ public class CharacterFragment extends CompanionFragment {
     }
     title.setTitle(character.get().getName());
     title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());
-    move.setVisibility(character.get().isLocal() ? View.VISIBLE : View.GONE);
+    campaignTitle.text(campaign.get().getName());
+    move.visible(character.get().isLocal());
+    delete.visible(character.get().isLocal());
     strength.setValue(character.get().getStrength(),
         Ability.modifier(character.get().getStrength()));
     dexterity.setValue(character.get().getDexterity(),
@@ -305,5 +314,15 @@ public class CharacterFragment extends CompanionFragment {
     xp.text(String.valueOf(character.get().getXp()));
     xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel()) + ")");
     level.text(String.valueOf(character.get().getLevel()));
+  }
+
+  @Override
+  public boolean goBack() {
+    if (campaign.isPresent()) {
+      CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
+    } else {
+      CompanionFragments.get().show(Type.campaigns, Optional.absent());
+    }
+    return true;
   }
 }

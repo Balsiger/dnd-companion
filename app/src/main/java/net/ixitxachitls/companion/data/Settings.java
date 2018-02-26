@@ -37,6 +37,7 @@ import net.ixitxachitls.companion.data.dynamics.StoredEntry;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.util.UUID;
 
@@ -53,6 +54,8 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private String appId;
   private long lastMessageId = 1;
   private MutableLiveData<Boolean> showStatus = new MutableLiveData<>();
+  private boolean remoteCampaigns = false;
+  private boolean remoteCharacters = false;
 
   private Settings(String name) {
     super(ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
@@ -88,6 +91,8 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
         .setNickname(name)
         .setAppId(appId)
         .setLastMessageId(lastMessageId)
+        .setRemoteCampaigns(remoteCampaigns)
+        .setRemoteCharacters(remoteCharacters)
         .build();
   }
 
@@ -100,6 +105,8 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     Settings settings = new Settings(proto.getNickname());
     settings.appId = proto.getAppId();
     settings.lastMessageId = proto.getLastMessageId();
+    settings.remoteCampaigns = proto.getRemoteCampaigns();
+    settings.remoteCharacters = proto.getRemoteCharacters();
 
     // Don't use 0 as it could be confused with an unset message id.
     if (settings.lastMessageId == 0) {
@@ -137,12 +144,25 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return name;
   }
 
+  public boolean useRemoteCampaigns() {
+    return Misc.onEmulator() && remoteCampaigns;
+  }
+
+  public boolean useRemoteCharacters() {
+    return Misc.onEmulator() && remoteCharacters;
+  }
+
   public String getAppId() {
     return appId;
   }
 
   public void setNickname(String name) {
     setName(name);
+  }
+
+  public void useRemote(boolean remoteCampaigns, boolean remoteCharacters) {
+    this.remoteCampaigns = remoteCampaigns;
+    this.remoteCharacters = remoteCharacters;
   }
 
   public long getNextMessageId() {

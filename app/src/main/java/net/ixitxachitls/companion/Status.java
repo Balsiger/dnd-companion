@@ -52,6 +52,10 @@ public class Status {
     runInView(v -> v.addMessage(message));
   }
 
+  public static void log(String message, Exception e) {
+    runInView(v -> v.addMessage(message + e));
+  }
+
   public static void toast(String message) {
     runInView(v -> Toast.makeText(v.getContext(), message, Toast.LENGTH_LONG).show());
   }
@@ -81,18 +85,22 @@ public class Status {
   }
 
   public static void heartBeat() {
-    runInView(StatusView::heartBeat);
+    // We can ignore heartbeats until the view is ready.
+    if (view.isPresent()) {
+      new Handler(Looper.getMainLooper()).post(() -> view.get().heartBeatWithRemove());
+    }
   }
 
   private static void runInView(Action action) {
     if (view.isPresent()) {
-      new Handler(Looper.getMainLooper()).post(() -> action.execute(view.get()));
-
       if (!pendingActions.isEmpty()) {
-        new Handler(Looper.getMainLooper()).post(() -> pendingActions.stream()
-            .forEach(a -> a.execute(view.get())));
-        pendingActions.clear();
+        new Handler(Looper.getMainLooper()).post(() -> {
+          pendingActions.forEach(a -> a.execute(view.get()));
+          pendingActions.clear();
+        });
       }
+
+      new Handler(Looper.getMainLooper()).post(() -> action.execute(view.get()));
     } else {
       pendingActions.add(action);
     }

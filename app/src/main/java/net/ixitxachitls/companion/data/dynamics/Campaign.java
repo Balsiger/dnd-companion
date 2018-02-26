@@ -36,7 +36,6 @@ import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.util.Misc;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -123,10 +122,6 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
   }
 
   public String getCampaignId() {
-    if (!isLocal() && Misc.onEmulator()) {
-      return StoredEntries.REMOTE + getEntryId();
-    }
-
     return getEntryId();
   }
 

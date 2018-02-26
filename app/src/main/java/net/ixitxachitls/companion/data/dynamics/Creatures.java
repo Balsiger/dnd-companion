@@ -62,7 +62,6 @@ public class Creatures {
   }
 
   public static LiveData<ImmutableList<String>> getCampaignCreatureIds(String campaignId) {
-    campaignId = StoredEntries.sanitize(campaignId);
     if (creatureIdsByCampaignId.containsKey(campaignId)) {
       return creatureIdsByCampaignId.get(campaignId);
     }

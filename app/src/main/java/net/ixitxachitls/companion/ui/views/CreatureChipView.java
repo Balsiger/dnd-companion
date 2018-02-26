@@ -59,8 +59,4 @@ public class CreatureChipView extends ChipView {
       }
     }
   }
-
-  protected static int sortKey(int initiative, int dexterity, int random) {
-    return 1_00_00 * initiative + 1_00 * dexterity + random;
-  }
 }

@@ -108,16 +108,21 @@ public class PartyFragment extends Fragment {
     party = view.findViewById(R.id.party);
     scroll = Wrapper.wrap(view, R.id.scroll);
     startBattle = Wrapper.wrap(view, R.id.start_battle);
-    startBattle.onClick(this::startBattle);
+    startBattle.onClick(this::startBattle)
+        .description("Start Battle", "Start a battle with the party. Monsters can be added once "
+            + "the battle has started.");
 
     battleView = new BattleView(getContext(), this);
     battleView.setVisibility(View.GONE);
     view.addView(battleView, 0);
 
     addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)
-        .onClick(this::createCharacter);
+        .onClick(this::createCharacter)
+        .description("Add Character", "Add a new character to the party. The character will "
+            + "automatically be shared with other players.");
     xp = Wrapper.<FloatingActionButton>wrap(view, R.id.xp)
-        .onClick(this::chooseXp);
+        .onClick(this::chooseXp)
+        .description("XP", "Award experience points to one ore multiple characters in the party.");
     initiative = view.findViewById(R.id.initiative);
     initiative.setDice(20);
     conditions = TextWrapper.wrap(view, R.id.conditions);
@@ -318,6 +323,10 @@ public class PartyFragment extends Fragment {
 
   private void startBattle() {
     if (!campaign.isLocal()) {
+      return;
+    }
+
+    if (campaign.getCharacters().isEmpty()) {
       return;
     }
 

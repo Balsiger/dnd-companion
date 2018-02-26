@@ -71,6 +71,10 @@ public class CompanionServer {
     }
   }
 
+  public void revoke(String id) {
+    schedulersByRecpientId.values().stream().forEach(s -> s.revoke(id));
+  }
+
   public void sendWaiting() {
     boolean sent = false;
     for (MessageScheduler scheduler : schedulersByRecpientId.values()) {
@@ -83,12 +87,12 @@ public class CompanionServer {
         // will automatically be resent and sent messages can be safely ignored.
         nsdServer.send(message.get().getRecieverId(), message.get().getMessageId(),
             message.get().getData());
-        Status.refreshClientConnection(getRecipientName(message.get().getRecieverId()));
+        Status.refreshClientConnection(message.get().getRecieverId());
         sent = true;
       }
     }
 
-    if (!sent && !Campaigns.hasAnyPublished()) {
+    if (started() && !sent && !Campaigns.hasAnyPublished()) {
       // Stop the server if there are no more message to be sent and there are no published
       // campaigns.
       stop();
@@ -136,6 +140,7 @@ public class CompanionServer {
   }
 
   public void schedule(Iterable<String> recipients, CompanionMessageData message) {
+    startIfNecessary();
     for (String recipient : recipients) {
       setupScheduler(recipient).schedule(message);
     }
@@ -151,21 +156,31 @@ public class CompanionServer {
       scheduler = new MessageScheduler(recipientId);
       schedulersByRecpientId.put(recipientId, scheduler);
 
-      if (Campaigns.hasAnyPublished()) {
-        start();
-      }
+      startIfNecessary();
     }
 
     return scheduler;
   }
 
   public void start() {
+    Status.log("starting companion server");
     if (!nsdServer.isStarted()) {
       nsdServer.start();
     }
   }
 
+  private void startIfNecessary() {
+    if (!started() && Campaigns.hasAnyPublished()) {
+      start();
+    }
+  }
+
+  public boolean started() {
+    return nsdServer.isStarted();
+  }
+
   public void stop() {
+    Status.log("stopping companion server");
     nsdServer.stop();
   }
 

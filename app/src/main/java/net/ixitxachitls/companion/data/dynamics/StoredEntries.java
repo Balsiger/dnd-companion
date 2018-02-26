@@ -41,8 +41,6 @@ import java.util.Map;
  */
 public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel {
 
-  public static final String REMOTE = "REMOTE:";
-
   protected final Context context;
   protected final Uri table;
   protected final boolean local;
@@ -85,15 +83,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
   }
 
   public Optional<E> get(String id) {
-    return Optional.fromNullable(entriesById.get(sanitize(id)));
-  }
-
-  protected static String sanitize(String id) {
-    if (id.startsWith(REMOTE)) {
-      return id.substring(REMOTE.length());
-    }
-
-    return id;
+    return Optional.fromNullable(entriesById.get(id));
   }
 
   public Collection<E> getAll() {

@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -51,6 +52,7 @@ public class StatusView extends LinearLayout {
 
   // Constants.
   private static final String TAG = "StatusView";
+  private static final int REMOVE_BEATS = 120;
 
   // External data.
   private final Settings settings;
@@ -100,15 +102,22 @@ public class StatusView extends LinearLayout {
     messages.text("");
   }
 
-  public void heartBeat() {
+  public void heartBeatWithRemove() {
     online.bleep();
 
-    for (ConnectionView connection : clientConnectionsById.values()) {
-      connection.heartbeat();
-    }
+    clientConnectionsById.values().forEach(ConnectionView::heartbeat);
+    heartBeatWithRemove(serverConnectionsById.entrySet());
+  }
 
-    for (ConnectionView connection : serverConnectionsById.values()) {
-      connection.heartbeat();
+  private void heartBeatWithRemove(Iterable<Map.Entry<String, ConnectionView>> views) {
+    for (Iterator<Map.Entry<String, ConnectionView>> i = views.iterator(); i.hasNext(); ) {
+      Map.Entry<String, ConnectionView> entry = i.next();
+      entry.getValue().heartbeat();
+      if (!entry.getKey().equals(Settings.get().getAppId())
+          && entry.getValue().getHeartbeats() < -REMOVE_BEATS) {
+        i.remove();
+        connections.get().removeView(entry.getValue());
+      }
     }
   }
 
