@@ -23,73 +23,59 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
- * A editable text view with a label and description.
+ * A text view with a label and description.
  */
-public class LabelledEditTextView extends AbstractLabelledView {
-  private static final String TAG = "LabTxtView";
+public class LabelledTextView extends AbstractLabelledView {
+  // UI elements.
+  private TextWrapper<TextView> text;
 
-  // Ui elements.
-  private EditTextWrapper<EditText> text;
-
-  public LabelledEditTextView(Context context) {
-    super(context, R.layout.view_labelled_edit_text);
+  public LabelledTextView(Context context) {
+    super(context, R.layout.view_labelled_text);
   }
 
-  public LabelledEditTextView(Context context, AttributeSet attributes) {
-    super(context, attributes, R.layout.view_labelled_edit_text);
+  public LabelledTextView(Context context, AttributeSet attributes) {
+    super(context, attributes, R.layout.view_labelled_text);
   }
 
   @Override
   protected void setup(View view, TypedArray array) {
     super.setup(view, array);
 
-    text = EditTextWrapper.wrap(view, R.id.text);
+    text = TextWrapper.wrap(view, R.id.text);
     text.text(array.getString(R.styleable.LabelledEditTextView_defaultText));
     text.textColorValue(array.getColor(R.styleable.LabelledEditTextView_textColor,
         getContext().getResources().getColor(R.color.colorPrimary, null)));
-    text.lineColorValue(array.getColor(R.styleable.LabelledEditTextView_lineColor,
+    View line = view.findViewById(R.id.line);
+    line.setBackgroundColor(array.getColor(R.styleable.LabelledEditTextView_lineColor,
         getContext().getResources().getColor(R.color.colorPrimary, null)));
-    int lines = array.getInt(R.styleable.LabelledEditTextView_minLines, 1);
-    if (lines > 1) {
-      text.get().setMinLines(lines);
-      text.get().setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
-      text.get().setHorizontallyScrolling(false);
-    }
   }
 
   public String getText() {
     return text.getText();
   }
 
-  public LabelledEditTextView text(String text) {
+  public LabelledTextView text(String text) {
     this.text.text(text);
 
     return this;
   }
 
-  public LabelledEditTextView onEdit(Wrapper.Action action) {
-    text.onEdit(action);
+  public LabelledTextView onClick(Wrapper.Action action) {
+    text.onClick(action);
 
     return this;
   }
 
-  public LabelledEditTextView onChange(Wrapper.Action action) {
-    text.onChange(action);
-
-    return this;
-  }
-
-  public LabelledEditTextView enabled(boolean enabled) {
+  public LabelledTextView enabled(boolean enabled) {
     text.enabled(enabled);
 
     return this;

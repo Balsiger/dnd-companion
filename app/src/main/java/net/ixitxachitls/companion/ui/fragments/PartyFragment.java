@@ -158,7 +158,8 @@ public class PartyFragment extends Fragment {
       // Refresh the view buttons and such.
       TransitionManager.beginDelayedTransition(view);
       addCharacter.visible(!this.campaign.inBattle());
-      xp.visible(this.campaign.isLocal() && !this.campaign.inBattle());
+      xp.visible(this.campaign.isLocal() && !this.campaign.inBattle()
+          && !this.campaign.isDefault());
 
       Battle battle = this.campaign.getBattle();
       if (this.campaign.inBattle()) {

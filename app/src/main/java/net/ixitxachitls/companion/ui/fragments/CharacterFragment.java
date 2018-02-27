@@ -152,13 +152,6 @@ public class CharacterFragment extends CompanionFragment {
     }
   }
 
-  @Override
-  public void onResume() {
-    super.onResume();
-
-
-  }
-
   private void delete() {
     ConfirmationDialog.create(getContext())
         .title(getResources().getString(R.string.character_delete_title))
@@ -201,10 +194,53 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   public void showCharacter(Character character) {
+    if (this.character.isPresent()) {
+      Characters.getCharacter(this.character.get().getCharacterId()).removeObservers(this);
+    }
+
     this.character = Optional.of(character);
     this.campaign = Campaigns.getCampaign(character.getCampaignId()).getValue();
 
-    refresh();
+    Characters.getCharacter(character.getCharacterId()).observe(this, this::update);
+  }
+
+  private void update(Optional<Character> character) {
+    this.character = character;
+
+    if (!character.isPresent() || !campaign.isPresent()) {
+      this.campaign = Optional.absent();
+      return;
+    }
+
+    campaign = Campaigns.getCampaign(character.get().getCampaignId()).getValue();
+
+    campaignTitle.text(campaign.get().getName());
+    title.setTitle(character.get().getName());
+    title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());
+    Optional<Image> characterImage = Images.get(character.get().isLocal()).getImage(
+        Character.TABLE, character.get().getCharacterId()).getValue();
+    if (characterImage.isPresent()) {
+      image.setImageBitmap(characterImage.get().getBitmap());
+    } else {
+      image.clearImage();
+    }
+    move.visible(character.get().isLocal());
+    delete.visible(character.get().isLocal());
+    strength.setValue(character.get().getStrength(),
+        Ability.modifier(character.get().getStrength()));
+    dexterity.setValue(character.get().getDexterity(),
+        Ability.modifier(character.get().getDexterity()));
+    constitution.setValue(character.get().getConstitution(),
+        Ability.modifier(character.get().getConstitution()));
+    intelligence.setValue(character.get().getIntelligence(),
+        Ability.modifier(character.get().getIntelligence()));
+    wisdom.setValue(character.get().getWisdom(),
+        Ability.modifier(character.get().getWisdom()));
+    charisma.setValue(character.get().getCharisma(),
+        Ability.modifier(character.get().getCharisma()));
+    xp.text(String.valueOf(character.get().getXp()));
+    xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel()) + ")");
+    level.text(String.valueOf(character.get().getLevel()));
   }
 
   private void editBase() {
@@ -270,50 +306,6 @@ public class CharacterFragment extends CompanionFragment {
 
   public boolean canEdit() {
     return campaign.isPresent() && character.isPresent() && character.get().isLocal();
-  }
-
-  @Override
-  public void refresh() {
-    super.refresh();
-
-    if (!character.isPresent() || !campaign.isPresent()) {
-      return;
-    }
-
-    character = Characters.getCharacter(character.get().getCharacterId()).getValue();
-    if (!character.isPresent()) {
-      return;
-    }
-
-    campaign = Campaigns.getCampaign(campaign.get().getCampaignId()).getValue();
-
-    Optional<Image> characterImage = Images.get(character.get().isLocal()).getImage(
-        Character.TABLE, character.get().getCharacterId()).getValue();
-    if (characterImage.isPresent()) {
-      image.setImageBitmap(characterImage.get().getBitmap());
-    } else {
-      image.clearImage();
-    }
-    title.setTitle(character.get().getName());
-    title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());
-    campaignTitle.text(campaign.get().getName());
-    move.visible(character.get().isLocal());
-    delete.visible(character.get().isLocal());
-    strength.setValue(character.get().getStrength(),
-        Ability.modifier(character.get().getStrength()));
-    dexterity.setValue(character.get().getDexterity(),
-        Ability.modifier(character.get().getDexterity()));
-    constitution.setValue(character.get().getConstitution(),
-        Ability.modifier(character.get().getConstitution()));
-    intelligence.setValue(character.get().getIntelligence(),
-        Ability.modifier(character.get().getIntelligence()));
-    wisdom.setValue(character.get().getWisdom(),
-        Ability.modifier(character.get().getWisdom()));
-    charisma.setValue(character.get().getCharisma(),
-        Ability.modifier(character.get().getCharisma()));
-    xp.text(String.valueOf(character.get().getXp()));
-    xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel()) + ")");
-    level.text(String.valueOf(character.get().getLevel()));
   }
 
   @Override

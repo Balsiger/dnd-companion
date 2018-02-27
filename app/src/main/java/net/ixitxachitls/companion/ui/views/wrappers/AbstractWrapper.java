@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
+import android.support.annotation.LayoutRes;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.MotionEvent;
@@ -182,14 +183,15 @@ class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
+  public W description(String name, @LayoutRes int layout) {
+    onLongClick(()
+        -> MessageDialog.create(get().getContext()).layout(layout).title(name).show());
+
+    return (W) this;
+  }
+
   public W onLongClick(Wrapper.Action action) {
-    view.setOnLongClickListener(new View.OnLongClickListener() {
-      @Override
-      public boolean onLongClick(View v) {
-        action.execute();
-        return true;
-      }
-    });
+    view.setOnLongClickListener(v -> { action.execute(); return true; });
 
     return (W) this;
   }

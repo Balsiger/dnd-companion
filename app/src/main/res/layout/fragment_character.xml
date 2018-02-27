@@ -45,8 +45,7 @@
       android:layout_height="wrap_content"
       android:layout_below="@+id/campaign"
       android:background="@color/character"
-      android:orientation="horizontal"
-      android:transitionName="sharedMove">
+      android:orientation="horizontal">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/back"
@@ -67,7 +66,8 @@
         android:layout_gravity="center_vertical"
         android:layout_marginStart="10dp"
         android:layout_weight="0"
-        android:src="@drawable/ic_person_black_48dp"/>
+        android:src="@drawable/ic_person_black_48dp"
+        android:transitionName="sharedMove"/>
 
     <view
         android:id="@+id/title"

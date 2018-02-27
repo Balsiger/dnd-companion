@@ -76,44 +76,57 @@
       android:visibility="gone"
       app:modifier_label="@string/label_initiative_modifier"/>
 
-  <android.support.design.widget.FloatingActionButton
-      android:id="@+id/xp"
+  <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_alignTop="@+id/start_battle"
-      android:layout_marginEnd="8dp"
-      android:layout_toStartOf="@+id/start_battle"
-      android:tint="@android:color/black"
-      app:backgroundTint="@color/campaign"
-      app:srcCompat="@drawable/ic_xp"/>
-
-  <android.support.design.widget.FloatingActionButton
-      android:id="@+id/start_battle"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@+id/scroll"
-      android:layout_alignParentBottom="false"
-      android:layout_alignParentEnd="false"
+      android:layout_alignParentEnd="true"
       android:layout_below="@+id/scroll"
-      android:layout_marginEnd="8dp"
       android:layout_marginTop="@dimen/fab_margin_negative"
-      android:layout_toLeftOf="@+id/add_character"
-      app:backgroundTint="@color/battle"
-      app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
+      android:orientation="horizontal">
 
-  <android.support.design.widget.FloatingActionButton
-      android:id="@+id/add_character"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@+id/scroll"
-      android:layout_alignEnd="@+id/scroll"
-      android:layout_alignParentBottom="false"
-      android:layout_alignParentEnd="false"
-      android:layout_below="@+id/scroll"
-      android:layout_marginEnd="8dp"
-      android:layout_marginTop="@dimen/fab_margin_negative"
-      app:backgroundTint="@color/character"
-      app:srcCompat="@drawable/ic_add_black_24dp"/>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/xp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/start_battle"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/start_battle"
+        android:layout_weight="1"
+        android:tint="@android:color/black"
+        app:backgroundTint="@color/campaign"
+        app:srcCompat="@drawable/ic_xp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/start_battle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scroll"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/scroll"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toLeftOf="@+id/add_character"
+        android:layout_weight="1"
+        app:backgroundTint="@color/battle"
+        app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scroll"
+        android:layout_alignEnd="@+id/scroll"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/scroll"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        app:backgroundTint="@color/character"
+        app:srcCompat="@drawable/ic_add_black_24dp"/>
+  </LinearLayout>
 
   <TextView
       android:id="@+id/conditions"

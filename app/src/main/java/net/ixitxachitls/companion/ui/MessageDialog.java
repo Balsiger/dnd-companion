@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.support.annotation.LayoutRes;
 
 import net.ixitxachitls.companion.R;
 
@@ -41,12 +42,20 @@ public class MessageDialog {
   }
 
   public MessageDialog title(String title) {
-    dialog.setTitle(title);
+    if (title != null) {
+      dialog.setTitle(title);
+    }
+
     return this;
   }
 
   public MessageDialog message(String message) {
     dialog.setMessage(message);
+    return this;
+  }
+
+  public MessageDialog layout(@LayoutRes int layout) {
+    dialog.setView(layout);
     return this;
   }
 

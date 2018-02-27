@@ -136,7 +136,6 @@ public class CompanionFragments {
                                  Optional<View> sharedTransitionElement) {
     Log.d(TAG, "showing fragment " + fragment.getClass().getSimpleName());
     if (fragment == currentFragment.orNull()) {
-      fragment.refresh();
       return fragment;
     }
 
@@ -162,7 +161,6 @@ public class CompanionFragments {
 
     transaction.replace(R.id.content, fragment).commitAllowingStateLoss();
     fragmentManager.executePendingTransactions();
-    fragment.refresh();
     return fragment;
   }
 

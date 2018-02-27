@@ -27,8 +27,6 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.common.base.Optional;
 
@@ -36,9 +34,10 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
-import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
+import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -51,8 +50,8 @@ public class EditCampaignDialog extends Dialog {
   private Optional<Campaign> campaign = Optional.absent();
 
   // The following values are only valid after onCreate().
-  private EditTextWrapper<EditText> name;
-  private TextWrapper<TextView> world;
+  private LabelledEditTextView name;
+  private LabelledTextView world;
   private Wrapper<Button> save;
 
   public EditCampaignDialog() {}
@@ -63,7 +62,7 @@ public class EditCampaignDialog extends Dialog {
 
   public static EditCampaignDialog newInstance(String id) {
     EditCampaignDialog fragment = new EditCampaignDialog();
-    fragment.setArguments(arguments(R.layout.fragment_edit_campaign,
+    fragment.setArguments(arguments(R.layout.dialog_edit_campaign,
         id.isEmpty() ? R.string.campaign_title_add : R.string.campaign_title_edit,
         R.color.campaign, id));
     return fragment;
@@ -96,13 +95,11 @@ public class EditCampaignDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     if (campaign.isPresent()) {
-      name = EditTextWrapper.wrap(view, R.id.edit_name)
-          .text(campaign.get().getName())
-          .label(R.string.campaign_edit_name)
-          .lineColor(R.color.campaign)
-          .onChange(this::update);
-      world = TextWrapper.wrap(view, R.id.world)
-          .onClick(this::selectWorld);
+      name = view.findViewById(R.id.edit_name);
+      name.text(campaign.get().getName());
+      name.onChange(this::update);
+      world = view.findViewById(R.id.world);
+      world.onClick(this::selectWorld);
       if (!campaign.get().getWorld().isEmpty()) {
         world.text(campaign.get().getWorld());
       }
@@ -154,6 +151,7 @@ public class EditCampaignDialog extends Dialog {
       campaign.get().store();
 
       super.save();
+      CompanionFragments.get().showCampaign(campaign.get(), Optional.absent());
     }
   }
 }

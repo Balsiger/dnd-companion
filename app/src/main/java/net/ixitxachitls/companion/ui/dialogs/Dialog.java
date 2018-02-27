@@ -36,7 +36,6 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 /**
  * Base for all the edit fragments for the companion.
@@ -135,16 +134,12 @@ public abstract class Dialog extends DialogFragment {
   }
 
   private void close() {
-    MainActivity activity = (MainActivity) getActivity();
-    getFragmentManager().popBackStackImmediate();
-    //activity.refresh();
+    dismiss();
   }
 
   @Override
   public void onDestroyView() {
     super.onDestroyView();
-    MainActivity activity = (MainActivity) getActivity();
-    //activity.refresh();
   }
 
   protected abstract void createContent(View view);

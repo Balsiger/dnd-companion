@@ -1,0 +1,101 @@
+<!--
+  ~ Copyright (c) 2017-{2017} Peter Balsiger
+  ~ All rights reserved
+  ~
+  ~ This file is part of the Player Companion.
+  ~
+  ~ The Player Companion is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ The Player Companion is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with the Player Companion; if not, write to the Free Software
+  ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:elevation="24dp"
+                                             android:padding="10dp"
+                                             tools:context="net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog">
+
+  <TextView
+      android:id="@+id/campaign_edit_intro"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="34dp"
+      android:text="@string/campaign_edit_intro"
+      android:textAlignment="center"
+      android:textSize="18sp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:layout_constraintLeft_creator="1"
+      tools:layout_constraintTop_creator="1"
+      app:layout_constraintHorizontal_bias="1.0"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"/>
+
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/edit_name"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="24dp"
+      tools:layout_editor_absoluteX="10dp"
+      tools:layout_editor_absoluteY="300dp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/campaign_edit_intro"
+      app:layout_constraintHorizontal_bias="0.507"
+      app:lineColor="@color/campaign"
+      app:textColor="@color/campaignDark"
+      app:labelColor="@color/campaign"
+      app:labelText="Name"
+      app:descriptionText="The name of the campaign as it will be displayed to your players. Do avoid confusion, make sure the name is unique on the local WiFi."/>
+
+  <net.ixitxachitls.companion.ui.views.LabelledTextView
+      android:id="@+id/world"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="16dp"
+      android:text="@string/campaign_edit_world_hint"
+      android:textSize="24sp"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edit_name"
+      app:lineColor="@color/campaign"
+      app:textColor="@color/campaignDark"
+      app:labelColor="@color/campaign"
+      app:labelText="World"
+      app:descriptionText="THe world the campaign is set in. This will have some impact on what kind of rules will be used for playing in that campaign (eg. what calendar is used to record times and dates)."/>
+
+  <Button
+      android:id="@+id/save"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:text="@string/settings_save"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintHorizontal_bias="0.458"
+      android:layout_marginTop="24dp"
+      app:layout_constraintTop_toBottomOf="@+id/world"/>
+
+</android.support.constraint.ConstraintLayout>

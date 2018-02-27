@@ -25,12 +25,14 @@ import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -62,6 +64,16 @@ public class IconView extends android.support.v7.widget.AppCompatImageView {
         action.execute();
       }
     });
+  }
+
+  public void setDescription(String title, String text) {
+    setOnLongClickListener(v -> { MessageDialog.create(getContext())
+        .message(text).title(title).show(); return true; });
+  }
+
+  public void setDescription(String title, @LayoutRes int layout) {
+    setOnLongClickListener(v -> { MessageDialog.create(getContext())
+        .layout(layout).title(title).show(); return true; });
   }
 
   public void bleep() {

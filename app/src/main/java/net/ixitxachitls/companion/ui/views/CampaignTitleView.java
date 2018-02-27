@@ -36,6 +36,7 @@ import com.google.common.base.Optional;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
 
@@ -51,7 +52,7 @@ public class CampaignTitleView extends LinearLayout {
   // Ui elements.
   private TitleView title;
   private NetworkIcon networkIcon;
-  private TextView dm;
+  private TextWrapper<TextView> dm;
 
   public CampaignTitleView(Context context) {
     super(context);
@@ -85,7 +86,10 @@ public class CampaignTitleView extends LinearLayout {
 
     title = view.findViewById(R.id.title);
     networkIcon = view.findViewById(R.id.network);
-    dm = view.findViewById(R.id.dm);
+    networkIcon.setDescription("Campaign State", R.layout.description_campaign_state);
+    dm = TextWrapper.wrap(view, R.id.dm);
+    dm.description("DM", "This indicates that you are the Dungeon Master of the campaign. You are "
+        + "the only person that can make changes to the values and settings of the campaign.");
 
     addView(view);
   }
@@ -131,11 +135,7 @@ public class CampaignTitleView extends LinearLayout {
       networkIcon.setVisibility(VISIBLE);
     }
 
-    if (!campaign.isLocal() || campaign.isDefault()) {
-      dm.setVisibility(INVISIBLE);
-    } else {
-      dm.setVisibility(VISIBLE);
-    }
+    dm.visible(campaign.isLocal() && !campaign.isDefault());
 
     if (Misc.onEmulator()) {
       title.setTitle(campaign.getName() + " ("

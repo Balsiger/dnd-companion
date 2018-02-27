@@ -66,7 +66,7 @@ public class SettingsFragment extends CompanionFragment {
     nickname = view.findViewById(R.id.nickname);
     nickname.text(settings.isDefined() ? settings.getNickname() : "")
         .onEdit(this::editNickname)
-        .onChange(this::refresh);
+        .onChange(this::update);
     remoteCampaigns = Wrapper.wrap(view, R.id.remote_campaigns);
     remoteCampaigns.get().setChecked(settings.useRemoteCampaigns());
     remoteCampaigns.visible(Misc.onEmulator());
@@ -80,7 +80,7 @@ public class SettingsFragment extends CompanionFragment {
       view.findViewById(R.id.initial).setVisibility(View.INVISIBLE);
     }
 
-    refresh();
+    update();
     return view;
   }
 
@@ -105,10 +105,7 @@ public class SettingsFragment extends CompanionFragment {
     return true;
   }
 
-  @Override
-  public void refresh() {
-    super.refresh();
-
+  private void update() {
     if (nickname != null) {
       if (nickname.getText().length() > 0) {
         save.get().setVisibility(View.VISIBLE);

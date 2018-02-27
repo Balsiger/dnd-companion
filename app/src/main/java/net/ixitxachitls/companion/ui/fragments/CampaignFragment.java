@@ -74,14 +74,33 @@ public class CampaignFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
-    Wrapper.<ImageView>wrap(view, R.id.back).onClick(this::goBack);
+    Wrapper.<ImageView>wrap(view, R.id.back)
+        .onClick(this::goBack)
+        .description("Back", "Go back to the list of campaigns.");
     title = view.findViewById(R.id.title);
     title.setAction(this::edit);
-    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).onClick(this::deleteCampaign);
-    publish = Wrapper.<FloatingActionButton>wrap(view, R.id.publish).onClick(this::publish);
-    unpublish = Wrapper.<FloatingActionButton>wrap(view, R.id.unpublish).onClick(this::unpublish);
-    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).onClick(this::edit);
-    calendar = Wrapper.<FloatingActionButton>wrap(view, R.id.calendar).onClick(this::editDate);
+    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete)
+        .onClick(this::deleteCampaign)
+        .description("Delete", "Delete this campaign. This action cannot be undone and will send "
+            + "a deletion request to players to delete this campaign on their devices too. "
+            + "You cannot delete a campaign that is currently published.");
+    publish = Wrapper.<FloatingActionButton>wrap(view, R.id.publish)
+        .onClick(this::publish)
+        .description("Publish", "Publish this campaign on the local WiFi. Players on the same WiFi "
+            + "can add characters to the campaign and generally interact with the campaign while "
+            + "it is published.");
+    unpublish = Wrapper.<FloatingActionButton>wrap(view, R.id.unpublish)
+        .onClick(this::unpublish)
+        .description("Unpublish", "Remove the campaign from the local WiFi. The campaign will "
+            + "become unavailable to players, but they can still make changes to their characters. "
+            + "These changes will not be propagated to you or to other players, though.");
+    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit)
+        .onClick(this::edit)
+        .description("Edit", "Change the basic information of the campaign.");
+    calendar = Wrapper.<FloatingActionButton>wrap(view, R.id.calendar)
+        .onClick(this::editDate)
+        .description("Calendar", "Open the calendar for the campaign to allow you to change the "
+            + "current date and time of your campaign.");
     date = TextWrapper.wrap(view, R.id.date);
     date.onClick(this::editDate);
 
@@ -106,14 +125,18 @@ public class CampaignFragment extends CompanionFragment {
       publish.visible(campaign.get().isLocal() && !campaign.get().isDefault()
           && !campaign.get().isPublished());
       unpublish.visible(campaign.get().isLocal() && campaign.get().isPublished());
-      edit.visible(campaign.get().isLocal());
-      calendar.visible(campaign.get().isLocal());
-      date.text(campaign.get().getDate().toString());
+      edit.visible(campaign.get().isLocal() && !campaign.get().isDefault());
+      calendar.visible(campaign.get().isLocal() && !campaign.get().isDefault());
+      if (campaign.get().isDefault()) {
+        date.text("");
+      } else {
+        date.text(campaign.get().getDate().toString());
+      }
     }
   }
 
   private void editDate() {
-    if (campaign.isLocal()) {
+    if (campaign.isLocal() && !campaign.isDefault()) {
       DateDialog.newInstance(campaign.getCampaignId()).display();
     }
   }
@@ -155,12 +178,6 @@ public class CampaignFragment extends CompanionFragment {
     Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
         Toast.LENGTH_SHORT).show();
     show(Type.campaigns);
-  }
-
-  @Override
-  public void refresh() {
-    Log.d(TAG, "refreshing campaign fragment");
-    super.refresh();
   }
 
   private boolean canDeleteCampaign() {

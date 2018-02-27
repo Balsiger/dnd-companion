@@ -76,13 +76,14 @@ abstract class AbstractLabelledView extends LinearLayout {
     label.textColorValue(array.getColor(R.styleable.LabelledEditTextView_labelColor,
         getContext().getResources().getColor(R.color.colorPrimary, null)));
 
+    String name = array.getString(R.styleable.LabelledEditTextView_labelText);
     String description = array.getString(R.styleable.LabelledEditTextView_descriptionText);
-    if (!description.isEmpty()) {
-      label.onLongClick(() -> showDescription(description));
+    if (description != null && !description.isEmpty()) {
+      label.onLongClick(() -> showDescription(name, description));
     }
   }
 
-  private void showDescription(String description) {
-    new MessageDialog(getContext()).message(description).show();
+  private void showDescription(String name, String description) {
+    new MessageDialog(getContext()).title(name).message(description).show();
   }
 }

@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.ui.fragments;
 
 //import android.app.Fragment;
 
-import android.support.annotation.CallSuper;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 
@@ -61,17 +60,11 @@ public abstract class CompanionFragment extends Fragment {
 
   public abstract boolean goBack();
 
-  @CallSuper
-  public void refresh() {
-    Log.d(TAG, "refreshing " + getClass().getSimpleName());
-  }
-
   @Override
   public void onResume() {
     super.onResume();
 
     Log.d(TAG, "resumed fragment " + getClass().getSimpleName());
     CompanionFragments.get().resumed(this);
-    refresh();
   }
 }
