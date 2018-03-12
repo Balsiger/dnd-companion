@@ -147,14 +147,15 @@ public class DateDialog extends Dialog {
 
   private void night() {
     if (campaign.isPresent()) {
-      from(campaign.get().getDate().nextMorning());
+      from(campaign.get().getCalendar().nextMorning(campaign.get().getDate()));
       update();
     }
   }
 
   public void addMinutes(int minutes) {
     if (campaign.isPresent()) {
-      from(campaign.get().getDate().addMinutes(minutes));
+      from(campaign.get().getCalendar().addMinutes(
+          new CampaignDate(yearShown, monthShown, dayShown, hoursShown, minutesShown), minutes));
       update();
     }
   }
@@ -248,8 +249,8 @@ public class DateDialog extends Dialog {
   @Override
   public void onDestroyView() {
     if (campaign.isPresent()) {
-      campaign.get().setDate(campaign.get().getDate()
-          .from(yearShown, monthShown, dayShown, hoursShown, minutesShown));
+      campaign.get().setDate(new CampaignDate(yearShown, monthShown, dayShown, hoursShown,
+          minutesShown));
     }
 
     super.onDestroyView();
@@ -260,8 +261,12 @@ public class DateDialog extends Dialog {
       year.text(String.valueOf(yearShown));
       year.label(formatYear(yearShown));
       month.text(formatMonth(monthShown));
-      hours.text(formatTime(hoursShown));
-      minutes.text(formatTime(minutesShown));
+
+      // Setting hours or minutes will edit the values and overwrite our current values.
+      int newHours = hoursShown;
+      int newMinutes = minutesShown;
+      hours.text(formatTime(newHours));
+      minutes.text(formatTime(newMinutes));
       days.setAdapter(adapter);
     }
   }

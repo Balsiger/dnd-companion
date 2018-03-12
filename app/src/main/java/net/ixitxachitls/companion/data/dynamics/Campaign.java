@@ -68,13 +68,13 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
         local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE);
 
     world = Entries.get().getWorlds().get("Generic").get();
-    date = new CampaignDate(world.getCalendar());
+    date = new CampaignDate(world.getCalendar().getYears().get(0).getNumber());
     dm = Settings.get().getNickname();
     battle = new Battle(this);
   }
 
   public int getMaxPartyLevel() {
-    int max = 0;
+    int max = 1;
     for (String characterId : getCharacterIds().getValue()) {
       Character character = Characters.getCharacter(characterId).getValue().get();
       max = Math.max(max, character.getLevel());
@@ -91,7 +91,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
     }
 
     if (min == Integer.MAX_VALUE) {
-      return 0;
+      return 1;
     }
 
     return min;
@@ -176,8 +176,6 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
     else
       // We "know" it should be there.
       this.world = Entries.get().getWorlds().get("Generic").get();
-
-    this.date.setCalendar(world.get().getCalendar());
   }
 
   public void setDate(CampaignDate date) {
@@ -234,7 +232,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
       .or(Entries.get().getWorlds().get("Generic").get());
     campaign.dm = proto.getDm();
     campaign.published = proto.getPublished();
-    campaign.date = CampaignDate.fromProto(campaign.getCalendar(), proto.getDate());
+    campaign.date = CampaignDate.fromProto(proto.getDate());
     campaign.battle = Battle.fromProto(campaign, proto.getBattle());
     campaign.nextBattleNumber = proto.getNextBattleNumber();
 

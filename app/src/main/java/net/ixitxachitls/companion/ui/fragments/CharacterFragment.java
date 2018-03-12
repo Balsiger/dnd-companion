@@ -84,6 +84,7 @@ public class CharacterFragment extends CompanionFragment {
   private AbilityView wisdom;
   private AbilityView charisma;
   private RoundImageView image;
+  private Wrapper<FloatingActionButton> edit;
   private Wrapper<FloatingActionButton> delete;
   private Wrapper<FloatingActionButton> move;
   private EditTextWrapper<EditText> xp;
@@ -105,20 +106,28 @@ public class CharacterFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
-    back = Wrapper.<FloatingActionButton>wrap(view, R.id.back).onClick(this::goBack);
+    back = Wrapper.<FloatingActionButton>wrap(view, R.id.back)
+        .onClick(this::goBack)
+        .description("Back to Campaign", "Go back to this characters campaign view.");
     image = view.findViewById(R.id.image);
     image.setAction(this::editImage);
     title = view.findViewById(R.id.title);
     title.setAction(this::editBase);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
-    delete = Wrapper.wrap(view, R.id.delete);
-    delete.onClick(this::delete);
+    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit)
+        .onClick(this::editBase)
+        .description("Edit Character", "Edit the basic character traits");
+    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete)
+        .onClick(this::delete)
+        .description("Delete Character", "Delete this character. This will irrevocably delete "
+            + "the character and will send a deletion request to the DM and all other players.");
     if (character.isPresent() && !character.get().isLocal() &&
         campaign.isPresent() && !campaign.get().amDM()) {
       delete.gone();
     }
-    move = Wrapper.wrap(view, R.id.move);
-    move.onClick(this::move);
+    move = Wrapper.<FloatingActionButton>wrap(view, R.id.move)
+        .onClick(this::move)
+        .description("Move Character", "This button moves the character to an other campaign.");
     strength = view.findViewById(R.id.strength);
     strength.setAction(this::editAbilities);
     dexterity = view.findViewById(R.id.dexterity);
@@ -172,10 +181,10 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   private void move() {
-    ListSelectFragment fragment = ListSelectFragment.newInstance(
+    ListSelectDialog fragment = ListSelectDialog.newInstance(
         R.string.character_select_campaign, "",
         Campaigns.getAllCampaigns().stream()
-            .map(m -> new ListSelectFragment.Entry(m.getName(), m.getCampaignId()))
+            .map(m -> new ListSelectDialog.Entry(m.getName(), m.getCampaignId()))
             .collect(Collectors.toList()),
         R.color.campaign);
     fragment.setSelectListener(this::move);

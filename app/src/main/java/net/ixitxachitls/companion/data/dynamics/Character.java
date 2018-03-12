@@ -34,6 +34,8 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
+import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -42,16 +44,17 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 /**
  * Character represenatation.
  */
 public class Character extends BaseCreature<Data.CharacterProto> implements Comparable<Character> {
+
   public static final String TYPE = "character";
   public static final String TABLE = "characters";
   public static final String TABLE_LOCAL = TABLE + "_local";
   public static final String TABLE_REMOTE = TABLE + "_remote";
-  private static final String TAG = "Character";
   public static final int NO_INITIATIVE = 200;
   private static final int MAX_HISTORY = 20;
   private static final Random RANDOM = new Random();
@@ -59,7 +62,7 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   private String playerName = "";
   private List<Level> levels = new ArrayList<>();
   private int xp = 0;
-  private List<Character.TimedCondition> conditionsHistory = new ArrayList<>();
+  private List<Condition> conditionsHistory = new ArrayList<>();
 
   public Character(long id, String name, String campaignId, boolean local) {
     super(id, TYPE, name, local,
@@ -160,7 +163,11 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     this.initiative = initiative;
     this.initiativeRandom = RANDOM.nextInt(100_000);
     this.battleNumber = number;
-    this.conditions.clear();
+
+    // TODO(merlin): If we want to support long running conditions outside of battle, this has to
+    // change.
+    this.initiatedConditions.clear();
+    this.affectedConditions.clear();
     store();
   }
 
@@ -198,7 +205,8 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   public Data.CharacterProto toProto() {
     Data.CharacterProto.Builder proto = Data.CharacterProto.newBuilder()
         .setCreature(toCreatureProto())
-        .addAllTimedConditionHistory(convertConditions(conditionsHistory))
+        .addAllConditionHistory(conditionsHistory.stream()
+            .map(Condition::toProto).collect(Collectors.toList()))
         .setXp(xp);
 
     for (Level level : levels) {
@@ -208,23 +216,14 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     return proto.build();
   }
 
-  private List<Data.CreatureProto.TimedCondition>
-  convertConditions(List<Character.TimedCondition> conditions) {
-    List<Data.CreatureProto.TimedCondition> protos = new ArrayList<>();
-
-    for (Character.TimedCondition condition : conditions) {
-      protos.add(condition.toProto());
-    }
-
-    return protos;
-  }
-
   public static Character fromProto(long id, boolean local, Data.CharacterProto proto) {
     Character character = new Character(id, proto.getCreature().getName(),
         proto.getCreature().getCampaignId(), local);
     character.fromProto(proto.getCreature());
     character.playerName = proto.getPlayer();
-    character.conditionsHistory = convert(proto.getTimedConditionHistoryList());
+    character.conditionsHistory = proto.getConditionHistoryList().stream()
+        .map(Condition::fromProto)
+        .collect(Collectors.toList());
     character.xp = proto.getXp();
 
     for (Data.CharacterProto.Level level : proto.getLevelList()) {
@@ -236,16 +235,6 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     }
 
     return character;
-  }
-
-  private static List<TimedCondition> convert(List<Data.CreatureProto.TimedCondition> protos) {
-    List<TimedCondition> conditions = new ArrayList<>();
-
-    for (Data.CreatureProto.TimedCondition proto : protos) {
-      conditions.add(TimedCondition.fromProto(proto));
-    }
-
-    return conditions;
   }
 
   public Gender getGender() {
@@ -306,14 +295,14 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   }
 
   @Override
-  public void addTimedCondition(Character.TimedCondition condition) {
-    conditionsHistory.add(condition);
+  public void addInitiatedCondition(TargetedTimedCondition condition) {
     if (!condition.isPredefined()) {
+      conditionsHistory.add(condition.getCondition());
       conditionsHistory =
           conditionsHistory.subList(0, Math.min(conditionsHistory.size(), MAX_HISTORY));
     }
 
-    super.addTimedCondition(condition);
+    super.addInitiatedCondition(condition);
   }
 
   public static class Level extends DynamicEntry<Data.CharacterProto.Level> {
@@ -406,7 +395,7 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     CompanionMessenger.get().send(this);
   }
 
-  public List<TimedCondition> getConditionsHistory() {
+  public List<Condition> getConditionsHistory() {
     return ImmutableList.copyOf(conditionsHistory);
   }
 

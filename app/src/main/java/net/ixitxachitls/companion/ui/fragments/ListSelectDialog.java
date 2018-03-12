@@ -42,7 +42,7 @@ import java.util.stream.Collectors;
 /**
  * Simple fragmemt to select an item from a list.
  */
-public class ListSelectFragment extends Dialog {
+public class ListSelectDialog extends Dialog {
 
   private static final String ARG_SELECTED = "selected";
   private static final String ARG_VALUES = "values";
@@ -88,19 +88,19 @@ public class ListSelectFragment extends Dialog {
     }
   }
 
-  public ListSelectFragment() {
+  public ListSelectDialog() {
     // Required empty public constructor
   }
 
-  public static ListSelectFragment newStringInstance(int titleId, String selected,
-                                                     Collection<String> values, int color) {
+  public static ListSelectDialog newStringInstance(int titleId, String selected,
+                                                   Collection<String> values, int color) {
     return newInstance(titleId, selected,
         values.stream().map(m -> new Entry(m, m)).collect(Collectors.toList()), color);
   }
 
-  public static ListSelectFragment newInstance(int titleId, String selected,
-                                               Collection<Entry> values, int color) {
-    ListSelectFragment fragment = new ListSelectFragment();
+  public static ListSelectDialog newInstance(int titleId, String selected,
+                                             Collection<Entry> values, int color) {
+    ListSelectDialog fragment = new ListSelectDialog();
     Bundle arguments = arguments(R.layout.fragment_list_select, titleId, color, selected, values);
     fragment.setArguments(arguments);
     return fragment;

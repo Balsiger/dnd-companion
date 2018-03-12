@@ -48,8 +48,9 @@ public class LabelledAutocompleteTextView extends AbstractLabelledView {
     super(context, attributes, R.layout.view_labelled_autocomplete);
   }
 
-  protected void setup(View view, TypedArray array) {
-    super.setup(view, array);
+  @Override
+  protected void setup(View view, TypedArray array, TypedArray baseArray) {
+    super.setup(view, array, baseArray);
 
     text = EditTextWrapper.wrap(view, R.id.text);
     text.text(array.getString(R.styleable.LabelledEditTextView_defaultText));
@@ -83,6 +84,19 @@ public class LabelledAutocompleteTextView extends AbstractLabelledView {
 
   public LabelledAutocompleteTextView onFocus(Wrapper.Action action) {
     text.get().setOnFocusChangeListener((view, hasFocus) -> action.execute());
+
+    return this;
+  }
+
+  public LabelledAutocompleteTextView onFocus(Wrapper.Action focusAction,
+                                              Wrapper.Action focusLostAction) {
+    text.get().setOnFocusChangeListener((view, hasFocus) -> {
+      if (hasFocus) {
+        focusAction.execute();
+      } else {
+        focusLostAction.execute();
+      }
+    });
 
     return this;
   }

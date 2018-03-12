@@ -41,6 +41,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
  */
 abstract class AbstractLabelledView extends LinearLayout {
 
+  protected static final int ATTR_INPUT_TYPE = 0;
+
   // UI elements.
   protected TextWrapper<TextView> label;
 
@@ -59,6 +61,8 @@ abstract class AbstractLabelledView extends LinearLayout {
   private void setup(@Nullable AttributeSet attributes, @LayoutRes int layout) {
     TypedArray array =
         getContext().obtainStyledAttributes(attributes, R.styleable.LabelledEditTextView);
+    TypedArray baseArray =
+        getContext().obtainStyledAttributes(attributes, new int [] { android.R.attr.inputType, });
 
     View view = LayoutInflater.from(getContext()).inflate(layout, null, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
@@ -66,11 +70,13 @@ abstract class AbstractLabelledView extends LinearLayout {
         LinearLayout.LayoutParams.WRAP_CONTENT));
     addView(view);
 
-    setup(view, array);
+    setup(view, array, baseArray);
+
+    array.recycle();
   }
 
   @CallSuper
-  protected void setup(View view, TypedArray array) {
+  protected void setup(View view, TypedArray array, TypedArray baseArray) {
     label = TextWrapper.wrap(view, R.id.label);
     label.text(array.getString(R.styleable.LabelledEditTextView_labelText));
     label.textColorValue(array.getColor(R.styleable.LabelledEditTextView_labelColor,

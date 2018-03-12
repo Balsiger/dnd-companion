@@ -22,6 +22,8 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +43,6 @@ import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
-import net.ixitxachitls.companion.ui.fragments.PartyFragment;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -65,24 +66,43 @@ public class BattleView extends LinearLayout {
   private final Wrapper<View> stopDelimiter;
   private final Wrapper<View> timedDelimiter;
 
-  public BattleView(Context context, PartyFragment party) {
-    super(context);
+  public BattleView(Context context, @Nullable AttributeSet attributes) {
+    super(context, attributes);
 
-    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, (ViewGroup) party.getView(), false);
-    setLayoutParams(new LinearLayout.LayoutParams(
-        LinearLayout.LayoutParams.MATCH_PARENT,
-        LinearLayout.LayoutParams.WRAP_CONTENT));
+    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, this, false);
 
-    add = Wrapper.<Button>wrap(view, R.id.add).onClick(this::addMonster);
+    add = Wrapper.<Button>wrap(view, R.id.add)
+        .onClick(this::addMonster)
+        .description("Add Monster", "Add a monster to the initiative order. You select the "
+            + "monsters initiative bonus and the exact initiative will be randomly computed. If "
+            + "you want a single initiative for all monsters, simply use a single monster as a "
+            + "placeholder.");
     addDelimiter = Wrapper.wrap(view, R.id.delimiter_add);
-    next = Wrapper.<Button>wrap(view, R.id.next).onClick(this::next);
+    next = Wrapper.<Button>wrap(view, R.id.next)
+        .onClick(this::next)
+        .description("Next Combatant", "Switch to the next combatant. This ends the current "
+            + "combatants round and starts the round for the next combatant. When ending the last "
+            + "combatants round, the turn is ended and the next one starts again with the first "
+            + "combatant.");
     nextDelimiter = Wrapper.wrap(view, R.id.delimiter_next);
-    delay = Wrapper.<Button>wrap(view, R.id.delay).onClick(this::delay);
+    delay = Wrapper.<Button>wrap(view, R.id.delay)
+        .onClick(this::delay)
+    .description("Delay Combatant", "Delay the current combatants round. The combatant will be "
+        + "moved after the next combatant. Note that you should not allow a combatant to delay its "
+        + "round when all other combatans are either done or also delaying.");
     delayDelimiter = Wrapper.wrap(view, R.id.delimiter_delay);
-    stop = Wrapper.<Button>wrap(view, R.id.stop).onClick(this::stopBattle);
-    stopDelimiter = Wrapper.wrap(view, R.id.delimiter_stop);
-    timed = Wrapper.<Button>wrap(view, R.id.timed).onClick(this::addTimed);
+    timed = Wrapper.<Button>wrap(view, R.id.timed)
+        .onClick(this::addTimed)
+        .description("Time Condition", "Create a timed condition for the current combatant. The "
+            + "condition can apply to other characters as well, but has to originate from the "
+            + "current combatant. Conditions are automatically tracked until their duration runs "
+            + "out.");
     timedDelimiter = Wrapper.wrap(view, R.id.delimiter_timed);
+    stop = Wrapper.<Button>wrap(view, R.id.stop)
+        .onClick(this::stopBattle)
+        .description("Stop Battle", "Stop the battle completely. Note that you cannot restart a "
+            + "battle but instead will have to start a completely new battle.");
+    stopDelimiter = Wrapper.wrap(view, R.id.delimiter_stop);
 
     addView(view);
   }
@@ -116,7 +136,7 @@ public class BattleView extends LinearLayout {
       delay.visible(canDelay);
       delayDelimiter.visible(canDelay);
       stop.visible(isDM && !battle.isEnded());
-      stopDelimiter.visible(isDM && battle.isSurprised() || battle.isOngoing());
+      stopDelimiter.visible(isDM && !battle.isEnded());
       timed.visible(currentCreatureIsLocal && battle.isOngoingOrSurprised());
       timedDelimiter.visible(currentCreatureIsLocal && battle.isOngoingOrSurprised());
     } else {

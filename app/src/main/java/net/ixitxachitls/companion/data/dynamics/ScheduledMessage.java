@@ -259,6 +259,10 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
             + message.getData().getXpAward().getCharacterId() + "/"
             + message.getData().getXpAward().getXpAward() + postfix;
 
+      case CONDITION:
+        return "CONDITION - " + message.getData().getCondition().getTargetId()
+            + "/" + message.getData().getCondition().getCondition().getCondition().getName();
+
       case PAYLOAD_NOT_SET:
         return "NOT SET" + postfix;
 

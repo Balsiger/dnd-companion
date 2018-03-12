@@ -97,6 +97,10 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     return Ids.extractServerId(entryId);
   }
 
+  public String getType() {
+    return type;
+  }
+
   public boolean store() {
     P proto = toProto();
 
@@ -126,6 +130,14 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
 
   private String createId() {
     return type + "-" + Settings.get().getAppId() + "-" + id;
+  }
+
+  public static boolean hasType(String id, String type) {
+    return id.startsWith(type);
+  }
+
+  public static String extractType(String id) {
+    return id.replaceAll("-.*", "");
   }
 
   private String protoCacheKey() {

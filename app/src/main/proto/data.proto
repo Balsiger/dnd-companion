@@ -18,15 +18,7 @@ message CampaignProto {
   string id = 4;
   string dm = 5;
   bool published = 6;
-
-  message Date {
-    int32 year = 1;
-    int32 month = 2;
-    int32 day = 3;
-    int32 hour = 4;
-    int32 minute = 5;
-  }
-  Date date = 7;
+  DateProto date = 7;
 
   message Battle {
     BattleStatus status = 1;
@@ -56,20 +48,14 @@ message CreatureProto {
   }
   Abilities abilities = 6;
 
-  message TimedCondition {
-    int32 rounds = 1;
-    repeated string character_id = 2;
-    string name = 3;
-    int32 endRound = 4;
-    string description = 5;
-  }
-
   message Battle {
     int32 initiative = 1;
     int32 number = 2;
-    repeated TimedCondition timed_condition = 3;
   }
   Battle battle = 7;
+
+  repeated TargetedTimedConditionProto initiated_condition = 8;
+  repeated TimedConditionProto affected_condition = 9;
 }
 
 message CharacterProto {
@@ -86,7 +72,7 @@ message CharacterProto {
   repeated Level level = 2;
   string player = 3;
 
-  repeated CreatureProto.TimedCondition timed_condition_history = 4;
+  repeated ConditionProto condition_history = 4;
   int32 xp = 5;
 }
 
@@ -128,6 +114,17 @@ message CompanionMessageProto {
       int32 xp_award = 3;
     }
 
+    message Condition {
+      string target_id = 1;
+      TimedConditionProto condition = 2;
+    }
+
+    message DeleteCondition {
+      string name = 1;
+      string source_id = 2;
+      string target_id = 3;
+    }
+
     oneof payload {
       string debug = 1;
       Welcome welcome = 2;
@@ -138,6 +135,8 @@ message CompanionMessageProto {
       string character_delete = 7;
       Image image = 8;
       Xp xp_award = 9;
+      Condition condition = 10;
+      DeleteCondition condtion_delete = 11; // from server only
     }
   }
   Payload data = 2;

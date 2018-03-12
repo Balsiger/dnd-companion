@@ -21,8 +21,11 @@
 
 package net.ixitxachitls.companion;
 
+import android.app.Activity;
+import android.app.Application;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.support.multidex.MultiDexApplication;
 
 import net.ixitxachitls.companion.data.Entries;
@@ -36,9 +39,10 @@ import net.ixitxachitls.companion.net.CompanionMessenger;
 /**
  * The main application for the companion.
  */
-public class CompanionApplication extends MultiDexApplication {
+public class CompanionApplication extends MultiDexApplication implements Application.ActivityLifecycleCallbacks {
 
   private CompanionMessenger messenger;
+  private Activity currentActivity;
 
   @Override
   public void onCreate() {
@@ -62,5 +66,41 @@ public class CompanionApplication extends MultiDexApplication {
     messenger.start(); // Stopping is done in MainActivity.exit();
     Campaigns.publish();
     Characters.publish();
+
+    registerActivityLifecycleCallbacks(this);
+  }
+
+  public Activity getCurrentActivity() {
+    return currentActivity;
+  }
+
+  @Override
+  public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+  }
+
+  @Override
+  public void onActivityStarted(Activity activity) {
+    currentActivity = activity;
+  }
+
+  @Override
+  public void onActivityResumed(Activity activity) {
+    currentActivity = activity;
+  }
+
+  @Override
+  public void onActivityPaused(Activity activity) {
+  }
+
+  @Override
+  public void onActivityStopped(Activity activity) {
+  }
+
+  @Override
+  public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+  }
+
+  @Override
+  public void onActivityDestroyed(Activity activity) {
   }
 }

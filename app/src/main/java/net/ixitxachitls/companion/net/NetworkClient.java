@@ -70,21 +70,25 @@ public class NetworkClient {
   }
 
   public void send(CompanionMessageData message) {
-    Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-        .setHeader(Data.CompanionMessageProto.Header.newBuilder()
-            .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
-                .setId(Settings.get().getAppId())
-                .setName(Settings.get().getNickname())
-                .build())
-            .setReceiver(Data.CompanionMessageProto.Header.Id.newBuilder()
-                .setId(serverId)
-                .setName(serverName)
-                .build())
-            .build())
-        .setData(message.toProto())
-        .build();
+    if (transmitter != null) {
+      Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
+          .setHeader(Data.CompanionMessageProto.Header.newBuilder()
+              .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
+                  .setId(Settings.get().getAppId())
+                  .setName(Settings.get().getNickname())
+                  .build())
+              .setReceiver(Data.CompanionMessageProto.Header.Id.newBuilder()
+                  .setId(serverId)
+                  .setName(serverName)
+                  .build())
+              .build())
+          .setData(message.toProto())
+          .build();
 
-    transmitter.send(proto);
+      transmitter.send(proto);
+    } else {
+      Status.log("No transmitter, cannot send");
+    }
   }
 
   public Optional<CompanionMessage> receive() {

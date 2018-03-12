@@ -24,16 +24,22 @@ package net.ixitxachitls.companion.net;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
+import net.ixitxachitls.companion.data.dynamics.StoredEntry;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -106,6 +112,14 @@ public abstract class MessageProcessor {
         handleCharacterDeletion(senderId, messageId, message.getCharacterDelete());
         break;
 
+      case CONDITION:
+        handleCondition(senderId, messageId, message.getConditionDeleteTargetId(),
+            message.getCondition());
+
+      case CONDITION_DELETE:
+        handleConditionDelete(senderId, messageId, message.getConditionDeleteName(),
+            message.getConditionDeleteSourceId(), message.getConditionDeleteTargetId());
+
       case XP_AWARD:
         handleXpAward(receiverId, senderId, messageId, message.getXpAward());
         break;
@@ -123,6 +137,28 @@ public abstract class MessageProcessor {
     if (received.size() > MAX_RECEIVED_SIZE) {
       received.removeLast();
     }
+  }
+
+  private void handleCondition(String senderId, long messageId, String targetId,
+                               TimedCondition condition) {
+    Optional<? extends BaseCreature> creature;
+    if (StoredEntry.hasType(targetId, Character.TYPE)) {
+      creature = Characters.getCharacter(targetId).getValue();
+    } else {
+      creature = Creatures.getCreature(targetId).getValue();
+    }
+
+    if (creature.isPresent()) {
+      if (creature.get().isLocal()) {
+        creature.get().addAffectedCondition(condition);
+      } else {
+        CompanionMessenger.get().send(targetId, condition);
+      }
+    } else {
+      Status.log("Cannot find creature for " + targetId + " to assign condition.");
+    }
+
+    CompanionMessenger.get().sendAckToServer(senderId, messageId);
   }
 
   protected String createKey(String senderId, String receiverId, long messageId) {
@@ -162,6 +198,28 @@ public abstract class MessageProcessor {
 
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
     throw new UnsupportedOperationException();
+  }
+
+  protected void handleConditionDelete(String senderId, long messageId, String conditionName,
+                                       String sourceId, String targetId) {
+    Optional<? extends BaseCreature> creature;
+    if (StoredEntry.hasType(targetId, Character.TYPE)) {
+      creature = Characters.getCharacter(targetId).getValue();
+    } else {
+      creature = Creatures.getCreature(targetId).getValue();
+    }
+
+    if (creature.isPresent()) {
+      if (creature.get().isLocal()) {
+        creature.get().removeAffectedCondition(conditionName, sourceId);
+      } else {
+        CompanionMessenger.get().sendDeletion(conditionName, sourceId, targetId);
+      }
+    } else {
+      Status.log("Cannot find creature for " + targetId + " to assign condition.");
+    }
+
+    CompanionMessenger.get().sendAckToServer(senderId, messageId);
   }
 
   private void handleInvalid(String senderName) {

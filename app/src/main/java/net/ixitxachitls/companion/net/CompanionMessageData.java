@@ -27,6 +27,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Data;
 
 /**
@@ -41,7 +42,7 @@ public class CompanionMessageData {
 
   enum Type {
     UNKNOWN, DEBUG, WELCOME, ACK, CAMPAIGN, CAMPAIGN_DELETE, CHARACTER, CHARACTER_DELETE, IMAGE,
-    XP_AWARD,
+    XP_AWARD, CONDITION, CONDITION_DELETE
   };
 
   public Type getType() {
@@ -73,6 +74,12 @@ public class CompanionMessageData {
       case XP_AWARD:
         return Type.XP_AWARD;
 
+      case CONDITION:
+        return Type.CONDITION;
+
+      case CONDTION_DELETE:
+        return Type.CONDITION_DELETE;
+
       default:
       case PAYLOAD_NOT_SET:
         return Type.UNKNOWN;
@@ -97,6 +104,14 @@ public class CompanionMessageData {
     return Image.fromProto(data.getImage());
   }
 
+  public String getConditionTargetId() {
+    return data.getCondition().getTargetId();
+  }
+
+  public TimedCondition getCondition() {
+    return TimedCondition.fromProto(data.getCondition().getCondition());
+  }
+
   public long getAck() {
     return data.getAck();
   }
@@ -107,6 +122,18 @@ public class CompanionMessageData {
 
   public String getCharacterDelete() {
     return data.getCharacterDelete();
+  }
+
+  public String getConditionDeleteName() {
+    return data.getCondtionDelete().getName();
+  }
+
+  public String getConditionDeleteSourceId() {
+    return data.getCondtionDelete().getSourceId();
+  }
+
+  public String getConditionDeleteTargetId() {
+    return data.getCondtionDelete().getTargetId();
   }
 
   public XpAward getXpAward() {
@@ -164,8 +191,10 @@ public class CompanionMessageData {
         return false;
 
       case XP_AWARD:
+      case CONDITION:
       case CAMPAIGN_DELETE:
       case CHARACTER_DELETE:
+      case CONDTION_DELETE:
         return true;
     }
   }
@@ -177,7 +206,7 @@ public class CompanionMessageData {
     switch (getType()) {
       default:
       case UNKNOWN:
-        return message + "uknown";
+        return message + "unknown";
 
       case DEBUG:
         return message + getDebug();
@@ -199,6 +228,14 @@ public class CompanionMessageData {
 
       case CHARACTER_DELETE:
         return message + data.getCharacterDelete();
+
+      case CONDITION:
+        return message + data.getCondition().getCondition().getCondition().getName();
+
+      case CONDITION_DELETE:
+        return message + data.getCondtionDelete().getName() + "/"
+            + data.getCondtionDelete().getSourceId() + ">"
+            + data.getCondtionDelete().getTargetId();
 
       case IMAGE:
         return message + data.getImage().getId();
@@ -231,6 +268,15 @@ public class CompanionMessageData {
         .build());
   }
 
+  public static CompanionMessageData from(String targetId, TimedCondition condition) {
+    return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
+        .setCondition(Data.CompanionMessageProto.Payload.Condition.newBuilder()
+            .setTargetId(targetId)
+            .setCondition(condition.toProto())
+            .build())
+        .build());
+  }
+
   public static CompanionMessageData fromDelete(Character character) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setCharacterDelete(character.getCharacterId())
@@ -240,6 +286,18 @@ public class CompanionMessageData {
   public static CompanionMessageData fromDelete(Campaign campaign) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setCampaignDelete(campaign.getCampaignId())
+        .build());
+  }
+
+  public static CompanionMessageData fromDelete(String conditionName,
+                                                String sourceId,
+                                                String targetId) {
+    return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
+        .setCondtionDelete(Data.CompanionMessageProto.Payload.DeleteCondition.newBuilder()
+            .setName(conditionName)
+            .setSourceId(sourceId)
+            .setTargetId(targetId)
+            .build())
         .build());
   }
 

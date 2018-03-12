@@ -31,7 +31,8 @@ import net.ixitxachitls.companion.util.Dice;
  * Representation of a monster in the game.
  */
 public class Creature extends BaseCreature<Data.CreatureProto> implements Comparable<Creature> {
-  public static final String Type = "creature";
+  @Deprecated public static final String Type = "creature";
+  public static final String TYPE = "creatures";
   public static final String TABLE = "creatures";
   public static final String TABLE_LOCAL = TABLE + "_local";
   private static final String TAG = "Creature";

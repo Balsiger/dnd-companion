@@ -169,7 +169,7 @@ public class MessageScheduler {
       pendingByMessageId.remove(messageId);
       markAcked(message);
     } else {
-      Status.log("Ingored ack for unknown message " + messageId + " for " + recipientId);
+      Status.log("Ignored ack for unknown message id " + messageId + " for " + recipientId);
     }
   }
 

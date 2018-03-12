@@ -43,6 +43,10 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
+import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.data.values.Duration;
+import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -74,6 +78,8 @@ public class TimedConditionDialog extends Dialog {
   private Map<String, CheckBox> checkboxesByCreatureId = new HashMap<>();
   private LabelledEditTextView rounds;
   private LabelledEditTextView description;
+  private LabelledEditTextView summary;
+  private Wrapper<Button> save;
 
   public TimedConditionDialog() {}
 
@@ -112,9 +118,11 @@ public class TimedConditionDialog extends Dialog {
     condition = view.findViewById(R.id.condition);
     condition.onChange(this::selectCondition).onFocus(condition::showDropDown);
     rounds = view.findViewById(R.id.rounds);
+    rounds.onChange(this::updateSave);
     description = view.findViewById(R.id.description);
+    summary = view.findViewById(R.id.summary);
     party = Wrapper.<LinearLayout>wrap(view, R.id.party);
-    Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
+    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save).enabled(false);
 
     if (creature.isPresent()) {
       ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),
@@ -134,21 +142,21 @@ public class TimedConditionDialog extends Dialog {
     }
   }
 
-  private List<BaseCreature.TimedCondition> conditions(BaseCreature creature) {
-    List<BaseCreature.TimedCondition> conditions = new ArrayList<>();
+  private List<Condition> conditions(BaseCreature creature) {
+    List<Condition> conditions = new ArrayList<>();
 
     if (creature instanceof Character) {
       conditions.addAll(((Character) creature).getConditionsHistory());
     }
 
-    conditions.addAll(Conditions.asTimedConditions());
+    conditions.addAll(Conditions.CONDITIONS);
 
     return conditions;
   }
 
   private List<String> conditionNames(BaseCreature creature) {
     return conditions(creature).stream()
-        .map(BaseCreature.TimedCondition::getName)
+        .map(Condition::getName)
         .collect(Collectors.toList());
   }
 
@@ -158,36 +166,52 @@ public class TimedConditionDialog extends Dialog {
     checkbox.setTextAppearance(R.style.LargeText);
     checkbox.setButtonTintList(ColorStateList.valueOf(view.getResources()
         .getColor(color, null)));
+    checkbox.setOnCheckedChangeListener((v, c) -> updateSave());
     party.get().addView(checkbox);
     checkboxesByCreatureId.put(creatureId, checkbox);
   }
 
   private void selectCondition() {
     if (creature.isPresent()) {
-      Optional<Character.TimedCondition> selected =
+      Optional<Condition> selected =
           findCondition(creature.get(), condition.getText());
       if (selected.isPresent()) {
         predefined = selected.get().isPredefined();
-        rounds.text(String.valueOf(selected.get().getRounds()))
-            .enabled(!predefined || selected.get().getRounds() == 0);
+        int roundsNbr = selected.get().getDuration().getRounds();
+        rounds.text(roundsNbr > 0 ? String.valueOf(roundsNbr) : "")
+            .enabled(!predefined || selected.get().getDuration().getRounds() == 0);
         description.text(selected.get().getDescription()).enabled(!predefined);
-        for (String id : selected.get().getCharacterIds()) {
-          if (checkboxesByCreatureId.containsKey(id)) {
-            checkboxesByCreatureId.get(id).setChecked(true);
-          }
-        }
+        summary.text(selected.get().getSummary()).enabled(!predefined);
+      } else {
+        rounds.text("").enabled(true);
+        description.text("").enabled(true);
+        summary.text("").enabled(true);
       }
     }
   }
 
-  private Optional<BaseCreature.TimedCondition> findCondition(BaseCreature creature, String name) {
-    for (BaseCreature.TimedCondition condition : conditions(creature)) {
+  private Optional<Condition> findCondition(BaseCreature creature, String name) {
+    for (Condition condition : conditions(creature)) {
       if (condition.getName().equals(name)) {
         return Optional.of(condition);
       }
     }
 
     return Optional.absent();
+  }
+
+  private void updateSave() {
+    save.enabled(!rounds.getText().isEmpty() && targetSelected());
+  }
+
+  private boolean targetSelected() {
+    for (Map.Entry<String, CheckBox> entry : checkboxesByCreatureId.entrySet()) {
+      if (entry.getValue().isChecked()) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   @Override
@@ -200,11 +224,14 @@ public class TimedConditionDialog extends Dialog {
         }
       }
 
-      if (!ids.isEmpty() && !rounds.getText().isEmpty() && Integer.parseInt(rounds.getText()) > 0) {
+      if (!ids.isEmpty() && !rounds.getText().isEmpty()) {
         int rounds = Integer.parseInt(this.rounds.getText());
-        creature.get().addTimedCondition(new Character.TimedCondition(
-            rounds, currentRound + rounds + 1, ids, condition.getText(),
-            description.getText(), predefined));
+        if (rounds > 0) {
+          creature.get().addInitiatedCondition(new TargetedTimedCondition(
+              new TimedCondition(new Condition(condition.getText(), description.getText(),
+                  summary.getText(), Duration.rounds(rounds), predefined),
+                  creature.get().getEntryId(), currentRound + rounds), ids));
+        }
       }
     }
 

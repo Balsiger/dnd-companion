@@ -26,6 +26,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.transition.AutoTransition;
+import android.transition.Transition;
 import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -34,7 +36,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.common.base.Joiner;
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
@@ -52,12 +53,12 @@ import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.XPDialog;
 import net.ixitxachitls.companion.ui.views.BattleView;
 import net.ixitxachitls.companion.ui.views.CharacterChipView;
+import net.ixitxachitls.companion.ui.views.ConditionCreatureView;
 import net.ixitxachitls.companion.ui.views.CreatureChipView;
 import net.ixitxachitls.companion.ui.views.DiceView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -84,7 +85,8 @@ public class PartyFragment extends Fragment {
   private Wrapper<FloatingActionButton> addCharacter;
   private Wrapper<FloatingActionButton> xp;
   private DiceView initiative;
-  private TextWrapper<TextView> conditions;
+  private LinearLayout conditions;
+  private Transition transition = new AutoTransition();
 
   // State.
   private Map<String, CreatureChipView> chipsById = new ConcurrentHashMap<>();
@@ -111,10 +113,8 @@ public class PartyFragment extends Fragment {
     startBattle.onClick(this::startBattle)
         .description("Start Battle", "Start a battle with the party. Monsters can be added once "
             + "the battle has started.");
-
-    battleView = new BattleView(getContext(), this);
+    battleView = view.findViewById(R.id.battle);
     battleView.setVisibility(View.GONE);
-    view.addView(battleView, 0);
 
     addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)
         .onClick(this::createCharacter)
@@ -125,7 +125,8 @@ public class PartyFragment extends Fragment {
         .description("XP", "Award experience points to one ore multiple characters in the party.");
     initiative = view.findViewById(R.id.initiative);
     initiative.setDice(20);
-    conditions = TextWrapper.wrap(view, R.id.conditions);
+    conditions = view.findViewById(R.id.conditions);
+    transition.excludeChildren(conditions, true);
 
     return view;
   }
@@ -156,7 +157,7 @@ public class PartyFragment extends Fragment {
       this.campaign.getCreatureIds().observe(this, this::updateCreatureIds);
 
       // Refresh the view buttons and such.
-      TransitionManager.beginDelayedTransition(view);
+      TransitionManager.beginDelayedTransition(view, transition);
       addCharacter.visible(!this.campaign.inBattle());
       xp.visible(this.campaign.isLocal() && !this.campaign.inBattle()
           && !this.campaign.isDefault());
@@ -168,14 +169,15 @@ public class PartyFragment extends Fragment {
             .backgroundColor(R.color.battleLight);
         scroll.backgroundColor(R.color.battleDark);
         startBattle.gone();
-        conditions.visible(!this.campaign.getBattle().isStarting());
+        conditions.setVisibility(
+            this.campaign.getBattle().isStarting() ? View.GONE : View.VISIBLE);
       } else {
         title.text("Party");
         title.backgroundColor(R.color.characterLight);
         scroll.backgroundColor(R.color.cell);
         initiative.setVisibility(View.GONE);
         startBattle.visible(this.campaign.isLocal() && !this.campaign.isDefault());
-        conditions.visible();
+        conditions.setVisibility(View.VISIBLE);
       }
     }
   }
@@ -289,20 +291,20 @@ public class PartyFragment extends Fragment {
         initiative.setLabel("Initiative for " + initCharacter.getName());
         initiative.setModifier(initCharacter.initiativeModifier());
         initiative.setSelectAction(i -> {
-          TransitionManager.beginDelayedTransition(view);
+          TransitionManager.beginDelayedTransition(view, transition);
           Battle battle = campaign.getBattle();
           initCharacter.setBattle(i, battle.getNumber());
         });
       }
 
-      // Update conditions display.
-      conditions.text(conditions());
+      conditions.removeAllViews();
+      addAllConditions();
     }
   }
 
   private void updateCreature(Optional<Creature> creature) {
-    // Update conditions display.
-    conditions.text(conditions());
+    conditions.removeAllViews();
+    addAllConditions();
   }
 
   private void updateImage(Optional<Image> image) {
@@ -337,7 +339,7 @@ public class PartyFragment extends Fragment {
   private void redrawChips() {
     Log.d(TAG, "redrawing party chips");
 
-    TransitionManager.beginDelayedTransition(view);
+    TransitionManager.beginDelayedTransition(view, transition);
     party.removeAllViews();
 
     List<String> ids = campaign.getBattle().obtainCreatureIds();
@@ -352,53 +354,26 @@ public class PartyFragment extends Fragment {
     }
   }
 
-  private String conditions() {
-    List<String> conditions = new ArrayList<>();
-
-    for (Character shownCharacter : campaign.getCharacters()) {
-      conditions.addAll(conditions(shownCharacter));
+  private void addAllConditions() {
+    for (Character character : campaign.getCharacters()) {
+      addConditions(character);
     }
 
     if (campaign.isLocal()) {
-      for (Creature shownCreature : campaign.getCreatures()) {
-        conditions.addAll(conditions(shownCreature));
+      for (Creature creature : campaign.getCreatures()) {
+        addConditions(creature);
       }
     }
-
-    return Joiner.on("\n").join(conditions);
   }
 
-  private List<String> conditions(BaseCreature shown) {
-    List<String> conditions = new ArrayList<>();
+  private void addConditions(BaseCreature shown) {
+    ConditionCreatureView creatureView =
+        new ConditionCreatureView(getContext(), shown.getName(), campaign.getBattle().getTurn());
 
-    if (shown.isLocal() || campaign.isLocal()) {
-      for (Character conditional : campaign.getCharacters()) {
-        for (BaseCreature.TimedCondition condition
-            : conditional.conditionsFor(shown.getEntryId())) {
-          int remainingRounds = condition.getEndRound() - campaign.getBattle().getTurn();
-          if (remainingRounds > 0) {
-            conditions.add(condition.getName() + " (" + conditional.getName() + "), "
-                + remainingRounds + " rounds");
-            conditions.add(condition.getDescription());
-          }
-        }
-      }
-    }
+    creatureView.addConditions(shown, campaign.isLocal());
 
-    for (Creature creature : campaign.getCreatures()) {
-      for (BaseCreature.TimedCondition condition : creature.conditionsFor(shown.getEntryId())) {
-        int remainingRounds = condition.getEndRound() - campaign.getBattle().getTurn();
-        if (remainingRounds > 0) {
-          conditions.add(condition.getName() + " (" + creature.getName() + "), "
-              + remainingRounds + " rounds");
-          conditions.add(condition.getDescription());
-        }
-      }
+    if (creatureView.hasConditions()) {
+      conditions.addView(creatureView);
     }
-
-    if (!conditions.isEmpty()) {
-      conditions.add(0, shown.getName());
-    }
-    return conditions;
   }
 }

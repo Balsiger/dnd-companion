@@ -47,8 +47,8 @@ public class LabelledTextView extends AbstractLabelledView {
   }
 
   @Override
-  protected void setup(View view, TypedArray array) {
-    super.setup(view, array);
+  protected void setup(View view, TypedArray array, TypedArray baseArray) {
+    super.setup(view, array, baseArray);
 
     text = TextWrapper.wrap(view, R.id.text);
     text.text(array.getString(R.styleable.LabelledEditTextView_defaultText));

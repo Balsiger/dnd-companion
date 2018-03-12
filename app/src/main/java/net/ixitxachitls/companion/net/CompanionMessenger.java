@@ -28,12 +28,17 @@ import com.google.common.base.Optional;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.StoredEntries;
+import net.ixitxachitls.companion.data.dynamics.StoredEntry;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.util.Ids;
 
 import java.util.Arrays;
@@ -228,6 +233,39 @@ public class CompanionMessenger implements Runnable {
     }
   }
 
+  public void send(String targetId, TimedCondition condition) {
+    Optional<? extends BaseCreature> creature;
+    if (StoredEntry.hasType(targetId, Character.TYPE)) {
+      creature = Characters.getCharacter(targetId).getValue();
+    } else {
+      creature = Creatures.getCreature(targetId).getValue();
+    }
+
+    if (creature.isPresent()) {
+      if (creature.get().isLocal()) {
+        Status.log("adding timed condtion " + condition + " to " + targetId);
+        creature.get().addAffectedCondition(condition);
+      } else {
+        Status.log("sending timed condition " + condition + " to " + targetId);
+        Optional<Campaign> campaign =
+            Campaigns.getCampaign(creature.get().getCampaignId()).getValue();
+        if (campaign.isPresent()) {
+          if (campaign.get().isLocal()) {
+            companionServer.schedule(Ids.extractServerId(targetId),
+                CompanionMessageData.from(targetId, condition));
+          } else {
+            companionClients.schedule(Ids.extractServerId(targetId),
+                CompanionMessageData.from(targetId, condition));
+          }
+        } else {
+          Status.log("Cannot find campaign for " + targetId + ", cannot send condition");
+        }
+      }
+    } else {
+      Status.log("Cannot send timed condition to unknown character " + targetId);
+    }
+  }
+
   public void sendDeletion(Campaign campaign) {
     if (!campaign.isLocal()) {
       Status.toast("cannot delete remote campaign");
@@ -252,6 +290,34 @@ public class CompanionMessenger implements Runnable {
       Status.log("deleted character " + character);
     } else {
       Status.toast("Cannot get campaign for character " + character + " for deletion");
+    }
+  }
+
+  public void sendDeletion(String conditionName, String sourceId, String targetId) {
+    Status.log("handling condition deletion for " + conditionName + " from "
+        + StoredEntries.nameFor(sourceId) + " to " + StoredEntries.nameFor(targetId));
+    Optional<Character> character = Characters.getCharacter(targetId).getValue();
+    if (character.isPresent()) {
+      if (character.get().isLocal()) {
+        character.get().removeAffectedCondition(conditionName, sourceId);
+      } else {
+        Optional<Campaign> campaign =
+            Campaigns.getCampaign(character.get().getCampaignId()).getValue();
+        if (campaign.isPresent()) {
+          if (campaign.get().isLocal()) {
+            companionServer.schedule(Ids.extractServerId(targetId),
+                CompanionMessageData.fromDelete(conditionName, sourceId, targetId));
+          } else {
+            companionClients.schedule(campaign.get().getServerId(),
+                CompanionMessageData.fromDelete(conditionName, sourceId, targetId));
+          }
+        } else {
+          Status.log("Cannot send condition deleteion for " + StoredEntries.nameFor(targetId)
+              + " for unknown campaign " + character.get().getCampaignId());
+        }
+      }
+    } else {
+      Status.log("Cannot send condition delete to unknown character " + targetId);
     }
   }
 

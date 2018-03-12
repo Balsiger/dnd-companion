@@ -83,13 +83,13 @@ public class ClientMessageProcessor extends MessageProcessor {
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
     Optional<Character> character = Characters.getCharacter(award.getCharacterId()).getValue();
     if (character.isPresent()) {
-      new ConfirmationDialog(application.getApplicationContext())
+      new ConfirmationDialog(application.getCurrentActivity())
           .title("XP Award")
           .message("Congratulation!\n"
               + "Your DM has granted " + character.get().getName() + " " + award.getXp() + " XP!")
           .yes(() -> addXpAward(senderId, messageId, character.get().getCharacterId(),
               award.getXp()))
-          .no(() -> inFlightMessages.remove(createKey(receiverId, senderId, messageId)))
+          .no(() -> inFlightMessages.remove(createKey(senderId, receiverId, messageId)))
           .show();
     }
   }
@@ -100,5 +100,18 @@ public class ClientMessageProcessor extends MessageProcessor {
       character.get().addXp(xp);
       CompanionMessenger.get().sendAckToServer(senderId, messageId);
     }
+  }
+
+  @Override
+  protected void handleConditionDelete(String senderId, long messageId, String conditionName,
+                                       String sourceId, String targetId) {
+    Status.log("dismissing condition " + conditionName + " for " + targetId);
+
+    Optional<Character> character = Characters.getCharacter(sourceId).getValue();
+    if (character.isPresent()) {
+      character.get().removeInitiatedCondition(conditionName);
+    }
+
+    CompanionMessenger.get().sendAckToServer(senderId, messageId);
   }
 }

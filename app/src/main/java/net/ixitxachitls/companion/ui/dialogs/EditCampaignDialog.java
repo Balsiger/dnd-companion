@@ -35,7 +35,7 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
+import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -116,7 +116,7 @@ public class EditCampaignDialog extends Dialog {
 
   private void selectWorld() {
     if (campaign.isPresent()) {
-      ListSelectFragment fragment = ListSelectFragment.newStringInstance(
+      ListSelectDialog fragment = ListSelectDialog.newStringInstance(
           R.string.campaign_select_world, campaign.get().getWorld(),
           Entries.get().getWorlds().getNames(), R.color.campaign);
       fragment.setSelectListener(this::editWorld);

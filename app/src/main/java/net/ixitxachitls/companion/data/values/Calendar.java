@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.values;
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -114,6 +115,9 @@ public class Calendar {
     }
   }
 
+  private static final int NIGHT_HOURS = 8;
+  private static final int MORNING_HOURS = 6;
+
   private final List<Year> years;
   private final List<Month> months;
   private final int daysPerWeek;
@@ -175,6 +179,172 @@ public class Calendar {
     }
 
     return Optional.absent();
+  }
+
+  public CampaignDate normalize(CampaignDate date) {
+    int minute = date.getMinute();
+    int hour = date.getHour();
+    int day = date.getDay();
+    int month = date.getMonth();
+    int year = date.getYear();
+
+    // Normalize minutes.
+    if(minute >= getMinutesPerHour())
+    {
+      hour += minute / getMinutesPerHour();
+      minute = minute % getMinutesPerHour();
+    }
+    else if(minute < 0)
+    {
+      hour += minute / getMinutesPerHour() - 1;
+      minute = getMinutesPerHour() + minute % getMinutesPerHour();
+    }
+
+    // Normalize hours.
+    if(hour >= getHoursPerDay())
+    {
+      day += hour / getHoursPerDay();
+      hour = hour % getHoursPerDay();
+    }
+    else if(hour < 0)
+    {
+      day += hour / getHoursPerDay() - 1;
+      hour = getHoursPerDay() + hour % getHoursPerDay();
+    }
+
+    // Normalize months.
+    YearMonth yearMonth = normalizeMonths(year, month);
+    year = yearMonth.year;
+    month = yearMonth.month;
+
+    // Normalize days.
+    while(day > getMonth(month).getDays()) {
+      day -= getMonth(month).getDays();
+      month++;
+      yearMonth = normalizeMonths(year, month);
+      year = yearMonth.year;
+      month = yearMonth.month;
+    }
+
+    while(day <= 0)
+    {
+      month--;
+      yearMonth = normalizeMonths(year, month);
+      year = yearMonth.year;
+      month = yearMonth.month;
+      day += getMonth(month).getDays();
+    }
+
+    return new CampaignDate(year, month, day, hour, minute);
+  }
+
+  public CampaignDate addMinutes(CampaignDate date, int minutes) {
+    return manipulateDate(date, 0, 0, 0, 0, minutes);
+  }
+
+  public CampaignDate nextMorning(CampaignDate date) {
+    int mins = NIGHT_HOURS * getMinutesPerHour();
+    int morning = getHoursPerDay() * getMinutesPerHour()
+        + MORNING_HOURS * getMinutesPerHour()
+        - dailyMinutes(date.getHour(), date.getMinute());
+
+    if (mins < morning) {
+      return addMinutes(date, morning);
+    } else {
+      return addMinutes(date, mins);
+    }
+  }
+
+  private int dailyMinutes(int hour, int minute) {
+    return hour * getMinutesPerHour() + minute;
+  }
+
+  public String formatTime(CampaignDate date) {
+    return Strings.pad(date.getHour(), 2, true) + ":" + Strings.pad(date.getMinute(), 2, true);
+  }
+
+  public String formatMonth(CampaignDate date) {
+    if (date.getMonth() == 0)
+      return "";
+
+    if (getMonths().size() >= date.getMonth())
+      return getMonths().get(date.getMonth() - 1).getName();
+
+    return String.valueOf(date.getMonth());
+  }
+
+  public String formatYear(CampaignDate date) {
+    Optional<Calendar.Year> calendarYear = getYear(date.getYear());
+    if (calendarYear.isPresent() && !calendarYear.get().getName().isEmpty()) {
+      return calendarYear.get().getName() + " (" + date.getYear() + ")";
+    }
+
+    return String.valueOf(date.getYear());
+  }
+
+  public String formatDay(CampaignDate date) {
+    if (date.getDay() == 0 || daysPerMonth(date.getMonth()) == 1)
+      return "";
+
+    return String.valueOf(date.getDay());
+  }
+
+  public String format(CampaignDate date) {
+    return (date.getMonth() > 0 ? formatMonth(date) + " " : "")
+        + (date.getDay() > 0 && daysPerMonth(date.getMonth()) != 1
+        ? formatDay(date) + " " : "")
+        + formatYear(date) + " " + formatTime(date);
+  }
+
+  public int daysPerMonth(int inMonth) {
+    if (inMonth == 0 || inMonth >= getMonths().size())
+      return 0;
+
+    return getMonths().get(inMonth - 1).getDays();
+  }
+
+  private CampaignDate manipulateDate(CampaignDate date, int years, int months, int days,
+                                      int hours, int minutes) {
+    CampaignDate manipulated = new CampaignDate(date.getYear() + years, date.getMonth() + months,
+        date.getDay() + days, date.getHour() + hours, date.getMinute() + minutes);
+    return normalize(manipulated);
+  }
+
+  private class YearMonth {
+    private final int year;
+    private final int month;
+
+    private YearMonth(int year, int month) {
+      this.year = year;
+      this.month = month;
+    }
+  }
+
+  private YearMonth normalizeMonths(int year, int month) {
+    if(month > getMonths().size())
+    {
+      year += month / getMonths().size();
+      month = month % getMonths().size() + 1;
+
+      return normalizeMonths(year, month);
+    }
+    else if(month <= 0)
+    {
+      year += month / getMonths().size() - 1;
+      month = getMonths().size() + month % getMonths().size();
+
+      normalizeMonths(year, month);
+    } else {
+      // Avoid leap year months.
+      if(getMonth(month).getLeapYears() != 0 && year % getMonth(month).getLeapYears() != 0)
+      {
+        month++;
+
+        return normalizeMonths(year, month);
+      }
+    }
+
+    return new YearMonth(year, month);
   }
 
   @Override

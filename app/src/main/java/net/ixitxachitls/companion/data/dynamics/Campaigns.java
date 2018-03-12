@@ -87,10 +87,17 @@ public class Campaigns {
   public static List<Campaign> getAllCampaigns() {
     List<Campaign> campaigns = new ArrayList<>();
     campaigns.add(defaultCampaign);
-    if (!Settings.get().useRemoteCampaigns()) {
+    if (Misc.onEmulator()) {
+      if (Settings.get().useRemoteCampaigns()) {
+        campaigns.addAll(remote.getCampaigns());
+      } else {
+        campaigns.addAll(local.getCampaigns());
+      }
+    } else {
       campaigns.addAll(local.getCampaigns());
+      campaigns.addAll(remote.getCampaigns());
     }
-    campaigns.addAll(remote.getCampaigns());
+
 
     return campaigns;
   }
@@ -218,16 +225,23 @@ public class Campaigns {
   private static List<String> campaignIds() {
     List<String> ids = new ArrayList<>();
     ids.add(defaultCampaign.getCampaignId());
-    ids.addAll(local.getCampaigns()
-        .stream()
-        .map(Campaign::getCampaignId)
-        .collect(Collectors.toList()));
     if (Misc.onEmulator()) {
-      ids.addAll(remote.getCampaigns()
+      if (Settings.get().useRemoteCampaigns()) {
+        ids.addAll(remote.getCampaigns()
+            .stream()
+            .map(Campaign::getCampaignId)
+            .collect(Collectors.toList()));
+      } else {
+        ids.addAll(local.getCampaigns()
+            .stream()
+            .map(Campaign::getCampaignId)
+            .collect(Collectors.toList()));
+      }
+    } else {
+      ids.addAll(local.getCampaigns()
           .stream()
           .map(Campaign::getCampaignId)
           .collect(Collectors.toList()));
-    } else {
       ids.addAll(remote.getCampaigns()
           .stream()
           .map(Campaign::getCampaignId)

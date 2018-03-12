@@ -47,25 +47,37 @@
       android:layout_height="wrap_content"
       android:layout_margin="10dp"
       android:ems="10"
-      android:inputType="number"
+      android:inputType="number|numberSigned|numberDecimal"
       android:theme="@style/LargeText"
-      app:lineColor="@color/character"
-      app:labelText="Rounds"
+      app:descriptionText="The number of rounds this condition will be active in play."
       app:labelColor="@color/character"
-      app:textColor="@color/characterDark"
-      app:descriptionText="The number of rounds this condition will be active in play."/>
+      app:labelText="Rounds"
+      app:lineColor="@color/character"
+      app:textColor="@color/characterDark"/>
 
   <net.ixitxachitls.companion.ui.views.LabelledEditTextView
       android:id="@+id/description"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="10dp"
+      android:visibility="gone"
       app:descriptionText="The description of the condition. This should explain all details
                              necessary for a player to know how to deal with this condition."
       app:labelColor="@color/character"
       app:labelText="Description"
       app:lineColor="@color/character"
       app:minLines="4"
+      app:textColor="@color/characterDark"/>
+
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/summary"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      app:descriptionText="A short summary of the condition."
+      app:labelColor="@color/character"
+      app:labelText="Summary"
+      app:lineColor="@color/character"
       app:textColor="@color/characterDark"/>
 
   <LinearLayout

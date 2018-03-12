@@ -50,8 +50,8 @@ public class LabelledEditTextView extends AbstractLabelledView {
   }
 
   @Override
-  protected void setup(View view, TypedArray array) {
-    super.setup(view, array);
+  protected void setup(View view, TypedArray array, TypedArray baseArray) {
+    super.setup(view, array, baseArray);
 
     text = EditTextWrapper.wrap(view, R.id.text);
     text.text(array.getString(R.styleable.LabelledEditTextView_defaultText));
@@ -65,6 +65,7 @@ public class LabelledEditTextView extends AbstractLabelledView {
       text.get().setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
       text.get().setHorizontallyScrolling(false);
     }
+    text.get().setInputType(baseArray.getInt(ATTR_INPUT_TYPE, 0));
   }
 
   public String getText() {

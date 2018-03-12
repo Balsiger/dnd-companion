@@ -116,4 +116,29 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
   }
 
   protected abstract Optional<E> parseEntry(long id, byte[] blob);
+
+  public static String nameFor(String id) {
+    Optional<? extends  DynamicEntry> entry = getTyped(id);
+    if (entry.isPresent()) {
+      return entry.get().getName();
+    }
+
+    return id;
+  }
+
+  public static Optional<? extends DynamicEntry> getTyped(String id) {
+    switch (StoredEntry.extractType(id)) {
+      case Character.TYPE:
+        return Characters.getCharacter(id).getValue();
+
+      case Campaign.TYPE:
+        return Campaigns.getCampaign(id).getValue();
+
+      case Creature.TYPE:
+        return Creatures.getCreature(id).getValue();
+
+      default:
+        return Optional.absent();
+    }
+  }
 }

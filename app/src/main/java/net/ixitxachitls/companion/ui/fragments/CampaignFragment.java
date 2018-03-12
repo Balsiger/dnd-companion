@@ -130,7 +130,7 @@ public class CampaignFragment extends CompanionFragment {
       if (campaign.get().isDefault()) {
         date.text("");
       } else {
-        date.text(campaign.get().getDate().toString());
+        date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
       }
     }
   }

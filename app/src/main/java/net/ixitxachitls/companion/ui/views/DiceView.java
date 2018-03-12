@@ -73,9 +73,11 @@ public class DiceView extends LinearLayout {
     label = TextWrapper.wrap(view, R.id.label);
     label.text(array.getString(R.styleable.DiceView_modifier_label));
     modifierView = TextWrapper.wrap(view, R.id.modifier);
-    random = Wrapper.wrap(view, R.id.random);
-    random.onClick(this::selectRandom);
-    grid = (GridView) view.findViewById(R.id.numbers);
+    random = Wrapper.<Button>wrap(view, R.id.random)
+        .onClick(this::selectRandom)
+        .description("Random", "Instead of selecting the number that you actually rolled on your "
+            + "dice, you can also just click on this button to randomly select a value");
+    grid = view.findViewById(R.id.numbers);
     grid.setAdapter(adapter);
     grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override

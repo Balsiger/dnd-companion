@@ -103,7 +103,7 @@ public class XPDialog extends Dialog {
         final int index = i;
         LinearLayout container = (LinearLayout) inflator.inflate(R.layout.view_ecl, null);
         TextWrapper<TextView> ecl = TextWrapper.wrap(container, R.id.ecl).text(String.valueOf(index))
-            .onClick(() -> selectEcl(index));
+            .onClick(() -> selectEcl(index)).onLongClick(() -> selectEcl(0));
         if (campaign.get().isCloseECL(i)) {
           ecl.get().setTypeface(Typeface.DEFAULT_BOLD);
         }
@@ -146,7 +146,10 @@ public class XPDialog extends Dialog {
       eclViews.get(selectedECL - 1).backgroundColor(R.color.cell);
     }
     selectedECL = level;
-    eclViews.get(selectedECL - 1).backgroundColor(R.color.colorAccent);
+
+    if (selectedECL > 0) {
+      eclViews.get(selectedECL - 1).backgroundColor(R.color.colorAccent);
+    }
 
     refresh();
   }

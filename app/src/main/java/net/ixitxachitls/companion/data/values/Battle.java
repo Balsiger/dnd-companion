@@ -108,6 +108,10 @@ public class Battle {
     return creatureIds.get(0);
   }
 
+  public boolean isCurrent(BaseCreature character) {
+    return isEnded() || getCurrentCreatureId().equals(character.getEntryId());
+  }
+
   public void setup() {
     status = BattleStatus.STARTING;
     number++;

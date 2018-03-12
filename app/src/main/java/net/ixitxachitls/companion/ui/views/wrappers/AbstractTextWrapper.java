@@ -140,13 +140,6 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
     return (W) this;
   }
 
-  @SuppressWarnings("unchecked")
-  public W enabled(boolean enabled) {
-    view.setEnabled(enabled);
-
-    return (W) this;
-  }
-
   public String getText() {
     return view.getText().toString();
   }

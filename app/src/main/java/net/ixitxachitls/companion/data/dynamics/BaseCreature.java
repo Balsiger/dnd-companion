@@ -24,17 +24,20 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.net.Uri;
 
 import com.google.common.base.Optional;
-import com.google.common.collect.ImmutableList;
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Monster;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Gender;
+import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
+import net.ixitxachitls.companion.data.values.TimedCondition;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,7 +46,7 @@ import java.util.stream.Collectors;
  * characters (playable monsters with levels).
  */
 public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P> {
-  public static final int NO_INITIATIVE = 200;
+  private static final int NO_INITIATIVE = 200;
 
   protected String campaignId = "";
   protected Optional<Monster> mRace = Optional.absent();
@@ -57,7 +60,8 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   protected int initiative = NO_INITIATIVE;
   protected int initiativeRandom = 0;
   protected int battleNumber = 0;
-  protected List<Character.TimedCondition> conditions = new ArrayList<>();
+  protected List<TargetedTimedCondition> initiatedConditions = new ArrayList<>();
+  protected List<TimedCondition> affectedConditions = new ArrayList<>();
 
   protected BaseCreature(long id, String type, String name, boolean local, Uri dbUrl,
                          String campaignId) {
@@ -107,20 +111,50 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   }
 
 
-  public void addTimedCondition(Character.TimedCondition condition) {
-    conditions.add(condition);
+  public void addInitiatedCondition(TargetedTimedCondition condition) {
+    initiatedConditions.add(condition);
+
+    for (String targetId : condition.getTargetIds()) {
+      CompanionMessenger.get().send(targetId, condition.getTimedCondition());
+    }
+
     store();
   }
 
-  public Collection<? extends TimedCondition> conditionsFor(String characterId) {
-    List<TimedCondition> matchingConditions = new ArrayList<>();
-    for (TimedCondition condition : conditions) {
-      if (condition.characterIds.contains(characterId)) {
-        matchingConditions.add(condition);
+  public void addAffectedCondition(TimedCondition condition) {
+    affectedConditions.add(condition);
+    store();
+  }
+
+  public void removeInitiatedCondition(String name) {
+    for (Iterator<TargetedTimedCondition> i = initiatedConditions.iterator(); i.hasNext(); ) {
+      if (i.next().getName().equals(name)) {
+        i.remove();
+        // TODO(merlin): Have to send removal to all other affected characters
+        // (need to know what characters where affected???)
+        store();
+        break;
       }
     }
+  }
 
-    return matchingConditions;
+  public void removeAffectedCondition(String name, String sourceId) {
+    for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
+      TimedCondition condition = i.next();
+      if (condition.getName().equals(name) && condition.getSourceId().equals(sourceId)) {
+        i.remove();
+        store();
+        break;
+      }
+    }
+  }
+
+  public List<TargetedTimedCondition> getInitiatedConditions() {
+    return Collections.unmodifiableList(initiatedConditions);
+  }
+
+  public List<TimedCondition> getAffectedConditions() {
+    return Collections.unmodifiableList(affectedConditions);
   }
 
   public Data.CreatureProto toCreatureProto() {
@@ -140,9 +174,13 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
         .setBattle(Data.CreatureProto.Battle.newBuilder()
             .setInitiative(initiative)
             .setNumber(battleNumber)
-            .addAllTimedCondition(
-                conditions.stream().map(tc -> tc.toProto()).collect(Collectors.toList()))
-            .build());
+            .build())
+        .addAllInitiatedCondition(initiatedConditions.stream()
+            .map(TargetedTimedCondition::toProto)
+            .collect(Collectors.toList()))
+        .addAllAffectedCondition(affectedConditions.stream()
+            .map(TimedCondition::toProto)
+            .collect(Collectors.toList()));
 
     if (mRace.isPresent()) {
       proto.setRace(mRace.get().getName());
@@ -164,75 +202,11 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     charisma = proto.getAbilities().getCharisma();
     initiative = proto.hasBattle() ? proto.getBattle().getInitiative() : NO_INITIATIVE;
     battleNumber = proto.getBattle().getNumber();
-    conditions = proto.getBattle().getTimedConditionList()
-        .stream()
-        .map(Character.TimedCondition::fromProto)
+    initiatedConditions = proto.getInitiatedConditionList().stream()
+        .map(TargetedTimedCondition::fromProto)
         .collect(Collectors.toList());
-  }
-
-  public static class TimedCondition extends DynamicEntry<Data.CreatureProto.TimedCondition> {
-
-    private final int rounds;
-    private final int endRound;
-    private final ImmutableList<String> characterIds;
-    private final String name;
-    private final String description;
-    private final boolean predefined;
-
-    public TimedCondition(String name, String description) {
-      this(0, 0, ImmutableList.of(), name, description, true);
-    }
-
-    public TimedCondition(int rounds, int endRound, List<String> characterIds, String name,
-                          String description, boolean predefined) {
-      super(name);
-
-      this.rounds = rounds;
-      this.endRound = endRound;
-      this.characterIds = ImmutableList.copyOf(characterIds);
-      this.name = name;
-      this.description = description;
-      this.predefined = predefined;
-    }
-
-    public int getRounds() {
-      return rounds;
-    }
-
-    public ImmutableList<String> getCharacterIds() {
-      return characterIds;
-    }
-
-    public String getName() {
-      return name;
-    }
-
-    public String getDescription() {
-      return description;
-    }
-
-    public int getEndRound() {
-      return endRound;
-    }
-
-    public boolean isPredefined() {
-      return predefined;
-    }
-
-    @Override
-    public Data.CreatureProto.TimedCondition toProto() {
-      return Data.CreatureProto.TimedCondition.newBuilder()
-          .setRounds(rounds)
-          .setEndRound(endRound)
-          .addAllCharacterId(characterIds)
-          .setName(name)
-          .setDescription(description)
-          .build();
-    }
-
-    public static TimedCondition fromProto(Data.CreatureProto.TimedCondition proto) {
-      return new TimedCondition(proto.getRounds(), proto.getEndRound(), proto.getCharacterIdList(),
-          proto.getName(), proto.getDescription(), false);
-    }
+    affectedConditions = proto.getAffectedConditionList().stream()
+        .map(TimedCondition::fromProto)
+        .collect(Collectors.toList());
   }
 }

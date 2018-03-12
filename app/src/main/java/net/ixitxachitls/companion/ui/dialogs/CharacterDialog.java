@@ -40,7 +40,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.enums.Gender;
-import net.ixitxachitls.companion.ui.fragments.ListSelectFragment;
+import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -117,7 +117,7 @@ public class CharacterDialog extends Dialog {
 
   public void editGender() {
     if (character.isPresent()) {
-      ListSelectFragment edit = ListSelectFragment.newStringInstance(R.string.character_edit_gender,
+      ListSelectDialog edit = ListSelectDialog.newStringInstance(R.string.character_edit_gender,
           character.get().getGender().getName(), Gender.names(), R.color.character);
       edit.setSelectListener(this::updateGender);
       edit.display();
@@ -137,7 +137,7 @@ public class CharacterDialog extends Dialog {
 
   public void editRace() {
     if (character.isPresent()) {
-      ListSelectFragment edit = ListSelectFragment.newStringInstance(R.string.character_edit_race,
+      ListSelectDialog edit = ListSelectDialog.newStringInstance(R.string.character_edit_race,
           character.get().getRace(), Entries.get().getMonsters().primaryRaces(), R.color.character);
       edit.setSelectListener(this::updateRace);
       edit.display();

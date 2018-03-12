@@ -144,12 +144,12 @@ message DamageProto
     DiceProto base = 1;
     Type type = 2;
     string effect = 3;
-    ConditionProto condition = 4;
+    ConditionalProto conditional = 4;
   }
   repeated Damage damage = 1;
 }
 
-message ConditionProto
+message ConditionalProto
 {
   string generic = 1;
   WeaponStyle weapon_style = 2;
@@ -255,8 +255,7 @@ message ExpressionProto {
   Literal literal = 3;
 }
 
-message CalendarProto
-{
+message CalendarProto {
   message Year {
     int32 start = 1;
     int32 end = 2;
@@ -275,6 +274,41 @@ message CalendarProto
   int32 hours_per_day = 4;
   int32 minutes_per_hour = 5;
   int32 seconds_per_minute = 6;
+}
+
+message DurationProto {
+  int32 rounds = 1;
+  int32 minutes = 2;
+  int32 hours = 3;
+  int32 days = 4;
+  int32 years = 5;
+}
+
+message DateProto {
+  int32 year = 1;
+  int32 month = 2;
+  int32 day = 3;
+  int32 hour = 4;
+  int32 minute = 5;
+}
+
+message ConditionProto {
+  string name = 1;
+  string description = 2;
+  string summary = 3;
+  DurationProto duration = 4;
+}
+
+message TimedConditionProto {
+  ConditionProto condition = 1;
+  string source_id = 2;
+  int32 endRound = 3;
+  DateProto end_date = 4;
+}
+
+message TargetedTimedConditionProto {
+  TimedConditionProto condition = 1;
+  repeated string target_id = 3;
 }
 
 // Shared enums.

@@ -103,7 +103,7 @@ public abstract class Dialog extends DialogFragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     LinearLayout view = (LinearLayout) inflater.inflate(R.layout.fragment_edit, container, false);
-    TextView titleView = (TextView) view.findViewById(R.id.title);
+    TextView titleView = view.findViewById(R.id.title);
     titleView.setText(title);
     titleView.setBackgroundColor(getResources().getColor(color, null));
 

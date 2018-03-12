@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (c) 2017-{2017} Peter Balsiger
+  ~ Copyright (c) 2017-{2018} Peter Balsiger
   ~ All rights reserved
   ~
   ~ This file is part of the Player Companion.
@@ -19,19 +20,26 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:clickable="true"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-    >
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
 
-    <!-- TODO: Update blank fragment layout -->
+  <TextView
+      android:id="@+id/creature_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:text="TextView"
+      android:textStyle="bold"
+      android:theme="@style/LargeText"/>
 
-
-    <ListView
-        android:id="@+id/listSelectView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+  <LinearLayout
+      android:id="@+id/creature_conditions"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+  </LinearLayout>
 </LinearLayout>
