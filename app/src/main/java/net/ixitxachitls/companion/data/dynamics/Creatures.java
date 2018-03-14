@@ -47,6 +47,15 @@ public class Creatures {
   private static final Map<String, MutableLiveData<ImmutableList<String>>>
       creatureIdsByCampaignId = new ConcurrentHashMap<>();
 
+  public static Optional<? extends BaseCreature> getCreatureOrCharacter(String creatureId) {
+    Optional<? extends DynamicEntry> entry = StoredEntries.getTyped(creatureId);
+    if (entry.isPresent() && entry.get() instanceof BaseCreature) {
+      return Optional.of((BaseCreature) entry.get());
+    }
+
+    return Optional.absent();
+  }
+
   // Data accessors.
 
   public static LiveData<Optional<Creature>> getCreature(String creatureId) {

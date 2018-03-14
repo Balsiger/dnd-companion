@@ -93,17 +93,11 @@ public class AbilitiesDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     strength = (EditAbility) view.findViewById(R.id.strength);
-    strength.setOnChange(this::change);
     dexterity = (EditAbility) view.findViewById(R.id.dexterity);
-    dexterity.setOnChange(this::change);
     constitution = (EditAbility) view.findViewById(R.id.constitution);
-    constitution.setOnChange(this::change);
     intelligence = (EditAbility) view.findViewById(R.id.intelligence);
-    intelligence.setOnChange(this::change);
     wisdom = (EditAbility) view.findViewById(R.id.wisdom);
-    wisdom.setOnChange(this::change);
     charisma = (EditAbility) view.findViewById(R.id.charisma);
-    charisma.setOnChange(this::change);
     Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
 
     // Setup the layout parameters again after adding dynamic content.
@@ -113,7 +107,8 @@ public class AbilitiesDialog extends Dialog {
     update();
   }
 
-  private void change() {
+  @Override
+  public void save() {
     if (character.isPresent()) {
       character.get().setStrength(strength.getValue());
       character.get().setDexterity(dexterity.getValue());
@@ -121,7 +116,10 @@ public class AbilitiesDialog extends Dialog {
       character.get().setIntelligence(intelligence.getValue());
       character.get().setWisdom(wisdom.getValue());
       character.get().setCharisma(charisma.getValue());
+      character.get().store();
     }
+
+    super.save();
   }
 
   protected void update() {

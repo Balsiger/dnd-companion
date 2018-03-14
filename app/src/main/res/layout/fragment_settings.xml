@@ -33,11 +33,9 @@
       android:id="@+id/initial"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginEnd="8dp"
       android:layout_marginLeft="8dp"
       android:layout_marginRight="8dp"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="70dp"
+      android:layout_marginTop="24dp"
       android:text="@string/settings_initial"
       android:textColor="@android:color/white"
       android:theme="@style/LargeText"
@@ -90,12 +88,26 @@
       android:id="@+id/save"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="8dp"
+      android:layout_marginTop="24dp"
       android:text="@string/settings_save"
       android:theme="@style/SmallText"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/remote_characters"/>
+      app:layout_constraintTop_toBottomOf="@+id/features"/>
 
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/features"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      app:descriptionText="A comma separated list of enabled features currently in development. Enable any such feature at your own risk, as anything might break at any time."
+      app:labelColor="@color/white"
+      app:labelText="Enabled Alpha Features"
+      app:layout_constraintHorizontal_bias="0.625"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/remote_characters"
+      app:lineColor="@color/white"
+      app:textColor="@color/white"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -32,7 +32,6 @@ import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.util.ArrayList;
@@ -114,10 +113,6 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   public void addInitiatedCondition(TargetedTimedCondition condition) {
     initiatedConditions.add(condition);
 
-    for (String targetId : condition.getTargetIds()) {
-      CompanionMessenger.get().send(targetId, condition.getTimedCondition());
-    }
-
     store();
   }
 
@@ -138,6 +133,16 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     }
   }
 
+  public boolean hasAffectedCondition(String name) {
+    for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
+      if (i.next().getName().equals(name)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   public void removeAffectedCondition(String name, String sourceId) {
     for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
       TimedCondition condition = i.next();
@@ -147,6 +152,16 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
         break;
       }
     }
+  }
+
+  public void removeAllAffectedConditions(String name) {
+    for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
+      if (i.next().getName().equals(name)) {
+        i.remove();
+      }
+    }
+
+    store();
   }
 
   public List<TargetedTimedCondition> getInitiatedConditions() {

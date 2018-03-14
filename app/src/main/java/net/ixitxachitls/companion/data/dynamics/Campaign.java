@@ -22,9 +22,10 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
+import android.net.Uri;
+import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.data.Entries;
@@ -35,7 +36,6 @@ import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -43,29 +43,23 @@ import java.util.stream.Collectors;
 /**
  * A campaign with all its data.
  */
-public class Campaign extends StoredEntry<Data.CampaignProto> implements Comparable<Campaign> {
+public abstract class Campaign extends StoredEntry<Data.CampaignProto>
+    implements Comparable<Campaign> {
 
   // Constants.
   public static final String TYPE = "campaign";
   public static final String TABLE = "campaigns";
-  public static final String TABLE_LOCAL = TABLE + "_local";
-  public static final String TABLE_REMOTE = TABLE + "_remote";
-  public static final int DEFAULT_CAMPAIGN_ID = -1;
-
-  // External Data.
-  private LiveData<List<Character>> characters;
 
   // Values.
-  private World world;
-  private String dm = "";
-  private boolean published = false;
-  private CampaignDate date;
-  private Battle battle;
-  private int nextBattleNumber = 0;
+  protected World world;
+  protected String dm = "";
+  protected Battle battle;
+  protected CampaignDate date;
+  protected int nextBattleNumber = 0;
 
-  private Campaign(long id, String name, boolean local) {
-    super(id, TYPE, name, local,
-        local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE);
+  protected Campaign(long id, String name, boolean local,
+                     Uri dbUrl) {
+    super(id, TYPE, name, local, dbUrl);
 
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar().getYears().get(0).getNumber());
@@ -114,7 +108,7 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
   }
 
   public boolean amDM(){
-    return dm.equals(Settings.get().getNickname());
+    return isLocal();
   }
 
   public Calendar getCalendar() {
@@ -157,41 +151,13 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
     return !battle.isEnded();
   }
 
-  public boolean isDefault() {
-    return getId() == DEFAULT_CAMPAIGN_ID;
-  }
-
-  public boolean isPublished() {
-    return published;
-  }
-
-  public boolean isOnline() {
-    return CompanionMessenger.get().isOnline(this);
-  }
-
-  public void setWorld(String name) {
-    Optional<World> world = Entries.get().getWorlds().get(name);
-    if (world.isPresent())
-      this.world = world.get();
-    else
-      // We "know" it should be there.
-      this.world = Entries.get().getWorlds().get("Generic").get();
-  }
-
-  public void setDate(CampaignDate date) {
-    this.date = date;
-    store();
-  }
-
-  public void publish() {
-    if (!published) {
-      published = true;
-      // Storing will also publish the updated campaign.
-      store();
-    } else {
-      CompanionMessenger.get().send(this);
-    }
-  }
+  public abstract boolean isDefault();
+  public abstract boolean isPublished();
+  public abstract boolean isOnline();
+  public abstract void setWorld(String name);
+  public abstract void publish();
+  public abstract void setDate(CampaignDate date);
+  public abstract void unpublish();
 
   @Override
   public Data.CampaignProto toProto() {
@@ -199,97 +165,48 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
         .setId(getEntryId())
         .setName(name)
         .setWorld(world.getName())
-        .setPublished(published)
-        .setDm(dm)
+        .setPublished(isPublished())
+        .setDm(getDm())
         .setDate(date.toProto())
         .setBattle(battle.toProto())
         .setNextBattleNumber(nextBattleNumber)
         .build();
   }
 
-  public void unpublish() {
-    published = false;
-    store();
-    // We don't unpublish the campaign in the companion server, as the server will be automatically
-    // stoped if there are not more message and no published campaigns.
-  }
-
-  public static Campaign createNew() {
-    return new Campaign(0, "", true);
-  }
-
-  public static Campaign createDefault() {
-    Campaign campaign = new Campaign(DEFAULT_CAMPAIGN_ID, "Default Campaign", true);
-    campaign.setWorld("Generic");
-    return campaign;
-  }
-
-  public static Campaign fromProto(long id, boolean local, Data.CampaignProto proto) {
-    Campaign campaign = new Campaign(id, proto.getName(), local);
-    campaign.entryId =
-        proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
-    campaign.world = Entries.get().getWorlds().get(proto.getWorld())
-      .or(Entries.get().getWorlds().get("Generic").get());
-    campaign.dm = proto.getDm();
-    campaign.published = proto.getPublished();
-    campaign.date = CampaignDate.fromProto(proto.getDate());
-    campaign.battle = Battle.fromProto(campaign, proto.getBattle());
-    campaign.nextBattleNumber = proto.getNextBattleNumber();
-
-    return campaign;
-  }
-
   @Override
   public boolean store() {
-    boolean changed = super.store();
-    if (changed) {
+    if (super.store()) {
       if (Campaigns.has(this)) {
         Campaigns.update(this);
       } else {
         Campaigns.add(this);
       }
 
-      if (isLocal() && published) {
-        CompanionMessenger.get().send(this);
-      }
+      return true;
     }
 
-    return changed;
+    return false;
   }
 
   @Override
   public String toString() {
-    return getName() + " (" + getCampaignId() + "/" + (isLocal() ? "local" : "remote") + ")";
+    return getName() + " (" + getCampaignId() + ")";
   }
 
+  @CallSuper
   public void delete() {
-    if (isLocal()) {
-      CompanionMessenger.get().sendDeletion(this);
-    }
     Campaigns.remove(this);
   }
 
-  private static class XPAward {
-    private String characterId;
-    private int xp;
-
-    private XPAward(String characterId, int xp) {
-      this.characterId = characterId;
-      this.xp = xp;
-    }
-  }
-
   @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    if (!super.equals(o)) return false;
+  public boolean equals(Object other) {
+    if (this == other) return true;
+    if (other == null || getClass() != other.getClass()) return false;
+    if (!super.equals(other)) return false;
 
-    Campaign campaign = (Campaign) o;
+    Campaign campaign = (Campaign) other;
 
-    if (published != campaign.published) return false;
     if (nextBattleNumber != campaign.nextBattleNumber) return false;
-    if (!characters.equals(campaign.characters)) return false;
     if (!world.equals(campaign.world)) return false;
     if (!dm.equals(campaign.dm)) return false;
     if (!date.equals(campaign.date)) return false;
@@ -299,10 +216,8 @@ public class Campaign extends StoredEntry<Data.CampaignProto> implements Compara
   @Override
   public int hashCode() {
     int result = super.hashCode();
-    result = 31 * result + characters.hashCode();
     result = 31 * result + world.hashCode();
     result = 31 * result + dm.hashCode();
-    result = 31 * result + (published ? 1 : 0);
     result = 31 * result + date.hashCode();
     result = 31 * result + battle.hashCode();
     result = 31 * result + nextBattleNumber;

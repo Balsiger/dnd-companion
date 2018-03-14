@@ -126,10 +126,10 @@ public class CampaignsData extends StoredEntries<Campaign> {
 
   protected Optional<Campaign> parseEntry(long id, byte[] blob) {
     try {
-      return Optional.of(
-          Campaign.fromProto(id, isLocal(),
-              Data.CampaignProto.getDefaultInstance().getParserForType()
-                  .parseFrom(blob)));
+      Data.CampaignProto proto = Data.CampaignProto.getDefaultInstance().getParserForType()
+          .parseFrom(blob);
+      return Optional.of(isLocal()
+          ? LocalCampaign.fromProto(id, proto) : RemoteCampaign.fromProto(id, proto));
     } catch (InvalidProtocolBufferException e) {
       Log.e(TAG, "Cannot parse proto for campaign: " + e);
       Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);

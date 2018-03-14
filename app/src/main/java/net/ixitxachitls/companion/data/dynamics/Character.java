@@ -36,12 +36,15 @@ import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -167,7 +170,13 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     // TODO(merlin): If we want to support long running conditions outside of battle, this has to
     // change.
     this.initiatedConditions.clear();
-    this.affectedConditions.clear();
+
+    // Clear all conditions exception surprised, as we only just added it.
+    for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
+      if (!i.next().getName().equals(Conditions.SURPRISED.getName())) {
+        i.remove();
+      }
+    }
     store();
   }
 

@@ -23,12 +23,15 @@ package net.ixitxachitls.companion.data.values;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.rules.Conditions;
+import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -112,10 +115,19 @@ public class Battle {
     return isEnded() || getCurrentCreatureId().equals(character.getEntryId());
   }
 
+  public boolean acted(String creatureId) {
+    int index = creatureIds.indexOf(creatureId);
+    return index >= 0 && index < currentCreatureIndex;
+  }
+
   public void setup() {
     status = BattleStatus.STARTING;
     number++;
     store();
+
+    if (Settings.get().isEnabled("flatfooted")) {
+      TimedConditionDialog.displaySurprised(campaign);
+    }
   }
 
   public void start() {
@@ -123,6 +135,26 @@ public class Battle {
     turn = 0;
     creatureIds = obtainCreatureIds();
     status = BattleStatus.SURPRISED;
+
+    // Add flat-footed to all creatures.
+
+    if (Settings.get().isEnabled("flatfooted")) {
+      // TODO(merlin): This does not work for remote characters!!
+      for (String creatureId : creatureIds) {
+        Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(creatureId);
+        if (creature.isPresent()) {
+          int rounds = 0;
+          if (creature.get().hasAffectedCondition(Conditions.SURPRISED.getName())) {
+            rounds = 1;
+            creature.get().removeAllAffectedConditions(Conditions.SURPRISED.getName());
+          }
+
+          creature.get().addAffectedCondition(
+              new TimedCondition(Conditions.FLAT_FOOTED, creatureId, rounds));
+        }
+      }
+    }
+
     store();
   }
 
@@ -152,6 +184,11 @@ public class Battle {
       nextTurn();
     }
 
+    store();
+  }
+
+  public void skipTurn() {
+    nextTurn();
     store();
   }
 

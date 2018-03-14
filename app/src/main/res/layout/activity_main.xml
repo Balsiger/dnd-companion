@@ -28,7 +28,7 @@
           android:layout_height="wrap_content"
           android:background="?attr/colorPrimary"
           app:popupTheme="@style/AppTheme.PopupOverlay"
-          app:title="RPG Companion">
+          app:title="Tabletop Companion">
       </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 

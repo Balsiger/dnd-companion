@@ -34,6 +34,15 @@ import java.util.stream.Collectors;
  */
 public class Conditions {
 
+  public static final Condition FLAT_FOOTED = new Condition("Flat-Footed",
+      "A character who has not yet acted during a combat is flat-footed, not yet reacting "
+          + "normally to the situation. A flat-footed character loses his Dexterity bonus to "
+          + "AC (if any) and cannot make attacks of opportunity.",
+      "Not yet acted, no Dex to AC, no attacks of opprtunity.");
+  public static final Condition SURPRISED = new Condition("Surprised",
+      "A character who is surprised in the encounter and thus can't initially act.",
+      "Cannot act in the surprise round.");
+
   public static ImmutableList<Condition> CONDITIONS = new ImmutableList.Builder<Condition>()
       .add(new Condition("Ability Damaged",
           "The character has temporarily lost 1 or more ability score points. Lost points return "
@@ -184,11 +193,7 @@ public class Conditions {
               + "character to become exhausted. After 8 hours of complete rest, fatigued "
               + "characters are no longer fatigued.",
           "Cannot run or charge, -2 Str and Dex."))
-      .add(new Condition("Flat-Footed",
-          "A character who has not yet acted during a combat is flat-footed, not yet reacting "
-              + "normally to the situation. A flat-footed character loses his Dexterity bonus to "
-              + "AC (if any) and cannot make attacks of opportunity.",
-          "Not yet acted, no Dex to AC, no attacks of opprtunity."))
+      .add(FLAT_FOOTED)
       .add(new Condition("Frightened",
           "A frightened creature flees from the source of its fear as best it can. If unable to "
               + "flee, it may fight. A frightened creature takes a –2 penalty on all attack rolls, "
@@ -309,6 +314,7 @@ public class Conditions {
           "A stunned creature drops everything held, can’t take actions, takes a –2 penalty to AC, "
               + "and loses his Dexterity bonus to AC (if any).",
           "Drop everything, can't take actions, -2 AC, not Dex to AC."))
+      .add(SURPRISED)
       .add(new Condition("Turned",
           "Affected by a turn undead attempt. Turned undead flee for 10 rounds (1 minute) by the "
               + "best and fastest means available to them. If they cannot flee, they cower.",

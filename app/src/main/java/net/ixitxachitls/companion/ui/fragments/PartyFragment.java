@@ -179,6 +179,8 @@ public class PartyFragment extends Fragment {
         startBattle.visible(this.campaign.isLocal() && !this.campaign.isDefault());
         conditions.setVisibility(View.VISIBLE);
       }
+
+      conditions.removeAllViews();
     }
   }
 
@@ -266,7 +268,7 @@ public class PartyFragment extends Fragment {
       if (character.get().hasInitiative()) {
         charactersNeedingInitiative.remove(character.get().getCharacterId());
       } else {
-        if (character.get().isLocal() || campaign.isLocal())
+        if (character.get().isLocal())
         charactersNeedingInitiative.put(character.get().getCharacterId(), character.get());
       }
 
@@ -286,6 +288,7 @@ public class PartyFragment extends Fragment {
           campaign.getBattle().start();
         }
       } else {
+        // Only local characters can need initiative.
         Character initCharacter = charactersNeedingInitiative.values().iterator().next();
         initiative.setVisibility(View.VISIBLE);
         initiative.setLabel("Initiative for " + initCharacter.getName());
@@ -368,7 +371,7 @@ public class PartyFragment extends Fragment {
 
   private void addConditions(BaseCreature shown) {
     ConditionCreatureView creatureView =
-        new ConditionCreatureView(getContext(), shown.getName(), campaign.getBattle().getTurn());
+        new ConditionCreatureView(getContext(), shown.getName(), campaign.getBattle());
 
     creatureView.addConditions(shown, campaign.isLocal());
 

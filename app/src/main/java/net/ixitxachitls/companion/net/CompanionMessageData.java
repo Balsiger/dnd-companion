@@ -26,6 +26,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Data;
@@ -90,9 +91,9 @@ public class CompanionMessageData {
     return data.getDebug();
   }
 
-  public Campaign getCampaign() {
-    return Campaign.fromProto(Campaigns.getRemoteIdFor(data.getCampaign().getId()),
-        false, data.getCampaign());
+  public RemoteCampaign getCampaign() {
+    return RemoteCampaign.fromProto(Campaigns.getRemoteIdFor(data.getCampaign().getId()),
+        data.getCampaign());
   }
 
   public Character getCharacter() {

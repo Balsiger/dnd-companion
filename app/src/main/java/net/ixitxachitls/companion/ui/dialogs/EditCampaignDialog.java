@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -82,12 +83,12 @@ public class EditCampaignDialog extends Dialog {
     if (getArguments() != null) {
       String id = getArguments().getString(ARG_ID);
       if (id == null || id.isEmpty()) {
-        campaign = Optional.of(Campaign.createNew());
+        campaign = Optional.of(LocalCampaign.createNew());
       } else {
         campaign = Campaigns.getCampaign(id).getValue();
       }
     } else {
-      campaign = Optional.of(Campaign.createNew());
+      campaign = Optional.of(LocalCampaign.createNew());
     }
   }
 

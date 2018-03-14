@@ -41,11 +41,11 @@ import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
@@ -280,7 +280,7 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                       Data.CampaignProto proto = Data.CampaignProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      Campaign.fromProto(Campaigns.getLocalIdFor(proto.getId()), true, proto)
+                      LocalCampaign.fromProto(Campaigns.getLocalIdFor(proto.getId()), proto)
                           .store();
                     } else if (meta.getTitle().endsWith(".character")) {
                       Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance()

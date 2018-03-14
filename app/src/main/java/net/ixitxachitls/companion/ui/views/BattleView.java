@@ -54,13 +54,14 @@ public class BattleView extends LinearLayout {
 
   private Campaign campaign = Campaigns.defaultCampaign;
 
-  private final ViewGroup view;
   private final Wrapper<Button> add;
+  private final Wrapper<Button> skip;
   private final Wrapper<Button> next;
   private final Wrapper<Button> delay;
   private final Wrapper<Button> stop;
   private final Wrapper<Button> timed;
   private final Wrapper<View> addDelimiter;
+  private final Wrapper<View> skipDelimiter;
   private final Wrapper<View> nextDelimiter;
   private final Wrapper<View> delayDelimiter;
   private final Wrapper<View> stopDelimiter;
@@ -69,7 +70,7 @@ public class BattleView extends LinearLayout {
   public BattleView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, this, false);
+    ViewGroup view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, this, false);
 
     add = Wrapper.<Button>wrap(view, R.id.add)
         .onClick(this::addMonster)
@@ -78,6 +79,11 @@ public class BattleView extends LinearLayout {
             + "you want a single initiative for all monsters, simply use a single monster as a "
             + "placeholder.");
     addDelimiter = Wrapper.wrap(view, R.id.delimiter_add);
+    skip = Wrapper.<Button>wrap(view, R.id.skip)
+        .onClick(this::skip)
+        .description("Skip Round", "Skip the current round and move on to the next. This is used "
+            + "to skip a surpirse round if there was no surprise.");
+    skipDelimiter = Wrapper.wrap(view, R.id.delimiter_skip);
     next = Wrapper.<Button>wrap(view, R.id.next)
         .onClick(this::next)
         .description("Next Combatant", "Switch to the next combatant. This ends the current "
@@ -129,6 +135,8 @@ public class BattleView extends LinearLayout {
       boolean isDM = campaign.isDefault() || campaign.isLocal();
       add.visible(isDM && battle.isStarting());
       addDelimiter.visible(isDM && battle.isStarting());
+      skip.visible(isDM && battle.isSurprised());
+      skipDelimiter.visible(isDM && battle.isSurprised());
       next.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
       nextDelimiter.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
       boolean canDelay = isDM && battle.isOngoing()
@@ -158,6 +166,12 @@ public class BattleView extends LinearLayout {
   private void next() {
     if (inBattle()) {
       campaign.getBattle().creatureDone();
+    }
+  }
+
+  private void skip() {
+    if (inBattle()) {
+      campaign.getBattle().skipTurn();
     }
   }
 

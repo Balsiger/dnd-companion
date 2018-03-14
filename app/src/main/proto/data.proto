@@ -10,6 +10,7 @@ message SettingsProto {
   int64 last_message_id = 3;
   bool remote_campaigns = 4;
   bool remote_characters = 5;
+  repeated string features = 6;
 }
 
 message CampaignProto {

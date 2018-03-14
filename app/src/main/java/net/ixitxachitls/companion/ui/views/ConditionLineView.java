@@ -79,7 +79,11 @@ public class ConditionLineView extends LinearLayout {
                   .map(StoredEntries::nameFor)
                   .collect(Collectors.toList())) + ")");
     }
-    TextWrapper.wrap(view, R.id.duration).text(rounds + " rounds");
+    if (rounds > 0) {
+      TextWrapper.wrap(view, R.id.duration).text(rounds + (rounds > 1 ? " rounds" : " round"));
+    } else {
+      TextWrapper.wrap(view, R.id.duration).text("ending");
+    }
     TextWrapper.wrap(view, R.id.summary).text(condition.getSummary());
     Wrapper.wrap(view, R.id.delete_condition)
         .visible(canDelete)

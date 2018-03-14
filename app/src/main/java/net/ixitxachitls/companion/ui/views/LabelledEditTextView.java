@@ -65,7 +65,10 @@ public class LabelledEditTextView extends AbstractLabelledView {
       text.get().setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
       text.get().setHorizontallyScrolling(false);
     }
-    text.get().setInputType(baseArray.getInt(ATTR_INPUT_TYPE, 0));
+    int type = baseArray.getInt(ATTR_INPUT_TYPE, 0);
+    if (type != 0) {
+      text.get().setInputType(type);
+    }
   }
 
   public String getText() {

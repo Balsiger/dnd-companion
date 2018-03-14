@@ -39,6 +39,9 @@ import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Misc;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -56,11 +59,25 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private MutableLiveData<Boolean> showStatus = new MutableLiveData<>();
   private boolean remoteCampaigns = false;
   private boolean remoteCharacters = false;
+  private List<String> features = new ArrayList<>();
 
   private Settings(String name) {
     super(ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
 
     showStatus.setValue(false);
+  }
+
+  public List<String> getFeatures() {
+    return Collections.unmodifiableList(features);
+  }
+
+  public void setFeatures(List<String> features) {
+    this.features.clear();
+    this.features.addAll(features);
+  }
+
+  public boolean isEnabled(String feature) {
+    return features.contains(feature);
   }
 
   public static ContentValues defaultSettings() {
@@ -93,6 +110,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
         .setLastMessageId(lastMessageId)
         .setRemoteCampaigns(remoteCampaigns)
         .setRemoteCharacters(remoteCharacters)
+        .addAllFeatures(features)
         .build();
   }
 
@@ -107,6 +125,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     settings.lastMessageId = proto.getLastMessageId();
     settings.remoteCampaigns = proto.getRemoteCampaigns();
     settings.remoteCharacters = proto.getRemoteCharacters();
+    settings.features.addAll(proto.getFeaturesList());
 
     // Don't use 0 as it could be confused with an unset message id.
     if (settings.lastMessageId == 0) {

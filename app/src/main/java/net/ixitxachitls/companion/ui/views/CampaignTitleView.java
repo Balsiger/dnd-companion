@@ -145,7 +145,8 @@ public class CampaignTitleView extends LinearLayout {
     }
     title.setSubtitle(subtitle(campaign));
 
-    networkIcon.setStatus(campaign.isLocal(), campaign.isPublished());
+    networkIcon.setStatus(campaign.isLocal(), campaign.isOnline());
+
     if (campaign.isLocal() && !campaign.isDefault()) {
       networkIcon.setAction(this::publish);
     }

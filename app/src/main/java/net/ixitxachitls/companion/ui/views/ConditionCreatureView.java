@@ -31,6 +31,7 @@ import com.google.common.collect.ImmutableList;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
+import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -43,14 +44,14 @@ import java.util.List;
 public class ConditionCreatureView extends LinearLayout {
 
   private final LinearLayout container;
-  private final int battleTurn;
+  private final Battle battle;
 
   private boolean hasConditions = false;
 
-  public ConditionCreatureView(Context context, String name, int battleTurn) {
+  public ConditionCreatureView(Context context, String name, Battle battle) {
     super(context);
 
-    this.battleTurn = battleTurn;
+    this.battle = battle;
 
     View view =
         LayoutInflater.from(getContext()).inflate(R.layout.view_condition_creature, this, false);
@@ -75,8 +76,8 @@ public class ConditionCreatureView extends LinearLayout {
 
   private void addCondition(String sourceName, String sourceId, List<String> targetIds,
                             TimedCondition condition, boolean affected, boolean canDelete) {
-    int remainingRounds = condition.getEndRound() - battleTurn;
-    if (remainingRounds > 0) {
+    int remainingRounds = condition.getEndRound() - battle.getTurn();
+    if (remainingRounds > 0 || (remainingRounds == 0 && !battle.acted(sourceId))) {
       hasConditions = true;
       container.addView(new ConditionLineView(getContext(), condition, sourceName, sourceId,
           targetIds, remainingRounds, affected, canDelete));

@@ -46,7 +46,7 @@ public class Campaigns {
   private static CampaignsData local;
   private static CampaignsData remote;
 
-  public static final Campaign defaultCampaign = Campaign.createDefault();
+  public static final Campaign defaultCampaign = LocalCampaign.createDefault();
   private static final MutableLiveData<Optional<Campaign>> liveDefaultCampaign =
       new MutableLiveData<>();
 

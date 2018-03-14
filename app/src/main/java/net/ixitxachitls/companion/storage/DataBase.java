@@ -28,9 +28,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Creature;
+import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
+import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.util.Lazy;
 
@@ -47,9 +48,9 @@ public class DataBase extends SQLiteOpenHelper {
   public static final String CREATE_SETTINGS = "CREATE TABLE " + Settings.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY,"
       + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CAMPAIGNS_LOCAL = "CREATE TABLE " + Campaign.TABLE_LOCAL
+  public static final String CREATE_CAMPAIGNS_LOCAL = "CREATE TABLE " + LocalCampaign.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CAMPAIGNS_REMOTE = "CREATE TABLE " + Campaign.TABLE_REMOTE
+  public static final String CREATE_CAMPAIGNS_REMOTE = "CREATE TABLE " + RemoteCampaign.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_CHARACTERS_LOCAL = "CREATE TABLE " + Character.TABLE_LOCAL
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";

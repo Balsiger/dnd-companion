@@ -38,6 +38,9 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
+import net.ixitxachitls.companion.util.Strings;
+
+import java.util.Arrays;
 
 /**
  * Fragment for displaying settings values.
@@ -49,6 +52,7 @@ public class SettingsFragment extends CompanionFragment {
   private LabelledEditTextView nickname;
   private Wrapper<CheckBox> remoteCampaigns;
   private Wrapper<CheckBox> remoteCharacters;
+  private LabelledEditTextView features;
   private Wrapper<Button> save;
 
   public SettingsFragment() {
@@ -73,6 +77,10 @@ public class SettingsFragment extends CompanionFragment {
     remoteCharacters = Wrapper.wrap(view, R.id.remote_characters);
     remoteCharacters.get().setChecked(settings.useRemoteCharacters());
     remoteCharacters.visible(Misc.onEmulator());
+    features = view.findViewById(R.id.features);
+    features.text(Strings.COMMA_JOINER.join(settings.getFeatures()))
+        .onEdit(this::editFeatures)
+        .onChange(this::update);
     save = Wrapper.wrap(view, R.id.save);
     save.onClick(this::save);
 
@@ -87,6 +95,7 @@ public class SettingsFragment extends CompanionFragment {
   private void save() {
     editNickname();
     settings.useRemote(remoteCampaigns.get().isChecked(), remoteCharacters.get().isChecked());
+    settings.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
     settings.store();
 
     if (settings.isDefined()) {
@@ -97,6 +106,10 @@ public class SettingsFragment extends CompanionFragment {
 
   protected void editNickname() {
     settings.setNickname(nickname.getText());
+  }
+
+  protected void editFeatures() {
+    settings.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
   }
 
   @Override
