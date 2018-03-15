@@ -37,7 +37,7 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 public abstract class CompanionFragment extends Fragment {
   private static final String TAG = "Fragment";
 
-  public enum Type { settings, campaigns, campaign, character, };
+  public enum Type { settings, campaigns, campaign, localCampaign, character, localCharacter };
 
   private final Type type;
 

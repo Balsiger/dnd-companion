@@ -21,20 +21,14 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.common.base.Optional;
 
@@ -47,9 +41,7 @@ import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
@@ -57,40 +49,32 @@ import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
-import java.io.IOException;
-import java.util.stream.Collectors;
-
-import static android.app.Activity.RESULT_OK;
-
 /**
  * Fragment for displaying character information.
  */
 public class CharacterFragment extends CompanionFragment {
 
-  private final String TAG = "CharacterFragment";
-  private final int PICK_IMAGE = 1;
-
-  private Optional<Character> character = Optional.absent();
-  private Optional<Campaign> campaign = Optional.absent();
-  private boolean storeOnPause = true;
+  protected Optional<Character> character = Optional.absent();
+  protected Optional<Campaign> campaign = Optional.absent();
+  protected boolean storeOnPause = true;
 
   // UI elements.
-  private TitleView title;
-  private TextWrapper<TextView> campaignTitle;
-  private AbilityView strength;
-  private AbilityView dexterity;
-  private AbilityView constitution;
-  private AbilityView intelligence;
-  private AbilityView wisdom;
-  private AbilityView charisma;
-  private RoundImageView image;
-  private Wrapper<FloatingActionButton> edit;
-  private Wrapper<FloatingActionButton> delete;
-  private Wrapper<FloatingActionButton> move;
-  private EditTextWrapper<EditText> xp;
-  private TextWrapper<TextView> xpNext;
-  private EditTextWrapper<EditText> level;
-  private Wrapper<FloatingActionButton> back;
+  protected TitleView title;
+  protected TextWrapper<TextView> campaignTitle;
+  protected AbilityView strength;
+  protected AbilityView dexterity;
+  protected AbilityView constitution;
+  protected AbilityView intelligence;
+  protected AbilityView wisdom;
+  protected AbilityView charisma;
+  protected RoundImageView image;
+  protected Wrapper<FloatingActionButton> edit;
+  protected Wrapper<FloatingActionButton> delete;
+  protected Wrapper<FloatingActionButton> move;
+  protected EditTextWrapper<EditText> xp;
+  protected TextWrapper<TextView> xpNext;
+  protected EditTextWrapper<EditText> level;
+  protected Wrapper<FloatingActionButton> back;
 
   public CharacterFragment() {
     super(Type.character);
@@ -110,45 +94,25 @@ public class CharacterFragment extends CompanionFragment {
         .onClick(this::goBack)
         .description("Back to Campaign", "Go back to this characters campaign view.");
     image = view.findViewById(R.id.image);
-    image.setAction(this::editImage);
     title = view.findViewById(R.id.title);
-    title.setAction(this::editBase);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
-    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit)
-        .onClick(this::editBase)
-        .description("Edit Character", "Edit the basic character traits");
-    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete)
-        .onClick(this::delete)
-        .description("Delete Character", "Delete this character. This will irrevocably delete "
-            + "the character and will send a deletion request to the DM and all other players.");
-    if (character.isPresent() && !character.get().isLocal() &&
-        campaign.isPresent() && !campaign.get().amDM()) {
-      delete.gone();
-    }
-    move = Wrapper.<FloatingActionButton>wrap(view, R.id.move)
-        .onClick(this::move)
-        .description("Move Character", "This button moves the character to an other campaign.");
+    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone();
+    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).gone();
+    move = Wrapper.<FloatingActionButton>wrap(view, R.id.move).gone();
     strength = view.findViewById(R.id.strength);
-    strength.setAction(this::editAbilities);
     dexterity = view.findViewById(R.id.dexterity);
-    dexterity.setAction(this::editAbilities);
     constitution = view.findViewById(R.id.constitution);
-    constitution.setAction(this::editAbilities);
     intelligence = view.findViewById(R.id.intelligence);
-    intelligence.setAction(this::editAbilities);
     wisdom = view.findViewById(R.id.wisdom);
-    wisdom.setAction(this::editAbilities);
     charisma = view.findViewById(R.id.charisma);
-    charisma.setAction(this::editAbilities);
 
     xp = EditTextWrapper.wrap(view, R.id.xp)
-        .lineColor(R.color.character)
-        .onChange(this::changeXp);
+        .lineColor(R.color.character);
     xpNext = TextWrapper.wrap(view, R.id.xp_next);
     level = EditTextWrapper.wrap(view, R.id.level)
-        .lineColor(R.color.character)
-        .onChange(this::changeLevel);
+        .lineColor(R.color.character);
 
+    update(character);
     return view;
   }
 
@@ -158,47 +122,6 @@ public class CharacterFragment extends CompanionFragment {
 
     if (storeOnPause && character.isPresent()) {
       character.get().store();
-    }
-  }
-
-  private void delete() {
-    ConfirmationDialog.create(getContext())
-        .title(getResources().getString(R.string.character_delete_title))
-        .message(getResources().getString(R.string.character_delete_message))
-        .yes(this::deleteCharacterOk)
-        .show();
-  }
-
-  private void deleteCharacterOk() {
-    if (character.isPresent()) {
-      Characters.remove(character.get());
-      Toast.makeText(getActivity(), getString(R.string.character_deleted),
-          Toast.LENGTH_SHORT).show();
-
-      storeOnPause = false;
-      show(Type.campaign);
-    }
-  }
-
-  private void move() {
-    ListSelectDialog fragment = ListSelectDialog.newInstance(
-        R.string.character_select_campaign, "",
-        Campaigns.getAllCampaigns().stream()
-            .map(m -> new ListSelectDialog.Entry(m.getName(), m.getCampaignId()))
-            .collect(Collectors.toList()),
-        R.color.campaign);
-    fragment.setSelectListener(this::move);
-    fragment.display();
-  }
-
-  private void move(String campaignId) {
-    if (character.isPresent()) {
-      character.get().setCampaignId(campaignId);
-    }
-
-    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId).getValue();
-    if (campaign.isPresent()) {
-      CompanionFragments.get().showCampaign(campaign.get(), Optional.absent());
     }
   }
 
@@ -233,8 +156,6 @@ public class CharacterFragment extends CompanionFragment {
     } else {
       image.clearImage();
     }
-    move.visible(character.get().isLocal());
-    delete.visible(character.get().isLocal());
     strength.setValue(character.get().getStrength(),
         Ability.modifier(character.get().getStrength()));
     dexterity.setValue(character.get().getDexterity(),
@@ -250,71 +171,6 @@ public class CharacterFragment extends CompanionFragment {
     xp.text(String.valueOf(character.get().getXp()));
     xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel()) + ")");
     level.text(String.valueOf(character.get().getLevel()));
-  }
-
-  private void editBase() {
-    if (!canEdit() || !character.isPresent()) {
-      return;
-    }
-
-    CharacterDialog.newInstance(character.get().getCharacterId(),
-        character.get().getCampaignId()).display();
-  }
-
-  private void editImage() {
-    if (character.isPresent() && character.get().isLocal()) {
-      Intent intent = new Intent();
-      // Show only images, no videos or anything else
-      intent.setType("image/*");
-      intent.setAction(Intent.ACTION_GET_CONTENT);
-      // Always show the chooser (if there are multiple options available)
-      startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
-    }
-  }
-
-  private void changeXp() {
-    if (character.isPresent() && !xp.getText().isEmpty()) {
-      character.get().setXp(Integer.parseInt(xp.getText()));
-    }
-  }
-
-  private void changeLevel() {
-    if (character.isPresent() && !level.getText().isEmpty()) {
-      character.get().setLevel(Integer.parseInt(level.getText()));
-    }
-  }
-
-  @Override
-  public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
-
-    if (requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
-        data != null && data.getData() != null && character.isPresent()) {
-      try {
-        Uri uri = data.getData();
-        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        Image characterImage = new Image(Character.TABLE, character.get().getCharacterId(), bitmap);
-        characterImage.save(character.get().isLocal());
-        characterImage.publish();
-        image.setImageBitmap(characterImage.getBitmap());
-      } catch (IOException e) {
-        Log.e(TAG, "Cannot load image bitmap", e);
-        e.printStackTrace();
-      }
-    }
-  }
-
-  private void editAbilities() {
-    if (!canEdit() || !character.isPresent()) {
-      return;
-    }
-
-    AbilitiesDialog.newInstance(character.get().getCharacterId(),
-        character.get().getCampaignId()).display();
-  }
-
-  public boolean canEdit() {
-    return campaign.isPresent() && character.isPresent() && character.get().isLocal();
   }
 
   @Override

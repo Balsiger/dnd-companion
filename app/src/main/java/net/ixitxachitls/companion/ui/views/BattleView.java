@@ -23,14 +23,12 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.google.common.base.Optional;
 
@@ -54,61 +52,44 @@ public class BattleView extends LinearLayout {
 
   private Campaign campaign = Campaigns.defaultCampaign;
 
-  private final Wrapper<Button> add;
-  private final Wrapper<Button> skip;
-  private final Wrapper<Button> next;
-  private final Wrapper<Button> delay;
-  private final Wrapper<Button> stop;
-  private final Wrapper<Button> timed;
-  private final Wrapper<View> addDelimiter;
-  private final Wrapper<View> skipDelimiter;
-  private final Wrapper<View> nextDelimiter;
-  private final Wrapper<View> delayDelimiter;
-  private final Wrapper<View> stopDelimiter;
-  private final Wrapper<View> timedDelimiter;
+  private final Wrapper<FloatingActionButton> add;
+  private final Wrapper<FloatingActionButton> next;
+  private final Wrapper<FloatingActionButton> delay;
+  private final Wrapper<FloatingActionButton> stop;
+  private final Wrapper<FloatingActionButton> timed;
 
   public BattleView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
     ViewGroup view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, this, false);
 
-    add = Wrapper.<Button>wrap(view, R.id.add)
+    add = Wrapper.<FloatingActionButton>wrap(view, R.id.add)
         .onClick(this::addMonster)
         .description("Add Monster", "Add a monster to the initiative order. You select the "
             + "monsters initiative bonus and the exact initiative will be randomly computed. If "
             + "you want a single initiative for all monsters, simply use a single monster as a "
             + "placeholder.");
-    addDelimiter = Wrapper.wrap(view, R.id.delimiter_add);
-    skip = Wrapper.<Button>wrap(view, R.id.skip)
-        .onClick(this::skip)
-        .description("Skip Round", "Skip the current round and move on to the next. This is used "
-            + "to skip a surpirse round if there was no surprise.");
-    skipDelimiter = Wrapper.wrap(view, R.id.delimiter_skip);
-    next = Wrapper.<Button>wrap(view, R.id.next)
+    next = Wrapper.<FloatingActionButton>wrap(view, R.id.next)
         .onClick(this::next)
         .description("Next Combatant", "Switch to the next combatant. This ends the current "
             + "combatants round and starts the round for the next combatant. When ending the last "
             + "combatants round, the turn is ended and the next one starts again with the first "
             + "combatant.");
-    nextDelimiter = Wrapper.wrap(view, R.id.delimiter_next);
-    delay = Wrapper.<Button>wrap(view, R.id.delay)
+    delay = Wrapper.<FloatingActionButton>wrap(view, R.id.delay)
         .onClick(this::delay)
     .description("Delay Combatant", "Delay the current combatants round. The combatant will be "
         + "moved after the next combatant. Note that you should not allow a combatant to delay its "
         + "round when all other combatans are either done or also delaying.");
-    delayDelimiter = Wrapper.wrap(view, R.id.delimiter_delay);
-    timed = Wrapper.<Button>wrap(view, R.id.timed)
+    timed = Wrapper.<FloatingActionButton>wrap(view, R.id.timed)
         .onClick(this::addTimed)
         .description("Time Condition", "Create a timed condition for the current combatant. The "
             + "condition can apply to other characters as well, but has to originate from the "
             + "current combatant. Conditions are automatically tracked until their duration runs "
             + "out.");
-    timedDelimiter = Wrapper.wrap(view, R.id.delimiter_timed);
-    stop = Wrapper.<Button>wrap(view, R.id.stop)
+    stop = Wrapper.<FloatingActionButton>wrap(view, R.id.stop)
         .onClick(this::stopBattle)
         .description("Stop Battle", "Stop the battle completely. Note that you cannot restart a "
             + "battle but instead will have to start a completely new battle.");
-    stopDelimiter = Wrapper.wrap(view, R.id.delimiter_stop);
 
     addView(view);
   }
@@ -117,7 +98,6 @@ public class BattleView extends LinearLayout {
     this.campaign = campaign;
 
     Log.d(TAG, "refreshing battle view with " + campaign);
-    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) getLayoutParams();
     if (inBattle()) {
       boolean currentCreatureIsLocal;
       String currentCreatureId = campaign.getBattle().getCurrentCreatureId();
@@ -130,26 +110,20 @@ public class BattleView extends LinearLayout {
 
       setVisibility(VISIBLE);
       Battle battle = campaign.getBattle();
-      params.removeRule(RelativeLayout.ALIGN_BOTTOM);
-      params.addRule(RelativeLayout.BELOW, R.id.scroll);
       boolean isDM = campaign.isDefault() || campaign.isLocal();
       add.visible(isDM && battle.isStarting());
-      addDelimiter.visible(isDM && battle.isStarting());
-      skip.visible(isDM && battle.isSurprised());
-      skipDelimiter.visible(isDM && battle.isSurprised());
       next.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
-      nextDelimiter.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
       boolean canDelay = isDM && battle.isOngoing()
           && !battle.currentIsLast();
       delay.visible(canDelay);
-      delayDelimiter.visible(canDelay);
       stop.visible(isDM && !battle.isEnded());
-      stopDelimiter.visible(isDM && !battle.isEnded());
       timed.visible(currentCreatureIsLocal && battle.isOngoingOrSurprised());
-      timedDelimiter.visible(currentCreatureIsLocal && battle.isOngoingOrSurprised());
     } else {
-      params.removeRule(RelativeLayout.BELOW);
-      params.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.scroll);
+      add.gone();
+      next.gone();
+      delay.gone();
+      stop.gone();
+      timed.gone();
     }
   }
 
@@ -166,12 +140,6 @@ public class BattleView extends LinearLayout {
   private void next() {
     if (inBattle()) {
       campaign.getBattle().creatureDone();
-    }
-  }
-
-  private void skip() {
-    if (inBattle()) {
-      campaign.getBattle().skipTurn();
     }
   }
 

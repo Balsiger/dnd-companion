@@ -29,7 +29,6 @@ import android.util.Log;
 import android.view.View;
 
 import com.google.common.base.Optional;
-import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
@@ -41,6 +40,8 @@ import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
+import net.ixitxachitls.companion.ui.fragments.LocalCampaignFragment;
+import net.ixitxachitls.companion.ui.fragments.LocalCharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
 
 /**
@@ -59,9 +60,11 @@ public class CompanionFragments {
   private FragmentManager fragmentManager;
   private Optional<CompanionFragment> currentFragment = Optional.absent();
   private Optional<CampaignFragment> campaignFragment = Optional.absent();
+  private Optional<LocalCampaignFragment> localCampaignFragment = Optional.absent();
   private Optional<CampaignsFragment> campaignsFragment = Optional.absent();
   private Optional<SettingsFragment> settingsFragment = Optional.absent();
   private Optional<CharacterFragment> characterFragment = Optional.absent();
+  private Optional<LocalCharacterFragment> localCharacterFragment = Optional.absent();
 
   private CompanionFragments(FragmentManager fragmentManager) {
     this.fragmentManager = fragmentManager;
@@ -76,7 +79,6 @@ public class CompanionFragments {
       singleton = new CompanionFragments(fragmentManager);
     } else {
       singleton.fragmentManager = fragmentManager;
-      singleton.currentFragment = Optional.absent();
     }
   }
 
@@ -116,6 +118,12 @@ public class CompanionFragments {
         }
         return show(characterFragment.get(), sharedElement);
 
+      case localCharacter:
+        if (!localCharacterFragment.isPresent()) {
+          localCharacterFragment = Optional.of(new LocalCharacterFragment());
+        }
+        return show(localCharacterFragment.get(), sharedElement);
+
       default:
       case campaigns:
         if (!campaignsFragment.isPresent()) {
@@ -129,6 +137,13 @@ public class CompanionFragments {
         }
 
         return show(campaignFragment.get(), sharedElement);
+
+      case localCampaign:
+        if (!localCampaignFragment.isPresent()) {
+          localCampaignFragment = Optional.of(new LocalCampaignFragment());
+        }
+
+        return show(localCampaignFragment.get(), sharedElement);
     }
   }
 
@@ -164,14 +179,6 @@ public class CompanionFragments {
     return fragment;
   }
 
-  public void show(String typeName) {
-    if (Strings.isNullOrEmpty(typeName)) {
-      show();
-    } else {
-      show(CompanionFragment.Type.valueOf(typeName), Optional.absent());
-    }
-  }
-
   public boolean goBack() {
     if (!currentFragment.isPresent()) {
       return false;
@@ -181,17 +188,31 @@ public class CompanionFragments {
   }
 
   public void showCampaign(Campaign campaign, Optional<View> shared) {
-    show(CompanionFragment.Type.campaign, shared);
-    if (campaignFragment.isPresent()) {
-      Campaigns.changeCurrent(campaign.getCampaignId());
-      campaignFragment.get().showCampaign(campaign.getCampaignId());
+    Campaigns.changeCurrent(campaign.getCampaignId());
+    if (campaign.isLocal()) {
+      show(CompanionFragment.Type.localCampaign, shared);
+      if (localCampaignFragment.isPresent()) {
+        localCampaignFragment.get().showCampaign(campaign.getCampaignId());
+      }
+    } else {
+      show(CompanionFragment.Type.campaign, shared);
+      if (campaignFragment.isPresent()) {
+        campaignFragment.get().showCampaign(campaign.getCampaignId());
+      }
     }
   }
 
   public void showCharacter(Character character, Optional<View> shared) {
-    show(CompanionFragment.Type.character, shared);
-    if (characterFragment.isPresent()) {
-      characterFragment.get().showCharacter(character);
+    if (character.isLocal()) {
+      show(CompanionFragment.Type.localCharacter, shared);
+      if (localCharacterFragment.isPresent()) {
+        localCharacterFragment.get().showCharacter(character);
+      }
+    } else {
+      show(CompanionFragment.Type.character, shared);
+      if (characterFragment.isPresent()) {
+        characterFragment.get().showCharacter(character);
+      }
     }
   }
 
