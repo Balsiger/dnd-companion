@@ -46,6 +46,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
+import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
@@ -286,8 +287,8 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                       Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      Character.fromProto(Characters.getLocalIdFor(proto.getCreature().getId()),
-                          true, proto).store();
+                      LocalCharacter.fromProto(
+                          Characters.getLocalIdFor(proto.getCreature().getId()), proto).store();
                     } else if (meta.getTitle().endsWith(".character.jpg")) {
                       new Image(Character.TABLE, meta.getDescription(),
                           Image.asBitmap(result.getDriveContents().getInputStream()));

@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 
 import com.google.common.base.Optional;
@@ -29,22 +30,14 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 
-import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
-import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
-import net.ixitxachitls.companion.data.values.TimedCondition;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -52,25 +45,30 @@ import java.util.stream.Collectors;
 /**
  * Character represenatation.
  */
-public class Character extends BaseCreature<Data.CharacterProto> implements Comparable<Character> {
+public abstract class Character extends BaseCreature<Data.CharacterProto>
+    implements Comparable<Character> {
 
   public static final String TYPE = "character";
   public static final String TABLE = "characters";
   public static final String TABLE_LOCAL = TABLE + "_local";
   public static final String TABLE_REMOTE = TABLE + "_remote";
   public static final int NO_INITIATIVE = 200;
-  private static final int MAX_HISTORY = 20;
-  private static final Random RANDOM = new Random();
+  protected static final int MAX_HISTORY = 20;
+  protected static final Random RANDOM = new Random();
 
-  private String playerName = "";
-  private List<Level> levels = new ArrayList<>();
-  private int xp = 0;
-  private List<Condition> conditionsHistory = new ArrayList<>();
+  protected String playerName = "";
+  protected List<Level> levels = new ArrayList<>();
+  protected int xp = 0;
+  protected List<Condition> conditionsHistory = new ArrayList<>();
 
   public Character(long id, String name, String campaignId, boolean local) {
     super(id, TYPE, name, local,
         local ? DataBaseContentProvider.CHARACTERS_LOCAL
             : DataBaseContentProvider.CHARACTERS_REMOTE, campaignId);
+  }
+
+  protected Character(long id, String name, String campaignId, boolean local, Uri dbUrl) {
+    super(id, TYPE, name, local, dbUrl, campaignId);
   }
 
   public String getRace() {
@@ -88,62 +86,18 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     return entryId;
   }
 
+  public Optional<Campaign> getCampaign() {
+    return Campaigns.getCampaign(campaignId).getValue();
+  }
+
   @Override
   public int getInitiative() {
-    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId).getValue();
+    Optional<Campaign> campaign = getCampaign();
     if (campaign.isPresent() && campaign.get().getBattle().getNumber() != battleNumber) {
       initiative = NO_INITIATIVE;
     }
 
     return super.getInitiative();
-  }
-
-  public void setCampaignId(String campaignId) {
-    this.campaignId = campaignId;
-  }
-
-  public void setRace(String name) {
-    mRace = Entries.get().getMonsters().get(name);
-  }
-
-  public void setGender(Gender gender) {
-    this.gender = gender;
-  }
-
-  public void setStrength(int strength) {
-    if (this.strength != strength) {
-      this.strength = strength;
-    }
-  }
-
-  public void setConstitution(int constitution) {
-    if (this.constitution != constitution) {
-      this.constitution = constitution;
-    }
-  }
-
-  public void setDexterity(int dexterity) {
-    if (this.dexterity != dexterity) {
-      this.dexterity = dexterity;
-    }
-  }
-
-  public void setIntelligence(int intelligence) {
-    if (this.intelligence != intelligence) {
-      this.intelligence = intelligence;
-    }
-  }
-
-  public void setWisdom(int wisdom) {
-    if (this.wisdom != wisdom) {
-      this.wisdom = wisdom;
-    }
-  }
-
-  public void setCharisma(int charisma) {
-    if (this.charisma != charisma) {
-      this.charisma = charisma;
-    }
   }
 
   public int getBattleNumber() {
@@ -162,44 +116,8 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     return Ability.modifier(dexterity);
   }
 
-  public void setBattle(int initiative, int number) {
-    this.initiative = initiative;
-    this.initiativeRandom = RANDOM.nextInt(100_000);
-    this.battleNumber = number;
-
-    // TODO(merlin): If we want to support long running conditions outside of battle, this has to
-    // change.
-    this.initiatedConditions.clear();
-
-    // Clear all conditions exception surprised, as we only just added it.
-    for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
-      if (!i.next().getName().equals(Conditions.SURPRISED.getName())) {
-        i.remove();
-      }
-    }
-    store();
-  }
-
-  public void clearInitiative() {
-    this.initiative = NO_INITIATIVE;
-    store();
-  }
-
-  public void setXp(int xp) {
-    this.xp = xp;
-  }
-
-  public void addXp(int xp) {
-    this.xp += xp;
-    store();
-  }
-
   public int getXp() {
     return xp;
-  }
-
-  public static Character createNew(String campaignId) {
-    return new Character(0, "", campaignId, true);
   }
 
   public Optional<Level> getLevel(int number) {
@@ -210,68 +128,12 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     return Optional.absent();
   }
 
-  @Override
-  public Data.CharacterProto toProto() {
-    Data.CharacterProto.Builder proto = Data.CharacterProto.newBuilder()
-        .setCreature(toCreatureProto())
-        .addAllConditionHistory(conditionsHistory.stream()
-            .map(Condition::toProto).collect(Collectors.toList()))
-        .setXp(xp);
-
-    for (Level level : levels) {
-      proto.addLevel(level.toProto());
-    }
-
-    return proto.build();
-  }
-
-  public static Character fromProto(long id, boolean local, Data.CharacterProto proto) {
-    Character character = new Character(id, proto.getCreature().getName(),
-        proto.getCreature().getCampaignId(), local);
-    character.fromProto(proto.getCreature());
-    character.playerName = proto.getPlayer();
-    character.conditionsHistory = proto.getConditionHistoryList().stream()
-        .map(Condition::fromProto)
-        .collect(Collectors.toList());
-    character.xp = proto.getXp();
-
-    for (Data.CharacterProto.Level level : proto.getLevelList()) {
-      character.levels.add(Character.fromProto(level));
-    }
-
-    if (character.playerName.isEmpty()) {
-      character.playerName = Settings.get().getNickname();
-    }
-
-    return character;
-  }
-
   public Gender getGender() {
     return gender;
   }
 
-  public void setLevel(int index, Level level) {
-    if(levels.size() > index) {
-      levels.set(index, level);
-    } else {
-      addLevel(level);
-    }
-  }
-
-  public void addLevel(Character.Level level) {
-    levels.add(level);
-  }
-
   public int getLevel() {
     return levels.size();
-  }
-
-  // TODO: remove this once we properly support level objets.
-  public void setLevel(int level) {
-    levels.clear();
-    for (int i = 0; i < level; i++) {
-      addLevel(new Character.Level("Barbarian"));
-    }
   }
 
   public ArrayList<String> levelSummaries() {
@@ -294,6 +156,47 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     return Strings.COMMA_JOINER.join(names);
   }
 
+  public List<Condition> getConditionsHistory() {
+    return ImmutableList.copyOf(conditionsHistory);
+  }
+
+  public abstract void setCampaignId(String campaignId);
+  public abstract void setRace(String name);
+  public abstract void setGender(Gender gender);
+  public abstract void setStrength(int strength);
+  public abstract void setConstitution(int constitution);
+  public abstract void setDexterity(int dexterity);
+  public abstract void setIntelligence(int intelligence);
+  public abstract void setWisdom(int wisdom);
+  public abstract void setCharisma(int charisma);
+  public abstract void setBattle(int initiative, int numbrer);
+  public abstract void clearInitiative();
+  public abstract void setXp(int xp);
+  public abstract void addXp(int xp);
+  public abstract void setLevel(int index, Level level);
+  public abstract void addLevel(Character.Level level);
+  public abstract void setLevel(int level);
+  public abstract void publish();
+
+  public LiveData<Optional<Image>> loadImage() {
+    return Images.get(isLocal()).getImage(Character.TABLE, getCharacterId());
+  };
+
+  @Override
+  public Data.CharacterProto toProto() {
+    Data.CharacterProto.Builder proto = Data.CharacterProto.newBuilder()
+        .setCreature(toCreatureProto())
+        .addAllConditionHistory(conditionsHistory.stream()
+            .map(Condition::toProto).collect(Collectors.toList()))
+        .setXp(xp);
+
+    for (Level level : levels) {
+      proto.addLevel(level.toProto());
+    }
+
+    return proto.build();
+  }
+
   private Multiset<String> countedLevelNames() {
     Multiset<String> names = HashMultiset.create();
     for (Level level : levels) {
@@ -304,14 +207,18 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
   }
 
   @Override
-  public void addInitiatedCondition(TargetedTimedCondition condition) {
-    if (!condition.isPredefined()) {
-      conditionsHistory.add(condition.getCondition());
-      conditionsHistory =
-          conditionsHistory.subList(0, Math.min(conditionsHistory.size(), MAX_HISTORY));
+  public boolean store() {
+    if (super.store()) {
+      if (Characters.has(this)) {
+        Characters.update(this);
+      } else {
+        Characters.add(this);
+      }
+
+      return true;
     }
 
-    super.addInitiatedCondition(condition);
+    return false;
   }
 
   public static class Level extends DynamicEntry<Data.CharacterProto.Level> {
@@ -374,40 +281,6 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
     return level;
   }
 
-  public LiveData<Optional<Image>> loadImage() {
-    return Images.get(isLocal()).getImage(Character.TABLE, getCharacterId());
-  };
-
-  @Override
-  public boolean store() {
-    if (playerName.isEmpty()) {
-      playerName = Settings.get().getNickname();
-    }
-
-    boolean changed = super.store();
-    if (changed) {
-      if (Characters.has(this)) {
-        Characters.update(this);
-      } else {
-        Characters.add(this);
-      }
-      if (isLocal()) {
-        CompanionMessenger.get().send(this);
-      }
-    }
-
-    return changed;
-  }
-
-  public void publish() {
-    Status.log("publishing character " + this);
-    CompanionMessenger.get().send(this);
-  }
-
-  public List<Condition> getConditionsHistory() {
-    return ImmutableList.copyOf(conditionsHistory);
-  }
-
   @Override
   public int compareTo(@NonNull Character that) {
     int name = this.name.compareTo(that.name);
@@ -420,6 +293,6 @@ public class Character extends BaseCreature<Data.CharacterProto> implements Comp
 
   @Override
   public String toString() {
-    return getName() + " (" + getCharacterId() + "/" + (isLocal() ? "local" : "remote") + ")";
+    return getName() + " (" + getCharacterId() + ")";
   }
 }

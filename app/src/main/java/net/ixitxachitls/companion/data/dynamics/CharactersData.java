@@ -133,9 +133,10 @@ public class CharactersData extends StoredEntries<Character> {
   @Override
   protected Optional<Character> parseEntry(long id, byte[] blob) {
     try {
-      return Optional.of(
-          Character.fromProto(id, isLocal(), Data.CharacterProto.getDefaultInstance().getParserForType()
-              .parseFrom(blob)));
+      Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance().getParserForType()
+          .parseFrom(blob);
+      return Optional.of(isLocal()
+          ? LocalCharacter.fromProto(id, proto) : RemoteCharacter.fromProto(id, proto));
     } catch (InvalidProtocolBufferException e) {
       Log.e(TAG, "Cannot parse proto for campaign: " + e);
       Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG).show();

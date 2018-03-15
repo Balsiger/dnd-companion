@@ -39,6 +39,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
@@ -90,7 +91,7 @@ public class CharacterDialog extends Dialog {
     if (campaign.isPresent()) {
       String characterId = getArguments().getString(ARG_ID);
       if (characterId.isEmpty()) {
-        character = Optional.of(Character.createNew(campaign.get().getCampaignId()));
+        character = Optional.of(LocalCharacter.createNew(campaign.get().getCampaignId()));
       } else {
         character = Characters.getCharacter(characterId).getValue();
       }
