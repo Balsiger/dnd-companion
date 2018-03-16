@@ -101,7 +101,7 @@ public class BattleView extends LinearLayout {
     if (inBattle()) {
       boolean currentCreatureIsLocal;
       String currentCreatureId = campaign.getBattle().getCurrentCreatureId();
-      if (currentCreatureId.startsWith(Creature.Type)) {
+      if (currentCreatureId.startsWith(Creature.TYPE)) {
         currentCreatureIsLocal = true;
       } else {
         Optional<Character> character = Characters.getCharacter(currentCreatureId).getValue();

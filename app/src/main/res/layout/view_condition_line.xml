@@ -61,6 +61,7 @@
       android:layout_gravity="center_vertical"
       android:layout_marginBottom="4dp"
       android:layout_weight="0"
+      android:gravity="center_vertical"
       android:maxLines="1"
       android:text="10 rounds"
       android:textAlignment="viewEnd"

@@ -112,7 +112,7 @@ public class Battle {
   }
 
   public boolean isCurrent(BaseCreature character) {
-    return isEnded() || getCurrentCreatureId().equals(character.getEntryId());
+    return isEnded() || getCurrentCreatureId().equals(character.getCreatureId());
   }
 
   public boolean acted(String creatureId) {

@@ -119,7 +119,9 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
   public void nsdStopped(String name) {
     NetworkClient client = clientsByServerName.remove(name);
     clientsByServerId.remove(client.getServerId());
-    client.stop();
+    if (client != null) {
+      client.stop();
+    }
   }
 
   public List<CompanionMessage> receive() {

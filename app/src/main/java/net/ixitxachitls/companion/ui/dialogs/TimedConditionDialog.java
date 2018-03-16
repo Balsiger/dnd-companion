@@ -256,14 +256,15 @@ public class TimedConditionDialog extends Dialog {
 
     if (!ids.isEmpty() && !rounds.getText().isEmpty()) {
       int rounds = Integer.parseInt(this.rounds.getText());
-      TimedCondition timed = new TimedCondition(new Condition(condition.getText(),
-          description.getText(), summary.getText(), Duration.rounds(rounds), predefined),
-          id, currentRound + rounds);
-      if (creature.isPresent() && !condition.getText().isEmpty()) {
-        if (rounds > 0) {
+      if (rounds > 0) {
+        // TODO(merlin): Move this into character
+        TimedCondition timed = new TimedCondition(new Condition(condition.getText(),
+            description.getText(), summary.getText(), Duration.rounds(rounds), predefined),
+            id, currentRound + rounds);
+        if (creature.isPresent() && !condition.getText().isEmpty()) {
           creature.get().addInitiatedCondition(new TargetedTimedCondition(timed, ids));
         }
-      } else {
+
         for (String id : ids) {
           CompanionMessenger.get().send(id, timed);
         }

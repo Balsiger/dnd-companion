@@ -190,7 +190,9 @@ public class PartyFragment extends Fragment {
       LiveData<Optional<Character>> character = Characters.getCharacter(characterId);
       character.removeObservers(this);
       character.observe(this, this::updateCharacter);
-      character.getValue().get().loadImage().observe(this, this::updateImage);
+      if (character.getValue().isPresent()) {
+        character.getValue().get().loadImage().observe(this, this::updateImage);
+      }
     }
 
     // Remove all chips for which we don't have characters anymore.
@@ -226,7 +228,7 @@ public class PartyFragment extends Fragment {
       // Remove all chips for which we don't have creatures anymore.
       for (Iterator<String> i = chipsById.keySet().iterator(); i.hasNext(); ) {
         String chipId = i.next();
-        if (chipId.startsWith(Creature.Type) && !creatureIds.contains(chipId)) {
+        if (chipId.startsWith(Creature.TYPE) && !creatureIds.contains(chipId)) {
           i.remove();
         }
       }
@@ -244,7 +246,7 @@ public class PartyFragment extends Fragment {
     } else {
       for (Iterator<String> i = chipsById.keySet().iterator(); i.hasNext(); ) {
         String chipId = i.next();
-        if (chipId.startsWith(Creature.Type)) {
+        if (chipId.startsWith(Creature.TYPE)) {
           i.remove();
         }
       }

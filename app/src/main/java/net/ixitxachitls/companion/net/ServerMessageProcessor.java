@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 
 /**
@@ -73,5 +74,8 @@ public class ServerMessageProcessor extends MessageProcessor {
 
     // Publish all local campaigns to that client.
     Campaigns.publish();
+
+    // Publish all local characters to that client.
+    Characters.publish();
   }
 }
