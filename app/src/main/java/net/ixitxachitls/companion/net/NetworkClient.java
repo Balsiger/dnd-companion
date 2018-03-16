@@ -35,7 +35,6 @@ import java.net.InetAddress;
  * Client able to talk to a Companion server.
  */
 public class NetworkClient {
-  private static final String TAG = "client";
 
   private Transmitter transmitter;
   private String serverId = "";

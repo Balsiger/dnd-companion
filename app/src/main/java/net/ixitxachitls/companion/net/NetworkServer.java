@@ -41,8 +41,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import static android.content.ContentValues.TAG;
-
 /**
  * Server endpoint for network communication.
  */
@@ -63,8 +61,7 @@ public class NetworkServer implements Runnable {
       Status.log("starting network server");
       thread.start();
     } catch (IOException e) {
-      Log.e(TAG, "Error creating ServerSocket: ", e);
-      e.printStackTrace();
+      Status.toast("Error creating ServerSocket: " + e);
       return false;
     }
 

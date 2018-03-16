@@ -28,7 +28,6 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.text.InputFilter;
 import android.text.Spanned;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -41,6 +40,7 @@ import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.values.Calendar;
@@ -54,7 +54,6 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  */
 public class DateDialog extends Dialog {
 
-  private static final String TAG = "DateDialog";
   private static final String ARG_ID = "id";
 
   private Optional<Campaign> campaign = Optional.absent();
@@ -169,7 +168,7 @@ public class DateDialog extends Dialog {
       hoursShown = Integer.parseInt(hours.getText());
       minutesShown = Integer.parseInt(minutes.getText());
     } catch(NumberFormatException e) {
-      Log.d(TAG, "Invalid time: " + hours.getText() + ":" + minutes.getText());
+      Status.log("Invalid time: " + hours.getText() + ":" + minutes.getText());
     }
   }
 
@@ -182,7 +181,7 @@ public class DateDialog extends Dialog {
     try {
       yearShown = Integer.parseInt(year.getText());
     } catch(NumberFormatException e) {
-      Log.d(TAG, "Invalid year: " + year.getText());
+      Status.log("Invalid year: " + year.getText());
     }
   }
 

@@ -26,7 +26,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -58,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
   public static final int RESOLVE_DRIVE_CONNECTION_CODE = 1;
   public static final int DRIVE_IMPORT_OPEN_CODE = 2;
 
-  private static final String TAG = "Main";
-
   private DriveStorage driveStorage;
 
   // UI elements.
@@ -69,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(@Nullable Bundle state) {
     super.onCreate(state);
-    Log.d(TAG, "onCreate");
+    Status.log("onCreate");
 
     CompanionFragments.init(getSupportFragmentManager());
     driveStorage = new DriveStorage(this);
@@ -162,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
   @Override
   public void onDestroy() {
     Status.clearView();
-    Log.d(TAG, "main activity destroyed");
+    Status.log("main activity destroyed");
 
     super.onDestroy();
   }

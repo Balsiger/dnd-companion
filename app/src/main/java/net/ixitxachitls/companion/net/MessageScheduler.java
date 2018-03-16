@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.util.Log;
-
 import com.google.common.base.Optional;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
@@ -41,8 +39,6 @@ import java.util.Map;
  * A scheduler for messages to a single recipient.
  */
 public class MessageScheduler {
-
-  private static final String TAG = "MsgSchdlr";
 
   private final String recipientId;
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
@@ -91,7 +87,7 @@ public class MessageScheduler {
   }
 
   public void schedule(CompanionMessageData data) {
-    Log.d(TAG, "scheduling to " + recipientId + ": " + data);
+    Status.log("scheduling to " + recipientId + ": " + data);
     ScheduledMessage message = new ScheduledMessage(
         new CompanionMessage(Settings.get().getAppId(), Settings.get().getNickname(),
             recipientId, data.requiresAck() ? Settings.get().getNextMessageId() : 0,

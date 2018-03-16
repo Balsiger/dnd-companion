@@ -24,11 +24,11 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
-import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 
@@ -43,8 +43,6 @@ import java.util.stream.Collectors;
  * Information and storage for all characters.
  */
 public class Characters {
-  private static final String TAG = "Characters";
-
   private static CharactersData local;
   private static CharactersData remote;
 
@@ -105,7 +103,7 @@ public class Characters {
   // Data mutations.
 
   public static void update(Character character) {
-    Log.d(TAG, "updating character " + character);
+    Status.log("updating character " + character);
 
     // We have to consider that the character changed the campaign id, but not the character id,
     // thus we have to update all character id by campaign id lists.
@@ -123,7 +121,7 @@ public class Characters {
   }
 
   public static void add(Character character) {
-    Log.d(TAG, "adding character " + character);
+    Status.log("adding character " + character);
 
     if (character.isLocal()) {
       local.add(character);
@@ -151,7 +149,7 @@ public class Characters {
   }
 
   public static void remove(Character character) {
-    Log.d(TAG, "removing character " + character);
+    Status.log("removing character " + character);
 
     if (character.isLocal()) {
       local.remove(character);
@@ -180,7 +178,7 @@ public class Characters {
   // TODO(merlin): Move this over to the publishers.
 
   public static void publish() {
-    Log.d(TAG, "publishing all local characters");
+    Status.log("publishing all local characters");
     for (Character character : local.getAll()) {
       character.publish();
       Images.get(character.isLocal()).publishImageFor(character);
@@ -188,7 +186,7 @@ public class Characters {
   }
 
   public static void publish(String campaignId) {
-    Log.d(TAG, "publishing characters of campaign " + campaignId);
+    Status.log("publishing characters of campaign " + campaignId);
     for (Character character : local.getCharacters(campaignId)) {
       character.publish();
       Images.get(character.isLocal()).publishImageFor(character);
@@ -205,21 +203,21 @@ public class Characters {
 
   private static void loadLocal(Context context) {
     if (local != null) {
-      Log.d(TAG, "local characters already loaded");
+      Status.log("local characters already loaded");
       return;
     }
 
-    Log.d(TAG, "loading local characters");
+    Status.log("loading local characters");
     local = new CharactersData(context, true);
   }
 
   private static void loadRemote(Context context) {
     if (remote != null) {
-      Log.d(TAG, "remote characters already loaded");
+      Status.log("remote characters already loaded");
       return;
     }
 
-    Log.d(TAG, "loading remote characters");
+    Status.log("loading remote characters");
     remote = new CharactersData(context, false);
   }
 

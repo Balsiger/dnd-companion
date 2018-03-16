@@ -25,10 +25,10 @@ import android.content.ContentUris;
 import android.content.ContentValues;
 import android.net.Uri;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.google.protobuf.MessageLite;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.storage.DataBase;
@@ -41,7 +41,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * An entry that is stored in the database.
  */
 public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P> {
-  private static final String TAG = "StoredEntry";
   private static final Map<String, MessageLite> PROTO_CACHE = new ConcurrentHashMap<>();
 
   protected long id;
@@ -115,7 +114,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
 
     String key = protoCacheKey();
     if (proto.equals(PROTO_CACHE.get(key))) {
-      Log.d(TAG, "no changes for " + getClass().getSimpleName() + "/" + getName());
+      Status.log("no changes for " + getClass().getSimpleName() + "/" + getName());
       return false;
     }
 
@@ -124,7 +123,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
         "id = " + id, null);
 
     PROTO_CACHE.put(key, proto);
-    Log.d(TAG, "stored changes for " + getClass().getSimpleName() + "/" + getName());
+    Status.log("stored changes for " + getClass().getSimpleName() + "/" + getName());
     return true;
   }
 

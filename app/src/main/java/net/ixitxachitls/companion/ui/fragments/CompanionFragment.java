@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.ui.fragments;
 //import android.app.Fragment;
 
 import android.support.v4.app.Fragment;
-import android.util.Log;
 
 import com.google.common.base.Optional;
 
@@ -35,7 +34,6 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
  * Base fragment for all our non-dialog fragments
  */
 public abstract class CompanionFragment extends Fragment {
-  private static final String TAG = "Fragment";
 
   public enum Type { settings, campaigns, campaign, localCampaign, character, localCharacter };
 
@@ -64,7 +62,7 @@ public abstract class CompanionFragment extends Fragment {
   public void onResume() {
     super.onResume();
 
-    Log.d(TAG, "resumed fragment " + getClass().getSimpleName());
+    Status.log("resumed fragment " + getClass().getSimpleName());
     CompanionFragments.get().resumed(this);
   }
 }

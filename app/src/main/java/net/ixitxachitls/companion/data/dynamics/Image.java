@@ -23,11 +23,11 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.protobuf.ByteString;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 
@@ -43,7 +43,6 @@ import java.io.InputStream;
  */
 public class Image {
   public static final int MAX = 500;
-  private static final String TAG = "Image";
 
   private final String type;
   private final String id;
@@ -89,17 +88,17 @@ public class Image {
       out = new FileOutputStream(file);
       bitmap.compress(Bitmap.CompressFormat.JPEG, 50, out);
     } catch (Exception e) {
-      Log.e(TAG, "Cannot write image bitmap", e);
+      Status.toast("Cannot write image bitmap: " + e);
     } finally {
       try {
         out.close();
       } catch (IOException e) {
-        Log.e(TAG, "Cannot close output image", e);
+        Status.toast("Cannot close output image" + e);
       }
     }
 
     Images.get(local).update(this);
-    Log.d(TAG, "Saved image " + type + " " + id);
+    Status.log("Saved image " + type + " " + id);
   }
 
   public Data.CompanionMessageProto.Payload.Image toProto() {

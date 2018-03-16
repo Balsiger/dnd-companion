@@ -25,7 +25,6 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -36,6 +35,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -51,7 +51,6 @@ import java.util.Map;
 public class StatusView extends LinearLayout {
 
   // Constants.
-  private static final String TAG = "StatusView";
   private static final int REMOVE_BEATS = 120;
 
   // External data.
@@ -128,7 +127,7 @@ public class StatusView extends LinearLayout {
 
   public void addClientConnection(String id, String name) {
     if (clientConnectionsById.containsKey(id)) {
-      Log.d(TAG, "trying to add second connection for " + name);
+      Status.log("trying to add second connection for " + name);
       return;
     }
 
@@ -154,7 +153,7 @@ public class StatusView extends LinearLayout {
   // TODO(merlin): remove id?
   public void addServerConnection(String id, String name) {
     if (serverConnectionsById.containsKey(id)) {
-      Log.d(TAG, "trying to add second connection for " + name);
+      Status.log("trying to add second connection for " + name);
       return;
     }
 
@@ -166,7 +165,7 @@ public class StatusView extends LinearLayout {
   public void updateClientConnection(String id) {
     ConnectionView connection = clientConnectionsById.get(id);
     if (connection == null) {
-      Log.d(TAG, "no connection view for " + id);
+      Status.log("no connection view for " + id);
       return;
     }
 
@@ -176,7 +175,7 @@ public class StatusView extends LinearLayout {
   public void updateServerConnection(String id) {
     ConnectionView connection = serverConnectionsById.get(id);
     if (connection == null) {
-      Log.d(TAG, "no connection view for " + id);
+      Status.log("no connection view for " + id);
       return;
     }
 

@@ -22,14 +22,13 @@
 package net.ixitxachitls.companion.net;
 
 import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
@@ -43,8 +42,6 @@ import java.util.List;
  * Storage for all schedule messages.
  */
 public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
-
-  private static final String TAG = "SchdldMsgs";
 
   private static ScheduledMessages singleton = null;
 
@@ -68,8 +65,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
       return Optional.of(ScheduledMessage.fromProto(id, Data.ScheduledMessageProto
           .getDefaultInstance().getParserForType().parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
-      Log.e(TAG, "Cannot parse proto for message: " + e);
-      Toast.makeText(context, "Cannot parse proto for message: " + e, Toast.LENGTH_LONG);
+      Status.toast("Cannot parse proto for message: " + e);
       return Optional.absent();
     }
   }

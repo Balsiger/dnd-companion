@@ -29,7 +29,6 @@ import android.support.v4.app.Fragment;
 import android.transition.AutoTransition;
 import android.transition.Transition;
 import android.transition.TransitionManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +39,7 @@ import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -69,8 +69,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * A fragment displaying the complete party of the current campaign.
  */
 public class PartyFragment extends Fragment {
-
-  private static final String TAG = "PartyFragment";
 
   // External data.
   private Campaign campaign = Campaigns.defaultCampaign;
@@ -139,14 +137,14 @@ public class PartyFragment extends Fragment {
   }
 
   private void updateCampaignId(String campaignId) {
-    Log.d(TAG, "updating campaign id to " + campaignId);
+    Status.log("updating campaign id to " + campaignId);
     Campaigns.getCampaign(campaign.getCampaignId()).removeObservers(this);
     Campaigns.getCampaign(campaignId).observe(this, this::updateCampaign);
   }
 
   private void updateCampaign(Optional<Campaign> campaign) {
     if (campaign.isPresent()) {
-      Log.d(TAG, "updading campaign " + campaign);
+      Status.log("updading campaign " + campaign);
       this.campaign.getCharacterIds().removeObservers(this);
 
       this.campaign = campaign.get();
@@ -185,7 +183,7 @@ public class PartyFragment extends Fragment {
   }
 
   private void updateCharacterIds(ImmutableList<String> characterIds) {
-    Log.d(TAG, "updating characters for " + campaign + ": " + characterIds);
+    Status.log("updating characters for " + campaign + ": " + characterIds);
     for (String characterId : characterIds) {
       LiveData<Optional<Character>> character = Characters.getCharacter(characterId);
       character.removeObservers(this);
@@ -221,7 +219,7 @@ public class PartyFragment extends Fragment {
   }
 
   private void updateCreatureIds(ImmutableList<String> creatureIds) {
-    Log.d(TAG, "updating creatures for " + campaign + ": " + creatureIds);
+    Status.log("updating creatures for " + campaign + ": " + creatureIds);
 
     // Only add monster chips for local campaigns (the DM).
     if (campaign.isLocal()) {
@@ -342,7 +340,7 @@ public class PartyFragment extends Fragment {
   }
 
   private void redrawChips() {
-    Log.d(TAG, "redrawing party chips");
+    Status.log("redrawing party chips");
 
     TransitionManager.beginDelayedTransition(view, transition);
     party.removeAllViews();

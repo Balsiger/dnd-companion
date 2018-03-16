@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.util.Log;
-
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
@@ -35,8 +33,6 @@ import net.ixitxachitls.companion.data.dynamics.Image;
  * Processor on the server to process client messages.
  */
 public class ServerMessageProcessor extends MessageProcessor {
-  private static final String TAG = "SrvMsgProc";
-
   public ServerMessageProcessor(CompanionApplication application) {
     super(application);
   }
@@ -59,7 +55,7 @@ public class ServerMessageProcessor extends MessageProcessor {
   }
 
   protected void handleImage(String senderId, Image image) {
-    Log.d(TAG, "received image for " + image.getType() + " " + image.getId());
+    Status.log("received image for " + image.getType() + " " + image.getId());
     image.save(false);
 
     // Send the image update to the other clients.

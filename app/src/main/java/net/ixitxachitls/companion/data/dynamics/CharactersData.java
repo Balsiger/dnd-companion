@@ -24,13 +24,12 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -43,8 +42,6 @@ import java.util.stream.Collectors;
  * Data storage for various characters.
  */
 public class CharactersData extends StoredEntries<Character> {
-  private static final String TAG = "CharactersData";
-
   private final Map<String, MutableLiveData<Optional<Character>>> characterById =
       new ConcurrentHashMap<>();
   private final Map<String, MutableLiveData<ImmutableList<String>>> charactersByCampaignId =
@@ -138,8 +135,7 @@ public class CharactersData extends StoredEntries<Character> {
       return Optional.of(isLocal()
           ? LocalCharacter.fromProto(id, proto) : RemoteCharacter.fromProto(id, proto));
     } catch (InvalidProtocolBufferException e) {
-      Log.e(TAG, "Cannot parse proto for campaign: " + e);
-      Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG).show();
+      Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.absent();
     }
   }

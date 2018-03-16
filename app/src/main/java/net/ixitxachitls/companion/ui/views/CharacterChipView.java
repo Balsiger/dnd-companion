@@ -23,12 +23,12 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
-import android.util.Log;
 import android.view.View;
 
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
@@ -38,8 +38,6 @@ import net.ixitxachitls.companion.util.Misc;
  * A chip displaying character information.
  */
 public class CharacterChipView extends CreatureChipView {
-
-  private static final String TAG = "CharChipView";
 
   private Character character;
 
@@ -54,7 +52,7 @@ public class CharacterChipView extends CreatureChipView {
   public void update(Character character) {
     this.character = character;
 
-    Log.d(TAG, "updating character " + character);
+    Status.log("updating character " + character);
     this.character = character;
     if (Misc.onEmulator()) {
       name.text((character.isLocal() ? "L" : "R") + "/" + character.getName());

@@ -40,8 +40,6 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  */
 public class ChipView extends LinearLayout {
 
-  private static final String TAG = "ChipView";
-
   private final String dataId;
   private final int chipColor;
   private final int backgroundColor;

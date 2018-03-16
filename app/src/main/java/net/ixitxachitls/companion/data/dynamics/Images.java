@@ -26,10 +26,11 @@ import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
+
+import net.ixitxachitls.companion.Status;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -42,8 +43,6 @@ import java.util.Map;
  * Storage for all dynamic images of entries.
  */
 public class Images {
-
-  private static final String TAG = "Images";
 
   private static Images local;
   private static Images remote;
@@ -73,16 +72,16 @@ public class Images {
 
   public static void load(Context context) {
     if (local != null) {
-      Log.d(TAG, "local images already loaded");
+      Status.log("local images already loaded");
     } else {
-      Log.d(TAG, "loading local images");
+      Status.log("loading local images");
       local = new Images(context, true);
     }
 
     if (remote != null) {
-      Log.d(TAG, "remote images already loaded");
+      Status.log("remote images already loaded");
     } else {
-      Log.d(TAG, "loading remote images");
+      Status.log("loading remote images");
       remote = new Images(context, false);
     }
   }

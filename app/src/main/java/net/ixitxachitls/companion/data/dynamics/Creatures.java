@@ -24,10 +24,11 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
-import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
+
+import net.ixitxachitls.companion.Status;
 
 import java.util.List;
 import java.util.Map;
@@ -39,8 +40,6 @@ import java.util.stream.Collectors;
  * stored here and should be obtained from Characters.
  */
 public class Creatures {
-  private static final String TAG = "Creatures";
-
   private static CreaturesData local;
 
   // Live data storages.
@@ -85,14 +84,14 @@ public class Creatures {
   // Data mutations.
 
   public static void update(Creature creature) {
-    Log.d(TAG, "updating creature " + creature);
+    Status.log("updating creature " + creature);
 
     // We cannot move a creature to a different campaign, so id lists cannot change.
     local.update(creature);
   }
 
   public static void add(Creature creature) {
-    Log.d(TAG, "adding creature " + creature);
+    Status.log("adding creature " + creature);
 
     local.add(creature);
 
@@ -110,7 +109,7 @@ public class Creatures {
   }
 
   public static void remove(Creature creature) {
-    Log.d(TAG, "removing creature " + creature);
+    Status.log("removing creature " + creature);
     local.remove(creature);
 
     // Update live data.
@@ -131,11 +130,11 @@ public class Creatures {
 
   private static void loadLocal(Context context) {
     if (local != null) {
-      Log.d(TAG, "local creature already loaded");
+      Status.log("local creature already loaded");
       return;
     }
 
-    Log.d(TAG, "loading local creature");
+    Status.log("loading local creature");
     local = new CreaturesData(context);
   }
 

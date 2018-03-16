@@ -35,7 +35,6 @@ public class Creature extends BaseCreature<Data.CreatureProto> implements Compar
   public static final String TYPE = "creatures";
   public static final String TABLE = "creatures";
   public static final String TABLE_LOCAL = TABLE + "_local";
-  private static final String TAG = "Creature";
 
   public Creature(long id, String name, String campaignId, int initiativeModifier) {
     this(id, name, campaignId);

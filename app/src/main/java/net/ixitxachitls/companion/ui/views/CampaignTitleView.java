@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +33,7 @@ import android.widget.TextView;
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.ui.CampaignPublisher;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -44,8 +44,6 @@ import net.ixitxachitls.companion.util.Misc;
  * View for a campaign title.
  */
 public class CampaignTitleView extends LinearLayout {
-
-  private static final String TAG = "CampaignTitleView";
 
   private Campaign campaign;
 
@@ -101,7 +99,7 @@ public class CampaignTitleView extends LinearLayout {
   }
 
   public void setCampaign(Campaign campaign) {
-    Log.d(TAG, "setting campaign " + campaign);
+    Status.log("setting campaign " + campaign);
     this.campaign = campaign;
     refresh();
   }
@@ -128,7 +126,7 @@ public class CampaignTitleView extends LinearLayout {
   }
 
   public void refresh() {
-    Log.d(TAG, "refreshing campaign title view");
+    Status.log("refreshing campaign title view");
     if (campaign.isDefault()) {
       networkIcon.setVisibility(INVISIBLE);
     } else {

@@ -25,12 +25,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
-import android.util.Log;
 import android.view.View;
 
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -48,7 +48,6 @@ import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
  * Manager for companion fragments.
  */
 public class CompanionFragments {
-  private static final String TAG = "Fragments";
 
   private static final String TRANSITION_NAME = "sharedMove";
   private static int EXIT_FADE_DURATION_MS = 100;
@@ -149,13 +148,13 @@ public class CompanionFragments {
 
   private CompanionFragment show(CompanionFragment fragment,
                                  Optional<View> sharedTransitionElement) {
-    Log.d(TAG, "showing fragment " + fragment.getClass().getSimpleName());
+    Status.log("showing fragment " + fragment.getClass().getSimpleName());
     if (fragment == currentFragment.orNull()) {
       return fragment;
     }
 
     FragmentTransaction transaction = fragmentManager.beginTransaction();
-    Log.d(TAG, "Adding to backstack " + fragment.getClass().getSimpleName());
+    Status.log("Adding to backstack " + fragment.getClass().getSimpleName());
 
     // Shared element transition.
     if (sharedTransitionElement.isPresent()) {

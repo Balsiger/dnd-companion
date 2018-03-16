@@ -24,13 +24,12 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -44,8 +43,6 @@ import java.util.stream.Collectors;
  * A class encapsulating all data for a set of campaigns.
  */
 public class CampaignsData extends StoredEntries<Campaign> {
-
-  private static final String TAG = "CampignsData";
 
   private final MutableLiveData<ImmutableList<String>> ids = new MutableLiveData<>();
   private final Map<String, MutableLiveData<Optional<Campaign>>> campaignById =
@@ -131,8 +128,7 @@ public class CampaignsData extends StoredEntries<Campaign> {
       return Optional.of(isLocal()
           ? LocalCampaign.fromProto(id, proto) : RemoteCampaign.fromProto(id, proto));
     } catch (InvalidProtocolBufferException e) {
-      Log.e(TAG, "Cannot parse proto for campaign: " + e);
-      Toast.makeText(context, "Cannot parse proto for campaign: " + e, Toast.LENGTH_LONG);
+      Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.absent();
     }
   }

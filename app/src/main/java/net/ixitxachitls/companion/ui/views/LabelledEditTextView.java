@@ -36,7 +36,6 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  * A editable text view with a label and description.
  */
 public class LabelledEditTextView extends AbstractLabelledView {
-  private static final String TAG = "LabTxtView";
 
   // Ui elements.
   private EditTextWrapper<EditText> text;

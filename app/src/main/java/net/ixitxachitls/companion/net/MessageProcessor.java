@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.util.Log;
 import android.widget.Toast;
 
 import com.google.common.base.Optional;
@@ -54,7 +53,6 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public abstract class MessageProcessor {
 
-  private static final String TAG = "MsgProc";
   private static final int MAX_RECEIVED_SIZE = 50;
 
   protected final CompanionApplication application;
@@ -72,7 +70,7 @@ public abstract class MessageProcessor {
     if (message.requiresAck()) {
       String key = createKey(senderId, receiverId, messageId);
       if (inFlightMessages.contains(key)) {
-        Log.w(TAG, "ignoring message in flight");
+        Status.log("ignoring message in flight");
         return;
       } else {
         inFlightMessages.add(key);
@@ -238,7 +236,7 @@ public abstract class MessageProcessor {
     if (!StoredEntries.isLocalId(character.getCharacterId())) {
       // Storing will also add the character if it's changed.
       character.store();
-      Log.d(TAG, "received character " + character.getName());
+      Status.log("received character " + character.getName());
       status("received character " + character.getName());
     }
   }

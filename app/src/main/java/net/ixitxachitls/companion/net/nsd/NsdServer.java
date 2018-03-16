@@ -25,7 +25,6 @@ import android.content.Context;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
@@ -43,7 +42,6 @@ import java.util.List;
  */
 public class NsdServer {
 
-  private static final String TAG = "NsdRegistration";
   public static final String TYPE = "_companion._tcp";
 
   private final String name;
@@ -85,7 +83,7 @@ public class NsdServer {
       return;
     }
 
-    Log.d(TAG, "unregistering nsd service " + name);
+    Status.log("unregistering nsd service " + name);
     Status.log("unregistering nsd service " + name);
     manager.unregisterService(registrationListener);
     registrationListener = null;

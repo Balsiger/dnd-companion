@@ -25,7 +25,6 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -33,6 +32,7 @@ import android.widget.LinearLayout;
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
@@ -47,8 +47,6 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  * View representing battle information (and buttons) for a party view.
  */
 public class BattleView extends LinearLayout {
-
-  private static final String TAG = "BattleView";
 
   private Campaign campaign = Campaigns.defaultCampaign;
 
@@ -97,7 +95,7 @@ public class BattleView extends LinearLayout {
   public void update(Campaign campaign) {
     this.campaign = campaign;
 
-    Log.d(TAG, "refreshing battle view with " + campaign);
+    Status.log("refreshing battle view with " + campaign);
     if (inBattle()) {
       boolean currentCreatureIsLocal;
       String currentCreatureId = campaign.getBattle().getCurrentCreatureId();

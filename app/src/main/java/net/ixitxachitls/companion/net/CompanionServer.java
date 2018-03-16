@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.util.Log;
-
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -46,8 +44,6 @@ import java.util.Set;
  * Class to publish data to the local network.
  */
 public class CompanionServer {
-
-  public static final String TAG = "Publisher";
 
   private final NsdServer nsdServer;
   private final Map<String, MessageScheduler> schedulersByRecpientId = new HashMap<>();
@@ -81,7 +77,7 @@ public class CompanionServer {
       for (Optional<ScheduledMessage> message = scheduler.nextWaiting();
            message.isPresent();
            message = scheduler.nextWaiting()) {
-        Log.d(TAG, message.get() + " to " + getRecipientName(message.get().getRecieverId()));
+        Status.log(message.get() + " to " + getRecipientName(message.get().getRecieverId()));
         // The messasge is already marked as sent or pending (depending on ack).
         // Thus, even if sending fails, we don't need to do anything. Pending message
         // will automatically be resent and sent messages can be safely ignored.

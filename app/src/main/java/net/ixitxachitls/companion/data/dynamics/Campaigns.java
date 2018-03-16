@@ -24,11 +24,11 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
-import android.util.Log;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.util.Misc;
 
@@ -41,8 +41,6 @@ import java.util.stream.Collectors;
  * Access to and utilities for camapigns.
  */
 public class Campaigns {
-  private static final String TAG = "Campaigns";
-
   private static CampaignsData local;
   private static CampaignsData remote;
 
@@ -158,13 +156,13 @@ public class Campaigns {
     // Don't check for equality with the current campaign here, as we might have changed
     // the object and need to update UI now, as the campaign actually changed, although
     // the object is already updated.
-    Log.d(TAG, "setting current campaign to " + campaignId);
+    Status.log("setting current campaign to " + campaignId);
     LiveDataUtils.setValueIfChanged(currentCampaignId, campaignId);
   }
 
   public static void update(Campaign campaign) {
     // We assume that the campaign id did not change.
-    Log.d(TAG, "updating campaign " + campaign);
+    Status.log("updating campaign " + campaign);
 
     if (campaign.isLocal()) {
       local.update(campaign);
@@ -174,7 +172,7 @@ public class Campaigns {
   }
 
   public static void add(Campaign campaign) {
-    Log.d(TAG, "adding campaign " + campaign);
+    Status.log("adding campaign " + campaign);
 
     if (campaign.isLocal()) {
       local.add(campaign);
@@ -186,7 +184,7 @@ public class Campaigns {
   }
 
   public static void remove(String campaignId, boolean isLocal) {
-    Log.d(TAG, "removing campaign " + campaignId + " / " + isLocal);
+    Status.log("removing campaign " + campaignId + " / " + isLocal);
     if (isLocal) {
       local.remove(campaignId);
     } else {
@@ -206,7 +204,7 @@ public class Campaigns {
   // Publishing.
   // TODO(merlin): This should be moved out of here into the publisher.
   public static void publish() {
-    Log.d(TAG, "publishing all campaigns");
+    Status.log("publishing all campaigns");
     for (Campaign campaign : local.getAll()) {
       if (!campaign.isDefault() && campaign.isPublished()) {
         campaign.publish();
@@ -261,21 +259,21 @@ public class Campaigns {
 
   private static void loadLocal(Context context) {
     if (local != null) {
-      Log.d(TAG, "local campaigns already loaded");
+      Status.log("local campaigns already loaded");
       return;
     }
 
-    Log.d(TAG, "loading lcoal campaigns");
+    Status.log("loading lcoal campaigns");
     local = new CampaignsData(context, true);
   }
 
   private static void loadRemote(Context context) {
     if (remote != null) {
-      Log.d(TAG, "remote campaigns already loaded");
+      Status.log("remote campaigns already loaded");
       return;
     }
 
-    Log.d(TAG, "loading lcoal campaigns");
+    Status.log("loading lcoal campaigns");
     remote = new CampaignsData(context, false);
   }
 

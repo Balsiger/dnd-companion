@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.util.Log;
-
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -41,8 +39,6 @@ import net.ixitxachitls.companion.ui.ConfirmationDialog;
  */
 public class ClientMessageProcessor extends MessageProcessor {
 
-  private static final String TAG = "ClientMsgProc";
-
   public ClientMessageProcessor(CompanionApplication application) {
     super(application);
   }
@@ -54,7 +50,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleImage(String senderId, Image image) {
-    Log.d(TAG, "received image for " + image.getType() + " " + image.getId());
+    Status.log("received image for " + image.getType() + " " + image.getId());
     image.save(false);
   }
 
@@ -62,7 +58,7 @@ public class ClientMessageProcessor extends MessageProcessor {
   protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
     // Storing will also add the campaign if it's changed.
     campaign.store();
-    Log.d(TAG, "received campaign " + campaign.getName());
+    Status.log("received campaign " + campaign.getName());
     status("received campaign " + campaign.getName());
   }
 

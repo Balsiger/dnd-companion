@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net.raw;
 
-import android.util.Log;
-
 import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.Status;
@@ -38,8 +36,6 @@ import java.net.SocketException;
  * sending and a receiving on the given socket.
  */
 public class Transmitter {
-
-  public static final String TAG = "Transmitter";
 
   private final String name;
   private final Sender sender;
@@ -81,7 +77,7 @@ public class Transmitter {
   }
 
   public void send(Data.CompanionMessageProto message) {
-    Log.d(TAG, name + ": enqueing message");
+    Status.log(name + ": enqueing message");
     sender.add(message);
   }
 
