@@ -158,7 +158,6 @@ public class Characters {
     } else {
       remote.remove(character);
     }
-    local.remove(character);
 
     // Unpublish the character.
     CompanionMessenger.get().sendDeletion(character);

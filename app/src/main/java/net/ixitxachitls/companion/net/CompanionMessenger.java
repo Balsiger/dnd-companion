@@ -283,7 +283,7 @@ public class CompanionMessenger implements Runnable {
         // Forward the campaign deletion to all 'other' clients.
         companionServer.schedule(clientIds(campaign.get(), character.getServerId()),
             CompanionMessageData.fromDelete(character));
-      } else {
+      } else if (character.isLocal()) {
         companionClients.schedule(campaign.get().getServerId(),
             CompanionMessageData.fromDelete(character));
       }
