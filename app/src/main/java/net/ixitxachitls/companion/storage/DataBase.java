@@ -27,6 +27,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Creature;
@@ -124,8 +125,7 @@ public class DataBase extends SQLiteOpenHelper {
   @Override
   public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     if (newVersion != VERSION) {
-      throw new IllegalArgumentException("don't know how to convert from " + oldVersion + " to "
-          + newVersion);
+      Status.toast("don't know how to convert from " + oldVersion + " to " + newVersion);
     }
 
     update(db, oldVersion);

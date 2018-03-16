@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.values;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -149,8 +150,7 @@ public class Calendar {
   public Month getMonth(int inMonth)
   {
     if (inMonth <= 0 || inMonth > months.size())
-      throw new IllegalArgumentException("invalid month given: " + inMonth
-          + ", must be 1 based.");
+      Status.toast("invalid month given: " + inMonth + ", must be 1 based.");
 
     return months.get(inMonth - 1);
   }
