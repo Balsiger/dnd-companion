@@ -84,17 +84,6 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/remote_campaigns"/>
 
-  <Button
-      android:id="@+id/save"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="24dp"
-      android:text="@string/settings_save"
-      android:theme="@style/SmallText"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/features"/>
-
   <net.ixitxachitls.companion.ui.views.LabelledEditTextView
       android:id="@+id/features"
       android:layout_width="match_parent"
@@ -109,5 +98,17 @@
       app:layout_constraintTop_toBottomOf="@+id/remote_characters"
       app:lineColor="@color/white"
       app:textColor="@color/white"/>
+
+  <Button
+      android:id="@+id/save"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:layout_weight="1"
+      android:text="@string/settings_save"
+      android:theme="@style/SmallText"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/features"/>
 
 </android.support.constraint.ConstraintLayout>

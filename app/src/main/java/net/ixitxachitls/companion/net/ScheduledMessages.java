@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.content.Context;
-
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
@@ -43,10 +41,10 @@ import java.util.List;
  */
 public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
 
-  private static ScheduledMessages singleton = null;
+  private static ScheduledMessages singleton;
 
-  protected ScheduledMessages(Context context) {
-    super(context, DataBaseContentProvider.MESSAGES, true);
+  private ScheduledMessages(CompanionApplication application) {
+    super(application.getApplicationContext(), DataBaseContentProvider.MESSAGES, true);
   }
 
   public static void init(CompanionApplication application) {

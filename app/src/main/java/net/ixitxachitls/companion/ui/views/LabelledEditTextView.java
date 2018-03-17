@@ -53,7 +53,10 @@ public class LabelledEditTextView extends AbstractLabelledView {
     super.setup(view, array, baseArray);
 
     text = EditTextWrapper.wrap(view, R.id.text);
-    text.text(array.getString(R.styleable.LabelledEditTextView_defaultText));
+    String defaultText = array.getString(R.styleable.LabelledEditTextView_defaultText);
+    if (defaultText != null) {
+      text.text(defaultText);
+    }
     text.textColorValue(array.getColor(R.styleable.LabelledEditTextView_textColor,
         getContext().getResources().getColor(R.color.colorPrimary, null)));
     text.lineColorValue(array.getColor(R.styleable.LabelledEditTextView_lineColor,

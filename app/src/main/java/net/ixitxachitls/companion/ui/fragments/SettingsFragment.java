@@ -62,15 +62,15 @@ public class SettingsFragment extends CompanionFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
+    super.onCreateView(inflater, container, savedInstanceState);
+
     ConstraintLayout view = (ConstraintLayout)
         inflater.inflate(R.layout.fragment_settings, container, false);
 
     settings = Settings.get();
 
     nickname = view.findViewById(R.id.nickname);
-    nickname.text(settings.isDefined() ? settings.getNickname() : "")
-        .onEdit(this::editNickname)
-        .onChange(this::update);
+    nickname.onEdit(this::editNickname).onChange(this::update);
     remoteCampaigns = Wrapper.wrap(view, R.id.remote_campaigns);
     remoteCampaigns.get().setChecked(settings.useRemoteCampaigns());
     remoteCampaigns.visible(Misc.onEmulator());
@@ -78,9 +78,7 @@ public class SettingsFragment extends CompanionFragment {
     remoteCharacters.get().setChecked(settings.useRemoteCharacters());
     remoteCharacters.visible(Misc.onEmulator());
     features = view.findViewById(R.id.features);
-    features.text(Strings.COMMA_JOINER.join(settings.getFeatures()))
-        .onEdit(this::editFeatures)
-        .onChange(this::update);
+    features.onEdit(this::editFeatures);
     save = Wrapper.wrap(view, R.id.save);
     save.onClick(this::save);
 
@@ -92,10 +90,19 @@ public class SettingsFragment extends CompanionFragment {
     return view;
   }
 
+  @Override
+  public void onStart() {
+    super.onStart();
+
+    // We need to reset values here or they will be messed up by the saved state...?
+    nickname.text(settings.isDefined() ? settings.getNickname() : "");
+    features.text(Strings.COMMA_JOINER.join(settings.getFeatures()));
+  }
+
   private void save() {
     editNickname();
     settings.useRemote(remoteCampaigns.get().isChecked(), remoteCharacters.get().isChecked());
-    settings.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
+    //settings.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
     settings.store();
 
     if (settings.isDefined()) {
