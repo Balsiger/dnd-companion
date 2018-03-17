@@ -23,12 +23,12 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
-import android.content.Context;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -48,8 +48,8 @@ public class CreaturesData extends StoredEntries<Creature> {
   private final Map<String, MutableLiveData<ImmutableList<String>>> creaturesByCampaignId =
       new ConcurrentHashMap<>();
 
-  public CreaturesData(Context context) {
-    super(context, DataBaseContentProvider.CREATURES_LOCAL, true);
+  public CreaturesData(CompanionApplication application) {
+    super(application, DataBaseContentProvider.CREATURES_LOCAL, true);
   }
 
   public LiveData<Optional<Creature>> getCreature(String creatureId) {

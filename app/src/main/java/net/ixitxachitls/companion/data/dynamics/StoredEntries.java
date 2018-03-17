@@ -22,13 +22,13 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.ViewModel;
-import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 
 import com.google.common.base.Optional;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.storage.DataBase;
 
@@ -41,17 +41,18 @@ import java.util.Map;
  */
 public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel {
 
-  protected final Context context;
+  protected final CompanionApplication application;
   protected final Uri table;
   protected final boolean local;
   protected final Map<String, E> entriesById = new HashMap<>();
 
-  protected StoredEntries(Context context, Uri table, boolean local) {
-    this.context = context;
+  protected StoredEntries(CompanionApplication application, Uri table, boolean local) {
+    this.application = application;
     this.table = table;
     this.local = local;
 
-    Cursor cursor = context.getContentResolver().query(table, DataBase.COLUMNS, null, null, null);
+    Cursor cursor =
+        application.getContentResolver().query(table, DataBase.COLUMNS, null, null, null);
     while(cursor.moveToNext()) {
       Optional<E> entry = parseEntry(cursor.getLong(cursor.getColumnIndex("_id")),
           cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO)));
@@ -102,7 +103,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
   protected void remove(E entry) {
     entry.remove();
     entriesById.remove(entry.getEntryId());
-    context.getContentResolver().delete(table, "id = " + entry.getId(), null);
+    application.getContentResolver().delete(table, "id = " + entry.getId(), null);
   }
 
   @Nullable

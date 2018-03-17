@@ -34,8 +34,6 @@
   <color name="battleText">#ffffff</color>
 
   <!-- Colors for icon status and changes. -->
-
-
   <color name="status">#ffeeaa</color>
   <color name="on">#570</color>
   <color name="onBright">#92cc00</color>
@@ -49,6 +47,5 @@
   <color name="white">#fff</color>
   <color name="red">#800</color>
   <color name="brightRed">#f00</color>
-
 
 </resources>

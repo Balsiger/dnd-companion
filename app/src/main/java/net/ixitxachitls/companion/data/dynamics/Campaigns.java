@@ -23,11 +23,11 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
-import android.content.Context;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.util.Misc;
@@ -215,9 +215,9 @@ public class Campaigns {
   // Private metbods.
 
   // This should only be called from the main activity.
-  public static void load(Context context) {
-    loadLocal(context);
-    loadRemote(context);
+  public static void load(CompanionApplication application) {
+    loadLocal(application);
+    loadRemote(application);
   }
 
   private static List<String> campaignIds() {
@@ -257,24 +257,24 @@ public class Campaigns {
     return local.get(campaignId).or(remote.get(campaignId));
   }
 
-  private static void loadLocal(Context context) {
+  private static void loadLocal(CompanionApplication application) {
     if (local != null) {
       Status.log("local campaigns already loaded");
       return;
     }
 
     Status.log("loading lcoal campaigns");
-    local = new CampaignsData(context, true);
+    local = new CampaignsData(application, true);
   }
 
-  private static void loadRemote(Context context) {
+  private static void loadRemote(CompanionApplication application) {
     if (remote != null) {
       Status.log("remote campaigns already loaded");
       return;
     }
 
     Status.log("loading lcoal campaigns");
-    remote = new CampaignsData(context, false);
+    remote = new CampaignsData(application, false);
   }
 
   private static class CampaignComparator implements Comparator<Campaign> {

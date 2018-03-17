@@ -23,11 +23,11 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
-import android.content.Context;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessenger;
@@ -196,29 +196,29 @@ public class Characters {
   // Private methods.
 
   // While this method is public, it should only be called in the main application.
-  public static void load(Context context) {
-    loadLocal(context);
-    loadRemote(context);
+  public static void load(CompanionApplication application) {
+    loadLocal(application);
+    loadRemote(application);
   }
 
-  private static void loadLocal(Context context) {
+  private static void loadLocal(CompanionApplication application) {
     if (local != null) {
       Status.log("local characters already loaded");
       return;
     }
 
     Status.log("loading local characters");
-    local = new CharactersData(context, true);
+    local = new CharactersData(application, true);
   }
 
-  private static void loadRemote(Context context) {
+  private static void loadRemote(CompanionApplication application) {
     if (remote != null) {
       Status.log("remote characters already loaded");
       return;
     }
 
     Status.log("loading remote characters");
-    remote = new CharactersData(context, false);
+    remote = new CharactersData(application, false);
   }
 
   private static List<String> orphaned() {

@@ -23,13 +23,13 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
-import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 
 import java.io.File;
@@ -47,12 +47,12 @@ public class Images {
   private static Images local;
   private static Images remote;
 
-  private final Context context;
+  private final CompanionApplication application;
   private final boolean isLocal;
   private final Map<String, MutableLiveData<Optional<Image>>> imagesByKey = new HashMap<>();
 
-  protected Images(Context context, boolean isLocal) {
-    this.context = context;
+  protected Images(CompanionApplication application, boolean isLocal) {
+    this.application = application;
     this.isLocal = isLocal;
   }
 
@@ -70,19 +70,19 @@ public class Images {
     return local ? Images.local : Images.remote;
   }
 
-  public static void load(Context context) {
+  public static void load(CompanionApplication application) {
     if (local != null) {
       Status.log("local images already loaded");
     } else {
       Status.log("loading local images");
-      local = new Images(context, true);
+      local = new Images(application, true);
     }
 
     if (remote != null) {
       Status.log("remote images already loaded");
     } else {
       Status.log("loading remote images");
-      remote = new Images(context, false);
+      remote = new Images(application, false);
     }
   }
 
@@ -157,7 +157,7 @@ public class Images {
   }
 
   private File file(String type, String id) {
-    return new File(context.getExternalFilesDir(type + (isLocal() ? "-local" : "-remote")),
+    return new File(application.getExternalFilesDir(type + (isLocal() ? "-local" : "-remote")),
         id + ".jpg");
   }
 

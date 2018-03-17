@@ -23,12 +23,12 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
-import android.content.Context;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -48,8 +48,8 @@ public class CampaignsData extends StoredEntries<Campaign> {
   private final Map<String, MutableLiveData<Optional<Campaign>>> campaignById =
       new ConcurrentHashMap<>();
 
-  CampaignsData(Context context, boolean local) {
-    super(context,
+  CampaignsData(CompanionApplication application, boolean local) {
+    super(application,
         local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE,
         local);
 

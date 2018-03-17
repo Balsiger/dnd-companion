@@ -70,14 +70,6 @@ public class CompanionMessenger implements Runnable {
     serverMessageProcessor = new ServerMessageProcessor(application);
   }
 
-  public static CompanionMessenger getOrInit(CompanionApplication application) {
-    if (singleton != null) {
-      return get();
-    } else {
-      return init(application);
-    }
-  }
-
   public static CompanionMessenger init(CompanionApplication application) {
     if (singleton != null) {
       throw new IllegalStateException("Messenger already initialized!");

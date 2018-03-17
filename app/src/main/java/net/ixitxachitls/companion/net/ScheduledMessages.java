@@ -44,7 +44,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
   private static ScheduledMessages singleton;
 
   private ScheduledMessages(CompanionApplication application) {
-    super(application.getApplicationContext(), DataBaseContentProvider.MESSAGES, true);
+    super(application, DataBaseContentProvider.MESSAGES, true);
   }
 
   public static void init(CompanionApplication application) {

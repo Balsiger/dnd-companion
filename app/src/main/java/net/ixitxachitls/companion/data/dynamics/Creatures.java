@@ -23,11 +23,11 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
-import android.content.Context;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 
 import java.util.List;
@@ -124,18 +124,18 @@ public class Creatures {
   // Private methods.
 
   // While this method is public, it should only be called in the main application.
-  public static void load(Context context) {
-    loadLocal(context);
+  public static void load(CompanionApplication application) {
+    loadLocal(application);
   }
 
-  private static void loadLocal(Context context) {
+  private static void loadLocal(CompanionApplication application) {
     if (local != null) {
       Status.log("local creature already loaded");
       return;
     }
 
     Status.log("loading local creature");
-    local = new CreaturesData(context);
+    local = new CreaturesData(application);
   }
 
   private static List<String> orphaned() {

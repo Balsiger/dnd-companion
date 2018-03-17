@@ -39,10 +39,4 @@
   <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar" >
     <item name="android:textSize">36sp</item>
   </style>
-
-  <style name="AlertTheme" parent="Theme.AppCompat.Dialog.Alert">
-    <item name="android:background">@color/primary</item>
-    <item name="android:color">@color/white</item>
-  </style>
-
 </resources>
