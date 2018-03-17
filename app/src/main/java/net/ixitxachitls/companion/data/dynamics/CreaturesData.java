@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
@@ -35,6 +34,7 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -133,7 +133,7 @@ public class CreaturesData extends StoredEntries<Creature> {
               .parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
-      return Optional.absent();
+      return Optional.empty();
     }
   }
 }

@@ -30,7 +30,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
@@ -43,6 +42,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Dice;
 
+import java.util.Optional;
+
 /**
  * Dialog to enter monster initiative stats.
  */
@@ -51,7 +52,7 @@ public class MonsterInitiativeDialog extends Dialog {
   private static final String ARG_CAMPAIGN_ID = "campaign-id";
   private static final String ARG_MONSTER_ID = "monster-id";
 
-  private Optional<Campaign> campaign = Optional.absent();
+  private Optional<Campaign> campaign = Optional.empty();
   private int monsterId;
 
   // Ui elements;

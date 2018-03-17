@@ -25,19 +25,18 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.ui.views.StatusView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * A statically accessible class to record the applications current status. As many components
  * might depend on this class, it should be initialized first.
  */
 public class Status {
-  private static Optional<StatusView> view = Optional.absent();
+  private static Optional<StatusView> view = Optional.empty();
   private static List<Action> pendingActions = new ArrayList<>();
 
   public static void setView(StatusView view) {
@@ -45,7 +44,7 @@ public class Status {
   }
 
   public static void clearView() {
-    Status.view = Optional.absent();
+    Status.view = Optional.empty();
   }
 
   public static void log(String message) {

@@ -30,13 +30,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -49,7 +48,7 @@ public class ListSelectDialog extends Dialog {
 
   private String selected;
   private ArrayList<Entry> values;
-  protected Optional<SelectAction> selectAction = Optional.absent();
+  protected Optional<SelectAction> selectAction = Optional.empty();
 
   @FunctionalInterface
   public interface SelectAction {

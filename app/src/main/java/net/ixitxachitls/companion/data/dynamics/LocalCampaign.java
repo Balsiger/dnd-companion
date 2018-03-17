@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.support.annotation.CallSuper;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.statics.World;
@@ -33,6 +31,8 @@ import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+
+import java.util.Optional;
 
 /**
  * A locally available campaign (the local user is the DM).
@@ -141,7 +141,7 @@ public class LocalCampaign extends Campaign {
     campaign.entryId =
         proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
     campaign.world = Entries.get().getWorlds().get(proto.getWorld())
-        .or(Entries.get().getWorlds().get("Generic").get());
+        .orElse(Entries.get().getWorlds().get("Generic").get());
     campaign.dm = proto.getDm();
     campaign.published = proto.getPublished();
     campaign.date = CampaignDate.fromProto(proto.getDate());

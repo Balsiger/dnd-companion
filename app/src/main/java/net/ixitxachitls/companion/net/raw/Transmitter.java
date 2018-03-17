@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net.raw;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
 
@@ -30,6 +28,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.Optional;
 
 /**
  * Class supporting sending and receiving data. The transmitter starts two threads, and
@@ -82,6 +81,6 @@ public class Transmitter {
   }
 
   public Optional<Data.CompanionMessageProto> receive() {
-    return Optional.fromNullable(receiver.receive());
+    return Optional.ofNullable(receiver.receive());
   }
 }

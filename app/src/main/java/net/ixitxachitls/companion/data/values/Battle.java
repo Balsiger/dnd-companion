@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.values;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -37,6 +35,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -49,7 +48,7 @@ public class Battle {
   private int number;
   private int turn;
   private BattleStatus status;
-  private Optional<String> lastMonsterName = Optional.absent();
+  private Optional<String> lastMonsterName = Optional.empty();
   private List<String> creatureIds = new ArrayList<>();
   private int currentCreatureIndex;
 
@@ -218,7 +217,7 @@ public class Battle {
       Creatures.remove(creatureId);
     }
 
-    lastMonsterName = Optional.absent();
+    lastMonsterName = Optional.empty();
     store();
   }
 

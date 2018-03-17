@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -35,6 +34,7 @@ import net.ixitxachitls.companion.util.Misc;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -254,7 +254,12 @@ public class Campaigns {
       return Optional.of(defaultCampaign);
     }
 
-    return local.get(campaignId).or(remote.get(campaignId));
+    Optional<Campaign> campaign = local.get(campaignId);
+    if (campaign.isPresent()) {
+      return campaign;
+    }
+
+    return remote.get(campaignId);
   }
 
   private static void loadLocal(CompanionApplication application) {

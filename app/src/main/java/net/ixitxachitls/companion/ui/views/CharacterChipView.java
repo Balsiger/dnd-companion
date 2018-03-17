@@ -25,14 +25,14 @@ import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.View;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.util.Misc;
+
+import java.util.Optional;
 
 /**
  * A chip displaying character information.

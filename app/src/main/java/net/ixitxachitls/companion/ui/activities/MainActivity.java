@@ -32,7 +32,6 @@ import android.view.View;
 
 import com.google.android.gms.drive.DriveId;
 import com.google.android.gms.drive.OpenFileActivityBuilder;
-import com.google.common.base.Optional;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
@@ -51,6 +50,7 @@ import net.ixitxachitls.companion.ui.views.StatusView;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
   public boolean onOptionsItemSelected(MenuItem item) {
     int id = item.getItemId();
     if (id == R.id.action_settings) {
-      CompanionFragments.get().show(CompanionFragment.Type.settings, Optional.absent());
+      CompanionFragments.get().show(CompanionFragment.Type.settings, Optional.empty());
       return true;
     }
 

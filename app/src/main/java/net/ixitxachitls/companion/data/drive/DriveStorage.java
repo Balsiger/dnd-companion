@@ -37,7 +37,6 @@ import com.google.android.gms.drive.DriveFile;
 import com.google.android.gms.drive.DriveFolder;
 import com.google.android.gms.drive.Metadata;
 import com.google.android.gms.drive.MetadataChangeSet;
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
@@ -58,13 +57,14 @@ import java.io.Writer;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Connection to google drive.
  */
 public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
   private final MainActivity activity;
-  private Optional<GoogleApiClient> googleApiClient = Optional.absent();
+  private Optional<GoogleApiClient> googleApiClient = Optional.empty();
   public List<Task> tasks = new ArrayList<>();
 
   public DriveStorage(MainActivity activity) {

@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
@@ -34,6 +33,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * A scheduler for messages to a single recipient.
@@ -156,7 +156,7 @@ public class MessageScheduler {
       return Optional.of(message);
     }
 
-    return Optional.absent();
+    return Optional.empty();
   }
 
   public void ack(long messageId) {

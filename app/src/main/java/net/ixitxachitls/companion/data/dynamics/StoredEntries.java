@@ -26,8 +26,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.storage.DataBase;
@@ -35,6 +33,7 @@ import net.ixitxachitls.companion.storage.DataBase;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Base for all stored entry collections.
@@ -84,7 +83,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
   }
 
   public Optional<E> get(String id) {
-    return Optional.fromNullable(entriesById.get(id));
+    return Optional.ofNullable(entriesById.get(id));
   }
 
   public Collection<E> getAll() {
@@ -139,7 +138,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
         return Creatures.getCreature(id).getValue();
 
       default:
-        return Optional.absent();
+        return Optional.empty();
     }
   }
 }

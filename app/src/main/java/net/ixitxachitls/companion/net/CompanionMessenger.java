@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.net;
 
 import android.os.Handler;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
@@ -43,6 +41,7 @@ import net.ixitxachitls.companion.util.Ids;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 /**

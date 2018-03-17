@@ -30,7 +30,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
@@ -46,6 +45,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.Optional;
+
 /**
  * Fragment for editing a character (main values).
  */
@@ -55,8 +56,8 @@ public class CharacterDialog extends Dialog {
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
 
   // The following values are only valid after onCreate().
-  private Optional<Character> character = Optional.absent();
-  private Optional<Campaign> campaign = Optional.absent();
+  private Optional<Character> character = Optional.empty();
+  private Optional<Campaign> campaign = Optional.empty();
 
   // UI elements.
   private EditTextWrapper<EditText> name;
@@ -96,7 +97,7 @@ public class CharacterDialog extends Dialog {
         character = Characters.getCharacter(characterId).getValue();
       }
     } else {
-      character = Optional.absent();
+      character = Optional.empty();
     }
   }
 

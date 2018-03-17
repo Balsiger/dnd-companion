@@ -31,8 +31,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -45,6 +43,7 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 
 import java.io.IOException;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static android.app.Activity.RESULT_OK;
@@ -144,7 +143,7 @@ public class LocalCharacterFragment extends CharacterFragment {
 
     Optional<Campaign> campaign = Campaigns.getCampaign(campaignId).getValue();
     if (campaign.isPresent()) {
-      CompanionFragments.get().showCampaign(campaign.get(), Optional.absent());
+      CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
     }
   }
 

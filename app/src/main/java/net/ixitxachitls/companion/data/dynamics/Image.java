@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.google.common.base.Optional;
 import com.google.protobuf.ByteString;
 
 import net.ixitxachitls.companion.Status;
@@ -37,6 +36,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Optional;
 
 /**
  * Representation of an image.
@@ -73,9 +73,9 @@ public class Image {
   public Optional<Bitmap> load(boolean local) {
     File file = Images.get(local).file(this);
     try {
-      return Optional.fromNullable(BitmapFactory.decodeStream(new FileInputStream(file)));
+      return Optional.ofNullable(BitmapFactory.decodeStream(new FileInputStream(file)));
     } catch (FileNotFoundException e) {
-      return Optional.absent();
+      return Optional.empty();
     }
   }
 

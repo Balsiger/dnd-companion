@@ -25,10 +25,10 @@ package net.ixitxachitls.companion.ui.fragments;
 
 import android.support.v4.app.Fragment;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+
+import java.util.Optional;
 
 /**
  * Base fragment for all our non-dialog fragments
@@ -53,7 +53,7 @@ public abstract class CompanionFragment extends Fragment {
   }
 
   protected void show(Type fragment) {
-    CompanionFragments.get().show(fragment, Optional.absent());
+    CompanionFragments.get().show(fragment, Optional.empty());
   }
 
   public abstract boolean goBack();

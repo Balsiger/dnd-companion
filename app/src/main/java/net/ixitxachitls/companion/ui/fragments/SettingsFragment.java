@@ -29,8 +29,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessenger;
@@ -41,6 +39,7 @@ import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Arrays;
+import java.util.Optional;
 
 /**
  * Fragment for displaying settings values.
@@ -106,7 +105,7 @@ public class SettingsFragment extends CompanionFragment {
     settings.store();
 
     if (settings.isDefined()) {
-      CompanionFragments.get().show(Type.campaigns, Optional.absent());
+      CompanionFragments.get().show(Type.campaigns, Optional.empty());
       CompanionMessenger.get().sendWelcome();
     }
   }
@@ -121,7 +120,7 @@ public class SettingsFragment extends CompanionFragment {
 
   @Override
   public boolean goBack() {
-    CompanionFragments.get().show(Type.campaigns, Optional.absent());
+    CompanionFragments.get().show(Type.campaigns, Optional.empty());
     return true;
   }
 

@@ -33,7 +33,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
@@ -49,6 +48,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 
 /**
  * Dialog for selecting XP rewards.
@@ -58,7 +59,7 @@ public class XPDialog extends Dialog {
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
   private static final int MAX_ECL = 30;
 
-  private Optional<Campaign> campaign = Optional.absent();
+  private Optional<Campaign> campaign = Optional.empty();
   private final List<TextWrapper<TextView>> eclViews = new ArrayList<>();
   private int selectedECL = 0;
   private LinearLayout characterContainer;

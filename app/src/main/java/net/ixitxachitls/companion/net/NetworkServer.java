@@ -24,8 +24,6 @@ package net.ixitxachitls.companion.net;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.raw.Transmitter;
@@ -39,6 +37,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**

@@ -29,7 +29,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
@@ -40,6 +39,8 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.views.EditAbility;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import java.util.Optional;
 
 /**
  * Dialog fragment to edit the abilities of a character or monster.
@@ -57,8 +58,8 @@ public class AbilitiesDialog extends Dialog {
   private EditAbility wisdom;
   private EditAbility charisma;
 
-  private Optional<Campaign> campaign = Optional.absent();
-  private Optional<Character> character = Optional.absent();
+  private Optional<Campaign> campaign = Optional.empty();
+  private Optional<Character> character = Optional.empty();
 
   public AbilitiesDialog() {}
 
@@ -86,7 +87,7 @@ public class AbilitiesDialog extends Dialog {
     if (campaign.isPresent()) {
       character = Characters.getCharacter(getArguments().getString(ARG_ID)).getValue();
     } else {
-      character = Optional.absent();
+      character = Optional.empty();
     }
   }
 

@@ -84,7 +84,7 @@ public class RemoteCampaign extends Campaign {
     RemoteCampaign campaign = new RemoteCampaign(id, proto.getName());
     campaign.entryId = proto.getId();
     campaign.world = Entries.get().getWorlds().get(proto.getWorld())
-        .or(Entries.get().getWorlds().get("Generic").get());
+        .orElse(Entries.get().getWorlds().get("Generic").get());
     campaign.dm = proto.getDm();
     campaign.date = CampaignDate.fromProto(proto.getDate());
     campaign.battle = Battle.fromProto(campaign, proto.getBattle());

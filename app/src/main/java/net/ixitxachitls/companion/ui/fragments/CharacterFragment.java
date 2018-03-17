@@ -30,8 +30,6 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -49,13 +47,15 @@ import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.Optional;
+
 /**
  * Fragment for displaying character information.
  */
 public class CharacterFragment extends CompanionFragment {
 
-  protected Optional<Character> character = Optional.absent();
-  protected Optional<Campaign> campaign = Optional.absent();
+  protected Optional<Character> character = Optional.empty();
+  protected Optional<Campaign> campaign = Optional.empty();
   protected boolean storeOnPause = true;
 
   // UI elements.
@@ -140,7 +140,7 @@ public class CharacterFragment extends CompanionFragment {
     this.character = character;
 
     if (!character.isPresent() || !campaign.isPresent()) {
-      this.campaign = Optional.absent();
+      this.campaign = Optional.empty();
       return;
     }
 
@@ -178,7 +178,7 @@ public class CharacterFragment extends CompanionFragment {
     if (campaign.isPresent()) {
       CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
     } else {
-      CompanionFragments.get().show(Type.campaigns, Optional.absent());
+      CompanionFragments.get().show(Type.campaigns, Optional.empty());
     }
     return true;
   }

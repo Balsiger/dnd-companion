@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
@@ -36,6 +35,7 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -101,7 +101,7 @@ public class CampaignsData extends StoredEntries<Campaign> {
 
     LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids()));
     if (campaignById.containsKey(campaignId)) {
-      campaignById.get(campaignId).setValue(Optional.absent());
+      campaignById.get(campaignId).setValue(Optional.empty());
     }
 
     return campaign;
@@ -113,7 +113,7 @@ public class CampaignsData extends StoredEntries<Campaign> {
 
     LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids()));
     if (campaignById.containsKey(campaign.getCampaignId())) {
-      campaignById.get(campaign.getCampaignId()).setValue(Optional.absent());
+      campaignById.get(campaign.getCampaignId()).setValue(Optional.empty());
     }
   }
 
@@ -129,7 +129,7 @@ public class CampaignsData extends StoredEntries<Campaign> {
           ? LocalCampaign.fromProto(id, proto) : RemoteCampaign.fromProto(id, proto));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
-      return Optional.absent();
+      return Optional.empty();
     }
   }
 }

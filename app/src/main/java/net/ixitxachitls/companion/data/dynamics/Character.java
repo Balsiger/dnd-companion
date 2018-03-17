@@ -25,7 +25,6 @@ import android.arch.lifecycle.LiveData;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
@@ -39,6 +38,7 @@ import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -125,7 +125,7 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
       return Optional.of(levels.get(number));
     }
 
-    return Optional.absent();
+    return Optional.empty();
   }
 
   public Gender getGender() {

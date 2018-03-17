@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.data;
 
 import android.content.res.AssetManager;
 
-import com.google.common.base.Optional;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 
@@ -34,6 +33,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Store to access entries of a specific type.
@@ -72,7 +72,7 @@ public class EntriesStore<T extends Entry<? extends MessageLite>> {
   }
 
   public Optional<T> get(String name) {
-    return Optional.fromNullable(byName.get(name));
+    return Optional.ofNullable(byName.get(name));
   }
 
   public ArrayList<String> getNames() {

@@ -30,7 +30,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.R;
@@ -43,6 +42,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * The fragment displaying the campaign list

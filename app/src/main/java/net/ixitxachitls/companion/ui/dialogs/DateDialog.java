@@ -36,7 +36,6 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
@@ -49,6 +48,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.Optional;
+
 /**
  * Fragment for editing a campaign date.
  */
@@ -56,7 +57,7 @@ public class DateDialog extends Dialog {
 
   private static final String ARG_ID = "id";
 
-  private Optional<Campaign> campaign = Optional.absent();
+  private Optional<Campaign> campaign = Optional.empty();
 
   private GridView days;
   private DateAdapter adapter = new DateAdapter();
@@ -218,7 +219,7 @@ public class DateDialog extends Dialog {
   }
 
   private String formatYear(int number) {
-    Optional<Calendar.Year> calendarYear = Optional.absent();
+    Optional<Calendar.Year> calendarYear = Optional.empty();
     if (campaign.isPresent()) {
       calendarYear = campaign.get().getCalendar().getYear(number);
     }

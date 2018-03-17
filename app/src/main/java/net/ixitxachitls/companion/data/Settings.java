@@ -27,7 +27,6 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.CursorIndexOutOfBoundsException;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 import com.google.inject.Singleton;
@@ -42,6 +41,7 @@ import net.ixitxachitls.companion.util.Misc;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 /**
@@ -90,7 +90,7 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   }
 
   public static Settings init(Context context) {
-    settings = load(context).or(new Settings(""));
+    settings = load(context).orElse(new Settings(""));
     settings.ensureAppId();
     return settings;
   }
@@ -141,13 +141,13 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
           .parseFrom(loadBytes(context, ID, DataBaseContentProvider.SETTINGS))));
     } catch (InvalidProtocolBufferException e) {
       e.printStackTrace();
-      return Optional.absent();
+      return Optional.empty();
     } catch (CursorIndexOutOfBoundsException e) {
       // For some reason, the default settings are not there anymore. Let's restore them.
       Entries.getContext().getContentResolver().insert(DataBaseContentProvider.SETTINGS,
           Settings.defaultSettings());
 
-      return Optional.absent();
+      return Optional.empty();
     }
   }
 

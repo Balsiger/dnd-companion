@@ -27,8 +27,6 @@ import android.transition.ChangeBounds;
 import android.transition.Fade;
 import android.view.View;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
@@ -44,6 +42,8 @@ import net.ixitxachitls.companion.ui.fragments.LocalCampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.LocalCharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
 
+import java.util.Optional;
+
 /**
  * Manager for companion fragments.
  */
@@ -57,13 +57,13 @@ public class CompanionFragments {
   private static CompanionFragments singleton;
 
   private FragmentManager fragmentManager;
-  private Optional<CompanionFragment> currentFragment = Optional.absent();
-  private Optional<CampaignFragment> campaignFragment = Optional.absent();
-  private Optional<LocalCampaignFragment> localCampaignFragment = Optional.absent();
-  private Optional<CampaignsFragment> campaignsFragment = Optional.absent();
-  private Optional<SettingsFragment> settingsFragment = Optional.absent();
-  private Optional<CharacterFragment> characterFragment = Optional.absent();
-  private Optional<LocalCharacterFragment> localCharacterFragment = Optional.absent();
+  private Optional<CompanionFragment> currentFragment = Optional.empty();
+  private Optional<CampaignFragment> campaignFragment = Optional.empty();
+  private Optional<LocalCampaignFragment> localCampaignFragment = Optional.empty();
+  private Optional<CampaignsFragment> campaignsFragment = Optional.empty();
+  private Optional<SettingsFragment> settingsFragment = Optional.empty();
+  private Optional<CharacterFragment> characterFragment = Optional.empty();
+  private Optional<LocalCharacterFragment> localCharacterFragment = Optional.empty();
 
   private CompanionFragments(FragmentManager fragmentManager) {
     this.fragmentManager = fragmentManager;
@@ -91,14 +91,14 @@ public class CompanionFragments {
 
   public void show() {
     if (currentFragment.isPresent()) {
-      show(currentFragment.get(), Optional.absent());
+      show(currentFragment.get(), Optional.empty());
     } else {
       // Show the default campaign to be able to come back to it.
-      show(CompanionFragment.Type.campaigns, Optional.absent());
+      show(CompanionFragment.Type.campaigns, Optional.empty());
 
       // Show settings if not yet defined
       if (!Settings.get().isDefined()) {
-        show(CompanionFragment.Type.settings, Optional.absent());
+        show(CompanionFragment.Type.settings, Optional.empty());
       }
     }
   }
@@ -149,7 +149,7 @@ public class CompanionFragments {
   private CompanionFragment show(CompanionFragment fragment,
                                  Optional<View> sharedTransitionElement) {
     Status.log("showing fragment " + fragment.getClass().getSimpleName());
-    if (fragment == currentFragment.orNull()) {
+    if (fragment == currentFragment.orElse(null)) {
       return fragment;
     }
 

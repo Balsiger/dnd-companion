@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
@@ -33,6 +31,8 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
+
+import java.util.Optional;
 
 /**
  * Processor specifically for client side message handling.

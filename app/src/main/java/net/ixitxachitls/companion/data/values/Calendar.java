@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.values;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
@@ -30,6 +28,7 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * A calendar representation of a world.
@@ -178,7 +177,7 @@ public class Calendar {
       }
     }
 
-    return Optional.absent();
+    return Optional.empty();
   }
 
   public CampaignDate normalize(CampaignDate date) {

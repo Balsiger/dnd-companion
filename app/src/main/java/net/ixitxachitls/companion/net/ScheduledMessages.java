@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
 
@@ -35,6 +34,7 @@ import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Storage for all schedule messages.
@@ -64,7 +64,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
           .getDefaultInstance().getParserForType().parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for message: " + e);
-      return Optional.absent();
+      return Optional.empty();
     }
   }
 

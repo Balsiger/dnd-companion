@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.net.Uri;
 
-import com.google.common.base.Optional;
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.data.Entries;
@@ -38,6 +37,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -48,7 +48,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   private static final int NO_INITIATIVE = 200;
 
   protected String campaignId = "";
-  protected Optional<Monster> mRace = Optional.absent();
+  protected Optional<Monster> mRace = Optional.empty();
   protected Gender gender = Gender.UNKNOWN;
   protected int strength;
   protected int constitution;

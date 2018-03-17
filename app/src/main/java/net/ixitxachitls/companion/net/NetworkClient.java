@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.net;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.raw.Transmitter;
@@ -30,6 +28,7 @@ import net.ixitxachitls.companion.proto.Data;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.util.Optional;
 
 /**
  * Client able to talk to a Companion server.
@@ -93,7 +92,7 @@ public class NetworkClient {
   public Optional<CompanionMessage> receive() {
     Optional<Data.CompanionMessageProto> message = transmitter.receive();
     if (!message.isPresent()) {
-      return Optional.absent();
+      return Optional.empty();
     }
 
     // Handle welcome message to obtain server id and name.

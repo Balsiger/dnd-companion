@@ -26,7 +26,6 @@ import android.arch.lifecycle.MutableLiveData;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -38,6 +37,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Storage for all dynamic images of entries.
@@ -122,12 +122,12 @@ public class Images {
     try {
       Bitmap bitmap = BitmapFactory.decodeStream(new FileInputStream(file));
       if (bitmap == null) {
-        return Optional.absent();
+        return Optional.empty();
       }
 
       return Optional.of(new Image(type, id, bitmap));
     } catch (FileNotFoundException e) {
-      return Optional.absent();
+      return Optional.empty();
     }
   }
 
@@ -136,7 +136,7 @@ public class Images {
     try {
       return Optional.of(new FileInputStream(file));
     } catch (FileNotFoundException e) {
-      return Optional.absent();
+      return Optional.empty();
     }
   }
 
@@ -145,7 +145,7 @@ public class Images {
     file.delete();
 
     if (imagesByKey.containsKey(id)) {
-      imagesByKey.get(id).setValue(Optional.absent());
+      imagesByKey.get(id).setValue(Optional.empty());
     }
   }
 

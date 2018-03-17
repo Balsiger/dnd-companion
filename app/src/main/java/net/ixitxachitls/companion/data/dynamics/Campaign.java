@@ -26,7 +26,6 @@ import android.net.Uri;
 import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 
-import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.data.Entries;
@@ -39,6 +38,7 @@ import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -154,7 +154,7 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
 
   public static Optional<LocalCampaign> asLocal(Optional<Campaign> campaign) {
     if (campaign.isPresent() || !campaign.get().isLocal()) {
-      return Optional.absent();
+      return Optional.empty();
     }
 
     return Optional.of((LocalCampaign) campaign.get());

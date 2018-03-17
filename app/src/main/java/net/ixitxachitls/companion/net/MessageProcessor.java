@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.net;
 
 import android.widget.Toast;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
@@ -45,6 +43,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 

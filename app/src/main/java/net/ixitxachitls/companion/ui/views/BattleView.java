@@ -29,8 +29,6 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -42,6 +40,8 @@ import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import java.util.Optional;
 
 /**
  * View representing battle information (and buttons) for a party view.

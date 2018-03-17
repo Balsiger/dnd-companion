@@ -32,7 +32,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
-import com.google.common.base.Optional;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
@@ -56,6 +55,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -68,8 +68,8 @@ public class TimedConditionDialog extends Dialog {
 
   // State.
   private String id;
-  private Optional<? extends BaseCreature> creature = Optional.absent();
-  private Optional<Campaign> campaign = Optional.absent();
+  private Optional<? extends BaseCreature> creature = Optional.empty();
+  private Optional<Campaign> campaign = Optional.empty();
   private int currentRound = 0;
   private boolean predefined = false;
 
@@ -227,7 +227,7 @@ public class TimedConditionDialog extends Dialog {
       }
     }
 
-    return Optional.absent();
+    return Optional.empty();
   }
 
   private void updateSave() {
