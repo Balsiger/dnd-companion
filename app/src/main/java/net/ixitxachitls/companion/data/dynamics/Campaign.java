@@ -26,6 +26,7 @@ import android.net.Uri;
 import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 
+import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.data.Entries;
@@ -149,6 +150,14 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
 
   public boolean inBattle() {
     return !battle.isEnded();
+  }
+
+  public static Optional<LocalCampaign> asLocal(Optional<Campaign> campaign) {
+    if (campaign.isPresent() || !campaign.get().isLocal()) {
+      return Optional.absent();
+    }
+
+    return Optional.of((LocalCampaign) campaign.get());
   }
 
   public abstract boolean isDefault();

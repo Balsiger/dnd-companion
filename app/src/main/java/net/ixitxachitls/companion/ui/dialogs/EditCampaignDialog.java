@@ -29,6 +29,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.common.base.Optional;
+import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
@@ -48,7 +49,7 @@ public class EditCampaignDialog extends Dialog {
 
   private static final String ARG_ID = "id";
 
-  private Optional<Campaign> campaign = Optional.absent();
+  private Optional<LocalCampaign> campaign = Optional.absent();
 
   // The following values are only valid after onCreate().
   private LabelledEditTextView name;
@@ -82,10 +83,10 @@ public class EditCampaignDialog extends Dialog {
 
     if (getArguments() != null) {
       String id = getArguments().getString(ARG_ID);
-      if (id == null || id.isEmpty()) {
+      if (Strings.isNullOrEmpty(id)) {
         campaign = Optional.of(LocalCampaign.createNew());
       } else {
-        campaign = Campaigns.getCampaign(id).getValue();
+        campaign = Campaign.asLocal(Campaigns.getCampaign(id).getValue());
       }
     } else {
       campaign = Optional.of(LocalCampaign.createNew());
