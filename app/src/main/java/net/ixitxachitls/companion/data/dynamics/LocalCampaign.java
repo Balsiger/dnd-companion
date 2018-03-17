@@ -78,7 +78,6 @@ public class LocalCampaign extends Campaign {
     return Settings.get().getNickname();
   }
 
-  @Override
   public void setWorld(String name) {
     Optional<World> world = Entries.get().getWorlds().get(name);
     if (world.isPresent())
@@ -88,7 +87,6 @@ public class LocalCampaign extends Campaign {
       this.world = Entries.get().getWorlds().get("Generic").get();
   }
 
-  @Override
   public void setDate(CampaignDate date) {
     this.date = date;
     store();

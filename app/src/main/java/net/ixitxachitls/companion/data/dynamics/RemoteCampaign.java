@@ -61,11 +61,6 @@ public class RemoteCampaign extends Campaign {
   }
 
   @Override
-  public void setWorld(String name) {
-    Status.toast("Cannot set the world in a remote campaign!");
-  }
-
-  @Override
   public void setDate(CampaignDate date) {
     Status.toast("Cannot set the date of a remote campaign!");
   }

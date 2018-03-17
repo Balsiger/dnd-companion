@@ -158,7 +158,7 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
 
       Drive.DriveApi.getRootFolder(client)
           .createFolder(client, new MetadataChangeSet.Builder()
-              .setTitle("RPG Companion")
+              .setTitle("Tabletop Companion")
               .build())
           .setResultCallback(
               new ResolvingResultCallbacks<DriveFolder.DriveFolderResult>(activity, 0) {

@@ -33,8 +33,10 @@ import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -220,8 +222,8 @@ public class Campaigns {
     loadRemote(application);
   }
 
-  private static List<String> campaignIds() {
-    List<String> ids = new ArrayList<>();
+  private static Set<String> campaignIds() {
+    Set<String> ids = new HashSet<>();
     ids.add(defaultCampaign.getCampaignId());
     if (Misc.onEmulator()) {
       if (Settings.get().useRemoteCampaigns()) {

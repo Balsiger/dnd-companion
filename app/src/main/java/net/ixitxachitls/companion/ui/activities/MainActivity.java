@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
   public void onBackPressed() {
     if (!CompanionFragments.get().goBack()) {
       ConfirmationDialog.create(this).title("Exit?")
-          .message("Do you really want to exit the RPG Companion?")
+          .message("Do you really want to exit the Tabletop Companion?")
           .no(this::noExit)
           .yes(this::exit)
           .show();

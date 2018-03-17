@@ -163,9 +163,7 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   public abstract boolean isDefault();
   public abstract boolean isPublished();
   public abstract boolean isOnline();
-  public abstract void setWorld(String name);
   public abstract void publish();
-  public abstract void setDate(CampaignDate date);
   public abstract void unpublish();
 
   @Override
