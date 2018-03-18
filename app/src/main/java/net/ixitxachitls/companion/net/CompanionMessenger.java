@@ -69,16 +69,17 @@ public class CompanionMessenger implements Runnable {
 
   public static CompanionMessenger init(CompanionApplication application) {
     if (singleton != null) {
-      throw new IllegalStateException("Messenger already initialized!");
+      Status.error("Messenger already initialized!");
+    } else {
+      singleton = new CompanionMessenger(application);
     }
 
-    singleton = new CompanionMessenger(application);
     return singleton;
   }
 
   public static CompanionMessenger get() {
     if (singleton == null) {
-      throw new IllegalStateException("Messenger not yet initialized");
+      Status.error("Messenger not yet initialized");
     }
 
     return singleton;
@@ -115,10 +116,10 @@ public class CompanionMessenger implements Runnable {
   public void send(Campaign campaign) {
     Status.log("sending campaign " + campaign + " to all");
     if (!campaign.isLocal()) {
-      throw new IllegalStateException("Cannot sent remote campaign!");
+      Status.error("Cannot sent remote campaign!");
+    } else {
+      companionServer.schedule(clientIds(campaign), CompanionMessageData.from(campaign));
     }
-
-    companionServer.schedule(clientIds(campaign), CompanionMessageData.from(campaign));
   }
 
   /**
