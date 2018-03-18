@@ -110,12 +110,14 @@ public abstract class MessageProcessor {
         break;
 
       case CONDITION:
-        handleCondition(senderId, messageId, message.getConditionDeleteTargetId(),
+        handleCondition(senderId, messageId, message.getConditionTargetId(),
             message.getCondition());
+        break;
 
       case CONDITION_DELETE:
         handleConditionDelete(senderId, messageId, message.getConditionDeleteName(),
             message.getConditionDeleteSourceId(), message.getConditionDeleteTargetId());
+        break;
 
       case XP_AWARD:
         handleXpAward(receiverId, senderId, messageId, message.getXpAward());
@@ -148,7 +150,7 @@ public abstract class MessageProcessor {
     if (creature.isPresent()) {
       creature.get().addAffectedCondition(condition);
     } else {
-      Status.error("Cannot find creature for " + targetId + " to assign condition.");
+      Status.error("Cannot find creature for '" + targetId + "' to assign condition.");
     }
 
     CompanionMessenger.get().sendAckToServer(senderId, messageId);
@@ -195,19 +197,9 @@ public abstract class MessageProcessor {
 
   protected void handleConditionDelete(String senderId, long messageId, String conditionName,
                                        String sourceId, String targetId) {
-    Optional<? extends BaseCreature> creature;
-    if (StoredEntry.hasType(targetId, Character.TYPE)) {
-      creature = Characters.getCharacter(targetId).getValue();
-    } else {
-      creature = Creatures.getCreature(targetId).getValue();
-    }
-
+    Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
-      if (creature.get().isLocal()) {
-        creature.get().removeAffectedCondition(conditionName, sourceId);
-      } else {
-        CompanionMessenger.get().sendDeletion(conditionName, sourceId, targetId);
-      }
+      creature.get().removeAffectedCondition(conditionName, sourceId);
     } else {
       Status.log("Cannot find creature for " + targetId + " to assign condition.");
     }

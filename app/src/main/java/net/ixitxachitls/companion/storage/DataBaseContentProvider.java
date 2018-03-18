@@ -32,6 +32,7 @@ import android.net.Uri;
 
 import com.google.common.base.Strings;
 
+import net.ixitxachitls.companion.BuildConfig;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Creature;
@@ -48,7 +49,7 @@ import java.util.List;
 public class DataBaseContentProvider extends ContentProvider {
 
   public static final String CONTENT = "content://";
-  public static final String AUTHORITY = "net.ixitxachitls.companion";
+  public static final String AUTHORITY = BuildConfig.APPLICATION_ID;
   public static final String PREFIX = CONTENT + AUTHORITY + "/";
   public static final Uri CAMPAIGNS_LOCAL = Uri.parse(PREFIX + LocalCampaign.TABLE);
   public static final Uri CAMPAIGNS_REMOTE = Uri.parse(PREFIX + RemoteCampaign.TABLE);

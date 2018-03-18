@@ -168,13 +168,17 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   }
 
   public void removeAffectedCondition(String name, String sourceId) {
-    for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
-      TimedCondition condition = i.next();
-      if (condition.getName().equals(name) && condition.getSourceId().equals(sourceId)) {
-        i.remove();
-        store();
-        break;
+    if (isLocal()) {
+      for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
+        TimedCondition condition = i.next();
+        if (condition.getName().equals(name) && condition.getSourceId().equals(sourceId)) {
+          i.remove();
+          store();
+          break;
+        }
       }
+    } else {
+      CompanionMessenger.get().sendDeletion(name, sourceId, getCreatureId());
     }
   }
 

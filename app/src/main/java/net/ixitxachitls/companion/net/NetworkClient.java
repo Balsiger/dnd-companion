@@ -90,6 +90,10 @@ public class NetworkClient {
   }
 
   public Optional<CompanionMessage> receive() {
+    if (transmitter == null) {
+      return Optional.empty();
+    }
+
     Optional<Data.CompanionMessageProto> message = transmitter.receive();
     if (!message.isPresent()) {
       return Optional.empty();

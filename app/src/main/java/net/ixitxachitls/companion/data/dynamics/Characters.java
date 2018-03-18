@@ -162,13 +162,8 @@ public class Characters {
 
     // Update live data.
     if (characterIdsByCampaignId.containsKey(character.getCampaignId())) {
-      if (character.isLocal()) {
-        LiveDataUtils.setValueIfChanged(characterIdsByCampaignId.get(character.getCampaignId()),
-            ImmutableList.copyOf(local.ids(character.getCampaignId())));
-      } else {
-        LiveDataUtils.setValueIfChanged(characterIdsByCampaignId.get(character.getCampaignId()),
-            ImmutableList.copyOf(remote.ids(character.getCampaignId())));
-      }
+      LiveDataUtils.setValueIfChanged(characterIdsByCampaignId.get(character.getCampaignId()),
+          ImmutableList.copyOf(characterIds(character.getCampaignId())));
     }
 
     Images.get(character.isLocal()).remove(Character.TABLE, character.getCharacterId());

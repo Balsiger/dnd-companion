@@ -65,6 +65,7 @@ public class Status {
   }
 
   public static void toast(String message) {
+    log(message);
     runInView(v -> Toast.makeText(v.getContext(), message, Toast.LENGTH_LONG).show());
   }
 

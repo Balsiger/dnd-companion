@@ -25,7 +25,7 @@
 
     <provider
         android:name="net.ixitxachitls.companion.storage.DataBaseContentProvider"
-        android:authorities="net.ixitxachitls.companion">
+        android:authorities="${applicationId}">
     </provider>
 
   </application>

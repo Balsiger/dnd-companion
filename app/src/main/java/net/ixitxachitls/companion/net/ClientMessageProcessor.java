@@ -86,7 +86,7 @@ public class ClientMessageProcessor extends MessageProcessor {
               + "Your DM has granted " + character.get().getName() + " " + award.getXp() + " XP!")
           .yes(() -> addXpAward(senderId, messageId, character.get().getCharacterId(),
               award.getXp()))
-          .no(() -> inFlightMessages.remove(createKey(senderId, receiverId, messageId)))
+          .noNo()
           .show();
     }
   }
