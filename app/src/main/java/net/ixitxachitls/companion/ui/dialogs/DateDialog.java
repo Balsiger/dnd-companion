@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
@@ -57,7 +58,7 @@ public class DateDialog extends Dialog {
 
   private static final String ARG_ID = "id";
 
-  private Optional<Campaign> campaign = Optional.empty();
+  private Optional<LocalCampaign> campaign = Optional.empty();
 
   private GridView days;
   private DateAdapter adapter = new DateAdapter();
@@ -93,7 +94,7 @@ public class DateDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getCampaign(getArguments().getString(ARG_ID)).getValue();
+    campaign = Campaign.asLocal(Campaigns.getCampaign(getArguments().getString(ARG_ID)).getValue());
     if (campaign.isPresent()) {
       from(campaign.get().getDate());
     }

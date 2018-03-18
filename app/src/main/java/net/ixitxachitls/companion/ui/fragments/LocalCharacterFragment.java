@@ -138,7 +138,7 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   private void move(String campaignId) {
     if (character.isPresent()) {
-      character.get().setCampaignId(campaignId);
+      character.get().asLocal().setCampaignId(campaignId);
     }
 
     Optional<Campaign> campaign = Campaigns.getCampaign(campaignId).getValue();
@@ -158,13 +158,13 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   private void changeXp() {
     if (character.isPresent() && !xp.getText().isEmpty()) {
-      character.get().setXp(Integer.parseInt(xp.getText()));
+      character.get().asLocal().setXp(Integer.parseInt(xp.getText()));
     }
   }
 
   private void changeLevel() {
     if (character.isPresent() && !level.getText().isEmpty()) {
-      character.get().setLevel(Integer.parseInt(level.getText()));
+      character.get().asLocal().setLevel(Integer.parseInt(level.getText()));
     }
   }
 

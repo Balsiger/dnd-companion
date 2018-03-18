@@ -152,11 +152,9 @@ public class CompanionFragments {
     if (fragment == currentFragment.orElse(null)) {
       return fragment;
     }
-
-    FragmentTransaction transaction = fragmentManager.beginTransaction();
-    Status.log("Adding to backstack " + fragment.getClass().getSimpleName());
-
+    
     // Shared element transition.
+    FragmentTransaction transaction = fragmentManager.beginTransaction();
     if (sharedTransitionElement.isPresent()) {
       currentFragment.get().setExitTransition(fade(ENTER_FADE_DURATION_MS, 0));
       currentFragment.get().setReenterTransition(fade(ENTER_FADE_DURATION_MS,

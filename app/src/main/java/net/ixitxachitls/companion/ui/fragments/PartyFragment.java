@@ -296,7 +296,7 @@ public class PartyFragment extends Fragment {
         initiative.setSelectAction(i -> {
           TransitionManager.beginDelayedTransition(view, transition);
           Battle battle = campaign.getBattle();
-          initCharacter.setBattle(i, battle.getNumber());
+          initCharacter.asLocal().setBattle(i, battle.getNumber());
         });
       }
 

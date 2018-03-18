@@ -48,9 +48,9 @@ public class CompanionApplication extends MultiDexApplication implements Applica
   public void onCreate() {
     try {
       PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-      Status.log("starting rpg companion version " + packageInfo.versionName + " #" + packageInfo.versionCode);
+      Status.error("starting rpg companion version " + packageInfo.versionName + " #" + packageInfo.versionCode);
     } catch (PackageManager.NameNotFoundException e) {
-      Status.log("starting rpg companion with unknown version");
+      Status.warning("starting rpg companion with unknown version");
     }
     super.onCreate();
 

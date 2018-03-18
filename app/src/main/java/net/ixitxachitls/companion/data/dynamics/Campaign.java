@@ -28,13 +28,13 @@ import android.support.annotation.NonNull;
 
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.util.List;
@@ -96,8 +96,10 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
     return getMinPartyLevel() <= level && getMaxPartyLevel() >= level;
   }
 
-  public void awardXp(Character character, int xp) {
-    CompanionMessenger.get().sendXpAward(this, character, xp);
+  public LocalCampaign asLocal() {
+    IllegalStateException e = new IllegalStateException("Cannot access remote campaign as local!");
+    Status.exception("Invalid local conversion", e);
+    throw e;
   }
 
   public String getWorld() {
@@ -153,7 +155,7 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   }
 
   public static Optional<LocalCampaign> asLocal(Optional<Campaign> campaign) {
-    if (campaign.isPresent() || !campaign.get().isLocal()) {
+    if (!campaign.isPresent() || !campaign.get().isLocal()) {
       return Optional.empty();
     }
 
@@ -163,8 +165,6 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   public abstract boolean isDefault();
   public abstract boolean isPublished();
   public abstract boolean isOnline();
-  public abstract void publish();
-  public abstract void unpublish();
 
   @Override
   public Data.CampaignProto toProto() {

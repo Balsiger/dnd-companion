@@ -29,6 +29,7 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
@@ -84,10 +85,6 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
 
   public String getCharacterId() {
     return entryId;
-  }
-
-  public Optional<Campaign> getCampaign() {
-    return Campaigns.getCampaign(campaignId).getValue();
   }
 
   @Override
@@ -160,23 +157,21 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
     return ImmutableList.copyOf(conditionsHistory);
   }
 
-  public abstract void setCampaignId(String campaignId);
-  public abstract void setRace(String name);
-  public abstract void setGender(Gender gender);
-  public abstract void setStrength(int strength);
-  public abstract void setConstitution(int constitution);
-  public abstract void setDexterity(int dexterity);
-  public abstract void setIntelligence(int intelligence);
-  public abstract void setWisdom(int wisdom);
-  public abstract void setCharisma(int charisma);
-  public abstract void setBattle(int initiative, int numbrer);
-  public abstract void clearInitiative();
-  public abstract void setXp(int xp);
+  public LocalCharacter asLocal() {
+    IllegalStateException e = new IllegalStateException("Cannot access remote character as local!");
+    Status.exception("Invalid local conversion", e);
+    throw e;
+  }
+
   public abstract void addXp(int xp);
-  public abstract void setLevel(int index, Level level);
-  public abstract void addLevel(Character.Level level);
-  public abstract void setLevel(int level);
-  public abstract void publish();
+
+  public static Optional<LocalCharacter> asLocal(Optional<Character> character) {
+    if (!character.isPresent() || !character.get().isLocal()) {
+      return Optional.empty();
+    }
+
+    return Optional.of((LocalCharacter) character.get());
+  }
 
   public LiveData<Optional<Image>> loadImage() {
     return Images.get(isLocal()).getImage(Character.TABLE, getCharacterId());

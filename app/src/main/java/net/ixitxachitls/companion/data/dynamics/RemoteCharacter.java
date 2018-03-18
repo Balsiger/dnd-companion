@@ -23,11 +23,12 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -40,88 +41,15 @@ public class RemoteCharacter extends Character {
   }
 
   @Override
-  public void setCampaignId(String campaignId) {
-    Status.toast("Cannot set the campaign id of a remote character!");
-  }
-
-  @Override
-  public void setRace(String name) {
-    Status.toast("Cannot set the race of a remote character!");
-  }
-
-  @Override
-  public void setGender(Gender gender) {
-    Status.toast("Cannot set the gender of a remote character!");
-  }
-
-  @Override
-  public void setStrength(int strength) {
-    Status.toast("Cannot set the strength of a remote character!");
-  }
-
-  @Override
-  public void setConstitution(int constitution) {
-    Status.toast("Cannot set the constitution of a remote character!");
-  }
-
-  @Override
-  public void setDexterity(int dexterity) {
-    Status.toast("Cannot set the dexterity of a remote character!");
-  }
-
-  @Override
-  public void setIntelligence(int intelligence) {
-    Status.toast("Cannot set the intelligence of a remote character!");
-  }
-
-  @Override
-  public void setWisdom(int wisdom) {
-    Status.toast("Cannot set the wisdom of a remote character!");
-  }
-
-  @Override
-  public void setCharisma(int charisma) {
-    Status.toast("Cannot set the charisma of a remote character!");
-  }
-
-  @Override
-  public void setBattle(int initiative, int numbrer) {
-    Status.toast("Cannot set battle of a remote character!");
-  }
-
-  @Override
-  public void clearInitiative() {
-    Status.toast("Cannot cearl initiative of a remote character!");
-  }
-
-  @Override
-  public void setXp(int xp) {
-    Status.toast("Cannot set xp of a remote character!");
-  }
-
-  @Override
   public void addXp(int xp) {
-    Status.toast("Cannot add xp to a remote character!");
-  }
+    // Send an award message to the remote character.
+    Optional<Campaign> campaign = getCampaign();
+    if (!campaign.isPresent() && !campaign.get().isLocal()) {
+      Status.error("Cannot award xp for a remote or unknown campaign");
+    }
 
-  @Override
-  public void setLevel(int index, Level level) {
-    Status.toast("Cannot set level of a remote character!");
-  }
-
-  @Override
-  public void addLevel(Level level) {
-    Status.toast("Cannot add level to a remote character!");
-  }
-
-  @Override
-  public void setLevel(int level) {
-    Status.toast("Cannot set level of a remote character!");
-  }
-
-  @Override
-  public void publish() {
-    Status.toast("Cannot publish a remote character!");
+    Status.log("sending xp award of " + xp + " for " + this);
+    CompanionMessenger.get().sendXpAward(campaign.get().getCampaignId(), getCharacterId(), xp);
   }
 
   @Override

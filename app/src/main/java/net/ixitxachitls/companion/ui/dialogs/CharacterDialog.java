@@ -56,7 +56,7 @@ public class CharacterDialog extends Dialog {
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
 
   // The following values are only valid after onCreate().
-  private Optional<Character> character = Optional.empty();
+  private Optional<LocalCharacter> character = Optional.empty();
   private Optional<Campaign> campaign = Optional.empty();
 
   // UI elements.
@@ -94,7 +94,7 @@ public class CharacterDialog extends Dialog {
       if (characterId.isEmpty()) {
         character = Optional.of(LocalCharacter.createNew(campaign.get().getCampaignId()));
       } else {
-        character = Characters.getCharacter(characterId).getValue();
+        character = Character.asLocal(Characters.getCharacter(characterId).getValue());
       }
     } else {
       character = Optional.empty();

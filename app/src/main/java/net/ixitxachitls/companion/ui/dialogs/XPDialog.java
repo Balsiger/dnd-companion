@@ -198,7 +198,7 @@ public class XPDialog extends Dialog {
     if (campaign.isPresent()) {
       for (int i = 0; i < characterContainer.getChildCount(); i++) {
         XPCharacterView view = (XPCharacterView) characterContainer.getChildAt(i);
-        campaign.get().awardXp(view.getCharacter(), view.getXP());
+        view.getCharacter().addXp(view.getXP());
       }
     }
 

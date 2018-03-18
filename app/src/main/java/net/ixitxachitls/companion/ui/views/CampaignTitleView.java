@@ -33,7 +33,7 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.ui.CampaignPublisher;
+import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
@@ -121,8 +121,7 @@ public class CampaignTitleView extends LinearLayout {
       return;
     }
 
-    CampaignPublisher.toggle(getContext(), campaign, this::refresh,
-        CampaignPublisher.EmptyCancelAction);
+    campaign.asLocal().toggle(getContext(), this::refresh, LocalCampaign.EmptyCancelAction);
   }
 
   public void refresh() {
@@ -147,6 +146,8 @@ public class CampaignTitleView extends LinearLayout {
 
     if (campaign.isLocal() && !campaign.isDefault()) {
       networkIcon.setAction(this::publish);
+    } else {
+      networkIcon.setAction(null);
     }
   }
 

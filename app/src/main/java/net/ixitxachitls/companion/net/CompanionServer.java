@@ -164,7 +164,7 @@ public class CompanionServer {
     }
   }
 
-  private void startIfNecessary() {
+  public void startIfNecessary() {
     if (!started() && Campaigns.hasAnyPublished()) {
       start();
     }

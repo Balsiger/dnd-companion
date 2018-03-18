@@ -58,7 +58,7 @@ class Receiver implements Runnable {
           queue.put(message);
         }
       } catch (IOException | InterruptedException e) {
-        Status.log(name + " receiver error: ", e);
+        Status.exception(name + " receiver error: ", e);
         break;
       }
     }

@@ -50,7 +50,7 @@ public class Transmitter {
     try {
       socket.setKeepAlive(true);
     } catch (SocketException e) {
-      Status.log("error when setting keepalive in socket", e);
+      Status.exception("error when setting keepalive in socket", e);
     }
 
     this.name = name;

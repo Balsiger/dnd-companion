@@ -146,13 +146,9 @@ public abstract class MessageProcessor {
     }
 
     if (creature.isPresent()) {
-      if (creature.get().isLocal()) {
-        creature.get().addAffectedCondition(condition);
-      } else {
-        CompanionMessenger.get().send(targetId, condition);
-      }
+      creature.get().addAffectedCondition(condition);
     } else {
-      Status.log("Cannot find creature for " + targetId + " to assign condition.");
+      Status.error("Cannot find creature for " + targetId + " to assign condition.");
     }
 
     CompanionMessenger.get().sendAckToServer(senderId, messageId);
@@ -173,11 +169,11 @@ public abstract class MessageProcessor {
   }
 
   protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
-    throw new UnsupportedOperationException();
+    Status.error("handling campaign not supported");
   }
 
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
-    throw new UnsupportedOperationException();
+    Status.error("Handling campaign deletion not supported.");
   }
 
   protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
@@ -186,15 +182,15 @@ public abstract class MessageProcessor {
   }
 
   protected void handleAck(String senderId, long messageId) {
-    throw new UnsupportedOperationException();
+    Status.error("handling ack not supported");
   }
 
   protected void handleImage(String senderId, Image image) {
-    throw new UnsupportedOperationException();
+    Status.error("Handling image not supported.");
   }
 
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
-    throw new UnsupportedOperationException();
+    Status.error("Handling xp award no supported");
   }
 
   protected void handleConditionDelete(String senderId, long messageId, String conditionName,

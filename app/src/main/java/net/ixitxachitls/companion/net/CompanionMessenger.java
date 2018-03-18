@@ -31,10 +31,8 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
-import net.ixitxachitls.companion.data.dynamics.StoredEntry;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.util.Ids;
@@ -89,7 +87,7 @@ public class CompanionMessenger implements Runnable {
   public void start() {
     Status.log("starting messenger");
     companionClients.start();
-    // Only start the server once we actually publish a campaign
+    companionServer.startIfNecessary();
 
     run();
   }
@@ -224,36 +222,23 @@ public class CompanionMessenger implements Runnable {
     }
   }
 
-  public void send(String targetId, TimedCondition condition) {
-    Optional<? extends BaseCreature> creature;
-    if (StoredEntry.hasType(targetId, Character.TYPE)) {
-      creature = Characters.getCharacter(targetId).getValue();
+  public void send(BaseCreature creature, TimedCondition condition) {
+    if (creature.isLocal()) {
+      return;
     } else {
-      creature = Creatures.getCreature(targetId).getValue();
-    }
-
-    if (creature.isPresent()) {
-      if (creature.get().isLocal()) {
-        Status.log("adding timed condtion " + condition + " to " + targetId);
-        creature.get().addAffectedCondition(condition);
-      } else {
-        Status.log("sending timed condition " + condition + " to " + targetId);
-        Optional<Campaign> campaign =
-            Campaigns.getCampaign(creature.get().getCampaignId()).getValue();
-        if (campaign.isPresent()) {
-          if (campaign.get().isLocal()) {
-            companionServer.schedule(Ids.extractServerId(targetId),
-                CompanionMessageData.from(targetId, condition));
-          } else {
-            companionClients.schedule(Ids.extractServerId(targetId),
-                CompanionMessageData.from(targetId, condition));
-          }
+      Status.log("sending timed condition " + condition + " to " + creature);
+      Optional<Campaign> campaign = creature.getCampaign();
+      if (campaign.isPresent()) {
+        if (campaign.get().isLocal()) {
+          companionServer.schedule(Ids.extractServerId(creature.getCreatureId()),
+              CompanionMessageData.from(creature.getCreatureId(), condition));
         } else {
-          Status.log("Cannot find campaign for " + targetId + ", cannot send condition");
+          companionClients.schedule(Ids.extractServerId(creature.getCreatureId()),
+              CompanionMessageData.from(creature.getCreatureId(), condition));
         }
+      } else {
+        Status.error("Cannot find campaign for " + creature + ", cannot send condition");
       }
-    } else {
-      Status.log("Cannot send timed condition to unknown character " + targetId);
     }
   }
 
@@ -320,14 +305,9 @@ public class CompanionMessenger implements Runnable {
     companionClients.revoke(id);
   }
 
-  public void sendXpAward(Campaign campaign, Character character, int xp) {
-    if (!campaign.isLocal()) {
-      throw new IllegalStateException("Cannot award xp for a remote campaign");
-    }
-
-    Status.log("sending xp award of " + xp + " for " + character);
-    companionServer.schedule(character.getServerId(), CompanionMessageData.from(
-        new XpAward(character.getCharacterId(), campaign.getCampaignId(), xp)));
+  public void sendXpAward(String campaignId, String characterId, int xp) {
+    companionServer.schedule(Ids.extractServerId(characterId),
+        CompanionMessageData.from(new XpAward(characterId, campaignId, xp)));
   }
 
   public void sendAckToClient(String recipientId, long messageId) {

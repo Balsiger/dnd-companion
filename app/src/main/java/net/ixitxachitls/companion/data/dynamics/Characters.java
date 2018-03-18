@@ -180,7 +180,7 @@ public class Characters {
   public static void publish() {
     Status.log("publishing all local characters");
     for (Character character : local.getAll()) {
-      character.publish();
+      character.asLocal().publish();
       Images.get(character.isLocal()).publishImageFor(character);
     }
   }
@@ -188,7 +188,7 @@ public class Characters {
   public static void publish(String campaignId) {
     Status.log("publishing characters of campaign " + campaignId);
     for (Character character : local.getCharacters(campaignId)) {
-      character.publish();
+      character.asLocal().publish();
       Images.get(character.isLocal()).publishImageFor(character);
     }
   }

@@ -28,6 +28,7 @@ import android.support.annotation.IdRes;
 import android.support.annotation.StringRes;
 import android.support.annotation.StyleRes;
 import android.text.Editable;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -42,7 +43,7 @@ import android.widget.TextView;
 class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W>>
     extends AbstractWrapper<V, W> {
 
-  public enum Align { LEFT, RIGHT, CENTER };
+  public enum Align { LEFT, RIGHT, CENTER }
 
   protected AbstractTextWrapper(View parent, @IdRes int id) {
     super(parent, id);
@@ -60,16 +61,19 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
     return (W) this;
   }
 
+  @SuppressWarnings("unchecked")
   public W text(@StringRes int text) {
     return text(view.getContext().getString(text));
   }
 
+  @SuppressWarnings("unchecked")
   public W ems(int ems) {
     view.setEms(ems);
 
     return (W) this;
   }
 
+  @SuppressWarnings("unchecked")
   public W align(Align align) {
     switch (align) {
       case LEFT:
@@ -88,6 +92,7 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
     return (W) this;
   }
 
+  @SuppressWarnings("unchecked")
   public W bold() {
     view.setTypeface(Typeface.DEFAULT_BOLD);
 
@@ -97,6 +102,27 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
   @SuppressWarnings("unchecked")
   public W text(String text) {
     view.setText(text);
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W text(Spanned text) {
+    view.setText(text);
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W append(String text) {
+    view.append(text);
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W append(Spanned text) {
+    view.append(text);
 
     return (W) this;
   }
@@ -142,6 +168,10 @@ class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W
 
   public String getText() {
     return view.getText().toString();
+  }
+
+  public CharSequence getCharSequence() {
+    return view.getText();
   }
 
   private static class TextChangeWatcher implements TextWatcher {

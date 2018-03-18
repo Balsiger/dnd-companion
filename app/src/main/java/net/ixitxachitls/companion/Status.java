@@ -51,8 +51,17 @@ public class Status {
     runInView(v -> v.addMessage(message));
   }
 
-  public static void log(String message, Exception e) {
-    runInView(v -> v.addMessage(message + e));
+  public static void exception(String message, Exception e) {
+    runInView(v -> v.showException(message, e));
+  }
+
+  public static void warning(String message) {
+    runInView(v -> v.addWarningMessage(message));
+  }
+
+  public static void error(String message) {
+    toast(message);
+    runInView(v -> v.addErrorMessage(message));
   }
 
   public static void toast(String message) {

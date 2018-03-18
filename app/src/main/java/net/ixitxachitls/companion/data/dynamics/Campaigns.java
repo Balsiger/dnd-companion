@@ -65,7 +65,8 @@ public class Campaigns {
       return liveDefaultCampaign;
     }
 
-    if (!Settings.get().useRemoteCampaigns() && local.hasCampaign(campaignId)) {
+    if ((!Misc.onEmulator() || !Settings.get().useRemoteCampaigns())
+        && local.hasCampaign(campaignId)) {
       return local.getCampaign(campaignId);
     }
 
@@ -204,12 +205,12 @@ public class Campaigns {
   }
 
   // Publishing.
-  // TODO(merlin): This should be moved out of here into the publisher.
   public static void publish() {
     Status.log("publishing all campaigns");
     for (Campaign campaign : local.getAll()) {
-      if (!campaign.isDefault() && campaign.isPublished()) {
-        campaign.publish();
+      LocalCampaign localCampaign = campaign.asLocal();
+      if (!localCampaign.isDefault() && localCampaign.isPublished()) {
+        localCampaign.publish();
       }
     }
   }
@@ -220,6 +221,19 @@ public class Campaigns {
   public static void load(CompanionApplication application) {
     loadLocal(application);
     loadRemote(application);
+
+    // Check that we don't have local and remote campaigns with the same id.
+    if (!Misc.onEmulator()) {
+      List<String> localIds = local.getCampaigns().stream()
+          .map(Campaign::getCampaignId)
+          .collect(Collectors.toList());
+      for (Campaign campaign : remote.getCampaigns()) {
+        if (localIds.contains(campaign.getCampaignId())) {
+          Status.toast("Removing duplicate remote campaign " + campaign.getName());
+          remote.remove(campaign);
+        }
+      }
+    }
   }
 
   private static Set<String> campaignIds() {

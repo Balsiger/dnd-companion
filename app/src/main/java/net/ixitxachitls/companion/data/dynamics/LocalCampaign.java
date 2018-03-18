@@ -21,8 +21,10 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.content.Context;
 import android.support.annotation.CallSuper;
 
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.statics.World;
@@ -31,6 +33,7 @@ import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
 
 import java.util.Optional;
 
@@ -78,6 +81,10 @@ public class LocalCampaign extends Campaign {
     return Settings.get().getNickname();
   }
 
+  public LocalCampaign asLocal() {
+    return this;
+  }
+
   public void setWorld(String name) {
     Optional<World> world = Entries.get().getWorlds().get(name);
     if (world.isPresent())
@@ -92,7 +99,6 @@ public class LocalCampaign extends Campaign {
     store();
   }
 
-  @Override
   public void publish() {
     if (!published) {
       published = true;
@@ -103,12 +109,11 @@ public class LocalCampaign extends Campaign {
     }
   }
 
-  @Override
   public void unpublish() {
     published = false;
     store();
     // We don't unpublish the campaign in the companion server, as the server will be automatically
-    // stoped if there are not more message and no published campaigns.
+    // stopped if there are not more message and no published campaigns.
   }
 
   @Override
@@ -147,6 +152,48 @@ public class LocalCampaign extends Campaign {
     campaign.nextBattleNumber = proto.getNextBattleNumber();
 
     return campaign;
+  }
+
+  @FunctionalInterface
+  public interface OKAction {
+    public void ok();
+  }
+
+  @FunctionalInterface
+  public interface CancelAction {
+    public void cancel();
+  }
+
+  public static OKAction EmptyOkAction = () -> {};
+  public static CancelAction EmptyCancelAction = () -> {};
+
+  public void publish(Context context, OKAction okAction, CancelAction cancelAction) {
+    ConfirmationDialog.create(context)
+        .title(context.getString(R.string.main_campaign_publish_title))
+        .message(context.getString(R.string.main_campaign_publish_message))
+        .yes(() -> { publish(); okAction.ok(); })
+        .no(cancelAction::cancel)
+        .show();
+  }
+
+  public void unpublish(Context context, OKAction okAction, CancelAction cancelAction) {
+    ConfirmationDialog.create(context)
+        .title(context.getString(R.string.main_campaign_unpublish_title))
+        .message(context.getString(R.string.main_campaign_unpublish_message))
+        .yes(() -> {
+          unpublish();
+          okAction.ok();
+        })
+        .no(cancelAction::cancel)
+        .show();
+  }
+
+  public void toggle(Context context, OKAction okAction, CancelAction cancelAction) {
+    if (isPublished()) {
+      unpublish(context, okAction, cancelAction);
+    } else {
+      publish(context, okAction, cancelAction);
+    }
   }
 
   @Override

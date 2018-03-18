@@ -36,6 +36,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.views.EditAbility;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -59,7 +60,7 @@ public class AbilitiesDialog extends Dialog {
   private EditAbility charisma;
 
   private Optional<Campaign> campaign = Optional.empty();
-  private Optional<Character> character = Optional.empty();
+  private Optional<LocalCharacter> character = Optional.empty();
 
   public AbilitiesDialog() {}
 
@@ -85,7 +86,8 @@ public class AbilitiesDialog extends Dialog {
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
     if (campaign.isPresent()) {
-      character = Characters.getCharacter(getArguments().getString(ARG_ID)).getValue();
+      character = Character.asLocal(
+          Characters.getCharacter(getArguments().getString(ARG_ID)).getValue());
     } else {
       character = Optional.empty();
     }
@@ -93,12 +95,12 @@ public class AbilitiesDialog extends Dialog {
 
   @Override
   protected void createContent(View view) {
-    strength = (EditAbility) view.findViewById(R.id.strength);
-    dexterity = (EditAbility) view.findViewById(R.id.dexterity);
-    constitution = (EditAbility) view.findViewById(R.id.constitution);
-    intelligence = (EditAbility) view.findViewById(R.id.intelligence);
-    wisdom = (EditAbility) view.findViewById(R.id.wisdom);
-    charisma = (EditAbility) view.findViewById(R.id.charisma);
+    strength = view.findViewById(R.id.strength);
+    dexterity = view.findViewById(R.id.dexterity);
+    constitution = view.findViewById(R.id.constitution);
+    intelligence = view.findViewById(R.id.intelligence);
+    wisdom = view.findViewById(R.id.wisdom);
+    charisma = view.findViewById(R.id.charisma);
     Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
 
     // Setup the layout parameters again after adding dynamic content.

@@ -49,64 +49,58 @@ public class LocalCharacter extends Character {
     return new LocalCharacter(0, "", campaignId);
   }
 
-  @Override
+  public LocalCharacter asLocal() {
+    return this;
+  }
+
   public void setCampaignId(String campaignId) {
     this.campaignId = campaignId;
   }
 
-  @Override
   public void setRace(String name) {
     mRace = Entries.get().getMonsters().get(name);
   }
 
-  @Override
   public void setGender(Gender gender) {
     this.gender = gender;
   }
 
-  @Override
   public void setStrength(int strength) {
     if (this.strength != strength) {
       this.strength = strength;
     }
   }
 
-  @Override
   public void setConstitution(int constitution) {
     if (this.constitution != constitution) {
       this.constitution = constitution;
     }
   }
 
-  @Override
   public void setDexterity(int dexterity) {
     if (this.dexterity != dexterity) {
       this.dexterity = dexterity;
     }
   }
 
-  @Override
   public void setIntelligence(int intelligence) {
     if (this.intelligence != intelligence) {
       this.intelligence = intelligence;
     }
   }
 
-  @Override
   public void setWisdom(int wisdom) {
     if (this.wisdom != wisdom) {
       this.wisdom = wisdom;
     }
   }
 
-  @Override
   public void setCharisma(int charisma) {
     if (this.charisma != charisma) {
       this.charisma = charisma;
     }
   }
 
-  @Override
   public void setBattle(int initiative, int number) {
     this.initiative = initiative;
     this.initiativeRandom = RANDOM.nextInt(100_000);
@@ -125,13 +119,6 @@ public class LocalCharacter extends Character {
     store();
   }
 
-  @Override
-  public void clearInitiative() {
-    this.initiative = NO_INITIATIVE;
-    store();
-  }
-
-  @Override
   public void setXp(int xp) {
     this.xp = xp;
   }
@@ -142,7 +129,6 @@ public class LocalCharacter extends Character {
     store();
   }
 
-  @Override
   public void setLevel(int index, Level level) {
     if(levels.size() > index) {
       levels.set(index, level);
@@ -151,13 +137,11 @@ public class LocalCharacter extends Character {
     }
   }
 
-  @Override
   public void addLevel(Character.Level level) {
     levels.add(level);
   }
 
   // TODO: remove this once we properly support level objets.
-  @Override
   public void setLevel(int level) {
     levels.clear();
     for (int i = 0; i < level; i++) {

@@ -29,6 +29,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 
@@ -91,7 +92,8 @@ public class ClientMessageProcessor extends MessageProcessor {
   }
 
   private void addXpAward(String senderId, long messageId, String characterId, int xp) {
-    Optional<Character> character = Characters.getCharacter(characterId).getValue();
+    Optional<LocalCharacter> character =
+        Character.asLocal(Characters.getCharacter(characterId).getValue());
     if (character.isPresent()) {
       character.get().addXp(xp);
       CompanionMessenger.get().sendAckToServer(senderId, messageId);

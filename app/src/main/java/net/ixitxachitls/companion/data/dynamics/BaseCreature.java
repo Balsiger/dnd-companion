@@ -25,12 +25,14 @@ import android.net.Uri;
 
 import com.google.protobuf.MessageLite;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Monster;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
+import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
 
 import java.util.ArrayList;
@@ -73,6 +75,10 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return campaignId;
   }
 
+  public Optional<Campaign> getCampaign() {
+    return Campaigns.getCampaign(campaignId).getValue();
+  }
+
   public String getCreatureId() {
     return entryId;
   }
@@ -111,14 +117,32 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
 
   public void addInitiatedCondition(TargetedTimedCondition condition) {
-    initiatedConditions.add(condition);
+    if (isLocal()) {
+      initiatedConditions.add(condition);
+      store();
 
-    store();
+      // Send the condition to all affected characters/cratures.
+      for (String id : condition.getTargetIds()) {
+        Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(id);
+        if (creature.isPresent()) {
+          creature.get().addAffectedCondition(condition.getTimedCondition());
+        } else {
+          Status.error("Cannot affect " + id + " with condition " + condition);
+        }
+      }
+
+    } else {
+      Status.error("Cannot add initiated condition to remote character or creature.");
+    }
   }
 
   public void addAffectedCondition(TimedCondition condition) {
-    affectedConditions.add(condition);
-    store();
+    if (isLocal()) {
+      affectedConditions.add(condition);
+      store();
+    } else {
+      CompanionMessenger.get().send(this, condition);
+    }
   }
 
   public void removeInitiatedCondition(String name) {

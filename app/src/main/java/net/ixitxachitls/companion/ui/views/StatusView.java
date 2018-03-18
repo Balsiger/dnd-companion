@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -38,9 +39,12 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessenger;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -76,7 +80,7 @@ public class StatusView extends LinearLayout {
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));
-    online = (IconView) view.findViewById(R.id.online);
+    online = view.findViewById(R.id.online);
     online.setAction(this::restart);
     messagesScroll = view.findViewById(R.id.messages_scroll);
     messages = TextWrapper.wrap(view, R.id.messages)
@@ -91,6 +95,14 @@ public class StatusView extends LinearLayout {
         messagesScroll.setVisibility(data ? VISIBLE : GONE); });
 
     addView(view);
+  }
+
+  public void showException(String message, Exception e) {
+    StringWriter writer = new StringWriter();
+    PrintWriter printWriter = new PrintWriter(writer);
+    e.printStackTrace(printWriter);
+    new ConfirmationDialog(getContext()).title(message).message(writer.toString()).noNo().show();
+    printWriter.close();
   }
 
   private void toggleDebug() {
@@ -121,7 +133,19 @@ public class StatusView extends LinearLayout {
   }
 
   public void addMessage(String message) {
-    messages.text(messages.getText() + message + "\n");
+    messages.append(Html.fromHtml("<div>" + message + "</div>", Html.FROM_HTML_MODE_COMPACT));
+    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
+  }
+
+  public void addWarningMessage(String message) {
+    messages.append(Html.fromHtml("<div><b>" + message + "</b></div>",
+        Html.FROM_HTML_MODE_COMPACT));
+    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
+  }
+
+  public void addErrorMessage(String message) {
+    messages.append(Html.fromHtml("<div><b><font color=\"red\">" + message + "</font></b></div>",
+        Html.FROM_HTML_MODE_COMPACT));
     messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
   }
 

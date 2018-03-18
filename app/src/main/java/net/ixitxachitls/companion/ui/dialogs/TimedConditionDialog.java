@@ -45,7 +45,6 @@ import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -257,16 +256,11 @@ public class TimedConditionDialog extends Dialog {
     if (!ids.isEmpty() && !rounds.getText().isEmpty()) {
       int rounds = Integer.parseInt(this.rounds.getText());
       if (rounds > 0) {
-        // TODO(merlin): Move this into character
         TimedCondition timed = new TimedCondition(new Condition(condition.getText(),
             description.getText(), summary.getText(), Duration.rounds(rounds), predefined),
             id, currentRound + rounds);
         if (creature.isPresent() && !condition.getText().isEmpty()) {
           creature.get().addInitiatedCondition(new TargetedTimedCondition(timed, ids));
-        }
-
-        for (String id : ids) {
-          CompanionMessenger.get().send(id, timed);
         }
       }
     }

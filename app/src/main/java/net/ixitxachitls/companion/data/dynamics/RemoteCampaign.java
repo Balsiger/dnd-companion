@@ -36,7 +36,7 @@ public class RemoteCampaign extends Campaign {
 
   public static final String TABLE = Campaign.TABLE + "_remote";
 
-  protected RemoteCampaign(long id, String name) {
+  private RemoteCampaign(long id, String name) {
     super(id, name, false, DataBaseContentProvider.CAMPAIGNS_REMOTE);
   }
 
@@ -60,19 +60,8 @@ public class RemoteCampaign extends Campaign {
     return CompanionMessenger.get().isOnline(this);
   }
 
-  @Override
   public void setDate(CampaignDate date) {
     Status.toast("Cannot set the date of a remote campaign!");
-  }
-
-  @Override
-  public void publish() {
-    Status.toast("Cannot publish a remote campaign!");
-  }
-
-  @Override
-  public void unpublish() {
-    Status.toast("Cannot unpublish a remote campaign!");
   }
 
   public static RemoteCampaign fromProto(long id, Data.CampaignProto proto) {

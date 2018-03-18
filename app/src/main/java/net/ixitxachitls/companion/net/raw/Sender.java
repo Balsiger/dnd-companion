@@ -68,9 +68,10 @@ class Sender implements Runnable {
           + ScheduledMessage.info(message.getHeader().getReceiver()));
       message.writeDelimitedTo(socket.getOutputStream());
     } catch (UnknownHostException e) {
-      Status.log("Unknown Host: ", e);
+      Status.exception("Unknown Host: ", e);
     } catch (IOException e) {
-      Status.log("I/O Exception", e);
+      Status.exception("I/O Exception", e);
+
     }
   }
 }

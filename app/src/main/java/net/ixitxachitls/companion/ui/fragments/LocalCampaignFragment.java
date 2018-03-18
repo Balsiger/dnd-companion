@@ -110,7 +110,7 @@ public class LocalCampaignFragment extends CampaignFragment {
       return;
     }
 
-    campaign.publish();
+    campaign.asLocal().publish();
   }
 
   private void unpublish() {
@@ -118,7 +118,7 @@ public class LocalCampaignFragment extends CampaignFragment {
       return;
     }
 
-    campaign.unpublish();
+    campaign.asLocal().unpublish();
   }
 
   private void editDate() {
