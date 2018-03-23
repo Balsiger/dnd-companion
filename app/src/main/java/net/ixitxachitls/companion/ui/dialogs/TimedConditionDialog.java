@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Player Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Player Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Player Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Player Companion; if not, write to the Free Software
+ * along with the Tabletop Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -88,17 +88,6 @@ public class TimedConditionDialog extends Dialog {
     TimedConditionDialog dialog = new TimedConditionDialog();
     dialog.setArguments(arguments(R.layout.dialog_timed_condition,
         R.string.edit_timed_condition, R.color.character, creatureOrCampaignId, currentRound));
-    return dialog;
-  }
-
-  public static TimedConditionDialog displaySurprised(Campaign campaign) {
-    TimedConditionDialog dialog = newInstance(campaign.getCampaignId(), 0);
-    dialog.display();
-    dialog.selectCondition(Optional.of(Conditions.SURPRISED));
-    dialog.rounds.text("1");
-    dialog.save.get().setFocusableInTouchMode(true);
-    dialog.save.get().requestFocus();
-
     return dialog;
   }
 
@@ -230,8 +219,7 @@ public class TimedConditionDialog extends Dialog {
   }
 
   private void updateSave() {
-    save.enabled((!rounds.getText().isEmpty() && targetSelected())
-        || condition.getText().equals(Conditions.SURPRISED.getName()));
+    save.enabled((!rounds.getText().isEmpty() && targetSelected()));
   }
 
   private boolean targetSelected() {
@@ -256,8 +244,9 @@ public class TimedConditionDialog extends Dialog {
     if (!ids.isEmpty() && !rounds.getText().isEmpty()) {
       int rounds = Integer.parseInt(this.rounds.getText());
       if (rounds > 0) {
-        TimedCondition timed = new TimedCondition(new Condition(condition.getText(),
-            description.getText(), summary.getText(), Duration.rounds(rounds), predefined),
+        TimedCondition timed = new TimedCondition(Condition.newBuilder(condition.getText())
+            .description(description.getText()).summary(summary.getText())
+            .duration(Duration.rounds(rounds)).predefined(predefined).build(),
             id, currentRound + rounds);
         if (creature.isPresent() && !condition.getText().isEmpty()) {
           creature.get().addInitiatedCondition(new TargetedTimedCondition(timed, ids));

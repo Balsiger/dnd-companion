@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Player Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Player Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Player Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Player Companion; if not, write to the Free Software
+ * along with the Tabletop Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -46,12 +46,14 @@ public abstract class Dialog extends DialogFragment {
   private static final String ARG_TITLE = "title";
   private static final String ARG_TITLE_STRING = "title-string";
   private static final String ARG_COLOR = "color";
+  private static final String ARG_TEXT_COLOR = "text-color";
   private static final int WIDTH = 1500;
 
   // The following values are only filled after onCreate().
   protected int layoutId;
   protected String title;
   protected int color;
+  protected int textColor;
 
   private View content;
 
@@ -68,11 +70,33 @@ public abstract class Dialog extends DialogFragment {
     return arguments;
   }
 
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int color, @ColorRes int textColor) {
+    Bundle arguments = new Bundle();
+    arguments.putInt(ARG_LAYOUT, layoutId);
+    arguments.putInt(ARG_TITLE, titleId);
+    arguments.putInt(ARG_COLOR, color);
+    arguments.putInt(ARG_TEXT_COLOR, textColor);
+
+    return arguments;
+  }
+
   protected static Bundle arguments(@LayoutRes int layoutId, String title, @ColorRes int color) {
     Bundle arguments = new Bundle();
     arguments.putInt(ARG_LAYOUT, layoutId);
     arguments.putString(ARG_TITLE_STRING, title);
     arguments.putInt(ARG_COLOR, color);
+
+    return arguments;
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, String title, @ColorRes int color,
+                                    @ColorRes int textColor) {
+    Bundle arguments = new Bundle();
+    arguments.putInt(ARG_LAYOUT, layoutId);
+    arguments.putString(ARG_TITLE_STRING, title);
+    arguments.putInt(ARG_COLOR, color);
+    arguments.putInt(ARG_TEXT_COLOR, textColor);
 
     return arguments;
   }
@@ -83,15 +107,17 @@ public abstract class Dialog extends DialogFragment {
 
     if (getArguments() != null) {
       layoutId = getArguments().getInt(ARG_LAYOUT);
-      title = getArguments().getString(ARG_TITLE_STRING);
+      title = getArguments().getString(ARG_TITLE_STRING, "");
       if (title == null || title.isEmpty()) {
         title = getString(getArguments().getInt(ARG_TITLE));
       }
-      color = getArguments().getInt(ARG_COLOR);
+      color = getArguments().getInt(ARG_COLOR, 0);
+      textColor = getArguments().getInt(ARG_TEXT_COLOR, 0);
     } else {
       layoutId = 0;
       title = "";
       color = 0;
+      textColor = 0;
     }
   }
 
@@ -106,6 +132,9 @@ public abstract class Dialog extends DialogFragment {
     TextView titleView = view.findViewById(R.id.title);
     titleView.setText(title);
     titleView.setBackgroundColor(getResources().getColor(color, null));
+    if (textColor != 0) {
+      titleView.setTextColor(getResources().getColor(textColor, null));
+    }
 
     content = inflater.inflate(layoutId, container, false);
     createContent(content);

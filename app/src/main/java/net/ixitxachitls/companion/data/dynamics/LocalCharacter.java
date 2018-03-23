@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Player Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Player Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Player Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Player Companion; if not, write to the Free Software
+ * along with the Tabletop Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -27,13 +27,10 @@ import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
-import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
-import java.util.Iterator;
 import java.util.stream.Collectors;
 
 /**
@@ -109,13 +106,8 @@ public class LocalCharacter extends Character {
     // TODO(merlin): If we want to support long running conditions outside of battle, this has to
     // change.
     this.initiatedConditions.clear();
+    this.affectedConditions.clear();
 
-    // Clear all conditions exception surprised, as we only just added it.
-    for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
-      if (!i.next().getName().equals(Conditions.SURPRISED.getName())) {
-        i.remove();
-      }
-    }
     store();
   }
 

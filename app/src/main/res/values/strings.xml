@@ -94,5 +94,6 @@
   <string name="edit_timed_condition">Create a timed condition</string>
   <string name="title_xp_rewards">XP Rewards</string>
   <string name="action_clear_messages">Clear Messages</string>
+  <string name="dialog_title_start_battle">Start a Battle!</string>
 
 </resources>

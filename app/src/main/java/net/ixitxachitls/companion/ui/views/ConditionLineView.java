@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Player Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Player Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Player Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Player Companion; if not, write to the Free Software
+ * along with the Tabletop Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -29,13 +29,9 @@ import android.widget.LinearLayout;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
-import net.ixitxachitls.companion.data.dynamics.StoredEntry;
 import net.ixitxachitls.companion.data.values.TimedCondition;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -70,7 +66,7 @@ public class ConditionLineView extends LinearLayout {
 
     if (affected) {
       TextWrapper.wrap(view, R.id.name)
-          .text(condition.getName() + " (from " + sourceName + ")");
+          .text(condition.getName() + (sourceName.isEmpty() ? "" : " (from " + sourceName + ")"));
     } else {
       TextWrapper.wrap(view, R.id.name)
           .text(condition.getName() + " (affecting " +
@@ -104,23 +100,20 @@ public class ConditionLineView extends LinearLayout {
 
   private void deleteCondition() {
     for (String targetId : targetIds) {
-      CompanionMessenger.get().sendDeletion(condition.getName(), sourceId, targetId);
+      Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
+      if (creature.isPresent()) {
+        creature.get().removeAffectedCondition(condition.getName(), sourceId);
+      }
     }
 
     if (initiated) {
-      Optional<? extends BaseCreature> creature;
-      if (StoredEntry.hasType(sourceId, Character.TYPE)) {
-        creature = Characters.getCharacter(sourceId).getValue();
-      } else {
-        creature = Creatures.getCreature(sourceId).getValue();
-      }
-
+      Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(sourceId);
       if (creature.isPresent()) {
-        Status.log("Remving initiated condition " + condition.getName() + " from "
+        Status.log("Removing initiated condition " + condition.getName() + " from "
             + creature.get().getName());
         creature.get().removeInitiatedCondition(condition.getName());
       } else {
-        Status.log("Cannot remove initiated condtion for creature " + sourceId);
+        Status.error("Cannot remove initiated condtion for creature " + sourceId);
       }
     }
   }

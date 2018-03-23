@@ -2,24 +2,26 @@
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Player Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Player Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Player Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Player Companion; if not, write to the Free Software
+ * along with the Tabletop Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
 package net.ixitxachitls.companion.data.values;
+
+import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
@@ -29,7 +31,7 @@ import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.rules.Conditions;
-import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
+import net.ixitxachitls.companion.ui.dialogs.StartBattleDialog;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -50,20 +52,27 @@ public class Battle {
   private BattleStatus status;
   private Optional<String> lastMonsterName = Optional.empty();
   private List<String> creatureIds = new ArrayList<>();
+  private List<String> surprisedCreatureIds = new ArrayList<>();
   private int currentCreatureIndex;
 
   public Battle(Campaign campaign) {
-    this(campaign, 0, BattleStatus.ENDED, 0, Collections.emptyList(), 0);
+    this(campaign, 0, BattleStatus.ENDED, 0, Collections.emptyList(), Collections.emptyList(), 0);
   }
 
   private Battle(Campaign campaign, int number, BattleStatus status, int turn,
-                 List<String> creatureIds, int currentCreatureIndex) {
+                 List<String> creatureIds, List<String> surprisedCreatureIds,
+                 int currentCreatureIndex) {
     this.campaign = campaign;
     this.number = number;
     this.status = status;
     this.turn = turn;
     this.currentCreatureIndex = currentCreatureIndex;
     this.creatureIds.addAll(creatureIds);
+    this.surprisedCreatureIds.addAll(surprisedCreatureIds);
+  }
+
+  public List<String> getCreatureIds() {
+    return creatureIds;
   }
 
   public BattleStatus getStatus() {
@@ -119,35 +128,44 @@ public class Battle {
     return index >= 0 && index < currentCreatureIndex;
   }
 
-  public void setup() {
-    status = BattleStatus.STARTING;
-    number++;
-    store();
+  public boolean acting(String creatureId) {
+    int index = creatureIds.indexOf(creatureId);
+    return index >= 0 && index <= currentCreatureIndex;
+  }
 
-    if (Settings.get().isEnabled("flatfooted")) {
-      TimedConditionDialog.displaySurprised(campaign);
+  public void setup() {
+    number++;
+    if (Settings.get().isEnabled("battlestart")) {
+      StartBattleDialog.newInstance(campaign.getCampaignId()).display();
+    } else {
+      starting(obtainCreatureIds(), ImmutableList.of());
     }
+
+    store();
+  }
+
+  public void starting(List<String> includedCreatureIds, List<String> surprisedCreatureIds) {
+    status = BattleStatus.STARTING;
+    this.creatureIds.clear();
+    this.creatureIds.addAll(includedCreatureIds);
+    this.surprisedCreatureIds.clear();
+    this.surprisedCreatureIds.addAll(surprisedCreatureIds);
+
+    store();
   }
 
   public void start() {
-    currentCreatureIndex = 0;
+    currentCreatureIndex = -1;
     turn = 0;
-    creatureIds = obtainCreatureIds();
     status = BattleStatus.SURPRISED;
+    toNextUnsurprised();
 
     // Add flat-footed to all creatures.
-
-    if (Settings.get().isEnabled("flatfooted")) {
-      // TODO(merlin): This does not work for remote characters!!
+    if (Settings.get().isEnabled("battlestart")) {
       for (String creatureId : creatureIds) {
         Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(creatureId);
         if (creature.isPresent()) {
-          int rounds = 0;
-          if (creature.get().hasAffectedCondition(Conditions.SURPRISED.getName())) {
-            rounds = 1;
-            creature.get().removeAllAffectedConditions(Conditions.SURPRISED.getName());
-          }
-
+          int rounds = surprisedCreatureIds.contains(creatureId) ? 1 : 0;
           creature.get().addAffectedCondition(
               new TimedCondition(Conditions.FLAT_FOOTED, creatureId, rounds));
         }
@@ -165,11 +183,20 @@ public class Battle {
     }
 
     List<BaseCreature> creatures = new ArrayList<>();
-    for (String id : campaign.getCreatureIds().getValue()) {
-      creatures.add(Creatures.getCreature(id).getValue().get());
-    }
-    for (String id : campaign.getCharacterIds().getValue()) {
-      creatures.add(Characters.getCharacter(id).getValue().get());
+    if (status == BattleStatus.STARTING && Settings.get().isEnabled("battlestart")) {
+      for (String id : creatureIds) {
+        Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(id);
+        if (creature.isPresent()) {
+          creatures.add(creature.get());
+        }
+      }
+    } else {
+      for (String id : campaign.getCreatureIds().getValue()) {
+        creatures.add(Creatures.getCreature(id).getValue().get());
+      }
+      for (String id : campaign.getCharacterIds().getValue()) {
+        creatures.add(Characters.getCharacter(id).getValue().get());
+      }
     }
 
     creatures.sort(new InitiativeComparator());
@@ -177,17 +204,44 @@ public class Battle {
     return creatures.stream().map(BaseCreature::getCreatureId).collect(Collectors.toList());
   }
 
-  public void creatureDone() {
-    currentCreatureIndex++;
-    if (currentCreatureIndex >= creatureIds.size()) {
-      nextTurn();
+  public List<String> sortCreatures(List<String> creatureIds) {
+    List<BaseCreature> creatures = new ArrayList<>();
+    for (String id : creatureIds) {
+      Optional<? extends BaseCreature> creature = Creatures.getCreature(id).getValue();
+      if (creature.isPresent()) {
+        creatures.add(creature.get());
+      }
     }
 
-    store();
+    creatures.sort(new InitiativeComparator());
+    return creatures.stream().map(BaseCreature::getCreatureId).collect(Collectors.toList());
+  }
+
+  public void creatureDone() {
+    toNextUnsurprised();
   }
 
   public void skipTurn() {
     nextTurn();
+    store();
+  }
+
+  private void toNextUnsurprised() {
+    if (status == BattleStatus.SURPRISED) {
+      while (currentCreatureIndex < creatureIds.size()) {
+        currentCreatureIndex++;
+        if (!surprisedCreatureIds.contains(getCurrentCreatureId())) {
+          break;
+        }
+      }
+    } else {
+      currentCreatureIndex++;
+    }
+
+    if (currentCreatureIndex >= creatureIds.size()) {
+      nextTurn();
+    }
+
     store();
   }
 
@@ -213,6 +267,7 @@ public class Battle {
   public void end() {
     status = BattleStatus.ENDED;
 
+    // Remove all monsters used in the battle.
     for (String creatureId : campaign.getCreatureIds().getValue()) {
       Creatures.remove(creatureId);
     }
@@ -265,6 +320,7 @@ public class Battle {
         .setTurn(turn)
         .setNumber(number)
         .addAllCreatureId(creatureIds)
+        .addAllSurprisedCreatureId(surprisedCreatureIds)
         .setCurrentCreatureIndex(currentCreatureIndex);
 
     return proto.build();
@@ -272,7 +328,8 @@ public class Battle {
 
   public static Battle fromProto(Campaign campaign, Data.CampaignProto.Battle proto) {
     return new Battle(campaign, proto.getNumber(), BattleStatus.fromProto(proto.getStatus()),
-        proto.getTurn(), proto.getCreatureIdList(), proto.getCurrentCreatureIndex());
+        proto.getTurn(), proto.getCreatureIdList(), proto.getSurprisedCreatureIdList(),
+        proto.getCurrentCreatureIndex());
   }
 
   public boolean currentIsLast() {

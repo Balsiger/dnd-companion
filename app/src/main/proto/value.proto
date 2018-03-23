@@ -297,6 +297,7 @@ message ConditionProto {
   string description = 2;
   string summary = 3;
   DurationProto duration = 4;
+  bool ends_before_turn = 5;
 }
 
 message TimedConditionProto {

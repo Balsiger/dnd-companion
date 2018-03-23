@@ -27,6 +27,7 @@ message CampaignProto {
     int32 number = 3;
     repeated string creature_id = 4;
     int32 current_creature_index = 5;
+    repeated string surprised_creature_id = 6;
   }
   Battle battle = 8;
   int32 next_battle_number = 9;

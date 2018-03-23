@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Player Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Player Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Player Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Player Companion; if not, write to the Free Software
+ * along with the Tabletop Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -94,6 +94,7 @@ public class CreaturesData extends StoredEntries<Creature> {
   public void add(Creature creature) {
     super.add(creature);
 
+    /*
     // We need to check for null since ids will be setup only after the super constructor is run.
     if (creaturesByCampaignId != null) {
       MutableLiveData<ImmutableList<String>> ids =
@@ -105,6 +106,23 @@ public class CreaturesData extends StoredEntries<Creature> {
 
       LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids(creature.getCampaignId())));
     }
+    */
+  }
+
+  @Override
+  public void remove(Creature creature) {
+    super.remove(creature);
+
+    if (creatureById.containsKey(creature.getCreatureId())) {
+      creatureById.get(creature.getCreatureId()).setValue(Optional.empty());
+    }
+
+    /*
+    if (creaturesByCampaignId.containsKey(creature.getCampaignId())) {
+      creaturesByCampaignId.get(creature.getCampaignId())
+          .setValue(ImmutableList.copyOf(ids(creature.getCampaignId())));
+    }
+    */
   }
 
   public List<String> ids(String campaignId) {

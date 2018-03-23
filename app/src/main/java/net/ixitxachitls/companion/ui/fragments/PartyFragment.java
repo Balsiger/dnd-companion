@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Player Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Player Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Player Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Player Companion; if not, write to the Free Software
+ * along with the Tabletop Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -177,8 +177,6 @@ public class PartyFragment extends Fragment {
         startBattle.visible(this.campaign.isLocal() && !this.campaign.isDefault());
         conditions.setVisibility(View.VISIBLE);
       }
-
-      conditions.removeAllViews();
     }
   }
 
@@ -208,7 +206,7 @@ public class PartyFragment extends Fragment {
       }
     }
 
-    // Remove any character needing initative that are not more available.
+    // Remove any character needing initative that are no more available.
     for (Iterator<String> i = charactersNeedingInitiative.keySet().iterator(); i.hasNext(); ) {
       if (!characterIds.contains(i.next())) {
         i.remove();
@@ -224,12 +222,8 @@ public class PartyFragment extends Fragment {
     // Only add monster chips for local campaigns (the DM).
     if (campaign.isLocal()) {
       // Remove all chips for which we don't have creatures anymore.
-      for (Iterator<String> i = chipsById.keySet().iterator(); i.hasNext(); ) {
-        String chipId = i.next();
-        if (chipId.startsWith(Creature.TYPE) && !creatureIds.contains(chipId)) {
-          i.remove();
-        }
-      }
+      chipsById.keySet()
+          .removeIf(chipId -> chipId.startsWith(Creature.TYPE) && !creatureIds.contains(chipId));
 
       // Add all new chips.
       for (String creatureId : creatureIds) {
@@ -242,12 +236,7 @@ public class PartyFragment extends Fragment {
         }
       }
     } else {
-      for (Iterator<String> i = chipsById.keySet().iterator(); i.hasNext(); ) {
-        String chipId = i.next();
-        if (chipId.startsWith(Creature.TYPE)) {
-          i.remove();
-        }
-      }
+      chipsById.keySet().removeIf(chipId -> chipId.startsWith(Creature.TYPE));
     }
 
     redrawChips();
@@ -267,8 +256,8 @@ public class PartyFragment extends Fragment {
     if (character.isPresent()) {
       if (character.get().hasInitiative()) {
         charactersNeedingInitiative.remove(character.get().getCharacterId());
-      } else {
-        if (character.get().isLocal())
+      } else if (character.get().isLocal()
+          && campaign.getBattle().getCreatureIds().contains(character.get().getCharacterId())) {
         charactersNeedingInitiative.put(character.get().getCharacterId(), character.get());
       }
 
@@ -329,13 +318,16 @@ public class PartyFragment extends Fragment {
 
   private void startBattle() {
     if (!campaign.isLocal()) {
+      Status.error("Cannot start battle in a remote campaign.");
       return;
     }
 
     if (campaign.getCharacters().isEmpty()) {
+      Status.error("Cannot start battle without characters");
       return;
     }
 
+    charactersNeedingInitiative.clear();
     campaign.getBattle().setup();
   }
 

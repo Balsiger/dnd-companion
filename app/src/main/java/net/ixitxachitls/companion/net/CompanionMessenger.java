@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Player Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Player Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Player Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Player Companion; if not, write to the Free Software
+ * along with the Tabletop Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -47,7 +47,7 @@ import java.util.Set;
  */
 public class CompanionMessenger implements Runnable {
 
-  public static final int DELAY_MILLIS = 1_000;
+  private static final int DELAY_MILLIS = 1_000;
   private static CompanionMessenger singleton;
 
   private final Handler handler;
@@ -270,31 +270,23 @@ public class CompanionMessenger implements Runnable {
     }
   }
 
-  public void sendDeletion(String conditionName, String sourceId, String targetId) {
+  public void sendDeletion(String conditionName, String sourceId, BaseCreature creature) {
     Status.log("handling condition deletion for " + conditionName + " from "
-        + StoredEntries.nameFor(sourceId) + " to " + StoredEntries.nameFor(targetId));
-    Optional<Character> character = Characters.getCharacter(targetId).getValue();
-    if (character.isPresent()) {
-      if (character.get().isLocal()) {
-        character.get().removeAffectedCondition(conditionName, sourceId);
+        + StoredEntries.nameFor(sourceId) + " to "
+        + StoredEntries.nameFor(creature.getCreatureId()));
+    Optional<Campaign> campaign = Campaigns.getCampaign(creature.getCampaignId()).getValue();
+    if (campaign.isPresent()) {
+      if (campaign.get().isLocal()) {
+        companionServer.schedule(Ids.extractServerId(creature.getCreatureId()),
+            CompanionMessageData.fromDelete(conditionName, sourceId, creature.getCreatureId()));
       } else {
-        Optional<Campaign> campaign =
-            Campaigns.getCampaign(character.get().getCampaignId()).getValue();
-        if (campaign.isPresent()) {
-          if (campaign.get().isLocal()) {
-            companionServer.schedule(Ids.extractServerId(targetId),
-                CompanionMessageData.fromDelete(conditionName, sourceId, targetId));
-          } else {
-            companionClients.schedule(campaign.get().getServerId(),
-                CompanionMessageData.fromDelete(conditionName, sourceId, targetId));
-          }
-        } else {
-          Status.log("Cannot send condition deleteion for " + StoredEntries.nameFor(targetId)
-              + " for unknown campaign " + character.get().getCampaignId());
-        }
+        companionClients.schedule(campaign.get().getServerId(),
+            CompanionMessageData.fromDelete(conditionName, sourceId, creature.getCreatureId()));
       }
     } else {
-      Status.log("Cannot send condition delete to unknown character " + targetId);
+      Status.log("Cannot send condition deleteion for "
+          + StoredEntries.nameFor(creature.getCreatureId()) + " for unknown campaign "
+          + creature.getCampaignId());
     }
   }
 
