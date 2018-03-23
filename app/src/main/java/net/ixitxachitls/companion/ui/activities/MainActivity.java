@@ -44,6 +44,7 @@ import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.views.StatusView;
 
@@ -102,58 +103,67 @@ public class MainActivity extends AppCompatActivity {
       return true;
     }
 
-    if (id == R.id.action_export) {
-      List<DriveStorage.File> files = new ArrayList<>();
-      // Export local campaigns.
-      for (Campaign campaign : Campaigns.getLocalCampaigns()) {
-        files.add(new DriveStorage.TextFile(campaign.getName() + ".campaign.txt",
-            campaign.getCampaignId(), "text/plain", "# This file will not be re-imported."
-            + campaign.toProto().toString()));
-        files.add(new DriveStorage.BinaryFile(campaign.getName() + ".campaign",
-            campaign.getCampaignId(), "application/x-protobuf", campaign.toProto().toByteArray()));
-      }
-      // Export local characters.
-      for (Character character : Characters.getLocalCharacters()) {
-        files.add(new DriveStorage.TextFile(character.getName() + ".character.txt",
-            character.getCharacterId(), "text/plain", "# This file will not be re-imported."
-            + character.toProto().toString()));
-        files.add(new DriveStorage.BinaryFile(character.getName() + ".character",
-            character.getCharacterId(), "application/x-protobuf", character.toProto().toByteArray()));
-        Optional<InputStream> image =
-            Images.local().read(Character.TABLE, character.getCharacterId());
-        if (image.isPresent()) {
-          files.add(new DriveStorage.StreamFile(character.getName() + ".character.jpg",
-              character.getCharacterId(), "image/jpeg", image.get()));
+    switch(id) {
+
+      case R.id.action_export: {
+        List<DriveStorage.File> files = new ArrayList<>();
+        // Export local campaigns.
+        for (Campaign campaign : Campaigns.getLocalCampaigns()) {
+          files.add(new DriveStorage.TextFile(campaign.getName() + ".campaign.txt",
+              campaign.getCampaignId(), "text/plain", "# This file will not be re-imported."
+              + campaign.toProto().toString()));
+          files.add(new DriveStorage.BinaryFile(campaign.getName() + ".campaign",
+              campaign.getCampaignId(), "application/x-protobuf", campaign.toProto().toByteArray()));
         }
+        // Export local characters.
+        for (Character character : Characters.getLocalCharacters()) {
+          files.add(new DriveStorage.TextFile(character.getName() + ".character.txt",
+              character.getCharacterId(), "text/plain", "# This file will not be re-imported."
+              + character.toProto().toString()));
+          files.add(new DriveStorage.BinaryFile(character.getName() + ".character",
+              character.getCharacterId(), "application/x-protobuf", character.toProto().toByteArray()));
+          Optional<InputStream> image =
+              Images.local().read(Character.TABLE, character.getCharacterId());
+          if (image.isPresent()) {
+            files.add(new DriveStorage.StreamFile(character.getName() + ".character.jpg",
+                character.getCharacterId(), "image/jpeg", image.get()));
+          }
+        }
+
+        driveStorage.start(new DriveStorage.Export(files));
+        return true;
       }
 
-      driveStorage.start(new DriveStorage.Export(files));
-    }
+      case R.id.action_import:
+        driveStorage.start(new DriveStorage.SelectImportFolder());
+        return true;
 
-    if (id == R.id.action_import) {
-      driveStorage.start(new DriveStorage.SelectImportFolder());
-    }
+      case R.id.action_reset:
+        ConfirmationDialog.create(this)
+            .title("Reset All Data")
+            .message("Do you really want to delete all data? This step cannot be undone!")
+            .yes(() -> DataBaseContentProvider.reset(getApplicationContext(), getContentResolver()))
+            .show();
+        return true;
 
-    if (id == R.id.action_reset) {
-      ConfirmationDialog.create(this)
-          .title("Reset All Data")
-          .message("Do you really want to delete all data? This step cannot be undone!")
-          .yes(() -> DataBaseContentProvider.reset(getApplicationContext(), getContentResolver()))
-          .show();
-      return true;
-    }
+      case R.id.action_clear_messages:
+        ConfirmationDialog.create(this)
+            .title("Clear Messages")
+            .message("Do you really want to clear all pending messages? This step cannot be undone!")
 
-    if (id == R.id.action_clear_messages) {
-      ConfirmationDialog.create(this)
-          .title("Clear Messages")
-          .message("Do you really want to clear all pending messages? This step cannot be undone!")
-          .yes(() -> DataBaseContentProvider.clearMessages(
-              getApplicationContext(), getContentResolver()))
-          .show();
-      return true;
-    }
+            .yes(() -> DataBaseContentProvider.clearMessages(
+                getApplicationContext(), getContentResolver()))
+            .show();
+        return true;
 
-    return super.onOptionsItemSelected(item);
+      case R.id.action_about:
+        MessageDialog.create(this)
+            .layout(R.layout.dialog_about)
+            .show();
+
+      default:
+        return super.onOptionsItemSelected(item);
+    }
   }
 
   @Override

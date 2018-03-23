@@ -1,12 +1,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="net.ixitachitls.companion.net.ixitachitls.companion.CampaignSelection">
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="net.ixitachitls.companion.net.ixitachitls.companion.CampaignSelection">
+  <group android:id="@+id/menu_main">
     <item
         android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_white_24dp"
         android:orderInCategory="100"
         android:title="@string/action_settings"
+        app:showAsAction="never|ifRoom"/>
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="@string/action_about"
         app:showAsAction="never" />
+  </group>
+
+  <group android:id="@+id/menu_import_export">
     <item
         android:id="@+id/action_export"
         android:orderInCategory="100"
@@ -17,14 +27,18 @@
         android:orderInCategory="100"
         android:title="@string/action_import"
         app:showAsAction="never" />
+  </group>
+
+  <group android:id="@+id/menu_debug">
     <item
         android:id="@+id/action_reset"
         android:orderInCategory="100"
         android:title="@string/action_reset"
-        app:showAsAction="never" />
+        app:showAsAction="never"/>
     <item
         android:id="@+id/action_clear_messages"
         android:orderInCategory="100"
         android:title="@string/action_clear_messages"
         app:showAsAction="never" />
+  </group>
 </menu>
