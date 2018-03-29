@@ -62,9 +62,7 @@ primary_attack {
       base {
         modifier: 1
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {

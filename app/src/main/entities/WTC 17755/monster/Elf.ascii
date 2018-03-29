@@ -51,9 +51,7 @@ primary_attack {
         dice: 8
         modifier: 1
       }
-      condition {
-      }
-    }
+          }
   }
 }
 primary_attack {
@@ -66,9 +64,7 @@ primary_attack {
         number: 1
         dice: 8
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -191,16 +187,12 @@ quality {
   name: "elf traits"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "low-light vision"
   parameters {
   }
-  condition {
   }
-}
 skill {
   name: "appraise"
 }

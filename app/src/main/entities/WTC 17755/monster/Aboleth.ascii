@@ -71,8 +71,6 @@ primary_attack {
         dice: 6
       }
       effect: "slime"
-      condition {
-      }
     }
   }
 }

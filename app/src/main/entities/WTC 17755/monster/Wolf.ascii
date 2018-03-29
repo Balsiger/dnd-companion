@@ -65,9 +65,7 @@ primary_attack {
         number: 1
         dice: 6
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -139,23 +137,17 @@ quality {
   name: "trip"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "low-light vision"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "scent"
   parameters {
   }
-  condition {
   }
-}
 skill {
   name: "hide"
 }

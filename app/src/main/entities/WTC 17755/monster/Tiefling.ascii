@@ -58,9 +58,7 @@ primary_attack {
     damage {
       base {
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -130,9 +128,7 @@ quality {
       text: "1"
     }
   }
-  condition {
   }
-}
 quality {
   name: "darkvision"
   parameters {
@@ -141,9 +137,7 @@ quality {
       text: "60 ft"
     }
   }
-  condition {
   }
-}
 quality {
   name: "resistance to cold"
   parameters {
@@ -152,9 +146,7 @@ quality {
       text: "5"
     }
   }
-  condition {
   }
-}
 quality {
   name: "resistance to electricity"
   parameters {
@@ -163,9 +155,7 @@ quality {
       text: "5"
     }
   }
-  condition {
   }
-}
 quality {
   name: "resistance to fire"
   parameters {
@@ -174,9 +164,7 @@ quality {
       text: "5"
     }
   }
-  condition {
   }
-}
 skill {
   name: "bluff"
   ranks: 4

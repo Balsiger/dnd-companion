@@ -72,9 +72,7 @@ primary_attack {
     damage {
       base {
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -156,9 +154,7 @@ quality {
       text: "90 ft"
     }
   }
-  condition {
   }
-}
 quality {
   name: "regeneration"
   parameters {
@@ -175,9 +171,7 @@ quality {
       text: "reattach it by holding the severed member to the stump. Reattachment takes 1 minute. If the head or some other vital organ is severed, it must be reattached within 10 minutes or the creature dies. An ogre mage cannot regrow lost body parts."
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -190,9 +184,7 @@ quality {
       text: "1"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -205,9 +197,7 @@ quality {
       text: "1"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -220,9 +210,7 @@ quality {
       text: "1"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -235,9 +223,7 @@ quality {
       text: "1"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell resistance"
   parameters {
@@ -246,23 +232,17 @@ quality {
       text: "19"
     }
   }
-  condition {
   }
-}
 quality {
   name: "low-light vision"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "flight"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -275,9 +255,7 @@ quality {
       text: "999"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -290,9 +268,7 @@ quality {
       text: "999"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -305,9 +281,7 @@ quality {
       text: "1"
     }
   }
-  condition {
   }
-}
 skill {
   name: "concentration"
   ranks: 8

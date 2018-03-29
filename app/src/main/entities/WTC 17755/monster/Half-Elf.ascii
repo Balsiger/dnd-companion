@@ -64,23 +64,18 @@ quality {
   name: "immunity to sleep effects"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "low-light vision"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "half-elf traits"
   parameters {
   }
-  condition {
   }
-}
 skill {
   name: "appraise"
 }
+main_race: true

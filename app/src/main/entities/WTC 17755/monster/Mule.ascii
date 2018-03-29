@@ -57,9 +57,7 @@ primary_attack {
         number: 1
         dice: 4
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -104,23 +102,17 @@ quality {
   name: "low-light vision"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "scent"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "surefooted"
   parameters {
   }
-  condition {
   }
-}
 skill {
   name: "listen"
   ranks: 6

@@ -73,9 +73,7 @@ primary_attack {
         modifier: 4
       }
       effect: "disease"
-      condition {
-      }
-    }
+          }
   }
 }
 space {

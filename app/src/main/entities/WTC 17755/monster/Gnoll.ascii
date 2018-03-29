@@ -52,9 +52,7 @@ primary_attack {
     damage {
       base {
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -167,9 +165,7 @@ quality {
       text: "60 ft"
     }
   }
-  condition {
   }
-}
 skill {
   name: "listen"
   ranks: 2

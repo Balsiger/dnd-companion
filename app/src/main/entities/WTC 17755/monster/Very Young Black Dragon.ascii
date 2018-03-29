@@ -76,9 +76,7 @@ primary_attack {
         number: 1
         dice: 6
       }
-      condition {
-      }
-    }
+          }
   }
 }
 secondary_attack {
@@ -93,9 +91,7 @@ secondary_attack {
         number: 1
         dice: 3
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -149,16 +145,12 @@ quality {
   name: "immunity to acid"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "water breathing"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "breath weapon"
   parameters {
@@ -187,9 +179,7 @@ quality {
       text: "line"
     }
   }
-  condition {
   }
-}
 skill {
   name: "listen"
   ranks: 6

@@ -49,9 +49,7 @@ primary_attack {
     damage {
       base {
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -169,3 +167,4 @@ skill {
   name: "move silently"
   ranks: 1
 }
+main_race: true

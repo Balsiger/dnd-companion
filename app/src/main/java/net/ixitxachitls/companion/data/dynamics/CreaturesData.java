@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Tabletop Companion; if not, write to the Free Software
+ * along with the Roleplay Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
-import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -44,8 +43,6 @@ import java.util.stream.Collectors;
 public class CreaturesData extends StoredEntries<Creature> {
 
   private final Map<String, MutableLiveData<Optional<Creature>>> creatureById =
-      new ConcurrentHashMap<>();
-  private final Map<String, MutableLiveData<ImmutableList<String>>> creaturesByCampaignId =
       new ConcurrentHashMap<>();
 
   public CreaturesData(CompanionApplication application) {
@@ -94,19 +91,11 @@ public class CreaturesData extends StoredEntries<Creature> {
   public void add(Creature creature) {
     super.add(creature);
 
-    /*
-    // We need to check for null since ids will be setup only after the super constructor is run.
-    if (creaturesByCampaignId != null) {
-      MutableLiveData<ImmutableList<String>> ids =
-          creaturesByCampaignId.get(creature.getCampaignId());
-      if (ids == null) {
-        ids = new MutableLiveData<>();
-        creaturesByCampaignId.put(creature.getCampaignId(), ids);
+    if (creatureById != null) {
+      if (creatureById.containsKey(creature.getCreatureId())) {
+        creatureById.get(creature.getCreatureId()).setValue(Optional.of(creature));
       }
-
-      LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids(creature.getCampaignId())));
     }
-    */
   }
 
   @Override
@@ -116,13 +105,6 @@ public class CreaturesData extends StoredEntries<Creature> {
     if (creatureById.containsKey(creature.getCreatureId())) {
       creatureById.get(creature.getCreatureId()).setValue(Optional.empty());
     }
-
-    /*
-    if (creaturesByCampaignId.containsKey(creature.getCampaignId())) {
-      creaturesByCampaignId.get(creature.getCampaignId())
-          .setValue(ImmutableList.copyOf(ids(creature.getCampaignId())));
-    }
-    */
   }
 
   public List<String> ids(String campaignId) {

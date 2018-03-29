@@ -2,86 +2,73 @@
  * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Tabletop Companion; if not, write to the Free Software
+ * along with the Roleplay Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
-import net.ixitxachitls.companion.data.dynamics.StoredEntries;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
-import net.ixitxachitls.companion.util.Strings;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * View for a single condition line.
  */
-public class ConditionLineView extends LinearLayout {
+public abstract class ConditionLineView extends LinearLayout {
 
-  private final TimedCondition condition;
-  private final String sourceId;
-  private final List<String> targetIds;
-  private final boolean initiated;
+  protected final TimedCondition condition;
+  protected final String sourceName;
+  protected final String sourceId;
+  protected final List<String> targetIds;
+  protected final boolean isDM;
 
-  public ConditionLineView(Context context, TimedCondition condition, String sourceName,
-                           String sourceId, List<String> targetIds, int rounds, boolean affected,
-                           boolean canDelete) {
+  protected final Wrapper<FloatingActionButton> delete;
+
+  protected ConditionLineView(Context context, TimedCondition condition, String sourceName,
+                           String sourceId, List<String> targetIds, int rounds, boolean isDM) {
     super(context);
 
     this.condition = condition;
+    this.sourceName = sourceName;
     this.sourceId = sourceId;
     this.targetIds = targetIds;
-    this.initiated = !affected;
+    this.isDM = isDM;
 
     View view =
         LayoutInflater.from(getContext()).inflate(R.layout.view_condition_line, this, false);
 
-    if (affected) {
-      TextWrapper.wrap(view, R.id.name)
-          .text(condition.getName() + (sourceName.isEmpty() ? "" : " (from " + sourceName + ")"));
-    } else {
-      TextWrapper.wrap(view, R.id.name)
-          .text(condition.getName() + " (affecting " +
-              Strings.COMMA_JOINER.join(targetIds.stream()
-                  .map(StoredEntries::nameFor)
-                  .collect(Collectors.toList())) + ")");
-    }
     if (rounds > 0) {
       TextWrapper.wrap(view, R.id.duration).text(rounds + (rounds > 1 ? " rounds" : " round"));
     } else {
       TextWrapper.wrap(view, R.id.duration).text("ending");
     }
-    TextWrapper.wrap(view, R.id.summary).text(condition.getSummary());
-    Wrapper.wrap(view, R.id.delete_condition)
-        .visible(canDelete)
+
+    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete_condition)
         .onClick(this::deleteCondition)
         .description("Dismiss Condition",
             "Dismiss the condition and remove it from this character. Note that the deletion will "
@@ -95,26 +82,11 @@ public class ConditionLineView extends LinearLayout {
       return true;
     });
 
+    setUp(view);
     addView(view);
   }
 
-  private void deleteCondition() {
-    for (String targetId : targetIds) {
-      Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
-      if (creature.isPresent()) {
-        creature.get().removeAffectedCondition(condition.getName(), sourceId);
-      }
-    }
-
-    if (initiated) {
-      Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(sourceId);
-      if (creature.isPresent()) {
-        Status.log("Removing initiated condition " + condition.getName() + " from "
-            + creature.get().getName());
-        creature.get().removeInitiatedCondition(condition.getName());
-      } else {
-        Status.error("Cannot remove initiated condtion for creature " + sourceId);
-      }
-    }
-  }
+  protected abstract void setUp(View view);
+  protected abstract void deleteCondition();
+  public abstract void update(Campaign campaign);
 }

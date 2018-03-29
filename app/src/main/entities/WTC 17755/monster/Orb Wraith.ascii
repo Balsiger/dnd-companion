@@ -60,9 +60,7 @@ primary_attack {
         dice: 8
       }
       effect: "1d6 Constitution drain"
-      condition {
-      }
-    }
+          }
   }
 }
 primary_attack {
@@ -76,9 +74,7 @@ primary_attack {
       base {
       }
       effect: "1d4 negative levels"
-      condition {
-      }
-    }
+          }
   }
 }
 space {

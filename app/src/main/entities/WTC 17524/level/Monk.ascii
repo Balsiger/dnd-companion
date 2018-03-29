@@ -71,8 +71,6 @@ quality {
     name: "ac +1"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -80,8 +78,6 @@ quality {
   entity {
     name: "ac +1"
     parameters {
-    }
-    condition {
     }
   }
 }
@@ -91,8 +87,6 @@ quality {
     name: "ac +1"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -100,8 +94,6 @@ quality {
   entity {
     name: "ac +1"
     parameters {
-    }
-    condition {
     }
   }
 }

@@ -51,8 +51,6 @@ quality {
     parameters {
     }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
@@ -62,8 +60,6 @@ quality {
     parameters {
     }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
@@ -73,8 +69,6 @@ quality {
     parameters {
     }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
@@ -84,8 +78,6 @@ quality {
     parameters {
     }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
@@ -95,8 +87,6 @@ quality {
     parameters {
     }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
@@ -106,8 +96,6 @@ quality {
     parameters {
     }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
@@ -115,8 +103,6 @@ quality {
   entity {
     name: "Fast Movement"
     parameters {
-    }
-    condition {
     }
   }
 }
@@ -126,8 +112,6 @@ quality {
     name: "Illiteracy"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -135,8 +119,6 @@ quality {
   entity {
     name: "Uncanny Dodge"
     parameters {
-    }
-    condition {
     }
   }
 }
@@ -146,8 +128,6 @@ quality {
     name: "Trap Sense"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -155,8 +135,6 @@ quality {
   entity {
     name: "Improved Uncanny Dodge"
     parameters {
-    }
-    condition {
     }
   }
 }
@@ -166,8 +144,6 @@ quality {
     name: "Trap Sense"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -175,8 +151,6 @@ quality {
   entity {
     name: "Trap Sense"
     parameters {
-    }
-    condition {
     }
   }
 }
@@ -186,8 +160,6 @@ quality {
     name: "Trap Sense"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -196,8 +168,6 @@ quality {
     name: "Trap Sense"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -205,8 +175,6 @@ quality {
   entity {
     name: "Trap Sense"
     parameters {
-    }
-    condition {
     }
   }
 }

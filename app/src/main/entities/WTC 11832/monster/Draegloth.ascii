@@ -69,8 +69,6 @@ primary_attack {
         number: 1
         dice: 6
       }
-      condition {
-      }
     }
   }
 }
@@ -85,8 +83,6 @@ secondary_attack {
       base {
         number: 1
         dice: 8
-      }
-      condition {
       }
     }
   }

@@ -2,28 +2,25 @@
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Tabletop Companion; if not, write to the Free Software
+ * along with the Roleplay Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
 package net.ixitxachitls.companion.data.values;
 
-import com.google.common.collect.ImmutableList;
-
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Characters;
@@ -135,12 +132,7 @@ public class Battle {
 
   public void setup() {
     number++;
-    if (Settings.get().isEnabled("battlestart")) {
-      StartBattleDialog.newInstance(campaign.getCampaignId()).display();
-    } else {
-      starting(obtainCreatureIds(), ImmutableList.of());
-    }
-
+    StartBattleDialog.newInstance(campaign.getCampaignId()).display();
     store();
   }
 
@@ -161,18 +153,20 @@ public class Battle {
     toNextUnsurprised();
 
     // Add flat-footed to all creatures.
-    if (Settings.get().isEnabled("battlestart")) {
-      for (String creatureId : creatureIds) {
-        Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(creatureId);
-        if (creature.isPresent()) {
-          int rounds = surprisedCreatureIds.contains(creatureId) ? 1 : 0;
-          creature.get().addAffectedCondition(
-              new TimedCondition(Conditions.FLAT_FOOTED, creatureId, rounds));
-        }
+    for (String creatureId : creatureIds) {
+      Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(creatureId);
+      if (creature.isPresent()) {
+        int rounds = surprisedCreatureIds.contains(creatureId) ? 1 : 0;
+        creature.get().addAffectedCondition(
+            new TimedCondition(Conditions.FLAT_FOOTED, creatureId, rounds));
       }
     }
 
     store();
+  }
+
+  public void addCreature(String creatureId) {
+    creatureIds.add(creatureId);
   }
 
   public List<String> obtainCreatureIds() {
@@ -183,7 +177,7 @@ public class Battle {
     }
 
     List<BaseCreature> creatures = new ArrayList<>();
-    if (status == BattleStatus.STARTING && Settings.get().isEnabled("battlestart")) {
+    if (status == BattleStatus.STARTING) {
       for (String id : creatureIds) {
         Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(id);
         if (creature.isPresent()) {
@@ -192,38 +186,24 @@ public class Battle {
       }
     } else {
       for (String id : campaign.getCreatureIds().getValue()) {
-        creatures.add(Creatures.getCreature(id).getValue().get());
+        if (Creatures.getCreature(id).getValue().isPresent()) {
+          creatures.add(Creatures.getCreature(id).getValue().get());
+        }
       }
       for (String id : campaign.getCharacterIds().getValue()) {
-        creatures.add(Characters.getCharacter(id).getValue().get());
+        if (Characters.getCharacter(id).getValue().isPresent()) {
+          creatures.add(Characters.getCharacter(id).getValue().get());
+        }
       }
     }
 
     creatures.sort(new InitiativeComparator());
 
-    return creatures.stream().map(BaseCreature::getCreatureId).collect(Collectors.toList());
-  }
-
-  public List<String> sortCreatures(List<String> creatureIds) {
-    List<BaseCreature> creatures = new ArrayList<>();
-    for (String id : creatureIds) {
-      Optional<? extends BaseCreature> creature = Creatures.getCreature(id).getValue();
-      if (creature.isPresent()) {
-        creatures.add(creature.get());
-      }
-    }
-
-    creatures.sort(new InitiativeComparator());
     return creatures.stream().map(BaseCreature::getCreatureId).collect(Collectors.toList());
   }
 
   public void creatureDone() {
     toNextUnsurprised();
-  }
-
-  public void skipTurn() {
-    nextTurn();
-    store();
   }
 
   private void toNextUnsurprised() {

@@ -78,9 +78,7 @@ primary_attack {
         modifier: 1
       }
       effect: "poison"
-      condition {
-      }
-    }
+          }
   }
 }
 space {

@@ -60,9 +60,7 @@ primary_attack {
         dice: 6
         modifier: 5
       }
-      condition {
-      }
-    }
+          }
   }
 }
 secondary_attack {
@@ -77,9 +75,7 @@ secondary_attack {
         dice: 8
         modifier: 2
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {

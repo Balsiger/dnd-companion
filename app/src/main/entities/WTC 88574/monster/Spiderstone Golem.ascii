@@ -76,9 +76,7 @@ primary_attack {
         dice: 8
         modifier: 2
       }
-      condition {
-      }
-    }
+          }
   }
 }
 primary_attack {
@@ -92,9 +90,7 @@ primary_attack {
       base {
       }
       effect: "web"
-      condition {
-      }
-    }
+          }
   }
 }
 space {

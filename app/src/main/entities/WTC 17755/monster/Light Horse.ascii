@@ -53,9 +53,7 @@ secondary_attack {
         number: 1
         dice: 4
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {

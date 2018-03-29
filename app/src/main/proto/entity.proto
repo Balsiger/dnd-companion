@@ -408,7 +408,7 @@ message ParametrizedEntityProto {
 
   ParametersProto parameters = 3;
   int32 per_day = 4;
-  ConditionProto condition = 5;
+  ConditionalProto condition = 5;
 }
 
 message LeveledEntityProto {

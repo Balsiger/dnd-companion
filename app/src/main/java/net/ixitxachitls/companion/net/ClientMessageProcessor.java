@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Tabletop Companion; if not, write to the Free Software
+ * along with the Roleplay Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -32,6 +32,7 @@ import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 import java.util.Optional;
 
@@ -57,10 +58,27 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
+    Optional<Campaign> oldCampaign = Campaigns.getCampaign(campaign.getCampaignId()).getValue();
+    if (oldCampaign.isPresent()
+        && oldCampaign.get().getBattle().isEnded()
+        && !campaign.getBattle().isEnded()
+        && CompanionFragments.get().showsCampaign(campaign.getCampaignId())) {
+      // Show a message about the newly started battle.
+      ConfirmationDialog.create(application)
+          .title("Battle started")
+          .message("A battle has started in " + campaign.getName()
+              + ". Do you want to go to the battle screen?")
+          .yes(() -> gotoBattle(campaign));
+    }
+
     // Storing will also add the campaign if it's changed.
     campaign.store();
     Status.log("received campaign " + campaign.getName());
     status("received campaign " + campaign.getName());
+  }
+
+  private void gotoBattle(Campaign campaign) {
+    CompanionFragments.get().showCampaign(campaign, Optional.empty());
   }
 
   @Override

@@ -73,8 +73,6 @@ primary_attack {
         dice: 6
         modifier: 4
       }
-      condition {
-      }
     }
   }
 }

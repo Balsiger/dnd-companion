@@ -66,9 +66,7 @@ secondary_attack {
         dice: 4
       }
       effect: "poison"
-      condition {
-      }
-    }
+          }
   }
 }
 space {

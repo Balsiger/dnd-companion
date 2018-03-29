@@ -56,8 +56,6 @@ quality {
     name: "favored enemy"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -65,8 +63,6 @@ quality {
   entity {
     name: "favored enemy"
     parameters {
-    }
-    condition {
     }
   }
 }
@@ -76,8 +72,6 @@ quality {
     name: "favored enemy"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -85,8 +79,6 @@ quality {
   entity {
     name: "favored enemy"
     parameters {
-    }
-    condition {
     }
   }
 }
@@ -96,8 +88,6 @@ quality {
     name: "favored enemy"
     parameters {
     }
-    condition {
-    }
   }
 }
 quality {
@@ -105,8 +95,6 @@ quality {
   entity {
     name: "wild empathy"
     parameters {
-    }
-    condition {
     }
   }
 }
@@ -116,7 +104,7 @@ quality {
     name: "combat style: archery|combat style: two-weapon fighting"
     parameters {
     }
-    condition {
+    conditional {
       generic: "wearing light or no armor"
     }
   }
@@ -127,7 +115,7 @@ quality {
     name: "animal companion"
     parameters {
     }
-    condition {
+    conditional {
       generic: "using half level and -3 levels for separate animal companion list"
     }
   }
@@ -218,9 +206,7 @@ bonusFeat {
     name: "track"
     parameters {
     }
-    condition {
-    }
-  }
+      }
 }
 bonusFeat {
   level: 3
@@ -228,9 +214,7 @@ bonusFeat {
     name: "endurance"
     parameters {
     }
-    condition {
-    }
-  }
+      }
 }
 spell_ability: WISDOM
 spells_per_day {

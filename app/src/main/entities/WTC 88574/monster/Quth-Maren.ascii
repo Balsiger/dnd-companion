@@ -67,9 +67,7 @@ primary_attack {
         dice: 6
       }
       effect: "1d6 acid"
-      condition {
-      }
-    }
+          }
   }
 }
 space {

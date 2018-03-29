@@ -64,16 +64,12 @@ quality {
   name: "low-light vision"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "scent"
   parameters {
   }
-  condition {
   }
-}
 skill {
   name: "listen"
   ranks: 1

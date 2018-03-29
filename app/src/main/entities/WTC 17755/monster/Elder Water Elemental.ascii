@@ -67,9 +67,7 @@ primary_attack {
         number: 2
         dice: 10
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {

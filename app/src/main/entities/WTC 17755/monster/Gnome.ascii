@@ -99,16 +99,12 @@ quality {
   name: "gnome traits"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "low-light vision"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "weapon familiarity"
   parameters {
@@ -117,9 +113,7 @@ quality {
       text: "gnome hammer"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -140,9 +134,7 @@ quality {
       text: "speak with animals"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -159,9 +151,7 @@ quality {
       text: "dancing lights"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -178,9 +168,7 @@ quality {
       text: "ghoust sound"
     }
   }
-  condition {
   }
-}
 quality {
   name: "spell-like ability"
   parameters {
@@ -197,9 +185,8 @@ quality {
       text: "prestidigitation."
     }
   }
-  condition {
   }
-}
 skill {
   name: "appraise"
 }
+main_race: true

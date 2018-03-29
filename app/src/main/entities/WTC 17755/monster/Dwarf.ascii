@@ -49,8 +49,6 @@ primary_attack {
     damage {
       base {
       }
-      condition {
-      }
     }
   }
 }
@@ -119,14 +117,10 @@ quality {
       text: "60 ft"
     }
   }
-  condition {
-  }
 }
 quality {
   name: "stonecunning"
   parameters {
-  }
-  condition {
   }
 }
 quality {
@@ -137,8 +131,6 @@ quality {
       text: "Dwarven Waraxe"
     }
   }
-  condition {
-  }
 }
 quality {
   name: "weapon familiarity"
@@ -148,28 +140,20 @@ quality {
       text: "Urgrosh"
     }
   }
-  condition {
-  }
 }
 quality {
   name: "stability"
   parameters {
-  }
-  condition {
   }
 }
 quality {
   name: "poison save +2"
   parameters {
   }
-  condition {
-  }
 }
 quality {
   name: "spell save +2"
   parameters {
-  }
-  condition {
   }
 }
 quality {
@@ -180,8 +164,6 @@ quality {
       text: "orcs (including half-orcs) and goblinoids (including goblins, hobgoblins, and bugbears)"
     }
   }
-  condition {
-  }
 }
 quality {
   name: "dodge +4"
@@ -191,8 +173,6 @@ quality {
       text: "creatures of the giant type (such as ogres, trolls, and hill giants)"
     }
   }
-  condition {
-  }
 }
 quality {
   name: "appraise +2"
@@ -201,8 +181,6 @@ quality {
       name: "name"
       text: "related to stone or metal items"
     }
-  }
-  condition {
   }
 }
 skill {
@@ -225,3 +203,4 @@ skill {
   name: "spot"
   ranks: 3
 }
+main_race: true

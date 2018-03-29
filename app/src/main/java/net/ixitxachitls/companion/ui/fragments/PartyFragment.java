@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Tabletop Companion; if not, write to the Free Software
+ * along with the Roleplay Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -177,6 +177,13 @@ public class PartyFragment extends Fragment {
         startBattle.visible(this.campaign.isLocal() && !this.campaign.isDefault());
         conditions.setVisibility(View.VISIBLE);
       }
+
+      for (int i = 0; i < conditions.getChildCount(); i++) {
+        View view = conditions.getChildAt(i);
+        if (view instanceof ConditionCreatureView) {
+          ((ConditionCreatureView) view).update(campaign.get());
+        }
+      }
     }
   }
 
@@ -232,6 +239,7 @@ public class PartyFragment extends Fragment {
           creature.observe(this, this::updateCreature);
           if (creature.getValue().isPresent()) {
             chipsById.put(creatureId, new CreatureChipView(getContext(), creature.getValue().get()));
+            campaign.getBattle().addCreature(creatureId);
           }
         }
       }
@@ -351,7 +359,9 @@ public class PartyFragment extends Fragment {
 
   private void addAllConditions() {
     for (Character character : campaign.getCharacters()) {
-      addConditions(character);
+      if (character.isLocal() || campaign.isLocal()) {
+        addConditions(character);
+      }
     }
 
     if (campaign.isLocal()) {

@@ -56,9 +56,7 @@ primary_attack {
         dice: 8
       }
       effect: "2d8 fire"
-      condition {
-      }
-    }
+          }
   }
 }
 space {

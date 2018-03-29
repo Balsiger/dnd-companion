@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2017} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Tabletop Companion; if not, write to the Free Software
+ * along with the Roleplay Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
-import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -43,8 +42,6 @@ import java.util.stream.Collectors;
  */
 public class CharactersData extends StoredEntries<Character> {
   private final Map<String, MutableLiveData<Optional<Character>>> characterById =
-      new ConcurrentHashMap<>();
-  private final Map<String, MutableLiveData<ImmutableList<String>>> charactersByCampaignId =
       new ConcurrentHashMap<>();
 
   public CharactersData(CompanionApplication application, boolean local) {
@@ -95,19 +92,11 @@ public class CharactersData extends StoredEntries<Character> {
   public void add(Character character) {
     super.add(character);
 
-    /*
-    // We need to check for null since ids will be setup only after the super constructor is run.
-    if (charactersByCampaignId != null) {
-      MutableLiveData<ImmutableList<String>> ids =
-          charactersByCampaignId.get(character.getCampaignId());
-      if (ids == null) {
-        ids = new MutableLiveData<>();
-        charactersByCampaignId.put(character.getCampaignId(), ids);
+    if (characterById != null) {
+      if (characterById.containsKey(character.getCharacterId())) {
+        characterById.get(character.getCharacterId()).setValue(Optional.of(character));
       }
-
-      LiveDataUtils.setValueIfChanged(ids, ImmutableList.copyOf(ids(character.getCampaignId())));
     }
-    */
   }
 
   @Override
@@ -115,8 +104,8 @@ public class CharactersData extends StoredEntries<Character> {
     super.remove(character);
 
 
-    if (characterById.containsKey(character.getCreatureId())) {
-      characterById.get(character.getCreatureId()).setValue(Optional.empty());
+    if (characterById.containsKey(character.getCharacterId())) {
+      characterById.get(character.getCharacterId()).setValue(Optional.empty());
     }
 
     /*

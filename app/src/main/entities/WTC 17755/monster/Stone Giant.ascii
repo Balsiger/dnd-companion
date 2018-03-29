@@ -62,9 +62,7 @@ primary_attack {
     damage {
       base {
       }
-      condition {
-      }
-    }
+          }
   }
 }
 primary_attack {
@@ -79,9 +77,7 @@ primary_attack {
         number: 1
         dice: 4
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -235,23 +231,17 @@ quality {
   name: "rock throwing"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "darkvision"
   parameters {
   }
-  condition {
   }
-}
 quality {
   name: "rock catching"
   parameters {
   }
-  condition {
   }
-}
 skill {
   name: "climb"
   ranks: 11

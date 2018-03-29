@@ -70,8 +70,6 @@ primary_attack {
         number: 3
         dice: 4
       }
-      condition {
-      }
     }
   }
 }

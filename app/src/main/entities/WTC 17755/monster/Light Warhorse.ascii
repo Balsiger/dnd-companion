@@ -54,9 +54,7 @@ primary_attack {
         number: 1
         dice: 4
       }
-      condition {
-      }
-    }
+          }
   }
 }
 secondary_attack {
@@ -71,9 +69,7 @@ secondary_attack {
         number: 1
         dice: 3
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {

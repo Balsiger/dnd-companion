@@ -2,20 +2,20 @@
  * Copyright (c) 2017-{2018} Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Tabletop Companion; if not, write to the Free Software
+ * along with the Roleplay Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -30,6 +30,7 @@ import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
@@ -65,7 +66,7 @@ public class ConditionCreatureView extends LinearLayout {
   public void addConditions(BaseCreature<?> creature, boolean isDM) {
     for (TargetedTimedCondition condition : creature.getInitiatedConditions()) {
       addCondition(creature.getName(), creature.getCreatureId(), condition.getTargetIds(),
-          condition.getTimedCondition(), false, true);
+          condition.getTimedCondition(), false, isDM);
     }
 
     for (TimedCondition condition : creature.getAffectedConditions()) {
@@ -75,19 +76,34 @@ public class ConditionCreatureView extends LinearLayout {
   }
 
   private void addCondition(String sourceName, String sourceId, List<String> targetIds,
-                            TimedCondition condition, boolean affected, boolean canDelete) {
+                            TimedCondition condition, boolean affected, boolean isDM) {
     int remainingRounds = condition.getEndRound() - battle.getTurn();
     if (remainingRounds > 0
         || (remainingRounds == 0
             && (condition.getCondition().endsBeforeTurn()
                 ? !battle.acting(sourceId) : !battle.acted(sourceId)))) {
       hasConditions = true;
-      container.addView(new ConditionLineView(getContext(), condition, sourceName, sourceId,
-          targetIds, remainingRounds, affected, canDelete));
+      if (affected) {
+        container.addView(new AffectedConditionLineView(getContext(), condition,
+            targetIds.size() == 1 && sourceId.equals(targetIds.get(0)) ? "" : sourceName,
+            sourceId, targetIds, remainingRounds, isDM));
+      } else {
+        container.addView(new InitiatedConditionLineView(getContext(), condition, sourceName,
+            sourceId, targetIds, remainingRounds, isDM));
+      }
     }
   }
 
   public boolean hasConditions() {
     return hasConditions;
+  }
+
+  public void update(Campaign campaign) {
+    for (int i = 0; i < container.getChildCount(); i++) {
+      View view = container.getChildAt(i);
+      if (view instanceof ConditionLineView) {
+        ((ConditionLineView) view).update(campaign);
+      }
+    }
   }
 }

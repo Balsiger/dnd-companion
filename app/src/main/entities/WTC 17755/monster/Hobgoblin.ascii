@@ -55,9 +55,7 @@ primary_attack {
     damage {
       base {
       }
-      condition {
-      }
-    }
+          }
   }
 }
 space {
@@ -172,9 +170,7 @@ quality {
       text: "60 ft"
     }
   }
-  condition {
   }
-}
 skill {
   name: "hide"
   ranks: 2

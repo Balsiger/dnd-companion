@@ -1,5 +1,5 @@
 <resources>
-  <string name="app_name">Tabletop Companion</string>
+  <string name="app_name">Roleplay Companion</string>
 
   <!-- menu strings -->
   <string name="action_settings">Settings</string>
@@ -63,7 +63,7 @@
   <string name="settings_title">Settings</string>
   <string name="settings_nickname_label">Nickname</string>
   <string name="settings_save">Save</string>
-  <string name="settings_initial">First time setup for the RPG Companion.</string>
+  <string name="settings_initial">First time setup for the Roleplay Companion.</string>
 
   <!-- timed condition dialog -->
   <string name="condition_enter">enter condition</string>
@@ -98,11 +98,15 @@
   <string name="action_about">About</string>
   <string name="ceo">CEO</string>
   <string name="ceo_name">Queen of Nihil</string>
-  <string name="coding"><![CDATA[Coding & \'Design\']]></string>
+  <string name="coding">Coding</string>
   <string name="coding_name">Merlin</string>
   <string name="web">Web</string>
   <string name="web_address">https://companion.ixitxachitls.net</string>
   <string name="contact">Contact</string>
   <string name="contact_email">companion@ixitxachitls.net</string>
+  <string name="testing">Testing</string>
+  <string name="testing_name">Nirual</string>
+  <string name="testing_name2">Tauriel Borrealis</string>
+  <string name="testing_name3">The Dragon Slayers</string>
 
 </resources>
