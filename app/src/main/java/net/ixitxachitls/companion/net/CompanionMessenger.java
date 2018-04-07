@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.net;
 
 import android.os.Handler;
+import android.support.annotation.VisibleForTesting;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
@@ -35,6 +36,8 @@ import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
+import net.ixitxachitls.companion.net.nsd.NsdAccessor;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.util.Ids;
 
 import java.util.Arrays;
@@ -50,6 +53,7 @@ public class CompanionMessenger implements Runnable {
   private static final int DELAY_MILLIS = 1_000;
   private static CompanionMessenger singleton;
 
+  private final DataBaseAccessor dataBaseAccessor;
   private final Handler handler;
 
   private final CompanionServer companionServer;
@@ -57,26 +61,37 @@ public class CompanionMessenger implements Runnable {
   private final ClientMessageProcessor clientMessageProcessor;
   private final ServerMessageProcessor serverMessageProcessor;
 
-  private CompanionMessenger(CompanionApplication application) {
-    this.handler = new Handler();
+  @VisibleForTesting
+  public CompanionMessenger(DataBaseAccessor dataBaseAccessor,
+                            NsdAccessor nsdAccessor,
+                            Settings settings,
+                            CompanionApplication application,
+                            Handler handler) {
+    this.dataBaseAccessor = dataBaseAccessor;
+    this.handler = handler;
 
-    ScheduledMessages.init(application);
-    companionServer = new CompanionServer(application);
-    companionClients = new CompanionClients(application.getApplicationContext());
+    ScheduledMessages.init(dataBaseAccessor);
+    companionServer = new CompanionServer(nsdAccessor, settings);
+    companionClients = new CompanionClients(nsdAccessor, settings.getDataBaseAccessor());
     clientMessageProcessor = new ClientMessageProcessor(application);
     serverMessageProcessor = new ServerMessageProcessor(application);
   }
 
-  public static CompanionMessenger init(CompanionApplication application) {
+  public static CompanionMessenger init(DataBaseAccessor dataBaseAccessor,
+                                        NsdAccessor nsdAccessor,
+                                        Settings settings,
+                                        CompanionApplication application) {
     if (singleton != null) {
       Status.error("Messenger already initialized!");
     } else {
-      singleton = new CompanionMessenger(application);
+      singleton = new CompanionMessenger(dataBaseAccessor, nsdAccessor, settings, application,
+          new Handler());
     }
 
     return singleton;
   }
 
+  @Deprecated
   public static CompanionMessenger get() {
     if (singleton == null) {
       Status.error("Messenger not yet initialized");
@@ -99,10 +114,6 @@ public class CompanionMessenger implements Runnable {
     companionServer.stop();
 
     handler.removeCallbacks(this);
-  }
-
-  public boolean isRunning() {
-    return companionClients.isStarted();
   }
 
   public boolean isOnline(Campaign campaign) {
@@ -138,7 +149,8 @@ public class CompanionMessenger implements Runnable {
             companionServer.schedule(recipientId, CompanionMessageData.from(character));
             Optional<Image> image = character.loadImage().getValue();
             if (image.isPresent()) {
-              companionServer.schedule(recipientId, CompanionMessageData.from(image.get()));
+              companionServer.schedule(recipientId,
+                  CompanionMessageData.from(image.get(), dataBaseAccessor));
             }
           }
         }
@@ -153,7 +165,8 @@ public class CompanionMessenger implements Runnable {
             companionServer.schedule(recipientId, CompanionMessageData.from(character));
             Optional<Image> image = character.loadImage().getValue();
             if (image.isPresent()) {
-              companionServer.schedule(recipientId, CompanionMessageData.from(image.get()));
+              companionServer.schedule(recipientId,
+                  CompanionMessageData.from(image.get(), dataBaseAccessor));
             }
           }
         }
@@ -202,12 +215,12 @@ public class CompanionMessenger implements Runnable {
               // Send the image to all known clients, except the owner.
               companionServer.schedule(
                   clientIds(campaign.get(), Ids.extractServerId(image.getId())),
-                  CompanionMessageData.from(image));
+                  CompanionMessageData.from(image, dataBaseAccessor));
             } else {
               // Send the image to the server (unless we are the server as well).
               if (!campaign.get().getServerId().equals(Settings.get().getAppId())) {
                 companionClients.schedule(campaign.get().getServerId(),
-                    CompanionMessageData.from(image));
+                    CompanionMessageData.from(image, dataBaseAccessor));
               }
             }
           } else {
@@ -224,18 +237,17 @@ public class CompanionMessenger implements Runnable {
   }
 
   public void send(BaseCreature creature, TimedCondition condition) {
-    if (creature.isLocal()) {
-      return;
-    } else {
+    // Local creatures should already be handled locally.
+    if (!creature.isLocal()) {
       Status.log("sending timed condition " + condition + " to " + creature);
       Optional<Campaign> campaign = creature.getCampaign();
       if (campaign.isPresent()) {
         if (campaign.get().isLocal()) {
           companionServer.schedule(Ids.extractServerId(creature.getCreatureId()),
-              CompanionMessageData.from(creature.getCreatureId(), condition));
+              CompanionMessageData.from(creature.getCreatureId(), condition, dataBaseAccessor));
         } else {
-          companionClients.schedule(Ids.extractServerId(creature.getCreatureId()),
-              CompanionMessageData.from(creature.getCreatureId(), condition));
+          companionClients.schedule(campaign.get().getServerId(),
+              CompanionMessageData.from(creature.getCreatureId(), condition, dataBaseAccessor));
         }
       } else {
         Status.error("Cannot find campaign for " + creature + ", cannot send condition");
@@ -257,7 +269,7 @@ public class CompanionMessenger implements Runnable {
     Optional<Campaign> campaign = Campaigns.getCampaign(character.getCampaignId()).getValue();
     if (campaign.isPresent()) {
       if (campaign.get().isLocal()) {
-        // Forward the campaign deletion to all 'other' clients.
+        // Forward the character deletion to all 'other' clients.
         companionServer.schedule(clientIds(campaign.get(), character.getServerId()),
             CompanionMessageData.fromDelete(character));
       } else if (character.isLocal()) {
@@ -271,22 +283,25 @@ public class CompanionMessenger implements Runnable {
   }
 
   public void sendDeletion(String conditionName, String sourceId, BaseCreature creature) {
-    Status.log("handling condition deletion for " + conditionName + " from "
-        + StoredEntries.nameFor(sourceId) + " to "
-        + StoredEntries.nameFor(creature.getCreatureId()));
-    Optional<Campaign> campaign = Campaigns.getCampaign(creature.getCampaignId()).getValue();
-    if (campaign.isPresent()) {
-      if (campaign.get().isLocal()) {
-        companionServer.schedule(Ids.extractServerId(creature.getCreatureId()),
-            CompanionMessageData.fromDelete(conditionName, sourceId, creature.getCreatureId()));
+    if (!creature.isLocal()) {
+      Status.log("handling condition deletion for " + conditionName + " from "
+          + StoredEntries.nameFor(sourceId) + " affecting " + creature.getName());
+      Optional<Campaign> campaign = Campaigns.getCampaign(creature.getCampaignId()).getValue();
+      if (campaign.isPresent()) {
+        if (campaign.get().isLocal()) {
+          companionServer.schedule(Ids.extractServerId(creature.getCreatureId()),
+              CompanionMessageData.fromDelete(conditionName, sourceId, creature.getCreatureId(),
+                  dataBaseAccessor));
+        } else {
+          companionClients.schedule(campaign.get().getServerId(),
+              CompanionMessageData.fromDelete(conditionName, sourceId, creature.getCreatureId(),
+                  dataBaseAccessor));
+        }
       } else {
-        companionClients.schedule(campaign.get().getServerId(),
-            CompanionMessageData.fromDelete(conditionName, sourceId, creature.getCreatureId()));
+        Status.log("Cannot send condition deletion for "
+            + StoredEntries.nameFor(creature.getCreatureId()) + " for unknown campaign "
+            + creature.getCampaignId());
       }
-    } else {
-      Status.log("Cannot send condition deleteion for "
-          + StoredEntries.nameFor(creature.getCreatureId()) + " for unknown campaign "
-          + creature.getCampaignId());
     }
   }
 
@@ -300,28 +315,34 @@ public class CompanionMessenger implements Runnable {
 
   public void sendXpAward(String campaignId, String characterId, int xp) {
     companionServer.schedule(Ids.extractServerId(characterId),
-        CompanionMessageData.from(new XpAward(characterId, campaignId, xp)));
+        CompanionMessageData.from(new XpAward(characterId, campaignId, xp), dataBaseAccessor));
   }
 
   public void sendAckToClient(String recipientId, long messageId) {
     Status.log("sending ack for " + messageId + " to client " + recipientId);
-    companionServer.schedule(recipientId, CompanionMessageData.fromAck(messageId));
+    companionServer.schedule(recipientId,
+        CompanionMessageData.fromAck(messageId, dataBaseAccessor));
   }
 
   public void sendAckToServer(String recipientId, long messageId) {
     Status.log("sending ack for " + messageId + " to server " + recipientId);
-    companionClients.schedule(recipientId, CompanionMessageData.fromAck(messageId));
+    companionClients.schedule(recipientId,
+        CompanionMessageData.fromAck(messageId, dataBaseAccessor));
   }
 
   public void sendWelcome() {
     companionClients.schedule(CompanionMessageData.fromWelcome(Settings.get().getAppId(),
-        Settings.get().getNickname()));
+        Settings.get().getNickname(), dataBaseAccessor));
     companionServer.schedule(CompanionMessageData.fromWelcome(Settings.get().getAppId(),
-        Settings.get().getNickname()));
+        Settings.get().getNickname(), dataBaseAccessor));
   }
 
-  public void ackServer(String recipientId, long messageId){
+  public void ackServer(String recipientId, long messageId) {
     companionServer.ack(recipientId, messageId);
+  }
+
+  public void ackClient(String recipientId, long messageId) {
+    companionClients.ack(recipientId, messageId);
   }
 
   private Set<String> clientIds(Campaign campaign, String ... ignoreIds) {
@@ -360,5 +381,16 @@ public class CompanionMessenger implements Runnable {
     } finally {
       handler.postDelayed(this, DELAY_MILLIS);
     }
+  }
+
+
+  // Testing.
+  @VisibleForTesting
+  public CompanionServer getServer() {
+    return companionServer;
+  }
+
+  public CompanionClients getClients() {
+    return companionClients;
   }
 }

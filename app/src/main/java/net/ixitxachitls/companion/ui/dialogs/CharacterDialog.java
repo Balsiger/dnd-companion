@@ -32,6 +32,7 @@ import android.widget.TextView;
 
 import com.google.common.base.Preconditions;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -92,7 +93,8 @@ public class CharacterDialog extends Dialog {
     if (campaign.isPresent()) {
       String characterId = getArguments().getString(ARG_ID);
       if (characterId.isEmpty()) {
-        character = Optional.of(LocalCharacter.createNew(campaign.get().getCampaignId()));
+        character = Optional.of(LocalCharacter.createNew(campaign.get().getCampaignId(),
+            CompanionApplication.get(getContext()).getDataBaseAccessor()));
       } else {
         character = Character.asLocal(Characters.getCharacter(characterId).getValue());
       }

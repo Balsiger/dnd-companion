@@ -21,14 +21,18 @@
 
 package net.ixitxachitls.companion.net;
 
+import android.support.annotation.VisibleForTesting;
+
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -41,6 +45,7 @@ import java.util.Optional;
 public class MessageScheduler {
 
   private final String recipientId;
+  private final DataBaseAccessor dataBaseAccessor;
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
       waiting = LinkedHashMultimap.create();
   private final Map<Long, ScheduledMessage> pendingByMessageId = new HashMap<>();
@@ -49,8 +54,9 @@ public class MessageScheduler {
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
       acknowledgedByType = LinkedHashMultimap.create();
 
-  public MessageScheduler(String recipientId) {
+  public MessageScheduler(String recipientId, DataBaseAccessor dataBaseAccessor) {
     this.recipientId = recipientId;
+    this.dataBaseAccessor = dataBaseAccessor;
 
     List<ScheduledMessage> toRemove = new ArrayList<>();
     for (ScheduledMessage message
@@ -87,11 +93,10 @@ public class MessageScheduler {
   }
 
   public void schedule(CompanionMessageData data) {
-    Status.log("scheduling to " + recipientId + ": " + data);
     ScheduledMessage message = new ScheduledMessage(
         new CompanionMessage(Settings.get().getAppId(), Settings.get().getNickname(),
-            recipientId, data.requiresAck() ? Settings.get().getNextMessageId() : 0,
-            data));
+            recipientId, Settings.get().getNextMessageId(), data), dataBaseAccessor);
+    Status.log("scheduling to " + Status.nameFor(recipientId) + ": " + message);
     message.store();
 
     if (message.mayOverwrite()) {
@@ -165,7 +170,8 @@ public class MessageScheduler {
       pendingByMessageId.remove(messageId);
       markAcked(message);
     } else {
-      Status.log("Ignored ack for unknown message id " + messageId + " for " + recipientId);
+      Status.log("Ignored ack for unknown message id " + messageId + " for "
+          + Status.nameFor(recipientId));
     }
   }
 
@@ -225,5 +231,21 @@ public class MessageScheduler {
   private void markPending(ScheduledMessage message) {
     message.markPending();
     pendingByMessageId.put(message.getMessageId(), message);
+  }
+
+  // Testing.
+  @VisibleForTesting
+  public Collection<ScheduledMessage> getWaiting() {
+    return waiting.values();
+  }
+
+  @VisibleForTesting
+  public Collection<ScheduledMessage> getPending() {
+    return pendingByMessageId.values();
+  }
+
+  @VisibleForTesting
+  public Collection<ScheduledMessage> getAcked() {
+    return acknowledgedByType.values();
   }
 }

@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.raw.Transmitter;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -45,12 +46,14 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class NetworkServer implements Runnable {
 
+  private final DataBaseAccessor dataBaseAccessor;
   private @Nullable ServerSocket socket;
   private Thread thread;
   private Map<String, Transmitter> transmittersById = new ConcurrentHashMap<>();
   private Map<String, String> namesById = new ConcurrentHashMap<>();
 
-  public NetworkServer() {
+  public NetworkServer(DataBaseAccessor dataBaseAccessor) {
+    this.dataBaseAccessor = dataBaseAccessor;
     this.thread = new Thread(this);
   }
 
@@ -99,13 +102,12 @@ public class NetworkServer implements Runnable {
 
   @Override
   public void run() {
-    Status.log("starting server thread");
-    Log.d("Server", "ServerSocket Created, awaiting connection on "
-        + socket.getInetAddress() + ":" + socket.getLocalPort());
+    Status.log("ServerSocket created, awaiting connection on " + socket.getInetAddress() + ":"
+        + socket.getLocalPort());
 
     while (!Thread.currentThread().isInterrupted()) {
       try {
-        Log.d("socket", "socket" + socket);
+        Status.log("socket " + socket + " accepted");
         Socket transmissionSocket = socket.accept();
         Transmitter transmitter = new Transmitter("server", transmissionSocket);
         // Temporarily store the transmitter without id until we get the welcome message.
@@ -130,9 +132,9 @@ public class NetworkServer implements Runnable {
                     .build()))
             .build());
 
-        Log.d("Server", "Connected.");
+        Status.log("Server connected.");
       } catch (IOException e) {
-        Log.d("Server", "io exception when waiting for connections: " + e);
+        Status.error("Server got io exception when waiting for connections: " + e);
         e.printStackTrace();
       }
     }
@@ -163,7 +165,7 @@ public class NetworkServer implements Runnable {
             Status.log("Received welcome message from client " + name);
           }
 
-          messages.add(CompanionMessage.fromProto(message.get()));
+          messages.add(CompanionMessage.fromProto(message.get(), dataBaseAccessor));
         }
       }
     }
@@ -174,11 +176,11 @@ public class NetworkServer implements Runnable {
   public boolean send(String recieverId, long messageId, CompanionMessageData message) {
     Transmitter transmitter = transmittersById.get(recieverId);
     if (transmitter == null) {
-      Log.e("Server", "No transmitter found for '" + recieverId + "', message not sent.");
+      Status.log("Server found no transmitter for '" + recieverId + "', message not sent.");
       return false;
     }
 
-    Log.d("Server", "sending message: " + message.toString());
+    Status.log("Server sending message: " + message.toString());
     transmitter.send(Data.CompanionMessageProto.newBuilder()
         .setHeader(Data.CompanionMessageProto.Header.newBuilder()
             .setId(messageId)

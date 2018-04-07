@@ -26,9 +26,9 @@ import android.arch.lifecycle.MutableLiveData;
 
 import com.google.common.collect.ImmutableList;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
@@ -46,18 +46,13 @@ public class Campaigns {
   private static CampaignsData local;
   private static CampaignsData remote;
 
-  public static final Campaign defaultCampaign = LocalCampaign.createDefault();
+  public static Campaign defaultCampaign;
   private static final MutableLiveData<Optional<Campaign>> liveDefaultCampaign =
       new MutableLiveData<>();
 
   // Live data storages.
   private static MutableLiveData<String> currentCampaignId = new MutableLiveData<>();
   private static MutableLiveData<ImmutableList<String>> allCampaignIds = new MutableLiveData<>();
-
-  static {
-    currentCampaignId.setValue(defaultCampaign.getCampaignId());
-    liveDefaultCampaign.setValue(Optional.of(defaultCampaign));
-  }
 
   // Data accessors.
   public static LiveData<Optional<Campaign>> getCampaign(String campaignId) {
@@ -215,12 +210,16 @@ public class Campaigns {
     }
   }
 
-  // Private metbods.
+  // Private methods.
 
   // This should only be called from the main activity.
-  public static void load(CompanionApplication application) {
-    loadLocal(application);
-    loadRemote(application);
+  public static void load(DataBaseAccessor dataBaseAccessor) {
+    defaultCampaign = LocalCampaign.createDefault(dataBaseAccessor);
+    currentCampaignId.setValue(defaultCampaign.getCampaignId());
+    liveDefaultCampaign.setValue(Optional.of(defaultCampaign));
+
+    loadLocal(dataBaseAccessor);
+    loadRemote(dataBaseAccessor);
 
     // Check that we don't have local and remote campaigns with the same id.
     if (!Misc.onEmulator()) {
@@ -278,24 +277,24 @@ public class Campaigns {
     return remote.get(campaignId);
   }
 
-  private static void loadLocal(CompanionApplication application) {
+  private static void loadLocal(DataBaseAccessor dataBaseAccessor) {
     if (local != null) {
       Status.log("local campaigns already loaded");
       return;
     }
 
-    Status.log("loading lcoal campaigns");
-    local = new CampaignsData(application, true);
+    Status.log("loading local campaigns");
+    local = new CampaignsData(dataBaseAccessor, true);
   }
 
-  private static void loadRemote(CompanionApplication application) {
+  private static void loadRemote(DataBaseAccessor dataBaseAccessor) {
     if (remote != null) {
       Status.log("remote campaigns already loaded");
       return;
     }
 
-    Status.log("loading lcoal campaigns");
-    remote = new CampaignsData(application, false);
+    Status.log("loading remote campaigns");
+    remote = new CampaignsData(dataBaseAccessor, false);
   }
 
   private static class CampaignComparator implements Comparator<Campaign> {

@@ -194,7 +194,7 @@ public class StatusView extends LinearLayout {
   public void updateClientConnection(String id) {
     ConnectionView connection = clientConnectionsById.get(id);
     if (connection == null) {
-      Status.log("no connection view for " + id);
+      Status.log("no connection view for " + Status.nameFor(id));
       return;
     }
 
@@ -204,7 +204,7 @@ public class StatusView extends LinearLayout {
   public void updateServerConnection(String id) {
     ConnectionView connection = serverConnectionsById.get(id);
     if (connection == null) {
-      Status.log("no connection view for " + id);
+      Status.log("no connection view for " + Status.nameFor(id));
       return;
     }
 

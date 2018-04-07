@@ -27,6 +27,7 @@ import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 /**
@@ -36,8 +37,8 @@ public class RemoteCampaign extends Campaign {
 
   public static final String TABLE = Campaign.TABLE + "_remote";
 
-  private RemoteCampaign(long id, String name) {
-    super(id, name, false, DataBaseContentProvider.CAMPAIGNS_REMOTE);
+  private RemoteCampaign(long id, String name, DataBaseAccessor dataBaseAccessor) {
+    super(id, name, false, DataBaseContentProvider.CAMPAIGNS_REMOTE, dataBaseAccessor);
   }
 
   @Override
@@ -64,8 +65,9 @@ public class RemoteCampaign extends Campaign {
     Status.toast("Cannot set the date of a remote campaign!");
   }
 
-  public static RemoteCampaign fromProto(long id, Data.CampaignProto proto) {
-    RemoteCampaign campaign = new RemoteCampaign(id, proto.getName());
+  public static RemoteCampaign fromProto(long id, Data.CampaignProto proto,
+                                         DataBaseAccessor dataBaseAccessor) {
+    RemoteCampaign campaign = new RemoteCampaign(id, proto.getName(), dataBaseAccessor);
     campaign.entryId = proto.getId();
     campaign.world = Entries.get().getWorlds().get(proto.getWorld())
         .orElse(Entries.get().getWorlds().get("Generic").get());

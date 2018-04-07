@@ -29,6 +29,7 @@ import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.stream.Collectors;
@@ -38,12 +39,14 @@ import java.util.stream.Collectors;
  */
 public class LocalCharacter extends Character {
 
-  public LocalCharacter(long id, String name, String campaignId) {
-    super(id, name, campaignId, true, DataBaseContentProvider.CHARACTERS_LOCAL);
+  public static final String TABLE = Character.TABLE + "_local";
+
+  public LocalCharacter(long id, String name, String campaignId, DataBaseAccessor dataBaseAccessor) {
+    super(id, name, campaignId, true, DataBaseContentProvider.CHARACTERS_LOCAL, dataBaseAccessor);
   }
 
-  public static LocalCharacter createNew(String campaignId) {
-    return new LocalCharacter(0, "", campaignId);
+  public static LocalCharacter createNew(String campaignId, DataBaseAccessor dataBaseAccessor) {
+    return new LocalCharacter(0, "", campaignId, dataBaseAccessor);
   }
 
   public LocalCharacter asLocal() {
@@ -177,9 +180,10 @@ public class LocalCharacter extends Character {
     return super.toString() + "/local";
   }
 
-  public static LocalCharacter fromProto(long id, Data.CharacterProto proto) {
+  public static LocalCharacter fromProto(long id, Data.CharacterProto proto,
+                                         DataBaseAccessor dataBaseAccessor) {
     LocalCharacter character = new LocalCharacter(id, proto.getCreature().getName(),
-        proto.getCreature().getCampaignId());
+        proto.getCreature().getCampaignId(), dataBaseAccessor);
     character.fromProto(proto.getCreature());
     character.playerName = proto.getPlayer();
     character.conditionsHistory = proto.getConditionHistoryList().stream()

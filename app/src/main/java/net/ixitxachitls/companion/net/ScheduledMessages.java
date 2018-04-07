@@ -24,12 +24,12 @@ package net.ixitxachitls.companion.net;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.ArrayList;
@@ -43,13 +43,14 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
 
   private static ScheduledMessages singleton;
 
-  private ScheduledMessages(CompanionApplication application) {
-    super(application, DataBaseContentProvider.MESSAGES, true);
+  private ScheduledMessages(DataBaseAccessor dataBaseAccessor) {
+    super(dataBaseAccessor, DataBaseContentProvider.MESSAGES, true);
   }
 
-  public static void init(CompanionApplication application) {
-    Preconditions.checkArgument(singleton == null);
-    singleton = new ScheduledMessages(application);
+  public static void init(DataBaseAccessor dataBaseAccessor) {
+    if (singleton == null) {
+      singleton = new ScheduledMessages(dataBaseAccessor);
+    }
   }
 
   public static ScheduledMessages get() {
@@ -61,7 +62,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
   protected Optional<ScheduledMessage> parseEntry(long id, byte[] blob) {
     try {
       return Optional.of(ScheduledMessage.fromProto(id, Data.ScheduledMessageProto
-          .getDefaultInstance().getParserForType().parseFrom(blob)));
+          .getDefaultInstance().getParserForType().parseFrom(blob), dataBaseAccessor));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for message: " + e);
       return Optional.empty();

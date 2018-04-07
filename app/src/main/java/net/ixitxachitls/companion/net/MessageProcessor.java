@@ -34,7 +34,6 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
-import net.ixitxachitls.companion.data.dynamics.StoredEntry;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 
@@ -67,12 +66,18 @@ public abstract class MessageProcessor {
                          CompanionMessageData message) {
 
     if (message.requiresAck()) {
-      String key = createKey(senderId, receiverId, messageId);
-      if (inFlightMessages.contains(key)) {
-        Status.log("ignoring message in flight");
-        return;
+      if (messageId == 0) {
+        Status.error("Got ack message with no message id: " + Status.nameFor(senderId) + " -> "
+            + Status.nameFor(receiverId) + ": " + messageId);
       } else {
-        inFlightMessages.add(key);
+        String key = createKey(senderId, receiverId, messageId);
+        if (inFlightMessages.contains(key)) {
+          Status.log("ignoring message in flight: " + Status.nameFor(senderId) + " -> "
+              + Status.nameFor(receiverId) + ": " + messageId);
+          return;
+        } else {
+          inFlightMessages.add(key);
+        }
       }
     }
 
@@ -128,7 +133,6 @@ public abstract class MessageProcessor {
         break;
     }
 
-
     Status.refreshServerConnection(Settings.get().getAppId());
     Status.refreshClientConnection(senderId);
 
@@ -140,20 +144,18 @@ public abstract class MessageProcessor {
 
   private void handleCondition(String senderId, long messageId, String targetId,
                                TimedCondition condition) {
-    Optional<? extends BaseCreature> creature;
-    if (StoredEntry.hasType(targetId, Character.TYPE)) {
-      creature = Characters.getCharacter(targetId).getValue();
-    } else {
-      creature = Creatures.getCreature(targetId).getValue();
-    }
-
+    Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
       creature.get().addAffectedCondition(condition);
     } else {
       Status.error("Cannot find creature for '" + targetId + "' to assign condition.");
     }
 
-    CompanionMessenger.get().sendAckToServer(senderId, messageId);
+    if (this instanceof ClientMessageProcessor) {
+      CompanionMessenger.get().sendAckToServer(senderId, messageId);
+    } else {
+      CompanionMessenger.get().sendAckToClient(senderId, messageId);
+    }
   }
 
   protected String createKey(String senderId, String receiverId, long messageId) {
@@ -180,12 +182,15 @@ public abstract class MessageProcessor {
 
   protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
     Characters.remove(characterId, false);
-    CompanionMessenger.get().sendAckToServer(senderId, messageId);
+
+    if (this instanceof ClientMessageProcessor) {
+      CompanionMessenger.get().sendAckToServer(senderId, messageId);
+    } else {
+      CompanionMessenger.get().sendAckToClient(senderId, messageId);
+    }
   }
 
-  protected void handleAck(String senderId, long messageId) {
-    Status.error("handling ack not supported");
-  }
+  protected abstract void handleAck(String senderId, long messageId);
 
   protected void handleImage(String senderId, Image image) {
     Status.error("Handling image not supported.");
@@ -197,14 +202,20 @@ public abstract class MessageProcessor {
 
   protected void handleConditionDelete(String senderId, long messageId, String conditionName,
                                        String sourceId, String targetId) {
+    Status.log("dismissing condition " + conditionName + " for " + Status.nameFor(targetId)
+        + " from " + Status.nameFor(sourceId));
     Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
       creature.get().removeAffectedCondition(conditionName, sourceId);
     } else {
-      Status.log("Cannot find creature for " + targetId + " to assign condition.");
+      Status.log("Cannot find creature for " + Status.nameFor(targetId) + " to assign condition.");
     }
 
-    CompanionMessenger.get().sendAckToServer(senderId, messageId);
+    if (this instanceof ClientMessageProcessor) {
+      CompanionMessenger.get().sendAckToServer(senderId, messageId);
+    } else {
+      CompanionMessenger.get().sendAckToClient(senderId, messageId);
+    }
   }
 
   private void handleInvalid(String senderName) {
@@ -229,6 +240,7 @@ public abstract class MessageProcessor {
   }
 
   protected void handleWelcome(String remoteId, String remoteName) {
+    Status.recordId(remoteId, remoteName);
     for (Campaign campaign : Campaigns.getCampaignsByServer(remoteId)) {
       Characters.publish(campaign.getCampaignId());
     }

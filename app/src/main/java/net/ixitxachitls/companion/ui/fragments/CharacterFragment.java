@@ -169,7 +169,7 @@ public class CharacterFragment extends CompanionFragment {
     charisma.setValue(character.get().getCharisma(),
         Ability.modifier(character.get().getCharisma()));
     xp.text(String.valueOf(character.get().getXp()));
-    xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel()) + ")");
+    xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
     level.text(String.valueOf(character.get().getLevel()));
   }
 

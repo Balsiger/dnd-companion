@@ -109,6 +109,11 @@ public class ClientMessageProcessor extends MessageProcessor {
     }
   }
 
+  @Override
+  protected void handleAck(String senderId, long messageId) {
+    CompanionMessenger.get().ackClient(senderId, messageId);
+  }
+
   private void addXpAward(String senderId, long messageId, String characterId, int xp) {
     Optional<LocalCharacter> character =
         Character.asLocal(Characters.getCharacter(characterId).getValue());
@@ -116,18 +121,5 @@ public class ClientMessageProcessor extends MessageProcessor {
       character.get().addXp(xp);
       CompanionMessenger.get().sendAckToServer(senderId, messageId);
     }
-  }
-
-  @Override
-  protected void handleConditionDelete(String senderId, long messageId, String conditionName,
-                                       String sourceId, String targetId) {
-    Status.log("dismissing condition " + conditionName + " for " + targetId);
-
-    Optional<Character> character = Characters.getCharacter(sourceId).getValue();
-    if (character.isPresent()) {
-      character.get().removeInitiatedCondition(conditionName);
-    }
-
-    CompanionMessenger.get().sendAckToServer(senderId, messageId);
   }
 }

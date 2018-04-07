@@ -26,9 +26,9 @@ import android.arch.lifecycle.MutableLiveData;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.List;
@@ -45,8 +45,8 @@ public class CreaturesData extends StoredEntries<Creature> {
   private final Map<String, MutableLiveData<Optional<Creature>>> creatureById =
       new ConcurrentHashMap<>();
 
-  public CreaturesData(CompanionApplication application) {
-    super(application, DataBaseContentProvider.CREATURES_LOCAL, true);
+  public CreaturesData(DataBaseAccessor dataBaseAccessor) {
+    super(dataBaseAccessor, DataBaseContentProvider.CREATURES_LOCAL, true);
   }
 
   public LiveData<Optional<Creature>> getCreature(String creatureId) {
@@ -130,7 +130,7 @@ public class CreaturesData extends StoredEntries<Creature> {
     try {
       return Optional.of(
           Creature.fromProto(id, Data.CreatureProto.getDefaultInstance().getParserForType()
-              .parseFrom(blob)));
+              .parseFrom(blob), dataBaseAccessor));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.empty();

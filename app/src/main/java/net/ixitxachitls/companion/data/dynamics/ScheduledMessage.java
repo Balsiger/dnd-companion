@@ -23,10 +23,12 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.support.annotation.Nullable;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.Date;
@@ -47,13 +49,14 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
   private State state;
   private long lastInteraction;
 
-  public ScheduledMessage(CompanionMessage message) {
-    this(0, State.WAITING, new Date().getTime(), message);
+  public ScheduledMessage(CompanionMessage message, DataBaseAccessor dataBaseAccessor) {
+    this(0, State.WAITING, new Date().getTime(), message, dataBaseAccessor);
   }
 
-  private ScheduledMessage(long id, State state, long lastInteraction, CompanionMessage message) {
+  private ScheduledMessage(long id, State state, long lastInteraction, CompanionMessage message,
+                           DataBaseAccessor dataBaseAccessor) {
     super(id, TYPE, TYPE + "-" + Settings.get().getAppId() + "-" + message.getMessageId(), TYPE,
-        true, DataBaseContentProvider.MESSAGES);
+        true, DataBaseContentProvider.MESSAGES, dataBaseAccessor);
 
     this.message = message;
     this.state = state;
@@ -165,9 +168,10 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     }
   }
 
-  public static ScheduledMessage fromProto(long id, Data.ScheduledMessageProto proto) {
+  public static ScheduledMessage fromProto(long id, Data.ScheduledMessageProto proto,
+                                           DataBaseAccessor dataBaseAccessor) {
     return new ScheduledMessage(id, convert(proto.getState()), proto.getLastInteraction(),
-        CompanionMessage.fromProto(proto.getMessage()));
+        CompanionMessage.fromProto(proto.getMessage(), dataBaseAccessor), dataBaseAccessor);
   }
 
   private static State convert(Data.ScheduledMessageProto.State state) {
@@ -260,8 +264,13 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
             + message.getData().getXpAward().getXpAward() + postfix;
 
       case CONDITION:
-        return "CONDITION - " + message.getData().getCondition().getTargetId()
+        return "CONDITION - " + Status.nameFor(message.getData().getCondition().getTargetId())
             + "/" + message.getData().getCondition().getCondition().getCondition().getName();
+
+      case CONDITION_DELETE:
+        return "CONDITION DELETE - " + message.getData().getConditionDelete().getName()
+            + "/" + Status.nameFor(message.getData().getConditionDelete().getSourceId()
+            + ">" + Status.nameFor(message.getData().getConditionDelete().getTargetId()));
 
       case PAYLOAD_NOT_SET:
         return "NOT SET" + postfix;

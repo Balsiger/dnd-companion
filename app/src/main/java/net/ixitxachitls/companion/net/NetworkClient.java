@@ -25,6 +25,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.raw.Transmitter;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -35,11 +36,13 @@ import java.util.Optional;
  */
 public class NetworkClient {
 
+  private final DataBaseAccessor dataBaseAccessor;
   private Transmitter transmitter;
   private String serverId = "";
   private String serverName = "(not yet known)";
 
-  public NetworkClient() {
+  public NetworkClient(DataBaseAccessor dataBaseAccessor) {
+    this.dataBaseAccessor = dataBaseAccessor;
     Status.log("creating network client");
   }
 
@@ -107,6 +110,6 @@ public class NetworkClient {
       Status.log("setting server id to " + serverId + "/" + serverName);
     }
 
-    return Optional.of(CompanionMessage.fromProto(message.get()));
+    return Optional.of(CompanionMessage.fromProto(message.get(), dataBaseAccessor));
   }
 }

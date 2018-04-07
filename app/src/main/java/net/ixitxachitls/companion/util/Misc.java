@@ -28,12 +28,17 @@ import android.os.Build;
  */
 public class Misc {
 
-  public static final boolean SHOW_EMULATOR = false;
+  public static final boolean SHOW_EMULATOR = true;
 
   private Misc() {}
 
   public static boolean onEmulator() {
-    return Build.PRODUCT.equals("sdk_google_phone_x86");
+    // This is null in tests.
+    if (Build.PRODUCT != null) {
+      return Build.PRODUCT.equals("sdk_google_phone_x86");
+    } else {
+      return false;
+    }
   }
 
 }

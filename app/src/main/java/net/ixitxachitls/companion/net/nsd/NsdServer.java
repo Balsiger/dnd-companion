@@ -21,12 +21,10 @@
 
 package net.ixitxachitls.companion.net.nsd;
 
-import android.content.Context;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessage;
@@ -44,19 +42,22 @@ public class NsdServer {
 
   public static final String TYPE = "_companion._tcp";
 
+  private final NsdAccessor nsdAccessor;
+  private final Settings settings;
   private final String name;
-  private final NsdManager manager;
   private final NsdServiceInfo service;
   private final NetworkServer server;
 
   private boolean started = false;
   private @Nullable RegistrationListener registrationListener;
 
-  public NsdServer(CompanionApplication application) {
-    this.name = Settings.get().getNickname();
-    this.manager = (NsdManager) application.getSystemService(Context.NSD_SERVICE);
+  public NsdServer(NsdAccessor nsdAccessor, Settings settings) {
+    this.nsdAccessor = nsdAccessor;
+    this.settings = settings;
+
+    this.name = settings.getNickname();
     this.service = new NsdServiceInfo();
-    this.server = new NetworkServer();
+    this.server = new NetworkServer(settings.getDataBaseAccessor());
 
     this.service.setServiceName(this.name);
     this.service.setServiceType(TYPE);
@@ -71,10 +72,10 @@ public class NsdServer {
     service.setHost(server.getAddress());
     service.setPort(server.getPort());
     registrationListener = new RegistrationListener();
-    manager.registerService(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
+    nsdAccessor.register(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
 
     Status.log("nsd service registered");
-    Status.addServerConnection(Settings.get().getAppId(), name);
+    Status.addServerConnection(settings.getAppId(), name);
     started = true;
   }
 
@@ -85,7 +86,7 @@ public class NsdServer {
 
     Status.log("unregistering nsd service " + name);
     Status.log("unregistering nsd service " + name);
-    manager.unregisterService(registrationListener);
+    nsdAccessor.unregister(registrationListener);
     registrationListener = null;
     server.stop();
     Status.removeServerConnection(name);

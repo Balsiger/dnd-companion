@@ -32,6 +32,7 @@ import android.widget.NumberPicker;
 
 import com.google.common.base.Preconditions;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -112,7 +113,8 @@ public class MonsterInitiativeDialog extends Dialog {
     }
 
     Creature creature = new Creature(0, name.getText(), campaign.get().getCampaignId(),
-        Dice.d20() + modifier.get().getValue() - 20);
+        Dice.d20() + modifier.get().getValue() - 20,
+        CompanionApplication.get(getContext()).getDataBaseAccessor());
     creature.store();  // Storing will also add the creature.
     campaign.get().getBattle().setLastMonsterName(name.getText());
     save();

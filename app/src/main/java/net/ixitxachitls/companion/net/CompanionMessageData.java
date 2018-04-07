@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.net;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
@@ -31,15 +32,19 @@ import net.ixitxachitls.companion.data.dynamics.RemoteCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 /**
  * A message transmitted between client and server.
  */
 public class CompanionMessageData {
   private final Data.CompanionMessageProto.Payload data;
+  private final DataBaseAccessor dataBaseAccessor;
 
-  private CompanionMessageData(Data.CompanionMessageProto.Payload data) {
+  private CompanionMessageData(Data.CompanionMessageProto.Payload data,
+                               DataBaseAccessor dataBaseAccessor) {
     this.data = data;
+    this.dataBaseAccessor = dataBaseAccessor;
   }
 
   enum Type {
@@ -79,7 +84,7 @@ public class CompanionMessageData {
       case CONDITION:
         return Type.CONDITION;
 
-      case CONDTION_DELETE:
+      case CONDITION_DELETE:
         return Type.CONDITION_DELETE;
 
       default:
@@ -94,13 +99,13 @@ public class CompanionMessageData {
 
   public RemoteCampaign getCampaign() {
     return RemoteCampaign.fromProto(Campaigns.getRemoteIdFor(data.getCampaign().getId()),
-        data.getCampaign());
+        data.getCampaign(), dataBaseAccessor);
   }
 
   public RemoteCharacter getCharacter() {
     return RemoteCharacter.fromProto(
         Characters.getRemoteIdFor(data.getCharacter().getCreature().getId()),
-        data.getCharacter());
+        data.getCharacter(), dataBaseAccessor);
   }
 
   public Image getImage() {
@@ -128,15 +133,15 @@ public class CompanionMessageData {
   }
 
   public String getConditionDeleteName() {
-    return data.getCondtionDelete().getName();
+    return data.getConditionDelete().getName();
   }
 
   public String getConditionDeleteSourceId() {
-    return data.getCondtionDelete().getSourceId();
+    return data.getConditionDelete().getSourceId();
   }
 
   public String getConditionDeleteTargetId() {
-    return data.getCondtionDelete().getTargetId();
+    return data.getConditionDelete().getTargetId();
   }
 
   public XpAward getXpAward() {
@@ -197,7 +202,7 @@ public class CompanionMessageData {
       case CONDITION:
       case CAMPAIGN_DELETE:
       case CHARACTER_DELETE:
-      case CONDTION_DELETE:
+      case CONDITION_DELETE:
         return true;
     }
   }
@@ -236,9 +241,9 @@ public class CompanionMessageData {
         return message + data.getCondition().getCondition().getCondition().getName();
 
       case CONDITION_DELETE:
-        return message + data.getCondtionDelete().getName() + "/"
-            + data.getCondtionDelete().getSourceId() + ">"
-            + data.getCondtionDelete().getTargetId();
+        return message + data.getConditionDelete().getName() + "/"
+            + Status.nameFor(data.getConditionDelete().getSourceId()) + ">"
+            + Status.nameFor(data.getConditionDelete().getTargetId());
 
       case IMAGE:
         return message + data.getImage().getId();
@@ -256,77 +261,80 @@ public class CompanionMessageData {
   public static CompanionMessageData from(Campaign campaign) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setCampaign(campaign.toProto())
-        .build());
+        .build(), campaign.getDataBaseAccessor());
   }
 
   public static CompanionMessageData from(Character character) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setCharacter(character.toProto())
-        .build());
+        .build(), character.getDataBaseAccessor());
   }
 
-  public static CompanionMessageData from(Image image) {
+  public static CompanionMessageData from(Image image, DataBaseAccessor dataBaseAccessor) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setImage(image.toProto())
-        .build());
+        .build(), dataBaseAccessor);
   }
 
-  public static CompanionMessageData from(String targetId, TimedCondition condition) {
+  public static CompanionMessageData from(String targetId, TimedCondition condition,
+                                          DataBaseAccessor dataBaseAccessor) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setCondition(Data.CompanionMessageProto.Payload.Condition.newBuilder()
             .setTargetId(targetId)
             .setCondition(condition.toProto())
             .build())
-        .build());
+        .build(), dataBaseAccessor);
   }
 
   public static CompanionMessageData fromDelete(Character character) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setCharacterDelete(character.getCharacterId())
-        .build());
+        .build(), character.getDataBaseAccessor());
   }
 
   public static CompanionMessageData fromDelete(Campaign campaign) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setCampaignDelete(campaign.getCampaignId())
-        .build());
+        .build(), campaign.getDataBaseAccessor());
   }
 
-  public static CompanionMessageData fromDelete(String conditionName,
-                                                String sourceId,
-                                                String targetId) {
+  public static CompanionMessageData fromDelete(String conditionName, String sourceId,
+                                                String targetId,
+                                                DataBaseAccessor dataBaseAccessor) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
-        .setCondtionDelete(Data.CompanionMessageProto.Payload.DeleteCondition.newBuilder()
+        .setConditionDelete(Data.CompanionMessageProto.Payload.DeleteCondition.newBuilder()
             .setName(conditionName)
             .setSourceId(sourceId)
             .setTargetId(targetId)
             .build())
-        .build());
+        .build(), dataBaseAccessor);
   }
 
-  public static CompanionMessageData fromWelcome(String id, String name) {
+  public static CompanionMessageData fromWelcome(String id, String name,
+                                                 DataBaseAccessor dataBaseAccessor) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setWelcome(Data.CompanionMessageProto.Payload.Welcome.newBuilder()
             .setId(id)
             .setName(name)
             .build())
-        .build());
+        .build(), dataBaseAccessor);
   }
 
-  public static CompanionMessageData from(XpAward award) {
+  public static CompanionMessageData from(XpAward award, DataBaseAccessor dataBaseAccessor) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setXpAward(award.toProto())
-        .build());
+        .build(), dataBaseAccessor);
   }
 
-  public static CompanionMessageData fromAck(long messageId) {
+  public static CompanionMessageData fromAck(long messageId, DataBaseAccessor dataBaseAccessor) {
     return fromProto(Data.CompanionMessageProto.Payload.newBuilder()
         .setAck(messageId)
-        .build());
+        .build(), dataBaseAccessor);
   }
 
-  public static CompanionMessageData fromProto(Data.CompanionMessageProto.Payload data) {
-    return new CompanionMessageData(data);
+  public static CompanionMessageData fromProto(Data.CompanionMessageProto.Payload data,
+                                               DataBaseAccessor dataBaseAccessor) {
+    return new CompanionMessageData(data ,dataBaseAccessor);
   }
 
   @Override

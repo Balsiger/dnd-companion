@@ -26,13 +26,12 @@ import android.arch.lifecycle.MutableLiveData;
 
 import com.google.common.collect.ImmutableList;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.net.CompanionMessenger;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.Collection;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -191,29 +190,29 @@ public class Characters {
   // Private methods.
 
   // While this method is public, it should only be called in the main application.
-  public static void load(CompanionApplication application) {
-    loadLocal(application);
-    loadRemote(application);
+  public static void load(DataBaseAccessor dataBaseAccessor) {
+    loadLocal(dataBaseAccessor);
+    loadRemote(dataBaseAccessor);
   }
 
-  private static void loadLocal(CompanionApplication application) {
+  private static void loadLocal(DataBaseAccessor dataBaseAccessor) {
     if (local != null) {
       Status.log("local characters already loaded");
       return;
     }
 
     Status.log("loading local characters");
-    local = new CharactersData(application, true);
+    local = new CharactersData(dataBaseAccessor, true);
   }
 
-  private static void loadRemote(CompanionApplication application) {
+  private static void loadRemote(DataBaseAccessor dataBaseAccessor) {
     if (remote != null) {
       Status.log("remote characters already loaded");
       return;
     }
 
     Status.log("loading remote characters");
-    remote = new CharactersData(application, false);
+    remote = new CharactersData(dataBaseAccessor, false);
   }
 
   private static List<String> orphaned() {
@@ -242,25 +241,5 @@ public class Characters {
     }
 
     return ids;
-  }
-
-  private static class CharacterComparator implements Comparator<Character> {
-    @Override
-    public int compare(Character first, Character second) {
-      if (first.getId() == second.getId())
-        return 0;
-
-      int compare = first.getName().compareTo(second.getName());
-      if (compare != 0) {
-        return compare;
-      }
-
-      return Long.compare(first.getId(), second.getId());
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-      return false;
-    }
   }
 }

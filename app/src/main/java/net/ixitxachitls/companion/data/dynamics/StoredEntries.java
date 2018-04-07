@@ -26,9 +26,9 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.storage.DataBase;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -40,20 +40,19 @@ import java.util.Optional;
  */
 public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel {
 
-  protected final CompanionApplication application;
+  protected final DataBaseAccessor dataBaseAccessor;
   protected final Uri table;
   protected final boolean local;
   protected final Map<String, E> entriesById = new HashMap<>();
 
-  protected StoredEntries(CompanionApplication application, Uri table, boolean local) {
-    this.application = application;
+  protected StoredEntries(DataBaseAccessor dataBaseAccessor, Uri table, boolean local) {
+    this.dataBaseAccessor = dataBaseAccessor;
     this.table = table;
     this.local = local;
 
-    Cursor cursor =
-        application.getContentResolver().query(table, DataBase.COLUMNS, null, null, null);
+    Cursor cursor = dataBaseAccessor.queryAll(table);
     while(cursor.moveToNext()) {
-      Optional<E> entry = parseEntry(cursor.getLong(cursor.getColumnIndex("_id")),
+      Optional<E> entry = parseEntry(cursor.getLong(0),
           cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO)));
       if (entry.isPresent()) {
         add(entry.get());
@@ -102,7 +101,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
   protected void remove(E entry) {
     entry.remove();
     entriesById.remove(entry.getEntryId());
-    application.getContentResolver().delete(table, "id = " + entry.getId(), null);
+    dataBaseAccessor.delete(table, entry.getId());
   }
 
   @Nullable

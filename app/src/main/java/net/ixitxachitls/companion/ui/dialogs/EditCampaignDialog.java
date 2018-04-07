@@ -30,6 +30,7 @@ import android.widget.Button;
 
 import com.google.common.base.Strings;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -85,12 +86,14 @@ public class EditCampaignDialog extends Dialog {
     if (getArguments() != null) {
       String id = getArguments().getString(ARG_ID);
       if (Strings.isNullOrEmpty(id)) {
-        campaign = Optional.of(LocalCampaign.createNew());
+        campaign = Optional.of(LocalCampaign.createNew(
+            CompanionApplication.get(getContext()).getDataBaseAccessor()));
       } else {
         campaign = Campaign.asLocal(Campaigns.getCampaign(id).getValue());
       }
     } else {
-      campaign = Optional.of(LocalCampaign.createNew());
+      campaign = Optional.of(LocalCampaign.createNew(
+          CompanionApplication.get(getContext()).getDataBaseAccessor()));
     }
   }
 

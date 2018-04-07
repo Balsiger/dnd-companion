@@ -21,9 +21,8 @@
 
 package net.ixitxachitls.companion.data;
 
-import android.content.res.AssetManager;
-
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,9 +38,9 @@ public class Monsters extends EntriesStore<Monster> {
     super(Monster.class);
   }
 
-  protected void read(AssetManager assetManager, String file)
+  protected void read(InputStream input)
       throws InvocationTargetException, NoSuchMethodException, IllegalAccessException, IOException {
-    super.read(assetManager, file);
+    super.read(input);
     primaryRaces = null;
   }
 

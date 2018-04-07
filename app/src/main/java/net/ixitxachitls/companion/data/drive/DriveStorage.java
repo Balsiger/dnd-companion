@@ -40,6 +40,7 @@ import com.google.android.gms.drive.MetadataChangeSet;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Characters;
@@ -281,14 +282,16 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                       Data.CampaignProto proto = Data.CampaignProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      LocalCampaign.fromProto(Campaigns.getLocalIdFor(proto.getId()), proto)
+                      LocalCampaign.fromProto(Campaigns.getLocalIdFor(proto.getId()), proto,
+                          CompanionApplication.get(activity).getDataBaseAccessor())
                           .store();
                     } else if (meta.getTitle().endsWith(".character")) {
                       Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
                       LocalCharacter.fromProto(
-                          Characters.getLocalIdFor(proto.getCreature().getId()), proto).store();
+                          Characters.getLocalIdFor(proto.getCreature().getId()), proto,
+                          CompanionApplication.get(activity).getDataBaseAccessor()).store();
                     } else if (meta.getTitle().endsWith(".character.jpg")) {
                       new Image(Character.TABLE, meta.getDescription(),
                           Image.asBitmap(result.getDriveContents().getInputStream()));

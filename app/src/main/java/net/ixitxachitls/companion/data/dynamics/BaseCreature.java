@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -65,8 +66,8 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   protected List<TimedCondition> affectedConditions = new ArrayList<>();
 
   protected BaseCreature(long id, String type, String name, boolean local, Uri dbUrl,
-                         String campaignId) {
-    super(id, type, name, local, dbUrl);
+                         String campaignId, DataBaseAccessor dataBaseAccessor) {
+    super(id, type, name, local, dbUrl, dataBaseAccessor);
 
     this.campaignId = campaignId;
   }
@@ -147,11 +148,21 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
   public void removeInitiatedCondition(String name) {
     for (Iterator<TargetedTimedCondition> i = initiatedConditions.iterator(); i.hasNext(); ) {
-      if (i.next().getName().equals(name)) {
+      TargetedTimedCondition condition = i.next();
+      if (condition.getName().equals(name)) {
         i.remove();
-        // TODO(merlin): Have to send removal to all other affected characters
-        // (need to know what characters where affected???)
         store();
+
+        for (String targetId : condition.getTargetIds()) {
+          Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
+          if (creature.isPresent()) {
+            creature.get().removeAffectedCondition(name, getCreatureId());
+          } else {
+            Status.error("Cannot get creature to remove condition " + name + " from: "
+                + Status.nameFor(targetId));
+          }
+        }
+
         break;
       }
     }

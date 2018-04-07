@@ -21,13 +21,15 @@
 
 package net.ixitxachitls.companion.net;
 
-import net.ixitxachitls.companion.CompanionApplication;
+import android.support.annotation.VisibleForTesting;
+
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
+import net.ixitxachitls.companion.net.nsd.NsdAccessor;
 import net.ixitxachitls.companion.net.nsd.NsdServer;
 import net.ixitxachitls.companion.util.Ids;
 
@@ -44,15 +46,17 @@ import java.util.Set;
  */
 public class CompanionServer {
 
+  private final Settings settings;
   private final NsdServer nsdServer;
   private final Map<String, MessageScheduler> schedulersByRecpientId = new HashMap<>();
 
-  public CompanionServer(CompanionApplication application) {
-    this.nsdServer = new NsdServer(application);
+  public CompanionServer(NsdAccessor nsdAccessor, Settings settings) {
+    this.settings = settings;
+    this.nsdServer = new NsdServer(nsdAccessor, settings);
 
     // Setup stored messages.
     for (ScheduledMessage message
-        : ScheduledMessages.get().getMessagesBySender(Settings.get().getAppId())) {
+        : ScheduledMessages.get().getMessagesBySender(settings.getAppId())) {
       setupScheduler(message.getRecieverId());
     }
   }
@@ -148,7 +152,7 @@ public class CompanionServer {
   private MessageScheduler setupScheduler(String recipientId) {
     MessageScheduler scheduler = schedulersByRecpientId.get(recipientId);
     if (scheduler == null) {
-      scheduler = new MessageScheduler(recipientId);
+      scheduler = new MessageScheduler(recipientId, settings.getDataBaseAccessor());
       schedulersByRecpientId.put(recipientId, scheduler);
 
       startIfNecessary();
@@ -181,5 +185,12 @@ public class CompanionServer {
 
   public List<CompanionMessage> receive() {
     return nsdServer.receive();
+  }
+
+
+  // Testing.
+  @VisibleForTesting
+  public Map<String, MessageScheduler> getSchedulersByRecpientId() {
+    return schedulersByRecpientId;
   }
 }

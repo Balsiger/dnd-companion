@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -51,8 +52,6 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
 
   public static final String TYPE = "character";
   public static final String TABLE = "characters";
-  public static final String TABLE_LOCAL = TABLE + "_local";
-  public static final String TABLE_REMOTE = TABLE + "_remote";
   public static final int NO_INITIATIVE = 200;
   protected static final int MAX_HISTORY = 20;
   protected static final Random RANDOM = new Random();
@@ -62,14 +61,16 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
   protected int xp = 0;
   protected List<Condition> conditionsHistory = new ArrayList<>();
 
-  public Character(long id, String name, String campaignId, boolean local) {
+  public Character(long id, String name, String campaignId, boolean local,
+                   DataBaseAccessor dataBaseAccessor) {
     super(id, TYPE, name, local,
         local ? DataBaseContentProvider.CHARACTERS_LOCAL
-            : DataBaseContentProvider.CHARACTERS_REMOTE, campaignId);
+            : DataBaseContentProvider.CHARACTERS_REMOTE, campaignId, dataBaseAccessor);
   }
 
-  protected Character(long id, String name, String campaignId, boolean local, Uri dbUrl) {
-    super(id, TYPE, name, local, dbUrl, campaignId);
+  protected Character(long id, String name, String campaignId, boolean local, Uri dbUrl,
+                      DataBaseAccessor dataBaseAccessor) {
+    super(id, TYPE, name, local, dbUrl, campaignId, dataBaseAccessor);
   }
 
   public String getRace() {
@@ -288,6 +289,6 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
 
   @Override
   public String toString() {
-    return getName() + " (" + getCharacterId() + ")";
+    return getName() + " (" + Status.nameFor(getCharacterId()) + ")";
   }
 }

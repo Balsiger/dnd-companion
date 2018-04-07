@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.net;
 
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 /**
  * Wrapper for a companion message with data and all necessary routing information.
@@ -104,12 +105,13 @@ public class CompanionMessage {
         .build();
   }
 
-  public static CompanionMessage fromProto(Data.CompanionMessageProto proto) {
+  public static CompanionMessage fromProto(Data.CompanionMessageProto proto,
+                                           DataBaseAccessor dataBaseAccessor) {
     return new CompanionMessage(proto.getHeader().getSender().getId(),
         proto.getHeader().getSender().getName(),
         proto.getHeader().getReceiver().getId(),
         proto.getHeader().getId(),
-        CompanionMessageData.fromProto(proto.getData()));
+        CompanionMessageData.fromProto(proto.getData(), dataBaseAccessor));
   }
 
   @Override

@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data;
 
-import android.content.res.AssetManager;
-
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 
@@ -48,9 +46,9 @@ public class EntriesStore<T extends Entry<? extends MessageLite>> {
     this.entryClass = entryClass;
   }
 
-  protected void read(AssetManager assetManager, String file)
+  protected void read(InputStream input)
       throws IOException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-    T entry = fromProto(assetManager.open(file));
+    T entry = fromProto(input);
     byName.put(entry.getName(), entry);
     names = null;
   }

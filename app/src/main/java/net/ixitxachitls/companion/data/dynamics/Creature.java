@@ -23,7 +23,9 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.support.annotation.NonNull;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Dice;
 
@@ -36,15 +38,16 @@ public class Creature extends BaseCreature<Data.CreatureProto> implements Compar
   public static final String TABLE = "creatures";
   public static final String TABLE_LOCAL = TABLE + "_local";
 
-  public Creature(long id, String name, String campaignId, int initiativeModifier) {
-    this(id, name, campaignId);
+  public Creature(long id, String name, String campaignId, int initiativeModifier,
+                  DataBaseAccessor dataBaseAccessor) {
+    this(id, name, campaignId, dataBaseAccessor);
 
     this.initiative = Dice.d20() + initiativeModifier;
   }
 
-  public Creature(long id, String name, String campaignId) {
-    super(id, TABLE, name, true,
-        DataBaseContentProvider.CREATURES_LOCAL, campaignId);
+  public Creature(long id, String name, String campaignId, DataBaseAccessor dataBaseAccessor) {
+    super(id, TABLE, name, true, DataBaseContentProvider.CREATURES_LOCAL, campaignId,
+        dataBaseAccessor);
   }
 
   @Override
@@ -52,8 +55,9 @@ public class Creature extends BaseCreature<Data.CreatureProto> implements Compar
     return toCreatureProto();
   }
 
-  public static Creature fromProto(long id, Data.CreatureProto proto) {
-    Creature creature = new Creature(id, proto.getName(), proto.getCampaignId());
+  public static Creature fromProto(long id, Data.CreatureProto proto,
+                                   DataBaseAccessor dataBaseAccessor) {
+    Creature creature = new Creature(id, proto.getName(), proto.getCampaignId(), dataBaseAccessor);
     creature.fromProto(proto);
 
     return creature;
@@ -85,6 +89,6 @@ public class Creature extends BaseCreature<Data.CreatureProto> implements Compar
 
   @Override
   public String toString() {
-    return getName() + " (" + getCreatureId() + "/local)";
+    return getName() + " (" + Status.nameFor(getCreatureId()) + "/local)";
   }
 }

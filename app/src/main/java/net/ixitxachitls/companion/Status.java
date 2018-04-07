@@ -25,10 +25,13 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
+import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.ui.views.StatusView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -38,9 +41,29 @@ import java.util.Optional;
 public class Status {
   private static Optional<StatusView> view = Optional.empty();
   private static List<Action> pendingActions = new ArrayList<>();
+  private static Map<String, String> namesById = new HashMap<>();
 
   public static void setView(StatusView view) {
     Status.view = Optional.of(view);
+    namesById.put(Settings.get().getAppId(), Settings.get().getNickname());
+  }
+
+  public static void recordId(String id, String name) {
+    namesById.put(id, name);
+  }
+
+  public static String nameFor(String id) {
+    if (namesById.containsKey(id)) {
+      return namesById.get(id);
+    }
+
+    for (String namedId : namesById.keySet()) {
+      if (id.contains(namedId)) {
+        return id.replace(namedId, namesById.get(namedId));
+      }
+    }
+
+    return id;
   }
 
   public static void clearView() {

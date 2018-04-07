@@ -96,7 +96,7 @@ public class XP {
 
 
   public static int xpAward(int encounterLevel, int characterLevel, int partySize) {
-    if (partySize <= 0 || encounterLevel <= 0 || characterLevel <= 0) {
+    if (partySize <= 0 || encounterLevel <= 0 || characterLevel <= 0 || characterLevel > 20) {
       return 0;
     }
 
@@ -116,6 +116,6 @@ public class XP {
       return xpForLevel(20);
     }
 
-    return xpByLevel[level];
+    return xpByLevel[level - 1];
   }
 }

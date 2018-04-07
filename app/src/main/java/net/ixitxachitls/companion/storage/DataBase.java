@@ -29,10 +29,11 @@ import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
+import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
+import net.ixitxachitls.companion.data.dynamics.RemoteCharacter;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.util.Lazy;
 
@@ -53,9 +54,9 @@ public class DataBase extends SQLiteOpenHelper {
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_CAMPAIGNS_REMOTE = "CREATE TABLE " + RemoteCampaign.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CHARACTERS_LOCAL = "CREATE TABLE " + Character.TABLE_LOCAL
+  public static final String CREATE_CHARACTERS_LOCAL = "CREATE TABLE " + LocalCharacter.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CHARACTERS_REMOTE = "CREATE TABLE " + Character.TABLE_REMOTE
+  public static final String CREATE_CHARACTERS_REMOTE = "CREATE TABLE " + RemoteCharacter.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_CREATURES_LOCAL = "CREATE TABLE " + Creature.TABLE_LOCAL
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";

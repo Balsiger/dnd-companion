@@ -21,13 +21,13 @@
 
 package net.ixitxachitls.companion.data;
 
-import android.content.Context;
 import android.support.annotation.Nullable;
 
 import com.google.inject.Singleton;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.statics.World;
-import net.ixitxachitls.companion.ui.Alert;
+import net.ixitxachitls.companion.storage.AssetAccessor;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -45,16 +45,15 @@ public class Entries {
   private final Monsters monsters = new Monsters();
   private final EntriesStore<Level> levels = new EntriesStore<>(Level.class);
   private final EntriesStore<World> worlds = new EntriesStore<>(World.class);
-  private final Context mContext;
+  private final AssetAccessor assetAccessor;
 
-  public Entries(Context context) {
-    // nothing for now
-    mContext = context;
+  public Entries(AssetAccessor assetAccessor) {
+    this.assetAccessor = assetAccessor;
   }
 
-  public static void init(Context context) {
+  public static void init(AssetAccessor assetAccessor) {
     if (singleton == null) {
-      singleton = new Entries(context);
+      singleton = new Entries(assetAccessor);
       singleton.load();
     }
   }
@@ -63,8 +62,8 @@ public class Entries {
     return singleton;
   }
 
-  public static Context getContext() {
-    return get().mContext;
+  public static AssetAccessor getAssetAccessor() {
+    return get().assetAccessor;
   }
 
   public Monsters getMonsters() {
@@ -80,26 +79,23 @@ public class Entries {
   }
 
   private void load() {
-    String message = null;
     try {
-      for (String reference : mContext.getAssets().list(PATH_ENTITIES)) {
-        for (String type : mContext.getAssets().list(PATH_ENTITIES + "/" + reference)) {
+      for (String reference : assetAccessor.list(PATH_ENTITIES)) {
+        for (String type : assetAccessor.list(PATH_ENTITIES + "/" + reference)) {
           String path = PATH_ENTITIES + "/" + reference + "/" + type;
-          for (String file : mContext.getAssets().list(path)) {
-            message = type + ": " + file;
+          for (String file : assetAccessor.list(path)) {
             switch (type) {
               case Monster.TYPE:
-                monsters.read(mContext.getAssets(), path + "/" + file);
+                monsters.read(assetAccessor.open(path + "/" + file));
                 break;
               case Level.TYPE:
-                levels.read(mContext.getAssets(), path + "/" + file);
+                levels.read(assetAccessor.open(path + "/" + file));
                 break;
               case World.TYPE:
-                worlds.read(mContext.getAssets(), path + "/" + file);
+                worlds.read(assetAccessor.open(path + "/" + file));
                 break;
               default:
-                Alert.show(mContext, "Loading " + type + ": " + file,
-                    "Unsupported type " + type + " found!");
+                Status.error("Unsupported type " + type + " found!");
                 break;
             }
           }
@@ -107,8 +103,7 @@ public class Entries {
       }
     } catch (IOException | NoSuchMethodException | IllegalAccessException
         | InvocationTargetException e) {
-      Alert.show(mContext, "Loading " + message,
-          "Loading of entries from internal storage failed: " + e);
+      Status.error("Loading of entries from internal storage failed: " + e);
     }
   }
 }

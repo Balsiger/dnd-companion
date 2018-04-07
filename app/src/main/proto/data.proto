@@ -138,7 +138,7 @@ message CompanionMessageProto {
       Image image = 8;
       Xp xp_award = 9;
       Condition condition = 10;
-      DeleteCondition condtion_delete = 11; // from server only
+      DeleteCondition condition_delete = 11; // from server only
     }
   }
   Payload data = 2;

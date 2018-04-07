@@ -36,6 +36,7 @@ import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.List;
 import java.util.Optional;
@@ -58,9 +59,9 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   protected CampaignDate date;
   protected int nextBattleNumber = 0;
 
-  protected Campaign(long id, String name, boolean local,
-                     Uri dbUrl) {
-    super(id, TYPE, name, local, dbUrl);
+  protected Campaign(long id, String name, boolean local, Uri dbUrl,
+                     DataBaseAccessor dataBaseAccessor) {
+    super(id, TYPE, name, local, dbUrl, dataBaseAccessor);
 
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar().getYears().get(0).getNumber());
@@ -195,7 +196,7 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
 
   @Override
   public String toString() {
-    return getName() + " (" + getCampaignId() + ")";
+    return getName() + " (" + Status.nameFor(getCampaignId()) + ")";
   }
 
   @CallSuper

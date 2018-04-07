@@ -26,9 +26,9 @@ import android.arch.lifecycle.MutableLiveData;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.List;
@@ -44,8 +44,8 @@ public class CharactersData extends StoredEntries<Character> {
   private final Map<String, MutableLiveData<Optional<Character>>> characterById =
       new ConcurrentHashMap<>();
 
-  public CharactersData(CompanionApplication application, boolean local) {
-    super(application, local ?
+  public CharactersData(DataBaseAccessor dataBaseAccessor, boolean local) {
+    super(dataBaseAccessor, local ?
             DataBaseContentProvider.CHARACTERS_LOCAL : DataBaseContentProvider.CHARACTERS_REMOTE,
         local);
   }
@@ -141,7 +141,8 @@ public class CharactersData extends StoredEntries<Character> {
       Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance().getParserForType()
           .parseFrom(blob);
       return Optional.of(isLocal()
-          ? LocalCharacter.fromProto(id, proto) : RemoteCharacter.fromProto(id, proto));
+          ? LocalCharacter.fromProto(id, proto, dataBaseAccessor)
+          : RemoteCharacter.fromProto(id, proto, dataBaseAccessor));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.empty();

@@ -26,6 +26,7 @@ import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.Optional;
@@ -36,8 +37,10 @@ import java.util.stream.Collectors;
  */
 public class RemoteCharacter extends Character {
 
-  public RemoteCharacter(long id, String name, String campaignId) {
-    super(id, name, campaignId, false, DataBaseContentProvider.CHARACTERS_REMOTE);
+  public static final String TABLE = Character.TABLE + "_remote";
+
+  public RemoteCharacter(long id, String name, String campaignId, DataBaseAccessor dataBaseAccessor) {
+    super(id, name, campaignId, false, DataBaseContentProvider.CHARACTERS_REMOTE, dataBaseAccessor);
   }
 
   @Override
@@ -57,9 +60,10 @@ public class RemoteCharacter extends Character {
     return super.toString() + "/remote";
   }
 
-  public static RemoteCharacter fromProto(long id, Data.CharacterProto proto) {
+  public static RemoteCharacter fromProto(long id, Data.CharacterProto proto,
+                                          DataBaseAccessor dataBaseAccessor) {
     RemoteCharacter character = new RemoteCharacter(id, proto.getCreature().getName(),
-        proto.getCreature().getCampaignId());
+        proto.getCreature().getCampaignId(), dataBaseAccessor);
     character.fromProto(proto.getCreature());
     character.playerName = proto.getPlayer();
     character.conditionsHistory = proto.getConditionHistoryList().stream()

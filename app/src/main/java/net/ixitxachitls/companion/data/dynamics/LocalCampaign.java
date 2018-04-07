@@ -32,6 +32,7 @@ import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 
@@ -47,18 +48,19 @@ public class LocalCampaign extends Campaign {
 
   private boolean published = false;
 
-  protected LocalCampaign(long id, String name) {
-    super(id, name, true, DataBaseContentProvider.CAMPAIGNS_LOCAL);
+  protected LocalCampaign(long id, String name, DataBaseAccessor dataBaseAccessor) {
+    super(id, name, true, DataBaseContentProvider.CAMPAIGNS_LOCAL, dataBaseAccessor);
   }
 
-  public static LocalCampaign createDefault() {
-    LocalCampaign campaign = new LocalCampaign(DEFAULT_CAMPAIGN_ID, "Default Campaign");
+  public static LocalCampaign createDefault(DataBaseAccessor dataBaseAccessor) {
+    LocalCampaign campaign = new LocalCampaign(DEFAULT_CAMPAIGN_ID, "Default Campaign",
+        dataBaseAccessor);
     campaign.setWorld("Generic");
     return campaign;
   }
 
-  public static LocalCampaign createNew() {
-    return new LocalCampaign(0, "");
+  public static LocalCampaign createNew(DataBaseAccessor dataBaseAccessor) {
+    return new LocalCampaign(0, "", dataBaseAccessor);
   }
 
   @Override
@@ -139,8 +141,9 @@ public class LocalCampaign extends Campaign {
     return super.toString() + "/local";
   }
 
-  public static LocalCampaign fromProto(long id, Data.CampaignProto proto) {
-    LocalCampaign campaign = new LocalCampaign(id, proto.getName());
+  public static LocalCampaign fromProto(long id, Data.CampaignProto proto,
+                                        DataBaseAccessor dataBaseAccessor) {
+    LocalCampaign campaign = new LocalCampaign(id, proto.getName(), dataBaseAccessor);
     campaign.entryId =
         proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
     campaign.world = Entries.get().getWorlds().get(proto.getWorld())

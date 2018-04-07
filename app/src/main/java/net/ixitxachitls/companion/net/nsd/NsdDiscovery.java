@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.net.nsd;
 
-import android.content.Context;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
@@ -37,26 +36,26 @@ import java.net.InetAddress;
  */
 public class NsdDiscovery {
 
-  private final NsdManager manager;
+  private final NsdAccessor nsdAccessor;
   private final NsdCallback nsdCallback;
   private @Nullable NsdManager.DiscoveryListener discoveryListener;
   private @Nullable NsdManager.ResolveListener resolveListener;
 
-  public NsdDiscovery(Context context, NsdCallback nsdCallback) {
-    this.manager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
+  public NsdDiscovery(NsdAccessor nsdAccessor, NsdCallback nsdCallback) {
+    this.nsdAccessor = nsdAccessor;
     this.nsdCallback = nsdCallback;
   }
 
   public void start() {
     Status.log("starting NSD client");
     discoveryListener = new DiscoveryListener();
-    manager.discoverServices(NsdServer.TYPE, NsdManager.PROTOCOL_DNS_SD,
+    nsdAccessor.discover(NsdServer.TYPE, NsdManager.PROTOCOL_DNS_SD,
         discoveryListener);
   }
 
   public void stop() {
     Status.log("stopping NSD client");
-    manager.stopServiceDiscovery(discoveryListener);
+    nsdAccessor.undiscover(discoveryListener);
     discoveryListener = null;
   }
 
@@ -84,7 +83,7 @@ public class NsdDiscovery {
       } else  {
         Status.log("found service " + service.getServiceName());
         resolveListener = new ResolveListener();
-        manager.resolveService(service, resolveListener);
+        nsdAccessor.resolve(service, resolveListener);
       }
     }
 
@@ -104,14 +103,14 @@ public class NsdDiscovery {
     public void onStartDiscoveryFailed(String serviceType, int errorCode) {
       Status.log("start discovery failed with error " + errorCode);
       if (started) {
-        manager.stopServiceDiscovery(this);
+        nsdAccessor.undiscover(this);
       }
     }
 
     @Override
     public void onStopDiscoveryFailed(String serviceType, int errorCode) {
       Status.log("stop discovery failed with error " + errorCode);
-      manager.stopServiceDiscovery(this);
+      nsdAccessor.undiscover(this);
     }
   }
 

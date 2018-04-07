@@ -27,9 +27,9 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.ArrayList;
@@ -48,8 +48,8 @@ public class CampaignsData extends StoredEntries<Campaign> {
   private final Map<String, MutableLiveData<Optional<Campaign>>> campaignById =
       new ConcurrentHashMap<>();
 
-  CampaignsData(CompanionApplication application, boolean local) {
-    super(application,
+  CampaignsData(DataBaseAccessor dataBaseAccessor, boolean local) {
+    super(dataBaseAccessor,
         local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE,
         local);
 
@@ -114,7 +114,8 @@ public class CampaignsData extends StoredEntries<Campaign> {
       Data.CampaignProto proto = Data.CampaignProto.getDefaultInstance().getParserForType()
           .parseFrom(blob);
       return Optional.of(isLocal()
-          ? LocalCampaign.fromProto(id, proto) : RemoteCampaign.fromProto(id, proto));
+          ? LocalCampaign.fromProto(id, proto, dataBaseAccessor)
+          : RemoteCampaign.fromProto(id, proto, dataBaseAccessor));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.empty();

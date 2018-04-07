@@ -23,6 +23,7 @@ package net.ixitxachitls.companion;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -35,34 +36,54 @@ import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.net.CompanionMessenger;
+import net.ixitxachitls.companion.net.nsd.ApplicationNsdAccessor;
+import net.ixitxachitls.companion.net.nsd.NsdAccessor;
+import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
+import net.ixitxachitls.companion.storage.ApplicationDataBaseAccessor;
+import net.ixitxachitls.companion.storage.AssetAccessor;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 /**
  * The main application for the companion.
  */
-public class CompanionApplication extends MultiDexApplication implements Application.ActivityLifecycleCallbacks {
+public class CompanionApplication extends MultiDexApplication
+    implements Application.ActivityLifecycleCallbacks, CompanionContext {
 
+  private final DataBaseAccessor dataBaseAccessor;
+  private final AssetAccessor assetAccessor;
+
+  private NsdAccessor nsdAccessor;
   private CompanionMessenger messenger;
   private Activity currentActivity;
+
+  public CompanionApplication() {
+    this.dataBaseAccessor = new ApplicationDataBaseAccessor(this);
+    this.assetAccessor = new ApplicationAssetAccessor(this);
+  }
 
   @Override
   public void onCreate() {
     try {
       PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-      Status.error("starting rpg companion version " + packageInfo.versionName + " #" + packageInfo.versionCode);
+      Status.error("starting roleplay companion version " + packageInfo.versionName + " #"
+          + packageInfo.versionCode);
     } catch (PackageManager.NameNotFoundException e) {
-      Status.warning("starting rpg companion with unknown version");
+      Status.warning("starting roleplay companion with unknown version");
     }
     super.onCreate();
 
-    Entries.init(this);
-    Settings.init(this);
+    nsdAccessor = new ApplicationNsdAccessor(this);
 
-    Campaigns.load(this);
-    Images.load(this);
-    Characters.load(this);
-    Creatures.load(this);
+    Entries.init(this.getAssetAccessor());
+    Settings.init(this.getDataBaseAccessor());
 
-    messenger = CompanionMessenger.init(this);
+    Campaigns.load(this.getDataBaseAccessor());
+    Images.load(this.getAssetAccessor());
+    Characters.load(this.getDataBaseAccessor());
+    Creatures.load(this.getDataBaseAccessor());
+
+    // The messenger needs other entries, thus cannot be created earlier.
+    messenger = CompanionMessenger.init(dataBaseAccessor, nsdAccessor, Settings.get(), this);
     messenger.start(); // Stopping is done in MainActivity.exit();
     Campaigns.publish();
     Characters.publish();
@@ -70,8 +91,30 @@ public class CompanionApplication extends MultiDexApplication implements Applica
     registerActivityLifecycleCallbacks(this);
   }
 
+  public static CompanionApplication get(Context context) {
+    return (CompanionApplication) context.getApplicationContext();
+  }
+
   public Activity getCurrentActivity() {
     return currentActivity;
+  }
+
+  // Companion Context accessors.
+  public DataBaseAccessor getDataBaseAccessor() {
+    return dataBaseAccessor;
+  }
+
+  public AssetAccessor getAssetAccessor() {
+    return assetAccessor;
+  }
+
+  public NsdAccessor getNsdAccessor() {
+    return nsdAccessor;
+  }
+
+  public Settings getSettings() {
+    // TODO(merlin): Make this a real member.
+    return Settings.get();
   }
 
   @Override

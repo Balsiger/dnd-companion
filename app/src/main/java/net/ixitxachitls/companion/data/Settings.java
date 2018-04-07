@@ -24,8 +24,8 @@ package net.ixitxachitls.companion.data;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.content.ContentValues;
-import android.content.Context;
 import android.database.CursorIndexOutOfBoundsException;
+import android.support.annotation.VisibleForTesting;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
@@ -35,6 +35,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import net.ixitxachitls.companion.data.dynamics.StoredEntry;
 import net.ixitxachitls.companion.proto.Data;
 import net.ixitxachitls.companion.storage.DataBase;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Misc;
 
@@ -50,9 +51,10 @@ import java.util.UUID;
 @Singleton
 public class Settings extends StoredEntry<Data.SettingsProto> {
   public static final String TABLE = "settings";
-  public static final int ID = 1;
 
+  private static final int ID = 1;
   private static Settings settings = null;
+  private final DataBaseAccessor dataBaseAccessor;
 
   private String appId;
   private long lastMessageId = 1;
@@ -61,8 +63,11 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private boolean remoteCharacters = false;
   private List<String> features = new ArrayList<>();
 
-  private Settings(String name) {
-    super(ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
+  @VisibleForTesting
+  public Settings(String name, DataBaseAccessor dataBaseAccessor) {
+    super(ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS,
+        dataBaseAccessor);
+    this.dataBaseAccessor = dataBaseAccessor;
 
     showStatus.setValue(false);
   }
@@ -80,6 +85,12 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return features.contains(feature);
   }
 
+  /*
+  public static DataBaseAccessor getDataBaseAccessor() {
+    return Settings.dataBaseAccessor;
+  }
+  */
+
   public static ContentValues defaultSettings() {
     ContentValues values = new ContentValues();
     values.put(DataBase.COLUMN_ID, ID);
@@ -89,8 +100,8 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return values;
   }
 
-  public static Settings init(Context context) {
-    settings = load(context).orElse(new Settings(""));
+  public static Settings init(DataBaseAccessor dataBaseAccessor) {
+    settings = load(dataBaseAccessor).orElse(new Settings("", dataBaseAccessor));
     settings.ensureAppId();
     return settings;
   }
@@ -119,8 +130,8 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return settings;
   }
 
-  private static Settings fromProto(Data.SettingsProto proto) {
-    Settings settings = new Settings(proto.getNickname());
+  private static Settings fromProto(Data.SettingsProto proto, DataBaseAccessor dataBaseAccessor) {
+    Settings settings = new Settings(proto.getNickname(), dataBaseAccessor);
     settings.appId = proto.getAppId();
     settings.lastMessageId = proto.getLastMessageId();
     settings.remoteCampaigns = proto.getRemoteCampaigns();
@@ -135,17 +146,17 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return settings;
   }
 
-  private static Optional<Settings> load(Context context) {
+  private static Optional<Settings> load(DataBaseAccessor dataBaseAccessor) {
     try {
       return Optional.of(fromProto(Data.SettingsProto.getDefaultInstance().getParserForType()
-          .parseFrom(loadBytes(context, ID, DataBaseContentProvider.SETTINGS))));
+          .parseFrom(loadBytes(dataBaseAccessor, ID, DataBaseContentProvider.SETTINGS)),
+          dataBaseAccessor));
     } catch (InvalidProtocolBufferException e) {
       e.printStackTrace();
       return Optional.empty();
     } catch (CursorIndexOutOfBoundsException e) {
       // For some reason, the default settings are not there anymore. Let's restore them.
-      Entries.getContext().getContentResolver().insert(DataBaseContentProvider.SETTINGS,
-          Settings.defaultSettings());
+      dataBaseAccessor.insert(DataBaseContentProvider.SETTINGS, Settings.defaultSettings());
 
       return Optional.empty();
     }

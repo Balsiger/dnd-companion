@@ -28,12 +28,13 @@ import android.graphics.BitmapFactory;
 
 import com.google.common.base.Preconditions;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.storage.AssetAccessor;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -47,12 +48,12 @@ public class Images {
   private static Images local;
   private static Images remote;
 
-  private final CompanionApplication application;
+  private final AssetAccessor assetAccessor;
   private final boolean isLocal;
   private final Map<String, MutableLiveData<Optional<Image>>> imagesByKey = new HashMap<>();
 
-  protected Images(CompanionApplication application, boolean isLocal) {
-    this.application = application;
+  protected Images(AssetAccessor assetAccessor, boolean isLocal) {
+    this.assetAccessor = assetAccessor;
     this.isLocal = isLocal;
   }
 
@@ -70,19 +71,19 @@ public class Images {
     return local ? Images.local : Images.remote;
   }
 
-  public static void load(CompanionApplication application) {
+  public static void load(AssetAccessor assetAccessor) {
     if (local != null) {
       Status.log("local images already loaded");
     } else {
       Status.log("loading local images");
-      local = new Images(application, true);
+      local = new Images(assetAccessor, true);
     }
 
     if (remote != null) {
       Status.log("remote images already loaded");
     } else {
       Status.log("loading remote images");
-      remote = new Images(application, false);
+      remote = new Images(assetAccessor, false);
     }
   }
 
@@ -119,16 +120,18 @@ public class Images {
 
   private Optional<Image> load(String type, String id) {
     File file = file(type, id);
-    try {
-      Bitmap bitmap = BitmapFactory.decodeStream(new FileInputStream(file));
-      if (bitmap == null) {
-        return Optional.empty();
+    try (InputStream input = new FileInputStream(file)) {
+      Bitmap bitmap = BitmapFactory.decodeStream(input);
+      if (bitmap != null) {
+        return Optional.of(new Image(type, id, bitmap));
       }
-
-      return Optional.of(new Image(type, id, bitmap));
     } catch (FileNotFoundException e) {
-      return Optional.empty();
+      Status.error("Cannot find file image " + file + " (" + e + ")");
+    } catch (IOException e) {
+      Status.error("Cannot read image file " + file + " (" + e + ")");
     }
+
+    return Optional.empty();
   }
 
   public Optional<InputStream> read(String type, String id) {
@@ -157,7 +160,7 @@ public class Images {
   }
 
   private File file(String type, String id) {
-    return new File(application.getExternalFilesDir(type + (isLocal() ? "-local" : "-remote")),
+    return new File(assetAccessor.getExternalFilesDir(type + (isLocal() ? "-local" : "-remote")),
         id + ".jpg");
   }
 

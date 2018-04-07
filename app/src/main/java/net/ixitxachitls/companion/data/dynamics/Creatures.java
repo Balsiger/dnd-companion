@@ -26,8 +26,8 @@ import android.arch.lifecycle.MutableLiveData;
 
 import com.google.common.collect.ImmutableList;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.List;
 import java.util.Map;
@@ -130,18 +130,18 @@ public class Creatures {
   // Private methods.
 
   // While this method is public, it should only be called in the main application.
-  public static void load(CompanionApplication application) {
-    loadLocal(application);
+  public static void load(DataBaseAccessor dataBaseAccessor) {
+    loadLocal(dataBaseAccessor);
   }
 
-  private static void loadLocal(CompanionApplication application) {
+  private static void loadLocal(DataBaseAccessor dataBaseAccessor) {
     if (local != null) {
       Status.log("local creature already loaded");
       return;
     }
 
     Status.log("loading local creature");
-    local = new CreaturesData(application);
+    local = new CreaturesData(dataBaseAccessor);
   }
 
   private static List<String> orphaned() {
