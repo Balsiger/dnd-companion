@@ -32,13 +32,10 @@ import android.widget.TextView;
 
 import com.google.common.base.Preconditions;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
@@ -89,14 +86,14 @@ public class CharacterDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
+    campaign = campaigns().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
     if (campaign.isPresent()) {
       String characterId = getArguments().getString(ARG_ID);
       if (characterId.isEmpty()) {
-        character = Optional.of(LocalCharacter.createNew(campaign.get().getCampaignId(),
-            CompanionApplication.get(getContext()).getDataBaseAccessor()));
+        character =
+            Optional.of(LocalCharacter.createNew(data(), campaign.get().getCampaignId()));
       } else {
-        character = Character.asLocal(Characters.getCharacter(characterId).getValue());
+        character = Character.asLocal(characters().getCharacter(characterId).getValue());
       }
     } else {
       character = Optional.empty();

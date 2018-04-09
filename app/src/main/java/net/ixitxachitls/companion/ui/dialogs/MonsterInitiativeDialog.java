@@ -32,10 +32,8 @@ import android.widget.NumberPicker;
 
 import com.google.common.base.Preconditions;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
@@ -82,7 +80,7 @@ public class MonsterInitiativeDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
+    campaign = campaigns().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
     monsterId = getArguments().getInt(ARG_MONSTER_ID);
   }
 
@@ -112,9 +110,8 @@ public class MonsterInitiativeDialog extends Dialog {
       return;
     }
 
-    Creature creature = new Creature(0, name.getText(), campaign.get().getCampaignId(),
-        Dice.d20() + modifier.get().getValue() - 20,
-        CompanionApplication.get(getContext()).getDataBaseAccessor());
+    Creature creature = new Creature(data(), 0, name.getText(), campaign.get().getCampaignId(),
+        Dice.d20() + modifier.get().getValue() - 20);
     creature.store();  // Storing will also add the creature.
     campaign.get().getBattle().setLastMonsterName(name.getText());
     save();

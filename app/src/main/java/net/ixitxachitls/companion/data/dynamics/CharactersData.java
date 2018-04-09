@@ -27,8 +27,8 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.List;
@@ -41,11 +41,12 @@ import java.util.stream.Collectors;
  * Data storage for various characters.
  */
 public class CharactersData extends StoredEntries<Character> {
+
   private final Map<String, MutableLiveData<Optional<Character>>> characterById =
       new ConcurrentHashMap<>();
 
-  public CharactersData(DataBaseAccessor dataBaseAccessor, boolean local) {
-    super(dataBaseAccessor, local ?
+  public CharactersData(Data data, boolean local) {
+    super(data, local ?
             DataBaseContentProvider.CHARACTERS_LOCAL : DataBaseContentProvider.CHARACTERS_REMOTE,
         local);
   }
@@ -124,25 +125,25 @@ public class CharactersData extends StoredEntries<Character> {
 
   public List<Character> orphaned() {
     return getAll().stream()
-        .filter(CharactersData::isOrphaned)
+        .filter(this::isOrphaned)
         .collect(Collectors.toList());
   }
 
-  private static boolean isOrphaned(Character character) {
+  private boolean isOrphaned(Character character) {
     return character.isLocal()
-        && character.getCampaignId().equals(Campaigns.defaultCampaign.getCampaignId())
-        || (!Campaigns.has(character.getCampaignId(), true)
-        && !Campaigns.has(character.getCampaignId(), false));
+        && character.getCampaignId().equals(data.campaigns().getDefaultCampaign().getCampaignId())
+        || (!data.campaigns().has(character.getCampaignId(), true)
+        && !data.campaigns().has(character.getCampaignId(), false));
   }
 
   @Override
   protected Optional<Character> parseEntry(long id, byte[] blob) {
     try {
-      Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance().getParserForType()
+      Entry.CharacterProto proto = Entry.CharacterProto.getDefaultInstance().getParserForType()
           .parseFrom(blob);
       return Optional.of(isLocal()
-          ? LocalCharacter.fromProto(id, proto, dataBaseAccessor)
-          : RemoteCharacter.fromProto(id, proto, dataBaseAccessor));
+          ? LocalCharacter.fromProto(data, id, proto)
+          : RemoteCharacter.fromProto(data, id, proto));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.empty();

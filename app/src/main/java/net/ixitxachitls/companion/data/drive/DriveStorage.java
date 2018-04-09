@@ -41,13 +41,12 @@ import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.CompanionApplication;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 import java.io.IOException;
@@ -278,20 +277,20 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                 public void onSuccess(DriveApi.DriveContentsResult result) {
                   net.ixitxachitls.companion.Status.log("reading file " + meta.getTitle());
                   try {
+                    Data data = CompanionApplication.get(activity).data();
                     if (meta.getTitle().endsWith(".campaign")) {
-                      Data.CampaignProto proto = Data.CampaignProto.getDefaultInstance()
+                      Entry.CampaignProto proto = Entry.CampaignProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      LocalCampaign.fromProto(Campaigns.getLocalIdFor(proto.getId()), proto,
-                          CompanionApplication.get(activity).getDataBaseAccessor())
-                          .store();
+                      LocalCampaign.fromProto(data, data.campaigns().getLocalIdFor(proto.getId()),
+                          proto).store();
                     } else if (meta.getTitle().endsWith(".character")) {
-                      Data.CharacterProto proto = Data.CharacterProto.getDefaultInstance()
+                      Entry.CharacterProto proto = Entry.CharacterProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      LocalCharacter.fromProto(
-                          Characters.getLocalIdFor(proto.getCreature().getId()), proto,
-                          CompanionApplication.get(activity).getDataBaseAccessor()).store();
+                      LocalCharacter.fromProto(data,
+                          data.characters().getLocalIdFor(proto.getCreature().getId()), proto)
+                          .store();
                     } else if (meta.getTitle().endsWith(".character.jpg")) {
                       new Image(Character.TABLE, meta.getDescription(),
                           Image.asBitmap(result.getDriveContents().getInputStream()));

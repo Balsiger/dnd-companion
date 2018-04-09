@@ -34,7 +34,6 @@ import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
@@ -68,7 +67,7 @@ public class CampaignsFragment extends CompanionFragment {
             + "You will be the Dungeon Master of the campaign.");
 
 
-    Campaigns.getAllCampaignIds().observe(this, this::update);
+    campaigns().getAllCampaignIds().observe(this, this::update);
 
     return view;
   }
@@ -77,7 +76,7 @@ public class CampaignsFragment extends CompanionFragment {
   public void onResume() {
     super.onResume();
 
-    update(Campaigns.getAllCampaignIds().getValue());
+    update(campaigns().getAllCampaignIds().getValue());
   }
 
 
@@ -92,10 +91,10 @@ public class CampaignsFragment extends CompanionFragment {
     // from this fragment seems to break them.
     TransitionManager.beginDelayedTransition(campaignsView.get());
     campaignsView.get().removeAllViews();
-    List<Campaign> campaigns = Campaigns.getAllCampaigns();
+    List<Campaign> campaigns = campaigns().getAllCampaigns();
     Collections.sort(campaigns);
     for (Campaign campaign : campaigns) {
-      LiveData<Optional<Campaign>> liveCampaign = Campaigns.getCampaign(campaign.getCampaignId());
+      LiveData<Optional<Campaign>> liveCampaign = campaigns().getCampaign(campaign.getCampaignId());
       CampaignTitleView title = new CampaignTitleView(getContext());
       liveCampaign.removeObservers(this);
       liveCampaign.observe(this, title::update);
@@ -103,7 +102,7 @@ public class CampaignsFragment extends CompanionFragment {
       title.setAction(() -> {
         CompanionFragments.get().showCampaign(campaign, Optional.of(title));
       });
-      if (campaign.getCampaignId().equals(Campaigns.getCurrentCampaignId().getValue())) {
+      if (campaign.getCampaignId().equals(campaigns().getCurrentCampaignId().getValue())) {
         title.setTransitionName("sharedMove");
       }
     }

@@ -24,40 +24,41 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.support.annotation.NonNull;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Dice;
 
 /**
  * Representation of a monster in the game.
  */
-public class Creature extends BaseCreature<Data.CreatureProto> implements Comparable<Creature> {
+public class Creature extends BaseCreature<Entry.CreatureProto> implements Comparable<Creature> {
   @Deprecated public static final String Type = "creature";
   public static final String TYPE = "creatures";
   public static final String TABLE = "creatures";
   public static final String TABLE_LOCAL = TABLE + "_local";
 
-  public Creature(long id, String name, String campaignId, int initiativeModifier,
-                  DataBaseAccessor dataBaseAccessor) {
-    this(id, name, campaignId, dataBaseAccessor);
+  private final Data data;
+
+  public Creature(Data data, long id, String name, String campaignId,
+                  int initiativeModifier) {
+    this(data, id, name, campaignId);
 
     this.initiative = Dice.d20() + initiativeModifier;
   }
 
-  public Creature(long id, String name, String campaignId, DataBaseAccessor dataBaseAccessor) {
-    super(id, TABLE, name, true, DataBaseContentProvider.CREATURES_LOCAL, campaignId,
-        dataBaseAccessor);
+  public Creature(Data data, long id, String name, String campaignId) {
+    super(data, id, TABLE, name, true, DataBaseContentProvider.CREATURES_LOCAL, campaignId);
+    this.data = data;
   }
 
   @Override
-  public Data.CreatureProto toProto() {
+  public Entry.CreatureProto toProto() {
     return toCreatureProto();
   }
 
-  public static Creature fromProto(long id, Data.CreatureProto proto,
-                                   DataBaseAccessor dataBaseAccessor) {
-    Creature creature = new Creature(id, proto.getName(), proto.getCampaignId(), dataBaseAccessor);
+  public static Creature fromProto(Data data, long id, Entry.CreatureProto proto) {
+    Creature creature = new Creature(data, id, proto.getName(), proto.getCampaignId());
     creature.fromProto(proto);
 
     return creature;
@@ -67,10 +68,10 @@ public class Creature extends BaseCreature<Data.CreatureProto> implements Compar
   public boolean store() {
     boolean changed = super.store();
     if (changed) {
-      if (Creatures.has(this)) {
-        Creatures.update(this);
+      if (data.creatures().has(this)) {
+        data.creatures().update(this);
       } else {
-        Creatures.add(this);
+        data.creatures().add(this);
       }
     }
 

@@ -27,8 +27,8 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.List;
@@ -45,8 +45,8 @@ public class CreaturesData extends StoredEntries<Creature> {
   private final Map<String, MutableLiveData<Optional<Creature>>> creatureById =
       new ConcurrentHashMap<>();
 
-  public CreaturesData(DataBaseAccessor dataBaseAccessor) {
-    super(dataBaseAccessor, DataBaseContentProvider.CREATURES_LOCAL, true);
+  public CreaturesData(Data data) {
+    super(data, DataBaseContentProvider.CREATURES_LOCAL, true);
   }
 
   public LiveData<Optional<Creature>> getCreature(String creatureId) {
@@ -115,22 +115,21 @@ public class CreaturesData extends StoredEntries<Creature> {
 
   public List<Creature> orphaned() {
     return getAll().stream()
-        .filter(CreaturesData::isOrphaned)
+        .filter(this::isOrphaned)
         .collect(Collectors.toList());
   }
 
-  private static boolean isOrphaned(Creature creature) {
-    return creature.getCampaignId().equals(Campaigns.defaultCampaign.getCampaignId())
-        || (!Campaigns.has(creature.getCampaignId(), true)
-            && !Campaigns.has(creature.getCampaignId(), false));
+  private boolean isOrphaned(Creature creature) {
+    return creature.getCampaignId().equals(data.campaigns().getDefaultCampaign().getCampaignId())
+        || (!data.campaigns().has(creature.getCampaignId(), true)
+            && !data.campaigns().has(creature.getCampaignId(), false));
   }
 
   @Override
   protected Optional<Creature> parseEntry(long id, byte[] blob) {
     try {
-      return Optional.of(
-          Creature.fromProto(id, Data.CreatureProto.getDefaultInstance().getParserForType()
-              .parseFrom(blob), dataBaseAccessor));
+      return Optional.of(Creature.fromProto(data, id,
+          Entry.CreatureProto.getDefaultInstance().getParserForType().parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.empty();

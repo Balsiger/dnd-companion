@@ -24,11 +24,10 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.Date;
@@ -36,7 +35,7 @@ import java.util.Date;
 /**
  * A message scheduled for transmission.
  */
-public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
+public class ScheduledMessage extends StoredEntry<Entry.ScheduledMessageProto> {
 
   public static final String TYPE = "message";
   public static final String TABLE = "messages";
@@ -49,14 +48,15 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
   private State state;
   private long lastInteraction;
 
-  public ScheduledMessage(CompanionMessage message, DataBaseAccessor dataBaseAccessor) {
-    this(0, State.WAITING, new Date().getTime(), message, dataBaseAccessor);
+  public ScheduledMessage(Campaigns campaigns, CompanionMessage message) {
+    this(campaigns, 0, State.WAITING, new Date().getTime(), message);
   }
 
-  private ScheduledMessage(long id, State state, long lastInteraction, CompanionMessage message,
-                           DataBaseAccessor dataBaseAccessor) {
-    super(id, TYPE, TYPE + "-" + Settings.get().getAppId() + "-" + message.getMessageId(), TYPE,
-        true, DataBaseContentProvider.MESSAGES, dataBaseAccessor);
+  private ScheduledMessage(Campaigns campaigns, long id, State state, long lastInteraction,
+                           CompanionMessage message) {
+    super(campaigns.data(), id, TYPE,
+        TYPE + "-" + campaigns.data().settings().getAppId() + "-" + message.getMessageId(), TYPE,
+        true, DataBaseContentProvider.MESSAGES);
 
     this.message = message;
     this.state = state;
@@ -80,8 +80,8 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
   }
 
   @Override
-  public Data.ScheduledMessageProto toProto() {
-    return Data.ScheduledMessageProto.newBuilder()
+  public Entry.ScheduledMessageProto toProto() {
+    return Entry.ScheduledMessageProto.newBuilder()
         .setState(convert(state))
         .setLastInteraction(lastInteraction)
         .setMessage(message.toProto())
@@ -151,30 +151,29 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     return message.getRecieverId();
   }
 
-  private Data.ScheduledMessageProto.State convert(State state) {
+  private Entry.ScheduledMessageProto.State convert(State state) {
     switch (state) {
       default:
       case WAITING:
-        return Data.ScheduledMessageProto.State.WAITING;
+        return Entry.ScheduledMessageProto.State.WAITING;
 
       case PENDING:
-        return Data.ScheduledMessageProto.State.PENDING;
+        return Entry.ScheduledMessageProto.State.PENDING;
 
       case SENT:
-        return Data.ScheduledMessageProto.State.SENT;
+        return Entry.ScheduledMessageProto.State.SENT;
 
       case ACKED:
-        return Data.ScheduledMessageProto.State.ACKED;
+        return Entry.ScheduledMessageProto.State.ACKED;
     }
   }
 
-  public static ScheduledMessage fromProto(long id, Data.ScheduledMessageProto proto,
-                                           DataBaseAccessor dataBaseAccessor) {
-    return new ScheduledMessage(id, convert(proto.getState()), proto.getLastInteraction(),
-        CompanionMessage.fromProto(proto.getMessage(), dataBaseAccessor), dataBaseAccessor);
+  public static ScheduledMessage fromProto(Data data, long id, Entry.ScheduledMessageProto proto) {
+    return new ScheduledMessage(data.campaigns(), id, convert(proto.getState()),
+        proto.getLastInteraction(), CompanionMessage.fromProto(data, proto.getMessage()));
   }
 
-  private static State convert(Data.ScheduledMessageProto.State state) {
+  private static State convert(Entry.ScheduledMessageProto.State state) {
     switch (state) {
       default:
       case UNRECOGNIZED:
@@ -218,7 +217,7 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     return result;
   }
 
-  public static String info(Data.CompanionMessageProto.Header.Id id) {
+  public static String info(Entry.CompanionMessageProto.Header.Id id) {
     if (!id.getName().isEmpty()) {
       return id.getName();
     }
@@ -226,7 +225,7 @@ public class ScheduledMessage extends StoredEntry<Data.ScheduledMessageProto> {
     return id.getId();
   }
 
-  public static String info(Data.CompanionMessageProto message) {
+  public static String info(Entry.CompanionMessageProto message) {
     String postfix = "";
     if (message.getHeader().getId() != 0) {
       postfix = " (id " + message.getHeader().getId() + ")";

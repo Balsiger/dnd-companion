@@ -19,19 +19,46 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion;
+package net.ixitxachitls.companion.data;
 
-import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.net.nsd.NsdAccessor;
-import net.ixitxachitls.companion.storage.AssetAccessor;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 /**
- * The context for all data access.
+ * Reference to all global data.
  */
-public interface CompanionContext {
-  DataBaseAccessor getDataBaseAccessor();
-  AssetAccessor getAssetAccessor();
-  NsdAccessor getNsdAccessor();
-  Settings getSettings();
+public abstract class Data {
+
+  private final DataBaseAccessor dataBaseAccessor;
+
+  protected Settings settings;
+  protected Campaigns campaigns;
+  protected Creatures creatures;
+  protected Characters characters;
+
+  protected Data(DataBaseAccessor dataBaseAccessor) {
+    this.dataBaseAccessor = dataBaseAccessor;
+  }
+
+  public DataBaseAccessor getDataBaseAccessor() {
+    return dataBaseAccessor;
+  }
+
+  public Settings settings() {
+    return settings;
+  }
+
+  public Campaigns campaigns() {
+    return campaigns;
+  }
+
+  public Creatures creatures() {
+    return creatures;
+  }
+
+  public Characters characters() {
+    return characters;
+  }
 }

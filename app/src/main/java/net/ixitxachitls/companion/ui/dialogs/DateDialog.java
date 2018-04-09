@@ -41,7 +41,6 @@ import com.google.common.base.Preconditions;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
@@ -94,7 +93,8 @@ public class DateDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaign.asLocal(Campaigns.getCampaign(getArguments().getString(ARG_ID)).getValue());
+    campaign = Campaign.asLocal(campaigns().getCampaign(getArguments().getString(ARG_ID))
+        .getValue());
     if (campaign.isPresent()) {
       from(campaign.get().getDate());
     }

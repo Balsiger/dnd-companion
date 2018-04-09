@@ -29,12 +29,13 @@ import android.net.Uri;
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
 import net.ixitxachitls.companion.data.dynamics.RemoteCharacter;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -113,6 +114,9 @@ public abstract class FakeDataBaseAccessor implements DataBaseAccessor {
       case "/" + RemoteCharacter.TABLE:
         return remoteCharactersById;
 
+      case "/" + Creature.TABLE_LOCAL:
+        return remoteCharactersById;
+
       case "/" + ScheduledMessage.TABLE:
         return messagesById;
 
@@ -126,17 +130,17 @@ public abstract class FakeDataBaseAccessor implements DataBaseAccessor {
     table.put(table.size() + 1L, message.toByteArray());
   }
 
-  protected static Data.SettingsProto settings(String id, String nickName, long lastMessageId) {
-    return Data.SettingsProto.newBuilder()
+  protected static Entry.SettingsProto settings(String id, String nickName, long lastMessageId) {
+    return Entry.SettingsProto.newBuilder()
         .setAppId(id)
         .setNickname(nickName)
         .setLastMessageId(lastMessageId)
         .build();
   }
 
-  protected static Data.CampaignProto campaign(String campaignId, String name, String world,
+  protected static Entry.CampaignProto campaign(String campaignId, String name, String world,
                                                boolean published) {
-    return Data.CampaignProto.newBuilder()
+    return Entry.CampaignProto.newBuilder()
         .setId(campaignId)
         .setName(name)
         .setWorld(world)
@@ -144,14 +148,14 @@ public abstract class FakeDataBaseAccessor implements DataBaseAccessor {
         .build();
   }
 
-  protected static Data.CharacterProto character(String characterId, String name, String campaignId) {
-    return Data.CharacterProto.newBuilder()
+  protected static Entry.CharacterProto character(String characterId, String name, String campaignId) {
+    return Entry.CharacterProto.newBuilder()
         .setCreature(creature(characterId, name, campaignId))
         .build();
   }
 
-  private static Data.CreatureProto creature(String creatureId, String name, String campaignId) {
-    return Data.CreatureProto.newBuilder()
+  private static Entry.CreatureProto creature(String creatureId, String name, String campaignId) {
+    return Entry.CreatureProto.newBuilder()
         .setId(creatureId)
         .setName(name)
         .setCampaignId(campaignId)

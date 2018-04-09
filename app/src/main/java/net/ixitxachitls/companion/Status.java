@@ -45,7 +45,8 @@ public class Status {
 
   public static void setView(StatusView view) {
     Status.view = Optional.of(view);
-    namesById.put(Settings.get().getAppId(), Settings.get().getNickname());
+    Settings settings = CompanionApplication.get(view.getContext()).settings();
+    namesById.put(settings.getAppId(), settings.getNickname());
   }
 
   public static void recordId(String id, String name) {

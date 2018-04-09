@@ -25,14 +25,13 @@ import android.content.Context;
 import android.support.annotation.CallSuper;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.net.CompanionMessenger;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 
@@ -48,19 +47,18 @@ public class LocalCampaign extends Campaign {
 
   private boolean published = false;
 
-  protected LocalCampaign(long id, String name, DataBaseAccessor dataBaseAccessor) {
-    super(id, name, true, DataBaseContentProvider.CAMPAIGNS_LOCAL, dataBaseAccessor);
+  protected LocalCampaign(Data data, long id, String name) {
+    super(data, id, name, true, DataBaseContentProvider.CAMPAIGNS_LOCAL);
   }
 
-  public static LocalCampaign createDefault(DataBaseAccessor dataBaseAccessor) {
-    LocalCampaign campaign = new LocalCampaign(DEFAULT_CAMPAIGN_ID, "Default Campaign",
-        dataBaseAccessor);
+  public static LocalCampaign createDefault(Data data) {
+    LocalCampaign campaign = new LocalCampaign(data, DEFAULT_CAMPAIGN_ID, "Default Campaign");
     campaign.setWorld("Generic");
     return campaign;
   }
 
-  public static LocalCampaign createNew(DataBaseAccessor dataBaseAccessor) {
-    return new LocalCampaign(0, "", dataBaseAccessor);
+  public static LocalCampaign createNew(Data data) {
+    return new LocalCampaign(data, 0, "");
   }
 
   @Override
@@ -80,7 +78,7 @@ public class LocalCampaign extends Campaign {
 
   @Override
   public String getDm() {
-    return Settings.get().getNickname();
+    return data.settings().getNickname();
   }
 
   public LocalCampaign asLocal() {
@@ -141,11 +139,10 @@ public class LocalCampaign extends Campaign {
     return super.toString() + "/local";
   }
 
-  public static LocalCampaign fromProto(long id, Data.CampaignProto proto,
-                                        DataBaseAccessor dataBaseAccessor) {
-    LocalCampaign campaign = new LocalCampaign(id, proto.getName(), dataBaseAccessor);
+  public static LocalCampaign fromProto(Data data, long id, Entry.CampaignProto proto) {
+    LocalCampaign campaign = new LocalCampaign(data, id, proto.getName());
     campaign.entryId =
-        proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
+        proto.getId().isEmpty() ? data.settings().getAppId() + "-" + id : proto.getId();
     campaign.world = Entries.get().getWorlds().get(proto.getWorld())
         .orElse(Entries.get().getWorlds().get("Generic").get());
     campaign.dm = proto.getDm();

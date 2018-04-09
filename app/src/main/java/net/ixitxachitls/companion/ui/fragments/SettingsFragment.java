@@ -66,7 +66,7 @@ public class SettingsFragment extends CompanionFragment {
     ConstraintLayout view = (ConstraintLayout)
         inflater.inflate(R.layout.fragment_settings, container, false);
 
-    settings = Settings.get();
+    settings = settings();
 
     nickname = view.findViewById(R.id.nickname);
     nickname.onEdit(this::editNickname).onChange(this::update);

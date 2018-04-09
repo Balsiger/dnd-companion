@@ -27,7 +27,7 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.util.Misc;
 
@@ -43,183 +43,26 @@ import java.util.stream.Collectors;
  * Access to and utilities for camapigns.
  */
 public class Campaigns {
-  private static CampaignsData local;
-  private static CampaignsData remote;
+  private final Data data;
+  private final CampaignsData local;
+  private final CampaignsData remote;
 
-  public static Campaign defaultCampaign;
-  private static final MutableLiveData<Optional<Campaign>> liveDefaultCampaign =
+  private Campaign defaultCampaign;
+  private final MutableLiveData<Optional<Campaign>> liveDefaultCampaign =
       new MutableLiveData<>();
 
   // Live data storages.
-  private static MutableLiveData<String> currentCampaignId = new MutableLiveData<>();
-  private static MutableLiveData<ImmutableList<String>> allCampaignIds = new MutableLiveData<>();
+  private MutableLiveData<String> currentCampaignId = new MutableLiveData<>();
+  private MutableLiveData<ImmutableList<String>> allCampaignIds = new MutableLiveData<>();
 
-  // Data accessors.
-  public static LiveData<Optional<Campaign>> getCampaign(String campaignId) {
-    if (campaignId.equals(defaultCampaign.getCampaignId())) {
-      return liveDefaultCampaign;
-    }
+  public Campaigns(Data data) {
+    this.data = data;
+    this.local = new CampaignsData(data, true);
+    this.remote = new CampaignsData(data, false);
 
-    if ((!Misc.onEmulator() || !Settings.get().useRemoteCampaigns())
-        && local.hasCampaign(campaignId)) {
-      return local.getCampaign(campaignId);
-    }
-
-    return remote.getCampaign(campaignId);
-  }
-
-  public static LiveData<String> getCurrentCampaignId() {
-    return currentCampaignId;
-  }
-
-  public static List<Campaign> getLocalCampaigns() {
-    return local.getCampaigns();
-  }
-
-  public static List<Campaign> getRemoteCampaigns() {
-    return remote.getCampaigns();
-  }
-
-  public static List<Campaign> getAllCampaigns() {
-    List<Campaign> campaigns = new ArrayList<>();
-    campaigns.add(defaultCampaign);
-    if (Misc.onEmulator()) {
-      if (Settings.get().useRemoteCampaigns()) {
-        campaigns.addAll(remote.getCampaigns());
-      } else {
-        campaigns.addAll(local.getCampaigns());
-      }
-    } else {
-      campaigns.addAll(local.getCampaigns());
-      campaigns.addAll(remote.getCampaigns());
-    }
-
-
-    return campaigns;
-  }
-
-  public static boolean has(Campaign campaign) {
-    return has(campaign.getCampaignId(), campaign.isLocal());
-  }
-
-  public static boolean has(String campaignId, boolean isLocal) {
-    if (isLocal) {
-      return local.has(campaignId);
-    }
-
-    return remote.has(campaignId);
-  }
-
-  public static boolean hasAnyPublished() {
-    for (Campaign campaign : local.getAll()) {
-      if (campaign.isPublished()) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  // This is not live data.
-  public static List<Campaign> getCampaignsByServer(String serverId) {
-    List<Campaign> filtered = new ArrayList<>();
-    for (Campaign campaign : remote.getCampaigns()) {
-      if (campaign.getCampaignId().startsWith(serverId)) {
-        filtered.add(campaign);
-      }
-    }
-
-    return filtered;
-  }
-
-  public static LiveData<ImmutableList<String>> getAllCampaignIds() {
-    if (allCampaignIds.getValue() == null) {
-      LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
-    }
-
-    return allCampaignIds;
-  }
-
-  public static long getLocalIdFor(String campaignId) {
-    return local.getIdFor(campaignId);
-  }
-
-  public static long getRemoteIdFor(String campaignId) {
-    return remote.getIdFor(campaignId);
-  }
-
-  // Data mutations.
-
-  public static void changeCurrent(String campaignId) {
-    // Don't check for equality with the current campaign here, as we might have changed
-    // the object and need to update UI now, as the campaign actually changed, although
-    // the object is already updated.
-    Status.log("setting current campaign to " + campaignId);
-    LiveDataUtils.setValueIfChanged(currentCampaignId, campaignId);
-  }
-
-  public static void update(Campaign campaign) {
-    // We assume that the campaign id did not change.
-    Status.log("updating campaign " + campaign);
-
-    if (campaign.isLocal()) {
-      local.update(campaign);
-    } else {
-      remote.update(campaign);
-    }
-  }
-
-  public static void add(Campaign campaign) {
-    Status.log("adding campaign " + campaign);
-
-    if (campaign.isLocal()) {
-      local.add(campaign);
-    } else {
-      remote.add(campaign);
-    }
-
-    LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
-  }
-
-  public static void remove(String campaignId, boolean isLocal) {
-    Status.log("removing campaign " + campaignId + " / " + isLocal);
-    if (isLocal) {
-      local.remove(campaignId);
-    } else {
-      remote.remove(campaignId);
-    }
-
-    LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
-    if (currentCampaignId.getValue().equals(campaignId)) {
-      currentCampaignId.setValue(defaultCampaign.getCampaignId());
-    }
-  }
-
-  public static void remove(Campaign campaign) {
-    remove(campaign.getCampaignId(), campaign.isLocal());
-  }
-
-  // Publishing.
-  public static void publish() {
-    Status.log("publishing all campaigns");
-    for (Campaign campaign : local.getAll()) {
-      LocalCampaign localCampaign = campaign.asLocal();
-      if (!localCampaign.isDefault() && localCampaign.isPublished()) {
-        localCampaign.publish();
-      }
-    }
-  }
-
-  // Private methods.
-
-  // This should only be called from the main activity.
-  public static void load(DataBaseAccessor dataBaseAccessor) {
-    defaultCampaign = LocalCampaign.createDefault(dataBaseAccessor);
-    currentCampaignId.setValue(defaultCampaign.getCampaignId());
-    liveDefaultCampaign.setValue(Optional.of(defaultCampaign));
-
-    loadLocal(dataBaseAccessor);
-    loadRemote(dataBaseAccessor);
+    this.defaultCampaign = LocalCampaign.createDefault(data);
+    this.currentCampaignId.setValue(defaultCampaign.getCampaignId());
+    this.liveDefaultCampaign.setValue(Optional.of(defaultCampaign));
 
     // Check that we don't have local and remote campaigns with the same id.
     if (!Misc.onEmulator()) {
@@ -235,11 +78,181 @@ public class Campaigns {
     }
   }
 
-  private static Set<String> campaignIds() {
+  public Data data() {
+    return data;
+  }
+
+  public Campaign getDefaultCampaign() {
+    return defaultCampaign;
+  }
+
+  // Data accessors.
+  public LiveData<Optional<Campaign>> getCampaign(String campaignId) {
+    if (campaignId.equals(defaultCampaign.getCampaignId())) {
+      return liveDefaultCampaign;
+    }
+
+    if ((!Misc.onEmulator() || !data.settings().useRemoteCampaigns())
+        && local.hasCampaign(campaignId)) {
+      return local.getCampaign(campaignId);
+    }
+
+    return remote.getCampaign(campaignId);
+  }
+
+  public LiveData<String> getCurrentCampaignId() {
+    return currentCampaignId;
+  }
+
+  public List<Campaign> getLocalCampaigns() {
+    return local.getCampaigns();
+  }
+
+  public List<Campaign> getRemoteCampaigns() {
+    return remote.getCampaigns();
+  }
+
+  public List<Campaign> getAllCampaigns() {
+    List<Campaign> campaigns = new ArrayList<>();
+    campaigns.add(defaultCampaign);
+    if (Misc.onEmulator()) {
+      if (data.settings().useRemoteCampaigns()) {
+        campaigns.addAll(remote.getCampaigns());
+      } else {
+        campaigns.addAll(local.getCampaigns());
+      }
+    } else {
+      campaigns.addAll(local.getCampaigns());
+      campaigns.addAll(remote.getCampaigns());
+    }
+
+
+    return campaigns;
+  }
+
+  public boolean has(Campaign campaign) {
+    return has(campaign.getCampaignId(), campaign.isLocal());
+  }
+
+  public boolean has(String campaignId, boolean isLocal) {
+    if (isLocal) {
+      return local.has(campaignId);
+    }
+
+    return remote.has(campaignId);
+  }
+
+  public boolean hasAnyPublished() {
+    for (Campaign campaign : local.getAll()) {
+      if (campaign.isPublished()) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  // This is not live data.
+  public List<Campaign> getCampaignsByServer(String serverId) {
+    List<Campaign> filtered = new ArrayList<>();
+    for (Campaign campaign : remote.getCampaigns()) {
+      if (campaign.getCampaignId().startsWith(serverId)) {
+        filtered.add(campaign);
+      }
+    }
+
+    return filtered;
+  }
+
+  public LiveData<ImmutableList<String>> getAllCampaignIds() {
+    if (allCampaignIds.getValue() == null) {
+      LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
+    }
+
+    return allCampaignIds;
+  }
+
+  public long getLocalIdFor(String campaignId) {
+    return local.getIdFor(campaignId);
+  }
+
+  public long getRemoteIdFor(String campaignId) {
+    return remote.getIdFor(campaignId);
+  }
+
+  // Data mutations.
+
+  public void changeCurrent(String campaignId) {
+    // Don't check for equality with the current campaign here, as we might have changed
+    // the object and need to update UI now, as the campaign actually changed, although
+    // the object is already updated.
+    Status.log("setting current campaign to " + campaignId);
+    LiveDataUtils.setValueIfChanged(currentCampaignId, campaignId);
+  }
+
+  public void update(Campaign campaign) {
+    // We assume that the campaign id did not change.
+    Status.log("updating campaign " + campaign);
+
+    if (campaign.isLocal()) {
+      local.update(campaign);
+    } else {
+      remote.update(campaign);
+    }
+  }
+
+  public void add(Campaign campaign) {
+    Status.log("adding campaign " + campaign);
+
+    if (campaign.isLocal()) {
+      local.add(campaign);
+    } else {
+      remote.add(campaign);
+    }
+
+    LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
+  }
+
+  public void remove(String campaignId, boolean isLocal) {
+    Status.log("removing campaign " + campaignId + " / " + isLocal);
+    if (isLocal) {
+      local.remove(campaignId);
+    } else {
+      remote.remove(campaignId);
+    }
+
+    LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
+    if (currentCampaignId.getValue().equals(campaignId)) {
+      currentCampaignId.setValue(defaultCampaign.getCampaignId());
+    }
+  }
+
+  public void remove(Campaign campaign) {
+    remove(campaign.getCampaignId(), campaign.isLocal());
+  }
+
+  // Publishing.
+  public void publish() {
+    Status.log("publishing all campaigns");
+    for (Campaign campaign : local.getAll()) {
+      LocalCampaign localCampaign = campaign.asLocal();
+      if (!localCampaign.isDefault() && localCampaign.isPublished()) {
+        localCampaign.publish();
+      }
+    }
+  }
+
+  // Private methods.
+
+  // This should only be called from the main activity.
+  public void load(DataBaseAccessor dataBaseAccessor) {
+  }
+
+  private Set<String> campaignIds() {
     Set<String> ids = new HashSet<>();
     ids.add(defaultCampaign.getCampaignId());
     if (Misc.onEmulator()) {
-      if (Settings.get().useRemoteCampaigns()) {
+      if (data.settings().useRemoteCampaigns()) {
         ids.addAll(remote.getCampaigns()
             .stream()
             .map(Campaign::getCampaignId)
@@ -264,7 +277,7 @@ public class Campaigns {
     return ids;
   }
 
-  private static Optional<Campaign> campaign(String campaignId) {
+  private Optional<Campaign> campaign(String campaignId) {
     if (defaultCampaign.getCampaignId().equals(campaignId)) {
       return Optional.of(defaultCampaign);
     }
@@ -275,26 +288,6 @@ public class Campaigns {
     }
 
     return remote.get(campaignId);
-  }
-
-  private static void loadLocal(DataBaseAccessor dataBaseAccessor) {
-    if (local != null) {
-      Status.log("local campaigns already loaded");
-      return;
-    }
-
-    Status.log("loading local campaigns");
-    local = new CampaignsData(dataBaseAccessor, true);
-  }
-
-  private static void loadRemote(DataBaseAccessor dataBaseAccessor) {
-    if (remote != null) {
-      Status.log("remote campaigns already loaded");
-      return;
-    }
-
-    Status.log("loading remote campaigns");
-    remote = new CampaignsData(dataBaseAccessor, false);
   }
 
   private static class CampaignComparator implements Comparator<Campaign> {

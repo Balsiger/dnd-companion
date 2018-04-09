@@ -25,7 +25,7 @@ import android.arch.core.executor.testing.InstantTaskExecutorRule;
 import android.os.Handler;
 import android.support.multidex.MultiDexApplication;
 
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.FakeData;
 import net.ixitxachitls.companion.net.nsd.FakeNsdAccessor;
 import net.ixitxachitls.companion.storage.FakeClient1DataBaseAccessor;
 import net.ixitxachitls.companion.storage.FakeClient2DataBaseAccessor;
@@ -51,15 +51,15 @@ public class NetworkTest {
 
   protected final FakeNsdAccessor serverNsd = new FakeNsdAccessor();
   protected final FakeDataBaseAccessor serverDataBase = new FakeServerDataBaseAccessor();
-  protected final Settings serverSettings = new Settings("server", serverDataBase);
+  protected final FakeData serverData = new FakeData("Server", "server", serverDataBase);
 
   protected final FakeNsdAccessor client1Nsd = new FakeNsdAccessor();
   protected final FakeDataBaseAccessor client1DataBase = new FakeClient1DataBaseAccessor();
-  protected final Settings client1Settings = new Settings("client1", client1DataBase);
+  protected final FakeData client1Data = new FakeData("Client 1", "client1", client1DataBase);
 
   protected final FakeNsdAccessor client2Nsd = new FakeNsdAccessor();
   protected final FakeDataBaseAccessor client2DataBase = new FakeClient2DataBaseAccessor();
-  protected final Settings client2Settings = new Settings("client2", client2DataBase);
+  protected final FakeData client2Data = new FakeData("Client 2", "client2", client2DataBase);
 
   @Before
   public void setUp() {
@@ -68,13 +68,13 @@ public class NetworkTest {
   @Test
   public void welcome() {
     CompanionMessenger server =
-        new CompanionMessenger(serverDataBase, serverNsd, serverSettings, null, new Handler());
+        new CompanionMessenger(serverData, serverNsd, null, new Handler());
     server.start();
     CompanionMessenger client1 =
-        new CompanionMessenger(client1DataBase, client1Nsd, client1Settings, null, new Handler());
+        new CompanionMessenger(client1Data, client1Nsd, null, new Handler());
     client1.start();
     CompanionMessenger client2 =
-        new CompanionMessenger(client2DataBase, client2Nsd, client2Settings, null, new Handler());
+        new CompanionMessenger(client2Data, client2Nsd, null, new Handler());
     client2.start();
 
 

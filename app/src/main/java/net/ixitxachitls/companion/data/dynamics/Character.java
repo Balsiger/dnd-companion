@@ -30,11 +30,11 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -47,7 +47,7 @@ import java.util.stream.Collectors;
 /**
  * Character represenatation.
  */
-public abstract class Character extends BaseCreature<Data.CharacterProto>
+public abstract class Character extends BaseCreature<Entry.CharacterProto>
     implements Comparable<Character> {
 
   public static final String TYPE = "character";
@@ -61,16 +61,15 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
   protected int xp = 0;
   protected List<Condition> conditionsHistory = new ArrayList<>();
 
-  public Character(long id, String name, String campaignId, boolean local,
-                   DataBaseAccessor dataBaseAccessor) {
-    super(id, TYPE, name, local,
+  public Character(Data data, long id, String name, String campaignId, boolean local) {
+    super(data, id, TYPE, name, local,
         local ? DataBaseContentProvider.CHARACTERS_LOCAL
-            : DataBaseContentProvider.CHARACTERS_REMOTE, campaignId, dataBaseAccessor);
+            : DataBaseContentProvider.CHARACTERS_REMOTE, campaignId);
   }
 
-  protected Character(long id, String name, String campaignId, boolean local, Uri dbUrl,
-                      DataBaseAccessor dataBaseAccessor) {
-    super(id, TYPE, name, local, dbUrl, campaignId, dataBaseAccessor);
+  protected Character(Data data, long id, String name, String campaignId, boolean local,
+                      Uri dbUrl) {
+    super(data, id, TYPE, name, local, dbUrl, campaignId);
   }
 
   public String getRace() {
@@ -88,6 +87,14 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
     return entryId;
   }
 
+  public Data data() {
+    return data;
+  }
+
+  public Campaigns campaigns() {
+    return data.campaigns();
+  }
+
   @Override
   public int getInitiative() {
     Optional<Campaign> campaign = getCampaign();
@@ -103,7 +110,7 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
   }
 
   public boolean hasInitiative() {
-    Optional<Campaign> campaign = Campaigns.getCampaign(getCampaignId()).getValue();
+    Optional<Campaign> campaign = campaigns().getCampaign(getCampaignId()).getValue();
     return initiative != NO_INITIATIVE
         && campaign.isPresent()
         && battleNumber == campaign.get().getBattle().getNumber();
@@ -179,8 +186,8 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
   };
 
   @Override
-  public Data.CharacterProto toProto() {
-    Data.CharacterProto.Builder proto = Data.CharacterProto.newBuilder()
+  public Entry.CharacterProto toProto() {
+    Entry.CharacterProto.Builder proto = Entry.CharacterProto.newBuilder()
         .setCreature(toCreatureProto())
         .addAllConditionHistory(conditionsHistory.stream()
             .map(Condition::toProto).collect(Collectors.toList()))
@@ -205,10 +212,10 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
   @Override
   public boolean store() {
     if (super.store()) {
-      if (Characters.has(this)) {
-        Characters.update(this);
+      if (data.characters().has(this)) {
+        data.characters().update(this);
       } else {
-        Characters.add(this);
+        data.characters().add(this);
       }
 
       return true;
@@ -217,7 +224,7 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
     return false;
   }
 
-  public static class Level extends DynamicEntry<Data.CharacterProto.Level> {
+  public static class Level extends DynamicEntry<Entry.CharacterProto.Level> {
 
     private int hp;
     private Ability abilityIncrease;
@@ -235,8 +242,8 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
     }
 
     @Override
-    public Data.CharacterProto.Level toProto() {
-      return Data.CharacterProto.Level.newBuilder()
+    public Entry.CharacterProto.Level toProto() {
+      return Entry.CharacterProto.Level.newBuilder()
           .setName(name)
           .setHp(hp)
           //.setAbilityIncrease(abilityIncrease.toProto())
@@ -269,7 +276,7 @@ public abstract class Character extends BaseCreature<Data.CharacterProto>
     }
   }
 
-  public static Level fromProto(Data.CharacterProto.Level proto) {
+  public static Level fromProto(Entry.CharacterProto.Level proto) {
     Level level = new Level(proto.getName());
     level.hp = proto.getHp();
     level.abilityIncrease = Ability.fromProto(proto.getAbilityIncrease());

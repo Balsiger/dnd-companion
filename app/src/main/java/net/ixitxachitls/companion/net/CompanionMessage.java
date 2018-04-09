@@ -21,8 +21,8 @@
 
 package net.ixitxachitls.companion.net;
 
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.proto.Entry;
 
 /**
  * Wrapper for a companion message with data and all necessary routing information.
@@ -89,14 +89,14 @@ public class CompanionMessage {
     return data;
   }
 
-  public Data.CompanionMessageProto toProto() {
-    return Data.CompanionMessageProto.newBuilder()
-        .setHeader(Data.CompanionMessageProto.Header.newBuilder()
-            .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
+  public Entry.CompanionMessageProto toProto() {
+    return Entry.CompanionMessageProto.newBuilder()
+        .setHeader(Entry.CompanionMessageProto.Header.newBuilder()
+            .setSender(Entry.CompanionMessageProto.Header.Id.newBuilder()
                 .setId(senderId)
                 .setName(senderName)
                 .build())
-            .setReceiver(Data.CompanionMessageProto.Header.Id.newBuilder()
+            .setReceiver(Entry.CompanionMessageProto.Header.Id.newBuilder()
                 .setId(recieverId)
                 .build())
             .setId(messageId)
@@ -105,13 +105,12 @@ public class CompanionMessage {
         .build();
   }
 
-  public static CompanionMessage fromProto(Data.CompanionMessageProto proto,
-                                           DataBaseAccessor dataBaseAccessor) {
+  public static CompanionMessage fromProto(Data data, Entry.CompanionMessageProto proto) {
     return new CompanionMessage(proto.getHeader().getSender().getId(),
         proto.getHeader().getSender().getName(),
         proto.getHeader().getReceiver().getId(),
         proto.getHeader().getId(),
-        CompanionMessageData.fromProto(proto.getData(), dataBaseAccessor));
+        CompanionMessageData.fromProto(data, proto.getData()));
   }
 
   @Override

@@ -37,15 +37,14 @@ import android.widget.TextView;
 
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creature;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
@@ -71,7 +70,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class PartyFragment extends Fragment {
 
   // External data.
-  private Campaign campaign = Campaigns.defaultCampaign;
+  private Campaigns campaigns;
+  private Campaign campaign;
 
   // UI.
   private ViewGroup view;
@@ -91,13 +91,16 @@ public class PartyFragment extends Fragment {
   private Map<String, Character> charactersNeedingInitiative = new HashMap<>();
 
   public PartyFragment() {
-    Campaigns.getCurrentCampaignId().observe(this, this::updateCampaignId);
   }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
+
+    campaigns = CompanionApplication.get(getContext()).campaigns();
+    campaign = campaigns.getDefaultCampaign();
+    campaigns.getCurrentCampaignId().observe(this, this::updateCampaignId);
 
     view = (ViewGroup) inflater.inflate(R.layout.fragment_party, container, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
@@ -133,13 +136,13 @@ public class PartyFragment extends Fragment {
   public void onResume() {
     super.onResume();
 
-    updateCampaignId(Campaigns.getCurrentCampaignId().getValue());
+    updateCampaignId(campaigns.getCurrentCampaignId().getValue());
   }
 
   private void updateCampaignId(String campaignId) {
     Status.log("updating campaign id to " + campaignId);
-    Campaigns.getCampaign(campaign.getCampaignId()).removeObservers(this);
-    Campaigns.getCampaign(campaignId).observe(this, this::updateCampaign);
+    campaigns.getCampaign(campaign.getCampaignId()).removeObservers(this);
+    campaigns.getCampaign(campaignId).observe(this, this::updateCampaign);
   }
 
   private void updateCampaign(Optional<Campaign> campaign) {
@@ -190,7 +193,8 @@ public class PartyFragment extends Fragment {
   private void updateCharacterIds(ImmutableList<String> characterIds) {
     Status.log("updating characters for " + campaign + ": " + characterIds);
     for (String characterId : characterIds) {
-      LiveData<Optional<Character>> character = Characters.getCharacter(characterId);
+      LiveData<Optional<Character>> character = CompanionApplication.get(getContext())
+          .characters().getCharacter(characterId);
       character.removeObservers(this);
       character.observe(this, this::updateCharacter);
       if (character.getValue().isPresent()) {
@@ -235,7 +239,8 @@ public class PartyFragment extends Fragment {
       // Add all new chips.
       for (String creatureId : creatureIds) {
         if (!chipsById.containsKey(creatureId)) {
-          LiveData<Optional<Creature>> creature = Creatures.getCreature(creatureId);
+          LiveData<Optional<Creature>> creature =
+              CompanionApplication.get(getContext()).creatures().getCreature(creatureId);
           creature.observe(this, this::updateCreature);
           if (creature.getValue().isPresent()) {
             chipsById.put(creatureId, new CreatureChipView(getContext(), creature.getValue().get()));

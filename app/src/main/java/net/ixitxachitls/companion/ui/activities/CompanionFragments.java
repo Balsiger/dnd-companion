@@ -29,7 +29,6 @@ import android.view.View;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
@@ -56,7 +55,9 @@ public class CompanionFragments {
 
   private static CompanionFragments singleton;
 
+  private final Campaigns campaigns;
   private FragmentManager fragmentManager;
+
   private Optional<CompanionFragment> currentFragment = Optional.empty();
   private Optional<CampaignFragment> campaignFragment = Optional.empty();
   private Optional<LocalCampaignFragment> localCampaignFragment = Optional.empty();
@@ -65,7 +66,8 @@ public class CompanionFragments {
   private Optional<CharacterFragment> characterFragment = Optional.empty();
   private Optional<LocalCharacterFragment> localCharacterFragment = Optional.empty();
 
-  private CompanionFragments(FragmentManager fragmentManager) {
+  private CompanionFragments(Campaigns campaigns, FragmentManager fragmentManager) {
+    this.campaigns = campaigns;
     this.fragmentManager = fragmentManager;
   }
 
@@ -73,9 +75,9 @@ public class CompanionFragments {
     currentFragment = Optional.of(fragment);
   }
 
-  public static void init(FragmentManager fragmentManager) {
+  public static void init(Campaigns campaigns, FragmentManager fragmentManager) {
     if (singleton == null) {
-      singleton = new CompanionFragments(fragmentManager);
+      singleton = new CompanionFragments(campaigns, fragmentManager);
     } else {
       singleton.fragmentManager = fragmentManager;
     }
@@ -97,7 +99,7 @@ public class CompanionFragments {
       show(CompanionFragment.Type.campaigns, Optional.empty());
 
       // Show settings if not yet defined
-      if (!Settings.get().isDefined()) {
+      if (!campaigns.data().settings().isDefined()) {
         show(CompanionFragment.Type.settings, Optional.empty());
       }
     }
@@ -185,7 +187,7 @@ public class CompanionFragments {
   }
 
   public void showCampaign(Campaign campaign, Optional<View> shared) {
-    Campaigns.changeCurrent(campaign.getCampaignId());
+    campaigns.changeCurrent(campaign.getCampaignId());
     if (campaign.isLocal()) {
       show(CompanionFragment.Type.localCampaign, shared);
       if (localCampaignFragment.isPresent()) {

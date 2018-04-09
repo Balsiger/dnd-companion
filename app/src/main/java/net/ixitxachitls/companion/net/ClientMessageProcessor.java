@@ -23,11 +23,8 @@ package net.ixitxachitls.companion.net;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
@@ -47,7 +44,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, Settings.get().getAppId(), messageId, message);
+    process(senderId, senderName, application.settings().getAppId(), messageId, message);
   }
 
   @Override
@@ -58,7 +55,8 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
-    Optional<Campaign> oldCampaign = Campaigns.getCampaign(campaign.getCampaignId()).getValue();
+    Optional<Campaign> oldCampaign =
+        application.campaigns().getCampaign(campaign.getCampaignId()).getValue();
     if (oldCampaign.isPresent()
         && oldCampaign.get().getBattle().isEnded()
         && !campaign.getBattle().isEnded()
@@ -83,7 +81,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
-    Campaigns.remove(campaignId, false);
+    application.campaigns().remove(campaignId, false);
     CompanionMessenger.get().sendAckToServer(senderId, messageId);
   }
 
@@ -96,7 +94,8 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
-    Optional<Character> character = Characters.getCharacter(award.getCharacterId()).getValue();
+    Optional<Character> character =
+        application.characters().getCharacter(award.getCharacterId()).getValue();
     if (character.isPresent()) {
       new ConfirmationDialog(application.getCurrentActivity())
           .title("XP Award")
@@ -116,7 +115,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   private void addXpAward(String senderId, long messageId, String characterId, int xp) {
     Optional<LocalCharacter> character =
-        Character.asLocal(Characters.getCharacter(characterId).getValue());
+        Character.asLocal(application.characters().getCharacter(characterId).getValue());
     if (character.isPresent()) {
       character.get().addXp(xp);
       CompanionMessenger.get().sendAckToServer(senderId, messageId);

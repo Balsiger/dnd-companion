@@ -22,11 +22,10 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.Optional;
@@ -39,8 +38,8 @@ public class RemoteCharacter extends Character {
 
   public static final String TABLE = Character.TABLE + "_remote";
 
-  public RemoteCharacter(long id, String name, String campaignId, DataBaseAccessor dataBaseAccessor) {
-    super(id, name, campaignId, false, DataBaseContentProvider.CHARACTERS_REMOTE, dataBaseAccessor);
+  public RemoteCharacter(Data data, long id, String name, String campaignId) {
+    super(data, id, name, campaignId, false, DataBaseContentProvider.CHARACTERS_REMOTE);
   }
 
   @Override
@@ -60,10 +59,9 @@ public class RemoteCharacter extends Character {
     return super.toString() + "/remote";
   }
 
-  public static RemoteCharacter fromProto(long id, Data.CharacterProto proto,
-                                          DataBaseAccessor dataBaseAccessor) {
-    RemoteCharacter character = new RemoteCharacter(id, proto.getCreature().getName(),
-        proto.getCreature().getCampaignId(), dataBaseAccessor);
+  public static RemoteCharacter fromProto(Data data, long id, Entry.CharacterProto proto) {
+    RemoteCharacter character = new RemoteCharacter(data, id,
+        proto.getCreature().getName(), proto.getCreature().getCampaignId());
     character.fromProto(proto.getCreature());
     character.playerName = proto.getPlayer();
     character.conditionsHistory = proto.getConditionHistoryList().stream()
@@ -71,12 +69,12 @@ public class RemoteCharacter extends Character {
         .collect(Collectors.toList());
     character.xp = proto.getXp();
 
-    for (Data.CharacterProto.Level level : proto.getLevelList()) {
+    for (Entry.CharacterProto.Level level : proto.getLevelList()) {
       character.levels.add(Character.fromProto(level));
     }
 
     if (character.playerName.isEmpty()) {
-      character.playerName = Settings.get().getNickname();
+      character.playerName = data.settings().getNickname();
     }
 
     return character;

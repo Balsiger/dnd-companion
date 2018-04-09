@@ -37,9 +37,7 @@ import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.views.XPCharacterView;
 import net.ixitxachitls.companion.ui.views.XPFixedView;
@@ -85,7 +83,7 @@ public class XPDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
+    campaign = campaigns().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
   }
 
   @Override
@@ -118,7 +116,7 @@ public class XPDialog extends Dialog {
 
       characterContainer = (LinearLayout) view.findViewById(R.id.party);
       for (String characterId: campaign.get().getCharacterIds().getValue()) {
-        Character character = Characters.getCharacter(characterId).getValue().get();
+        Character character = characters().getCharacter(characterId).getValue().get();
         characterContainer.addView(new XPCharacterView(getContext(), this, character));
       }
 

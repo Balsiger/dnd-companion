@@ -29,12 +29,11 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
@@ -48,7 +47,7 @@ import java.util.Optional;
  */
 public class BattleView extends LinearLayout {
 
-  private Campaign campaign = Campaigns.defaultCampaign;
+  private Campaign campaign;
 
   private final Wrapper<FloatingActionButton> add;
   private final Wrapper<FloatingActionButton> next;
@@ -58,6 +57,7 @@ public class BattleView extends LinearLayout {
 
   public BattleView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
+    this.campaign = CompanionApplication.get(context).campaigns().getDefaultCampaign();
 
     ViewGroup view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, this, false);
 
@@ -102,7 +102,8 @@ public class BattleView extends LinearLayout {
       if (currentCreatureId.startsWith(Creature.TYPE)) {
         currentCreatureIsLocal = true;
       } else {
-        Optional<Character> character = Characters.getCharacter(currentCreatureId).getValue();
+        Optional<Character> character = CompanionApplication.get(getContext())
+            .characters().getCharacter(currentCreatureId).getValue();
         currentCreatureIsLocal = character.isPresent() && character.get().isLocal();
       }
 

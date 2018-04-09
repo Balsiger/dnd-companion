@@ -25,15 +25,10 @@ import android.widget.Toast;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 
@@ -133,7 +128,7 @@ public abstract class MessageProcessor {
         break;
     }
 
-    Status.refreshServerConnection(Settings.get().getAppId());
+    Status.refreshServerConnection(application.settings().getAppId());
     Status.refreshClientConnection(senderId);
 
     received.addFirst(new RecievedMessage(senderName, message));
@@ -144,7 +139,8 @@ public abstract class MessageProcessor {
 
   private void handleCondition(String senderId, long messageId, String targetId,
                                TimedCondition condition) {
-    Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
+    Optional<? extends BaseCreature> creature =
+        application.creatures().getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
       creature.get().addAffectedCondition(condition);
     } else {
@@ -181,7 +177,7 @@ public abstract class MessageProcessor {
   }
 
   protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
-    Characters.remove(characterId, false);
+    application.characters().remove(characterId, false);
 
     if (this instanceof ClientMessageProcessor) {
       CompanionMessenger.get().sendAckToServer(senderId, messageId);
@@ -204,7 +200,8 @@ public abstract class MessageProcessor {
                                        String sourceId, String targetId) {
     Status.log("dismissing condition " + conditionName + " for " + Status.nameFor(targetId)
         + " from " + Status.nameFor(sourceId));
-    Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
+    Optional<? extends BaseCreature> creature =
+        application.creatures().getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
       creature.get().removeAffectedCondition(conditionName, sourceId);
     } else {
@@ -231,7 +228,7 @@ public abstract class MessageProcessor {
   }
 
   protected void handleCharacter(String senderId, Character character) {
-    if (!StoredEntries.isLocalId(character.getCharacterId())) {
+    if (!character.isLocal()) {
       // Storing will also add the character if it's changed.
       character.store();
       Status.log("received character " + character.getName());
@@ -241,8 +238,8 @@ public abstract class MessageProcessor {
 
   protected void handleWelcome(String remoteId, String remoteName) {
     Status.recordId(remoteId, remoteName);
-    for (Campaign campaign : Campaigns.getCampaignsByServer(remoteId)) {
-      Characters.publish(campaign.getCampaignId());
+    for (Campaign campaign : application.campaigns().getCampaignsByServer(remoteId)) {
+      application.characters().publish(campaign.getCampaignId());
     }
 
     CompanionMessenger.get().sendCurrent(remoteId);

@@ -33,13 +33,12 @@ import android.view.View;
 import com.google.android.gms.drive.DriveId;
 import com.google.android.gms.drive.OpenFileActivityBuilder;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -69,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(state);
     Status.log("onCreate");
 
-    CompanionFragments.init(getSupportFragmentManager());
+    CompanionFragments.init(CompanionApplication.get(this).campaigns(),
+        getSupportFragmentManager());
     driveStorage = new DriveStorage(this);
 
     setContentView(R.layout.activity_main);
@@ -108,7 +108,8 @@ public class MainActivity extends AppCompatActivity {
       case R.id.action_export: {
         List<DriveStorage.File> files = new ArrayList<>();
         // Export local campaigns.
-        for (Campaign campaign : Campaigns.getLocalCampaigns()) {
+        for (Campaign campaign
+            : CompanionApplication.get(this).campaigns().getLocalCampaigns()) {
           files.add(new DriveStorage.TextFile(campaign.getName() + ".campaign.txt",
               campaign.getCampaignId(), "text/plain", "# This file will not be re-imported."
               + campaign.toProto().toString()));
@@ -116,7 +117,8 @@ public class MainActivity extends AppCompatActivity {
               campaign.getCampaignId(), "application/x-protobuf", campaign.toProto().toByteArray()));
         }
         // Export local characters.
-        for (Character character : Characters.getLocalCharacters()) {
+        for (Character character
+            : CompanionApplication.get(this).characters().getLocalCharacters()) {
           files.add(new DriveStorage.TextFile(character.getName() + ".character.txt",
               character.getCharacterId(), "text/plain", "# This file will not be re-imported."
               + character.toProto().toString()));

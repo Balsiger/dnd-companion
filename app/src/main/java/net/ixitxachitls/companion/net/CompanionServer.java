@@ -24,10 +24,8 @@ package net.ixitxachitls.companion.net;
 import android.support.annotation.VisibleForTesting;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.net.nsd.NsdAccessor;
 import net.ixitxachitls.companion.net.nsd.NsdServer;
@@ -46,17 +44,17 @@ import java.util.Set;
  */
 public class CompanionServer {
 
-  private final Settings settings;
+  private final Data data;
   private final NsdServer nsdServer;
   private final Map<String, MessageScheduler> schedulersByRecpientId = new HashMap<>();
 
-  public CompanionServer(NsdAccessor nsdAccessor, Settings settings) {
-    this.settings = settings;
-    this.nsdServer = new NsdServer(nsdAccessor, settings);
+  public CompanionServer(Data data, NsdAccessor nsdAccessor) {
+    this.data = data;
+    this.nsdServer = new NsdServer(data, nsdAccessor);
 
     // Setup stored messages.
     for (ScheduledMessage message
-        : ScheduledMessages.get().getMessagesBySender(settings.getAppId())) {
+        : ScheduledMessages.get().getMessagesBySender(data.settings().getAppId())) {
       setupScheduler(message.getRecieverId());
     }
   }
@@ -91,7 +89,7 @@ public class CompanionServer {
       }
     }
 
-    if (started() && !sent && !Campaigns.hasAnyPublished()) {
+    if (started() && !sent && !data.campaigns().hasAnyPublished()) {
       // Stop the server if there are no more message to be sent and there are no published
       // campaigns.
       stop();
@@ -99,7 +97,7 @@ public class CompanionServer {
   }
 
   private String getRecipientName(String id) {
-    if (id.equals(Settings.get().getAppId())) {
+    if (id.equals(data.settings().getAppId())) {
       return "(me)";
     }
 
@@ -119,10 +117,10 @@ public class CompanionServer {
     ids.addAll(clientIds());
 
     for (String characterId
-        : Characters.getCampaignCharacterIds(campaign.getCampaignId()).getValue()) {
+        : data.characters().getCampaignCharacterIds(campaign.getCampaignId()).getValue()) {
       String id = Ids.extractServerId(characterId);
       // Don't send anything to oneself.
-      if (!id.equals(Settings.get().getAppId())) {
+      if (!id.equals(data.settings().getAppId())) {
         ids.add(id);
       }
     }
@@ -152,7 +150,7 @@ public class CompanionServer {
   private MessageScheduler setupScheduler(String recipientId) {
     MessageScheduler scheduler = schedulersByRecpientId.get(recipientId);
     if (scheduler == null) {
-      scheduler = new MessageScheduler(recipientId, settings.getDataBaseAccessor());
+      scheduler = new MessageScheduler(data.settings(), recipientId);
       schedulersByRecpientId.put(recipientId, scheduler);
 
       startIfNecessary();
@@ -169,7 +167,7 @@ public class CompanionServer {
   }
 
   public void startIfNecessary() {
-    if (!started() && Campaigns.hasAnyPublished()) {
+    if (!started() && data.campaigns().hasAnyPublished()) {
       start();
     }
   }

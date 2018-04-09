@@ -26,15 +26,14 @@ import android.net.Uri;
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Monster;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -65,10 +64,9 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   protected List<TargetedTimedCondition> initiatedConditions = new ArrayList<>();
   protected List<TimedCondition> affectedConditions = new ArrayList<>();
 
-  protected BaseCreature(long id, String type, String name, boolean local, Uri dbUrl,
-                         String campaignId, DataBaseAccessor dataBaseAccessor) {
-    super(id, type, name, local, dbUrl, dataBaseAccessor);
-
+  protected BaseCreature(Data data, long id, String type, String name, boolean local, Uri dbUrl,
+                         String campaignId) {
+    super(data, id, type, name, local, dbUrl);
     this.campaignId = campaignId;
   }
 
@@ -77,7 +75,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   }
 
   public Optional<Campaign> getCampaign() {
-    return Campaigns.getCampaign(campaignId).getValue();
+    return data.campaigns().getCampaign(campaignId).getValue();
   }
 
   public String getCreatureId() {
@@ -124,7 +122,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
       // Send the condition to all affected characters/creatures.
       for (String id : condition.getTargetIds()) {
-        Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(id);
+        Optional<? extends BaseCreature> creature = data.creatures().getCreatureOrCharacter(id);
         if (creature.isPresent()) {
           creature.get().addAffectedCondition(condition.getTimedCondition());
         } else {
@@ -154,7 +152,8 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
         store();
 
         for (String targetId : condition.getTargetIds()) {
-          Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(targetId);
+          Optional<? extends BaseCreature> creature =
+              data.creatures().getCreatureOrCharacter(targetId);
           if (creature.isPresent()) {
             creature.get().removeAffectedCondition(name, getCreatureId());
           } else {
@@ -206,13 +205,13 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return Collections.unmodifiableList(affectedConditions);
   }
 
-  public Data.CreatureProto toCreatureProto() {
-    Data.CreatureProto.Builder proto = Data.CreatureProto.newBuilder()
+  public Entry.CreatureProto toCreatureProto() {
+    Entry.CreatureProto.Builder proto = Entry.CreatureProto.newBuilder()
         .setId(entryId)
         .setName(name)
         .setCampaignId(campaignId)
         .setGender(gender.toProto())
-        .setAbilities(Data.CreatureProto.Abilities.newBuilder()
+        .setAbilities(Entry.CreatureProto.Abilities.newBuilder()
             .setStrength(strength)
             .setDexterity(dexterity)
             .setConstitution(constitution)
@@ -220,7 +219,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
             .setWisdom(wisdom)
             .setCharisma(charisma)
             .build())
-        .setBattle(Data.CreatureProto.Battle.newBuilder()
+        .setBattle(Entry.CreatureProto.Battle.newBuilder()
             .setInitiative(initiative)
             .setNumber(battleNumber)
             .build())
@@ -238,9 +237,9 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return proto.build();
   }
 
-  protected void fromProto(Data.CreatureProto proto) {
+  protected void fromProto(Entry.CreatureProto proto) {
     campaignId = proto.getCampaignId();
-    entryId = proto.getId().isEmpty() ? Settings.get().getAppId() + "-" + id : proto.getId();
+    entryId = proto.getId().isEmpty() ? data.settings().getAppId() + "-" + id : proto.getId();
     mRace = Entries.get().getMonsters().get(proto.getRace());
     gender = Gender.fromProto(proto.getGender());
     strength = proto.getAbilities().getStrength();

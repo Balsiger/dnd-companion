@@ -34,7 +34,12 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 /**
@@ -164,6 +169,26 @@ public abstract class Dialog extends DialogFragment {
 
   private void close() {
     dismiss();
+  }
+
+  protected CompanionApplication application() {
+    return CompanionApplication.get(getContext());
+  }
+
+  protected Data data() {
+    return application().data();
+  }
+
+  protected Campaigns campaigns() {
+    return application().campaigns();
+  }
+
+  protected Creatures creatures() {
+    return application().creatures();
+  }
+
+  protected Characters characters() {
+    return application().characters();
   }
 
   @Override

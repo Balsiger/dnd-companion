@@ -28,7 +28,7 @@ import com.google.protobuf.ByteString;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.net.CompanionMessenger;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -101,15 +101,15 @@ public class Image {
     Status.log("Saved image " + type + " " + id);
   }
 
-  public Data.CompanionMessageProto.Payload.Image toProto() {
-    return Data.CompanionMessageProto.Payload.Image.newBuilder()
+  public Entry.CompanionMessageProto.Payload.Image toProto() {
+    return Entry.CompanionMessageProto.Payload.Image.newBuilder()
         .setType(type)
         .setId(id)
         .setImage(asByteString(bitmap))
         .build();
   }
 
-  public static Image fromProto(Data.CompanionMessageProto.Payload.Image proto) {
+  public static Image fromProto(Entry.CompanionMessageProto.Payload.Image proto) {
     return new Image(proto.getType(), proto.getId(), asBitmap(proto.getImage()));
   }
 

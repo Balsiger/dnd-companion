@@ -25,11 +25,10 @@ import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.ArrayList;
@@ -43,13 +42,17 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
 
   private static ScheduledMessages singleton;
 
-  private ScheduledMessages(DataBaseAccessor dataBaseAccessor) {
-    super(dataBaseAccessor, DataBaseContentProvider.MESSAGES, true);
+  private final Campaigns campaigns;
+
+  private ScheduledMessages(Campaigns campaigns) {
+    super(campaigns.data(), DataBaseContentProvider.MESSAGES, true);
+    this.campaigns = campaigns;
   }
 
-  public static void init(DataBaseAccessor dataBaseAccessor) {
+  @Deprecated
+  public static void init(Campaigns campaigns) {
     if (singleton == null) {
-      singleton = new ScheduledMessages(dataBaseAccessor);
+      singleton = new ScheduledMessages(campaigns);
     }
   }
 
@@ -61,8 +64,8 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
   @Override
   protected Optional<ScheduledMessage> parseEntry(long id, byte[] blob) {
     try {
-      return Optional.of(ScheduledMessage.fromProto(id, Data.ScheduledMessageProto
-          .getDefaultInstance().getParserForType().parseFrom(blob), dataBaseAccessor));
+      return Optional.of(ScheduledMessage.fromProto(data, id,
+          Entry.ScheduledMessageProto.getDefaultInstance().getParserForType().parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for message: " + e);
       return Optional.empty();
@@ -73,7 +76,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
     List<ScheduledMessage> messages = new ArrayList<>();
 
     for (ScheduledMessage message : getAll()) {
-      if (message.matches(Settings.get().getAppId(), receiverId)) {
+      if (message.matches(data.settings().getAppId(), receiverId)) {
         messages.add(message);
       }
     }

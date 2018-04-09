@@ -29,14 +29,13 @@ import android.support.annotation.NonNull;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.util.List;
 import java.util.Optional;
@@ -45,7 +44,7 @@ import java.util.stream.Collectors;
 /**
  * A campaign with all its data.
  */
-public abstract class Campaign extends StoredEntry<Data.CampaignProto>
+public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
     implements Comparable<Campaign> {
 
   // Constants.
@@ -53,26 +52,41 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   public static final String TABLE = "campaigns";
 
   // Values.
+  protected final Data data;
+
   protected World world;
   protected String dm = "";
   protected Battle battle;
   protected CampaignDate date;
   protected int nextBattleNumber = 0;
 
-  protected Campaign(long id, String name, boolean local, Uri dbUrl,
-                     DataBaseAccessor dataBaseAccessor) {
-    super(id, TYPE, name, local, dbUrl, dataBaseAccessor);
+  protected Campaign(Data data, long id, String name, boolean local, Uri dbUrl) {
+    super(data, id, TYPE, name, local, dbUrl);
+
+    this.data = data;
 
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar().getYears().get(0).getNumber());
-    dm = Settings.get().getNickname();
+    dm = data.settings().getNickname();
     battle = new Battle(this);
+  }
+
+  public Data data() {
+    return data;
+  }
+
+  public Campaigns campaigns() {
+    return data.campaigns();
+  }
+
+  public Creatures creatures() {
+    return data.creatures();
   }
 
   public int getMaxPartyLevel() {
     int max = 1;
     for (String characterId : getCharacterIds().getValue()) {
-      Character character = Characters.getCharacter(characterId).getValue().get();
+      Character character = data.characters().getCharacter(characterId).getValue().get();
       max = Math.max(max, character.getLevel());
     }
 
@@ -82,7 +96,7 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   public int getMinPartyLevel() {
     int min = Integer.MAX_VALUE;
     for (String characterId : getCharacterIds().getValue()) {
-      Character character = Characters.getCharacter(characterId).getValue().get();
+      Character character = data.characters().getCharacter(characterId).getValue().get();
       min = Math.min(min, character.getLevel());
     }
 
@@ -124,21 +138,21 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   }
 
   public LiveData<ImmutableList<String>> getCharacterIds() {
-    return Characters.getCampaignCharacterIds(getCampaignId());
+    return data.characters().getCampaignCharacterIds(getCampaignId());
   }
 
   public List<Character> getCharacters() {
     return getCharacterIds().getValue().stream()
-        .map(id -> Characters.getCharacter(id).getValue().get())
+        .map(id -> data.characters().getCharacter(id).getValue().get())
         .collect(Collectors.toList());
   }
 
   public LiveData<ImmutableList<String>> getCreatureIds() {
-    return Creatures.getCampaignCreatureIds(getCampaignId());
+    return data.creatures().getCampaignCreatureIds(getCampaignId());
   }
 
   public List<Creature> getCreatures() {
-    return Creatures.getCampaignCreatures(getCampaignId());
+    return data.creatures().getCampaignCreatures(getCampaignId());
   }
 
   public CampaignDate getDate() {
@@ -166,8 +180,8 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   public abstract boolean isOnline();
 
   @Override
-  public Data.CampaignProto toProto() {
-    return Data.CampaignProto.newBuilder()
+  public Entry.CampaignProto toProto() {
+    return Entry.CampaignProto.newBuilder()
         .setId(getEntryId())
         .setName(name)
         .setWorld(world.getName())
@@ -182,10 +196,10 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
   @Override
   public boolean store() {
     if (super.store()) {
-      if (Campaigns.has(this)) {
-        Campaigns.update(this);
+      if (data.campaigns().has(this)) {
+        data.campaigns().update(this);
       } else {
-        Campaigns.add(this);
+        data.campaigns().add(this);
       }
 
       return true;
@@ -201,7 +215,7 @@ public abstract class Campaign extends StoredEntry<Data.CampaignProto>
 
   @CallSuper
   public void delete() {
-    Campaigns.remove(this);
+    data.campaigns().remove(this);
   }
 
   @Override

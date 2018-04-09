@@ -35,6 +35,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
@@ -75,7 +76,7 @@ public class StatusView extends LinearLayout {
   public StatusView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    settings = Settings.get();
+    settings = CompanionApplication.get(context).settings();
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_status, null, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
@@ -125,7 +126,7 @@ public class StatusView extends LinearLayout {
     for (Iterator<Map.Entry<String, ConnectionView>> i = views.iterator(); i.hasNext(); ) {
       Map.Entry<String, ConnectionView> entry = i.next();
       entry.getValue().heartbeat();
-      if (!entry.getKey().equals(Settings.get().getAppId())
+      if (!entry.getKey().equals(settings.getAppId())
           && entry.getValue().getHeartbeats() < -REMOVE_BEATS) {
         i.remove();
         connections.get().removeView(entry.getValue());
@@ -156,7 +157,7 @@ public class StatusView extends LinearLayout {
       return;
     }
 
-    if (Misc.onEmulator() && !Misc.SHOW_EMULATOR && Settings.get().getAppId().equals(id)) {
+    if (Misc.onEmulator() && !Misc.SHOW_EMULATOR && settings.getAppId().equals(id)) {
       name = "Queen of Nihil";
     }
 

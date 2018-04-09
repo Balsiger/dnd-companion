@@ -28,7 +28,7 @@ import android.support.annotation.Nullable;
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.storage.DataBase;
 import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.util.Ids;
@@ -42,28 +42,27 @@ import java.util.concurrent.ConcurrentHashMap;
 public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P> {
   private static final Map<String, MessageLite> PROTO_CACHE = new ConcurrentHashMap<>();
 
+  protected final Data data;
   protected long id;
   protected String type;
   protected String entryId;
   private final Uri dbUrl;
-  private final DataBaseAccessor dataBaseAccessor;
   private final boolean local;
 
-  protected StoredEntry(long id, String type, String name, boolean local, Uri dbUrl,
-                        DataBaseAccessor dataBaseAccessor) {
-    this(id, type, null, name, local, dbUrl, dataBaseAccessor);
+  protected StoredEntry(Data data, long id, String type, String name, boolean local, Uri dbUrl) {
+    this(data, id, type, null, name, local, dbUrl);
   }
 
-  protected StoredEntry(long id, String type, @Nullable String entryId, String name, boolean local,
-                        Uri dbUrl, DataBaseAccessor dataBaseAccessor) {
+  protected StoredEntry(Data data, long id, String type, @Nullable String entryId, String name,
+                        boolean local, Uri dbUrl) {
     super(name);
 
+    this.data = data;
     this.id = id;
     this.type = type;
     this.entryId = entryId == null ? createId() : entryId;
     this.local = local;
     this.dbUrl = dbUrl;
-    this.dataBaseAccessor = dataBaseAccessor;
   }
 
   private static ContentValues toValues(MessageLite proto) {
@@ -106,7 +105,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     P proto = toProto();
 
     if (id == 0) {
-      id = dataBaseAccessor.insert(dbUrl, toValues(proto));
+      id = data.getDataBaseAccessor().insert(dbUrl, toValues(proto));
       if (isLocal()) {
         entryId = createId();
       }
@@ -120,7 +119,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     }
 
     // Store it (again if id made us change the entry id above).
-    dataBaseAccessor.update(dbUrl, id, toValues(proto));
+    getDataBaseAccessor().update(dbUrl, id, toValues(proto));
 
     PROTO_CACHE.put(key, proto);
     Status.log("stored changes for " + getClass().getSimpleName() + "/" + getName());
@@ -128,7 +127,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
   }
 
   private String createId() {
-    return type + "-" + Settings.get().getAppId() + "-" + id;
+    return type + "-" + data.settings().getAppId() + "-" + id;
   }
 
   public static String extractType(String id) {
@@ -144,7 +143,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
   }
 
   public DataBaseAccessor getDataBaseAccessor() {
-    return dataBaseAccessor;
+    return data.getDataBaseAccessor();
   }
 
   @SuppressWarnings("unchecked")

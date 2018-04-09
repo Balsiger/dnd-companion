@@ -21,11 +21,14 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-//import android.app.Fragment;
-
 import android.support.v4.app.Fragment;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.dynamics.Characters;
+import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 import java.util.Optional;
@@ -35,7 +38,9 @@ import java.util.Optional;
  */
 public abstract class CompanionFragment extends Fragment {
 
-  public enum Type { settings, campaigns, campaign, localCampaign, character, localCharacter };
+  public enum Type {settings, campaigns, campaign, localCampaign, character, localCharacter}
+
+  ;
 
   private final Type type;
 
@@ -57,6 +62,26 @@ public abstract class CompanionFragment extends Fragment {
   }
 
   public abstract boolean goBack();
+
+  protected CompanionApplication application() {
+    return CompanionApplication.get(getContext());
+  }
+
+  protected Settings settings() {
+    return application().settings();
+  }
+
+  protected Campaigns campaigns() {
+    return application().campaigns();
+  }
+
+  protected Creatures creatures() {
+    return application().creatures();
+  }
+
+  protected Characters characters() {
+    return application().characters();
+  }
 
   @Override
   public void onResume() {

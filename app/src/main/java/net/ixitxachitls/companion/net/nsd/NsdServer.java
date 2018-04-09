@@ -26,7 +26,7 @@ import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
 import net.ixitxachitls.companion.net.NetworkServer;
@@ -42,8 +42,8 @@ public class NsdServer {
 
   public static final String TYPE = "_companion._tcp";
 
+  private final Data data;
   private final NsdAccessor nsdAccessor;
-  private final Settings settings;
   private final String name;
   private final NsdServiceInfo service;
   private final NetworkServer server;
@@ -51,13 +51,13 @@ public class NsdServer {
   private boolean started = false;
   private @Nullable RegistrationListener registrationListener;
 
-  public NsdServer(NsdAccessor nsdAccessor, Settings settings) {
+  public NsdServer(Data data, NsdAccessor nsdAccessor) {
+    this.data = data;
     this.nsdAccessor = nsdAccessor;
-    this.settings = settings;
 
-    this.name = settings.getNickname();
+    this.name = data.settings().getNickname();
     this.service = new NsdServiceInfo();
-    this.server = new NetworkServer(settings.getDataBaseAccessor());
+    this.server = new NetworkServer(data);
 
     this.service.setServiceName(this.name);
     this.service.setServiceType(TYPE);
@@ -75,7 +75,7 @@ public class NsdServer {
     nsdAccessor.register(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
 
     Status.log("nsd service registered");
-    Status.addServerConnection(settings.getAppId(), name);
+    Status.addServerConnection(data.settings().getAppId(), name);
     started = true;
   }
 
@@ -84,7 +84,6 @@ public class NsdServer {
       return;
     }
 
-    Status.log("unregistering nsd service " + name);
     Status.log("unregistering nsd service " + name);
     nsdAccessor.unregister(registrationListener);
     registrationListener = null;

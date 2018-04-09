@@ -51,7 +51,7 @@ public class FakeServerDataBaseAccessor extends FakeDataBaseAccessor {
     add(localCharactersById,
         character("character-server-2", "Elminster", "campaign-client1-3"));
     add(remoteCharactersById,
-        character("character-client1-4", "Khelben Blackstaff", "campaign-client1-3"));
+        character("character-client1-4", "Khelben Blackstaff Arunsun", "campaign-client1-3"));
     add(remoteCharactersById,
         character("character-client2-3", "Laeral Silverhand", "campaign-client1-3"));
     add(remoteCharactersById,

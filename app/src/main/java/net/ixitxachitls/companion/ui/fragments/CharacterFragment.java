@@ -30,11 +30,10 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
@@ -127,13 +126,13 @@ public class CharacterFragment extends CompanionFragment {
 
   public void showCharacter(Character character) {
     if (this.character.isPresent()) {
-      Characters.getCharacter(this.character.get().getCharacterId()).removeObservers(this);
+      characters().getCharacter(this.character.get().getCharacterId()).removeObservers(this);
     }
 
     this.character = Optional.of(character);
-    this.campaign = Campaigns.getCampaign(character.getCampaignId()).getValue();
+    this.campaign = campaigns().getCampaign(character.getCampaignId()).getValue();
 
-    Characters.getCharacter(character.getCharacterId()).observe(this, this::update);
+    characters().getCharacter(character.getCharacterId()).observe(this, this::update);
   }
 
   private void update(Optional<Character> character) {
@@ -144,7 +143,8 @@ public class CharacterFragment extends CompanionFragment {
       return;
     }
 
-    campaign = Campaigns.getCampaign(character.get().getCampaignId()).getValue();
+    campaign = CompanionApplication.get(getContext()).campaigns()
+        .getCampaign(character.get().getCampaignId()).getValue();
 
     campaignTitle.text(campaign.get().getName());
     title.setTitle(character.get().getName());

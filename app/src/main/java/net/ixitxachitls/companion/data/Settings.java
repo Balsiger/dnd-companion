@@ -27,34 +27,29 @@ import android.content.ContentValues;
 import android.database.CursorIndexOutOfBoundsException;
 import android.support.annotation.VisibleForTesting;
 
-import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 import com.google.inject.Singleton;
 import com.google.protobuf.InvalidProtocolBufferException;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.StoredEntry;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBase;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 /**
  * All the settings value of the user.
  */
 @Singleton
-public class Settings extends StoredEntry<Data.SettingsProto> {
+public class Settings extends StoredEntry<Entry.SettingsProto> {
   public static final String TABLE = "settings";
-
   private static final int ID = 1;
-  private static Settings settings = null;
-  private final DataBaseAccessor dataBaseAccessor;
 
   private String appId;
   private long lastMessageId = 1;
@@ -64,12 +59,11 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   private List<String> features = new ArrayList<>();
 
   @VisibleForTesting
-  public Settings(String name, DataBaseAccessor dataBaseAccessor) {
-    super(ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS,
-        dataBaseAccessor);
-    this.dataBaseAccessor = dataBaseAccessor;
+  public Settings(Data data, String name, String id) {
+    super(data, ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
 
     showStatus.setValue(false);
+    this.appId = id;
   }
 
   public List<String> getFeatures() {
@@ -85,23 +79,28 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     return features.contains(feature);
   }
 
-  /*
-  public static DataBaseAccessor getDataBaseAccessor() {
-    return Settings.dataBaseAccessor;
-  }
-  */
-
   public static ContentValues defaultSettings() {
     ContentValues values = new ContentValues();
     values.put(DataBase.COLUMN_ID, ID);
     values.put(DataBase.COLUMN_PROTO,
-        Data.SettingsProto.newBuilder().build().toByteArray());
+        Entry.SettingsProto.newBuilder().build().toByteArray());
 
     return values;
   }
 
-  public static Settings init(DataBaseAccessor dataBaseAccessor) {
-    settings = load(dataBaseAccessor).orElse(new Settings("", dataBaseAccessor));
+  public static Settings load(Data data) {
+    Settings settings;
+    try {
+      settings = fromProto(data, Entry.SettingsProto.getDefaultInstance().getParserForType()
+          .parseFrom(loadBytes(data.getDataBaseAccessor(), ID, DataBaseContentProvider.SETTINGS)));
+    } catch (InvalidProtocolBufferException | CursorIndexOutOfBoundsException e) {
+      Status.error("Cannot load previous settings, creating new.");
+      data.getDataBaseAccessor().insert(DataBaseContentProvider.SETTINGS,
+          Settings.defaultSettings());
+
+      settings = new Settings(data, "", "");
+    }
+
     settings.ensureAppId();
     return settings;
   }
@@ -114,8 +113,8 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
   }
 
   @Override
-  public Data.SettingsProto toProto() {
-    return Data.SettingsProto.newBuilder()
+  public Entry.SettingsProto toProto() {
+    return Entry.SettingsProto.newBuilder()
         .setNickname(name)
         .setAppId(appId)
         .setLastMessageId(lastMessageId)
@@ -125,14 +124,15 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
         .build();
   }
 
+  /*
   public static Settings get() {
     Preconditions.checkNotNull(settings);
     return settings;
   }
+  */
 
-  private static Settings fromProto(Data.SettingsProto proto, DataBaseAccessor dataBaseAccessor) {
-    Settings settings = new Settings(proto.getNickname(), dataBaseAccessor);
-    settings.appId = proto.getAppId();
+  private static Settings fromProto(Data data, Entry.SettingsProto proto) {
+    Settings settings = new Settings(data, proto.getNickname(), proto.getAppId());
     settings.lastMessageId = proto.getLastMessageId();
     settings.remoteCampaigns = proto.getRemoteCampaigns();
     settings.remoteCharacters = proto.getRemoteCharacters();
@@ -144,22 +144,6 @@ public class Settings extends StoredEntry<Data.SettingsProto> {
     }
 
     return settings;
-  }
-
-  private static Optional<Settings> load(DataBaseAccessor dataBaseAccessor) {
-    try {
-      return Optional.of(fromProto(Data.SettingsProto.getDefaultInstance().getParserForType()
-          .parseFrom(loadBytes(dataBaseAccessor, ID, DataBaseContentProvider.SETTINGS)),
-          dataBaseAccessor));
-    } catch (InvalidProtocolBufferException e) {
-      e.printStackTrace();
-      return Optional.empty();
-    } catch (CursorIndexOutOfBoundsException e) {
-      // For some reason, the default settings are not there anymore. Let's restore them.
-      dataBaseAccessor.insert(DataBaseContentProvider.SETTINGS, Settings.defaultSettings());
-
-      return Optional.empty();
-    }
   }
 
   public boolean isDefined() {

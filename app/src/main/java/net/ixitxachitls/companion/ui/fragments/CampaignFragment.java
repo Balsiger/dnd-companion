@@ -31,6 +31,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -44,7 +45,8 @@ import java.util.Optional;
 /** A fragment displaying campaign information. */
 public class CampaignFragment extends CompanionFragment {
 
-  protected Campaign campaign = Campaigns.defaultCampaign;
+  protected Campaigns campaigns;
+  protected Campaign campaign;
 
   // UI elements.
   protected CampaignTitleView title;
@@ -64,6 +66,9 @@ public class CampaignFragment extends CompanionFragment {
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
+    this.campaigns = CompanionApplication.get(getContext()).campaigns();
+    this.campaign = campaigns.getDefaultCampaign();
+
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
@@ -78,14 +83,14 @@ public class CampaignFragment extends CompanionFragment {
     calendar = Wrapper.<FloatingActionButton>wrap(view, R.id.calendar).gone();
     date = TextWrapper.wrap(view, R.id.date);
 
-    Campaigns.getCurrentCampaignId().observe(this, this::showCampaign);
+    campaigns.getCurrentCampaignId().observe(this, this::showCampaign);
 
     return view;
   }
 
   public void showCampaign(String campaignId) {
-    Campaigns.getCampaign(campaign.getCampaignId()).removeObserver(this::update);
-    Campaigns.getCampaign(campaignId).observe(this, this::update);
+    campaigns.getCampaign(campaign.getCampaignId()).removeObserver(this::update);
+    campaigns.getCampaign(campaignId).observe(this, this::update);
   }
 
   public boolean shows(String campaignId) {

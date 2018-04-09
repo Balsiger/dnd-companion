@@ -29,7 +29,6 @@ import com.google.common.collect.Multimap;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -44,8 +43,8 @@ import java.util.Optional;
  */
 public class MessageScheduler {
 
+  private final Settings settings;
   private final String recipientId;
-  private final DataBaseAccessor dataBaseAccessor;
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
       waiting = LinkedHashMultimap.create();
   private final Map<Long, ScheduledMessage> pendingByMessageId = new HashMap<>();
@@ -54,9 +53,9 @@ public class MessageScheduler {
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
       acknowledgedByType = LinkedHashMultimap.create();
 
-  public MessageScheduler(String recipientId, DataBaseAccessor dataBaseAccessor) {
+  public MessageScheduler(Settings settings, String recipientId) {
+    this.settings = settings;
     this.recipientId = recipientId;
-    this.dataBaseAccessor = dataBaseAccessor;
 
     List<ScheduledMessage> toRemove = new ArrayList<>();
     for (ScheduledMessage message
@@ -93,9 +92,9 @@ public class MessageScheduler {
   }
 
   public void schedule(CompanionMessageData data) {
-    ScheduledMessage message = new ScheduledMessage(
-        new CompanionMessage(Settings.get().getAppId(), Settings.get().getNickname(),
-            recipientId, Settings.get().getNextMessageId(), data), dataBaseAccessor);
+    ScheduledMessage message = new ScheduledMessage(data.campaigns(),
+        new CompanionMessage(settings.getAppId(), settings.getNickname(),
+            recipientId, settings.getNextMessageId(), data));
     Status.log("scheduling to " + Status.nameFor(recipientId) + ": " + message);
     message.store();
 

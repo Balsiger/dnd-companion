@@ -21,7 +21,7 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 
 /**
  * Simple wrapper for an xp award.
@@ -49,15 +49,15 @@ public class XpAward {
     return award;
   }
 
-  public Data.CompanionMessageProto.Payload.Xp toProto() {
-    return Data.CompanionMessageProto.Payload.Xp.newBuilder()
+  public Entry.CompanionMessageProto.Payload.Xp toProto() {
+    return Entry.CompanionMessageProto.Payload.Xp.newBuilder()
         .setCharacterId(characterId)
         .setCampaignId(campaignId)
         .setXpAward(award)
         .build();
   }
 
-  public static XpAward fromProto(Data.CompanionMessageProto.Payload.Xp proto) {
+  public static XpAward fromProto(Entry.CompanionMessageProto.Payload.Xp proto) {
     return new XpAward(proto.getCharacterId(), proto.getCampaignId(), proto.getXpAward());
   }
 }

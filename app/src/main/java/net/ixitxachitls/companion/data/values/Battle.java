@@ -23,10 +23,8 @@ package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.ui.dialogs.StartBattleDialog;
 
@@ -53,7 +51,8 @@ public class Battle {
   private int currentCreatureIndex;
 
   public Battle(Campaign campaign) {
-    this(campaign, 0, BattleStatus.ENDED, 0, Collections.emptyList(), Collections.emptyList(), 0);
+    this(campaign, 0, BattleStatus.ENDED, 0, Collections.emptyList(),
+        Collections.emptyList(), 0);
   }
 
   private Battle(Campaign campaign, int number, BattleStatus status, int turn,
@@ -154,7 +153,8 @@ public class Battle {
 
     // Add flat-footed to all creatures.
     for (String creatureId : creatureIds) {
-      Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(creatureId);
+      Optional<? extends BaseCreature> creature =
+          campaign.creatures().getCreatureOrCharacter(creatureId);
       if (creature.isPresent()) {
         int rounds = surprisedCreatureIds.contains(creatureId) ? 1 : 0;
         creature.get().addAffectedCondition(
@@ -179,20 +179,20 @@ public class Battle {
     List<BaseCreature> creatures = new ArrayList<>();
     if (status == BattleStatus.STARTING) {
       for (String id : creatureIds) {
-        Optional<? extends BaseCreature> creature = Creatures.getCreatureOrCharacter(id);
+        Optional<? extends BaseCreature> creature = campaign.creatures().getCreatureOrCharacter(id);
         if (creature.isPresent()) {
           creatures.add(creature.get());
         }
       }
     } else {
       for (String id : campaign.getCreatureIds().getValue()) {
-        if (Creatures.getCreature(id).getValue().isPresent()) {
-          creatures.add(Creatures.getCreature(id).getValue().get());
+        if (campaign.creatures().getCreature(id).getValue().isPresent()) {
+          creatures.add(campaign.creatures().getCreature(id).getValue().get());
         }
       }
       for (String id : campaign.getCharacterIds().getValue()) {
-        if (Characters.getCharacter(id).getValue().isPresent()) {
-          creatures.add(Characters.getCharacter(id).getValue().get());
+        if (campaign.data().characters().getCharacter(id).getValue().isPresent()) {
+          creatures.add(campaign.data().characters().getCharacter(id).getValue().get());
         }
       }
     }
@@ -249,7 +249,7 @@ public class Battle {
 
     // Remove all monsters used in the battle.
     for (String creatureId : campaign.getCreatureIds().getValue()) {
-      Creatures.remove(creatureId);
+      campaign.creatures().remove(creatureId);
     }
 
     lastMonsterName = Optional.empty();
@@ -294,8 +294,8 @@ public class Battle {
     return lastMonsterName;
   }
 
-  public Data.CampaignProto.Battle toProto() {
-    Data.CampaignProto.Battle.Builder proto = Data.CampaignProto.Battle.newBuilder()
+  public Entry.CampaignProto.Battle toProto() {
+    Entry.CampaignProto.Battle.Builder proto = Entry.CampaignProto.Battle.newBuilder()
         .setStatus(status.toProto())
         .setTurn(turn)
         .setNumber(number)
@@ -306,10 +306,10 @@ public class Battle {
     return proto.build();
   }
 
-  public static Battle fromProto(Campaign campaign, Data.CampaignProto.Battle proto) {
-    return new Battle(campaign, proto.getNumber(), BattleStatus.fromProto(proto.getStatus()),
-        proto.getTurn(), proto.getCreatureIdList(), proto.getSurprisedCreatureIdList(),
-        proto.getCurrentCreatureIndex());
+  public static Battle fromProto(Campaign campaign, Entry.CampaignProto.Battle proto) {
+    return new Battle(campaign, proto.getNumber(),
+        BattleStatus.fromProto(proto.getStatus()), proto.getTurn(), proto.getCreatureIdList(),
+        proto.getSurprisedCreatureIdList(), proto.getCurrentCreatureIndex());
   }
 
   public boolean currentIsLast() {

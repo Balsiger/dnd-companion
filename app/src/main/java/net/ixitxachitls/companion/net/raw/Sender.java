@@ -23,7 +23,7 @@ package net.ixitxachitls.companion.net.raw;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -39,7 +39,7 @@ class Sender implements Runnable {
 
   private final String name;
   private final Socket socket;
-  private final BlockingQueue<Data.CompanionMessageProto> queue =
+  private final BlockingQueue<Entry.CompanionMessageProto> queue =
       new ArrayBlockingQueue<>(CAPACITY);
 
   public Sender(String name, Socket socket) {
@@ -58,11 +58,11 @@ class Sender implements Runnable {
     }
   }
 
-  public boolean add(Data.CompanionMessageProto message) {
+  public boolean add(Entry.CompanionMessageProto message) {
     return queue.add(message);
   }
 
-  private void send(Data.CompanionMessageProto message) {
+  private void send(Entry.CompanionMessageProto message) {
     try {
       Status.log(name + " sent " + ScheduledMessage.info(message) + " to "
           + ScheduledMessage.info(message.getHeader().getReceiver()));

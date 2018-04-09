@@ -27,9 +27,8 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.net.CompanionMessenger;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.Collection;
 import java.util.List;
@@ -42,28 +41,35 @@ import java.util.stream.Collectors;
  * Information and storage for all characters.
  */
 public class Characters {
-  private static CharactersData local;
-  private static CharactersData remote;
+  private final Data data;
+  private final CharactersData local;
+  private final CharactersData remote;
 
   // Live data storages.
   private static final Map<String, MutableLiveData<ImmutableList<String>>>
       characterIdsByCampaignId = new ConcurrentHashMap<>();
 
+  public Characters(Data data) {
+    this.data = data;
+    this.local = new CharactersData(data, true);
+    this.remote = new CharactersData(data, false);
+  }
+
   // Data accessors.
 
-  public static LiveData<Optional<Character>> getCharacter(String characterId) {
-    if (!Settings.get().useRemoteCharacters() && local.hasCharacter(characterId)) {
+  public LiveData<Optional<Character>> getCharacter(String characterId) {
+    if (!data.settings().useRemoteCharacters() && local.hasCharacter(characterId)) {
       return local.getCharacter(characterId);
     }
 
     return remote.getCharacter(characterId);
   }
 
-  public static boolean has(Character character) {
+  public boolean has(Character character) {
     return has(character.getCharacterId(), character.isLocal());
   }
 
-  public static boolean has(String characterId, boolean isLocal) {
+  public boolean has(String characterId, boolean isLocal) {
     if (isLocal) {
       return local.has(characterId);
     }
@@ -71,11 +77,11 @@ public class Characters {
     return remote.has(characterId);
   }
 
-  public static boolean hasLocalCharacterForCampaign(String campaignId) {
+  public boolean hasLocalCharacterForCampaign(String campaignId) {
     return local.hasCharacterForCampaign(campaignId);
   }
 
-  public static LiveData<ImmutableList<String>> getCampaignCharacterIds(String campaignId) {
+  public LiveData<ImmutableList<String>> getCampaignCharacterIds(String campaignId) {
     if (characterIdsByCampaignId.containsKey(campaignId)) {
       return characterIdsByCampaignId.get(campaignId);
     }
@@ -87,21 +93,21 @@ public class Characters {
     return ids;
   }
 
-  public static Collection<Character> getLocalCharacters() {
+  public Collection<Character> getLocalCharacters() {
     return local.getAll();
   }
 
-  public static long getLocalIdFor(String characterId) {
+  public long getLocalIdFor(String characterId) {
     return local.getIdFor(characterId);
   }
 
-  public static long getRemoteIdFor(String characterId) {
+  public long getRemoteIdFor(String characterId) {
     return remote.getIdFor(characterId);
   }
 
   // Data mutations.
 
-  public static void update(Character character) {
+  public void update(Character character) {
     Status.log("updating character " + character);
 
     // We have to consider that the character changed the campaign id, but not the character id,
@@ -119,7 +125,7 @@ public class Characters {
     }
   }
 
-  public static void add(Character character) {
+  public void add(Character character) {
     Status.log("adding character " + character);
 
     if (character.isLocal()) {
@@ -134,7 +140,7 @@ public class Characters {
     }
   }
 
-  public static void remove(String characterId, boolean isLocal) {
+  public void remove(String characterId, boolean isLocal) {
     Optional<Character> character;
     if (isLocal) {
       character = local.getCharacter(characterId).getValue();
@@ -147,7 +153,7 @@ public class Characters {
     }
   }
 
-  public static void remove(Character character) {
+  public void remove(Character character) {
     Status.log("removing character " + character);
 
     if (character.isLocal()) {
@@ -171,7 +177,7 @@ public class Characters {
   // Publishing characters.
   // TODO(merlin): Move this over to the publishers.
 
-  public static void publish() {
+  public void publish() {
     Status.log("publishing all local characters");
     for (Character character : local.getAll()) {
       character.asLocal().publish();
@@ -179,7 +185,7 @@ public class Characters {
     }
   }
 
-  public static void publish(String campaignId) {
+  public void publish(String campaignId) {
     Status.log("publishing characters of campaign " + campaignId);
     for (Character character : local.getCharacters(campaignId)) {
       character.asLocal().publish();
@@ -189,33 +195,7 @@ public class Characters {
 
   // Private methods.
 
-  // While this method is public, it should only be called in the main application.
-  public static void load(DataBaseAccessor dataBaseAccessor) {
-    loadLocal(dataBaseAccessor);
-    loadRemote(dataBaseAccessor);
-  }
-
-  private static void loadLocal(DataBaseAccessor dataBaseAccessor) {
-    if (local != null) {
-      Status.log("local characters already loaded");
-      return;
-    }
-
-    Status.log("loading local characters");
-    local = new CharactersData(dataBaseAccessor, true);
-  }
-
-  private static void loadRemote(DataBaseAccessor dataBaseAccessor) {
-    if (remote != null) {
-      Status.log("remote characters already loaded");
-      return;
-    }
-
-    Status.log("loading remote characters");
-    remote = new CharactersData(dataBaseAccessor, false);
-  }
-
-  private static List<String> orphaned() {
+  private List<String> orphaned() {
     List<String> ids = local.orphaned().stream()
         .map(Character::getCharacterId)
         .collect(Collectors.toList());
@@ -226,8 +206,8 @@ public class Characters {
     return ids;
   }
 
-  private static List<String> characterIds(String campaignId) {
-    if (campaignId.equals(Campaigns.defaultCampaign.getCampaignId())) {
+  private List<String> characterIds(String campaignId) {
+    if (campaignId.equals(data.campaigns().getDefaultCampaign().getCampaignId())) {
       return orphaned();
     }
 

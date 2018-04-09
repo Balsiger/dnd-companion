@@ -29,7 +29,6 @@ import android.widget.Toast;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
@@ -102,7 +101,7 @@ public class LocalCampaignFragment extends CampaignFragment {
       return !campaign.isPublished();
     }
 
-    return !Characters.hasLocalCharacterForCampaign(campaign.getCampaignId());
+    return !characters().hasLocalCharacterForCampaign(campaign.getCampaignId());
   }
 
   private void publish() {

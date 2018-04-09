@@ -29,6 +29,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.multidex.MultiDexApplication;
 
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -47,18 +48,20 @@ import net.ixitxachitls.companion.storage.DataBaseAccessor;
  * The main application for the companion.
  */
 public class CompanionApplication extends MultiDexApplication
-    implements Application.ActivityLifecycleCallbacks, CompanionContext {
+    implements Application.ActivityLifecycleCallbacks {
 
   private final DataBaseAccessor dataBaseAccessor;
   private final AssetAccessor assetAccessor;
 
   private NsdAccessor nsdAccessor;
   private CompanionMessenger messenger;
+  private CompanionData data;
   private Activity currentActivity;
 
   public CompanionApplication() {
     this.dataBaseAccessor = new ApplicationDataBaseAccessor(this);
     this.assetAccessor = new ApplicationAssetAccessor(this);
+
   }
 
   @Override
@@ -75,18 +78,16 @@ public class CompanionApplication extends MultiDexApplication
     nsdAccessor = new ApplicationNsdAccessor(this);
 
     Entries.init(this.getAssetAccessor());
-    Settings.init(this.getDataBaseAccessor());
 
-    Campaigns.load(this.getDataBaseAccessor());
+    data = new CompanionData(this.getDataBaseAccessor());
+
     Images.load(this.getAssetAccessor());
-    Characters.load(this.getDataBaseAccessor());
-    Creatures.load(this.getDataBaseAccessor());
 
     // The messenger needs other entries, thus cannot be created earlier.
-    messenger = CompanionMessenger.init(dataBaseAccessor, nsdAccessor, Settings.get(), this);
+    messenger = CompanionMessenger.init(data, nsdAccessor, this);
     messenger.start(); // Stopping is done in MainActivity.exit();
-    Campaigns.publish();
-    Characters.publish();
+    data.campaigns().publish();
+    data.characters().publish();
 
     registerActivityLifecycleCallbacks(this);
   }
@@ -112,9 +113,24 @@ public class CompanionApplication extends MultiDexApplication
     return nsdAccessor;
   }
 
-  public Settings getSettings() {
-    // TODO(merlin): Make this a real member.
-    return Settings.get();
+  public Data data() {
+    return data;
+  }
+
+  public Settings settings() {
+    return data.settings();
+  }
+
+  public Campaigns campaigns() {
+    return data.campaigns();
+  }
+
+  public Characters characters() {
+    return data.characters();
+  }
+
+  public Creatures creatures() {
+    return data.creatures();
   }
 
   @Override

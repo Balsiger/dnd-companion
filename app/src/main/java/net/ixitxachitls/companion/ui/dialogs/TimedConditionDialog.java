@@ -37,10 +37,8 @@ import com.google.common.base.Preconditions;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Creature;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
@@ -105,12 +103,12 @@ public class TimedConditionDialog extends Dialog {
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     id = getArguments().getString(ARG_ID); // The creature OR campaign id.
-    creature = Creatures.getCreatureOrCharacter(id);
+    creature = creatures().getCreatureOrCharacter(id);
     currentRound = getArguments().getInt(ARG_ROUND);
     if (creature.isPresent()) {
-      campaign = Campaigns.getCampaign(creature.get().getCampaignId()).getValue();
+      campaign = campaigns().getCampaign(creature.get().getCampaignId()).getValue();
     } else {
-      campaign = Campaigns.getCampaign(id).getValue();
+      campaign = campaigns().getCampaign(id).getValue();
     }
   }
 

@@ -25,7 +25,7 @@ import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -39,7 +39,7 @@ import java.util.concurrent.TransferQueue;
 class Receiver implements Runnable {
   private final String name;
   private final Socket socket;
-  private final TransferQueue<Data.CompanionMessageProto> queue = new LinkedTransferQueue<>();
+  private final TransferQueue<Entry.CompanionMessageProto> queue = new LinkedTransferQueue<>();
 
   public Receiver(String name, Socket socket) {
     this.name = name;
@@ -50,8 +50,8 @@ class Receiver implements Runnable {
   public void run() {
     while (!Thread.currentThread().isInterrupted()) {
       try {
-        Data.CompanionMessageProto message =
-            Data.CompanionMessageProto.parseDelimitedFrom(socket.getInputStream());
+        Entry.CompanionMessageProto message =
+            Entry.CompanionMessageProto.parseDelimitedFrom(socket.getInputStream());
         if (message != null) {
           Status.log(name + " received " + ScheduledMessage.info(message) + " from "
               + ScheduledMessage.info(message.getHeader().getSender()));
@@ -65,7 +65,7 @@ class Receiver implements Runnable {
   }
 
   @Nullable
-  public Data.CompanionMessageProto receive() {
+  public Entry.CompanionMessageProto receive() {
     return queue.poll();
   }
 }

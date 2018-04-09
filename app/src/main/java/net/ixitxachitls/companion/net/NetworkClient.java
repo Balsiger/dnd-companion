@@ -22,10 +22,9 @@
 package net.ixitxachitls.companion.net;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.net.raw.Transmitter;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -36,13 +35,13 @@ import java.util.Optional;
  */
 public class NetworkClient {
 
-  private final DataBaseAccessor dataBaseAccessor;
+  private final Data data;
   private Transmitter transmitter;
   private String serverId = "";
   private String serverName = "(not yet known)";
 
-  public NetworkClient(DataBaseAccessor dataBaseAccessor) {
-    this.dataBaseAccessor = dataBaseAccessor;
+  public NetworkClient(Data data) {
+    this.data = data;
     Status.log("creating network client");
   }
 
@@ -72,13 +71,13 @@ public class NetworkClient {
 
   public void send(CompanionMessageData message) {
     if (transmitter != null) {
-      Data.CompanionMessageProto proto = Data.CompanionMessageProto.newBuilder()
-          .setHeader(Data.CompanionMessageProto.Header.newBuilder()
-              .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
-                  .setId(Settings.get().getAppId())
-                  .setName(Settings.get().getNickname())
+      Entry.CompanionMessageProto proto = Entry.CompanionMessageProto.newBuilder()
+          .setHeader(Entry.CompanionMessageProto.Header.newBuilder()
+              .setSender(Entry.CompanionMessageProto.Header.Id.newBuilder()
+                  .setId(data.settings().getAppId())
+                  .setName(data.settings().getNickname())
                   .build())
-              .setReceiver(Data.CompanionMessageProto.Header.Id.newBuilder()
+              .setReceiver(Entry.CompanionMessageProto.Header.Id.newBuilder()
                   .setId(serverId)
                   .setName(serverName)
                   .build())
@@ -97,19 +96,19 @@ public class NetworkClient {
       return Optional.empty();
     }
 
-    Optional<Data.CompanionMessageProto> message = transmitter.receive();
+    Optional<Entry.CompanionMessageProto> message = transmitter.receive();
     if (!message.isPresent()) {
       return Optional.empty();
     }
 
     // Handle welcome message to obtain server id and name.
     if (message.get().getData().getPayloadCase()
-        == Data.CompanionMessageProto.Payload.PayloadCase.WELCOME) {
+        == Entry.CompanionMessageProto.Payload.PayloadCase.WELCOME) {
       serverId = message.get().getData().getWelcome().getId();
       serverName = message.get().getData().getWelcome().getName();
       Status.log("setting server id to " + serverId + "/" + serverName);
     }
 
-    return Optional.of(CompanionMessage.fromProto(message.get(), dataBaseAccessor));
+    return Optional.of(CompanionMessage.fromProto(data, message.get()));
   }
 }

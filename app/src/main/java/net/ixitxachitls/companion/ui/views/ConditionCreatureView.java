@@ -28,10 +28,10 @@ import android.widget.LinearLayout;
 
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
@@ -70,7 +70,8 @@ public class ConditionCreatureView extends LinearLayout {
     }
 
     for (TimedCondition condition : creature.getAffectedConditions()) {
-      addCondition(StoredEntries.nameFor(condition.getSourceId()), condition.getSourceId(),
+      addCondition(CompanionApplication.get(getContext()).creatures()
+              .nameFor(condition.getSourceId()), condition.getSourceId(),
           ImmutableList.<String>of(creature.getCreatureId()), condition, true, isDM);
     }
   }

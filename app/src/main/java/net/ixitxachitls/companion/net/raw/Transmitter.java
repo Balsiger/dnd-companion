@@ -22,7 +22,7 @@
 package net.ixitxachitls.companion.net.raw;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.proto.Data;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -75,12 +75,12 @@ public class Transmitter {
     receiverThread.interrupt();
   }
 
-  public void send(Data.CompanionMessageProto message) {
+  public void send(Entry.CompanionMessageProto message) {
     Status.log(name + ": enqueing message");
     sender.add(message);
   }
 
-  public Optional<Data.CompanionMessageProto> receive() {
+  public Optional<Entry.CompanionMessageProto> receive() {
     return Optional.ofNullable(receiver.receive());
   }
 }

@@ -26,9 +26,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.storage.DataBase;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -40,17 +39,17 @@ import java.util.Optional;
  */
 public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel {
 
-  protected final DataBaseAccessor dataBaseAccessor;
+  protected final Data data;
   protected final Uri table;
   protected final boolean local;
   protected final Map<String, E> entriesById = new HashMap<>();
 
-  protected StoredEntries(DataBaseAccessor dataBaseAccessor, Uri table, boolean local) {
-    this.dataBaseAccessor = dataBaseAccessor;
+  protected StoredEntries(Data data, Uri table, boolean local) {
+    this.data = data;
     this.table = table;
     this.local = local;
 
-    Cursor cursor = dataBaseAccessor.queryAll(table);
+    Cursor cursor = data.getDataBaseAccessor().queryAll(table);
     while(cursor.moveToNext()) {
       Optional<E> entry = parseEntry(cursor.getLong(0),
           cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO)));
@@ -71,10 +70,6 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
     } else {
       return 0;
     }
-  }
-
-  public static boolean isLocalId(String characterId) {
-    return characterId.startsWith(Settings.get().getAppId());
   }
 
   public boolean isLocal() {
@@ -101,7 +96,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
   protected void remove(E entry) {
     entry.remove();
     entriesById.remove(entry.getEntryId());
-    dataBaseAccessor.delete(table, entry.getId());
+    data.getDataBaseAccessor().delete(table, entry.getId());
   }
 
   @Nullable
@@ -115,29 +110,4 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
   }
 
   protected abstract Optional<E> parseEntry(long id, byte[] blob);
-
-  public static String nameFor(String id) {
-    Optional<? extends  DynamicEntry> entry = getTyped(id);
-    if (entry.isPresent()) {
-      return entry.get().getName();
-    }
-
-    return id;
-  }
-
-  public static Optional<? extends DynamicEntry> getTyped(String id) {
-    switch (StoredEntry.extractType(id)) {
-      case Character.TYPE:
-        return Characters.getCharacter(id).getValue();
-
-      case Campaign.TYPE:
-        return Campaigns.getCampaign(id).getValue();
-
-      case Creature.TYPE:
-        return Creatures.getCreature(id).getValue();
-
-      default:
-        return Optional.empty();
-    }
-  }
 }

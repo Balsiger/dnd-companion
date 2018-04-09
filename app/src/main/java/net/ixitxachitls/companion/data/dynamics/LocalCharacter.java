@@ -22,14 +22,13 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.net.CompanionMessenger;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.stream.Collectors;
@@ -41,12 +40,14 @@ public class LocalCharacter extends Character {
 
   public static final String TABLE = Character.TABLE + "_local";
 
-  public LocalCharacter(long id, String name, String campaignId, DataBaseAccessor dataBaseAccessor) {
-    super(id, name, campaignId, true, DataBaseContentProvider.CHARACTERS_LOCAL, dataBaseAccessor);
+  public LocalCharacter(Data data, long id, String name,
+                        String campaignId) {
+    super(data, id, name, campaignId, true,
+        DataBaseContentProvider.CHARACTERS_LOCAL);
   }
 
-  public static LocalCharacter createNew(String campaignId, DataBaseAccessor dataBaseAccessor) {
-    return new LocalCharacter(0, "", campaignId, dataBaseAccessor);
+  public static LocalCharacter createNew(Data data, String campaignId) {
+    return new LocalCharacter(data, 0, "", campaignId);
   }
 
   public LocalCharacter asLocal() {
@@ -163,7 +164,7 @@ public class LocalCharacter extends Character {
   @Override
   public boolean store() {
     if (playerName.isEmpty()) {
-      playerName = Settings.get().getNickname();
+      playerName = data.settings().getNickname();
     }
 
     if (super.store()) {
@@ -180,10 +181,10 @@ public class LocalCharacter extends Character {
     return super.toString() + "/local";
   }
 
-  public static LocalCharacter fromProto(long id, Data.CharacterProto proto,
-                                         DataBaseAccessor dataBaseAccessor) {
-    LocalCharacter character = new LocalCharacter(id, proto.getCreature().getName(),
-        proto.getCreature().getCampaignId(), dataBaseAccessor);
+  public static LocalCharacter fromProto(Data data, long id,
+                                         Entry.CharacterProto proto) {
+    LocalCharacter character = new LocalCharacter(data, id,
+        proto.getCreature().getName(), proto.getCreature().getCampaignId());
     character.fromProto(proto.getCreature());
     character.playerName = proto.getPlayer();
     character.conditionsHistory = proto.getConditionHistoryList().stream()
@@ -191,12 +192,12 @@ public class LocalCharacter extends Character {
         .collect(Collectors.toList());
     character.xp = proto.getXp();
 
-    for (Data.CharacterProto.Level level : proto.getLevelList()) {
+    for (Entry.CharacterProto.Level level : proto.getLevelList()) {
       character.levels.add(Character.fromProto(level));
     }
 
     if (character.playerName.isEmpty()) {
-      character.playerName = Settings.get().getNickname();
+      character.playerName = data.settings().getNickname();
     }
 
     return character;

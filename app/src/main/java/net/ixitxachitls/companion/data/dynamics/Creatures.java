@@ -27,7 +27,7 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.data.Data;
 
 import java.util.List;
 import java.util.Map;
@@ -40,36 +40,47 @@ import java.util.stream.Collectors;
  * stored here and should be obtained from Characters.
  */
 public class Creatures {
-  private static CreaturesData local;
+
+  private final CreaturesData local;
+  private final Data data;
 
   // Live data storages.
   private static final Map<String, MutableLiveData<ImmutableList<String>>>
       creatureIdsByCampaignId = new ConcurrentHashMap<>();
 
-  public static Optional<? extends BaseCreature> getCreatureOrCharacter(String creatureId) {
-    Optional<? extends DynamicEntry> entry = StoredEntries.getTyped(creatureId);
-    if (entry.isPresent() && entry.get() instanceof BaseCreature) {
-      return Optional.of((BaseCreature) entry.get());
-    }
+  public Creatures(Data data) {
+    this.data = data;
+    this.local = new CreaturesData(data);
+  }
 
-    return Optional.empty();
+  public Optional<? extends BaseCreature> getCreatureOrCharacter(String creatureId) {
+    switch (StoredEntry.extractType(creatureId)) {
+      case Character.TYPE:
+        return data.characters().getCharacter(creatureId).getValue();
+
+      case Creature.TYPE:
+        return getCreature(creatureId).getValue();
+
+      default:
+        return Optional.empty();
+    }
   }
 
   // Data accessors.
 
-  public static LiveData<Optional<Creature>> getCreature(String creatureId) {
+  public LiveData<Optional<Creature>> getCreature(String creatureId) {
     return local.getCreature(creatureId);
   }
 
-  public static boolean has(Creature creature){
+  public boolean has(Creature creature){
     return has(creature.getCreatureId());
   }
 
-  public static boolean has(String creatureId) {
+  public boolean has(String creatureId) {
     return local.has(creatureId);
   }
 
-  public static LiveData<ImmutableList<String>> getCampaignCreatureIds(String campaignId) {
+  public LiveData<ImmutableList<String>> getCampaignCreatureIds(String campaignId) {
     if (creatureIdsByCampaignId.containsKey(campaignId)) {
       return creatureIdsByCampaignId.get(campaignId);
     }
@@ -81,20 +92,29 @@ public class Creatures {
     return ids;
   }
 
-  public static List<Creature> getCampaignCreatures(String campaignId) {
+  public List<Creature> getCampaignCreatures(String campaignId) {
     return local.getCreatures(campaignId);
+  }
+
+  public String nameFor(String id) {
+    Optional<? extends BaseCreature> creature = getCreatureOrCharacter(id);
+    if (creature.isPresent()) {
+      return creature.get().getName();
+    }
+
+    return id;
   }
 
   // Data mutations.
 
-  public static void update(Creature creature) {
+  public void update(Creature creature) {
     Status.log("updating creature " + creature);
 
     // We cannot move a creature to a different campaign, so id lists cannot change.
     local.update(creature);
   }
 
-  public static void add(Creature creature) {
+  public void add(Creature creature) {
     Status.log("adding creature " + creature);
 
     local.add(creature);
@@ -105,7 +125,7 @@ public class Creatures {
     }
   }
 
-  public static void remove(String creatureId) {
+  public void remove(String creatureId) {
     Optional<Creature> creature = local.getCreature(creatureId).getValue();
     if (creature.isPresent()) {
       remove(creature.get());
@@ -114,7 +134,7 @@ public class Creatures {
     }
   }
 
-  public static void remove(Creature creature) {
+  public void remove(Creature creature) {
     Status.log("removing creature " + creature);
     local.remove(creature);
 
@@ -127,31 +147,14 @@ public class Creatures {
     Images.get(creature.isLocal()).remove(Creature.TABLE, creature.getCreatureId());
   }
 
-  // Private methods.
-
-  // While this method is public, it should only be called in the main application.
-  public static void load(DataBaseAccessor dataBaseAccessor) {
-    loadLocal(dataBaseAccessor);
-  }
-
-  private static void loadLocal(DataBaseAccessor dataBaseAccessor) {
-    if (local != null) {
-      Status.log("local creature already loaded");
-      return;
-    }
-
-    Status.log("loading local creature");
-    local = new CreaturesData(dataBaseAccessor);
-  }
-
-  private static List<String> orphaned() {
+  private List<String> orphaned() {
     return local.orphaned().stream()
         .map(Creature::getCreatureId)
         .collect(Collectors.toList());
   }
 
-  private static List<String> creatureIds(String campaignId) {
-    if (campaignId.equals(Campaigns.defaultCampaign.getCampaignId())) {
+  private List<String> creatureIds(String campaignId) {
+    if (campaignId.equals(data.campaigns().getDefaultCampaign().getCampaignId())) {
       return orphaned();
     }
 

@@ -23,10 +23,7 @@ package net.ixitxachitls.companion.net;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 
 /**
@@ -37,8 +34,9 @@ public class ServerMessageProcessor extends MessageProcessor {
     super(application);
   }
 
-  public void process(String senderId, String senderName, long messageId, CompanionMessageData message) {
-    process(senderId, senderName, Settings.get().getAppId(), messageId, message);
+  public void process(String senderId, String senderName, long messageId,
+                      CompanionMessageData message) {
+    process(senderId, senderName, application.settings().getAppId(), messageId, message);
   }
 
   @Override
@@ -69,9 +67,9 @@ public class ServerMessageProcessor extends MessageProcessor {
     Status.addClientConnection(remoteId, remoteName);
 
     // Publish all local campaigns to that client.
-    Campaigns.publish();
+    application.campaigns().publish();
 
     // Publish all local characters to that client.
-    Characters.publish();
+    application.characters().publish();
   }
 }

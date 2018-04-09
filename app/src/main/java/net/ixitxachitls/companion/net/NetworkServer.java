@@ -25,10 +25,9 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.Data;
 import net.ixitxachitls.companion.net.raw.Transmitter;
-import net.ixitxachitls.companion.proto.Data;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
+import net.ixitxachitls.companion.proto.Entry;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -46,14 +45,14 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class NetworkServer implements Runnable {
 
-  private final DataBaseAccessor dataBaseAccessor;
+  private final Data data;
   private @Nullable ServerSocket socket;
   private Thread thread;
   private Map<String, Transmitter> transmittersById = new ConcurrentHashMap<>();
   private Map<String, String> namesById = new ConcurrentHashMap<>();
 
-  public NetworkServer(DataBaseAccessor dataBaseAccessor) {
-    this.dataBaseAccessor = dataBaseAccessor;
+  public NetworkServer(Data data) {
+    this.data = data;
     this.thread = new Thread(this);
   }
 
@@ -117,18 +116,18 @@ public class NetworkServer implements Runnable {
 
         // Send a welcome message to the client.
         Status.log("sending welcome message to client");
-        transmitter.send(Data.CompanionMessageProto.newBuilder()
-            .setHeader(Data.CompanionMessageProto.Header.newBuilder()
-                .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
-                    .setId(Settings.get().getAppId())
-                    .setName(Settings.get().getNickname())
+        transmitter.send(Entry.CompanionMessageProto.newBuilder()
+            .setHeader(Entry.CompanionMessageProto.Header.newBuilder()
+                .setSender(Entry.CompanionMessageProto.Header.Id.newBuilder()
+                    .setId(data.settings().getAppId())
+                    .setName(data.settings().getNickname())
                     .build())
                 // Don't know anything about the client yet.
                 .build())
-            .setData(Data.CompanionMessageProto.Payload.newBuilder()
-                .setWelcome(Data.CompanionMessageProto.Payload.Welcome.newBuilder()
-                    .setId(Settings.get().getAppId())
-                    .setName(Settings.get().getNickname())
+            .setData(Entry.CompanionMessageProto.Payload.newBuilder()
+                .setWelcome(Entry.CompanionMessageProto.Payload.Welcome.newBuilder()
+                    .setId(data.settings().getAppId())
+                    .setName(data.settings().getNickname())
                     .build()))
             .build());
 
@@ -150,12 +149,12 @@ public class NetworkServer implements Runnable {
     List<CompanionMessage> messages = new ArrayList<>();
 
     for (Map.Entry<String, Transmitter> transmitter : transmittersById.entrySet()) {
-      for (Optional<Data.CompanionMessageProto> message = transmitter.getValue().receive();
+      for (Optional<Entry.CompanionMessageProto> message = transmitter.getValue().receive();
            message.isPresent(); message = transmitter.getValue().receive()) {
         if (message.isPresent()) {
           // Handle welcome message.
           if (message.get().getData().getPayloadCase()
-              == Data.CompanionMessageProto.Payload.PayloadCase.WELCOME) {
+              == Entry.CompanionMessageProto.Payload.PayloadCase.WELCOME) {
             String id = message.get().getData().getWelcome().getId();
             String name = message.get().getData().getWelcome().getName();
 
@@ -165,7 +164,7 @@ public class NetworkServer implements Runnable {
             Status.log("Received welcome message from client " + name);
           }
 
-          messages.add(CompanionMessage.fromProto(message.get(), dataBaseAccessor));
+          messages.add(CompanionMessage.fromProto(data, message.get()));
         }
       }
     }
@@ -181,14 +180,14 @@ public class NetworkServer implements Runnable {
     }
 
     Status.log("Server sending message: " + message.toString());
-    transmitter.send(Data.CompanionMessageProto.newBuilder()
-        .setHeader(Data.CompanionMessageProto.Header.newBuilder()
+    transmitter.send(Entry.CompanionMessageProto.newBuilder()
+        .setHeader(Entry.CompanionMessageProto.Header.newBuilder()
             .setId(messageId)
-            .setSender(Data.CompanionMessageProto.Header.Id.newBuilder()
-                .setId(Settings.get().getAppId())
-                .setName(Settings.get().getNickname())
+            .setSender(Entry.CompanionMessageProto.Header.Id.newBuilder()
+                .setId(data.settings().getAppId())
+                .setName(data.settings().getNickname())
                 .build())
-            .setReceiver(Data.CompanionMessageProto.Header.Id.newBuilder()
+            .setReceiver(Entry.CompanionMessageProto.Header.Id.newBuilder()
                 .setId(recieverId)
                 .setName(namesById.get(recieverId))
                 .build())

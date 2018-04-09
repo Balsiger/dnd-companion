@@ -34,9 +34,7 @@ import android.widget.Toast;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
@@ -114,7 +112,7 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   private void deleteCharacterOk() {
     if (character.isPresent()) {
-      Characters.remove(character.get());
+      characters().remove(character.get());
       Toast.makeText(getActivity(), getString(R.string.character_deleted),
           Toast.LENGTH_SHORT).show();
 
@@ -128,7 +126,7 @@ public class LocalCharacterFragment extends CharacterFragment {
   private void move() {
     ListSelectDialog fragment = ListSelectDialog.newInstance(
         R.string.character_select_campaign, "",
-        Campaigns.getAllCampaigns().stream()
+        campaigns().getAllCampaigns().stream()
             .map(m -> new ListSelectDialog.Entry(m.getName(), m.getCampaignId()))
             .collect(Collectors.toList()),
         R.color.campaign);
@@ -141,7 +139,7 @@ public class LocalCharacterFragment extends CharacterFragment {
       character.get().asLocal().setCampaignId(campaignId);
     }
 
-    Optional<Campaign> campaign = Campaigns.getCampaign(campaignId).getValue();
+    Optional<Campaign> campaign = campaigns().getCampaign(campaignId).getValue();
     if (campaign.isPresent()) {
       CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
     }

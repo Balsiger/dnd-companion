@@ -31,11 +31,10 @@ import android.widget.Button;
 
 import com.google.common.base.Preconditions;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.views.EditAbility;
@@ -84,10 +83,11 @@ public class AbilitiesDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = Campaigns.getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
+    campaign = CompanionApplication.get(getContext()).campaigns()
+        .getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
     if (campaign.isPresent()) {
       character = Character.asLocal(
-          Characters.getCharacter(getArguments().getString(ARG_ID)).getValue());
+          characters().getCharacter(getArguments().getString(ARG_ID)).getValue());
     } else {
       character = Optional.empty();
     }
