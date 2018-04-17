@@ -43,6 +43,7 @@ class Sender implements Runnable {
       new ArrayBlockingQueue<>(CAPACITY);
 
   public Sender(String name, Socket socket) {
+    Status.log("started sender " + socket);
     this.socket = socket;
     this.name = name;
   }
@@ -73,5 +74,9 @@ class Sender implements Runnable {
       Status.exception("I/O Exception", e);
 
     }
+  }
+
+  public boolean hasPendingMessages() {
+    return !queue.isEmpty();
   }
 }

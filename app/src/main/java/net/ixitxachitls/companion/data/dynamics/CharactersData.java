@@ -27,7 +27,7 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -45,8 +45,8 @@ public class CharactersData extends StoredEntries<Character> {
   private final Map<String, MutableLiveData<Optional<Character>>> characterById =
       new ConcurrentHashMap<>();
 
-  public CharactersData(Data data, boolean local) {
-    super(data, local ?
+  public CharactersData(CompanionContext companionContext, boolean local) {
+    super(companionContext, local ?
             DataBaseContentProvider.CHARACTERS_LOCAL : DataBaseContentProvider.CHARACTERS_REMOTE,
         local);
   }
@@ -131,9 +131,9 @@ public class CharactersData extends StoredEntries<Character> {
 
   private boolean isOrphaned(Character character) {
     return character.isLocal()
-        && character.getCampaignId().equals(data.campaigns().getDefaultCampaign().getCampaignId())
-        || (!data.campaigns().has(character.getCampaignId(), true)
-        && !data.campaigns().has(character.getCampaignId(), false));
+        && character.getCampaignId().equals(companionContext.campaigns().getDefaultCampaign().getCampaignId())
+        || (!companionContext.campaigns().has(character.getCampaignId(), true)
+        && !companionContext.campaigns().has(character.getCampaignId(), false));
   }
 
   @Override
@@ -142,8 +142,8 @@ public class CharactersData extends StoredEntries<Character> {
       Entry.CharacterProto proto = Entry.CharacterProto.getDefaultInstance().getParserForType()
           .parseFrom(blob);
       return Optional.of(isLocal()
-          ? LocalCharacter.fromProto(data, id, proto)
-          : RemoteCharacter.fromProto(data, id, proto));
+          ? LocalCharacter.fromProto(companionContext, id, proto)
+          : RemoteCharacter.fromProto(companionContext, id, proto));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.empty();

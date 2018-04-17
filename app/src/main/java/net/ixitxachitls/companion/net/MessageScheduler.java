@@ -239,6 +239,11 @@ public class MessageScheduler {
   }
 
   @VisibleForTesting
+  public Collection<ScheduledMessage> getSent(CompanionMessageData.Type type) {
+    return sentByType.get(type);
+  }
+
+  @VisibleForTesting
   public Collection<ScheduledMessage> getPending() {
     return pendingByMessageId.values();
   }

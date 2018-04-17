@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.net;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
@@ -38,13 +39,17 @@ import java.util.Optional;
  */
 public class ClientMessageProcessor extends MessageProcessor {
 
-  public ClientMessageProcessor(CompanionApplication application) {
-    super(application);
+  private final CompanionApplication application;
+
+  public ClientMessageProcessor(CompanionContext companionContext, CompanionApplication application, CompanionMessenger
+      messenger) {
+    super(companionContext, messenger);
+    this.application = application;
   }
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, application.settings().getAppId(), messageId, message);
+    process(senderId, senderName, companionContext.settings().getAppId(), messageId, message);
   }
 
   @Override
@@ -56,13 +61,13 @@ public class ClientMessageProcessor extends MessageProcessor {
   @Override
   protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
     Optional<Campaign> oldCampaign =
-        application.campaigns().getCampaign(campaign.getCampaignId()).getValue();
+        companionContext.campaigns().getCampaign(campaign.getCampaignId()).getValue();
     if (oldCampaign.isPresent()
         && oldCampaign.get().getBattle().isEnded()
         && !campaign.getBattle().isEnded()
         && CompanionFragments.get().showsCampaign(campaign.getCampaignId())) {
       // Show a message about the newly started battle.
-      ConfirmationDialog.create(application)
+      ConfirmationDialog.create(application.getCurrentActivity())
           .title("Battle started")
           .message("A battle has started in " + campaign.getName()
               + ". Do you want to go to the battle screen?")
@@ -81,8 +86,8 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
-    application.campaigns().remove(campaignId, false);
-    CompanionMessenger.get().sendAckToServer(senderId, messageId);
+    companionContext.campaigns().remove(campaignId, false);
+    messenger.sendAckToServer(senderId, messageId);
   }
 
   @Override
@@ -95,7 +100,7 @@ public class ClientMessageProcessor extends MessageProcessor {
   @Override
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
     Optional<Character> character =
-        application.characters().getCharacter(award.getCharacterId()).getValue();
+        companionContext.characters().getCharacter(award.getCharacterId()).getValue();
     if (character.isPresent()) {
       new ConfirmationDialog(application.getCurrentActivity())
           .title("XP Award")
@@ -110,15 +115,15 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleAck(String senderId, long messageId) {
-    CompanionMessenger.get().ackClient(senderId, messageId);
+    messenger.ackClient(senderId, messageId);
   }
 
   private void addXpAward(String senderId, long messageId, String characterId, int xp) {
     Optional<LocalCharacter> character =
-        Character.asLocal(application.characters().getCharacter(characterId).getValue());
+        Character.asLocal(companionContext.characters().getCharacter(characterId).getValue());
     if (character.isPresent()) {
       character.get().addXp(xp);
-      CompanionMessenger.get().sendAckToServer(senderId, messageId);
+      messenger.sendAckToServer(senderId, messageId);
     }
   }
 }

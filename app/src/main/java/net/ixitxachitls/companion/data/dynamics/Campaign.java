@@ -29,7 +29,7 @@ import android.support.annotation.NonNull;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.data.values.Battle;
@@ -52,7 +52,7 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
   public static final String TABLE = "campaigns";
 
   // Values.
-  protected final Data data;
+  protected final CompanionContext companionContext;
 
   protected World world;
   protected String dm = "";
@@ -60,33 +60,33 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
   protected CampaignDate date;
   protected int nextBattleNumber = 0;
 
-  protected Campaign(Data data, long id, String name, boolean local, Uri dbUrl) {
-    super(data, id, TYPE, name, local, dbUrl);
+  protected Campaign(CompanionContext companionContext, long id, String name, boolean local, Uri dbUrl) {
+    super(companionContext, id, TYPE, name, local, dbUrl);
 
-    this.data = data;
+    this.companionContext = companionContext;
 
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar().getYears().get(0).getNumber());
-    dm = data.settings().getNickname();
+    dm = companionContext.settings().getNickname();
     battle = new Battle(this);
   }
 
-  public Data data() {
-    return data;
+  public CompanionContext data() {
+    return companionContext;
   }
 
   public Campaigns campaigns() {
-    return data.campaigns();
+    return companionContext.campaigns();
   }
 
   public Creatures creatures() {
-    return data.creatures();
+    return companionContext.creatures();
   }
 
   public int getMaxPartyLevel() {
     int max = 1;
     for (String characterId : getCharacterIds().getValue()) {
-      Character character = data.characters().getCharacter(characterId).getValue().get();
+      Character character = companionContext.characters().getCharacter(characterId).getValue().get();
       max = Math.max(max, character.getLevel());
     }
 
@@ -96,7 +96,7 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
   public int getMinPartyLevel() {
     int min = Integer.MAX_VALUE;
     for (String characterId : getCharacterIds().getValue()) {
-      Character character = data.characters().getCharacter(characterId).getValue().get();
+      Character character = companionContext.characters().getCharacter(characterId).getValue().get();
       min = Math.min(min, character.getLevel());
     }
 
@@ -138,21 +138,21 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
   }
 
   public LiveData<ImmutableList<String>> getCharacterIds() {
-    return data.characters().getCampaignCharacterIds(getCampaignId());
+    return companionContext.characters().getCampaignCharacterIds(getCampaignId());
   }
 
   public List<Character> getCharacters() {
     return getCharacterIds().getValue().stream()
-        .map(id -> data.characters().getCharacter(id).getValue().get())
+        .map(id -> companionContext.characters().getCharacter(id).getValue().get())
         .collect(Collectors.toList());
   }
 
   public LiveData<ImmutableList<String>> getCreatureIds() {
-    return data.creatures().getCampaignCreatureIds(getCampaignId());
+    return companionContext.creatures().getCampaignCreatureIds(getCampaignId());
   }
 
   public List<Creature> getCreatures() {
-    return data.creatures().getCampaignCreatures(getCampaignId());
+    return companionContext.creatures().getCampaignCreatures(getCampaignId());
   }
 
   public CampaignDate getDate() {
@@ -196,10 +196,10 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
   @Override
   public boolean store() {
     if (super.store()) {
-      if (data.campaigns().has(this)) {
-        data.campaigns().update(this);
+      if (companionContext.campaigns().has(this)) {
+        companionContext.campaigns().update(this);
       } else {
-        data.campaigns().add(this);
+        companionContext.campaigns().add(this);
       }
 
       return true;
@@ -215,7 +215,7 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
 
   @CallSuper
   public void delete() {
-    data.campaigns().remove(this);
+    companionContext.campaigns().remove(this);
   }
 
   @Override

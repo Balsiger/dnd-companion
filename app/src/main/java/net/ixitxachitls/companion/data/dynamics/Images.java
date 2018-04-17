@@ -29,6 +29,7 @@ import android.graphics.BitmapFactory;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 
 import java.io.File;
@@ -48,11 +49,13 @@ public class Images {
   private static Images local;
   private static Images remote;
 
+  private final CompanionContext context;
   private final AssetAccessor assetAccessor;
   private final boolean isLocal;
   private final Map<String, MutableLiveData<Optional<Image>>> imagesByKey = new HashMap<>();
 
-  protected Images(AssetAccessor assetAccessor, boolean isLocal) {
+  protected Images(CompanionContext context, AssetAccessor assetAccessor, boolean isLocal) {
+    this.context = context;
     this.assetAccessor = assetAccessor;
     this.isLocal = isLocal;
   }
@@ -71,19 +74,19 @@ public class Images {
     return local ? Images.local : Images.remote;
   }
 
-  public static void load(AssetAccessor assetAccessor) {
+  public static void load(CompanionContext context, AssetAccessor assetAccessor) {
     if (local != null) {
       Status.log("local images already loaded");
     } else {
       Status.log("loading local images");
-      local = new Images(assetAccessor, true);
+      local = new Images(context, assetAccessor, true);
     }
 
     if (remote != null) {
       Status.log("remote images already loaded");
     } else {
       Status.log("loading remote images");
-      remote = new Images(assetAccessor, false);
+      remote = new Images(context, assetAccessor, false);
     }
   }
 
@@ -123,7 +126,7 @@ public class Images {
     try (InputStream input = new FileInputStream(file)) {
       Bitmap bitmap = BitmapFactory.decodeStream(input);
       if (bitmap != null) {
-        return Optional.of(new Image(type, id, bitmap));
+        return Optional.of(new Image(context, type, id, bitmap));
       }
     } catch (FileNotFoundException e) {
       Status.error("Cannot find file image " + file + " (" + e + ")");

@@ -22,9 +22,8 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.values.Condition;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -38,8 +37,8 @@ public class RemoteCharacter extends Character {
 
   public static final String TABLE = Character.TABLE + "_remote";
 
-  public RemoteCharacter(Data data, long id, String name, String campaignId) {
-    super(data, id, name, campaignId, false, DataBaseContentProvider.CHARACTERS_REMOTE);
+  public RemoteCharacter(CompanionContext companionContext, long id, String name, String campaignId) {
+    super(companionContext, id, name, campaignId, false, DataBaseContentProvider.CHARACTERS_REMOTE);
   }
 
   @Override
@@ -51,7 +50,7 @@ public class RemoteCharacter extends Character {
     }
 
     Status.log("sending xp award of " + xp + " for " + this);
-    CompanionMessenger.get().sendXpAward(campaign.get().getCampaignId(), getCharacterId(), xp);
+    context.messenger().sendXpAward(campaign.get().getCampaignId(), getCharacterId(), xp);
   }
 
   @Override
@@ -59,8 +58,8 @@ public class RemoteCharacter extends Character {
     return super.toString() + "/remote";
   }
 
-  public static RemoteCharacter fromProto(Data data, long id, Entry.CharacterProto proto) {
-    RemoteCharacter character = new RemoteCharacter(data, id,
+  public static RemoteCharacter fromProto(CompanionContext companionContext, long id, Entry.CharacterProto proto) {
+    RemoteCharacter character = new RemoteCharacter(companionContext, id,
         proto.getCreature().getName(), proto.getCreature().getCampaignId());
     character.fromProto(proto.getCreature());
     character.playerName = proto.getPlayer();
@@ -74,7 +73,7 @@ public class RemoteCharacter extends Character {
     }
 
     if (character.playerName.isEmpty()) {
-      character.playerName = data.settings().getNickname();
+      character.playerName = companionContext.settings().getNickname();
     }
 
     return character;

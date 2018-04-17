@@ -27,14 +27,13 @@ import android.graphics.BitmapFactory;
 import com.google.protobuf.ByteString;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.net.CompanionMessenger;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.proto.Entry;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Optional;
 
@@ -44,11 +43,13 @@ import java.util.Optional;
 public class Image {
   public static final int MAX = 500;
 
+  private final CompanionContext context;
   private final String type;
   private final String id;
   private Bitmap bitmap;
 
-  public Image(String type, String id, Bitmap bitmap) {
+  public Image(CompanionContext context, String type, String id, Bitmap bitmap) {
+    this.context = context;
     this.type = type;
     this.id = id;
     this.bitmap = bitmap;
@@ -67,7 +68,7 @@ public class Image {
   }
 
   public void publish() {
-    CompanionMessenger.get().send(this);
+    context.messenger().send(this);
   }
 
   public Optional<Bitmap> load(boolean local) {
@@ -83,18 +84,10 @@ public class Image {
     bitmap = scale(bitmap);
 
     File file = Images.get(local).file(this);
-    FileOutputStream out = null;
-    try {
-      out = new FileOutputStream(file);
+    try (FileOutputStream out = new FileOutputStream(file)) {
       bitmap.compress(Bitmap.CompressFormat.JPEG, 50, out);
     } catch (Exception e) {
       Status.toast("Cannot write image bitmap: " + e);
-    } finally {
-      try {
-        out.close();
-      } catch (IOException e) {
-        Status.toast("Cannot close output image" + e);
-      }
     }
 
     Images.get(local).update(this);
@@ -109,8 +102,9 @@ public class Image {
         .build();
   }
 
-  public static Image fromProto(Entry.CompanionMessageProto.Payload.Image proto) {
-    return new Image(proto.getType(), proto.getId(), asBitmap(proto.getImage()));
+  public static Image fromProto(CompanionContext context,
+                                Entry.CompanionMessageProto.Payload.Image proto) {
+    return new Image(context, proto.getType(), proto.getId(), asBitmap(proto.getImage()));
   }
 
   private static ByteString asByteString(Bitmap bitmap) {

@@ -22,12 +22,11 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -40,14 +39,14 @@ public class LocalCharacter extends Character {
 
   public static final String TABLE = Character.TABLE + "_local";
 
-  public LocalCharacter(Data data, long id, String name,
+  public LocalCharacter(CompanionContext companionContext, long id, String name,
                         String campaignId) {
-    super(data, id, name, campaignId, true,
+    super(companionContext, id, name, campaignId, true,
         DataBaseContentProvider.CHARACTERS_LOCAL);
   }
 
-  public static LocalCharacter createNew(Data data, String campaignId) {
-    return new LocalCharacter(data, 0, "", campaignId);
+  public static LocalCharacter createNew(CompanionContext companionContext, String campaignId) {
+    return new LocalCharacter(companionContext, 0, "", campaignId);
   }
 
   public LocalCharacter asLocal() {
@@ -158,17 +157,17 @@ public class LocalCharacter extends Character {
 
   public void publish() {
     Status.log("publishing character " + this);
-    CompanionMessenger.get().send(this);
+    context.messenger().send(this);
   }
 
   @Override
   public boolean store() {
     if (playerName.isEmpty()) {
-      playerName = data.settings().getNickname();
+      playerName = context.settings().getNickname();
     }
 
     if (super.store()) {
-      CompanionMessenger.get().send(this);
+      context.messenger().send(this);
 
       return true;
     }
@@ -181,9 +180,9 @@ public class LocalCharacter extends Character {
     return super.toString() + "/local";
   }
 
-  public static LocalCharacter fromProto(Data data, long id,
+  public static LocalCharacter fromProto(CompanionContext companionContext, long id,
                                          Entry.CharacterProto proto) {
-    LocalCharacter character = new LocalCharacter(data, id,
+    LocalCharacter character = new LocalCharacter(companionContext, id,
         proto.getCreature().getName(), proto.getCreature().getCampaignId());
     character.fromProto(proto.getCreature());
     character.playerName = proto.getPlayer();
@@ -197,7 +196,7 @@ public class LocalCharacter extends Character {
     }
 
     if (character.playerName.isEmpty()) {
-      character.playerName = data.settings().getNickname();
+      character.playerName = companionContext.settings().getNickname();
     }
 
     return character;

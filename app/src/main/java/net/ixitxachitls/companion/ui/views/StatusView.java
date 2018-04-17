@@ -38,8 +38,6 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -60,7 +58,7 @@ public class StatusView extends LinearLayout {
   private static final int REMOVE_BEATS = 120;
 
   // External data.
-  private final Settings settings;
+  private final CompanionApplication application;
 
   // UI elements.
   private final IconView online;
@@ -76,7 +74,8 @@ public class StatusView extends LinearLayout {
   public StatusView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    settings = CompanionApplication.get(context).settings();
+
+    application = CompanionApplication.get(context);
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_status, null, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
@@ -93,7 +92,7 @@ public class StatusView extends LinearLayout {
     Wrapper.<HorizontalScrollView>wrap(view, R.id.connections_scroll)
         .onTouch(this::toggleDebug, MotionEvent.ACTION_UP);
 
-    settings.shouldShowStatus().observe(ViewUtils.getActivity(context), data -> {
+    application.settings().shouldShowStatus().observe(ViewUtils.getActivity(context), data -> {
         messagesScroll.setVisibility(data ? VISIBLE : GONE); });
 
     addView(view);
@@ -108,7 +107,7 @@ public class StatusView extends LinearLayout {
   }
 
   private void toggleDebug() {
-    settings.setDebugStatus(!settings.shouldShowStatus().getValue());
+    application.settings().setDebugStatus(!application.settings().shouldShowStatus().getValue());
   }
 
   private void clearDebug() {
@@ -126,7 +125,7 @@ public class StatusView extends LinearLayout {
     for (Iterator<Map.Entry<String, ConnectionView>> i = views.iterator(); i.hasNext(); ) {
       Map.Entry<String, ConnectionView> entry = i.next();
       entry.getValue().heartbeat();
-      if (!entry.getKey().equals(settings.getAppId())
+      if (!entry.getKey().equals(application.settings().getAppId())
           && entry.getValue().getHeartbeats() < -REMOVE_BEATS) {
         i.remove();
         connections.get().removeView(entry.getValue());
@@ -157,7 +156,7 @@ public class StatusView extends LinearLayout {
       return;
     }
 
-    if (Misc.onEmulator() && !Misc.SHOW_EMULATOR && settings.getAppId().equals(id)) {
+    if (Misc.onEmulator() && !Misc.SHOW_EMULATOR && application.settings().getAppId().equals(id)) {
       name = "Queen of Nihil";
     }
 
@@ -214,9 +213,9 @@ public class StatusView extends LinearLayout {
 
   private void restart() {
     if (started) {
-      CompanionMessenger.get().stop();
+      application.messenger().stop();
     } else {
-      CompanionMessenger.get().start();
+      application.messenger().start();
     }
 
     started = !started;

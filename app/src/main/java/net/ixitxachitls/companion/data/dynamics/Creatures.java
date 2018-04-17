@@ -27,7 +27,7 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.List;
 import java.util.Map;
@@ -42,21 +42,21 @@ import java.util.stream.Collectors;
 public class Creatures {
 
   private final CreaturesData local;
-  private final Data data;
+  private final CompanionContext companionContext;
 
   // Live data storages.
   private static final Map<String, MutableLiveData<ImmutableList<String>>>
       creatureIdsByCampaignId = new ConcurrentHashMap<>();
 
-  public Creatures(Data data) {
-    this.data = data;
-    this.local = new CreaturesData(data);
+  public Creatures(CompanionContext companionContext) {
+    this.companionContext = companionContext;
+    this.local = new CreaturesData(companionContext);
   }
 
   public Optional<? extends BaseCreature> getCreatureOrCharacter(String creatureId) {
     switch (StoredEntry.extractType(creatureId)) {
       case Character.TYPE:
-        return data.characters().getCharacter(creatureId).getValue();
+        return companionContext.characters().getCharacter(creatureId).getValue();
 
       case Creature.TYPE:
         return getCreature(creatureId).getValue();
@@ -154,7 +154,7 @@ public class Creatures {
   }
 
   private List<String> creatureIds(String campaignId) {
-    if (campaignId.equals(data.campaigns().getDefaultCampaign().getCampaignId())) {
+    if (campaignId.equals(companionContext.campaigns().getDefaultCampaign().getCampaignId())) {
       return orphaned();
     }
 

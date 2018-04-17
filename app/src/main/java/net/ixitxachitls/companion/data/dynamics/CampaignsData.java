@@ -28,7 +28,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -48,8 +48,8 @@ public class CampaignsData extends StoredEntries<Campaign> {
   private final Map<String, MutableLiveData<Optional<Campaign>>> campaignById =
       new ConcurrentHashMap<>();
 
-  CampaignsData(Data data, boolean local) {
-    super(data,
+  CampaignsData(CompanionContext companionContext, boolean local) {
+    super(companionContext,
         local ? DataBaseContentProvider.CAMPAIGNS_LOCAL : DataBaseContentProvider.CAMPAIGNS_REMOTE,
         local);
 
@@ -114,8 +114,8 @@ public class CampaignsData extends StoredEntries<Campaign> {
       Entry.CampaignProto proto = Entry.CampaignProto.getDefaultInstance().getParserForType()
           .parseFrom(blob);
       return Optional.of(isLocal()
-          ? LocalCampaign.fromProto(data, id, proto)
-          : RemoteCampaign.fromProto(data, id, proto));
+          ? LocalCampaign.fromProto(companionContext, id, proto)
+          : RemoteCampaign.fromProto(companionContext, id, proto));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);
       return Optional.empty();

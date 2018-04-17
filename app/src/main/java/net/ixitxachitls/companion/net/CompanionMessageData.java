@@ -22,7 +22,7 @@
 package net.ixitxachitls.companion.net;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
@@ -37,21 +37,25 @@ import net.ixitxachitls.companion.proto.Entry;
  * A message transmitted between client and server.
  */
 public class CompanionMessageData {
-  private final Data data;
+  private final CompanionContext context;
   private final Entry.CompanionMessageProto.Payload payload;
 
-  private CompanionMessageData(Data data, Entry.CompanionMessageProto.Payload payload) {
-    this.data = data;
+  private CompanionMessageData(CompanionContext context, Entry.CompanionMessageProto.Payload payload) {
+    this.context = context;
     this.payload = payload;
   }
 
-  enum Type {
+  public enum Type {
     UNKNOWN, DEBUG, WELCOME, ACK, CAMPAIGN, CAMPAIGN_DELETE, CHARACTER, CHARACTER_DELETE, IMAGE,
     XP_AWARD, CONDITION, CONDITION_DELETE
   };
 
   public Type getType() {
-    switch(payload.getPayloadCase()) {
+    return getType(payload.getPayloadCase());
+  }
+
+  public static Type getType(Entry.CompanionMessageProto.Payload.PayloadCase type) {
+    switch(type) {
       case DEBUG:
         return Type.DEBUG;
 
@@ -92,7 +96,7 @@ public class CompanionMessageData {
   }
 
   public Campaigns campaigns() {
-    return data.campaigns();
+    return context.campaigns();
   }
 
   public String getDebug() {
@@ -100,18 +104,18 @@ public class CompanionMessageData {
   }
 
   public RemoteCampaign getCampaign() {
-    return RemoteCampaign.fromProto(data, campaigns().getRemoteIdFor(payload.getCampaign().getId()),
+    return RemoteCampaign.fromProto(context, campaigns().getRemoteIdFor(payload.getCampaign().getId()),
         payload.getCampaign());
   }
 
   public RemoteCharacter getCharacter() {
-    return RemoteCharacter.fromProto(data,
-        data.characters().getRemoteIdFor(payload.getCharacter().getCreature().getId()),
+    return RemoteCharacter.fromProto(context,
+        context.characters().getRemoteIdFor(payload.getCharacter().getCreature().getId()),
         payload.getCharacter());
   }
 
   public Image getImage() {
-    return Image.fromProto(payload.getImage());
+    return Image.fromProto(context, payload.getImage());
   }
 
   public String getConditionTargetId() {
@@ -272,14 +276,14 @@ public class CompanionMessageData {
         .build());
   }
 
-  public static CompanionMessageData from(Data data, Image image) {
-    return fromProto(data, Entry.CompanionMessageProto.Payload.newBuilder()
+  public static CompanionMessageData from(CompanionContext companionContext, Image image) {
+    return fromProto(companionContext, Entry.CompanionMessageProto.Payload.newBuilder()
         .setImage(image.toProto())
         .build());
   }
 
-  public static CompanionMessageData from(Data data, String targetId, TimedCondition condition) {
-    return fromProto(data, Entry.CompanionMessageProto.Payload.newBuilder()
+  public static CompanionMessageData from(CompanionContext companionContext, String targetId, TimedCondition condition) {
+    return fromProto(companionContext, Entry.CompanionMessageProto.Payload.newBuilder()
         .setCondition(Entry.CompanionMessageProto.Payload.Condition.newBuilder()
             .setTargetId(targetId)
             .setCondition(condition.toProto())
@@ -299,9 +303,9 @@ public class CompanionMessageData {
         .build());
   }
 
-  public static CompanionMessageData fromDelete(Data data, String conditionName, String sourceId,
+  public static CompanionMessageData fromDelete(CompanionContext companionContext, String conditionName, String sourceId,
                                                 String targetId) {
-    return fromProto(data, Entry.CompanionMessageProto.Payload.newBuilder()
+    return fromProto(companionContext, Entry.CompanionMessageProto.Payload.newBuilder()
         .setConditionDelete(Entry.CompanionMessageProto.Payload.DeleteCondition.newBuilder()
             .setName(conditionName)
             .setSourceId(sourceId)
@@ -310,8 +314,8 @@ public class CompanionMessageData {
         .build());
   }
 
-  public static CompanionMessageData fromWelcome(Data data, String id, String name) {
-    return fromProto(data, Entry.CompanionMessageProto.Payload.newBuilder()
+  public static CompanionMessageData fromWelcome(CompanionContext companionContext, String id, String name) {
+    return fromProto(companionContext, Entry.CompanionMessageProto.Payload.newBuilder()
         .setWelcome(Entry.CompanionMessageProto.Payload.Welcome.newBuilder()
             .setId(id)
             .setName(name)
@@ -319,21 +323,21 @@ public class CompanionMessageData {
         .build());
   }
 
-  public static CompanionMessageData from(Data data, XpAward award) {
-    return fromProto(data, Entry.CompanionMessageProto.Payload.newBuilder()
+  public static CompanionMessageData from(CompanionContext companionContext, XpAward award) {
+    return fromProto(companionContext, Entry.CompanionMessageProto.Payload.newBuilder()
         .setXpAward(award.toProto())
         .build());
   }
 
-  public static CompanionMessageData fromAck(Data data, long messageId) {
-    return fromProto(data, Entry.CompanionMessageProto.Payload.newBuilder()
+  public static CompanionMessageData fromAck(CompanionContext companionContext, long messageId) {
+    return fromProto(companionContext, Entry.CompanionMessageProto.Payload.newBuilder()
         .setAck(messageId)
         .build());
   }
 
-  public static CompanionMessageData fromProto(Data data,
+  public static CompanionMessageData fromProto(CompanionContext companionContext,
                                                Entry.CompanionMessageProto.Payload payload) {
-    return new CompanionMessageData(data, payload);
+    return new CompanionMessageData(companionContext, payload);
   }
 
   @Override

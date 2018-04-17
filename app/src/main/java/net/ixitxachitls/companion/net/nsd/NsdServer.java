@@ -24,9 +24,10 @@ package net.ixitxachitls.companion.net.nsd;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
+import android.support.annotation.VisibleForTesting;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
 import net.ixitxachitls.companion.net.NetworkServer;
@@ -42,7 +43,7 @@ public class NsdServer {
 
   public static final String TYPE = "_companion._tcp";
 
-  private final Data data;
+  private final CompanionContext companionContext;
   private final NsdAccessor nsdAccessor;
   private final String name;
   private final NsdServiceInfo service;
@@ -51,13 +52,13 @@ public class NsdServer {
   private boolean started = false;
   private @Nullable RegistrationListener registrationListener;
 
-  public NsdServer(Data data, NsdAccessor nsdAccessor) {
-    this.data = data;
+  public NsdServer(CompanionContext companionContext, NsdAccessor nsdAccessor) {
+    this.companionContext = companionContext;
     this.nsdAccessor = nsdAccessor;
 
-    this.name = data.settings().getNickname();
+    this.name = companionContext.settings().getNickname();
     this.service = new NsdServiceInfo();
-    this.server = new NetworkServer(data);
+    this.server = new NetworkServer(companionContext);
 
     this.service.setServiceName(this.name);
     this.service.setServiceType(TYPE);
@@ -75,7 +76,7 @@ public class NsdServer {
     nsdAccessor.register(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
 
     Status.log("nsd service registered");
-    Status.addServerConnection(data.settings().getAppId(), name);
+    Status.addServerConnection(companionContext.settings().getAppId(), name);
     started = true;
   }
 
@@ -133,5 +134,10 @@ public class NsdServer {
     public void onUnregistrationFailed(NsdServiceInfo serviceInfo, int errorCode) {
       Status.log("unregistering nsd service " + name + " failed: " + errorCode);
     }
+  }
+
+  @VisibleForTesting
+  public NetworkServer getServer() {
+    return server;
   }
 }

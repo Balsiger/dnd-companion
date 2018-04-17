@@ -24,7 +24,7 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
 import net.ixitxachitls.companion.proto.Entry;
@@ -168,9 +168,9 @@ public class ScheduledMessage extends StoredEntry<Entry.ScheduledMessageProto> {
     }
   }
 
-  public static ScheduledMessage fromProto(Data data, long id, Entry.ScheduledMessageProto proto) {
-    return new ScheduledMessage(data.campaigns(), id, convert(proto.getState()),
-        proto.getLastInteraction(), CompanionMessage.fromProto(data, proto.getMessage()));
+  public static ScheduledMessage fromProto(CompanionContext companionContext, long id, Entry.ScheduledMessageProto proto) {
+    return new ScheduledMessage(companionContext.campaigns(), id, convert(proto.getState()),
+        proto.getLastInteraction(), CompanionMessage.fromProto(companionContext, proto.getMessage()));
   }
 
   private static State convert(Entry.ScheduledMessageProto.State state) {

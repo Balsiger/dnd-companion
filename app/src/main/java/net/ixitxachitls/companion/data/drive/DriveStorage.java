@@ -41,7 +41,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.CompanionApplication;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
@@ -277,22 +277,22 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                 public void onSuccess(DriveApi.DriveContentsResult result) {
                   net.ixitxachitls.companion.Status.log("reading file " + meta.getTitle());
                   try {
-                    Data data = CompanionApplication.get(activity).data();
+                    CompanionContext context = CompanionApplication.get(activity).context();
                     if (meta.getTitle().endsWith(".campaign")) {
                       Entry.CampaignProto proto = Entry.CampaignProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      LocalCampaign.fromProto(data, data.campaigns().getLocalIdFor(proto.getId()),
+                      LocalCampaign.fromProto(context, context.campaigns().getLocalIdFor(proto.getId()),
                           proto).store();
                     } else if (meta.getTitle().endsWith(".character")) {
                       Entry.CharacterProto proto = Entry.CharacterProto.getDefaultInstance()
                           .getParserForType()
                           .parseFrom(result.getDriveContents().getInputStream());
-                      LocalCharacter.fromProto(data,
-                          data.characters().getLocalIdFor(proto.getCreature().getId()), proto)
+                      LocalCharacter.fromProto(context,
+                          context.characters().getLocalIdFor(proto.getCreature().getId()), proto)
                           .store();
                     } else if (meta.getTitle().endsWith(".character.jpg")) {
-                      new Image(Character.TABLE, meta.getDescription(),
+                      new Image(context, Character.TABLE, meta.getDescription(),
                           Image.asBitmap(result.getDriveContents().getInputStream()));
                     }
                   } catch (InvalidProtocolBufferException e) {

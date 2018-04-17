@@ -42,6 +42,7 @@ class Receiver implements Runnable {
   private final TransferQueue<Entry.CompanionMessageProto> queue = new LinkedTransferQueue<>();
 
   public Receiver(String name, Socket socket) {
+    Status.log("started receiver " + socket);
     this.name = name;
     this.socket = socket;
   }
@@ -67,5 +68,9 @@ class Receiver implements Runnable {
   @Nullable
   public Entry.CompanionMessageProto receive() {
     return queue.poll();
+  }
+
+  public boolean hasPendingMessages() {
+    return !queue.isEmpty();
   }
 }

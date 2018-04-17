@@ -24,7 +24,7 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.support.annotation.NonNull;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.util.Dice;
@@ -38,18 +38,18 @@ public class Creature extends BaseCreature<Entry.CreatureProto> implements Compa
   public static final String TABLE = "creatures";
   public static final String TABLE_LOCAL = TABLE + "_local";
 
-  private final Data data;
+  private final CompanionContext companionContext;
 
-  public Creature(Data data, long id, String name, String campaignId,
+  public Creature(CompanionContext companionContext, long id, String name, String campaignId,
                   int initiativeModifier) {
-    this(data, id, name, campaignId);
+    this(companionContext, id, name, campaignId);
 
     this.initiative = Dice.d20() + initiativeModifier;
   }
 
-  public Creature(Data data, long id, String name, String campaignId) {
-    super(data, id, TABLE, name, true, DataBaseContentProvider.CREATURES_LOCAL, campaignId);
-    this.data = data;
+  public Creature(CompanionContext companionContext, long id, String name, String campaignId) {
+    super(companionContext, id, TABLE, name, true, DataBaseContentProvider.CREATURES_LOCAL, campaignId);
+    this.companionContext = companionContext;
   }
 
   @Override
@@ -57,8 +57,8 @@ public class Creature extends BaseCreature<Entry.CreatureProto> implements Compa
     return toCreatureProto();
   }
 
-  public static Creature fromProto(Data data, long id, Entry.CreatureProto proto) {
-    Creature creature = new Creature(data, id, proto.getName(), proto.getCampaignId());
+  public static Creature fromProto(CompanionContext companionContext, long id, Entry.CreatureProto proto) {
+    Creature creature = new Creature(companionContext, id, proto.getName(), proto.getCampaignId());
     creature.fromProto(proto);
 
     return creature;
@@ -68,10 +68,10 @@ public class Creature extends BaseCreature<Entry.CreatureProto> implements Compa
   public boolean store() {
     boolean changed = super.store();
     if (changed) {
-      if (data.creatures().has(this)) {
-        data.creatures().update(this);
+      if (companionContext.creatures().has(this)) {
+        companionContext.creatures().update(this);
       } else {
-        data.creatures().add(this);
+        companionContext.creatures().add(this);
       }
     }
 

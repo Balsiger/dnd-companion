@@ -21,10 +21,8 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.widget.Toast;
-
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
@@ -48,13 +46,15 @@ public abstract class MessageProcessor {
 
   private static final int MAX_RECEIVED_SIZE = 50;
 
-  protected final CompanionApplication application;
+  protected final CompanionContext companionContext;
+  protected final CompanionMessenger messenger;
   private final Deque<RecievedMessage> received = new ArrayDeque<>();
   protected final Set<String> inFlightMessages =
       Collections.newSetFromMap(new ConcurrentHashMap<>());
 
-  public MessageProcessor(CompanionApplication application) {
-    this.application = application;
+  public MessageProcessor(CompanionContext companionContext, CompanionMessenger messenger) {
+    this.companionContext = companionContext;
+    this.messenger = messenger;
   }
 
   protected void process(String senderId, String senderName, String receiverId, long messageId,
@@ -128,7 +128,7 @@ public abstract class MessageProcessor {
         break;
     }
 
-    Status.refreshServerConnection(application.settings().getAppId());
+    Status.refreshServerConnection(companionContext.settings().getAppId());
     Status.refreshClientConnection(senderId);
 
     received.addFirst(new RecievedMessage(senderName, message));
@@ -140,7 +140,7 @@ public abstract class MessageProcessor {
   private void handleCondition(String senderId, long messageId, String targetId,
                                TimedCondition condition) {
     Optional<? extends BaseCreature> creature =
-        application.creatures().getCreatureOrCharacter(targetId);
+        companionContext.creatures().getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
       creature.get().addAffectedCondition(condition);
     } else {
@@ -148,9 +148,9 @@ public abstract class MessageProcessor {
     }
 
     if (this instanceof ClientMessageProcessor) {
-      CompanionMessenger.get().sendAckToServer(senderId, messageId);
+      messenger.sendAckToServer(senderId, messageId);
     } else {
-      CompanionMessenger.get().sendAckToClient(senderId, messageId);
+      messenger.sendAckToClient(senderId, messageId);
     }
   }
 
@@ -177,12 +177,12 @@ public abstract class MessageProcessor {
   }
 
   protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
-    application.characters().remove(characterId, false);
+    companionContext.characters().remove(characterId, false);
 
     if (this instanceof ClientMessageProcessor) {
-      CompanionMessenger.get().sendAckToServer(senderId, messageId);
+      messenger.sendAckToServer(senderId, messageId);
     } else {
-      CompanionMessenger.get().sendAckToClient(senderId, messageId);
+      messenger.sendAckToClient(senderId, messageId);
     }
   }
 
@@ -201,7 +201,7 @@ public abstract class MessageProcessor {
     Status.log("dismissing condition " + conditionName + " for " + Status.nameFor(targetId)
         + " from " + Status.nameFor(sourceId));
     Optional<? extends BaseCreature> creature =
-        application.creatures().getCreatureOrCharacter(targetId);
+        companionContext.creatures().getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
       creature.get().removeAffectedCondition(conditionName, sourceId);
     } else {
@@ -209,21 +209,19 @@ public abstract class MessageProcessor {
     }
 
     if (this instanceof ClientMessageProcessor) {
-      CompanionMessenger.get().sendAckToServer(senderId, messageId);
+      messenger.sendAckToServer(senderId, messageId);
     } else {
-      CompanionMessenger.get().sendAckToClient(senderId, messageId);
+      messenger.sendAckToClient(senderId, messageId);
     }
   }
 
   private void handleInvalid(String senderName) {
-    Toast.makeText(application.getApplicationContext(),
-        senderName + ": Unknown message ignored", Toast.LENGTH_LONG).show();
+    Status.error(senderName + ": Unknown message ignored");
   }
 
   protected void handleDebug(String senderId, String senderName, long messageId, String debug) {
     if (!debug.isEmpty()) {
-      Toast.makeText(application.getApplicationContext(),
-          senderName + ": " + debug, Toast.LENGTH_LONG).show();
+      Status.toast(senderName + ": " + debug);
     }
   }
 
@@ -238,11 +236,11 @@ public abstract class MessageProcessor {
 
   protected void handleWelcome(String remoteId, String remoteName) {
     Status.recordId(remoteId, remoteName);
-    for (Campaign campaign : application.campaigns().getCampaignsByServer(remoteId)) {
-      application.characters().publish(campaign.getCampaignId());
+    for (Campaign campaign : companionContext.campaigns().getCampaignsByServer(remoteId)) {
+      companionContext.characters().publish(campaign.getCampaignId());
     }
 
-    CompanionMessenger.get().sendCurrent(remoteId);
+    messenger.sendCurrent(remoteId);
   }
 
   public void status(String message) {

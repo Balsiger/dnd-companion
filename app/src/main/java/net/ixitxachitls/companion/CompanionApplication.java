@@ -29,7 +29,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.multidex.MultiDexApplication;
 
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
@@ -54,8 +54,7 @@ public class CompanionApplication extends MultiDexApplication
   private final AssetAccessor assetAccessor;
 
   private NsdAccessor nsdAccessor;
-  private CompanionMessenger messenger;
-  private CompanionData data;
+  private ApplicationCompantionContext context;
   private Activity currentActivity;
 
   public CompanionApplication() {
@@ -79,15 +78,15 @@ public class CompanionApplication extends MultiDexApplication
 
     Entries.init(this.getAssetAccessor());
 
-    data = new CompanionData(this.getDataBaseAccessor());
+    context =
+        new ApplicationCompantionContext(this.getDataBaseAccessor(), this.getNsdAccessor(), this);
 
-    Images.load(this.getAssetAccessor());
+    Images.load(context, this.getAssetAccessor());
 
     // The messenger needs other entries, thus cannot be created earlier.
-    messenger = CompanionMessenger.init(data, nsdAccessor, this);
-    messenger.start(); // Stopping is done in MainActivity.exit();
-    data.campaigns().publish();
-    data.characters().publish();
+    context.messenger().start(); // Stopping is done in MainActivity.exit();
+    context.campaigns().publish();
+    context.characters().publish();
 
     registerActivityLifecycleCallbacks(this);
   }
@@ -113,24 +112,28 @@ public class CompanionApplication extends MultiDexApplication
     return nsdAccessor;
   }
 
-  public Data data() {
-    return data;
+  public CompanionContext context() {
+    return context;
   }
 
   public Settings settings() {
-    return data.settings();
+    return context.settings();
   }
 
   public Campaigns campaigns() {
-    return data.campaigns();
+    return context.campaigns();
   }
 
   public Characters characters() {
-    return data.characters();
+    return context.characters();
   }
 
   public Creatures creatures() {
-    return data.creatures();
+    return context.creatures();
+  }
+
+  public CompanionMessenger messenger() {
+    return context.messenger();
   }
 
   @Override

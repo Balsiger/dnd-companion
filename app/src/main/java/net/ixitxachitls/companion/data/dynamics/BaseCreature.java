@@ -22,17 +22,17 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.net.Uri;
+import android.support.annotation.VisibleForTesting;
 
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Monster;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Entry;
 
 import java.util.ArrayList;
@@ -64,9 +64,9 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   protected List<TargetedTimedCondition> initiatedConditions = new ArrayList<>();
   protected List<TimedCondition> affectedConditions = new ArrayList<>();
 
-  protected BaseCreature(Data data, long id, String type, String name, boolean local, Uri dbUrl,
+  protected BaseCreature(CompanionContext context, long id, String type, String name, boolean local, Uri dbUrl,
                          String campaignId) {
-    super(data, id, type, name, local, dbUrl);
+    super(context, id, type, name, local, dbUrl);
     this.campaignId = campaignId;
   }
 
@@ -75,7 +75,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   }
 
   public Optional<Campaign> getCampaign() {
-    return data.campaigns().getCampaign(campaignId).getValue();
+    return context.campaigns().getCampaign(campaignId).getValue();
   }
 
   public String getCreatureId() {
@@ -114,15 +114,18 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return charisma;
   }
 
-
   public void addInitiatedCondition(TargetedTimedCondition condition) {
+    if (!condition.getTimedCondition().getSourceId().equals(getCreatureId())) {
+      throw new IllegalArgumentException("source id does not match creature id!");
+    }
+
     if (isLocal()) {
       initiatedConditions.add(condition);
       store();
 
       // Send the condition to all affected characters/creatures.
       for (String id : condition.getTargetIds()) {
-        Optional<? extends BaseCreature> creature = data.creatures().getCreatureOrCharacter(id);
+        Optional<? extends BaseCreature> creature = context.creatures().getCreatureOrCharacter(id);
         if (creature.isPresent()) {
           creature.get().addAffectedCondition(condition.getTimedCondition());
         } else {
@@ -140,7 +143,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
       affectedConditions.add(condition);
       store();
     } else {
-      CompanionMessenger.get().send(this, condition);
+      context.messenger().send(this, condition);
     }
   }
 
@@ -153,7 +156,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
         for (String targetId : condition.getTargetIds()) {
           Optional<? extends BaseCreature> creature =
-              data.creatures().getCreatureOrCharacter(targetId);
+              context.creatures().getCreatureOrCharacter(targetId);
           if (creature.isPresent()) {
             creature.get().removeAffectedCondition(name, getCreatureId());
           } else {
@@ -188,7 +191,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
         }
       }
     } else {
-      CompanionMessenger.get().sendDeletion(name, sourceId, this);
+      context.messenger().sendDeletion(name, sourceId, this);
     }
   }
 
@@ -239,7 +242,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
   protected void fromProto(Entry.CreatureProto proto) {
     campaignId = proto.getCampaignId();
-    entryId = proto.getId().isEmpty() ? data.settings().getAppId() + "-" + id : proto.getId();
+    entryId = proto.getId().isEmpty() ? context.settings().getAppId() + "-" + id : proto.getId();
     mRace = Entries.get().getMonsters().get(proto.getRace());
     gender = Gender.fromProto(proto.getGender());
     strength = proto.getAbilities().getStrength();
@@ -256,5 +259,10 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     affectedConditions = proto.getAffectedConditionList().stream()
         .map(TimedCondition::fromProto)
         .collect(Collectors.toList());
+  }
+
+  @VisibleForTesting
+  public List<String> affectedConditions() {
+    return affectedConditions.stream().map(TimedCondition::getName).collect(Collectors.toList());
   }
 }

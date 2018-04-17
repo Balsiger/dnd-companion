@@ -29,9 +29,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Settings;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -106,7 +106,7 @@ public class SettingsFragment extends CompanionFragment {
 
     if (settings.isDefined()) {
       CompanionFragments.get().show(Type.campaigns, Optional.empty());
-      CompanionMessenger.get().sendWelcome();
+      CompanionApplication.get(getContext()).messenger().sendWelcome();
     }
   }
 

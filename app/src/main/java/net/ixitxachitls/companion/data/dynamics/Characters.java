@@ -27,8 +27,7 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
-import net.ixitxachitls.companion.net.CompanionMessenger;
+import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.Collection;
 import java.util.List;
@@ -41,7 +40,7 @@ import java.util.stream.Collectors;
  * Information and storage for all characters.
  */
 public class Characters {
-  private final Data data;
+  private final CompanionContext context;
   private final CharactersData local;
   private final CharactersData remote;
 
@@ -49,16 +48,16 @@ public class Characters {
   private static final Map<String, MutableLiveData<ImmutableList<String>>>
       characterIdsByCampaignId = new ConcurrentHashMap<>();
 
-  public Characters(Data data) {
-    this.data = data;
-    this.local = new CharactersData(data, true);
-    this.remote = new CharactersData(data, false);
+  public Characters(CompanionContext context) {
+    this.context = context;
+    this.local = new CharactersData(context, true);
+    this.remote = new CharactersData(context, false);
   }
 
   // Data accessors.
 
   public LiveData<Optional<Character>> getCharacter(String characterId) {
-    if (!data.settings().useRemoteCharacters() && local.hasCharacter(characterId)) {
+    if (!context.settings().useRemoteCharacters() && local.hasCharacter(characterId)) {
       return local.getCharacter(characterId);
     }
 
@@ -163,7 +162,7 @@ public class Characters {
     }
 
     // Publish the character deletion.
-    CompanionMessenger.get().sendDeletion(character);
+    context.messenger().sendDeletion(character);
 
     // Update live data.
     if (characterIdsByCampaignId.containsKey(character.getCampaignId())) {
@@ -207,7 +206,7 @@ public class Characters {
   }
 
   private List<String> characterIds(String campaignId) {
-    if (campaignId.equals(data.campaigns().getDefaultCampaign().getCampaignId())) {
+    if (campaignId.equals(context.campaigns().getDefaultCampaign().getCampaignId())) {
       return orphaned();
     }
 

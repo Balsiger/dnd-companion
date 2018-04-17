@@ -56,6 +56,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
     }
   }
 
+  @Deprecated
   public static ScheduledMessages get() {
     Preconditions.checkNotNull(singleton);
     return singleton;
@@ -64,7 +65,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
   @Override
   protected Optional<ScheduledMessage> parseEntry(long id, byte[] blob) {
     try {
-      return Optional.of(ScheduledMessage.fromProto(data, id,
+      return Optional.of(ScheduledMessage.fromProto(companionContext, id,
           Entry.ScheduledMessageProto.getDefaultInstance().getParserForType().parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for message: " + e);
@@ -76,7 +77,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
     List<ScheduledMessage> messages = new ArrayList<>();
 
     for (ScheduledMessage message : getAll()) {
-      if (message.matches(data.settings().getAppId(), receiverId)) {
+      if (message.matches(companionContext.settings().getAppId(), receiverId)) {
         messages.add(message);
       }
     }

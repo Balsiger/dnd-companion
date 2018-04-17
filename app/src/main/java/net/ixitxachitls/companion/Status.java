@@ -23,10 +23,12 @@ package net.ixitxachitls.companion;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.widget.Toast;
 
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.ui.views.StatusView;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -72,18 +74,35 @@ public class Status {
   }
 
   public static void log(String message) {
+    Log.d("Status", message);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+    }
     runInView(v -> v.addMessage(message));
   }
 
   public static void exception(String message, Exception e) {
+    Log.e("Status", message, e);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+      e.printStackTrace();
+    }
     runInView(v -> v.showException(message, e));
   }
 
   public static void warning(String message) {
+    Log.w("Status", message);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+    }
     runInView(v -> v.addWarningMessage(message));
   }
 
   public static void error(String message) {
+    Log.e("Status", message);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+    }
     toastOnly(message);
     runInView(v -> v.addErrorMessage(message));
   }

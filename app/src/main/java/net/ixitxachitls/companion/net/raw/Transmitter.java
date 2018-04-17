@@ -58,6 +58,8 @@ public class Transmitter {
     this.receiver = new Receiver(name, socket);
     this.senderThread = new Thread(sender);
     this.receiverThread = new Thread(receiver);
+
+    Status.log("started transmitter for " + socket);
   }
 
   public void start() {
@@ -82,5 +84,9 @@ public class Transmitter {
 
   public Optional<Entry.CompanionMessageProto> receive() {
     return Optional.ofNullable(receiver.receive());
+  }
+
+  public boolean hasPendingMessage() {
+    return sender.hasPendingMessages() || receiver.hasPendingMessages();
   }
 }

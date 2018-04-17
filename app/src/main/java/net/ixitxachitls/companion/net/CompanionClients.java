@@ -24,7 +24,7 @@ package net.ixitxachitls.companion.net;
 import android.support.annotation.VisibleForTesting;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.net.nsd.NsdAccessor;
 import net.ixitxachitls.companion.net.nsd.NsdDiscovery;
@@ -41,7 +41,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * Subscriber for campaign information.
  */
 public class CompanionClients implements NsdDiscovery.NsdCallback {
-  private final Data data;
+  private final CompanionContext companionContext;
   private final NsdDiscovery nsdDiscovery;
   private final Map<String, NetworkClient> clientsByServerId = new ConcurrentHashMap<>();
   private final Map<String, NetworkClient> clientsByServerName = new ConcurrentHashMap<>();
@@ -49,9 +49,9 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
 
   private boolean started;
 
-  public CompanionClients(Data data, NsdAccessor nsdAccessor) {
-    this.data = data;
-    this.nsdDiscovery = new NsdDiscovery(data.settings(), nsdAccessor, this);
+  public CompanionClients(CompanionContext companionContext, NsdAccessor nsdAccessor) {
+    this.companionContext = companionContext;
+    this.nsdDiscovery = new NsdDiscovery(companionContext.settings(), nsdAccessor, this);
   }
 
   // Network handling.
@@ -103,7 +103,7 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
     }
 
     // Start a client to communicate.
-    client = new NetworkClient(data);
+    client = new NetworkClient(companionContext);
     if (!client.start(host, port)) {
       client.stop();
       client.start(host, port);
@@ -113,8 +113,8 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
 
     // Send a welcome message to the server.
     Status.log("sending welcome message to server");
-    client.send(CompanionMessageData.fromWelcome(data, data.settings().getAppId(),
-        data.settings().getNickname()));
+    client.send(CompanionMessageData.fromWelcome(companionContext, companionContext.settings().getAppId(),
+        companionContext.settings().getNickname()));
   }
 
   @Override
@@ -165,7 +165,7 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
   private MessageScheduler setupScheduler(String serverId) {
     if (!schedulersByServerId.containsKey(serverId)) {
       schedulersByServerId.put(serverId,
-          new MessageScheduler(data.settings(), serverId));
+          new MessageScheduler(companionContext.settings(), serverId));
     }
 
     return schedulersByServerId.get(serverId);
@@ -180,5 +180,10 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
   @VisibleForTesting
   public Map<String, NetworkClient> getClientsByServerId() {
     return clientsByServerId;
+  }
+
+  @VisibleForTesting
+  public Map<String, NetworkClient> getClientsByServerName() {
+    return clientsByServerName;
   }
 }

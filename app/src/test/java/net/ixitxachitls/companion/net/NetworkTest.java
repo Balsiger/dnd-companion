@@ -22,11 +22,20 @@
 package net.ixitxachitls.companion.net;
 
 import android.arch.core.executor.testing.InstantTaskExecutorRule;
-import android.os.Handler;
 import android.support.multidex.MultiDexApplication;
 
-import net.ixitxachitls.companion.data.FakeData;
+import com.google.common.collect.ImmutableList;
+
+import net.ixitxachitls.companion.CompanionTest;
+import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.FakeCompanionContext;
+import net.ixitxachitls.companion.data.dynamics.Images;
+import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.nsd.FakeNsdAccessor;
+import net.ixitxachitls.companion.proto.Entry;
+import net.ixitxachitls.companion.rules.Conditions;
+import net.ixitxachitls.companion.storage.FakeAssetAccessor;
 import net.ixitxachitls.companion.storage.FakeClient1DataBaseAccessor;
 import net.ixitxachitls.companion.storage.FakeClient2DataBaseAccessor;
 import net.ixitxachitls.companion.storage.FakeDataBaseAccessor;
@@ -39,44 +48,175 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
+import static junit.framework.TestCase.assertTrue;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.junit.Assert.assertEquals;
+
 /**
  * End 2 end test for the whole network stack.
  */
 @RunWith(RobolectricTestRunner.class)
 @Config(application = MultiDexApplication.class)
-public class NetworkTest {
+public class NetworkTest extends CompanionTest {
 
   // Make .setValue calls synchronous and allow them to be called in tests.
   @Rule public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
 
-  protected final FakeNsdAccessor serverNsd = new FakeNsdAccessor();
-  protected final FakeDataBaseAccessor serverDataBase = new FakeServerDataBaseAccessor();
-  protected final FakeData serverData = new FakeData("Server", "server", serverDataBase);
+  private final FakeNsdAccessor nsdAccessor = new FakeNsdAccessor();
+  private final FakeAssetAccessor assetAccessor = new FakeAssetAccessor();
 
-  protected final FakeNsdAccessor client1Nsd = new FakeNsdAccessor();
-  protected final FakeDataBaseAccessor client1DataBase = new FakeClient1DataBaseAccessor();
-  protected final FakeData client1Data = new FakeData("Client 1", "client1", client1DataBase);
+  private final FakeDataBaseAccessor serverDataBase = new FakeServerDataBaseAccessor();
+  private FakeCompanionContext serverContext;
 
-  protected final FakeNsdAccessor client2Nsd = new FakeNsdAccessor();
-  protected final FakeDataBaseAccessor client2DataBase = new FakeClient2DataBaseAccessor();
-  protected final FakeData client2Data = new FakeData("Client 2", "client2", client2DataBase);
+  private final FakeDataBaseAccessor client1DataBase = new FakeClient1DataBaseAccessor();
+  private FakeCompanionContext client1Context;
+
+  private final FakeDataBaseAccessor client2DataBase = new FakeClient2DataBaseAccessor();
+  private FakeCompanionContext client2Context;
+
+  private CompanionMessenger server;
+  private CompanionMessenger client1;
+  private CompanionMessenger client2;
 
   @Before
   public void setUp() {
+    super.setUp();
+
+    Entries.init(assetAccessor);
+    serverContext = new FakeCompanionContext(serverDataBase, nsdAccessor);
+    client1Context = new FakeCompanionContext(client1DataBase, nsdAccessor);
+    client2Context = new FakeCompanionContext(client2DataBase, nsdAccessor);
+    Images.load(serverContext, assetAccessor);
+
+    server = serverContext.messenger();
+    client1 = client1Context.messenger();
+    client2 = client2Context.messenger();
   }
 
   @Test
-  public void welcome() {
-    CompanionMessenger server =
-        new CompanionMessenger(serverData, serverNsd, null, new Handler());
+  public void welcome() throws InterruptedException {
+
     server.start();
-    CompanionMessenger client1 =
-        new CompanionMessenger(client1Data, client1Nsd, null, new Handler());
+    // No welcome expected, but server should be started.
+    assertTrue(server.getServer().isOnline());
+    assertTrue(server.getServer().getSchedulersByRecpientId().values().isEmpty());
+
     client1.start();
-    CompanionMessenger client2 =
-        new CompanionMessenger(client2Data, client2Nsd, null, new Handler());
     client2.start();
 
+    processAllMessages(server, client1, client2);
 
+    assertThat(server.getServer().connectedClientIds(),
+        containsInAnyOrder("client1", "client2", "client3"));
+    assertThat(server.getServer().getNsdServer().connectedIds(),
+        containsInAnyOrder("client1", "client2"));
+    assertEquals("Client 1", server.getServer().getNsdServer().getNameForId("client1"));
+    assertEquals("Client 2", server.getServer().getNsdServer().getNameForId("client2"));
+    assertThat(server.getClients().getSchedulersByServerId().keySet(),
+        containsInAnyOrder("client1"));
+    assertThat(server.getClients().getSchedulersByServerId().keySet(),
+        containsInAnyOrder("client1"));
+
+    assertServerSent(server, "server", Entry.CompanionMessageProto.Payload.PayloadCase.CAMPAIGN,
+        "campaign-server-1", "client1", "client2");
+    assertServerSent(server, "server", Entry.CompanionMessageProto.Payload.PayloadCase.CAMPAIGN,
+        "campaign-server-3", "client1", "client2");
+    assertServerSent(server, "server", Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
+        "character-server-1", "client1", "client2");
+    assertServerSent(server, "server", Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
+        "character-client1-3", "client2");
+    assertServerSent(server, "server", Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
+        "character-client2-5", "client1");
+    assertServerSent(server, "server", Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
+        "character-client3-2", "client1", "client2");
+    assertServerSent(server, "server", Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
+        "character-server-1", "client1", "client2");
+    assertServerSent(server, "server", Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
+        "character-server-2", "client1");
+
+    assertThat(client1.getClients().getClientsByServerId().keySet(),
+        containsInAnyOrder("server"));
+    assertThat(client1.getClients().getClientsByServerName().keySet(),
+        containsInAnyOrder("Server"));
+    assertClientSent(client1, "client1",  Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
+        "character-client1-3", "server");
+
+    assertThat(client2.getClients().getClientsByServerId().keySet(),
+        containsInAnyOrder("server"));
+    assertThat(client2.getClients().getClientsByServerName().keySet(),
+        containsInAnyOrder("Server"));
+    assertClientSent(client2, "client2",  Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
+        "character-client2-5", "server");
+
+    assertFinished(server, client1, client2);
+  }
+
+  @Test
+  public void condition() throws InterruptedException {
+    server.start();
+    client1.start();
+    client2.start();
+
+    assertTrue(character(client1Context, "character-client1-3")
+        .affectedConditions().isEmpty());
+    assertTrue(character(serverContext, "character-server-1")
+        .affectedConditions().isEmpty());
+    assertTrue(character(client2Context, "character-client2-5")
+        .affectedConditions().isEmpty());
+
+    character(client1Context, "character-client1-3").addInitiatedCondition(
+        new TargetedTimedCondition(new TimedCondition(Conditions.FLAT_FOOTED, "character-client1-3", 5),
+            ImmutableList.of("character-client2-5", "character-server-1")));
+
+    // Process messages and deliver to all clients.
+    processAllMessages(server, client1, client2);
+
+    assertThat(character(client1Context, "character-client1-3").affectedConditions(),
+        containsInAnyOrder());
+    assertThat(character(serverContext, "character-server-1").affectedConditions(),
+        containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
+    assertThat(character(client2Context, "character-client2-5").affectedConditions(),
+        containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
+
+    assertThat(character(serverContext, "character-client1-3").affectedConditions(),
+        containsInAnyOrder());
+    assertThat(character(client2Context, "character-client1-3").affectedConditions(),
+        containsInAnyOrder());
+
+    assertThat(character(client1Context, "character-server-1").affectedConditions(),
+        containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
+    assertThat(character(client2Context, "character-server-1").affectedConditions(),
+        containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
+
+    assertThat(character(serverContext, "character-client2-5").affectedConditions(),
+        containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
+    assertThat(character(client1Context, "character-client2-5").affectedConditions(),
+        containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
+
+    // Remove the condition again.
+    character(client1Context, "character-client1-3")
+        .removeInitiatedCondition(Conditions.FLAT_FOOTED.getName());
+
+    assertThat(character(serverContext, "character-server-1").affectedConditions(),
+        containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
+
+    // Process messages and deliver to all clients.
+    processAllMessages(server, client1, client2);
+
+    assertTrue(character(client1Context, "character-client1-3").affectedConditions().isEmpty());
+    assertTrue(character(serverContext, "character-server-1").affectedConditions().isEmpty());
+    assertTrue(character(client2Context, "character-client2-5").affectedConditions().isEmpty());
+
+    assertTrue(character(serverContext, "character-client1-3").affectedConditions().isEmpty());
+    assertTrue(character(client2Context, "character-client1-3").affectedConditions().isEmpty());
+
+    assertTrue(character(client1Context, "character-server-1").affectedConditions().isEmpty());
+    assertTrue(character(client2Context, "character-server-1").affectedConditions().isEmpty());
+
+    assertTrue(character(serverContext, "character-client2-5").affectedConditions().isEmpty());
+    assertTrue(character(client1Context, "character-client2-5").affectedConditions().isEmpty());
+
+    assertFinished(server, client1, client2);
   }
 }

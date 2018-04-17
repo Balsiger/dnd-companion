@@ -30,7 +30,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multiset;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
@@ -61,15 +61,15 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
   protected int xp = 0;
   protected List<Condition> conditionsHistory = new ArrayList<>();
 
-  public Character(Data data, long id, String name, String campaignId, boolean local) {
-    super(data, id, TYPE, name, local,
+  public Character(CompanionContext companionContext, long id, String name, String campaignId, boolean local) {
+    super(companionContext, id, TYPE, name, local,
         local ? DataBaseContentProvider.CHARACTERS_LOCAL
             : DataBaseContentProvider.CHARACTERS_REMOTE, campaignId);
   }
 
-  protected Character(Data data, long id, String name, String campaignId, boolean local,
+  protected Character(CompanionContext companionContext, long id, String name, String campaignId, boolean local,
                       Uri dbUrl) {
-    super(data, id, TYPE, name, local, dbUrl, campaignId);
+    super(companionContext, id, TYPE, name, local, dbUrl, campaignId);
   }
 
   public String getRace() {
@@ -87,12 +87,12 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
     return entryId;
   }
 
-  public Data data() {
-    return data;
+  public CompanionContext data() {
+    return context;
   }
 
   public Campaigns campaigns() {
-    return data.campaigns();
+    return context.campaigns();
   }
 
   @Override
@@ -212,10 +212,10 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
   @Override
   public boolean store() {
     if (super.store()) {
-      if (data.characters().has(this)) {
-        data.characters().update(this);
+      if (context.characters().has(this)) {
+        context.characters().update(this);
       } else {
-        data.characters().add(this);
+        context.characters().add(this);
       }
 
       return true;

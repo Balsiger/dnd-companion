@@ -36,7 +36,7 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
@@ -175,8 +175,8 @@ public abstract class Dialog extends DialogFragment {
     return CompanionApplication.get(getContext());
   }
 
-  protected Data data() {
-    return application().data();
+  protected CompanionContext data() {
+    return application().context();
   }
 
   protected Campaigns campaigns() {

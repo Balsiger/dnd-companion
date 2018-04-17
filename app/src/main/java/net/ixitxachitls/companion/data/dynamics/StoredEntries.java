@@ -26,7 +26,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.storage.DataBase;
 
 import java.util.Collection;
@@ -39,17 +39,17 @@ import java.util.Optional;
  */
 public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel {
 
-  protected final Data data;
+  protected final CompanionContext companionContext;
   protected final Uri table;
   protected final boolean local;
   protected final Map<String, E> entriesById = new HashMap<>();
 
-  protected StoredEntries(Data data, Uri table, boolean local) {
-    this.data = data;
+  protected StoredEntries(CompanionContext companionContext, Uri table, boolean local) {
+    this.companionContext = companionContext;
     this.table = table;
     this.local = local;
 
-    Cursor cursor = data.getDataBaseAccessor().queryAll(table);
+    Cursor cursor = companionContext.getDataBaseAccessor().queryAll(table);
     while(cursor.moveToNext()) {
       Optional<E> entry = parseEntry(cursor.getLong(0),
           cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO)));
@@ -96,7 +96,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
   protected void remove(E entry) {
     entry.remove();
     entriesById.remove(entry.getEntryId());
-    data.getDataBaseAccessor().delete(table, entry.getId());
+    companionContext.getDataBaseAccessor().delete(table, entry.getId());
   }
 
   @Nullable

@@ -21,7 +21,7 @@
 
 package net.ixitxachitls.companion.net;
 
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.proto.Entry;
 
 /**
@@ -105,12 +105,12 @@ public class CompanionMessage {
         .build();
   }
 
-  public static CompanionMessage fromProto(Data data, Entry.CompanionMessageProto proto) {
+  public static CompanionMessage fromProto(CompanionContext companionContext, Entry.CompanionMessageProto proto) {
     return new CompanionMessage(proto.getHeader().getSender().getId(),
         proto.getHeader().getSender().getName(),
         proto.getHeader().getReceiver().getId(),
         proto.getHeader().getId(),
-        CompanionMessageData.fromProto(data, proto.getData()));
+        CompanionMessageData.fromProto(companionContext, proto.getData()));
   }
 
   @Override

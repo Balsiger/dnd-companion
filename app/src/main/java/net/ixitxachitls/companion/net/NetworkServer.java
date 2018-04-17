@@ -25,7 +25,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.net.raw.Transmitter;
 import net.ixitxachitls.companion.proto.Entry;
 
@@ -45,14 +45,14 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class NetworkServer implements Runnable {
 
-  private final Data data;
+  private final CompanionContext companionContext;
   private @Nullable ServerSocket socket;
   private Thread thread;
   private Map<String, Transmitter> transmittersById = new ConcurrentHashMap<>();
   private Map<String, String> namesById = new ConcurrentHashMap<>();
 
-  public NetworkServer(Data data) {
-    this.data = data;
+  public NetworkServer(CompanionContext companionContext) {
+    this.companionContext = companionContext;
     this.thread = new Thread(this);
   }
 
@@ -119,15 +119,15 @@ public class NetworkServer implements Runnable {
         transmitter.send(Entry.CompanionMessageProto.newBuilder()
             .setHeader(Entry.CompanionMessageProto.Header.newBuilder()
                 .setSender(Entry.CompanionMessageProto.Header.Id.newBuilder()
-                    .setId(data.settings().getAppId())
-                    .setName(data.settings().getNickname())
+                    .setId(companionContext.settings().getAppId())
+                    .setName(companionContext.settings().getNickname())
                     .build())
                 // Don't know anything about the client yet.
                 .build())
             .setData(Entry.CompanionMessageProto.Payload.newBuilder()
                 .setWelcome(Entry.CompanionMessageProto.Payload.Welcome.newBuilder()
-                    .setId(data.settings().getAppId())
-                    .setName(data.settings().getNickname())
+                    .setId(companionContext.settings().getAppId())
+                    .setName(companionContext.settings().getNickname())
                     .build()))
             .build());
 
@@ -164,7 +164,7 @@ public class NetworkServer implements Runnable {
             Status.log("Received welcome message from client " + name);
           }
 
-          messages.add(CompanionMessage.fromProto(data, message.get()));
+          messages.add(CompanionMessage.fromProto(companionContext, message.get()));
         }
       }
     }
@@ -184,8 +184,8 @@ public class NetworkServer implements Runnable {
         .setHeader(Entry.CompanionMessageProto.Header.newBuilder()
             .setId(messageId)
             .setSender(Entry.CompanionMessageProto.Header.Id.newBuilder()
-                .setId(data.settings().getAppId())
-                .setName(data.settings().getNickname())
+                .setId(companionContext.settings().getAppId())
+                .setName(companionContext.settings().getNickname())
                 .build())
             .setReceiver(Entry.CompanionMessageProto.Header.Id.newBuilder()
                 .setId(recieverId)
@@ -204,5 +204,15 @@ public class NetworkServer implements Runnable {
     }
 
     return id;
+  }
+
+  public boolean hasPendingMessage() {
+    for (Transmitter transmitter : transmittersById.values()) {
+      if (transmitter.hasPendingMessage()) {
+        return true;
+      }
+    }
+
+    return false;
   }
 }

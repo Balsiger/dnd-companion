@@ -27,7 +27,7 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.storage.DataBaseAccessor;
 import net.ixitxachitls.companion.util.Misc;
 
@@ -43,7 +43,7 @@ import java.util.stream.Collectors;
  * Access to and utilities for camapigns.
  */
 public class Campaigns {
-  private final Data data;
+  private final CompanionContext companionContext;
   private final CampaignsData local;
   private final CampaignsData remote;
 
@@ -55,12 +55,12 @@ public class Campaigns {
   private MutableLiveData<String> currentCampaignId = new MutableLiveData<>();
   private MutableLiveData<ImmutableList<String>> allCampaignIds = new MutableLiveData<>();
 
-  public Campaigns(Data data) {
-    this.data = data;
-    this.local = new CampaignsData(data, true);
-    this.remote = new CampaignsData(data, false);
+  public Campaigns(CompanionContext companionContext) {
+    this.companionContext = companionContext;
+    this.local = new CampaignsData(companionContext, true);
+    this.remote = new CampaignsData(companionContext, false);
 
-    this.defaultCampaign = LocalCampaign.createDefault(data);
+    this.defaultCampaign = LocalCampaign.createDefault(companionContext);
     this.currentCampaignId.setValue(defaultCampaign.getCampaignId());
     this.liveDefaultCampaign.setValue(Optional.of(defaultCampaign));
 
@@ -78,8 +78,8 @@ public class Campaigns {
     }
   }
 
-  public Data data() {
-    return data;
+  public CompanionContext data() {
+    return companionContext;
   }
 
   public Campaign getDefaultCampaign() {
@@ -92,7 +92,7 @@ public class Campaigns {
       return liveDefaultCampaign;
     }
 
-    if ((!Misc.onEmulator() || !data.settings().useRemoteCampaigns())
+    if ((!Misc.onEmulator() || !companionContext.settings().useRemoteCampaigns())
         && local.hasCampaign(campaignId)) {
       return local.getCampaign(campaignId);
     }
@@ -116,7 +116,7 @@ public class Campaigns {
     List<Campaign> campaigns = new ArrayList<>();
     campaigns.add(defaultCampaign);
     if (Misc.onEmulator()) {
-      if (data.settings().useRemoteCampaigns()) {
+      if (companionContext.settings().useRemoteCampaigns()) {
         campaigns.addAll(remote.getCampaigns());
       } else {
         campaigns.addAll(local.getCampaigns());
@@ -156,7 +156,7 @@ public class Campaigns {
   public List<Campaign> getCampaignsByServer(String serverId) {
     List<Campaign> filtered = new ArrayList<>();
     for (Campaign campaign : remote.getCampaigns()) {
-      if (campaign.getCampaignId().startsWith(serverId)) {
+      if (campaign.getServerId().equals(serverId)) {
         filtered.add(campaign);
       }
     }
@@ -252,7 +252,7 @@ public class Campaigns {
     Set<String> ids = new HashSet<>();
     ids.add(defaultCampaign.getCampaignId());
     if (Misc.onEmulator()) {
-      if (data.settings().useRemoteCampaigns()) {
+      if (companionContext.settings().useRemoteCampaigns()) {
         ids.addAll(remote.getCampaigns()
             .stream()
             .map(Campaign::getCampaignId)

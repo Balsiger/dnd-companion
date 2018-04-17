@@ -25,12 +25,11 @@ import android.content.Context;
 import android.support.annotation.CallSuper;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.CampaignDate;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
@@ -47,18 +46,18 @@ public class LocalCampaign extends Campaign {
 
   private boolean published = false;
 
-  protected LocalCampaign(Data data, long id, String name) {
-    super(data, id, name, true, DataBaseContentProvider.CAMPAIGNS_LOCAL);
+  protected LocalCampaign(CompanionContext companionContext, long id, String name) {
+    super(companionContext, id, name, true, DataBaseContentProvider.CAMPAIGNS_LOCAL);
   }
 
-  public static LocalCampaign createDefault(Data data) {
-    LocalCampaign campaign = new LocalCampaign(data, DEFAULT_CAMPAIGN_ID, "Default Campaign");
+  public static LocalCampaign createDefault(CompanionContext companionContext) {
+    LocalCampaign campaign = new LocalCampaign(companionContext, DEFAULT_CAMPAIGN_ID, "Default Campaign");
     campaign.setWorld("Generic");
     return campaign;
   }
 
-  public static LocalCampaign createNew(Data data) {
-    return new LocalCampaign(data, 0, "");
+  public static LocalCampaign createNew(CompanionContext companionContext) {
+    return new LocalCampaign(companionContext, 0, "");
   }
 
   @Override
@@ -78,7 +77,7 @@ public class LocalCampaign extends Campaign {
 
   @Override
   public String getDm() {
-    return data.settings().getNickname();
+    return companionContext.settings().getNickname();
   }
 
   public LocalCampaign asLocal() {
@@ -105,7 +104,7 @@ public class LocalCampaign extends Campaign {
       // Storing will also publish the updated campaign.
       store();
     } else {
-      CompanionMessenger.get().send(this);
+      context.messenger().send(this);
     }
   }
 
@@ -120,7 +119,7 @@ public class LocalCampaign extends Campaign {
   public boolean store() {
     if (super.store()) {
       if (published && !isDefault()) {
-        CompanionMessenger.get().send(this);
+        context.messenger().send(this);
       }
     }
 
@@ -130,7 +129,7 @@ public class LocalCampaign extends Campaign {
   @Override
   @CallSuper
   public void delete() {
-    CompanionMessenger.get().sendDeletion(this);
+    context.messenger().sendDeletion(this);
     super.delete();
   }
 
@@ -139,10 +138,10 @@ public class LocalCampaign extends Campaign {
     return super.toString() + "/local";
   }
 
-  public static LocalCampaign fromProto(Data data, long id, Entry.CampaignProto proto) {
-    LocalCampaign campaign = new LocalCampaign(data, id, proto.getName());
+  public static LocalCampaign fromProto(CompanionContext companionContext, long id, Entry.CampaignProto proto) {
+    LocalCampaign campaign = new LocalCampaign(companionContext, id, proto.getName());
     campaign.entryId =
-        proto.getId().isEmpty() ? data.settings().getAppId() + "-" + id : proto.getId();
+        proto.getId().isEmpty() ? companionContext.settings().getAppId() + "-" + id : proto.getId();
     campaign.world = Entries.get().getWorlds().get(proto.getWorld())
         .orElse(Entries.get().getWorlds().get("Generic").get());
     campaign.dm = proto.getDm();

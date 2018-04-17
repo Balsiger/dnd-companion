@@ -40,7 +40,6 @@ import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Images;
-import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.MessageDialog;
@@ -192,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void exit() {
-    CompanionMessenger.get().stop();
+    CompanionApplication.get(this).context().messenger().stop();
     finishAffinity();
     finishAndRemoveTask();
     android.os.Process.killProcess(android.os.Process.myPid());

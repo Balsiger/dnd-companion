@@ -27,7 +27,7 @@ import android.arch.lifecycle.MutableLiveData;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -45,8 +45,8 @@ public class CreaturesData extends StoredEntries<Creature> {
   private final Map<String, MutableLiveData<Optional<Creature>>> creatureById =
       new ConcurrentHashMap<>();
 
-  public CreaturesData(Data data) {
-    super(data, DataBaseContentProvider.CREATURES_LOCAL, true);
+  public CreaturesData(CompanionContext companionContext) {
+    super(companionContext, DataBaseContentProvider.CREATURES_LOCAL, true);
   }
 
   public LiveData<Optional<Creature>> getCreature(String creatureId) {
@@ -120,15 +120,15 @@ public class CreaturesData extends StoredEntries<Creature> {
   }
 
   private boolean isOrphaned(Creature creature) {
-    return creature.getCampaignId().equals(data.campaigns().getDefaultCampaign().getCampaignId())
-        || (!data.campaigns().has(creature.getCampaignId(), true)
-            && !data.campaigns().has(creature.getCampaignId(), false));
+    return creature.getCampaignId().equals(companionContext.campaigns().getDefaultCampaign().getCampaignId())
+        || (!companionContext.campaigns().has(creature.getCampaignId(), true)
+            && !companionContext.campaigns().has(creature.getCampaignId(), false));
   }
 
   @Override
   protected Optional<Creature> parseEntry(long id, byte[] blob) {
     try {
-      return Optional.of(Creature.fromProto(data, id,
+      return Optional.of(Creature.fromProto(companionContext, id,
           Entry.CreatureProto.getDefaultInstance().getParserForType().parseFrom(blob)));
     } catch (InvalidProtocolBufferException e) {
       Status.toast("Cannot parse proto for campaign: " + e);

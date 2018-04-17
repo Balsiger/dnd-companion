@@ -31,6 +31,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -175,7 +176,8 @@ public class LocalCharacterFragment extends CharacterFragment {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        Image characterImage = new Image(Character.TABLE, character.get().getCharacterId(), bitmap);
+        Image characterImage = new Image(CompanionApplication.get(getContext()).context(),
+            Character.TABLE, character.get().getCharacterId(), bitmap);
         characterImage.save(character.get().isLocal());
         characterImage.publish();
         image.setImageBitmap(characterImage.getBitmap());

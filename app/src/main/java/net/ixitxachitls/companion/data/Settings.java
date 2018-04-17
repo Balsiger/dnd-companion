@@ -59,8 +59,8 @@ public class Settings extends StoredEntry<Entry.SettingsProto> {
   private List<String> features = new ArrayList<>();
 
   @VisibleForTesting
-  public Settings(Data data, String name, String id) {
-    super(data, ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
+  public Settings(CompanionContext companionContext, String name, String id) {
+    super(companionContext, ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
 
     showStatus.setValue(false);
     this.appId = id;
@@ -88,17 +88,17 @@ public class Settings extends StoredEntry<Entry.SettingsProto> {
     return values;
   }
 
-  public static Settings load(Data data) {
+  public static Settings load(CompanionContext companionContext) {
     Settings settings;
     try {
-      settings = fromProto(data, Entry.SettingsProto.getDefaultInstance().getParserForType()
-          .parseFrom(loadBytes(data.getDataBaseAccessor(), ID, DataBaseContentProvider.SETTINGS)));
+      settings = fromProto(companionContext, Entry.SettingsProto.getDefaultInstance().getParserForType()
+          .parseFrom(loadBytes(companionContext.getDataBaseAccessor(), ID, DataBaseContentProvider.SETTINGS)));
     } catch (InvalidProtocolBufferException | CursorIndexOutOfBoundsException e) {
       Status.error("Cannot load previous settings, creating new.");
-      data.getDataBaseAccessor().insert(DataBaseContentProvider.SETTINGS,
+      companionContext.getDataBaseAccessor().insert(DataBaseContentProvider.SETTINGS,
           Settings.defaultSettings());
 
-      settings = new Settings(data, "", "");
+      settings = new Settings(companionContext, "", "");
     }
 
     settings.ensureAppId();
@@ -131,8 +131,8 @@ public class Settings extends StoredEntry<Entry.SettingsProto> {
   }
   */
 
-  private static Settings fromProto(Data data, Entry.SettingsProto proto) {
-    Settings settings = new Settings(data, proto.getNickname(), proto.getAppId());
+  private static Settings fromProto(CompanionContext companionContext, Entry.SettingsProto proto) {
+    Settings settings = new Settings(companionContext, proto.getNickname(), proto.getAppId());
     settings.lastMessageId = proto.getLastMessageId();
     settings.remoteCampaigns = proto.getRemoteCampaigns();
     settings.remoteCharacters = proto.getRemoteCharacters();

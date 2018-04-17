@@ -21,8 +21,8 @@
 
 package net.ixitxachitls.companion.net;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 
@@ -30,18 +30,18 @@ import net.ixitxachitls.companion.data.dynamics.Image;
  * Processor on the server to process client messages.
  */
 public class ServerMessageProcessor extends MessageProcessor {
-  public ServerMessageProcessor(CompanionApplication application) {
-    super(application);
+  public ServerMessageProcessor(CompanionContext companionContext, CompanionMessenger messenger) {
+    super(companionContext, messenger);
   }
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, application.settings().getAppId(), messageId, message);
+    process(senderId, senderName, companionContext.settings().getAppId(), messageId, message);
   }
 
   @Override
   protected void handleAck(String senderId, long messageId) {
-    CompanionMessenger.get().ackServer(senderId, messageId);
+    messenger.ackServer(senderId, messageId);
   }
 
   @Override
@@ -49,7 +49,7 @@ public class ServerMessageProcessor extends MessageProcessor {
     super.handleCharacter(senderId, character);
 
     // Send the character update to the other clients.
-    CompanionMessenger.get().send(character);
+    messenger.send(character);
   }
 
   protected void handleImage(String senderId, Image image) {
@@ -57,7 +57,7 @@ public class ServerMessageProcessor extends MessageProcessor {
     image.save(false);
 
     // Send the image update to the other clients.
-    CompanionMessenger.get().send(image);
+    messenger.send(image);
   }
 
   @Override
@@ -67,9 +67,9 @@ public class ServerMessageProcessor extends MessageProcessor {
     Status.addClientConnection(remoteId, remoteName);
 
     // Publish all local campaigns to that client.
-    application.campaigns().publish();
+    companionContext.campaigns().publish();
 
     // Publish all local characters to that client.
-    application.characters().publish();
+    companionContext.characters().publish();
   }
 }

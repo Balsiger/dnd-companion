@@ -29,6 +29,7 @@ import android.os.Build;
 public class Misc {
 
   public static final boolean SHOW_EMULATOR = true;
+  public static boolean IN_UNIT_TEST = false;
 
   private Misc() {}
 

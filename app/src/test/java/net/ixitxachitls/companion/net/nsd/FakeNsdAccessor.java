@@ -77,7 +77,7 @@ public class FakeNsdAccessor implements NsdAccessor {
 
   @Override
   public void resolve(NsdServiceInfo info, NsdManager.ResolveListener listener) {
-    throw new UnsupportedOperationException("not implemented");
+    listener.onServiceResolved(info);
   }
 
   private void notifyDiscoveryListeners() {

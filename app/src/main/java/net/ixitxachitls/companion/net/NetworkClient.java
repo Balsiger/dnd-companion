@@ -21,8 +21,10 @@
 
 package net.ixitxachitls.companion.net;
 
+import android.support.annotation.VisibleForTesting;
+
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Data;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.net.raw.Transmitter;
 import net.ixitxachitls.companion.proto.Entry;
 
@@ -35,13 +37,13 @@ import java.util.Optional;
  */
 public class NetworkClient {
 
-  private final Data data;
+  private final CompanionContext companionContext;
   private Transmitter transmitter;
   private String serverId = "";
   private String serverName = "(not yet known)";
 
-  public NetworkClient(Data data) {
-    this.data = data;
+  public NetworkClient(CompanionContext companionContext) {
+    this.companionContext = companionContext;
     Status.log("creating network client");
   }
 
@@ -74,8 +76,8 @@ public class NetworkClient {
       Entry.CompanionMessageProto proto = Entry.CompanionMessageProto.newBuilder()
           .setHeader(Entry.CompanionMessageProto.Header.newBuilder()
               .setSender(Entry.CompanionMessageProto.Header.Id.newBuilder()
-                  .setId(data.settings().getAppId())
-                  .setName(data.settings().getNickname())
+                  .setId(companionContext.settings().getAppId())
+                  .setName(companionContext.settings().getNickname())
                   .build())
               .setReceiver(Entry.CompanionMessageProto.Header.Id.newBuilder()
                   .setId(serverId)
@@ -109,6 +111,11 @@ public class NetworkClient {
       Status.log("setting server id to " + serverId + "/" + serverName);
     }
 
-    return Optional.of(CompanionMessage.fromProto(data, message.get()));
+    return Optional.of(CompanionMessage.fromProto(companionContext, message.get()));
+  }
+
+  @VisibleForTesting
+  public Transmitter getTransmitter() {
+    return transmitter;
   }
 }
