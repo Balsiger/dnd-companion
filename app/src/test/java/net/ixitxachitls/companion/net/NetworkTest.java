@@ -293,4 +293,22 @@ public class NetworkTest extends CompanionTest {
     processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
     assertEquals("Guru", campaign(client1Context, "campaign-server-1").getName());
   }
+
+  @Test
+  public void socketCloseServer() throws InterruptedException, IOException {
+    server.start();
+    client1.start();
+
+    // Setup communication.
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+
+    // Close the client socket.
+    server.getServer().getNsdServer().getServer().getTransmittersById().get("client1").getReceiver()
+        .closeSocket();
+
+    campaign(serverContext, "campaign-server-1").setName("Guru");
+    campaign(serverContext, "campaign-server-1").store();
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    assertEquals("Guru", campaign(client1Context, "campaign-server-1").getName());
+  }
 }

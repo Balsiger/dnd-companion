@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.net;
 
 import android.support.annotation.Nullable;
+import android.support.annotation.VisibleForTesting;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
@@ -221,5 +222,10 @@ public class NetworkServer implements Runnable {
     }
 
     return false;
+  }
+
+  @VisibleForTesting
+  public Map<String, Transmitter> getTransmittersById() {
+    return transmittersById;
   }
 }
