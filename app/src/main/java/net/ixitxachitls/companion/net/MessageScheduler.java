@@ -27,7 +27,7 @@ import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 
 import java.util.ArrayList;
@@ -43,7 +43,7 @@ import java.util.Optional;
  */
 public class MessageScheduler {
 
-  private final Settings settings;
+  private final CompanionContext context;
   private final String recipientId;
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
       waiting = LinkedHashMultimap.create();
@@ -53,13 +53,12 @@ public class MessageScheduler {
   private final Multimap<CompanionMessageData.Type, ScheduledMessage>
       acknowledgedByType = LinkedHashMultimap.create();
 
-  public MessageScheduler(Settings settings, String recipientId) {
-    this.settings = settings;
+  public MessageScheduler(CompanionContext context, String recipientId) {
+    this.context = context;
     this.recipientId = recipientId;
 
     List<ScheduledMessage> toRemove = new ArrayList<>();
-    for (ScheduledMessage message
-        : ScheduledMessages.get().getMessagesByReceiver(recipientId)) {
+    for (ScheduledMessage message : context.messages().getMessagesByReceiver(recipientId)) {
 
       if (message.isOutdated()) {
         toRemove.add(message);
@@ -87,14 +86,18 @@ public class MessageScheduler {
 
     // Removed acked messages that are still stored (should normally not happen).
     for (ScheduledMessage message : toRemove) {
-      ScheduledMessages.get().remove(message);
+      context.messages().remove(message);
     }
+  }
+
+  public String getRecipientId() {
+    return recipientId;
   }
 
   public void schedule(CompanionMessageData data) {
     ScheduledMessage message = new ScheduledMessage(data.campaigns(),
-        new CompanionMessage(settings.getAppId(), settings.getNickname(),
-            recipientId, settings.getNextMessageId(), data));
+        new CompanionMessage(context.settings().getAppId(), context.settings().getNickname(),
+            recipientId, context.settings().getNextMessageId(), data));
     Status.log("scheduling to " + Status.nameFor(recipientId) + ": " + message);
     message.store();
 
@@ -217,13 +220,13 @@ public class MessageScheduler {
 
   private void markAcked(ScheduledMessage message) {
     message.markAck();
-    ScheduledMessages.get().remove(message);
+    context.messages().remove(message);
     acknowledgedByType.put(message.getData().getType(), message);
   }
 
   private void markSent(ScheduledMessage message) {
     message.markSent();
-    ScheduledMessages.get().remove(message);
+    context.messages().remove(message);
     sentByType.put(message.getData().getType(), message);
   }
 

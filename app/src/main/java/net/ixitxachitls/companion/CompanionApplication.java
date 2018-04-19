@@ -78,10 +78,8 @@ public class CompanionApplication extends MultiDexApplication
 
     Entries.init(this.getAssetAccessor());
 
-    context =
-        new ApplicationCompantionContext(this.getDataBaseAccessor(), this.getNsdAccessor(), this);
-
-    Images.load(context, this.getAssetAccessor());
+    context = new ApplicationCompantionContext(this.getDataBaseAccessor(), this.getNsdAccessor(),
+        this.getAssetAccessor(), this);
 
     // The messenger needs other entries, thus cannot be created earlier.
     context.messenger().start(); // Stopping is done in MainActivity.exit();
@@ -134,6 +132,10 @@ public class CompanionApplication extends MultiDexApplication
 
   public CompanionMessenger messenger() {
     return context.messenger();
+  }
+
+  public Images images(boolean local) {
+    return context.images(local);
   }
 
   @Override

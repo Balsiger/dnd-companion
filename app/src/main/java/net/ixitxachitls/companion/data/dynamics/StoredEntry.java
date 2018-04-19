@@ -139,6 +139,10 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
     return context.getDataBaseAccessor();
   }
 
+  public CompanionContext getContext() {
+    return context;
+  }
+
   @SuppressWarnings("unchecked")
   @Override
   public boolean equals(Object other) {

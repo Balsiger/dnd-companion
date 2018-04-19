@@ -35,7 +35,6 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
@@ -149,8 +148,9 @@ public class CharacterFragment extends CompanionFragment {
     campaignTitle.text(campaign.get().getName());
     title.setTitle(character.get().getName());
     title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());
-    Optional<Image> characterImage = Images.get(character.get().isLocal()).getImage(
-        Character.TABLE, character.get().getCharacterId()).getValue();
+    Optional<Image> characterImage = CompanionApplication.get(getContext())
+        .images(character.get().isLocal()).getImage(
+            Character.TABLE, character.get().getCharacterId()).getValue();
     if (characterImage.isPresent()) {
       image.setImageBitmap(characterImage.get().getBitmap());
     } else {

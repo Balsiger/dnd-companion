@@ -69,7 +69,6 @@ public class CompanionMessenger implements Runnable {
     this.handler = handler;
     this.delayMs = delayMs;
 
-    ScheduledMessages.init(context.campaigns());
     companionServer = new CompanionServer(context, nsdAccessor);
     companionClients = new CompanionClients(context, nsdAccessor);
     clientMessageProcessor = new ClientMessageProcessor(context, application, this);
@@ -98,6 +97,10 @@ public class CompanionMessenger implements Runnable {
     } else {
       return companionClients.isServerOnline(campaign.getServerId());
     }
+  }
+
+  public CompanionContext getContext() {
+    return companionContext;
   }
 
   public void send(Campaign campaign) {
@@ -379,8 +382,17 @@ public class CompanionMessenger implements Runnable {
   }
 
   @VisibleForTesting
+  public ServerMessageProcessor getServerMessageProcessor() {
+    return serverMessageProcessor;
+  }
+
+  @VisibleForTesting
+  public ClientMessageProcessor getClientMessageProcessor() {
+    return clientMessageProcessor;
+  }
+
+  @VisibleForTesting
   public Handler getHandler() {
     return handler;
   }
-
 }

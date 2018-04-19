@@ -72,7 +72,7 @@ public class Image {
   }
 
   public Optional<Bitmap> load(boolean local) {
-    File file = Images.get(local).file(this);
+    File file = context.images(local).file(this);
     try {
       return Optional.ofNullable(BitmapFactory.decodeStream(new FileInputStream(file)));
     } catch (FileNotFoundException e) {
@@ -83,14 +83,14 @@ public class Image {
   public void save(boolean local) {
     bitmap = scale(bitmap);
 
-    File file = Images.get(local).file(this);
+    File file = context.images(local).file(this);
     try (FileOutputStream out = new FileOutputStream(file)) {
       bitmap.compress(Bitmap.CompressFormat.JPEG, 50, out);
     } catch (Exception e) {
       Status.toast("Cannot write image bitmap: " + e);
     }
 
-    Images.get(local).update(this);
+    context.images(local).update(this);
     Status.log("Saved image " + type + " " + id);
   }
 

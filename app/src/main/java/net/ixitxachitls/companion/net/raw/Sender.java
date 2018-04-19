@@ -21,31 +21,38 @@
 
 package net.ixitxachitls.companion.net.raw;
 
+import com.google.common.annotations.VisibleForTesting;
+
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.proto.Entry;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
  * A sender running on its own thread to send messages stored in a queue.
  */
-class Sender implements Runnable {
+public class Sender implements Runnable {
   private static final int CAPACITY = 100;
 
   private final String name;
-  private final Socket socket;
+  private Socket socket;
   private final BlockingQueue<Entry.CompanionMessageProto> queue =
       new ArrayBlockingQueue<>(CAPACITY);
+  private final Callback callback;
 
-  public Sender(String name, Socket socket) {
-    Status.log("started sender " + socket);
+  public Sender(Callback callback, String name, Socket socket) {
+    this.callback = callback;
+    Status.log("started " + name + " sender " + socket);
     this.socket = socket;
     this.name = name;
+  }
+
+  public void setSocket(Socket socket) {
+    this.socket = socket;
   }
 
   @Override
@@ -54,7 +61,7 @@ class Sender implements Runnable {
       try {
         send(queue.take());
       } catch (InterruptedException e) {
-        Status.log("interrupted");
+        Status.log("sender " + name + " interrupted");
       }
     }
   }
@@ -68,15 +75,25 @@ class Sender implements Runnable {
       Status.log(name + " sent " + ScheduledMessage.info(message) + " to "
           + ScheduledMessage.info(message.getHeader().getReceiver()));
       message.writeDelimitedTo(socket.getOutputStream());
-    } catch (UnknownHostException e) {
-      Status.exception("Unknown Host: ", e);
     } catch (IOException e) {
-      Status.exception("I/O Exception", e);
-
+      queue.add(message);
+      Status.exception("exception when writing message in " + name + " sender on " + socket + ": "
+          + e, e);
+      //callback.disconnected();
     }
   }
 
   public boolean hasPendingMessages() {
     return !queue.isEmpty();
+  }
+
+  @FunctionalInterface
+  public interface Callback {
+    void disconnected();
+  }
+
+  @VisibleForTesting
+  public void closeSocket() throws IOException {
+    socket.close();
   }
 }

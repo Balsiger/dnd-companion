@@ -182,7 +182,7 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
   }
 
   public LiveData<Optional<Image>> loadImage() {
-    return Images.get(isLocal()).getImage(Character.TABLE, getCharacterId());
+    return context.images(isLocal()).getImage(Character.TABLE, getCharacterId());
   };
 
   @Override

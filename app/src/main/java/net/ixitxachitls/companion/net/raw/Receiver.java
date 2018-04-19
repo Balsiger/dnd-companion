@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.net.raw;
 
 import android.support.annotation.Nullable;
+import android.support.annotation.VisibleForTesting;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
@@ -36,14 +37,25 @@ import java.util.concurrent.TransferQueue;
  * A receiver running on its own thread to receive messages and store them in a queue for later
  * processing.
  */
-class Receiver implements Runnable {
+public class Receiver implements Runnable {
   private final String name;
-  private final Socket socket;
+  private final DisconnectCallback disconnectCallback;
+  private Socket socket;
   private final TransferQueue<Entry.CompanionMessageProto> queue = new LinkedTransferQueue<>();
 
-  public Receiver(String name, Socket socket) {
-    Status.log("started receiver " + socket);
+  @FunctionalInterface
+  public interface DisconnectCallback {
+    public void disconnected();
+  }
+
+  public Receiver(DisconnectCallback disconnectCallback, String name, Socket socket) {
+    this.disconnectCallback = disconnectCallback;
+    Status.log("started " + name + " receiver " + socket);
     this.name = name;
+    this.socket = socket;
+  }
+
+  public void setSocket(Socket socket) {
     this.socket = socket;
   }
 
@@ -59,7 +71,8 @@ class Receiver implements Runnable {
           queue.put(message);
         }
       } catch (IOException | InterruptedException e) {
-        Status.exception(name + " receiver error: ", e);
+        Status.exception(name + " receiver error " + e, e);
+        disconnectCallback.disconnected();
         break;
       }
     }
@@ -72,5 +85,11 @@ class Receiver implements Runnable {
 
   public boolean hasPendingMessages() {
     return !queue.isEmpty();
+  }
+
+  @VisibleForTesting
+  public void closeSocket() throws IOException {
+    socket.setSoLinger(true, 0);
+    socket.close();
   }
 }

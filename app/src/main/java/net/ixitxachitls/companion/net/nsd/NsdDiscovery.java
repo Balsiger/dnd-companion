@@ -133,7 +133,8 @@ public class NsdDiscovery {
         return;
       }
 
-      nsdCallback.nsdStarted(serviceInfo.getServiceName(), serviceInfo.getHost(), serviceInfo.getPort());
+      nsdCallback.nsdStarted(serviceInfo.getServiceName(), serviceInfo.getHost(),
+          serviceInfo.getPort());
     }
   }
 }

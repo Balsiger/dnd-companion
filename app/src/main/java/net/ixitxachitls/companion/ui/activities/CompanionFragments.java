@@ -99,7 +99,7 @@ public class CompanionFragments {
       show(CompanionFragment.Type.campaigns, Optional.empty());
 
       // Show settings if not yet defined
-      if (!campaigns.data().settings().isDefined()) {
+      if (!campaigns.context().settings().isDefined()) {
         show(CompanionFragment.Type.settings, Optional.empty());
       }
     }

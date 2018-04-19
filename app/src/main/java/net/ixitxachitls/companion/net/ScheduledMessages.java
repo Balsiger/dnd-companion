@@ -21,11 +21,10 @@
 
 package net.ixitxachitls.companion.net;
 
-import com.google.common.base.Preconditions;
 import com.google.protobuf.InvalidProtocolBufferException;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.dynamics.StoredEntries;
 import net.ixitxachitls.companion.proto.Entry;
@@ -40,26 +39,8 @@ import java.util.Optional;
  */
 public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
 
-  private static ScheduledMessages singleton;
-
-  private final Campaigns campaigns;
-
-  private ScheduledMessages(Campaigns campaigns) {
-    super(campaigns.data(), DataBaseContentProvider.MESSAGES, true);
-    this.campaigns = campaigns;
-  }
-
-  @Deprecated
-  public static void init(Campaigns campaigns) {
-    if (singleton == null) {
-      singleton = new ScheduledMessages(campaigns);
-    }
-  }
-
-  @Deprecated
-  public static ScheduledMessages get() {
-    Preconditions.checkNotNull(singleton);
-    return singleton;
+  public ScheduledMessages(CompanionContext context) {
+    super(context, DataBaseContentProvider.MESSAGES, true);
   }
 
   @Override

@@ -30,7 +30,6 @@ import android.support.multidex.MultiDexApplication;
 import net.ixitxachitls.companion.CompanionTest;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.FakeCompanionContext;
-import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.nsd.FakeNsdAccessor;
@@ -70,8 +69,7 @@ public class CompanionMessengerTest extends CompanionTest {
   public void setUp() {
     Entries.init(assetAccessor);
 
-    context = new FakeCompanionContext(dataBaseAccessor, nsdAccessor);
-    Images.load(context, assetAccessor);
+    context = new FakeCompanionContext(dataBaseAccessor, nsdAccessor, assetAccessor);
   }
 
   @Test
@@ -241,7 +239,8 @@ public class CompanionMessengerTest extends CompanionTest {
     assertFalse(messenger.getServer().started());
     assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(Images.local().getImage("characters", "character-server-1").getValue().get());
+    messenger.send(context.images(true).getImage("characters",
+        "character-server-1").getValue().get());
     assertTrue(messenger.getServer().started());
     assertServerScheduled(messenger, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
@@ -256,7 +255,8 @@ public class CompanionMessengerTest extends CompanionTest {
     assertFalse(messenger.getServer().started());
     assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(Images.local().getImage("characters", "character-server-2").getValue().get());
+    messenger.send(context.images(true).getImage("characters",
+        "character-server-2").getValue().get());
     assertFalse(messenger.getServer().started());
     assertClientScheduled(messenger, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
@@ -271,7 +271,8 @@ public class CompanionMessengerTest extends CompanionTest {
     assertFalse(messenger.getServer().started());
     assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(Images.local().getImage("characters", "character-server-2").getValue().get());
+    messenger.send(context.images(true).getImage("characters",
+        "character-server-2").getValue().get());
     assertFalse(messenger.getServer().started());
     assertClientScheduled(messenger, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
@@ -286,7 +287,8 @@ public class CompanionMessengerTest extends CompanionTest {
     assertFalse(messenger.getServer().started());
     assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(Images.local().getImage("characters", "character-server-2").getValue().get());
+    messenger.send(context.images(true).getImage("characters",
+        "character-server-2").getValue().get());
     assertFalse(messenger.getServer().started());
     assertClientScheduled(messenger, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
@@ -474,7 +476,7 @@ public class CompanionMessengerTest extends CompanionTest {
 
     messenger.getClients().getClientsByServerId().put("client42", new NetworkClient(context));
     messenger.getServer().getSchedulersByRecpientId().put("client23",
-        new MessageScheduler(context.settings(), "client23"));
+        new MessageScheduler(context, "client23"));
     messenger.sendWelcome();
     assertTrue(messenger.getServer().started());
     assertClientScheduled(messenger, "server",
@@ -489,7 +491,7 @@ public class CompanionMessengerTest extends CompanionTest {
   public void ackServer() {
     CompanionMessenger messenger = createMessenger();
 
-    MessageScheduler scheduler = new MessageScheduler(context.settings(), "client42");
+    MessageScheduler scheduler = new MessageScheduler(context, "client42");
     messenger.getServer().getSchedulersByRecpientId().put("client42", scheduler);
     scheduler.schedule(CompanionMessageData.fromDelete(
         context.campaigns().getCampaign("campaign-server-1").getValue().get()));
@@ -507,7 +509,7 @@ public class CompanionMessengerTest extends CompanionTest {
   public void ackClient() {
     CompanionMessenger messenger = createMessenger();
 
-    MessageScheduler scheduler = new MessageScheduler(context.settings(), "client23");
+    MessageScheduler scheduler = new MessageScheduler(context, "client23");
     messenger.getClients().getSchedulersByServerId().put("client23", scheduler);
     scheduler.schedule(CompanionMessageData.fromDelete(
         context.campaigns().getCampaign("campaign-server-1").getValue().get()));

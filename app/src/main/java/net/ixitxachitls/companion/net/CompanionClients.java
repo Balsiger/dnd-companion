@@ -76,13 +76,10 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
 
   public void sendWaiting() {
     for (MessageScheduler scheduler : schedulersByServerId.values()) {
-      Optional<ScheduledMessage> message = scheduler.nextWaiting();
-      if (message.isPresent()) {
-        NetworkClient client = clientsByServerId.get(message.get().getRecieverId());
-
-        // If the client is not currently available, the message will automatically be
-        // retried in one minute.
-        if (client != null) {
+      NetworkClient client = clientsByServerId.get(scheduler.getRecipientId());
+      if (client != null && client.isReady()) {
+        Optional<ScheduledMessage> message = scheduler.nextWaiting();
+        if (message.isPresent()) {
           client.send(message.get().getData());
           Status.refreshServerConnection(message.get().getRecieverId());
         }
@@ -110,11 +107,6 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
     }
 
     clientsByServerName.put(name, client);
-
-    // Send a welcome message to the server.
-    Status.log("sending welcome message to server");
-    client.send(CompanionMessageData.fromWelcome(companionContext, companionContext.settings().getAppId(),
-        companionContext.settings().getNickname()));
   }
 
   @Override
@@ -164,8 +156,7 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
 
   private MessageScheduler setupScheduler(String serverId) {
     if (!schedulersByServerId.containsKey(serverId)) {
-      schedulersByServerId.put(serverId,
-          new MessageScheduler(companionContext.settings(), serverId));
+      schedulersByServerId.put(serverId, new MessageScheduler(companionContext, serverId));
     }
 
     return schedulersByServerId.get(serverId);

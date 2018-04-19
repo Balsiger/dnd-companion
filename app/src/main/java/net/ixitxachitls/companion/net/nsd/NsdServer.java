@@ -98,6 +98,10 @@ public class NsdServer {
     server.send(recieverId, messageId, data);
   }
 
+  public boolean isReady(String receiverId) {
+    return server.isReady(receiverId);
+  }
+
   public List<CompanionMessage> receive() {
     return server.receive();
   }

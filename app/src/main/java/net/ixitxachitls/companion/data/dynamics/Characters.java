@@ -170,7 +170,7 @@ public class Characters {
           ImmutableList.copyOf(characterIds(character.getCampaignId())));
     }
 
-    Images.get(character.isLocal()).remove(Character.TABLE, character.getCharacterId());
+    context.images(character.isLocal()).remove(Character.TABLE, character.getCharacterId());
   }
 
   // Publishing characters.
@@ -180,7 +180,7 @@ public class Characters {
     Status.log("publishing all local characters");
     for (Character character : local.getAll()) {
       character.asLocal().publish();
-      Images.get(character.isLocal()).publishImageFor(character);
+      context.images(character.isLocal()).publishImageFor(character);
     }
   }
 
@@ -188,7 +188,7 @@ public class Characters {
     Status.log("publishing characters of campaign " + campaignId);
     for (Character character : local.getCharacters(campaignId)) {
       character.asLocal().publish();
-      Images.get(character.isLocal()).publishImageFor(character);
+      context.images(character.isLocal()).publishImageFor(character);
     }
   }
 

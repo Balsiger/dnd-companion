@@ -24,10 +24,12 @@ package net.ixitxachitls.companion;
 import android.support.annotation.CallSuper;
 
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
 import net.ixitxachitls.companion.net.CompanionMessenger;
+import net.ixitxachitls.companion.net.MessageProcessor;
 import net.ixitxachitls.companion.net.MessageScheduler;
 import net.ixitxachitls.companion.net.NetworkClient;
 import net.ixitxachitls.companion.proto.Entry;
@@ -36,6 +38,7 @@ import net.ixitxachitls.companion.util.Misc;
 import org.robolectric.shadows.ShadowLooper;
 
 import java.util.Collection;
+import java.util.List;
 
 import javax.annotation.Nullable;
 
@@ -58,6 +61,17 @@ public abstract class CompanionTest {
 
   protected Character character(CompanionContext context, String id) {
     return context.characters().getCharacter(id).getValue().get();
+  }
+
+  protected Campaign campaign(CompanionContext context, String id) {
+    return context.campaigns().getCampaign(id).getValue().get();
+  }
+
+  protected void assertReceived(MessageProcessor processor, Message ... messages) {
+    int i = 0;
+    for (MessageProcessor.RecievedMessage received : processor.allReceivedMessages()) {
+      messages[i++].assertEquals(i + "/" + received, received);
+    }
   }
 
   protected void assertClientSent(CompanionMessenger messenger, String senderId,
@@ -146,13 +160,16 @@ public abstract class CompanionTest {
     return true;
   }
 
+  protected ScheduledMessage lastMessage(Collection<ScheduledMessage> messages) {
+    return messages.stream().skip(messages.size() -1).findFirst().get();
+  }
+
   protected void assertLastMessage(Collection<ScheduledMessage> messages, @Nullable String senderId,
                                    @Nullable String receiverId, long messageId,
                                    Entry.CompanionMessageProto.Payload.PayloadCase type,
                                    @Nullable String id) {
     assertFalse(messages.isEmpty());
-    assertMessage(messages.stream().skip(messages.size() - 1).findFirst().get(),
-        senderId, receiverId, messageId, type, id);
+    assertMessage(lastMessage(messages), senderId, receiverId, messageId, type, id);
   }
 
   protected void assertMessage(ScheduledMessage message, @Nullable String senderId,
@@ -174,12 +191,13 @@ public abstract class CompanionTest {
     }
   }
 
-  protected void processAllMessages(CompanionMessenger ... messengers) throws InterruptedException {
+  protected void processAllMessages(List<String> servers, List<String> clients,
+                                    CompanionMessenger ... messengers) throws InterruptedException {
     Thread.sleep(100);
     do {
       System.out.println("processing all messages...");
       ShadowLooper.runUiThreadTasksIncludingDelayedTasks();
-    } while (pending(messengers));
+    } while (pending(servers, clients, messengers));
   }
 
   protected void assertFinished(CompanionMessenger ... messengers) {
@@ -203,7 +221,8 @@ public abstract class CompanionTest {
     assertTrue(scheduler.getPending().isEmpty());
   }
 
-  private boolean pending(CompanionMessenger ... messengers) {
+  private boolean pending(List<String> servers, List<String> clients,
+                          CompanionMessenger ... messengers) {
     for (CompanionMessenger messenger : messengers) {
       // Check that all pending messages are processed.
       if (messenger.getServer().getNsdServer().getServer().hasPendingMessage()) {
@@ -217,15 +236,21 @@ public abstract class CompanionTest {
         }
       }
 
-      for (MessageScheduler scheduler : messenger.getServer().getSchedulersByRecpientId().values()) {
-        if (!scheduler.getWaiting().isEmpty()) {
-          return true;
+      for (String id : messenger.getServer().getSchedulersByRecpientId().keySet()) {
+        if (clients.contains(id)) {
+          MessageScheduler scheduler = messenger.getServer().getSchedulersByRecpientId().get(id);
+          if (!scheduler.getWaiting().isEmpty()) {
+            return true;
+          }
         }
       }
 
-      for (MessageScheduler scheduler : messenger.getClients().getSchedulersByServerId().values()) {
-        if (!scheduler.getWaiting().isEmpty()) {
-          return true;
+      for (String id : messenger.getClients().getSchedulersByServerId().keySet()) {
+        if (servers.contains(id)) {
+          MessageScheduler scheduler = messenger.getClients().getSchedulersByServerId().get(id);
+          if (!scheduler.getWaiting().isEmpty()) {
+            return true;
+          }
         }
       }
     }
@@ -233,41 +258,69 @@ public abstract class CompanionTest {
     return false;
   }
 
-  private String extractId(ScheduledMessage message,
-                           Entry.CompanionMessageProto.Payload.PayloadCase type) {
+  private static String extractId(ScheduledMessage message,
+                                  Entry.CompanionMessageProto.Payload.PayloadCase type) {
+    return CompanionTest.extractId(message.getData(), type);
+  }
+
+  private static String extractId(CompanionMessageData data,
+                                  Entry.CompanionMessageProto.Payload.PayloadCase type) {
     switch (type) {
       case CAMPAIGN:
-        return message.getData().toProto().getCampaign().getId();
+        return data.toProto().getCampaign().getId();
 
       case CHARACTER:
-        return message.getData().toProto().getCharacter().getCreature().getId();
+        return data.toProto().getCharacter().getCreature().getId();
 
       case IMAGE:
-        return message.getData().toProto().getImage().getId();
+        return data.toProto().getImage().getId();
 
       case CONDITION:
-        return message.getData().toProto().getCondition().getTargetId();
+        return data.toProto().getCondition().getTargetId();
 
       case CAMPAIGN_DELETE:
-        return message.getData().toProto().getCampaignDelete();
+        return data.toProto().getCampaignDelete();
 
       case CHARACTER_DELETE:
-        return message.getData().toProto().getCharacterDelete();
+        return data.toProto().getCharacterDelete();
 
       case CONDITION_DELETE:
-        return message.getData().toProto().getConditionDelete().getTargetId();
+        return data.toProto().getConditionDelete().getTargetId();
 
       case XP_AWARD:
-        return message.getData().toProto().getXpAward().getCharacterId();
+        return data.toProto().getXpAward().getCharacterId();
 
       case ACK:
-        return String.valueOf(message.getData().toProto().getAck());
+        return String.valueOf(data.toProto().getAck());
 
       case WELCOME:
-        return String.valueOf(message.getData().toProto().getWelcome().getName());
+        return String.valueOf(data.toProto().getWelcome().getName());
 
       default:
         return "";
+    }
+  }
+
+  public static class Message {
+    private final String id;
+    private final Entry.CompanionMessageProto.Payload.PayloadCase type;
+    private final String sender;
+    private final String recipient;
+
+    public Message(String id, Entry.CompanionMessageProto.Payload.PayloadCase type, String sender,
+                   String recipient) {
+      this.id = id;
+      this.type = type;
+      this.sender = sender;
+      this.recipient = recipient;
+    }
+
+    public void assertEquals(String text, MessageProcessor.RecievedMessage message) {
+      org.junit.Assert.assertEquals(text, type, message.getMessage().toProto().getPayloadCase());
+      org.junit.Assert.assertTrue(text,
+          CompanionTest.extractId(message.getMessage(), type).matches(id));
+      org.junit.Assert.assertTrue(text, message.getSenderId().matches(sender));
+      org.junit.Assert.assertTrue(text, message.getReceiverId().matches(recipient));
     }
   }
 }

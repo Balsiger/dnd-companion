@@ -78,7 +78,7 @@ public class Campaigns {
     }
   }
 
-  public CompanionContext data() {
+  public CompanionContext context() {
     return companionContext;
   }
 

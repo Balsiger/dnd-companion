@@ -144,7 +144,7 @@ public class Creatures {
             ImmutableList.copyOf(local.ids(creature.getCampaignId())));
     }
 
-    Images.get(creature.isLocal()).remove(Creature.TABLE, creature.getCreatureId());
+    companionContext.images(creature.isLocal()).remove(Creature.TABLE, creature.getCreatureId());
   }
 
   private List<String> orphaned() {

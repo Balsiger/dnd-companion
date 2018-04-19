@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.net.raw;
 
+import android.support.annotation.VisibleForTesting;
+
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Entry;
 
@@ -37,16 +39,28 @@ import java.util.Optional;
 public class Transmitter {
 
   private final String name;
+  private final DisconnectCallback callback;
+  private Socket socket;
   private final Sender sender;
   private final Thread senderThread;
   private final Receiver receiver;
   private final Thread receiverThread;
 
-  public Transmitter(String name, InetAddress address, int port) throws IOException {
-    this(name, new Socket(address, port));
+  private boolean started = false;
+
+  @FunctionalInterface
+  public interface DisconnectCallback {
+    void disconnect();
   }
 
-  public Transmitter(String name, Socket socket) {
+  public Transmitter(DisconnectCallback callback, String name, InetAddress address, int port)
+      throws IOException {
+    this(callback, name, new Socket(address, port));
+  }
+
+  public Transmitter(DisconnectCallback callback, String name, Socket socket) {
+    this.callback = callback;
+    this.socket = socket;
     try {
       socket.setKeepAlive(true);
     } catch (SocketException e) {
@@ -54,12 +68,12 @@ public class Transmitter {
     }
 
     this.name = name;
-    this.sender = new Sender(name, socket);
-    this.receiver = new Receiver(name, socket);
+    this.sender = new Sender(this::disconnected, name, socket);
+    this.receiver = new Receiver(this::disconnected, name, socket);
     this.senderThread = new Thread(sender);
     this.receiverThread = new Thread(receiver);
 
-    Status.log("started transmitter for " + socket);
+    Status.log("started " + name + " transmitter for " + socket);
   }
 
   public void start() {
@@ -70,11 +84,36 @@ public class Transmitter {
     if (!receiverThread.isAlive() && !receiverThread.isInterrupted()) {
       receiverThread.start();
     }
+
+    started = true;
   }
 
   public void stop() {
+    started = false;
     senderThread.interrupt();
     receiverThread.interrupt();
+  }
+
+  public boolean isReady() {
+    return started;
+  }
+
+  private void disconnected() {
+    started = false;
+    Status.log(name + " transmitter disconnected, reconnecting");
+    callback.disconnect();
+
+    /*
+    try {
+      // Reconnect the socket.
+      socket = new Socket(socket.getInetAddress(), socket.getPort());
+      Status.log(name + " transmitter disconnected, reconnecting to " + socket);
+      sender.setSocket(socket);
+      receiver.setSocket(socket);
+    } catch (IOException e) {
+      Status.exception("cannot reconnect " + name + " transmitter", e);
+    }
+    */
   }
 
   public void send(Entry.CompanionMessageProto message) {
@@ -88,5 +127,15 @@ public class Transmitter {
 
   public boolean hasPendingMessage() {
     return sender.hasPendingMessages() || receiver.hasPendingMessages();
+  }
+
+  @VisibleForTesting
+  public Sender getSender() {
+    return sender;
+  }
+
+  @VisibleForTesting
+  public Receiver getReceiver() {
+    return receiver;
   }
 }

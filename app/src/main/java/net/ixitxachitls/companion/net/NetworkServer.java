@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.net;
 
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
@@ -78,8 +77,8 @@ public class NetworkServer implements Runnable {
     thread.interrupt();
     try {
       socket.close();
-    } catch (IOException ioe) {
-      Log.e("Server", "Error when closing server socket.");
+    } catch (IOException e) {
+      Status.exception("Error when closing server socket.", e);
     }
   }
 
@@ -106,13 +105,13 @@ public class NetworkServer implements Runnable {
 
     while (!Thread.currentThread().isInterrupted()) {
       try {
-        Status.log("socket " + socket + " accepted");
         Socket transmissionSocket = socket.accept();
-        Transmitter transmitter = new Transmitter("server", transmissionSocket);
+        Status.log("socket " + transmissionSocket + " accepted");
+        Status.log("client connected, setting up transmitter");
+        Transmitter transmitter = new Transmitter(this::disconnected, "server", transmissionSocket);
         // Temporarily store the transmitter without id until we get the welcome message.
         transmittersById.put("startup-" + transmittersById.keySet().size(), transmitter);
         transmitter.start();
-        Status.log("client connected, setting up transmitter");
 
         // Send a welcome message to the client.
         Status.log("sending welcome message to client");
@@ -133,8 +132,7 @@ public class NetworkServer implements Runnable {
 
         Status.log("Server connected.");
       } catch (IOException e) {
-        Status.error("Server got io exception when waiting for connections: " + e);
-        e.printStackTrace();
+        Status.exception("Server exception when waiting for connections: " + e, e);
       }
     }
 
@@ -143,6 +141,10 @@ public class NetworkServer implements Runnable {
     }
 
     transmittersById.clear();
+  }
+
+  private void disconnected() {
+    Status.log("reconnecting network server");
   }
 
   public List<CompanionMessage> receive() {
@@ -170,6 +172,11 @@ public class NetworkServer implements Runnable {
     }
 
     return messages;
+  }
+
+  public boolean isReady(String receiverId) {
+    return transmittersById.get(receiverId) != null
+        && transmittersById.get(receiverId).isReady();
   }
 
   public boolean send(String recieverId, long messageId, CompanionMessageData message) {

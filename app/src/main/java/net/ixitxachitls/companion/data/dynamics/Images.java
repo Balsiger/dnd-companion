@@ -26,8 +26,6 @@ import android.arch.lifecycle.MutableLiveData;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.google.common.base.Preconditions;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.storage.AssetAccessor;
@@ -54,40 +52,10 @@ public class Images {
   private final boolean isLocal;
   private final Map<String, MutableLiveData<Optional<Image>>> imagesByKey = new HashMap<>();
 
-  protected Images(CompanionContext context, AssetAccessor assetAccessor, boolean isLocal) {
+  public Images(CompanionContext context, AssetAccessor assetAccessor, boolean isLocal) {
     this.context = context;
     this.assetAccessor = assetAccessor;
     this.isLocal = isLocal;
-  }
-
-  public static Images local() {
-    Preconditions.checkNotNull(local, "local images have to be loaded!");
-    return local;
-  }
-
-  public static Images remote() {
-    Preconditions.checkNotNull(remote, "remote images have to be loaded!");
-    return remote;
-  }
-
-  public static Images get(boolean local) {
-    return local ? Images.local : Images.remote;
-  }
-
-  public static void load(CompanionContext context, AssetAccessor assetAccessor) {
-    if (local != null) {
-      Status.log("local images already loaded");
-    } else {
-      Status.log("loading local images");
-      local = new Images(context, assetAccessor, true);
-    }
-
-    if (remote != null) {
-      Status.log("remote images already loaded");
-    } else {
-      Status.log("loading remote images");
-      remote = new Images(context, assetAccessor, false);
-    }
   }
 
   public boolean isLocal() {
@@ -108,9 +76,9 @@ public class Images {
     return imagesByKey.get(id);
   }
 
-  public static void update(boolean isLocal, Image image) {
-    Images.get(isLocal).update(image);
-  }
+  //public static void update(boolean isLocal, Image image) {
+  //  Images.get(isLocal).update(image);
+  //}
 
   public void update(Image image) {
     MutableLiveData<Optional<Image>> liveImage = imagesByKey.get(image.getId());
@@ -129,7 +97,7 @@ public class Images {
         return Optional.of(new Image(context, type, id, bitmap));
       }
     } catch (FileNotFoundException e) {
-      Status.error("Cannot find file image " + file + " (" + e + ")");
+      // File does not exist, just return empty.
     } catch (IOException e) {
       Status.error("Cannot read image file " + file + " (" + e + ")");
     }

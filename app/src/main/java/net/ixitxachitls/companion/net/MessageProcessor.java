@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.net;
 
+import android.support.annotation.VisibleForTesting;
+
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
@@ -131,7 +133,7 @@ public abstract class MessageProcessor {
     Status.refreshServerConnection(companionContext.settings().getAppId());
     Status.refreshClientConnection(senderId);
 
-    received.addFirst(new RecievedMessage(senderName, message));
+    received.addFirst(new RecievedMessage(senderName, message, senderId, receiverId, messageId));
     if (received.size() > MAX_RECEIVED_SIZE) {
       received.removeLast();
     }
@@ -250,15 +252,43 @@ public abstract class MessageProcessor {
   public static class RecievedMessage {
     private final String senderName;
     private final CompanionMessageData message;
+    private final String senderId;
+    private final String receiverId;
+    private final long messageId;
 
-    public RecievedMessage(String senderName, CompanionMessageData message) {
+    public RecievedMessage(String senderName, CompanionMessageData message, String senderId,
+                           String receiverId, long messageId) {
       this.senderName = senderName;
       this.message = message;
+      this.senderId = senderId;
+      this.receiverId = receiverId;
+      this.messageId = messageId;
+    }
+
+    public CompanionMessageData getMessage() {
+      return message;
+    }
+
+    public long getMessageId() {
+      return messageId;
+    }
+
+    public String getReceiverId() {
+      return receiverId;
+    }
+
+    public String getSenderId() {
+      return senderId;
     }
 
     @Override
     public String toString() {
       return "from " + senderName + ": " + message;
     }
+  }
+
+  @VisibleForTesting
+  public List<RecievedMessage> allReceivedMessages() {
+    return new ArrayList<>(received);
   }
 }

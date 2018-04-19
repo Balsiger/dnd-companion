@@ -39,7 +39,6 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.MessageDialog;
@@ -124,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
           files.add(new DriveStorage.BinaryFile(character.getName() + ".character",
               character.getCharacterId(), "application/x-protobuf", character.toProto().toByteArray()));
           Optional<InputStream> image =
-              Images.local().read(Character.TABLE, character.getCharacterId());
+              CompanionApplication.get(this).images(true).read(Character.TABLE,
+                  character.getCharacterId());
           if (image.isPresent()) {
             files.add(new DriveStorage.StreamFile(character.getName() + ".character.jpg",
                 character.getCharacterId(), "image/jpeg", image.get()));

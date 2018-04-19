@@ -41,6 +41,8 @@ public class NetworkClient {
   private Transmitter transmitter;
   private String serverId = "";
   private String serverName = "(not yet known)";
+  private InetAddress address;
+  private int port;
 
   public NetworkClient(CompanionContext companionContext) {
     this.companionContext = companionContext;
@@ -52,15 +54,23 @@ public class NetworkClient {
   }
 
   public boolean start(InetAddress address, int port) {
+    this.address = address;
+    this.port = port;
     Status.log("starting client to " + address + ":" + port);
     try {
-      this.transmitter = new Transmitter("client", address, port);
+      this.transmitter = new Transmitter(this::disconnected, "client", address, port);
     } catch (IOException e) {
       Status.log("cannot create transmitter for " + address + ":" + port);
       return false;
     }
 
     transmitter.start();
+
+    // Send a welcome message to the server.
+    Status.log("sending welcome message to server");
+    send(CompanionMessageData.fromWelcome(companionContext, companionContext.settings().getAppId(),
+        companionContext.settings().getNickname()));
+
     return true;
   }
 
@@ -69,6 +79,14 @@ public class NetworkClient {
     if (transmitter != null) {
       transmitter.stop();
     }
+  }
+
+  private void disconnected() {
+    start(address, port);
+  }
+
+  public boolean isReady() {
+    return transmitter != null && transmitter.isReady();
   }
 
   public void send(CompanionMessageData message) {

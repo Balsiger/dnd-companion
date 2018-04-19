@@ -54,7 +54,7 @@ public class CompanionServer {
 
     // Setup stored messages.
     for (ScheduledMessage message
-        : ScheduledMessages.get().getMessagesBySender(companionContext.settings().getAppId())) {
+        : companionContext.messages().getMessagesBySender(companionContext.settings().getAppId())) {
       setupScheduler(message.getRecieverId());
     }
   }
@@ -75,17 +75,19 @@ public class CompanionServer {
   public void sendWaiting() {
     boolean sent = false;
     for (MessageScheduler scheduler : schedulersByRecpientId.values()) {
-      for (Optional<ScheduledMessage> message = scheduler.nextWaiting();
-           message.isPresent();
-           message = scheduler.nextWaiting()) {
-        Status.log(message.get() + " to " + getRecipientName(message.get().getRecieverId()));
-        // The messasge is already marked as sent or pending (depending on ack).
-        // Thus, even if sending fails, we don't need to do anything. Pending message
-        // will automatically be resent and sent messages can be safely ignored.
-        nsdServer.send(message.get().getRecieverId(), message.get().getMessageId(),
-            message.get().getData());
-        Status.refreshClientConnection(message.get().getRecieverId());
-        sent = true;
+      if (nsdServer.isReady(scheduler.getRecipientId())) {
+        for (Optional<ScheduledMessage> message = scheduler.nextWaiting();
+             message.isPresent();
+             message = scheduler.nextWaiting()) {
+          Status.log(message.get() + " to " + getRecipientName(message.get().getRecieverId()));
+          // The message is already marked as sent or pending (depending on ack).
+          // Thus, even if sending fails, we don't need to do anything. Pending message
+          // will automatically be resent and sent messages can be safely ignored.
+          nsdServer.send(message.get().getRecieverId(), message.get().getMessageId(),
+              message.get().getData());
+          Status.refreshClientConnection(message.get().getRecieverId());
+          sent = true;
+        }
       }
     }
 
@@ -150,7 +152,7 @@ public class CompanionServer {
   private MessageScheduler setupScheduler(String recipientId) {
     MessageScheduler scheduler = schedulersByRecpientId.get(recipientId);
     if (scheduler == null) {
-      scheduler = new MessageScheduler(companionContext.settings(), recipientId);
+      scheduler = new MessageScheduler(companionContext, recipientId);
       schedulersByRecpientId.put(recipientId, scheduler);
 
       startIfNecessary();

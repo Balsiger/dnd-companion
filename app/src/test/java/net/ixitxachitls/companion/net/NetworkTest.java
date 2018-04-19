@@ -29,7 +29,7 @@ import com.google.common.collect.ImmutableList;
 import net.ixitxachitls.companion.CompanionTest;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.FakeCompanionContext;
-import net.ixitxachitls.companion.data.dynamics.Images;
+import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.nsd.FakeNsdAccessor;
@@ -47,6 +47,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
+
+import java.io.IOException;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -84,10 +86,9 @@ public class NetworkTest extends CompanionTest {
     super.setUp();
 
     Entries.init(assetAccessor);
-    serverContext = new FakeCompanionContext(serverDataBase, nsdAccessor);
-    client1Context = new FakeCompanionContext(client1DataBase, nsdAccessor);
-    client2Context = new FakeCompanionContext(client2DataBase, nsdAccessor);
-    Images.load(serverContext, assetAccessor);
+    serverContext = new FakeCompanionContext(serverDataBase, nsdAccessor, assetAccessor);
+    client1Context = new FakeCompanionContext(client1DataBase, nsdAccessor, assetAccessor);
+    client2Context = new FakeCompanionContext(client2DataBase, nsdAccessor, assetAccessor);
 
     server = serverContext.messenger();
     client1 = client1Context.messenger();
@@ -105,7 +106,8 @@ public class NetworkTest extends CompanionTest {
     client1.start();
     client2.start();
 
-    processAllMessages(server, client1, client2);
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1", "client2"),
+        server, client1, client2);
 
     assertThat(server.getServer().connectedClientIds(),
         containsInAnyOrder("client1", "client2", "client3"));
@@ -139,15 +141,32 @@ public class NetworkTest extends CompanionTest {
         containsInAnyOrder("server"));
     assertThat(client1.getClients().getClientsByServerName().keySet(),
         containsInAnyOrder("Server"));
-    assertClientSent(client1, "client1",  Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
+    assertClientSent(client1, "client1", Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
         "character-client1-3", "server");
 
     assertThat(client2.getClients().getClientsByServerId().keySet(),
         containsInAnyOrder("server"));
     assertThat(client2.getClients().getClientsByServerName().keySet(),
         containsInAnyOrder("Server"));
-    assertClientSent(client2, "client2",  Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
+    assertClientSent(client2, "client2", Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
         "character-client2-5", "server");
+
+    // Check received messages (first message last).
+    System.out.println(server.getServerMessageProcessor().allReceivedMessages());
+    assertReceived(server.getServerMessageProcessor(),
+        new Message("character-client1-3",
+            Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER, "client1", "server"),
+        new Message("character-client2-5",
+            Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER, "client2", "server"),
+        // The order of the following two messages is not deterministic.
+        new Message("Client (1|2)",
+            Entry.CompanionMessageProto.Payload.PayloadCase.WELCOME, "client(1|2)", "server"),
+        new Message("Client (1|2)",
+            Entry.CompanionMessageProto.Payload.PayloadCase.WELCOME, "client(1|2)", "server"),
+        // We get two welcomes from client 1 because client 1 discovers the service twice and thus
+        // get's restarted.
+        new Message("Client 1",
+            Entry.CompanionMessageProto.Payload.PayloadCase.WELCOME, "client1", "server"));
 
     assertFinished(server, client1, client2);
   }
@@ -166,11 +185,13 @@ public class NetworkTest extends CompanionTest {
         .affectedConditions().isEmpty());
 
     character(client1Context, "character-client1-3").addInitiatedCondition(
-        new TargetedTimedCondition(new TimedCondition(Conditions.FLAT_FOOTED, "character-client1-3", 5),
+        new TargetedTimedCondition(new TimedCondition(Conditions.FLAT_FOOTED,
+            "character-client1-3", 5),
             ImmutableList.of("character-client2-5", "character-server-1")));
 
     // Process messages and deliver to all clients.
-    processAllMessages(server, client1, client2);
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1", "client2"),
+        server, client1, client2);
 
     assertThat(character(client1Context, "character-client1-3").affectedConditions(),
         containsInAnyOrder());
@@ -202,7 +223,8 @@ public class NetworkTest extends CompanionTest {
         containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
 
     // Process messages and deliver to all clients.
-    processAllMessages(server, client1, client2);
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1", "client2"),
+        server, client1, client2);
 
     assertTrue(character(client1Context, "character-client1-3").affectedConditions().isEmpty());
     assertTrue(character(serverContext, "character-server-1").affectedConditions().isEmpty());
@@ -218,5 +240,57 @@ public class NetworkTest extends CompanionTest {
     assertTrue(character(client1Context, "character-client2-5").affectedConditions().isEmpty());
 
     assertFinished(server, client1, client2);
+  }
+
+  @Test
+  public void ack() throws InterruptedException {
+    // Start server and client.
+    server.start();
+    client1.start();
+
+    // Setup communication.
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+
+    // Send campaign deletion, requires ack.
+    server.sendDeletion(campaign(serverContext, "campaign-server-2"));
+
+    assertLastMessage(server.getServer().getSchedulersByRecpientId().get("client1").getWaiting(),
+        "server", "client1", 50,
+        Entry.CompanionMessageProto.Payload.PayloadCase.CAMPAIGN_DELETE,
+        "campaign-server-2");
+
+    // Send message and receive ack.
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+
+    // Check that ack is exchanged with proper ids.
+    ScheduledMessage ack = lastMessage(client1.getClients().getSchedulersByServerId()
+        .get("server").getSent(CompanionMessageData.Type.ACK));
+    assertEquals(50, ack.getData().getAck());
+
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+
+    // Check that message was acked on the server.
+    assertLastMessage(server.getServer().getSchedulersByRecpientId().get("client1").getAcked(),
+        "server", "client1", 50,
+        Entry.CompanionMessageProto.Payload.PayloadCase.CAMPAIGN_DELETE,
+        "campaign-server-2");
+  }
+
+  @Test
+  public void socketCloseClient() throws InterruptedException, IOException {
+    server.start();
+    client1.start();
+
+    // Setup communication.
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+
+    // Close the client socket.
+    client1.getClients().getClientsByServerId().get("server").getTransmitter().getReceiver()
+        .closeSocket();
+
+    campaign(serverContext, "campaign-server-1").setName("Guru");
+    campaign(serverContext, "campaign-server-1").store();
+    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    assertEquals("Guru", campaign(client1Context, "campaign-server-1").getName());
   }
 }

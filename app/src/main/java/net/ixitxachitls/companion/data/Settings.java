@@ -59,8 +59,8 @@ public class Settings extends StoredEntry<Entry.SettingsProto> {
   private List<String> features = new ArrayList<>();
 
   @VisibleForTesting
-  public Settings(CompanionContext companionContext, String name, String id) {
-    super(companionContext, ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
+  public Settings(CompanionContext context, String name, String id) {
+    super(context, ID, TABLE, TABLE + "-" + ID, name, true, DataBaseContentProvider.SETTINGS);
 
     showStatus.setValue(false);
     this.appId = id;
