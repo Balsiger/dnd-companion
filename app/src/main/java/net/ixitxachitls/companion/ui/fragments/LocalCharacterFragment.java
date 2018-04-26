@@ -29,7 +29,6 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
@@ -37,7 +36,6 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 
@@ -64,10 +62,8 @@ public class LocalCharacterFragment extends CharacterFragment {
     edit.visible()
         .onClick(this::editBase)
         .description("Edit Character", "Edit the basic character traits");
-    delete.visible()
-        .onClick(this::delete)
-        .description("Delete Character", "Delete this character. This will irrevocably delete "
-            + "the character and will send a deletion request to the DM and all other players.");
+    delete.description("Delete Character", "Delete this character. This will irrevocably delete "
+        + "the character and will send a deletion request to the DM and all other players.");
     move.visible()
         .onClick(this::move)
         .description("Move Character", "This button moves the character to an other campaign.");
@@ -101,27 +97,6 @@ public class LocalCharacterFragment extends CharacterFragment {
 
     CharacterDialog.newInstance(character.get().getCharacterId(),
         character.get().getCampaignId()).display();
-  }
-
-  private void delete() {
-    ConfirmationDialog.create(getContext())
-        .title(getResources().getString(R.string.character_delete_title))
-        .message(getResources().getString(R.string.character_delete_message))
-        .yes(this::deleteCharacterOk)
-        .show();
-  }
-
-  private void deleteCharacterOk() {
-    if (character.isPresent()) {
-      characters().remove(character.get());
-      Toast.makeText(getActivity(), getString(R.string.character_deleted),
-          Toast.LENGTH_SHORT).show();
-
-      storeOnPause = false;
-      if (campaign.isPresent()) {
-        show(campaign.get().isLocal() ? Type.localCampaign : Type.campaign);
-      }
-    }
   }
 
   private void move() {

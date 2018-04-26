@@ -45,8 +45,8 @@ public class Creatures {
   private final CompanionContext companionContext;
 
   // Live data storages.
-  private static final Map<String, MutableLiveData<ImmutableList<String>>>
-      creatureIdsByCampaignId = new ConcurrentHashMap<>();
+  private final Map<String, MutableLiveData<ImmutableList<String>>> creatureIdsByCampaignId =
+      new ConcurrentHashMap<>();
 
   public Creatures(CompanionContext companionContext) {
     this.companionContext = companionContext;

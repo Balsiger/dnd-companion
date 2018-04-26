@@ -21,26 +21,15 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Handler;
 import android.support.multidex.MultiDexApplication;
 
 import net.ixitxachitls.companion.CompanionTest;
-import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.FakeCompanionContext;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.values.TimedCondition;
-import net.ixitxachitls.companion.net.nsd.FakeNsdAccessor;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.rules.Conditions;
-import net.ixitxachitls.companion.storage.FakeAssetAccessor;
-import net.ixitxachitls.companion.storage.FakeDataBaseAccessor;
-import net.ixitxachitls.companion.storage.FakeServerDataBaseAccessor;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
@@ -57,96 +46,71 @@ import static org.junit.Assert.assertTrue;
 @Config(application = MultiDexApplication.class)
 public class CompanionMessengerTest extends CompanionTest {
 
-  // Make .setValue calls synchronous and allow them to be called in tests.
-  @Rule public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
-
-  protected final FakeDataBaseAccessor dataBaseAccessor = new FakeServerDataBaseAccessor();
-  protected final FakeAssetAccessor assetAccessor = new FakeAssetAccessor();
-  protected final FakeNsdAccessor nsdAccessor = new FakeNsdAccessor();
-  protected FakeCompanionContext context;
-
   @Before
   public void setUp() {
-    Entries.init(assetAccessor);
-
-    context = new FakeCompanionContext(dataBaseAccessor, nsdAccessor, assetAccessor);
+    super.setUp();
   }
 
   @Test
   public void startStop() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.start();
+    server.start();
 
-    assertTrue(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertTrue(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.stop();
+    server.stop();
 
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
   }
 
   @Test
   public void isOnline() {
-    CompanionMessenger messenger = createMessenger();
-
     // Start the server, check that a campaign is online.
-    messenger.start();
-    assertTrue(messenger.isOnline(context.campaigns().getCampaign("campaign-server-1")
+    server.start();
+    assertTrue(server.isOnline(serverContext.campaigns().getCampaign("campaign-server-1")
         .getValue().get()));
-    assertFalse(messenger.isOnline(context.campaigns().getCampaign("campaign-server-2")
+    assertFalse(server.isOnline(serverContext.campaigns().getCampaign("campaign-server-2")
         .getValue().get()));
-    assertFalse(messenger.isOnline(context.campaigns().getCampaign("campaign-client1-3")
+    assertFalse(server.isOnline(serverContext.campaigns().getCampaign("campaign-client1-3")
         .getValue().get()));
   }
 
   @Test
   public void sendLocalCampaign() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
     // Sending local campaign schedules a new message.
-    messenger.send(context.campaigns().getCampaign("campaign-server-1").getValue().get());
-    assertTrue(messenger.getServer().started());
-    assertFalse(messenger.getServer().getSchedulersByRecpientId().isEmpty());
-    assertServerScheduled(messenger, "server",
+    server.send(serverContext.campaigns().getCampaign("campaign-server-1").getValue().get());
+    assertTrue(server.getServer().started());
+    assertFalse(server.getServer().getSchedulersByRecpientId().isEmpty());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CAMPAIGN, "campaign-server-1",
         "client1", "client2", "client3");
   }
 
   @Test
   public void sendRemoteCampaign() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
     // Sending a remote campaign fails (does not schedule anything).
-    messenger.send(context.campaigns().getCampaign("campaign-client1-3").getValue().get());
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    server.send(serverContext.campaigns().getCampaign("campaign-client1-3").getValue().get());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
   }
 
   @Test
   public void sendCurrent() {
-    Bitmap bitmap = BitmapFactory.decodeFile("../app/src/test/files/characters-local/"
-        + "character-server-1.jpg");
-    if (bitmap != null)
-      System.out.println("FOUND");
-
-    CompanionMessenger messenger = createMessenger();
-
-    messenger.sendCurrent("client1");
-    List<ScheduledMessage> waiting = new ArrayList<>(messenger.getServer()
+    server.sendCurrent("client1");
+    List<ScheduledMessage> waiting = new ArrayList<>(server.getServer()
         .getSchedulersByRecpientId().get("client1").getWaiting());
     assertEquals(8, waiting.size());
     assertMessage(waiting.get(0), "server", "client1", 24,
@@ -169,361 +133,314 @@ public class CompanionMessengerTest extends CompanionTest {
 
   @Test
   public void sendLocalCharacter() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
     // Sending local character schedules a new message.
-    messenger.send(context.characters().getCharacter("character-server-1").getValue().get());
-    assertTrue(messenger.getServer().started());
-    assertFalse(messenger.getServer().getSchedulersByRecpientId().isEmpty());
-    assertServerScheduled(messenger, "server",
+    server.send(serverContext.characters().getCharacter("character-server-1").getValue().get());
+    assertTrue(server.getServer().started());
+    assertFalse(server.getServer().getSchedulersByRecpientId().isEmpty());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER, "character-server-1",
         "client1", "client2", "client3");
   }
 
   @Test
   public void sendRemoteLocalCharacter() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
     // Sending a remote character of a local campaign sends it to all clients that don't own that
     // character.
-    messenger.send(context.characters().getCharacter("character-client2-5").getValue().get());
-    assertTrue(messenger.getServer().started());
-    assertServerScheduled(messenger, "server",
+    server.send(serverContext.characters().getCharacter("character-client2-5").getValue().get());
+    assertTrue(server.getServer().started());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
         "character-client2-5", "client1", "client3");
   }
 
   @Test
   public void sendLocalRemoteCharacter() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
     // Sending a local character of a remote campaign sends it to the owner of the campaign only.
-    messenger.send(context.characters().getCharacter("character-server-2").getValue().get());
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    server.send(serverContext.characters().getCharacter("character-server-2").getValue().get());
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER,
         "character-server-2", "client1");
   }
 
   @Test
   public void sendRemoteRemoteCharacter() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
     // Sending a remote character of a remote campaign does nothing.
-    messenger.send(context.characters().getCharacter("character-client1-4").getValue().get());
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    server.send(serverContext.characters().getCharacter("character-client1-4").getValue().get());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
   }
 
   @Test
   public void sendLocalLocalImage() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(context.images(true).getImage("characters",
+    server.send(serverContext.images(true).getImage("characters",
         "character-server-1").getValue().get());
-    assertTrue(messenger.getServer().started());
-    assertServerScheduled(messenger, "server",
+    assertTrue(server.getServer().started());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
         "character-server-1", "client1", "client2", "client3");
   }
 
   @Test
   public void sendLocalRemoteImage() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(context.images(true).getImage("characters",
+    server.send(serverContext.images(true).getImage("characters",
         "character-server-2").getValue().get());
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
         "character-server-2", "client1");
   }
 
   @Test
   public void sendRemoteLocalImage() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(context.images(true).getImage("characters",
+    server.send(serverContext.images(true).getImage("characters",
         "character-server-2").getValue().get());
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
         "character-server-2", "client1");
   }
 
   @Test
   public void sendRemoteRemoteImage() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(context.images(true).getImage("characters",
+    server.send(serverContext.images(true).getImage("characters",
         "character-server-2").getValue().get());
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.IMAGE,
         "character-server-2", "client1");
   }
 
   @Test
   public void sendLocalCondition() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(context.creatures().getCreatureOrCharacter("character-server-1").get(),
+    server.send(serverContext.creatures().getCreatureOrCharacter("character-server-1").get(),
         new TimedCondition(Conditions.FLAT_FOOTED, "server", 10));
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
   }
 
   @Test
   public void sendRemoteRemoteCondition() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(context.creatures().getCreatureOrCharacter("character-client1-4").get(),
+    server.send(serverContext.creatures().getCreatureOrCharacter("character-client1-4").get(),
         new TimedCondition(Conditions.FLAT_FOOTED, "server", 10));
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CONDITION,
         "character-client1-4", "client1");
   }
 
   @Test
   public void sendRemoteLocalCondition() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.send(context.creatures().getCreatureOrCharacter("character-client1-3").get(),
+    server.send(serverContext.creatures().getCreatureOrCharacter("character-client1-3").get(),
         new TimedCondition(Conditions.FLAT_FOOTED, "server", 10));
-    assertTrue(messenger.getServer().started());
-    assertServerScheduled(messenger, "server",
+    assertTrue(server.getServer().started());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CONDITION,
         "character-client1-3", "client1");
   }
 
   @Test
   public void sendCampaignDeletion() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.sendDeletion(context.campaigns().getCampaign("campaign-server-1").getValue().get());
-    assertTrue(messenger.getServer().started());
-    assertServerScheduled(messenger, "server",
+    server.sendDeletion(serverContext.campaigns().getCampaign("campaign-server-1").getValue().get());
+    assertTrue(server.getServer().started());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CAMPAIGN_DELETE,
         "campaign-server-1", "client1", "client2", "client3");
   }
 
   @Test
   public void sendLocalCharacterDeletion() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.sendDeletion(context.characters().getCharacter("character-server-1")
+    server.sendDeletion(serverContext.characters().getCharacter("character-server-1")
         .getValue().get());
-    assertTrue(messenger.getServer().started());
-    assertServerScheduled(messenger, "server",
+    assertTrue(server.getServer().started());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER_DELETE,
         "character-server-1", "client1", "client2", "client3");
   }
 
   @Test
   public void sendRemoteCharacterDeletion() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.sendDeletion(context.characters().getCharacter("character-server-2")
+    server.sendDeletion(serverContext.characters().getCharacter("character-server-2")
         .getValue().get());
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER_DELETE,
         "character-server-2", "client1");
   }
 
   @Test
   public void sendLocalConditionDeletion() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.sendDeletion(Conditions.FLAT_FOOTED.getName(), "server",
-        context.creatures().getCreatureOrCharacter("character-client1-3").get());
-    assertTrue(messenger.getServer().started());
-    assertServerScheduled(messenger, "server",
+    server.sendDeletion(Conditions.FLAT_FOOTED.getName(), "server",
+        serverContext.creatures().getCreatureOrCharacter("character-client1-3").get());
+    assertTrue(server.getServer().started());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CONDITION_DELETE,
         "character-client1-3", "client1");
   }
 
   @Test
   public void sendRemoteConditionDeletion() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.sendDeletion(Conditions.FLAT_FOOTED.getName(), "server",
-        context.creatures().getCreatureOrCharacter("character-client2-3").get());
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    server.sendDeletion(Conditions.FLAT_FOOTED.getName(), "server",
+        serverContext.creatures().getCreatureOrCharacter("character-client2-3").get());
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CONDITION_DELETE,
         "character-client2-3", "client1");
   }
 
   @Test
   public void sendXpAward() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.sendDeletion(Conditions.FLAT_FOOTED.getName(), "server",
-        context.creatures().getCreatureOrCharacter("character-client2-3").get());
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    server.sendDeletion(Conditions.FLAT_FOOTED.getName(), "server",
+        serverContext.creatures().getCreatureOrCharacter("character-client2-3").get());
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.CONDITION_DELETE,
         "character-client2-3", "client1");
   }
 
   @Test
   public void sendAckToClient() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.sendAckToClient("client1", 42);
-    assertTrue(messenger.getServer().started());
-    assertServerScheduled(messenger, "server",
+    server.sendAckToClient("client1", 42);
+    assertTrue(server.getServer().started());
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.ACK,
         "42", "client1");
   }
 
   @Test
   public void sendAckToServer() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.sendAckToServer("client1", 42);
-    assertFalse(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    server.sendAckToServer("client1", 42);
+    assertFalse(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.ACK,
         "42", "client1");
   }
 
   @Test
   public void sendWelcome() {
-    CompanionMessenger messenger = createMessenger();
-
     // Initially, server is not started and schedulers are empty.
-    assertFalse(messenger.getServer().started());
-    assertTrue(messenger.getServer().getSchedulersByRecpientId().isEmpty());
+    assertFalse(server.getServer().started());
+    assertTrue(server.getServer().getSchedulersByRecpientId().isEmpty());
 
-    messenger.getClients().getClientsByServerId().put("client42", new NetworkClient(context));
-    messenger.getServer().getSchedulersByRecpientId().put("client23",
-        new MessageScheduler(context, "client23"));
-    messenger.sendWelcome();
-    assertTrue(messenger.getServer().started());
-    assertClientScheduled(messenger, "server",
+    server.getClients().getClientsByServerId().put("client42",
+        new NetworkClient(serverContext));
+    server.getServer().getSchedulersByRecpientId().put("client23",
+        new MessageScheduler(serverContext, "client23"));
+    server.sendWelcome();
+    assertTrue(server.getServer().started());
+    assertClientScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.WELCOME,
         "Server", "client42");
-    assertServerScheduled(messenger, "server",
+    assertServerScheduled(server, "server",
         Entry.CompanionMessageProto.Payload.PayloadCase.WELCOME,
         "Server", "client23");
   }
 
   @Test
   public void ackServer() {
-    CompanionMessenger messenger = createMessenger();
-
-    MessageScheduler scheduler = new MessageScheduler(context, "client42");
-    messenger.getServer().getSchedulersByRecpientId().put("client42", scheduler);
+    MessageScheduler scheduler = new MessageScheduler(serverContext, "client42");
+    server.getServer().getSchedulersByRecpientId().put("client42", scheduler);
     scheduler.schedule(CompanionMessageData.fromDelete(
-        context.campaigns().getCampaign("campaign-server-1").getValue().get()));
+        serverContext.campaigns().getCampaign("campaign-server-1").getValue().get()));
 
     assertEquals(1, scheduler.getWaiting().size());
     assertEquals(CompanionMessageData.Type.CAMPAIGN_DELETE,
         scheduler.nextWaiting().get().getMessage().getData().getType());
     assertEquals(1, scheduler.getPending().size());
-    messenger.ackServer("client42", 24);
+    server.ackServer("client42", 24);
     assertEquals(0, scheduler.getPending().size());
     assertEquals(1, scheduler.getAcked().size());
   }
 
   @Test
   public void ackClient() {
-    CompanionMessenger messenger = createMessenger();
-
-    MessageScheduler scheduler = new MessageScheduler(context, "client23");
-    messenger.getClients().getSchedulersByServerId().put("client23", scheduler);
+    MessageScheduler scheduler = new MessageScheduler(serverContext, "client23");
+    server.getClients().getSchedulersByServerId().put("client23", scheduler);
     scheduler.schedule(CompanionMessageData.fromDelete(
-        context.campaigns().getCampaign("campaign-server-1").getValue().get()));
+        serverContext.campaigns().getCampaign("campaign-server-1").getValue().get()));
 
     assertEquals(1, scheduler.getWaiting().size());
     assertEquals(CompanionMessageData.Type.CAMPAIGN_DELETE,
         scheduler.nextWaiting().get().getMessage().getData().getType());
     assertEquals(1, scheduler.getPending().size());
-    messenger.ackClient("client23", 24);
+    server.ackClient("client23", 24);
     assertEquals(0, scheduler.getPending().size());
     assertEquals(1, scheduler.getAcked().size());
-  }
-
-  private CompanionMessenger createMessenger() {
-    return new CompanionMessenger(context, nsdAccessor, null, new Handler(), 50);
   }
 }

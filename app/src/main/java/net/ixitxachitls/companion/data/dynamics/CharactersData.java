@@ -104,17 +104,9 @@ public class CharactersData extends StoredEntries<Character> {
   public void remove(Character character) {
     super.remove(character);
 
-
     if (characterById.containsKey(character.getCharacterId())) {
       characterById.get(character.getCharacterId()).setValue(Optional.empty());
     }
-
-    /*
-    if (charactersByCampaignId.containsKey(character.getCampaignId())) {
-      charactersByCampaignId.get(character.getCampaignId())
-          .setValue(ImmutableList.copyOf(ids(character.getCampaignId())));
-    }
-    */
   }
 
   public List<String> ids(String campaignId) {

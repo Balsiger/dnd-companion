@@ -29,6 +29,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
@@ -37,6 +38,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
@@ -95,7 +97,10 @@ public class CharacterFragment extends CompanionFragment {
     title = view.findViewById(R.id.title);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
     edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone();
-    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).gone();
+    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).onClick(this::delete)
+        .description("Delete Character", "This will remove this character from your device. If the "
+            + "player is active on your WiFi, the character most likely will immediately "
+            + "reappear, though.");
     move = Wrapper.<FloatingActionButton>wrap(view, R.id.move).gone();
     strength = view.findViewById(R.id.strength);
     dexterity = view.findViewById(R.id.dexterity);
@@ -171,6 +176,27 @@ public class CharacterFragment extends CompanionFragment {
     xp.text(String.valueOf(character.get().getXp()));
     xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
     level.text(String.valueOf(character.get().getLevel()));
+  }
+
+  private void delete() {
+    ConfirmationDialog.create(getContext())
+        .title(getResources().getString(R.string.character_delete_title))
+        .message(getResources().getString(R.string.character_delete_message))
+        .yes(this::deleteCharacterOk)
+        .show();
+  }
+
+  private void deleteCharacterOk() {
+    if (character.isPresent()) {
+      character.get().delete();
+      Toast.makeText(getActivity(), getString(R.string.character_deleted),
+          Toast.LENGTH_SHORT).show();
+
+      storeOnPause = false;
+      if (campaign.isPresent()) {
+        show(campaign.get().isLocal() ? Type.localCampaign : Type.campaign);
+      }
+    }
   }
 
   @Override

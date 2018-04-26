@@ -94,6 +94,17 @@ public class MessageScheduler {
     return recipientId;
   }
 
+  public boolean hasWaiting(List<String> serverIds, List<String> clientIds) {
+    for (ScheduledMessage message : waiting.values()) {
+      if (serverIds.contains(message.getSenderId())
+          && clientIds.contains(message.getRecieverId())) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   public void schedule(CompanionMessageData data) {
     ScheduledMessage message = new ScheduledMessage(data.campaigns(),
         new CompanionMessage(context.settings().getAppId(), context.settings().getNickname(),

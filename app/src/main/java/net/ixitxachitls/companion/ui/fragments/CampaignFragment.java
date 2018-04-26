@@ -30,11 +30,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -77,6 +79,11 @@ public class CampaignFragment extends CompanionFragment {
         .description("Back", "Go back to the list of campaigns.");
     title = view.findViewById(R.id.title);
     delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).gone();
+    delete.onClick(this::deleteCampaign)
+        .description("Delete", "Delete this campaign. This action cannot be undone and will send "
+            + "a deletion request to players to delete this campaign on their devices too. "
+            + "You cannot delete a campaign that is currently published or that has local "
+            + "characters.");
     publish = Wrapper.<FloatingActionButton>wrap(view, R.id.publish).gone();
     unpublish = Wrapper.<FloatingActionButton>wrap(view, R.id.unpublish).gone();
     edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone();
@@ -107,7 +114,29 @@ public class CampaignFragment extends CompanionFragment {
       } else {
         date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
       }
+
+      delete.visible(canDeleteCampaign());
     }
+  }
+
+  protected void deleteCampaign() {
+    ConfirmationDialog.create(getContext())
+        .title(getResources().getString(R.string.campaign_delete_title))
+        .message(getResources().getString(R.string.campaign_delete_message_remote))
+        .yes(this::deleteCampaignOk)
+        .show();
+  }
+
+  protected void deleteCampaignOk() {
+    campaign.delete();
+    Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
+        Toast.LENGTH_SHORT).show();
+    show(Type.campaigns);
+  }
+
+  protected boolean canDeleteCampaign() {
+    // We always allow to delete a remote campaign if it does not have local characters.
+    return !characters().hasLocalCharacterForCampaign(campaign.getCampaignId());
   }
 
   @Override

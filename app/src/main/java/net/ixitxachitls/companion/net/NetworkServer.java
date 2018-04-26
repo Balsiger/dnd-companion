@@ -214,9 +214,9 @@ public class NetworkServer implements Runnable {
     return id;
   }
 
-  public boolean hasPendingMessage() {
-    for (Transmitter transmitter : transmittersById.values()) {
-      if (transmitter.hasPendingMessage()) {
+  public boolean hasPendingMessage(List<String> ids) {
+    for (Map.Entry<String, Transmitter> transmitter : transmittersById.entrySet()) {
+      if (ids.contains(transmitter.getKey()) && transmitter.getValue().hasPendingMessage()) {
         return true;
       }
     }

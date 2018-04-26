@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.storage;
 
+import org.junit.rules.TemporaryFolder;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -33,8 +35,12 @@ import java.util.Map;
  */
 public class FakeAssetAccessor implements AssetAccessor {
 
+  private static int count = 0;
+
   private final Map<String, String[]> paths = new HashMap<>();
   private final Map<String, byte[]> files = new HashMap<>();
+  private final TemporaryFolder folder = new TemporaryFolder();
+  private final String prefix;
 
   public FakeAssetAccessor() {
     paths.put("entities", new String[]{
@@ -48,6 +54,17 @@ public class FakeAssetAccessor implements AssetAccessor {
     paths.put("entities/Generic/world", new String[]{
         "Generic.pb", "Forgotten Realms.pb",
     });
+
+    prefix = String.valueOf(count++);
+    try {
+      folder.create();
+      folder.newFolder(prefix).createNewFile();
+      folder.newFolder(prefix, "characters-local").createNewFile();
+      folder.newFile(prefix + "/characters-local/character-server-1.jpg");
+      folder.newFile(prefix + "/characters-local/character-server-2.jpg");
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   @Override
@@ -66,6 +83,6 @@ public class FakeAssetAccessor implements AssetAccessor {
 
   @Override
   public File getExternalFilesDir(String name) {
-    return new File("../app/src/test/files/" + name);
+    return new File(folder.getRoot().getPath() + "/" + prefix + "/" + name);
   }
 }

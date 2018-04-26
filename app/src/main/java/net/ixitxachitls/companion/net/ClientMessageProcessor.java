@@ -49,7 +49,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, companionContext.settings().getAppId(), messageId, message);
+    process(senderId, senderName, context.settings().getAppId(), messageId, message);
   }
 
   @Override
@@ -61,7 +61,7 @@ public class ClientMessageProcessor extends MessageProcessor {
   @Override
   protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
     Optional<Campaign> oldCampaign =
-        companionContext.campaigns().getCampaign(campaign.getCampaignId()).getValue();
+        context.campaigns().getCampaign(campaign.getCampaignId()).getValue();
     if (oldCampaign.isPresent()
         && oldCampaign.get().getBattle().isEnded()
         && !campaign.getBattle().isEnded()
@@ -86,7 +86,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
-    companionContext.campaigns().remove(campaignId, false);
+    context.campaigns().getCampaign(campaignId).getValue().ifPresent(Campaign::delete);
     messenger.sendAckToServer(senderId, messageId);
   }
 
@@ -100,7 +100,7 @@ public class ClientMessageProcessor extends MessageProcessor {
   @Override
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
     Optional<Character> character =
-        companionContext.characters().getCharacter(award.getCharacterId()).getValue();
+        context.characters().getCharacter(award.getCharacterId()).getValue();
     if (character.isPresent()) {
       new ConfirmationDialog(application.getCurrentActivity())
           .title("XP Award")
@@ -120,7 +120,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   private void addXpAward(String senderId, long messageId, String characterId, int xp) {
     Optional<LocalCharacter> character =
-        Character.asLocal(companionContext.characters().getCharacter(characterId).getValue());
+        Character.asLocal(context.characters().getCharacter(characterId).getValue());
     if (character.isPresent()) {
       character.get().addXp(xp);
       messenger.sendAckToServer(senderId, messageId);

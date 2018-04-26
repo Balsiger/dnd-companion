@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.nsd.NsdAccessor;
 import net.ixitxachitls.companion.util.Ids;
+import net.ixitxachitls.companion.util.Misc;
 
 import java.util.Arrays;
 import java.util.List;
@@ -119,7 +120,8 @@ public class CompanionMessenger implements Runnable {
   public void sendCurrent(String recipientId) {
     // Send all local campaigns.
     for (Campaign campaign : companionContext.campaigns().getLocalCampaigns()) {
-      if (campaign.isPublished()) {
+      if (campaign.isPublished()
+          && !Misc.onEmulator() && !getContext().settings().useRemoteCampaigns()) {
         companionServer.schedule(recipientId, CompanionMessageData.from(campaign));
 
         // Send all characters and images of the campaign that are not under the recipients control.
@@ -332,7 +334,9 @@ public class CompanionMessenger implements Runnable {
     ids.addAll(companionServer.connectedClientIds());
 
     // Ignore the given id and ourselves.
-    ids.remove(companionContext.settings().getAppId());
+    if (!Misc.onEmulator()) {
+      ids.remove(companionContext.settings().getAppId());
+    }
     ids.removeAll(Arrays.asList(ignoreIds));
 
     return ids;

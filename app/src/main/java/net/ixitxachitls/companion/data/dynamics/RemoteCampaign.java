@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.support.annotation.CallSuper;
+
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
@@ -62,6 +64,18 @@ public class RemoteCampaign extends Campaign {
 
   public void setDate(CampaignDate date) {
     Status.toast("Cannot set the date of a remote campaign!");
+  }
+
+  @CallSuper @Override
+  public void delete() {
+    // Also delete all remote characters.
+    for (Character character : context.characters().getCampaignCharacters(getCampaignId())) {
+      if (!character.isLocal()) {
+        context.characters().remove(character);
+      }
+    }
+
+    super.delete();
   }
 
   public static RemoteCampaign fromProto(CompanionContext companionContext, long id, Entry.CampaignProto proto) {

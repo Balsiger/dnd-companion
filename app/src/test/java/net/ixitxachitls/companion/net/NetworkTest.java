@@ -21,28 +21,19 @@
 
 package net.ixitxachitls.companion.net;
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule;
+import android.support.annotation.CallSuper;
 import android.support.multidex.MultiDexApplication;
 
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.CompanionTest;
-import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.FakeCompanionContext;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
-import net.ixitxachitls.companion.net.nsd.FakeNsdAccessor;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.rules.Conditions;
-import net.ixitxachitls.companion.storage.FakeAssetAccessor;
-import net.ixitxachitls.companion.storage.FakeClient1DataBaseAccessor;
-import net.ixitxachitls.companion.storage.FakeClient2DataBaseAccessor;
-import net.ixitxachitls.companion.storage.FakeDataBaseAccessor;
-import net.ixitxachitls.companion.storage.FakeServerDataBaseAccessor;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
@@ -62,37 +53,9 @@ import static org.junit.Assert.assertEquals;
 @Config(application = MultiDexApplication.class)
 public class NetworkTest extends CompanionTest {
 
-  // Make .setValue calls synchronous and allow them to be called in tests.
-  @Rule public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
-
-  private final FakeNsdAccessor nsdAccessor = new FakeNsdAccessor();
-  private final FakeAssetAccessor assetAccessor = new FakeAssetAccessor();
-
-  private final FakeDataBaseAccessor serverDataBase = new FakeServerDataBaseAccessor();
-  private FakeCompanionContext serverContext;
-
-  private final FakeDataBaseAccessor client1DataBase = new FakeClient1DataBaseAccessor();
-  private FakeCompanionContext client1Context;
-
-  private final FakeDataBaseAccessor client2DataBase = new FakeClient2DataBaseAccessor();
-  private FakeCompanionContext client2Context;
-
-  private CompanionMessenger server;
-  private CompanionMessenger client1;
-  private CompanionMessenger client2;
-
-  @Before
+  @Before @Override @CallSuper
   public void setUp() {
     super.setUp();
-
-    Entries.init(assetAccessor);
-    serverContext = new FakeCompanionContext(serverDataBase, nsdAccessor, assetAccessor);
-    client1Context = new FakeCompanionContext(client1DataBase, nsdAccessor, assetAccessor);
-    client2Context = new FakeCompanionContext(client2DataBase, nsdAccessor, assetAccessor);
-
-    server = serverContext.messenger();
-    client1 = client1Context.messenger();
-    client2 = client2Context.messenger();
   }
 
   @Test
@@ -106,8 +69,8 @@ public class NetworkTest extends CompanionTest {
     client1.start();
     client2.start();
 
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1", "client2"),
-        server, client1, client2);
+    processAllMessages(server, client1, client2);
+    assertFinished(server, client1, client2);
 
     assertThat(server.getServer().connectedClientIds(),
         containsInAnyOrder("client1", "client2", "client3"));
@@ -152,7 +115,6 @@ public class NetworkTest extends CompanionTest {
         "character-client2-5", "server");
 
     // Check received messages (first message last).
-    System.out.println(server.getServerMessageProcessor().allReceivedMessages());
     assertReceived(server.getServerMessageProcessor(),
         new Message("character-client1-3",
             Entry.CompanionMessageProto.Payload.PayloadCase.CHARACTER, "client1", "server"),
@@ -190,8 +152,7 @@ public class NetworkTest extends CompanionTest {
             ImmutableList.of("character-client2-5", "character-server-1")));
 
     // Process messages and deliver to all clients.
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1", "client2"),
-        server, client1, client2);
+    processAllMessages(server, client1, client2);
 
     assertThat(character(client1Context, "character-client1-3").affectedConditions(),
         containsInAnyOrder());
@@ -223,8 +184,7 @@ public class NetworkTest extends CompanionTest {
         containsInAnyOrder(Conditions.FLAT_FOOTED.getName()));
 
     // Process messages and deliver to all clients.
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1", "client2"),
-        server, client1, client2);
+    processAllMessages(server, client1, client2);
 
     assertTrue(character(client1Context, "character-client1-3").affectedConditions().isEmpty());
     assertTrue(character(serverContext, "character-server-1").affectedConditions().isEmpty());
@@ -249,7 +209,7 @@ public class NetworkTest extends CompanionTest {
     client1.start();
 
     // Setup communication.
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    processAllMessages(server, client1);
 
     // Send campaign deletion, requires ack.
     server.sendDeletion(campaign(serverContext, "campaign-server-2"));
@@ -260,14 +220,16 @@ public class NetworkTest extends CompanionTest {
         "campaign-server-2");
 
     // Send message and receive ack.
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    processAllMessages(server, client1);
+    // Also wait until acks are actually sent out.
+    processAllMessages(server, client1);
 
     // Check that ack is exchanged with proper ids.
     ScheduledMessage ack = lastMessage(client1.getClients().getSchedulersByServerId()
         .get("server").getSent(CompanionMessageData.Type.ACK));
     assertEquals(50, ack.getData().getAck());
 
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    processAllMessages(server, client1);
 
     // Check that message was acked on the server.
     assertLastMessage(server.getServer().getSchedulersByRecpientId().get("client1").getAcked(),
@@ -282,7 +244,7 @@ public class NetworkTest extends CompanionTest {
     client1.start();
 
     // Setup communication.
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    processAllMessages(server, client1);
 
     // Close the client socket.
     client1.getClients().getClientsByServerId().get("server").getTransmitter().getReceiver()
@@ -290,7 +252,7 @@ public class NetworkTest extends CompanionTest {
 
     campaign(serverContext, "campaign-server-1").setName("Guru");
     campaign(serverContext, "campaign-server-1").store();
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    processAllMessages(server, client1);
     assertEquals("Guru", campaign(client1Context, "campaign-server-1").getName());
   }
 
@@ -300,7 +262,7 @@ public class NetworkTest extends CompanionTest {
     client1.start();
 
     // Setup communication.
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    processAllMessages(server, client1);
 
     // Close the client socket.
     server.getServer().getNsdServer().getServer().getTransmittersById().get("client1").getReceiver()
@@ -308,7 +270,7 @@ public class NetworkTest extends CompanionTest {
 
     campaign(serverContext, "campaign-server-1").setName("Guru");
     campaign(serverContext, "campaign-server-1").store();
-    processAllMessages(ImmutableList.of("server"), ImmutableList.of("client1"), server, client1);
+    processAllMessages(server, client1);
     assertEquals("Guru", campaign(client1Context, "campaign-server-1").getName());
   }
 }

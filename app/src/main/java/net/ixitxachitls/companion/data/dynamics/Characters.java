@@ -28,7 +28,9 @@ import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.util.Misc;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
@@ -45,8 +47,8 @@ public class Characters {
   private final CharactersData remote;
 
   // Live data storages.
-  private static final Map<String, MutableLiveData<ImmutableList<String>>>
-      characterIdsByCampaignId = new ConcurrentHashMap<>();
+  private final Map<String, MutableLiveData<ImmutableList<String>>> characterIdsByCampaignId =
+      new ConcurrentHashMap<>();
 
   public Characters(CompanionContext context) {
     this.context = context;
@@ -92,8 +94,34 @@ public class Characters {
     return ids;
   }
 
+  public List<Character> getCampaignCharacters(String campaignId) {
+    List<Character> characters = new ArrayList<>();
+
+    for (String id : characterIds(campaignId)) {
+      characters.add(getCharacter(id).getValue().get());
+    }
+
+    return characters;
+  }
+
   public Collection<Character> getLocalCharacters() {
     return local.getAll();
+  }
+
+  public List<Character> getAllCharacters() {
+    List<Character> characters = new ArrayList<>();
+    if (Misc.onEmulator()) {
+      if (context.settings().useRemoteCharacters()) {
+        characters.addAll(remote.getAll());
+      } else {
+        characters.addAll(local.getAll());
+      }
+    } else {
+      characters.addAll(local.getAll());
+      characters.addAll(remote.getAll());
+    }
+
+    return characters;
   }
 
   public long getLocalIdFor(String characterId) {
@@ -139,7 +167,7 @@ public class Characters {
     }
   }
 
-  public void remove(String characterId, boolean isLocal) {
+  protected void remove(String characterId, boolean isLocal) {
     Optional<Character> character;
     if (isLocal) {
       character = local.getCharacter(characterId).getValue();
@@ -152,7 +180,7 @@ public class Characters {
     }
   }
 
-  public void remove(Character character) {
+  protected void remove(Character character) {
     Status.log("removing character " + character);
 
     if (character.isLocal()) {
@@ -161,16 +189,11 @@ public class Characters {
       remote.remove(character);
     }
 
-    // Publish the character deletion.
-    context.messenger().sendDeletion(character);
-
     // Update live data.
     if (characterIdsByCampaignId.containsKey(character.getCampaignId())) {
       LiveDataUtils.setValueIfChanged(characterIdsByCampaignId.get(character.getCampaignId()),
           ImmutableList.copyOf(characterIds(character.getCampaignId())));
     }
-
-    context.images(character.isLocal()).remove(Character.TABLE, character.getCharacterId());
   }
 
   // Publishing characters.

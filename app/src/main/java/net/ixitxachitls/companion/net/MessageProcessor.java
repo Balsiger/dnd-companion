@@ -48,14 +48,14 @@ public abstract class MessageProcessor {
 
   private static final int MAX_RECEIVED_SIZE = 50;
 
-  protected final CompanionContext companionContext;
+  protected final CompanionContext context;
   protected final CompanionMessenger messenger;
   private final Deque<RecievedMessage> received = new ArrayDeque<>();
   protected final Set<String> inFlightMessages =
       Collections.newSetFromMap(new ConcurrentHashMap<>());
 
-  public MessageProcessor(CompanionContext companionContext, CompanionMessenger messenger) {
-    this.companionContext = companionContext;
+  public MessageProcessor(CompanionContext context, CompanionMessenger messenger) {
+    this.context = context;
     this.messenger = messenger;
   }
 
@@ -130,7 +130,7 @@ public abstract class MessageProcessor {
         break;
     }
 
-    Status.refreshServerConnection(companionContext.settings().getAppId());
+    Status.refreshServerConnection(context.settings().getAppId());
     Status.refreshClientConnection(senderId);
 
     received.addFirst(new RecievedMessage(senderName, message, senderId, receiverId, messageId));
@@ -142,7 +142,7 @@ public abstract class MessageProcessor {
   private void handleCondition(String senderId, long messageId, String targetId,
                                TimedCondition condition) {
     Optional<? extends BaseCreature> creature =
-        companionContext.creatures().getCreatureOrCharacter(targetId);
+        context.creatures().getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
       creature.get().addAffectedCondition(condition);
     } else {
@@ -179,7 +179,7 @@ public abstract class MessageProcessor {
   }
 
   protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
-    companionContext.characters().remove(characterId, false);
+    context.characters().getCharacter(characterId).getValue().ifPresent(Character::delete);
 
     if (this instanceof ClientMessageProcessor) {
       messenger.sendAckToServer(senderId, messageId);
@@ -203,7 +203,7 @@ public abstract class MessageProcessor {
     Status.log("dismissing condition " + conditionName + " for " + Status.nameFor(targetId)
         + " from " + Status.nameFor(sourceId));
     Optional<? extends BaseCreature> creature =
-        companionContext.creatures().getCreatureOrCharacter(targetId);
+        context.creatures().getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
       creature.get().removeAffectedCondition(conditionName, sourceId);
     } else {
@@ -238,8 +238,8 @@ public abstract class MessageProcessor {
 
   protected void handleWelcome(String remoteId, String remoteName) {
     Status.recordId(remoteId, remoteName);
-    for (Campaign campaign : companionContext.campaigns().getCampaignsByServer(remoteId)) {
-      companionContext.characters().publish(campaign.getCampaignId());
+    for (Campaign campaign : context.campaigns().getCampaignsByServer(remoteId)) {
+      context.characters().publish(campaign.getCampaignId());
     }
 
     messenger.sendCurrent(remoteId);

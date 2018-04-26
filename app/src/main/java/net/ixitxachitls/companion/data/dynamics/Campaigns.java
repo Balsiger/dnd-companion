@@ -126,7 +126,6 @@ public class Campaigns {
       campaigns.addAll(remote.getCampaigns());
     }
 
-
     return campaigns;
   }
 
@@ -213,7 +212,7 @@ public class Campaigns {
     LiveDataUtils.setValueIfChanged(allCampaignIds, ImmutableList.copyOf(campaignIds()));
   }
 
-  public void remove(String campaignId, boolean isLocal) {
+  protected void remove(String campaignId, boolean isLocal) {
     Status.log("removing campaign " + campaignId + " / " + isLocal);
     if (isLocal) {
       local.remove(campaignId);
@@ -227,7 +226,7 @@ public class Campaigns {
     }
   }
 
-  public void remove(Campaign campaign) {
+  protected void remove(Campaign campaign) {
     remove(campaign.getCampaignId(), campaign.isLocal());
   }
 

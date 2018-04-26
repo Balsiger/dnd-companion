@@ -25,7 +25,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
@@ -45,10 +44,6 @@ public class LocalCampaignFragment extends CampaignFragment {
     View view = super.onCreateView(inflater, container, savedInstanceState);
 
     title.setAction(this::edit);
-    delete.onClick(this::deleteCampaign)
-        .description("Delete", "Delete this campaign. This action cannot be undone and will send "
-        + "a deletion request to players to delete this campaign on their devices too. "
-        + "You cannot delete a campaign that is currently published.");
     publish.onClick(this::publish)
         .description("Publish", "Publish this campaign on the local WiFi. Players on the same WiFi "
             + "can add characters to the campaign and generally interact with the campaign while "
@@ -85,14 +80,8 @@ public class LocalCampaignFragment extends CampaignFragment {
         .show();
   }
 
-  private void deleteCampaignOk() {
-    campaign.delete();
-    Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
-        Toast.LENGTH_SHORT).show();
-    show(Type.campaigns);
-  }
-
-  private boolean canDeleteCampaign() {
+  @Override
+  protected boolean canDeleteCampaign() {
     if (campaign.isDefault()) {
       return false;
     }
@@ -131,7 +120,6 @@ public class LocalCampaignFragment extends CampaignFragment {
     super.update(campaign);
 
     if (campaign.isPresent()) {
-      delete.visible(canDeleteCampaign());
       publish.visible(campaign.get().isLocal() && !campaign.get().isDefault()
           && !campaign.get().isPublished());
       unpublish.visible(campaign.get().isLocal() && campaign.get().isPublished());

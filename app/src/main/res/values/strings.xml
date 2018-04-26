@@ -108,5 +108,6 @@
   <string name="testing_name">Nirual</string>
   <string name="testing_name2">Tauriel Borrealis</string>
   <string name="testing_name3">The Dragon Slayers</string>
+  <string name="campaign_delete_message_remote">Do you really want to delete the campaign? Note that the campaign will reappear as soon as it\'s available on the local network again.</string>
 
 </resources>

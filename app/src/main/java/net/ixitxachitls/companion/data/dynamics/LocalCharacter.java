@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.support.annotation.CallSuper;
+
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
@@ -158,6 +160,12 @@ public class LocalCharacter extends Character {
   public void publish() {
     Status.log("publishing character " + this);
     context.messenger().send(this);
+  }
+
+  @Override @CallSuper
+  public void delete() {
+    super.delete();
+    context.messenger().sendDeletion(this);
   }
 
   @Override

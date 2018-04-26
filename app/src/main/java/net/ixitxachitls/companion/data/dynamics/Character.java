@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.LiveData;
 import android.net.Uri;
+import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 
 import com.google.common.collect.HashMultiset;
@@ -207,6 +208,12 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
     }
 
     return names;
+  }
+
+  @CallSuper
+  public void delete() {
+    context.characters().remove(this);
+    context.images(isLocal()).remove(Character.TABLE, getCharacterId());
   }
 
   @Override

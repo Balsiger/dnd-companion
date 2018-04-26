@@ -46,11 +46,11 @@ public class FakeClient1DataBaseAccessor extends FakeDataBaseAccessor {
         campaign("campaign-server-3", "Test Campaign 2", "Generic", true));
 
     add(localCampaignsById,
-        campaign("campaign-client1-3", "Cormy", "Forgotten Realms", false));
+        campaign("campaign-client1-3", "Cormyr", "Forgotten Realms", false));
     add(remoteCharactersById,
         character("character-server-2", "Elminster", "campaign-client1-3"));
     add(localCharactersById,
-        character("character-client1-4", "Khelben Blackstaff", "campaign-client1-3"));
+        character("character-client1-4", "Khelben Blackstaff Arunsun", "campaign-client1-3"));
     add(remoteCharactersById,
         character("character-client2-3", "Laeral Silverhand", "campaign-client1-3"));
     add(remoteCharactersById,

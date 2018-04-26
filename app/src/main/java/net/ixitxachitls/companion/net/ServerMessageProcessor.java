@@ -36,7 +36,7 @@ public class ServerMessageProcessor extends MessageProcessor {
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, companionContext.settings().getAppId(), messageId, message);
+    process(senderId, senderName, context.settings().getAppId(), messageId, message);
   }
 
   @Override
@@ -67,9 +67,9 @@ public class ServerMessageProcessor extends MessageProcessor {
     Status.addClientConnection(remoteId, remoteName);
 
     // Publish all local campaigns to that client.
-    companionContext.campaigns().publish();
+    context.campaigns().publish();
 
     // Publish all local characters to that client.
-    companionContext.characters().publish();
+    context.characters().publish();
   }
 }

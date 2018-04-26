@@ -21,9 +21,14 @@
 
 package net.ixitxachitls.companion;
 
+import android.arch.core.executor.testing.InstantTaskExecutorRule;
 import android.support.annotation.CallSuper;
 
+import com.google.common.collect.ImmutableList;
+
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.FakeCompanionContext;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
@@ -32,13 +37,24 @@ import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.net.MessageProcessor;
 import net.ixitxachitls.companion.net.MessageScheduler;
 import net.ixitxachitls.companion.net.NetworkClient;
+import net.ixitxachitls.companion.net.nsd.FakeNsdAccessor;
 import net.ixitxachitls.companion.proto.Entry;
+import net.ixitxachitls.companion.storage.FakeAssetAccessor;
+import net.ixitxachitls.companion.storage.FakeClient1DataBaseAccessor;
+import net.ixitxachitls.companion.storage.FakeClient2DataBaseAccessor;
+import net.ixitxachitls.companion.storage.FakeDataBaseAccessor;
+import net.ixitxachitls.companion.storage.FakeServerDataBaseAccessor;
 import net.ixitxachitls.companion.util.Misc;
 
+import org.junit.Rule;
 import org.robolectric.shadows.ShadowLooper;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -47,16 +63,49 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Base class for the companion tests.
  */
 public abstract class CompanionTest {
 
+  // Make .setValue calls synchronous and allow them to be called in tests.
+  @Rule public InstantTaskExecutorRule instantTaskExecutorRule = new InstantTaskExecutorRule();
+
+  protected FakeNsdAccessor nsdAccessor;
+  protected FakeAssetAccessor assetAccessor;
+
+  protected FakeDataBaseAccessor serverDataBase;
+  protected FakeCompanionContext serverContext;
+
+  protected FakeDataBaseAccessor client1DataBase;
+  protected FakeCompanionContext client1Context;
+
+  protected FakeDataBaseAccessor client2DataBase;
+  protected FakeCompanionContext client2Context;
+
+  protected CompanionMessenger server;
+  protected CompanionMessenger client1;
+  protected CompanionMessenger client2;
+
   @CallSuper
   public void setUp() {
     Misc.IN_UNIT_TEST = true;
+
+    nsdAccessor =  new FakeNsdAccessor();
+    assetAccessor = new FakeAssetAccessor();
+    serverDataBase = new FakeServerDataBaseAccessor();
+    client1DataBase = new FakeClient1DataBaseAccessor();
+    client2DataBase = new FakeClient2DataBaseAccessor();
+
+    Entries.init(assetAccessor);
+    serverContext = new FakeCompanionContext(serverDataBase, nsdAccessor, assetAccessor);
+    client1Context = new FakeCompanionContext(client1DataBase, nsdAccessor, assetAccessor);
+    client2Context = new FakeCompanionContext(client2DataBase, nsdAccessor, assetAccessor);
+
+    server = serverContext.messenger();
+    client1 = client1Context.messenger();
+    client2 = client2Context.messenger();
   }
 
   protected Character character(CompanionContext context, String id) {
@@ -65,6 +114,18 @@ public abstract class CompanionTest {
 
   protected Campaign campaign(CompanionContext context, String id) {
     return context.campaigns().getCampaign(id).getValue().get();
+  }
+
+  protected List<String> campaignNames(CompanionContext context) {
+    return context.campaigns().getAllCampaigns().stream()
+        .map(Campaign::getName)
+        .collect(Collectors.toList());
+  }
+
+  protected List<String> characterNames(CompanionContext context) {
+    return context.characters().getAllCharacters().stream()
+        .map(Character::getName)
+        .collect(Collectors.toList());
   }
 
   protected void assertReceived(MessageProcessor processor, Message ... messages) {
@@ -191,64 +252,90 @@ public abstract class CompanionTest {
     }
   }
 
-  protected void processAllMessages(List<String> servers, List<String> clients,
-                                    CompanionMessenger ... messengers) throws InterruptedException {
+  protected void processAllMessages(CompanionMessenger ... messengers) throws InterruptedException {
     Thread.sleep(100);
     do {
-      System.out.println("processing all messages...");
       ShadowLooper.runUiThreadTasksIncludingDelayedTasks();
-    } while (pending(servers, clients, messengers));
+    } while (pending(messengers));
   }
 
   protected void assertFinished(CompanionMessenger ... messengers) {
+    List<String> ids = ids(messengers);
+    List<String> serverIds = serverIds(messengers);
     for (CompanionMessenger messenger : messengers) {
-      assertFinished(messenger);
+      assertFinished(serverIds, ids, messenger);
     }
   }
 
-  protected void assertFinished(CompanionMessenger messenger) {
-    assertFinished(messenger.getServer().getSchedulersByRecpientId().values());
+  protected void assertFinished(List<String> serverIds, List<String> clientIds,
+                                CompanionMessenger messenger) {
+    assertFinished(serverIds, clientIds,
+        messenger.getServer().getSchedulersByRecpientId().values());
   }
 
-  protected void assertFinished(Collection<MessageScheduler> schedulers) {
+  protected void assertFinished(List<String> serverIds, List<String> clientIds,
+                                Collection<MessageScheduler> schedulers) {
     for (MessageScheduler scheduler : schedulers) {
-      assertFinished(scheduler);
+      if (clientIds.contains(scheduler.getRecipientId())) {
+        assertFinished(serverIds, clientIds, scheduler);
+      }
     }
   }
 
-  protected void assertFinished(MessageScheduler scheduler) {
-    assertTrue(scheduler.getWaiting().isEmpty());
-    assertTrue(scheduler.getPending().isEmpty());
+  protected void assertFinished(List<String> serverIds, List<String> clientIds,
+                                MessageScheduler scheduler) {
+    assertFalse(scheduler.hasWaiting(serverIds, clientIds));
   }
 
-  private boolean pending(List<String> servers, List<String> clients,
-                          CompanionMessenger ... messengers) {
+  List<String> ids(CompanionMessenger ... messengers) {
+    return Arrays.asList(messengers).stream()
+        .map(m -> m.getContext().settings().getAppId())
+        .collect(Collectors.toList());
+  }
+
+  List<String> serverIds(CompanionMessenger ... messengers) {
+    return Arrays.asList(messengers).stream()
+        .filter(m -> m.getServer().started())
+        .map(m -> m.getContext().settings().getAppId())
+        .collect(Collectors.toList());
+  }
+
+  List<String> withId(List<String> ids, String id) {
+    List<String> union = new ArrayList<>(ids);
+    union.add(id);
+    return union;
+  }
+
+  private boolean pending(CompanionMessenger ... messengers) {
+    List<String> ids = ids(messengers);
+    List<String> serverIds = serverIds(messengers);
     for (CompanionMessenger messenger : messengers) {
       // Check that all pending messages are processed.
-      if (messenger.getServer().getNsdServer().getServer().hasPendingMessage()) {
+      if (messenger.getServer().getNsdServer().getServer().hasPendingMessage(ids)) {
         return true;
       }
 
-      for (NetworkClient client
-          : messenger.getClients().getClientsByServerId().values()) {
-        if (client.getTransmitter().hasPendingMessage()) {
+      for (Map.Entry<String, NetworkClient> client
+          : messenger.getClients().getClientsByServerId().entrySet()) {
+        if (ids.contains(client.getKey())
+            && client.getValue().getTransmitter().hasPendingMessage()) {
           return true;
         }
       }
 
       for (String id : messenger.getServer().getSchedulersByRecpientId().keySet()) {
-        if (clients.contains(id)) {
+        if (ids.contains(id)) {
           MessageScheduler scheduler = messenger.getServer().getSchedulersByRecpientId().get(id);
-          if (!scheduler.getWaiting().isEmpty()) {
+          if (scheduler.hasWaiting(serverIds, ids)) {
             return true;
           }
         }
       }
 
       for (String id : messenger.getClients().getSchedulersByServerId().keySet()) {
-        if (servers.contains(id)) {
+        if (serverIds.contains(id)) {
           MessageScheduler scheduler = messenger.getClients().getSchedulersByServerId().get(id);
-          if (!scheduler.getWaiting().isEmpty()) {
+          if (scheduler.hasWaiting(ImmutableList.of(id), serverIds)) {
             return true;
           }
         }

@@ -105,8 +105,9 @@ public class SettingsFragment extends CompanionFragment {
     settings.store();
 
     if (settings.isDefined()) {
-      CompanionFragments.get().show(Type.campaigns, Optional.empty());
+      // We have to send the welcome before showing another fragment, or the context will be null.
       CompanionApplication.get(getContext()).messenger().sendWelcome();
+      CompanionFragments.get().show(Type.campaigns, Optional.empty());
     }
   }
 

@@ -143,6 +143,7 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
 
   public List<Character> getCharacters() {
     return getCharacterIds().getValue().stream()
+        .filter(id -> companionContext.characters().getCharacter(id).getValue().isPresent())
         .map(id -> companionContext.characters().getCharacter(id).getValue().get())
         .collect(Collectors.toList());
   }
