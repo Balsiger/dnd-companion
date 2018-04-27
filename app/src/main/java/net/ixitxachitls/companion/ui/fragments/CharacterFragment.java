@@ -33,6 +33,7 @@ import android.widget.Toast;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
@@ -68,6 +69,7 @@ public class CharacterFragment extends CompanionFragment {
   protected AbilityView wisdom;
   protected AbilityView charisma;
   protected RoundImageView image;
+  protected Wrapper<FloatingActionButton> copy;
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> delete;
   protected Wrapper<FloatingActionButton> move;
@@ -96,6 +98,9 @@ public class CharacterFragment extends CompanionFragment {
     image = view.findViewById(R.id.image);
     title = view.findViewById(R.id.title);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
+    copy = Wrapper.<FloatingActionButton>wrap(view, R.id.copy).gone().onClick(this::copy)
+        .description("Copy Character",
+            "Copies the character to the current device as a local character.");
     edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone();
     delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).onClick(this::delete)
         .description("Delete Character", "This will remove this character from your device. If the "
@@ -161,6 +166,7 @@ public class CharacterFragment extends CompanionFragment {
     } else {
       image.clearImage();
     }
+    copy.visible(!character.get().isLocal() && campaign.get().amDM());
     strength.setValue(character.get().getStrength(),
         Ability.modifier(character.get().getStrength()));
     dexterity.setValue(character.get().getDexterity(),
@@ -196,6 +202,13 @@ public class CharacterFragment extends CompanionFragment {
       if (campaign.isPresent()) {
         show(campaign.get().isLocal() ? Type.localCampaign : Type.campaign);
       }
+    }
+  }
+
+  private void copy() {
+    if (character.isPresent()) {
+      character.get().copy();
+      Status.toast("The character has been copied.");
     }
   }
 

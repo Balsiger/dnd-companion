@@ -35,6 +35,7 @@ import org.robolectric.annotation.Config;
 import java.io.IOException;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -103,5 +104,14 @@ public class CharacterTest extends CompanionTest {
 
     // Got deleted above.
     assetAccessor.getExternalFilesDir("characters-local/character-server-1.jpg").createNewFile();
+  }
+
+  @Test
+  public void copy() {
+    character(serverContext, "character-server-1").copy();
+    assertThat(characterNames(serverContext),
+        containsInAnyOrder("Conan", "Copy of Conan", "Hulk", "Wonder Woman", "Black Widow",
+            "Elminster", "Khelben Blackstaff Arunsun", "Laeral Silverhand", "The Simbul"));
+    assertEquals("Copy of Conan", character(serverContext, "character-server-3").getName());
   }
 }

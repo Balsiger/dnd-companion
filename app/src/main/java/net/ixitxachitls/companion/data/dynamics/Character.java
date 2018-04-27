@@ -216,6 +216,17 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
     context.images(isLocal()).remove(Character.TABLE, getCharacterId());
   }
 
+  public void copy() {
+    Entry.CharacterProto.Builder proto = toProto().toBuilder();
+    proto.setCreature(proto.getCreature().toBuilder()
+        .setName("Copy of " + proto.getCreature().getName())
+        .setId("")
+        .build());
+
+    Character copy = LocalCharacter.fromProto(context, 0, proto.build());
+    copy.store();
+  }
+
   @Override
   public boolean store() {
     if (super.store()) {
