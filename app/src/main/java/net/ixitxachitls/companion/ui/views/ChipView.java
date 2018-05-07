@@ -48,6 +48,7 @@ public class ChipView extends LinearLayout {
   protected final TextWrapper<TextView> name;
   protected final TextWrapper<TextView> subtitle;
   protected final RoundImageView image;
+  protected final LinearLayout icons;
 
   public ChipView(Context context, String dataId, String name, String subtitle,
                   @ColorRes int chipColor, @ColorRes int backgroundColor) {
@@ -63,6 +64,8 @@ public class ChipView extends LinearLayout {
     container.backgroundColor(backgroundColor);
     this.name = TextWrapper.wrap(view, R.id.name);
     this.name.text(name).backgroundColor(chipColor).noWrap();
+
+    this.icons = view.findViewById(R.id.icons);
 
     this.subtitle = TextWrapper.wrap(view, R.id.subtitle);
     this.subtitle.noWrap().backgroundColor(chipColor).noWrap();

@@ -22,46 +22,68 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/container"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/primaryBack"
-                android:padding="5dp">
+                android:orientation="vertical"
+    >
 
-  <net.ixitxachitls.companion.ui.views.RoundImageView
-      android:id="@+id/image"
-      android:layout_width="120dp"
-      android:layout_height="120dp"
-      app:height_px="500"
-      app:width_px="500"
-      app:radius_percents="6"/>
+  <RelativeLayout
+      android:id="@+id/container"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="2dp"
+      android:layout_marginTop="5dp"
+      android:background="@color/primaryBack"
+      android:padding="5dp">
+
+    <net.ixitxachitls.companion.ui.views.RoundImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:height_px="500"
+        app:radius_percents="6"
+        app:width_px="500"/>
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="... text ..."
+          android:textAlignment="center"
+          android:textStyle="normal|bold"
+          android:theme="@style/SmallText"/>
+
+      <TextView
+          android:id="@+id/subtitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="4dp"
+          android:paddingBottom="2dp"
+          android:text=""
+          android:textAlignment="center"
+          android:theme="@style/TinyText"
+          android:visibility="visible"/>
+    </LinearLayout>
+
+  </RelativeLayout>
 
   <LinearLayout
-      android:layout_width="120dp"
+      android:id="@+id/icons"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_alignBottom="@+id/image"
-      android:layout_marginBottom="5dp"
-      android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="... text ..."
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:theme="@style/SmallText"/>
-
-    <TextView
-        android:id="@+id/subtitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:paddingBottom="2dp"
-        android:text=""
-        android:textAlignment="center"
-        android:theme="@style/TinyText"
-        android:visibility="visible"/>
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:orientation="horizontal">
   </LinearLayout>
 
 </RelativeLayout>
+
+
+

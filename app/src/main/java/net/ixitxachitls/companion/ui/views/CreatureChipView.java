@@ -34,14 +34,21 @@ import net.ixitxachitls.companion.data.enums.BattleStatus;
  */
 public class CreatureChipView extends ChipView {
 
+  protected final HPImageView hp;
+
   public CreatureChipView(Context context, Creature creature) {
     this(context, creature, R.color.monsterDark, R.color.monsterLight);
   }
 
   protected CreatureChipView(Context context, BaseCreature creature, @ColorRes int chipColor,
-                          @ColorRes int higlightColor) {
+                             @ColorRes int higlightColor) {
     super(context, creature.getCreatureId(), creature.getName(), "init " + creature.getInitiative(),
         chipColor, higlightColor);
+
+    hp = new HPImageView(getContext());
+    icons.addView(hp);
+
+    update(creature);
   }
 
   public String getCreatureId() {
@@ -58,5 +65,9 @@ public class CreatureChipView extends ChipView {
         setSubtitle("");
       }
     }
+  }
+
+  public void update(BaseCreature creature) {
+    hp.setHp(creature.getHp(), creature.getMaxHp());
   }
 }

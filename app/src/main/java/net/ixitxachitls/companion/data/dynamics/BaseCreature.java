@@ -58,6 +58,9 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   protected int intelligence;
   protected int wisdom;
   protected int charisma;
+  protected int hp;
+  protected int maxHp;
+  protected int nonlethalDamage;
   protected int initiative = NO_INITIATIVE;
   protected int initiativeRandom = 0;
   protected int battleNumber = 0;
@@ -208,6 +211,30 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return Collections.unmodifiableList(affectedConditions);
   }
 
+  public int getHp() {
+    return hp;
+  }
+
+  public void setHp(int hp) {
+    this.hp = hp;
+  }
+
+  public int getMaxHp() {
+    return maxHp;
+  }
+
+  public void setMaxHp(int maxHp) {
+    this.maxHp = maxHp;
+  }
+
+  public int getNonlethalDamage() {
+    return nonlethalDamage;
+  }
+
+  public void setNonlethalDamage(int nonlethalDamage) {
+    this.nonlethalDamage = nonlethalDamage;
+  }
+
   public Entry.CreatureProto toCreatureProto() {
     Entry.CreatureProto.Builder proto = Entry.CreatureProto.newBuilder()
         .setId(entryId)
@@ -231,7 +258,10 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
             .collect(Collectors.toList()))
         .addAllAffectedCondition(affectedConditions.stream()
             .map(TimedCondition::toProto)
-            .collect(Collectors.toList()));
+            .collect(Collectors.toList()))
+        .setHp(hp)
+        .setHpMax(maxHp)
+        .setNonlethalDamage(nonlethalDamage);
 
     if (mRace.isPresent()) {
       proto.setRace(mRace.get().getName());
@@ -259,6 +289,9 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     affectedConditions = proto.getAffectedConditionList().stream()
         .map(TimedCondition::fromProto)
         .collect(Collectors.toList());
+    hp = proto.getHp();
+    maxHp = proto.getHpMax();
+    nonlethalDamage = proto.getNonlethalDamage();
   }
 
   @VisibleForTesting

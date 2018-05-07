@@ -26,7 +26,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,9 +41,10 @@ import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.ConfirmationDialog;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.AbilityView;
+import net.ixitxachitls.companion.ui.views.HPImageView;
+import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -73,9 +73,14 @@ public class CharacterFragment extends CompanionFragment {
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> delete;
   protected Wrapper<FloatingActionButton> move;
-  protected EditTextWrapper<EditText> xp;
+  protected LabelledEditTextView xp;
   protected TextWrapper<TextView> xpNext;
-  protected EditTextWrapper<EditText> level;
+  protected LabelledEditTextView level;
+  protected HPImageView hpIcon;
+  protected LabelledEditTextView hp;
+  protected LabelledEditTextView hpMax;
+  protected LabelledEditTextView damageNonlethal;
+  protected HPImageView hpImage;
   protected Wrapper<FloatingActionButton> back;
 
   public CharacterFragment() {
@@ -114,11 +119,14 @@ public class CharacterFragment extends CompanionFragment {
     wisdom = view.findViewById(R.id.wisdom);
     charisma = view.findViewById(R.id.charisma);
 
-    xp = EditTextWrapper.wrap(view, R.id.xp)
-        .lineColor(R.color.character);
+    xp = view.findViewById(R.id.xp);
     xpNext = TextWrapper.wrap(view, R.id.xp_next);
-    level = EditTextWrapper.wrap(view, R.id.level)
-        .lineColor(R.color.character);
+    level = view.findViewById(R.id.level);
+
+    hpIcon = view.findViewById(R.id.hpIcon);
+    hp = view.findViewById(R.id.hp);
+    hpMax = view.findViewById(R.id.hp_max);
+    damageNonlethal = view.findViewById(R.id.hp_nonlethal);
 
     update(character);
     return view;
@@ -180,8 +188,17 @@ public class CharacterFragment extends CompanionFragment {
     charisma.setValue(character.get().getCharisma(),
         Ability.modifier(character.get().getCharisma()));
     xp.text(String.valueOf(character.get().getXp()));
-    xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
     level.text(String.valueOf(character.get().getLevel()));
+    hp.text(String.valueOf(character.get().getHp()));
+    hpMax.text(String.valueOf(character.get().getMaxHp()));
+    damageNonlethal.text(String.valueOf(character.get().getNonlethalDamage()));
+
+    redraw();
+  }
+
+  protected void redraw() {
+    xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
+    hpIcon.setHp(character.get().getHp(), character.get().getMaxHp());
   }
 
   private void delete() {

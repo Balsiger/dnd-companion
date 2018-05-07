@@ -33,6 +33,14 @@
   <color name="battleDark">#7f0000</color>
   <color name="battleText">#ffffff</color>
 
+  <!-- colors for character status -->
+  <color name="alive">#f00</color>
+  <color name="stable">#666</color>
+  <color name="dying">#ae841e</color>
+  <color name="dead">#000</color>
+  <color name="nonleathal">#fd0</color>
+  <color name="unconcious">#ff0</color>
+
   <!-- Colors for icon status and changes. -->
   <color name="status">#ffeeaa</color>
   <color name="on">#570</color>

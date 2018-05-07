@@ -34,7 +34,7 @@ android {
     applicationId "net.ixitxachitls.companion"
     minSdkVersion 24
     targetSdkVersion 27
-    versionCode 150
+    versionCode 151
     versionName "Aasimar"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

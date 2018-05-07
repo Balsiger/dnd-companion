@@ -54,25 +54,20 @@ public class AbilityView extends LinearLayout {
 
     View view = LayoutInflater.from(getContext())
         .inflate(R.layout.view_ability, null, false);
-    ((TextView) view.findViewById(R.id.name))
-        .setText(array.getString(R.styleable.AbilityView_attribute_name));
-    value = TextWrapper.wrap(view, R.id.value);
-    modifier = TextWrapper.wrap(view, R.id.modifier);
+    TextWrapper.wrap(view, R.id.name).text(array.getString(R.styleable.AbilityView_attribute_name))
+        .textColor(R.color.characterDark);
+    value = TextWrapper.wrap(view, R.id.value).textColor(R.color.characterText);
+    modifier = TextWrapper.wrap(view, R.id.modifier).textColor(R.color.characterText);
 
     addView(view);
   }
 
   public void setValue(int value, int modifier) {
     this.value.text(String.valueOf(value));
-    this.modifier.text("(" + modifier + ")");
+    this.modifier.text("(" + (modifier < 0 ? "" : "+") + modifier + ")");
   }
 
   public void setAction(Wrapper.Action action) {
-    setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        action.execute();
-      }
-    });
+    setOnClickListener(v -> action.execute());
   }
 }

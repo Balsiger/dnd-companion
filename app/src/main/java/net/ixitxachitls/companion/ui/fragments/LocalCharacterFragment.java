@@ -73,8 +73,11 @@ public class LocalCharacterFragment extends CharacterFragment {
     intelligence.setAction(this::editAbilities);
     wisdom.setAction(this::editAbilities);
     charisma.setAction(this::editAbilities);
-    xp.onChange(this::changeXp);
-    level.onChange(this::changeLevel);
+    xp.onEdit(this::changeXp);
+    level.onEdit(this::changeLevel);
+    hp.onEdit(this::changeHp);
+    hpMax.onEdit(this::changeMaxHp);
+    damageNonlethal.onEdit(this::changeNonlethalDamage);
 
     return view;
   }
@@ -138,7 +141,47 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   private void changeLevel() {
     if (character.isPresent() && !level.getText().isEmpty()) {
-      character.get().asLocal().setLevel(Integer.parseInt(level.getText()));
+      try {
+        character.get().asLocal().setLevel(Integer.parseInt(level.getText()));
+      } catch (NumberFormatException e) {
+        character.get().asLocal().setLevel(1);
+      }
+    }
+
+    redraw();
+  }
+
+  private void changeHp() {
+    if (character.isPresent() && !hp.getText().isEmpty()) {
+      try {
+        character.get().setHp(Integer.parseInt(hp.getText()));
+      } catch (NumberFormatException e) {
+        character.get().asLocal().setHp(1);
+      }
+    }
+
+    redraw();
+  }
+
+  private void changeMaxHp() {
+    if (character.isPresent() && !hpMax.getText().isEmpty()) {
+      try {
+        character.get().setMaxHp(Integer.parseInt(hpMax.getText()));
+      } catch (NumberFormatException e) {
+        character.get().asLocal().setMaxHp(1);
+      }
+    }
+
+    redraw();
+  }
+
+  private void changeNonlethalDamage() {
+    if (character.isPresent() && !damageNonlethal.getText().isEmpty()) {
+      try {
+        character.get().setNonlethalDamage(Integer.parseInt(damageNonlethal.getText()));
+      } catch (NumberFormatException e) {
+        character.get().asLocal().setNonlethalDamage(0);
+      }
     }
   }
 
