@@ -30,11 +30,26 @@ unMock {
 
 android {
   compileSdkVersion 27
+
+  def versionFile = file('version.properties')
+  Properties version = new Properties()
+  if (!versionFile.canRead()) {
+    version['VERSION'] = 0;
+  } else {
+    version.load(new FileInputStream(versionFile))
+  }
+
+  logger.error(gradle.startParameter.taskNames.toString())
+  if (':app:assembleRelease' in gradle.startParameter.taskNames) {
+    version['VERSION'] = (version['VERSION'].toInteger() + 1).toString()
+    version.store(versionFile.newWriter(), null)
+  }
+
   defaultConfig {
     applicationId "net.ixitxachitls.companion"
     minSdkVersion 24
     targetSdkVersion 27
-    versionCode 152
+    versionCode version['VERSION'].toInteger()
     versionName "Aasimar"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
