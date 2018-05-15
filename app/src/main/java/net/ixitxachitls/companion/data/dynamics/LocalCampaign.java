@@ -32,7 +32,7 @@ import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 
 import java.util.Optional;
 
@@ -167,7 +167,7 @@ public class LocalCampaign extends Campaign {
   public static CancelAction EmptyCancelAction = () -> {};
 
   public void publish(Context context, OKAction okAction, CancelAction cancelAction) {
-    ConfirmationDialog.create(context)
+    ConfirmationPrompt.create(context)
         .title(context.getString(R.string.main_campaign_publish_title))
         .message(context.getString(R.string.main_campaign_publish_message))
         .yes(() -> { publish(); okAction.ok(); })
@@ -176,7 +176,7 @@ public class LocalCampaign extends Campaign {
   }
 
   public void unpublish(Context context, OKAction okAction, CancelAction cancelAction) {
-    ConfirmationDialog.create(context)
+    ConfirmationPrompt.create(context)
         .title(context.getString(R.string.main_campaign_unpublish_title))
         .message(context.getString(R.string.main_campaign_unpublish_message))
         .yes(() -> {

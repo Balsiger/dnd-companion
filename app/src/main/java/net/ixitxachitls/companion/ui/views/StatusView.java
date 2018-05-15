@@ -38,7 +38,7 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
@@ -102,7 +102,7 @@ public class StatusView extends LinearLayout {
     StringWriter writer = new StringWriter();
     PrintWriter printWriter = new PrintWriter(writer);
     e.printStackTrace(printWriter);
-    new ConfirmationDialog(getContext()).title(message).message(writer.toString()).noNo().show();
+    new ConfirmationPrompt(getContext()).title(message).message(writer.toString()).noNo().show();
     printWriter.close();
   }
 

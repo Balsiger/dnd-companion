@@ -40,12 +40,15 @@ import net.ixitxachitls.companion.ui.MessageDialog;
 class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   protected final V view;
 
+  // State values that need to be set on attach.
+  private int gravity;
+
   public enum Margin { LEFT, RIGHT, TOP, BOTTOM };
   public enum Padding { LEFT, RIGHT, TOP, BOTTOM, ALL, LEFT_RIGHT, TOP_BOTTOM };
 
   @SuppressWarnings("unchecked")
   protected AbstractWrapper(View parent, @IdRes int id) {
-    this.view = (V) parent.findViewById(id);
+    this(parent.findViewById(id));
   }
 
   protected AbstractWrapper(V view) {
@@ -163,7 +166,6 @@ class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
 
     return (W) this;
   }
-
 
   public W onClick(Wrapper.Action action) {
     view.setOnClickListener(new View.OnClickListener() {

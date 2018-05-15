@@ -1,21 +1,21 @@
 /*
- * Copyright (c) 2017-{2017} Peter Balsiger
+ * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Roleplay Companion.
+ * This file is part of the Tabletop Companion.
  *
- * The Roleplay Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Roleplay Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with the Roleplay Companion; if not, write to the Free Software
+ * along with the Player Companion; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -26,63 +26,53 @@ import android.content.Context;
 import android.content.DialogInterface;
 
 /**
- * Simple dialog to show a confirmation and waiting for a users yes or not.
+ * Base prompt for all other prompts.
  */
-public class ConfirmationDialog {
+public class Prompt<T extends Prompt> {
 
-  private final AlertDialog.Builder dialog;
+  protected final AlertDialog.Builder dialog;
 
-  @Deprecated
-  public interface Callback {
-    void yes();
-    void no();
-  }
-
-  public ConfirmationDialog(Context context) {
+  public Prompt(Context context) {
     this.dialog = new AlertDialog.Builder(context);
-    this.dialog
-        .setIconAttribute(android.R.attr.alertDialogIcon)
-        .setPositiveButton(android.R.string.yes, null)
-        .setNegativeButton(android.R.string.no, null);
   }
 
-  public ConfirmationDialog title(String title) {
+  public T title(String title) {
     dialog.setTitle(title);
-    return this;
+    return (T) this;
   }
 
-  public ConfirmationDialog message(String message) {
+  public T message(String message) {
     dialog.setMessage(message);
-    return this;
+    return (T) this;
   }
 
-  public ConfirmationDialog yes(Action action) {
+  public T yes(Action action) {
     dialog.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
       @Override
       public void onClick(DialogInterface dialog, int whichButton) {
         action.execute();
       }
     });
-    return this;
+    return (T) this;
   }
 
-  public ConfirmationDialog no(Action action) {
+  public T no(Action action) {
     dialog.setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
       @Override
       public void onClick(DialogInterface dialog, int whichButton) {
         action.execute();
       }
     });
-    return this;
+    return (T) this;
   }
 
-  public ConfirmationDialog noNo() {
+  public T noNo() {
     dialog.setNegativeButton(null, null);
-    return this;
+    return (T) this;
   }
 
-  public void show() {
-    this.dialog.show();
+  public AlertDialog show() {
+    return this.dialog.show();
   }
 
 
@@ -103,7 +93,7 @@ public class ConfirmationDialog {
     public void no();
   }
 
-  public static ConfirmationDialog create(Context context) {
-    return new ConfirmationDialog(context);
+  public static ConfirmationPrompt create(Context context) {
+    return new ConfirmationPrompt(context);
   }
 }

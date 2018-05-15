@@ -38,6 +38,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
+import net.ixitxachitls.companion.ui.dialogs.NumberPrompt;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -76,6 +77,8 @@ public class LocalCharacterFragment extends CharacterFragment {
     xp.onEdit(this::changeXp);
     level.onEdit(this::changeLevel);
     hp.onEdit(this::changeHp);
+    hpAdd.onClick(this::addHp);
+    hpSubtract.onClick(this::subtractHp);
     hpMax.onEdit(this::changeMaxHp);
     damageNonlethal.onEdit(this::changeNonlethalDamage);
 
@@ -207,5 +210,31 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   public boolean canEdit() {
     return campaign.isPresent() && character.isPresent();
+  }
+
+  private void addHp() {
+    NumberPrompt prompt = new NumberPrompt(getContext())
+        .title("Add hit points")
+        .message("The number of hit points to add to your current value.");
+    prompt.yes(() -> {
+      if (character.isPresent()) {
+        character.get().addHp(prompt.getNumber());
+        redraw();
+      }
+    });
+    prompt.show();
+  }
+
+  private void subtractHp() {
+    NumberPrompt prompt = new NumberPrompt(getContext())
+        .title("Subtract hit points")
+        .message("The number of hit points to subtract to your current value.");
+    prompt.yes(() -> {
+      if (character.isPresent()) {
+        character.get().addHp(-prompt.getNumber());
+        redraw();
+      }
+    });
+    prompt.show();
   }
 }

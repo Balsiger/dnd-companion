@@ -29,7 +29,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 import java.util.Optional;
@@ -67,7 +67,7 @@ public class ClientMessageProcessor extends MessageProcessor {
         && !campaign.getBattle().isEnded()
         && CompanionFragments.get().showsCampaign(campaign.getCampaignId())) {
       // Show a message about the newly started battle.
-      ConfirmationDialog.create(application.getCurrentActivity())
+      ConfirmationPrompt.create(application.getCurrentActivity())
           .title("Battle started")
           .message("A battle has started in " + campaign.getName()
               + ". Do you want to go to the battle screen?")
@@ -102,7 +102,7 @@ public class ClientMessageProcessor extends MessageProcessor {
     Optional<Character> character =
         context.characters().getCharacter(award.getCharacterId()).getValue();
     if (character.isPresent()) {
-      new ConfirmationDialog(application.getCurrentActivity())
+      new ConfirmationPrompt(application.getCurrentActivity())
           .title("XP Award")
           .message("Congratulation!\n"
               + "Your DM has granted " + character.get().getName() + " " + award.getXp() + " XP!")

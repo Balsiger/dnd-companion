@@ -40,7 +40,7 @@ import android.widget.TextView;
 /**
  * Abstrat wrapper for text views.
  */
-class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W>>
+public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapper<V, W>>
     extends AbstractWrapper<V, W> {
 
   public enum Align { LEFT, RIGHT, CENTER }

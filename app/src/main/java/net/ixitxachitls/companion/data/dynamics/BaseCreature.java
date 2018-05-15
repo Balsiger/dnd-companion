@@ -219,6 +219,11 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     this.hp = hp;
   }
 
+  public void addHp(int hp) {
+    // TODO(merlin): Do we want a consistency check here?
+    this.hp += hp;
+  }
+
   public int getMaxHp() {
     return maxHp;
   }

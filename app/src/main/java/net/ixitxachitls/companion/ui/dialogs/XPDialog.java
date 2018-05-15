@@ -79,8 +79,8 @@ public class XPDialog extends Dialog {
   }
 
   @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+  public void onCreate(Bundle state) {
+    super.onCreate(state);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     campaign = campaigns().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();

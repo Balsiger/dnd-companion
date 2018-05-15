@@ -282,6 +282,39 @@
         app:lineColor="@color/characterDark"
         app:textColor="@color/characterText"/>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+      <TextView
+          android:id="@+id/hp_add"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_gravity="center_horizontal"
+          android:paddingEnd="10dp"
+          android:paddingStart="10dp"
+          android:text="+"
+          android:textSize="24sp"
+          android:textStyle="bold"/>
+
+      <TextView
+          android:id="@+id/hp_subtract"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_gravity="center_horizontal"
+          android:paddingEnd="10dp"
+          android:paddingStart="10dp"
+          android:text="-"
+          android:textSize="24sp"
+          android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
     <net.ixitxachitls.companion.ui.views.LabelledEditTextView
         android:id="@+id/hp_max"
         android:layout_width="match_parent"
@@ -309,6 +342,5 @@
         app:textColor="@color/characterText"/>
 
   </LinearLayout>
-
 
 </RelativeLayout>

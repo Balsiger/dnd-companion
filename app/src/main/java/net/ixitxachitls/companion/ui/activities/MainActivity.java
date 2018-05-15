@@ -40,7 +40,7 @@ import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.views.StatusView;
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
 
       case R.id.action_reset:
-        ConfirmationDialog.create(this)
+        ConfirmationPrompt.create(this)
             .title("Reset All Data")
             .message("Do you really want to delete all data? This step cannot be undone!")
             .yes(() -> DataBaseContentProvider.reset(getApplicationContext(), getContentResolver()))
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
 
       case R.id.action_clear_messages:
-        ConfirmationDialog.create(this)
+        ConfirmationPrompt.create(this)
             .title("Clear Messages")
             .message("Do you really want to clear all pending messages? This step cannot be undone!")
 
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
   @Override
   public void onBackPressed() {
     if (!CompanionFragments.get().goBack()) {
-      ConfirmationDialog.create(this).title("Exit?")
+      ConfirmationPrompt.create(this).title("Exit?")
           .message("Do you really want to exit the Roleplay Companion?")
           .no(this::noExit)
           .yes(this::exit)

@@ -36,7 +36,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -120,7 +120,7 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   protected void deleteCampaign() {
-    ConfirmationDialog.create(getContext())
+    ConfirmationPrompt.create(getContext())
         .title(getResources().getString(R.string.campaign_delete_title))
         .message(getResources().getString(R.string.campaign_delete_message_remote))
         .yes(this::deleteCampaignOk)

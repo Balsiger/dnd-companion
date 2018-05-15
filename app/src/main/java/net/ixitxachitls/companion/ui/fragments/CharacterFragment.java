@@ -38,7 +38,7 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
-import net.ixitxachitls.companion.ui.ConfirmationDialog;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.HPImageView;
@@ -78,6 +78,8 @@ public class CharacterFragment extends CompanionFragment {
   protected LabelledEditTextView level;
   protected HPImageView hpIcon;
   protected LabelledEditTextView hp;
+  protected TextWrapper<TextView> hpAdd;
+  protected TextWrapper<TextView> hpSubtract;
   protected LabelledEditTextView hpMax;
   protected LabelledEditTextView damageNonlethal;
   protected HPImageView hpImage;
@@ -125,6 +127,8 @@ public class CharacterFragment extends CompanionFragment {
 
     hpIcon = view.findViewById(R.id.hpIcon);
     hp = view.findViewById(R.id.hp);
+    hpAdd = TextWrapper.wrap(view, R.id.hp_add);
+    hpSubtract = TextWrapper.wrap(view, R.id.hp_subtract);
     hpMax = view.findViewById(R.id.hp_max);
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
 
@@ -199,10 +203,11 @@ public class CharacterFragment extends CompanionFragment {
   protected void redraw() {
     xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
     hpIcon.setHp(character.get().getHp(), character.get().getMaxHp());
+    hp.text(String.valueOf(character.get().getHp()));
   }
 
   private void delete() {
-    ConfirmationDialog.create(getContext())
+    ConfirmationPrompt.create(getContext())
         .title(getResources().getString(R.string.character_delete_title))
         .message(getResources().getString(R.string.character_delete_message))
         .yes(this::deleteCharacterOk)
