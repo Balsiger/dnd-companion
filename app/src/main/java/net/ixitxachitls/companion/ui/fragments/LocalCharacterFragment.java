@@ -186,6 +186,8 @@ public class LocalCharacterFragment extends CharacterFragment {
         character.get().asLocal().setNonlethalDamage(0);
       }
     }
+
+    redraw();
   }
 
   @Override

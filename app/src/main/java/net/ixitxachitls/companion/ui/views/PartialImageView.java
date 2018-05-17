@@ -49,8 +49,6 @@ public class PartialImageView extends android.support.v7.widget.AppCompatImageVi
   public void setImageDrawable(Drawable draw) {
     clipped = new ClipDrawable(draw, Gravity.BOTTOM, ClipDrawable.VERTICAL);
     super.setImageDrawable(clipped);
-    // Must the set after setting the drawable or it will simply reset clipping to 0.
-    clipped.setLevel(40_00);
   }
 
   public void setPartial(@IntRange(from=0,to=10000) int visiblePercentsE2) {

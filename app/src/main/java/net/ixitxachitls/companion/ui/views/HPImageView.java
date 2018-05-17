@@ -52,8 +52,6 @@ public class HPImageView extends PartialImageView {
   public HPImageView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    this.hp = hp;
-    this.maxHp = maxHp;
     this.alive = context.getDrawable(R.drawable.ic_favorite_black_24dp).mutate();
     this.alive.setTint(context.getColor(R.color.alive));
     this.aliveBackground = context.getDrawable(R.drawable.ic_favorite_black_24dp).mutate();

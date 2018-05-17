@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.data.enums.BattleStatus;
 public class CreatureChipView extends ChipView {
 
   protected final HPImageView hp;
+  protected final NonlethalImageView nonlethal;
 
   public CreatureChipView(Context context, Creature creature) {
     this(context, creature, R.color.monsterDark, R.color.monsterLight);
@@ -47,6 +48,8 @@ public class CreatureChipView extends ChipView {
 
     hp = new HPImageView(getContext());
     icons.addView(hp);
+    nonlethal = new NonlethalImageView(getContext());
+    icons.addView(nonlethal);
 
     update(creature);
   }
@@ -69,5 +72,6 @@ public class CreatureChipView extends ChipView {
 
   public void update(BaseCreature creature) {
     hp.setHp(creature.getHp(), creature.getMaxHp());
+    nonlethal.setNonlethalDamage(creature.getNonlethalDamage(), creature.getHp());
   }
 }

@@ -264,8 +264,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:background="@drawable/heart_pulse"
-        android:elevation="0dp"
-        android:outlineProvider="bounds"
         app:srcCompat="@drawable/ic_favorite_black_24dp"/>
 
     <net.ixitxachitls.companion.ui.views.LabelledEditTextView
@@ -326,7 +324,17 @@
         app:labelColor="@color/characterDark"
         app:labelText="Max HP"
         app:lineColor="@color/characterDark"
-        app:textColor="@color/characterText"/>
+        app:textColor="@color/characterText">
+
+    </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+
+    <net.ixitxachitls.companion.ui.views.NonlethalImageView
+        android:id="@+id/nonlethalIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/ic_thumb_down_black_24dp"
+        app:srcCompat="@drawable/ic_thumb_down_black_24dp"/>
 
     <net.ixitxachitls.companion.ui.views.LabelledEditTextView
         android:id="@+id/hp_nonlethal"

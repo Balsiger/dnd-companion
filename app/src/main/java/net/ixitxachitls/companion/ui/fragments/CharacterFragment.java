@@ -43,6 +43,7 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.HPImageView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
+import net.ixitxachitls.companion.ui.views.NonlethalImageView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -81,8 +82,8 @@ public class CharacterFragment extends CompanionFragment {
   protected TextWrapper<TextView> hpAdd;
   protected TextWrapper<TextView> hpSubtract;
   protected LabelledEditTextView hpMax;
+  protected NonlethalImageView nonleathalIcon;
   protected LabelledEditTextView damageNonlethal;
-  protected HPImageView hpImage;
   protected Wrapper<FloatingActionButton> back;
 
   public CharacterFragment() {
@@ -130,6 +131,7 @@ public class CharacterFragment extends CompanionFragment {
     hpAdd = TextWrapper.wrap(view, R.id.hp_add);
     hpSubtract = TextWrapper.wrap(view, R.id.hp_subtract);
     hpMax = view.findViewById(R.id.hp_max);
+    nonleathalIcon = view.findViewById(R.id.nonlethalIcon);
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
 
     update(character);
@@ -203,6 +205,8 @@ public class CharacterFragment extends CompanionFragment {
   protected void redraw() {
     xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
     hpIcon.setHp(character.get().getHp(), character.get().getMaxHp());
+    nonleathalIcon.setNonlethalDamage(character.get().getNonlethalDamage(),
+        character.get().getHp());
     hp.text(String.valueOf(character.get().getHp()));
   }
 
