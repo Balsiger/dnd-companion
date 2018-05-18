@@ -58,8 +58,7 @@ message CreatureProto {
 
   repeated TargetedTimedConditionProto initiated_condition = 8;
   repeated TimedConditionProto affected_condition = 9;
-  int32 hp = 10;
-  int32 hp_max = 11;
+  int32 hp = 10;  int32 hp_max = 11;
   int32 nonlethal_damage = 12;
 }
 

@@ -27,6 +27,9 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.IntRange;
 import android.util.AttributeSet;
 import android.view.Gravity;
+import android.view.View;
+
+import net.ixitxachitls.companion.ui.MessageDialog;
 
 import javax.annotation.Nullable;
 
@@ -38,11 +41,13 @@ public class PartialImageView extends android.support.v7.widget.AppCompatImageVi
   private ClipDrawable clipped;
 
   public PartialImageView(Context context) {
-    super(context);
+    this(context, null);
   }
 
   public PartialImageView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
+
+    setOnLongClickListener(this::longClicked);
   }
 
   @Override
@@ -53,5 +58,14 @@ public class PartialImageView extends android.support.v7.widget.AppCompatImageVi
 
   public void setPartial(@IntRange(from=0,to=10000) int visiblePercentsE2) {
     clipped.setLevel(visiblePercentsE2);
+  }
+
+  protected boolean longClicked(View view) {
+    // Add relevant things in derivations.
+    return false;
+  }
+
+  protected void showDescription(String name, String description) {
+    new MessageDialog(getContext()).title(name).message(description).show();
   }
 }

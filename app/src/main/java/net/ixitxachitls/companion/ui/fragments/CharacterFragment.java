@@ -123,16 +123,21 @@ public class CharacterFragment extends CompanionFragment {
     charisma = view.findViewById(R.id.charisma);
 
     xp = view.findViewById(R.id.xp);
+    xp.enabled(false);
     xpNext = TextWrapper.wrap(view, R.id.xp_next);
     level = view.findViewById(R.id.level);
+    level.enabled(false);
 
     hpIcon = view.findViewById(R.id.hpIcon);
     hp = view.findViewById(R.id.hp);
+    hp.enabled(false);
     hpAdd = TextWrapper.wrap(view, R.id.hp_add);
     hpSubtract = TextWrapper.wrap(view, R.id.hp_subtract);
     hpMax = view.findViewById(R.id.hp_max);
+    hpMax.enabled(false);
     nonleathalIcon = view.findViewById(R.id.nonlethalIcon);
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
+    damageNonlethal.enabled(false);
 
     update(character);
     return view;
@@ -171,7 +176,8 @@ public class CharacterFragment extends CompanionFragment {
 
     campaignTitle.text(campaign.get().getName());
     title.setTitle(character.get().getName());
-    title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace());
+    title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace()
+        + ", " + character.get().getPlayerName());
     Optional<Image> characterImage = CompanionApplication.get(getContext())
         .images(character.get().isLocal()).getImage(
             Character.TABLE, character.get().getCharacterId()).getValue();

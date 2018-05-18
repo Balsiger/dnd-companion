@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.view.View;
 
 import net.ixitxachitls.companion.R;
 
@@ -44,6 +45,8 @@ public class HPImageView extends PartialImageView {
   private final Drawable dying;
   private final Drawable dyingBackground;
   private final Drawable dead;
+
+  private enum State { alive, dying, stable, dead }
 
   public HPImageView(Context context) {
     this(context, null);
@@ -77,27 +80,70 @@ public class HPImageView extends PartialImageView {
     update();
   }
 
-  private void update() {
+  private State state() {
     if (hp == 0) {
-      setImageDrawable(stable);
-      setBackground(stableBackground);
-      setPartial(100_00);
-    } else if (hp <= -10)  {
-      setImageDrawable(dead);
-      setBackground(null);
-      setPartial(100_00);
+      return State.stable;
+    } else if (hp <= -10) {
+      return State.dead;
     } else if (hp < 0) {
-      setImageDrawable(dying);
-      setBackground(dyingBackground);
-      setPartial((10 + hp) * 10_00);
+      return State.dying;
     } else {
-      setImageDrawable(alive);
-      setBackground(aliveBackground);
-      if (maxHp > 0) {
-        setPartial(hp * 100_00 / maxHp);
-      } else {
-        setPartial(100_00);
-      }
+      return State.alive;
     }
+  }
+
+  private void update() {
+    switch(state()) {
+      case alive:
+        setImageDrawable(alive);
+        setBackground(aliveBackground);
+        if (maxHp > 0) {
+          setPartial(hp * 100_00 / maxHp);
+        } else {
+          setPartial(100_00);
+        }
+        break;
+
+      case dying:
+        setImageDrawable(dying);
+        setBackground(dyingBackground);
+        setPartial((10 + hp) * 10_00);
+        break;
+
+      case stable:
+        setImageDrawable(stable);
+        setBackground(stableBackground);
+        setPartial(100_00);
+        break;
+
+      case dead:
+        setImageDrawable(dead);
+        setBackground(null);
+        setPartial(100_00);
+        break;
+    }
+  }
+
+  @Override
+  protected boolean longClicked(View view) {
+    switch(state()) {
+      case alive:
+        showDescription("Alive, all is well", "No worries, you are still alive... for now...");
+        break;
+
+      case dying:
+        showDescription("Dying", "You are below 0 hp and dying. Better get some healing.");
+        break;
+
+      case stable:
+        showDescription("Stable", "You are dying, but stable. You currently don't get worse.");
+        break;
+
+      case dead:
+        showDescription("Dead", "You are dead. Time to roll up a new character.");
+        break;
+    }
+
+    return true;
   }
 }

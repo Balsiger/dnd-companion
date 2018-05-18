@@ -74,13 +74,13 @@ public class LocalCharacterFragment extends CharacterFragment {
     intelligence.setAction(this::editAbilities);
     wisdom.setAction(this::editAbilities);
     charisma.setAction(this::editAbilities);
-    xp.onEdit(this::changeXp);
-    level.onEdit(this::changeLevel);
-    hp.onEdit(this::changeHp);
+    xp.onEdit(this::changeXp).enabled(true);
+    level.onEdit(this::changeLevel).enabled(true);
+    hp.onEdit(this::changeHp).enabled(true);
     hpAdd.onClick(this::addHp);
     hpSubtract.onClick(this::subtractHp);
-    hpMax.onEdit(this::changeMaxHp);
-    damageNonlethal.onEdit(this::changeNonlethalDamage);
+    hpMax.onEdit(this::changeMaxHp).enabled(true);
+    damageNonlethal.onEdit(this::changeNonlethalDamage).enabled(true);
 
     return view;
   }
