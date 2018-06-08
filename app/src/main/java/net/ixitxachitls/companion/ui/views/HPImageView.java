@@ -27,6 +27,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.rules.Conditions;
 
 import javax.annotation.Nullable;
 
@@ -44,7 +46,6 @@ public class HPImageView extends PartialImageView {
   private final Drawable stableBackground;
   private final Drawable dying;
   private final Drawable dyingBackground;
-  private final Drawable dead;
 
   private enum State { alive, dying, stable, dead }
 
@@ -55,20 +56,18 @@ public class HPImageView extends PartialImageView {
   public HPImageView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    this.alive = context.getDrawable(R.drawable.ic_favorite_black_24dp).mutate();
+    this.alive = context.getDrawable(R.drawable.baseline_favorite_black_36).mutate();
     this.alive.setTint(context.getColor(R.color.alive));
-    this.aliveBackground = context.getDrawable(R.drawable.ic_favorite_black_24dp).mutate();
+    this.aliveBackground = context.getDrawable(R.drawable.baseline_favorite_black_36).mutate();
     this.aliveBackground.setTint(context.getColor(R.color.dead));
-    this.stable = context.getDrawable(R.drawable.heart_pulse).mutate();
+    this.stable = context.getDrawable(R.drawable.ic_heart_pulse_black_36dp).mutate();
     this.stable.setTint(context.getColor(R.color.stable));
-    this.stableBackground = context.getDrawable(R.drawable.heart_pulse).mutate();
+    this.stableBackground = context.getDrawable(R.drawable.ic_heart_pulse_black_36dp).mutate();
     this.stableBackground.setTint(context.getColor(R.color.dead));
-    this.dying = context.getDrawable(R.drawable.heart_pulse).mutate();
+    this.dying = context.getDrawable(R.drawable.ic_heart_pulse_black_36dp).mutate();
     this.dying.setTint(context.getColor(R.color.dying));
-    this.dyingBackground = context.getDrawable(R.drawable.heart_pulse).mutate();
+    this.dyingBackground = context.getDrawable(R.drawable.ic_heart_pulse_black_36dp).mutate();
     this.dyingBackground.setTint(context.getColor(R.color.dead));
-    this.dead = context.getDrawable(R.drawable.skull).mutate();
-    this.dead.setTint(context.getColor(R.color.dead));
 
     update();
   }
@@ -95,6 +94,7 @@ public class HPImageView extends PartialImageView {
   private void update() {
     switch(state()) {
       case alive:
+        setVisibility(VISIBLE);
         setImageDrawable(alive);
         setBackground(aliveBackground);
         if (maxHp > 0) {
@@ -105,21 +105,21 @@ public class HPImageView extends PartialImageView {
         break;
 
       case dying:
+        setVisibility(VISIBLE);
         setImageDrawable(dying);
         setBackground(dyingBackground);
         setPartial((10 + hp) * 10_00);
         break;
 
       case stable:
+        setVisibility(VISIBLE);
         setImageDrawable(stable);
         setBackground(stableBackground);
         setPartial(100_00);
         break;
 
       case dead:
-        setImageDrawable(dead);
-        setBackground(null);
-        setPartial(100_00);
+        setVisibility(GONE);
         break;
     }
   }
@@ -132,7 +132,7 @@ public class HPImageView extends PartialImageView {
         break;
 
       case dying:
-        showDescription("Dying", "You are below 0 hp and dying. Better get some healing.");
+        showDescription(Conditions.DYING);
         break;
 
       case stable:
@@ -140,10 +140,15 @@ public class HPImageView extends PartialImageView {
         break;
 
       case dead:
-        showDescription("Dead", "You are dead. Time to roll up a new character.");
+        showDescription(Conditions.DEAD);
         break;
     }
 
     return true;
+  }
+
+  private void showDescription(Condition condition) {
+    showDescription(condition.getName(),
+        condition.getSummary() + "\n\n" + condition.getDescription());
   }
 }

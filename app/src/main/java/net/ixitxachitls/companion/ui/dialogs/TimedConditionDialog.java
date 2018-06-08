@@ -243,8 +243,11 @@ public class TimedConditionDialog extends Dialog {
       int rounds = Integer.parseInt(this.rounds.getText());
       if (rounds > 0) {
         TimedCondition timed = new TimedCondition(Condition.newBuilder(condition.getText())
-            .description(description.getText()).summary(summary.getText())
-            .duration(Duration.rounds(rounds)).predefined(predefined).build(),
+            .description(description.getText())
+            .summary(summary.getText())
+            .duration(Duration.rounds(rounds))
+            .predefined(predefined)
+            .build(),
             id, currentRound + rounds);
         if (creature.isPresent() && !condition.getText().isEmpty()) {
           creature.get().addInitiatedCondition(new TargetedTimedCondition(timed, ids));

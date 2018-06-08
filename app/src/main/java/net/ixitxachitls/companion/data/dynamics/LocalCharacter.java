@@ -60,7 +60,7 @@ public class LocalCharacter extends Character {
   }
 
   public void setRace(String name) {
-    mRace = Entries.get().getMonsters().get(name);
+    race = Entries.get().getMonsters().get(name);
   }
 
   public void setGender(Gender gender) {

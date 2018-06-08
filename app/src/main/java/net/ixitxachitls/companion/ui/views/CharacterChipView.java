@@ -29,6 +29,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.util.Misc;
 
@@ -41,7 +42,7 @@ public class CharacterChipView extends CreatureChipView {
 
   private Character character;
 
-  public CharacterChipView(Context context, Character character) {
+  public CharacterChipView(Context context, Character character, Battle battle) {
     super(context, character, character.isLocal() ? R.color.character : R.color.characterDark,
         R.color.characterLight);
 
@@ -64,6 +65,8 @@ public class CharacterChipView extends CreatureChipView {
     } else {
       setSubtitle(String.valueOf(character.getInitiative()));
     }
+
+    super.update(character);
   }
 
   public void update(Image characterImage) {

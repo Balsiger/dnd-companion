@@ -131,6 +131,7 @@ dependencies {
   implementation 'com.google.inject:guice:4.1.0'
   implementation 'com.android.support:multidex:1.0.3'
   implementation 'com.google.android.gms:play-services-drive:15.0.0'
+  implementation 'com.google.android:flexbox:1.0.0'
 
   testImplementation 'junit:junit:4.12'
   testImplementation 'org.mockito:mockito-core:2.7.6'

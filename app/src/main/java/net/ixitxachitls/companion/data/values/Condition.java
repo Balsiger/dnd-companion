@@ -21,7 +21,11 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
+
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.rules.Conditions;
 
 /**
  * A condition a character can have.
@@ -34,15 +38,18 @@ public class Condition {
   private final Duration duration;
   private final boolean predefined;
   private final boolean endsBeforeTurn;
+  @DrawableRes private final int icon;
 
   public Condition(String name, String description, String summary, Duration duration,
-                   boolean predefined, boolean endsBeforeTurn) {
+                   boolean predefined, boolean endsBeforeTurn, @DrawableRes int icon,
+                   @ColorRes int iconColor) {
     this.name = name;
     this.description = description;
     this.summary = summary;
     this.duration = duration;
     this.predefined = predefined;
     this.endsBeforeTurn = endsBeforeTurn;
+    this.icon = icon;
   }
 
   public String getName() {
@@ -69,9 +76,22 @@ public class Condition {
     return endsBeforeTurn;
   }
 
+  public boolean showsIcon() {
+    return icon != 0;
+  }
+
+  @DrawableRes public int getIcon() {
+    return icon;
+  }
+
   public static Condition fromProto(Value.ConditionProto proto) {
-    return new Condition(proto.getName(), proto.getDescription(), proto.getSummary(),
-        Duration.fromProto(proto.getDuration()), false, proto.getEndsBeforeTurn());
+    return Condition.newBuilder(proto.getName())
+        .description(proto.getDescription())
+        .summary(proto.getSummary())
+        .duration(Duration.fromProto(proto.getDuration()))
+        .predefined(false)
+        .endsBeforeTurn(proto.getEndsBeforeTurn())
+        .build();
   }
 
   public Value.ConditionProto toProto() {
@@ -100,9 +120,21 @@ public class Condition {
     private Duration duration = new Duration();
     private boolean predefined;
     private boolean endsBeforeTurn;
+    @DrawableRes private int icon = 0;
+    @ColorRes private int iconColor = 0;
 
     public Builder(String name) {
       this.name = name;
+
+      Condition existing = Conditions.get(name);
+      if (existing != null) {
+        this.description = existing.description;
+        this.summary = existing.summary;
+        this.duration = existing.duration;
+        this.predefined = existing.predefined;
+        this.endsBeforeTurn = existing.endsBeforeTurn;
+        this.icon = existing.icon;
+      }
     }
 
     public Builder description(String description) {
@@ -135,8 +167,19 @@ public class Condition {
       return this;
     }
 
+    public Builder endsBeforeTurn(boolean value) {
+      this.endsBeforeTurn = value;
+      return this;
+    }
+
+    public Builder icon(@DrawableRes int icon) {
+      this.icon = icon;
+      return this;
+    }
+
     public Condition build() {
-      return new Condition(name, description, summary, duration, predefined, endsBeforeTurn);
+      return new Condition(name, description, summary, duration, predefined, endsBeforeTurn,
+          icon, iconColor);
     }
   }
 }

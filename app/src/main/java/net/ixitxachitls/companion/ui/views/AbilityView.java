@@ -64,7 +64,7 @@ public class AbilityView extends LinearLayout {
 
   public void setValue(int value, int modifier) {
     this.value.text(String.valueOf(value));
-    this.modifier.text("(" + (modifier < 0 ? "" : "+") + modifier + ")");
+    this.modifier.text((modifier < 0 ? "" : "+") + modifier);
   }
 
   public void setAction(Wrapper.Action action) {

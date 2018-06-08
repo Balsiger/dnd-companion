@@ -31,9 +31,12 @@ import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.Monster;
 import net.ixitxachitls.companion.data.enums.Gender;
+import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Entry;
+import net.ixitxachitls.companion.rules.Conditions;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -50,7 +53,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   private static final int NO_INITIATIVE = 200;
 
   protected String campaignId = "";
-  protected Optional<Monster> mRace = Optional.empty();
+  protected Optional<Monster> race = Optional.empty();
   protected Gender gender = Gender.UNKNOWN;
   protected int strength;
   protected int constitution;
@@ -79,6 +82,10 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
   public Optional<Campaign> getCampaign() {
     return context.campaigns().getCampaign(campaignId).getValue();
+  }
+
+  public Optional<Battle> getBattle() {
+    return getCampaign().map(Campaign::getBattle);
   }
 
   public String getCreatureId() {
@@ -150,6 +157,12 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     }
   }
 
+  protected void maybeAddAffectedCondition(TimedCondition condition) {
+    if (!hasAffectedCondition(condition.getName())) {
+      addAffectedCondition(condition);
+    }
+  }
+
   public void removeInitiatedCondition(String name) {
     for (Iterator<TargetedTimedCondition> i = initiatedConditions.iterator(); i.hasNext(); ) {
       TargetedTimedCondition condition = i.next();
@@ -211,17 +224,52 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return Collections.unmodifiableList(affectedConditions);
   }
 
+  public List<Condition> getActiveConditions(Battle battle) {
+    return affectedConditions.stream()
+        .filter(c -> c.active(battle))
+        .map(TimedCondition::getCondition)
+        .collect(Collectors.toList());
+  }
+
   public int getHp() {
     return hp;
   }
 
   public void setHp(int hp) {
-    this.hp = hp;
+    if (isLocal()) {
+      this.hp = hp;
+      if (this.hp > maxHp) {
+        this.hp = maxHp;
+      }
+
+      if (hp <= -10) {
+        maybeAddAffectedCondition(new TimedCondition(Conditions.DEAD, getCreatureId()));
+        removeAffectedCondition(Conditions.DISABLED.getName(), getCreatureId());
+        removeAffectedCondition(Conditions.DYING.getName(), getCreatureId());
+        removeAffectedCondition(Conditions.UNCONSCIOUS.getName(), getCreatureId());
+      } else if (hp < 0) {
+        maybeAddAffectedCondition(new TimedCondition(Conditions.DYING, getCreatureId()));
+        maybeAddAffectedCondition(new TimedCondition(Conditions.UNCONSCIOUS, getCreatureId()));
+        removeAffectedCondition(Conditions.DISABLED.getName(), getCreatureId());
+        removeAffectedCondition(Conditions.DEAD.getName(), getCreatureId());
+      } else if (hp == 0) {
+        removeAffectedCondition(Conditions.DEAD.getName(), getCreatureId());
+        removeAffectedCondition(Conditions.DYING.getName(), getCreatureId());
+        removeAffectedCondition(Conditions.UNCONSCIOUS.getName(), getCreatureId());
+        maybeAddAffectedCondition(new TimedCondition(Conditions.DISABLED, getCreatureId()));
+      } else {
+        removeAffectedCondition(Conditions.DEAD.getName(), getCreatureId());
+        removeAffectedCondition(Conditions.DISABLED.getName(), getCreatureId());
+        removeAffectedCondition(Conditions.DYING.getName(), getCreatureId());
+        removeAffectedCondition(Conditions.UNCONSCIOUS.getName(), getCreatureId());
+      }
+
+      store();
+    }
   }
 
   public void addHp(int hp) {
-    // TODO(merlin): Do we want a consistency check here?
-    this.hp += hp;
+    setHp(this.hp + hp);
   }
 
   public int getMaxHp() {
@@ -237,7 +285,28 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   }
 
   public void setNonlethalDamage(int nonlethalDamage) {
-    this.nonlethalDamage = nonlethalDamage;
+    if (nonlethalDamage >= 0) {
+      this.nonlethalDamage = nonlethalDamage;
+    } else {
+      this.nonlethalDamage = 0;
+    }
+
+    if (this.nonlethalDamage < hp) {
+      removeAffectedCondition(Conditions.STAGGERED.getName(), getCreatureId());
+      removeAffectedCondition(Conditions.UNCONSCIOUS.getName(), getCreatureId());
+    } else if (this.nonlethalDamage == hp && hp > 0) {
+      maybeAddAffectedCondition(new TimedCondition(Conditions.STAGGERED, getCreatureId()));
+      removeAffectedCondition(Conditions.UNCONSCIOUS.getName(), getCreatureId());
+    } else {
+      maybeAddAffectedCondition(new TimedCondition(Conditions.UNCONSCIOUS, getCreatureId()));
+      removeAffectedCondition(Conditions.STAGGERED.getName(), getCreatureId());
+    }
+
+    store();
+  }
+
+  public void addNonlethalDamage(int damage) {
+    setNonlethalDamage(nonlethalDamage + damage);
   }
 
   public Entry.CreatureProto toCreatureProto() {
@@ -268,8 +337,8 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
         .setHpMax(maxHp)
         .setNonlethalDamage(nonlethalDamage);
 
-    if (mRace.isPresent()) {
-      proto.setRace(mRace.get().getName());
+    if (race.isPresent()) {
+      proto.setRace(race.get().getName());
     }
 
     return proto.build();
@@ -278,7 +347,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   protected void fromProto(Entry.CreatureProto proto) {
     campaignId = proto.getCampaignId();
     entryId = proto.getId().isEmpty() ? context.settings().getAppId() + "-" + id : proto.getId();
-    mRace = Entries.get().getMonsters().get(proto.getRace());
+    race = Entries.get().getMonsters().get(proto.getRace());
     gender = Gender.fromProto(proto.getGender());
     strength = proto.getAbilities().getStrength();
     dexterity = proto.getAbilities().getDexterity();

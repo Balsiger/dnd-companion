@@ -37,8 +37,7 @@ public class NonlethalImageView extends PartialImageView {
   private int nonlethalDamage;
   private int hp;
 
-  private final Drawable unconscious;
-  private final Drawable damaged;
+  private final Drawable icon;
 
   public NonlethalImageView(Context context) {
     this(context, null);
@@ -47,13 +46,11 @@ public class NonlethalImageView extends PartialImageView {
   public NonlethalImageView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    unconscious = context.getDrawable(R.drawable.ic_thumb_down_black_24dp).mutate();
-    unconscious.setTint(getContext().getColor(R.color.unconcious));
+    icon = context.getDrawable(R.drawable.icons8_punch_filled_50).mutate();
+    icon.setTint(getContext().getColor(R.color.nonleathal));
 
-    damaged = context.getDrawable(R.drawable.ic_thumb_down_black_24dp).mutate();
-    damaged.setTint(getContext().getColor(R.color.nonleathal));
-
-    setBackground(context.getDrawable(R.drawable.ic_thumb_down_black_24dp).mutate());
+    setImageDrawable(icon);
+    setBackground(context.getDrawable(R.drawable.icons8_punch_filled_50).mutate());
 
     update();
   }
@@ -66,17 +63,11 @@ public class NonlethalImageView extends PartialImageView {
   }
 
   private void update() {
-    if (nonlethalDamage == 0) {
-      setVisibility(INVISIBLE);
-    } else if (nonlethalDamage < hp) {
+    if (nonlethalDamage > 0 && nonlethalDamage < hp) {
       setVisibility(VISIBLE);
-      setImageDrawable(damaged);
       setPartial(nonlethalDamage * 100_00 / hp);
     } else {
-      setVisibility(VISIBLE);
-      setImageDrawable(unconscious);
-      setPartial(100_00);
+      setVisibility(GONE);
     }
   }
-
 }

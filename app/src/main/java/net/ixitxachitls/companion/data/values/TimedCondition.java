@@ -33,6 +33,10 @@ public class TimedCondition {
   private final int endRound;
   private final CampaignDate endDate;
 
+  public TimedCondition(Condition condition, String sourceId) {
+    this(condition, sourceId, Integer.MAX_VALUE);
+  }
+
   public TimedCondition(Condition condition, String sourceId, int endRound) {
     this(condition, sourceId, endRound, new CampaignDate());
   }
@@ -84,6 +88,14 @@ public class TimedCondition {
     return endDate;
   }
 
+  public boolean active(Battle battle) {
+    return getEndRound() == Integer.MAX_VALUE
+        || getEndRound() > battle.getTurn()
+        || (getEndRound() == battle.getTurn()
+            && (getCondition().endsBeforeTurn()
+                ? !battle.acting(sourceId) : !battle.acted(sourceId)));
+  }
+
   public static TimedCondition fromProto(Value.TimedConditionProto proto) {
     return new TimedCondition(Condition.fromProto(proto.getCondition()),
         proto.getSourceId(), proto.getEndRound(), CampaignDate.fromProto(proto.getEndDate()));
@@ -100,6 +112,7 @@ public class TimedCondition {
 
   @Override
   public String toString() {
-    return condition + " until " + (endRound > 0 ? endRound : endDate);
+    return condition
+        + (endRound != Integer.MAX_VALUE ? " until " + (endRound > 0 ? endRound : endDate) : "");
   }
 }

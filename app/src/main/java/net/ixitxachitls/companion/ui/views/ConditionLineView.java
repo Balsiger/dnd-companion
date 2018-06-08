@@ -64,8 +64,10 @@ public abstract class ConditionLineView extends LinearLayout {
 
     if (rounds > 0) {
       TextWrapper.wrap(view, R.id.duration).text(rounds + (rounds > 1 ? " rounds" : " round"));
-    } else {
+    } else if (rounds == 0) {
       TextWrapper.wrap(view, R.id.duration).text("ending");
+    } else {
+      TextWrapper.wrap(view, R.id.duration).text("permanent");
     }
 
     delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete_condition)

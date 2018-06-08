@@ -46,6 +46,10 @@
   <color name="on">#570</color>
   <color name="onBright">#92cc00</color>
   <color name="off">#920</color>
+  <color name="icon">#000</color>
+  <color name="iconBack">#ff8001</color>
+  <color name="iconBright">#cc0</color>
+  <color name="iconDark">#880</color>
   <color name="bright">#ff0</color>
   <color name="light">#dd0</color>
   <color name="out">#444</color>

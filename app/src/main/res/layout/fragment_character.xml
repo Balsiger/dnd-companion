@@ -76,6 +76,18 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         app:color="@color/character"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/conditions"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/bar"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="-15dp"
+      android:layout_weight="0"
+      android:orientation="horizontal">
   </LinearLayout>
 
   <LinearLayout
@@ -133,12 +145,12 @@
 
   <LinearLayout
       android:id="@+id/abilities"
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/bar"
       android:layout_centerInParent="false"
       android:layout_marginStart="10dp"
-      android:layout_marginTop="32dp"
+      android:layout_marginTop="40dp"
       android:orientation="horizontal">
 
     <view
@@ -210,35 +222,10 @@
       android:theme="@style/SmallText"/>
 
   <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/xp"
-      android:layout_width="100dp"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/abilities_note"
-      android:layout_marginStart="20dp"
-      android:inputType="number|numberSigned"
-      app:defaultText="0"
-      app:descriptionText="The amount of XP this character currently has."
-      app:labelColor="@color/characterDark"
-      app:labelText="XP"
-      app:lineColor="@color/characterDark"
-      app:textColor="@color/characterText"/>
-
-  <TextView
-      android:id="@+id/xp_next"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBottom="@+id/xp"
-      android:layout_toEndOf="@+id/xp"
-      android:elevation="14dp"
-      android:padding="10dp"
-      android:text="(next level at 1000)"
-      android:theme="@style/SmallText"/>
-
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
       android:id="@+id/level"
       android:layout_width="100dp"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/xp"
+      android:layout_below="@+id/abilities_note"
       android:layout_marginStart="20dp"
       android:inputType="number|numberSigned"
       app:defaultText="1"
@@ -251,26 +238,73 @@
   </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
 
   <LinearLayout
-      android:id="@+id/hpLine"
+      android:id="@+id/xp_line"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_below="@+id/level"
-      android:layout_marginLeft="20dp"
+      android:layout_marginStart="20dp"
       android:orientation="horizontal">
 
-    <net.ixitxachitls.companion.ui.views.HPImageView
-        android:id="@+id/hpIcon"
+    <ImageView
+        android:id="@+id/xp_subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/xp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberSigned"
+        app:defaultText="0"
+        app:descriptionText="The amount of XP this character currently has."
+        app:labelColor="@color/characterDark"
+        app:labelText="XP"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText"/>
+
+    <ImageView
+        android:id="@+id/xp_add"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+
+    <TextView
+        android:id="@+id/xp_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/xp"
         android:layout_gravity="center_vertical"
-        android:background="@drawable/heart_pulse"
-        app:srcCompat="@drawable/ic_favorite_black_24dp"/>
+        android:layout_toEndOf="@+id/xp"
+        android:layout_weight="0"
+        android:elevation="14dp"
+        android:padding="10dp"
+        android:text="(next level at 1000)"
+        android:theme="@style/SmallText"/>
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/hpLine"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/xp_line"
+      android:layout_marginEnd="20dp"
+      android:layout_marginStart="20dp"
+      android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/hp_subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
 
     <net.ixitxachitls.companion.ui.views.LabelledEditTextView
         android:id="@+id/hp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
         android:layout_weight="1"
         android:inputType="number|numberSigned"
         app:defaultText="1"
@@ -280,38 +314,12 @@
         app:lineColor="@color/characterDark"
         app:textColor="@color/characterText"/>
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/hp_add"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="24dp"
         android:layout_gravity="center_vertical"
-        android:orientation="vertical">
-
-      <TextView
-          android:id="@+id/hp_add"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentBottom="true"
-          android:layout_gravity="center_horizontal"
-          android:paddingEnd="10dp"
-          android:paddingStart="10dp"
-          android:text="+"
-          android:textSize="24sp"
-          android:textStyle="bold"/>
-
-      <TextView
-          android:id="@+id/hp_subtract"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentBottom="true"
-          android:layout_gravity="center_horizontal"
-          android:paddingEnd="10dp"
-          android:paddingStart="10dp"
-          android:text="-"
-          android:textSize="24sp"
-          android:textStyle="bold"/>
-
-    </LinearLayout>
-
+        app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
 
     <net.ixitxachitls.companion.ui.views.LabelledEditTextView
         android:id="@+id/hp_max"
@@ -328,13 +336,12 @@
 
     </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
 
-    <net.ixitxachitls.companion.ui.views.NonlethalImageView
-        android:id="@+id/nonlethalIcon"
+    <ImageView
+        android:id="@+id/hp_nonlethal_subtract"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="24dp"
         android:layout_gravity="center_vertical"
-        android:background="@drawable/ic_thumb_down_black_24dp"
-        app:srcCompat="@drawable/ic_thumb_down_black_24dp"/>
+        app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
 
     <net.ixitxachitls.companion.ui.views.LabelledEditTextView
         android:id="@+id/hp_nonlethal"
@@ -348,6 +355,13 @@
         app:labelText="Nonlethal"
         app:lineColor="@color/characterDark"
         app:textColor="@color/characterText"/>
+
+    <ImageView
+        android:id="@+id/hp_nonlethal_add"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
 
   </LinearLayout>
 

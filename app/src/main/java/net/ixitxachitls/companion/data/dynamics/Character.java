@@ -74,8 +74,8 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
   }
 
   public String getRace() {
-    if(mRace.isPresent())
-      return mRace.get().getName();
+    if(race.isPresent())
+      return race.get().getName();
 
     return "";
   }

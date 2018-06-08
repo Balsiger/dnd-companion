@@ -213,7 +213,8 @@ public class PartyFragment extends Fragment {
     // Add all new chips.
     for (Character character : campaign.getCharacters()) {
       if (!chipsById.containsKey(character.getCharacterId())) {
-        chipsById.put(character.getCharacterId(), new CharacterChipView(getContext(), character));
+        chipsById.put(character.getCharacterId(),
+            new CharacterChipView(getContext(), character, campaign.getBattle()));
       }
     }
 

@@ -78,11 +78,9 @@ public class ConditionCreatureView extends LinearLayout {
 
   private void addCondition(String sourceName, String sourceId, List<String> targetIds,
                             TimedCondition condition, boolean affected, boolean isDM) {
-    int remainingRounds = condition.getEndRound() - battle.getTurn();
-    if (remainingRounds > 0
-        || (remainingRounds == 0
-            && (condition.getCondition().endsBeforeTurn()
-                ? !battle.acting(sourceId) : !battle.acted(sourceId)))) {
+    int remainingRounds = condition.getEndRound() == Integer.MAX_VALUE
+        ? -1 : condition.getEndRound() - battle.getTurn();
+    if (condition.active(battle)) {
       hasConditions = true;
       if (affected) {
         container.addView(new AffectedConditionLineView(getContext(), condition,

@@ -33,8 +33,16 @@ public final class Wrapper<V extends View> extends AbstractWrapper<V, Wrapper<V>
     return new Wrapper<>(parent, id);
   }
 
+  public static <V extends View> Wrapper<V> wrap(V view) {
+    return new Wrapper<>(view);
+  }
+
   private Wrapper(View parent, @IdRes int id) {
     super(parent, id);
+  }
+
+  private Wrapper(V view) {
+    super(view);
   }
 
   @FunctionalInterface

@@ -75,12 +75,16 @@ public class LocalCharacterFragment extends CharacterFragment {
     wisdom.setAction(this::editAbilities);
     charisma.setAction(this::editAbilities);
     xp.onEdit(this::changeXp).enabled(true);
+    xpAdd.visible().onClick(this::addXp);
+    xpSubtract.visible().onClick(this::subtractXp);
     level.onEdit(this::changeLevel).enabled(true);
     hp.onEdit(this::changeHp).enabled(true);
-    hpAdd.onClick(this::addHp);
-    hpSubtract.onClick(this::subtractHp);
+    hpAdd.visible().onClick(this::addHp);
+    hpSubtract.visible().onClick(this::subtractHp);
     hpMax.onEdit(this::changeMaxHp).enabled(true);
     damageNonlethal.onEdit(this::changeNonlethalDamage).enabled(true);
+    hpNonlethalAdd.visible().onClick(this::addNonlethalDamage);
+    hpNonlethalSubtract.visible().onClick(this::subtractNonlethalDamage);
 
     return view;
   }
@@ -230,10 +234,63 @@ public class LocalCharacterFragment extends CharacterFragment {
   private void subtractHp() {
     NumberPrompt prompt = new NumberPrompt(getContext())
         .title("Subtract hit points")
-        .message("The number of hit points to subtract to your current value.");
+        .message("The number of hit points to subtract from your current value.");
     prompt.yes(() -> {
       if (character.isPresent()) {
         character.get().addHp(-prompt.getNumber());
+        redraw();
+      }
+    });
+    prompt.show();
+  }
+
+  private void addNonlethalDamage() {
+    NumberPrompt prompt = new NumberPrompt(getContext())
+        .title("Add Non Lethal Damaga")
+        .message("The number of hit points to add to your current value of non lethal damage.");
+    prompt.yes(() -> {
+      if (character.isPresent()) {
+        character.get().addNonlethalDamage(prompt.getNumber());
+        redraw();
+      }
+    });
+    prompt.show();
+  }
+
+  private void subtractNonlethalDamage() {
+    NumberPrompt prompt = new NumberPrompt(getContext())
+        .title("Subtract Non Lethal Damage")
+        .message("The number of hit points to subtract from your current value of non lethal "
+            + "damage.");
+    prompt.yes(() -> {
+      if (character.isPresent()) {
+        character.get().addNonlethalDamage(-prompt.getNumber());
+        redraw();
+      }
+    });
+    prompt.show();
+  }
+
+  private void addXp() {
+    NumberPrompt prompt = new NumberPrompt(getContext())
+        .title("Add XP")
+        .message("The number of XPs to add to your current value.");
+    prompt.yes(() -> {
+      if (character.isPresent()) {
+        character.get().addXp(prompt.getNumber());
+        redraw();
+      }
+    });
+    prompt.show();
+  }
+
+  private void subtractXp() {
+    NumberPrompt prompt = new NumberPrompt(getContext())
+        .title("Subtract XP")
+        .message("The number of Xps to subtract from your current value.");
+    prompt.yes(() -> {
+      if (character.isPresent()) {
+        character.get().addXp(-prompt.getNumber());
         redraw();
       }
     });

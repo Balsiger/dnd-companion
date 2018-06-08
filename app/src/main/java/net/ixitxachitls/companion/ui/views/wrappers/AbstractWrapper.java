@@ -37,7 +37,7 @@ import net.ixitxachitls.companion.ui.MessageDialog;
 /**
  * Abstact base wrapper.
  */
-class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
+public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   protected final V view;
 
   // State values that need to be set on attach.

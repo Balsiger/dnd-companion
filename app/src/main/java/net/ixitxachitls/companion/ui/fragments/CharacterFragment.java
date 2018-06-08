@@ -26,6 +26,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,9 +43,8 @@ import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.AbilityView;
-import net.ixitxachitls.companion.ui.views.HPImageView;
+import net.ixitxachitls.companion.ui.views.ConditionIconsView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
-import net.ixitxachitls.companion.ui.views.NonlethalImageView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -75,16 +76,19 @@ public class CharacterFragment extends CompanionFragment {
   protected Wrapper<FloatingActionButton> delete;
   protected Wrapper<FloatingActionButton> move;
   protected LabelledEditTextView xp;
+  protected Wrapper<ImageView> xpAdd;
+  protected Wrapper<ImageView> xpSubtract;
   protected TextWrapper<TextView> xpNext;
   protected LabelledEditTextView level;
-  protected HPImageView hpIcon;
   protected LabelledEditTextView hp;
-  protected TextWrapper<TextView> hpAdd;
-  protected TextWrapper<TextView> hpSubtract;
+  protected Wrapper<ImageView> hpAdd;
+  protected Wrapper<ImageView> hpSubtract;
   protected LabelledEditTextView hpMax;
-  protected NonlethalImageView nonleathalIcon;
   protected LabelledEditTextView damageNonlethal;
+  protected Wrapper<ImageView> hpNonlethalAdd;
+  protected Wrapper<ImageView> hpNonlethalSubtract;
   protected Wrapper<FloatingActionButton> back;
+  protected ConditionIconsView conditions;
 
   public CharacterFragment() {
     super(Type.character);
@@ -106,6 +110,11 @@ public class CharacterFragment extends CompanionFragment {
     image = view.findViewById(R.id.image);
     title = view.findViewById(R.id.title);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
+
+    LinearLayout conditionsContainer = view.findViewById(R.id.conditions);
+    conditions = new ConditionIconsView(view.getContext());
+    conditionsContainer.addView(conditions);
+
     copy = Wrapper.<FloatingActionButton>wrap(view, R.id.copy).gone().onClick(this::copy)
         .description("Copy Character",
             "Copies the character to the current device as a local character.");
@@ -124,20 +133,22 @@ public class CharacterFragment extends CompanionFragment {
 
     xp = view.findViewById(R.id.xp);
     xp.enabled(false);
+    xpAdd = Wrapper.<ImageView>wrap(view, R.id.xp_add).gone();
+    xpSubtract = Wrapper.<ImageView>wrap(view, R.id.xp_subtract).gone();
     xpNext = TextWrapper.wrap(view, R.id.xp_next);
     level = view.findViewById(R.id.level);
     level.enabled(false);
 
-    hpIcon = view.findViewById(R.id.hpIcon);
     hp = view.findViewById(R.id.hp);
     hp.enabled(false);
-    hpAdd = TextWrapper.wrap(view, R.id.hp_add);
-    hpSubtract = TextWrapper.wrap(view, R.id.hp_subtract);
+    hpAdd = Wrapper.<ImageView>wrap(view, R.id.hp_add).gone();
+    hpSubtract = Wrapper.<ImageView>wrap(view, R.id.hp_subtract).gone();
     hpMax = view.findViewById(R.id.hp_max);
     hpMax.enabled(false);
-    nonleathalIcon = view.findViewById(R.id.nonlethalIcon);
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
     damageNonlethal.enabled(false);
+    hpNonlethalAdd = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_add).gone();
+    hpNonlethalSubtract = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_subtract).gone();
 
     update(character);
     return view;
@@ -186,6 +197,9 @@ public class CharacterFragment extends CompanionFragment {
     } else {
       image.clearImage();
     }
+
+    conditions.update(character.get());
+
     copy.visible(!character.get().isLocal() && campaign.get().amDM());
     strength.setValue(character.get().getStrength(),
         Ability.modifier(character.get().getStrength()));
@@ -210,9 +224,6 @@ public class CharacterFragment extends CompanionFragment {
 
   protected void redraw() {
     xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
-    hpIcon.setHp(character.get().getHp(), character.get().getMaxHp());
-    nonleathalIcon.setNonlethalDamage(character.get().getNonlethalDamage(),
-        character.get().getHp());
     hp.text(String.valueOf(character.get().getHp()));
   }
 

@@ -36,28 +36,22 @@
       android:textStyle="bold"
       android:theme="@style/SmallText"/>
 
-  <LinearLayout
+  <TextView
+      android:id="@+id/value"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:baselineAligned="true"
-      android:orientation="horizontal">
+      android:layout_gravity="center_horizontal"
+      android:layout_weight="1"
+      android:text="42"
+      android:theme="@style/LargeText"/>
 
-    <TextView
-        android:id="@+id/value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_weight="1"
-        android:text="42"
-        android:theme="@style/LargeText"/>
-
-    <TextView
-        android:id="@+id/modifier"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:text="(+4)"
-        android:theme="@style/SmallText"/>
-  </LinearLayout>
+  <TextView
+      android:id="@+id/modifier"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_weight="0"
+      android:text="+4"
+      android:theme="@style/SmallText"/>
 
 </LinearLayout>
