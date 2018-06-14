@@ -9,7 +9,7 @@ calendar {
     start: 2017;
   }
   month {
-    name: "January"
+    name: "3January"
     days: 31
   }
   month {

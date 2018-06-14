@@ -33,6 +33,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -78,18 +79,26 @@ public class ConditionCreatureView extends LinearLayout {
 
   private void addCondition(String sourceName, String sourceId, List<String> targetIds,
                             TimedCondition condition, boolean affected, boolean isDM) {
-    int remainingRounds = condition.getEndRound() == Integer.MAX_VALUE
-        ? -1 : condition.getEndRound() - battle.getTurn();
-    if (condition.active(battle)) {
-      hasConditions = true;
-      if (affected) {
-        container.addView(new AffectedConditionLineView(getContext(), condition,
-            targetIds.size() == 1 && sourceId.equals(targetIds.get(0)) ? "" : sourceName,
-            sourceId, targetIds, remainingRounds, isDM));
-      } else {
-        container.addView(new InitiatedConditionLineView(getContext(), condition, sourceName,
-            sourceId, targetIds, remainingRounds, isDM));
+    Duration remaining;
+    if (condition.hasEndDate()) {
+      remaining = battle.getCampaign().getCalendar().dateDifference(battle.getCampaign().getDate(),
+          condition.getEndDate());
+    } else {
+      if (!condition.active(battle)) {
+        return;
       }
+
+      remaining = Duration.rounds(condition.getEndRound() - battle.getTurn());
+    }
+
+    hasConditions = true;
+    if (affected) {
+      container.addView(new AffectedConditionLineView(getContext(), condition,
+          targetIds.size() == 1 && sourceId.equals(targetIds.get(0)) ? "" : sourceName,
+          sourceId, targetIds, remaining, isDM));
+    } else {
+      container.addView(new InitiatedConditionLineView(getContext(), condition, sourceName,
+          sourceId, targetIds, remaining, isDM));
     }
   }
 

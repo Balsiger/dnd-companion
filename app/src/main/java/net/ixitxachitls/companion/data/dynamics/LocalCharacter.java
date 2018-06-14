@@ -29,6 +29,7 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -108,10 +109,13 @@ public class LocalCharacter extends Character {
     this.initiativeRandom = RANDOM.nextInt(100_000);
     this.battleNumber = number;
 
-    // TODO(merlin): If we want to support long running conditions outside of battle, this has to
-    // change.
-    this.initiatedConditions.clear();
-    this.affectedConditions.clear();
+    // Remove all round based conditions.
+    initiatedConditions = initiatedConditions.stream()
+        .filter(c -> c.getTimedCondition().hasEndDate())
+        .collect(Collectors.toList());
+    affectedConditions = affectedConditions.stream()
+        .filter(TimedCondition::hasEndDate)
+        .collect(Collectors.toList());
 
     store();
   }

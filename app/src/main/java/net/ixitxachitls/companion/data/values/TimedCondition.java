@@ -88,8 +88,13 @@ public class TimedCondition {
     return endDate;
   }
 
+  public boolean hasEndDate() {
+    return endRound == 0 && !endDate.isEmpty();
+  }
+
   public boolean active(Battle battle) {
-    return getEndRound() == Integer.MAX_VALUE
+    return hasEndDate()
+        || getEndRound() == Integer.MAX_VALUE
         || getEndRound() > battle.getTurn()
         || (getEndRound() == battle.getTurn()
             && (getCondition().endsBeforeTurn()

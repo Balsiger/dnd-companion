@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import android.support.annotation.VisibleForTesting;
+
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
@@ -125,7 +127,8 @@ public class Calendar {
   private final int minutesPerHour;
   private final int secondsPerMinute;
 
-  private Calendar(List<Year> years, List<Month> months, int daysPerWeek, int hoursPerDay,
+  @VisibleForTesting
+  public Calendar(List<Year> years, List<Month> months, int daysPerWeek, int hoursPerDay,
                    int minutesPerHour, int secondsPerMinute) {
     this.years = years;
     this.months = months;
@@ -241,6 +244,49 @@ public class Calendar {
     return manipulateDate(date, 0, 0, 0, 0, minutes);
   }
 
+  public CampaignDate add(CampaignDate date, Duration duration) {
+    return manipulateDate(date, duration.getYears(), 0, duration.getDays(), duration.getHours(),
+        duration.getMinutes());
+  }
+
+  public Duration dateDifference(CampaignDate current, CampaignDate next) {
+    int minutes = minutes(next) - minutes(current);
+
+    int years = minutes / (daysPerYear() * hoursPerDay * minutesPerHour);
+    minutes -= years * (daysPerYear() * hoursPerDay * minutesPerHour);
+
+    int days = minutes / (hoursPerDay * minutesPerHour);
+    minutes -= days * (hoursPerDay * minutesPerHour);
+
+    int hours = minutes / minutesPerHour;
+    minutes -= hours * minutesPerHour;
+
+    return Duration.time(years, days, hours, minutes);
+  }
+
+  public int minutesWithinYear(CampaignDate date) {
+    int minutes = date.getMinute();
+    minutes += date.getHour() * minutesPerHour;
+    minutes += daysWithinYear(date) * minutesPerHour * hoursPerDay;
+
+    return minutes;
+  }
+
+  // TODO(merlin): Does not handle leap years.
+  public int minutes(CampaignDate date) {
+    return minutesWithinYear(date) +
+        (date.getYear() - 1) * daysPerYear() * minutesPerHour * hoursPerDay;
+  }
+
+  public int daysWithinYear(CampaignDate date) {
+    int days = date.getDay() - 1;
+    for (int i = 1; i < date.getMonth(); i++) {
+      days += getMonth(i).days;
+    }
+
+    return days;
+  }
+
   public CampaignDate nextMorning(CampaignDate date) {
     int mins = NIGHT_HOURS * getMinutesPerHour();
     int morning = getHoursPerDay() * getMinutesPerHour()
@@ -300,6 +346,16 @@ public class Calendar {
       return 0;
 
     return getMonths().get(inMonth - 1).getDays();
+  }
+
+  // TODO(merlin): Does not handle leap years!
+  public int daysPerYear() {
+    int days = 0;
+    for (int month = 0; month < months.size(); month++) {
+      days += months.get(month).days;
+    }
+
+    return days;
   }
 
   private CampaignDate manipulateDate(CampaignDate date, int years, int months, int days,

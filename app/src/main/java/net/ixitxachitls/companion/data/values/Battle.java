@@ -99,6 +99,10 @@ public class Battle {
     return turn;
   }
 
+  public Campaign getCampaign() {
+    return campaign;
+  }
+
   public int getNumber() {
     return number;
   }

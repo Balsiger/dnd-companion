@@ -117,7 +117,7 @@ public class Condition {
     private String name;
     private String description;
     private String summary;
-    private Duration duration = new Duration();
+    private Duration duration = Duration.NULL;
     private boolean predefined;
     private boolean endsBeforeTurn;
     @DrawableRes private int icon = 0;

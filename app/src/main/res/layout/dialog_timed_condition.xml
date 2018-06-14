@@ -42,16 +42,16 @@
       app:textColor="@color/characterDark"/>
 
   <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/rounds"
+      android:id="@+id/duration"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="10dp"
       android:ems="10"
-      android:inputType="number|numberSigned|numberDecimal"
+      android:inputType="text"
       android:theme="@style/LargeText"
-      app:descriptionText="The number of rounds this condition will be active in play."
+      app:descriptionText="The duration for the condition. Can be one or multiple numbers with a unit of rounds, minutes, hours, days or years.\nExamples: 5 rounds; 1 year 5 hours 2 min.\nIf no unit is given, rounds are assumed. "
       app:labelColor="@color/character"
-      app:labelText="Rounds"
+      app:labelText="Duration"
       app:lineColor="@color/character"
       app:textColor="@color/characterDark"/>
 

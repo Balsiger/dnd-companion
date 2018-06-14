@@ -29,6 +29,7 @@ import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -50,7 +51,8 @@ public abstract class ConditionLineView extends LinearLayout {
   protected final Wrapper<FloatingActionButton> delete;
 
   protected ConditionLineView(Context context, TimedCondition condition, String sourceName,
-                           String sourceId, List<String> targetIds, int rounds, boolean isDM) {
+                           String sourceId, List<String> targetIds, Duration remaining,
+                              boolean isDM) {
     super(context);
 
     this.condition = condition;
@@ -62,13 +64,7 @@ public abstract class ConditionLineView extends LinearLayout {
     View view =
         LayoutInflater.from(getContext()).inflate(R.layout.view_condition_line, this, false);
 
-    if (rounds > 0) {
-      TextWrapper.wrap(view, R.id.duration).text(rounds + (rounds > 1 ? " rounds" : " round"));
-    } else if (rounds == 0) {
-      TextWrapper.wrap(view, R.id.duration).text("ending");
-    } else {
-      TextWrapper.wrap(view, R.id.duration).text("permanent");
-    }
+    TextWrapper.wrap(view, R.id.duration).text(remaining.toString());
 
     delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete_condition)
         .onClick(this::deleteCondition)

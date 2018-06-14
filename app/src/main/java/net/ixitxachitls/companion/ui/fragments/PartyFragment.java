@@ -302,10 +302,10 @@ public class PartyFragment extends Fragment {
           initCharacter.asLocal().setBattle(i, battle.getNumber());
         });
       }
-
-      conditions.removeAllViews();
-      addAllConditions();
     }
+
+    conditions.removeAllViews();
+    addAllConditions();
   }
 
   private void updateCreature(Optional<Creature> creature) {

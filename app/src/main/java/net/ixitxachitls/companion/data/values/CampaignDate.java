@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.util.Strings;
 
 /**
  * A date in the campaign.
@@ -82,7 +83,11 @@ public class CampaignDate {
 
   @Override
   public String toString() {
-    return year + "-" + month + "-" + day + " " + hour + ":" + minute;
+    return year + "-"
+        + Strings.pad(month, 2, true) + "-"
+        + Strings.pad(day, 2, true) + " "
+        + Strings.pad(hour, 2, true) + ":"
+        + Strings.pad(minute, 2, true);
   }
 
   public Value.DateProto toProto() {

@@ -22,20 +22,30 @@
 package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.util.Strings;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * A duration value.
  */
 public class Duration {
+
+  public static final Duration PERMANENT = new Duration(-1, -1, -1, -1, -1);
+  public static final Duration NULL = new Duration(0, 0, 0, 0, 0);
+
+  private static final Pattern ROUNDS_ONLLY = Pattern.compile("\\s*(\\d+)\\s*");
+  private static final Pattern PATTERN =
+      Pattern.compile("\\s*(\\d+)\\s+(r|rounds?|m|min|minutes?|h|hours?|d|days?|y|years?)");
+
   private final int rounds;
   private final int minutes;
   private final int hours;
   private final int days;
   private final int years;
-
-  public Duration() {
-    this(0, 0, 0, 0, 0);
-  }
 
   private Duration(int rounds, int minutes, int hours, int days, int years) {
     this.rounds = rounds;
@@ -47,6 +57,76 @@ public class Duration {
 
   public static Duration rounds(int rounds) {
     return new Duration(rounds, 0, 0, 0, 0);
+  }
+
+  public static Duration time(int years, int days, int hours, int minutes) {
+    return new Duration(0, minutes, hours, days, years);
+  }
+
+  public static Duration parse(String input) {
+    int rounds = 0;
+    int minutes = 0;
+    int hours = 0;
+    int days = 0;
+    int years = 0;
+
+    Matcher matcher = ROUNDS_ONLLY.matcher(input);
+    if (matcher.matches()) {
+      rounds = Integer.parseInt(matcher.group(1));
+    } else {
+      matcher = PATTERN.matcher(input);
+      while (matcher.find()) {
+        int value = Integer.parseInt(matcher.group(1));
+        String unit = matcher.group(2);
+
+        switch (unit) {
+          case "r":
+          case "round":
+          case "rounds":
+            rounds += value;
+            break;
+
+          case "m":
+          case "min":
+          case "minute":
+          case "minutes":
+            minutes += value;
+            break;
+
+          case "h":
+          case "hour":
+          case "hours":
+            hours += value;
+            break;
+
+          case "d":
+          case "day":
+          case "days":
+            days += value;
+            break;
+
+          case "y":
+          case "year":
+          case "years":
+            years += value;
+            break;
+        }
+      }
+    }
+
+    return new Duration(rounds, minutes, hours, days, years);
+  }
+
+  public boolean isNone() {
+    return rounds == 0 && minutes == 0 && hours == 0 && days == 0 && years == 0;
+  }
+
+  public boolean isPermanent() {
+    return rounds == -1 && minutes == -1 && hours == -1 && days == -1 && years == -1;
+  }
+
+  public boolean isRounds() {
+    return rounds != 0;
   }
 
   public int getDays() {
@@ -82,5 +162,34 @@ public class Duration {
         .setDays(days)
         .setYears(years)
         .build();
+  }
+
+  public String toString() {
+    if (isNone()) {
+      return "ending";
+    }
+
+    if (isPermanent()) {
+      return "permanent";
+    }
+
+    List<String> output = new ArrayList<String>();
+    if (years != 0) {
+      output.add(years + (years == 1 ? " year" : " years"));
+    }
+    if (days != 0) {
+      output.add(days + (days == 1 ? " day" : " days"));
+    }
+    if (hours != 0) {
+      output.add(hours + (hours == 1 ? " hour" : " hours"));
+    }
+    if (minutes != 0) {
+      output.add(minutes + (minutes == 1 ? " minute" : " minutes"));
+    }
+    if (rounds != 0) {
+      output.add(rounds + (rounds == 1 ? " round" : " rounds"));
+    }
+
+    return Strings.SPACE_JOINER.join(output);
   }
 }
