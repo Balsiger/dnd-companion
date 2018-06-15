@@ -100,4 +100,12 @@ public class LabelledEditTextView extends AbstractLabelledView {
 
     return this;
   }
+
+  public LabelledEditTextView disabled() {
+    return enabled(false);
+  }
+
+  public LabelledEditTextView enabled() {
+    return enabled(true);
+  }
 }

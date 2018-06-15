@@ -74,7 +74,12 @@ public class TimedConditionDialog extends Dialog {
   private LabelledAutocompleteTextView condition;
   private Wrapper<LinearLayout> party;
   private Map<String, CheckBox> checkboxesByCreatureId = new HashMap<>();
-  private LabelledEditTextView duration;
+  private LabelledEditTextView rounds;
+  private LabelledEditTextView minutes;
+  private LabelledEditTextView hours;
+  private LabelledEditTextView days;
+  private LabelledEditTextView years;
+  private Wrapper<CheckBox> permanent;
   private LabelledEditTextView description;
   private LabelledEditTextView summary;
   private Wrapper<Button> save;
@@ -116,8 +121,17 @@ public class TimedConditionDialog extends Dialog {
   protected void createContent(View view) {
     condition = view.findViewById(R.id.condition);
     condition.onChange(this::selectCondition).onFocus(condition::showDropDown);
-    duration = view.findViewById(R.id.duration);
-    duration.onChange(this::updateSave);
+    rounds = view.findViewById(R.id.rounds);
+    rounds.onChange(this::update);
+    minutes = view.findViewById(R.id.minutes);
+    minutes.onChange(this::update);
+    hours = view.findViewById(R.id.hours);
+    hours.onChange(this::update);
+    days = view.findViewById(R.id.days);
+    days.onChange(this::update);
+    years = view.findViewById(R.id.years);
+    years.onChange(this::update);
+    permanent = Wrapper.<CheckBox>wrap(view, R.id.permanent).onClick(this::update);
     description = view.findViewById(R.id.description);
     summary = view.findViewById(R.id.summary);
     party = Wrapper.<LinearLayout>wrap(view, R.id.party);
@@ -171,7 +185,7 @@ public class TimedConditionDialog extends Dialog {
     checkbox.setTextAppearance(R.style.LargeText);
     checkbox.setButtonTintList(ColorStateList.valueOf(view.getResources()
         .getColor(color, null)));
-    checkbox.setOnCheckedChangeListener((v, c) -> updateSave());
+    checkbox.setOnCheckedChangeListener((v, c) -> update());
     party.get().addView(checkbox);
     checkboxesByCreatureId.put(creatureId, checkbox);
   }
@@ -194,16 +208,37 @@ public class TimedConditionDialog extends Dialog {
   private void displayCondition(Optional<Condition> condition) {
     if (condition.isPresent()) {
       predefined = condition.get().isPredefined();
-      int roundsNbr = condition.get().getDuration().getRounds();
-      duration.text(roundsNbr > 0 ? String.valueOf(roundsNbr) : "")
-          .enabled(!predefined || condition.get().getDuration().getRounds() == 0);
+      Duration duration = condition.get().getDuration();
+      if (duration.getRounds() > 0) {
+        rounds.text(String.valueOf(duration.getRounds()));
+      }
+      if (duration.getMinutes() > 0) {
+        minutes.text(String.valueOf(duration.getMinutes()));
+      }
+      if (duration.getHours() > 0) {
+        hours.text(String.valueOf(duration.getHours()));
+      }
+      if (duration.getDays() > 0) {
+        days.text(String.valueOf(duration.getDays()));
+      }
+      if (duration.getYears() > 0) {
+        years.text(String.valueOf(duration.getYears()));
+      }
+      permanent.get().setChecked(duration.isPermanent());
+
       description.text(condition.get().getDescription()).enabled(!predefined);
       summary.text(condition.get().getSummary()).enabled(!predefined);
     } else {
-      duration.text("").enabled(true);
-      description.text("").enabled(true);
-      summary.text("").enabled(true);
+      rounds.text("");
+      minutes.text("");
+      hours.text("");
+      days.text("");
+      years.text("");
+      description.text("");
+      summary.text("");
     }
+
+    update();
   }
 
   private Optional<Condition> findCondition(BaseCreature creature, String name) {
@@ -216,8 +251,40 @@ public class TimedConditionDialog extends Dialog {
     return Optional.empty();
   }
 
-  private void updateSave() {
-    save.enabled((!duration.getText().isEmpty() && targetSelected()));
+  private void update() {
+    if (permanent.get().isChecked()) {
+      rounds.text("").disabled();
+      minutes.text("").disabled();
+      hours.text("").disabled();
+      days.text("").disabled();
+      years.text("").disabled();
+      save.enabled(targetSelected());
+    } else {
+      if (!rounds.getText().isEmpty()) {
+        permanent.disabled();
+        minutes.text("").disabled();
+        hours.text("").disabled();
+        hours.text("").disabled();
+        days.text("").disabled();
+        years.text("").disabled();
+        save.enabled(targetSelected());
+      } else {
+        if (!minutes.getText().isEmpty() || !hours.getText().isEmpty() || !days.getText().isEmpty()
+            || !years.getText().isEmpty()) {
+          permanent.disabled();
+          rounds.text("").disabled();
+          save.enabled(targetSelected());
+        } else {
+          permanent.enabled();
+          rounds.enabled();
+          minutes.enabled();
+          hours.enabled();
+          days.enabled();
+          years.enabled();
+          save.disabled();
+        }
+      }
+    }
   }
 
   private boolean targetSelected() {
@@ -239,28 +306,46 @@ public class TimedConditionDialog extends Dialog {
       }
     }
 
-    if (!ids.isEmpty() && !duration.getText().isEmpty()) {
-      Duration duration = Duration.parse(this.duration.getText());
-      if (!duration.isNone()) {
-        Condition cond = Condition.newBuilder(condition.getText())
-            .description(description.getText())
-            .summary(summary.getText())
-            .duration(duration)
-            .predefined(predefined)
-            .build();
-        TimedCondition timed;
-        if (duration.isRounds()) {
-          timed = new TimedCondition(cond, id, currentRound + duration.getRounds());
-        } else {
-          timed = new TimedCondition(cond, id, campaign.get().getCalendar()
-              .add(campaign.get().getDate(), duration));
-        }
-        if (creature.isPresent() && !condition.getText().isEmpty()) {
-          creature.get().addInitiatedCondition(new TargetedTimedCondition(timed, ids));
-        }
+    Duration duration = extractDuration();
+    if (!ids.isEmpty() && !duration.isNone()) {
+      Condition cond = Condition.newBuilder(condition.getText())
+          .description(description.getText())
+          .summary(summary.getText())
+          .duration(duration)
+          .predefined(predefined)
+          .build();
+      TimedCondition timed;
+      if (duration.isRounds()) {
+        timed = new TimedCondition(cond, id, currentRound + duration.getRounds());
+      } else if (duration.isPermanent()) {
+        timed = new TimedCondition(cond, id);
+      } else {
+        timed = new TimedCondition(cond, id,
+            campaign.get().getCalendar().add(campaign.get().getDate(), duration));
+      }
+      if (creature.isPresent() && !condition.getText().isEmpty()) {
+        creature.get().addInitiatedCondition(new TargetedTimedCondition(timed, ids));
       }
     }
 
     super.save();
   }
+
+  private Duration extractDuration() {
+    if (permanent.get().isChecked()) {
+      return Duration.PERMANENT;
+    }
+
+    if (!rounds.getText().isEmpty()) {
+      return Duration.rounds(extractInt(rounds));
+    }
+
+    return Duration.time(
+        extractInt(years), extractInt(days), extractInt(hours), extractInt(minutes));
+  }
+
+  private int extractInt(LabelledEditTextView view) {
+    return view.getText().isEmpty() ? 0 : Integer.parseInt(view.getText());
+  }
+
 }

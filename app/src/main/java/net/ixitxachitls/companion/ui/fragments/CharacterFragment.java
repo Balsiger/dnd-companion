@@ -75,6 +75,7 @@ public class CharacterFragment extends CompanionFragment {
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> delete;
   protected Wrapper<FloatingActionButton> move;
+  protected Wrapper<FloatingActionButton> timed;
   protected LabelledEditTextView xp;
   protected Wrapper<ImageView> xpAdd;
   protected Wrapper<ImageView> xpSubtract;
@@ -124,6 +125,7 @@ public class CharacterFragment extends CompanionFragment {
             + "player is active on your WiFi, the character most likely will immediately "
             + "reappear, though.");
     move = Wrapper.<FloatingActionButton>wrap(view, R.id.move).gone();
+    timed = Wrapper.<FloatingActionButton>wrap(view, R.id.timed).gone();
     strength = view.findViewById(R.id.strength);
     dexterity = view.findViewById(R.id.dexterity);
     constitution = view.findViewById(R.id.constitution);

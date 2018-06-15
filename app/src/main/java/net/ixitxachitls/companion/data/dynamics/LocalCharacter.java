@@ -29,7 +29,6 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
-import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
@@ -111,10 +110,10 @@ public class LocalCharacter extends Character {
 
     // Remove all round based conditions.
     initiatedConditions = initiatedConditions.stream()
-        .filter(c -> c.getTimedCondition().hasEndDate())
+        .filter(c -> c.getTimedCondition().hasEndDate() || c.getTimedCondition().isPermanent())
         .collect(Collectors.toList());
     affectedConditions = affectedConditions.stream()
-        .filter(TimedCondition::hasEndDate)
+        .filter(c -> c.hasEndDate() || c.isPermanent())
         .collect(Collectors.toList());
 
     store();

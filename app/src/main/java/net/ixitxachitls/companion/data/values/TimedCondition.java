@@ -88,6 +88,10 @@ public class TimedCondition {
     return endDate;
   }
 
+  public boolean isPermanent() {
+    return getDuration().isPermanent();
+  }
+
   public boolean hasEndDate() {
     return endRound == 0 && !endDate.isEmpty();
   }

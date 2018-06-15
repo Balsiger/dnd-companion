@@ -41,25 +41,118 @@
       app:lineColor="@color/character"
       app:textColor="@color/characterDark"/>
 
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/duration"
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="10dp"
-      android:ems="10"
-      android:inputType="text"
-      android:theme="@style/LargeText"
-      app:descriptionText="The duration for the condition. Can be one or multiple numbers with a unit of rounds, minutes, hours, days or years.\nExamples: 5 rounds; 1 year 5 hours 2 min.\nIf no unit is given, rounds are assumed. "
-      app:labelColor="@color/character"
-      app:labelText="Duration"
-      app:lineColor="@color/character"
-      app:textColor="@color/characterDark"/>
+      android:orientation="horizontal">
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/rounds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:ems="3"
+        android:inputType="numberSigned"
+        android:theme="@style/LargeText"
+        app:descriptionText="The number of rounds this condition last. You can either give rounds or minutes, but not both. Round based conditions are only valid during the current combat."
+        app:labelColor="@color/character"
+        app:labelText="Rounds"
+        app:lineColor="@color/character"
+        app:textColor="@color/characterDark"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/minutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:ems="3"
+        android:inputType="numberSigned"
+        android:theme="@style/LargeText"
+        app:descriptionText="The number of minutes this condition last. You can either give rounds or minutes, but not both."
+        app:labelColor="@color/character"
+        app:labelText="Minutes"
+        app:lineColor="@color/character"
+        app:textColor="@color/characterDark"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/hours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:ems="3"
+        android:inputType="numberSigned"
+        android:theme="@style/LargeText"
+        app:descriptionText="The number of hours this condition last. You can either give rounds or hours, but not both."
+        app:labelColor="@color/character"
+        app:labelText="Hours"
+        app:lineColor="@color/character"
+        app:textColor="@color/characterDark"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:ems="3"
+        android:inputType="numberSigned"
+        android:theme="@style/LargeText"
+        app:descriptionText="The number of days this condition last. You can either give rounds or days, but not both."
+        app:labelColor="@color/character"
+        app:labelText="Days"
+        app:lineColor="@color/character"
+        app:textColor="@color/characterDark"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/years"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="3"
+        android:inputType="numberSigned"
+        android:theme="@style/LargeText"
+        app:descriptionText="The number of years this condition last. You can either give rounds or years, but not both."
+        app:labelColor="@color/character"
+        app:labelText="Years"
+        app:lineColor="@color/character"
+        app:textColor="@color/characterDark">
+    </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0"
+        android:orientation="vertical">
+
+      <CheckBox
+          android:id="@+id/permanent"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="bottom"
+          android:layout_weight="0"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="permanent"
+          android:textColor="@color/character"
+          android:theme="@style/TinyText"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
 
   <net.ixitxachitls.companion.ui.views.LabelledEditTextView
       android:id="@+id/description"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_margin="10dp"
+      android:layout_marginEnd="5dp"
       android:visibility="gone"
       app:descriptionText="The description of the condition. This should explain all details
                              necessary for a player to know how to deal with this condition."

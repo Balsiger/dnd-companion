@@ -101,9 +101,22 @@
       >
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/timed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        app:backgroundTint="@color/character"
+        app:srcCompat="@drawable/ic_hourglass_full_black_24dp"/>
+
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/copy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:clickable="true"
         app:backgroundTint="@color/character"

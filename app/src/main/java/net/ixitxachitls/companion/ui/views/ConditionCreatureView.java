@@ -83,6 +83,8 @@ public class ConditionCreatureView extends LinearLayout {
     if (condition.hasEndDate()) {
       remaining = battle.getCampaign().getCalendar().dateDifference(battle.getCampaign().getDate(),
           condition.getEndDate());
+    } else if (condition.isPermanent()) {
+      remaining = Duration.PERMANENT;
     } else {
       if (!condition.active(battle)) {
         return;

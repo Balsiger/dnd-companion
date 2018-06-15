@@ -266,6 +266,14 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
+  public W enabled() {
+    return enabled(true);
+  }
+
+  public W disabled() {
+    return enabled(false);
+  }
+
   public V get() {
     return view;
   }

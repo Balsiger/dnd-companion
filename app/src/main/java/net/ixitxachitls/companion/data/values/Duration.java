@@ -29,6 +29,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.annotation.Nullable;
+
 /**
  * A duration value.
  */
@@ -126,7 +128,20 @@ public class Duration {
   }
 
   public boolean isRounds() {
-    return rounds != 0;
+    return rounds != 0 && minutes == 0;
+  }
+
+  public boolean isNegative() {
+    if (isPermanent()) {
+      return false;
+    }
+
+    if (isRounds()) {
+      return rounds < 0;
+    }
+
+    // NOTE(merlin): We assume that either all values are positive or all values are negative.
+    return minutes < 0 || hours < 0 || days < 0 || years < 0;
   }
 
   public int getDays() {
@@ -173,23 +188,29 @@ public class Duration {
       return "permanent";
     }
 
-    List<String> output = new ArrayList<String>();
-    if (years != 0) {
-      output.add(years + (years == 1 ? " year" : " years"));
-    }
-    if (days != 0) {
-      output.add(days + (days == 1 ? " day" : " days"));
-    }
-    if (hours != 0) {
-      output.add(hours + (hours == 1 ? " hour" : " hours"));
-    }
-    if (minutes != 0) {
-      output.add(minutes + (minutes == 1 ? " minute" : " minutes"));
-    }
-    if (rounds != 0) {
-      output.add(rounds + (rounds == 1 ? " round" : " rounds"));
+    if (isNegative()) {
+      return formatUnsigned() + " ago";
     }
 
+    return formatUnsigned();
+  }
+
+  private String formatUnsigned() {
+    List<String> output = new ArrayList<String>();
+    output.add(formatUnsigned(years, "year", "years"));
+    output.add(formatUnsigned(days, "day", "days"));
+    output.add(formatUnsigned(hours, "hour", "hours"));
+    output.add(formatUnsigned(minutes, "minute", "minutes"));
+    output.add(formatUnsigned(rounds, "round", "rounds"));
+
     return Strings.SPACE_JOINER.join(output);
+  }
+
+  private static @Nullable String formatUnsigned(int value, String unit, String pluralUnit) {
+    if (value == 0) {
+      return null;
+    }
+
+    return Math.abs(value) + " " + (Math.abs(value) == 1 ? unit : pluralUnit);
   }
 }

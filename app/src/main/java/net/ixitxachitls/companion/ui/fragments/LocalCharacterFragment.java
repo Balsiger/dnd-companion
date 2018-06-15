@@ -39,6 +39,7 @@ import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.NumberPrompt;
+import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -68,6 +69,9 @@ public class LocalCharacterFragment extends CharacterFragment {
     move.visible()
         .onClick(this::move)
         .description("Move Character", "This button moves the character to an other campaign.");
+    timed.visible()
+        .onClick(this::timed)
+        .description("Add Condition", "Add a timed condition to this and/or other characters.");
     strength.setAction(this::editAbilities);
     dexterity.setAction(this::editAbilities);
     constitution.setAction(this::editAbilities);
@@ -128,6 +132,12 @@ public class LocalCharacterFragment extends CharacterFragment {
     Optional<Campaign> campaign = campaigns().getCampaign(campaignId).getValue();
     if (campaign.isPresent()) {
       CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
+    }
+  }
+
+  private void timed() {
+    if (character.isPresent()) {
+      TimedConditionDialog.newInstance(character.get().getCharacterId(), 0).display();
     }
   }
 

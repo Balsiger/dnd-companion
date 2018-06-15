@@ -29,9 +29,9 @@ import java.util.Date;
  * Utilities for handling strings.
  */
 public class Strings {
-  public static final Joiner COMMA_JOINER = Joiner.on(", ");
-  public static final Joiner NEWLINE_JOINER = Joiner.on("\n");
-  public static final Joiner SPACE_JOINER = Joiner.on(" ");
+  public static final Joiner COMMA_JOINER = Joiner.on(", ").skipNulls();
+  public static final Joiner NEWLINE_JOINER = Joiner.on("\n").skipNulls();
+  public static final Joiner SPACE_JOINER = Joiner.on(" ").skipNulls();
   private static final String SPACES =
       "                                                                      "
           + "                                                                     "
