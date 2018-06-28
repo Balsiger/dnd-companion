@@ -234,6 +234,10 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
         context.characters().update(this);
       } else {
         context.characters().add(this);
+        if (getCampaign().isPresent()) {
+          context.histories().created(getName(), getCampaign().get().getDate(),
+              getCharacterId(), getCampaignId());
+        }
       }
 
       return true;

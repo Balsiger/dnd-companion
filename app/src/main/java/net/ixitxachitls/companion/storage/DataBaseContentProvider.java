@@ -35,6 +35,7 @@ import com.google.common.base.Strings;
 import net.ixitxachitls.companion.BuildConfig;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Creature;
+import net.ixitxachitls.companion.data.dynamics.HistoryEntry;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
@@ -59,6 +60,7 @@ public class DataBaseContentProvider extends ContentProvider {
   public static final Uri CHARACTERS_REMOTE = Uri.parse(PREFIX + RemoteCharacter.TABLE);
   public static final Uri SETTINGS = Uri.parse(PREFIX + Settings.TABLE);
   public static final Uri MESSAGES = Uri.parse(PREFIX + ScheduledMessage.TABLE);
+  public static final Uri HISTORY = Uri.parse(PREFIX + HistoryEntry.TABLE);
 
   private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
   private static final String TABLE_MIME = "vnd.android.cursor.dir/vnd." + AUTHORITY + ".";

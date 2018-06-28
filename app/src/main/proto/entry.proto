@@ -158,3 +158,22 @@ message ScheduledMessageProto {
 
   CompanionMessageProto message = 3;
 }
+
+message HistoryProto {
+  string real_date = 2; // Format YYYY-MM-DD hh:mm:ss in whatever time zone the phone is.
+  DateProto game_date = 3;
+
+  enum Type {
+    UNKNOWN = 0;
+    OTHER = 1;
+    CREATE = 2;
+    ADD = 3;
+    REMOVE = 4;
+    XP = 5;
+  }
+  Type type = 4;
+  repeated string entity = 5;
+  string description = 6;
+  bool viewed = 7;
+}
+

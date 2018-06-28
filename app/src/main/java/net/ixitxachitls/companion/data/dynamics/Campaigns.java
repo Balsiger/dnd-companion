@@ -228,6 +228,7 @@ public class Campaigns {
 
   protected void remove(Campaign campaign) {
     remove(campaign.getCampaignId(), campaign.isLocal());
+    context().histories().removed(campaign.getName(), campaign.getDate(), campaign.getCampaignId());
   }
 
   // Publishing.

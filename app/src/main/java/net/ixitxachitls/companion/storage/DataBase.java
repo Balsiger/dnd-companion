@@ -30,6 +30,7 @@ import android.support.annotation.Nullable;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Creature;
+import net.ixitxachitls.companion.data.dynamics.HistoryEntry;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
@@ -42,7 +43,7 @@ import net.ixitxachitls.companion.util.Lazy;
  */
 public class DataBase extends SQLiteOpenHelper {
 
-  private static final int VERSION = 4;
+  private static final int VERSION = 5;
   private static final String DATABASE_NAME = "RPGCompanion";
   public static final String COLUMN_ID = "id";
   public static final String COLUMN_PROTO = "proto";
@@ -61,6 +62,8 @@ public class DataBase extends SQLiteOpenHelper {
   public static final String CREATE_CREATURES_LOCAL = "CREATE TABLE " + Creature.TABLE_LOCAL
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_MESSAGES = "CREATE TABLE " + ScheduledMessage.TABLE
+      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
+  public static final String CREATE_HISTORY = "CREATE TABLE " + HistoryEntry.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
 
   public static final String COLUMNS[] = {
@@ -118,8 +121,12 @@ public class DataBase extends SQLiteOpenHelper {
       db.execSQL(CREATE_MESSAGES);
     }
 
-    if (version <= 4) {
+    if (version <= 3) {
       db.execSQL(CREATE_CREATURES_LOCAL);
+    }
+
+    if (version <= 5) {
+      db.execSQL(CREATE_HISTORY);
     }
   }
 

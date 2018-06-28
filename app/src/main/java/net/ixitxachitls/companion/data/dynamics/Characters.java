@@ -194,6 +194,9 @@ public class Characters {
       LiveDataUtils.setValueIfChanged(characterIdsByCampaignId.get(character.getCampaignId()),
           ImmutableList.copyOf(characterIds(character.getCampaignId())));
     }
+
+    context.histories().removed(character.getName(), character.getCampaign().get().getDate(),
+        character.getCharacterId(), character.campaignId);
   }
 
   // Publishing characters.

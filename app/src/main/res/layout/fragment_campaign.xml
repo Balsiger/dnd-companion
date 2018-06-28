@@ -70,12 +70,13 @@
       android:name="net.ixitxachitls.companion.ui.fragments.PartyFragment"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_above="@+id/history"
       android:layout_below="@+id/date"
       android:tag="party"/>
 
   <LinearLayout
       android:layout_width="wrap_content"
-      android:layout_height="match_parent"
+      android:layout_height="wrap_content"
       android:layout_alignParentEnd="true"
       android:layout_below="@+id/titlebar"
       android:orientation="horizontal">
@@ -137,5 +138,13 @@
         app:backgroundTint="@color/campaign"
         app:srcCompat="@drawable/ic_delete_black_24dp"/>
   </LinearLayout>
+
+  <fragment
+      android:id="@+id/history"
+      android:name="net.ixitxachitls.companion.ui.fragments.HistoryFragment"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      />
 
 </RelativeLayout>

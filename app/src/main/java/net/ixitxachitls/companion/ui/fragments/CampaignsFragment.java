@@ -79,7 +79,6 @@ public class CampaignsFragment extends CompanionFragment {
     update(campaigns().getAllCampaignIds().getValue());
   }
 
-
   private void addCampaign() {
     EditCampaignDialog.newInstance().display();
   }

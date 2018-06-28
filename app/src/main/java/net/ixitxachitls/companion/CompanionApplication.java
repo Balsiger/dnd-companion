@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
+import net.ixitxachitls.companion.data.dynamics.Histories;
 import net.ixitxachitls.companion.data.dynamics.Images;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.net.nsd.ApplicationNsdAccessor;
@@ -136,6 +137,10 @@ public class CompanionApplication extends MultiDexApplication
 
   public Images images(boolean local) {
     return context.images(local);
+  }
+
+  public Histories histories() {
+    return context.histories();
   }
 
   @Override

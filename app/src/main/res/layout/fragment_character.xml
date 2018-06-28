@@ -156,226 +156,241 @@
 
   </LinearLayout>
 
-  <LinearLayout
-      android:id="@+id/abilities"
+  <ScrollView
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/bar"
-      android:layout_centerInParent="false"
-      android:layout_marginStart="10dp"
-      android:layout_marginTop="40dp"
-      android:orientation="horizontal">
+      android:layout_height="match_parent"
+      android:layout_above="@+id/history"
+      android:layout_below="@+id/bar">
 
-    <view
-        android:id="@+id/strength"
-        class="net.ixitxachitls.companion.ui.views.AbilityView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        app:attribute_name="STR"/>
-
-    <view
-        android:id="@+id/dexterity"
-        class="net.ixitxachitls.companion.ui.views.AbilityView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        app:attribute_name="DEX"/>
-
-    <view
-        android:id="@+id/constitution"
-        class="net.ixitxachitls.companion.ui.views.AbilityView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        app:attribute_name="CON"/>
-
-    <view
-        android:id="@+id/intelligence"
-        class="net.ixitxachitls.companion.ui.views.AbilityView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        app:attribute_name="INT"/>
-
-    <view
-        android:id="@+id/wisdom"
-        class="net.ixitxachitls.companion.ui.views.AbilityView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        app:attribute_name="WIS"/>
-
-    <view
-        android:id="@+id/charisma"
-        class="net.ixitxachitls.companion.ui.views.AbilityView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        app:attribute_name="CHA"/>
-
-  </LinearLayout>
-
-  <TextView
-      android:id="@+id/abilities_note"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/abilities"
-      android:layout_marginBottom="10dp"
-      android:layout_marginEnd="20dp"
-      android:layout_marginStart="20dp"
-      android:layout_weight="1"
-      android:text="Currently, only Dexterity is used to compute iniative. Since that currently only uses the bare Dexterity modifier, make sure that the Dexertity entered results in a DEX modifier matching your initiative modifier."
-      android:theme="@style/SmallText"/>
-
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/level"
-      android:layout_width="100dp"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/abilities_note"
-      android:layout_marginStart="20dp"
-      android:inputType="number|numberSigned"
-      app:defaultText="1"
-      app:descriptionText="The total effective character level."
-      app:labelColor="@color/characterDark"
-      app:labelText="Level"
-      app:lineColor="@color/characterDark"
-      app:textColor="@color/characterText">
-
-  </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
-
-  <LinearLayout
-      android:id="@+id/xp_line"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/level"
-      android:layout_marginStart="20dp"
-      android:orientation="horizontal">
-
-    <ImageView
-        android:id="@+id/xp_subtract"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_gravity="center_vertical"
-        app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/xp"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:inputType="number|numberSigned"
-        app:defaultText="0"
-        app:descriptionText="The amount of XP this character currently has."
-        app:labelColor="@color/characterDark"
-        app:labelText="XP"
-        app:lineColor="@color/characterDark"
-        app:textColor="@color/characterText"/>
-
-    <ImageView
-        android:id="@+id/xp_add"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_gravity="center_vertical"
-        app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
-
-    <TextView
-        android:id="@+id/xp_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/xp"
-        android:layout_gravity="center_vertical"
-        android:layout_toEndOf="@+id/xp"
-        android:layout_weight="0"
-        android:elevation="14dp"
-        android:padding="10dp"
-        android:text="(next level at 1000)"
-        android:theme="@style/SmallText"/>
-  </LinearLayout>
-
-  <LinearLayout
-      android:id="@+id/hpLine"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/xp_line"
-      android:layout_marginEnd="20dp"
-      android:layout_marginStart="20dp"
-      android:orientation="horizontal">
-
-    <ImageView
-        android:id="@+id/hp_subtract"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_gravity="center_vertical"
-        app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/hp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:inputType="number|numberSigned"
-        app:defaultText="1"
-        app:descriptionText="The characters current hit points."
-        app:labelColor="@color/characterDark"
-        app:labelText="HP"
-        app:lineColor="@color/characterDark"
-        app:textColor="@color/characterText"/>
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/hp_add"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_gravity="center_vertical"
-        app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+      <LinearLayout
+          android:id="@+id/abilities"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="false"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="40dp"
+          android:orientation="horizontal">
 
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/hp_max"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:inputType="number|numberSigned"
-        app:defaultText="1"
-        app:descriptionText="The characters maximal hit points."
-        app:labelColor="@color/characterDark"
-        app:labelText="Max HP"
-        app:lineColor="@color/characterDark"
-        app:textColor="@color/characterText">
+        <view
+            android:id="@+id/strength"
+            class="net.ixitxachitls.companion.ui.views.AbilityView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:attribute_name="STR"/>
 
-    </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+        <view
+            android:id="@+id/dexterity"
+            class="net.ixitxachitls.companion.ui.views.AbilityView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:attribute_name="DEX"/>
 
-    <ImageView
-        android:id="@+id/hp_nonlethal_subtract"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_gravity="center_vertical"
-        app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
+        <view
+            android:id="@+id/constitution"
+            class="net.ixitxachitls.companion.ui.views.AbilityView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:attribute_name="CON"/>
 
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/hp_nonlethal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:inputType="number|numberSigned"
-        app:defaultText="0"
-        app:descriptionText="The points of nonlethal damage the characters has sustained."
-        app:labelColor="@color/characterDark"
-        app:labelText="Nonlethal"
-        app:lineColor="@color/characterDark"
-        app:textColor="@color/characterText"/>
+        <view
+            android:id="@+id/intelligence"
+            class="net.ixitxachitls.companion.ui.views.AbilityView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:attribute_name="INT"/>
 
-    <ImageView
-        android:id="@+id/hp_nonlethal_add"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_gravity="center_vertical"
-        app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+        <view
+            android:id="@+id/wisdom"
+            class="net.ixitxachitls.companion.ui.views.AbilityView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:attribute_name="WIS"/>
 
-  </LinearLayout>
+        <view
+            android:id="@+id/charisma"
+            class="net.ixitxachitls.companion.ui.views.AbilityView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:attribute_name="CHA"/>
+
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/abilities_note"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:layout_marginEnd="20dp"
+          android:layout_marginStart="20dp"
+          android:layout_weight="1"
+          android:text="Currently, only Dexterity is used to compute iniative. Since that currently only uses the bare Dexterity modifier, make sure that the Dexertity entered results in a DEX modifier matching your initiative modifier."
+          android:theme="@style/SmallText"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/level"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:inputType="number|numberSigned"
+          app:defaultText="1"
+          app:descriptionText="The total effective character level."
+          app:labelColor="@color/characterDark"
+          app:labelText="Level"
+          app:lineColor="@color/characterDark"
+          app:textColor="@color/characterText">
+
+      </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+
+      <LinearLayout
+          android:id="@+id/xp_line"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/xp_subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/xp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberSigned"
+            app:defaultText="0"
+            app:descriptionText="The amount of XP this character currently has."
+            app:labelColor="@color/characterDark"
+            app:labelText="XP"
+            app:lineColor="@color/characterDark"
+            app:textColor="@color/characterText"/>
+
+        <ImageView
+            android:id="@+id/xp_add"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+
+        <TextView
+            android:id="@+id/xp_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            android:elevation="14dp"
+            android:padding="10dp"
+            android:text="(next level at 1000)"
+            android:theme="@style/SmallText"/>
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/hpLine"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="20dp"
+          android:layout_marginStart="20dp"
+          android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/hp_subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number|numberSigned"
+            app:defaultText="1"
+            app:descriptionText="The characters current hit points."
+            app:labelColor="@color/characterDark"
+            app:labelText="HP"
+            app:lineColor="@color/characterDark"
+            app:textColor="@color/characterText"/>
+
+        <ImageView
+            android:id="@+id/hp_add"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/hp_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number|numberSigned"
+            app:defaultText="1"
+            app:descriptionText="The characters maximal hit points."
+            app:labelColor="@color/characterDark"
+            app:labelText="Max HP"
+            app:lineColor="@color/characterDark"
+            app:textColor="@color/characterText">
+
+        </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+
+        <ImageView
+            android:id="@+id/hp_nonlethal_subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/hp_nonlethal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number|numberSigned"
+            app:defaultText="0"
+            app:descriptionText="The points of nonlethal damage the characters has sustained."
+            app:labelColor="@color/characterDark"
+            app:labelText="Nonlethal"
+            app:lineColor="@color/characterDark"
+            app:textColor="@color/characterText"/>
+
+        <ImageView
+            android:id="@+id/hp_nonlethal_add"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+  </ScrollView>
+
+  <fragment
+      android:id="@+id/history"
+      android:name="net.ixitxachitls.companion.ui.fragments.HistoryFragment"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      />
 
 </RelativeLayout>

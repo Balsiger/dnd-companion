@@ -90,6 +90,7 @@ public class CharacterFragment extends CompanionFragment {
   protected Wrapper<ImageView> hpNonlethalSubtract;
   protected Wrapper<FloatingActionButton> back;
   protected ConditionIconsView conditions;
+  protected HistoryFragment history;
 
   public CharacterFragment() {
     super(Type.character);
@@ -151,6 +152,8 @@ public class CharacterFragment extends CompanionFragment {
     damageNonlethal.enabled(false);
     hpNonlethalAdd = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_add).gone();
     hpNonlethalSubtract = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_subtract).gone();
+
+    history = (HistoryFragment) getChildFragmentManager().findFragmentById(R.id.history);
 
     update(character);
     return view;
@@ -220,6 +223,8 @@ public class CharacterFragment extends CompanionFragment {
     hp.text(String.valueOf(character.get().getHp()));
     hpMax.text(String.valueOf(character.get().getMaxHp()));
     damageNonlethal.text(String.valueOf(character.get().getNonlethalDamage()));
+
+    history.update(character.get().getCharacterId());
 
     redraw();
   }

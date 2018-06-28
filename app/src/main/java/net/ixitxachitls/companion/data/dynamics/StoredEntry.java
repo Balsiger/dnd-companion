@@ -44,12 +44,13 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
   private final Uri dbUrl;
   private final boolean local;
 
-  protected StoredEntry(CompanionContext context, long id, String type, String name, boolean local, Uri dbUrl) {
+  protected StoredEntry(CompanionContext context, long id, String type, String name, boolean local,
+                        Uri dbUrl) {
     this(context, id, type, null, name, local, dbUrl);
   }
 
-  protected StoredEntry(CompanionContext context, long id, String type, @Nullable String entryId, String name,
-                        boolean local, Uri dbUrl) {
+  protected StoredEntry(CompanionContext context, long id, String type, @Nullable String entryId,
+                        String name, boolean local, Uri dbUrl) {
     super(name);
 
     this.context = context;

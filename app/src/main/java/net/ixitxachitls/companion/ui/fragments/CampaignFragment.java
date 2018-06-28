@@ -58,6 +58,7 @@ public class CampaignFragment extends CompanionFragment {
   protected Wrapper<FloatingActionButton> unpublish;
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> calendar;
+  protected HistoryFragment history;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -89,6 +90,7 @@ public class CampaignFragment extends CompanionFragment {
     edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone();
     calendar = Wrapper.<FloatingActionButton>wrap(view, R.id.calendar).gone();
     date = TextWrapper.wrap(view, R.id.date);
+    history = (HistoryFragment) getChildFragmentManager().findFragmentById(R.id.history);
 
     campaigns.getCurrentCampaignId().observe(this, this::showCampaign);
 
@@ -98,6 +100,8 @@ public class CampaignFragment extends CompanionFragment {
   public void showCampaign(String campaignId) {
     campaigns.getCampaign(campaign.getCampaignId()).removeObserver(this::update);
     campaigns.getCampaign(campaignId).observe(this, this::update);
+
+    history.update(campaignId);
   }
 
   public boolean shows(String campaignId) {

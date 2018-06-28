@@ -201,6 +201,7 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
         companionContext.campaigns().update(this);
       } else {
         companionContext.campaigns().add(this);
+        companionContext.histories().created(getName(), getDate(), getCampaignId());
       }
 
       return true;
