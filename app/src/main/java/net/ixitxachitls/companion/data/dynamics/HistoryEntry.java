@@ -21,6 +21,9 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import android.support.annotation.DrawableRes;
+
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.values.CampaignDate;
@@ -86,13 +89,47 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
     return Collections.unmodifiableList(ids);
   }
 
+  public String buildNotificationTitle() {
+    switch (type) {
+      default:
+        return type.toString();
+
+      case xp:
+        return "xp";
+    }
+  }
+
+  public @DrawableRes int getNotificationDrawable() {
+    switch (type) {
+      default:
+        return R.drawable.history;
+
+      case xp:
+        return R.drawable.history_xp;
+    }
+  }
+
   @Override
   public int compareTo(HistoryEntry other) {
     return other.realDate.compareTo(this.realDate);
   }
 
-  public boolean hasId(String id) {
-    return ids.contains(id);
+  public boolean hasId(@Nullable String id) {
+    return id == null || ids.contains(id);
+  }
+
+  public boolean isViewed() {
+    return viewed;
+  }
+
+  public Type getEntryType() {
+    return type;
+  }
+
+  public void markViewed() {
+    viewed = true;
+    store();
+    context.histories().update(this);
   }
 
   @Override
@@ -185,7 +222,7 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
     return Entry.HistoryProto.Type.UNKNOWN;
   }
 
-  private String describe() {
+  public String describe() {
     String action;
     switch (type) {
       default:
@@ -208,8 +245,7 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
         return describeRemove();
 
       case xp:
-        action = "Awarded XP for " + describeIds();
-        break;
+        return describeXp();
     }
 
     if (description == null || description.isEmpty()) {
@@ -256,6 +292,21 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
 
       default:
         return "Removed " + describeIds() + " (" + description + ")";
+    }
+  }
+
+  private String describeXp() {
+    if (ids.isEmpty() || ids.size() < 2) {
+      return description;
+    }
+
+    Optional<Character> character = context.characters().getCharacter(ids.get(0)).getValue();
+    Optional<Campaign> campaign = context.campaigns().getCampaign(ids.get(1)).getValue();
+    if (character.isPresent() && character.isPresent()) {
+      return campaign.get().getDm() + " has awarded " + description + " XP to "
+          + character.get().getName();
+    } else {
+      return "The DM has awarded " + ids.get(0) + " " + description + " XP";
     }
   }
 

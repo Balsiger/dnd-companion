@@ -127,6 +127,10 @@ public class LocalCharacter extends Character {
   public void addXp(int xp) {
     this.xp += xp;
     store();
+
+    if (getCampaign().isPresent()) {
+      context.histories().addedXp(xp, getCampaign().get().getDate(), getCharacterId(), campaignId);
+    }
   }
 
   public void setLevel(int index, Level level) {

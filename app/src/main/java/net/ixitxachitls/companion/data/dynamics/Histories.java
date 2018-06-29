@@ -34,11 +34,11 @@ import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
+
+import javax.annotation.Nullable;
 
 /**
  * Access to history entries.
@@ -52,17 +52,23 @@ public class Histories extends StoredEntries<HistoryEntry> {
   public Histories(CompanionContext context) {
     super(context, DataBaseContentProvider.HISTORY, true);
 
-    entries.setValue(ImmutableList.sortedCopyOf(getAll()));
+    entries.setValue(entries(null));
   }
 
   public LiveData<ImmutableList<HistoryEntry>> getEntries() {
     return entries;
   }
 
-  public LiveData<ImmutableList<HistoryEntry>> getEntries(String id) {
+  public LiveData<ImmutableList<HistoryEntry>> getEntries(@Nullable String id) {
+    if (id == null) {
+      return getEntries();
+    }
+
     if (!entriesById.containsKey(id)) {
       MutableLiveData<ImmutableList<HistoryEntry>> data = new MutableLiveData<>();
-      data.setValue(ImmutableList.copyOf(entries(id)));
+      data.setValue(entries(id).stream()
+          .filter(e -> !e.isViewed())
+          .collect(ImmutableList.toImmutableList()));
       entriesById.put(id, data);
     }
 
@@ -73,14 +79,15 @@ public class Histories extends StoredEntries<HistoryEntry> {
     return getEntries().getValue().contains(entry);
   }
 
-  private List<HistoryEntry> entries(String id) {
-    return entries.getValue().stream()
-        .filter(h -> h.hasId(id)).sorted()
-        .collect(Collectors.toList());
+  private ImmutableList<HistoryEntry> entries(@Nullable String id) {
+    return getAll().stream()
+        .filter(e -> !e.isViewed() && e.hasId(id))
+        .sorted()
+        .collect(ImmutableList.toImmutableList());
   }
 
   protected void update(HistoryEntry entry) {
-    LiveDataUtils.setValueIfChanged(entries, ImmutableList.sortedCopyOf(getAll()));
+    LiveDataUtils.setValueIfChanged(entries, entries(null));
     for (String id : entry.getIds()) {
       if (entriesById.containsKey(id)) {
         entriesById.get(id).setValue(ImmutableList.copyOf(entries(id)));
@@ -109,6 +116,14 @@ public class Histories extends StoredEntries<HistoryEntry> {
     entry.store();
     add(entry);
   }
+
+  public void addedXp(int xp, CampaignDate gameDate, String characterId, String campaignId) {
+    HistoryEntry entry = new HistoryEntry(companionContext, gameDate, HistoryEntry.Type.xp,
+        ImmutableList.of(characterId, campaignId), String.valueOf(xp), false);
+    entry.store();
+    add(entry);
+  }
+
 
   @Override
   public void add(HistoryEntry entry) {

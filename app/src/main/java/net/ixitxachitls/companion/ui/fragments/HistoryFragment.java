@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.arch.lifecycle.LiveData;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -30,10 +31,14 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.common.collect.ImmutableList;
+
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Histories;
 import net.ixitxachitls.companion.data.dynamics.HistoryEntry;
+import net.ixitxachitls.companion.ui.Prompt;
+import net.ixitxachitls.companion.ui.views.wrappers.AbstractTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
 import java.util.List;
@@ -48,6 +53,7 @@ public class HistoryFragment extends Fragment {
   private ViewGroup view;
   private ScrollView contentsScroll;
   private LinearLayout contents;
+  private LinearLayout notifications;
   private Histories histories;
   private TextWrapper<TextView> all;
 
@@ -67,6 +73,9 @@ public class HistoryFragment extends Fragment {
     contentsScroll = view.findViewById(R.id.contents_scroll);
     contents = view.findViewById(R.id.contents);
     all = TextWrapper.wrap(view, R.id.all).onClick(this::toggleAll);
+    notifications = view.findViewById(R.id.notifications);
+
+    update((String) null);
 
     return view;
   }
@@ -75,27 +84,27 @@ public class HistoryFragment extends Fragment {
   public void onResume() {
     super.onResume();
 
-    update(histories.getEntries().getValue());
-  }
-
-  public void update() {
-    if (id == null) {
-      update(histories.getEntries().getValue());
-    } else {
-      update(histories.getEntries(id).getValue());
-    }
-  }
-
-  public void update(@Nullable String campaignId) {
-    this.id = campaignId;
     update();
   }
 
-  private void update(List<HistoryEntry> entries) {
-    contents.removeAllViews();
+  public void update() {
+    update(histories.getEntries(id).getValue());
+  }
 
+  public void update(@Nullable String campaignId) {
+    histories.getEntries(id).removeObservers(this);
+
+    this.id = campaignId;
+    LiveData<ImmutableList<HistoryEntry>> entries = histories.getEntries(id);
+    entries.observe(this, this::update);
+    update(entries.getValue());
+  }
+
+  private void update(List<HistoryEntry> entries) {
+    notifications.removeAllViews();
+    notifications.addView(all.get());
     for (HistoryEntry entry : entries) {
-      contents.addView(createLine(entry));
+      notifications.addView(createNotification(entry));
     }
   }
 
@@ -105,9 +114,34 @@ public class HistoryFragment extends Fragment {
     return line.get();
   }
 
+  private TextView createNotification(HistoryEntry entry) {
+    TextWrapper<TextView> notification = TextWrapper.wrap(new TextView(getContext()));
+    notification.text(entry.buildNotificationTitle());
+    notification.get().setBackground(getContext().getDrawable(entry.getNotificationDrawable()));
+    notification.align(AbstractTextWrapper.Align.CENTER);
+    notification.onClick(() -> showEntry(entry));
+    return notification.get();
+  }
+
+  private void showEntry(HistoryEntry entry) {
+    Prompt.create(getContext()).title(entry.buildNotificationTitle())
+        .message(entry.describe())
+        .yes(() -> entry.markViewed())
+        .noNo()
+        .show();
+  }
+
   private void toggleAll() {
     LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) contentsScroll.getLayoutParams();
     params.height = params.height == 0 ? 200 : 0;
     contentsScroll.setLayoutParams(params);
+
+    if (params.height > 0) {
+      contents.removeAllViews();
+
+      for (HistoryEntry entry : histories.getAll()) {
+        contents.addView(createLine(entry));
+      }
+    }
   }
 }
