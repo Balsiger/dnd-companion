@@ -120,6 +120,7 @@ public class HistoryFragment extends Fragment {
     notification.get().setBackground(getContext().getDrawable(entry.getNotificationDrawable()));
     notification.align(AbstractTextWrapper.Align.CENTER);
     notification.onClick(() -> showEntry(entry));
+    notification.bold();
     return notification.get();
   }
 

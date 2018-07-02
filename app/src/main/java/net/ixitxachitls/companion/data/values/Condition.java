@@ -27,6 +27,8 @@ import android.support.annotation.DrawableRes;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.rules.Conditions;
 
+import java.util.Objects;
+
 /**
  * A condition a character can have.
  */
@@ -181,5 +183,29 @@ public class Condition {
       return new Condition(name, description, summary, duration, predefined, endsBeforeTurn,
           icon, iconColor);
     }
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    Condition other = (Condition) o;
+    return predefined == other.predefined
+        && endsBeforeTurn == other.endsBeforeTurn
+        && icon == other.icon
+        && Objects.equals(name, other.name)
+        && Objects.equals(description, other.description)
+        && Objects.equals(summary, other.summary)
+        && Objects.equals(duration, other.duration);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, description, summary, duration, predefined, endsBeforeTurn, icon);
   }
 }

@@ -81,6 +81,26 @@ public class CampaignDate {
     return year == 0 && month == 0 && day == 0 && hour == 0 && minute == 0;
   }
 
+  public boolean before(CampaignDate date) {
+    return year < date.year
+        || month < date.month
+        || day < date.day
+        || hour < date.hour
+        || minute < date.minute;
+  }
+
+  public boolean after(CampaignDate date) {
+    return !equals(date) && !before(date);
+  }
+
+  public boolean equals(CampaignDate date) {
+    return year == date.year
+        && month == date.month
+        && day == date.day
+        && hour == date.hour
+        && minute == date.minute;
+  }
+
   @Override
   public String toString() {
     return year + "-"

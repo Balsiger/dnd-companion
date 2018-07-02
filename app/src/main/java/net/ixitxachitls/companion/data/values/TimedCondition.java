@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.proto.Value;
 
+import java.util.Objects;
+
 /**
  * A condition affecting a character for a specific amount of time.
  */
@@ -92,6 +94,14 @@ public class TimedCondition {
     return getDuration().isPermanent();
   }
 
+  public boolean endedAfter(CampaignDate date) {
+    return hasEndDate() && endDate.after(date);
+  }
+
+  public boolean endedBefore(CampaignDate date) {
+    return hasEndDate() && endDate.before(date);
+  }
+
   public boolean hasEndDate() {
     return endRound == 0 && !endDate.isEmpty();
   }
@@ -123,5 +133,26 @@ public class TimedCondition {
   public String toString() {
     return condition
         + (endRound != Integer.MAX_VALUE ? " until " + (endRound > 0 ? endRound : endDate) : "");
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    TimedCondition other = (TimedCondition) o;
+    return endRound == other.endRound &&
+        Objects.equals(condition, other.condition) &&
+        Objects.equals(sourceId, other.sourceId) &&
+        Objects.equals(endDate, other.endDate);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(condition, sourceId, endRound, endDate);
   }
 }

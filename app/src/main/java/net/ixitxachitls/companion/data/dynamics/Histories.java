@@ -117,6 +117,13 @@ public class Histories extends StoredEntries<HistoryEntry> {
     add(entry);
   }
 
+  public void expired(String description, CampaignDate gameDate, String ... ids) {
+    HistoryEntry entry = new HistoryEntry(companionContext, gameDate, HistoryEntry.Type.expired,
+        Arrays.asList(ids), description, false);
+    entry.store();
+    add(entry);
+  }
+
   public void addedXp(int xp, CampaignDate gameDate, String characterId, String campaignId) {
     HistoryEntry entry = new HistoryEntry(companionContext, gameDate, HistoryEntry.Type.xp,
         ImmutableList.of(characterId, campaignId), String.valueOf(xp), false);

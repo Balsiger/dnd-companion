@@ -170,6 +170,7 @@ message HistoryProto {
     ADD = 3;
     REMOVE = 4;
     XP = 5;
+    EXPIRED = 6;
   }
   Type type = 4;
   repeated string entity = 5;

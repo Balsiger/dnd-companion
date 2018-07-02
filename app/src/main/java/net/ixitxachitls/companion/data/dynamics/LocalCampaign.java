@@ -24,12 +24,16 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.content.Context;
 import android.support.annotation.CallSuper;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.CampaignDate;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
@@ -94,8 +98,29 @@ public class LocalCampaign extends Campaign {
   }
 
   public void setDate(CampaignDate date) {
+    Multimap<String, TimedCondition> expired = expiredConditions(this.date, date);
     this.date = date;
     store();
+
+    for (String id : expired.keySet()) {
+      for (TimedCondition condition : expired.get(id)) {
+        context.histories().expired(condition.getName(), getDate(), id, getCampaignId());
+      }
+    }
+  }
+
+  private Multimap<String, TimedCondition> expiredConditions(CampaignDate last,
+                                                             CampaignDate current) {
+    Multimap<String, TimedCondition> expired = HashMultimap.create();
+    for (Character character : getCharacters()) {
+      for (TimedCondition condition : character.getAffectedConditions()) {
+        if (!condition.endedBefore(last) && condition.endedBefore(current)) {
+          expired.put(character.getCharacterId(), condition);
+        }
+      }
+    }
+
+    return expired;
   }
 
   public void publish() {

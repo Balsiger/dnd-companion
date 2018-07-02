@@ -26,6 +26,7 @@ import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -212,5 +213,28 @@ public class Duration {
     }
 
     return Math.abs(value) + " " + (Math.abs(value) == 1 ? unit : pluralUnit);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    Duration other = (Duration) o;
+    return rounds == other.rounds
+        && minutes == other.minutes
+        && hours == other.hours
+        && days == other.days
+        && years == other.years;
+  }
+
+  @Override
+  public int hashCode() {
+
+    return Objects.hash(rounds, minutes, hours, days, years);
   }
 }

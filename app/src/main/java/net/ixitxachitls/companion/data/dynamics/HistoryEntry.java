@@ -60,7 +60,7 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
   private boolean viewed;
 
   public enum Type {
-    unknown, other, create, add, remove, xp
+    unknown, other, create, add, remove, xp, expired
   }
 
   public HistoryEntry(CompanionContext context, CampaignDate gameDate, Type type,
@@ -96,6 +96,9 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
 
       case xp:
         return "xp";
+
+      case expired:
+        return "expired";
     }
   }
 
@@ -106,6 +109,9 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
 
       case xp:
         return R.drawable.history_xp;
+
+      case expired:
+        return R.drawable.history_expired;
     }
   }
 
@@ -191,6 +197,9 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
 
       case XP:
         return Type.xp;
+
+      case EXPIRED:
+        return Type.expired;
     }
 
     Status.error("Uknown history type encountered: " + type);
@@ -216,6 +225,9 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
 
       case xp:
         return Entry.HistoryProto.Type.XP;
+
+      case expired:
+        return Entry.HistoryProto.Type.EXPIRED;
     }
 
     Status.error("Unknown history type encountered: " + type);
@@ -246,6 +258,9 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
 
       case xp:
         return describeXp();
+
+      case expired:
+        return describeExpired();
     }
 
     if (description == null || description.isEmpty()) {
@@ -296,17 +311,32 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
   }
 
   private String describeXp() {
-    if (ids.isEmpty() || ids.size() < 2) {
+    if (ids.size() < 2) {
       return description;
     }
 
     Optional<Character> character = context.characters().getCharacter(ids.get(0)).getValue();
     Optional<Campaign> campaign = context.campaigns().getCampaign(ids.get(1)).getValue();
-    if (character.isPresent() && character.isPresent()) {
+    if (character.isPresent() && campaign.isPresent()) {
       return campaign.get().getDm() + " has awarded " + description + " XP to "
           + character.get().getName();
     } else {
       return "The DM has awarded " + ids.get(0) + " " + description + " XP";
+    }
+  }
+
+  private String describeExpired() {
+    if (ids.size() < 2) {
+      return description;
+    }
+
+    Optional<Character> character = context.characters().getCharacter(ids.get(0)).getValue();
+    Optional<Campaign> campaign = context.campaigns().getCampaign(ids.get(1)).getValue();
+    if (character.isPresent() && campaign.isPresent()) {
+      return "The " + description + " condition for character " + character.get().getName()
+          + " (" + campaign.get().getName() + ") has expired.";
+    } else {
+      return "The " + description + " condition for " + ids.get(0) + " has expired.";
     }
   }
 
