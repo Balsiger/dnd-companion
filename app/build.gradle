@@ -208,5 +208,7 @@ task convertProtoData {
       'net.ixitxachitls.companion.proto.LevelProto')
   convertToBinaryProtos('./src/main/entities', 'world',
       'net.ixitxachitls.companion.proto.WorldProto')
+  convertToBinaryProtos('./src/main/entities', 'item',
+      'net.ixitxachitls.companion.proto.ItemTemplateProto')
 }
 

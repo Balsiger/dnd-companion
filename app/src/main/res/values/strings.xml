@@ -109,5 +109,8 @@
   <string name="testing_name2">Tauriel Borrealis</string>
   <string name="testing_name3">The Dragon Slayers</string>
   <string name="campaign_delete_message_remote">Do you really want to delete the campaign? Note that the campaign will reappear as soon as it\'s available on the local network again.</string>
+  <string name="character_add_item">Add Item</string>
+  <string name="item">Item</string>
+  <string name="item_description">The name of the item to add to the character\'s inventory.</string>
 
 </resources>

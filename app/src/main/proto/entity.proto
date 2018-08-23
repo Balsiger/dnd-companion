@@ -326,6 +326,106 @@ message MonsterProto {
   repeated Skill skill = 36;
 }
 
+message ItemTemplateProto
+{
+  EntityProto entity = 1;
+  MoneyProto value = 2;
+  WeightProto weight = 3;
+
+  enum Probability
+  {
+    UNKNOWN = 0;
+    COMMON = 1;
+    UNCOMMON = 2;
+    RARE = 3;
+    VERY_RARE = 4;
+    UNIQUE = 5;
+  }
+  Probability probability = 4;
+  SizeProto size = 5;
+  int32 hardness = 6;
+  int32 hit_points = 7;
+
+  message Appearance
+  {
+    Probability probability = 1;
+    string appearance = 2;
+  }
+  repeated Appearance appearance = 8;
+
+  message Substance
+  {
+    enum Material
+    {
+      UNKNOWN = 0;
+      PAPER = 1;
+      CLOTH = 2;
+      ROPE = 3;
+      GLASS = 4;
+      ICE = 5;
+      LEATHER = 6;
+      HIDE = 7;
+      WOOD = 8;
+      STONE = 9;
+      IRON = 10;
+      STEEL = 11;
+      CRYSTAL = 12;
+      MITHRAL = 13;
+      ADAMANTINE = 14;
+      BONE = 15;
+    }
+    Material material = 1;
+    DistanceProto thickness = 2;
+  }
+  Substance substance = 9;
+  int32 break_dc = 10;
+  string player_name = 11;
+  bool monetary = 26;
+
+  WeaponProto weapon = 12;
+  WearableProto wearable = 13;
+  IncompleteProto incomplete = 14;
+  MagicProto magic = 15;
+  CountedProto counted = 16;
+  MultipleProto multiple = 17;
+  MultiuseProto multiuse = 18;
+  TimedProto timed = 19;
+  CommodityProto commodity = 20;
+  ContainerProto container = 21;
+  ArmorProto armor = 22;
+  LightProto light = 23;
+  CompositeProto composite = 24;
+  repeated ParametrizedEntityProto qualities = 27;
+
+  message Random
+  {
+    enum Type
+    {
+      UNKNOWN = 0;
+      MUNDANE = 1;
+    }
+    Type type = 1;
+    DiceProto multiple = 2;
+    repeated string item = 3;
+  }
+  repeated Random random = 28;
+
+  message Material
+  {
+    MoneyProto value = 1;
+    enum ValueType
+    {
+      UNKNOWN = 0;
+      PER_POUND = 1;
+    }
+    ValueType value_type = 2;
+    int32 hp_per_inch = 3;
+    RationalProto weight_multiplier = 4;
+    RationalProto hp_multiplier = 5;
+  }
+  Material material = 29;
+}
+
 message LevelProto {
   EntityProto entity = 1;
   string abbreviation = 2;
@@ -414,5 +514,199 @@ message ParametrizedEntityProto {
 message LeveledEntityProto {
   int32 level = 1;
   ParametrizedEntityProto entity = 2;
+}
+
+message WeaponProto
+{
+  DamageProto damage = 1;
+  DamageProto secondary_damage = 2;
+  DamageProto splash = 3;
+
+  enum Type
+  {
+    UNKNOWN = 0;
+    PIERCING_OR_SLASHING = 1;
+    BLUDGEONING_OR_PIERCING = 2;
+    BLUDGEONING_AND_PIERCING = 3;
+    SLASHING_OR_PIERCING = 4;
+    SLASHING = 5;
+    BLUDGEONING = 6;
+    PIERCING = 7;
+    GRENADE = 8;
+    NONE = 9;
+  }
+  Type type = 4;
+  CriticalProto critical = 5;
+  WeaponStyle style = 6;
+  Proficiency proficiency = 7;
+  DistanceProto range = 8;
+  DistanceProto reach = 9;
+  int32 max_attacks = 10;
+  bool finesse = 11;
+  bool ammunition = 12;
+  repeated string ammunition_needed = 13;
+  SizeProto.Size wielder_size = 14;
+}
+
+message WearableProto
+{
+  enum Slot
+  {
+    UNKNOWN = 0;
+    HEAD = 1;
+    NECK = 2;
+    TORSO = 3;
+    BODY = 4;
+    WAIST = 5;
+    SHOULDERS = 6;
+    HANDS = 7;
+    HAND = 8;
+    FINGER = 9;
+    WRISTS = 10;
+    FEET = 11;
+    EYES = 12;
+  }
+  Slot slot = 1;
+  DurationProto wear = 2;
+  DurationProto wear_hastily = 3;
+  DurationProto remove = 4;
+}
+
+message IncompleteProto
+{
+  string text = 1;
+}
+
+message MagicProto
+{
+  enum Type
+  {
+    UNKNOWN = 0;
+    STRENGTH = 1;
+    DEXTERITY = 2;
+    CONSTITUTION = 3;
+    INTELLIGENCE = 4;
+    WISDOM = 5;
+    CHARISMA = 6;
+    ATTACK = 7;
+    DAMAGE = 8;
+    ARMOR_CLASS = 9;
+    HIDE = 10;
+    MOVE_SILENTLY = 11;
+  }
+
+  message Modifier
+  {
+    Type type = 3;
+    ModifierProto modifier = 2;
+  }
+  repeated Modifier modifier = 2;
+}
+
+message CountedProto
+{
+  int32 count = 1;
+
+  enum Unit
+  {
+    UNKNOWN = 0;
+    DAY = 1;
+    PIECE = 2;
+    SHEET = 3;
+    USE = 4;
+    PAGE = 5;
+    CHARGE = 6;
+    APPLICATION = 7;
+    DAMAGE = 8;
+  }
+  Unit unit = 2;
+}
+
+message MultipleProto
+{
+  int32 count = 1;
+  CountedProto.Unit unit = 2;
+}
+
+message MultiuseProto
+{
+  int32 count = 1;
+}
+
+message TimedProto
+{
+  RandomDurationProto duration = 1;
+}
+
+message CommodityProto
+{
+  AreaProto area = 1;
+  DistanceProto length = 2;
+}
+
+message ContainerProto
+{
+  VolumeProto capacity = 1;
+
+  enum State
+  {
+    UNKNOWN = 0;
+    SOLID = 1;
+    GRANULAR = 2;
+    LIQUID = 3;
+    GASEOUS = 4;
+  }
+  State state = 2;
+}
+
+message ArmorProto
+{
+  ModifierProto ac_bonus = 1;
+
+  enum Type
+  {
+    UNKNOWN = 0;
+    LIGHT = 1;
+    MEDIUM = 2;
+    HEAVY = 3;
+    SHIELD = 4;
+    TOWER_SHIELD = 5;
+    NONE = 6;
+  }
+  Type type = 2;
+  int32 max_dexterity = 3;
+  int32 check_penalty = 4;
+  int32 arcane_failure = 5;
+  DistanceProto speed_fast = 6;
+  DistanceProto speed_slow = 7;
+}
+
+message LightProto
+{
+  message Light
+  {
+    DistanceProto distance = 1;
+
+    enum Shape
+    {
+      UNKNOWN = 0;
+      CONE = 1;
+      CYLINDER = 2;
+      LINE = 3;
+      SPHERE = 4;
+    }
+    Shape shape = 2;
+  }
+  Light bright = 1;
+  Light shadowy = 2;
+}
+
+message CompositeProto
+{
+  message Or
+  {
+    repeated string name = 1;
+  }
+  repeated Or contains = 1;
 }
 

@@ -33,6 +33,16 @@
   <color name="battleDark">#7f0000</color>
   <color name="battleText">#ffffff</color>
 
+  <color name="item">#2962ff</color>
+  <color name="itemLight">#768fff</color>
+  <color name="itemDark">#0039cb</color>
+  <color name="itemText">#fff</color>
+
+  <color name="className">#ffd54f</color>
+  <color name="classNameLight">#ffff81 </color>
+  <color name="classNameDark">#c8a415</color>
+  <color name="classNameText">#000</color>
+
   <!-- colors for character status -->
   <color name="alive">#f00</color>
   <color name="stable">#666</color>
@@ -59,5 +69,7 @@
   <color name="white">#fff</color>
   <color name="red">#800</color>
   <color name="brightRed">#f00</color>
+  <color name="transparent">#00ff0000</color>
+  <color name="error">#f00</color>
 
 </resources>

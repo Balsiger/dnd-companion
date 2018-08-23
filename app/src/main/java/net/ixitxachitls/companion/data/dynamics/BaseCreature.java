@@ -29,8 +29,8 @@ import com.google.protobuf.MessageLite;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.Monster;
 import net.ixitxachitls.companion.data.enums.Gender;
+import net.ixitxachitls.companion.data.statics.Monster;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
@@ -64,6 +64,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   protected int hp;
   protected int maxHp;
   protected int nonlethalDamage;
+  protected List<Item> items = new ArrayList<>();
   protected int initiative = NO_INITIATIVE;
   protected int initiativeRandom = 0;
   protected int battleNumber = 0;
@@ -122,6 +123,43 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
   public int getCharisma() {
     return charisma;
+  }
+
+  public List<Item> getItems() {
+    return items;
+  }
+
+  public void add(Item item) {
+    items.add(item);
+    store();
+  }
+
+  public void moveItemBefore(Item item, Item move) {
+    if (items.remove(move)) {
+      items.add(items.indexOf(item), move);
+      store();
+    }
+  }
+
+  public void moveItemAfter(Item item, Item move) {
+    if (items.remove(move)) {
+      items.add(items.indexOf(item) + 1, move);
+      store();
+    }
+  }
+
+  public void moveItemFirst(Item item) {
+    if (items.remove(item)) {
+      items.add(0, item);
+      store();
+    }
+  }
+
+  public void moveItemLast(Item item) {
+    if (items.remove(item)) {
+      items.add(item);
+      store();
+    }
   }
 
   public void addInitiatedCondition(TargetedTimedCondition condition) {
@@ -335,7 +373,8 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
             .collect(Collectors.toList()))
         .setHp(hp)
         .setHpMax(maxHp)
-        .setNonlethalDamage(nonlethalDamage);
+        .setNonlethalDamage(nonlethalDamage)
+        .addAllItem(items.stream().map(Item::toProto).collect(Collectors.toList()));
 
     if (race.isPresent()) {
       proto.setRace(race.get().getName());
@@ -366,6 +405,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     hp = proto.getHp();
     maxHp = proto.getHpMax();
     nonlethalDamage = proto.getNonlethalDamage();
+    items = proto.getItemList().stream().map(p -> Item.fromProto(p)).collect(Collectors.toList());
   }
 
   @VisibleForTesting

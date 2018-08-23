@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data;
 
+import net.ixitxachitls.companion.data.statics.Monster;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;

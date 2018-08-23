@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.support.annotation.IdRes;
+import android.view.MotionEvent;
 import android.view.View;
 
 /**
@@ -48,5 +49,10 @@ public final class Wrapper<V extends View> extends AbstractWrapper<V, Wrapper<V>
   @FunctionalInterface
   public interface Action {
     void execute();
+  }
+
+  @FunctionalInterface
+  public interface TouchAction {
+    boolean execute(MotionEvent event);
   }
 }

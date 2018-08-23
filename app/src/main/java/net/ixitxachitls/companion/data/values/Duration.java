@@ -27,6 +27,7 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,10 +40,15 @@ public class Duration {
 
   public static final Duration PERMANENT = new Duration(-1, -1, -1, -1, -1);
   public static final Duration NULL = new Duration(0, 0, 0, 0, 0);
+  public static final Duration ZERO = NULL;
 
   private static final Pattern ROUNDS_ONLLY = Pattern.compile("\\s*(\\d+)\\s*");
-  private static final Pattern PATTERN =
-      Pattern.compile("\\s*(\\d+)\\s+(r|rounds?|m|min|minutes?|h|hours?|d|days?|y|years?)");
+  private static final ValueParser PARSER = new IntegerValueParser(
+      new ValueParser.Unit("round", "rounds", "r"),
+      new ValueParser.Unit("minute", "minutes", "min", "m"),
+      new ValueParser.Unit("hour", "hours", "h"),
+      new ValueParser.Unit("day", "days", "d"),
+      new ValueParser.Unit("year", "years", "y"));
 
   private final int rounds;
   private final int minutes;
@@ -66,58 +72,19 @@ public class Duration {
     return new Duration(0, minutes, hours, days, years);
   }
 
-  public static Duration parse(String input) {
-    int rounds = 0;
-    int minutes = 0;
-    int hours = 0;
-    int days = 0;
-    int years = 0;
-
+  public static Optional<Duration> parse(String input) {
     Matcher matcher = ROUNDS_ONLLY.matcher(input);
     if (matcher.matches()) {
-      rounds = Integer.parseInt(matcher.group(1));
+      return Optional.of(Duration.rounds(Integer.parseInt(matcher.group(1))));
     } else {
-      matcher = PATTERN.matcher(input);
-      while (matcher.find()) {
-        int value = Integer.parseInt(matcher.group(1));
-        String unit = matcher.group(2);
-
-        switch (unit) {
-          case "r":
-          case "round":
-          case "rounds":
-            rounds += value;
-            break;
-
-          case "m":
-          case "min":
-          case "minute":
-          case "minutes":
-            minutes += value;
-            break;
-
-          case "h":
-          case "hour":
-          case "hours":
-            hours += value;
-            break;
-
-          case "d":
-          case "day":
-          case "days":
-            days += value;
-            break;
-
-          case "y":
-          case "year":
-          case "years":
-            years += value;
-            break;
-        }
+      try {
+        List<Integer> values = PARSER.parse(input);
+        return Optional.of(new Duration(values.get(0), values.get(1), values.get(2), values.get(3),
+            values.get(4)));
+      } catch (IllegalArgumentException e) {
+        return Optional.empty();
       }
     }
-
-    return new Duration(rounds, minutes, hours, days, years);
   }
 
   public boolean isNone() {

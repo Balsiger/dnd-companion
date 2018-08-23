@@ -23,10 +23,13 @@ package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -38,19 +41,17 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.ConditionIconsView;
-import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.TitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
+
+import javax.annotation.Nullable;
 
 /**
  * Fragment for displaying character information.
@@ -64,33 +65,18 @@ public class CharacterFragment extends CompanionFragment {
   // UI elements.
   protected TitleView title;
   protected TextWrapper<TextView> campaignTitle;
-  protected AbilityView strength;
-  protected AbilityView dexterity;
-  protected AbilityView constitution;
-  protected AbilityView intelligence;
-  protected AbilityView wisdom;
-  protected AbilityView charisma;
   protected RoundImageView image;
   protected Wrapper<FloatingActionButton> copy;
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> delete;
   protected Wrapper<FloatingActionButton> move;
   protected Wrapper<FloatingActionButton> timed;
-  protected LabelledEditTextView xp;
-  protected Wrapper<ImageView> xpAdd;
-  protected Wrapper<ImageView> xpSubtract;
-  protected TextWrapper<TextView> xpNext;
-  protected LabelledEditTextView level;
-  protected LabelledEditTextView hp;
-  protected Wrapper<ImageView> hpAdd;
-  protected Wrapper<ImageView> hpSubtract;
-  protected LabelledEditTextView hpMax;
-  protected LabelledEditTextView damageNonlethal;
-  protected Wrapper<ImageView> hpNonlethalAdd;
-  protected Wrapper<ImageView> hpNonlethalSubtract;
   protected Wrapper<FloatingActionButton> back;
   protected ConditionIconsView conditions;
   protected HistoryFragment history;
+  protected ViewPager pager;
+  protected @Nullable CharacterStatisticsFragment statisticsFragment;
+  protected @Nullable CharacterInventoryFragment inventoryFragment;
 
   public CharacterFragment() {
     super(Type.character);
@@ -127,33 +113,11 @@ public class CharacterFragment extends CompanionFragment {
             + "reappear, though.");
     move = Wrapper.<FloatingActionButton>wrap(view, R.id.move).gone();
     timed = Wrapper.<FloatingActionButton>wrap(view, R.id.timed).gone();
-    strength = view.findViewById(R.id.strength);
-    dexterity = view.findViewById(R.id.dexterity);
-    constitution = view.findViewById(R.id.constitution);
-    intelligence = view.findViewById(R.id.intelligence);
-    wisdom = view.findViewById(R.id.wisdom);
-    charisma = view.findViewById(R.id.charisma);
-
-    xp = view.findViewById(R.id.xp);
-    xp.enabled(false);
-    xpAdd = Wrapper.<ImageView>wrap(view, R.id.xp_add).gone();
-    xpSubtract = Wrapper.<ImageView>wrap(view, R.id.xp_subtract).gone();
-    xpNext = TextWrapper.wrap(view, R.id.xp_next);
-    level = view.findViewById(R.id.level);
-    level.enabled(false);
-
-    hp = view.findViewById(R.id.hp);
-    hp.enabled(false);
-    hpAdd = Wrapper.<ImageView>wrap(view, R.id.hp_add).gone();
-    hpSubtract = Wrapper.<ImageView>wrap(view, R.id.hp_subtract).gone();
-    hpMax = view.findViewById(R.id.hp_max);
-    hpMax.enabled(false);
-    damageNonlethal = view.findViewById(R.id.hp_nonlethal);
-    damageNonlethal.enabled(false);
-    hpNonlethalAdd = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_add).gone();
-    hpNonlethalSubtract = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_subtract).gone();
 
     history = (HistoryFragment) getChildFragmentManager().findFragmentById(R.id.history);
+
+    pager = view.findViewById(R.id.pager);
+    pager.setAdapter(new CharacterPagerAdapter(getChildFragmentManager()));
 
     update(character);
     return view;
@@ -181,10 +145,16 @@ public class CharacterFragment extends CompanionFragment {
 
   private void update(Optional<Character> character) {
     this.character = character;
-
+    if (statisticsFragment != null) {
+      statisticsFragment.update(character);
+    }
     if (!character.isPresent() || !campaign.isPresent()) {
       this.campaign = Optional.empty();
       return;
+    }
+
+    if (inventoryFragment != null) {
+      inventoryFragment.update(character.get());
     }
 
     campaign = CompanionApplication.get(getContext()).campaigns()
@@ -204,34 +174,8 @@ public class CharacterFragment extends CompanionFragment {
     }
 
     conditions.update(character.get());
-
     copy.visible(!character.get().isLocal() && campaign.get().amDM());
-    strength.setValue(character.get().getStrength(),
-        Ability.modifier(character.get().getStrength()));
-    dexterity.setValue(character.get().getDexterity(),
-        Ability.modifier(character.get().getDexterity()));
-    constitution.setValue(character.get().getConstitution(),
-        Ability.modifier(character.get().getConstitution()));
-    intelligence.setValue(character.get().getIntelligence(),
-        Ability.modifier(character.get().getIntelligence()));
-    wisdom.setValue(character.get().getWisdom(),
-        Ability.modifier(character.get().getWisdom()));
-    charisma.setValue(character.get().getCharisma(),
-        Ability.modifier(character.get().getCharisma()));
-    xp.text(String.valueOf(character.get().getXp()));
-    level.text(String.valueOf(character.get().getLevel()));
-    hp.text(String.valueOf(character.get().getHp()));
-    hpMax.text(String.valueOf(character.get().getMaxHp()));
-    damageNonlethal.text(String.valueOf(character.get().getNonlethalDamage()));
-
     history.update(character.get().getCharacterId());
-
-    redraw();
-  }
-
-  protected void redraw() {
-    xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
-    hp.text(String.valueOf(character.get().getHp()));
   }
 
   private void delete() {
@@ -270,5 +214,53 @@ public class CharacterFragment extends CompanionFragment {
       CompanionFragments.get().show(Type.campaigns, Optional.empty());
     }
     return true;
+  }
+
+  public class CharacterPagerAdapter extends FragmentPagerAdapter {
+
+    public CharacterPagerAdapter(FragmentManager manager) {
+      super(manager);
+    }
+
+    @Override
+    public int getCount() {
+      return 2;
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+      switch (position) {
+        default:
+        case 0:
+          if (character.isPresent() && character.get().isLocal()) {
+            statisticsFragment = new LocalCharacterStatisticsFragment();
+          } else {
+            statisticsFragment = new CharacterStatisticsFragment();
+          }
+          statisticsFragment.update(character);
+          return statisticsFragment;
+
+        case 1:
+          if (character.isPresent()) {
+            inventoryFragment = new CharacterInventoryFragment();
+            inventoryFragment.update(character.get());
+          }
+          return inventoryFragment;
+      }
+    }
+
+    @Override
+    public String getPageTitle(int position) {
+      switch (position) {
+        case 0:
+          return "Statistics";
+
+        case 1:
+          return "Inventory";
+
+        default:
+          return "Unknown";
+      }
+    }
   }
 }

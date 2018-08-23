@@ -168,12 +168,13 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   }
 
   public W onClick(Wrapper.Action action) {
-    view.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        action.execute();
-      }
-    });
+    view.setOnClickListener(v -> action.execute());
+
+    return (W) this;
+  }
+
+  public W onTouch(Wrapper.TouchAction action) {
+    view.setOnTouchListener((v, event) -> action.execute(event));
 
     return (W) this;
   }

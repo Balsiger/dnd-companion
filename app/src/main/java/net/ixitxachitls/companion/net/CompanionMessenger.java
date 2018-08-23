@@ -353,8 +353,10 @@ public class CompanionMessenger implements Runnable {
 
       // Check for messages from servers.
       List<CompanionMessage> serverMessages = companionClients.receive();
-      Status.log(companionContext.settings().getNickname() + " received " + serverMessages.size()
-          + " server messages for processing");
+      if (!serverMessages.isEmpty()) {
+        Status.log(companionContext.settings().getNickname() + " received " + serverMessages.size()
+            + " server messages for processing");
+      }
       for (CompanionMessage serverMessage : serverMessages) {
         clientMessageProcessor.process(serverMessage.getSenderId(), serverMessage.getSenderName(),
             serverMessage.getMessageId(), serverMessage.getData());
@@ -362,8 +364,10 @@ public class CompanionMessenger implements Runnable {
 
       // Handle message from clients.
       List<CompanionMessage> clientMessages = companionServer.receive();
-      Status.log(companionContext.settings().getNickname() + " received " + clientMessages.size()
-          + " client messages for processing");
+      if (!clientMessages.isEmpty()) {
+        Status.log(companionContext.settings().getNickname() + " received " + clientMessages.size()
+            + " client messages for processing");
+      }
       for (CompanionMessage clientMessage : clientMessages) {
         serverMessageProcessor.process(clientMessage.getSenderId(), clientMessage.getSenderName(),
             clientMessage.getMessageId(), clientMessage.getData());

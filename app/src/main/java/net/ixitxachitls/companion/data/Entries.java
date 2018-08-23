@@ -26,6 +26,8 @@ import android.support.annotation.Nullable;
 import com.google.inject.Singleton;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.statics.ItemTemplate;
+import net.ixitxachitls.companion.data.statics.Monster;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 
@@ -45,6 +47,7 @@ public class Entries {
   private final Monsters monsters = new Monsters();
   private final EntriesStore<Level> levels = new EntriesStore<>(Level.class);
   private final EntriesStore<World> worlds = new EntriesStore<>(World.class);
+  private final ItemTemplates items = new ItemTemplates();
   private final AssetAccessor assetAccessor;
 
   public Entries(AssetAccessor assetAccessor) {
@@ -78,6 +81,10 @@ public class Entries {
     return levels;
   }
 
+  public ItemTemplates getItems() {
+    return items;
+  }
+
   private void load() {
     try {
       for (String reference : assetAccessor.list(PATH_ENTITIES)) {
@@ -93,6 +100,9 @@ public class Entries {
                 break;
               case World.TYPE:
                 worlds.read(assetAccessor.open(path + "/" + file));
+                break;
+              case ItemTemplate.TYPE:
+                items.read(assetAccessor.open(path + "/" + file));
                 break;
               default:
                 Status.error("Unsupported type " + type + " found!");

@@ -29,11 +29,23 @@ import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.EditText;
 
+import net.ixitxachitls.companion.R;
+
+import java.util.Optional;
+
 /**
  * Wrapper for edit texts.
  */
 public final class EditTextWrapper<V extends EditText>
     extends AbstractTextWrapper<V, EditTextWrapper<V>> {
+
+  @FunctionalInterface
+  public interface Validator {
+    public boolean validate(String value);
+  }
+
+  private Optional<Validator> validator = Optional.empty();
+  private @ColorInt int lineColorValue;
 
   private EditTextWrapper(View parent, @IdRes int id) {
     super(parent, id);
@@ -41,6 +53,10 @@ public final class EditTextWrapper<V extends EditText>
 
   private EditTextWrapper(V view) {
     super(view);
+  }
+
+  public void hideLine() {
+    view.setBackgroundColor(view.getContext().getResources().getColor(R.color.transparent, null));
   }
 
   public static <V extends EditText> EditTextWrapper<V> wrap(View parent, @IdRes int id) {
@@ -66,8 +82,34 @@ public final class EditTextWrapper<V extends EditText>
   }
 
   public EditTextWrapper<V> lineColorValue(@ColorInt int color) {
+    this.lineColorValue = color;
     view.setBackgroundTintList(ColorStateList.valueOf(color));
 
     return this;
+  }
+
+  public EditTextWrapper<V> validate(Validator validator) {
+    this.validator = Optional.of(validator);
+    return onChange(this::validate);
+  }
+
+  private void validate() {
+    if (validator.isPresent()) {
+      if (getText().isEmpty() || validator.get().validate(getText())) {
+        clearError();
+      } else {
+        error();
+      }
+    }
+  }
+
+  public EditTextWrapper<V> error() {
+    view.setBackgroundTintList(ColorStateList.valueOf(
+        view.getResources().getColor(R.color.error, null)));
+    return this;
+  }
+
+  public EditTextWrapper<V> clearError() {
+    return lineColorValue(lineColorValue);
   }
 }

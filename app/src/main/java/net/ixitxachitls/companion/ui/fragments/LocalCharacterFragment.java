@@ -38,7 +38,6 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
-import net.ixitxachitls.companion.ui.dialogs.NumberPrompt;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 
 import java.io.IOException;
@@ -72,23 +71,6 @@ public class LocalCharacterFragment extends CharacterFragment {
     timed.visible()
         .onClick(this::timed)
         .description("Add Condition", "Add a timed condition to this and/or other characters.");
-    strength.setAction(this::editAbilities);
-    dexterity.setAction(this::editAbilities);
-    constitution.setAction(this::editAbilities);
-    intelligence.setAction(this::editAbilities);
-    wisdom.setAction(this::editAbilities);
-    charisma.setAction(this::editAbilities);
-    xp.onEdit(this::changeXp).enabled(true);
-    xpAdd.visible().onClick(this::addXp);
-    xpSubtract.visible().onClick(this::subtractXp);
-    level.onEdit(this::changeLevel).enabled(true);
-    hp.onEdit(this::changeHp).enabled(true);
-    hpAdd.visible().onClick(this::addHp);
-    hpSubtract.visible().onClick(this::subtractHp);
-    hpMax.onEdit(this::changeMaxHp).enabled(true);
-    damageNonlethal.onEdit(this::changeNonlethalDamage).enabled(true);
-    hpNonlethalAdd.visible().onClick(this::addNonlethalDamage);
-    hpNonlethalSubtract.visible().onClick(this::subtractNonlethalDamage);
 
     return view;
   }
@@ -141,69 +123,6 @@ public class LocalCharacterFragment extends CharacterFragment {
     }
   }
 
-  private void editAbilities() {
-    if (!canEdit() || !character.isPresent()) {
-      return;
-    }
-
-    AbilitiesDialog.newInstance(character.get().getCharacterId(),
-        character.get().getCampaignId()).display();
-  }
-
-  private void changeXp() {
-    if (character.isPresent() && !xp.getText().isEmpty()) {
-      character.get().asLocal().setXp(Integer.parseInt(xp.getText()));
-    }
-  }
-
-  private void changeLevel() {
-    if (character.isPresent() && !level.getText().isEmpty()) {
-      try {
-        character.get().asLocal().setLevel(Integer.parseInt(level.getText()));
-      } catch (NumberFormatException e) {
-        character.get().asLocal().setLevel(1);
-      }
-    }
-
-    redraw();
-  }
-
-  private void changeHp() {
-    if (character.isPresent() && !hp.getText().isEmpty()) {
-      try {
-        character.get().setHp(Integer.parseInt(hp.getText()));
-      } catch (NumberFormatException e) {
-        character.get().asLocal().setHp(1);
-      }
-    }
-
-    redraw();
-  }
-
-  private void changeMaxHp() {
-    if (character.isPresent() && !hpMax.getText().isEmpty()) {
-      try {
-        character.get().setMaxHp(Integer.parseInt(hpMax.getText()));
-      } catch (NumberFormatException e) {
-        character.get().asLocal().setMaxHp(1);
-      }
-    }
-
-    redraw();
-  }
-
-  private void changeNonlethalDamage() {
-    if (character.isPresent() && !damageNonlethal.getText().isEmpty()) {
-      try {
-        character.get().setNonlethalDamage(Integer.parseInt(damageNonlethal.getText()));
-      } catch (NumberFormatException e) {
-        character.get().asLocal().setNonlethalDamage(0);
-      }
-    }
-
-    redraw();
-  }
-
   @Override
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
@@ -226,84 +145,5 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   public boolean canEdit() {
     return campaign.isPresent() && character.isPresent();
-  }
-
-  private void addHp() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Add hit points")
-        .message("The number of hit points to add to your current value.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addHp(prompt.getNumber());
-        redraw();
-      }
-    });
-    prompt.show();
-  }
-
-  private void subtractHp() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Subtract hit points")
-        .message("The number of hit points to subtract from your current value.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addHp(-prompt.getNumber());
-        redraw();
-      }
-    });
-    prompt.show();
-  }
-
-  private void addNonlethalDamage() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Add Non Lethal Damaga")
-        .message("The number of hit points to add to your current value of non lethal damage.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addNonlethalDamage(prompt.getNumber());
-        redraw();
-      }
-    });
-    prompt.show();
-  }
-
-  private void subtractNonlethalDamage() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Subtract Non Lethal Damage")
-        .message("The number of hit points to subtract from your current value of non lethal "
-            + "damage.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addNonlethalDamage(-prompt.getNumber());
-        redraw();
-      }
-    });
-    prompt.show();
-  }
-
-  private void addXp() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Add XP")
-        .message("The number of XPs to add to your current value.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addXp(prompt.getNumber());
-        redraw();
-      }
-    });
-    prompt.show();
-  }
-
-  private void subtractXp() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Subtract XP")
-        .message("The number of Xps to subtract from your current value.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addXp(-prompt.getNumber());
-        redraw();
-      }
-    });
-    prompt.show();
   }
 }

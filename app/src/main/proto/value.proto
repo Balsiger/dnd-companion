@@ -312,6 +312,104 @@ message TargetedTimedConditionProto {
   repeated string target_id = 3;
 }
 
+message MoneyProto
+{
+  int32 copper = 1;
+  int32 silver = 2;
+  int32 gold = 3;
+  int32 platinum = 4;
+
+  int32 magic_armor = 5;
+  int32 magic_weapon = 6;
+}
+
+message WeightProto
+{
+  message Metric
+  {
+    RationalProto tons = 1;
+    RationalProto kilograms = 2;
+    RationalProto grams = 3;
+  }
+  Metric metric = 1;
+
+  message Imperial
+  {
+    RationalProto pounds = 1;
+    RationalProto ounces = 2;
+  }
+  Imperial imperial = 2;
+
+  RationalProto carats = 3;
+}
+
+message CriticalProto
+{
+  RangeProto threat = 1;
+  int32 multiplier = 2;
+}
+
+message RandomDurationProto
+{
+  DurationProto duration = 1;
+  repeated DiceProto dice = 2;
+}
+
+message AreaProto
+{
+  message Metric
+  {
+    RationalProto square_meters = 1;
+    RationalProto square_decimeters = 2;
+    RationalProto square_centimeters = 3;
+  }
+  Metric metric = 1;
+
+  message Imperial
+  {
+    RationalProto square_yards = 1;
+    RationalProto square_feet = 2;
+    RationalProto square_inches = 3;
+  }
+  Imperial imperial = 2;
+}
+
+message VolumeProto
+{
+  message Metric
+  {
+    RationalProto cubic_meters = 1;
+    RationalProto cubic_decimeters = 2;
+    RationalProto cubic_centimeters = 3;
+  }
+  Metric metric = 1;
+
+  message Imperial
+  {
+    RationalProto cubic_feet = 1;
+    RationalProto cubic_inches = 2;
+  }
+  Imperial imperial = 2;
+
+  message Gallons
+  {
+    RationalProto gallons = 1;
+    RationalProto quarts = 2;
+    RationalProto pints = 3;
+    RationalProto cups = 4;
+  }
+  Gallons gallons = 3;
+
+  message Liters
+  {
+    RationalProto liters = 1;
+    RationalProto deciliters = 2;
+    RationalProto centiliters = 3;
+  }
+  Liters liters = 4;
+}
+
+
 // Shared enums.
 
 enum WeaponStyle {

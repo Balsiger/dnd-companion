@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.values;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 /**
  * Created by balsiger on 6/11/18.
@@ -32,15 +33,20 @@ public class DurationTest {
 
   @Test
   public void parse() {
-    assertEquals("", Duration.parse("").toString());
-    assertEquals("3 rounds", Duration.parse("   3    ").toString());
-    assertEquals("1 round", Duration.parse("1 r").toString());
-    assertEquals("42 rounds", Duration.parse("42 round").toString());
-    assertEquals("", Duration.parse("0 r").toString());
-    assertEquals("5 rounds", Duration.parse("5 rounds").toString());
+    assertFalse(Duration.parse("").isPresent());
+    assertFalse(Duration.parse("year").isPresent());
+    assertFalse(Duration.parse("1 yearr").isPresent());
+    assertFalse(Duration.parse("1 year 2 guru").isPresent());
+    assertFalse(Duration.parse("1 year 2").isPresent());
+    assertFalse(Duration.parse("1 year guru").isPresent());
+    assertEquals("3 rounds", Duration.parse("   3    ").get().toString());
+    assertEquals("1 round", Duration.parse("1 r").get().toString());
+    assertEquals("42 rounds", Duration.parse("42 round").get().toString());
+    assertEquals("ending", Duration.parse("0 r").get().toString());
+    assertEquals("5 rounds", Duration.parse("5 rounds").get().toString());
     assertEquals("1 year 2 days 3 hours 5 minutes",
-        Duration.parse("   5 m 3   h   2    d   1 y").toString());
+        Duration.parse("   5 m 3   h   2    d   1 y").get().toString());
     assertEquals("3 hours 12 minutes",
-        Duration.parse("4 minutes 2 h 3 m 1 hour 5 min").toString());
+        Duration.parse("4 minutes 2 h 3 m 1 hour 5 min").get().toString());
   }
 }

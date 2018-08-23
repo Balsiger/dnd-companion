@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.LayoutRes;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -38,7 +39,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 public class LabelledAutocompleteTextView extends AbstractLabelledView {
 
   // Ui elements.
-  private EditTextWrapper<AutoCompleteTextView> text;
+  protected EditTextWrapper<? extends AutoCompleteTextView> text;
 
   public LabelledAutocompleteTextView(Context context) {
     super(context, R.layout.view_labelled_autocomplete);
@@ -46,6 +47,11 @@ public class LabelledAutocompleteTextView extends AbstractLabelledView {
 
   public LabelledAutocompleteTextView(Context context, AttributeSet attributes) {
     super(context, attributes, R.layout.view_labelled_autocomplete);
+  }
+
+  protected LabelledAutocompleteTextView(Context context, AttributeSet attributes,
+                                         @LayoutRes int layoutId) {
+    super(context, attributes, layoutId);
   }
 
   @Override

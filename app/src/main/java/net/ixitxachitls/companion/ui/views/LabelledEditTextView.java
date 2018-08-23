@@ -97,15 +97,20 @@ public class LabelledEditTextView extends AbstractLabelledView {
 
   public LabelledEditTextView enabled(boolean enabled) {
     text.enabled(enabled);
-
     return this;
   }
 
   public LabelledEditTextView disabled() {
+    text.hideLine();;
     return enabled(false);
   }
 
   public LabelledEditTextView enabled() {
     return enabled(true);
+  }
+
+  public LabelledEditTextView validate(EditTextWrapper.Validator validator) {
+    text.validate(validator);
+    return this;
   }
 }

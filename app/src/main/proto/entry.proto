@@ -60,6 +60,7 @@ message CreatureProto {
   repeated TimedConditionProto affected_condition = 9;
   int32 hp = 10;  int32 hp_max = 11;
   int32 nonlethal_damage = 12;
+  repeated ItemProto item = 13;
 }
 
 message CharacterProto {
@@ -78,6 +79,22 @@ message CharacterProto {
 
   repeated ConditionProto condition_history = 4;
   int32 xp = 5;
+}
+
+message ItemProto {
+  string name = 1;
+  repeated string template = 2;
+  int32 hit_points = 3;
+  MoneyProto value = 4;
+  string appearance = 5;
+  string player_notes = 6;
+  string player_name = 7;
+  string dm_notes = 8;
+  int32 multiple = 9;
+  int32 multiuse = 10;
+  DurationProto time_left = 11;
+  bool identified = 12;
+  repeated ItemProto content = 13;
 }
 
 message CompanionMessageProto {
