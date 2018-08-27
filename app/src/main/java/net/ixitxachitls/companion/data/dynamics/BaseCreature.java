@@ -134,30 +134,75 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     store();
   }
 
-  public void moveItemBefore(Item item, Item move) {
-    if (items.remove(move)) {
-      items.add(items.indexOf(item), move);
-      store();
+  public boolean remove(Item item) {
+    if (items.remove(item)) {
+      return true;
     }
+
+    for (Item container : items) {
+      if (container.remove(item)) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
-  public void moveItemAfter(Item item, Item move) {
-    if (items.remove(move)) {
-      items.add(items.indexOf(item) + 1, move);
-      store();
+  public boolean moveItemBefore(Item item, Item move) {
+    if (remove(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item), move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemBefore(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
     }
+
+    return false;
+  }
+
+  public boolean moveItemAfter(Item item, Item move) {
+    if (remove(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item) + 1, move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemAfter(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
+    }
+
+    return false;
   }
 
   public void moveItemFirst(Item item) {
-    if (items.remove(item)) {
+    if (remove(item)) {
       items.add(0, item);
       store();
     }
   }
 
   public void moveItemLast(Item item) {
-    if (items.remove(item)) {
+    if (remove(item)) {
       items.add(item);
+      store();
+    }
+  }
+
+  public void moveItemInto(Item container, Item item) {
+    if (remove(item)) {
+      container.add(item);
       store();
     }
   }
@@ -222,6 +267,10 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
         break;
       }
     }
+  }
+
+  public void updated(Item item) {
+    store();
   }
 
   public boolean hasAffectedCondition(String name) {

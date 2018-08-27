@@ -208,6 +208,10 @@ public class CharacterFragment extends CompanionFragment {
 
   @Override
   public boolean goBack() {
+    // TODO(merlin): Maybe there is a better way than this?
+    // Remove the pager from the screen as otherwise transitions try to attach the
+    // view pager title to a weird view and thus an exception is thrown.
+    ((ViewGroup) pager.getParent()).removeView(pager);
     if (campaign.isPresent()) {
       CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
     } else {

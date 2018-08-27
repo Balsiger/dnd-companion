@@ -27,6 +27,18 @@
               android:orientation="vertical"
               android:padding="20dp">
 
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/name"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:theme="@style/LargeText"
+      app:descriptionText="The name of the item to use."
+      app:labelColor="@color/item"
+      app:labelText="Name"
+      app:lineColor="@color/item"
+      app:textColor="@color/itemDark"/>
+
   <net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView
       android:id="@+id/item"
       android:layout_width="match_parent"
@@ -48,18 +60,6 @@
       app:descriptionText="The templates to apply to the base item selected."
       app:labelColor="@color/item"
       app:labelText="Templates"
-      app:lineColor="@color/item"
-      app:textColor="@color/itemDark"/>
-
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/name"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_weight="1"
-      android:theme="@style/LargeText"
-      app:descriptionText="The name of the item to use."
-      app:labelColor="@color/item"
-      app:labelText="Name"
       app:lineColor="@color/item"
       app:textColor="@color/itemDark"/>
 
@@ -158,5 +158,12 @@
       android:layout_gravity="center"
       android:layout_marginTop="20dp"
       android:text="Add"/>
+  <Button
+      android:id="@+id/save"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="20dp"
+      android:text="Save"/>
 
 </LinearLayout>

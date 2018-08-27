@@ -22,6 +22,7 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -55,13 +56,22 @@
         android:text="10gp / 5lb"
         android:textColor="@color/itemText"
         android:theme="@style/LargeText"/>
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="0"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_mode_edit_black_24dp"/>
   </LinearLayout>
 
   <LinearLayout
       android:id="@+id/details"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="@color/itemLight"
+      android:background="@color/itemDark"
       android:orientation="vertical"
       android:padding="20dp"
       android:visibility="visible">
@@ -82,6 +92,14 @@
         android:text="TextView"
         android:textColor="@color/itemText"
         android:theme="@style/SmallText"/>
+
+    <LinearLayout
+        android:id="@+id/contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+    </LinearLayout>
 
   </LinearLayout>
 

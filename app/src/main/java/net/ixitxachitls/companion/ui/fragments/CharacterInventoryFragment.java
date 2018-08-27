@@ -35,11 +35,13 @@ import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Weight;
-import net.ixitxachitls.companion.ui.dialogs.AddItemDialog;
+import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.views.ItemView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -84,9 +86,17 @@ public class CharacterInventoryFragment extends Fragment {
     if (this.items != null && getContext() != null) {
       Money totalValue = Money.ZERO;
       Weight totalWeight = Weight.ZERO;
-      this.items.removeAllViews();
+
+      Map<Item, ItemView> views = collectItemViews();
+      items.removeAllViews();
       for (Item item : character.getItems()) {
-        this.items.addView(createLine(item));
+        ItemView view = views.get(item);
+        if (view == null) {
+          view = createLine(item);
+        } else {
+          view.update();
+        }
+        items.addView(view);
         totalValue = totalValue.add(item.getValue());
         totalWeight = totalWeight.add(item.getWeight());
       }
@@ -96,13 +106,23 @@ public class CharacterInventoryFragment extends Fragment {
     }
   }
 
-  private View createLine(Item item) {
+  private Map<Item, ItemView> collectItemViews() {
+    Map<Item, ItemView> views = new HashMap<>();
+    for (int i = 0; i < items.getChildCount(); i++) {
+      ItemView view = (ItemView) items.getChildAt(i);
+      views.put(view.getItem(), view);
+    }
+
+    return views;
+  }
+
+  private ItemView createLine(Item item) {
     return new ItemView(getContext(), character.get(), item);
   }
 
   private void addItem() {
     if (character.isPresent()) {
-      AddItemDialog.newInstance(character.get().getCharacterId()).display();
+      EditItemDialog.newInstance(character.get().getCharacterId()).display();
     } else {
       Status.error("No character available!");
     }

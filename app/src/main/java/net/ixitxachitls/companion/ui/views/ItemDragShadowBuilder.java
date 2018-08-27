@@ -37,7 +37,7 @@ public class ItemDragShadowBuilder extends View.DragShadowBuilder {
   @Override
   public void onProvideShadowMetrics(Point size, Point touch) {
     size.set(getView().getWidth() / 2, getView().getWidth());
-    touch.set(0, getView().getHeight());
+    touch.set(getView().getWidth() / 2, getView().getHeight() / 2);
   }
 
   @Override

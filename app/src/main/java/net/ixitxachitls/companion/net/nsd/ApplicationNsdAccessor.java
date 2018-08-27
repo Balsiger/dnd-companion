@@ -56,7 +56,9 @@ public class ApplicationNsdAccessor implements NsdAccessor {
 
   @Override
   public void undiscover(NsdManager.DiscoveryListener listener) {
-    manager.stopServiceDiscovery(listener);
+    if (listener != null) {
+      manager.stopServiceDiscovery(listener);
+    }
   }
 
   @Override

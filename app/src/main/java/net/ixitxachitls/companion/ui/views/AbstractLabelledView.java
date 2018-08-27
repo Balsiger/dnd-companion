@@ -92,4 +92,8 @@ abstract class AbstractLabelledView extends LinearLayout {
   private void showDescription(String name, String description) {
     new MessageDialog(getContext()).title(name).message(description).show();
   }
+
+  public void gone() {
+    setVisibility(GONE);
+  }
 }

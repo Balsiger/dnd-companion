@@ -41,11 +41,11 @@ import java.util.stream.Collectors;
  */
 public class Item {
 
-  private final String name;
-  private final List<ItemTemplate> templates;
+  private String name;
+  private List<ItemTemplate> templates;
   private int hp;
-  private final Money value;
-  private final String appearance;
+  private Money value;
+  private String appearance;
   private String playerName;
   private String playerNotes;
   private String dmNotes;
@@ -73,24 +73,137 @@ public class Item {
     this.contents = new ArrayList(contents);
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public List<ItemTemplate> getTemplates() {
+    return Collections.unmodifiableList(templates);
+  }
+
+  public void setTemplates(List<ItemTemplate> templates) {
+    this.templates = new ArrayList<>(templates);
+  }
+
   public Money getValue() {
     return value;
   }
 
-  public Weight getWeight() {
-    return weight(templates);
+  public void setValue(Money value) {
+    this.value = value;
+  }
+
+  public int getHp() {
+    return hp;
+  }
+
+  public void setHp(int hp) {
+    this.hp = hp;
   }
 
   public String getAppearance() {
     return appearance;
   }
 
+  public void setAppearance(String appearance) {
+    this.appearance = appearance;
+  }
+
+  public int getMultiple() {
+    return multiple;
+  }
+
+  public void setMultiple(int multiple) {
+    this.multiple = multiple;
+  }
+
+  public int getMultiuse() {
+    return multiuse;
+  }
+
+  public void setMultiuse(int multiuse) {
+    this.multiuse = multiuse;
+  }
+
+  public Weight getWeight() {
+    Weight weight = weight(templates);
+    for (Item content : contents) {
+      weight = weight.add(content.getWeight());
+    }
+
+    return weight;
+  }
+
   public String getDescription() {
     return description(templates);
   }
 
+  public List<Item> getContents() {
+    return Collections.unmodifiableList(this.contents);
+  }
+
+  public Optional<ItemTemplate> getBaseTemplate() {
+    if (templates.isEmpty()) {
+      return Optional.empty();
+    }
+
+    return Optional.of(templates.get(0));
+  }
+
   public String summary() {
     return value.toString() + " / " + getWeight().toString();
+  }
+
+  public void add(Item item) {
+    contents.add(item);
+  }
+
+  public boolean remove(Item item) {
+    if (contents.remove(item)) {
+      return true;
+    }
+
+    for (Item container : contents) {
+      if (container.remove(item)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  public boolean addItemBefore(Item item, Item move) {
+    if (contents.contains(item)) {
+      contents.add(contents.indexOf(item), move);
+      return true;
+    } else {
+      for (Item container : contents) {
+        if (container.addItemBefore(item, move)) {
+          return true;
+        }
+      }
+    }
+
+    return false;
+  }
+
+  public boolean addItemAfter(Item item, Item move) {
+    if (contents.contains(item)) {
+      contents.add(contents.indexOf(item) + 1, move);
+      return true;
+    } else {
+      for (Item container : contents) {
+        if (container.addItemAfter(item, move)) {
+          return true;
+        }
+      }
+    }
+
+    return false;
   }
 
   public static Item create(String ... names) {
@@ -140,10 +253,6 @@ public class Item {
         .setIdentified(identified)
         .addAllContent(contents.stream().map(Item::toProto).collect(Collectors.toList()))
         .build();
-  }
-
-  public String getName() {
-    return name;
   }
 
   public boolean isContainer() {

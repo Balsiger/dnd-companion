@@ -140,19 +140,85 @@ public class Rational {
 
   @Override
   public String toString() {
-    String result = "";
+    String sign = "";
     if (negative) {
-      result = "-";
+      sign = "-";
     }
 
     if (nominator == denominator || nominator == 0 || denominator == 0) {
-      return result + leader;
+      return sign + leader;
     }
 
+    String fraction = formatFraction();
     if (leader == 0) {
-      return result + nominator + "/" + denominator;
+      return sign + fraction;
     }
 
-    return result + leader + " " + nominator + "/" + denominator;
+    if (fraction.length() > 1) {
+      return sign + leader + " " + fraction;
+    } else {
+      return sign + leader + fraction;
+    }
+  }
+
+  private String formatFraction() {
+    switch (nominator) {
+      case 1:
+        switch (denominator) {
+          case 2:
+            return "½";
+          case 3:
+            return "⅓";
+          case 4:
+            return "¼";
+          case 5:
+            return "⅕";
+          case 6:
+            return "⅙";
+          case 7:
+            return "⅐";
+          case 8:
+            return "⅛";
+          case 9:
+            return "⅑";
+          case 10:
+            return "⅒";
+        }
+      case 2:
+        switch (denominator) {
+          case 3:
+            return "⅔";
+          case 5:
+            return "⅖";
+        }
+      case 3:
+        switch (denominator) {
+          case 4:
+            return "¾";
+          case 5:
+            return "⅗";
+          case 8:
+            return "⅜";
+        }
+      case 4:
+        switch (denominator) {
+          case 5:
+            return "⅘";
+        }
+      case 5:
+        switch (denominator) {
+          case 6:
+            return "⅚";
+          case 8:
+            return "⅝";
+        }
+      case 7:
+        switch (denominator) {
+          case 8:
+            return "⅞";
+        }
+    }
+
+    return nominator + "/" + denominator;
   }
 }
