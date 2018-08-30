@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.dynamics;
 
+import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.statics.ItemTemplate;
 import net.ixitxachitls.companion.data.values.Duration;
@@ -41,6 +42,7 @@ import java.util.stream.Collectors;
  */
 public class Item {
 
+  private String id;
   private String name;
   private List<ItemTemplate> templates;
   private int hp;
@@ -55,15 +57,18 @@ public class Item {
   private boolean identified;
   private List<Item> contents;
 
-  public Item(String name, List<ItemTemplate> templates, int hp, Money value, String appearance,
-              String playerName, String playerNotes, String dmNotes, int multiple, int multiuse,
-              Duration timeLeft, boolean identified, List<Item> contents) {
+  public Item(String id, String name, List<ItemTemplate> templates, int hp, Money value,
+              String appearance, String playerName, String playerNotes, String dmNotes,
+              int multiple, int multiuse, Duration timeLeft, boolean identified,
+              List<Item> contents) {
+    this.id = id;
     this.name = name;
     this.templates = new ArrayList(templates);
     this.hp = hp;
     this.value = value;
     this.appearance = appearance;
-    this.playerName = playerName;
+    this.playerName = playerName.isEmpty() && !templates.isEmpty()
+        ? templates.get(0).getName() : playerName;
     this.playerNotes = playerNotes;
     this.dmNotes = dmNotes;
     this.multiple = multiple;
@@ -71,6 +76,16 @@ public class Item {
     this.timeLeft = timeLeft;
     this.identified = identified;
     this.contents = new ArrayList(contents);
+  }
+
+  public String getId() {
+    return id;
+  }
+
+  // TODO(merlin): Remove this once the single caller is gone.
+  @Deprecated
+  public void setId(String id) {
+    this.id = id;
   }
 
   public String getName() {
@@ -154,6 +169,21 @@ public class Item {
     return Optional.of(templates.get(0));
   }
 
+  public Optional<Item> getNestedItem(String itemId) {
+    for (Item item : contents) {
+      if (item.getId().equals(itemId)) {
+        return Optional.of(item);
+      }
+
+      Optional<Item> nested = item.getNestedItem(itemId);
+      if (nested.isPresent()) {
+        return nested;
+      }
+    }
+
+    return Optional.empty();
+  }
+
   public String summary() {
     return value.toString() + " / " + getWeight().toString();
   }
@@ -206,20 +236,25 @@ public class Item {
     return false;
   }
 
-  public static Item create(String ... names) {
+  public static Item create(CompanionContext context, String ... names) {
     List<ItemTemplate> templates =
         Arrays.asList(names).stream().map(Item::template).collect(Collectors.toList());
     String name = name(templates);
-    return new Item(name, templates, hp(templates), value(templates), appearance(templates),
-        "", "", "", 0, 0, Duration.ZERO, false, Collections.emptyList());
+    return new Item(generateId(context), name, templates, hp(templates), value(templates),
+        appearance(templates), names[0], "", "", 0, 0, Duration.ZERO, false,
+        Collections.emptyList());
+  }
+
+  public static String generateId(CompanionContext context) {
+    return context.settings().getAppId() + "-" + context.settings().getNextItemId();
   }
 
   public static Item fromProto(Entry.ItemProto proto) {
     List<ItemTemplate> templates =
         proto.getTemplateList().stream().map(Item::template).collect(Collectors.toList());
-    templates.add(0, template(proto.getName()));
 
-    return new Item(proto.getName(),
+    return new Item(proto.getId(),
+        proto.getName(),
         templates,
         proto.getHitPoints(),
         Money.fromProto(proto.getValue()),
@@ -236,11 +271,9 @@ public class Item {
 
   public Entry.ItemProto toProto() {
     return Entry.ItemProto.newBuilder()
+        .setId(id)
         .setName(name)
-        .addAllTemplate(templates.stream()
-            .skip(1)
-            .map(ItemTemplate::getName)
-            .collect(Collectors.toList()))
+        .addAllTemplate(templates.stream().map(ItemTemplate::getName).collect(Collectors.toList()))
         .setHitPoints(hp)
         .setValue(value.toProto())
         .setAppearance(appearance)
@@ -263,6 +296,36 @@ public class Item {
     }
 
     return false;
+  }
+
+  public boolean similar(Item other) {
+    return name.equals(other.name)
+        && hp == other.hp
+        && value.equals(other.value)
+        && appearance.equals(other.appearance)
+        && playerName.equals(other.playerName)
+        && playerNotes.equals(other.playerNotes)
+        && dmNotes.equals(other.dmNotes)
+        && timeLeft.equals(other.timeLeft)
+        && identified == other.identified
+        && contents.isEmpty() && other.contents.isEmpty()
+        && multiuse == other.multiuse
+        && similar(templates, other.templates);
+  }
+
+  private boolean similar(List<ItemTemplate> first, List<ItemTemplate> second) {
+    List<String> firstNames =
+        first.stream().map(ItemTemplate::getName).collect(Collectors.toList());
+    List<String> secondNames =
+        first.stream().map(ItemTemplate::getName).collect(Collectors.toList());
+
+    for (String name : firstNames) {
+      if (!secondNames.remove(name)) {
+        return false;
+      }
+    }
+
+    return secondNames.isEmpty();
   }
 
   @Override

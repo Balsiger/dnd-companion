@@ -129,9 +129,28 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return items;
   }
 
+  public Optional<Item> getItem(String itemId) {
+    for (Item item : items) {
+      if (item.getId().equals(itemId)) {
+        return Optional.of(item);
+      }
+
+      Optional<Item> nested = item.getNestedItem(itemId);
+      if (nested.isPresent()) {
+        return nested;
+      }
+    }
+
+    return Optional.empty();
+  }
+
   public void add(Item item) {
     items.add(item);
     store();
+  }
+
+  public boolean amDM() {
+    return getCampaign().isPresent() && getCampaign().get().amDM();
   }
 
   public boolean remove(Item item) {
@@ -165,6 +184,14 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     }
 
     return false;
+  }
+
+  public void combine(Item item, Item other) {
+    remove(other);
+    if (item.similar(other)) {
+      item.setMultiple(item.getMultiple() + other.getMultiple());
+      store();
+    }
   }
 
   public boolean moveItemAfter(Item item, Item move) {

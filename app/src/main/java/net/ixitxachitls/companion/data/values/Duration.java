@@ -201,7 +201,6 @@ public class Duration {
 
   @Override
   public int hashCode() {
-
     return Objects.hash(rounds, minutes, hours, days, years);
   }
 }

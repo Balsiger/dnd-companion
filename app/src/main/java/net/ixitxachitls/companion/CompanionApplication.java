@@ -55,7 +55,7 @@ public class CompanionApplication extends MultiDexApplication
   private final AssetAccessor assetAccessor;
 
   private NsdAccessor nsdAccessor;
-  private ApplicationCompantionContext context;
+  private ApplicationCompanionContext context;
   private Activity currentActivity;
 
   public CompanionApplication() {
@@ -79,7 +79,7 @@ public class CompanionApplication extends MultiDexApplication
 
     Entries.init(this.getAssetAccessor());
 
-    context = new ApplicationCompantionContext(this.getDataBaseAccessor(), this.getNsdAccessor(),
+    context = new ApplicationCompanionContext(this.getDataBaseAccessor(), this.getNsdAccessor(),
         this.getAssetAccessor(), this);
 
     // The messenger needs other entries, thus cannot be created earlier.

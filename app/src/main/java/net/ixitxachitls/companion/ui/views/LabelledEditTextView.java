@@ -48,6 +48,10 @@ public class LabelledEditTextView extends AbstractLabelledView {
     super(context, attributes, R.layout.view_labelled_edit_text);
   }
 
+  public boolean isEmpty() {
+    return text.isEmpty();
+  }
+
   @Override
   protected void setup(View view, TypedArray array, TypedArray baseArray) {
     super.setup(view, array, baseArray);

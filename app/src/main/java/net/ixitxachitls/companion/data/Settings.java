@@ -53,6 +53,7 @@ public class Settings extends StoredEntry<Entry.SettingsProto> {
 
   private String appId;
   private long lastMessageId = 1;
+  private long lastItemId = 1;
   private MutableLiveData<Boolean> showStatus = new MutableLiveData<>();
   private boolean remoteCampaigns = false;
   private boolean remoteCharacters = false;
@@ -118,22 +119,17 @@ public class Settings extends StoredEntry<Entry.SettingsProto> {
         .setNickname(name)
         .setAppId(appId)
         .setLastMessageId(lastMessageId)
+        .setLastItemId(lastItemId)
         .setRemoteCampaigns(remoteCampaigns)
         .setRemoteCharacters(remoteCharacters)
         .addAllFeatures(features)
         .build();
   }
 
-  /*
-  public static Settings get() {
-    Preconditions.checkNotNull(settings);
-    return settings;
-  }
-  */
-
   private static Settings fromProto(CompanionContext companionContext, Entry.SettingsProto proto) {
     Settings settings = new Settings(companionContext, proto.getNickname(), proto.getAppId());
     settings.lastMessageId = proto.getLastMessageId();
+    settings.lastItemId = proto.getLastItemId();
     settings.remoteCampaigns = proto.getRemoteCampaigns();
     settings.remoteCharacters = proto.getRemoteCharacters();
     settings.features.addAll(proto.getFeaturesList());
@@ -141,6 +137,10 @@ public class Settings extends StoredEntry<Entry.SettingsProto> {
     // Don't use 0 as it could be confused with an unset message id.
     if (settings.lastMessageId == 0) {
       settings.lastMessageId = 1;
+    }
+
+    if (settings.lastItemId == 0) {
+      settings.lastItemId = 1;
     }
 
     return settings;
@@ -184,6 +184,13 @@ public class Settings extends StoredEntry<Entry.SettingsProto> {
     store();
 
     return lastMessageId;
+  }
+
+  public long getNextItemId() {
+    lastItemId++;
+    store();
+
+    return lastItemId;
   }
 
   public void setDebugStatus(boolean showStatus) {

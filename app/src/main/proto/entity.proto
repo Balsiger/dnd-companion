@@ -657,6 +657,7 @@ message ContainerProto
     GASEOUS = 4;
   }
   State state = 2;
+  bool fixed_weight = 3;
 }
 
 message ArmorProto

@@ -184,4 +184,9 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
         return Entity.ItemTemplateProto.Probability.UNIQUE;
     }
   }
+
+  @Override
+  public String toString() {
+    return getName();
+  }
 }

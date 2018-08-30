@@ -26,6 +26,7 @@ import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 /**
@@ -159,5 +160,23 @@ public class Money {
     }
 
     return Strings.SPACE_JOINER.join(parts);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Money money = (Money) o;
+    return platinum == money.platinum &&
+        gold == money.gold &&
+        silver == money.silver &&
+        copper == money.copper &&
+        armor == money.armor &&
+        weapon == money.weapon;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(platinum, gold, silver, copper, armor, weapon);
   }
 }

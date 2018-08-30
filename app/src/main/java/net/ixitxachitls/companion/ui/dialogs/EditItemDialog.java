@@ -41,7 +41,9 @@ import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
@@ -55,10 +57,11 @@ import java.util.stream.Collectors;
  */
 public class EditItemDialog extends Dialog {
 
-  private static final String ARG_ID = "id";
+  private static final String ARG_CREATURE_ID = "creature_id";
+  private static final String ARG_ITEM_ID = "item_id";
 
   private Optional<? extends BaseCreature> creature = Optional.empty();
-  private final Optional<Item> item;
+  private Optional<Item> item;
   private Optional<ItemTemplate> baseTemplate = Optional.empty();
   private List<ItemTemplate> templates = Collections.emptyList();
 
@@ -78,33 +81,27 @@ public class EditItemDialog extends Dialog {
     this.item = Optional.empty();
   }
 
-  public EditItemDialog(Item item) {
-    this.item = Optional.of(item);
-  }
-
   public static EditItemDialog newInstance(String creatureId) {
     EditItemDialog dialog = new EditItemDialog();
-    dialog.setArguments(arguments(creatureId, R.layout.dialog_edit_item,
+    dialog.setArguments(arguments(creatureId, "", R.layout.dialog_edit_item,
         R.string.character_add_item, R.color.item));
     return dialog;
   }
 
-  public static EditItemDialog newInstance(String creatureId, Item item) {
-    // TODO(merlin): This does not work for screen changes and other occasions when the dialog
-    // needs to be rebuilt, as we don't have the item in the arguments.
-    // We might need to have a unique id of the item to store it in arguments and recover it
-    // afterwards.
-    EditItemDialog dialog = new EditItemDialog(item);
-    dialog.setArguments(arguments(creatureId, R.layout.dialog_edit_item, R.string.character_edit_item,
+  public static EditItemDialog newInstance(String creatureId, String itemId) {
+    EditItemDialog dialog = new EditItemDialog();
+    dialog.setArguments(arguments(creatureId, itemId, R.layout.dialog_edit_item, R.string
+            .character_edit_item,
         R.color.item));
 
     return dialog;
   }
 
-  protected static Bundle arguments(String creatureId, @LayoutRes int layoutId,
+  protected static Bundle arguments(String creatureId, String itemId, @LayoutRes int layoutId,
                                     @StringRes int titleId, @ColorRes int colorId) {
     Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ID, creatureId);
+    arguments.putString(ARG_CREATURE_ID, creatureId);
+    arguments.putString(ARG_ITEM_ID, itemId);
     return arguments;
   }
 
@@ -113,9 +110,13 @@ public class EditItemDialog extends Dialog {
     super.onCreate(savedInstance);
 
     if (getArguments() != null) {
-      String creatureId = getArguments().getString(ARG_ID);
+      String creatureId = getArguments().getString(ARG_CREATURE_ID);
       creature =
           CompanionApplication.get(getContext()).creatures().getCreatureOrCharacter(creatureId);
+      String itemId = getArguments().getString(ARG_ITEM_ID);
+      if (creature.isPresent() && !itemId.isEmpty()) {
+        item = creature.get().getItem(itemId);
+      }
     }
   }
 
@@ -133,6 +134,8 @@ public class EditItemDialog extends Dialog {
         Entries.get().getItems().templates()));
     templatesSelection.onChange(this::selectItem);
 
+    TextWrapper.wrap(view, R.id.id).text(item.isPresent() ? item.get().getId() : "")
+        .visible(Misc.onEmulator());
     name = view.findViewById(R.id.name);
     value = view.findViewById(R.id.value);
     value.validate(Money::validate);
@@ -143,7 +146,7 @@ public class EditItemDialog extends Dialog {
     multiple = view.findViewById(R.id.multiple);
     multiuse = view.findViewById(R.id.multiuse);
     add = Wrapper.<Button>wrap(view, R.id.add).onClick(this::add).disabled();
-    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::store).disabled();
+    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::store);
     if (item.isPresent()) {
       add.gone();
       update(item.get());
@@ -185,6 +188,7 @@ public class EditItemDialog extends Dialog {
           templates.add(template.get());
         }
       }
+      update(templates);
       add.enabled();
     } else {
       name.text("");
@@ -211,13 +215,39 @@ public class EditItemDialog extends Dialog {
     } else if (!creature.isPresent()) {
       Status.error("No creature to add item to!");
     } else {
-      Item item = new Item(baseTemplate.get().getName(),
-          templates.stream().skip(1).collect(Collectors.toList()), Integer.parseInt(hp.getText()),
-          itemValue.get(), appearance.getText(), "", "", "", Integer.parseInt(multiple.getText()),
-          Integer.parseInt(multiuse.getText()), Duration.ZERO, false, Collections.emptyList());
+      Item item = new Item(
+          Item.generateId(((CompanionApplication) getContext().getApplicationContext()).context()),
+          baseTemplate.get().getName(),
+          templates, parseHp(),
+          itemValue.get(), appearance.getText(), "", "", "", parseMultiple(), parseMultiuse(),
+          Duration.ZERO, false, Collections.emptyList());
       creature.get().add(item);
       save();
     }
+  }
+
+  private int parseHp() {
+    if (hp.isEmpty()) {
+      return 0;
+    }
+
+    return Integer.parseInt(hp.getText());
+  }
+
+  private int parseMultiple() {
+    if (multiple.isEmpty()) {
+      return 1;
+    }
+
+    return Integer.parseInt(multiple.getText());
+  }
+
+  private int parseMultiuse() {
+    if (multiuse.isEmpty()) {
+      return 1;
+    }
+
+    return Integer.parseInt(multiuse.getText());
   }
 
   private void store() {
@@ -236,8 +266,8 @@ public class EditItemDialog extends Dialog {
       item.get().setTemplates(templates);
       item.get().setHp(Integer.parseInt(hp.getText()));
       item.get().setAppearance(appearance.getText());
-      item.get().setMultiple(Integer.parseInt(multiple.getText()));
-      item.get().setMultiuse(Integer.parseInt(multiple.getText()));
+      item.get().setMultiple(parseMultiple());
+      item.get().setMultiuse(parseMultiuse());
       creature.get().updated(item.get());
       save();
     }

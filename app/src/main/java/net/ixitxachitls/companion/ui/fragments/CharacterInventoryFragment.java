@@ -27,6 +27,7 @@ import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
@@ -56,6 +57,7 @@ public class CharacterInventoryFragment extends Fragment {
   private TextWrapper<TextView> weight;
   private ViewGroup items;
   private ViewGroup view;
+  private Wrapper<Button> addItem;
 
   public CharacterInventoryFragment() {
   }
@@ -69,7 +71,7 @@ public class CharacterInventoryFragment extends Fragment {
     wealth = TextWrapper.wrap(view, R.id.wealth);
     weight = TextWrapper.wrap(view, R.id.weight);
     items = view.findViewById(R.id.items);
-    Wrapper.wrap(view, R.id.item_add)
+    addItem = Wrapper.<Button>wrap(view, R.id.item_add)
         .onClick(this::addItem)
         .description("Add Item", "Add an item to the characters inventory.");
 
@@ -103,6 +105,7 @@ public class CharacterInventoryFragment extends Fragment {
       this.wealth.text(totalValue.toString());
       this.weight.text(totalWeight.toString());
       view.setOnDragListener((v, e) -> onItemDrag(v, e));
+      addItem.visible(character.isLocal() || character.amDM());
     }
   }
 

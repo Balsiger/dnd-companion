@@ -11,6 +11,7 @@ message SettingsProto {
   bool remote_campaigns = 4;
   bool remote_characters = 5;
   repeated string features = 6;
+  int64 last_item_id = 7;
 }
 
 message CampaignProto {
@@ -82,6 +83,7 @@ message CharacterProto {
 }
 
 message ItemProto {
+  string id = 14;
   string name = 1;
   repeated string template = 2;
   int32 hit_points = 3;

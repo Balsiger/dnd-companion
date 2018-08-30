@@ -29,7 +29,9 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Item;
@@ -37,13 +39,14 @@ import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Texts;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by balsiger on 8/14/18.
+ * View for a single item.
  */
 public class ItemView extends LinearLayout implements View.OnDragListener {
 
@@ -51,13 +54,19 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
   private final BaseCreature<?> creature;
   private final Item item;
+  private final TextWrapper<TextView> name;
+  private final TextWrapper<TextView> summary;
   private final Wrapper<LinearLayout> title;
   private final Wrapper<LinearLayout> details;
+  private final TextWrapper<TextView> appearance;
+  private final TextWrapper<TextView> description;
   private final Wrapper<LinearLayout> contents;
 
   private boolean expanded = false;
   private boolean showBottomMargin = false;
   private boolean showTopMargin = false;
+  private float touchStartX = 0;
+  private float touchStartY = 0;
 
   public ItemView(Context context, BaseCreature<?> creature, Item item) {
     super(context);
@@ -66,19 +75,27 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_item, this, false);
     title = Wrapper.<LinearLayout>wrap(view, R.id.title).onTouch(this::handleTouch);
-    TextWrapper.wrap(view, R.id.name).text(item.getName());
-    TextWrapper.wrap(view, R.id.summary).text(item.summary());
+    name = TextWrapper.wrap(view, R.id.name);
+    summary = TextWrapper.wrap(view, R.id.summary);
     TextWrapper.wrap(view, R.id.edit).onClick(this::edit);
 
     details = Wrapper.<LinearLayout>wrap(view, R.id.details).gone();
-    TextWrapper.wrap(view, R.id.appearance).text(item.getAppearance());
-    TextWrapper.wrap(view, R.id.description).text(
-        Texts.toSpanned(getContext(), item.getDescription()));
+    TextWrapper.wrap(view, R.id.id).text(item.getId()).visible(Misc.onEmulator());
+    appearance = TextWrapper.wrap(view, R.id.appearance);
+    description = TextWrapper.wrap(view, R.id.description);
     contents = Wrapper.<LinearLayout>wrap(view, R.id.contents);
     update();
 
     addView(view);
     setOnDragListener(this);
+
+    // TODO(merlin): If we don't have an id, add one (this can be removed once all the debugging
+    // items got an appropriate id.
+    if (item.getId().isEmpty()) {
+      item.setId(Item.generateId(
+          ((CompanionApplication) context.getApplicationContext()).context()));
+      creature.store();
+    }
   }
 
   public void toggleDetails() {
@@ -94,7 +111,18 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     return item;
   }
 
+  private String buildItemName() {
+    String prefix = item.getMultiple() > 1 ? item.getMultiple() + "x " : "";
+    String postfix = item.getMultiuse() > 1 ? " (" + item.getMultiuse() + " uses)" : "";
+    return prefix + item.getName() + postfix;
+  }
+
   public void update() {
+    name.text(buildItemName());
+    summary.text(item.summary());
+    appearance.text(item.getAppearance());
+    description.text(Texts.toSpanned(getContext(), item.getDescription()));
+
     Map<Item, ItemView> views = collectItemViews();
     contents.get().removeAllViews();
     for (Item content : item.getContents()) {
@@ -120,7 +148,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   }
 
   private void edit() {
-    EditItemDialog.newInstance(creature.getCreatureId(), item).display();
+    EditItemDialog.newInstance(creature.getCreatureId(), item.getId()).display();
   }
 
   @Override
@@ -131,7 +159,8 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
         return true;
 
       case DragEvent.ACTION_DRAG_LOCATION:
-        if (item.isContainer() && (event.getY() > 10 || event.getY() < getHeight() - 10)) {
+        if ((item.isContainer() || item.similar((Item) event.getLocalState()))
+            && (event.getY() > 10 || event.getY() < getHeight() - 10)) {
           showNoInsert();
           title.backgroundColor(R.color.itemLight);
         } else {
@@ -154,7 +183,11 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
         } else if (showBottomMargin) {
           creature.moveItemAfter(item, (Item) event.getLocalState());
         } else {
-          creature.moveItemInto(item, (Item) event.getLocalState());
+          if (item.isContainer()) {
+            creature.moveItemInto(item, (Item) event.getLocalState());
+          } else {
+            creature.combine(item, (Item) event.getLocalState());
+          }
         }
         return true;
 
@@ -192,19 +225,16 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     title.backgroundColor(R.color.item);
   }
 
-  private float startX = 0;
-  private float startY = 0;
-
   private boolean handleTouch(MotionEvent event) {
     switch(event.getActionMasked()) {
       case MotionEvent.ACTION_DOWN:
-        startX = event.getX();
-        startY = event.getY();
+        touchStartX = event.getX();
+        touchStartY = event.getY();
         return true;
 
       case MotionEvent.ACTION_MOVE:
-        if (Math.abs((int) (startX - event.getX())) > MIN_DRAG_DISTANCE
-            || Math.abs((int) (startY - event.getY())) > MIN_DRAG_DISTANCE) {
+        if (Math.abs((int) (touchStartX - event.getX())) > MIN_DRAG_DISTANCE
+            || Math.abs((int) (touchStartY - event.getY())) > MIN_DRAG_DISTANCE) {
           startDragAndDrop(ClipData.newPlainText("name", item.getName()),
               new ItemDragShadowBuilder(this), item, 0);
           ((ViewGroup) getParent()).removeView(this);

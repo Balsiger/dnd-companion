@@ -53,6 +53,10 @@ public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapp
     super(view);
   }
 
+  public boolean isEmpty() {
+    return view.getText().length() == 0;
+  }
+
   @SuppressWarnings("unchecked")
   public W noWrap() {
     view.setMaxLines(1);
