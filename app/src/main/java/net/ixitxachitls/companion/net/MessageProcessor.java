@@ -29,6 +29,7 @@ import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 
@@ -125,6 +126,10 @@ public abstract class MessageProcessor {
         handleXpAward(receiverId, senderId, messageId, message.getXpAward());
         break;
 
+      case ITEM_ADD:
+        handleItemAdd(senderId, messageId, message.getItemAddRecipient(), message.getItemAdd());
+        break;
+
       default:
         handleInvalid(senderName);
         break;
@@ -192,6 +197,10 @@ public abstract class MessageProcessor {
 
   protected void handleImage(String senderId, Image image) {
     Status.error("Handling image not supported.");
+  }
+
+  protected void handleItemAdd(String senderId, long messageId, String characterId, Item item) {
+    Status.error("Adding of item not supported.");
   }
 
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {

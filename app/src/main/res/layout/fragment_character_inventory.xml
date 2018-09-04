@@ -31,9 +31,9 @@
     android:paddingTop="20dp">
 
   <ScrollView
-      android:id="@+id/scrollView2"
       android:layout_width="match_parent"
-      android:layout_height="match_parent">
+      android:layout_height="match_parent"
+      android:layout_above="@+id/item_add">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -93,6 +93,16 @@
 
     </LinearLayout>
   </ScrollView>
+
+  <net.ixitxachitls.companion.ui.views.ImageDropTarget
+      android:id="@+id/item_remove"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
+      android:layout_margin="5dp"
+      android:tint="@color/item"
+      app:srcCompat="@drawable/ic_delete_black_24dp"/>
 
   <android.support.design.widget.FloatingActionButton
       android:id="@+id/item_add"

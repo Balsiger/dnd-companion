@@ -114,7 +114,12 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   private String buildItemName() {
     String prefix = item.getMultiple() > 1 ? item.getMultiple() + "x " : "";
     String postfix = item.getMultiuse() > 1 ? " (" + item.getMultiuse() + " uses)" : "";
-    return prefix + item.getName() + postfix;
+
+    if (creature.isLocal()) {
+      return prefix + item.getPlayerName() + postfix;
+    } else {
+      return prefix + item.getName() + postfix;
+    }
   }
 
   public void update() {
@@ -233,8 +238,9 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
         return true;
 
       case MotionEvent.ACTION_MOVE:
-        if (Math.abs((int) (touchStartX - event.getX())) > MIN_DRAG_DISTANCE
-            || Math.abs((int) (touchStartY - event.getY())) > MIN_DRAG_DISTANCE) {
+        if (creature.isLocal()
+            && (Math.abs((int) (touchStartX - event.getX())) > MIN_DRAG_DISTANCE
+                || Math.abs((int) (touchStartY - event.getY())) > MIN_DRAG_DISTANCE)) {
           startDragAndDrop(ClipData.newPlainText("name", item.getName()),
               new ItemDragShadowBuilder(this), item, 0);
           ((ViewGroup) getParent()).removeView(this);

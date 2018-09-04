@@ -145,8 +145,12 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   }
 
   public void add(Item item) {
-    items.add(item);
-    store();
+    if (isLocal()) {
+      items.add(item);
+      store();
+    } else {
+      context.messenger().addItem(this, item);
+    }
   }
 
   public boolean amDM() {

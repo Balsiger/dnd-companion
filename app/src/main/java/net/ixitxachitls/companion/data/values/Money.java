@@ -68,6 +68,22 @@ public class Money {
         copper + other.copper, armor + other.armor, weapon + other.weapon);
   }
 
+  public Money multiply(int factor) {
+    if (factor == 1) {
+      return this;
+    }
+    if (factor == 0) {
+      return ZERO;
+    }
+
+    if (armor != 0 || weapon != 0) {
+      throw new IllegalStateException("Cannot multiply value with armor or weapon bonuses!");
+    }
+
+    return new Money(platinum * factor, gold * factor, silver * factor, copper * factor, 0, 0)
+        .simplify();
+  }
+
   public static boolean validate(String text) {
     return parse(text).isPresent();
   }
@@ -109,6 +125,28 @@ public class Money {
   public double asGold() {
     return platinum * 10 + gold + silver / 10.0 + copper / 100.0
         + armor * armor * 1000 + weapon * weapon * 2000;
+  }
+
+  public Money simplify() {
+    int newCopper = copper;
+    int newSilver = silver;
+    int newGold = gold;
+
+    if (newCopper > 10) {
+      newSilver = newCopper / 10;
+      newCopper = newCopper % 10;
+    }
+    if (newSilver > 10) {
+      newGold = newSilver / 10;
+      newSilver = newSilver % 10;
+    }
+    // We don't simplify platinums, as they are not widely used.
+
+    if (copper == newCopper && silver == newSilver && gold == newGold) {
+      return this;
+    }
+
+    return new Money(platinum, newGold, newSilver, newCopper, armor, weapon);
   }
 
   public Money resolveMagic() {

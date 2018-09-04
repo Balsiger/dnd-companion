@@ -145,8 +145,8 @@ public class EditItemDialog extends Dialog {
     appearance = view.findViewById(R.id.appearance);
     multiple = view.findViewById(R.id.multiple);
     multiuse = view.findViewById(R.id.multiuse);
-    add = Wrapper.<Button>wrap(view, R.id.add).onClick(this::add).disabled();
-    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::store);
+    add = Wrapper.<Button>wrap(view, R.id.add).onClick(() -> store(true)).disabled();
+    save = Wrapper.<Button>wrap(view, R.id.save).onClick(() -> store(false));
     if (item.isPresent()) {
       add.gone();
       update(item.get());
@@ -159,9 +159,11 @@ public class EditItemDialog extends Dialog {
   private void update(Item item) {
     baseTemplate = item.getBaseTemplate();
     if (baseTemplate.isPresent()) {
+      // Setting the item selection with actually select the item and thus overwrite
+      // existing templates, thus we do it first.
+      itemSelection.text(baseTemplate.get().getName());
       templates = item.getTemplates();
       update(templates);
-      itemSelection.text(baseTemplate.get().getName());
       templatesSelection.text(Strings.COMMA_JOINER.join(templates.stream().skip(1)
           .map(ItemTemplate::getName)
           .collect(Collectors.toList())));
@@ -169,7 +171,11 @@ public class EditItemDialog extends Dialog {
   }
 
   private void update(List<ItemTemplate> templates) {
-    name.text(Item.name(templates));
+    if (item.isPresent() && creature.isPresent() && creature.get().isLocal()) {
+      name.text(item.get().getPlayerName());
+    } else {
+      name.text(Item.name(templates));
+    }
     value.text(Item.value(templates).toString());
     weight.text(Item.weight(templates).toString());
     hp.text(String.valueOf(Item.hp(templates)));
@@ -203,29 +209,6 @@ public class EditItemDialog extends Dialog {
     multiuse.text("");
   }
 
-  private void add() {
-    if (!baseTemplate.isPresent()) {
-      return;
-    }
-
-    // Create the corresponding item.
-    Optional<Money> itemValue = Money.parse(value.getText());
-    if (!itemValue.isPresent()) {
-      Status.error("Cannot parse item value!");
-    } else if (!creature.isPresent()) {
-      Status.error("No creature to add item to!");
-    } else {
-      Item item = new Item(
-          Item.generateId(((CompanionApplication) getContext().getApplicationContext()).context()),
-          baseTemplate.get().getName(),
-          templates, parseHp(),
-          itemValue.get(), appearance.getText(), "", "", "", parseMultiple(), parseMultiuse(),
-          Duration.ZERO, false, Collections.emptyList());
-      creature.get().add(item);
-      save();
-    }
-  }
-
   private int parseHp() {
     if (hp.isEmpty()) {
       return 0;
@@ -250,8 +233,29 @@ public class EditItemDialog extends Dialog {
     return Integer.parseInt(multiuse.getText());
   }
 
-  private void store() {
-    if (!baseTemplate.isPresent() || !item.isPresent()) {
+  private void store(boolean create) {
+    if (!creature.isPresent() || !baseTemplate.isPresent()) {
+      return;
+    }
+
+    if (create) {
+      // Create the corresponding item.
+      Optional<Money> itemValue = Money.parse(value.getText());
+      if (!itemValue.isPresent()) {
+        Status.error("Cannot parse item value!");
+      } else if (!creature.isPresent()) {
+        Status.error("No creature to add item to!");
+      } else {
+        item = Optional.of(new Item(
+            Item.generateId(CompanionApplication.get(getContext()).context()),
+            baseTemplate.get().getName(),
+            templates, parseHp(),
+            itemValue.get(), appearance.getText(), "", "", "", parseMultiple(), parseMultiuse(),
+            Duration.ZERO, false, Collections.emptyList()));
+      }
+    }
+
+    if (!item.isPresent()) {
       return;
     }
 
@@ -261,15 +265,28 @@ public class EditItemDialog extends Dialog {
     } else if (!creature.isPresent()) {
       Status.error("No creature to edit item in!");
     } else {
+      if (creature.get().isLocal()) {
+        item.get().setPlayerName(name.getText());
+      } else if (creature.get().amDM()) {
+        item.get().setName(name.getText());
+      }
+
       item.get().setValue(itemValue.get());
-      item.get().setName(baseTemplate.get().getName());
       item.get().setTemplates(templates);
       item.get().setHp(Integer.parseInt(hp.getText()));
       item.get().setAppearance(appearance.getText());
       item.get().setMultiple(parseMultiple());
       item.get().setMultiuse(parseMultiuse());
-      creature.get().updated(item.get());
+
+      if (create) {
+        creature.get().add(item.get());
+      } else {
+        creature.get().updated(item.get());
+      }
+
       save();
     }
+
+
   }
 }

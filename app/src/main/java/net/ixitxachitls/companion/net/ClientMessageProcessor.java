@@ -27,6 +27,7 @@ import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
@@ -56,6 +57,18 @@ public class ClientMessageProcessor extends MessageProcessor {
   protected void handleImage(String senderId, Image image) {
     Status.log("received image for " + image.getType() + " " + image.getId());
     image.save(false);
+  }
+
+  @Override
+  protected void handleItemAdd(String senderId, long messageId, String characterId, Item item) {
+    Optional<Character> character = context.characters().getCharacter(characterId).getValue();
+    if (character.isPresent()) {
+      Status.log("received item " + item + " for " + character.get());
+      character.get().add(item);
+    } else {
+      Status.error("Cannot add item to unknown character " + characterId);
+    }
+    messenger.sendAckToServer(senderId, messageId);
   }
 
   @Override

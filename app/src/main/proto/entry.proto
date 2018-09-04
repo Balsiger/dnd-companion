@@ -148,6 +148,13 @@ message CompanionMessageProto {
       string target_id = 3;
     }
 
+    message Item {
+      string id = 1;
+      ItemProto item = 3;
+      MoneyProto sell_price = 4;
+      string recipient = 5;
+    }
+
     oneof payload {
       string debug = 1;
       Welcome welcome = 2;
@@ -159,7 +166,8 @@ message CompanionMessageProto {
       Image image = 8;
       Xp xp_award = 9;
       Condition condition = 10;
-      DeleteCondition condition_delete = 11; // from server only
+      DeleteCondition condition_delete = 11; // From server only
+      Item item_add = 12; // From server only.
     }
   }
   Payload data = 2;

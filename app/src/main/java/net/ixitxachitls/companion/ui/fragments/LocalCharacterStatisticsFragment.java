@@ -26,6 +26,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.ui.dialogs.NumberPrompt;
 
 /**
@@ -44,15 +45,15 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     wisdom.setAction(this::editAbilities);
     charisma.setAction(this::editAbilities);
 
-    xp.onEdit(this::changeXp).enabled(true);
+    xp.onBlur(this::changeXp).enabled(true);
     xpAdd.visible().onClick(this::addXp);
     xpSubtract.visible().onClick(this::subtractXp);
-    level.onEdit(this::changeLevel).enabled(true);
-    hp.onEdit(this::changeHp).enabled(true);
+    level.onBlur(this::changeLevel).enabled(true);
+    hp.onBlur(this::changeHp).enabled(true);
     hpAdd.visible().onClick(this::addHp);
     hpSubtract.visible().onClick(this::subtractHp);
-    hpMax.onEdit(this::changeMaxHp).enabled(true);
-    damageNonlethal.onEdit(this::changeNonlethalDamage).enabled(true);
+    hpMax.onBlur(this::changeMaxHp).enabled(true);
+    damageNonlethal.onBlur(this::changeNonlethalDamage).enabled(true);
     hpNonlethalAdd.visible().onClick(this::addNonlethalDamage);
     hpNonlethalSubtract.visible().onClick(this::subtractNonlethalDamage);
 
@@ -75,6 +76,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
   }
 
   private void changeLevel() {
+    Status.error("level change");
     if (character.isPresent() && !level.getText().isEmpty()) {
       try {
         character.get().asLocal().setLevel(Integer.parseInt(level.getText()));
@@ -87,7 +89,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
   }
 
   private void changeHp() {
-    if (character.isPresent() && !hp.getText().isEmpty()) {
+    if (character.isPresent()) {
       try {
         character.get().setHp(Integer.parseInt(hp.getText()));
       } catch (NumberFormatException e) {
@@ -99,7 +101,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
   }
 
   private void changeMaxHp() {
-    if (character.isPresent() && !hpMax.getText().isEmpty()) {
+    if (character.isPresent()) {
       try {
         character.get().setMaxHp(Integer.parseInt(hpMax.getText()));
       } catch (NumberFormatException e) {
@@ -111,7 +113,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
   }
 
   private void changeNonlethalDamage() {
-    if (character.isPresent() && !damageNonlethal.getText().isEmpty()) {
+    if (character.isPresent()) {
       try {
         character.get().setNonlethalDamage(Integer.parseInt(damageNonlethal.getText()));
       } catch (NumberFormatException e) {

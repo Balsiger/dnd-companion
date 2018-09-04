@@ -27,6 +27,7 @@ import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
 import net.ixitxachitls.companion.data.dynamics.RemoteCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
@@ -47,7 +48,7 @@ public class CompanionMessageData {
 
   public enum Type {
     UNKNOWN, DEBUG, WELCOME, ACK, CAMPAIGN, CAMPAIGN_DELETE, CHARACTER, CHARACTER_DELETE, IMAGE,
-    XP_AWARD, CONDITION, CONDITION_DELETE
+    XP_AWARD, CONDITION, CONDITION_DELETE, ITEM_ADD
   };
 
   public Type getType() {
@@ -89,6 +90,9 @@ public class CompanionMessageData {
       case CONDITION_DELETE:
         return Type.CONDITION_DELETE;
 
+      case ITEM_ADD:
+        return Type.ITEM_ADD;
+
       default:
       case PAYLOAD_NOT_SET:
         return Type.UNKNOWN;
@@ -116,6 +120,14 @@ public class CompanionMessageData {
 
   public Image getImage() {
     return Image.fromProto(context, payload.getImage());
+  }
+
+  public Item getItemAdd() {
+    return Item.fromProto(payload.getItemAdd().getItem());
+  }
+
+  public String getItemAddRecipient() {
+    return payload.getItemAdd().getRecipient();
   }
 
   public String getConditionTargetId() {
@@ -171,6 +183,7 @@ public class CompanionMessageData {
       case CHARACTER:
       case CAMPAIGN:
       case IMAGE:
+      case ITEM_ADD:
       case PAYLOAD_NOT_SET:
         return true;
     }
@@ -196,6 +209,9 @@ public class CompanionMessageData {
 
       case IMAGE:
         return payload.getImage().getId().equals(other.payload.getImage().getId());
+
+      case ITEM_ADD:
+        return payload.getItemAdd().getId().equals(other.payload.getItemAdd().getId());
     }
   }
 
@@ -209,6 +225,7 @@ public class CompanionMessageData {
       case CAMPAIGN_DELETE:
       case CHARACTER_DELETE:
       case CONDITION_DELETE:
+      case ITEM_ADD:
         return true;
     }
   }
@@ -254,6 +271,10 @@ public class CompanionMessageData {
       case IMAGE:
         return message + payload.getImage().getId();
 
+      case ITEM_ADD:
+        return message + payload.getItemAdd().getId() + " ("
+            + payload.getItemAdd().getItem().getName() + ")";
+
       case XP_AWARD:
         return message + payload.getXpAward().getXpAward()
             + " (" + payload.getXpAward().getCharacterId() + ")";
@@ -287,6 +308,16 @@ public class CompanionMessageData {
         .setCondition(Entry.CompanionMessageProto.Payload.Condition.newBuilder()
             .setTargetId(targetId)
             .setCondition(condition.toProto())
+            .build())
+        .build());
+  }
+
+  public static CompanionMessageData from(CompanionContext context, Item item, String creatureId) {
+    return fromProto(context, Entry.CompanionMessageProto.Payload.newBuilder()
+        .setItemAdd(Entry.CompanionMessageProto.Payload.Item.newBuilder()
+            .setId(item.getId())
+            .setItem(item.toProto())
+            .setRecipient(creatureId)
             .build())
         .build());
   }

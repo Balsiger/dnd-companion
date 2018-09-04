@@ -31,9 +31,7 @@ import android.text.Editable;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.Gravity;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -152,12 +150,9 @@ public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapp
 
   @SuppressWarnings("unchecked")
   public W onEdit(Wrapper.Action action) {
-    view.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-      @Override
-      public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-        action.execute();
-        return false;
-      }
+    view.setOnEditorActionListener((v, actionId, event) -> {
+      action.execute();
+      return false;
     });
 
     return (W) this;
@@ -190,13 +185,12 @@ public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapp
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-      Log.d("before", "before");
     }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
       // Prevent actions from changing text and triggering an endless loop.
-      // Ignore the first trigger, as this comes from the first initilization, when
+      // Ignore the first trigger, as this comes from the first initialization, when
       // we don't have any valid data yet.
       if (changing || first) {
         first = false;
@@ -210,7 +204,6 @@ public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapp
 
     @Override
     public void afterTextChanged(Editable s) {
-      Log.d("after", "after");
     }
   }
 }

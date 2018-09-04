@@ -115,6 +115,10 @@ public class Rational {
     return new Rational(0, Math.abs(newNominator), newDenominator, newNominator < 0).simplify();
   }
 
+  public Rational multiply(int factor) {
+    return new Rational(leader * factor, nominator * factor, denominator, negative).simplify();
+  }
+
   public Rational simplify() {
     if (nominator == 0 || denominator == 0) {
       return this;

@@ -99,6 +99,11 @@ public class LabelledEditTextView extends AbstractLabelledView {
     return this;
   }
 
+  public LabelledEditTextView onBlur(Wrapper.Action action) {
+    text.onBlur(action);
+    return this;
+  }
+
   public LabelledEditTextView enabled(boolean enabled) {
     text.enabled(enabled);
     return this;

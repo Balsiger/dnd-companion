@@ -54,6 +54,17 @@ public class Weight {
     return new Weight(pounds.add(other.pounds), ounces.add(other.ounces));
   }
 
+  public Weight multiply(int factor) {
+    if (factor == 1) {
+      return this;
+    }
+    if (factor == 0) {
+      return ZERO;
+    }
+
+    return new Weight(pounds.multiply(factor), ounces.multiply(factor));
+  }
+
   private static Optional<Weight> parse(String text) {
     try {
       List<Rational> values = PARSER.parse(text);

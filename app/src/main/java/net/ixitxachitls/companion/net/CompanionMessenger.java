@@ -31,6 +31,7 @@ import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.net.nsd.NsdAccessor;
@@ -234,6 +235,17 @@ public class CompanionMessenger implements Runnable {
       } else {
         Status.error("Cannot find campaign for " + creature + ", cannot send condition");
       }
+    }
+  }
+
+  public void addItem(BaseCreature<?> creature, Item item) {
+    Optional<Campaign> campaign = creature.getCampaign();
+    if (!creature.isLocal() && campaign.isPresent() && campaign.get().isLocal()) {
+      Status.log("Sending newly created item " + item + " to " + creature);
+      companionServer.schedule(Ids.extractServerId(creature.getCreatureId()),
+          CompanionMessageData.from(companionContext, item, creature.getCreatureId()));
+    } else {
+      Status.error("Sending item " + item + " to " + creature + " no allowed");
     }
   }
 

@@ -179,6 +179,16 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
+  public W onBlur(Wrapper.Action action) {
+    view.setOnFocusChangeListener((view, hasFocus) -> {
+      if (!hasFocus) {
+        action.execute();
+      }
+    });
+
+    return (W) this;
+  }
+
   public W description(String name, String description) {
     onLongClick(()
         -> MessageDialog.create(get().getContext()).message(description).title(name).show());

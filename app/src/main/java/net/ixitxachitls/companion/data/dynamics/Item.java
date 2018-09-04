@@ -96,6 +96,14 @@ public class Item {
     this.name = name;
   }
 
+  public String getPlayerName() {
+    return playerName;
+  }
+
+  public void setPlayerName(String name) {
+    this.playerName = name;
+  }
+
   public List<ItemTemplate> getTemplates() {
     return Collections.unmodifiableList(templates);
   }
@@ -105,7 +113,12 @@ public class Item {
   }
 
   public Money getValue() {
-    return value;
+    Money totalValue = value.multiply(multiple);
+    for (Item content : contents) {
+      totalValue = totalValue.add(content.getValue());
+    }
+
+    return totalValue;
   }
 
   public void setValue(Money value) {
@@ -145,7 +158,7 @@ public class Item {
   }
 
   public Weight getWeight() {
-    Weight weight = weight(templates);
+    Weight weight = weight(templates).multiply(multiple);
     for (Item content : contents) {
       weight = weight.add(content.getWeight());
     }
@@ -185,7 +198,7 @@ public class Item {
   }
 
   public String summary() {
-    return value.toString() + " / " + getWeight().toString();
+    return getValue().toString() + " / " + getWeight().toString();
   }
 
   public void add(Item item) {
