@@ -60,7 +60,7 @@ public class EditItemDialog extends Dialog {
   private static final String ARG_CREATURE_ID = "creature_id";
   private static final String ARG_ITEM_ID = "item_id";
 
-  private Optional<? extends BaseCreature> creature = Optional.empty();
+  private Optional<? extends BaseCreature<?>> creature = Optional.empty();
   private Optional<Item> item;
   private Optional<ItemTemplate> baseTemplate = Optional.empty();
   private List<ItemTemplate> templates = Collections.emptyList();
@@ -252,6 +252,11 @@ public class EditItemDialog extends Dialog {
             templates, parseHp(),
             itemValue.get(), appearance.getText(), "", "", "", parseMultiple(), parseMultiuse(),
             Duration.ZERO, false, Collections.emptyList()));
+        if (creature.isPresent() && creature.get().getCampaign().isPresent()) {
+          CompanionApplication.get(getContext()).histories().created(item.toString(),
+              creature.get().getCampaign().get().getDate(),
+              creature.get().getCampaignId(), creature.get().getCreatureId(), item.get().getId());
+        }
       }
     }
 

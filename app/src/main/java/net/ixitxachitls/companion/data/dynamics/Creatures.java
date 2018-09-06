@@ -53,7 +53,7 @@ public class Creatures {
     this.local = new CreaturesData(companionContext);
   }
 
-  public Optional<? extends BaseCreature> getCreatureOrCharacter(String creatureId) {
+  public Optional<? extends BaseCreature<?>> getCreatureOrCharacter(String creatureId) {
     switch (StoredEntry.extractType(creatureId)) {
       case Character.TYPE:
         return companionContext.characters().getCharacter(creatureId).getValue();
