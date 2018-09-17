@@ -30,8 +30,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.firebase.ui.auth.AuthUI;
+import com.firebase.ui.auth.IdpResponse;
 import com.google.android.gms.drive.DriveId;
 import com.google.android.gms.drive.OpenFileActivityBuilder;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
@@ -47,6 +51,7 @@ import net.ixitxachitls.companion.ui.views.StatusView;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
   public static final int RESOLVE_DRIVE_CONNECTION_CODE = 1;
   public static final int DRIVE_IMPORT_OPEN_CODE = 2;
+  public static final int SIGN_IN_CODE = 3;
 
   private DriveStorage driveStorage;
 
@@ -64,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(@Nullable Bundle state) {
     super.onCreate(state);
-    Status.log("onCreate");
 
     CompanionFragments.init(CompanionApplication.get(this).campaigns(),
         getSupportFragmentManager());
@@ -80,7 +85,15 @@ public class MainActivity extends AppCompatActivity {
     // Setup the status first, in case any fragment wants to log something.
     status = (StatusView) container.findViewById(R.id.status);
     Status.setView(status);
-    CompanionFragments.get().show();
+
+    // Log the user in.
+    List<AuthUI.IdpConfig> providers = Arrays.asList(new AuthUI.IdpConfig.GoogleBuilder().build());
+
+    // Create and launch sign-in intent
+    startActivityForResult(AuthUI.getInstance()
+        .createSignInIntentBuilder()
+        .setAvailableProviders(providers)
+        .build(), SIGN_IN_CODE);
   }
 
   @Override
@@ -199,6 +212,8 @@ public class MainActivity extends AppCompatActivity {
 
   @Override
   protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
     switch (requestCode) {
       case RESOLVE_DRIVE_CONNECTION_CODE:
         if (resultCode == RESULT_OK) {
@@ -212,8 +227,29 @@ public class MainActivity extends AppCompatActivity {
               OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID)).asDriveFolder()));
         }
 
-      default:
-        super.onActivityResult(requestCode, resultCode, data);
+      case SIGN_IN_CODE:
+        IdpResponse response = IdpResponse.fromResultIntent(data);
+
+        if (resultCode == RESULT_OK) {
+          FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+          CompanionApplication.get(this).context().login(
+              user.getEmail(), user.getDisplayName(), user.getPhotoUrl().toString());
+          Status.log("Successfully logged in");
+          CompanionFragments.get().show();
+        } else if (response == null) {
+          Status.error("Login required");
+          MessageDialog.create(this)
+              .title("Login Required")
+              .message("You have to login using your Google account to have access to your "
+                  + "characters and campaigns.")
+              .show();
+        } else {
+          Status.error("Login failed: " + response.getError().getMessage());
+          MessageDialog.create(this)
+              .title("Login Failed")
+              .message("Login failed with error: " + response.getError().getMessage())
+              .show();
+        }
     }
   }
 }

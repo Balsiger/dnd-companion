@@ -24,32 +24,27 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
-import net.ixitxachitls.companion.util.Misc;
-
-import java.util.Optional;
 
 /**
  * View for a campaign title.
  */
 public class CampaignTitleView extends LinearLayout {
 
-  private Campaign campaign;
+  private FSCampaign campaign ;
 
   // Ui elements.
   private TitleView title;
-  private NetworkIcon networkIcon;
   private TextWrapper<TextView> dm;
 
   public CampaignTitleView(Context context) {
@@ -83,8 +78,6 @@ public class CampaignTitleView extends LinearLayout {
     view.setLayoutParams(params);
 
     title = view.findViewById(R.id.title);
-    networkIcon = view.findViewById(R.id.network);
-    networkIcon.setDescription("Campaign State", R.layout.description_campaign_state);
     dm = TextWrapper.wrap(view, R.id.dm);
     dm.description("DM", "This indicates that you are the Dungeon Master of the campaign. You are "
         + "the only person that can make changes to the values and settings of the campaign.");
@@ -92,76 +85,33 @@ public class CampaignTitleView extends LinearLayout {
     addView(view);
   }
 
-  public void update(Optional<Campaign> campaign){
-    if (campaign.isPresent()) {
-      setCampaign(campaign.get());
-    }
-  }
-
-  public void setCampaign(Campaign campaign) {
-    Status.log("setting campaign " + campaign);
+  public void update(FSCampaign campaign) {
     this.campaign = campaign;
     refresh();
   }
 
-  private String subtitle(Campaign campaign) {
-    if (campaign.isDefault()) {
-      return "Playground and orphaned characters";
-    }
-
-    return campaign.getWorld() + ", " + campaign.getDm();
+  public void update(User dm) {
+    refresh();
   }
 
   public void setAction(Wrapper.Action action) {
     title.setAction(action);
   }
 
-  private void publish() {
-    if (campaign.isDefault() || !campaign.isLocal()) {
-      return;
-    }
-
-    campaign.asLocal().toggle(getContext(), this::refresh, LocalCampaign.EmptyCancelAction);
+  public void removeAction() {
+    title.removeAction();
   }
+
 
   public void refresh() {
-    Status.log("refreshing campaign title view");
-    if (campaign.isDefault()) {
-      networkIcon.setVisibility(INVISIBLE);
-    } else {
-      networkIcon.setVisibility(VISIBLE);
-    }
-
-    dm.visible(campaign.isLocal() && !campaign.isDefault());
-
-    if (Misc.onEmulator() && Misc.SHOW_EMULATOR) {
-      title.setTitle(campaign.getName() + " (" + (campaign.isLocal() ? "LOCAL" : "REMOTE") + ")");
-    } else {
+    if (campaign != null) {
       title.setTitle(campaign.getName());
-    }
-    title.setSubtitle(subtitle(campaign));
-
-    networkIcon.setStatus(campaign.isLocal(), campaign.isOnline());
-
-    if (campaign.isLocal() && !campaign.isDefault()) {
-      networkIcon.setAction(this::publish);
-    } else {
-      networkIcon.setAction(null);
+      title.setSubtitle(campaign.getWorld().toString() + ", " + campaign.getDm());
+      dm.visible(campaign.amDM());
     }
   }
 
-  @Override
-  public void removeAllViews() {
-    super.removeAllViews();
-  }
-
-  @Override
-  public void removeAllViewsInLayout() {
-    super.removeAllViewsInLayout();
-  }
-
-  @Override
-  public void removeView(View view) {
-    super.removeView(view);
+  @Deprecated
+  public void update(Campaign campaign) {
   }
 }

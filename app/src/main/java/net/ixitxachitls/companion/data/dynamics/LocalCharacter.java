@@ -178,7 +178,7 @@ public class LocalCharacter extends Character {
   @Override
   public boolean store() {
     if (playerName.isEmpty()) {
-      playerName = context.settings().getNickname();
+      playerName = context.me().get().getNickname();
     }
 
     if (super.store()) {
@@ -211,7 +211,7 @@ public class LocalCharacter extends Character {
     }
 
     if (character.playerName.isEmpty()) {
-      character.playerName = companionContext.settings().getNickname();
+      character.playerName = companionContext.me().get().getNickname();
     }
 
     return character;

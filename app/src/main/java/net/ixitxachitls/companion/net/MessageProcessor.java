@@ -135,7 +135,7 @@ public abstract class MessageProcessor {
         break;
     }
 
-    Status.refreshServerConnection(context.settings().getAppId());
+    Status.refreshServerConnection(context.me().get().getId());
     Status.refreshClientConnection(senderId);
 
     received.addFirst(new RecievedMessage(senderName, message, senderId, receiverId, messageId));

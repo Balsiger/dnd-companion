@@ -21,8 +21,8 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.data.documents.FSCampaign;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.rules.Conditions;
@@ -41,7 +41,7 @@ import java.util.stream.Collectors;
 public class Battle {
   public static final String DEFAULT_MONSTER_NAME = "Monsters";
 
-  private final Campaign campaign;
+  private final FSCampaign campaign;
   private int number;
   private int turn;
   private BattleStatus status;
@@ -50,12 +50,12 @@ public class Battle {
   private List<String> surprisedCreatureIds = new ArrayList<>();
   private int currentCreatureIndex;
 
-  public Battle(Campaign campaign) {
+  public Battle(FSCampaign campaign) {
     this(campaign, 0, BattleStatus.ENDED, 0, Collections.emptyList(),
         Collections.emptyList(), 0);
   }
 
-  private Battle(Campaign campaign, int number, BattleStatus status, int turn,
+  private Battle(FSCampaign campaign, int number, BattleStatus status, int turn,
                  List<String> creatureIds, List<String> surprisedCreatureIds,
                  int currentCreatureIndex) {
     this.campaign = campaign;
@@ -99,7 +99,7 @@ public class Battle {
     return turn;
   }
 
-  public Campaign getCampaign() {
+  public FSCampaign getCampaign() {
     return campaign;
   }
 
@@ -135,7 +135,7 @@ public class Battle {
 
   public void setup() {
     number++;
-    StartBattleDialog.newInstance(campaign.getCampaignId()).display();
+    StartBattleDialog.newInstance(campaign.getId()).display();
     store();
   }
 
@@ -189,14 +189,14 @@ public class Battle {
         }
       }
     } else {
-      for (String id : campaign.getCreatureIds().getValue()) {
+      for (String id : campaign.getCreatureIds()) {
         if (campaign.creatures().getCreature(id).getValue().isPresent()) {
           creatures.add(campaign.creatures().getCreature(id).getValue().get());
         }
       }
-      for (String id : campaign.getCharacterIds().getValue()) {
-        if (campaign.data().characters().getCharacter(id).getValue().isPresent()) {
-          creatures.add(campaign.data().characters().getCharacter(id).getValue().get());
+      for (String id : campaign.getCharacterIds()) {
+        if (campaign.getCharacter(id).isPresent()) {
+          creatures.add(campaign.getCharacter(id).get());
         }
       }
     }
@@ -252,7 +252,7 @@ public class Battle {
     status = BattleStatus.ENDED;
 
     // Remove all monsters used in the battle.
-    for (String creatureId : campaign.getCreatureIds().getValue()) {
+    for (String creatureId : campaign.getCreatureIds()) {
       campaign.creatures().remove(creatureId);
     }
 
@@ -310,7 +310,7 @@ public class Battle {
     return proto.build();
   }
 
-  public static Battle fromProto(Campaign campaign, Entry.CampaignProto.Battle proto) {
+  public static Battle fromProto(FSCampaign campaign, Entry.CampaignProto.Battle proto) {
     return new Battle(campaign, proto.getNumber(),
         BattleStatus.fromProto(proto.getStatus()), proto.getTurn(), proto.getCreatureIdList(),
         proto.getSurprisedCreatureIdList(), proto.getCurrentCreatureIndex());

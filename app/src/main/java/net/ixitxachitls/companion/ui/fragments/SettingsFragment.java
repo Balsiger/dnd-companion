@@ -22,18 +22,19 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ScrollView;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
+import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Strings;
@@ -45,14 +46,18 @@ import java.util.Optional;
  * Fragment for displaying settings values.
  */
 public class SettingsFragment extends CompanionFragment {
-  private Settings settings;
+
+  private Optional<User> me;
 
   // UI elements.
+  private LabelledEditTextView name;
+  private LabelledEditTextView email;
   private LabelledEditTextView nickname;
   private Wrapper<CheckBox> remoteCampaigns;
   private Wrapper<CheckBox> remoteCharacters;
   private LabelledEditTextView features;
   private Wrapper<Button> save;
+  private RoundImageView image;
 
   public SettingsFragment() {
     super(Type.settings);
@@ -63,26 +68,28 @@ public class SettingsFragment extends CompanionFragment {
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
-    ConstraintLayout view = (ConstraintLayout)
-        inflater.inflate(R.layout.fragment_settings, container, false);
+    me = application().context().me();
+    ScrollView view = (ScrollView) inflater.inflate(R.layout.fragment_settings, container, false);
 
-    settings = settings();
-
+    name = view.findViewById(R.id.name);
+    name.disabled();
+    email = view.findViewById(R.id.email);
+    email.disabled();
     nickname = view.findViewById(R.id.nickname);
     nickname.onEdit(this::editNickname).onChange(this::update);
     remoteCampaigns = Wrapper.wrap(view, R.id.remote_campaigns);
-    remoteCampaigns.get().setChecked(settings.useRemoteCampaigns());
+    //remoteCampaigns.get().setChecked(settings.useRemoteCampaigns());
     remoteCampaigns.visible(Misc.onEmulator());
     remoteCharacters = Wrapper.wrap(view, R.id.remote_characters);
-    remoteCharacters.get().setChecked(settings.useRemoteCharacters());
+    //remoteCharacters.get().setChecked(settings.useRemoteCharacters());
     remoteCharacters.visible(Misc.onEmulator());
     features = view.findViewById(R.id.features);
     features.onEdit(this::editFeatures);
     save = Wrapper.wrap(view, R.id.save);
     save.onClick(this::save);
-
-    if (settings.isDefined()) {
-      view.findViewById(R.id.initial).setVisibility(View.INVISIBLE);
+    image = view.findViewById(R.id.image);
+    if (me.isPresent()) {
+      image.loadImageUrl(me.get().getPhotoUrl());
     }
 
     update();
@@ -94,17 +101,21 @@ public class SettingsFragment extends CompanionFragment {
     super.onStart();
 
     // We need to reset values here or they will be messed up by the saved state...?
-    nickname.text(settings.isDefined() ? settings.getNickname() : "");
-    features.text(Strings.COMMA_JOINER.join(settings.getFeatures()));
+    if (me.isPresent()) {
+      name.text(me.get().getName());
+      email.text(me.get().getEmail());
+      nickname.text(me.get().getNickname());
+      features.text(Strings.COMMA_JOINER.join(me.get().getFeatures()));
+    }
   }
 
   private void save() {
     editNickname();
-    settings.useRemote(remoteCampaigns.get().isChecked(), remoteCharacters.get().isChecked());
-    settings.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
-    settings.store();
+    //settings.useRemote(remoteCampaigns.get().isChecked(), remoteCharacters.get().isChecked());
+    if (me.isPresent()) {
+      me.get().setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
+      me.get().store();
 
-    if (settings.isDefined()) {
       // We have to send the welcome before showing another fragment, or the context will be null.
       CompanionApplication.get(getContext()).messenger().sendWelcome();
       CompanionFragments.get().show(Type.campaigns, Optional.empty());
@@ -112,11 +123,15 @@ public class SettingsFragment extends CompanionFragment {
   }
 
   protected void editNickname() {
-    settings.setNickname(nickname.getText());
+    if (me.isPresent()) {
+      me.get().setNickname(nickname.getText());
+    }
   }
 
   protected void editFeatures() {
-    settings.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
+    if (me.isPresent()) {
+      me.get().setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
+    }
   }
 
   @Override

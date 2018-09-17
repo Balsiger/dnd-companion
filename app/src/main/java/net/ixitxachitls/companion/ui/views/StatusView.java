@@ -41,7 +41,6 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
-import net.ixitxachitls.companion.util.Misc;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -59,6 +58,9 @@ public class StatusView extends LinearLayout {
 
   // External data.
   private final CompanionApplication application;
+
+  // Internal data.
+  private boolean showDebug = false;
 
   // UI elements.
   private final IconView online;
@@ -92,9 +94,6 @@ public class StatusView extends LinearLayout {
     Wrapper.<HorizontalScrollView>wrap(view, R.id.connections_scroll)
         .onTouch(this::toggleDebug, MotionEvent.ACTION_UP);
 
-    application.settings().shouldShowStatus().observe(ViewUtils.getActivity(context), data -> {
-        messagesScroll.setVisibility(data ? VISIBLE : GONE); });
-
     addView(view);
   }
 
@@ -107,7 +106,8 @@ public class StatusView extends LinearLayout {
   }
 
   private void toggleDebug() {
-    application.settings().setDebugStatus(!application.settings().shouldShowStatus().getValue());
+    showDebug = !showDebug;
+    messagesScroll.setVisibility(showDebug ? VISIBLE : GONE);
   }
 
   private void clearDebug() {
@@ -125,8 +125,7 @@ public class StatusView extends LinearLayout {
     for (Iterator<Map.Entry<String, ConnectionView>> i = views.iterator(); i.hasNext(); ) {
       Map.Entry<String, ConnectionView> entry = i.next();
       entry.getValue().heartbeat();
-      if (!entry.getKey().equals(application.settings().getAppId())
-          && entry.getValue().getHeartbeats() < -REMOVE_BEATS) {
+      if (entry.getValue().getHeartbeats() < -REMOVE_BEATS) {
         i.remove();
         connections.get().removeView(entry.getValue());
       }
@@ -154,10 +153,6 @@ public class StatusView extends LinearLayout {
     if (clientConnectionsById.containsKey(id)) {
       Status.log("trying to add second connection for " + name);
       return;
-    }
-
-    if (Misc.onEmulator() && !Misc.SHOW_EMULATOR && application.settings().getAppId().equals(id)) {
-      name = "Queen of Nihil";
     }
 
     ConnectionView connection = new ConnectionView(getContext(), id, name, false);

@@ -36,7 +36,6 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 
@@ -113,7 +112,7 @@ public class LocalCharacterFragment extends CharacterFragment {
 
     Optional<Campaign> campaign = campaigns().getCampaign(campaignId).getValue();
     if (campaign.isPresent()) {
-      CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
+      //CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
     }
   }
 

@@ -26,7 +26,6 @@ import android.support.annotation.CallSuper;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -85,7 +84,7 @@ public class RemoteCampaign extends Campaign {
         .orElse(Entries.get().getWorlds().get("Generic").get());
     campaign.dm = proto.getDm();
     campaign.date = CampaignDate.fromProto(proto.getDate());
-    campaign.battle = Battle.fromProto(campaign, proto.getBattle());
+    //campaign.battle = Battle.fromProto(campaign, proto.getBattle());
     campaign.nextBattleNumber = proto.getNextBattleNumber();
 
     return campaign;

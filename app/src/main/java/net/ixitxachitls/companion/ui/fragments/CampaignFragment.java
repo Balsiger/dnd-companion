@@ -32,12 +32,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.FSCampaigns;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.dialogs.DateDialog;
+import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
+import net.ixitxachitls.companion.ui.dialogs.InviteDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -47,17 +49,16 @@ import java.util.Optional;
 /** A fragment displaying campaign information. */
 public class CampaignFragment extends CompanionFragment {
 
-  protected Campaigns campaigns;
-  protected Campaign campaign;
+  protected FSCampaigns campaigns;
+  protected FSCampaign campaign;
 
   // UI elements.
   protected CampaignTitleView title;
   protected TextWrapper<TextView> date;
   protected Wrapper<FloatingActionButton> delete;
-  protected Wrapper<FloatingActionButton> publish;
-  protected Wrapper<FloatingActionButton> unpublish;
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> calendar;
+  protected Wrapper<FloatingActionButton> invite;
   protected HistoryFragment history;
 
   public CampaignFragment() {
@@ -69,8 +70,7 @@ public class CampaignFragment extends CompanionFragment {
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
-    this.campaigns = CompanionApplication.get(getContext()).campaigns();
-    this.campaign = campaigns.getDefaultCampaign();
+    this.campaigns = fsCampaigns();
 
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
@@ -80,47 +80,60 @@ public class CampaignFragment extends CompanionFragment {
         .description("Back", "Go back to the list of campaigns.");
     title = view.findViewById(R.id.title);
     delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).gone();
-    delete.onClick(this::deleteCampaign)
+    delete.onClick(this::deleteCampaign).gone()
         .description("Delete", "Delete this campaign. This action cannot be undone and will send "
             + "a deletion request to players to delete this campaign on their devices too. "
             + "You cannot delete a campaign that is currently published or that has local "
             + "characters.");
-    publish = Wrapper.<FloatingActionButton>wrap(view, R.id.publish).gone();
-    unpublish = Wrapper.<FloatingActionButton>wrap(view, R.id.unpublish).gone();
-    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone();
-    calendar = Wrapper.<FloatingActionButton>wrap(view, R.id.calendar).gone();
-    date = TextWrapper.wrap(view, R.id.date);
+    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone()
+          .description("Edit", "Change the basic information of the campaign.");
+    calendar = Wrapper.<FloatingActionButton>wrap(view, R.id.calendar).gone()
+        .description("Calendar", "Open the calendar for the campaign to allow you to change the "
+            + "current date and time of your campaign.");
+    invite = Wrapper.<FloatingActionButton>wrap(view, R.id.invite).gone()
+        .description("Invite", "Invite players to create characters in this campaign.");
+    date = TextWrapper.wrap(view, R.id.date)
+        .description("Calendar", "Open the calendar for the campaign to allow you to change the "
+            + "current date and time of your campaign.");
     history = (HistoryFragment) getChildFragmentManager().findFragmentById(R.id.history);
-
-    campaigns.getCurrentCampaignId().observe(this, this::showCampaign);
 
     return view;
   }
 
-  public void showCampaign(String campaignId) {
-    campaigns.getCampaign(campaign.getCampaignId()).removeObserver(this::update);
-    campaigns.getCampaign(campaignId).observe(this, this::update);
+  public void showCampaign(FSCampaign campaign) {
+    if (this.campaign != null) {
+      this.campaign.unobserve(this);
+    }
+    this.campaign = campaign;
+    this.campaign.observe(this, this::update);
+    history.update(campaign.getId());
 
-    history.update(campaignId);
+    if (campaign.amDM()) {
+      title.setAction(this::edit);
+      edit.onClick(this::edit).visible();
+      calendar.onClick(this::editDate).visible();
+      invite.onClick(this::invite).visible();
+      date.onClick(this::editDate);
+    } else {
+      title.removeAction();
+      edit.removeClick().gone();
+      calendar.removeClick().gone();
+      invite.removeClick().gone();
+      date.removeClick();
+    }
+
+    update(campaign);
   }
 
   public boolean shows(String campaignId) {
-    return this.campaign.getCampaignId().equals(campaignId);
+    return this.campaign.getId().equals(campaignId);
   }
 
   @CallSuper
-  protected void update(Optional<Campaign> campaign) {
-    if (campaign.isPresent()) {
-      this.campaign = campaign.get();
-      title.setCampaign(campaign.get());
-      if (campaign.get().isDefault()) {
-        date.text("");
-      } else {
-        date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
-      }
-
-      delete.visible(canDeleteCampaign());
-    }
+  protected void update(FSCampaign campaign) {
+    title.update(campaign);
+    date.text(campaign.getCalendar().format(campaign.getDate()));
+    delete.visible(canDeleteCampaign());
   }
 
   protected void deleteCampaign() {
@@ -132,15 +145,26 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   protected void deleteCampaignOk() {
-    campaign.delete();
-    Toast.makeText(getActivity(), getString(R.string.campaign_deleted),
-        Toast.LENGTH_SHORT).show();
+    campaigns.remove(campaign);
+    Toast.makeText(getActivity(), getString(R.string.campaign_deleted), Toast.LENGTH_SHORT).show();
     show(Type.campaigns);
   }
 
   protected boolean canDeleteCampaign() {
-    // We always allow to delete a remote campaign if it does not have local characters.
-    return !characters().hasLocalCharacterForCampaign(campaign.getCampaignId());
+    // TODO(merlin): Also allow players to delete a campign if they don't have a character in it
+    return campaign.amDM();
+  }
+
+  private void edit() {
+    EditCampaignDialog.newInstance(campaign.getId()).display();
+  }
+
+  private void editDate() {
+    DateDialog.newInstance(campaign.getId()).display();
+  }
+
+  private void invite() {
+    InviteDialog.newInstance(campaign.getId()).display();
   }
 
   @Override

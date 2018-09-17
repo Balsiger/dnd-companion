@@ -31,7 +31,8 @@ import android.support.multidex.MultiDexApplication;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.documents.FSCampaigns;
+import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
@@ -45,11 +46,15 @@ import net.ixitxachitls.companion.storage.ApplicationDataBaseAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
+import java.util.Optional;
+
 /**
  * The main application for the companion.
  */
 public class CompanionApplication extends MultiDexApplication
     implements Application.ActivityLifecycleCallbacks {
+
+  private static CompanionApplication application;
 
   private final DataBaseAccessor dataBaseAccessor;
   private final AssetAccessor assetAccessor;
@@ -61,11 +66,12 @@ public class CompanionApplication extends MultiDexApplication
   public CompanionApplication() {
     this.dataBaseAccessor = new ApplicationDataBaseAccessor(this);
     this.assetAccessor = new ApplicationAssetAccessor(this);
-
   }
 
   @Override
   public void onCreate() {
+    application = this;
+
     try {
       PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
       Status.error("starting roleplay companion version " + packageInfo.versionName + " #"
@@ -88,6 +94,10 @@ public class CompanionApplication extends MultiDexApplication
     context.characters().publish();
 
     registerActivityLifecycleCallbacks(this);
+  }
+
+  public static CompanionApplication get() {
+    return application;
   }
 
   public static CompanionApplication get(Context context) {
@@ -115,8 +125,12 @@ public class CompanionApplication extends MultiDexApplication
     return context;
   }
 
-  public Settings settings() {
-    return context.settings();
+  public Optional<User> me() {
+    return context.me();
+  }
+
+  public FSCampaigns fsCampaigns() {
+    return context.fsCampaigns();
   }
 
   public Campaigns campaigns() {

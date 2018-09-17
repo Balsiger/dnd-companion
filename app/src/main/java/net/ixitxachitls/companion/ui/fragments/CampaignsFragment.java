@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-import android.arch.lifecycle.LiveData;
 import android.os.Bundle;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
@@ -30,21 +29,18 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.google.common.collect.ImmutableList;
-
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.FSCampaigns;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
-import java.util.Collections;
-import java.util.List;
 import java.util.Optional;
 
 /**
- * The fragment displaying the campaign list
+ * The fragment displaying the list of campaigns and orphaned characters.
  */
 public class CampaignsFragment extends CompanionFragment {
 
@@ -67,7 +63,7 @@ public class CampaignsFragment extends CompanionFragment {
             + "You will be the Dungeon Master of the campaign.");
 
 
-    campaigns().getAllCampaignIds().observe(this, this::update);
+    fsCampaigns().observe(this, this::update);
 
     return view;
   }
@@ -76,34 +72,28 @@ public class CampaignsFragment extends CompanionFragment {
   public void onResume() {
     super.onResume();
 
-    update(campaigns().getAllCampaignIds().getValue());
+    update(fsCampaigns());
   }
 
   private void addCampaign() {
     EditCampaignDialog.newInstance().display();
   }
 
-  private void update(ImmutableList<String> campaignIds) {
+  private void update(FSCampaigns campaigns) {
     campaignsView.get().removeAllViews();
 
-    // Sort all the campaigns. We have to recreate the campaigns as the transition away
-    // from this fragment seems to break them.
+    // We have to recreate the campaigns as the transition away from this fragment seems to break
+    // them.
     TransitionManager.beginDelayedTransition(campaignsView.get());
-    campaignsView.get().removeAllViews();
-    List<Campaign> campaigns = campaigns().getAllCampaigns();
-    Collections.sort(campaigns);
-    for (Campaign campaign : campaigns) {
-      LiveData<Optional<Campaign>> liveCampaign = campaigns().getCampaign(campaign.getCampaignId());
+    for (FSCampaign campaign : campaigns.getCampaigns()) {
       CampaignTitleView title = new CampaignTitleView(getContext());
-      liveCampaign.removeObservers(this);
-      liveCampaign.observe(this, title::update);
+      campaign.observe(this, title::update);
+      campaign.getDm().observe(this, title::update);
+      title.update(campaign);
       campaignsView.get().addView(title);
       title.setAction(() -> {
         CompanionFragments.get().showCampaign(campaign, Optional.of(title));
       });
-      if (campaign.getCampaignId().equals(campaigns().getCurrentCampaignId().getValue())) {
-        title.setTransitionName("sharedMove");
-      }
     }
   }
 

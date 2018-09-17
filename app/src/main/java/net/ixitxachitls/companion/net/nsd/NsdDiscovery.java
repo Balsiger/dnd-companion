@@ -26,7 +26,7 @@ import android.net.nsd.NsdServiceInfo;
 import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.net.InetAddress;
@@ -36,14 +36,14 @@ import java.net.InetAddress;
  */
 public class NsdDiscovery {
 
-  private final Settings settings;
+  private final User me;
   private final NsdAccessor nsdAccessor;
   private final NsdCallback nsdCallback;
   private @Nullable NsdManager.DiscoveryListener discoveryListener;
   private @Nullable NsdManager.ResolveListener resolveListener;
 
-  public NsdDiscovery(Settings settings, NsdAccessor nsdAccessor, NsdCallback nsdCallback) {
-    this.settings = settings;
+  public NsdDiscovery(User user, NsdAccessor nsdAccessor, NsdCallback nsdCallback) {
+    this.me = user;
     this.nsdAccessor = nsdAccessor;
     this.nsdCallback = nsdCallback;
   }
@@ -80,7 +80,7 @@ public class NsdDiscovery {
       Status.log("service discovered: " + service.getServiceName());
       if (!service.getServiceType().startsWith(NsdServer.TYPE)) {
         Status.log("unknown service type ignored: " + service.getServiceType());
-      } else if(!Misc.onEmulator() && service.getServiceName().equals(settings.getNickname())) {
+      } else if(!Misc.onEmulator() && service.getServiceName().equals(me.getNickname())) {
         Status.log("own service ignored");
       } else  {
         Status.log("found service " + service.getServiceName());
@@ -128,7 +128,7 @@ public class NsdDiscovery {
       Status.log("service " + serviceInfo.getServiceName() + " connected");
 
       if (!Misc.onEmulator() // Allow to find itself on emulator.
-          && serviceInfo.getServiceName().endsWith(settings.getNickname())) {
+          && serviceInfo.getServiceName().endsWith(me.getNickname())) {
         Status.log("same nickname, ignored.");
         return;
       }

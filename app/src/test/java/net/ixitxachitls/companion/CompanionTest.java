@@ -29,7 +29,7 @@ import com.google.common.collect.ImmutableList;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.FakeCompanionContext;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
@@ -112,13 +112,13 @@ public abstract class CompanionTest {
     return context.characters().getCharacter(id).getValue().get();
   }
 
-  protected Campaign campaign(CompanionContext context, String id) {
-    return context.campaigns().getCampaign(id).getValue().get();
+  protected FSCampaign campaign(CompanionContext context, String id) {
+    return context.fsCampaigns().getCampaign(id).get();
   }
 
   protected List<String> campaignNames(CompanionContext context) {
-    return context.campaigns().getAllCampaigns().stream()
-        .map(Campaign::getName)
+    return context.fsCampaigns().getCampaigns().stream()
+        .map(FSCampaign::getName)
         .collect(Collectors.toList());
   }
 
@@ -289,14 +289,14 @@ public abstract class CompanionTest {
 
   List<String> ids(CompanionMessenger ... messengers) {
     return Arrays.asList(messengers).stream()
-        .map(m -> m.getContext().settings().getAppId())
+        .map(m -> m.getContext().me().get().getId())
         .collect(Collectors.toList());
   }
 
   List<String> serverIds(CompanionMessenger ... messengers) {
     return Arrays.asList(messengers).stream()
         .filter(m -> m.getServer().started())
-        .map(m -> m.getContext().settings().getAppId())
+        .map(m -> m.getContext().me().get().getId())
         .collect(Collectors.toList());
   }
 

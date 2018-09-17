@@ -106,27 +106,6 @@
         app:srcCompat="@drawable/ic_today_black_24dp"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/publish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:clickable="true"
-        app:backgroundTint="@color/campaign"
-        app:srcCompat="@drawable/ic_signal_wifi_4_bar_black_24dp"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/unpublish"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:clickable="true"
-        app:backgroundTint="@color/campaign"
-        app:srcCompat="@drawable/ic_signal_wifi_off_black_24dp"/>
-
-    <android.support.design.widget.FloatingActionButton
         android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -137,6 +116,19 @@
         android:visibility="visible"
         app:backgroundTint="@color/campaign"
         app:srcCompat="@drawable/ic_delete_black_24dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:visibility="visible"
+        app:backgroundTint="@color/campaign"
+        app:srcCompat="@drawable/account_plus"/>
+
   </LinearLayout>
 
   <fragment

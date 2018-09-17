@@ -31,7 +31,6 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.statics.World;
-import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Entry;
@@ -81,7 +80,7 @@ public class LocalCampaign extends Campaign {
 
   @Override
   public String getDm() {
-    return companionContext.settings().getNickname();
+    return companionContext.me().get().getNickname();
   }
 
   public LocalCampaign asLocal() {
@@ -166,13 +165,13 @@ public class LocalCampaign extends Campaign {
   public static LocalCampaign fromProto(CompanionContext companionContext, long id, Entry.CampaignProto proto) {
     LocalCampaign campaign = new LocalCampaign(companionContext, id, proto.getName());
     campaign.entryId =
-        proto.getId().isEmpty() ? companionContext.settings().getAppId() + "-" + id : proto.getId();
+        proto.getId().isEmpty() ? companionContext.me().get().getId() + "-" + id : proto.getId();
     campaign.world = Entries.get().getWorlds().get(proto.getWorld())
         .orElse(Entries.get().getWorlds().get("Generic").get());
     campaign.dm = proto.getDm();
     campaign.published = proto.getPublished();
     campaign.date = CampaignDate.fromProto(proto.getDate());
-    campaign.battle = Battle.fromProto(campaign, proto.getBattle());
+    //campaign.battle = Battle.fromProto(campaign, proto.getBattle());
     campaign.nextBattleNumber = proto.getNextBattleNumber();
 
     return campaign;

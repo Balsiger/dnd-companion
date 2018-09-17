@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.dynamics;
 import android.arch.lifecycle.LiveData;
 import android.net.Uri;
 import android.support.annotation.CallSuper;
-import android.support.annotation.NonNull;
 
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
@@ -32,6 +31,7 @@ import com.google.common.collect.Multiset;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.values.Condition;
@@ -98,7 +98,7 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
 
   @Override
   public int getInitiative() {
-    Optional<Campaign> campaign = getCampaign();
+    Optional<FSCampaign> campaign = getCampaign();
     if (campaign.isPresent() && campaign.get().getBattle().getNumber() != battleNumber) {
       initiative = NO_INITIATIVE;
     }
@@ -307,7 +307,7 @@ public abstract class Character extends BaseCreature<Entry.CharacterProto>
   }
 
   @Override
-  public int compareTo(@NonNull Character that) {
+  public int compareTo(Character that) {
     int name = this.name.compareTo(that.name);
     if (name != 0) {
       return name;

@@ -51,7 +51,7 @@ public abstract class ConditionLineView extends LinearLayout {
   protected final Wrapper<FloatingActionButton> delete;
 
   protected ConditionLineView(Context context, TimedCondition condition, String sourceName,
-                           String sourceId, List<String> targetIds, Duration remaining,
+                              String sourceId, List<String> targetIds, Duration remaining,
                               boolean isDM) {
     super(context);
 

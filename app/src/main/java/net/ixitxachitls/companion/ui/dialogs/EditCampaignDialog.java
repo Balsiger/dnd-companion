@@ -32,8 +32,7 @@ import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -49,11 +48,12 @@ public class EditCampaignDialog extends Dialog {
 
   private static final String ARG_ID = "id";
 
-  private Optional<LocalCampaign> campaign = Optional.empty();
+  private Optional<FSCampaign> campaign = Optional.empty();
 
   // The following values are only valid after onCreate().
   private LabelledEditTextView name;
   private LabelledTextView world;
+  private String selectedWorld;
   private Wrapper<Button> save;
 
   public EditCampaignDialog() {}
@@ -84,12 +84,12 @@ public class EditCampaignDialog extends Dialog {
     if (getArguments() != null) {
       String id = getArguments().getString(ARG_ID);
       if (Strings.isNullOrEmpty(id)) {
-        campaign = Optional.of(LocalCampaign.createNew(data()));
+        campaign = Optional.of(fsCampaigns().create());
       } else {
-        campaign = Campaign.asLocal(campaigns().getCampaign(id).getValue());
+        campaign = fsCampaigns().getCampaign(id);
       }
     } else {
-      campaign = Optional.of(LocalCampaign.createNew(data()));
+      campaign = Optional.of(fsCampaigns().create());
     }
   }
 
@@ -102,24 +102,18 @@ public class EditCampaignDialog extends Dialog {
       name.onChange(this::update);
       world = view.findViewById(R.id.world);
       world.onClick(this::selectWorld);
-      if (!campaign.get().getWorld().isEmpty()) {
-        world.text(campaign.get().getWorld());
-      }
+      world.text(campaign.get().getWorld().getName());
+      selectedWorld = campaign.get().getWorld().getName();
       save = Wrapper.wrap(view, R.id.save);
       save.onClick(this::save);
-
-      if (campaign.get().isDefined()) {
-        view.findViewById(R.id.campaign_edit_intro).setVisibility(View.GONE);
-      }
+      update();
     }
-
-    update();
   }
 
   private void selectWorld() {
     if (campaign.isPresent()) {
       ListSelectDialog fragment = ListSelectDialog.newStringInstance(
-          R.string.campaign_select_world, campaign.get().getWorld(),
+          R.string.campaign_select_world, campaign.get().getWorld().getName(),
           Entries.get().getWorlds().getNames(), R.color.campaign);
       fragment.setSelectListener(this::editWorld);
       fragment.display();
@@ -127,33 +121,24 @@ public class EditCampaignDialog extends Dialog {
   }
 
   private void editWorld(String value) {
-    if (campaign.isPresent()) {
-      campaign.get().setWorld(value);
-      update();
-    }
+    selectedWorld = value;
+    update();
   }
 
   protected void update() {
-    if (campaign.isPresent()) {
-      if (name.getText().length() == 0 || campaign.get().getWorld().isEmpty()) {
-        save.invisible();
-      } else {
-        save.visible();
-      }
-
-      if (!campaign.get().getWorld().isEmpty()) {
-        world.text(campaign.get().getWorld());
-      }
-    }
+    world.text(selectedWorld);
+    save.visible(name.getText().length() > 0);
   }
 
   protected void save() {
     if (campaign.isPresent()) {
       campaign.get().setName(name.getText());
+      campaign.get().setWorld(selectedWorld);
       campaign.get().store();
 
       super.save();
       CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
     }
+
   }
 }

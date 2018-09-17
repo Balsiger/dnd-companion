@@ -33,7 +33,6 @@ import android.net.Uri;
 import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.BuildConfig;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.HistoryEntry;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
@@ -58,7 +57,6 @@ public class DataBaseContentProvider extends ContentProvider {
   public static final Uri CREATURES_LOCAL = Uri.parse(PREFIX + Creature.TABLE_LOCAL);
   public static final Uri CHARACTERS_LOCAL = Uri.parse(PREFIX + LocalCharacter.TABLE);
   public static final Uri CHARACTERS_REMOTE = Uri.parse(PREFIX + RemoteCharacter.TABLE);
-  public static final Uri SETTINGS = Uri.parse(PREFIX + Settings.TABLE);
   public static final Uri MESSAGES = Uri.parse(PREFIX + ScheduledMessage.TABLE);
   public static final Uri HISTORY = Uri.parse(PREFIX + HistoryEntry.TABLE);
 
@@ -124,7 +122,6 @@ public class DataBaseContentProvider extends ContentProvider {
   }
 
   public static void reset(Context context, ContentResolver contentResolver) {
-    contentResolver.delete(SETTINGS, null, null);
     contentResolver.delete(CAMPAIGNS_LOCAL, null, null);
     contentResolver.delete(CAMPAIGNS_REMOTE, null, null);
     contentResolver.delete(CHARACTERS_LOCAL, null, null);

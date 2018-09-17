@@ -26,7 +26,11 @@ import android.net.Uri;
 import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.common.collect.ImmutableList;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
@@ -37,7 +41,9 @@ import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.proto.Entry;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -67,8 +73,8 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
 
     world = Entries.get().getWorlds().get("Generic").get();
     date = new CampaignDate(world.getCalendar().getYears().get(0).getNumber());
-    dm = companionContext.settings().getNickname();
-    battle = new Battle(this);
+    dm = companionContext.me().get().getNickname();
+    //battle = new Battle(this);
   }
 
   public CompanionContext data() {
@@ -203,6 +209,27 @@ public abstract class Campaign extends StoredEntry<Entry.CampaignProto>
         companionContext.campaigns().add(this);
         companionContext.histories().created(getName(), getDate(), getCampaignId());
       }
+
+      // Try to store this in firestore.
+      FirebaseFirestore db = FirebaseFirestore.getInstance();
+      Map<String, String> map = new HashMap<>();
+      map.put("id", getCampaignId());
+      map.put("name", getName());
+      map.put("DM", getDm());
+      db.collection("campaigns")
+          .add(map)
+          .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+              Status.log("DocumentSnapshot added with ID: " + documentReference.getId());
+            }
+          })
+          .addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+              Status.error("Error adding document: " + e);
+            }
+          });
 
       return true;
     }

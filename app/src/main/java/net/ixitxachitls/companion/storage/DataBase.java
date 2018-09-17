@@ -28,7 +28,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.HistoryEntry;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
@@ -48,9 +47,6 @@ public class DataBase extends SQLiteOpenHelper {
   public static final String COLUMN_ID = "id";
   public static final String COLUMN_PROTO = "proto";
 
-  public static final String CREATE_SETTINGS = "CREATE TABLE " + Settings.TABLE
-      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY,"
-      + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_CAMPAIGNS_LOCAL = "CREATE TABLE " + LocalCampaign.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_CAMPAIGNS_REMOTE = "CREATE TABLE " + RemoteCampaign.TABLE
@@ -106,15 +102,10 @@ public class DataBase extends SQLiteOpenHelper {
 
   private void update(SQLiteDatabase db, int version) {
     if (version <= 0) {
-      db.execSQL(CREATE_SETTINGS);
       db.execSQL(CREATE_CAMPAIGNS_LOCAL);
       db.execSQL(CREATE_CAMPAIGNS_REMOTE);
       db.execSQL(CREATE_CHARACTERS_LOCAL);
       db.execSQL(CREATE_CHARACTERS_REMOTE);
-    }
-
-    if (version <= 1) {
-      db.insert(Settings.TABLE, null, Settings.defaultSettings());
     }
 
     if (version <= 2) {

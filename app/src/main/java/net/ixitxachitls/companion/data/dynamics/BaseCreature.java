@@ -29,6 +29,7 @@ import com.google.protobuf.MessageLite;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.statics.Monster;
 import net.ixitxachitls.companion.data.values.Battle;
@@ -81,12 +82,12 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return campaignId;
   }
 
-  public Optional<Campaign> getCampaign() {
-    return context.campaigns().getCampaign(campaignId).getValue();
+  public Optional<FSCampaign> getCampaign() {
+    return context.fsCampaigns().getCampaign(campaignId);
   }
 
   public Optional<Battle> getBattle() {
-    return getCampaign().map(Campaign::getBattle);
+    return getCampaign().map(FSCampaign::getBattle);
   }
 
   public String getCreatureId() {
@@ -465,7 +466,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
   protected void fromProto(Entry.CreatureProto proto) {
     campaignId = proto.getCampaignId();
-    entryId = proto.getId().isEmpty() ? context.settings().getAppId() + "-" + id : proto.getId();
+    entryId = proto.getId().isEmpty() ? context.me().get().getId() + "-" + id : proto.getId();
     race = Entries.get().getMonsters().get(proto.getRace());
     gender = Gender.fromProto(proto.getGender());
     strength = proto.getAbilities().getStrength();

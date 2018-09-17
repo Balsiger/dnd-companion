@@ -67,18 +67,6 @@
         android:textStyle="bold"
         android:typeface="normal"/>
 
-    <view
-        android:id="@+id/network"
-        class="net.ixitxachitls.companion.ui.views.NetworkIcon"
-        android:layout_width="@dimen/iconSizeSmall"
-        android:layout_height="@dimen/iconSizeSmall"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center_horizontal"
-        android:tint="#444"
-        app:bleep_bright="@color/onBright"
-        app:bleep_dark="@color/on"
-        app:srcCompat="@drawable/ic_home_black_48dp"/>
   </LinearLayout>
 
 </RelativeLayout>

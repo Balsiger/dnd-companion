@@ -27,6 +27,7 @@ import android.support.annotation.VisibleForTesting;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
 import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Character;
@@ -122,7 +123,7 @@ public class CompanionMessenger implements Runnable {
     // Send all local campaigns.
     for (Campaign campaign : companionContext.campaigns().getLocalCampaigns()) {
       if (campaign.isPublished()
-          && !Misc.onEmulator() && !getContext().settings().useRemoteCampaigns()) {
+          && !Misc.onEmulator() /*&& !getContext().settings().useRemoteCampaigns()*/) {
         companionServer.schedule(recipientId, CompanionMessageData.from(campaign));
 
         // Send all characters and images of the campaign that are not under the recipients control.
@@ -201,7 +202,7 @@ public class CompanionMessenger implements Runnable {
                   CompanionMessageData.from(companionContext, image));
             } else {
               // Send the image to the server (unless we are the server as well).
-              if (!campaign.get().getServerId().equals(companionContext.settings().getAppId())) {
+              if (!campaign.get().getServerId().equals(companionContext.me().get().getId())) {
                 companionClients.schedule(campaign.get().getServerId(),
                     CompanionMessageData.from(companionContext, image));
               }
@@ -239,8 +240,8 @@ public class CompanionMessenger implements Runnable {
   }
 
   public void addItem(BaseCreature<?> creature, Item item) {
-    Optional<Campaign> campaign = creature.getCampaign();
-    if (!creature.isLocal() && campaign.isPresent() && campaign.get().isLocal()) {
+    Optional<FSCampaign> campaign = creature.getCampaign();
+    if (!creature.isLocal() && campaign.isPresent() && campaign.get().amDM()) {
       Status.log("Sending newly created item " + item + " to " + creature);
       companionServer.schedule(Ids.extractServerId(creature.getCreatureId()),
           CompanionMessageData.from(companionContext, item, creature.getCreatureId()));
@@ -327,10 +328,10 @@ public class CompanionMessenger implements Runnable {
   }
 
   public void sendWelcome() {
-    companionClients.schedule(CompanionMessageData.fromWelcome(companionContext, companionContext.settings().getAppId(),
-        companionContext.settings().getNickname()));
+    companionClients.schedule(CompanionMessageData.fromWelcome(companionContext, companionContext.me().get().getId(),
+        companionContext.me().get().getNickname()));
     companionServer.schedule(CompanionMessageData.fromWelcome(companionContext,
-        companionContext.settings().getAppId(), companionContext.settings().getNickname()));
+        companionContext.me().get().getId(), companionContext.me().get().getNickname()));
   }
 
   public void ackServer(String recipientId, long messageId) {
@@ -347,7 +348,7 @@ public class CompanionMessenger implements Runnable {
 
     // Ignore the given id and ourselves.
     if (!Misc.onEmulator()) {
-      ids.remove(companionContext.settings().getAppId());
+      ids.remove(companionContext.me().get().getId());
     }
     ids.removeAll(Arrays.asList(ignoreIds));
 
@@ -366,7 +367,7 @@ public class CompanionMessenger implements Runnable {
       // Check for messages from servers.
       List<CompanionMessage> serverMessages = companionClients.receive();
       if (!serverMessages.isEmpty()) {
-        Status.log(companionContext.settings().getNickname() + " received " + serverMessages.size()
+        Status.log(companionContext.me().get().getNickname() + " received " + serverMessages.size()
             + " server messages for processing");
       }
       for (CompanionMessage serverMessage : serverMessages) {
@@ -377,7 +378,7 @@ public class CompanionMessenger implements Runnable {
       // Handle message from clients.
       List<CompanionMessage> clientMessages = companionServer.receive();
       if (!clientMessages.isEmpty()) {
-        Status.log(companionContext.settings().getNickname() + " received " + clientMessages.size()
+        Status.log(companionContext.me().get().getNickname() + " received " + clientMessages.size()
             + " client messages for processing");
       }
       for (CompanionMessage clientMessage : clientMessages) {
