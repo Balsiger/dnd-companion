@@ -40,7 +40,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Access to and utilities for camapigns.
+ * Access to and utilities for campaigns.
  */
 public class Campaigns {
   private final CompanionContext companionContext;
@@ -92,7 +92,7 @@ public class Campaigns {
       return liveDefaultCampaign;
     }
 
-    if ((!Misc.onEmulator() || !companionContext.settings().useRemoteCampaigns())
+    if ((!Misc.onEmulator() /*|| !companionContext.settings().useRemoteCampaigns()*/)
         && local.hasCampaign(campaignId)) {
       return local.getCampaign(campaignId);
     }
@@ -116,11 +116,11 @@ public class Campaigns {
     List<Campaign> campaigns = new ArrayList<>();
     campaigns.add(defaultCampaign);
     if (Misc.onEmulator()) {
-      if (companionContext.settings().useRemoteCampaigns()) {
-        campaigns.addAll(remote.getCampaigns());
-      } else {
+      //if (companionContext.settings().useRemoteCampaigns()) {
+      //  campaigns.addAll(remote.getCampaigns());
+      //} else {
         campaigns.addAll(local.getCampaigns());
-      }
+      //}
     } else {
       campaigns.addAll(local.getCampaigns());
       campaigns.addAll(remote.getCampaigns());
@@ -252,17 +252,17 @@ public class Campaigns {
     Set<String> ids = new HashSet<>();
     ids.add(defaultCampaign.getCampaignId());
     if (Misc.onEmulator()) {
-      if (companionContext.settings().useRemoteCampaigns()) {
-        ids.addAll(remote.getCampaigns()
-            .stream()
-            .map(Campaign::getCampaignId)
-            .collect(Collectors.toList()));
-      } else {
+      //if (companionContext.settings().useRemoteCampaigns()) {
+      //  ids.addAll(remote.getCampaigns()
+      //      .stream()
+      //      .map(Campaign::getCampaignId)
+      //      .collect(Collectors.toList()));
+      //} else {
         ids.addAll(local.getCampaigns()
             .stream()
             .map(Campaign::getCampaignId)
             .collect(Collectors.toList()));
-      }
+      //}
     } else {
       ids.addAll(local.getCampaigns()
           .stream()

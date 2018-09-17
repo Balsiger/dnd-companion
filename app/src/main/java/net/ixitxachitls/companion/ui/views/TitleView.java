@@ -83,11 +83,10 @@ public class TitleView extends LinearLayout {
   }
 
   public void setAction(Wrapper.Action action) {
-    setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        action.execute();
-      }
-    });
+    setOnClickListener(v -> action.execute());
+  }
+
+  public void removeAction() {
+    setOnClickListener(null);
   }
 }

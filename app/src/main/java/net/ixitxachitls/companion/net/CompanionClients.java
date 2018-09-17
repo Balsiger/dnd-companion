@@ -51,7 +51,7 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
 
   public CompanionClients(CompanionContext companionContext, NsdAccessor nsdAccessor) {
     this.companionContext = companionContext;
-    this.nsdDiscovery = new NsdDiscovery(companionContext.settings(), nsdAccessor, this);
+    this.nsdDiscovery = new NsdDiscovery(companionContext.me().get(), nsdAccessor, this);
   }
 
   // Network handling.

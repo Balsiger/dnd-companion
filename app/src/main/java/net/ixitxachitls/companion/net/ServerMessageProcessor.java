@@ -36,7 +36,7 @@ public class ServerMessageProcessor extends MessageProcessor {
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, context.settings().getAppId(), messageId, message);
+    process(senderId, senderName, context.me().get().getId(), messageId, message);
   }
 
   @Override

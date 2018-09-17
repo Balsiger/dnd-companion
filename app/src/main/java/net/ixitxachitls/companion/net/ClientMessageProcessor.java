@@ -50,7 +50,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, context.settings().getAppId(), messageId, message);
+    process(senderId, senderName, context.me().get().getId(), messageId, message);
   }
 
   @Override
@@ -94,7 +94,7 @@ public class ClientMessageProcessor extends MessageProcessor {
   }
 
   private void gotoBattle(Campaign campaign) {
-    CompanionFragments.get().showCampaign(campaign, Optional.empty());
+    //CompanionFragments.get().showCampaign(campaign, Optional.empty());
   }
 
   @Override

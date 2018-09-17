@@ -107,8 +107,8 @@ public class MessageScheduler {
 
   public void schedule(CompanionMessageData data) {
     ScheduledMessage message = new ScheduledMessage(data.campaigns(),
-        new CompanionMessage(context.settings().getAppId(), context.settings().getNickname(),
-            recipientId, context.settings().getNextMessageId(), data));
+        new CompanionMessage(context.me().get().getId(), context.me().get().getNickname(),
+            recipientId, 0 /*context.settings().getNextMessageId()*/, data));
     Status.log("scheduling to " + Status.nameFor(recipientId) + ": " + message);
     message.store();
 

@@ -53,4 +53,9 @@ public class World extends StaticEntry<Entity.WorldProto> {
 
     return world;
   }
+
+  @Override
+  public String toString() {
+    return getName();
+  }
 }

@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.dynamics;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -44,13 +45,13 @@ public class RemoteCharacter extends Character {
   @Override
   public void addXp(int xp) {
     // Send an award message to the remote character.
-    Optional<Campaign> campaign = getCampaign();
-    if (!campaign.isPresent() && !campaign.get().isLocal()) {
+    Optional<FSCampaign> campaign = getCampaign();
+    if (!campaign.isPresent() && !campaign.get().amDM()) {
       Status.error("Cannot award xp for a remote or unknown campaign");
     }
 
     Status.log("sending xp award of " + xp + " for " + this);
-    context.messenger().sendXpAward(campaign.get().getCampaignId(), getCharacterId(), xp);
+    context.messenger().sendXpAward(campaign.get().getId(), getCharacterId(), xp);
   }
 
   @Override
@@ -73,7 +74,7 @@ public class RemoteCharacter extends Character {
     }
 
     if (character.playerName.isEmpty()) {
-      character.playerName = companionContext.settings().getNickname();
+      character.playerName = companionContext.me().get().getNickname();
     }
 
     return character;

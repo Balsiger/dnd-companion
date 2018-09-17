@@ -54,7 +54,7 @@ public class CompanionServer {
 
     // Setup stored messages.
     for (ScheduledMessage message
-        : companionContext.messages().getMessagesBySender(companionContext.settings().getAppId())) {
+        : companionContext.messages().getMessagesBySender(companionContext.me().get().getId())) {
       setupScheduler(message.getRecieverId());
     }
   }
@@ -99,7 +99,7 @@ public class CompanionServer {
   }
 
   private String getRecipientName(String id) {
-    if (id.equals(companionContext.settings().getAppId())) {
+    if (id.equals(companionContext.me().get().getId())) {
       return "(me)";
     }
 
@@ -122,7 +122,7 @@ public class CompanionServer {
         : companionContext.characters().getCampaignCharacterIds(campaign.getCampaignId()).getValue()) {
       String id = Ids.extractServerId(characterId);
       // Don't send anything to oneself.
-      if (!id.equals(companionContext.settings().getAppId())) {
+      if (!id.equals(companionContext.me().get().getId())) {
         ids.add(id);
       }
     }

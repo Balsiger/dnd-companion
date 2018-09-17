@@ -55,7 +55,7 @@ public class ScheduledMessage extends StoredEntry<Entry.ScheduledMessageProto> {
   private ScheduledMessage(Campaigns campaigns, long id, State state, long lastInteraction,
                            CompanionMessage message) {
     super(campaigns.context(), id, TYPE,
-        TYPE + "-" + campaigns.context().settings().getAppId() + "-" + message.getMessageId(), TYPE,
+        TYPE + "-" + campaigns.context().me().get().getId() + "-" + message.getMessageId(), TYPE,
         true, DataBaseContentProvider.MESSAGES);
 
     this.message = message;

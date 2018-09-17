@@ -59,7 +59,7 @@ public class Characters {
   // Data accessors.
 
   public LiveData<Optional<Character>> getCharacter(String characterId) {
-    if (!context.settings().useRemoteCharacters() && local.hasCharacter(characterId)) {
+    if (/*!context.settings().useRemoteCharacters() && */local.hasCharacter(characterId)) {
       return local.getCharacter(characterId);
     }
 
@@ -111,11 +111,11 @@ public class Characters {
   public List<Character> getAllCharacters() {
     List<Character> characters = new ArrayList<>();
     if (Misc.onEmulator()) {
-      if (context.settings().useRemoteCharacters()) {
-        characters.addAll(remote.getAll());
-      } else {
+      //if (context.settings().useRemoteCharacters()) {
+      //  characters.addAll(remote.getAll());
+      //} else {
         characters.addAll(local.getAll());
-      }
+      //}
     } else {
       characters.addAll(local.getAll());
       characters.addAll(remote.getAll());

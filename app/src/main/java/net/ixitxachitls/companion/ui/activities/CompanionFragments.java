@@ -29,7 +29,7 @@ import android.view.View;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.documents.FSCampaign;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
@@ -37,7 +37,6 @@ import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
-import net.ixitxachitls.companion.ui.fragments.LocalCampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.LocalCharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
 
@@ -60,7 +59,6 @@ public class CompanionFragments {
 
   private Optional<CompanionFragment> currentFragment = Optional.empty();
   private Optional<CampaignFragment> campaignFragment = Optional.empty();
-  private Optional<LocalCampaignFragment> localCampaignFragment = Optional.empty();
   private Optional<CampaignsFragment> campaignsFragment = Optional.empty();
   private Optional<SettingsFragment> settingsFragment = Optional.empty();
   private Optional<CharacterFragment> characterFragment = Optional.empty();
@@ -97,11 +95,6 @@ public class CompanionFragments {
     } else {
       // Show the default campaign to be able to come back to it.
       show(CompanionFragment.Type.campaigns, Optional.empty());
-
-      // Show settings if not yet defined
-      if (!campaigns.context().settings().isDefined()) {
-        show(CompanionFragment.Type.settings, Optional.empty());
-      }
     }
   }
 
@@ -138,13 +131,6 @@ public class CompanionFragments {
         }
 
         return show(campaignFragment.get(), sharedElement);
-
-      case localCampaign:
-        if (!localCampaignFragment.isPresent()) {
-          localCampaignFragment = Optional.of(new LocalCampaignFragment());
-        }
-
-        return show(localCampaignFragment.get(), sharedElement);
     }
   }
 
@@ -186,17 +172,12 @@ public class CompanionFragments {
     return currentFragment.get().goBack();
   }
 
-  public void showCampaign(Campaign campaign, Optional<View> shared) {
-    campaigns.changeCurrent(campaign.getCampaignId());
-    if (campaign.isLocal()) {
-      show(CompanionFragment.Type.localCampaign, shared);
-      if (localCampaignFragment.isPresent()) {
-        localCampaignFragment.get().showCampaign(campaign.getCampaignId());
-      }
-    } else {
+  public void showCampaign(FSCampaign campaign, Optional<View> shared) {
+    campaigns.changeCurrent(campaign.getId());
+    if (campaign.amDM()) {
       show(CompanionFragment.Type.campaign, shared);
       if (campaignFragment.isPresent()) {
-        campaignFragment.get().showCampaign(campaign.getCampaignId());
+        campaignFragment.get().showCampaign(campaign);
       }
     }
   }

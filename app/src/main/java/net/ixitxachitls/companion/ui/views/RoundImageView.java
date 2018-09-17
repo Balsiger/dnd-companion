@@ -24,8 +24,10 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
@@ -35,6 +37,9 @@ import android.view.View;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import java.io.IOException;
+import java.net.URL;
 
 /**
  * An image view that shows the image round.
@@ -87,5 +92,31 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
         action.execute();
       }
     });
+  }
+
+  public void loadImageUrl(String url) {
+    if (!url.isEmpty()) {
+      new LoadTask().execute(url);
+    }
+  }
+
+  private class LoadTask extends AsyncTask<String, Void, Bitmap> {
+    @Override
+    protected Bitmap doInBackground(String ... input) {
+      try {
+        URL url = new URL(input[0]);
+        return BitmapFactory.decodeStream(url.openConnection().getInputStream());
+      } catch (IOException e) {
+        return null;
+      }
+    }
+
+    protected void onPostExecute(Bitmap bitmap) {
+      if (bitmap != null) {
+        setImageBitmap(bitmap);
+      } else {
+        net.ixitxachitls.companion.Status.error("Cannot load user photo!");
+      }
+    }
   }
 }

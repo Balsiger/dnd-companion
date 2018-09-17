@@ -24,10 +24,19 @@ package net.ixitxachitls.companion.data.values;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * A date in the campaign.
  */
 public class CampaignDate {
+
+  private static final String FIELD_YEAR = "year";
+  private static final String FIELD_MONTH = "month";
+  private static final String FIELD_DAY = "day";
+  private static final String FIELD_HOUR = "hour";
+  private static final String FIELD_MINUTE = "minute";
 
   private final int year;
   private final int month;
@@ -39,8 +48,7 @@ public class CampaignDate {
     this(0, 0, 0, 0, 0);
   }
 
-  public CampaignDate(int year)
-  {
+  public CampaignDate(int year) {
     this(year, 1, 0, 0, 0);
   }
 
@@ -52,28 +60,23 @@ public class CampaignDate {
     this.minute = minute;
   }
 
-  public int getYear()
-  {
+  public int getYear() {
     return year;
   }
 
-  public int getMonth()
-  {
+  public int getMonth() {
     return month;
   }
 
-  public int getDay()
-  {
+  public int getDay() {
     return day;
   }
 
-  public int getHour()
-  {
+  public int getHour() {
     return hour;
   }
 
-  public int getMinute()
-  {
+  public int getMinute() {
     return minute;
   }
 
@@ -99,6 +102,27 @@ public class CampaignDate {
         && day == date.day
         && hour == date.hour
         && minute == date.minute;
+  }
+
+  public static CampaignDate read(Map<String, Object> data) {
+    int year = (int) Values.get(data, FIELD_YEAR, 2010);
+    int month = (int) Values.get(data, FIELD_MONTH, 3);
+    int day = (int) Values.get(data, FIELD_DAY, 3);
+    int hour = (int) Values.get(data, FIELD_HOUR, 21);
+    int minute = (int) Values.get(data, FIELD_MINUTE, 42);
+
+    return new CampaignDate(year, month, day, hour, minute);
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_YEAR, year);
+    data.put(FIELD_MONTH, month);
+    data.put(FIELD_DAY, day);
+    data.put(FIELD_HOUR, hour);
+    data.put(FIELD_MINUTE, minute);
+
+    return data;
   }
 
   @Override

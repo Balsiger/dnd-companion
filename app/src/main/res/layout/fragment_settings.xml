@@ -20,95 +20,130 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<android.support.constraint.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/settings_content"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/primary"
-    android:padding="20dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-  <TextView
-      android:id="@+id/initial"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginLeft="8dp"
-      android:layout_marginRight="8dp"
-      android:layout_marginTop="24dp"
-      android:text="@string/settings_initial"
-      android:textColor="@android:color/white"
-      android:theme="@style/LargeText"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toTopOf="parent"/>
-
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/nickname"
+  <LinearLayout
+      android:id="@+id/settings_content"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      app:descriptionText="@string/settings_nickname_note"
-      app:labelColor="@color/white"
-      app:labelText="@string/settings_nickname_label"
-      app:layout_constraintHorizontal_bias="0.625"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/initial"
-      android:layout_marginTop="10dp"
-      app:lineColor="@color/white"
-      app:textColor="@color/white"/>
+      android:orientation="vertical"
+      android:padding="20dp">
 
-  <CheckBox
-      android:id="@+id/remote_campaigns"
-      android:layout_width="wrap_content"
-      android:layout_height="34dp"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="24dp"
-      android:buttonTint="@color/white"
-      android:text="Remote Campaigns"
-      android:textColor="@color/white"
-      android:theme="@style/LargeText"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/nickname"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-  <CheckBox
-      android:id="@+id/remote_characters"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="8dp"
-      android:buttonTint="@color/white"
-      android:text="Remote Characters"
-      android:textColor="@color/white"
-      android:theme="@style/LargeText"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/remote_campaigns"/>
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical">
 
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/features"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      app:descriptionText="A comma separated list of enabled features currently in development. Enable any such feature at your own risk, as anything might break at any time."
-      app:labelColor="@color/white"
-      app:labelText="Enabled Alpha Features"
-      app:layout_constraintHorizontal_bias="0.625"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/remote_characters"
-      app:lineColor="@color/white"
-      app:textColor="@color/white"/>
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:descriptionText="Your email address, used to uniquely identify you and your artefacts."
+            app:labelColor="@color/white"
+            app:labelText="EMail"
+            app:lineColor="@color/white"
+            app:textColor="@color/white"/>
 
-  <Button
-      android:id="@+id/save"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="24dp"
-      android:layout_weight="1"
-      android:text="@string/settings_save"
-      android:theme="@style/SmallText"
-      app:layout_constraintLeft_toLeftOf="parent"
-      app:layout_constraintRight_toRightOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/features"/>
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            app:descriptionText="Your name."
+            app:labelColor="@color/white"
+            app:labelText="Name"
+            app:lineColor="@color/white"
+            app:textColor="@color/white"/>
 
-</android.support.constraint.ConstraintLayout>
+      </LinearLayout>
+
+      <net.ixitxachitls.companion.ui.views.RoundImageView
+          android:id="@+id/image"
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_marginStart="20dp"
+          android:layout_weight="0"
+          app:srcCompat="@drawable/ic_person_black_48dp"/>
+
+    </LinearLayout>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:descriptionText="@string/settings_nickname_note"
+        app:labelColor="@color/white"
+        app:labelText="@string/settings_nickname_label"
+        app:lineColor="@color/white"
+        app:textColor="@color/white"/>
+
+    <CheckBox
+        android:id="@+id/remote_campaigns"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:buttonTint="@color/white"
+        android:text="Remote Campaigns"
+        android:textColor="@color/white"
+        android:theme="@style/LargeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nickname"/>
+
+    <CheckBox
+        android:id="@+id/remote_characters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:buttonTint="@color/white"
+        android:text="Remote Characters"
+        android:textColor="@color/white"
+        android:theme="@style/LargeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remote_campaigns"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/features"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:descriptionText="A comma separated list of enabled features currently in development. Enable any such feature at your own risk, as anything might break at any time."
+        app:labelColor="@color/white"
+        app:labelText="Enabled Alpha Features"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remote_characters"
+        app:lineColor="@color/white"
+        app:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:text="@string/settings_save"
+        android:theme="@style/SmallText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/features"/>
+
+  </LinearLayout>
+</ScrollView>

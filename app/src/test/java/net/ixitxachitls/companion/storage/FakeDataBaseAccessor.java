@@ -28,7 +28,6 @@ import android.net.Uri;
 
 import com.google.protobuf.MessageLite;
 
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
 import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
@@ -52,7 +51,6 @@ public abstract class FakeDataBaseAccessor implements DataBaseAccessor {
   protected final Map<Long, byte []> remoteCharactersById = new HashMap<>();
   private final Map<Long, byte []> creaturesById = new HashMap<>();
   private final Map<Long, byte []> messagesById = new HashMap<>();
-  protected final Map<Long, byte []> settingsById = new HashMap<>();
 
   public FakeDataBaseAccessor() {
   }
@@ -99,9 +97,6 @@ public abstract class FakeDataBaseAccessor implements DataBaseAccessor {
 
   private Map<Long, byte []> table(Uri table) {
     switch (table.getEncodedPath()) {
-      case "/" + Settings.TABLE:
-        return settingsById;
-
       case "/" + LocalCampaign.TABLE:
         return localCampaignsById;
 

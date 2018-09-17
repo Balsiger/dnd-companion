@@ -68,8 +68,8 @@ public class NetworkClient {
 
     // Send a welcome message to the server.
     Status.log("sending welcome message to server");
-    send(CompanionMessageData.fromWelcome(companionContext, companionContext.settings().getAppId(),
-        companionContext.settings().getNickname()));
+    send(CompanionMessageData.fromWelcome(companionContext, companionContext.me().get().getId(),
+        companionContext.me().get().getNickname()));
 
     return true;
   }
@@ -94,8 +94,8 @@ public class NetworkClient {
       Entry.CompanionMessageProto proto = Entry.CompanionMessageProto.newBuilder()
           .setHeader(Entry.CompanionMessageProto.Header.newBuilder()
               .setSender(Entry.CompanionMessageProto.Header.Id.newBuilder()
-                  .setId(companionContext.settings().getAppId())
-                  .setName(companionContext.settings().getNickname())
+                  .setId(companionContext.me().get().getId())
+                  .setName(companionContext.me().get().getNickname())
                   .build())
               .setReceiver(Entry.CompanionMessageProto.Header.Id.newBuilder()
                   .setId(serverId)

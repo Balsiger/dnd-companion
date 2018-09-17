@@ -173,6 +173,12 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
+  public W removeClick() {
+    view.setOnClickListener(null);
+
+    return (W) this;
+  }
+
   public W onTouch(Wrapper.TouchAction action) {
     view.setOnTouchListener((v, event) -> action.execute(event));
 

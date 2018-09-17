@@ -26,7 +26,6 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-import net.ixitxachitls.companion.data.Settings;
 import net.ixitxachitls.companion.ui.views.StatusView;
 import net.ixitxachitls.companion.util.Misc;
 
@@ -47,8 +46,6 @@ public class Status {
 
   public static void setView(StatusView view) {
     Status.view = Optional.of(view);
-    Settings settings = CompanionApplication.get(view.getContext()).settings();
-    namesById.put(settings.getAppId(), settings.getNickname());
   }
 
   public static void recordId(String id, String name) {

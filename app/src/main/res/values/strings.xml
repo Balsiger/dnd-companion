@@ -113,5 +113,6 @@
   <string name="item">Item</string>
   <string name="item_description">The name of the item to add to the character\'s inventory.</string>
   <string name="character_edit_item">Edit Item</string>
+  <string name="title_invite">Invite Players</string>
 
 </resources>

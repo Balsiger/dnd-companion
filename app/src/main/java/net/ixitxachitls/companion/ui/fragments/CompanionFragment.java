@@ -25,7 +25,8 @@ import android.support.v4.app.Fragment;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Settings;
+import net.ixitxachitls.companion.data.documents.FSCampaigns;
+import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.dynamics.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Characters;
 import net.ixitxachitls.companion.data.dynamics.Creatures;
@@ -38,7 +39,7 @@ import java.util.Optional;
  */
 public abstract class CompanionFragment extends Fragment {
 
-  public enum Type {settings, campaigns, campaign, localCampaign, character, localCharacter}
+  public enum Type {settings, campaigns, campaign, character, localCharacter}
 
   ;
 
@@ -67,8 +68,12 @@ public abstract class CompanionFragment extends Fragment {
     return CompanionApplication.get(getContext());
   }
 
-  protected Settings settings() {
-    return application().settings();
+  protected Optional<User> me() {
+    return application().me();
+  }
+
+  protected FSCampaigns fsCampaigns() {
+    return application().fsCampaigns();
   }
 
   protected Campaigns campaigns() {

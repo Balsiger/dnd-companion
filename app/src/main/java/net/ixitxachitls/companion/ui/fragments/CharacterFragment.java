@@ -194,7 +194,7 @@ public class CharacterFragment extends CompanionFragment {
 
       storeOnPause = false;
       if (campaign.isPresent()) {
-        show(campaign.get().isLocal() ? Type.localCampaign : Type.campaign);
+        show(Type.campaign);
       }
     }
   }
@@ -213,7 +213,7 @@ public class CharacterFragment extends CompanionFragment {
     // view pager title to a weird view and thus an exception is thrown.
     ((ViewGroup) pager.getParent()).removeView(pager);
     if (campaign.isPresent()) {
-      CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
+      //CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
     } else {
       CompanionFragments.get().show(Type.campaigns, Optional.empty());
     }

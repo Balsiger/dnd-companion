@@ -25,11 +25,14 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.support.v4.app.FragmentActivity;
 
+import javax.annotation.Nullable;
+
 /**
  * Static utitlity methods for views.
  */
 public class ViewUtils {
 
+  @Nullable
   public static FragmentActivity getActivity(Context context) {
     while (context instanceof ContextWrapper) {
       if (context instanceof FragmentActivity) {
