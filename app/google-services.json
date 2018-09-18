@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "394355712566",
+    "firebase_url": "https://roleplay-companion.firebaseio.com",
+    "project_id": "roleplay-companion",
+    "storage_bucket": "roleplay-companion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394355712566:android:b876f83d3a76b1cf",
+        "android_client_info": {
+          "package_name": "net.ixitxachitls.companion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394355712566-2j6nni6s2lu4bi757b45i1d0gcov163s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXpmc4R75J6Y1TBnrFC_kUJzavsMMFGuo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
