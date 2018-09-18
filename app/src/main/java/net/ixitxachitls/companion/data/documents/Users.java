@@ -42,14 +42,18 @@ public class Users extends Documents<Users> {
     return me;
   }
 
-  public User fromPath(String path) {
-    String id = path.replaceAll(User.PATH + "/(.*?)/.*", "$1");
-    User user = usersById.get(id);
+  public User get(String email) {
+    User user = usersById.get(email);
     if (user == null) {
-      user = new User(id);
-      usersById.put(id, user);
+      user = new User(email);
+      usersById.put(email, user);
     }
 
     return user;
+  }
+
+  public User fromPath(String path) {
+    String email = path.replaceAll(User.PATH + "/(.*?)/.*", "$1");
+    return get(email);
   }
 }

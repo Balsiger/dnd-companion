@@ -25,8 +25,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
-import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
+import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,22 +41,18 @@ public class FSCampaigns extends Documents<FSCampaigns> {
 
   protected static final String PATH = "campaigns";
 
-  private final Users users;
-  private final Characters characters;
-  private final Creatures creatures;
-  private final CollectionReference myCampaigns;
+  private final CollectionReference dmCampaigns;
 
   private ImmutableList<String> ids = ImmutableList.of();
   private ImmutableList<FSCampaign> campaigns = ImmutableList.of();
-  private Map<String, FSCampaign> campaignsById = new HashMap<>();
+  private Map<String, FSCampaign> dmCampaignsById = new HashMap<>();
+  private Map<String, FSCampaign> playerCampaignsById = new HashMap<>();
 
-  public FSCampaigns(Users users, Characters characters, Creatures creatures) {
-    this.users = users;
-    this.characters = characters;
-    this.creatures = creatures;
-    this.myCampaigns = db.collection(users.getMe().getId() + "/" + PATH);
+  public FSCampaigns(CompanionContext context) {
+    super(context);
 
-    readCampaigns();
+    this.dmCampaigns = db.collection(context.me().get().getId() + "/" + PATH);
+    readDMCampaigns();
   }
 
   public ImmutableList<String> getIds() {
@@ -65,7 +60,11 @@ public class FSCampaigns extends Documents<FSCampaigns> {
   }
 
   public Optional<FSCampaign> getCampaign(String id) {
-    return Optional.ofNullable(campaignsById.get(id));
+    if (dmCampaignsById.containsKey(id)) {
+      return Optional.of(dmCampaignsById.get(id));
+    }
+
+    return Optional.ofNullable(playerCampaignsById.get(id));
   }
 
   public List<FSCampaign> getCampaigns() {
@@ -73,47 +72,88 @@ public class FSCampaigns extends Documents<FSCampaigns> {
   }
 
   public FSCampaign create() {
-    return new FSCampaign(users.getMe(), users, characters, creatures);
+    return new FSCampaign(context.me().get(), context.users(), context.characters(),
+        context.creatures());
   }
 
   public void add(FSCampaign campaign) {
-    if (campaignsById.containsKey(campaign.getId())) {
-      throw new IllegalStateException("Campaign already added: " + campaign);
+    if (campaign.amDM()) {
+      if (dmCampaignsById.containsKey(campaign.getId())) {
+        throw new IllegalStateException("Campaign already added: " + campaign);
+      }
+
+      dmCampaignsById.put(campaign.getId(), campaign);
+    } else {
+      if (playerCampaignsById.containsKey(campaign.getId())) {
+        throw new IllegalStateException("Campaign already added: " + campaign);
+      }
+
+      playerCampaignsById.put(campaign.getId(), campaign);
     }
 
-    campaignsById.put(campaign.getId(), campaign);
     update();
   }
 
   public void remove(FSCampaign campaign) {
-    if (!campaignsById.containsKey(campaign.getId())) {
+    if (!dmCampaignsById.containsKey(campaign.getId())
+        && !playerCampaignsById.containsKey(campaign.getId())) {
       throw new IllegalStateException("Campaign to be removed does not exist: " + campaign);
     }
 
-    campaignsById.remove(campaign.getId());
+    campaign.uninviteAll();
+    dmCampaignsById.remove(campaign.getId());
+    playerCampaignsById.remove(campaign.getId());
     delete(campaign.getId());
     update();
   }
 
-  private void readCampaigns() {
-    myCampaigns.get().addOnSuccessListener(task -> readCampaigns(task.getDocuments()));
-    myCampaigns.addSnapshotListener((s, e) -> readCampaigns(s.getDocuments()));
+  private void readDMCampaigns() {
+    // DM campaigns, from the sub documents of the user.
+    dmCampaigns.get().addOnSuccessListener(task -> readDMCampaigns(task.getDocuments()));
+    dmCampaigns.addSnapshotListener((s, e) -> readDMCampaigns(s.getDocuments()));
+
+    context.me().get().observeForever(this::readPlayerCampaigns);
   }
 
-  private void readCampaigns(List<DocumentSnapshot> documents) {
-    campaignsById.clear();
+  private void readDMCampaigns(List<DocumentSnapshot> documents) {
+    dmCampaignsById.clear();
     for (DocumentSnapshot snapshot : documents) {
-      FSCampaign campaign = new FSCampaign(snapshot, users.getMe(), users, characters, creatures);
-      campaignsById.put(campaign.getId(), campaign);
+      FSCampaign campaign = new FSCampaign(snapshot, context.me().get(), context.users(),
+          context.characters(), context.creatures());
+      dmCampaignsById.put(campaign.getId(), campaign);
     }
 
     update();
   }
 
-  // TODO(merlin): Once we add another query, things get more complicated, as we might get an update
-  // in one but not both. Although think about moving all that handling into Documents.
+  private void readPlayerCampaigns(User me) {
+    if (changedCampaigns(me)) {
+      // Player campaigns, invitations from other users.
+      playerCampaignsById.clear();
+      for (String campaignId : me.getCampaigns()) {
+        Optional<FSCampaign> campaign = context.fsCampaigns().getCampaign(campaignId);
+        if (campaign.isPresent()) {
+          playerCampaignsById.put(campaignId, campaign.get());
+        }
+      }
+
+      update();
+    }
+  }
+
+  private boolean changedCampaigns(User me) {
+    return me.getCampaigns().size() != playerCampaignsById.size()
+        || me.getCampaigns().stream()
+        .filter(c -> !playerCampaignsById.containsKey(c))
+        .findAny().isPresent()
+        || playerCampaignsById.keySet().stream()
+        .filter(c -> !me.getCampaigns().contains(c))
+        .findAny().isPresent();
+  }
+
   private void update() {
-    List<FSCampaign> all = new ArrayList<>(campaignsById.values());
+    List<FSCampaign> all = new ArrayList<>(dmCampaignsById.values());
+    all.addAll(playerCampaignsById.values());
     Collections.sort(all);
     campaigns = ImmutableList.copyOf(all);
     this.ids = campaigns.stream().map(FSCampaign::getId).collect(ImmutableList.toImmutableList());

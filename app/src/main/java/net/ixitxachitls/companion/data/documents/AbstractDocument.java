@@ -40,6 +40,10 @@ public abstract class AbstractDocument<D extends AbstractDocument<D>> {
   protected final FirebaseFirestore db = FirebaseFirestore.getInstance();
   private final MutableLiveData<D> live = new MutableLiveData<>();
 
+  public void observeForever(Observer<D> observer) {
+    live.observeForever(observer);
+  }
+
   public void observe(LifecycleOwner owner, Observer<D> observer) {
     unobserve(owner);
     live.observe(owner, observer);
