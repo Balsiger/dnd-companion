@@ -149,6 +149,9 @@ public class FSCampaign extends Document<FSCampaign> implements Comparable<FSCam
     if (!invites.contains(email)) {
       invites.add(email);
       store();
+
+      User invited = users.get(email);
+      invited.whenReady(() -> invited.invite(getId()));
     }
   }
 
@@ -157,6 +160,20 @@ public class FSCampaign extends Document<FSCampaign> implements Comparable<FSCam
       invites.remove(email);
       store();
     }
+  }
+
+  public void uninviteAll() {
+    for (String email : invites) {
+      uninviteUser(email);
+    }
+
+    invites.clear();
+    store();
+  }
+
+  private void uninviteUser(String email) {
+    User uninvited = users.get(email);
+    uninvited.whenReady(() -> uninvited.uninvite(getId()));
   }
 
   @Override

@@ -83,6 +83,24 @@ public class User extends Document<User> {
     this.features = new ArrayList<>(features);
   }
 
+  public List<String> getCampaigns() {
+    return campaigns;
+  }
+
+  public void invite(String campaignId) {
+    if (!campaigns.contains(campaignId)) {
+      campaigns.add(campaignId);
+      store();
+    }
+  }
+
+  public void uninvite(String campaignId) {
+    if (campaigns.contains(campaignId)) {
+      campaigns.remove(campaignId);
+      store();
+    }
+  }
+
   @Override
   protected void read() {
     name = get(FIELD_NAME, "(not found)");

@@ -21,12 +21,18 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import net.ixitxachitls.companion.data.CompanionContext;
+
 /**
  * Base class for all document collections.
  */
 public abstract class Documents<D extends Documents<D>> extends AbstractDocument<D> {
 
-  protected Documents() {}
+  protected final CompanionContext context;
+
+  protected Documents(CompanionContext context) {
+    this.context = context;
+  }
 
   protected void delete(String id) {
     db.document(id).delete();
