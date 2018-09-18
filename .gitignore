@@ -46,3 +46,4 @@ captures/
 # Android Studio additions
 .DS_Store
 .externalNativeBuild
+app/google-services.json
