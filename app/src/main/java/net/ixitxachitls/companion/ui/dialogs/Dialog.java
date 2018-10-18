@@ -37,10 +37,10 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.documents.FSCampaigns;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
+import net.ixitxachitls.companion.data.documents.Campaigns;
+import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Monsters;
+import net.ixitxachitls.companion.data.values.Encounters;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 /**
@@ -180,15 +180,15 @@ public abstract class Dialog extends DialogFragment {
     return application().context();
   }
 
-  protected FSCampaigns fsCampaigns() {
-    return application().fsCampaigns();
-  }
-
   protected Campaigns campaigns() {
     return application().campaigns();
   }
 
-  protected Creatures creatures() {
+  protected Encounters battles() {
+    return application().encounters();
+  }
+
+  protected Monsters creatures() {
     return application().creatures();
   }
 

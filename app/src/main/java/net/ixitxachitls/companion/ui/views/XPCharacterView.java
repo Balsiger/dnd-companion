@@ -29,7 +29,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.ui.dialogs.XPDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 

@@ -22,21 +22,28 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
-import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
-import net.ixitxachitls.companion.data.documents.FSCampaigns;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Campaigns;
+import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
+import net.ixitxachitls.companion.ui.views.CharacterTitleView;
+import net.ixitxachitls.companion.ui.views.TitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Strings;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -44,7 +51,9 @@ import java.util.Optional;
  */
 public class CampaignsFragment extends CompanionFragment {
 
-  private Wrapper<LinearLayout> campaignsView;
+  private TitleView user;
+  private LinearLayout campaigns;
+  private LinearLayout characters;
 
   public CampaignsFragment() {
     super(Type.campaigns);
@@ -53,18 +62,27 @@ public class CampaignsFragment extends CompanionFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
-    RelativeLayout view = (RelativeLayout)
+    LinearLayout view = (LinearLayout)
         inflater.inflate(R.layout.fragment_campaigns, container, false);
 
-    campaignsView = Wrapper.wrap(view, R.id.campaigns);
+    user = view.findViewById(R.id.user);
+    user.setAction(() -> show(Type.settings));
+    campaigns = view.findViewById(R.id.campaigns);
+    characters = view.findViewById(R.id.characters);
     Wrapper.wrap(view, R.id.campaign_add)
         .onClick(this::addCampaign)
-        .description("Add Campaign", "This button allows you to create a new campaign. "
-            + "You will be the Dungeon Master of the campaign.");
+        .description("Add Campaign", "Ceate a new campaign. "
+            + "You will be the Dungeon Master of the campaign. The campaign will only be visible "
+            + "to player you invite to it.");
+    Wrapper.wrap(view, R.id.character_add)
+        .onClick(this::addCharacter)
+        .description("Add Character", "Create a new character. "
+            + "Characters created here will not be in a campaign, but can be moved to any existing "
+            + "campaign later.");
 
-
-    fsCampaigns().observe(this, this::update);
-
+    campaigns().observe(this, this::update);
+    characters().observe(this, this::update);
+    images().observe(this, this::update);
     return view;
   }
 
@@ -72,29 +90,75 @@ public class CampaignsFragment extends CompanionFragment {
   public void onResume() {
     super.onResume();
 
-    update(fsCampaigns());
+    update(campaigns());
   }
 
   private void addCampaign() {
     EditCampaignDialog.newInstance().display();
   }
 
-  private void update(FSCampaigns campaigns) {
-    campaignsView.get().removeAllViews();
+  private void addCharacter() {
+    CharacterDialog.newInstance("", "").display();
+  }
+
+  private void update(Campaigns campaigns) {
+    this.campaigns.removeAllViews();
 
     // We have to recreate the campaigns as the transition away from this fragment seems to break
     // them.
-    TransitionManager.beginDelayedTransition(campaignsView.get());
-    for (FSCampaign campaign : campaigns.getCampaigns()) {
+    for (Campaign campaign : campaigns.getCampaigns()) {
       CampaignTitleView title = new CampaignTitleView(getContext());
       campaign.observe(this, title::update);
       campaign.getDm().observe(this, title::update);
       title.update(campaign);
-      campaignsView.get().addView(title);
+      this.campaigns.addView(title);
       title.setAction(() -> {
         CompanionFragments.get().showCampaign(campaign, Optional.of(title));
       });
     }
+
+    user.setTitle(me().getNickname());
+    user.setSubtitle(subtitle());
+    user.loadImageUrl(me().getPhotoUrl());
+  }
+
+  private void update(Characters characters) {
+    this.characters.removeAllViews();
+
+    for (Character character : characters.getAll()) {
+      if (character.amPlayer()) {
+        CharacterTitleView title = new CharacterTitleView(getContext());
+        character.observe(this, title::update);
+        this.characters.addView(title);
+      }
+    }
+  }
+
+  private void update(Images images) {
+    for (int i = 0; i < campaigns.getChildCount(); i++) {
+      CampaignTitleView title = (CampaignTitleView) campaigns.getChildAt(i);
+      title.update(images);
+    }
+    for (int i = 0; i < characters.getChildCount(); i++) {
+      CharacterTitleView title = (CharacterTitleView) characters.getChildAt(i);
+      title.update(images);
+    }
+  }
+
+  private String subtitle() {
+    List<String> parts = new ArrayList<>();
+    if (me().getCampaigns().isEmpty()) {
+      parts.add("Not yet invited to any campaigns");
+    } else if (me().getCampaigns().size() == 1){
+      parts.add("Invited to 1 campaign");
+    } else {
+      parts.add("Invited to " + me().getCampaigns().size() + " campaigns");
+    }
+    if (!me().getFeatures().isEmpty()) {
+      parts.add(Strings.COMMA_JOINER.join(me().getFeatures()));
+    }
+
+    return Strings.SEMICOLON_JOINER.join(parts);
   }
 
   @Override

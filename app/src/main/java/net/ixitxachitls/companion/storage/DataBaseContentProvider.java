@@ -33,12 +33,7 @@ import android.net.Uri;
 import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.BuildConfig;
-import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.HistoryEntry;
-import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
-import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
-import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
-import net.ixitxachitls.companion.data.dynamics.RemoteCharacter;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 
 import java.io.File;
@@ -52,11 +47,6 @@ public class DataBaseContentProvider extends ContentProvider {
   public static final String CONTENT = "content://";
   public static final String AUTHORITY = BuildConfig.APPLICATION_ID;
   public static final String PREFIX = CONTENT + AUTHORITY + "/";
-  public static final Uri CAMPAIGNS_LOCAL = Uri.parse(PREFIX + LocalCampaign.TABLE);
-  public static final Uri CAMPAIGNS_REMOTE = Uri.parse(PREFIX + RemoteCampaign.TABLE);
-  public static final Uri CREATURES_LOCAL = Uri.parse(PREFIX + Creature.TABLE_LOCAL);
-  public static final Uri CHARACTERS_LOCAL = Uri.parse(PREFIX + LocalCharacter.TABLE);
-  public static final Uri CHARACTERS_REMOTE = Uri.parse(PREFIX + RemoteCharacter.TABLE);
   public static final Uri MESSAGES = Uri.parse(PREFIX + ScheduledMessage.TABLE);
   public static final Uri HISTORY = Uri.parse(PREFIX + HistoryEntry.TABLE);
 
@@ -122,11 +112,6 @@ public class DataBaseContentProvider extends ContentProvider {
   }
 
   public static void reset(Context context, ContentResolver contentResolver) {
-    contentResolver.delete(CAMPAIGNS_LOCAL, null, null);
-    contentResolver.delete(CAMPAIGNS_REMOTE, null, null);
-    contentResolver.delete(CHARACTERS_LOCAL, null, null);
-    contentResolver.delete(CHARACTERS_REMOTE, null, null);
-    contentResolver.delete(CREATURES_LOCAL, null, null);
     contentResolver.delete(MESSAGES, null, null);
 
     // Delete all files.

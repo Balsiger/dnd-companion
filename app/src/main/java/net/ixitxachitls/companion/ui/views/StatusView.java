@@ -86,6 +86,7 @@ public class StatusView extends LinearLayout {
     online = view.findViewById(R.id.online);
     online.setAction(this::restart);
     messagesScroll = view.findViewById(R.id.messages_scroll);
+    messagesScroll.setVisibility(GONE);
     messages = TextWrapper.wrap(view, R.id.messages)
         .onClick(this::toggleDebug)
         .onLongClick(this::clearDebug);

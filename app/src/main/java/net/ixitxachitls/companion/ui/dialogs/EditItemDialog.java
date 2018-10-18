@@ -33,7 +33,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
+import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.statics.ItemTemplate;
 import net.ixitxachitls.companion.data.values.Duration;
@@ -60,7 +60,7 @@ public class EditItemDialog extends Dialog {
   private static final String ARG_CREATURE_ID = "creature_id";
   private static final String ARG_ITEM_ID = "item_id";
 
-  private Optional<? extends BaseCreature<?>> creature = Optional.empty();
+  private Optional<? extends Creature<?>> creature = Optional.empty();
   private Optional<Item> item;
   private Optional<ItemTemplate> baseTemplate = Optional.empty();
   private List<ItemTemplate> templates = Collections.emptyList();
@@ -111,8 +111,11 @@ public class EditItemDialog extends Dialog {
 
     if (getArguments() != null) {
       String creatureId = getArguments().getString(ARG_CREATURE_ID);
-      creature =
-          CompanionApplication.get(getContext()).creatures().getCreatureOrCharacter(creatureId);
+      creature = CompanionApplication.get(getContext()).characters().get(creatureId);
+      if (!creature.isPresent()) {
+        creature = CompanionApplication.get(getContext()).creatures().get(creatureId);
+      }
+
       String itemId = getArguments().getString(ARG_ITEM_ID);
       if (creature.isPresent() && !itemId.isEmpty()) {
         item = creature.get().getItem(itemId);
@@ -171,7 +174,7 @@ public class EditItemDialog extends Dialog {
   }
 
   private void update(List<ItemTemplate> templates) {
-    if (item.isPresent() && creature.isPresent() && creature.get().isLocal()) {
+    if (item.isPresent() && creature.isPresent() && creature.get().amPlayer()) {
       name.text(item.get().getPlayerName());
     } else {
       name.text(Item.name(templates));
@@ -252,10 +255,10 @@ public class EditItemDialog extends Dialog {
             templates, parseHp(),
             itemValue.get(), appearance.getText(), "", "", "", parseMultiple(), parseMultiuse(),
             Duration.ZERO, false, Collections.emptyList()));
-        if (creature.isPresent() && creature.get().getCampaign().isPresent()) {
+        if (creature.isPresent() && campaigns().get(creature.get().getCampaignId()).isPresent()) {
           CompanionApplication.get(getContext()).histories().created(item.toString(),
-              creature.get().getCampaign().get().getDate(),
-              creature.get().getCampaignId(), creature.get().getCreatureId(), item.get().getId());
+              campaigns().get(creature.get().getCampaignId()).get().getDate(),
+              creature.get().getCampaignId(), creature.get().getId(), item.get().getId());
         }
       }
     }
@@ -270,9 +273,9 @@ public class EditItemDialog extends Dialog {
     } else if (!creature.isPresent()) {
       Status.error("No creature to edit item in!");
     } else {
-      if (creature.get().isLocal()) {
+      if (creature.get().amPlayer()) {
         item.get().setPlayerName(name.getText());
-      } else if (creature.get().amDM()) {
+      } else if (creature.get().isDM(CompanionApplication.get(getContext()).me())) {
         item.get().setName(name.getText());
       }
 

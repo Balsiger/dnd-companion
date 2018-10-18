@@ -25,9 +25,6 @@ import android.support.annotation.VisibleForTesting;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
@@ -38,7 +35,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -89,11 +85,11 @@ public abstract class MessageProcessor {
         break;
 
       case CAMPAIGN:
-        handleCampaign(senderId, senderName, messageId, message.getCampaign());
+        //handleCampaign(senderId, senderName, messageId, message.getCampaign());
         break;
 
       case CHARACTER:
-        handleCharacter(senderId, message.getCharacter());
+        //handleCharacter(senderId, message.getCharacter());
         break;
 
       case IMAGE:
@@ -135,7 +131,7 @@ public abstract class MessageProcessor {
         break;
     }
 
-    Status.refreshServerConnection(context.me().get().getId());
+    Status.refreshServerConnection(context.me().getId());
     Status.refreshClientConnection(senderId);
 
     received.addFirst(new RecievedMessage(senderName, message, senderId, receiverId, messageId));
@@ -146,6 +142,7 @@ public abstract class MessageProcessor {
 
   private void handleCondition(String senderId, long messageId, String targetId,
                                TimedCondition condition) {
+    /*
     Optional<? extends BaseCreature> creature =
         context.creatures().getCreatureOrCharacter(targetId);
     if (creature.isPresent()) {
@@ -159,6 +156,7 @@ public abstract class MessageProcessor {
     } else {
       messenger.sendAckToClient(senderId, messageId);
     }
+    */
   }
 
   protected String createKey(String senderId, String receiverId, long messageId) {
@@ -175,16 +173,12 @@ public abstract class MessageProcessor {
     return messages;
   }
 
-  protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
-    Status.error("handling campaign not supported");
-  }
-
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
     Status.error("Handling campaign deletion not supported.");
   }
 
   protected void handleCharacterDeletion(String senderId, long messageId, String characterId) {
-    context.characters().getCharacter(characterId).getValue().ifPresent(Character::delete);
+    //context.characters().getCharacter(characterId).getValue().ifPresent(Character::delete);
 
     if (this instanceof ClientMessageProcessor) {
       messenger.sendAckToServer(senderId, messageId);
@@ -209,6 +203,7 @@ public abstract class MessageProcessor {
 
   protected void handleConditionDelete(String senderId, long messageId, String conditionName,
                                        String sourceId, String targetId) {
+    /*
     Status.log("dismissing condition " + conditionName + " for " + Status.nameFor(targetId)
         + " from " + Status.nameFor(sourceId));
     Optional<? extends BaseCreature> creature =
@@ -224,6 +219,7 @@ public abstract class MessageProcessor {
     } else {
       messenger.sendAckToClient(senderId, messageId);
     }
+    */
   }
 
   private void handleInvalid(String senderName) {
@@ -236,6 +232,7 @@ public abstract class MessageProcessor {
     }
   }
 
+  /*
   protected void handleCharacter(String senderId, Character character) {
     if (!character.isLocal()) {
       // Storing will also add the character if it's changed.
@@ -244,12 +241,13 @@ public abstract class MessageProcessor {
       status("received character " + character.getName());
     }
   }
+  */
 
   protected void handleWelcome(String remoteId, String remoteName) {
     Status.recordId(remoteId, remoteName);
-    for (Campaign campaign : context.campaigns().getCampaignsByServer(remoteId)) {
-      context.characters().publish(campaign.getCampaignId());
-    }
+    //for (Campaign campaign : context.fsCampaigns().getCampaignsByServer(remoteId)) {
+    //  context.characters().publish(campaign.getCampaignId());
+    //}
 
     messenger.sendCurrent(remoteId);
   }

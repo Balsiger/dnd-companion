@@ -32,7 +32,7 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Weight;
@@ -77,12 +77,12 @@ public class CharacterInventoryFragment extends Fragment {
         .onClick(this::addItem)
         .description("Add Item", "Add an item to the characters inventory.")
         .visible(character.isPresent() &&
-            (character.get().isLocal() || character.get().amDM()));
+            (character.get().amPlayer() || character.get().amDM()));
     removeItem = Wrapper.<ImageDropTarget>wrap(view, R.id.item_remove)
         .description("Remove Item", "Drag an item over the trash to remove it");
     removeItem.get().setSupport(i -> i instanceof Item);
     removeItem.get().setDropExecutor(this::removeItem);
-    removeItem.visible(character.isPresent() && character.get().isLocal());
+    removeItem.visible(character.isPresent() && character.get().amPlayer());
 
     if (character.isPresent()) {
       update(character.get());
@@ -114,7 +114,7 @@ public class CharacterInventoryFragment extends Fragment {
       this.wealth.text(totalValue.simplify().toString());
       this.weight.text(totalWeight.toString());
       view.setOnDragListener((v, e) -> onItemDrag(v, e));
-      addItem.visible(character.isLocal() || character.amDM());
+      addItem.visible(character.amPlayer() || character.amDM());
     }
   }
 
@@ -134,7 +134,7 @@ public class CharacterInventoryFragment extends Fragment {
 
   private void addItem() {
     if (character.isPresent()) {
-      EditItemDialog.newInstance(character.get().getCharacterId()).display();
+      EditItemDialog.newInstance(character.get().getId()).display();
     } else {
       Status.error("No character available!");
     }
@@ -163,9 +163,9 @@ public class CharacterInventoryFragment extends Fragment {
         if (character.isPresent()) {
           Item item = (Item) event.getLocalState();
           if (moveFirst) {
-            character.get().moveItemFirst(item);
+            //character.get().moveItemFirst(item);
           } else {
-            character.get().moveItemLast(item);
+            //character.get().moveItemLast(item);
           }
         }
         return true;
@@ -177,7 +177,7 @@ public class CharacterInventoryFragment extends Fragment {
 
   private boolean removeItem(Object state) {
     if (character.isPresent() && state instanceof Item) {
-      character.get().remove((Item) state);
+      //character.get().remove((Item) state);
       character.get().store();
       return true;
     }

@@ -34,9 +34,7 @@ import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
@@ -54,8 +52,7 @@ public class CharacterDialog extends Dialog {
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
 
   // The following values are only valid after onCreate().
-  private Optional<LocalCharacter> character = Optional.empty();
-  private Optional<Campaign> campaign = Optional.empty();
+  private Optional<Character> character = Optional.empty();
 
   // UI elements.
   private EditTextWrapper<EditText> name;
@@ -86,17 +83,12 @@ public class CharacterDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = campaigns().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
-    if (campaign.isPresent()) {
-      String characterId = getArguments().getString(ARG_ID);
-      if (characterId.isEmpty()) {
-        character =
-            Optional.of(LocalCharacter.createNew(data(), campaign.get().getCampaignId()));
-      } else {
-        character = Character.asLocal(characters().getCharacter(characterId).getValue());
-      }
+    String campaignId = getArguments().getString(ARG_CAMPAIGN_ID);
+    String characterId = getArguments().getString(ARG_ID);
+    if (characterId.isEmpty()) {
+      character = Optional.of(characters().create(campaignId));
     } else {
-      character = Optional.empty();
+      character = characters().get(characterId);
     }
   }
 
@@ -113,6 +105,14 @@ public class CharacterDialog extends Dialog {
       save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
     }
 
+    if (character.get().getGender() != Gender.UNKNOWN) {
+      gender.text(character.get().getGender().getName());
+    }
+
+    if (character.get().getRace().isPresent()) {
+      race.text(character.get().getRace().get().getName());
+    }
+
     update();
   }
 
@@ -127,7 +127,7 @@ public class CharacterDialog extends Dialog {
 
   private boolean updateGender(String value) {
     if (character.isPresent()) {
-      character.get().setGender(Gender.fromName(value));
+      gender.text(value);
       update();
 
       return true;
@@ -139,7 +139,8 @@ public class CharacterDialog extends Dialog {
   public void editRace() {
     if (character.isPresent()) {
       ListSelectDialog edit = ListSelectDialog.newStringInstance(R.string.character_edit_race,
-          character.get().getRace(), Entries.get().getMonsters().primaryRaces(), R.color.character);
+          character.get().getRace().isPresent() ? character.get().getRace().get().getName() : "",
+          Entries.get().getMonsterTemplates().primaryRaces(), R.color.character);
       edit.setSelectListener(this::updateRace);
       edit.display();
     }
@@ -147,7 +148,7 @@ public class CharacterDialog extends Dialog {
 
   private boolean updateRace(String value) {
     if (character.isPresent()) {
-      character.get().setRace(value);
+      race.text(value);
       update();
 
       return true;
@@ -159,19 +160,12 @@ public class CharacterDialog extends Dialog {
   protected void update() {
     if (character.isPresent()) {
       if (name.getText().length() == 0
-          && character.get().getGender() != Gender.UNKNOWN
-          && !character.get().getRace().isEmpty()) {
+          || gender.getText().startsWith("<")
+          || race.getText().startsWith("<"))
+      {
         save.invisible();
       } else {
         save.visible();
-      }
-
-      if (character.get().getGender() != Gender.UNKNOWN) {
-        gender.text(character.get().getGender().getName());
-      }
-
-      if (!character.get().getRace().isEmpty()) {
-        race.text(character.get().getRace());
       }
     }
   }
@@ -179,7 +173,9 @@ public class CharacterDialog extends Dialog {
   @Override
   protected void save() {
     if (character.isPresent()) {
-      character.get().setName(name.getText().toString());
+      character.get().setName(name.getText());
+      character.get().setGender(Gender.fromName(gender.getText()));
+      character.get().setRace(race.getText());
       character.get().store();
 
       super.save();

@@ -26,7 +26,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ScrollView;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -36,7 +35,6 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
-import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Arrays;
@@ -45,21 +43,17 @@ import java.util.Optional;
 /**
  * Fragment for displaying settings values.
  */
-public class SettingsFragment extends CompanionFragment {
+public class UserFragment extends CompanionFragment {
 
-  private Optional<User> me;
+  private User me;
 
   // UI elements.
-  private LabelledEditTextView name;
-  private LabelledEditTextView email;
   private LabelledEditTextView nickname;
-  private Wrapper<CheckBox> remoteCampaigns;
-  private Wrapper<CheckBox> remoteCharacters;
   private LabelledEditTextView features;
   private Wrapper<Button> save;
   private RoundImageView image;
 
-  public SettingsFragment() {
+  public UserFragment() {
     super(Type.settings);
   }
 
@@ -69,28 +63,16 @@ public class SettingsFragment extends CompanionFragment {
     super.onCreateView(inflater, container, savedInstanceState);
 
     me = application().context().me();
-    ScrollView view = (ScrollView) inflater.inflate(R.layout.fragment_settings, container, false);
+    ScrollView view = (ScrollView) inflater.inflate(R.layout.fragment_user, container, false);
 
-    name = view.findViewById(R.id.name);
-    name.disabled();
-    email = view.findViewById(R.id.email);
-    email.disabled();
     nickname = view.findViewById(R.id.nickname);
     nickname.onEdit(this::editNickname).onChange(this::update);
-    remoteCampaigns = Wrapper.wrap(view, R.id.remote_campaigns);
-    //remoteCampaigns.get().setChecked(settings.useRemoteCampaigns());
-    remoteCampaigns.visible(Misc.onEmulator());
-    remoteCharacters = Wrapper.wrap(view, R.id.remote_characters);
-    //remoteCharacters.get().setChecked(settings.useRemoteCharacters());
-    remoteCharacters.visible(Misc.onEmulator());
     features = view.findViewById(R.id.features);
     features.onEdit(this::editFeatures);
     save = Wrapper.wrap(view, R.id.save);
     save.onClick(this::save);
     image = view.findViewById(R.id.image);
-    if (me.isPresent()) {
-      image.loadImageUrl(me.get().getPhotoUrl());
-    }
+    image.loadImageUrl(me.getPhotoUrl());
 
     update();
     return view;
@@ -101,37 +83,26 @@ public class SettingsFragment extends CompanionFragment {
     super.onStart();
 
     // We need to reset values here or they will be messed up by the saved state...?
-    if (me.isPresent()) {
-      name.text(me.get().getName());
-      email.text(me.get().getEmail());
-      nickname.text(me.get().getNickname());
-      features.text(Strings.COMMA_JOINER.join(me.get().getFeatures()));
-    }
+    nickname.text(me.getNickname());
+    features.text(Strings.COMMA_JOINER.join(me.getFeatures()));
   }
 
   private void save() {
     editNickname();
-    //settings.useRemote(remoteCampaigns.get().isChecked(), remoteCharacters.get().isChecked());
-    if (me.isPresent()) {
-      me.get().setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
-      me.get().store();
+    me.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
+    me.store();
 
-      // We have to send the welcome before showing another fragment, or the context will be null.
-      CompanionApplication.get(getContext()).messenger().sendWelcome();
-      CompanionFragments.get().show(Type.campaigns, Optional.empty());
-    }
+    // We have to send the welcome before showing another fragment, or the context will be null.
+    CompanionApplication.get(getContext()).messenger().sendWelcome();
+    CompanionFragments.get().show(Type.campaigns, Optional.empty());
   }
 
   protected void editNickname() {
-    if (me.isPresent()) {
-      me.get().setNickname(nickname.getText());
-    }
+    me.setNickname(nickname.getText());
   }
 
   protected void editFeatures() {
-    if (me.isPresent()) {
-      me.get().setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
-    }
+    me.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
   }
 
   @Override

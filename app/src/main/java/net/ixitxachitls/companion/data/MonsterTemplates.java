@@ -21,7 +21,7 @@
 
 package net.ixitxachitls.companion.data;
 
-import net.ixitxachitls.companion.data.statics.Monster;
+import net.ixitxachitls.companion.data.statics.MonsterTemplate;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,12 +32,12 @@ import java.util.Collections;
 /**
  * General information and storage for monsters.
  */
-public class Monsters extends EntriesStore<Monster> {
+public class MonsterTemplates extends EntriesStore<MonsterTemplate> {
 
   private ArrayList<String> primaryRaces = null;
 
-  public Monsters() {
-    super(Monster.class);
+  public MonsterTemplates() {
+    super(MonsterTemplate.class);
   }
 
   protected void read(InputStream input)
@@ -50,9 +50,9 @@ public class Monsters extends EntriesStore<Monster> {
     if (primaryRaces == null) {
       primaryRaces = new ArrayList<>();
 
-      for (Monster monster : byName.values()) {
-        if (monster.isPrimaryRace())
-          primaryRaces.add(monster.getName());
+      for (MonsterTemplate template : byName.values()) {
+        if (template.isPrimaryRace())
+          primaryRaces.add(template.getName());
       }
 
       Collections.sort(primaryRaces);

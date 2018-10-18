@@ -259,7 +259,7 @@ public class Item {
   }
 
   public static String generateId(CompanionContext context) {
-    return context.me().get().getId() + "-" /*+ context.settings().getNextItemId()*/;
+    return context.me().getId() + "-" /*+ context.settings().getNextItemId()*/;
   }
 
   public static Item fromProto(Entry.ItemProto proto) {

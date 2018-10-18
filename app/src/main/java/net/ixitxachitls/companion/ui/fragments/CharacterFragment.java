@@ -38,14 +38,12 @@ import android.widget.Toast;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.views.CharacterTitleView;
 import net.ixitxachitls.companion.ui.views.ConditionIconsView;
-import net.ixitxachitls.companion.ui.views.RoundImageView;
-import net.ixitxachitls.companion.ui.views.TitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -63,9 +61,8 @@ public class CharacterFragment extends CompanionFragment {
   protected boolean storeOnPause = true;
 
   // UI elements.
-  protected TitleView title;
+  protected CharacterTitleView title;
   protected TextWrapper<TextView> campaignTitle;
-  protected RoundImageView image;
   protected Wrapper<FloatingActionButton> copy;
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> delete;
@@ -95,8 +92,8 @@ public class CharacterFragment extends CompanionFragment {
     back = Wrapper.<FloatingActionButton>wrap(view, R.id.back)
         .onClick(this::goBack)
         .description("Back to Campaign", "Go back to this characters campaign view.");
-    image = view.findViewById(R.id.image);
     title = view.findViewById(R.id.title);
+    images().observe(this, title::update);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
 
     LinearLayout conditionsContainer = view.findViewById(R.id.conditions);
@@ -119,7 +116,9 @@ public class CharacterFragment extends CompanionFragment {
     pager = view.findViewById(R.id.pager);
     pager.setAdapter(new CharacterPagerAdapter(getChildFragmentManager()));
 
-    update(character);
+    if (character.isPresent()) {
+      update(character.get());
+    }
     return view;
   }
 
@@ -134,48 +133,40 @@ public class CharacterFragment extends CompanionFragment {
 
   public void showCharacter(Character character) {
     if (this.character.isPresent()) {
-      characters().getCharacter(this.character.get().getCharacterId()).removeObservers(this);
+      this.character.get().unobserve(this);
     }
 
     this.character = Optional.of(character);
-    this.campaign = campaigns().getCampaign(character.getCampaignId()).getValue();
+    character.observe(this, this::update);
+    this.campaign = campaigns().get(character.getCampaignId());
 
-    characters().getCharacter(character.getCharacterId()).observe(this, this::update);
+    update(character);
   }
 
-  private void update(Optional<Character> character) {
-    this.character = character;
+  private void update(Character character) {
+    this.character = Optional.of(character);
     if (statisticsFragment != null) {
       statisticsFragment.update(character);
     }
-    if (!character.isPresent() || !campaign.isPresent()) {
+    if (!campaign.isPresent()) {
       this.campaign = Optional.empty();
       return;
     }
 
     if (inventoryFragment != null) {
-      inventoryFragment.update(character.get());
+      inventoryFragment.update(character);
     }
 
     campaign = CompanionApplication.get(getContext()).campaigns()
-        .getCampaign(character.get().getCampaignId()).getValue();
+        .get(character.getCampaignId());
 
     campaignTitle.text(campaign.get().getName());
-    title.setTitle(character.get().getName());
-    title.setSubtitle(character.get().getGender().getName() + " " + character.get().getRace()
-        + ", " + character.get().getPlayerName());
-    Optional<Image> characterImage = CompanionApplication.get(getContext())
-        .images(character.get().isLocal()).getImage(
-            Character.TABLE, character.get().getCharacterId()).getValue();
-    if (characterImage.isPresent()) {
-      image.setImageBitmap(characterImage.get().getBitmap());
-    } else {
-      image.clearImage();
-    }
+    title.update(character);
+    title.update(images());
 
-    conditions.update(character.get());
-    copy.visible(!character.get().isLocal() && campaign.get().amDM());
-    history.update(character.get().getCharacterId());
+    conditions.update(character);
+    copy.visible(!character.amPlayer() && campaign.get().amDM());
+    history.update(character.getId());
   }
 
   private void delete() {
@@ -188,7 +179,7 @@ public class CharacterFragment extends CompanionFragment {
 
   private void deleteCharacterOk() {
     if (character.isPresent()) {
-      character.get().delete();
+      //character.get().delete();
       Toast.makeText(getActivity(), getString(R.string.character_deleted),
           Toast.LENGTH_SHORT).show();
 
@@ -201,7 +192,7 @@ public class CharacterFragment extends CompanionFragment {
 
   private void copy() {
     if (character.isPresent()) {
-      character.get().copy();
+      //character.get().copy();
       Status.toast("The character has been copied.");
     }
   }
@@ -211,9 +202,12 @@ public class CharacterFragment extends CompanionFragment {
     // TODO(merlin): Maybe there is a better way than this?
     // Remove the pager from the screen as otherwise transitions try to attach the
     // view pager title to a weird view and thus an exception is thrown.
-    ((ViewGroup) pager.getParent()).removeView(pager);
+    if (pager.getParent() != null) {
+      ((ViewGroup) pager.getParent()).removeView(pager);
+    }
+
     if (campaign.isPresent()) {
-      //CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
+      CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
     } else {
       CompanionFragments.get().show(Type.campaigns, Optional.empty());
     }
@@ -236,12 +230,12 @@ public class CharacterFragment extends CompanionFragment {
       switch (position) {
         default:
         case 0:
-          if (character.isPresent() && character.get().isLocal()) {
+          if (character.isPresent() && character.get().amPlayer()) {
             statisticsFragment = new LocalCharacterStatisticsFragment();
           } else {
             statisticsFragment = new CharacterStatisticsFragment();
           }
-          statisticsFragment.update(character);
+          statisticsFragment.update(character.get());
           return statisticsFragment;
 
         case 1:

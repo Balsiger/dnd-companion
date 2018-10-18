@@ -25,11 +25,11 @@ import android.support.v4.app.Fragment;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.documents.FSCampaigns;
+import net.ixitxachitls.companion.data.documents.Campaigns;
+import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 import java.util.Optional;
@@ -39,9 +39,7 @@ import java.util.Optional;
  */
 public abstract class CompanionFragment extends Fragment {
 
-  public enum Type {settings, campaigns, campaign, character, localCharacter}
-
-  ;
+  public enum Type {settings, campaigns, campaign, character, localCharacter};
 
   private final Type type;
 
@@ -68,24 +66,24 @@ public abstract class CompanionFragment extends Fragment {
     return CompanionApplication.get(getContext());
   }
 
-  protected Optional<User> me() {
+  protected User me() {
     return application().me();
-  }
-
-  protected FSCampaigns fsCampaigns() {
-    return application().fsCampaigns();
   }
 
   protected Campaigns campaigns() {
     return application().campaigns();
   }
 
-  protected Creatures creatures() {
-    return application().creatures();
-  }
-
   protected Characters characters() {
     return application().characters();
+  }
+
+  protected Images images() {
+    return application().images();
+  }
+
+  protected Monsters creatures() {
+    return application().creatures();
   }
 
   @Override

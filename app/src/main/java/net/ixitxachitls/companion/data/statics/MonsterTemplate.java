@@ -19,25 +19,41 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data.documents;
+package net.ixitxachitls.companion.data.statics;
 
-import android.support.annotation.CallSuper;
-
-import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.proto.Entity;
 
 /**
- * Base class for all document collections.
+ * The representation of a monster template that can be used to create actual, real monsters in
+ * the game.
  */
-public abstract class Documents<D extends Documents<D>> extends Observable<D> {
+public class MonsterTemplate extends StaticEntry<Entity.MonsterProto> {
 
-  protected final CompanionContext context;
+  public static final String TYPE = "monster";
 
-  protected Documents(CompanionContext context) {
-    this.context = context;
+  private boolean mPrimaryRace;
+
+  protected MonsterTemplate(String name) {
+    super(name);
   }
 
-  @CallSuper
-  protected void delete(String id) {
-    db.document(id).delete();
+  public static Entity.MonsterProto defaultProto() {
+    return Entity.MonsterProto.getDefaultInstance();
+  }
+
+  public static MonsterTemplate fromProto(Entity.MonsterProto proto) {
+    MonsterTemplate template = new MonsterTemplate(proto.getEntity().getName());
+    template.mPrimaryRace = proto.getMainRace();
+
+    return template;
+  }
+
+  public boolean isPrimaryRace() {
+    return mPrimaryRace;
+  }
+
+  @Override
+  public String toString() {
+    return getName();
   }
 }

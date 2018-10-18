@@ -22,16 +22,11 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.graphics.drawable.BitmapDrawable;
 import android.view.View;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
-import net.ixitxachitls.companion.util.Misc;
 
 import java.util.Optional;
 
@@ -42,9 +37,9 @@ public class CharacterChipView extends CreatureChipView {
 
   private Character character;
 
-  public CharacterChipView(Context context, Character character, Battle battle) {
-    super(context, character, character.isLocal() ? R.color.character : R.color.characterDark,
-        R.color.characterLight);
+  public CharacterChipView(Context context, Character character) {
+    super(context, character, character.amPlayer() ? R.color.character : R.color.characterDark,
+        R.color.characterLight, R.drawable.noun_viking_30736);
 
     this.character = character;
     setOnClickListener(this::onClick);
@@ -52,27 +47,12 @@ public class CharacterChipView extends CreatureChipView {
 
   public void update(Character character) {
     this.character = character;
-
-    Status.log("updating character " + character);
-    this.character = character;
-    if (Misc.onEmulator() && Misc.SHOW_EMULATOR) {
-      name.text((character.isLocal() ? "L" : "R") + "/" + character.getName());
-    } else {
-      name.text(character.getName());
-    }
-    if (character.getInitiative() == Character.NO_INITIATIVE) {
-      setSubtitle("");
-    } else {
-      setSubtitle(String.valueOf(character.getInitiative()));
-    }
-
+    name.text(character.getName());
     super.update(character);
   }
 
-  public void update(Image characterImage) {
-    BitmapDrawable drawable = new BitmapDrawable(getResources(),
-        characterImage.getBitmap());
-      image.setImageDrawable(drawable);
+  public void update() {
+    update(character);
   }
 
   private void onClick(View view) {

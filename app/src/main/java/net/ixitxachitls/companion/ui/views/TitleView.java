@@ -23,10 +23,14 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.support.annotation.CallSuper;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -42,9 +46,13 @@ public class TitleView extends LinearLayout {
   // UI elements.
   private TextWrapper<TextView> title;
   private TextWrapper<TextView> subtitle;
+  private RoundImageView image;
+  private LinearLayout icons;
 
   public TitleView(Context context) {
     super(context);
+
+    init(null);
   }
 
   public TitleView(Context context, @Nullable AttributeSet attributes) {
@@ -53,7 +61,8 @@ public class TitleView extends LinearLayout {
     init(attributes);
   }
 
-  private void init(AttributeSet attributes) {
+  @CallSuper
+  protected View init(AttributeSet attributes) {
     TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.TitleView);
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_title, null, false);
@@ -66,12 +75,16 @@ public class TitleView extends LinearLayout {
         .text(array.getString(R.styleable.TitleView_title));
     subtitle = TextWrapper.wrap(view, R.id.subtitle)
         .text(array.getString(R.styleable.TitleView_subtitle));
+    image = view.findViewById(R.id.image);
+    icons = view.findViewById(R.id.icons);
     view.setBackgroundColor(array.getColor(R.styleable.TitleView_color,
         getResources().getColor(R.color.white, null)));
     if (array.getBoolean(R.styleable.TitleView_dark, false)) {
       title.textColor(R.color.white);
       subtitle.textColor(R.color.white);
     }
+
+    return view;
   }
 
   public void setTitle(String text) {
@@ -82,11 +95,46 @@ public class TitleView extends LinearLayout {
     subtitle.text(text);
   }
 
+  public void loadImageUrl(String url) {
+    image.loadImageUrl(url);
+  }
+
+  public void setDefaultImage(@DrawableRes int drawable) {
+    image.setImageDrawable(getContext().getDrawable(drawable));
+  }
+
+  public void setImageBitmap(Bitmap bitmap) {
+    image.setImageBitmap(bitmap);
+  }
+
+  public void clearImage(@DrawableRes int defaultDrawable) {
+    image.clearImage(defaultDrawable);
+  }
+
   public void setAction(Wrapper.Action action) {
     setOnClickListener(v -> action.execute());
   }
 
   public void removeAction() {
     setOnClickListener(null);
+  }
+
+  public void setImageAction(Wrapper.Action action) {
+    image.setOnClickListener(v -> action.execute());
+  }
+
+  public void removeImageAction() {
+    image.setOnClickListener(null);
+  }
+
+  public void clearIcons() {
+    icons.removeAllViews();
+  }
+
+  public void addIcon(@DrawableRes int drawable) {
+    ImageView icon = new ImageView(getContext());
+    icon.setImageDrawable(getContext().getDrawable(drawable));
+    icons.addView(icon);
+    icon.getLayoutParams().height = 75;
   }
 }

@@ -21,52 +21,40 @@
   ~
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/list_item_campaign"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/campaign"
-                tools:context="net.ixitxachitls.companion.ui.activities.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/list_item_campaign"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:background="@color/campaign"
+              tools:context="net.ixitxachitls.companion.ui.activities.MainActivity">
 
   <view
       android:id="@+id/title"
       class="net.ixitxachitls.companion.ui.views.TitleView"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_toStartOf="@+id/delimiter"
+      android:layout_weight="1"
       app:color="@color/campaign"/>
-
-  <View
-      android:id="@+id/delimiter"
-      android:layout_width="2dp"
-      android:layout_height="50dp"
-      android:layout_centerVertical="true"
-      android:layout_marginStart="15dp"
-      android:layout_toStartOf="@+id/right"
-      android:background="#444"/>
 
   <LinearLayout
       android:id="@+id/right"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_alignParentEnd="true"
-      android:layout_centerVertical="true"
+      android:layout_gravity="center_vertical"
       android:layout_marginEnd="10dp"
       android:layout_marginStart="10dp"
       android:orientation="vertical">
 
-    <TextView
+    <ImageView
         android:id="@+id/dm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="DM"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:typeface="normal"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/noun_eye_of_providence_24673"/>
 
   </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

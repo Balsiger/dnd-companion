@@ -20,10 +20,11 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
   <TextView
       android:id="@+id/title"
@@ -38,21 +39,10 @@
       android:textStyle="bold"
       android:theme="@style/SmallText"/>
 
-  <net.ixitxachitls.companion.ui.views.BattleView
-      android:id="@+id/battle"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBottom="@+id/scroll"
-      android:layout_alignParentEnd="true"
-      android:layout_marginBottom="@dimen/fab_margin_negative"
-      android:elevation="2dp"
-      android:translationZ="1dp"/>
-
   <HorizontalScrollView
       android:id="@+id/scroll"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/title"
       android:background="@android:color/darker_gray"
       android:elevation="0dp"
       android:minHeight="50dp">
@@ -66,25 +56,19 @@
         android:padding="5dp"/>
   </HorizontalScrollView>
 
-  <view
-      android:id="@+id/initiative"
-      class="net.ixitxachitls.companion.ui.views.DiceView"
-      android:layout_width="match_parent"
+  <net.ixitxachitls.companion.ui.views.BattleView
+      android:id="@+id/battle"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/scroll"
-      android:layout_centerHorizontal="true"
-      android:layout_marginTop="30dp"
-      android:paddingLeft="10dp"
-      android:paddingRight="10dp"
-      android:paddingTop="5dp"
-      android:visibility="gone"
-      app:modifier_label="@string/label_initiative_modifier"/>
+      android:layout_gravity="end"
+      android:layout_marginTop="@dimen/fab_margin_negative"
+      android:elevation="2dp"
+      android:translationZ="1dp"/>
 
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_alignParentEnd="true"
-      android:layout_below="@+id/scroll"
+      android:layout_gravity="end"
       android:layout_marginTop="@dimen/fab_margin_negative"
       android:orientation="horizontal">
 
@@ -92,26 +76,19 @@
         android:id="@+id/xp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/start_battle"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_toStartOf="@+id/start_battle"
         android:layout_weight="1"
         android:tint="@android:color/black"
         app:backgroundTint="@color/campaign"
         app:srcCompat="@drawable/ic_xp"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/start_battle"
+        android:id="@+id/start_encounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/scroll"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentEnd="false"
-        android:layout_below="@+id/scroll"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_toLeftOf="@+id/add_character"
         android:layout_weight="1"
         app:backgroundTint="@color/battle"
         app:srcCompat="@drawable/ic_sword_cross_white_24dp"/>
@@ -120,11 +97,6 @@
         android:id="@+id/add_character"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/scroll"
-        android:layout_alignEnd="@+id/scroll"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentEnd="false"
-        android:layout_below="@+id/scroll"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
@@ -132,10 +104,21 @@
         app:srcCompat="@drawable/ic_add_black_24dp"/>
   </LinearLayout>
 
+  <view
+      android:id="@+id/initiative"
+      class="net.ixitxachitls.companion.ui.views.DiceView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="30dp"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:paddingTop="5dp"
+      android:visibility="gone"
+      app:modifier_label="@string/label_initiative_modifier"/>
+
   <ScrollView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/initiative"
       android:layout_marginTop="50dp">
 
     <LinearLayout
@@ -145,7 +128,6 @@
         android:orientation="vertical"
         android:paddingStart="8dp">
     </LinearLayout>
-
   </ScrollView>
 
-</RelativeLayout>
+</LinearLayout>

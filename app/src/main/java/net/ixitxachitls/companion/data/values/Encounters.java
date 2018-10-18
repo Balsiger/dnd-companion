@@ -19,35 +19,32 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data.statics;
+package net.ixitxachitls.companion.data.values;
 
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.Documents;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * The representation of a monster.
+ * Access to battles.
  */
-public class Monster extends StaticEntry<Entity.MonsterProto> {
+public class Encounters extends Documents<Encounters> {
 
-  public static final String TYPE = "monster";
+  private final Map<String, Encounter> battlesByCampaignId = new HashMap<>();
 
-  private boolean mPrimaryRace;
-
-  protected Monster(String name) {
-    super(name);
+  public Encounters(CompanionContext context) {
+    super(context);
   }
 
-  public static Entity.MonsterProto defaultProto() {
-    return Entity.MonsterProto.getDefaultInstance();
-  }
+  public Encounter get(String campaignId) {
+    Encounter encounter = battlesByCampaignId.get(campaignId);
+    if (encounter == null) {
+      encounter = Encounter.getOrCreate(context, campaignId);
+      battlesByCampaignId.put(campaignId, encounter);
+    }
 
-  public static Monster fromProto(Entity.MonsterProto proto) {
-    Monster monster = new Monster(proto.getEntity().getName());
-    monster.mPrimaryRace = proto.getMainRace();
-
-    return monster;
-  }
-
-  public boolean isPrimaryRace() {
-    return mPrimaryRace;
+    return encounter;
   }
 }

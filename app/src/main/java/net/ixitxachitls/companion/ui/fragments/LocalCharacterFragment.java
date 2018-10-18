@@ -30,12 +30,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Image;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 
@@ -57,8 +55,8 @@ public class LocalCharacterFragment extends CharacterFragment {
                            Bundle savedInstanceState) {
     View view = super.onCreateView(inflater, container, savedInstanceState);
 
-    image.setAction(this::editImage);
     title.setAction(this::editBase);
+    title.setImageAction(this::editImage);
     edit.visible()
         .onClick(this::editBase)
         .description("Edit Character", "Edit the basic character traits");
@@ -90,15 +88,15 @@ public class LocalCharacterFragment extends CharacterFragment {
       return;
     }
 
-    CharacterDialog.newInstance(character.get().getCharacterId(),
+    CharacterDialog.newInstance(character.get().getId(),
         character.get().getCampaignId()).display();
   }
 
   private void move() {
     ListSelectDialog fragment = ListSelectDialog.newInstance(
         R.string.character_select_campaign, "",
-        campaigns().getAllCampaigns().stream()
-            .map(m -> new ListSelectDialog.Entry(m.getName(), m.getCampaignId()))
+        campaigns().getCampaigns().stream()
+            .map(m -> new ListSelectDialog.Entry(m.getName(), m.getId()))
             .collect(Collectors.toList()),
         R.color.campaign);
     fragment.setSelectListener(this::move);
@@ -107,18 +105,18 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   private void move(String campaignId) {
     if (character.isPresent()) {
-      character.get().asLocal().setCampaignId(campaignId);
+      character.get().setCampaignId(campaignId);
     }
 
-    Optional<Campaign> campaign = campaigns().getCampaign(campaignId).getValue();
+    Optional<Campaign> campaign = campaigns().get(campaignId);
     if (campaign.isPresent()) {
-      //CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
+      CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
     }
   }
 
   private void timed() {
     if (character.isPresent()) {
-      TimedConditionDialog.newInstance(character.get().getCharacterId(), 0).display();
+      TimedConditionDialog.newInstance(character.get().getId(), 0).display();
     }
   }
 
@@ -131,11 +129,7 @@ public class LocalCharacterFragment extends CharacterFragment {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        Image characterImage = new Image(CompanionApplication.get(getContext()).context(),
-            Character.TABLE, character.get().getCharacterId(), bitmap);
-        characterImage.save(character.get().isLocal());
-        characterImage.publish();
-        image.setImageBitmap(characterImage.getBitmap());
+        images().set(character.get().getId(), bitmap);
       } catch (IOException e) {
         Status.toast("Cannot load image bitmap: " + e);
       }

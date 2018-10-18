@@ -26,6 +26,9 @@ import android.support.annotation.DrawableRes;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Campaigns;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
@@ -276,14 +279,14 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
     }
 
     switch (extractType(ids.get(0))) {
-      case Campaign.TYPE:
-        return "Created campaign " + description;
+      //case Campaign.TYPE:
+      //  return "Created campaign " + description;
 
-      case Character.TYPE:
-        return "Created character " + description;
+      //case Character.TYPE:
+      //  return "Created character " + description;
 
-      case Creature.TYPE:
-        return "Created creature " + description;
+      //case Creature.TYPE:
+      //  return "Created creature " + description;
 
       default:
         return "Created " + describeIds() + " (" + description + ")";
@@ -296,14 +299,14 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
     }
 
     switch (extractType(ids.get(0))) {
-      case Campaign.TYPE:
-        return "Removed campaign " + description;
+      //case Campaign.TYPE:
+      //  return "Removed campaign " + description;
 
-      case Character.TYPE:
-        return "Removed character " + description;
+      //case Character.TYPE:
+      //  return "Removed character " + description;
 
-      case Creature.TYPE:
-        return "Removed creature " + description;
+      //case Creature.TYPE:
+      //  return "Removed creature " + description;
 
       default:
         return "Removed " + describeIds() + " (" + description + ")";
@@ -315,8 +318,8 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
       return description;
     }
 
-    Optional<Character> character = context.characters().getCharacter(ids.get(0)).getValue();
-    Optional<Campaign> campaign = context.campaigns().getCampaign(ids.get(1)).getValue();
+    Optional<Character> character = context.characters().get(ids.get(0));
+    Optional<Campaign> campaign = context.campaigns().get(ids.get(1));
     if (character.isPresent() && campaign.isPresent()) {
       return campaign.get().getDm() + " has awarded " + description + " XP to "
           + character.get().getName();
@@ -330,8 +333,8 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
       return description;
     }
 
-    Optional<Character> character = context.characters().getCharacter(ids.get(0)).getValue();
-    Optional<Campaign> campaign = context.campaigns().getCampaign(ids.get(1)).getValue();
+    Optional<Character> character = context.characters().get(ids.get(0));
+    Optional<Campaign> campaign = context.campaigns().get(ids.get(1));
     if (character.isPresent() && campaign.isPresent()) {
       return "The " + description + " condition for character " + character.get().getName()
           + " (" + campaign.get().getName() + ") has expired.";
@@ -347,18 +350,18 @@ public class HistoryEntry extends StoredEntry<Entry.HistoryProto>
   }
 
   private String describeById(String id) {
-    Optional<? extends StoredEntry> entry = context.entryForId(id);
-    if (entry.isPresent()) {
-      return entry.toString();
-    } else {
+    //Optional<? extends StoredEntry> entry = context.entryForId(id);
+    //if (entry.isPresent()) {
+    //  return entry.toString();
+    //} else {
       return id;
-    }
+    //}
   }
 
   private String formatDate() {
     for (String id : ids) {
-      if (extractType(id).equals(Campaign.TYPE)) {
-        Optional<Campaign> campaign = context.campaigns().getCampaign(id).getValue();
+      if (Campaigns.isCampaignId(id)) {
+        Optional<Campaign> campaign = context.campaigns().get(id);
         if (campaign.isPresent()) {
           return campaign.get().getCalendar().format(gameDate);
         }

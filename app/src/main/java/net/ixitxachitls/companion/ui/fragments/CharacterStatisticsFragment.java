@@ -30,7 +30,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.views.AbilityView;
@@ -103,35 +103,38 @@ public class CharacterStatisticsFragment extends Fragment {
     hpNonlethalAdd = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_add).gone();
     hpNonlethalSubtract = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_subtract).gone();
 
-    update(character);
+    // TODO(merlin): This might be unnecessary?
+    if (character.isPresent()) {
+      update(character.get());
+    }
     return view;
   }
 
-  public void update(Optional<Character> character) {
-    this.character = character;
+  public void update(Character character) {
+    this.character = Optional.of(character);
 
-    if (!character.isPresent() || strength == null) {
+    if (strength == null) {
       return;
     }
 
-    strength.setValue(character.get().getStrength(),
-        Ability.modifier(character.get().getStrength()));
-    dexterity.setValue(character.get().getDexterity(),
-        Ability.modifier(character.get().getDexterity()));
-    constitution.setValue(character.get().getConstitution(),
-        Ability.modifier(character.get().getConstitution()));
-    intelligence.setValue(character.get().getIntelligence(),
-        Ability.modifier(character.get().getIntelligence()));
-    wisdom.setValue(character.get().getWisdom(),
-        Ability.modifier(character.get().getWisdom()));
-    charisma.setValue(character.get().getCharisma(),
-        Ability.modifier(character.get().getCharisma()));
+    strength.setValue(character.getStrength(),
+        Ability.modifier(character.getStrength()));
+    dexterity.setValue(character.getDexterity(),
+        Ability.modifier(character.getDexterity()));
+    constitution.setValue(character.getConstitution(),
+        Ability.modifier(character.getConstitution()));
+    intelligence.setValue(character.getIntelligence(),
+        Ability.modifier(character.getIntelligence()));
+    wisdom.setValue(character.getWisdom(),
+        Ability.modifier(character.getWisdom()));
+    charisma.setValue(character.getCharisma(),
+        Ability.modifier(character.getCharisma()));
 
-    xp.text(String.valueOf(character.get().getXp()));
-    level.text(String.valueOf(character.get().getLevel()));
-    hp.text(String.valueOf(character.get().getHp()));
-    hpMax.text(String.valueOf(character.get().getMaxHp()));
-    damageNonlethal.text(String.valueOf(character.get().getNonlethalDamage()));
+    xp.text(String.valueOf(character.getXp()));
+    level.text(String.valueOf(character.getLevel()));
+    hp.text(String.valueOf(character.getHp()));
+    hpMax.text(String.valueOf(character.getMaxHp()));
+    damageNonlethal.text(String.valueOf(character.getNonlethalDamage()));
 
     redraw();
   }

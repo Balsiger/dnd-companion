@@ -31,13 +31,13 @@ import android.support.multidex.MultiDexApplication;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.documents.FSCampaigns;
+import net.ixitxachitls.companion.data.documents.Campaigns;
+import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Characters;
-import net.ixitxachitls.companion.data.dynamics.Creatures;
 import net.ixitxachitls.companion.data.dynamics.Histories;
-import net.ixitxachitls.companion.data.dynamics.Images;
+import net.ixitxachitls.companion.data.values.Encounters;
 import net.ixitxachitls.companion.net.CompanionMessenger;
 import net.ixitxachitls.companion.net.nsd.ApplicationNsdAccessor;
 import net.ixitxachitls.companion.net.nsd.NsdAccessor;
@@ -45,8 +45,6 @@ import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
 import net.ixitxachitls.companion.storage.ApplicationDataBaseAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 import net.ixitxachitls.companion.storage.DataBaseAccessor;
-
-import java.util.Optional;
 
 /**
  * The main application for the companion.
@@ -87,13 +85,12 @@ public class CompanionApplication extends MultiDexApplication
 
     context = new ApplicationCompanionContext(this.getDataBaseAccessor(), this.getNsdAccessor(),
         this.getAssetAccessor(), this);
+    registerActivityLifecycleCallbacks(this);
+  }
 
+  public void loggedIn() {
     // The messenger needs other entries, thus cannot be created earlier.
     context.messenger().start(); // Stopping is done in MainActivity.exit();
-    context.campaigns().publish();
-    context.characters().publish();
-
-    registerActivityLifecycleCallbacks(this);
   }
 
   public static CompanionApplication get() {
@@ -125,32 +122,32 @@ public class CompanionApplication extends MultiDexApplication
     return context;
   }
 
-  public Optional<User> me() {
+  public User me() {
     return context.me();
-  }
-
-  public FSCampaigns fsCampaigns() {
-    return context.fsCampaigns();
   }
 
   public Campaigns campaigns() {
     return context.campaigns();
   }
 
+  public Encounters encounters() {
+    return context.encounters();
+  }
+
   public Characters characters() {
     return context.characters();
   }
 
-  public Creatures creatures() {
+  public Images images() {
+    return context.images();
+  }
+
+  public Monsters creatures() {
     return context.creatures();
   }
 
   public CompanionMessenger messenger() {
     return context.messenger();
-  }
-
-  public Images images(boolean local) {
-    return context.images(local);
   }
 
   public Histories histories() {
@@ -159,6 +156,7 @@ public class CompanionApplication extends MultiDexApplication
 
   @Override
   public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+    currentActivity = activity;
   }
 
   @Override

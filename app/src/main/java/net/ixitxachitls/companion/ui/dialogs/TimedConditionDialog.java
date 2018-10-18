@@ -35,10 +35,10 @@ import android.widget.LinearLayout;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Creature;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Creature;
+import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.values.Condition;
 import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
@@ -65,7 +65,7 @@ public class TimedConditionDialog extends Dialog {
 
   // State.
   private String id;
-  private Optional<? extends BaseCreature> creature = Optional.empty();
+  private Optional<? extends Creature<?>> creature = Optional.empty();
   private Optional<Campaign> campaign = Optional.empty();
   private int currentRound = 0;
   private boolean predefined = false;
@@ -108,12 +108,15 @@ public class TimedConditionDialog extends Dialog {
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
     id = getArguments().getString(ARG_ID); // The creature OR campaign id.
-    creature = creatures().getCreatureOrCharacter(id);
+    creature = characters().get(id);
+    if (!creature.isPresent()) {
+      creature = creatures().get(id);
+    }
     currentRound = getArguments().getInt(ARG_ROUND);
     if (creature.isPresent()) {
-      campaign = campaigns().getCampaign(creature.get().getCampaignId()).getValue();
+      campaign = campaigns().get(creature.get().getCampaignId());
     } else {
-      campaign = campaigns().getCampaign(id).getValue();
+      campaign = campaigns().get(id);
     }
   }
 
@@ -151,17 +154,17 @@ public class TimedConditionDialog extends Dialog {
     condition.setAdapter(adapter);
 
     if (campaign.isPresent()) {
-      for (Character character : campaign.get().getCharacters()) {
-        addCheckbox(view, character.getCharacterId(), character.getName());
+      for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
+        addCheckbox(view, character.getId(), character.getName());
       }
 
-      for (Creature creature : campaign.get().getCreatures()) {
-        addCheckbox(view, creature.getCreatureId(), creature.getName());
+      for (Monster monster : creatures().getCampaignCreatures(campaign.get().getId())) {
+        addCheckbox(view, monster.getId(), monster.getName());
       }
     }
   }
 
-  private List<Condition> conditions(BaseCreature creature) {
+  private List<Condition> conditions(Creature<?> creature) {
     List<Condition> conditions = new ArrayList<>();
 
     if (creature instanceof Character) {
@@ -173,7 +176,7 @@ public class TimedConditionDialog extends Dialog {
     return conditions;
   }
 
-  private List<String> conditionNames(BaseCreature creature) {
+  private List<String> conditionNames(Creature<?> creature) {
     return conditions(creature).stream()
         .map(Condition::getName)
         .collect(Collectors.toList());
@@ -241,7 +244,7 @@ public class TimedConditionDialog extends Dialog {
     update();
   }
 
-  private Optional<Condition> findCondition(BaseCreature creature, String name) {
+  private Optional<Condition> findCondition(Creature<?> creature, String name) {
     for (Condition condition : conditions(creature)) {
       if (condition.getName().equals(name)) {
         return Optional.of(condition);

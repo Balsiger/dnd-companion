@@ -30,10 +30,10 @@ import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.values.Duration;
+import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -46,14 +46,14 @@ import java.util.List;
 public class ConditionCreatureView extends LinearLayout {
 
   private final LinearLayout container;
-  private final Battle battle;
+  private final Encounter encounter;
 
   private boolean hasConditions = false;
 
-  public ConditionCreatureView(Context context, String name, Battle battle) {
+  public ConditionCreatureView(Context context, String name, Encounter encounter) {
     super(context);
 
-    this.battle = battle;
+    this.encounter = encounter;
 
     View view =
         LayoutInflater.from(getContext()).inflate(R.layout.view_condition_creature, this, false);
@@ -64,16 +64,16 @@ public class ConditionCreatureView extends LinearLayout {
     addView(view);
   }
 
-  public void addConditions(BaseCreature<?> creature, boolean isDM) {
+  public void addConditions(Creature<?> creature, boolean isDM) {
     for (TargetedTimedCondition condition : creature.getInitiatedConditions()) {
-      addCondition(creature.getName(), creature.getCreatureId(), condition.getTargetIds(),
+      addCondition(creature.getName(), creature.getId(), condition.getTargetIds(),
           condition.getTimedCondition(), false, isDM);
     }
 
     for (TimedCondition condition : creature.getAffectedConditions()) {
       addCondition(CompanionApplication.get(getContext()).creatures()
               .nameFor(condition.getSourceId()), condition.getSourceId(),
-          ImmutableList.<String>of(creature.getCreatureId()), condition, true, isDM);
+          ImmutableList.<String>of(creature.getId()), condition, true, isDM);
     }
   }
 
@@ -81,16 +81,16 @@ public class ConditionCreatureView extends LinearLayout {
                             TimedCondition condition, boolean affected, boolean isDM) {
     Duration remaining;
     if (condition.hasEndDate()) {
-      remaining = battle.getCampaign().getCalendar().dateDifference(battle.getCampaign().getDate(),
+      remaining = encounter.getCampaign().getCalendar().dateDifference(encounter.getCampaign().getDate(),
           condition.getEndDate());
     } else if (condition.isPermanent()) {
       remaining = Duration.PERMANENT;
     } else {
-      if (!condition.active(battle)) {
+      if (!condition.active(encounter)) {
         return;
       }
 
-      remaining = Duration.rounds(condition.getEndRound() - battle.getTurn());
+      remaining = Duration.rounds(condition.getEndRound() - encounter.getTurn());
     }
 
     hasConditions = true;

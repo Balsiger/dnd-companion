@@ -65,13 +65,13 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
       return;
     }
 
-    AbilitiesDialog.newInstance(character.get().getCharacterId(),
+    AbilitiesDialog.newInstance(character.get().getId(),
         character.get().getCampaignId()).display();
   }
 
   private void changeXp() {
     if (character.isPresent() && !xp.getText().isEmpty()) {
-      character.get().asLocal().setXp(Integer.parseInt(xp.getText()));
+      character.get().setXp(Integer.parseInt(xp.getText()));
     }
   }
 
@@ -79,9 +79,9 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     Status.error("level change");
     if (character.isPresent() && !level.getText().isEmpty()) {
       try {
-        character.get().asLocal().setLevel(Integer.parseInt(level.getText()));
+        character.get().setLevel(Integer.parseInt(level.getText()));
       } catch (NumberFormatException e) {
-        character.get().asLocal().setLevel(1);
+        character.get().setLevel(1);
       }
     }
 
@@ -93,7 +93,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
       try {
         character.get().setHp(Integer.parseInt(hp.getText()));
       } catch (NumberFormatException e) {
-        character.get().asLocal().setHp(1);
+        character.get().setHp(1);
       }
     }
 
@@ -105,7 +105,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
       try {
         character.get().setMaxHp(Integer.parseInt(hpMax.getText()));
       } catch (NumberFormatException e) {
-        character.get().asLocal().setMaxHp(1);
+        character.get().setMaxHp(1);
       }
     }
 
@@ -117,7 +117,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
       try {
         character.get().setNonlethalDamage(Integer.parseInt(damageNonlethal.getText()));
       } catch (NumberFormatException e) {
-        character.get().asLocal().setNonlethalDamage(0);
+        character.get().setNonlethalDamage(0);
       }
     }
 

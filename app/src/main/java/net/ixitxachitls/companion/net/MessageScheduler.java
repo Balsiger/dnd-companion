@@ -106,9 +106,10 @@ public class MessageScheduler {
   }
 
   public void schedule(CompanionMessageData data) {
+    /*
     ScheduledMessage message = new ScheduledMessage(data.campaigns(),
-        new CompanionMessage(context.me().get().getId(), context.me().get().getNickname(),
-            recipientId, 0 /*context.settings().getNextMessageId()*/, data));
+        new CompanionMessage(context.me().getId(), context.me().getNickname(),
+            recipientId, 0 context.settings().getNextMessageId(), data));
     Status.log("scheduling to " + Status.nameFor(recipientId) + ": " + message);
     message.store();
 
@@ -122,6 +123,7 @@ public class MessageScheduler {
     }
 
     waiting.put(data.getType(), message);
+    */
   }
 
   private boolean overwrites(CompanionMessageData oldMessage, CompanionMessageData newMessage) {
@@ -135,12 +137,14 @@ public class MessageScheduler {
         return oldMessage.getCampaignDelete().equals(newMessage.getCampaignDelete());
 
       case CHARACTER:
-        return oldMessage.getCharacter().getCharacterId().equals(
-            newMessage.getCharacter().getCharacterId());
+        return false;
+        //return oldMessage.getCharacter().getCharacterId().equals(
+        //    newMessage.getCharacter().getCharacterId());
 
       case CAMPAIGN:
-        return oldMessage.getCampaign().getCampaignId().equals(
-            newMessage.getCampaign().getCampaignId());
+        return false;
+        //return oldMessage.getCampaign().getCampaignId().equals(
+        //    newMessage.getCampaign().getCampaignId());
 
       case IMAGE:
         return oldMessage.getImage().getId().equals(newMessage.getImage().getId())
@@ -214,10 +218,12 @@ public class MessageScheduler {
         return false;
 
       case CAMPAIGN:
-        return message.getData().getCampaign().getCampaignId().equals(id);
+        return false;
+        //return message.getData().getCampaign().getCampaignId().equals(id);
 
       case CHARACTER:
-        return message.getData().getCharacter().getCharacterId().equals(id);
+        return false;
+        //return message.getData().getCharacter().getCharacterId().equals(id);
 
       case IMAGE:
         return message.getData().getImage().getId().equals(id);

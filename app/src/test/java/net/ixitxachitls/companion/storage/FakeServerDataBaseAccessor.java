@@ -28,8 +28,6 @@ public class FakeServerDataBaseAccessor extends FakeDataBaseAccessor {
 
   public FakeServerDataBaseAccessor() {
     // Setup the default data for the cursor.
-    add(settingsById, settings("server", "Server", 23));
-
     add(localCampaignsById,
         campaign("campaign-server-1", "Superheroes", "Generic", true));
     add(localCharactersById,

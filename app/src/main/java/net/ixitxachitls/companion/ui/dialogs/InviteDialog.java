@@ -33,7 +33,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -47,7 +47,7 @@ public class InviteDialog extends Dialog {
 
   private static final String ARG_ID = "id";
 
-  private Optional<FSCampaign> campaign = Optional.empty();
+  private Optional<Campaign> campaign = Optional.empty();
   private LinearLayout invites;
   private LabelledEditTextView email;
   private Wrapper<Button> invite;
@@ -72,7 +72,7 @@ public class InviteDialog extends Dialog {
     email = view.findViewById(R.id.email);
     invite = Wrapper.<Button>wrap(view, R.id.invite).onClick(this::invite);
 
-    campaign = application().fsCampaigns().getCampaign(getArguments().getString(ARG_ID));
+    campaign = application().campaigns().get(getArguments().getString(ARG_ID));
     refresh();
   }
 
@@ -86,7 +86,7 @@ public class InviteDialog extends Dialog {
   }
 
   private void invite() {
-    if (campaign.isPresent()) {
+    if (campaign.isPresent() && !email.getText().isEmpty()) {
       campaign.get().invite(email.getText());
       refresh();
     }

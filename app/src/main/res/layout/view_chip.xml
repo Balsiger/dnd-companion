@@ -20,70 +20,58 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:orientation="vertical"
-    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="5dp"
+              android:layout_marginBottom="5dp">
 
-  <RelativeLayout
-      android:id="@+id/container"
+  <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="7dp"
-      android:layout_marginTop="10dp"
       android:background="@color/primaryBack"
-      android:padding="5dp">
+      android:orientation="vertical"
+      >
 
     <net.ixitxachitls.companion.ui.views.RoundImageView
         android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="250px"
+        android:layout_height="250px"
         app:height_px="500"
         app:radius_percents="6"
         app:width_px="500"/>
 
-    <LinearLayout
-        android:layout_width="120dp"
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/image"
-        android:layout_marginBottom="5dp"
-        android:orientation="vertical">
+        android:layout_marginTop="1dp"
+        android:padding="3dp"
+        android:text="... text ..."
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:theme="@style/SmallText"/>
 
-      <TextView
-          android:id="@+id/name"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="... text ..."
-          android:textAlignment="center"
-          android:textStyle="normal|bold"
-          android:theme="@style/SmallText"/>
-
-      <TextView
-          android:id="@+id/subtitle"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginBottom="4dp"
-          android:paddingBottom="2dp"
-          android:text=""
-          android:textAlignment="center"
-          android:theme="@style/TinyText"
-          android:visibility="visible"/>
-    </LinearLayout>
-
-  </RelativeLayout>
-
-  <LinearLayout
-      android:id="@+id/icons"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_alignParentStart="true"
-      android:layout_alignParentTop="true"
-      android:orientation="horizontal">
   </LinearLayout>
 
-</RelativeLayout>
+  <ScrollView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginStart="1dp"
+      android:background="@color/character">
+
+    <LinearLayout
+        android:id="@+id/icons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dp">
+    </LinearLayout>
+
+  </ScrollView>
+
+</LinearLayout>
 
 
 

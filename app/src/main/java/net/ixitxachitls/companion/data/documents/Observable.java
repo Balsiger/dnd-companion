@@ -26,11 +26,12 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
 
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
 
 /**
  * Abstract base for all documents.
  */
-public abstract class AbstractDocument<D extends AbstractDocument<D>> {
+public abstract class Observable<D extends Observable<D>> {
 
   @FunctionalInterface
   public interface Action {
@@ -38,6 +39,7 @@ public abstract class AbstractDocument<D extends AbstractDocument<D>> {
   }
 
   protected final FirebaseFirestore db = FirebaseFirestore.getInstance();
+  protected final FirebaseStorage storage = FirebaseStorage.getInstance();
   private final MutableLiveData<D> live = new MutableLiveData<>();
 
   public void observeForever(Observer<D> observer) {

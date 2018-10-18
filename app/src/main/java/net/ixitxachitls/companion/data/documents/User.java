@@ -21,6 +21,10 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.support.annotation.CallSuper;
+
+import net.ixitxachitls.companion.data.CompanionContext;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -30,33 +34,24 @@ import java.util.Map;
  */
 public class User extends Document<User> {
 
+  private static final Factory FACTORY = new Factory();
+
   protected static final String PATH = "users";
-  private static final String FIELD_NAME = "name";
   private static final String FIELD_NICKNAME = "nickname";
+  private static final String DEFAULT_NICKNAME = "<not specified>";
   private static final String FIELD_PHOTO_URL = "photoUrl";
-  private static final String FIELD_CAMPAIGNS = "campaigns";
   private static final String FIELD_FEATURES = "features";
 
-  private String name;
   private String nickname;
-  private String photoUrl;
+  private String photoUrl = "";
   private List<String> campaigns = new ArrayList<>();
   private List<String> features = new ArrayList<>();
 
-  public User(String id) {
-    super(id, PATH);
-  }
+  protected static User getOrCreate(CompanionContext context, String id) {
+    User user = Document.getOrCreate(FACTORY, context, PATH + "/" + id);
+    user.whenReady(user::readCampaigns);
 
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getEmail() {
-    return getId();
+    return user;
   }
 
   public String getNickname() {
@@ -87,35 +82,23 @@ public class User extends Document<User> {
     return campaigns;
   }
 
-  public void invite(String campaignId) {
-    if (!campaigns.contains(campaignId)) {
-      campaigns.add(campaignId);
-      store();
-    }
-  }
-
-  public void uninvite(String campaignId) {
-    if (campaigns.contains(campaignId)) {
-      campaigns.remove(campaignId);
-      store();
-    }
+  private void readCampaigns() {
+    context.invites().listenCampaigns(campaigns -> { this.campaigns = campaigns; updated(); });
   }
 
   @Override
+  @CallSuper
   protected void read() {
-    name = get(FIELD_NAME, "(not found)");
-    nickname = get(FIELD_NICKNAME, name);
+    super.read();
+    nickname = get(FIELD_NICKNAME, DEFAULT_NICKNAME);
     photoUrl = get(FIELD_PHOTO_URL, "");
-    campaigns = get(FIELD_FEATURES, new ArrayList<>());
     features = get(FIELD_FEATURES, new ArrayList<>());
   }
 
   @Override
   protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_NAME, name);
     data.put(FIELD_NICKNAME, nickname);
     data.put(FIELD_PHOTO_URL, photoUrl);
-    data.put(FIELD_CAMPAIGNS, campaigns);
     data.put(FIELD_FEATURES, features);
     return data;
   }
@@ -123,5 +106,12 @@ public class User extends Document<User> {
   @Override
   public String toString() {
     return getNickname();
+  }
+
+  private static class Factory implements DocumentFactory<User> {
+    @Override
+    public User create() {
+      return new User();
+    }
   }
 }

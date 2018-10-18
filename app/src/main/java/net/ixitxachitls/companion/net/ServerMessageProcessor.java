@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.net;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 
 /**
@@ -36,7 +35,7 @@ public class ServerMessageProcessor extends MessageProcessor {
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, context.me().get().getId(), messageId, message);
+    process(senderId, senderName, context.me().getId(), messageId, message);
   }
 
   @Override
@@ -44,6 +43,7 @@ public class ServerMessageProcessor extends MessageProcessor {
     messenger.ackServer(senderId, messageId);
   }
 
+  /*
   @Override
   protected void handleCharacter(String senderId, Character character) {
     super.handleCharacter(senderId, character);
@@ -51,10 +51,11 @@ public class ServerMessageProcessor extends MessageProcessor {
     // Send the character update to the other clients.
     messenger.send(character);
   }
+  */
 
   protected void handleImage(String senderId, Image image) {
     Status.log("received image for " + image.getType() + " " + image.getId());
-    image.save(false);
+    image.save();
 
     // Send the image update to the other clients.
     messenger.send(image);
@@ -67,9 +68,9 @@ public class ServerMessageProcessor extends MessageProcessor {
     Status.addClientConnection(remoteId, remoteName);
 
     // Publish all local campaigns to that client.
-    context.campaigns().publish();
+    //context.campaigns().publish();
 
     // Publish all local characters to that client.
-    context.characters().publish();
+    //context.characters().publish();
   }
 }

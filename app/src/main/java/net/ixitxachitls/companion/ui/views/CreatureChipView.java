@@ -22,12 +22,17 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Creature;
+import net.ixitxachitls.companion.data.documents.Creature;
+import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.enums.BattleStatus;
+
+import java.util.Optional;
 
 /**
  * Chip view for a creature (monster).
@@ -36,14 +41,15 @@ public class CreatureChipView extends ChipView {
 
   private final ConditionIconsView conditions;
 
-  public CreatureChipView(Context context, Creature creature) {
-    this(context, creature, R.color.monsterDark, R.color.monsterLight);
+  public CreatureChipView(Context context, Monster monster) {
+    this(context, monster, R.color.monsterDark, R.color.monsterLight,
+        R.drawable.ic_person_black_48dp_inverted);
   }
 
-  protected CreatureChipView(Context context, BaseCreature creature, @ColorRes int chipColor,
-                             @ColorRes int higlightColor) {
-    super(context, creature.getCreatureId(), creature.getName(), "init " + creature.getInitiative(),
-        chipColor, higlightColor);
+  protected CreatureChipView(Context context, Creature creature, @ColorRes int chipColor,
+                             @ColorRes int higlightColor, @DrawableRes int drawable) {
+    super(context, creature.getId(), creature.getName(), "init " + creature.getInitiative(),
+        chipColor, higlightColor, drawable);
 
     this.conditions = new ConditionIconsView(context);
     icons.addView(conditions);
@@ -67,7 +73,11 @@ public class CreatureChipView extends ChipView {
     }
   }
 
-  public void update(BaseCreature<?> creature) {
+  public void update(Creature<?> creature) {
+    Optional<Bitmap> bitmap = CompanionApplication.get().images().get(creature.getId());
+    if (bitmap.isPresent()) {
+      image.get().setImageBitmap(bitmap.get());
+    }
     conditions.update(creature);
   }
 }

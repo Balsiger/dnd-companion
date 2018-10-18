@@ -8,10 +8,9 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.3'
+    classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.6'
     classpath 'com.google.protobuf:protobuf-java:3.4.0'
-    classpath 'de.mobilej.unmock:UnMockPlugin:0.6.4'
-  }
+    classpath 'de.mobilej.unmock:UnMockPlugin:0.6.4'  }
 }
 
 apply plugin: 'com.google.protobuf'
@@ -30,7 +29,6 @@ unMock {
 
 android {
   compileSdkVersion 27
-
   def versionFile = file('version.properties')
   Properties version = new Properties()
   if (!versionFile.canRead()) {
@@ -38,13 +36,11 @@ android {
   } else {
     version.load(new FileInputStream(versionFile))
   }
-
   logger.error(gradle.startParameter.taskNames.toString())
   if (':app:assembleRelease' in gradle.startParameter.taskNames) {
     version['VERSION'] = (version['VERSION'].toInteger() + 1).toString()
     version.store(versionFile.newWriter(), null)
   }
-
   defaultConfig {
     applicationId "net.ixitxachitls.companion"
     minSdkVersion 24
@@ -81,13 +77,13 @@ android {
     pickFirst 'META-INF/LICENSE'
     pickFirst 'META-INF/plexus/components.xml'
   }
-
   testOptions {
     execution 'ANDROID_TEST_ORCHESTRATOR'
     unitTests {
       includeAndroidResources = true
     }
   }
+  buildToolsVersion '28.0.3'
 }
 
 protobuf {
@@ -128,11 +124,13 @@ dependencies {
   implementation 'com.android.support:support-v4:27.1.1'
   implementation 'com.google.inject:guice:4.1.0'
   implementation 'com.android.support:multidex:1.0.3'
-  implementation 'com.google.android.gms:play-services-drive:15.0.1'
-  implementation 'com.google.android:flexbox:1.0.0'
-  implementation 'com.google.firebase:firebase-core:16.0.3'
-  implementation 'com.google.firebase:firebase-firestore:17.1.0'
-  implementation 'com.firebaseui:firebase-ui-auth:4.1.0'
+  implementation 'com.google.android.gms:play-services-drive:16.0.0'
+  implementation 'com.google.android:flexbox:1.1.0'
+  implementation 'com.google.firebase:firebase-core:16.0.4'
+  implementation 'com.google.firebase:firebase-auth:16.0.4'
+  implementation 'com.google.firebase:firebase-firestore:17.1.1'
+  implementation 'com.google.firebase:firebase-storage:16.0.3'
+  implementation 'com.firebaseui:firebase-ui-auth:4.2.0'
   testImplementation 'junit:junit:4.12'
   testImplementation 'org.mockito:mockito-core:2.7.6'
   testImplementation 'org.powermock:powermock-api-mockito2:1.7.0RC2'
@@ -209,3 +207,5 @@ task convertProtoData {
 }
 
 apply plugin: 'com.google.gms.google-services'
+// For some reason, firebase-auth seems to use play-services-base 15 instead of 16...
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-import android.arch.lifecycle.LiveData;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -40,29 +39,34 @@ import com.google.common.collect.ImmutableList;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Creature;
-import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Campaigns;
+import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Creature;
+import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Monster;
+import net.ixitxachitls.companion.data.values.Encounter;
+import net.ixitxachitls.companion.data.values.Encounters;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.XPDialog;
 import net.ixitxachitls.companion.ui.views.BattleView;
 import net.ixitxachitls.companion.ui.views.CharacterChipView;
+import net.ixitxachitls.companion.ui.views.ChipView;
 import net.ixitxachitls.companion.ui.views.ConditionCreatureView;
 import net.ixitxachitls.companion.ui.views.CreatureChipView;
 import net.ixitxachitls.companion.ui.views.DiceView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.stream.Collectors;
 
 /**
  * A fragment displaying the complete party of the current campaign.
@@ -71,14 +75,18 @@ public class PartyFragment extends Fragment {
 
   // External data.
   private Campaigns campaigns;
-  private Campaign campaign;
+  private Characters characters;
+  private Encounters encounters;
+  private Images images;
+  private Optional<Campaign> campaign = Optional.empty();
+  private Optional<Encounter> battle;
 
   // UI.
   private ViewGroup view;
   private Wrapper<View> scroll;
   private LinearLayout party;
   private TextWrapper<TextView> title;
-  private Wrapper<FloatingActionButton> startBattle;
+  private Wrapper<FloatingActionButton> startEncounter;
   private BattleView battleView;
   private Wrapper<FloatingActionButton> addCharacter;
   private Wrapper<FloatingActionButton> xp;
@@ -98,9 +106,12 @@ public class PartyFragment extends Fragment {
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
-    campaigns = CompanionApplication.get(getContext()).campaigns();
-    campaign = campaigns.getDefaultCampaign();
-    campaigns.getCurrentCampaignId().observe(this, this::updateCampaignId);
+    campaigns = CompanionApplication.get().campaigns();
+    characters = CompanionApplication.get().characters();
+    encounters = CompanionApplication.get().encounters();
+    images = CompanionApplication.get().images();
+    characters.observe(this, this::update);
+    images.observe(this, this::update);
 
     view = (ViewGroup) inflater.inflate(R.layout.fragment_party, container, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
@@ -110,10 +121,10 @@ public class PartyFragment extends Fragment {
     title = TextWrapper.wrap(view, R.id.title);
     party = view.findViewById(R.id.party);
     scroll = Wrapper.wrap(view, R.id.scroll);
-    startBattle = Wrapper.wrap(view, R.id.start_battle);
-    startBattle.onClick(this::startBattle)
-        .description("Start Battle", "Start a battle with the party. Monsters can be added once "
-            + "the battle has started.");
+    startEncounter = Wrapper.wrap(view, R.id.start_encounter);
+    startEncounter.onClick(this::startEncounter)
+        .description("Start Encounter", "Start an encounter with the party. "
+            + "Monsters can be added once the encounter has started.");
     battleView = view.findViewById(R.id.battle);
     battleView.setVisibility(View.GONE);
 
@@ -136,48 +147,36 @@ public class PartyFragment extends Fragment {
   public void onResume() {
     super.onResume();
 
-    updateCampaignId(campaigns.getCurrentCampaignId().getValue());
+    update(characters);
   }
 
+  /*
   private void updateCampaignId(String campaignId) {
     Status.log("updating campaign id to " + campaignId);
     campaigns.getCampaign(campaign.getCampaignId()).removeObservers(this);
     campaigns.getCampaign(campaignId).observe(this, this::updateCampaign);
   }
+  */
 
-  private void updateCampaign(Optional<Campaign> campaign) {
+  private void update(Characters characters) {
     if (campaign.isPresent()) {
-      Status.log("updading campaign " + campaign);
-      this.campaign.getCharacterIds().removeObservers(this);
-
-      this.campaign = campaign.get();
-      battleView.update(this.campaign);
-
-      // No need to refresh the view, as we get a new set of characters anyway.
-      this.campaign.getCharacterIds().observe(this, this::updateCharacterIds);
-      this.campaign.getCreatureIds().observe(this, this::updateCreatureIds);
-
       // Refresh the view buttons and such.
       TransitionManager.beginDelayedTransition(view, transition);
-      addCharacter.visible(!this.campaign.inBattle());
-      xp.visible(this.campaign.isLocal() && !this.campaign.inBattle()
-          && !this.campaign.isDefault());
-
-      Battle battle = this.campaign.getBattle();
-      if (this.campaign.inBattle()) {
+      addCharacter.visible();
+      xp.visible(campaign.get().amDM() && battle.isPresent() && !this.battle.get().inBattle());
+      if (battle.isPresent() && battle.get().inBattle()) {
         title.text("Battle - " +
-            (battle.isSurprised() ? "Surprise" : "Turn " + battle.getTurn()))
+            (battle.get().isSurprised() ? "Surprise" : "Turn " + battle.get().getTurn()))
             .backgroundColor(R.color.battleLight);
         scroll.backgroundColor(R.color.battleDark);
-        startBattle.gone();
-        conditions.setVisibility(
-            this.campaign.getBattle().isStarting() ? View.GONE : View.VISIBLE);
+        startEncounter.gone();
+        conditions.setVisibility(battle.get().isStarting() ? View.GONE : View.VISIBLE);
       } else {
         title.text("Party");
         title.backgroundColor(R.color.characterLight);
         scroll.backgroundColor(R.color.cell);
         initiative.setVisibility(View.GONE);
-        startBattle.visible(this.campaign.isLocal() && !this.campaign.isDefault());
+        startEncounter.visible(this.campaign.get().amDM());
         conditions.setVisibility(View.VISIBLE);
       }
 
@@ -187,11 +186,27 @@ public class PartyFragment extends Fragment {
           ((ConditionCreatureView) view).update(campaign.get());
         }
       }
+
+      updateChips();
     }
   }
 
-  private void updateCharacterIds(ImmutableList<String> characterIds) {
-    Status.log("updating characters for " + campaign + ": " + characterIds);
+  private void update(Images images) {
+    for (ChipView chip: chipsById.values()) {
+      chip.update();
+    }
+  }
+
+  public void show(Campaign campaign) {
+    this.campaign = Optional.of(campaign);
+    this.battle = Optional.empty(); //Optional.of(encounters.get(campaign.getId()));
+    //battleView.update(this.campaign);
+
+    update(characters);
+  }
+
+  private void updateChips() {
+      /*
     for (String characterId : characterIds) {
       LiveData<Optional<Character>> character = CompanionApplication.get(getContext())
           .characters().getCharacter(characterId);
@@ -201,20 +216,27 @@ public class PartyFragment extends Fragment {
         character.getValue().get().loadImage().observe(this, this::updateImage);
       }
     }
+      */
+
+    Collection<Character> campaignCharacters =
+        characters.getCampaignCharacters(campaign.get().getId());
+    Set<String> characterIds = campaignCharacters.stream()
+        .map(Character::getId)
+        .collect(Collectors.toSet());
 
     // Remove all chips for which we don't have characters anymore.
     for (Iterator<String> i = chipsById.keySet().iterator(); i.hasNext(); ) {
       String chipId = i.next();
-      if (chipId.startsWith(Character.TYPE) && !characterIds.contains(chipId)) {
+      if (chipId.startsWith("characters") && !characterIds.contains(chipId)) {
         chipsById.remove(chipId);
       }
     }
 
     // Add all new chips.
-    for (Character character : campaign.getCharacters()) {
-      if (!chipsById.containsKey(character.getCharacterId())) {
-        chipsById.put(character.getCharacterId(),
-            new CharacterChipView(getContext(), character, campaign.getBattle()));
+    for (Character character : campaignCharacters) {
+      if (!chipsById.containsKey(character.getId())) {
+        chipsById.put(character.getId(),
+            new CharacterChipView(getContext(), character));
       }
     }
 
@@ -232,25 +254,28 @@ public class PartyFragment extends Fragment {
     Status.log("updating creatures for " + campaign + ": " + creatureIds);
 
     // Only add monster chips for local campaigns (the DM).
-    if (campaign.isLocal()) {
+    if (campaign.isPresent() && campaign.get().amDM()) {
       // Remove all chips for which we don't have creatures anymore.
       chipsById.keySet()
-          .removeIf(chipId -> chipId.startsWith(Creature.TYPE) && !creatureIds.contains(chipId));
+          .removeIf(chipId -> chipId.startsWith("creature") && !creatureIds.contains(chipId));
 
       // Add all new chips.
       for (String creatureId : creatureIds) {
         if (!chipsById.containsKey(creatureId)) {
+          /*
           LiveData<Optional<Creature>> creature =
               CompanionApplication.get(getContext()).creatures().getCreature(creatureId);
           creature.observe(this, this::updateCreature);
           if (creature.getValue().isPresent()) {
-            chipsById.put(creatureId, new CreatureChipView(getContext(), creature.getValue().get()));
-            campaign.getBattle().addCreature(creatureId);
+            chipsById.put(creatureId, new CreatureChipView(getContext(), creature.getValue().get
+            ()));
+            battle.addCreature(creatureId);
           }
+          */
         }
       }
     } else {
-      chipsById.keySet().removeIf(chipId -> chipId.startsWith(Creature.TYPE));
+      chipsById.keySet().removeIf(chipId -> chipId.startsWith("creature"));
     }
 
     redrawChips();
@@ -258,21 +283,21 @@ public class PartyFragment extends Fragment {
 
   @Nullable
   private CharacterChipView chip(Character character) {
-    return (CharacterChipView) chipsById.get(character.getCharacterId());
+    return (CharacterChipView) chipsById.get(character.getId());
   }
 
   @Nullable
-  private CreatureChipView chip(Creature creature) {
-    return chipsById.get(creature.getCreatureId());
+  private CreatureChipView chip(Monster monster) {
+    return chipsById.get(monster.getId());
   }
 
   private void updateCharacter(Optional<Character> character) {
     if (character.isPresent()) {
       if (character.get().hasInitiative()) {
-        charactersNeedingInitiative.remove(character.get().getCharacterId());
-      } else if (character.get().isLocal()
-          && campaign.getBattle().getCreatureIds().contains(character.get().getCharacterId())) {
-        charactersNeedingInitiative.put(character.get().getCharacterId(), character.get());
+        charactersNeedingInitiative.remove(character.get().getId());
+      } else if (character.get().amPlayer()
+          && battle.get().getCreatureIds().contains(character.get().getId())) {
+        charactersNeedingInitiative.put(character.get().getId(), character.get());
       }
 
       CharacterChipView chip = chip(character.get());
@@ -284,23 +309,24 @@ public class PartyFragment extends Fragment {
       redrawChips();
     }
 
-    if (campaign.inBattle()) {
+    if (battle.get().inBattle()) {
       if (charactersNeedingInitiative.isEmpty()) {
         initiative.setVisibility(View.GONE);
-        if (campaign.isLocal() && campaign.getBattle().isStarting()) {
-          campaign.getBattle().start();
+        if (campaign.get().amDM() && battle.get().isStarting()) {
+          battle.get().start();
         }
       } else {
         // Only local characters can need initiative.
         Character initCharacter = charactersNeedingInitiative.values().iterator().next();
         initiative.setVisibility(View.VISIBLE);
+        /*
         initiative.setLabel("Initiative for " + initCharacter.getName());
         initiative.setModifier(initCharacter.initiativeModifier());
         initiative.setSelectAction(i -> {
           TransitionManager.beginDelayedTransition(view, transition);
-          Battle battle = campaign.getBattle();
-          initCharacter.asLocal().setBattle(i, battle.getNumber());
+          initCharacter.setBattle(i, battle.get().getNumber());
         });
+        */
       }
     }
 
@@ -308,41 +334,36 @@ public class PartyFragment extends Fragment {
     addAllConditions();
   }
 
+  /*
   private void updateCreature(Optional<Creature> creature) {
     conditions.removeAllViews();
     addAllConditions();
   }
-
-  private void updateImage(Optional<Image> image) {
-    if (image.isPresent()) {
-      CreatureChipView chip = chipsById.get(image.get().getId());
-      if (chip instanceof CharacterChipView) {
-        ((CharacterChipView) chip).update(image.get());
-      }
-    }
-  }
+  */
 
   private void createCharacter() {
-    CharacterDialog.newInstance("", campaign.getCampaignId()).display();
+    CharacterDialog.newInstance("", campaign.get().getId()).display();
   }
 
   private void chooseXp() {
-    XPDialog.newInstance(campaign.getCampaignId()).display();
+    XPDialog.newInstance(campaign.get().getId()).display();
   }
 
-  private void startBattle() {
-    if (!campaign.isLocal()) {
+  private void startEncounter() {
+    if (!campaign.get().amDM()) {
       Status.error("Cannot start battle in a remote campaign.");
       return;
     }
 
+    /*
     if (campaign.getCharacters().isEmpty()) {
       Status.error("Cannot start battle without characters");
       return;
     }
+    */
 
     charactersNeedingInitiative.clear();
-    campaign.getBattle().setup();
+    battle.get().setup();
   }
 
   private void redrawChips() {
@@ -351,37 +372,49 @@ public class PartyFragment extends Fragment {
     TransitionManager.beginDelayedTransition(view, transition);
     party.removeAllViews();
 
-    List<String> ids = campaign.getBattle().obtainCreatureIds();
+    if (campaign.isPresent()) {
+      for (Character character : characters.getCampaignCharacters(campaign.get().getId())) {
+        CreatureChipView chip = chipsById.get(character.getId());
+        if (chip != null) {
+          chip.addTo(party);
+        }
+      }
+    }
+    /*
+    List<String> ids = battle.get().obtainCreatureIds();
     for (String id : ids) {
       CreatureChipView chip = chipsById.get(id);
       if (chip != null) {
         chip.addTo(party);
-        chip.setBattleMode(campaign.getBattle().getStatus());
-        chip.select(campaign.getBattle().isOngoingOrSurprised()
-            && chip.getCreatureId().equals(campaign.getBattle().getCurrentCreatureId()));
+        chip.setBattleMode(battle.get().getStatus());
+        chip.select(battle.get().isOngoingOrSurprised()
+            && chip.getCreatureId().equals(battle.get().getCurrentCreatureId()));
       }
     }
+    */
   }
 
   private void addAllConditions() {
-    for (Character character : campaign.getCharacters()) {
-      if (character.isLocal() || campaign.isLocal()) {
+    for (Character character : characters.getCampaignCharacters(campaign.get().getId())) {
+      if (character.amPlayer() || campaign.get().amDM()) {
         addConditions(character);
       }
     }
 
-    if (campaign.isLocal()) {
-      for (Creature creature : campaign.getCreatures()) {
+    /*
+    if (campaign.get().amDM()) {
+      for (Creature creature : characters.getCampaignCharacters(campaign.get().getId()) {
         addConditions(creature);
       }
     }
+    */
   }
 
-  private void addConditions(BaseCreature shown) {
+  private void addConditions(Creature shown) {
     ConditionCreatureView creatureView =
-        new ConditionCreatureView(getContext(), shown.getName(), campaign.getBattle());
+        new ConditionCreatureView(getContext(), shown.getName(), battle.get());
 
-    creatureView.addConditions(shown, campaign.isLocal());
+    creatureView.addConditions(shown, campaign.get().amDM());
 
     if (creatureView.hasConditions()) {
       conditions.addView(creatureView);

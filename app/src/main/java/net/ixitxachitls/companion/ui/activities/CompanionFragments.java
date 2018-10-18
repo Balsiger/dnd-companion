@@ -29,16 +29,16 @@ import android.view.View;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.LocalCharacterFragment;
-import net.ixitxachitls.companion.ui.fragments.SettingsFragment;
+import net.ixitxachitls.companion.ui.fragments.UserFragment;
 
 import java.util.Optional;
 
@@ -54,18 +54,18 @@ public class CompanionFragments {
 
   private static CompanionFragments singleton;
 
-  private final Campaigns campaigns;
+  private final CompanionContext context;
   private FragmentManager fragmentManager;
 
   private Optional<CompanionFragment> currentFragment = Optional.empty();
   private Optional<CampaignFragment> campaignFragment = Optional.empty();
   private Optional<CampaignsFragment> campaignsFragment = Optional.empty();
-  private Optional<SettingsFragment> settingsFragment = Optional.empty();
+  private Optional<UserFragment> settingsFragment = Optional.empty();
   private Optional<CharacterFragment> characterFragment = Optional.empty();
   private Optional<LocalCharacterFragment> localCharacterFragment = Optional.empty();
 
-  private CompanionFragments(Campaigns campaigns, FragmentManager fragmentManager) {
-    this.campaigns = campaigns;
+  private CompanionFragments(CompanionContext context, FragmentManager fragmentManager) {
+    this.context = context;
     this.fragmentManager = fragmentManager;
   }
 
@@ -73,9 +73,9 @@ public class CompanionFragments {
     currentFragment = Optional.of(fragment);
   }
 
-  public static void init(Campaigns campaigns, FragmentManager fragmentManager) {
+  public static void init(CompanionContext context, FragmentManager fragmentManager) {
     if (singleton == null) {
-      singleton = new CompanionFragments(campaigns, fragmentManager);
+      singleton = new CompanionFragments(context, fragmentManager);
     } else {
       singleton.fragmentManager = fragmentManager;
     }
@@ -102,7 +102,7 @@ public class CompanionFragments {
     switch(fragment) {
       case settings:
         if (!settingsFragment.isPresent()) {
-          settingsFragment = Optional.of(new SettingsFragment());
+          settingsFragment = Optional.of(new UserFragment());
         }
         return show(settingsFragment.get(), sharedElement);
 
@@ -172,18 +172,17 @@ public class CompanionFragments {
     return currentFragment.get().goBack();
   }
 
-  public void showCampaign(FSCampaign campaign, Optional<View> shared) {
-    campaigns.changeCurrent(campaign.getId());
-    if (campaign.amDM()) {
-      show(CompanionFragment.Type.campaign, shared);
-      if (campaignFragment.isPresent()) {
-        campaignFragment.get().showCampaign(campaign);
-      }
+  public void showCampaign(Campaign campaign, Optional<View> shared) {
+    // TODO(merlin): Do we still need this?
+    //context.campaigns().changeCurrent(campaign.getId());
+    show(CompanionFragment.Type.campaign, shared);
+    if (campaignFragment.isPresent()) {
+      campaignFragment.get().showCampaign(campaign);
     }
   }
 
   public void showCharacter(Character character, Optional<View> shared) {
-    if (character.isLocal()) {
+    if (character.amPlayer()) {
       show(CompanionFragment.Type.localCharacter, shared);
       if (localCharacterFragment.isPresent()) {
         localCharacterFragment.get().showCharacter(character);

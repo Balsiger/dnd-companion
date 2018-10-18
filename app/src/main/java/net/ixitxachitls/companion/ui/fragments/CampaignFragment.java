@@ -21,7 +21,11 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.CallSuper;
 import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
@@ -33,8 +37,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
-import net.ixitxachitls.companion.data.documents.FSCampaigns;
+import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
@@ -44,13 +48,17 @@ import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.io.IOException;
 import java.util.Optional;
+
+import static android.app.Activity.RESULT_OK;
 
 /** A fragment displaying campaign information. */
 public class CampaignFragment extends CompanionFragment {
 
-  protected FSCampaigns campaigns;
-  protected FSCampaign campaign;
+  private final int PICK_IMAGE = 1;
+
+  protected Campaign campaign;
 
   // UI elements.
   protected CampaignTitleView title;
@@ -59,6 +67,7 @@ public class CampaignFragment extends CompanionFragment {
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> calendar;
   protected Wrapper<FloatingActionButton> invite;
+  protected PartyFragment party;
   protected HistoryFragment history;
 
   public CampaignFragment() {
@@ -70,8 +79,6 @@ public class CampaignFragment extends CompanionFragment {
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
-    this.campaigns = fsCampaigns();
-
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
@@ -79,6 +86,8 @@ public class CampaignFragment extends CompanionFragment {
         .onClick(this::goBack)
         .description("Back", "Go back to the list of campaigns.");
     title = view.findViewById(R.id.title);
+    title.setImageAction(this::editImage);
+    images().observe(this, title::update);
     delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).gone();
     delete.onClick(this::deleteCampaign).gone()
         .description("Delete", "Delete this campaign. This action cannot be undone and will send "
@@ -95,17 +104,20 @@ public class CampaignFragment extends CompanionFragment {
     date = TextWrapper.wrap(view, R.id.date)
         .description("Calendar", "Open the calendar for the campaign to allow you to change the "
             + "current date and time of your campaign.");
+    party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     history = (HistoryFragment) getChildFragmentManager().findFragmentById(R.id.history);
 
     return view;
   }
 
-  public void showCampaign(FSCampaign campaign) {
+  public void showCampaign(Campaign campaign) {
     if (this.campaign != null) {
       this.campaign.unobserve(this);
     }
     this.campaign = campaign;
     this.campaign.observe(this, this::update);
+    characters().addPlayers(campaign);
+    party.show(campaign);
     history.update(campaign.getId());
 
     if (campaign.amDM()) {
@@ -130,8 +142,9 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   @CallSuper
-  protected void update(FSCampaign campaign) {
+  protected void update(Campaign campaign) {
     title.update(campaign);
+    title.update(images());
     date.text(campaign.getCalendar().format(campaign.getDate()));
     delete.visible(canDeleteCampaign());
   }
@@ -145,7 +158,7 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   protected void deleteCampaignOk() {
-    campaigns.remove(campaign);
+    campaigns().remove(campaign);
     Toast.makeText(getActivity(), getString(R.string.campaign_deleted), Toast.LENGTH_SHORT).show();
     show(Type.campaigns);
   }
@@ -171,5 +184,30 @@ public class CampaignFragment extends CompanionFragment {
   public boolean goBack() {
     CompanionFragments.get().show(Type.campaigns, Optional.of(title));
     return true;
+  }
+
+  private void editImage() {
+    Intent intent = new Intent();
+    // Show only images, no videos or anything else
+    intent.setType("image/*");
+    intent.setAction(Intent.ACTION_GET_CONTENT);
+    // Always show the chooser (if there are multiple options available)
+    startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+  }
+
+  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    if (requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
+        data != null && data.getData() != null) {
+      try {
+        Uri uri = data.getData();
+        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+        images().set(campaign.getId(), bitmap);
+      } catch (IOException e) {
+        Status.toast("Cannot load image bitmap: " + e);
+      }
+    }
   }
 }

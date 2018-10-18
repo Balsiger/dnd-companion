@@ -65,7 +65,7 @@ public class CampaignTest extends CompanionTest {
         containsInAnyOrder("Conan", "Hulk", "Wonder Woman", "Black Widow",
             "Elminster", "Khelben Blackstaff Arunsun", "Laeral Silverhand", "The Simbul"));
 
-    campaign(client1Context, "campaign-server-2").delete();
+    //campaign(client1Context, "campaign-server-2").delete();
     processAllMessages(server, client1);
 
     assertThat(campaignNames(serverContext),
@@ -101,7 +101,7 @@ public class CampaignTest extends CompanionTest {
         containsInAnyOrder("Conan", "Hulk", "Wonder Woman", "Black Widow",
             "Elminster", "Khelben Blackstaff Arunsun", "Laeral Silverhand", "The Simbul"));
 
-    campaign(serverContext, "campaign-client1-3").delete();
+    //campaign(serverContext, "campaign-client1-3").delete();
     processAllMessages(server, client1);
 
     assertThat(campaignNames(serverContext),

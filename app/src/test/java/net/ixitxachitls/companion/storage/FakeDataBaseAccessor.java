@@ -28,11 +28,6 @@ import android.net.Uri;
 
 import com.google.protobuf.MessageLite;
 
-import net.ixitxachitls.companion.data.dynamics.Creature;
-import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
-import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
-import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
-import net.ixitxachitls.companion.data.dynamics.RemoteCharacter;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.proto.Entry;
 
@@ -97,21 +92,6 @@ public abstract class FakeDataBaseAccessor implements DataBaseAccessor {
 
   private Map<Long, byte []> table(Uri table) {
     switch (table.getEncodedPath()) {
-      case "/" + LocalCampaign.TABLE:
-        return localCampaignsById;
-
-      case "/" + RemoteCampaign.TABLE:
-        return remoteCampaignsById;
-
-      case "/" + LocalCharacter.TABLE:
-        return localCharactersById;
-
-      case "/" + RemoteCharacter.TABLE:
-        return remoteCharactersById;
-
-      case "/" + Creature.TABLE_LOCAL:
-        return remoteCharactersById;
-
       case "/" + ScheduledMessage.TABLE:
         return messagesById;
 

@@ -22,71 +22,47 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.support.annotation.CallSuper;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.view.View;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.User;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
-import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import java.util.Optional;
 
 /**
  * View for a campaign title.
  */
-public class CampaignTitleView extends LinearLayout {
+public class CampaignTitleView extends TitleView { //extends LinearLayout {
 
-  private FSCampaign campaign ;
-
-  // Ui elements.
-  private TitleView title;
-  private TextWrapper<TextView> dm;
+  private Optional<Campaign> campaign = Optional.empty();
 
   public CampaignTitleView(Context context) {
     super(context);
-
-    setup();
   }
 
   public CampaignTitleView(Context context, AttributeSet attributes) {
     super(context, attributes);
-
-    setup();
   }
 
-  public void addTo(ViewGroup group) {
-    ViewGroup parent = (ViewGroup) getParent();
-    if (parent != null) {
-      parent.removeView(this);
-    }
+  @Override
+  @CallSuper
+  protected View init(AttributeSet attributes) {
+    View view = super.init(attributes);
 
-    group.addView(this);
+    view.setBackgroundColor(getContext().getColor(R.color.campaign));
+    setDefaultImage(R.drawable.image_filter_hdr);
+    return view;
   }
 
-  private void setup() {
-    RelativeLayout view = (RelativeLayout)
-        LayoutInflater.from(getContext()).inflate(R.layout.view_campaign_title, this, false);
-    // Adding the margin in the xml layout does not work.
-    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-        ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-    params.setMargins(0, 0, 0, 2);
-    view.setLayoutParams(params);
 
-    title = view.findViewById(R.id.title);
-    dm = TextWrapper.wrap(view, R.id.dm);
-    dm.description("DM", "This indicates that you are the Dungeon Master of the campaign. You are "
-        + "the only person that can make changes to the values and settings of the campaign.");
-
-    addView(view);
-  }
-
-  public void update(FSCampaign campaign) {
-    this.campaign = campaign;
+  public void update(Campaign campaign) {
+    this.campaign = Optional.of(campaign);
     refresh();
   }
 
@@ -94,24 +70,26 @@ public class CampaignTitleView extends LinearLayout {
     refresh();
   }
 
-  public void setAction(Wrapper.Action action) {
-    title.setAction(action);
+  public void update(Images images) {
+    refresh();
   }
-
-  public void removeAction() {
-    title.removeAction();
-  }
-
 
   public void refresh() {
-    if (campaign != null) {
-      title.setTitle(campaign.getName());
-      title.setSubtitle(campaign.getWorld().toString() + ", " + campaign.getDm());
-      dm.visible(campaign.amDM());
-    }
-  }
+    if (campaign.isPresent()) {
+      setTitle(campaign.get().getName());
+      setSubtitle(campaign.get().getWorld().toString() + ", " + campaign.get().getDm());
 
-  @Deprecated
-  public void update(Campaign campaign) {
+      clearIcons();
+      if (campaign.get().amDM()) {
+        addIcon(R.drawable.noun_eye_of_providence_24673);
+      }
+
+      Optional<Bitmap> bitmap = CompanionApplication.get().images().get(campaign.get().getId());
+      if (bitmap.isPresent()) {
+        setImageBitmap(bitmap.get());
+      } else {
+        clearImage(R.drawable.image_filter_hdr);
+      }
+    }
   }
 }

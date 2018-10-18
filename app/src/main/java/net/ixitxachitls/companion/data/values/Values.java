@@ -21,15 +21,41 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import java.util.List;
 import java.util.Map;
 
 /**
  * Some auxiliary functions for values.
  */
 public class Values {
+  public static String get(Map<String, Object> data, String field, String defaultValue) {
+    if (data.containsKey(field)) {
+      return (String) data.get(field);
+    }
+
+    return defaultValue;
+  }
+
   public static long get(Map<String, Object> data, String field, long defaultValue) {
     if (data.containsKey(field)) {
       return (long) data.get(field);
+    }
+
+    return defaultValue;
+  }
+
+  public static <E extends Enum<E>> E get(Map<String, Object> data, String field, E defaultValue) {
+    if (data.containsKey(field)) {
+      return (E) Enum.valueOf(defaultValue.getClass(), (String) data.get(field));
+    }
+
+    return defaultValue;
+  }
+
+  public static List<String> get(Map<String, Object> data, String field,
+                                 List<String> defaultValue) {
+    if (data.containsKey(field)) {
+      return (List<String>) data.get(field);
     }
 
     return defaultValue;

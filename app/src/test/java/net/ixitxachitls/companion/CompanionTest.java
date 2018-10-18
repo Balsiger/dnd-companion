@@ -29,8 +29,8 @@ import com.google.common.collect.ImmutableList;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.FakeCompanionContext;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
 import net.ixitxachitls.companion.net.CompanionMessenger;
@@ -109,21 +109,21 @@ public abstract class CompanionTest {
   }
 
   protected Character character(CompanionContext context, String id) {
-    return context.characters().getCharacter(id).getValue().get();
+    return context.characters().get(id).get();
   }
 
-  protected FSCampaign campaign(CompanionContext context, String id) {
-    return context.fsCampaigns().getCampaign(id).get();
+  protected Campaign campaign(CompanionContext context, String id) {
+    return context.campaigns().get(id).get();
   }
 
   protected List<String> campaignNames(CompanionContext context) {
-    return context.fsCampaigns().getCampaigns().stream()
-        .map(FSCampaign::getName)
+    return context.campaigns().getCampaigns().stream()
+        .map(Campaign::getName)
         .collect(Collectors.toList());
   }
 
   protected List<String> characterNames(CompanionContext context) {
-    return context.characters().getAllCharacters().stream()
+    return context.characters().getAll().stream()
         .map(Character::getName)
         .collect(Collectors.toList());
   }
@@ -289,14 +289,14 @@ public abstract class CompanionTest {
 
   List<String> ids(CompanionMessenger ... messengers) {
     return Arrays.asList(messengers).stream()
-        .map(m -> m.getContext().me().get().getId())
+        .map(m -> m.getContext().me().getId())
         .collect(Collectors.toList());
   }
 
   List<String> serverIds(CompanionMessenger ... messengers) {
     return Arrays.asList(messengers).stream()
         .filter(m -> m.getServer().started())
-        .map(m -> m.getContext().me().get().getId())
+        .map(m -> m.getContext().me().getId())
         .collect(Collectors.toList());
   }
 

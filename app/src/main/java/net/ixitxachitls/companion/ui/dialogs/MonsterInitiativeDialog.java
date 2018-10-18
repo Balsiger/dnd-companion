@@ -32,13 +32,12 @@ import android.widget.NumberPicker;
 
 import com.google.common.base.Preconditions;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Creature;
-import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
-import net.ixitxachitls.companion.util.Dice;
 
 import java.util.Optional;
 
@@ -80,7 +79,7 @@ public class MonsterInitiativeDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = campaigns().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
+    campaign = campaigns().get(getArguments().getString(ARG_CAMPAIGN_ID));
     monsterId = getArguments().getInt(ARG_MONSTER_ID);
   }
 
@@ -110,18 +109,22 @@ public class MonsterInitiativeDialog extends Dialog {
       return;
     }
 
-    Creature creature = new Creature(data(), 0, name.getText(), campaign.get().getCampaignId(),
+    /*
+    Creature creature = new Creature(data(), 0, name.getText(), campaign.get().getId(),
         Dice.d20() + modifier.get().getValue() - 20);
     creature.store();  // Storing will also add the creature.
-    campaign.get().getBattle().setLastMonsterName(name.getText());
+    CompanionApplication.get(getContext()).battles().get(campaign.get().getId())
+        .setLastMonsterName(name.getText());
     save();
+    */
   }
 
   private String makeName() {
     if (!campaign.isPresent()) {
-      return Battle.DEFAULT_MONSTER_NAME;
+      return Encounter.DEFAULT_MONSTER_NAME;
     }
 
-    return campaign.get().getBattle().numberedMonsterName();
+    return CompanionApplication.get(getContext()).encounters().get(campaign.get().getId())
+        .numberedMonsterName();
   }
 }

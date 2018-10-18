@@ -27,10 +27,8 @@ import android.support.annotation.VisibleForTesting;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
@@ -39,10 +37,8 @@ import net.ixitxachitls.companion.net.nsd.NsdAccessor;
 import net.ixitxachitls.companion.util.Ids;
 import net.ixitxachitls.companion.util.Misc;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 /**
  * Class handling all sending, receiving and processing of network messages.
@@ -94,26 +90,20 @@ public class CompanionMessenger implements Runnable {
     handler.removeCallbacks(this);
   }
 
-  public boolean isOnline(Campaign campaign) {
-    if (campaign.isLocal()) {
-      return campaign.isPublished() && companionServer.isOnline();
-    } else {
-      return companionClients.isServerOnline(campaign.getServerId());
-    }
-  }
-
   public CompanionContext getContext() {
     return companionContext;
   }
 
+  /*
   public void send(Campaign campaign) {
     Status.log("sending campaign " + campaign + " to all");
     if (!campaign.isLocal()) {
       Status.error("Cannot sent remote campaign!");
     } else {
-      companionServer.schedule(clientIds(campaign), CompanionMessageData.from(campaign));
+      //companionServer.schedule(clientIds(campaign), CompanionMessageData.from(campaign));
     }
   }
+*/
 
   /**
    * Send the current state of all data to the given recipient.
@@ -121,13 +111,14 @@ public class CompanionMessenger implements Runnable {
    */
   public void sendCurrent(String recipientId) {
     // Send all local campaigns.
-    for (Campaign campaign : companionContext.campaigns().getLocalCampaigns()) {
-      if (campaign.isPublished()
+    for (Campaign campaign : companionContext.campaigns().getCampaigns()) {
+      if (campaign.amDM()
           && !Misc.onEmulator() /*&& !getContext().settings().useRemoteCampaigns()*/) {
-        companionServer.schedule(recipientId, CompanionMessageData.from(campaign));
+        //companionServer.schedule(recipientId, CompanionMessageData.from(campaign));
 
         // Send all characters and images of the campaign that are not under the recipients control.
-        for (Character character : campaign.getCharacters()) {
+        /*
+        for (Character character : companionContext.characters().getCharacters()) {
           if (!character.getServerId().equals(recipientId)) {
             companionServer.schedule(recipientId, CompanionMessageData.from(character));
             Optional<Image> image = character.loadImage().getValue();
@@ -137,11 +128,13 @@ public class CompanionMessenger implements Runnable {
             }
           }
         }
+        */
       }
     }
 
     // Send all the data for campaigns controlled by the recipient.
-    for (Campaign campaign : companionContext.campaigns().getRemoteCampaigns()) {
+    /*
+    for (Campaign campaign : companionContext.fsCampaigns().getRemoteCampaigns()) {
       if (campaign.getServerId().equals(recipientId)) {
         for (Character character : campaign.getCharacters()) {
           if (character.isLocal()) {
@@ -155,28 +148,28 @@ public class CompanionMessenger implements Runnable {
         }
       }
     }
+    */
   }
 
+  /*
   public void send(Character character) {
     Status.log("sending character " + character + " to all");
     Optional<Campaign> campaign =
-        companionContext.campaigns().getCampaign(character.getCampaignId()).getValue();
+        companionContext.campaigns().get(character.getCampaignId());
     if (campaign.isPresent()) {
-      if (campaign.get().isLocal()) {
+      if (campaign.get().amDM()) {
         // If the character is local, we have to send it to all clients for update.
         // If the character is remote, we got an update from a client and likewise need to update all
         // clients.
-        if (campaign.get().isPublished()) {
-          // Send the character to all connected clients and all owners of characters in the same
-          // campaign.
-          companionServer.schedule(clientIds(campaign.get(), character.getServerId()),
-              CompanionMessageData.from(character));
-        }
+        // Send the character to all connected clients and all owners of characters in the same
+        // campaign.
+        companionServer.schedule(clientIds(campaign.get(), character.getServerId()),
+            CompanionMessageData.from(character));
       } else {
         if (character.isLocal()) {
           // Send the character to the server for redestribution.
-          companionClients.schedule(campaign.get().getServerId(),
-              CompanionMessageData.from(character));
+          //companionClients.schedule(campaign.get().getServerId(),
+          //    CompanionMessageData.from(character));
         } else {
           Status.log("Cannot publish a remote character for a remote campaign.");
         }
@@ -185,24 +178,26 @@ public class CompanionMessenger implements Runnable {
       Status.log("Campaign not found, character " + character + " not sent");
     }
   }
+  */
 
   public void send(Image image) {
     Status.log("sending image " + image + " to all");
     switch (image.getType()) {
+      /*
       case Character.TABLE:
         Optional<Character> character = companionContext.characters().getCharacter(image.getId()).getValue();
         if (character.isPresent()) {
           Optional<Campaign> campaign =
-              companionContext.campaigns().getCampaign(character.get().getCampaignId()).getValue();
+              companionContext.campaigns().getCampaign(character.get().getCampaignId());
           if (campaign.isPresent()) {
-            if (campaign.get().isLocal() || !character.get().isLocal()) {
+            if (campaign.get().amDM() || !character.get().isLocal()) {
               // Send the image to all known clients, except the owner.
               companionServer.schedule(
                   clientIds(campaign.get(), Ids.extractServerId(image.getId())),
                   CompanionMessageData.from(companionContext, image));
             } else {
               // Send the image to the server (unless we are the server as well).
-              if (!campaign.get().getServerId().equals(companionContext.me().get().getId())) {
+              if (!campaign.get().getServerId().equals(companionContext.me().getId())) {
                 companionClients.schedule(campaign.get().getServerId(),
                     CompanionMessageData.from(companionContext, image));
               }
@@ -214,6 +209,7 @@ public class CompanionMessenger implements Runnable {
           Status.log("cannot find character for image " + image);
         }
         break;
+    */
 
       default:
         Status.toast("Unsupported image type cannot be sent");
@@ -224,6 +220,7 @@ public class CompanionMessenger implements Runnable {
     // Local creatures should already be handled locally.
     if (!creature.isLocal()) {
       Status.log("sending timed condition " + condition + " to " + creature);
+      /*
       Optional<Campaign> campaign = creature.getCampaign();
       if (campaign.isPresent()) {
         if (campaign.get().isLocal()) {
@@ -236,11 +233,12 @@ public class CompanionMessenger implements Runnable {
       } else {
         Status.error("Cannot find campaign for " + creature + ", cannot send condition");
       }
+        */
     }
   }
 
   public void addItem(BaseCreature<?> creature, Item item) {
-    Optional<FSCampaign> campaign = creature.getCampaign();
+    Optional<Campaign> campaign = creature.getCampaign();
     if (!creature.isLocal() && campaign.isPresent() && campaign.get().amDM()) {
       Status.log("Sending newly created item " + item + " to " + creature);
       companionServer.schedule(Ids.extractServerId(creature.getCreatureId()),
@@ -250,16 +248,7 @@ public class CompanionMessenger implements Runnable {
     }
   }
 
-  public void sendDeletion(Campaign campaign) {
-    if (!campaign.isLocal()) {
-      Status.toast("cannot delete remote campaign");
-    }
-
-    companionServer.schedule(clientIds(campaign), CompanionMessageData.fromDelete(campaign));
-    revoke(campaign.getCampaignId());
-    Status.log("deleted campaign " + campaign);
-  }
-
+    /*
   public void sendDeletion(Character character) {
     Optional<Campaign> campaign =
         companionContext.campaigns().getCampaign(character.getCampaignId()).getValue();
@@ -277,8 +266,10 @@ public class CompanionMessenger implements Runnable {
       Status.toast("Cannot get campaign for character " + character + " for deletion");
     }
   }
+    */
 
   public void sendDeletion(String conditionName, String sourceId, BaseCreature creature) {
+    /*
     if (!creature.isLocal()) {
       Status.log("handling condition deletion for " + conditionName + " from "
           + companionContext.creatures().nameFor(sourceId) + " affecting " + creature.getName());
@@ -300,6 +291,7 @@ public class CompanionMessenger implements Runnable {
             + creature.getCampaignId());
       }
     }
+    */
   }
 
   // Images are deleted with the associated entry, thus don't need their own deletion
@@ -328,10 +320,10 @@ public class CompanionMessenger implements Runnable {
   }
 
   public void sendWelcome() {
-    companionClients.schedule(CompanionMessageData.fromWelcome(companionContext, companionContext.me().get().getId(),
-        companionContext.me().get().getNickname()));
+    companionClients.schedule(CompanionMessageData.fromWelcome(companionContext, companionContext.me().getId(),
+        companionContext.me().getNickname()));
     companionServer.schedule(CompanionMessageData.fromWelcome(companionContext,
-        companionContext.me().get().getId(), companionContext.me().get().getNickname()));
+        companionContext.me().getId(), companionContext.me().getNickname()));
   }
 
   public void ackServer(String recipientId, long messageId) {
@@ -342,18 +334,20 @@ public class CompanionMessenger implements Runnable {
     companionClients.ack(recipientId, messageId);
   }
 
+  /*
   private Set<String> clientIds(Campaign campaign, String ... ignoreIds) {
     Set<String> ids = companionServer.clientIds(campaign);
     ids.addAll(companionServer.connectedClientIds());
 
     // Ignore the given id and ourselves.
     if (!Misc.onEmulator()) {
-      ids.remove(companionContext.me().get().getId());
+      ids.remove(companionContext.me().getId());
     }
     ids.removeAll(Arrays.asList(ignoreIds));
 
     return ids;
   }
+  */
 
   @Override
   public void run() {
@@ -367,7 +361,7 @@ public class CompanionMessenger implements Runnable {
       // Check for messages from servers.
       List<CompanionMessage> serverMessages = companionClients.receive();
       if (!serverMessages.isEmpty()) {
-        Status.log(companionContext.me().get().getNickname() + " received " + serverMessages.size()
+        Status.log(companionContext.me().getNickname() + " received " + serverMessages.size()
             + " server messages for processing");
       }
       for (CompanionMessage serverMessage : serverMessages) {
@@ -378,7 +372,7 @@ public class CompanionMessenger implements Runnable {
       // Handle message from clients.
       List<CompanionMessage> clientMessages = companionServer.receive();
       if (!clientMessages.isEmpty()) {
-        Status.log(companionContext.me().get().getNickname() + " received " + clientMessages.size()
+        Status.log(companionContext.me().getNickname() + " received " + clientMessages.size()
             + " client messages for processing");
       }
       for (CompanionMessage clientMessage : clientMessages) {

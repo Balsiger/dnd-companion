@@ -23,13 +23,9 @@ package net.ixitxachitls.companion.net;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Campaigns;
-import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.Item;
-import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
-import net.ixitxachitls.companion.data.dynamics.RemoteCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Entry;
@@ -107,19 +103,8 @@ public class CompanionMessageData {
     return payload.getDebug();
   }
 
-  public RemoteCampaign getCampaign() {
-    return RemoteCampaign.fromProto(context, campaigns().getRemoteIdFor(payload.getCampaign().getId()),
-        payload.getCampaign());
-  }
-
-  public RemoteCharacter getCharacter() {
-    return RemoteCharacter.fromProto(context,
-        context.characters().getRemoteIdFor(payload.getCharacter().getCreature().getId()),
-        payload.getCharacter());
-  }
-
   public Image getImage() {
-    return Image.fromProto(context, payload.getImage());
+    return Image.fromProto(payload.getImage());
   }
 
   public Item getItemAdd() {
@@ -285,17 +270,13 @@ public class CompanionMessageData {
     return payload;
   }
 
+  /*
   public static CompanionMessageData from(Campaign campaign) {
     return fromProto(campaign.data(), Entry.CompanionMessageProto.Payload.newBuilder()
         .setCampaign(campaign.toProto())
         .build());
   }
-
-  public static CompanionMessageData from(Character character) {
-    return fromProto(character.data(), Entry.CompanionMessageProto.Payload.newBuilder()
-        .setCharacter(character.toProto())
-        .build());
-  }
+  */
 
   public static CompanionMessageData from(CompanionContext companionContext, Image image) {
     return fromProto(companionContext, Entry.CompanionMessageProto.Payload.newBuilder()
@@ -322,17 +303,13 @@ public class CompanionMessageData {
         .build());
   }
 
-  public static CompanionMessageData fromDelete(Character character) {
-    return fromProto(character.data(), Entry.CompanionMessageProto.Payload.newBuilder()
-        .setCharacterDelete(character.getCharacterId())
-        .build());
-  }
-
+  /*
   public static CompanionMessageData fromDelete(Campaign campaign) {
     return fromProto(campaign.data(), Entry.CompanionMessageProto.Payload.newBuilder()
         .setCampaignDelete(campaign.getCampaignId())
         .build());
   }
+  */
 
   public static CompanionMessageData fromDelete(CompanionContext companionContext, String conditionName, String sourceId,
                                                 String targetId) {

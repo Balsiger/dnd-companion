@@ -28,11 +28,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.AttributeSet;
-import android.view.View;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.dynamics.Image;
@@ -72,8 +72,8 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     super.setImageDrawable(drawable);
   }
 
-  public void clearImage() {
-    super.setImageResource(R.drawable.ic_person_black_48dp);
+  public void clearImage(@DrawableRes int defaultDrawable) {
+    super.setImageResource(defaultDrawable);
   }
 
   private Bitmap computeBitmap(Drawable drawable) {
@@ -86,12 +86,11 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
   }
 
   public void setAction(Wrapper.Action action) {
-    setOnClickListener(new OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        action.execute();
-      }
-    });
+    setOnClickListener(v -> action.execute());
+  }
+
+  public void clearAction() {
+    setOnClickListener(null);
   }
 
   public void loadImageUrl(String url) {

@@ -58,7 +58,7 @@ public class ScheduledMessages extends StoredEntries<ScheduledMessage> {
     List<ScheduledMessage> messages = new ArrayList<>();
 
     for (ScheduledMessage message : getAll()) {
-      if (message.matches(companionContext.me().get().getId(), receiverId)) {
+      if (message.matches(companionContext.me().getId(), receiverId)) {
         messages.add(message);
       }
     }

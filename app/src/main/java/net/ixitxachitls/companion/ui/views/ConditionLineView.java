@@ -28,7 +28,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.ui.MessageDialog;

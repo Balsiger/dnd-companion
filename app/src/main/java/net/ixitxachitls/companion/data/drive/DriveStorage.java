@@ -38,15 +38,7 @@ import com.google.android.gms.drive.DriveFolder;
 import com.google.android.gms.drive.Metadata;
 import com.google.android.gms.drive.MetadataChangeSet;
 import com.google.common.collect.ImmutableList;
-import com.google.protobuf.InvalidProtocolBufferException;
 
-import net.ixitxachitls.companion.CompanionApplication;
-import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Image;
-import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
-import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
-import net.ixitxachitls.companion.proto.Entry;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 import java.io.IOException;
@@ -276,6 +268,7 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                 @Override
                 public void onSuccess(DriveApi.DriveContentsResult result) {
                   net.ixitxachitls.companion.Status.log("reading file " + meta.getTitle());
+                    /*
                   try {
                     CompanionContext context = CompanionApplication.get(activity).context();
                     if (meta.getTitle().endsWith(".campaign")) {
@@ -299,6 +292,7 @@ public class DriveStorage implements GoogleApiClient.ConnectionCallbacks, Google
                     net.ixitxachitls.companion.Status.toast("Reading of file " + meta.getTitle()
                         + " failed!");
                   }
+                  */
                 }
 
                 @Override

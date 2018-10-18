@@ -45,11 +45,11 @@ public class CampaignDate {
   private final int minute;
 
   public CampaignDate() {
-    this(0, 0, 0, 0, 0);
+    this(1, 1, 1, 0, 0);
   }
 
   public CampaignDate(int year) {
-    this(year, 1, 0, 0, 0);
+    this(year, 1, 1, 0, 0);
   }
 
   public CampaignDate(int year, int month, int day, int hour, int minute) {

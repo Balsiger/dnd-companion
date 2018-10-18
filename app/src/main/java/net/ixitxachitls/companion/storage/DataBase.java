@@ -28,12 +28,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.Creature;
 import net.ixitxachitls.companion.data.dynamics.HistoryEntry;
-import net.ixitxachitls.companion.data.dynamics.LocalCampaign;
-import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
-import net.ixitxachitls.companion.data.dynamics.RemoteCampaign;
-import net.ixitxachitls.companion.data.dynamics.RemoteCharacter;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.util.Lazy;
 
@@ -47,16 +42,6 @@ public class DataBase extends SQLiteOpenHelper {
   public static final String COLUMN_ID = "id";
   public static final String COLUMN_PROTO = "proto";
 
-  public static final String CREATE_CAMPAIGNS_LOCAL = "CREATE TABLE " + LocalCampaign.TABLE
-      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CAMPAIGNS_REMOTE = "CREATE TABLE " + RemoteCampaign.TABLE
-      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CHARACTERS_LOCAL = "CREATE TABLE " + LocalCharacter.TABLE
-      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CHARACTERS_REMOTE = "CREATE TABLE " + RemoteCharacter.TABLE
-      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
-  public static final String CREATE_CREATURES_LOCAL = "CREATE TABLE " + Creature.TABLE_LOCAL
-      + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_MESSAGES = "CREATE TABLE " + ScheduledMessage.TABLE
       + " (" + COLUMN_ID + " INTEGER PRIMARY KEY," + COLUMN_PROTO + " BLOB);";
   public static final String CREATE_HISTORY = "CREATE TABLE " + HistoryEntry.TABLE
@@ -101,19 +86,8 @@ public class DataBase extends SQLiteOpenHelper {
 
 
   private void update(SQLiteDatabase db, int version) {
-    if (version <= 0) {
-      db.execSQL(CREATE_CAMPAIGNS_LOCAL);
-      db.execSQL(CREATE_CAMPAIGNS_REMOTE);
-      db.execSQL(CREATE_CHARACTERS_LOCAL);
-      db.execSQL(CREATE_CHARACTERS_REMOTE);
-    }
-
     if (version <= 2) {
       db.execSQL(CREATE_MESSAGES);
-    }
-
-    if (version <= 3) {
-      db.execSQL(CREATE_CREATURES_LOCAL);
     }
 
     if (version <= 5) {

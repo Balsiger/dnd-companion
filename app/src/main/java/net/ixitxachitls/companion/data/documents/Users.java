@@ -21,32 +21,37 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import net.ixitxachitls.companion.data.CompanionContext;
+
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Collection allowing access to user data.
  */
 public class Users extends Documents<Users> {
-  private final User me;
+  private Optional<User> me = Optional.empty();
 
-  public Users(User me) {
-    this.me = me;
-
-    usersById.put(me.getId(), me);
+  public Users(CompanionContext context) {
+    super(context);
   }
 
   private Map<String, User> usersById = new HashMap<>();
 
   public User getMe() {
-    return me;
+    if (me.isPresent()) {
+      return me.get();
+    }
+
+    throw new IllegalStateException("Tried to get logged in user before user logged in!");
   }
 
-  public User get(String email) {
-    User user = usersById.get(email);
+  public User get(String id) {
+    User user = usersById.get(id);
     if (user == null) {
-      user = new User(email);
-      usersById.put(email, user);
+      user = User.getOrCreate(context, id);
+      usersById.put(id, user);
     }
 
     return user;
@@ -55,5 +60,17 @@ public class Users extends Documents<Users> {
   public User fromPath(String path) {
     String email = path.replaceAll(User.PATH + "/(.*?)/.*", "$1");
     return get(email);
+  }
+
+  public void login(String id, String photoUrl) {
+    me = Optional.of(get(id));
+    me.get().whenCompleted(() -> {
+      me.get().setPhotoUrl(photoUrl);
+      me.get().store();
+
+      context.loggedIn(me.get());
+    });
+
+    usersById.put(me.get().getId(), me.get());
   }
 }

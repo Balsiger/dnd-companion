@@ -212,7 +212,7 @@ public class NetworkTest extends CompanionTest {
     processAllMessages(server, client1);
 
     // Send campaign deletion, requires ack.
-    server.sendDeletion(campaign(serverContext, "campaign-server-2"));
+    //server.sendDeletion(campaign(serverContext, "campaign-server-2"));
 
     assertLastMessage(server.getServer().getSchedulersByRecpientId().get("client1").getWaiting(),
         "server", "client1", 50,

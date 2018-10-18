@@ -41,16 +41,12 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.views.StatusView;
 
-import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -71,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
   protected void onCreate(@Nullable Bundle state) {
     super.onCreate(state);
 
-    CompanionFragments.init(CompanionApplication.get(this).campaigns(),
+    CompanionFragments.init(CompanionApplication.get(this).context(),
         getSupportFragmentManager());
     driveStorage = new DriveStorage(this);
 
@@ -117,34 +113,7 @@ public class MainActivity extends AppCompatActivity {
     switch(id) {
 
       case R.id.action_export: {
-        List<DriveStorage.File> files = new ArrayList<>();
-        // Export local campaigns.
-        for (Campaign campaign
-            : CompanionApplication.get(this).campaigns().getLocalCampaigns()) {
-          files.add(new DriveStorage.TextFile(campaign.getName() + ".campaign.txt",
-              campaign.getCampaignId(), "text/plain", "# This file will not be re-imported."
-              + campaign.toProto().toString()));
-          files.add(new DriveStorage.BinaryFile(campaign.getName() + ".campaign",
-              campaign.getCampaignId(), "application/x-protobuf", campaign.toProto().toByteArray()));
-        }
-        // Export local characters.
-        for (Character character
-            : CompanionApplication.get(this).characters().getLocalCharacters()) {
-          files.add(new DriveStorage.TextFile(character.getName() + ".character.txt",
-              character.getCharacterId(), "text/plain", "# This file will not be re-imported."
-              + character.toProto().toString()));
-          files.add(new DriveStorage.BinaryFile(character.getName() + ".character",
-              character.getCharacterId(), "application/x-protobuf", character.toProto().toByteArray()));
-          Optional<InputStream> image =
-              CompanionApplication.get(this).images(true).read(Character.TABLE,
-                  character.getCharacterId());
-          if (image.isPresent()) {
-            files.add(new DriveStorage.StreamFile(character.getName() + ".character.jpg",
-                character.getCharacterId(), "image/jpeg", image.get()));
-          }
-        }
-
-        driveStorage.start(new DriveStorage.Export(files));
+        Status.error("Not currently implemented!");
         return true;
       }
 
@@ -232,8 +201,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (resultCode == RESULT_OK) {
           FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-          CompanionApplication.get(this).context().login(
-              user.getEmail(), user.getDisplayName(), user.getPhotoUrl().toString());
+          CompanionApplication.get(this).context().users().login(
+              user.getUid(), user.getPhotoUrl().toString());
           Status.log("Successfully logged in");
           CompanionFragments.get().show();
         } else if (response == null) {

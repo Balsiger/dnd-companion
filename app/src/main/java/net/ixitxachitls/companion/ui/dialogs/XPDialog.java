@@ -36,8 +36,9 @@ import android.widget.TextView;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.views.XPCharacterView;
 import net.ixitxachitls.companion.ui.views.XPFixedView;
@@ -83,7 +84,7 @@ public class XPDialog extends Dialog {
     super.onCreate(state);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = campaigns().getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
+    campaign = campaigns().get(getArguments().getString(ARG_CAMPAIGN_ID));
   }
 
   @Override
@@ -91,10 +92,11 @@ public class XPDialog extends Dialog {
     if (campaign.isPresent()) {
       ViewGroup ecls = (ViewGroup) view.findViewById(R.id.ecls);
       LayoutInflater inflator = LayoutInflater.from(getContext());
+      int minPartyLevel = characters().minPartyLevel(campaign.get().getId());
+      int maxPartyLevel = characters().maxPartyLevel(campaign.get().getId());
       for (int i = 1; i <= MAX_ECL; i++) {
         // Don't display this if characters would not get xp anyway.
-        if (XP.xpAward(i, campaign.get().getMinPartyLevel(), 1) <= 0
-            && XP.xpAward(i, campaign.get().getMaxPartyLevel(), 1) <= 0) {
+        if (XP.xpAward(i, minPartyLevel, 1) <= 0 && XP.xpAward(i, maxPartyLevel, 1) <= 0) {
           eclViews.add(null);
           continue;
         }
@@ -103,7 +105,7 @@ public class XPDialog extends Dialog {
         LinearLayout container = (LinearLayout) inflator.inflate(R.layout.view_ecl, null);
         TextWrapper<TextView> ecl = TextWrapper.wrap(container, R.id.ecl).text(String.valueOf(index))
             .onClick(() -> selectEcl(index)).onLongClick(() -> selectEcl(0));
-        if (campaign.get().isCloseECL(i)) {
+        if (Characters.isCloseECL(i, minPartyLevel, maxPartyLevel)) {
           ecl.get().setTypeface(Typeface.DEFAULT_BOLD);
         }
         if (selectedECL == i) {
@@ -115,8 +117,7 @@ public class XPDialog extends Dialog {
       }
 
       characterContainer = (LinearLayout) view.findViewById(R.id.party);
-      for (String characterId: campaign.get().getCharacterIds().getValue()) {
-        Character character = characters().getCharacter(characterId).getValue().get();
+      for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
         characterContainer.addView(new XPCharacterView(getContext(), this, character));
       }
 

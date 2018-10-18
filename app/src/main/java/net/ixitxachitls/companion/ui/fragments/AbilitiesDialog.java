@@ -31,11 +31,8 @@ import android.widget.Button;
 
 import com.google.common.base.Preconditions;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.views.EditAbility;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -58,8 +55,7 @@ public class AbilitiesDialog extends Dialog {
   private EditAbility wisdom;
   private EditAbility charisma;
 
-  private Optional<Campaign> campaign = Optional.empty();
-  private Optional<LocalCharacter> character = Optional.empty();
+  private Optional<Character> character = Optional.empty();
 
   public AbilitiesDialog() {}
 
@@ -83,14 +79,7 @@ public class AbilitiesDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = CompanionApplication.get(getContext()).campaigns()
-        .getCampaign(getArguments().getString(ARG_CAMPAIGN_ID)).getValue();
-    if (campaign.isPresent()) {
-      character = Character.asLocal(
-          characters().getCharacter(getArguments().getString(ARG_ID)).getValue());
-    } else {
-      character = Optional.empty();
-    }
+    character = characters().get(getArguments().getString(ARG_ID));
   }
 
   @Override

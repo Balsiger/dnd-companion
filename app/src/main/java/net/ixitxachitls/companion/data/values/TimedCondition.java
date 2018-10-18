@@ -106,13 +106,13 @@ public class TimedCondition {
     return endRound == 0 && !endDate.isEmpty();
   }
 
-  public boolean active(Battle battle) {
+  public boolean active(Encounter encounter) {
     return hasEndDate()
         || getEndRound() == Integer.MAX_VALUE
-        || getEndRound() > battle.getTurn()
-        || (getEndRound() == battle.getTurn()
+        || getEndRound() > encounter.getTurn()
+        || (getEndRound() == encounter.getTurn()
             && (getCondition().endsBeforeTurn()
-                ? !battle.acting(sourceId) : !battle.acted(sourceId)));
+                ? !encounter.acting(sourceId) : !encounter.acted(sourceId)));
   }
 
   public static TimedCondition fromProto(Value.TimedConditionProto proto) {

@@ -25,6 +25,7 @@ import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.net.CompanionMessage;
 import net.ixitxachitls.companion.net.CompanionMessageData;
 import net.ixitxachitls.companion.proto.Entry;
@@ -48,14 +49,15 @@ public class ScheduledMessage extends StoredEntry<Entry.ScheduledMessageProto> {
   private State state;
   private long lastInteraction;
 
-  public ScheduledMessage(Campaigns campaigns, CompanionMessage message) {
-    this(campaigns, 0, State.WAITING, new Date().getTime(), message);
+  public ScheduledMessage(CompanionContext context, Campaigns campaigns,
+                          CompanionMessage message) {
+    this(context, campaigns, 0, State.WAITING, new Date().getTime(), message);
   }
 
-  private ScheduledMessage(Campaigns campaigns, long id, State state, long lastInteraction,
-                           CompanionMessage message) {
-    super(campaigns.context(), id, TYPE,
-        TYPE + "-" + campaigns.context().me().get().getId() + "-" + message.getMessageId(), TYPE,
+  private ScheduledMessage(CompanionContext context, Campaigns campaigns, long id, State state,
+                           long lastInteraction, CompanionMessage message) {
+    super(context, id, TYPE,
+        TYPE + "-" + context.me().getId() + "-" + message.getMessageId(), TYPE,
         true, DataBaseContentProvider.MESSAGES);
 
     this.message = message;
@@ -169,8 +171,9 @@ public class ScheduledMessage extends StoredEntry<Entry.ScheduledMessageProto> {
   }
 
   public static ScheduledMessage fromProto(CompanionContext companionContext, long id, Entry.ScheduledMessageProto proto) {
-    return new ScheduledMessage(companionContext.campaigns(), id, convert(proto.getState()),
-        proto.getLastInteraction(), CompanionMessage.fromProto(companionContext, proto.getMessage()));
+    return new ScheduledMessage(companionContext, companionContext.campaigns(), id,
+        convert(proto.getState()), proto.getLastInteraction(),
+        CompanionMessage.fromProto(companionContext, proto.getMessage()));
   }
 
   private static State convert(Entry.ScheduledMessageProto.State state) {

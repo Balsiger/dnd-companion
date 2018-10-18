@@ -23,9 +23,9 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/primary"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/primary">
 
   <LinearLayout
       android:id="@+id/settings_content"
@@ -39,34 +39,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-      <LinearLayout
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/nickname"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginTop="10dp"
           android:layout_weight="1"
-          android:orientation="vertical">
-
-        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:descriptionText="Your email address, used to uniquely identify you and your artefacts."
-            app:labelColor="@color/white"
-            app:labelText="EMail"
-            app:lineColor="@color/white"
-            app:textColor="@color/white"/>
-
-        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            app:descriptionText="Your name."
-            app:labelColor="@color/white"
-            app:labelText="Name"
-            app:lineColor="@color/white"
-            app:textColor="@color/white"/>
-
-      </LinearLayout>
+          app:descriptionText="@string/settings_nickname_note"
+          app:labelColor="@color/white"
+          app:labelText="@string/settings_nickname_label"
+          app:lineColor="@color/white"
+          app:textColor="@color/white"/>
 
       <net.ixitxachitls.companion.ui.views.RoundImageView
           android:id="@+id/image"
@@ -79,43 +63,6 @@
           app:srcCompat="@drawable/ic_person_black_48dp"/>
 
     </LinearLayout>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/nickname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:descriptionText="@string/settings_nickname_note"
-        app:labelColor="@color/white"
-        app:labelText="@string/settings_nickname_label"
-        app:lineColor="@color/white"
-        app:textColor="@color/white"/>
-
-    <CheckBox
-        android:id="@+id/remote_campaigns"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:buttonTint="@color/white"
-        android:text="Remote Campaigns"
-        android:textColor="@color/white"
-        android:theme="@style/LargeText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nickname"/>
-
-    <CheckBox
-        android:id="@+id/remote_characters"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:buttonTint="@color/white"
-        android:text="Remote Characters"
-        android:textColor="@color/white"
-        android:theme="@style/LargeText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/remote_campaigns"/>
 
     <net.ixitxachitls.companion.ui.views.LabelledEditTextView
         android:id="@+id/features"

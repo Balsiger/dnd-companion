@@ -59,23 +59,11 @@
         app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
 
     <view
-        android:id="@+id/image"
-        class="net.ixitxachitls.companion.ui.views.RoundImageView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="10dp"
-        android:layout_weight="0"
-        android:src="@drawable/ic_person_black_48dp"
-        android:transitionName="sharedMove"/>
-
-    <view
         android:id="@+id/title"
-        class="net.ixitxachitls.companion.ui.views.TitleView"
+        class="net.ixitxachitls.companion.ui.views.CharacterTitleView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        app:color="@color/character"/>
+        android:layout_weight="1"/>
 
   </LinearLayout>
 
@@ -84,17 +72,16 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_above="@+id/history"
-      android:layout_below="@+id/bar"
-      android:layout_weight="1">
+      android:layout_below="@+id/bar">
 
     <android.support.v4.view.PagerTitleStrip
         android:id="@+id/pager_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
+        android:layout_gravity="bottom"
         android:background="@color/characterLight"
+        android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:paddingTop="25dp"
         android:textColor="@color/characterText"
         android:theme="@style/SmallText"/>
   </android.support.v4.view.ViewPager>

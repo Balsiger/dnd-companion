@@ -121,7 +121,7 @@ public abstract class StoredEntry<P extends MessageLite> extends DynamicEntry<P>
   }
 
   private String createId() {
-    return type + "-" + context.me().get().getId() + "-" + id;
+    return type + "-" + context.me().getId() + "-" + id;
   }
 
   public static String extractType(String id) {

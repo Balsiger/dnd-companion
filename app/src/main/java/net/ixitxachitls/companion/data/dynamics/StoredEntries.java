@@ -22,12 +22,10 @@
 package net.ixitxachitls.companion.data.dynamics;
 
 import android.arch.lifecycle.ViewModel;
-import android.database.Cursor;
 import android.net.Uri;
 import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.storage.DataBase;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -49,6 +47,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
     this.table = table;
     this.local = local;
 
+    /*
     Cursor cursor = companionContext.getDataBaseAccessor().queryAll(table);
     while(cursor.moveToNext()) {
       Optional<E> entry = parseEntry(cursor.getLong(0),
@@ -57,6 +56,7 @@ public abstract class StoredEntries<E extends StoredEntry<?>> extends ViewModel 
         add(entry.get());
       }
     }
+    */
   }
 
   public boolean has(String id) {

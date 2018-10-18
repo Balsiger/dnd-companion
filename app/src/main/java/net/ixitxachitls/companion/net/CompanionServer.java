@@ -25,15 +25,11 @@ import android.support.annotation.VisibleForTesting;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
 import net.ixitxachitls.companion.data.dynamics.ScheduledMessage;
 import net.ixitxachitls.companion.net.nsd.NsdAccessor;
 import net.ixitxachitls.companion.net.nsd.NsdServer;
-import net.ixitxachitls.companion.util.Ids;
 
-import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -54,7 +50,7 @@ public class CompanionServer {
 
     // Setup stored messages.
     for (ScheduledMessage message
-        : companionContext.messages().getMessagesBySender(companionContext.me().get().getId())) {
+        : companionContext.messages().getMessagesBySender(companionContext.me().getId())) {
       setupScheduler(message.getRecieverId());
     }
   }
@@ -91,15 +87,15 @@ public class CompanionServer {
       }
     }
 
-    if (started() && !sent && !companionContext.campaigns().hasAnyPublished()) {
+    //if (started() && !sent && !companionContext.fsCampaigns().hasAnyPublished()) {
       // Stop the server if there are no more message to be sent and there are no published
       // campaigns.
-      stop();
-    }
+    //  stop();
+    //}
   }
 
   private String getRecipientName(String id) {
-    if (id.equals(companionContext.me().get().getId())) {
+    if (id.equals(companionContext.me().getId())) {
       return "(me)";
     }
 
@@ -112,26 +108,6 @@ public class CompanionServer {
 
   public Set<String> connectedClientIds() {
     return schedulersByRecpientId.keySet();
-  }
-
-  public Set<String> clientIds(Campaign campaign) {
-    Set<String> ids = new HashSet<>();
-    ids.addAll(clientIds());
-
-    for (String characterId
-        : companionContext.characters().getCampaignCharacterIds(campaign.getCampaignId()).getValue()) {
-      String id = Ids.extractServerId(characterId);
-      // Don't send anything to oneself.
-      if (!id.equals(companionContext.me().get().getId())) {
-        ids.add(id);
-      }
-    }
-
-    return ids;
-  }
-
-  private Collection<String> clientIds() {
-    return nsdServer.connectedIds();
   }
 
   public void schedule(CompanionMessageData message) {
@@ -169,9 +145,9 @@ public class CompanionServer {
   }
 
   public void startIfNecessary() {
-    if (!started() && companionContext.campaigns().hasAnyPublished()) {
-      start();
-    }
+    //if (!started() && companionContext.campaigns().hasAnyPublished()) {
+    //  start();
+    //}
   }
 
   public boolean started() {

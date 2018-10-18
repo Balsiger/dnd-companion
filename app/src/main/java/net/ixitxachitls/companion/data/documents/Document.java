@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.support.annotation.CallSuper;
+
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
@@ -29,6 +31,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,66 +44,84 @@ import javax.annotation.Nullable;
 /**
  * The base document for all documents stored in firestore.
  */
-public abstract class Document<D extends Document<D>> extends AbstractDocument<D> {
+public abstract class Document<D extends Document<D>> extends Observable<D> {
 
-  private final String path;
-  private final String id;
+  protected CompanionContext context;
+  protected boolean temporary = true;
+  protected String path;
+  protected String id;
+  protected CollectionReference collection;
+  protected Optional<DocumentReference> reference = Optional.empty();
+  protected Optional<DocumentSnapshot> snapshot = Optional.empty();
+  private boolean failed = false;
   private final List<Action> whenCompleted = new ArrayList<>();
   private final List<Action> whenReady = new ArrayList<>();
   private final List<Action> whenFailed = new ArrayList<>();
 
-  // TODO(merlin): Check which of these are actually needed.
-  private final CollectionReference collection;
-  private Optional<DocumentReference> reference = Optional.empty();
-  private Optional<DocumentSnapshot> snapshot = Optional.empty();
-  private boolean failed = false;
-
   /**
    * Create a new document that is not yet saved and will get an automatic id.
-   *
-   * @param path The path to the document.
    */
-  protected Document(String path) {
-    this.id = "";
-    this.path = path;
-    this.collection = db.collection(path);
+  protected static <D extends Document<D>> D create(DocumentFactory<D> factory,
+                                                    CompanionContext context, String path) {
+    D document = factory.create();
+    document.context = context;
+    document.id = "";
+    document.path = path;
+    document.collection = document.db.collection(path);
+    document.temporary = false;
+
+    return document;
   }
 
-  /**
-   * Create an existing document that is read from firestore.
-   *
-   * @param id The id of the document.
-   * @param path The path to the document
-   */
-  protected Document(String id, String path) {
-    this.id = id;
-    this.path = path;
-    this.collection = db.collection(path);
-    reference = Optional.of(this.collection.document(id));
-    reference.get().get().addOnCompleteListener(this::onComplete);
+  protected static <D extends Document<D>> D get(DocumentFactory<D> factory,
+                                                 CompanionContext context,
+                                                 String id) {
+    D document = getOrCreate(factory, context, id);
+    document.temporary = true;
+
+    return document;
   }
 
-  /**
-   * Create a document from an existing, already ready snapshot from firestore.
-   *
-   * @param snapshot The snapshot with all the data.
-   */
-  protected Document(DocumentSnapshot snapshot) {
-    this.snapshot = Optional.of(snapshot);
-    this.reference = Optional.of(snapshot.getReference());
-    this.collection = reference.get().getParent();
-    this.path = this.reference.get().getParent().getPath();
-    this.id = snapshot.getId();
+  protected static <D extends Document<D>> D getOrCreate(DocumentFactory<D> factory,
+                                                         CompanionContext context,
+                                                         String id) {
+    D document = factory.create();
+    document.context = context;
+    document.id = extractId(id);
+    document.path = extractPath(id);
+    document.collection = document.db.collection(document.path);
+    document.reference = Optional.of(document.collection.document(document.id));
+    document.reference.get().get().addOnCompleteListener(document::onComplete);
+    document.temporary = false;
 
-    read();
-    startListening();
+    return document;
+  }
+
+  protected static <D extends Document<D>> D fromData(DocumentFactory<D> factory,
+                                                      CompanionContext context,
+                                                      DocumentSnapshot snapshot) {
+    D document = factory.create();
+    document.context = context;
+    document.id = snapshot.getId();
+    document.path = snapshot.getReference().getParent().getPath();
+    document.collection = snapshot.getReference().getParent();
+    document.reference = Optional.of(snapshot.getReference());
+    document.snapshot = Optional.of(snapshot);
+    document.temporary = false;
+
+    document.read();
+    document.startListening();
+
+    return document;
   }
 
   public void onComplete(Task<DocumentSnapshot> task) {
     if (task.isSuccessful() && task.getResult().exists()) {
       snapshot = Optional.of(task.getResult());
+      temporary = false;
       read();
       execute(whenReady);
+      updated();
     } else {
       Status.error("Cannot find data for " + id);
       failed = true;
@@ -119,7 +140,7 @@ public abstract class Document<D extends Document<D>> extends AbstractDocument<D
   }
 
   public boolean isDM(User user) {
-    return path.startsWith(user.getEmail());
+    return path.startsWith(user.getId());
   }
 
   public boolean isReady() {
@@ -151,6 +172,10 @@ public abstract class Document<D extends Document<D>> extends AbstractDocument<D
   }
 
   public void store() {
+    if (temporary) {
+      throw new IllegalStateException("This temporary document cannot be stored.");
+    }
+
     if (reference.isPresent()) {
       reference.get().set(write(new HashMap<>()));
     } else {
@@ -163,7 +188,12 @@ public abstract class Document<D extends Document<D>> extends AbstractDocument<D
     }
   }
 
-  protected abstract void read();
+  @CallSuper
+  protected void read() {
+    if (snapshot.isPresent()) {
+      this.id = snapshot.get().getId();
+    }
+  }
   protected abstract Map<String, Object> write(Map<String, Object> data);
 
   private static void execute(List<Action> actions) {
@@ -184,6 +214,29 @@ public abstract class Document<D extends Document<D>> extends AbstractDocument<D
 
     return defaultValue;
   }
+
+  protected long get(String field, long defaultValue) {
+    if (snapshot.isPresent()) {
+      Long value = snapshot.get().getLong(field);
+      if (value != null) {
+        return value;
+      }
+    }
+
+    return defaultValue;
+  }
+
+  public <E extends Enum<E>> E get(String field, E defaultValue) {
+    if (snapshot.isPresent()) {
+      String value = snapshot.get().getString(field);
+      if (value != null && !value.isEmpty()) {
+        return (E) Enum.valueOf(defaultValue.getClass(), (String) value);
+      }
+    }
+
+    return defaultValue;
+  }
+
 
   protected <T> T get(String field, T defaultValue) {
     if (snapshot.isPresent()) {
@@ -207,7 +260,7 @@ public abstract class Document<D extends Document<D>> extends AbstractDocument<D
     return defaultValue;
   }
 
-  private void startListening() {
+  protected void startListening() {
     if (reference.isPresent()) {
       reference.get().addSnapshotListener(CompanionApplication.get().getCurrentActivity(),
           this::updated);
@@ -219,5 +272,17 @@ public abstract class Document<D extends Document<D>> extends AbstractDocument<D
     this.snapshot = Optional.ofNullable(snapshot);
     read();
     updated();
+  }
+
+  protected static String extractId(String id) {
+    return id.replaceAll(".*/", "");
+  }
+
+  protected static String extractPath(String id) {
+    return id.replaceAll("/[^/]*$", "");
+  }
+
+  protected interface DocumentFactory<D> {
+    D create();
   }
 }

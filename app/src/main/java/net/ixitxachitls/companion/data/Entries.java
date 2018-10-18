@@ -27,7 +27,7 @@ import com.google.inject.Singleton;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.statics.ItemTemplate;
-import net.ixitxachitls.companion.data.statics.Monster;
+import net.ixitxachitls.companion.data.statics.MonsterTemplate;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 
@@ -44,7 +44,7 @@ public class Entries {
 
   private static @Nullable Entries singleton = null;
 
-  private final Monsters monsters = new Monsters();
+  private final MonsterTemplates monsterTemplates = new MonsterTemplates();
   private final EntriesStore<Level> levels = new EntriesStore<>(Level.class);
   private final EntriesStore<World> worlds = new EntriesStore<>(World.class);
   private final ItemTemplates items = new ItemTemplates();
@@ -69,8 +69,8 @@ public class Entries {
     return get().assetAccessor;
   }
 
-  public Monsters getMonsters() {
-    return monsters;
+  public MonsterTemplates getMonsterTemplates() {
+    return monsterTemplates;
   }
 
   public EntriesStore<World> getWorlds() {
@@ -92,8 +92,8 @@ public class Entries {
           String path = PATH_ENTITIES + "/" + reference + "/" + type;
           for (String file : assetAccessor.list(path)) {
             switch (type) {
-              case Monster.TYPE:
-                monsters.read(assetAccessor.open(path + "/" + file));
+              case MonsterTemplate.TYPE:
+                monsterTemplates.read(assetAccessor.open(path + "/" + file));
                 break;
               case Level.TYPE:
                 levels.read(assetAccessor.open(path + "/" + file));

@@ -24,11 +24,11 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
@@ -44,14 +44,13 @@ public class ChipView extends LinearLayout {
   private final int chipColor;
   private final int backgroundColor;
 
-  protected final Wrapper<RelativeLayout> container;
+  protected final Wrapper<RoundImageView> image;
   protected final TextWrapper<TextView> name;
-  protected final TextWrapper<TextView> subtitle;
-  protected final RoundImageView image;
   protected final LinearLayout icons;
 
   public ChipView(Context context, String dataId, String name, String subtitle,
-                  @ColorRes int chipColor, @ColorRes int backgroundColor) {
+                  @ColorRes int chipColor, @ColorRes int backgroundColor,
+                  @DrawableRes int drawableRes) {
     super(context);
 
     this.dataId = dataId;
@@ -60,22 +59,17 @@ public class ChipView extends LinearLayout {
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, this, false);
 
-    this.container = Wrapper.wrap(view, R.id.container);
-    container.backgroundColor(backgroundColor);
     this.name = TextWrapper.wrap(view, R.id.name);
     this.name.text(name).backgroundColor(chipColor).noWrap();
 
     this.icons = view.findViewById(R.id.icons);
 
-    this.subtitle = TextWrapper.wrap(view, R.id.subtitle);
-    this.subtitle.noWrap().backgroundColor(chipColor).noWrap();
-    setSubtitle(subtitle);
+    this.image = Wrapper.wrap(view, R.id.image);
+    image.backgroundColor(backgroundColor);
 
-    this.image = view.findViewById(R.id.image);
-
-    Drawable drawable = getResources().getDrawable(R.drawable.ic_person_black_48dp_inverted, null);
+    Drawable drawable = getResources().getDrawable(drawableRes, null);
     drawable.setTint(getResources().getColor(chipColor, null));
-    image.setImageDrawable(drawable);
+    image.get().setImageDrawable(drawable);
 
     addView(view);
   }
@@ -90,18 +84,15 @@ public class ChipView extends LinearLayout {
   }
 
   public void setBackground(@ColorRes int color) {
-    container.backgroundColor(color);
+    image.backgroundColor(color);
+    name.backgroundColor(color);
   }
 
+  @Deprecated
   protected void setSubtitle(String text) {
-    subtitle.text(text);
-    if (text.isEmpty()) {
-      this.subtitle.gone();
-    } else {
-      this.subtitle.visible();
-    }
   }
 
+  @Deprecated
   public void select(boolean select) {
     if (select) {
       select();
@@ -110,17 +101,19 @@ public class ChipView extends LinearLayout {
     }
   }
 
+  @Deprecated
   public void select() {
     name.backgroundColor(backgroundColor);
-    subtitle.backgroundColor(backgroundColor);
   }
 
+  @Deprecated
   public void unselect() {
     name.backgroundColor(chipColor);
-    subtitle.backgroundColor(chipColor);
   }
 
   public String getDataId() {
     return dataId;
   }
+
+  public void update() {}
 }

@@ -22,26 +22,20 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
-import com.google.android.flexbox.FlexWrap;
-import com.google.android.flexbox.FlexboxLayout;
-
-import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.values.Condition;
-import net.ixitxachitls.companion.ui.MessageDialog;
-import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.rules.Conditions;
 
 import java.util.Optional;
 
 /**
  * Created by balsiger on 5/28/18.
  */
-public class ConditionIconsView extends FlexboxLayout {
+public class ConditionIconsView extends LinearLayout { //FlexboxLayout {
 
   private final HPImageView hp;
   private final NonlethalImageView nonlethal;
@@ -49,12 +43,13 @@ public class ConditionIconsView extends FlexboxLayout {
   public ConditionIconsView(Context context) {
     super(context);
 
-    setFlexWrap(FlexWrap.WRAP);
+    setOrientation(VERTICAL);
+    //setFlexWrap(FlexWrap.WRAP);
     hp = new HPImageView(getContext());
     nonlethal = new NonlethalImageView(getContext());
   }
 
-  public void update(BaseCreature<?> creature) {
+  public void update(Creature<?> creature) {
     hp.setHp(creature.getHp(), creature.getMaxHp());
     nonlethal.setNonlethalDamage(creature.getNonlethalDamage(), creature.getHp());
 
@@ -62,41 +57,36 @@ public class ConditionIconsView extends FlexboxLayout {
     addView(hp);
     addView(nonlethal);
 
-    Optional<Battle> battle = creature.getBattle();
-    Optional<Character> character = Optional.empty();
-    if (creature instanceof Character) {
-      character = Optional.of((Character) creature);
-    }
-    if (battle.isPresent()) {
-      for (Condition condition : creature.getActiveConditions(battle.get())) {
-        if (condition.showsIcon()) {
-          addView(createImage(condition, character));
+
+    addView(createImage(Conditions.BLINDED, Optional.empty()));
+    addView(createImage(Conditions.COWERING, Optional.empty()));
+    addView(createImage(Conditions.DEAD, Optional.empty()));
+    addView(createImage(Conditions.ENTANGLED, Optional.empty()));
+    addView(createImage(Conditions.FASCINATED, Optional.empty()));
+    addView(createImage(Conditions.GRAPPLING, Optional.empty()));
+    addView(createImage(Conditions.CHECKED, Optional.empty()));
+    addView(createImage(Conditions.PANICKED, Optional.empty()));
+    addView(createImage(Conditions.ABILITY_DAMAGED, Optional.empty()));
+    addView(createImage(Conditions.PRONE, Optional.empty()));
+    addView(createImage(Conditions.PETRIFIED, Optional.empty()));
+    addView(createImage(Conditions.UNCONSCIOUS, Optional.empty()));
+
+    /*
+    Encounter encounter = CompanionApplication.get(getContext()).encounters().get(creature.getCampaignId());
+    for (Condition condition : creature.getActiveConditions(encounter)) {
+      if (condition.showsIcon()) {
+        Optional<Character> character = Optional.empty();
+        if (creature instanceof Character) {
+          character = Optional.of((Character) creature);
         }
+
+        addView(createImage(condition, character));
       }
     }
+    */
   }
 
   private ImageView createImage(Condition condition, Optional<Character> character) {
-    ImageView image = new ImageView(getContext());
-    image.setImageResource(condition.getIcon());
-    image.setImageTintList(ColorStateList.valueOf(getContext().getColor(R.color.icon)));
-    image.setBackground(getContext().getDrawable(R.drawable.icon_back));
-    image.setOnLongClickListener(v ->  {
-      new MessageDialog(getContext())
-          .title(condition.getName())
-          .message(condition.getSummary() + "\n\n" + condition.getDescription())
-          .show();
-      return true;
-    });
-    // NOTE: For some reason, Android seems to intercepts clicks when adding a long click handler.
-    // Since we want clicks to be ignored (and be interpreted in the chip to open the character
-    // fragment, we do it here too).
-    if (character.isPresent()) {
-      image.setOnClickListener(v -> {
-        CompanionFragments.get().showCharacter(character.get(), Optional.of(v));
-      });
-    }
-
-    return image;
+    return new ConditionIconView(getContext(), condition);
   }
 }

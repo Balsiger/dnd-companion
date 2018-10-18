@@ -32,10 +32,9 @@ import android.widget.LinearLayout;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
-import net.ixitxachitls.companion.data.dynamics.Creature;
-import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -47,7 +46,7 @@ import java.util.Optional;
  */
 public class BattleView extends LinearLayout {
 
-  private Campaign campaign;
+  private Optional<Campaign> campaign = Optional.empty();
 
   private final Wrapper<FloatingActionButton> add;
   private final Wrapper<FloatingActionButton> next;
@@ -57,7 +56,6 @@ public class BattleView extends LinearLayout {
 
   public BattleView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
-    this.campaign = CompanionApplication.get(context).campaigns().getDefaultCampaign();
 
     ViewGroup view = (ViewGroup) LayoutInflater.from(context).inflate(R.layout.view_battle, this, false);
 
@@ -92,31 +90,31 @@ public class BattleView extends LinearLayout {
     addView(view);
   }
 
-  public void update(Campaign campaign) {
+  public void update(Optional<Campaign> campaign) {
     this.campaign = campaign;
 
     Status.log("refreshing battle view with " + campaign);
+    Encounter encounter = CompanionApplication.get(getContext()).encounters().get(campaign.get().getId());
     if (inBattle()) {
       boolean currentCreatureIsLocal;
-      String currentCreatureId = campaign.getBattle().getCurrentCreatureId();
-      if (currentCreatureId.startsWith(Creature.TYPE)) {
+      String currentCreatureId = encounter.getCurrentCreatureId();
+      if (currentCreatureId.startsWith("creature")) {
         currentCreatureIsLocal = true;
       } else {
         Optional<Character> character = CompanionApplication.get(getContext())
-            .characters().getCharacter(currentCreatureId).getValue();
-        currentCreatureIsLocal = character.isPresent() && character.get().isLocal();
+            .characters().get(currentCreatureId);
+        currentCreatureIsLocal = character.isPresent() && character.get().amPlayer();
       }
 
       setVisibility(VISIBLE);
-      Battle battle = campaign.getBattle();
-      boolean isDM = campaign.isDefault() || campaign.isLocal();
+      boolean isDM = campaign.get().amDM();
       add.visible(isDM && inBattle());
-      next.visible(isDM && (battle.isSurprised() || battle.isOngoing()));
-      boolean canDelay = isDM && battle.isOngoing()
-          && !battle.currentIsLast();
+      next.visible(isDM && (encounter.isSurprised() || encounter.isOngoing()));
+      boolean canDelay = isDM && encounter.isOngoing()
+          && !encounter.currentIsLast();
       delay.visible(canDelay);
-      stop.visible(isDM && !battle.isEnded());
-      timed.visible(currentCreatureIsLocal && battle.isOngoingOrSurprised());
+      stop.visible(isDM && !encounter.isEnded());
+      timed.visible(currentCreatureIsLocal && encounter.isOngoingOrSurprised());
     } else {
       add.gone();
       next.gone();
@@ -127,37 +125,38 @@ public class BattleView extends LinearLayout {
   }
 
   private boolean inBattle() {
-    return !campaign.getBattle().isEnded();
+    return !CompanionApplication.get(getContext()).encounters().get(campaign.get().getId()).isEnded();
   }
 
   private void addMonster() {
     if (inBattle()) {
-      MonsterInitiativeDialog.newInstance(campaign.getCampaignId(), -1).display();
+      MonsterInitiativeDialog.newInstance(campaign.get().getId(), -1).display();
     }
   }
 
   private void next() {
     if (inBattle()) {
-      campaign.getBattle().creatureDone();
+      CompanionApplication.get(getContext()).encounters().get(campaign.get().getId()).creatureDone();
     }
   }
 
   private void delay() {
     if (inBattle()) {
-      campaign.getBattle().creatureWait();
+      CompanionApplication.get(getContext()).encounters().get(campaign.get().getId()).creatureWait();
     }
   }
 
   private void stopBattle() {
     if (inBattle()) {
-      campaign.getBattle().end();
+      CompanionApplication.get(getContext()).encounters().get(campaign.get().getId()).end();
     }
   }
 
   private void addTimed() {
     if (inBattle()) {
-      TimedConditionDialog.newInstance(campaign.getBattle().getCurrentCreatureId(),
-          campaign.getBattle().getTurn())
+      TimedConditionDialog.newInstance(CompanionApplication.get(
+          getContext()).encounters().get(campaign.get().getId()).getCurrentCreatureId(),
+          CompanionApplication.get(getContext()).encounters().get(campaign.get().getId()).getTurn())
           .display();
     }
   }

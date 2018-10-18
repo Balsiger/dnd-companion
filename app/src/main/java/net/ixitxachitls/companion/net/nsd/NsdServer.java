@@ -56,7 +56,7 @@ public class NsdServer {
     this.companionContext = companionContext;
     this.nsdAccessor = nsdAccessor;
 
-    this.name = companionContext.me().get().getNickname();
+    this.name = companionContext.me().getNickname();
     this.service = new NsdServiceInfo();
     this.server = new NetworkServer(companionContext);
 
@@ -76,7 +76,7 @@ public class NsdServer {
     nsdAccessor.register(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
 
     Status.log("nsd service registered");
-    Status.addServerConnection(companionContext.me().get().getId(), name);
+    Status.addServerConnection(companionContext.me().getId(), name);
     started = true;
   }
 

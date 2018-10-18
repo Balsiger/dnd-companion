@@ -28,7 +28,7 @@ public class FakeClient2DataBaseAccessor extends FakeDataBaseAccessor {
 
   public FakeClient2DataBaseAccessor() {
     // Setup the default data for the cursor.
-    add(settingsById, settings("client2", "Client 2", 42));
+    //add(settingsById, settings("client2", "Client 2", 42));
 
     add(remoteCampaignsById,
         campaign("campaign-server-1", "Superheroes", "Generic", true));

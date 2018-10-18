@@ -24,11 +24,9 @@ package net.ixitxachitls.companion.net;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.dynamics.Campaign;
-import net.ixitxachitls.companion.data.dynamics.Character;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.Item;
-import net.ixitxachitls.companion.data.dynamics.LocalCharacter;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
@@ -50,17 +48,18 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   public void process(String senderId, String senderName, long messageId,
                       CompanionMessageData message) {
-    process(senderId, senderName, context.me().get().getId(), messageId, message);
+    process(senderId, senderName, context.me().getId(), messageId, message);
   }
 
   @Override
   protected void handleImage(String senderId, Image image) {
     Status.log("received image for " + image.getType() + " " + image.getId());
-    image.save(false);
+    image.save();
   }
 
   @Override
   protected void handleItemAdd(String senderId, long messageId, String characterId, Item item) {
+    /*
     Optional<Character> character = context.characters().getCharacter(characterId).getValue();
     if (character.isPresent()) {
       Status.log("received item " + item + " for " + character.get());
@@ -69,16 +68,16 @@ public class ClientMessageProcessor extends MessageProcessor {
       Status.error("Cannot add item to unknown character " + characterId);
     }
     messenger.sendAckToServer(senderId, messageId);
+    */
   }
 
-  @Override
   protected void handleCampaign(String senderId, String senderName, long id, Campaign campaign) {
     Optional<Campaign> oldCampaign =
-        context.campaigns().getCampaign(campaign.getCampaignId()).getValue();
+        context.campaigns().get(campaign.getId());
     if (oldCampaign.isPresent()
-        && oldCampaign.get().getBattle().isEnded()
-        && !campaign.getBattle().isEnded()
-        && CompanionFragments.get().showsCampaign(campaign.getCampaignId())) {
+        && context.encounters().get(oldCampaign.get().getId()).isEnded()
+        //&& !campaign.getBattle().isEnded()
+        && CompanionFragments.get().showsCampaign(campaign.getId())) {
       // Show a message about the newly started battle.
       ConfirmationPrompt.create(application.getCurrentActivity())
           .title("Battle started")
@@ -99,7 +98,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleCampaignDeletion(String senderId, long messageId, String campaignId) {
-    context.campaigns().getCampaign(campaignId).getValue().ifPresent(Campaign::delete);
+    //context.campaigns().getCampaign(campaignId).ifPresent(Campaign::delete);
     messenger.sendAckToServer(senderId, messageId);
   }
 
@@ -112,6 +111,7 @@ public class ClientMessageProcessor extends MessageProcessor {
 
   @Override
   protected void handleXpAward(String receiverId, String senderId, long messageId, XpAward award) {
+    /*
     Optional<Character> character =
         context.characters().getCharacter(award.getCharacterId()).getValue();
     if (character.isPresent()) {
@@ -124,6 +124,7 @@ public class ClientMessageProcessor extends MessageProcessor {
           .noNo()
           .show();
     }
+    */
   }
 
   @Override
@@ -132,11 +133,13 @@ public class ClientMessageProcessor extends MessageProcessor {
   }
 
   private void addXpAward(String senderId, long messageId, String characterId, int xp) {
+    /*
     Optional<LocalCharacter> character =
         Character.asLocal(context.characters().getCharacter(characterId).getValue());
     if (character.isPresent()) {
       character.get().addXp(xp);
       messenger.sendAckToServer(senderId, messageId);
     }
+     */
   }
 }

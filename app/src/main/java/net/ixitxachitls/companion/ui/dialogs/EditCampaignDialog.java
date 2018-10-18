@@ -32,7 +32,7 @@ import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -48,7 +48,7 @@ public class EditCampaignDialog extends Dialog {
 
   private static final String ARG_ID = "id";
 
-  private Optional<FSCampaign> campaign = Optional.empty();
+  private Optional<Campaign> campaign = Optional.empty();
 
   // The following values are only valid after onCreate().
   private LabelledEditTextView name;
@@ -84,12 +84,12 @@ public class EditCampaignDialog extends Dialog {
     if (getArguments() != null) {
       String id = getArguments().getString(ARG_ID);
       if (Strings.isNullOrEmpty(id)) {
-        campaign = Optional.of(fsCampaigns().create());
+        campaign = Optional.of(application().context().campaigns().create());
       } else {
-        campaign = fsCampaigns().getCampaign(id);
+        campaign = campaigns().get(id);
       }
     } else {
-      campaign = Optional.of(fsCampaigns().create());
+      campaign = Optional.of(application().context().campaigns().create());
     }
   }
 
@@ -137,7 +137,8 @@ public class EditCampaignDialog extends Dialog {
       campaign.get().store();
 
       super.save();
-      CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
+      campaign.get().whenReady(() ->
+          CompanionFragments.get().showCampaign(campaign.get(), Optional.empty()));
     }
 
   }

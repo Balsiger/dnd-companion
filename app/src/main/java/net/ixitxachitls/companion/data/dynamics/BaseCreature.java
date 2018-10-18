@@ -29,11 +29,11 @@ import com.google.protobuf.MessageLite;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.enums.Gender;
-import net.ixitxachitls.companion.data.statics.Monster;
-import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.data.statics.MonsterTemplate;
 import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.proto.Entry;
@@ -54,7 +54,7 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
   private static final int NO_INITIATIVE = 200;
 
   protected String campaignId = "";
-  protected Optional<Monster> race = Optional.empty();
+  protected Optional<MonsterTemplate> race = Optional.empty();
   protected Gender gender = Gender.UNKNOWN;
   protected int strength;
   protected int constitution;
@@ -82,12 +82,12 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return campaignId;
   }
 
-  public Optional<FSCampaign> getCampaign() {
-    return context.fsCampaigns().getCampaign(campaignId);
+  public Optional<Campaign> getCampaign() {
+    return context.campaigns().get(campaignId);
   }
 
-  public Optional<Battle> getBattle() {
-    return getCampaign().map(FSCampaign::getBattle);
+  public Encounter getBattle() {
+    return context.encounters().get(getCampaignId());
   }
 
   public String getCreatureId() {
@@ -250,12 +250,12 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
       // Send the condition to all affected characters/creatures.
       for (String id : condition.getTargetIds()) {
-        Optional<? extends BaseCreature> creature = context.creatures().getCreatureOrCharacter(id);
-        if (creature.isPresent()) {
-          creature.get().addAffectedCondition(condition.getTimedCondition());
-        } else {
-          Status.error("Cannot affect " + id + " with condition " + condition);
-        }
+        //Optional<? extends BaseCreature> creature = context.creatures().getCreatureOrCharacter(id);
+       // if (creature.isPresent()) {
+       //   creature.get().addAffectedCondition(condition.getTimedCondition());
+       // } else {
+        //  Status.error("Cannot affect " + id + " with condition " + condition);
+        //}
       }
 
     } else {
@@ -286,14 +286,14 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
         store();
 
         for (String targetId : condition.getTargetIds()) {
-          Optional<? extends BaseCreature> creature =
-              context.creatures().getCreatureOrCharacter(targetId);
-          if (creature.isPresent()) {
-            creature.get().removeAffectedCondition(name, getCreatureId());
-          } else {
-            Status.error("Cannot get creature to remove condition " + name + " from: "
-                + Status.nameFor(targetId));
-          }
+          //Optional<? extends BaseCreature> creature =
+          //    context.creatures().getCreatureOrCharacter(targetId);
+          //if (creature.isPresent()) {
+          //  creature.get().removeAffectedCondition(name, getCreatureId());
+          //} else {
+          //  Status.error("Cannot get creature to remove condition " + name + " from: "
+          //      + Status.nameFor(targetId));
+          //}
         }
 
         break;
@@ -343,9 +343,9 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
     return Collections.unmodifiableList(affectedConditions);
   }
 
-  public List<Condition> getActiveConditions(Battle battle) {
+  public List<Condition> getActiveConditions(Encounter encounter) {
     return affectedConditions.stream()
-        .filter(c -> c.active(battle))
+        .filter(c -> c.active(encounter))
         .map(TimedCondition::getCondition)
         .collect(Collectors.toList());
   }
@@ -466,8 +466,8 @@ public abstract class BaseCreature<P extends MessageLite> extends StoredEntry<P>
 
   protected void fromProto(Entry.CreatureProto proto) {
     campaignId = proto.getCampaignId();
-    entryId = proto.getId().isEmpty() ? context.me().get().getId() + "-" + id : proto.getId();
-    race = Entries.get().getMonsters().get(proto.getRace());
+    entryId = proto.getId().isEmpty() ? context.me().getId() + "-" + id : proto.getId();
+    race = Entries.get().getMonsterTemplates().get(proto.getRace());
     gender = Gender.fromProto(proto.getGender());
     strength = proto.getAbilities().getStrength();
     dexterity = proto.getAbilities().getDexterity();

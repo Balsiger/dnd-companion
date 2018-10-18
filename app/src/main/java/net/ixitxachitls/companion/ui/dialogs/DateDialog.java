@@ -40,7 +40,7 @@ import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.documents.FSCampaign;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
@@ -56,7 +56,7 @@ public class DateDialog extends Dialog {
 
   private static final String ARG_ID = "id";
 
-  private Optional<FSCampaign> campaign = Optional.empty();
+  private Optional<Campaign> campaign = Optional.empty();
 
   private GridView days;
   private DateAdapter adapter = new DateAdapter();
@@ -92,7 +92,7 @@ public class DateDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = application().fsCampaigns().getCampaign(getArguments().getString(ARG_ID));
+    campaign = application().campaigns().get(getArguments().getString(ARG_ID));
     if (campaign.isPresent()) {
       from(campaign.get().getDate());
     }

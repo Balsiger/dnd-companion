@@ -27,8 +27,6 @@ package net.ixitxachitls.companion.storage;
 public class FakeClient1DataBaseAccessor extends FakeDataBaseAccessor {
   public FakeClient1DataBaseAccessor() {
     // Setup the default data for the cursor.
-    add(settingsById, settings("client1", "Client 1", 42));
-
     add(remoteCampaignsById,
         campaign("campaign-server-1", "Superheroes", "Generic", true));
     add(remoteCharactersById,

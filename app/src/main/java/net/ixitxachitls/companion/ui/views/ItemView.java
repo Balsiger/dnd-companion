@@ -33,7 +33,7 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
+import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
@@ -52,7 +52,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
   private static final float MIN_DRAG_DISTANCE = 20;
 
-  private final BaseCreature<?> creature;
+  private final Creature<?> creature;
   private final Item item;
   private final TextWrapper<TextView> name;
   private final TextWrapper<TextView> summary;
@@ -68,7 +68,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   private float touchStartX = 0;
   private float touchStartY = 0;
 
-  public ItemView(Context context, BaseCreature<?> creature, Item item) {
+  public ItemView(Context context, Creature<?> creature, Item item) {
     super(context);
     this.creature = creature;
     this.item = item;
@@ -115,7 +115,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     String prefix = item.getMultiple() > 1 ? item.getMultiple() + "x " : "";
     String postfix = item.getMultiuse() > 1 ? " (" + item.getMultiuse() + " uses)" : "";
 
-    if (creature.isLocal()) {
+    if (creature.amPlayer()) {
       return prefix + item.getPlayerName() + postfix;
     } else {
       return prefix + item.getName() + postfix;
@@ -153,7 +153,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   }
 
   private void edit() {
-    EditItemDialog.newInstance(creature.getCreatureId(), item.getId()).display();
+    EditItemDialog.newInstance(creature.getId(), item.getId()).display();
   }
 
   @Override
@@ -184,14 +184,14 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
       case DragEvent.ACTION_DROP:
         if (showTopMargin) {
-          creature.moveItemBefore(item, (Item) event.getLocalState());
+          //creature.moveItemBefore(item, (Item) event.getLocalState());
         } else if (showBottomMargin) {
-          creature.moveItemAfter(item, (Item) event.getLocalState());
+          //creature.moveItemAfter(item, (Item) event.getLocalState());
         } else {
           if (item.isContainer()) {
-            creature.moveItemInto(item, (Item) event.getLocalState());
+            //creature.moveItemInto(item, (Item) event.getLocalState());
           } else {
-            creature.combine(item, (Item) event.getLocalState());
+            //creature.combine(item, (Item) event.getLocalState());
           }
         }
         return true;
@@ -238,7 +238,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
         return true;
 
       case MotionEvent.ACTION_MOVE:
-        if (creature.isLocal()
+        if (creature.canEdit()
             && (Math.abs((int) (touchStartX - event.getX())) > MIN_DRAG_DISTANCE
                 || Math.abs((int) (touchStartY - event.getY())) > MIN_DRAG_DISTANCE)) {
           startDragAndDrop(ClipData.newPlainText("name", item.getName()),

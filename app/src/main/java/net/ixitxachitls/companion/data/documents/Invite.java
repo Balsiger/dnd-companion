@@ -21,10 +21,40 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-/**
- * Model for all characters available to a user.
- */
-public class FSCharacters extends Documents<FSCharacters> {
-  protected static final String PATH = "characters";
+import android.support.annotation.CallSuper;
 
+import com.google.firebase.firestore.DocumentSnapshot;
+
+import net.ixitxachitls.companion.data.CompanionContext;
+
+import java.util.Map;
+
+/**
+ * An invite from one user to another to participate in a campaign.
+ */
+public class Invite extends Document<Invite> {
+
+  private static final DocumentFactory<Invite> FACTORY = () -> new Invite();
+
+
+  private String campaign;
+
+  public static void createAndStore(CompanionContext context, String email, String campaignId) {
+  }
+
+  protected static Invite fromData(CompanionContext context, DocumentSnapshot snapshot) {
+    return Document.fromData(FACTORY, context, snapshot);
+  }
+
+  @Override
+  @CallSuper
+  protected void read() {
+    super.read();
+  }
+
+  @Override
+  @CallSuper
+  protected Map<String, Object> write(Map<String, Object> data) {
+    return data;
+  }
 }
