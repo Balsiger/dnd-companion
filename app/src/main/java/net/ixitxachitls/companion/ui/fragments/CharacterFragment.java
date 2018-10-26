@@ -207,7 +207,7 @@ public class CharacterFragment extends CompanionFragment {
     }
 
     if (campaign.isPresent()) {
-      CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
+      //CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
     } else {
       CompanionFragments.get().show(Type.campaigns, Optional.empty());
     }
