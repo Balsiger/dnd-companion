@@ -77,11 +77,4 @@
         app:srcCompat="@drawable/ic_add_black_24dp"/>
   </LinearLayout>
 
-  <fragment
-      android:id="@+id/history"
-      android:name="net.ixitxachitls.companion.ui.fragments.HistoryFragment"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      />
-
 </LinearLayout>

@@ -38,15 +38,9 @@ import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
-import net.ixitxachitls.companion.data.dynamics.Histories;
 import net.ixitxachitls.companion.data.values.Encounters;
-import net.ixitxachitls.companion.net.CompanionMessenger;
-import net.ixitxachitls.companion.net.nsd.ApplicationNsdAccessor;
-import net.ixitxachitls.companion.net.nsd.NsdAccessor;
 import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
-import net.ixitxachitls.companion.storage.ApplicationDataBaseAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 /**
  * The main application for the companion.
@@ -56,15 +50,12 @@ public class CompanionApplication extends MultiDexApplication
 
   private static CompanionApplication application;
 
-  private final DataBaseAccessor dataBaseAccessor;
   private final AssetAccessor assetAccessor;
 
-  private NsdAccessor nsdAccessor;
   private ApplicationCompanionContext context;
   private Activity currentActivity;
 
   public CompanionApplication() {
-    this.dataBaseAccessor = new ApplicationDataBaseAccessor(this);
     this.assetAccessor = new ApplicationAssetAccessor(this);
   }
 
@@ -81,18 +72,10 @@ public class CompanionApplication extends MultiDexApplication
     }
     super.onCreate();
 
-    nsdAccessor = new ApplicationNsdAccessor(this);
-
     Entries.init(this.getAssetAccessor());
 
-    context = new ApplicationCompanionContext(this.getDataBaseAccessor(), this.getNsdAccessor(),
-        this.getAssetAccessor(), this);
+    context = new ApplicationCompanionContext();
     registerActivityLifecycleCallbacks(this);
-  }
-
-  public void loggedIn() {
-    // The messenger needs other entries, thus cannot be created earlier.
-    context.messenger().start(); // Stopping is done in MainActivity.exit();
   }
 
   public static CompanionApplication get() {
@@ -107,17 +90,8 @@ public class CompanionApplication extends MultiDexApplication
     return currentActivity;
   }
 
-  // Companion Context accessors.
-  public DataBaseAccessor getDataBaseAccessor() {
-    return dataBaseAccessor;
-  }
-
   public AssetAccessor getAssetAccessor() {
     return assetAccessor;
-  }
-
-  public NsdAccessor getNsdAccessor() {
-    return nsdAccessor;
   }
 
   public CompanionContext context() {
@@ -154,14 +128,6 @@ public class CompanionApplication extends MultiDexApplication
 
   public Monsters monsters() {
     return context.monsters();
-  }
-
-  public CompanionMessenger messenger() {
-    return context.messenger();
-  }
-
-  public Histories histories() {
-    return context.histories();
   }
 
   @Override

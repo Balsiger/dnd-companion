@@ -23,11 +23,6 @@
       </intent-filter>
     </activity>
 
-    <provider
-        android:name="net.ixitxachitls.companion.storage.DataBaseContentProvider"
-        android:authorities="${applicationId}">
-    </provider>
-
   </application>
 
 </manifest>

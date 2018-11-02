@@ -41,7 +41,6 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
-import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.StatusView;
@@ -119,24 +118,6 @@ public class MainActivity extends AppCompatActivity {
         driveStorage.start(new DriveStorage.SelectImportFolder());
         return true;
 
-      case R.id.action_reset:
-        ConfirmationPrompt.create(this)
-            .title("Reset All Data")
-            .message("Do you really want to delete all data? This step cannot be undone!")
-            .yes(() -> DataBaseContentProvider.reset(getApplicationContext(), getContentResolver()))
-            .show();
-        return true;
-
-      case R.id.action_clear_messages:
-        ConfirmationPrompt.create(this)
-            .title("Clear Messages")
-            .message("Do you really want to clear all pending messages? This step cannot be undone!")
-
-            .yes(() -> DataBaseContentProvider.clearMessages(
-                getApplicationContext(), getContentResolver()))
-            .show();
-        return true;
-
       case R.id.action_about:
         MessageDialog.create(this)
             .layout(R.layout.dialog_about)
@@ -171,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void exit() {
-    CompanionApplication.get(this).context().messenger().stop();
     finishAffinity();
     finishAndRemoveTask();
     android.os.Process.killProcess(android.os.Process.myPid());

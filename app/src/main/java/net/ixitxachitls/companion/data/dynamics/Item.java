@@ -40,6 +40,7 @@ import java.util.stream.Collectors;
 /**
  * An item in the game.
  */
+@Deprecated
 public class Item {
 
   private String id;

@@ -28,7 +28,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
@@ -92,8 +91,6 @@ public class UserFragment extends CompanionFragment {
     me.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
     me.store();
 
-    // We have to send the welcome before showing another fragment, or the context will be null.
-    CompanionApplication.get(getContext()).messenger().sendWelcome();
     CompanionFragments.get().show(Type.campaigns, Optional.empty());
   }
 

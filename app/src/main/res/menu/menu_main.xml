@@ -29,16 +29,4 @@
         app:showAsAction="never" />
   </group>
 
-  <group android:id="@+id/menu_debug">
-    <item
-        android:id="@+id/action_reset"
-        android:orderInCategory="100"
-        android:title="@string/action_reset"
-        app:showAsAction="never"/>
-    <item
-        android:id="@+id/action_clear_messages"
-        android:orderInCategory="100"
-        android:title="@string/action_clear_messages"
-        app:showAsAction="never" />
-  </group>
 </menu>

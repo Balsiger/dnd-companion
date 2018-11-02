@@ -45,7 +45,6 @@ public class Entries {
   private static @Nullable Entries singleton = null;
 
   private final MonsterTemplates monsterTemplates = new MonsterTemplates();
-  private final EntriesStore<Level> levels = new EntriesStore<>(Level.class);
   private final EntriesStore<World> worlds = new EntriesStore<>(World.class);
   private final ItemTemplates items = new ItemTemplates();
   private final AssetAccessor assetAccessor;
@@ -65,20 +64,12 @@ public class Entries {
     return singleton;
   }
 
-  public static AssetAccessor getAssetAccessor() {
-    return get().assetAccessor;
-  }
-
   public MonsterTemplates getMonsterTemplates() {
     return monsterTemplates;
   }
 
   public EntriesStore<World> getWorlds() {
     return worlds;
-  }
-
-  public EntriesStore<Level> getLevels() {
-    return levels;
   }
 
   public ItemTemplates getItems() {
@@ -94,9 +85,6 @@ public class Entries {
             switch (type) {
               case MonsterTemplate.TYPE:
                 monsterTemplates.read(assetAccessor.open(path + "/" + file));
-                break;
-              case Level.TYPE:
-                levels.read(assetAccessor.open(path + "/" + file));
                 break;
               case World.TYPE:
                 worlds.read(assetAccessor.open(path + "/" + file));

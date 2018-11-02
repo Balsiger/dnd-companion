@@ -21,13 +21,7 @@
 
 package net.ixitxachitls.companion.data;
 
-import android.database.Cursor;
-import android.net.Uri;
-
 import com.google.protobuf.MessageLite;
-
-import net.ixitxachitls.companion.storage.DataBase;
-import net.ixitxachitls.companion.storage.DataBaseAccessor;
 
 /**
  * Base class for all entries.
@@ -44,18 +38,8 @@ public abstract class Entry<P extends MessageLite> {
     this.name = name;
   }
 
-  public boolean isDefined() {
-    return !name.isEmpty();
-  }
-
   public String getName() {
     return name;
-  }
-
-  protected static byte[] loadBytes(DataBaseAccessor dataBaseAccessor, long id, Uri table) {
-    Cursor cursor = dataBaseAccessor.query(table, id);
-    cursor.moveToFirst();
-    return cursor.getBlob(cursor.getColumnIndex(DataBase.COLUMN_PROTO));
   }
 
   public void setName(String name) {

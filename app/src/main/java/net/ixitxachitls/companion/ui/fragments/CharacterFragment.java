@@ -67,7 +67,6 @@ public class CharacterFragment extends CompanionFragment {
   protected Wrapper<FloatingActionButton> move;
   protected Wrapper<FloatingActionButton> timed;
   protected Wrapper<FloatingActionButton> back;
-  protected HistoryFragment history;
   protected ViewPager pager;
   protected @Nullable CharacterStatisticsFragment statisticsFragment;
   protected @Nullable CharacterInventoryFragment inventoryFragment;
@@ -100,8 +99,6 @@ public class CharacterFragment extends CompanionFragment {
             + "reappear, though.").invisible();
     move = Wrapper.<FloatingActionButton>wrap(view, R.id.move).gone();
     timed = Wrapper.<FloatingActionButton>wrap(view, R.id.timed).gone();
-
-    history = (HistoryFragment) getChildFragmentManager().findFragmentById(R.id.history);
 
     pager = view.findViewById(R.id.pager);
     pager.setAdapter(new CharacterPagerAdapter(getChildFragmentManager()));
@@ -165,8 +162,6 @@ public class CharacterFragment extends CompanionFragment {
     campaignTitle.text(campaign.get().getName());
     title.update(character);
     title.update(images());
-
-    history.update(character.getId());
   }
 
   private void delete() {

@@ -71,7 +71,6 @@ public class CampaignFragment extends CompanionFragment {
   protected TextWrapper<TextView> date;
   protected PartyFragment party;
   protected EncounterFragment encounter;
-  protected HistoryFragment history;
   protected Wrapper<FloatingActionButton> delete;
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> calendar;
@@ -106,7 +105,6 @@ public class CampaignFragment extends CompanionFragment {
     party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     encounter = (EncounterFragment) getChildFragmentManager().findFragmentById(R.id.encounter);
     encounter.hide();
-    history = (HistoryFragment) getChildFragmentManager().findFragmentById(R.id.history);
     delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).gone();
     delete.onClick(this::deleteCampaign).gone()
         .description("Delete", "Delete this campaign. This action cannot be undone and will send "
@@ -167,7 +165,6 @@ public class CampaignFragment extends CompanionFragment {
     monsters().addCampaign(campaign.getId());
     party.show(campaign);
     encounter.show(campaign);
-    history.update(campaign.getId());
     startEncounter.visible(campaign.amDM());
 
     if (campaign.amDM()) {

@@ -255,11 +255,6 @@ public class EditItemDialog extends Dialog {
             templates, parseHp(),
             itemValue.get(), appearance.getText(), "", "", "", parseMultiple(), parseMultiuse(),
             Duration.ZERO, false, Collections.emptyList()));
-        if (creature.isPresent() && campaigns().get(creature.get().getCampaignId()).isPresent()) {
-          CompanionApplication.get(getContext()).histories().created(item.toString(),
-              campaigns().get(creature.get().getCampaignId()).get().getDate(),
-              creature.get().getCampaignId(), creature.get().getId(), item.get().getId());
-        }
       }
     }
 
