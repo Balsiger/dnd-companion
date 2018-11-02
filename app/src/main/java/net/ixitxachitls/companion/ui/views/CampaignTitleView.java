@@ -55,7 +55,7 @@ public class CampaignTitleView extends TitleView { //extends LinearLayout {
   protected View init(AttributeSet attributes) {
     View view = super.init(attributes);
 
-    view.setBackgroundColor(getContext().getColor(R.color.campaign));
+    container.setBackgroundColor(getContext().getColor(R.color.campaign));
     setDefaultImage(R.drawable.image_filter_hdr);
     return view;
   }

@@ -32,19 +32,21 @@ import java.util.Map;
  */
 public class Encounters extends Documents<Encounters> {
 
-  private final Map<String, Encounter> battlesByCampaignId = new HashMap<>();
+  private final Map<String, Encounter> encountersByCampaignId = new HashMap<>();
 
   public Encounters(CompanionContext context) {
     super(context);
   }
 
+  /*
   public Encounter get(String campaignId) {
-    Encounter encounter = battlesByCampaignId.get(campaignId);
-    if (encounter == null) {
-      encounter = Encounter.getOrCreate(context, campaignId);
-      battlesByCampaignId.put(campaignId, encounter);
+    Encounter startEncounter = encountersByCampaignId.get(campaignId);
+    if (startEncounter == null) {
+      startEncounter = Encounter.getOrCreate(context, campaignId);
+      encountersByCampaignId.put(campaignId, startEncounter);
     }
 
-    return encounter;
+    return startEncounter;
   }
+  */
 }

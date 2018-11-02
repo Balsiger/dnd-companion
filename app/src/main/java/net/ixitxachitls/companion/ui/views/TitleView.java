@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.support.annotation.CallSuper;
+import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -43,20 +44,32 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  */
 public class TitleView extends LinearLayout {
 
+  protected final int foregroundColor;
+  protected final int backgroundColor;
+  protected final int defaultImage;
+
   // UI elements.
-  private TextWrapper<TextView> title;
-  private TextWrapper<TextView> subtitle;
-  private RoundImageView image;
-  private LinearLayout icons;
+  protected LinearLayout container;
+  protected TextWrapper<TextView> title;
+  protected TextWrapper<TextView> subtitle;
+  protected RoundImageView image;
+  protected LinearLayout icons;
 
   public TitleView(Context context) {
-    super(context);
-
-    init(null);
+    this(context, null);
   }
 
   public TitleView(Context context, @Nullable AttributeSet attributes) {
+    this(context, attributes, 0, 0, 0);
+  }
+
+  public TitleView(Context context, @Nullable AttributeSet attributes,
+                   @ColorRes int foregroundColor, @ColorRes int backgroundColor,
+                   @DrawableRes int defaultImage) {
     super(context, attributes);
+    this.foregroundColor = foregroundColor;
+    this.backgroundColor = backgroundColor;
+    this.defaultImage = defaultImage;
 
     init(attributes);
   }
@@ -66,19 +79,21 @@ public class TitleView extends LinearLayout {
     TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.TitleView);
 
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_title, null, false);
+    // Ensure the view uses the full width.
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
-        LinearLayout.LayoutParams.WRAP_CONTENT));
+    LinearLayout.LayoutParams.WRAP_CONTENT));
     addView(view);
 
+    container = view.findViewById(R.id.container);
+    container.setBackgroundColor(array.getColor(R.styleable.TitleView_color,
+        getResources().getColor(R.color.white, null)));
     title = TextWrapper.wrap(view, R.id.title)
         .text(array.getString(R.styleable.TitleView_title));
     subtitle = TextWrapper.wrap(view, R.id.subtitle)
         .text(array.getString(R.styleable.TitleView_subtitle));
     image = view.findViewById(R.id.image);
     icons = view.findViewById(R.id.icons);
-    view.setBackgroundColor(array.getColor(R.styleable.TitleView_color,
-        getResources().getColor(R.color.white, null)));
     if (array.getBoolean(R.styleable.TitleView_dark, false)) {
       title.textColor(R.color.white);
       subtitle.textColor(R.color.white);
@@ -134,7 +149,11 @@ public class TitleView extends LinearLayout {
   public void addIcon(@DrawableRes int drawable) {
     ImageView icon = new ImageView(getContext());
     icon.setImageDrawable(getContext().getDrawable(drawable));
+    addIcon(icon);
+    icon.getLayoutParams().height = 50;
+  }
+
+  public void addIcon(ImageView icon) {
     icons.addView(icon);
-    icon.getLayoutParams().height = 75;
   }
 }

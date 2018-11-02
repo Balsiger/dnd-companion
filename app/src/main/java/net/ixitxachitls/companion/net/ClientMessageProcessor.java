@@ -75,7 +75,7 @@ public class ClientMessageProcessor extends MessageProcessor {
     Optional<Campaign> oldCampaign =
         context.campaigns().get(campaign.getId());
     if (oldCampaign.isPresent()
-        && context.encounters().get(oldCampaign.get().getId()).isEnded()
+        && oldCampaign.get().getEncounter().isEnded()
         //&& !campaign.getBattle().isEnded()
         && CompanionFragments.get().showsCampaign(campaign.getId())) {
       // Show a message about the newly started battle.
@@ -106,7 +106,6 @@ public class ClientMessageProcessor extends MessageProcessor {
   protected void handleWelcome(String remoteId, String remoteName) {
     status("received welcome from server " + remoteName);
     super.handleWelcome(remoteId, remoteName);
-    Status.addServerConnection(remoteId, remoteName);
   }
 
   @Override

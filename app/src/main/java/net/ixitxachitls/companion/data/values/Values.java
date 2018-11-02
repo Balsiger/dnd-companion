@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +29,15 @@ import java.util.Map;
  * Some auxiliary functions for values.
  */
 public class Values {
+
+  public static Map<String, Object> get(Map<String, Object> data, String field) {
+    if (data.containsKey(field)) {
+      return (Map<String, Object>) data.get(field);
+    }
+
+    return Collections.emptyMap();
+  }
+
   public static String get(Map<String, Object> data, String field, String defaultValue) {
     if (data.containsKey(field)) {
       return (String) data.get(field);
@@ -39,6 +49,14 @@ public class Values {
   public static long get(Map<String, Object> data, String field, long defaultValue) {
     if (data.containsKey(field)) {
       return (long) data.get(field);
+    }
+
+    return defaultValue;
+  }
+
+  public static boolean get(Map<String, Object> data, String field, boolean defaultValue) {
+    if (data.containsKey(field)) {
+      return (boolean) data.get(field);
     }
 
     return defaultValue;
@@ -59,5 +77,9 @@ public class Values {
     }
 
     return defaultValue;
+  }
+
+  public static boolean has(Map<String, Object> data, String field) {
+    return data.containsKey(field);
   }
 }

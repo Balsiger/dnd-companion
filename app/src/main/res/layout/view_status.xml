@@ -21,50 +21,11 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="1000dp"
+              android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:background="@color/status"
               android:orientation="vertical"
-              android:paddingBottom="5dp"
-              android:paddingEnd="10dp"
-              android:paddingStart="10dp"
-              android:paddingTop="5dp">
-
-  <LinearLayout
-      android:id="@+id/container"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_gravity="bottom"
-      android:orientation="horizontal">
-
-    <view
-        android:id="@+id/online"
-        class="net.ixitxachitls.companion.ui.views.IconView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        app:bleep_bright="@color/brightRed"
-        app:bleep_dark="@color/red"
-        app:srcCompat="@drawable/ic_favorite_black_24dp"/>
-
-    <HorizontalScrollView
-        android:id="@+id/connections_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-      <LinearLayout
-          android:id="@+id/connections"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:orientation="horizontal"
-          android:padding="5dp">
-      </LinearLayout>
-
-    </HorizontalScrollView>
-
-  </LinearLayout>
+    >
 
   <ScrollView
       android:id="@+id/messages_scroll"

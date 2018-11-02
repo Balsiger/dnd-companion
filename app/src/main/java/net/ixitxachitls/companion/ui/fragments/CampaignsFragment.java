@@ -26,6 +26,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
@@ -33,6 +34,7 @@ import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
@@ -45,6 +47,7 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * The fragment displaying the list of campaigns and orphaned characters.
@@ -52,6 +55,7 @@ import java.util.Optional;
 public class CampaignsFragment extends CompanionFragment {
 
   private TitleView user;
+  private Wrapper<TextView> note;
   private LinearLayout campaigns;
   private LinearLayout characters;
 
@@ -69,6 +73,7 @@ public class CampaignsFragment extends CompanionFragment {
     user.setAction(() -> show(Type.settings));
     campaigns = view.findViewById(R.id.campaigns);
     characters = view.findViewById(R.id.characters);
+    note = Wrapper.wrap(view, R.id.note);
     Wrapper.wrap(view, R.id.campaign_add)
         .onClick(this::addCampaign)
         .description("Add Campaign", "Ceate a new campaign. "
@@ -83,6 +88,7 @@ public class CampaignsFragment extends CompanionFragment {
     campaigns().observe(this, this::update);
     characters().observe(this, this::update);
     images().observe(this, this::update);
+    messages().observe(this, this::update);
     return view;
   }
 
@@ -106,6 +112,7 @@ public class CampaignsFragment extends CompanionFragment {
 
     // We have to recreate the campaigns as the transition away from this fragment seems to break
     // them.
+    boolean campaignFound = false;
     for (Campaign campaign : campaigns.getCampaigns()) {
       CampaignTitleView title = new CampaignTitleView(getContext());
       campaign.observe(this, title::update);
@@ -115,6 +122,11 @@ public class CampaignsFragment extends CompanionFragment {
       title.setAction(() -> {
         CompanionFragments.get().showCampaign(campaign, Optional.of(title));
       });
+      campaignFound = true;
+    }
+
+    if (campaignFound) {
+      note.gone();
     }
 
     user.setTitle(me().getNickname());
@@ -125,13 +137,24 @@ public class CampaignsFragment extends CompanionFragment {
   private void update(Characters characters) {
     this.characters.removeAllViews();
 
+    boolean characterFound = false;
     for (Character character : characters.getAll()) {
       if (character.amPlayer()) {
         CharacterTitleView title = new CharacterTitleView(getContext());
         character.observe(this, title::update);
+        messages().observe(this, title::update);
         this.characters.addView(title);
+        characterFound = true;
       }
     }
+
+    if (characterFound) {
+      note.gone();
+    }
+
+    messages().readMessages(characters.getPlayerCharacters(me().getId()).stream()
+        .map(Character::getId)
+        .collect(Collectors.toList()));
   }
 
   private void update(Images images) {
@@ -143,6 +166,10 @@ public class CampaignsFragment extends CompanionFragment {
       CharacterTitleView title = (CharacterTitleView) characters.getChildAt(i);
       title.update(images);
     }
+  }
+
+  private void update(Messages message) {
+
   }
 
   private String subtitle() {

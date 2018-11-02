@@ -44,12 +44,10 @@ import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.storage.DataBaseContentProvider;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
-import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.views.StatusView;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -105,8 +103,8 @@ public class MainActivity extends AppCompatActivity {
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     int id = item.getItemId();
-    if (id == R.id.action_settings) {
-      CompanionFragments.get().show(CompanionFragment.Type.settings, Optional.empty());
+    if (id == R.id.action_log) {
+      Status.toggleDebug();
       return true;
     }
 

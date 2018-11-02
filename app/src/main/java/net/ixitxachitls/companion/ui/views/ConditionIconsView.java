@@ -22,29 +22,40 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.widget.ImageView;
+import android.support.annotation.ColorRes;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.widget.LinearLayout;
 
-import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Creature;
-import net.ixitxachitls.companion.data.values.Condition;
-import net.ixitxachitls.companion.rules.Conditions;
+import net.ixitxachitls.companion.data.documents.CreatureCondition;
+import net.ixitxachitls.companion.util.Strings;
 
-import java.util.Optional;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * Created by balsiger on 5/28/18.
+ * View for all condition icons.
  */
-public class ConditionIconsView extends LinearLayout { //FlexboxLayout {
+public class ConditionIconsView extends LinearLayout {
 
+  private final int orientation;
+  private final int backgroundColor;
+  private final int foregroundColor;
+  private List<CreatureCondition> conditions = Collections.emptyList();
+
+  // UI elements.
   private final HPImageView hp;
   private final NonlethalImageView nonlethal;
 
-  public ConditionIconsView(Context context) {
+  public ConditionIconsView(Context context, @LinearLayoutCompat.OrientationMode int orientation,
+                            @ColorRes int foregroundColor, @ColorRes int backgroundColor) {
     super(context);
+    this.orientation = orientation;
+    this.foregroundColor = foregroundColor;
+    this.backgroundColor = backgroundColor;
 
-    setOrientation(VERTICAL);
-    //setFlexWrap(FlexWrap.WRAP);
+    setOrientation(orientation);
     hp = new HPImageView(getContext());
     nonlethal = new NonlethalImageView(getContext());
   }
@@ -53,40 +64,46 @@ public class ConditionIconsView extends LinearLayout { //FlexboxLayout {
     hp.setHp(creature.getHp(), creature.getMaxHp());
     nonlethal.setNonlethalDamage(creature.getNonlethalDamage(), creature.getHp());
 
+    redraw();
+  }
+
+  private void redraw() {
     removeAllViews();
     addView(hp);
     addView(nonlethal);
 
-
-    addView(createImage(Conditions.BLINDED, Optional.empty()));
-    addView(createImage(Conditions.COWERING, Optional.empty()));
-    addView(createImage(Conditions.DEAD, Optional.empty()));
-    addView(createImage(Conditions.ENTANGLED, Optional.empty()));
-    addView(createImage(Conditions.FASCINATED, Optional.empty()));
-    addView(createImage(Conditions.GRAPPLING, Optional.empty()));
-    addView(createImage(Conditions.CHECKED, Optional.empty()));
-    addView(createImage(Conditions.PANICKED, Optional.empty()));
-    addView(createImage(Conditions.ABILITY_DAMAGED, Optional.empty()));
-    addView(createImage(Conditions.PRONE, Optional.empty()));
-    addView(createImage(Conditions.PETRIFIED, Optional.empty()));
-    addView(createImage(Conditions.UNCONSCIOUS, Optional.empty()));
+    for (CreatureCondition condition : conditions) {
+      addView(new ConditionIconView(getContext(), condition, foregroundColor, backgroundColor));
+    }
 
     /*
-    Encounter encounter = CompanionApplication.get(getContext()).encounters().get(creature.getCampaignId());
-    for (Condition condition : creature.getActiveConditions(encounter)) {
-      if (condition.showsIcon()) {
-        Optional<Character> character = Optional.empty();
-        if (creature instanceof Character) {
-          character = Optional.of((Character) creature);
-        }
-
-        addView(createImage(condition, character));
-      }
-    }
+    addView(new ConditionIconView(getContext(), Conditions.FLAT_FOOTED));
+    addView(new ConditionIconView(getContext(), Conditions.BLINDED));
+    addView(new ConditionIconView(getContext(), Conditions.DEAD));
+    addView(new ConditionIconView(getContext(), Conditions.ENTANGLED));
+    addView(new ConditionIconView(getContext(), Conditions.FASCINATED));
+    addView(new ConditionIconView(getContext(), Conditions.GRAPPLING));
+    addView(new ConditionIconView(getContext(), Conditions.CHECKED));
+    addView(new ConditionIconView(getContext(), Conditions.PANICKED));
+    addView(new ConditionIconView(getContext(), Conditions.ABILITY_DAMAGED));
+    addView(new ConditionIconView(getContext(), Conditions.PRONE));
+    addView(new ConditionIconView(getContext(), Conditions.PETRIFIED));
+    addView(new ConditionIconView(getContext(), Conditions.UNCONSCIOUS));
     */
   }
 
-  private ImageView createImage(Condition condition, Optional<Character> character) {
-    return new ConditionIconView(getContext(), condition);
+  public void update(List<CreatureCondition> conditions) {
+    this.conditions = conditions;
+    redraw();
+  }
+
+  public String summary() {
+    String summary = Strings.SEMICOLON_JOINER.join(conditions.stream()
+        .map(c -> c.getCondition().getSummary()).collect(Collectors.toList()));
+    if (summary.isEmpty()) {
+      return "No conditions";
+    }
+
+    return summary;
   }
 }

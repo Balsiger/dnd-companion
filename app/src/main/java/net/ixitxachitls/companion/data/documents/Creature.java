@@ -27,12 +27,13 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.statics.MonsterTemplate;
-import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -42,7 +43,6 @@ import java.util.stream.Collectors;
  * The base for all monsters or characters in the game.
  */
 public class Creature<T extends Creature<T>> extends Document<T> {
-  private static final int NO_INITIATIVE = 200;
   private static final String FIELD_CAMPAIGN = "campaign";
   private static final String DEFAULT_CAMPAIGN = "";
   private static final String FIELD_NAME = "name";
@@ -59,6 +59,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_HP = "hp";
   private static final String FIELD_MAX_HP = "max_hp";
   private static final String FIELD_NONLETHAL = "nonlethal";
+  private static final String FIELD_INITIATIVE = "initiative";
+  private static final String FIELD_ENCOUNTER_NUMBER = "encounter_number";
 
   private String campaignId = "";
   private String name;
@@ -66,7 +68,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private Gender gender = Gender.UNKNOWN;
   private int strength;
   private int constitution;
-  private int dexterity;
+  protected int dexterity;
   private int intelligence;
   private int wisdom;
   private int charisma;
@@ -74,9 +76,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private int maxHp;
   private int nonlethalDamage;
   private List<Item> items = new ArrayList<>();
-  private int initiative = NO_INITIATIVE;
-  private int initiativeRandom = 0;
-  private int battleNumber = 0;
+  private int initiative = 0;
+  private int encounterNumber = 0;
   private List<TargetedTimedCondition> initiatedConditions = new ArrayList<>();
   private List<TimedCondition> affectedConditions = new ArrayList<>();
 
@@ -90,6 +91,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public String getCampaignId() {
     return campaignId;
+  }
+
+  public Optional<Campaign> getCampaign() {
+    return context.campaigns().get(campaignId);
   }
 
   public void setCampaignId(String campaignId) {
@@ -184,6 +189,29 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return gender;
   }
 
+  public void setInitiative(int encounterNumber, int initiative) {
+    this.encounterNumber = encounterNumber;
+    this.initiative = initiative;
+
+    store();
+  }
+
+  public boolean hasInitiative(int encounterNumber) {
+    return this.encounterNumber == encounterNumber;
+  }
+
+  public Optional<Integer> getInitiative(int encounterNumber) {
+    if (this.encounterNumber == encounterNumber) {
+      return Optional.of(initiative);
+    }
+
+    return Optional.empty();
+  }
+
+  public int getEncounterNumber() {
+    return encounterNumber;
+  }
+
   public void setGender(Gender gender) {
     this.gender = gender;
   }
@@ -267,6 +295,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return affectedConditions;
   }
 
+  public void addCondition(TimedCondition condition) {
+    CreatureCondition.create(context, getId(), condition).store();
+  }
+
   public void addAffectedCondition(TimedCondition condition) {
     affectedConditions.add(condition);
   }
@@ -288,7 +320,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     */
   }
 
-  public List<Condition> getActiveConditions(Encounter encounter) {
+  public List<ConditionData> getActiveConditions(Encounter encounter) {
     return affectedConditions.stream()
         .filter(c -> c.active(encounter))
         .map(TimedCondition::getCondition)
@@ -358,6 +390,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     hp = (int) get(FIELD_HP, 0);
     maxHp = (int) get(FIELD_MAX_HP, 0);
     nonlethalDamage = (int) get(FIELD_NONLETHAL, 0);
+    initiative = (int) get(FIELD_INITIATIVE, 0);
+    encounterNumber = (int) get(FIELD_ENCOUNTER_NUMBER, 0);
   }
 
   @Override
@@ -378,6 +412,48 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     data.put(FIELD_HP, hp);
     data.put(FIELD_MAX_HP, maxHp);
     data.put(FIELD_NONLETHAL, nonlethalDamage);
+    data.put(FIELD_INITIATIVE, initiative);
+    data.put(FIELD_ENCOUNTER_NUMBER, encounterNumber);
+
     return data;
+  }
+
+  public static class InitiativeComparator implements Comparator<Creature> {
+    private final int encounterNumber;
+
+    public InitiativeComparator(int encounterNumber) {
+      this.encounterNumber = encounterNumber;
+    }
+
+    @Override
+    public int compare(Creature first, Creature second) {
+      if (first.encounterNumber == encounterNumber && second.encounterNumber == encounterNumber) {
+        return compareInit(first, second);
+      }
+
+      if (first.encounterNumber == encounterNumber && second.encounterNumber != encounterNumber) {
+        return -1;
+      }
+
+      if (first.encounterNumber != encounterNumber && second.encounterNumber == encounterNumber) {
+        return +2;
+      }
+
+      return compareInit(first, second);
+    }
+
+    private int compareInit(Creature first, Creature second) {
+      int compare = Integer.compare(second.initiative, first.initiative);
+      if (compare != 0) {
+        return compare;
+      }
+
+      compare = Integer.compare(second.dexterity, first.dexterity);
+      if (compare != 0) {
+        return compare;
+      }
+
+      return first.getId().compareTo(second.getId());
+    }
   }
 }

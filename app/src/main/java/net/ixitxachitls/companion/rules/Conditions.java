@@ -25,20 +25,19 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Duration;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nullable;
 
 /**
  * Rules for conditions.
  */
 public class Conditions {
 
-  public static final Condition ABILITY_DAMAGED = Condition.newBuilder("Ability Damaged")
+  public static final ConditionData ABILITY_DAMAGED = ConditionData.newBuilder("Ability Damaged")
       .description("The character has temporarily lost 1 or more ability score points. Lost "
           + "points return at a rate of 1 per day unless noted otherwise by the condition "
           + "dealing the damage. A character with Strength 0 falls to the ground and is "
@@ -52,7 +51,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_fragile_48)
       .build();
-  public static final Condition ABILITY_DRAINED = Condition.newBuilder("Ability Drained")
+  public static final ConditionData ABILITY_DRAINED = ConditionData.newBuilder("Ability Drained")
       .description("The character has permanently lost 1 or more ability score points. "
           + "The character can regain these points only through magical means. A "
           + "character with Strength 0 falls to the ground and is helpless. A character "
@@ -64,7 +63,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_amputee_48)
       .build();
-  public static final Condition BLINDED = Condition.newBuilder("Blinded")
+  public static final ConditionData BLINDED = ConditionData.newBuilder("Blinded")
       .description("The character cannot see. He takes a –2 penalty to Armor Class, loses his"
           + " Dexterity bonus to AC (if any), moves at half speed, and takes a –4 penalty"
           + " on Search checks and on most Strength- and Dexterity-based skill checks. "
@@ -78,7 +77,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.eye_off)
       .build();
-  public static final Condition BLOWN_AWAY = Condition.newBuilder("Blown Away")
+  public static final ConditionData BLOWN_AWAY = ConditionData.newBuilder("Blown Away")
       .description("Depending on its size, a creature can be blown away by winds of high "
           + "velocity (see Table 3–24, page 95). A creature on the ground that is blown "
           + "away is knocked down and rolls 1d4×10 feet, taking 1d4 points of nonlethal "
@@ -90,7 +89,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_air_48)
       .build();
-  public static final Condition CHECKED = Condition.newBuilder("Checked")
+  public static final ConditionData CHECKED = ConditionData.newBuilder("Checked")
       .description("Prevented from achieving forward motion by an applied force, such as wind"
           + ". Checked creatures on the ground merely stop. Checked flying creatures move "
           + "back a distance specified in the description of the effect.")
@@ -98,7 +97,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.checkerboard)
       .build();
-  public static final Condition CONFUSED = Condition.newBuilder("Confused")
+  public static final ConditionData CONFUSED = ConditionData.newBuilder("Confused")
       .description("A confused character’s actions are determined by rolling d% at the "
           + "beginning of his turn: 01–10, attack caster with melee or ranged weapons (or "
           + "close with caster if attacking is not possible); 11–20, act normally; 21–50, do "
@@ -116,7 +115,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_puzzled_48)
       .build();
-  public static final Condition COWERING = Condition.newBuilder("Cowering")
+  public static final ConditionData COWERING = ConditionData.newBuilder("Cowering")
       .description("The character is frozen in fear and can take no actions. A cowering "
           + "character takes a –2 penalty to Armor Class and loses her Dexterity bonus (if "
           + "any).")
@@ -124,7 +123,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_ostrich_head_in_sand_48)
       .build();
-  public static final Condition DAZED = Condition.newBuilder("Dazed")
+  public static final ConditionData DAZED = ConditionData.newBuilder("Dazed")
       .description("The creature is unable to act normally. A dazed creature can take no "
           + "actions, but has no penalty to AC. A dazed condition typically lasts 1 round.")
       .summary("No action, but no AC penalty.")
@@ -132,7 +131,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_confused_48)
       .build();
-  public static final Condition DAZZLED = Condition.newBuilder("Dazzled")
+  public static final ConditionData DAZZLED = ConditionData.newBuilder("Dazzled")
       .description("The creature is unable to see well because of overstimulation of the "
           + "eyes. A dazzled creature takes a –1 penalty on attack rolls, Search checks, and "
           + "Spot checks.")
@@ -140,7 +139,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.sunglasses)
       .build();
-  public static final Condition DEAD = Condition.newBuilder("Dead")
+  public static final ConditionData DEAD = ConditionData.newBuilder("Dead")
       .description("The character’s hit points are reduced to –10, his Constitution drops to "
           + "0, or he is killed outright by a spell or effect. The character’s soul leaves "
           + "his body. Dead characters cannot benefit from normal or magical healing, but "
@@ -152,9 +151,11 @@ public class Conditions {
           + "bodies.")
       .summary("He's dead, Jim.")
       .predefined()
+      .dmOnly()
+      .notDismissable()
       .icon(R.drawable.ic_skull_black_36dp)
       .build();
-  public static final Condition DEAFENED = Condition.newBuilder("Deafened")
+  public static final ConditionData DEAFENED = ConditionData.newBuilder("Deafened")
       .description("A deafened character cannot hear. She takes a –4 penalty on initiative "
           + "checks, automatically fails Listen checks, and has a 20% chance of spell failure"
           + " when casting spells with verbal components.\n"
@@ -164,7 +165,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_deaf_48)
       .build();
-  public static final Condition DISABLED = Condition.newBuilder("Disabled")
+  public static final ConditionData DISABLED = ConditionData.newBuilder("Disabled")
       .description("A character with 0 hit points, or one who has negative hit points but has"
           + " become stable and conscious, is disabled. A disabled character may take a "
           + "single move action or standard action each round (but not both, nor can she take"
@@ -183,7 +184,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_wheelchair_48)
       .build();
-  public static final Condition DYING = Condition.newBuilder("Dying")
+  public static final ConditionData DYING = ConditionData.newBuilder("Dying")
       .description("A dying character is unconcious and near death. She has –1 to –9 current "
           + "hit points. A dying character can take no actions and is unconscious. At the end"
           + " of each round starting with the round in which the character dropped below 0 hit "
@@ -191,9 +192,11 @@ public class Conditions {
           + "chance to become stable. If she does not, she loses 1 hit point. If a dying "
           + "character reaches –10 hit points, she is dead.")
       .summary("Unconcious and near death, taking no actions but loses 1 hit point per round.")
+      .dmOnly()
+      .notDismissable()
       .predefined()
       .build();
-  public static final Condition ENERGY_DRAINED = Condition.newBuilder("Energy Drained")
+  public static final ConditionData ENERGY_DRAINED = ConditionData.newBuilder("Energy Drained")
       .description("The character gains one or more negative levels, which might permanently "
           + "drain the character’s levels. If the subject has at least as many negative "
           + "levels as Hit Dice, he dies. Each negative level gives a creature the following "
@@ -207,7 +210,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.battery_10)
       .build();
-  public static final Condition ENTANGLED = Condition.newBuilder("Entangled")
+  public static final ConditionData ENTANGLED = ConditionData.newBuilder("Entangled")
       .description("The character is ensnared. Being entangled impedes movement, but does not"
           + " entirely prevent it unless the bonds are anchored to an immobile object or "
           + "tethered by an opposing force. An entangled creature moves at half speed, cannot"
@@ -218,16 +221,17 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_handcuffs_48)
       .build();
-  public static final Condition EXHAUSTED = Condition.newBuilder("Exhausted")
+  public static final ConditionData EXHAUSTED = ConditionData.newBuilder("Exhausted")
       .description("An exhausted character moves at half speed and takes a –6 penalty to "
           + "Strength and Dexterity. After 1 hour of complete rest, an exhausted character "
           + "becomes fatigued. A fatigued character becomes exhausted by doing something else"
           + " that would normally cause fatigue.")
       .summary("Move half speed, -6 Str and Dex.")
       .predefined()
+      .notDismissable()
       .icon(R.drawable.icons8_insomnia_48)
       .build();
-  public static final Condition FASCINATED = Condition.newBuilder("Fascinated")
+  public static final ConditionData FASCINATED = ConditionData.newBuilder("Fascinated")
       .description("A fascinated creature is entranced by a supernatural or spell effect. The"
           + " creature stands or sits quietly, taking no actions other than to pay attention "
           + "to the fascinating effect, for as long as the effect lasts. It takes a –4 "
@@ -241,25 +245,27 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_galaxy_48)
       .build();
-  public static final Condition FATIGUED = Condition.newBuilder("Fatigued")
+  public static final ConditionData FATIGUED = ConditionData.newBuilder("Fatigued")
       .description("A fatigued character can neither run nor charge and takes a –2 penalty to"
           + " Strength and Dexterity. Doing anything that would normally cause fatigue causes"
           + " the fatigued character to become exhausted. After 8 hours of complete rest, "
           + "fatigued characters are no longer fatigued.")
       .summary("Cannot run or charge, -2 Str and Dex.")
       .predefined()
+      .notDismissable()
       .icon(R.drawable.icons8_slouch_filled_50)
       .build();
-  public static final Condition FLAT_FOOTED = Condition.newBuilder("Flat-footed")
+  public static final ConditionData FLAT_FOOTED = ConditionData.newBuilder("Flat-footed")
       .description("A character who has not yet acted during a combat is flat-footed, not yet "
           + "reacting normally to the situation. A flat-footed character loses his Dexterity "
           + "bonus to AC (if any) and cannot make attacks of opportunity.")
-      .summary("Not yet acted, no Dex to AC, no attacks of opprtunity.")
+      .summary("Not yet acted, no Dex to AC, no attacks of opportunity.")
       .predefined()
       .endsBeforeTurn()
+      .dmOnly()
       .icon(R.drawable.icons8_foot_50)
       .build();
-  public static final Condition FRIGHTENED = Condition.newBuilder("Frightened")
+  public static final ConditionData FRIGHTENED = ConditionData.newBuilder("Frightened")
       .description("A frightened creature flees from the source of its fear as best it can. "
           + "If unable to flee, it may fight. A frightened creature takes a –2 penalty on all"
           + " attack rolls, saving throws, skill checks, and ability checks. A frightened "
@@ -271,7 +277,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_scream_50)
       .build();
-  public static final Condition GRAPPLING = Condition.newBuilder("Grappling")
+  public static final ConditionData GRAPPLING = ConditionData.newBuilder("Grappling")
       .description("Engaged in wrestling or some other form of hand-to-hand struggle with one"
           + " or more attackers. A grappling character can undertake only a limited number of "
           + "actions. He does not threaten any squares, and loses his Dexterity bonus to AC "
@@ -280,7 +286,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_wrestling_48)
       .build();
-  public static final Condition HELPLESS = Condition.newBuilder("Helpless")
+  public static final ConditionData HELPLESS = ConditionData.newBuilder("Helpless")
       .description("A helpless character is paralyzed, held, bound, sleeping, unconscious, or"
           + " otherwise completely at an opponent’s mercy. A helpless target is treated as "
           + "having a Dexterity of 0 (–5 modifier). Melee attacks against a helpless target "
@@ -299,7 +305,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_oppression_48)
       .build();
-  public static final Condition INCORPOREAL = Condition.newBuilder("Incorporeal")
+  public static final ConditionData INCORPOREAL = ConditionData.newBuilder("Incorporeal")
       .description("Having no physical body. Incorporeal creatures are immune to all "
           + "nonmagical attack forms. They can be harmed only by other incorporeal creatures,"
           + " +1 or better magic weapons, spells, spell-like effects, or supernatural effects. "
@@ -308,7 +314,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_ghost_48)
       .build();
-  public static final Condition INVISIBLE = Condition.newBuilder("Invisible")
+  public static final ConditionData INVISIBLE = ConditionData.newBuilder("Invisible")
       .description("Visually undetectable. An invisible creature gains a +2 bonus on attack "
           + "rolls against sighted opponents, and ignores its opponents’ Dexterity bonuses to"
           + " AC (if any). (See Invisibility, under Special Abilities, earlier in this "
@@ -317,16 +323,17 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_invisible_48)
       .build();
-  public static final Condition KNOCKED_DOWN = Condition.newBuilder("Knocked Down")
+  public static final ConditionData KNOCKED_DOWN = ConditionData.newBuilder("Knocked Down")
       .description("Depending on their size, creatures can be knocked down by winds of high "
           + "velocity (see Table 3–24: Wind Effects, page 95). Creatures on the ground are "
           + "knocked prone by the force of the wind. Flying creatures are instead blown back "
           + "1d6×10 feet.")
       .summary("Knocked prone (ground) or blown back (flying).")
       .predefined()
+      .notDismissable()
       .icon(R.drawable.icons8_boxing_glove_48)
       .build();
-  public static final Condition NAUSEATED = Condition.newBuilder("Nauseated")
+  public static final ConditionData NAUSEATED = ConditionData.newBuilder("Nauseated")
       .description("Experiencing stomach distress. Nauseated creatures are unable to attack, "
           + "cast spells, concentrate on spells, or do  anything else requiring attention. "
           + "The only action such a character can take is a single move action per turn.")
@@ -334,7 +341,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_vomited_48)
       .build();
-  public static final Condition PANICKED = Condition.newBuilder("Panicked")
+  public static final ConditionData PANICKED = ConditionData.newBuilder("Panicked")
       .description("A panicked creature must drop anything it holds and flee at top speed "
           + "from the source of its fear, as well as any other dangers it encounters, along a"
           + " random path. It can’t take any other actions. I.addition, the creature takes a "
@@ -348,7 +355,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_exercise_48)
       .build();
-  public static final Condition PARALYZED = Condition.newBuilder("Paralyzed")
+  public static final ConditionData PARALYZED = ConditionData.newBuilder("Paralyzed")
       .description("A paralyzed character is frozen in place and unable to move or act, such "
           + "as by the hold person spell. A paralyzed character has effective Dexterity and "
           + "Strength scores of 0 and is helpless, but can take purely mental actions. A "
@@ -360,7 +367,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_no_running_48)
       .build();
-  public static final Condition PETRIFIED = Condition.newBuilder("Petrified")
+  public static final ConditionData PETRIFIED = ConditionData.newBuilder("Petrified")
       .description("A petrified character has been turned to stone and is considered "
           + "unconcious. If a petrified character cracks or breaks, but the broken pieces are"
           + " joined with the body as he returns to flesh, he is unharmed. If the character’s"
@@ -371,13 +378,13 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_statue_48)
       .build();
-  public static final Condition PINNED = Condition.newBuilder("Pinned")
+  public static final ConditionData PINNED = ConditionData.newBuilder("Pinned")
       .description("Held immobile (but not helpless) in a grapple.")
       .summary("Held immobile, but not helpless.")
       .predefined()
       .icon(R.drawable.icons8_pin_48)
       .build();
-  public static final Condition PRONE = Condition.newBuilder("Prone")
+  public static final ConditionData PRONE = ConditionData.newBuilder("Prone")
       .description("The character is on the ground. An attacker who is prone has a –4 penalty"
           + " on melee attack rolls and cannot use a ranged weapon (except for a crossbow). A "
           + "defender who is prone gains a +4 bonus to Armor Class against ranged attacks, but "
@@ -388,7 +395,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_pushups_48)
       .build();
-  public static final Condition SHAKEN = Condition.newBuilder("Shaken")
+  public static final ConditionData SHAKEN = ConditionData.newBuilder("Shaken")
       .description("A shaken character takes a –2 penalty on attack rolls, saving throws, "
           + "skill checks, and ability checks. Shaken is a less severe state of fear than "
           + "frightened or panicked.")
@@ -396,14 +403,14 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_cocktail_shaker_50)
       .build();
-  public static final Condition SICKENED = Condition.newBuilder("Sickened")
+  public static final ConditionData SICKENED = ConditionData.newBuilder("Sickened")
       .description("The character takes a –2 penalty on all attack rolls, weapon damage "
           + "rolls, saving throws, skill checks, and ability checks.")
       .summary("-2 attack, damage, saves, skill, ability checks.")
       .predefined()
       .icon(R.drawable.icons8_fever_50)
       .build();
-  public static final Condition STABLE = Condition.newBuilder("Stable")
+  public static final ConditionData STABLE = ConditionData.newBuilder("Stable")
       .description("A character who was dying but who has stopped losing hit points and still"
           + " has negative hit points is stable. The character is no longer dying, but is "
           + "still unconscious. If the character has become stable because of aid from another "
@@ -417,7 +424,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_dry_flat_50)
       .build();
-  public static final Condition STAGGERED = Condition.newBuilder("Staggered")
+  public static final ConditionData STAGGERED = ConditionData.newBuilder("Staggered")
       .description("A character whose nonlethal damage exactly equals his current hit points "
           + "is staggered. A staggered character may take a single move action or standard "
           + "action each round (but not both, nor can she take full-round actions). A "
@@ -428,19 +435,20 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_elderly_person_48)
       .build();
-  public static final Condition STUNNED = Condition.newBuilder("Stunned")
+  public static final ConditionData STUNNED = ConditionData.newBuilder("Stunned")
       .description("A stunned creature drops everything held, can’t take actions, takes a –2 "
           + "penalty to AC, and loses his Dexterity bonus to AC (if any).")
       .summary("Drop everything, can't take actions, -2 AC, not Dex to AC.")
       .predefined()
       .icon(R.drawable.icons8_action_50)
       .build();
-  public static final Condition SURPRISED = Condition.newBuilder("Surprised")
-      .description("A character who is surprised in the encounter and thus can't initially act.")
+  public static final ConditionData SURPRISED = ConditionData.newBuilder("Surprised")
+      .description("A character who is surprised in the startEncounter and thus can't initially act.")
       .summary("Cannot act in the surprise round.")
       .predefined()
+      .dmOnly()
       .build();
-  public static final Condition TURNED = Condition.newBuilder("Turned")
+  public static final ConditionData TURNED = ConditionData.newBuilder("Turned")
       .description("Affected by a turn undead attempt. Turned undead flee for 10 rounds (1 "
           + "minute) by the best and fastest means available to them. If they cannot flee, "
           + "they cower.")
@@ -448,7 +456,7 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_cross_50)
       .build();
-  public static final Condition UNCONSCIOUS = Condition.newBuilder("Unconscious")
+  public static final ConditionData UNCONSCIOUS = ConditionData.newBuilder("Unconscious")
       .description("Knocked out and helpless. Unconsciousness can result from having current "
           + "hit points between –1 and –9, or from nonlethal damage in excess of current hit "
           + "points.")
@@ -457,7 +465,7 @@ public class Conditions {
       .predefined()
       .build();
 
-  public static ImmutableList<Condition> CONDITIONS = new ImmutableList.Builder<Condition>()
+  public static ImmutableList<ConditionData> CONDITIONS = new ImmutableList.Builder<ConditionData>()
       .add(ABILITY_DAMAGED)
       .add(ABILITY_DRAINED)
       .add(BLINDED)
@@ -499,22 +507,22 @@ public class Conditions {
       .add(UNCONSCIOUS)
       .build();
 
-  public static final ImmutableMap<String, Condition> CONDITIONS_BY_NAME = ImmutableMap.copyOf(
-      CONDITIONS.stream().collect(Collectors.toMap(Condition::getName, i -> i)));
+  public static final ImmutableMap<String, ConditionData> CONDITIONS_BY_NAME = ImmutableMap.copyOf(
+      CONDITIONS.stream().collect(Collectors.toMap(ConditionData::getName, i -> i)));
 
   private Conditions() {
   }
 
   public static List<String> getNames() {
     // Use the list to preserve order.
-    return CONDITIONS.stream().map(Condition::getName).collect(Collectors.toList());
+    return CONDITIONS.stream().map(ConditionData::getName).collect(Collectors.toList());
   }
 
-  public static @Nullable Condition get(String name) {
+  public static Optional<ConditionData> get(String name) {
     if (CONDITIONS_BY_NAME == null) {
-      return null;
+      return Optional.empty();
     }
 
-    return CONDITIONS_BY_NAME.get(name);
+    return Optional.ofNullable(CONDITIONS_BY_NAME.get(name));
   }
 }

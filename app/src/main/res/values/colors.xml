@@ -11,6 +11,9 @@
   <color name="primaryBack">#e1e2e1</color>
   <color name="primaryAccent">#FF4081</color>
   <color name="colorAccent">@color/primaryAccent</color>
+  <color name="action">#fff</color>
+  <color name="actionDisabled">#aaa</color>
+  <color name="actionBack">#000</color>
 
   <!-- Type specific colors. -->
   <color name="campaign">#ff8f00</color>

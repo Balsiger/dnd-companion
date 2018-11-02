@@ -131,9 +131,6 @@ public abstract class MessageProcessor {
         break;
     }
 
-    Status.refreshServerConnection(context.me().getId());
-    Status.refreshClientConnection(senderId);
-
     received.addFirst(new RecievedMessage(senderName, message, senderId, receiverId, messageId));
     if (received.size() > MAX_RECEIVED_SIZE) {
       received.removeLast();

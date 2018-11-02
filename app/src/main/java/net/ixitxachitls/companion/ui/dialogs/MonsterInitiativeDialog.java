@@ -35,6 +35,7 @@ import com.google.common.base.Preconditions;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -94,8 +95,8 @@ public class MonsterInitiativeDialog extends Dialog {
     modifier.get().setFormatter(new NumberPicker.Formatter() {
       @Override
       public String format(int index) {
-        return Integer.toString(index - 20);
-      }
+          return Integer.toString(index - 20);
+        }
     });
 
     add = Wrapper.wrap(view, R.id.add);
@@ -109,14 +110,10 @@ public class MonsterInitiativeDialog extends Dialog {
       return;
     }
 
-    /*
-    Creature creature = new Creature(data(), 0, name.getText(), campaign.get().getId(),
-        Dice.d20() + modifier.get().getValue() - 20);
-    creature.store();  // Storing will also add the creature.
-    CompanionApplication.get(getContext()).battles().get(campaign.get().getId())
-        .setLastMonsterName(name.getText());
+    Monster.create(CompanionApplication.get().context(), campaign.get().getId(),
+        name.getText(), modifier.get().getValue() - 20, campaign.get().getEncounter().getNumber());
+    campaign.get().getEncounter().setLastMonsterName(name.getText());
     save();
-    */
   }
 
   private String makeName() {
@@ -124,7 +121,6 @@ public class MonsterInitiativeDialog extends Dialog {
       return Encounter.DEFAULT_MONSTER_NAME;
     }
 
-    return CompanionApplication.get(getContext()).encounters().get(campaign.get().getId())
-        .numberedMonsterName();
+    return campaign.get().getEncounter().numberedMonsterName();
   }
 }

@@ -23,10 +23,14 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.ColorRes;
 import android.support.annotation.Nullable;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.data.documents.CreatureCondition;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 
 /**
@@ -34,23 +38,40 @@ import net.ixitxachitls.companion.ui.MessageDialog;
  */
 public class ConditionIconView extends android.support.v7.widget.AppCompatImageView {
   public ConditionIconView(Context context) {
-    this(context, null);
+    this(context, null, 0, 0);
   }
 
-  public ConditionIconView(Context context, @Nullable Condition condition) {
+  public ConditionIconView(Context context, @Nullable CreatureCondition condition,
+                           @ColorRes int foregroundColor, @ColorRes int backgroundColor) {
     super(context);
 
     if (condition != null) {
-      setImageResource(condition.getIcon());
-      setImageTintList(ColorStateList.valueOf(getContext().getColor(R.color.characterDark)));
-      setBackground(getContext().getDrawable(R.drawable.icon_back));
+      setImageResource(condition.getCondition().getCondition().getIcon());
+      setImageTintList(ColorStateList.valueOf(getContext().getColor(backgroundColor)));
+      Drawable back = getContext().getDrawable(R.drawable.icon_back);
+      back.setTint(getContext().getColor(foregroundColor));
+      setBackground(back);
       setOnLongClickListener(v -> {
         new MessageDialog(getContext())
-            .title(condition.getName())
-            .message(condition.getSummary() + "\n\n" + condition.getDescription())
+            .title(condition.getCondition().getName())
+            .message(condition.getCondition().getSummary() + "\n\n"
+                + condition.getCondition().getDescription())
             .show();
         return true;
       });
+      if (CompanionApplication.get().me().amDM(condition.getId())) {
+        setOnClickListener(v -> {
+          new ConfirmationPrompt(getContext())
+              .title("Dismiss Condition?")
+              .message("Do you really want to dismiss this condition?")
+              .yes(() -> dismiss(condition.getId()))
+              .show();
+        });
+      }
     }
+  }
+
+  private void dismiss(String conditionId) {
+    CompanionApplication.get().context().conditions().delete(conditionId);
   }
 }

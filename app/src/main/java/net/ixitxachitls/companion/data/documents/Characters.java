@@ -21,18 +21,20 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
+import com.google.common.collect.SortedSetMultimap;
+import com.google.common.collect.TreeMultimap;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -42,8 +44,8 @@ public class Characters extends Documents<Characters> {
   protected static final String PATH = "characters";
 
   private final Map<String, Character> charactersByCharacterId = new HashMap<>();
-  private final Multimap<String, Character> charactersByCampaignId = HashMultimap.create();
-  private final Multimap<String, Character> charactersByPlayerId = HashMultimap.create();
+  private final SortedSetMultimap<String, Character> charactersByCampaignId = TreeMultimap.create();
+  private final SortedSetMultimap<String, Character> charactersByPlayerId = TreeMultimap.create();
 
   public Characters(CompanionContext context) {
     super(context);
@@ -62,15 +64,37 @@ public class Characters extends Documents<Characters> {
   }
 
   public Collection<Character> getCampaignCharacters(String campaignId) {
-    return charactersByCampaignId.get(campaignId);
+    if (charactersByCampaignId.containsKey(campaignId)) {
+      return charactersByCampaignId.get(campaignId);
+    }
+
+    return Collections.emptyList();
+  }
+
+  public Collection<Character> getPlayerCharacters(String userId) {
+    if (charactersByPlayerId.containsKey(userId)) {
+      return charactersByPlayerId.get(userId);
+    }
+
+    return Collections.emptyList();
   }
 
   public Optional<Character> get(String characterId) {
     return Optional.ofNullable(charactersByCharacterId.get(characterId));
   }
 
-  public Collection<Character> getAll() {
-    return charactersByCharacterId.values();
+  public Optional<? extends Creature> getCreature(String creatureId) {
+    if (isCharacterId(creatureId)) {
+      return get(creatureId);
+    } else {
+      return context.monsters().get(creatureId);
+    }
+  }
+
+  public List<Character> getAll() {
+    return charactersByCharacterId.values().stream()
+        .sorted()
+        .collect(Collectors.toList());
   }
 
   public int maxPartyLevel(String campaignId) {
@@ -110,19 +134,29 @@ public class Characters extends Documents<Characters> {
     }
   }
 
+  public static boolean isCharacterId(String id) {
+    return id.contains("/characters/");
+  }
+
   public void addPlayer(User player) {
     if (!charactersByPlayerId.containsKey(player.getId())) {
       CollectionReference reference = db.collection(player.getId() + "/" + PATH);
-      reference.get().addOnSuccessListener(task -> readCharacters(player, task.getDocuments()));
       reference.addSnapshotListener((s, e) -> readCharacters(player, s.getDocuments()));
     }
   }
 
   private void readCharacters(User player, List<DocumentSnapshot> snapshots) {
-    clearPlayerData(player);
+    Map<String, Character> existing = clearPlayerData(player);
 
     for (DocumentSnapshot snapshot : snapshots) {
-      Character character = Character.fromData(context, player, snapshot);
+      Character character = existing.get(snapshot.getId());
+      if (character == null) {
+        character = Character.fromData(context, player, snapshot);
+      } else {
+        character.snapshot = Optional.of(snapshot);
+        character.read();
+      }
+
       charactersByPlayerId.put(player.getId(), character);
       charactersByCampaignId.put(character.getCampaignId(), character);
       charactersByCharacterId.put(character.getId(), character);
@@ -131,8 +165,7 @@ public class Characters extends Documents<Characters> {
     updated();
   }
 
-  private void clearPlayerData(User player) {
-    charactersByPlayerId.removeAll(player.getId());
+  private Map<String, Character> clearPlayerData(User player) {
     List<Character> toRemove = charactersByCampaignId.values().stream()
         .filter(c -> c.getPlayer() == player)
         .collect(Collectors.toList());
@@ -146,7 +179,19 @@ public class Characters extends Documents<Characters> {
       charactersByCharacterId.remove(character.getId(), character);
     }
 
-    updated();
+    return charactersByPlayerId.removeAll(player.getId()).stream()
+        .collect(Collectors.toMap(Character::getId, Function.identity()));
+  }
+
+  public void delete(Character character) {
+    if (character.amPlayer() || character.amDM()) {
+      delete(character.getId());
+      charactersByCharacterId.remove(character.getId());
+      charactersByCampaignId.remove(character.getCampaignId(), character);
+      charactersByPlayerId.remove(character.getPlayer().getId(), character);
+
+      updated();
+    }
   }
 
   /*
@@ -195,37 +240,5 @@ public class Characters extends Documents<Characters> {
       remove(character.get());
     }
   }
-
-  protected void remove(Character character) {
-    Status.log("removing character " + character);
-
-    if (character.isLocal()) {
-      local.remove(character);
-    } else {
-      remote.remove(character);
-    }
-
-    // Update live data.
-    if (characterIdsByCampaignId.containsKey(character.getCampaignId())) {
-      LiveDataUtils.setValueIfChanged(characterIdsByCampaignId.get(character.getCampaignId()),
-          ImmutableList.copyOf(characterIds(character.getCampaignId())));
-    }
-
-    context.histories().removed(character.getName(), character.getCampaign().get().getDate(),
-        character.getCharacterId(), character.campaignId);
-  }
-
-  private List<String> orphaned() {
-    List<String> ids = local.orphaned().stream()
-        .map(Character::getCharacterId)
-        .collect(Collectors.toList());
-    ids.addAll(remote.orphaned().stream()
-        .map(Character::getCharacterId)
-        .collect(Collectors.toList()));
-
-    return ids;
-  }
-
-
    */
 }

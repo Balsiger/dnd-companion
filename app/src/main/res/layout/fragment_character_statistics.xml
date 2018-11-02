@@ -33,12 +33,20 @@
       android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/abilities"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="false"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
         android:orientation="horizontal">
 
       <view

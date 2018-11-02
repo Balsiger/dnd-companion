@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.ui.views.wrappers;
 
+import android.content.res.ColorStateList;
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
@@ -29,6 +30,7 @@ import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.ui.Alert;
@@ -289,6 +291,15 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
 
   public W disabled() {
     return enabled(false);
+  }
+
+  public W tint(@ColorRes int color) {
+    if (view instanceof ImageView) {
+      ((ImageView) view).setImageTintList(ColorStateList.valueOf(
+          view.getContext().getColor(color)));
+    }
+
+    return (W) this;
   }
 
   public V get() {

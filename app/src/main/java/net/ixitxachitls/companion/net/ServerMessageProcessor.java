@@ -65,7 +65,6 @@ public class ServerMessageProcessor extends MessageProcessor {
   protected void handleWelcome(String remoteId, String remoteName) {
     status("received welcome from client " + remoteName);
     super.handleWelcome(remoteId, remoteName);
-    Status.addClientConnection(remoteId, remoteName);
 
     // Publish all local campaigns to that client.
     //context.campaigns().publish();

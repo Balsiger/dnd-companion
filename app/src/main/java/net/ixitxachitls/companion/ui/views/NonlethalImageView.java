@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
@@ -51,6 +52,8 @@ public class NonlethalImageView extends PartialImageView {
 
     setImageDrawable(icon);
     setBackground(context.getDrawable(R.drawable.icons8_punch_filled_50).mutate());
+    setBackgroundTintList(ColorStateList.valueOf(getContext().getColor(R.color.characterDark)));
+    setAdjustViewBounds(true);
 
     update();
   }

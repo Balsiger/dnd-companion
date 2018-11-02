@@ -39,6 +39,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.views.XPCharacterView;
 import net.ixitxachitls.companion.ui.views.XPFixedView;
@@ -116,7 +117,7 @@ public class XPDialog extends Dialog {
         Wrapper.wrap(view, R.id.save).onClick(this::awardEcl);
       }
 
-      characterContainer = (LinearLayout) view.findViewById(R.id.party);
+      characterContainer = view.findViewById(R.id.party);
       for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
         characterContainer.addView(new XPCharacterView(getContext(), this, character));
       }
@@ -128,8 +129,8 @@ public class XPDialog extends Dialog {
         }
       });
 
-      fixed1 = (LinearLayout) view.findViewById(R.id.fixed_1);
-      fixed2 = (LinearLayout) view.findViewById(R.id.fixed_2);
+      fixed1 = view.findViewById(R.id.fixed_1);
+      fixed2 = view.findViewById(R.id.fixed_2);
       fixed1.addView(new XPFixedView(getContext(), this, 5));
       fixed1.addView(new XPFixedView(getContext(), this, 10));
       fixed1.addView(new XPFixedView(getContext(), this, 25));
@@ -197,7 +198,10 @@ public class XPDialog extends Dialog {
     if (campaign.isPresent()) {
       for (int i = 0; i < characterContainer.getChildCount(); i++) {
         XPCharacterView view = (XPCharacterView) characterContainer.getChildAt(i);
-        view.getCharacter().addXp(view.getXP());
+        if (view.getXP() > 0) {
+          Message.createForXp(campaign.get().getContext(), view.getCharacter().getId(),
+              view.getXP());
+        }
       }
     }
 

@@ -21,8 +21,12 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import android.support.annotation.Nullable;
+
 import net.ixitxachitls.companion.proto.Value;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -30,24 +34,29 @@ import java.util.Objects;
  */
 public class TimedCondition {
 
-  private final Condition condition;
+  private static final String FIELD_CONDITION = "condition";
+  private static final String FIELD_SOURCE = "source";
+  private static final String FIELD_END_ROUND = "end_round";
+  private static final String FIELD_END_DATE = "end_date";
+
+  private final ConditionData condition;
   private String sourceId;
   private final int endRound;
   private final CampaignDate endDate;
 
-  public TimedCondition(Condition condition, String sourceId) {
+  public TimedCondition(ConditionData condition, String sourceId) {
     this(condition, sourceId, Integer.MAX_VALUE);
   }
 
-  public TimedCondition(Condition condition, String sourceId, int endRound) {
+  public TimedCondition(ConditionData condition, String sourceId, int endRound) {
     this(condition, sourceId, endRound, new CampaignDate());
   }
 
-  public TimedCondition(Condition condition, String sourceId, CampaignDate endDate) {
+  public TimedCondition(ConditionData condition, String sourceId, CampaignDate endDate) {
     this(condition, sourceId, 0, endDate);
   }
 
-  private TimedCondition(Condition condition, String sourceId, int endRound, CampaignDate endDate) {
+  private TimedCondition(ConditionData condition, String sourceId, int endRound, CampaignDate endDate) {
     this.condition = condition;
     this.sourceId = sourceId;
     this.endRound = endRound;
@@ -74,7 +83,7 @@ public class TimedCondition {
     return condition.isPredefined();
   }
 
-  public Condition getCondition() {
+  public ConditionData getCondition() {
     return condition;
   }
 
@@ -116,7 +125,7 @@ public class TimedCondition {
   }
 
   public static TimedCondition fromProto(Value.TimedConditionProto proto) {
-    return new TimedCondition(Condition.fromProto(proto.getCondition()),
+    return new TimedCondition(ConditionData.fromProto(proto.getCondition()),
         proto.getSourceId(), proto.getEndRound(), CampaignDate.fromProto(proto.getEndDate()));
   }
 
@@ -127,6 +136,36 @@ public class TimedCondition {
         .setEndRound(endRound)
         .setEndDate(endDate.toProto())
         .build();
+  }
+
+  public static TimedCondition read(@Nullable Map<String, Object> data) {
+    if (data == null) {
+      throw new IllegalArgumentException("Data cannot be null");
+    }
+
+    ConditionData condition = ConditionData.read(Values.get(data, FIELD_CONDITION));
+    String source = Values.get(data, FIELD_SOURCE, "");
+    if (Values.has(data, FIELD_END_DATE)) {
+      CampaignDate endDate = CampaignDate.read(Values.get(data, FIELD_END_DATE));
+      return new TimedCondition(condition, source, endDate);
+    } else {
+      int endRound = (int) Values.get(data, FIELD_END_ROUND, 0);
+      return new TimedCondition(condition, source, endRound);
+    }
+
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_CONDITION, condition.write());
+    data.put(FIELD_SOURCE, sourceId);
+    if (endRound > 0) {
+      data.put(FIELD_END_ROUND, endRound);
+    } else {
+      data.put(FIELD_END_DATE, endDate.write());
+    }
+
+    return data;
   }
 
   @Override

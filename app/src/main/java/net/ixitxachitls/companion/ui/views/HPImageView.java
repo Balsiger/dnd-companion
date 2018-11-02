@@ -27,7 +27,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.rules.Conditions;
 
 import javax.annotation.Nullable;
@@ -56,18 +56,19 @@ public class HPImageView extends PartialImageView {
   public HPImageView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
 
-    this.alive = context.getDrawable(R.drawable.baseline_favorite_black_36).mutate();
+    this.alive = context.getDrawable(R.drawable.baseline_favorite_black_24).mutate();
     this.alive.setTint(context.getColor(R.color.alive));
-    this.aliveBackground = context.getDrawable(R.drawable.baseline_favorite_black_36).mutate();
-    this.aliveBackground.setTint(context.getColor(R.color.dead));
-    this.stable = context.getDrawable(R.drawable.ic_heart_pulse_black_36dp).mutate();
+    this.aliveBackground = context.getDrawable(R.drawable.baseline_favorite_black_24).mutate();
+    this.aliveBackground.setTint(context.getColor(R.color.characterDark));
+    this.stable = context.getDrawable(R.drawable.ic_heart_pulse_black_24dp).mutate();
     this.stable.setTint(context.getColor(R.color.stable));
-    this.stableBackground = context.getDrawable(R.drawable.ic_heart_pulse_black_36dp).mutate();
-    this.stableBackground.setTint(context.getColor(R.color.dead));
-    this.dying = context.getDrawable(R.drawable.ic_heart_pulse_black_36dp).mutate();
+    this.stableBackground = context.getDrawable(R.drawable.ic_heart_pulse_black_24dp).mutate();
+    this.stableBackground.setTint(context.getColor(R.color.characterDark));
+    this.dying = context.getDrawable(R.drawable.ic_heart_pulse_black_24dp).mutate();
     this.dying.setTint(context.getColor(R.color.dying));
-    this.dyingBackground = context.getDrawable(R.drawable.ic_heart_pulse_black_36dp).mutate();
-    this.dyingBackground.setTint(context.getColor(R.color.dead));
+    this.dyingBackground = context.getDrawable(R.drawable.ic_heart_pulse_black_24dp).mutate();
+    this.dyingBackground.setTint(context.getColor(R.color.characterDark));
+    setAdjustViewBounds(true);
 
     update();
   }
@@ -147,7 +148,7 @@ public class HPImageView extends PartialImageView {
     return true;
   }
 
-  private void showDescription(Condition condition) {
+  private void showDescription(ConditionData condition) {
     showDescription(condition.getName(),
         condition.getSummary() + "\n\n" + condition.getDescription());
   }

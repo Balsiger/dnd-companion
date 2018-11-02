@@ -71,7 +71,7 @@ public class ConditionCreatureView extends LinearLayout {
     }
 
     for (TimedCondition condition : creature.getAffectedConditions()) {
-      addCondition(CompanionApplication.get(getContext()).creatures()
+      addCondition(CompanionApplication.get(getContext()).monsters()
               .nameFor(condition.getSourceId()), condition.getSourceId(),
           ImmutableList.<String>of(creature.getId()), condition, true, isDM);
     }

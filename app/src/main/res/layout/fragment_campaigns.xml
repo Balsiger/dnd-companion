@@ -28,6 +28,14 @@
           app:subtitle="loading..."
           app:title="[ Nickname ]"/>
 
+      <TextView
+          android:id="@+id/note"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="20dp"
+          android:text="Tell your DM to invite you to his campaign or create your own!\nYou can also create a character now and move it into a campaign later."
+          android:theme="@style/LargeText"/>
+
       <LinearLayout
           android:id="@+id/campaigns"
           android:layout_width="match_parent"
@@ -46,7 +54,7 @@
   <LinearLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_gravity="right"
+      android:layout_gravity="end"
       android:layout_weight="0"
       android:orientation="horizontal">
 
@@ -74,7 +82,6 @@
       android:name="net.ixitxachitls.companion.ui.fragments.HistoryFragment"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
       />
 
 </LinearLayout>

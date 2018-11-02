@@ -49,10 +49,12 @@ public class CompanionServer {
     this.nsdServer = new NsdServer(companionContext, nsdAccessor);
 
     // Setup stored messages.
+    /*
     for (ScheduledMessage message
         : companionContext.messages().getMessagesBySender(companionContext.me().getId())) {
       setupScheduler(message.getRecieverId());
     }
+    */
   }
 
   public void ack(String recipientId, long messageId) {
@@ -81,7 +83,6 @@ public class CompanionServer {
           // will automatically be resent and sent messages can be safely ignored.
           nsdServer.send(message.get().getRecieverId(), message.get().getMessageId(),
               message.get().getData());
-          Status.refreshClientConnection(message.get().getRecieverId());
           sent = true;
         }
       }

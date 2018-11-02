@@ -188,8 +188,8 @@ public abstract class Dialog extends DialogFragment {
     return application().encounters();
   }
 
-  protected Monsters creatures() {
-    return application().creatures();
+  protected Monsters monsters() {
+    return application().monsters();
   }
 
   protected Characters characters() {

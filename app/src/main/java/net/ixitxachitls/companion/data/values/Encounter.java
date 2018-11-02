@@ -21,33 +21,35 @@
 
 package net.ixitxachitls.companion.data.values;
 
-import android.support.annotation.CallSuper;
+import android.support.annotation.Nullable;
 
-import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.Creature;
-import net.ixitxachitls.companion.data.documents.Document;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
-import net.ixitxachitls.companion.data.enums.BattleStatus;
-import net.ixitxachitls.companion.proto.Entry;
+import net.ixitxachitls.companion.data.documents.CreatureCondition;
+import net.ixitxachitls.companion.data.documents.CreatureConditions;
+import net.ixitxachitls.companion.data.documents.Monster;
+import net.ixitxachitls.companion.data.documents.Monsters;
+import net.ixitxachitls.companion.data.enums.EncounterStatus;
 import net.ixitxachitls.companion.rules.Conditions;
-import net.ixitxachitls.companion.ui.dialogs.StartBattleDialog;
+import net.ixitxachitls.companion.ui.dialogs.StartEncounterDialog;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Representation of a battle in a campaign.
+ * Representation of an encounter in a campaign.
  */
-public class Encounter extends Document<Encounter> {
+public class Encounter {
   public static final String DEFAULT_MONSTER_NAME = "Monsters";
 
-  private static final Factory FACTORY = new Factory();
-  private static final String PATH = "battles";
   private static final String FIELD_NUMBER = "number";
   private static final String FIELD_TURN = "turn";
   private static final String FIELD_STATUS = "status";
@@ -55,67 +57,43 @@ public class Encounter extends Document<Encounter> {
   private static final String FIELD_SURPRISED = "surprised";
   private static final String FIELD_CURRENT = "current";
 
-  private Optional<Campaign> campaign;
+  private Campaign campaign;
+
   private int number;
   private int turn;
-  private BattleStatus status = BattleStatus.ENDED;
+  private EncounterStatus status = EncounterStatus.ENDED;
   private Optional<String> lastMonsterName = Optional.empty();
   private List<String> creatureIds = new ArrayList<>();
   private List<String> surprisedCreatureIds = new ArrayList<>();
+  private List<Creature> creatures = new ArrayList<>();
   private int currentCreatureIndex;
 
-  public static Encounter getOrCreate(CompanionContext context, String campaignId) {
-    Encounter encounter = Document.getOrCreate(FACTORY, context, campaignId + "/" + PATH);
-    encounter.campaign = context.campaigns().get(campaignId);
-
-    return encounter;
-  }
-
-  /*
-  public Battle(FSCampaign campaign) {
-    this(campaign, 0, BattleStatus.ENDED, 0, Collections.emptyList(),
-        Collections.emptyList(), 0);
-  }
-
-  private Battle(FSCampaign campaign, int number, BattleStatus status, int turn,
-                 List<String> creatureIds, List<String> surprisedCreatureIds,
-                 int currentCreatureIndex) {
+  public Encounter(Campaign campaign) {
     this.campaign = campaign;
-    this.number = number;
-    this.status = status;
-    this.turn = turn;
-    this.currentCreatureIndex = currentCreatureIndex;
-    this.creatureIds.addAll(creatureIds);
-    this.surprisedCreatureIds.addAll(surprisedCreatureIds);
-  }
-  */
-
-  public List<String> getCreatureIds() {
-    return creatureIds;
   }
 
-  public BattleStatus getStatus() {
+  public EncounterStatus getStatus() {
     return status;
   }
 
   public boolean inBattle() {
-    return status != BattleStatus.ENDED;
+    return status != EncounterStatus.ENDED;
   }
 
   public boolean isEnded() {
-    return status == BattleStatus.ENDED;
+    return status == EncounterStatus.ENDED;
   }
 
   public boolean isStarting() {
-    return status == BattleStatus.STARTING;
+    return status == EncounterStatus.STARTING;
   }
 
   public boolean isSurprised() {
-    return status == BattleStatus.SURPRISED;
+    return status == EncounterStatus.SURPRISED;
   }
 
   public boolean isOngoing() {
-    return status == BattleStatus.ONGOING;
+    return status == EncounterStatus.ONGOING;
   }
 
   public boolean isOngoingOrSurprised() {
@@ -127,29 +105,31 @@ public class Encounter extends Document<Encounter> {
   }
 
   public Campaign getCampaign() {
-    // TODO(merlin): needed? can it return an optional?
-    assert campaign.isPresent();
-    return campaign.get();
+    return campaign;
   }
 
   public int getNumber() {
     return number;
   }
 
-  public String getCurrentCreatureId() {
-    if (currentCreatureIndex < creatureIds.size()) {
-      return creatureIds.get(currentCreatureIndex);
-    }
+  public int getCurrentCreatureIndex() {
+    return currentCreatureIndex;
+  }
 
-    if (creatureIds.isEmpty()) {
+  public String getCurrentCreatureId() {
+    if (currentCreatureIndex < 0 || currentCreatureIndex >= creatureIds.size()) {
       return "";
     }
 
-    return creatureIds.get(0);
+    return creatureIds.get(currentCreatureIndex);
   }
 
-  public boolean isCurrent(BaseCreature character) {
-    return isEnded() || getCurrentCreatureId().equals(character.getCreatureId());
+  public boolean includes(String creatureId) {
+    return creatureIds.contains(creatureId);
+  }
+
+  public List<Creature> getCreatures() {
+    return creatures;
   }
 
   public boolean acted(String creatureId) {
@@ -163,67 +143,107 @@ public class Encounter extends Document<Encounter> {
   }
 
   public void setup() {
+    if (!isEnded()) {
+      Status.error("The startEncounter is already running!");
+      return;
+    }
+
     number++;
-    StartBattleDialog.newInstance(campaign.get().getId()).display();
-    store();
+    turn = 0;
+    currentCreatureIndex = -1;
+    campaign.store();
+    StartEncounterDialog.newInstance(campaign.getId()).display();
   }
 
   public void starting(List<String> includedCreatureIds, List<String> surprisedCreatureIds) {
-    status = BattleStatus.STARTING;
-    this.creatureIds.clear();
-    this.creatureIds.addAll(includedCreatureIds);
-    this.surprisedCreatureIds.clear();
-    this.surprisedCreatureIds.addAll(surprisedCreatureIds);
+    if (campaign.amDM()) {
+      number++;
+      creatureIds = includedCreatureIds;
+      this.surprisedCreatureIds = surprisedCreatureIds;
 
-    store();
+      status = EncounterStatus.STARTING;
+      campaign.store();
+    }
   }
 
-  public void start() {
-    currentCreatureIndex = -1;
-    turn = 0;
-    status = BattleStatus.SURPRISED;
-    toNextUnsurprised();
-
-    // Add flat-footed to all creatures.
-    for (String creatureId : creatureIds) {
-      Optional<? extends Creature> creature = campaign.get().creatures().get(creatureId);
+  private void syncCreaturesWithIds(boolean sort) {
+    creatures.clear();
+    List<String> sortedIds = new ArrayList<>();
+    for (String id : creatureIds) {
+      Optional<? extends Creature> creature;
+      if (Characters.isCharacterId(id)) {
+        creature = campaign.characters().get(id);
+      } else {
+        creature = campaign.monsters().get(id);
+      }
       if (creature.isPresent()) {
-        int rounds = surprisedCreatureIds.contains(creatureId) ? 1 : 0;
-        creature.get().addAffectedCondition(
-            new TimedCondition(Conditions.FLAT_FOOTED, creatureId, rounds));
+        creatures.add(creature.get());
+      } else {
+        sortedIds.add(id);
       }
     }
 
-    store();
-  }
-
-  public void addCreature(String creatureId) {
-    creatureIds.add(creatureId);
-  }
-
-  public List<String> obtainCreatureIds() {
-    // If the battle is ongoing, we don't sort ids anymore, as initiative cannot change
-    // anymore (but the order can change by waiting).
-    if (status != BattleStatus.STARTING && status != BattleStatus.ENDED) {
-      return creatureIds;
+    if (sort) {
+      creatures.sort(new Creature.InitiativeComparator(campaign.getEncounter().getNumber()));
+      sortedIds.addAll(creatures.stream().map(Creature::getId).collect(Collectors.toList()));
+      creatureIds = sortedIds;
     }
 
-    List<Creature> creatures = new ArrayList<>();
-    if (status == BattleStatus.STARTING) {
-      for (String id : creatureIds) {
-        Optional<? extends Creature> creature = campaign.get().creatures().get(id);
-        if (creature.isPresent()) {
-          creatures.add(creature.get());
+    campaign.getContext().conditions().readConditions(creatureIds);
+  }
+
+  public void update(CreatureConditions conditions) {
+    updateConditions();
+  }
+
+  public void update(Characters characters) {
+    if (status == EncounterStatus.STARTING) {
+      syncCreaturesWithIds(true);
+
+      // Don't start the encounter if we don't yet have all characters, as we might
+      // be missing some data.
+      if (campaign.amDM() && creatureIds.size() == creatures.size()) {
+        boolean done = true;
+        for (Creature creature : creatures) {
+          if (!creature.hasInitiative(number)) {
+            done = false;
+          }
+        }
+
+        if (done) {
+          start();
+          campaign.store();
         }
       }
     } else {
-      creatures.addAll(campaign.get().creatures().getCampaignCreatures(campaign.get().getId()));
-      creatures.addAll(campaign.get().characters().getCampaignCharacters(campaign.get().getId()));
+      syncCreaturesWithIds(false);
+    }
+  }
+
+  public void update(Monsters monsters) {
+    for (Monster monster : monsters.getCampaignMonsters(campaign.getId())) {
+      if (!creatureIds.contains(monster.getId())) {
+        // A new monster has appeared. Add if after the current creature.
+        creatureIds.add(currentCreatureIndex + 1, monster.getId());
+        creatures.add(currentCreatureIndex + 1, monster);
+      }
     }
 
-    creatures.sort(new InitiativeComparator());
+    update(campaign.getContext().characters());
+  }
 
-    return creatures.stream().map(Creature::getId).collect(Collectors.toList());
+  public void start() {
+    turn = 0;
+    status = EncounterStatus.SURPRISED;
+
+    // Add flat-footed to all creatures (before going to the next character).
+    for (Creature creature : creatures) {
+      int rounds = isSurprised(creature) ? 1 : 0;
+      creature.addCondition(new TimedCondition(Conditions.FLAT_FOOTED, creature.getId(), rounds));
+    }
+
+    toNextUnsurprised();
+    campaign.store();
   }
 
   public void creatureDone() {
@@ -231,10 +251,10 @@ public class Encounter extends Document<Encounter> {
   }
 
   private void toNextUnsurprised() {
-    if (status == BattleStatus.SURPRISED) {
+    if (status == EncounterStatus.SURPRISED) {
       while (currentCreatureIndex < creatureIds.size()) {
         currentCreatureIndex++;
-        if (!surprisedCreatureIds.contains(getCurrentCreatureId())) {
+        if (currentCreatureIndex < creatures.size() && !isSurprised(currentCreatureIndex)) {
           break;
         }
       }
@@ -246,12 +266,58 @@ public class Encounter extends Document<Encounter> {
       nextTurn();
     }
 
-    store();
+    updateConditions();
+
+    campaign.store();
+  }
+
+  public boolean amCurrentPlayer() {
+    return currentCreatureIndex >= 0
+        && creatures.size() > currentCreatureIndex
+        && creatures.get(currentCreatureIndex).amPlayer();
+  }
+
+  private void updateConditions() {
+    int lastCreatureIndex = currentCreatureIndex - 1;
+    if (turn > 0 && lastCreatureIndex < 0) {
+      lastCreatureIndex = creatures.size() - 1;
+    }
+
+    if (lastCreatureIndex >= 0 && creatures.size() > lastCreatureIndex) {
+      // Remove conditions that have expired for the last creature.
+      Creature creature = creatures.get(lastCreatureIndex);
+      updateConditions(creature.getId(), false);
+    }
+
+    if (currentCreatureIndex >= 0 && creatures.size() > currentCreatureIndex) {
+      // Remove expired conditions for the current creature.
+      Creature creature = creatures.get(currentCreatureIndex);
+      updateConditions(creature.getId(), true);
+    }
+  }
+
+  private void updateConditions(String creatureId, boolean before) {
+    for (CreatureCondition condition
+        : campaign.getContext().conditions().getCreatureConditions(creatureId)) {
+      if (!condition.getCondition().hasEndDate()
+          && (condition.getCondition().getEndRound() < turn
+              || (before && condition.getCondition().getEndRound() == turn))) {
+        campaign.getContext().conditions().delete(condition.getId());
+      }
+    }
+  }
+
+  private boolean isSurprised(int index) {
+    return isSurprised(creatures.get(index));
+  }
+
+  private boolean isSurprised(Creature creature) {
+    return surprisedCreatureIds.contains(creature.getId());
   }
 
   private void nextTurn() {
     currentCreatureIndex = 0;
-    status = BattleStatus.ONGOING;
+    status = EncounterStatus.ONGOING;
     turn++;
   }
 
@@ -261,19 +327,16 @@ public class Encounter extends Document<Encounter> {
       creatureIds.add(currentCreatureIndex + 1, id);
     }
 
-    store();
+    campaign.store();
   }
 
   public void end() {
-    status = BattleStatus.ENDED;
-
-    // Remove all monsters used in the battle.
-    //for (String creatureId : campaign.getCreatureIds()) {
-      //campaign.creatures().remove(creatureId);
-    //}
-
     lastMonsterName = Optional.empty();
-    store();
+
+    campaign.getContext().conditions().deleteRoundBasedCreatureConditions();
+    campaign.getContext().monsters().deleteAllInCampaign(campaign.getId());
+    status = EncounterStatus.ENDED;
+    campaign.store();
   }
 
   public void setLastMonsterName(String name) {
@@ -314,44 +377,45 @@ public class Encounter extends Document<Encounter> {
     return lastMonsterName;
   }
 
-  public Entry.CampaignProto.Battle toProto() {
-    Entry.CampaignProto.Battle.Builder proto = Entry.CampaignProto.Battle.newBuilder()
-        .setStatus(status.toProto())
-        .setTurn(turn)
-        .setNumber(number)
-        .addAllCreatureId(creatureIds)
-        .addAllSurprisedCreatureId(surprisedCreatureIds)
-        .setCurrentCreatureIndex(currentCreatureIndex);
-
-    return proto.build();
-  }
-
-  /*
-  public static Battle fromProto(FSCampaign campaign, Entry.CampaignProto.Battle proto) {
-    return new Battle(campaign, proto.getNumber(),
-        BattleStatus.fromProto(proto.getStatus()), proto.getTurn(), proto.getCreatureIdList(),
-        proto.getSurprisedCreatureIdList(), proto.getCurrentCreatureIndex());
-  }
-  */
-
   public boolean currentIsLast() {
     return currentCreatureIndex >= creatureIds.size() - 1;
   }
 
-  @Override
-  @CallSuper
-  protected void read() {
-    super.read();
-    number = (int) get(FIELD_NUMBER, 0);
-    turn = (int) get(FIELD_TURN, 0);
-    status = get(FIELD_STATUS, BattleStatus.ENDED);
-    creatureIds = get(FIELD_CREATURES, creatureIds);
-    surprisedCreatureIds = get(FIELD_SURPRISED, surprisedCreatureIds);
-    currentCreatureIndex = (int) get(FIELD_CURRENT, currentCreatureIndex);
+  public Optional<Character> firstPlayerCharacterNeedingInitiative() {
+    for (Creature creature : creatures) {
+      if (Characters.isCharacterId(creature.getId())) {
+        Character character = (Character) creature;
+        if (character.amPlayer() && !character.hasInitiative(number)) {
+          return Optional.of(character);
+        }
+      }
+    }
+
+    return Optional.empty();
   }
 
-  @Override
-  protected Map<String, Object> write(Map<String, Object> data) {
+  public static Encounter read(Campaign campaign, @Nullable Map<String, Object> data) {
+    Encounter encounter = new Encounter(campaign);
+    if (data != null) {
+      encounter.read(data);
+    }
+
+    return encounter;
+  }
+
+  public void read(Map<String, Object> data) {
+    number = (int) Values.get(data, FIELD_NUMBER, 0);
+    turn = (int) Values.get(data, FIELD_TURN, 0);
+    status = Values.get(data, FIELD_STATUS, EncounterStatus.ENDED);
+    creatureIds = Values.get(data, FIELD_CREATURES, Collections.emptyList());
+    surprisedCreatureIds = Values.get(data, FIELD_SURPRISED, Collections.emptyList());
+    currentCreatureIndex = (int) Values.get(data, FIELD_CURRENT, 0);
+
+    syncCreaturesWithIds(status == EncounterStatus.ENDED || status == EncounterStatus.STARTING);
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
     data.put(FIELD_NUMBER, number);
     data.put(FIELD_TURN, turn);
     data.put(FIELD_STATUS, status.toString());
@@ -386,36 +450,5 @@ public class Encounter extends Document<Encounter> {
     result = 31 * result + currentCreatureIndex;
     result = 31 * result + lastMonsterName.hashCode();
     return result;
-  }
-
-  private static class InitiativeComparator implements Comparator<Creature> {
-    @Override
-    public int compare(Creature first, Creature second) {
-      int compare = Integer.compare(second.getInitiative(), first.getInitiative());
-      if (compare != 0) {
-        return compare;
-      }
-
-      compare = Integer.compare(second.getDexterity(), first.getDexterity());
-      if (compare != 0) {
-        return compare;
-      }
-
-      /*
-      compare = Integer.compare(second.getInitiativeRandom(), first.getInitiativeRandom());
-      if (compare != 0) {
-        return compare;
-      }
-      */
-
-      return first.getName().compareTo(second.getName());
-    }
-  }
-
-  private static class Factory implements DocumentFactory<Encounter> {
-    @Override
-    public Encounter create() {
-      return new Encounter();
-    }
   }
 }

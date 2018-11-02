@@ -23,11 +23,13 @@ package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.CallSuper;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * The data for a single user.
@@ -86,6 +88,10 @@ public class User extends Document<User> {
     context.invites().listenCampaigns(campaigns -> { this.campaigns = campaigns; updated(); });
   }
 
+  public boolean owns(String id) {
+    return id.startsWith(getId());
+  }
+
   @Override
   @CallSuper
   protected void read() {
@@ -113,5 +119,26 @@ public class User extends Document<User> {
     public User create() {
       return new User();
     }
+  }
+
+  public boolean amDM(String id) {
+    // Campaigns start with the user id.
+    if (isA(id, Campaigns.PATH) && id.startsWith(getId())) {
+      return true;
+    }
+
+    // Characters an anything below it need an indirection to the campaign.
+    if (isA(id, Characters.PATH)) {
+      Optional<Character> character =
+          CompanionApplication.get().context().characters().get(
+              id.replaceAll("(/" + Characters.PATH + "/.*?)/.*$", "$1"));
+      return character.isPresent();
+    }
+
+    return false;
+  }
+
+  private static boolean isA(String id, String type) {
+    return id.contains("/" + type + "/");
   }
 }

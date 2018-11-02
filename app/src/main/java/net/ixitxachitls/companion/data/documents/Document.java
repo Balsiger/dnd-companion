@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -139,6 +140,10 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return path;
   }
 
+  public CompanionContext getContext() {
+    return context;
+  }
+
   public boolean isDM(User user) {
     return path.startsWith(user.getId());
   }
@@ -183,6 +188,8 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
         if (task.isSuccessful()) {
           reference = Optional.of(task.getResult());
           reference.get().get().addOnCompleteListener(this::onComplete);
+        } else {
+          Status.error("Writing failed for " + this);
         }
       });
     }
@@ -202,6 +209,18 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     }
 
     actions.clear();
+  }
+
+  protected boolean has(String field) {
+    return snapshot.isPresent() && snapshot.get().get(field) != null;
+  }
+
+  protected Map<String, Object> get(String field) {
+    if (snapshot.isPresent()) {
+      return (Map<String, Object>) snapshot.get().get(field);
+    }
+
+    return Collections.emptyMap();
   }
 
   protected String get(String field, String defaultValue) {
@@ -225,6 +244,16 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
 
     return defaultValue;
   }
+  protected boolean get(String field, boolean defaultValue) {
+    if (snapshot.isPresent()) {
+      Boolean value = snapshot.get().getBoolean(field);
+      if (value != null) {
+        return value;
+      }
+    }
+
+    return defaultValue;
+  }
 
   public <E extends Enum<E>> E get(String field, E defaultValue) {
     if (snapshot.isPresent()) {
@@ -236,7 +265,6 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
 
     return defaultValue;
   }
-
 
   protected <T> T get(String field, T defaultValue) {
     if (snapshot.isPresent()) {
@@ -270,7 +298,10 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   private void updated(@Nullable DocumentSnapshot snapshot,
                        @Nullable FirebaseFirestoreException e) {
     this.snapshot = Optional.ofNullable(snapshot);
-    read();
+    if (this.snapshot.isPresent()) {
+      read();
+    }
+
     updated();
   }
 

@@ -81,7 +81,6 @@ public class CompanionClients implements NsdDiscovery.NsdCallback {
         Optional<ScheduledMessage> message = scheduler.nextWaiting();
         if (message.isPresent()) {
           client.send(message.get().getData());
-          Status.refreshServerConnection(message.get().getRecieverId());
         }
       }
     }

@@ -27,6 +27,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
@@ -34,6 +35,7 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.views.AbilityView;
+import net.ixitxachitls.companion.ui.views.ConditionIconsView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -48,6 +50,7 @@ public class CharacterStatisticsFragment extends Fragment {
   protected Optional<Character> character = Optional.empty();
 
   // UI elements.
+  protected ConditionIconsView conditions;
   protected AbilityView strength;
   protected AbilityView dexterity;
   protected AbilityView constitution;
@@ -76,6 +79,11 @@ public class CharacterStatisticsFragment extends Fragment {
 
     ViewGroup view =
         (ViewGroup) inflater.inflate(R.layout.fragment_character_statistics, container, false);
+
+    LinearLayout conditionsContainer = view.findViewById(R.id.conditions);
+    conditions = new ConditionIconsView(view.getContext(), LinearLayout.HORIZONTAL,
+        R.color.character, R.color.characterDark);
+    conditionsContainer.addView(conditions);
 
     strength = view.findViewById(R.id.strength);
     dexterity = view.findViewById(R.id.dexterity);
@@ -135,6 +143,7 @@ public class CharacterStatisticsFragment extends Fragment {
     hp.text(String.valueOf(character.getHp()));
     hpMax.text(String.valueOf(character.getMaxHp()));
     damageNonlethal.text(String.valueOf(character.getNonlethalDamage()));
+    conditions.update(character);
 
     redraw();
   }

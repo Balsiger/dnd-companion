@@ -28,7 +28,7 @@ import java.util.ArrayList;
 /**
  * Status of a battle.
  */
-public enum BattleStatus implements Enums.Named, Enums.Proto<Value.BattleStatus> {
+public enum EncounterStatus implements Enums.Named, Enums.Proto<Value.BattleStatus> {
   ENDED("Ended", "E", Value.BattleStatus.ENDED),
   STARTING("Starting", "S", Value.BattleStatus.STARTING),
   SURPRISED("Surprised", "U", Value.BattleStatus.SURPRISED),
@@ -38,7 +38,7 @@ public enum BattleStatus implements Enums.Named, Enums.Proto<Value.BattleStatus>
   private final String shortName;
   private final Value.BattleStatus proto;
 
-  BattleStatus(String name, String shortName, Value.BattleStatus proto) {
+  EncounterStatus(String name, String shortName, Value.BattleStatus proto) {
     this.name = name;
     this.shortName = shortName;
     this.proto = proto;
@@ -56,7 +56,7 @@ public enum BattleStatus implements Enums.Named, Enums.Proto<Value.BattleStatus>
     return proto;
   }
 
-  public static BattleStatus fromProto(Value.BattleStatus proto) {
+  public static EncounterStatus fromProto(Value.BattleStatus proto) {
     return Enums.fromProto(proto, values());
   }
 
@@ -64,7 +64,7 @@ public enum BattleStatus implements Enums.Named, Enums.Proto<Value.BattleStatus>
     return Enums.names(values());
   }
 
-  public static BattleStatus fromName(String name) {
+  public static EncounterStatus fromName(String name) {
     return Enums.fromName(name, values());
   }
 }

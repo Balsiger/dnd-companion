@@ -22,17 +22,15 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.support.annotation.CallSuper;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.view.View;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Message;
+import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 import java.util.Optional;
@@ -40,71 +38,50 @@ import java.util.Optional;
 /**
  * A tile view for characters.
  */
-public class CharacterTitleView extends TitleView {
-
-  Optional<Character> character = Optional.empty();
+public class CharacterTitleView extends CreatureTitleView<Character> {
 
   public CharacterTitleView(Context context) {
-    super(context);
+    this(context, null);
   }
 
   public CharacterTitleView(Context context, @Nullable AttributeSet attributes) {
-    super(context, attributes);
+    super(context, attributes, R.color.characterLight, R.color.character,
+        R.drawable.noun_viking_30736);
   }
 
   @Override
-  @CallSuper
-  protected View init(AttributeSet attributes) {
-    View view = super.init(attributes);
-
-    view.setBackgroundColor(getContext().getColor(R.color.character));
-    setDefaultImage(R.drawable.noun_viking_30736);
-    return view;
-  }
-
   public void update(Character character) {
-    this.character = Optional.of(character);
+    super.update(character);
 
-    setTitle(character.getName());
-    setSubtitle(subtitle(character));
     setAction(() -> {
       CompanionFragments.get().showCharacter(character, Optional.of(this));
     });
-
-    clearIcons();
-    if (character.amPlayer()) {
-      addIcon(R.drawable.noun_puppet_52120);
-    }
-    if (character.amDM()) {
-      addIcon(R.drawable.noun_eye_of_providence_24673);
-    }
-
-    update(CompanionApplication.get().images());
   }
 
-  public void update(Images images) {
-    if (character.isPresent()) {
-      Optional<Bitmap> bitmap = images.get(character.get().getId());
-      if (bitmap.isPresent()) {
-        setImageBitmap(bitmap.get());
-      } else {
-        clearImage(R.drawable.noun_viking_30736);
+  public void update(Messages messages) {
+    updateIcons();
+  }
+
+  @Override
+  protected void updateIcons() {
+    super.updateIcons();
+
+    if (creature.isPresent()) {
+      if (creature.get().amPlayer()) {
+        addIcon(R.drawable.noun_puppet_52120);
+      }
+
+      Optional<Campaign> campaign = creature.get().getCampaign();
+      if (campaign.isPresent()
+          && campaign.get().getEncounter().isOngoing()
+          && campaign.get().getEncounter().includes(creature.get().getId())) {
+        addIcon(R.drawable.ic_sword_cross_black_18dp);
+      }
+
+      for (Message message
+          : CompanionApplication.get().messages().getMessages(creature.get().getId())) {
+        addIcon(new MessageView(getContext(), creature.get(), message));
       }
     }
-  }
-
-  private String subtitle(Character character) {
-    String subtitle = character.getGender().getName();
-    if (character.getRace().isPresent()) {
-      subtitle += " " + character.getRace().get();
-    }
-
-    Optional<Campaign> campaign =
-        CompanionApplication.get(getContext()).campaigns().get(character.getCampaignId());
-    if (campaign.isPresent()) {
-      subtitle += ", " + campaign.get().getName();
-    }
-
-    return subtitle;
   }
 }

@@ -35,13 +35,13 @@ import android.widget.LinearLayout;
 import com.google.common.base.Preconditions;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.Monster;
-import net.ixitxachitls.companion.data.values.Condition;
+import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Duration;
-import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView;
@@ -110,7 +110,7 @@ public class TimedConditionDialog extends Dialog {
     id = getArguments().getString(ARG_ID); // The creature OR campaign id.
     creature = characters().get(id);
     if (!creature.isPresent()) {
-      creature = creatures().get(id);
+      creature = monsters().get(id);
     }
     currentRound = getArguments().getInt(ARG_ROUND);
     if (creature.isPresent()) {
@@ -148,7 +148,7 @@ public class TimedConditionDialog extends Dialog {
       adapter = new ArrayAdapter<String>(getContext(),
           R.layout.list_item_select,
           Conditions.CONDITIONS.stream()
-              .map(Condition::getName)
+              .map(ConditionData::getName)
               .collect(Collectors.toList()));
     }
     condition.setAdapter(adapter);
@@ -158,14 +158,14 @@ public class TimedConditionDialog extends Dialog {
         addCheckbox(view, character.getId(), character.getName());
       }
 
-      for (Monster monster : creatures().getCampaignCreatures(campaign.get().getId())) {
+      for (Monster monster : monsters().getCampaignMonsters(campaign.get().getId())) {
         addCheckbox(view, monster.getId(), monster.getName());
       }
     }
   }
 
-  private List<Condition> conditions(Creature<?> creature) {
-    List<Condition> conditions = new ArrayList<>();
+  private List<ConditionData> conditions(Creature<?> creature) {
+    List<ConditionData> conditions = new ArrayList<>();
 
     if (creature instanceof Character) {
       conditions.addAll(((Character) creature).getConditionsHistory());
@@ -178,7 +178,7 @@ public class TimedConditionDialog extends Dialog {
 
   private List<String> conditionNames(Creature<?> creature) {
     return conditions(creature).stream()
-        .map(Condition::getName)
+        .map(ConditionData::getName)
         .collect(Collectors.toList());
   }
 
@@ -194,12 +194,10 @@ public class TimedConditionDialog extends Dialog {
   }
 
   private void selectCondition() {
-    if (creature.isPresent()) {
-      displayCondition(findCondition(creature.get(), condition.getText()));
-    }
+    displayCondition(findCondition(creature, condition.getText()));
   }
 
-  private void selectCondition(Optional<Condition> condition) {
+  private void selectCondition(Optional<ConditionData> condition) {
     if (condition.isPresent()) {
       this.condition.text(condition.get().getName());
     } else {
@@ -208,7 +206,7 @@ public class TimedConditionDialog extends Dialog {
     displayCondition(condition);
   }
 
-  private void displayCondition(Optional<Condition> condition) {
+  private void displayCondition(Optional<ConditionData> condition) {
     if (condition.isPresent()) {
       predefined = condition.get().isPredefined();
       Duration duration = condition.get().getDuration();
@@ -244,14 +242,16 @@ public class TimedConditionDialog extends Dialog {
     update();
   }
 
-  private Optional<Condition> findCondition(Creature<?> creature, String name) {
-    for (Condition condition : conditions(creature)) {
-      if (condition.getName().equals(name)) {
-        return Optional.of(condition);
+  private Optional<ConditionData> findCondition(Optional<? extends Creature<?>> creature, String name) {
+    if (creature.isPresent()) {
+      for (ConditionData condition : conditions(creature.get())) {
+        if (condition.getName().equals(name)) {
+          return Optional.of(condition);
+        }
       }
     }
 
-    return Optional.empty();
+    return Conditions.get(name);
   }
 
   private void update() {
@@ -311,7 +311,7 @@ public class TimedConditionDialog extends Dialog {
 
     Duration duration = extractDuration();
     if (!ids.isEmpty() && !duration.isNone()) {
-      Condition cond = Condition.newBuilder(condition.getText())
+      ConditionData cond = ConditionData.newBuilder(condition.getText())
           .description(description.getText())
           .summary(summary.getText())
           .duration(duration)
@@ -326,8 +326,13 @@ public class TimedConditionDialog extends Dialog {
         timed = new TimedCondition(cond, id,
             campaign.get().getCalendar().add(campaign.get().getDate(), duration));
       }
-      if (creature.isPresent() && !condition.getText().isEmpty()) {
-        creature.get().addInitiatedCondition(new TargetedTimedCondition(timed, ids));
+      for (String id : ids) {
+        Optional<? extends Creature> target = characters().getCreature(id);
+        if (target.isPresent()) {
+          target.get().addCondition(timed);
+        } else {
+          Status.error("Creature " + id + " not found to add condition!");
+        }
       }
     }
 

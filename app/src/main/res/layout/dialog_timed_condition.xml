@@ -20,174 +20,178 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:padding="20dp">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+  <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
 
 
-  <net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView
-      android:id="@+id/condition"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_margin="10dp"
-      android:completionThreshold="1"
-      android:theme="@style/LargeText"
-      app:descriptionText="@string/settings_nickname_note"
-      app:labelColor="@color/character"
-      app:labelText="Condition"
-      app:lineColor="@color/character"
-      app:textColor="@color/characterDark"/>
-
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_margin="10dp"
-      android:orientation="horizontal">
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/rounds"
+    <net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView
+        android:id="@+id/condition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_weight="1"
-        android:ems="3"
-        android:inputType="numberSigned"
+        android:layout_margin="10dp"
+        android:completionThreshold="1"
         android:theme="@style/LargeText"
-        app:descriptionText="The number of rounds this condition last. You can either give rounds or minutes, but not both. Round based conditions are only valid during the current combat."
+        app:descriptionText="@string/settings_nickname_note"
         app:labelColor="@color/character"
-        app:labelText="Rounds"
+        app:labelText="Condition"
         app:lineColor="@color/character"
         app:textColor="@color/characterDark"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/minutes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_weight="1"
-        android:ems="3"
-        android:inputType="numberSigned"
-        android:theme="@style/LargeText"
-        app:descriptionText="The number of minutes this condition last. You can either give rounds or minutes, but not both."
-        app:labelColor="@color/character"
-        app:labelText="Minutes"
-        app:lineColor="@color/character"
-        app:textColor="@color/characterDark"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/hours"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_weight="1"
-        android:ems="3"
-        android:inputType="numberSigned"
-        android:theme="@style/LargeText"
-        app:descriptionText="The number of hours this condition last. You can either give rounds or hours, but not both."
-        app:labelColor="@color/character"
-        app:labelText="Hours"
-        app:lineColor="@color/character"
-        app:textColor="@color/characterDark"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/days"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_weight="1"
-        android:ems="3"
-        android:inputType="numberSigned"
-        android:theme="@style/LargeText"
-        app:descriptionText="The number of days this condition last. You can either give rounds or days, but not both."
-        app:labelColor="@color/character"
-        app:labelText="Days"
-        app:lineColor="@color/character"
-        app:textColor="@color/characterDark"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/years"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:ems="3"
-        android:inputType="numberSigned"
-        android:theme="@style/LargeText"
-        app:descriptionText="The number of years this condition last. You can either give rounds or years, but not both."
-        app:labelColor="@color/character"
-        app:labelText="Years"
-        app:lineColor="@color/character"
-        app:textColor="@color/characterDark">
-    </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_weight="0"
-        android:orientation="vertical">
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
-      <CheckBox
-          android:id="@+id/permanent"
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/rounds"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="5dp"
+          android:layout_weight="1"
+          android:ems="3"
+          android:inputType="numberSigned"
+          android:theme="@style/LargeText"
+          app:descriptionText="The number of rounds this condition last. You can either give rounds or minutes, but not both. Round based conditions are only valid during the current combat."
+          app:labelColor="@color/character"
+          app:labelText="Rounds"
+          app:lineColor="@color/character"
+          app:textColor="@color/characterDark"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/minutes"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="5dp"
+          android:layout_weight="1"
+          android:ems="3"
+          android:inputType="numberSigned"
+          android:theme="@style/LargeText"
+          app:descriptionText="The number of minutes this condition last. You can either give rounds or minutes, but not both."
+          app:labelColor="@color/character"
+          app:labelText="Minutes"
+          app:lineColor="@color/character"
+          app:textColor="@color/characterDark"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/hours"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="5dp"
+          android:layout_weight="1"
+          android:ems="3"
+          android:inputType="numberSigned"
+          android:theme="@style/LargeText"
+          app:descriptionText="The number of hours this condition last. You can either give rounds or hours, but not both."
+          app:labelColor="@color/character"
+          app:labelText="Hours"
+          app:lineColor="@color/character"
+          app:textColor="@color/characterDark"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/days"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="5dp"
+          android:layout_weight="1"
+          android:ems="3"
+          android:inputType="numberSigned"
+          android:theme="@style/LargeText"
+          app:descriptionText="The number of days this condition last. You can either give rounds or days, but not both."
+          app:labelColor="@color/character"
+          app:labelText="Days"
+          app:lineColor="@color/character"
+          app:textColor="@color/characterDark"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/years"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:ems="3"
+          android:inputType="numberSigned"
+          android:theme="@style/LargeText"
+          app:descriptionText="The number of years this condition last. You can either give rounds or years, but not both."
+          app:labelColor="@color/character"
+          app:labelText="Years"
+          app:lineColor="@color/character"
+          app:textColor="@color/characterDark">
+      </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+
+      <LinearLayout
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="bottom"
-          android:layout_weight="0"/>
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
           android:layout_weight="0"
-          android:text="permanent"
-          android:textColor="@color/character"
-          android:theme="@style/TinyText"/>
+          android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/permanent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="permanent"
+            android:textColor="@color/character"
+            android:theme="@style/TinyText"/>
+
+      </LinearLayout>
 
     </LinearLayout>
 
-  </LinearLayout>
-
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/description"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginEnd="5dp"
-      android:visibility="gone"
-      app:descriptionText="The description of the condition. This should explain all details
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:visibility="gone"
+        app:descriptionText="The description of the condition. This should explain all details
                              necessary for a player to know how to deal with this condition."
-      app:labelColor="@color/character"
-      app:labelText="Description"
-      app:lineColor="@color/character"
-      app:minLines="4"
-      app:textColor="@color/characterDark"/>
+        app:labelColor="@color/character"
+        app:labelText="Description"
+        app:lineColor="@color/character"
+        app:minLines="4"
+        app:textColor="@color/characterDark"/>
 
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/summary"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_margin="10dp"
-      app:descriptionText="A short summary of the condition."
-      app:labelColor="@color/character"
-      app:labelText="Summary"
-      app:lineColor="@color/character"
-      app:textColor="@color/characterDark"/>
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:descriptionText="A short summary of the condition."
+        app:labelColor="@color/character"
+        app:labelText="Summary"
+        app:lineColor="@color/character"
+        app:textColor="@color/characterDark"/>
 
-  <LinearLayout
-      android:id="@+id/party"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_margin="10dp"
-      android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/party"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="Add"
+        android:theme="@style/LargeText"/>
+
   </LinearLayout>
-
-  <Button
-      android:id="@+id/save"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_margin="10dp"
-      android:text="Add"
-      android:theme="@style/LargeText"/>
-
-</LinearLayout>
+</ScrollView>

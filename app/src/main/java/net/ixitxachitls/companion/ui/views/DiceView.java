@@ -29,7 +29,6 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
@@ -79,12 +78,7 @@ public class DiceView extends LinearLayout {
             + "dice, you can also just click on this button to randomly select a value");
     grid = view.findViewById(R.id.numbers);
     grid.setAdapter(adapter);
-    grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-      @Override
-      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        select(position + 1);
-      }
-    });
+    grid.setOnItemClickListener((parent, v, position, id) -> select(position + 1));
 
     addView(view);
   }

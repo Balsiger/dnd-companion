@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -31,7 +32,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,7 +43,6 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.CharacterTitleView;
-import net.ixitxachitls.companion.ui.views.ConditionIconsView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -63,13 +62,11 @@ public class CharacterFragment extends CompanionFragment {
   // UI elements.
   protected CharacterTitleView title;
   protected TextWrapper<TextView> campaignTitle;
-  protected Wrapper<FloatingActionButton> copy;
   protected Wrapper<FloatingActionButton> edit;
   protected Wrapper<FloatingActionButton> delete;
   protected Wrapper<FloatingActionButton> move;
   protected Wrapper<FloatingActionButton> timed;
   protected Wrapper<FloatingActionButton> back;
-  protected ConditionIconsView conditions;
   protected HistoryFragment history;
   protected ViewPager pager;
   protected @Nullable CharacterStatisticsFragment statisticsFragment;
@@ -86,7 +83,7 @@ public class CharacterFragment extends CompanionFragment {
 
     storeOnPause = true;
 
-    RelativeLayout view = (RelativeLayout)
+    LinearLayout view = (LinearLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
     back = Wrapper.<FloatingActionButton>wrap(view, R.id.back)
@@ -96,18 +93,11 @@ public class CharacterFragment extends CompanionFragment {
     images().observe(this, title::update);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
 
-    LinearLayout conditionsContainer = view.findViewById(R.id.conditions);
-    conditions = new ConditionIconsView(view.getContext());
-    conditionsContainer.addView(conditions);
-
-    copy = Wrapper.<FloatingActionButton>wrap(view, R.id.copy).gone().onClick(this::copy)
-        .description("Copy Character",
-            "Copies the character to the current device as a local character.");
     edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone();
     delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).onClick(this::delete)
         .description("Delete Character", "This will remove this character from your device. If the "
             + "player is active on your WiFi, the character most likely will immediately "
-            + "reappear, though.");
+            + "reappear, though.").invisible();
     move = Wrapper.<FloatingActionButton>wrap(view, R.id.move).gone();
     timed = Wrapper.<FloatingActionButton>wrap(view, R.id.timed).gone();
 
@@ -132,6 +122,7 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   public void showCharacter(Character character) {
+
     if (this.character.isPresent()) {
       this.character.get().unobserve(this);
     }
@@ -141,6 +132,15 @@ public class CharacterFragment extends CompanionFragment {
     this.campaign = campaigns().get(character.getCampaignId());
 
     update(character);
+  }
+
+  @Override
+  public void onStart() {
+    super.onStart();
+
+    TabLayout tabs = pager.findViewById(R.id.tabs);
+    tabs.getTabAt(0).setIcon(R.drawable.ic_information_outline_black_24dp);
+    tabs.getTabAt(1).setIcon(R.drawable.noun_backpack_16138);
   }
 
   private void update(Character character) {
@@ -160,12 +160,12 @@ public class CharacterFragment extends CompanionFragment {
     campaign = CompanionApplication.get(getContext()).campaigns()
         .get(character.getCampaignId());
 
+    delete.visible(character.amPlayer() || character.amDM());
+
     campaignTitle.text(campaign.get().getName());
     title.update(character);
     title.update(images());
 
-    conditions.update(character);
-    copy.visible(!character.amPlayer() && campaign.get().amDM());
     history.update(character.getId());
   }
 
@@ -179,7 +179,7 @@ public class CharacterFragment extends CompanionFragment {
 
   private void deleteCharacterOk() {
     if (character.isPresent()) {
-      //character.get().delete();
+      characters().delete(character.get());
       Toast.makeText(getActivity(), getString(R.string.character_deleted),
           Toast.LENGTH_SHORT).show();
 
@@ -207,7 +207,7 @@ public class CharacterFragment extends CompanionFragment {
     }
 
     if (campaign.isPresent()) {
-      //CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
+      CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
     } else {
       CompanionFragments.get().show(Type.campaigns, Optional.empty());
     }
@@ -244,20 +244,6 @@ public class CharacterFragment extends CompanionFragment {
             inventoryFragment.update(character.get());
           }
           return inventoryFragment;
-      }
-    }
-
-    @Override
-    public String getPageTitle(int position) {
-      switch (position) {
-        case 0:
-          return "Statistics";
-
-        case 1:
-          return "Inventory";
-
-        default:
-          return "Unknown";
       }
     }
   }

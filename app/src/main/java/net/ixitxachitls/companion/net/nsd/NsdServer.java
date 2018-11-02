@@ -76,7 +76,6 @@ public class NsdServer {
     nsdAccessor.register(service, NsdManager.PROTOCOL_DNS_SD, registrationListener);
 
     Status.log("nsd service registered");
-    Status.addServerConnection(companionContext.me().getId(), name);
     started = true;
   }
 
@@ -89,7 +88,6 @@ public class NsdServer {
     nsdAccessor.unregister(registrationListener);
     registrationListener = null;
     server.stop();
-    Status.removeServerConnection(name);
 
     started = false;
   }

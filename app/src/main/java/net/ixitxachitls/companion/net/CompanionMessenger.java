@@ -28,7 +28,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.dynamics.BaseCreature;
+import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.dynamics.Image;
 import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.dynamics.XpAward;
@@ -38,7 +38,6 @@ import net.ixitxachitls.companion.util.Ids;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Class handling all sending, receiving and processing of network messages.
@@ -216,9 +215,9 @@ public class CompanionMessenger implements Runnable {
     }
   }
 
-  public void send(BaseCreature creature, TimedCondition condition) {
+  public void send(Creature creature, TimedCondition condition) {
     // Local creatures should already be handled locally.
-    if (!creature.isLocal()) {
+    //if (!creature.isLocal()) {
       Status.log("sending timed condition " + condition + " to " + creature);
       /*
       Optional<Campaign> campaign = creature.getCampaign();
@@ -234,10 +233,11 @@ public class CompanionMessenger implements Runnable {
         Status.error("Cannot find campaign for " + creature + ", cannot send condition");
       }
         */
-    }
+    //}
   }
 
-  public void addItem(BaseCreature<?> creature, Item item) {
+  public void addItem(Creature<?> creature, Item item) {
+    /*
     Optional<Campaign> campaign = creature.getCampaign();
     if (!creature.isLocal() && campaign.isPresent() && campaign.get().amDM()) {
       Status.log("Sending newly created item " + item + " to " + creature);
@@ -246,6 +246,7 @@ public class CompanionMessenger implements Runnable {
     } else {
       Status.error("Sending item " + item + " to " + creature + " no allowed");
     }
+    */
   }
 
     /*
@@ -268,7 +269,7 @@ public class CompanionMessenger implements Runnable {
   }
     */
 
-  public void sendDeletion(String conditionName, String sourceId, BaseCreature creature) {
+  public void sendDeletion(String conditionName, String sourceId, Creature creature) {
     /*
     if (!creature.isLocal()) {
       Status.log("handling condition deletion for " + conditionName + " from "
@@ -351,8 +352,6 @@ public class CompanionMessenger implements Runnable {
 
   @Override
   public void run() {
-    Status.heartBeat();
-
     try {
       // Send waiting messages.
       companionServer.sendWaiting();

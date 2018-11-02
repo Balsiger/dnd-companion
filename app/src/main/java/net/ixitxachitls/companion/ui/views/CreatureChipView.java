@@ -30,7 +30,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.Monster;
-import net.ixitxachitls.companion.data.enums.BattleStatus;
+import net.ixitxachitls.companion.data.enums.EncounterStatus;
 
 import java.util.Optional;
 
@@ -47,11 +47,11 @@ public class CreatureChipView extends ChipView {
   }
 
   protected CreatureChipView(Context context, Creature creature, @ColorRes int chipColor,
-                             @ColorRes int higlightColor, @DrawableRes int drawable) {
+                             @ColorRes int highlightColor, @DrawableRes int drawable) {
     super(context, creature.getId(), creature.getName(), "init " + creature.getInitiative(),
-        chipColor, higlightColor, drawable);
+        chipColor, highlightColor, drawable);
 
-    this.conditions = new ConditionIconsView(context);
+    this.conditions = new ConditionIconsView(context, VERTICAL, highlightColor, chipColor);
     icons.addView(conditions);
 
     update(creature);
@@ -61,13 +61,13 @@ public class CreatureChipView extends ChipView {
     return getDataId();
   }
 
-  public void setBattleMode(BattleStatus inBattle) {
-    if (inBattle == BattleStatus.ENDED) {
+  public void setBattleMode(EncounterStatus inBattle) {
+    if (inBattle == EncounterStatus.ENDED) {
       setBackground(R.color.cell);
       setSubtitle("");
     } else {
       setBackground(R.color.battleDark);
-      if (inBattle != BattleStatus.STARTING) {
+      if (inBattle != EncounterStatus.STARTING) {
         setSubtitle("");
       }
     }

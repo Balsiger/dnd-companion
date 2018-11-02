@@ -113,37 +113,6 @@ public class Status {
     runInView(v -> Toast.makeText(v.getContext(), message, Toast.LENGTH_LONG).show());
   }
 
-  public static void addClientConnection(String id, String name) {
-    runInView(v -> v.addClientConnection(id, name));
-  }
-
-  public static void addServerConnection(String id, String name) {
-    runInView(v -> v.addServerConnection(id, name));
-  }
-
-  public static void refreshClientConnection(String id) {
-    runInView(v -> v.updateClientConnection(id));
-  }
-
-  public static void refreshServerConnection(String id) {
-    runInView(v -> v.updateServerConnection(id));
-  }
-
-  public static void removeClientConnection(String id) {
-    runInView(v -> v.removeClientConnection(id));
-  }
-
-  public static void removeServerConnection(String id) {
-    runInView(v -> v.removeServerConnection(id));
-  }
-
-  public static void heartBeat() {
-    // We can ignore heartbeats until the view is ready.
-    if (view.isPresent()) {
-      new Handler(Looper.getMainLooper()).post(() -> view.get().heartBeatWithRemove());
-    }
-  }
-
   private static void runInView(Action action) {
     if (view.isPresent()) {
       if (!pendingActions.isEmpty()) {
@@ -156,6 +125,12 @@ public class Status {
       new Handler(Looper.getMainLooper()).post(() -> action.execute(view.get()));
     } else {
       pendingActions.add(action);
+    }
+  }
+
+  public static void toggleDebug() {
+    if (view.isPresent()) {
+      view.get().toggleDebug();
     }
   }
 

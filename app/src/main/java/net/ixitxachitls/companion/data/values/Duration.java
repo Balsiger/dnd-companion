@@ -25,7 +25,9 @@ import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -37,6 +39,12 @@ import javax.annotation.Nullable;
  * A duration value.
  */
 public class Duration {
+
+  private static final String FIELD_ROUNDS = "rounds";
+  private static final String FIELD_MINUTES = "minutes";
+  private static final String FIELD_HOURS = "hours";
+  private static final String FIELD_DAYS = "days";
+  private static final String FIELD_YEARS = "years";
 
   public static final Duration PERMANENT = new Duration(-1, -1, -1, -1, -1);
   public static final Duration NULL = new Duration(0, 0, 0, 0, 0);
@@ -147,6 +155,46 @@ public class Duration {
         .build();
   }
 
+  public static Duration read(@Nullable Map<String, Object> data) {
+    if (data == null) {
+      return ZERO;
+    }
+
+    int rounds = (int) Values.get(data, FIELD_ROUNDS, 0);
+    int minutes = (int) Values.get(data, FIELD_MINUTES, 0);
+    int hours = (int) Values.get(data, FIELD_HOURS, 0);
+    int days = (int) Values.get(data, FIELD_DAYS, 0);
+    int years = (int) Values.get(data, FIELD_YEARS, 0);
+
+    if (rounds > 0) {
+      return rounds(rounds);
+    }
+
+    return time(years, days, hours, minutes);
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    if (rounds > 0) {
+      data.put(FIELD_ROUNDS, rounds);
+    }
+    if (minutes > 0) {
+      data.put(FIELD_MINUTES, minutes);
+    }
+    if (hours > 0) {
+      data.put(FIELD_HOURS, hours);
+    }
+    if (days > 0) {
+      data.put(FIELD_DAYS, days);
+    }
+    if (years > 0) {
+      data.put(FIELD_YEARS, years);
+    }
+
+    return data;
+  }
+
+  @Override
   public String toString() {
     if (isNone()) {
       return "ending";

@@ -23,13 +23,19 @@ package net.ixitxachitls.companion.data.documents;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * Monsters available in the games.
@@ -39,22 +45,57 @@ public class Monsters extends Documents<Monsters> {
     super(context);
   }
 
-  private final Map<String, Monster> creaturesByCreatureId = new HashMap<>();
-  private final Multimap<String, Monster> creaturesByCampaignId = HashMultimap.create();
+  private final Map<String, Monster> monstersByMonsterId = new HashMap<>();
+  private final Multimap<String, Monster> monstersByCampaignId = HashMultimap.create();
 
-  public Collection<Monster> getCampaignCreatures(String campaignId) {
-    return creaturesByCampaignId.get(campaignId);
+  public void addCampaign(String campaignId) {
+    if (!monstersByCampaignId.containsKey(campaignId)) {
+      CollectionReference reference = db.collection(campaignId + "/" + Monster.PATH);
+      reference.addSnapshotListener((s, e) -> readMonsters(campaignId, s.getDocuments()));
+    }
+  }
+
+  private void readMonsters(String campaignId, List<DocumentSnapshot> snapshots) {
+    Map<String, Monster> existing;
+    if (monstersByCampaignId.containsKey(campaignId)) {
+      existing = monstersByCampaignId.removeAll(campaignId).stream()
+          .collect(Collectors.toMap(Monster::getId, Function.identity()));
+      for (Monster monster : existing.values()) {
+        monstersByMonsterId.remove(monster.getId());
+      }
+    } else {
+      existing = Collections.emptyMap();
+    }
+
+    for (DocumentSnapshot snapshot : snapshots) {
+      Monster monster = existing.get(snapshot.getId());
+      if (monster == null) {
+        monster = Monster.fromData(context, snapshot);
+      } else {
+        monster.snapshot = Optional.of(snapshot);
+        monster.read();
+      }
+
+      monstersByCampaignId.put(campaignId, monster);
+      monstersByMonsterId.put(monster.getId(), monster);
+    }
+
+    updated();
+  }
+
+  public Collection<Monster> getCampaignMonsters(String campaignId) {
+    return monstersByCampaignId.get(campaignId);
   }
 
   public Optional<Monster> get(String creatureId) {
-    return Optional.ofNullable(creaturesByCreatureId.get(creatureId));
+    return Optional.ofNullable(monstersByMonsterId.get(creatureId));
   }
 
   public Collection<Monster> getAll() {
-    return creaturesByCreatureId.values();
+    return monstersByMonsterId.values();
   }
 
-  public Optional<? extends Creature<?>> getCreatureOrCharacter(String id) {
+  public Optional<? extends Creature<?>> getMonsterOrCharacter(String id) {
     Optional<? extends Creature<?>> creature = context.characters().get(id);
     if (!creature.isPresent()) {
       creature = get(id);
@@ -64,7 +105,7 @@ public class Monsters extends Documents<Monsters> {
   }
 
   public String nameFor(String id) {
-    Optional<? extends Creature<?>> creature = getCreatureOrCharacter(id);
+    Optional<? extends Creature<?>> creature = getMonsterOrCharacter(id);
     if (creature.isPresent()) {
       return creature.get().getName();
     }
@@ -72,54 +113,14 @@ public class Monsters extends Documents<Monsters> {
     return id;
   }
 
-  /*
-
-  public void update(Creature creature) {
-    Status.log("updating creature " + creature);
-
-    // We cannot move a creature to a different campaign, so id lists cannot change.
-    local.update(creature);
+  public static boolean isMonsterId(String id) {
+    return id.contains("/monsters/");
   }
 
-  public void add(Creature creature) {
-    Status.log("adding creature " + creature);
-
-    local.add(creature);
-
-    if (creatureIdsByCampaignId.containsKey(creature.getCampaignId())) {
-      LiveDataUtils.setValueIfChanged(creatureIdsByCampaignId.get(creature.getCampaignId()),
-          ImmutableList.copyOf(creatureIds(creature.getCampaignId())));
+  public void deleteAllInCampaign(String campaignId) {
+    for (Monster monster : monstersByCampaignId.removeAll(campaignId)) {
+      monstersByMonsterId.remove(monster.getId());
+      delete(monster.getId());
     }
   }
-
-  public void remove(String creatureId) {
-    Optional<Creature> creature = local.getCreature(creatureId).getValue();
-    if (creature.isPresent()) {
-      remove(creature.get());
-    } else {
-      Status.error("Cannot remove unknown creature " + creatureId);
-    }
-  }
-
-  public void remove(Creature creature) {
-    Status.log("removing creature " + creature);
-    local.remove(creature);
-
-    // Update live data.
-    if (creatureIdsByCampaignId.containsKey(creature.getCampaignId())) {
-      LiveDataUtils.setValueIfChanged(creatureIdsByCampaignId.get(creature.getCampaignId()),
-            ImmutableList.copyOf(local.ids(creature.getCampaignId())));
-    }
-
-    companionContext.images(creature.isLocal()).remove(Creature.TABLE, creature.getCreatureId());
-  }
-
-  private List<String> orphaned() {
-    return local.orphaned().stream()
-        .map(Creature::getCreatureId)
-        .collect(Collectors.toList());
-  }
-
-
-   */
 }

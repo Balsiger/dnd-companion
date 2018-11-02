@@ -113,7 +113,7 @@ public class EditItemDialog extends Dialog {
       String creatureId = getArguments().getString(ARG_CREATURE_ID);
       creature = CompanionApplication.get(getContext()).characters().get(creatureId);
       if (!creature.isPresent()) {
-        creature = CompanionApplication.get(getContext()).creatures().get(creatureId);
+        creature = CompanionApplication.get(getContext()).monsters().get(creatureId);
       }
 
       String itemId = getArguments().getString(ARG_ITEM_ID);

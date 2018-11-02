@@ -21,18 +21,25 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import android.support.annotation.Nullable;
+
 import net.ixitxachitls.companion.proto.Value;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * A timed condition targeted at a specific character (from a specific source).
  */
 public class TargetedTimedCondition {
-  private final TimedCondition condition;
 
+  private static final String FIELD_TARGET_IDS = "targets";
+  private static final String FIELD_CONDITION = "condition";
+
+  private final TimedCondition condition;
   private final List<String> targetIds;
 
   public TargetedTimedCondition(TimedCondition condition, List<String> targetId) {
@@ -40,7 +47,7 @@ public class TargetedTimedCondition {
     this.targetIds = new ArrayList<>(targetId);
   }
 
-  public Condition getCondition() {
+  public ConditionData getCondition() {
     return condition.getCondition();
   }
 
@@ -90,5 +97,24 @@ public class TargetedTimedCondition {
         .setCondition(condition.toProto())
         .addAllTargetId(targetIds)
         .build();
+  }
+
+  public static TargetedTimedCondition read(@Nullable Map<String, Object> data) {
+    if (data == null) {
+      throw new IllegalArgumentException("Data cannot be null");
+    }
+
+    List<String> targetIds = Values.get(data, FIELD_TARGET_IDS, Collections.emptyList());
+    TimedCondition condition = TimedCondition.read((Map<String, Object>) data.get(FIELD_CONDITION));
+
+    return new TargetedTimedCondition(condition, targetIds);
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_TARGET_IDS, targetIds);
+    data.put(FIELD_CONDITION, condition.write());
+
+    return data;
   }
 }

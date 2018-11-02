@@ -92,7 +92,6 @@ public class NsdDiscovery {
     @Override
     public void onServiceLost(NsdServiceInfo service) {
       Status.log("service " + service.getServiceName() + " lost");
-      Status.removeClientConnection(service.getServiceName());
       nsdCallback.nsdStopped(service.getServiceName());
     }
 

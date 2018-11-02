@@ -33,7 +33,9 @@ import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.CreatureConditions;
 import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.dynamics.Histories;
@@ -138,12 +140,20 @@ public class CompanionApplication extends MultiDexApplication
     return context.characters();
   }
 
+  public CreatureConditions conditions() {
+    return context.conditions();
+  }
+
   public Images images() {
     return context.images();
   }
 
-  public Monsters creatures() {
-    return context.creatures();
+  public Messages messages() {
+    return context.messages();
+  }
+
+  public Monsters monsters() {
+    return context.monsters();
   }
 
   public CompanionMessenger messenger() {

@@ -37,7 +37,8 @@ android {
     version.load(new FileInputStream(versionFile))
   }
   logger.error(gradle.startParameter.taskNames.toString())
-  if (':app:assembleRelease' in gradle.startParameter.taskNames) {
+  if (':app:assembleRelease' in gradle.startParameter.taskNames
+      || ':app:bundleRelease' in gradle.startParameter.taskNames) {
     version['VERSION'] = (version['VERSION'].toInteger() + 1).toString()
     version.store(versionFile.newWriter(), null)
   }
@@ -125,14 +126,14 @@ dependencies {
   implementation 'com.google.inject:guice:4.1.0'
   implementation 'com.android.support:multidex:1.0.3'
   implementation 'com.google.android.gms:play-services-drive:16.0.0'
-  implementation 'com.google.android:flexbox:1.1.0'
+  implementation 'com.google.android:flexbox:1.0.0'
   implementation 'com.google.firebase:firebase-core:16.0.4'
   implementation 'com.google.firebase:firebase-auth:16.0.4'
   implementation 'com.google.firebase:firebase-firestore:17.1.1'
   implementation 'com.google.firebase:firebase-storage:16.0.3'
   implementation 'com.firebaseui:firebase-ui-auth:4.2.0'
   testImplementation 'junit:junit:4.12'
-  testImplementation 'org.mockito:mockito-core:2.7.6'
+  testImplementation 'org.mockito:mockito-core:2.19.0'
   testImplementation 'org.powermock:powermock-api-mockito2:1.7.0RC2'
   testImplementation 'org.powermock:powermock-module-junit4:1.7.0RC2'
   testImplementation 'org.hamcrest:hamcrest-library:1.3'

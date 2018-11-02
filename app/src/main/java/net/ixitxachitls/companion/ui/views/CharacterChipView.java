@@ -26,6 +26,8 @@ import android.view.View;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Message;
+import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 import java.util.Optional;
@@ -45,6 +47,10 @@ public class CharacterChipView extends CreatureChipView {
     setOnClickListener(this::onClick);
   }
 
+  public Character getCharacter() {
+    return character;
+  }
+
   public void update(Character character) {
     this.character = character;
     name.text(character.getName());
@@ -57,5 +63,23 @@ public class CharacterChipView extends CreatureChipView {
 
   private void onClick(View view) {
     CompanionFragments.get().showCharacter(character, Optional.of(view));
+  }
+
+  public void update(Messages messages) {
+    if (character.amPlayer()) {
+      clearMessages();
+      for (Message message : messages.getMessages(character.getId())) {
+        icons.addView(new MessageView(getContext(), character, message), 0);
+      }
+    }
+  }
+
+  private void clearMessages() {
+    for (int i = 0; i < icons.getChildCount(); i++) {
+      View view = icons.getChildAt(i);
+      if (view instanceof MessageView) {
+        icons.removeView(view);
+      }
+    }
   }
 }

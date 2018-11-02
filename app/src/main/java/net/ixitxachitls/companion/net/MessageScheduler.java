@@ -58,6 +58,7 @@ public class MessageScheduler {
     this.recipientId = recipientId;
 
     List<ScheduledMessage> toRemove = new ArrayList<>();
+    /*
     for (ScheduledMessage message : context.messages().getMessagesByReceiver(recipientId)) {
 
       if (message.isOutdated()) {
@@ -83,10 +84,10 @@ public class MessageScheduler {
         }
       }
     }
-
+*/
     // Removed acked messages that are still stored (should normally not happen).
     for (ScheduledMessage message : toRemove) {
-      context.messages().remove(message);
+      //context.messages().remove(message);
     }
   }
 
@@ -237,13 +238,13 @@ public class MessageScheduler {
 
   private void markAcked(ScheduledMessage message) {
     message.markAck();
-    context.messages().remove(message);
+    //context.messages().remove(message);
     acknowledgedByType.put(message.getData().getType(), message);
   }
 
   private void markSent(ScheduledMessage message) {
     message.markSent();
-    context.messages().remove(message);
+    //context.messages().remove(message);
     sentByType.put(message.getData().getType(), message);
   }
 
