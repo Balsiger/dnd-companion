@@ -72,6 +72,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
   private void changeXp() {
     if (character.isPresent() && !xp.getText().isEmpty()) {
       character.get().setXp(Integer.parseInt(xp.getText()));
+      character.get().store();
     }
   }
 
@@ -83,6 +84,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
       } catch (NumberFormatException e) {
         character.get().setLevel(1);
       }
+      character.get().store();
     }
 
     redraw();
@@ -95,6 +97,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
       } catch (NumberFormatException e) {
         character.get().setHp(1);
       }
+      character.get().store();
     }
 
     redraw();
@@ -107,6 +110,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
       } catch (NumberFormatException e) {
         character.get().setMaxHp(1);
       }
+      character.get().store();
     }
 
     redraw();
@@ -119,6 +123,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
       } catch (NumberFormatException e) {
         character.get().setNonlethalDamage(0);
       }
+      character.get().store();
     }
 
     redraw();
@@ -131,6 +136,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     prompt.yes(() -> {
       if (character.isPresent()) {
         character.get().addHp(prompt.getNumber());
+        character.get().store();
         redraw();
       }
     });
@@ -144,6 +150,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     prompt.yes(() -> {
       if (character.isPresent()) {
         character.get().addHp(-prompt.getNumber());
+        character.get().store();
         redraw();
       }
     });
@@ -157,6 +164,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     prompt.yes(() -> {
       if (character.isPresent()) {
         character.get().addNonlethalDamage(prompt.getNumber());
+        character.get().store();
         redraw();
       }
     });
@@ -171,6 +179,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     prompt.yes(() -> {
       if (character.isPresent()) {
         character.get().addNonlethalDamage(-prompt.getNumber());
+        character.get().store();
         redraw();
       }
     });
@@ -184,6 +193,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     prompt.yes(() -> {
       if (character.isPresent()) {
         character.get().addXp(prompt.getNumber());
+        character.get().store();
         redraw();
       }
     });
@@ -197,6 +207,7 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     prompt.yes(() -> {
       if (character.isPresent()) {
         character.get().addXp(-prompt.getNumber());
+        character.get().store();
         redraw();
       }
     });

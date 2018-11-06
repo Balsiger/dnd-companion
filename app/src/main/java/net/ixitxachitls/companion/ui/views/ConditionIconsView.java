@@ -39,7 +39,6 @@ import java.util.stream.Collectors;
  */
 public class ConditionIconsView extends LinearLayout {
 
-  private final int orientation;
   private final int backgroundColor;
   private final int foregroundColor;
   private List<CreatureCondition> conditions = Collections.emptyList();
@@ -51,7 +50,6 @@ public class ConditionIconsView extends LinearLayout {
   public ConditionIconsView(Context context, @LinearLayoutCompat.OrientationMode int orientation,
                             @ColorRes int foregroundColor, @ColorRes int backgroundColor) {
     super(context);
-    this.orientation = orientation;
     this.foregroundColor = foregroundColor;
     this.backgroundColor = backgroundColor;
 
@@ -75,21 +73,6 @@ public class ConditionIconsView extends LinearLayout {
     for (CreatureCondition condition : conditions) {
       addView(new ConditionIconView(getContext(), condition, foregroundColor, backgroundColor));
     }
-
-    /*
-    addView(new ConditionIconView(getContext(), Conditions.FLAT_FOOTED));
-    addView(new ConditionIconView(getContext(), Conditions.BLINDED));
-    addView(new ConditionIconView(getContext(), Conditions.DEAD));
-    addView(new ConditionIconView(getContext(), Conditions.ENTANGLED));
-    addView(new ConditionIconView(getContext(), Conditions.FASCINATED));
-    addView(new ConditionIconView(getContext(), Conditions.GRAPPLING));
-    addView(new ConditionIconView(getContext(), Conditions.CHECKED));
-    addView(new ConditionIconView(getContext(), Conditions.PANICKED));
-    addView(new ConditionIconView(getContext(), Conditions.ABILITY_DAMAGED));
-    addView(new ConditionIconView(getContext(), Conditions.PRONE));
-    addView(new ConditionIconView(getContext(), Conditions.PETRIFIED));
-    addView(new ConditionIconView(getContext(), Conditions.UNCONSCIOUS));
-    */
   }
 
   public void update(List<CreatureCondition> conditions) {

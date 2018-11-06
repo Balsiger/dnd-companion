@@ -48,12 +48,12 @@ import net.ixitxachitls.companion.ui.views.EncounterMonsterTitleView;
 import net.ixitxachitls.companion.ui.views.EncounterTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 /**
- * A fragment to show on onging startEncounter (battle).
+ * A fragment to show on ongoing startEncounter (battle).
  */
 public class EncounterFragment extends NestedCompanionFragment {
 
@@ -62,7 +62,7 @@ public class EncounterFragment extends NestedCompanionFragment {
   // UI.
   private DiceView initiative;
   private LinearLayout creatures;
-  private List<EncounterTitleView> creatureViews = new ArrayList<>();
+  private Map<String, EncounterTitleView<?>> creatureViewsById = new HashMap<>();
   private TextWrapper<TextView> turn;
   private Transition transition = new AutoTransition();
 
@@ -90,6 +90,7 @@ public class EncounterFragment extends NestedCompanionFragment {
     images().observe(this, this::update);
     conditions().observe(this, this::update);
     monsters().observe(this, this::update);
+    messages().observe(this, this::update);
 
     return view;
   }
@@ -136,19 +137,22 @@ public class EncounterFragment extends NestedCompanionFragment {
         initiative.setVisibility(View.GONE);
         creatures.setVisibility(View.VISIBLE);
 
+        Map<String, EncounterTitleView<?>> currentViews = creatureViewsById;
+        creatureViewsById = new HashMap<>();
         creatures.removeAllViews();
-        creatureViews.clear();
         int current = campaign.get().getEncounter().getCurrentCreatureIndex();
         int i = 0;
         for (Creature creature : campaign.get().getEncounter().getCreatures()) {
-          EncounterTitleView view = null;
-          if (creature instanceof Character) {
-            view = new EncounterCharacterTitleView(getContext());
-          } else if (creature instanceof Monster) {
-            view = new EncounterMonsterTitleView(getContext());
+          EncounterTitleView view = currentViews.get(creature.getId());
+          if (view == null) {
+            if (creature instanceof Character) {
+              view = new EncounterCharacterTitleView(getContext());
+            } else if (creature instanceof Monster) {
+              view = new EncounterMonsterTitleView(getContext());
+            }
           }
 
-          creatureViews.add(view);
+          creatureViewsById.put(creature.getId(), view);
           view.update(campaign.get(), creature);
           view.update(conditions().getCreatureConditions(creature.getId()));
           creatures.addView(view);
@@ -167,6 +171,8 @@ public class EncounterFragment extends NestedCompanionFragment {
     if (campaign.isPresent()) {
       campaign.get().getEncounter().update(monsters);
     }
+
+    update(monsters.getContext().characters());
   }
 
   private void update(Images images) {
@@ -182,7 +188,7 @@ public class EncounterFragment extends NestedCompanionFragment {
     if (campaign.isPresent()) {
       campaign.get().getEncounter().update(conditions);
     }
-    for (EncounterTitleView view : creatureViews) {
+    for (EncounterTitleView view : creatureViewsById.values()) {
       view.update(conditions().getCreatureConditions(view.getCreatureId()));
     }
   }

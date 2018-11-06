@@ -107,7 +107,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     document.path = snapshot.getReference().getParent().getPath();
     document.collection = snapshot.getReference().getParent();
     document.reference = Optional.of(snapshot.getReference());
-    document.snapshot = Optional.of(snapshot);
+    document.snapshot = Optional.ofNullable(snapshot);
     document.temporary = false;
 
     document.read();
@@ -297,12 +297,15 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
 
   private void updated(@Nullable DocumentSnapshot snapshot,
                        @Nullable FirebaseFirestoreException e) {
-    this.snapshot = Optional.ofNullable(snapshot);
-    if (this.snapshot.isPresent()) {
-      read();
+    if (e != null) {
+      Status.exception("Cannot update document", e);
+    } else {
+      this.snapshot = Optional.ofNullable(snapshot);
+      if (this.snapshot.isPresent() && this.snapshot.get().exists()) {
+        read();
+        updated();
+      }
     }
-
-    updated();
   }
 
   protected static String extractId(String id) {

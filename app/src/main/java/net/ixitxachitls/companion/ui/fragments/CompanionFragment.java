@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Invites;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
@@ -89,6 +90,10 @@ public abstract class CompanionFragment extends Fragment {
 
   protected Messages messages() {
     return application().messages();
+  }
+
+  protected Invites invites() {
+    return application().invites();
   }
 
   protected Monsters creatures() {

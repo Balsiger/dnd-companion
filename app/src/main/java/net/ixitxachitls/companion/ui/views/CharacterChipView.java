@@ -66,7 +66,7 @@ public class CharacterChipView extends CreatureChipView {
   }
 
   public void update(Messages messages) {
-    if (character.amPlayer()) {
+    if (character.amPlayer() || character.amDM()) {
       clearMessages();
       for (Message message : messages.getMessages(character.getId())) {
         icons.addView(new MessageView(getContext(), character, message), 0);

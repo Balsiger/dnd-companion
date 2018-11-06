@@ -132,10 +132,14 @@ public class User extends Document<User> {
       Optional<Character> character =
           CompanionApplication.get().context().characters().get(
               id.replaceAll("(/" + Characters.PATH + "/.*?)/.*$", "$1"));
-      return character.isPresent();
+      return character.isPresent() && character.get().amDM();
     }
 
     return false;
+  }
+
+  public boolean amPlayer(String id) {
+    return id.startsWith(getId());
   }
 
   private static boolean isA(String id, String type) {

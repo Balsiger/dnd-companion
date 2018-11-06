@@ -142,10 +142,10 @@ public class TimedConditionDialog extends Dialog {
 
     ArrayAdapter<String> adapter;
     if (creature.isPresent()) {
-      adapter = new ArrayAdapter<String>(getContext(),
+      adapter = new ArrayAdapter<>(getContext(),
           R.layout.list_item_select, conditionNames(creature.get()));
     } else {
-      adapter = new ArrayAdapter<String>(getContext(),
+      adapter = new ArrayAdapter<>(getContext(),
           R.layout.list_item_select,
           Conditions.CONDITIONS.stream()
               .map(ConditionData::getName)
@@ -154,12 +154,18 @@ public class TimedConditionDialog extends Dialog {
     condition.setAdapter(adapter);
 
     if (campaign.isPresent()) {
-      for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
-        addCheckbox(view, character.getId(), character.getName());
-      }
+      if (campaign.get().getEncounter().inBattle()) {
+        for (Creature creature : campaign.get().getEncounter().getCreatures()) {
+          addCheckbox(view, creature.getId(), creature.getName());
+        }
+      } else {
+        for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
+          addCheckbox(view, character.getId(), character.getName());
+        }
 
-      for (Monster monster : monsters().getCampaignMonsters(campaign.get().getId())) {
-        addCheckbox(view, monster.getId(), monster.getName());
+        for (Monster monster : monsters().getCampaignMonsters(campaign.get().getId())) {
+          addCheckbox(view, monster.getId(), monster.getName());
+        }
       }
     }
   }

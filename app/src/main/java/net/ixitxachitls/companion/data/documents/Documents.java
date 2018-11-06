@@ -40,4 +40,8 @@ public abstract class Documents<D extends Documents<D>> extends Observable<D> {
   protected void delete(String id) {
     db.document(id).delete();
   }
+
+  public CompanionContext getContext() {
+    return context;
+  }
 }

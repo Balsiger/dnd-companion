@@ -101,7 +101,6 @@ public class CampaignFragment extends CompanionFragment {
         .description("Back", "Go back to the list of campaigns.");
     title = view.findViewById(R.id.title);
     title.setImageAction(this::editImage);
-    images().observe(this, title::update);
     party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     encounter = (EncounterFragment) getChildFragmentManager().findFragmentById(R.id.encounter);
     encounter.hide();
@@ -152,6 +151,8 @@ public class CampaignFragment extends CompanionFragment {
         .description("Award XP", "Award experience points to your characters.")
         .invisible();
 
+    images().observe(this, title::update);
+
     return view;
   }
 
@@ -161,8 +162,6 @@ public class CampaignFragment extends CompanionFragment {
     }
     this.campaign = campaign;
     this.campaign.observe(this, this::update);
-    characters().addPlayers(campaign);
-    monsters().addCampaign(campaign.getId());
     party.show(campaign);
     encounter.show(campaign);
     startEncounter.visible(campaign.amDM());
@@ -182,6 +181,9 @@ public class CampaignFragment extends CompanionFragment {
     }
 
     xp.visible(campaign.amDM());
+
+    characters().addPlayers(campaign);
+    monsters().addCampaign(campaign.getId());
 
     update(campaign);
   }

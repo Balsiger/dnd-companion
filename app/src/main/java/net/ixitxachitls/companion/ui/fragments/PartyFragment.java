@@ -130,7 +130,15 @@ public class PartyFragment extends NestedCompanionFragment {
       }
 
       updateChips();
+
+      if (campaign.get().amDM()) {
+        messages().readMessages(characters().getCampaignCharacters(campaign.get().getId()).stream()
+            .map(Character::getId)
+            .collect(Collectors.toList()));
+      }
     }
+
+    update(messages());
   }
 
   private void update(Images images) {

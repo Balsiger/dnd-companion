@@ -29,9 +29,14 @@ import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.CreatureCondition;
+import net.ixitxachitls.companion.data.documents.Monster;
+import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
+
+import java.util.Optional;
 
 /**
  * An icon for a condition.
@@ -55,11 +60,13 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
         new MessageDialog(getContext())
             .title(condition.getCondition().getName())
             .message(condition.getCondition().getSummary() + "\n\n"
-                + condition.getCondition().getDescription())
+                + condition.getCondition().getDescription() + "\n\n"
+                + sourceName(condition.getCondition()))
             .show();
         return true;
       });
-      if (CompanionApplication.get().me().amDM(condition.getId())) {
+      if (CompanionApplication.get().me().amDM(condition.getId())
+          || CompanionApplication.get().me().amPlayer(condition.getCondition().getSourceId())) {
         setOnClickListener(v -> {
           new ConfirmationPrompt(getContext())
               .title("Dismiss Condition?")
@@ -69,6 +76,26 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
         });
       }
     }
+  }
+
+  private String sourceName(TimedCondition condition) {
+    if (condition.getSourceId().isEmpty()) {
+      return "This condition kindly provided by your DM";
+    }
+
+    Optional<Character> character =
+        CompanionApplication.get().characters().get(condition.getSourceId());
+    if (character.isPresent()) {
+      return "Through the support of " + character.get().getName() + "!";
+    }
+
+    Optional<Monster> monster =
+        CompanionApplication.get().monsters().get(condition.getSourceId());
+    if (monster.isPresent()) {
+      return "You suffer this because of " + monster.get().getName() + "...";
+    }
+
+    return "I'm sorry, I have no clue where this came from...";
   }
 
   private void dismiss(String conditionId) {

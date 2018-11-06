@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Invites;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
@@ -73,10 +74,10 @@ public class CampaignsFragment extends CompanionFragment {
     user.setAction(() -> show(Type.settings));
     campaigns = view.findViewById(R.id.campaigns);
     characters = view.findViewById(R.id.characters);
-    note = Wrapper.wrap(view, R.id.note);
+    note = Wrapper.<TextView>wrap(view, R.id.note).gone();
     Wrapper.wrap(view, R.id.campaign_add)
         .onClick(this::addCampaign)
-        .description("Add Campaign", "Ceate a new campaign. "
+        .description("Add Campaign", "Create a new campaign. "
             + "You will be the Dungeon Master of the campaign. The campaign will only be visible "
             + "to player you invite to it.");
     Wrapper.wrap(view, R.id.character_add)
@@ -89,14 +90,8 @@ public class CampaignsFragment extends CompanionFragment {
     characters().observe(this, this::update);
     images().observe(this, this::update);
     messages().observe(this, this::update);
+    invites().observe(this, this::update);
     return view;
-  }
-
-  @Override
-  public void onResume() {
-    super.onResume();
-
-    update(campaigns());
   }
 
   private void addCampaign() {
@@ -125,9 +120,7 @@ public class CampaignsFragment extends CompanionFragment {
       campaignFound = true;
     }
 
-    if (campaignFound) {
-      note.gone();
-    }
+    note.visible(!campaignFound);
 
     user.setTitle(me().getNickname());
     user.setSubtitle(subtitle());
@@ -148,9 +141,7 @@ public class CampaignsFragment extends CompanionFragment {
       }
     }
 
-    if (characterFound) {
-      note.gone();
-    }
+    note.visible(!characterFound);
 
     messages().readMessages(characters.getPlayerCharacters(me().getId()).stream()
         .map(Character::getId)
@@ -169,7 +160,11 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void update(Messages message) {
+    update(characters());
+  }
 
+  private void update(Invites invites) {
+    update(campaigns());
   }
 
   private String subtitle() {

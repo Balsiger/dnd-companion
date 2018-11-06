@@ -40,6 +40,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.CharacterTitleView;
@@ -119,13 +120,13 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   public void showCharacter(Character character) {
-
     if (this.character.isPresent()) {
       this.character.get().unobserve(this);
     }
 
     this.character = Optional.of(character);
     character.observe(this, this::update);
+    characters().observe(this, this::update);
     this.campaign = campaigns().get(character.getCampaignId());
 
     update(character);
@@ -138,6 +139,12 @@ public class CharacterFragment extends CompanionFragment {
     TabLayout tabs = pager.findViewById(R.id.tabs);
     tabs.getTabAt(0).setIcon(R.drawable.ic_information_outline_black_24dp);
     tabs.getTabAt(1).setIcon(R.drawable.noun_backpack_16138);
+  }
+
+  private void update(Characters characters) {
+    if (character.isPresent()) {
+      update(character.get());
+    }
   }
 
   private void update(Character character) {

@@ -239,7 +239,8 @@ public class Encounter {
     // Add flat-footed to all creatures (before going to the next character).
     for (Creature creature : creatures) {
       int rounds = isSurprised(creature) ? 1 : 0;
-      creature.addCondition(new TimedCondition(Conditions.FLAT_FOOTED, creature.getId(), rounds));
+      creature.addCondition(new TimedCondition(
+          Conditions.FLAT_FOOTED, getCampaign().getDm().getId(), rounds));
     }
 
     toNextUnsurprised();
