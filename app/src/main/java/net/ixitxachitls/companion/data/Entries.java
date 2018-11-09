@@ -27,6 +27,7 @@ import com.google.inject.Singleton;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.statics.ItemTemplate;
+import net.ixitxachitls.companion.data.statics.LevelTemplate;
 import net.ixitxachitls.companion.data.statics.MonsterTemplate;
 import net.ixitxachitls.companion.data.statics.World;
 import net.ixitxachitls.companion.storage.AssetAccessor;
@@ -47,6 +48,8 @@ public class Entries {
   private final MonsterTemplates monsterTemplates = new MonsterTemplates();
   private final EntriesStore<World> worlds = new EntriesStore<>(World.class);
   private final ItemTemplates items = new ItemTemplates();
+  private final EntriesStore<LevelTemplate> levels = new EntriesStore<>(LevelTemplate.class);
+
   private final AssetAccessor assetAccessor;
 
   public Entries(AssetAccessor assetAccessor) {
@@ -93,8 +96,8 @@ public class Entries {
               case ItemTemplate.TYPE:
                 items.read(assetAccessor.open(path + "/" + file));
                 break;
-              case "level":
-                // TODO(merlin): Implement this again!
+              case LevelTemplate.TYPE:
+                levels.read(assetAccessor.open(path + "/" + file));
                 break;
               default:
                 Status.error("Unsupported type " + type + " found!");
