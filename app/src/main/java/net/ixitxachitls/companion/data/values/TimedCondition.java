@@ -56,7 +56,8 @@ public class TimedCondition {
     this(condition, sourceId, 0, endDate);
   }
 
-  private TimedCondition(ConditionData condition, String sourceId, int endRound, CampaignDate endDate) {
+  private TimedCondition(ConditionData condition, String sourceId, int endRound,
+                         CampaignDate endDate) {
     this.condition = condition;
     this.sourceId = sourceId;
     this.endRound = endRound;

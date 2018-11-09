@@ -36,8 +36,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Widget for displaying a title and subtitle.
@@ -53,7 +57,8 @@ public class TitleView extends LinearLayout {
   protected TextWrapper<TextView> title;
   protected TextWrapper<TextView> subtitle;
   protected RoundImageView image;
-  protected LinearLayout icons;
+  protected UpdatableViewGroup<LinearLayout, ImageView, Integer> icons;
+  protected UpdatableViewGroup<LinearLayout, MessageView, Message> messages;
 
   public TitleView(Context context) {
     this(context, null);
@@ -93,7 +98,8 @@ public class TitleView extends LinearLayout {
     subtitle = TextWrapper.wrap(view, R.id.subtitle)
         .text(array.getString(R.styleable.TitleView_subtitle));
     image = view.findViewById(R.id.image);
-    icons = view.findViewById(R.id.icons);
+    icons = new UpdatableViewGroup<>(view.findViewById(R.id.icons));
+    messages = new UpdatableViewGroup<>(view.findViewById(R.id.messages));
     if (array.getBoolean(R.styleable.TitleView_dark, false)) {
       title.textColor(R.color.white);
       subtitle.textColor(R.color.white);
@@ -142,18 +148,25 @@ public class TitleView extends LinearLayout {
     image.setOnClickListener(null);
   }
 
-  public void clearIcons() {
-    icons.removeAllViews();
+  protected List<Integer> iconDrawableResources() {
+    return new ArrayList<>();
   }
 
-  public void addIcon(@DrawableRes int drawable) {
+  protected List<Message> messageIcons() {
+    return new ArrayList<>();
+  }
+
+  public void updateIcons() {
+    icons.ensureOnly(iconDrawableResources(), this::createIcon);
+  }
+
+  protected ImageView createIcon(@DrawableRes int id) {
     ImageView icon = new ImageView(getContext());
-    icon.setImageDrawable(getContext().getDrawable(drawable));
-    addIcon(icon);
-    icon.getLayoutParams().height = 50;
-  }
+    icon.setImageDrawable(getContext().getDrawable(id));
+    icon.setMaxWidth(50);
+    icon.setMaxHeight(50);
+    icon.setAdjustViewBounds(true);
 
-  public void addIcon(ImageView icon) {
-    icons.addView(icon);
+    return icon;
   }
 }

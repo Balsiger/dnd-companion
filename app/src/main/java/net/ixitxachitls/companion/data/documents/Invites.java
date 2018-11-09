@@ -103,17 +103,20 @@ public class Invites extends Documents<Invites> {
   public static void invite(String email, String campaignId) {
     Map<String, Object> data = new HashMap<>();
     data.put(FIELD_CAMPAIGN, campaignId);
-    FirebaseFirestore.getInstance().collection(INVITES + "/" + email + "/" + CAMPAIGNS).document().set(data);
+    FirebaseFirestore.getInstance().collection(INVITES + "/" + email + "/" + CAMPAIGNS).document()
+        .set(data);
   }
 
   public static void uninvite(String email, String campaignId) {
     CollectionReference invites =
         FirebaseFirestore.getInstance().collection(INVITES + "/" + email + "/" + CAMPAIGNS);
     invites.whereEqualTo("campaign", campaignId).addSnapshotListener((snapshots, e) -> {
-      if (snapshots != null) {
+      if (e == null) {
         for (DocumentSnapshot snapshot : snapshots.getDocuments()) {
           snapshot.getReference().delete();
         }
+      } else {
+        Status.exception("Cannot read invites!", e);
       }
     });
   }

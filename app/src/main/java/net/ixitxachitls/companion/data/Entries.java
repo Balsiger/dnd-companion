@@ -82,6 +82,7 @@ public class Entries {
         for (String type : assetAccessor.list(PATH_ENTITIES + "/" + reference)) {
           String path = PATH_ENTITIES + "/" + reference + "/" + type;
           for (String file : assetAccessor.list(path)) {
+            Status.log(path + "::" + file);
             switch (type) {
               case MonsterTemplate.TYPE:
                 monsterTemplates.read(assetAccessor.open(path + "/" + file));
@@ -91,6 +92,9 @@ public class Entries {
                 break;
               case ItemTemplate.TYPE:
                 items.read(assetAccessor.open(path + "/" + file));
+                break;
+              case "level":
+                // TODO(merlin): Implement this again!
                 break;
               default:
                 Status.error("Unsupported type " + type + " found!");

@@ -32,6 +32,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.CreatureCondition;
 import net.ixitxachitls.companion.data.documents.Monster;
+import net.ixitxachitls.companion.data.documents.Users;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
@@ -79,10 +80,6 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
   }
 
   private String sourceName(TimedCondition condition) {
-    if (condition.getSourceId().isEmpty()) {
-      return "This condition kindly provided by your DM";
-    }
-
     Optional<Character> character =
         CompanionApplication.get().characters().get(condition.getSourceId());
     if (character.isPresent()) {
@@ -93,6 +90,10 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
         CompanionApplication.get().monsters().get(condition.getSourceId());
     if (monster.isPresent()) {
       return "You suffer this because of " + monster.get().getName() + "...";
+    }
+
+    if (Users.isUserId(condition.getSourceId())) {
+      return "This condition kindly provided by your DM.";
     }
 
     return "I'm sorry, I have no clue where this came from...";

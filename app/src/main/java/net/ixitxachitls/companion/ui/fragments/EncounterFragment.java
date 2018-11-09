@@ -31,6 +31,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Campaigns;
@@ -42,14 +43,14 @@ import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.documents.Monsters;
+import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.ui.views.DiceView;
 import net.ixitxachitls.companion.ui.views.EncounterCharacterTitleView;
 import net.ixitxachitls.companion.ui.views.EncounterMonsterTitleView;
 import net.ixitxachitls.companion.ui.views.EncounterTitleView;
+import net.ixitxachitls.companion.ui.views.UpdatableViewGroup;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -57,12 +58,12 @@ import java.util.Optional;
  */
 public class EncounterFragment extends NestedCompanionFragment {
 
-  private Optional<Campaign> campaign = Optional.empty();
+  private Optional<Encounter> encounter = Optional.empty();
 
   // UI.
   private DiceView initiative;
-  private LinearLayout creatures;
-  private Map<String, EncounterTitleView<?>> creatureViewsById = new HashMap<>();
+  private UpdatableViewGroup<LinearLayout, EncounterTitleView<? extends Creature<?>>, String>
+      creatures;
   private TextWrapper<TextView> turn;
   private Transition transition = new AutoTransition();
 
@@ -82,7 +83,7 @@ public class EncounterFragment extends NestedCompanionFragment {
     initiative = view.findViewById(R.id.initiative);
     initiative.setDice(20);
 
-    creatures = view.findViewById(R.id.monsters);
+    creatures = new UpdatableViewGroup(view.findViewById(R.id.monsters));
 
     turn = TextWrapper.wrap(view, R.id.turn);
 
@@ -96,7 +97,7 @@ public class EncounterFragment extends NestedCompanionFragment {
   }
 
   public void show(Campaign campaign) {
-    this.campaign = Optional.of(campaign);
+    this.encounter = Optional.of(campaign.getEncounter());
 
     update(characters());
     update(campaigns());
@@ -104,13 +105,13 @@ public class EncounterFragment extends NestedCompanionFragment {
   }
 
   public void update(Campaigns campaigns) {
-    if (campaign.isPresent()) {
-      if (campaign.get().getEncounter().isStarting()) {
+    if (encounter.isPresent()) {
+      if (encounter.get().isStarting()) {
         turn.text("Waiting for initiative...");
-      } else if (campaign.get().getEncounter().isSurprised()) {
+      } else if (encounter.get().isSurprised()) {
         turn.text("Surprise round");
       } else {
-        turn.text("Turn " + campaign.get().getEncounter().getTurn());
+        turn.text("Turn " + encounter.get().getTurn());
       }
 
       // TODO(merlin): Check whether we can ensure just doing the update once, not
@@ -119,77 +120,80 @@ public class EncounterFragment extends NestedCompanionFragment {
   }
 
   private void update(Characters characters) {
-    if (campaign.isPresent()) {
-      campaign.get().getEncounter().update(characters);
+    if (encounter.isPresent()) {
+      encounter.get().update(characters);
       Optional<Character> character =
-          campaign.get().getEncounter().firstPlayerCharacterNeedingInitiative();
+          encounter.get().firstPlayerCharacterNeedingInitiative();
       if (character.isPresent()) {
         initiative.setLabel("Initiative for " + character.get().getName());
         initiative.setModifier(character.get().initiativeModifier());
         initiative.setSelectAction(i -> {
           TransitionManager.beginDelayedTransition(view, transition);
-          character.get().setInitiative(campaign.get().getEncounter().getNumber(), i);
+          character.get().setInitiative(encounter.get().getNumber(), i);
         });
 
         initiative.setVisibility(View.VISIBLE);
-        creatures.setVisibility(View.GONE);
+        creatures.getView().setVisibility(View.GONE);
       } else {
         initiative.setVisibility(View.GONE);
-        creatures.setVisibility(View.VISIBLE);
+        creatures.getView().setVisibility(View.VISIBLE);
 
-        Map<String, EncounterTitleView<?>> currentViews = creatureViewsById;
-        creatureViewsById = new HashMap<>();
-        creatures.removeAllViews();
-        int current = campaign.get().getEncounter().getCurrentCreatureIndex();
-        int i = 0;
-        for (Creature creature : campaign.get().getEncounter().getCreatures()) {
-          EncounterTitleView view = currentViews.get(creature.getId());
-          if (view == null) {
-            if (creature instanceof Character) {
-              view = new EncounterCharacterTitleView(getContext());
-            } else if (creature instanceof Monster) {
-              view = new EncounterMonsterTitleView(getContext());
-            }
-          }
-
-          creatureViewsById.put(creature.getId(), view);
-          view.update(campaign.get(), creature);
-          view.update(conditions().getCreatureConditions(creature.getId()));
-          creatures.addView(view);
-          creatures.setVisibility(View.VISIBLE);
-          view.showSelected(i++ == current);
-        }
+        String currentCreatureId = encounter.get().getCurrentCreatureId();
+        creatures.ensureOnly(encounter.get().getCreatureIds(),
+            id -> {
+              Optional<? extends Creature<?>> creature =
+                  CompanionApplication.get().monsters().getMonsterOrCharacter(id);
+              if (creature.isPresent() && creature.get() instanceof Character) {
+                return new EncounterCharacterTitleView(getContext());
+              } else if (creature.isPresent() && creature.get() instanceof Monster) {
+                return new EncounterMonsterTitleView(getContext());
+              } else {
+                return null;
+              }
+            });
+        creatures.update(encounter.get().getCreatureIds(),
+            (id, view) -> {
+              Optional<? extends Creature<?>> creature =
+                  CompanionApplication.get().monsters().getMonsterOrCharacter(id);
+              if (creature.isPresent()) {
+                // This weird cast is necessary because the type of creature we get here
+                // is not guaranteed to match the type of title view; it should match in
+                // practice, though.
+                ((EncounterTitleView) view).update(encounter.get(), creature.get());
+                view.update(conditions().getCreatureConditions(id));
+                view.showSelected(id.equals(currentCreatureId));
+                creatures.getView().setVisibility(View.VISIBLE);
+              }
+            });
       }
     }
   }
 
   private void update(Messages messages) {
-    update(characters());
+    creatures.simpleUpdate(v -> {
+      if (v instanceof EncounterCharacterTitleView) {
+        ((EncounterCharacterTitleView) v).update(messages);
+      }
+    });
   }
 
   private void update(Monsters monsters) {
-    if (campaign.isPresent()) {
-      campaign.get().getEncounter().update(monsters);
+    if (encounter.isPresent()) {
+      encounter.get().update(monsters);
     }
 
     update(monsters.getContext().characters());
   }
 
   private void update(Images images) {
-    for (int i = 0; i < creatures.getChildCount(); i++) {
-      View view = creatures.getChildAt(i);
-      if (view instanceof EncounterCharacterTitleView) {
-        ((EncounterTitleView) view).update(images);
-      }
-    }
+    creatures.simpleUpdate(v -> v.update(images));
   }
 
   private void update(CreatureConditions conditions) {
-    if (campaign.isPresent()) {
-      campaign.get().getEncounter().update(conditions);
+    if (encounter.isPresent()) {
+      encounter.get().update(conditions);
     }
-    for (EncounterTitleView view : creatureViewsById.values()) {
-      view.update(conditions().getCreatureConditions(view.getCreatureId()));
-    }
+
+    creatures.simpleUpdate(v -> v.update(conditions().getCreatureConditions(v.getCreatureId())));
   }
 }

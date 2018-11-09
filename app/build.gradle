@@ -89,7 +89,7 @@ android {
 
 protobuf {
   protoc {
-    artifact = 'com.google.protobuf:protoc:3.1.0'
+    artifact = 'com.google.protobuf:protoc:3.6.1'
   }
   plugins {
     lite {
@@ -148,7 +148,7 @@ dependencies {
       (OperatingSystem.WINDOWS): 'windows-x86_32',
       (OperatingSystem.MAC_OS) : 'osx-x86_32'
   ].withDefault { 'linux-x86_32' }
-  protoc "com.google.protobuf:protoc:3.1.0:${platformMapping.get(OperatingSystem.current())}@exe"
+  protoc "com.google.protobuf:protoc:3.6.0:${platformMapping.get(OperatingSystem.current())}@exe"
   // Architecture components.
   implementation 'android.arch.lifecycle:common-java8:1.1.1'
   annotationProcessor "android.arch.lifecycle:compiler:1.1.1"

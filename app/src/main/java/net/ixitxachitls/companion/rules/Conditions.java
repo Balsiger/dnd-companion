@@ -447,6 +447,7 @@ public class Conditions {
       .summary("Cannot act in the surprise round.")
       .predefined()
       .dmOnly()
+      .icon(R.drawable.noun_gift_15044)
       .build();
   public static final ConditionData TURNED = ConditionData.newBuilder("Turned")
       .description("Affected by a turn undead attempt. Turned undead flee for 10 rounds (1 "

@@ -33,6 +33,7 @@ import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -56,32 +57,47 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
     setAction(() -> {
       CompanionFragments.get().showCharacter(character, Optional.of(this));
     });
-  }
 
-  public void update(Messages messages) {
     updateIcons();
   }
 
+  public void update(Messages messages) {
+    updateMessages();
+  }
+
   @Override
-  protected void updateIcons() {
-    super.updateIcons();
+  protected List<Integer> iconDrawableResources() {
+    List<Integer> resources = super.iconDrawableResources();
 
     if (creature.isPresent()) {
       if (creature.get().amPlayer()) {
-        addIcon(R.drawable.noun_puppet_52120);
+        resources.add(R.drawable.noun_puppet_52120);
       }
 
       Optional<Campaign> campaign = creature.get().getCampaign();
       if (campaign.isPresent()
           && campaign.get().getEncounter().isOngoing()
           && campaign.get().getEncounter().includes(creature.get().getId())) {
-        addIcon(R.drawable.ic_sword_cross_black_18dp);
-      }
-
-      for (Message message
-          : CompanionApplication.get().messages().getMessages(creature.get().getId())) {
-        addIcon(new MessageView(getContext(), creature.get(), message));
+        resources.add(R.drawable.ic_sword_cross_black_18dp);
       }
     }
+
+    return resources;
+  }
+
+  @Override
+  protected List<Message> messageIcons() {
+    List<Message> messages = super.messageIcons();
+    messages.addAll(CompanionApplication.get().messages().getMessages(creature.get().getId()));
+
+    return messages;
+  }
+
+  protected void updateMessages() {
+    messages.ensureOnly(messageIcons(), this::createMessageIcon);
+  }
+
+  protected MessageView createMessageIcon(Message message) {
+    return new MessageView(getContext(), (Character) creature.get(), message);
   }
 }

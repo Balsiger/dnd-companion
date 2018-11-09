@@ -41,20 +41,42 @@ public class CreatureChipView extends ChipView {
 
   private final ConditionIconsView conditions;
 
-  public CreatureChipView(Context context, Monster monster) {
+  private int perLine;
+
+  public CreatureChipView(Context context, Monster monster, int perLine) {
     this(context, monster, R.color.monsterDark, R.color.monsterLight,
-        R.drawable.ic_person_black_48dp_inverted);
+        R.drawable.ic_person_black_48dp_inverted, perLine);
   }
 
   protected CreatureChipView(Context context, Creature creature, @ColorRes int chipColor,
-                             @ColorRes int highlightColor, @DrawableRes int drawable) {
+                             @ColorRes int highlightColor, @DrawableRes int drawable, int perLine) {
     super(context, creature.getId(), creature.getName(), "init " + creature.getInitiative(),
         chipColor, highlightColor, drawable);
 
     this.conditions = new ConditionIconsView(context, VERTICAL, highlightColor, chipColor);
+    this.perLine = perLine;
+
     icons.addView(conditions);
 
     update(creature);
+  }
+
+  @Override
+  public void onMeasure(int width, int height) {
+    super.onMeasure(width, height);
+
+    if (perLine > 0) {
+      int windowWidth = CompanionApplication.get().getCurrentActivity().getWindowManager()
+          .getDefaultDisplay().getWidth();
+      int chrome = getMeasuredWidth() - image.get().getMeasuredWidth();
+      int newSize = windowWidth / perLine - chrome;
+      if (image.get().getMeasuredWidth() != newSize) {
+        image.width(newSize);
+        image.height(newSize);
+
+        super.onMeasure(width, height);
+      }
+    }
   }
 
   public String getCreatureId() {

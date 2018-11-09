@@ -39,9 +39,9 @@ public class CharacterChipView extends CreatureChipView {
 
   private Character character;
 
-  public CharacterChipView(Context context, Character character) {
+  public CharacterChipView(Context context, Character character, int perLine) {
     super(context, character, character.amPlayer() ? R.color.character : R.color.characterDark,
-        R.color.characterLight, R.drawable.noun_viking_30736);
+        R.color.characterLight, R.drawable.noun_viking_30736, perLine);
 
     this.character = character;
     setOnClickListener(this::onClick);

@@ -33,6 +33,7 @@ import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.User;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -79,10 +80,7 @@ public class CampaignTitleView extends TitleView { //extends LinearLayout {
       setTitle(campaign.get().getName());
       setSubtitle(campaign.get().getWorld().toString() + ", " + campaign.get().getDm());
 
-      clearIcons();
-      if (campaign.get().amDM()) {
-        addIcon(R.drawable.noun_eye_of_providence_24673);
-      }
+      updateIcons();
 
       Optional<Bitmap> bitmap = CompanionApplication.get().images().get(campaign.get().getId());
       if (bitmap.isPresent()) {
@@ -91,5 +89,15 @@ public class CampaignTitleView extends TitleView { //extends LinearLayout {
         clearImage(R.drawable.image_filter_hdr);
       }
     }
+  }
+
+  @Override
+  protected List<Integer> iconDrawableResources() {
+    List<Integer> resources = super.iconDrawableResources();
+    if (campaign.get().amDM()) {
+      resources.add(R.drawable.noun_eye_of_providence_24673);
+    }
+
+    return resources;
   }
 }

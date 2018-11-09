@@ -73,4 +73,8 @@ public class Users extends Documents<Users> {
 
     usersById.put(me.get().getId(), me.get());
   }
+
+  public static boolean isUserId(String id) {
+    return id.startsWith(User.PATH + "/");
+  }
 }

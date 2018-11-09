@@ -305,4 +305,16 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   public V get() {
     return view;
   }
+
+  public W width(int width) {
+    view.getLayoutParams().width = width;
+
+    return (W) this;
+  }
+
+  public W height(int height) {
+    view.getLayoutParams().height = height;
+
+    return (W) this;
+  }
 }

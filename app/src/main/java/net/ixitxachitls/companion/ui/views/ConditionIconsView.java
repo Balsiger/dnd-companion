@@ -42,6 +42,8 @@ public class ConditionIconsView extends LinearLayout {
   private final int backgroundColor;
   private final int foregroundColor;
   private List<CreatureCondition> conditions = Collections.emptyList();
+  private final UpdatableViewGroup<ConditionIconsView, ConditionIconView, CreatureCondition>
+      updatable;
 
   // UI elements.
   private final HPImageView hp;
@@ -52,6 +54,7 @@ public class ConditionIconsView extends LinearLayout {
     super(context);
     this.foregroundColor = foregroundColor;
     this.backgroundColor = backgroundColor;
+    this.updatable = new UpdatableViewGroup(this);
 
     setOrientation(orientation);
     hp = new HPImageView(getContext());
@@ -66,13 +69,12 @@ public class ConditionIconsView extends LinearLayout {
   }
 
   private void redraw() {
-    removeAllViews();
-    addView(hp);
-    addView(nonlethal);
+    updatable.ensureOnly(conditions,
+        condition -> new ConditionIconView(getContext(), condition, foregroundColor,
+            backgroundColor));
 
-    for (CreatureCondition condition : conditions) {
-      addView(new ConditionIconView(getContext(), condition, foregroundColor, backgroundColor));
-    }
+    addView(nonlethal, 0);
+    addView(hp, 0);
   }
 
   public void update(List<CreatureCondition> conditions) {

@@ -32,15 +32,12 @@ import android.view.View;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
-import com.google.android.gms.drive.DriveId;
-import com.google.android.gms.drive.OpenFileActivityBuilder;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.StatusView;
@@ -50,34 +47,19 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-  public static final int RESOLVE_DRIVE_CONNECTION_CODE = 1;
-  public static final int DRIVE_IMPORT_OPEN_CODE = 2;
-  public static final int SIGN_IN_CODE = 3;
-
-  private DriveStorage driveStorage;
+  public static final int SIGN_IN_CODE = 1;
 
   // UI elements.
   private StatusView status;
-  private Menu menu;
+
+  public MainActivity() {
+
+  }
 
   @Override
   protected void onCreate(@Nullable Bundle state) {
-    super.onCreate(state);
-
     CompanionFragments.init(CompanionApplication.get(this).context(),
         getSupportFragmentManager());
-    driveStorage = new DriveStorage(this);
-
-    setContentView(R.layout.activity_main);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
-    setTitle(getString(R.string.app_name));
-
-    View container = findViewById(R.id.activity_main);
-
-    // Setup the status first, in case any fragment wants to log something.
-    status = (StatusView) container.findViewById(R.id.status);
-    Status.setView(status);
 
     // Log the user in.
     List<AuthUI.IdpConfig> providers = Arrays.asList(new AuthUI.IdpConfig.GoogleBuilder().build());
@@ -87,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
         .createSignInIntentBuilder()
         .setAvailableProviders(providers)
         .build(), SIGN_IN_CODE);
+
+    super.onCreate(state);
   }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
-    this.menu = menu;
-
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.menu_main, menu);
 
@@ -101,27 +83,23 @@ public class MainActivity extends AppCompatActivity {
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
-    int id = item.getItemId();
-    if (id == R.id.action_log) {
-      Status.toggleDebug();
-      return true;
-    }
+    switch(item.getItemId()) {
 
-    switch(id) {
-
-      case R.id.action_export: {
-        Status.error("Not currently implemented!");
-        return true;
-      }
-
-      case R.id.action_import:
-        driveStorage.start(new DriveStorage.SelectImportFolder());
+      case R.id.action_log:
+        Status.toggleDebug();
         return true;
 
       case R.id.action_about:
         MessageDialog.create(this)
             .layout(R.layout.dialog_about)
             .show();
+        return true;
+
+      case R.id.action_sign_out:
+        AuthUI.getInstance()
+            .signOut(this)
+            .addOnCompleteListener(task -> finish());
+        return true;
 
       default:
         return super.onOptionsItemSelected(item);
@@ -157,23 +135,27 @@ public class MainActivity extends AppCompatActivity {
     android.os.Process.killProcess(android.os.Process.myPid());
   }
 
+  private void create() {
+    setTheme(R.style.AppTheme_NoActionBar);
+
+    setContentView(R.layout.activity_main);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
+    setTitle(getString(R.string.app_name));
+
+    View container = findViewById(R.id.activity_main);
+    // Setup the status first, in case any fragment wants to log something.
+    status = (StatusView) container.findViewById(R.id.status);
+    Status.setView(status);
+
+    CompanionFragments.get().show();
+  }
+
   @Override
   protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
 
     switch (requestCode) {
-      case RESOLVE_DRIVE_CONNECTION_CODE:
-        if (resultCode == RESULT_OK) {
-          driveStorage.connect();
-        }
-        break;
-
-      case DRIVE_IMPORT_OPEN_CODE:
-        if (resultCode == RESULT_OK) {
-          driveStorage.start(new DriveStorage.Import(((DriveId) data.getParcelableExtra(
-              OpenFileActivityBuilder.EXTRA_RESPONSE_DRIVE_ID)).asDriveFolder()));
-        }
-
       case SIGN_IN_CODE:
         IdpResponse response = IdpResponse.fromResultIntent(data);
 
@@ -182,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
           CompanionApplication.get(this).context().users().login(
               user.getUid(), user.getPhotoUrl().toString());
           Status.log("Successfully logged in");
-          CompanionFragments.get().show();
+          create();
         } else if (response == null) {
           Status.error("Login required");
           MessageDialog.create(this)

@@ -26,6 +26,7 @@ import com.google.common.collect.TreeMultimap;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.Collection;
@@ -141,7 +142,13 @@ public class Characters extends Documents<Characters> {
   public void addPlayer(User player) {
     if (!charactersByPlayerId.containsKey(player.getId())) {
       CollectionReference reference = db.collection(player.getId() + "/" + PATH);
-      reference.addSnapshotListener((s, e) -> readCharacters(player, s.getDocuments()));
+      reference.addSnapshotListener((s, e) -> {
+        if (e == null) {
+          readCharacters(player, s.getDocuments());
+        } else {
+          Status.exception("Cannot read characters!", e);
+        }
+      });
     }
   }
 

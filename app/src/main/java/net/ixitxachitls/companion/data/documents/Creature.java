@@ -373,6 +373,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     //store();
   }
 
+  public boolean hasCondition(String name) {
+    return context.conditions().hasCondition(getId(), name);
+  }
+
   @Override
   @CallSuper
   protected void read() {

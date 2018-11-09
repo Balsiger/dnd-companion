@@ -54,7 +54,6 @@
         android:layout_height="wrap_content"
         android:minWidth="200dp"
         android:orientation="horizontal"
-        android:padding="5dp"
         app:flexWrap="wrap"/>
   </ScrollView>
 

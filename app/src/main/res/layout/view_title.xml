@@ -91,6 +91,16 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/messages"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_weight="0"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/icons"
         android:layout_width="25dp"
         android:layout_height="wrap_content"

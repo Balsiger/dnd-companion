@@ -63,67 +63,6 @@
       android:layout_below="@+id/date"
       android:tag="encounter"/>
 
-  <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentEnd="true"
-      android:layout_below="@+id/title"
-      android:orientation="horizontal">
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:visibility="visible"
-        app:backgroundTint="@color/campaign"
-        app:srcCompat="@drawable/ic_mode_edit_black_24dp"
-        android:focusable="true"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/calendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:visibility="visible"
-        app:backgroundTint="@color/campaign"
-        app:srcCompat="@drawable/ic_today_black_24dp"
-        android:focusable="true"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:visibility="visible"
-        app:backgroundTint="@color/campaign"
-        app:srcCompat="@drawable/ic_delete_black_24dp"
-        android:focusable="true"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/invite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:visibility="visible"
-        app:backgroundTint="@color/campaign"
-        app:srcCompat="@drawable/account_plus"
-        android:focusable="true"/>
-
-  </LinearLayout>
-
   <HorizontalScrollView
       android:id="@+id/actionsContainer"
       android:layout_width="match_parent"
@@ -149,6 +88,28 @@
           android:padding="10dp"
           android:tint="@color/action"
           app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+
+      <ImageView
+          android:id="@+id/edit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="0"
+          android:contentDescription="Edit base campaign values"
+          android:padding="10dp"
+          android:tint="@color/action"
+          app:srcCompat="@drawable/ic_mode_edit_black_24dp"/>
+
+      <ImageView
+          android:id="@+id/calendar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="0"
+          android:contentDescription="Edit the campaign's date"
+          android:padding="10dp"
+          android:tint="@color/action"
+          app:srcCompat="@drawable/ic_today_black_24dp"/>
 
       <ImageView
           android:id="@+id/encounter_start"
@@ -234,6 +195,28 @@
           android:padding="10dp"
           android:tint="@color/action"
           app:srcCompat="@drawable/noun_experience_1705256"/>
+
+      <ImageView
+          android:id="@+id/invite"
+          android:layout_width="50dp"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="0"
+          android:contentDescription="Invite other players"
+          android:padding="10dp"
+          android:tint="@color/action"
+          app:srcCompat="@drawable/account_plus"/>
+
+      <ImageView
+          android:id="@+id/delete"
+          android:layout_width="50dp"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="0"
+          android:contentDescription="Delete the campaign"
+          android:padding="10dp"
+          android:tint="@color/action"
+          app:srcCompat="@drawable/ic_delete_black_24dp"/>
 
     </LinearLayout>
 

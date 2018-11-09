@@ -54,7 +54,6 @@ public class Encounter {
   private static final String FIELD_TURN = "turn";
   private static final String FIELD_STATUS = "status";
   private static final String FIELD_CREATURES = "creatures";
-  private static final String FIELD_SURPRISED = "surprised";
   private static final String FIELD_CURRENT = "current";
 
   private Campaign campaign;
@@ -64,7 +63,6 @@ public class Encounter {
   private EncounterStatus status = EncounterStatus.ENDED;
   private Optional<String> lastMonsterName = Optional.empty();
   private List<String> creatureIds = new ArrayList<>();
-  private List<String> surprisedCreatureIds = new ArrayList<>();
   private List<Creature> creatures = new ArrayList<>();
   private int currentCreatureIndex;
 
@@ -132,6 +130,10 @@ public class Encounter {
     return creatures;
   }
 
+  public List<String> getCreatureIds() {
+    return creatureIds;
+  }
+
   public boolean acted(String creatureId) {
     int index = creatureIds.indexOf(creatureId);
     return index >= 0 && index < currentCreatureIndex;
@@ -159,7 +161,23 @@ public class Encounter {
     if (campaign.amDM()) {
       number++;
       creatureIds = includedCreatureIds;
-      this.surprisedCreatureIds = surprisedCreatureIds;
+
+      // Setup initial conditions for characters.
+      for (String creatureId : includedCreatureIds) {
+        Optional<? extends Creature> creature = campaign.characters().getCreature(creatureId);
+        if (creature.isPresent()) {
+          creature.get().addCondition(new TimedCondition(
+              Conditions.FLAT_FOOTED, getCampaign().getDm().getId()));
+        }
+      }
+
+      for (String creatureId : surprisedCreatureIds) {
+        Optional<? extends Creature> creature = campaign.characters().getCreature(creatureId);
+        if (creature.isPresent()) {
+          creature.get().addCondition(new TimedCondition(
+              Conditions.SURPRISED, getCampaign().getDm().getId()));
+        }
+      }
 
       status = EncounterStatus.STARTING;
       campaign.store();
@@ -236,13 +254,6 @@ public class Encounter {
     turn = 0;
     status = EncounterStatus.SURPRISED;
 
-    // Add flat-footed to all creatures (before going to the next character).
-    for (Creature creature : creatures) {
-      int rounds = isSurprised(creature) ? 1 : 0;
-      creature.addCondition(new TimedCondition(
-          Conditions.FLAT_FOOTED, getCampaign().getDm().getId(), rounds));
-    }
-
     toNextUnsurprised();
     campaign.store();
   }
@@ -266,6 +277,10 @@ public class Encounter {
     if (currentCreatureIndex >= creatureIds.size()) {
       nextTurn();
     }
+
+    // Remove the flat-footed condition, as the creature is acting now.
+    campaign.getContext().conditions().deleteAll(Conditions.FLAT_FOOTED.getName(),
+        creatureIds.get(currentCreatureIndex));
 
     updateConditions();
 
@@ -313,10 +328,17 @@ public class Encounter {
   }
 
   private boolean isSurprised(Creature creature) {
-    return surprisedCreatureIds.contains(creature.getId());
+    return creature.hasCondition(Conditions.SURPRISED.getName());
   }
 
   private void nextTurn() {
+    if (status == EncounterStatus.SURPRISED) {
+      // Remove all surprised conditions.
+      for (String id : creatureIds) {
+        campaign.getContext().conditions().deleteAll(Conditions.SURPRISED.getName(), id);
+      }
+    }
+
     currentCreatureIndex = 0;
     status = EncounterStatus.ONGOING;
     turn++;
@@ -409,7 +431,6 @@ public class Encounter {
     turn = (int) Values.get(data, FIELD_TURN, 0);
     status = Values.get(data, FIELD_STATUS, EncounterStatus.ENDED);
     creatureIds = Values.get(data, FIELD_CREATURES, Collections.emptyList());
-    surprisedCreatureIds = Values.get(data, FIELD_SURPRISED, Collections.emptyList());
     currentCreatureIndex = (int) Values.get(data, FIELD_CURRENT, 0);
 
     syncCreaturesWithIds(status == EncounterStatus.ENDED || status == EncounterStatus.STARTING);
@@ -421,7 +442,6 @@ public class Encounter {
     data.put(FIELD_TURN, turn);
     data.put(FIELD_STATUS, status.toString());
     data.put(FIELD_CREATURES, creatureIds);
-    data.put(FIELD_SURPRISED, surprisedCreatureIds);
     data.put(FIELD_CURRENT, currentCreatureIndex);
 
     return data;

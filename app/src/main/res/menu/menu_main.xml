@@ -7,25 +7,17 @@
         android:id="@+id/action_log"
         android:icon="@drawable/ic_bug_outline_white_24dp"
         android:orderInCategory="100"
-        android:title="Open @string/facebook_login_protocol_scheme"
+        android:title="Open Log"
         app:showAsAction="never|ifRoom"/>
     <item
         android:id="@+id/action_about"
         android:orderInCategory="100"
         android:title="@string/action_about"
         app:showAsAction="never" />
-  </group>
-
-  <group android:id="@+id/menu_import_export">
     <item
-        android:id="@+id/action_export"
+        android:id="@+id/action_sign_out"
         android:orderInCategory="100"
-        android:title="@string/action_export"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_import"
-        android:orderInCategory="100"
-        android:title="@string/action_import"
+        android:title="Sign Out"
         app:showAsAction="never" />
   </group>
 

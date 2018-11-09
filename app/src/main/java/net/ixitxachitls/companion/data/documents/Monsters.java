@@ -26,6 +26,7 @@ import com.google.common.collect.Multimap;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.Collection;
@@ -51,7 +52,13 @@ public class Monsters extends Documents<Monsters> {
   public void addCampaign(String campaignId) {
     if (!monstersByCampaignId.containsKey(campaignId)) {
       CollectionReference reference = db.collection(campaignId + "/" + Monster.PATH);
-      reference.addSnapshotListener((s, e) -> readMonsters(campaignId, s.getDocuments()));
+      reference.addSnapshotListener((s, e) -> {
+        if (e == null) {
+          readMonsters(campaignId, s.getDocuments());
+        } else {
+          Status.exception("Cannot read monsters!", e);
+        }
+      });
     }
   }
 
