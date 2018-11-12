@@ -1,0 +1,141 @@
+entity {
+  name: "Half-plate"
+  synonym: "Plate, Half"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 123
+      high: 123
+    }
+    pages {
+      low: 124
+      high: 124
+    }
+    pages {
+      low: 125
+      high: 125
+    }
+  }
+  world: "Generic"
+  description: "This armor is a combination of chainmail with metal plates (breastplate,\n  epaulettes, elbow guards, gauntlets, tasses, and greaves) covering vital\n  areas. Buckles and straps hold the whole suit together and distribute the\n  weight, but the armor still hangs more loosely than full plate. The suit\n  includes gauntlets."
+}
+value {
+  gold: 600
+}
+weight {
+  imperial {
+    pounds {
+      leader: 50
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A suite of banded mail."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A battered suite of banded mail."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Half-plate"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+    modifier {
+      value: 7
+      type: ARMOR
+    }
+  }
+  type: HEAVY
+  check_penalty: -7
+  arcane_failure: 40
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

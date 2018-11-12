@@ -1,0 +1,139 @@
+entity {
+  name: "Buckler"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 123
+      high: 123
+    }
+    pages {
+      low: 124
+      high: 124
+    }
+  }
+  world: "Generic"
+  description: "This small metal shield is worn strapped to your forearm.  You can use a bow\n  or crossbow without penalty while carrying it. You can also use your shield\n  arm to wield a weapon (whether you are using an off-hand weapon or using your\n  off hand to help wield a two-handed weapon), but you take a \342\210\232\302\242\302\254\303\204\302\254\303\2541 penalty on\n  attack rolls while doing so because of the extra weight on your arm. This\n  penalty stacks with those that may apply for fighting with your off hand and\n  for fighting with two weapons. In any case, if you use a weapon in your off\n  hand, you don\'t get the buckler\'s AC bonus for the rest of the round."
+  short_description: "A small metal shield to be strapped to your forearm."
+}
+value {
+  gold: 15
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hardness: 10
+hit_points: 5
+appearance {
+  probability: COMMON
+  appearance: "A buckler."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A battered buckler."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Buckler"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+    modifier {
+      value: 1
+      type: SHIELD
+    }
+  }
+  type: SHIELD
+  check_penalty: -1
+  arcane_failure: 5
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk armor"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

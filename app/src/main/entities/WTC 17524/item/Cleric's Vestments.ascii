@@ -1,0 +1,129 @@
+entity {
+  name: "Cleric\'s Vestments"
+  category: "clothing"
+  synonym: "Vestments, Cleric\'s"
+  synonym: "Outfit, Cleric"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 129
+      high: 129
+    }
+    pages {
+      low: 131
+      high: 131
+    }
+  }
+  world: "Generic"
+  description: "These ecclesiastical clothes are for performing priestly functions, not for\n  adventuring."
+  short_description: "Clothes for performing priestly functions."
+}
+value {
+  gold: 5
+}
+weight {
+  imperial {
+    pounds {
+      leader: 6
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A set of ecclesiastical clothes for priestly functions."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Cleric\'s Vestments"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -1,0 +1,134 @@
+entity {
+  name: "Ceramic Vial"
+  category: "gear"
+  synonym: "Vial (Ceramic)"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "This ceramic vial is fitted with a tight stopper and holds 1 ounce of\n  liquid. The stoppered container usually is no more than 1 inch wide and 3\n  inches high."
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: FINE
+}
+hardness: 1
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "An engraved ceramic vial with a tight stopper."
+}
+appearance {
+  probability: COMMON
+  appearance: "A ceramic vial with a tight stopper."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A scratched ceramic vial with a tight stopper."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+break_dc: 12
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: GASEOUS
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

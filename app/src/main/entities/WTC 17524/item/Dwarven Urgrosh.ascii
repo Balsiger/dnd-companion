@@ -1,0 +1,166 @@
+entity {
+  name: "Dwarven Urgrosh"
+  category: "axe"
+  synonym: "Urgrosh, Dwarven"
+  synonym: "Spear Axe"
+  synonym: "Axe, Spear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 117
+      high: 117
+    }
+    pages {
+      low: 119
+      high: 119
+    }
+    pages {
+      low: 121
+      high: 121
+    }
+  }
+  world: "Generic"
+  description: "A dwarven urgrosh is a double weapon. You can fight with it as if fighting\n  with two weapons, but if you do, you incur all the normal attack penalties\n  associated with fighting with two weapons, just as if you were using a\n  one-handed weapon and a light weapon (see \\Feat{Two-Weapon Fighting}). The\n  urgrosh\'s axe head is a slashing weapon that deals 1d8 points of damage. Its\n  spear head is a piercing weapon that deals 1d6 points of damage. You can use\n  either head as the primary weapon. The other is the off-hand weapon. A\n  creature wielding a dwarven urgrosh in one hand can\'t use it as a double\n  weapon-only one end of the weapon can be used in any given round.  If\n  you use a ready action to set an urgrosh against a charge, you deal double\n  damage if you score a hit against a charging character. If you use an urgrosh\n  against a charging character, the spear head is the part of the weapon that\n  deals damage.  An urgrosh is also called a spear-axe. Dwarves treat dwarven\n  urgroshes as martial weapons."
+}
+value {
+  gold: 50
+}
+weight {
+  imperial {
+    pounds {
+      leader: 12
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: MEDIUM
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A dwarven urgrosh."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A rusty, dwarven urgrosh."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Dwarven Urgrosh"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: SLASHING_OR_PIERCING
+  critical {
+    threat {
+    }
+    multiplier: 3
+  }
+  style: TWOHANDED_MELEE
+  proficiency: EXOCTIC
+  range {
+    imperial {
+      feet {
+        leader: 10
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

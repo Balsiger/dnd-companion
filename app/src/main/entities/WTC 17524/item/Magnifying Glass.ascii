@@ -1,0 +1,130 @@
+entity {
+  name: "Magnifying Glass"
+  category: "Glass"
+  synonym: "Glass, Magnifying"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "This simple lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as\nbright as sunlight to focus, tinder to ignite, and at least a full-round\naction.\n\nA magnifying glass grants a +2 circumstance bonus on Appraise checks involving any item that is small or highly detailed, such as a gem. "
+  short_description: "A magnifying piece of glass (can start a fire +2 circumstance to Appraise)."
+}
+value {
+  gold: 100
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: DIMINUTIVE
+  modifier: LONG
+}
+appearance {
+  probability: COMMON
+  appearance: "A simpe magnifying glass."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

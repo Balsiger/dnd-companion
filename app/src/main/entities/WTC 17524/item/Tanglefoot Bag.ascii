@@ -1,0 +1,158 @@
+entity {
+  name: "Tanglefoot Bag"
+  category: "alchemical"
+  synonym: "Bag, Tanglefoot"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+  }
+  world: "Generic"
+  description: "This round leather bag is full of alchemical goo.  When you throw a\n  tanglefoot bag at a creature (as a ranged touch attack with a range increment\n  of 10 feet), the bag comes apart and the goo bursts out, entangling the\n  target and then becoming tough and resilient upon exposure to air. An\n  entangled creature takes a -2 penalty on attack rolls and a\n  -4 penalty to Dexterity and must make a DC 15 Reflex save or be glued\n  to the floor, unable to move. Even on a successful save, it can move only at\n  half speed. Huge or larger creatures are unaffected by a tanglefoot bag. A\n  flying creature is not stuck to the floor, but it must make a DC 15 Reflex\n  save or be unable to fly (assuming it uses its wings to fly) and fall to the\n  ground. A tanglefoot bag does not function underwater.  A creature that is\n  glued to the floor (or unable to fly) can break free by making a DC 17\n  Strength check or by dealing 15 points of damage to the goo with a slashing\n  weapon. A creature trying to scrape goo off itself, or another creature\n  assisting, does not need to make an attack roll; hitting the goo is\n  automatic, after which the creature that hit makes a damage roll to see how\n  much of the goo was scraped off. Once free, the creature can move (including\n  flying) at half speed. A character capable of spellcasting who is bound by\n  the goo must make a DC 15 Concentration check to cast a spell. The goo\n  becomes brittle and fragile after 2d4 rounds, cracking apart and losing its\n  effectiveness. An application of universal solvent (see page 268 of the\n  Dungeon Master\'s Guide) to a stuck creature dissolves the\n  alchemical goo immediately."
+}
+value {
+  gold: 50
+}
+weight {
+  imperial {
+    pounds {
+      leader: 4
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: DIMINUTIVE
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A leather bag full of goo."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+break_dc: 3
+player_name: "Tanglefoot Bag"
+weapon {
+  damage {
+    damage {
+      base {
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+    damage {
+      base {
+      }
+      conditional {
+      }
+    }
+  }
+  type: GRENADE
+  critical {
+    threat {
+    }
+    multiplier: 2
+  }
+  style: THROWN_TOUCH
+  proficiency: NONE_PROFICIENCY
+  range {
+    imperial {
+      feet {
+        leader: 10
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+      rounds: 1
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+    number: 1
+    dice: 4
+  }
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

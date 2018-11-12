@@ -1,0 +1,56 @@
+entity {
+  name: "Bandoleer"
+  category: "gear"
+  category: "container"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 95
+      high: 96
+    }
+  }
+  world: "Forgotten Realms"
+  description: "This leather belt has loops or pouches for carrying small items (up to\n   dagger size). It is usually worn across the chest. It holds eight items."
+}
+value {
+  silver: 5
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A leather belt with eight pouches."
+}
+appearance {
+  probability: COMMON
+  appearance: "A leather belt with eight loops."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Bandoleer"
+container {
+  capacity {
+  }
+  state: GRANULAR
+}

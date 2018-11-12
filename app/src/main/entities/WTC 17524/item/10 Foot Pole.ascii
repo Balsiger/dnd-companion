@@ -1,0 +1,128 @@
+entity {
+  name: "10 Foot Pole"
+  category: "gear"
+  synonym: "Pole, 10 Foot"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "When you suspect a trap, you can put the end of your 10-foot pole through\n  that hole in the wall instead of reaching in with your hand."
+}
+value {
+  silver: 2
+}
+weight {
+  imperial {
+    pounds {
+      leader: 8
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: LARGE
+}
+hardness: 5
+hit_points: 12
+appearance {
+  probability: COMMON
+  appearance: "A simple 10 ft long pole."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "10 Foot Pole"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

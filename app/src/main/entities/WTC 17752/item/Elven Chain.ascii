@@ -1,0 +1,125 @@
+entity {
+  name: "Elven Chain"
+  base: "chainmail"
+  category: "elf"
+  category: "armor"
+  synonym: "Chain, Elven"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 220
+      high: 220
+    }
+  }
+  description: "This extremely light chainmail is made of very fine mithral links. Speed\n  while wearing elven chain is 30 feet for Medium creatures, or 20 feet for\n  Small. The armor has an arcane spell failure chance of 20%, a maximum\n  Dexterity bonus of +4, and an armor check penalty of -2. It is considered\n  light armor and weighs 20 pounds."
+  short_description: "A extremly well made, very light chainmail."
+}
+value {
+  gold: 4150
+}
+weight {
+  imperial {
+    pounds {
+      leader: 20
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+}
+appearance {
+  probability: COMMON
+  appearance: "A suprisingly light chainmail."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  type: LIGHT
+  max_dexterity: 4
+  arcane_failure: 20
+  speed_fast {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

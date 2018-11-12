@@ -1,0 +1,115 @@
+entity {
+  name: "Ring of Protection +3"
+  base: "ring"
+  category: "protection"
+  category: "ac"
+  synonym: "Protection +3, Ring of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 232
+      high: 232
+    }
+  }
+  description: "This ring offers continual magical protection in the form of a deflection\n  bonus of +3 AC."
+  short_description: "AC +3 deflection bonus"
+}
+value {
+  gold: 18000
+}
+weight {
+}
+probability: RARE
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+  modifier {
+    modifier {
+      modifier {
+        value: 3
+        type: DEFLECTION
+      }
+    }
+    type: ARMOR_CLASS
+  }
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

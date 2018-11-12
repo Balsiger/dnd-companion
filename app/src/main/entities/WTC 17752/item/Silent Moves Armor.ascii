@@ -1,0 +1,116 @@
+entity {
+  name: "Silent Moves Armor"
+  category: "silent"
+  category: "move"
+  category: "magic"
+  synonym: "silent moves"
+  synonym: "Armor, Silent Moves"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 219
+      high: 219
+    }
+  }
+  description: "This armor is well oiled and magically con- structed so that it not only\nmakes little sound, but it dampens sound around it. It provides a +5\ncompetence bonus on its wearer\'s Move Silently checks. (The armor\'s armor\ncheck penalty still applies normally.)"
+  short_description: "+5 competence bonus on Move Silently."
+}
+value {
+  gold: 3750
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+  modifier {
+    modifier {
+      modifier {
+        value: 5
+        type: COMPETENCE
+      }
+    }
+    type: MOVE_SILENTLY
+  }
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

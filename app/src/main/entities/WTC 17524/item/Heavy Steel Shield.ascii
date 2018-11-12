@@ -1,0 +1,145 @@
+entity {
+  name: "Heavy Steel Shield"
+  synonym: "Shield, Heavy, Steel"
+  synonym: "Shield, Steel, Heavy"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 123
+      high: 123
+    }
+    pages {
+      low: 124
+      high: 124
+    }
+    pages {
+      low: 125
+      high: 125
+    }
+  }
+  world: "Generic"
+  description: "You strap a shield to your forearm and grip it with your hand. A heavy\n  shield is so heavy that you can\'t use your shield hand for anything else.\n\n  \\emph{Wooden or Steel:} Wooden and steel shields offer the same basic\n  protection, though they respond differently to special attacks (such as warp\n  wood and heat metal).\n\n  \\emph{Shield Bash Attacks:} You can bash an opponent with a heavy shield,\n  using it as an off-hand weapon. See Table 7\342\210\232\302\242\302\254\303\204\302\254\303\2545: Weapons for the damage dealt\n  by a shield bash. Used this way, a heavy shield is a martial bludgeoning\n  weapon. For the purpose of penalties on attack rolls, treat a heavy shield as\n  a one-handed weapon. If you use your shield as a weapon, you lose its AC\n  bonus until your next action (usually until the next round). An enhancement\n  bonus on a shield does not improve the effectiveness of a shield bash made\n  with it, but the shield can be made into a magic weapon in its own right."
+  short_description: "A heavy shield strapped to the forarm, too heavy to allow anything else to be used with that hand. Can be used for Shield Bash Attacks (1d3/1d4 damage)."
+}
+value {
+  gold: 7
+}
+weight {
+  imperial {
+    pounds {
+      leader: 15
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hit_points: 20
+appearance {
+  probability: COMMON
+  appearance: "A heavy, steel shield."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A battered, heavy, steel shield."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Heavy Steel Shield"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+    modifier {
+      value: 2
+      type: GENERAL
+    }
+  }
+  type: SHIELD
+  max_dexterity: 30
+  check_penalty: -2
+  arcane_failure: 15
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk armor"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

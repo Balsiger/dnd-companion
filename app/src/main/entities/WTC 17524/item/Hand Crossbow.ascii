@@ -1,0 +1,166 @@
+entity {
+  name: "Hand Crossbow"
+  category: "crossbow"
+  synonym: "Crossbow, Hand"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 115
+      high: 115
+    }
+    pages {
+      low: 117
+      high: 117
+    }
+    pages {
+      low: 118
+      high: 118
+    }
+  }
+  world: "Generic"
+  description: "This exotic weapon is common among rogues and others who favor stealth over\npower. You can draw a hand crossbow back by hand. Loading a hand crossbow is\na move action that provokes attacks of opportunity.  You can shoot, but not\nload, a hand crossbow with one hand at no penalty.\nYou can shoot a hand crossbow with each hand, but you take a penalty on\nattack rolls as if attacking with two light weapons (see Table 8-10:\nTwo-Weapon Fighting Penalties, page 160 in the \\Product[WTC 17524]{Player\'s\nHandbook})."
+  short_description: "An exotic, stealthy crossbow that can be drawn back by hand as a move action (AoO), can be shot one handed."
+}
+value {
+  gold: 100
+}
+weight {
+  imperial {
+    pounds {
+      leader: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A hand crossbow."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A worn, hand crossbow"
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Hand Crossbow"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 4
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: PIERCING
+  critical {
+    threat {
+      low: 19
+    }
+    multiplier: 2
+  }
+  style: RANGED
+  proficiency: EXOCTIC
+  range {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

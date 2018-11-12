@@ -1,0 +1,150 @@
+entity {
+  name: "Common Lamp"
+  category: "gear"
+  synonym: "Lamp, Common"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "A lamp clearly illuminates a 15-foot radius, provides shadowy illumination\n  out to a 30-foot radius, and burns for 6 hours on a pint of oil. It burns\n  with a more even flame than a torch, but, unlike a lantern, it uses an open\n  flame and it can spill easily, a fact that makes it too dangerous for most\n  adventuring. You can carry a lamp in one hand. See page 164 in the\n  \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination."
+}
+value {
+  silver: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "An ornamented but common lamp."
+}
+appearance {
+  probability: COMMON
+  appearance: "A common lamp."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A rugged, common lamp."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Common Lamp"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+      hours: 6
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: LIQUID
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+      imperial {
+        feet {
+          leader: 15
+        }
+      }
+    }
+    shape: SPHERE
+  }
+  shadowy {
+    distance {
+      imperial {
+        feet {
+          leader: 30
+        }
+      }
+    }
+    shape: SPHERE
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

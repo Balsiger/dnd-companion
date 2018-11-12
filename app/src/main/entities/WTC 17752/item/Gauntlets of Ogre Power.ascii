@@ -1,0 +1,130 @@
+entity {
+  name: "Gauntlets of Ogre Power"
+  category: "gauntlets"
+  category: "magic"
+  category: "wearable"
+  category: "clothing"
+  category: "power"
+  category: "strength"
+  synonym: "Ogre Power, Gauntlets of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 257
+      high: 257
+    }
+  }
+  world: "Generic"
+  description: "These gauntlets are made of tough leather with iron studs running across the\n  back of the hands and fingers. They grant the wearer great strength, adding a\n  +2 enhancement bonus to his Strength score. Both gauntlets must be worn for\n  the magic to be effective."
+  short_description: "+2 enhancement bonus to Str when worn."
+}
+value {
+  gold: 4000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 4
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "Tough leather gauntlets."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Gauntlets"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

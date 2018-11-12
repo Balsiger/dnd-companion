@@ -1,0 +1,105 @@
+entity {
+  name: "Drow Poison"
+  base: "poison"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "Drow are renowned for their use of unconsciousness-inducing poison in subterranean ambushes. Drow poison is an Injury (DC 17) poison. Its initial damage is unconsciousness for 1 minute, and its secondary damage is unconsciousness for 2d4 hours. Drow poison costs 75 gp per dose. The dark elves carefully guard the secret of their venom, and it is exceedingly difficult to find it outside of drow realms and outposts."
+  short_description: "Inject Poison with DC 17 and initial damage unconsciousness for 1 min and secondary unconciousness for 2d4 hours."
+}
+value {
+  gold: 75
+}
+weight {
+}
+probability: COMMON
+size {
+  size: FINE
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

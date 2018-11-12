@@ -1,0 +1,132 @@
+entity {
+  name: "Saddlebags"
+  category: "mount"
+  synonym: "Bags, Saddle"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 129
+      high: 129
+    }
+  }
+  reference {
+    name: "TSR 11550"
+    pages {
+      low: 110
+      high: 110
+    }
+  }
+  world: "Generic"
+  description: "A pair of saddle bags."
+}
+value {
+  gold: 4
+}
+weight {
+  imperial {
+    pounds {
+      leader: 8
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A pair of saddle bags."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Saddlebags"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: SOLID
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

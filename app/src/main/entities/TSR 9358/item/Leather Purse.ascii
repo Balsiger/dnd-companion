@@ -1,0 +1,130 @@
+entity {
+  name: "Leather Purse"
+  category: "gear"
+  category: "money"
+  category: "container"
+  synonym: "Linen Wallet"
+  synonym: "Purse, Linen"
+  synonym: "Wallet, Linen"
+  reference {
+    name: "TSR 9358"
+    pages {
+      low: 84
+      high: 84
+    }
+  }
+  world: "Forgotten Realms"
+  description: "All of our purses are durable and roomy.\n\n   Hidden pouches (5 gp) are optional, as is a wire mesh inner layer (7 gp) to\n   deter thieves. As a bonus, we will embroider (linen) or tool (leather) one\n   initial on your new purse at no extra charge. Additional letters, 1 sp\n   each.\n\n   The next time a cutpurse cuts your purse, think about one of our purses.\n   Any purse with wire mesh layer prevents successful purse cutting by thieves,\n   although a hand can still get inside one."
+  short_description: "A leather purse."
+}
+value {
+  gold: 2
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A simple leather purse."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Leather Purse"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: GRANULAR
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

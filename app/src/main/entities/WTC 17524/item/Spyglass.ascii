@@ -1,0 +1,142 @@
+entity {
+  name: "Spyglass"
+  category: "gear"
+  category: "visual"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "Objects viewed through a spyglass are magnified to twice their size."
+}
+value {
+  gold: 1000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: DIMINUTIVE
+}
+hardness: 1
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "An shiny and polished brass spyglass."
+}
+appearance {
+  probability: COMMON
+  appearance: "A brass spyglass."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A splotchy brass spyglass."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Spyglass"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

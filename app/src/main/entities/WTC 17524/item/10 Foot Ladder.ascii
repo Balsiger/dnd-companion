@@ -1,0 +1,139 @@
+entity {
+  name: "10 Foot Ladder"
+  category: "gear"
+  category: "climb"
+  synonym: "Ladder, 10 Foot"
+  synonym: "10\' Ladder"
+  synonym: "Ladder, 10\'"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "This item is straight, simple wodden ladder."
+}
+value {
+  copper: 5
+}
+weight {
+  imperial {
+    pounds {
+      leader: 20
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: LARGE
+}
+hardness: 5
+hit_points: 24
+appearance {
+  probability: VERY_RARE
+  appearance: "A sturdy, 10 ft. long ladder."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple, 10 ft. long ladder."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A haphazard wooden 10 ft. ladder with some broken steps."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "10 Foot Ladder"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

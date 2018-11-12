@@ -1,0 +1,120 @@
+entity {
+  name: "Mwk Armor"
+  category: "masterwork"
+  synonym: "Masterwork"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+  }
+  description: "Just as with weapons, you can purchase or craft masterwork versions of armor\n  or shields. Such a well-made item functions like the normal version, except\n  that its armor check penalty is lessened by 1.\n\n  A masterwork suit of armor or shield costs an extra 150 gp over and above the\n  normal cost for that type of armor or shield.\n\n  The masterwork quality of a suite of armor never provides a bonus on attack\n  or damage rolls, even if the armor or shield is used as a weapon (such as\n  \\Item{spiked armor} or a \\Item{spiked shield}).\n\n  All magic armors and shields are automatically considered to be of masterwork\n  quality.\n\n  You can\'t add the masterwork quality to armor or a shield after it is\n  created; it must be created as a masterwork item."
+  short_description: "A masterwork version."
+}
+value {
+  gold: 150
+}
+weight {
+}
+probability: UNCOMMON
+size {
+}
+appearance {
+  probability: COMMON
+  appearance: "Good workmanship."
+}
+appearance {
+  probability: COMMON
+  appearance: "Finely crafted."
+}
+appearance {
+  probability: COMMON
+  appearance: "Well made."
+}
+appearance {
+  probability: RARE
+  appearance: "Extraordinarily well made."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

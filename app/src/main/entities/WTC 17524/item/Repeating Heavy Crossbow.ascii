@@ -1,0 +1,166 @@
+entity {
+  name: "Repeating Heavy Crossbow"
+  category: "crossbow"
+  synonym: "Crossbow, Repeating, Heavy"
+  synonym: "Crossbow, Heavy, Repeating"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 116
+      high: 116
+    }
+    pages {
+      low: 117
+      high: 117
+    }
+    pages {
+      low: 118
+      high: 118
+    }
+  }
+  world: "Generic"
+  description: "The repeating crossbow (whether heavy or light) holds 5 crossbow bolts. As\n  long as it holds bolts, you can reload it by pulling the reloading lever (a\n  free action). Loading a new case of 5 bolts is a full-round action that\n  provokes attacks of opportunity.\n\n  You can fire a repeating crossbow with one hand or fire a repeating crossbow\n  in each hand in the same manner as you would a normal crossbow of the same\n  size. However, you must fire the weapon with two hands in order to use the\n  reloading lever, and you must use two hands to load a new case of bolts."
+}
+value {
+  gold: 400
+}
+weight {
+  imperial {
+    pounds {
+      leader: 12
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: MEDIUM
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A heavy, repeating crossbow."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A worn, heavy repeating crossbow"
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Repeating Heavy Crossbow"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 10
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: PIERCING
+  critical {
+    threat {
+      low: 19
+    }
+    multiplier: 2
+  }
+  style: RANGED
+  proficiency: EXOCTIC
+  range {
+    imperial {
+      feet {
+        leader: 120
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

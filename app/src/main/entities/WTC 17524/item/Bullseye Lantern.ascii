@@ -1,0 +1,156 @@
+entity {
+  name: "Bullseye Lantern"
+  category: "gear"
+  synonym: "Lantern, Bullseye"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "A bullseye lantern has only a single shutter. Its other sides are highly\n  polished inside to reflect the light in a single direction. A bullseye\n  lantern provides clear illumination in a 60-foot cone and shadowy\n  illumination in a 120-foot cone. It burns for 6 hours on a pint of oil. You\n  can carry a bullseye lantern in one hand. See page 164 in the \\Product[WTC\n  17524]{Player\'s Handbook} for more rules on illumination."
+}
+value {
+  gold: 12
+}
+weight {
+  imperial {
+    pounds {
+      leader: 3
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "An bullseye lantern made of polished wood."
+}
+appearance {
+  probability: COMMON
+  appearance: "A bullseye lantern with a single shutter."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A scratched bullseye lantern with a single shutter."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Bullseye Lantern"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+      hours: 6
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: LIQUID
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+      imperial {
+        feet {
+          leader: 60
+        }
+      }
+    }
+    shape: CONE
+  }
+  shadowy {
+    distance {
+      imperial {
+        feet {
+          leader: 120
+        }
+      }
+    }
+    shape: CONE
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

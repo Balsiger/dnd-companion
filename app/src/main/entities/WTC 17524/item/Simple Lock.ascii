@@ -1,0 +1,142 @@
+entity {
+  name: "Simple Lock"
+  category: "locks"
+  synonym: "Lock, Simple"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "A lock is worded with a large, bulky key. The DC to open a lock with the\n  \\Skill{Open Lock} skill depends on the lock\'s quality: simple (DC 20),\n  average (DC 25), good (DC 30), or amazing (DC 40)."
+}
+value {
+  gold: 20
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: FINE
+}
+hardness: 10
+hit_points: 60
+appearance {
+  probability: VERY_RARE
+  appearance: "A richly ornamented lock."
+}
+appearance {
+  probability: COMMON
+  appearance: "A lock."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A crude, roughly worked lock."
+}
+substance {
+  material: IRON
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Simple Lock"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

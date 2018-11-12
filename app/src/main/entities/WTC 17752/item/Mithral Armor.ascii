@@ -1,0 +1,109 @@
+entity {
+  name: "Mithral Armor"
+  base: "mwk armor"
+  synonym: "Mithral"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 284
+      high: 284
+    }
+  }
+  description: "Mithral is a very rare silvery, glistening metal that is lighter than iron\n  but just as hard. When worked like steel, it becomes a wonderful material\n  from which to create armor and is occasionally used for other items as\n  well."
+}
+value {
+}
+weight {
+}
+probability: RARE
+size {
+}
+hardness: 15
+substance {
+  material: MITHRAL
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Mithral Shield"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -1,0 +1,110 @@
+entity {
+  name: "Masterwork Artisan\'s Tools"
+  base: "artisan\'s tools"
+  synonym: "Artisan\'s Tools, Masterwork"
+  synonym: "Tools, Artisan\'s, Masterwork"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 130
+    }
+  }
+  description: "These tools serve the same purpose as \\Item{artisan\342\200\231s tools}, but masterwork artisan\342\200\231s tools are the perfect tools for the job, so you get a +2 circumstance bonus on Craft checks made with them. "
+  short_description: "High quality tools for a craft"
+}
+value {
+  gold: 55
+}
+weight {
+}
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -1,0 +1,125 @@
+entity {
+  name: "Pipes of the Sewers"
+  category: "magic"
+  category: "instrument"
+  category: "pipes"
+  synonym: "Sewers, Pipes of the"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 264
+      high: 265
+    }
+  }
+  world: "Generic"
+  description: "These wooden pipes appear ordinary, but if the possessor learns the proper\n  tune, he can attract 1d3 rat swarms (see page 239 of the Monster Manual) if\n  rats are within 400 feet. For each 50-foot distance the rats have to travel,\n  there is a 1-round delay. The piper must continue playing until the rats\n  appear, and when they do so, the piper must make a DC 10 Perform (wind\n  instruments) check. Success means that they obey the piper\342\210\232\302\242\302\254\303\204\302\254\303\264s telepathic\n  commands so long as he continues to play. Failure indicates that they turn on\n  the piper. If for any reason the piper ceases playing, the rats leave\n  immediately. If they are called again within a day, the Perform check DC is\n  15.\n\n  If the rats are under the control of another creature, add the HD of the\n  controller to the Perform check DC. Once control is assumed, another check\n  is required each round to maintain it if the other creature is actively\n  seeking to reassert its control.\n\nFaint conjuration; CL2nd; Craft Wondrous Item, charm\nanimal, summon nature\342\210\232\302\242\302\254\303\204\302\254\303\264s ally I, wild empathy ability; Price1,150\ngp; Weight3 lb.\n\n"
+  short_description: "Attact 1d3 rat swarms if rats are within 400 ft (after 1 round per 50 ft), Perform (wind instruments) DC 10 (15 for second in day) to control telepathically or they attack piper."
+}
+value {
+  gold: 1150
+}
+weight {
+  imperial {
+    pounds {
+      leader: 3
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: TINY
+}
+appearance {
+  probability: COMMON
+  appearance: "Some ordinary wooden pipes."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Pipes"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

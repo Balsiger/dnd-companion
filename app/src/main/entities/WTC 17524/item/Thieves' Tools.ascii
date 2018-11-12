@@ -1,0 +1,133 @@
+entity {
+  name: "Thieves\' Tools"
+  category: "thief"
+  category: "tool"
+  synonym: "Tools, Thieves\'"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+    pages {
+      low: 130
+      high: 130
+    }
+  }
+  world: "Generic"
+  description: "This kit contains the tools you need to use the \\Skill{Disable Device} and\n  \\Skill{Open Lock} skills. The kit includes one or more skeleton keys, long\n  metal picks and pries, a long-nosed clamp, a small hand saw, and a small\n  wedge and hammer. Without these tools, you must improvise tools, and you take\n  a -2 circumstance penalty on \\Skill{Disable Device} and \\Skill{Open Locks}\n  checks"
+}
+value {
+  gold: 30
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: FINE
+}
+hardness: 10
+hit_points: 1
+appearance {
+  probability: UNCOMMON
+  appearance: "A kit containing skeleton keys, long metal picks and priest, a long-nodes clamp, a small hand saw, and a small wedge and hammer."
+}
+substance {
+  material: STEEL
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Thieves\' Tools"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

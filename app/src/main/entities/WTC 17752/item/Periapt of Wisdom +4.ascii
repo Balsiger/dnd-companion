@@ -1,0 +1,121 @@
+entity {
+  name: "Periapt of Wisdom +4"
+  category: "magic"
+  category: "wisdom"
+  category: "ability"
+  synonym: "Wisdom +4, Periapt of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 263
+      high: 264
+    }
+  }
+  world: "Generic"
+  description: "Although it appears to be a normal pearl on a light chain, a periapt of\n  wisdom actually increases the possessor\'s Wisdom score in the form of an\n  enhancement bonus of +4.  "
+  short_description: "Wisdom +4 enhancement."
+}
+value {
+  gold: 16000
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 4
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: TINY
+}
+appearance {
+  probability: COMMON
+  appearance: "A pearl on a light chain."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Art Object"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

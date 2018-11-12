@@ -1,0 +1,126 @@
+entity {
+  name: "Dusty Rose Ioun Stone"
+  category: "magic"
+  category: "stone"
+  category: "ioun stone"
+  synonym: "Ioun Stone, Dusty Red"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 260
+      high: 261
+    }
+  }
+  world: "Generic"
+  description: "These crystalline stones always float in the air and must be within 3 feet\n  of their owner to be of any use. When a character first acquires a stone, she\n  must hold it and then release it, whereupon it takes up a circling orbit 1d3\n  feet from her head.  Thereafter, a stone must be grasped or netted to\n  separate it from its owner. The owner may voluntarily seize and stow a stone\n  (to keep it safe while she is sleeping, for example), but she loses the bene-\n  fits of the stone during that time. Ioun stones have AC 24, 10 hit points, and\n  hardness 5."
+  short_description: "+1 insight to AC."
+}
+value {
+  gold: 5000
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: TINY
+}
+appearance {
+  probability: COMMON
+  appearance: "A dusty, rose colored stone."
+}
+substance {
+  material: STONE
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Dusty Rose Stone"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

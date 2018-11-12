@@ -1,0 +1,115 @@
+entity {
+  name: "Silver Weapon"
+  synonym: "Silver"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 284
+      high: 285
+    }
+  }
+  description: "A complex process involving metallurgy and alchemy can bond silver to a\n  weapon made of steel so that it bypasses the damage reduction of creatures\n  such as lycanthropes.\n\n  On a successful attack with a silvered weapon, the wielder takes a -1 penalty\n  on the damage roll (with the usual minimum of 1 point of damage). The\n  alchemical silvering process can\'t be applied to nonmetal items, and it\n  doesn\'t work on rare metals such as adamantine, cold iron, and mithral.\n\n  Alchemical silver has 10 hit points per inch of thickness and hardness 8."
+}
+value {
+}
+weight {
+}
+probability: UNCOMMON
+size {
+}
+hardness: 8
+hit_points: 10
+substance {
+  thickness {
+  }
+}
+player_name: "Silver"
+weapon {
+  damage {
+    damage {
+      base {
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

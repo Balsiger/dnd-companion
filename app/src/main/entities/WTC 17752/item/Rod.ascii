@@ -1,0 +1,132 @@
+entity {
+  name: "Rod"
+  category: "mundane"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 233
+      high: 233
+    }
+  }
+  world: "Generic"
+  description: "Rods are scepterlike devices that have unique magical powers and do not\n  usually have charges. Anyone can use a rod."
+}
+value {
+  copper: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: TINY
+}
+hardness: 10
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "A polished, shiny rod."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple rod."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A slightly rusted rod."
+}
+substance {
+  material: IRON
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+break_dc: 27
+player_name: "Rod"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

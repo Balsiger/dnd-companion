@@ -1,0 +1,119 @@
+entity {
+  name: "Artisan\'s Tools"
+  category: "tool"
+  category: "craft"
+  synonym: "Tools, Artisan\'s"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 129
+    }
+  }
+  world: "Generic"
+  description: "These special tools include the items needed to pursue any craft. Without them, you have to use improvised tools (\342\200\2232 penalty on Craft checks), if you can do the job at all. "
+  short_description: "Tools needed for a specific craft."
+}
+value {
+  gold: 5
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: MEDIUM
+  modifier: LONG
+}
+appearance {
+  probability: COMMON
+  appearance: "A set of tools."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

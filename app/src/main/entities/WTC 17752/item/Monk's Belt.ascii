@@ -1,0 +1,124 @@
+entity {
+  name: "Monk\'s Belt"
+  category: "belt"
+  category: "monk"
+  synonym: "Belt, Monk\'s"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 248
+      high: 248
+    }
+  }
+  world: "Generic"
+  description: "This simple rope belt, when wrapped around a character\342\210\232\302\242\302\254\303\204\302\254\303\264s waist, confers\n  great ability in unarmed combat. The wearer\342\210\232\302\242\302\254\303\204\302\254\303\264s AC and unarmed damage is\n  treated as a monk of five levels higher. If donned by a character with the\n  Stunning Fist feat, the belt lets her make one additional stunning attack per\n  day. If the character is not a monk, she gains the AC and unarmed damage of a\n  5th-level monk. This AC bonus functions just like the monk\342\210\232\302\242\302\254\303\204\302\254\303\264s AC bonus."
+  short_description: "Gain AC and unarmed damage of a monk 5 levels higher."
+}
+value {
+  gold: 13000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple rope belt."
+}
+substance {
+  material: ROPE
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Belt"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

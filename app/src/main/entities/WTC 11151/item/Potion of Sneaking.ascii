@@ -1,0 +1,104 @@
+entity {
+  name: "Potion of Sneaking"
+  base: "potion"
+  reference {
+    name: "WTC 11151"
+    pages {
+      low: 192
+      high: 192
+    }
+  }
+  description: "This potion grants the drinker the ability to walk softly and dampens sound around her slightly, granting a +10 circumstance bonus to her \\Skill{Move Silently} checks for 1 hour."
+  short_description: "Move Silently +10 for 1 hour."
+}
+value {
+  gold: 150
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Potion"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

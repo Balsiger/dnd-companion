@@ -1,0 +1,132 @@
+entity {
+  name: "Red Ink"
+  category: "scribe"
+  synonym: "Ink (Red)"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "This is red ink."
+}
+value {
+  gold: 4
+  platinum: 1
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 100
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: FINE
+}
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "Some strong red liquid."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some red liquid."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "Some watery, red liquid."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Black Liquid"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

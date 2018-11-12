@@ -1,0 +1,136 @@
+entity {
+  name: "Parchment"
+  category: "scribe"
+  synonym: "Sheet of Parchment"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "A sheet of parchment is a piece of goat hide or sheepskin that has been\n  prepared for writing on."
+}
+value {
+  silver: 2
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: FINE
+}
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "A fine sheet of parchment."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple sheet of parchment."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A crumpled sheet of parchment."
+}
+substance {
+  material: PAPER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Parchment"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

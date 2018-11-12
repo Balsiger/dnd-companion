@@ -38,6 +38,14 @@ public class Values {
     return Collections.emptyMap();
   }
 
+  public static List<Map<String, Object>> getRawList(Map<String, Object> data, String field) {
+    if (data.containsKey(field)) {
+      return (List<Map<String, Object>>) data.get(field);
+    }
+
+    return Collections.emptyList();
+  }
+
   public static String get(Map<String, Object> data, String field, String defaultValue) {
     if (data.containsKey(field)) {
       return (String) data.get(field);

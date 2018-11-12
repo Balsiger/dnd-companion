@@ -1,0 +1,145 @@
+entity {
+  name: "Barrel"
+  category: "goods"
+  synonym: "Cask"
+  synonym: "Keg"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+  }
+  reference {
+    name: "TSR 11550"
+    pages {
+      low: 110
+      high: 110
+    }
+  }
+  world: "Generic"
+  description: "A large barrel to store goods."
+}
+value {
+  gold: 2
+}
+weight {
+  imperial {
+    pounds {
+      leader: 30
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: MEDIUM
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "A superbly crafted large wooden barrel."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A large wooden barrel in good shape."
+}
+appearance {
+  probability: COMMON
+  appearance: "A large, simple, wooden barrel."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A large, simple, slightly leaking barrel."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Barrel"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: SOLID
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

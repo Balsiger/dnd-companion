@@ -1,0 +1,127 @@
+entity {
+  name: "Cold Weather Outfit"
+  category: "clothing"
+  synonym: "Outfit, Cold Weather"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 129
+      high: 129
+    }
+    pages {
+      low: 131
+      high: 131
+    }
+  }
+  world: "Generic"
+  description: "A cold weather outfit includes a wool coat, linen shirt, wool cap, heavy\n  cloak, thick pants or skirt, and boots. This outfit grants a +5 circumstance\n  bonus on Fortitude saving throws against exposure to cold weather (see the\n  Dungeon Master\'s Guide for information on cold dangers)."
+}
+value {
+  gold: 8
+}
+weight {
+  imperial {
+    pounds {
+      leader: 7
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A set with a wool coat, linen shirt, wool cap, heavy cloak, thick pants, and boots."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Cold Weather Outfit"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

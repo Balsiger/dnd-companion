@@ -34,7 +34,7 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Creature;
-import net.ixitxachitls.companion.data.dynamics.Item;
+import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -184,14 +184,14 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
       case DragEvent.ACTION_DROP:
         if (showTopMargin) {
-          //creature.moveItemBefore(item, (Item) event.getLocalState());
+          creature.moveItemBefore(item, (Item) event.getLocalState());
         } else if (showBottomMargin) {
-          //creature.moveItemAfter(item, (Item) event.getLocalState());
+          creature.moveItemAfter(item, (Item) event.getLocalState());
         } else {
           if (item.isContainer()) {
-            //creature.moveItemInto(item, (Item) event.getLocalState());
+            creature.moveItemInto(item, (Item) event.getLocalState());
           } else {
-            //creature.combine(item, (Item) event.getLocalState());
+            creature.combine(item, (Item) event.getLocalState());
           }
         }
         return true;

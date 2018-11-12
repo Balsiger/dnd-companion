@@ -1,0 +1,117 @@
+entity {
+  name: "Climber\'s Kit"
+  category: "climb"
+  synonym: "Kit, Climber\'s"
+  world: "Generic"
+  description: "A climber\342\200\231s kit includes special pitons, boot tips, gloves, and a harness that aids in all sorts of climbing. This is the perfect tool for climbing and gives you a +2 circumstance bonus on Climb checks. "
+  short_description: "The perfect tool for climbing, give a +2 circumstance to Climb."
+}
+value {
+  gold: 80
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: MEDIUM
+  modifier: LONG
+}
+appearance {
+  probability: COMMON
+  appearance: "A kit to help climbing."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

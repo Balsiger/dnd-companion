@@ -1,0 +1,106 @@
+entity {
+  name: "Icy Burst"
+  base: "frost"
+  category: "ice"
+  category: "cold"
+  category: "burst"
+  synonym: "icy burst"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 225
+      high: 225
+    }
+  }
+  description: "An icy burst weapon functions as a frost weapon that also explodes with\n  frost upon striking a successful critical hit. The frost does not harm the\n  wielder. In addition to the extra damage from the frost ability, an icy burst\n  weapon deals an extra 1d10 points of cold damage on a successful critical\n  hit. If the weapon\'s critical multiplier is x3, add an extra 2d10 points of\n  cold damage instead, and if the multiplier is x4, add an extra 3d10\n  points. Bows, crossbows, and slings so crafted bestow the cold energy upon\n  their ammunition. Even if the frost ability is not active, the weapon still\n  deals its extra cold damage on a successful critical hit."
+  short_description: "Deals extrac 1d10 cold damage on critical hit."
+}
+value {
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

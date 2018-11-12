@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.CharacterTitleView;
 import net.ixitxachitls.companion.ui.views.TitleView;
+import net.ixitxachitls.companion.ui.views.UpdatableViewGroup;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -58,7 +59,7 @@ public class CampaignsFragment extends CompanionFragment {
   private TitleView user;
   private Wrapper<TextView> note;
   private LinearLayout campaigns;
-  private LinearLayout characters;
+  private UpdatableViewGroup<LinearLayout, CharacterTitleView, String> characters;
 
   public CampaignsFragment() {
     super(Type.campaigns);
@@ -73,7 +74,7 @@ public class CampaignsFragment extends CompanionFragment {
     user = view.findViewById(R.id.user);
     user.setAction(() -> show(Type.settings));
     campaigns = view.findViewById(R.id.campaigns);
-    characters = view.findViewById(R.id.characters);
+    characters = new UpdatableViewGroup<>(view.findViewById(R.id.characters));
     note = Wrapper.<TextView>wrap(view, R.id.note).gone();
     Wrapper.wrap(view, R.id.campaign_add)
         .onClick(this::addCampaign)
@@ -128,24 +129,24 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void update(Characters characters) {
-    this.characters.removeAllViews();
-
-    boolean characterFound = false;
-    for (Character character : characters.getAll()) {
-      if (character.amPlayer()) {
-        CharacterTitleView title = new CharacterTitleView(getContext());
-        character.observe(this, title::update);
-        messages().observe(this, title::update);
-        this.characters.addView(title);
-        characterFound = true;
+    List<String> characterIds = characters.getAll().stream()
+        .filter(Character::amPlayer)
+        .map(Character::getId)
+        .collect(Collectors.toList());
+    this.characters.ensureOnly(characterIds, id -> new CharacterTitleView(getContext()));
+    this.characters.update(characterIds, (id, view) -> {
+      Optional<Character> character = characters.get(id);
+      if (character.isPresent()) {
+        view.update(character.get());
       }
-    }
+    });
 
-    note.visible(!characterFound);
+    note.visible(this.characters.getView().getChildCount() == 0);
 
     messages().readMessages(characters.getPlayerCharacters(me().getId()).stream()
         .map(Character::getId)
         .collect(Collectors.toList()));
+    update(messages());
   }
 
   private void update(Images images) {
@@ -153,14 +154,14 @@ public class CampaignsFragment extends CompanionFragment {
       CampaignTitleView title = (CampaignTitleView) campaigns.getChildAt(i);
       title.update(images);
     }
-    for (int i = 0; i < characters.getChildCount(); i++) {
-      CharacterTitleView title = (CharacterTitleView) characters.getChildAt(i);
+    for (int i = 0; i < characters.getView().getChildCount(); i++) {
+      CharacterTitleView title = (CharacterTitleView) characters.getView().getChildAt(i);
       title.update(images);
     }
   }
 
-  private void update(Messages message) {
-    update(characters());
+  private void update(Messages messages) {
+    characters.simpleUpdate(v -> v.update(messages));
   }
 
   private void update(Invites invites) {

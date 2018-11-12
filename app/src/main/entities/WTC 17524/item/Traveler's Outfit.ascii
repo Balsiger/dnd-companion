@@ -1,0 +1,131 @@
+entity {
+  name: "Traveler\'s Outfit"
+  category: "clothing"
+  synonym: "Outfit, Traveler\'s"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 129
+      high: 129
+    }
+    pages {
+      low: 131
+      high: 131
+    }
+  }
+  world: "Generic"
+  description: "This set of clothes consists of boots, a wool skirt or breeches, a sturdy\n  belt, a shirt (perhaps with a vest or jacket), and an ample cloak with a\n  hood."
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A set with boots, a wool skirt, a sturdy belt, a shirt and a cloak with hood."
+}
+appearance {
+  probability: COMMON
+  appearance: "A set with boots, wool breeches, a sturdy belt, a shirt and a cloak with hood."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Traveler\'s Outfit"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

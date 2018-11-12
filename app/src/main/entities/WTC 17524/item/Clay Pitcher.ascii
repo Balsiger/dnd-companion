@@ -1,0 +1,140 @@
+entity {
+  name: "Clay Pitcher"
+  category: "crockery"
+  synonym: "Pitcher, Clay"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  reference {
+    name: "TSR 11550"
+    pages {
+      low: 110
+      high: 110
+    }
+  }
+  world: "Generic"
+  description: "A simple pitcher made from clay."
+}
+value {
+  copper: 2
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: FINE
+}
+hardness: 1
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "An ornamented clay pitcher."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple clay pitcher."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "An ordinary clay pitcher."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Clay Pitcher"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: LIQUID
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

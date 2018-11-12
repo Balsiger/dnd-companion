@@ -1,0 +1,134 @@
+entity {
+  name: "Heward\'s Handy Haversack"
+  category: "magic"
+  category: "bag"
+  category: "container"
+  category: "wondrous"
+  synonym: "Haversack, Heward\'s Handy"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 259
+      high: 259
+    }
+  }
+  world: "Generic"
+  description: "A backpack of this sort appears to be well made, well used, and quite\n  ordinary. It is constructed of finely tanned leather, and the straps have\n  brass hardware and buckles. It has two wide pouches, each of which appears\n  large enough to hold about a quart of material. In fact, each is like a\n  \\Item{bag of holding} and can actually hold material as much as 2 cubic feet\n  in volume or 20 pounds in weight. The large central portion can contain up to\n  8 cubic feet or 80 pounds of material. Even when so filled, the backpack\n  always weighs only 5 pounds.\n\n  While such storage is useful enough, the pack has an even greater power in\n  addition. When the wearer reaches into it for a specific item, that item is\n  always on top. Thus, no digging around and fumbling is ever necessary to find\n  what a haversack contains. Retrieving any specific item from a haversack is a\n  move action, but it does not provoke the attacks of opportunity that\n  retrieving a stored item usually does."
+  short_description: "A combination of bag of holding and backpack"
+}
+value {
+  gold: 2000
+}
+weight {
+}
+probability: VERY_RARE
+size {
+  size: SMALL
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: UNCOMMON
+  appearance: "A simple leather bag with straps to carry it."
+}
+appearance {
+  probability: COMMON
+  appearance: "A leather backpack to stow your stuff."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A finely crafted backpack to stow your stuff."
+}
+appearance {
+  probability: RARE
+  appearance: "A finely crafted backpack with golden buckles."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Backpack"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: SOLID
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

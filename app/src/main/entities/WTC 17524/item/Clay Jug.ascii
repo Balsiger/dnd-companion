@@ -1,0 +1,144 @@
+entity {
+  name: "Clay Jug"
+  category: "gear"
+  synonym: "Jug, Clay"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  reference {
+    name: "TSR 11550"
+    pages {
+      low: 110
+      high: 110
+    }
+  }
+  world: "Generic"
+  description: "This basic ceramic jug is fitted with a stopper and holds 1 gallon of\n  liquid."
+}
+value {
+  copper: 3
+}
+weight {
+  imperial {
+    pounds {
+      leader: 9
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hardness: 1
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "An ornamented ceramic jug, fitted with a stopper."
+}
+appearance {
+  probability: COMMON
+  appearance: "A basic ceramic jug, fitted with a stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A scratched ceramic jug, fitted with a stopper."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Clay Jug"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: LIQUID
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

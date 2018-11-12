@@ -34,9 +34,10 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.documents.Creature;
-import net.ixitxachitls.companion.data.dynamics.Item;
+import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.statics.ItemTemplate;
 import net.ixitxachitls.companion.data.values.Duration;
+import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -281,15 +282,18 @@ public class EditItemDialog extends Dialog {
       item.get().setMultiple(parseMultiple());
       item.get().setMultiuse(parseMultiuse());
 
-      if (create) {
-        creature.get().add(item.get());
+      if (creature.get().amPlayer()) {
+        if (create) {
+          creature.get().add(item.get());
+        } else {
+          creature.get().updated(item.get());
+        }
       } else {
-        creature.get().updated(item.get());
+        Message.createForItem(CompanionApplication.get().context(), creature.get().getId(),
+            item.get(), CompanionApplication.get().context().me().getId());
       }
 
       save();
     }
-
-
   }
 }

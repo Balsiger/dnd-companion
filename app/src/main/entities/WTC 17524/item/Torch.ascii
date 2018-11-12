@@ -1,0 +1,170 @@
+entity {
+  name: "Torch"
+  category: "gear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "A typical torch is a wooden rod capped with a twisted flax soaked in\n  tallow. A torch burns for 1 hour, clearly illuminating a 20- foot radius and\n  providing shadowy illumination out to a 40- foot radius. See page 164 in the\n  \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination. If a\n  torch is used in combat, treat it as a one-handed improvised weapon (see page\n  113) that deals bludgeoning damage equal to that of a gauntlet of its size,\n  plus 1 point of fire damage."
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A simple torch."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Torch"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 3
+      }
+      conditional {
+      }
+    }
+    damage {
+      base {
+        modifier: 1
+      }
+      type: FIRE
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: BLUDGEONING
+  critical {
+    threat {
+    }
+    multiplier: 2
+  }
+  style: LIGHT_MELEE
+  proficiency: IMPROVISED
+  range {
+    imperial {
+      feet {
+        leader: 10
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+      hours: 1
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+      imperial {
+        feet {
+          leader: 20
+        }
+      }
+    }
+    shape: SPHERE
+  }
+  shadowy {
+    distance {
+      imperial {
+        feet {
+          leader: 40
+        }
+      }
+    }
+    shape: SPHERE
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

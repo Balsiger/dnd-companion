@@ -24,15 +24,16 @@ package net.ixitxachitls.companion.data.documents;
 import android.support.annotation.CallSuper;
 
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.dynamics.Item;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.statics.MonsterTemplate;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Encounter;
+import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -61,6 +62,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_NONLETHAL = "nonlethal";
   private static final String FIELD_INITIATIVE = "initiative";
   private static final String FIELD_ENCOUNTER_NUMBER = "encounter_number";
+  private static final String FIELD_ITEMS = "items";
 
   private String campaignId = "";
   private String name;
@@ -342,35 +344,96 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return Optional.empty();
   }
 
+  public List<Item> getItems() {
+    return Collections.unmodifiableList(items);
+  }
+
   public void add(Item item) {
-    /*
-    if (isLocal()) {
+    if (amPlayer()) {
       items.add(item);
       store();
-    } else {
-      context.messenger().addItem(this, item);
     }
-    */
   }
 
   public boolean remove(Item item) {
-    /*
-    if (items.remove(item)) {
+    if (amPlayer()) {
+      items.remove(item);
+      store();
       return true;
     }
-
-    for (Item container : items) {
-      if (container.remove(item)) {
-        return true;
-      }
-    }
-    */
 
     return false;
   }
 
   public void updated(Item item) {
-    //store();
+    store();
+  }
+
+  public boolean moveItemBefore(Item item, Item move) {
+    if (remove(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item), move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemBefore(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
+    }
+
+    return false;
+  }
+
+  public void combine(Item item, Item other) {
+    remove(other);
+    if (item.similar(other)) {
+      item.setMultiple(item.getMultiple() + other.getMultiple());
+      store();
+    }
+  }
+
+  public boolean moveItemAfter(Item item, Item move) {
+    if (remove(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item) + 1, move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemAfter(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
+    }
+
+    return false;
+  }
+
+  public void moveItemFirst(Item item) {
+    if (remove(item)) {
+      items.add(0, item);
+      store();
+    }
+  }
+
+  public void moveItemLast(Item item) {
+    if (remove(item)) {
+      items.add(item);
+      store();
+    }
+  }
+
+  public void moveItemInto(Item container, Item item) {
+    if (remove(item)) {
+      container.add(item);
+      store();
+    }
   }
 
   public boolean hasCondition(String name) {
@@ -396,6 +459,11 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     nonlethalDamage = (int) get(FIELD_NONLETHAL, 0);
     initiative = (int) get(FIELD_INITIATIVE, 0);
     encounterNumber = (int) get(FIELD_ENCOUNTER_NUMBER, 0);
+    items = new ArrayList<>();
+    for (Map<String, Object> item
+        : get(FIELD_ITEMS, Collections.<Map<String, Object>>emptyList())) {
+      items.add(Item.read(item));
+    }
   }
 
   @Override
@@ -418,6 +486,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     data.put(FIELD_NONLETHAL, nonlethalDamage);
     data.put(FIELD_INITIATIVE, initiative);
     data.put(FIELD_ENCOUNTER_NUMBER, encounterNumber);
+    data.put(FIELD_ITEMS, items.stream().map(Item::write).collect(Collectors.toList()));
 
     return data;
   }

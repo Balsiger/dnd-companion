@@ -1,0 +1,127 @@
+entity {
+  name: "Winged Boots"
+  category: "magic"
+  category: "boots"
+  category: "wearable"
+  synonym: "Boots, Winged"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 250
+      high: 250
+    }
+  }
+  world: "Generic"
+  description: "These boots appear to be ordinary footgear. On command, the boots sprout\n  wings at the heel and let the wearer fly, without having to maintain\n  concentration, as if affected by a \\SpellRef{fly} spell. He can fly three\n  times day for up to 5 minutes per flight."
+  short_description: "Boots that sprout wings and let the wearer fly."
+}
+value {
+  gold: 16000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: TINY
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A pair of ordinary brown boots."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Boots"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

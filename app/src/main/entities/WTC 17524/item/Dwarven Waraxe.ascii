@@ -1,0 +1,165 @@
+entity {
+  name: "Dwarven Waraxe"
+  category: "axe"
+  synonym: "Waraxe, Dwarven"
+  synonym: "Axe, War, Dwarven"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 117
+      high: 117
+    }
+    pages {
+      low: 119
+      high: 119
+    }
+    pages {
+      low: 121
+      high: 121
+    }
+  }
+  world: "Generic"
+  description: "A dwarven waraxe is too large to use in one hand without special training;\n  thus, it is an exotic weapon. A Medium character can use a dwarven waraxe\n  two-handed as a martial weapon, or a Large creature can use it one-handed in\n  the same way. A \\Monster{dwarf} treats a dwarven waraxe as a martial weapon\n  even when using it in one hand."
+}
+value {
+  gold: 30
+}
+weight {
+  imperial {
+    pounds {
+      leader: 8
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: SMALL
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A dwarven waraxe."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A rusty, dwarven waraxe."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Dwarven Waraxe"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 10
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: SLASHING
+  critical {
+    threat {
+    }
+    multiplier: 3
+  }
+  style: ONEHANDED_MELEE
+  proficiency: EXOCTIC
+  range {
+    imperial {
+      feet {
+        leader: 10
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

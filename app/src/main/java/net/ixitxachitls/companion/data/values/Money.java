@@ -25,7 +25,9 @@ import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -33,6 +35,13 @@ import java.util.Optional;
  * A monetary value.
  */
 public class Money {
+
+  private static final String FIELD_PLATINUM = "platinum";
+  private static final String FIELD_GOLD = "gold";
+  private static final String FIELD_SILVER = "silver";
+  private static final String FIELD_COPPER = "copper";
+  private static final String FIELD_ARMOR = "armor";
+  private static final String FIELD_WEAPON = "weapon";
 
   public static Money ZERO = new Money(0, 0, 0, 0, 0, 0);
   private static final ValueParser PARSER = new IntegerValueParser(
@@ -216,5 +225,28 @@ public class Money {
   @Override
   public int hashCode() {
     return Objects.hash(platinum, gold, silver, copper, armor, weapon);
+  }
+
+  public static Money read(Map<String, Object> data) {
+    int platinum = (int) Values.get(data, FIELD_PLATINUM, 0);
+    int gold = (int) Values.get(data, FIELD_GOLD, 0);
+    int silver = (int) Values.get(data, FIELD_SILVER, 0);
+    int copper = (int) Values.get(data, FIELD_COPPER, 0);
+    int armor = (int) Values.get(data, FIELD_ARMOR, 0);
+    int weapon = (int) Values.get(data, FIELD_WEAPON, 0);
+
+    return new Money(platinum, gold, silver, copper, armor, weapon);
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_PLATINUM, platinum);
+    data.put(FIELD_GOLD, gold);
+    data.put(FIELD_SILVER, silver);
+    data.put(FIELD_COPPER, copper);
+    data.put(FIELD_ARMOR, armor);
+    data.put(FIELD_WEAPON, weapon);
+
+    return data;
   }
 }

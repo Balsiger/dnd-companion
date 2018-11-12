@@ -1,0 +1,184 @@
+entity {
+  name: "Composite Longbow"
+  category: "bow"
+  synonym: "Bow, Long, Composite"
+  synonym: "Longbow, Composite"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 117
+      high: 117
+    }
+    pages {
+      low: 118
+      high: 119
+    }
+  }
+  world: "Generic"
+  description: "You need at least two hands to use a bow, regardless of its size. You can\n  use a composite longbow while mounted. Composite bows are made from laminated\n  horn, wood, or bone and built with a recurve, meaning that the bow remains\n  bowshaped even when unstrung. All composite bows are made with a particular\n  strength rating (that is, each requires a minimum Strength modifier to use\n  with proficiency). If your Strength bonus is less than the strength rating of\n  the composite bow, you can\'t effectively use it, so you take a\n  -2 penalty on attacks with it. The default composite longbow requires\n  a Strength modifier of +0 or higher to use with proficiency. A composite\n  longbow can be made with a high strength rating (representing an especially\n  heavy pull) to take advantage of an above-average Strength score; this\n  feature allows you to add your Strength bonus to damage, up to the maximum\n  bonus indicated for the bow. Each point of Strength bonus granted by the bow\n  adds 100 gp to its cost. For instance, a composite longbow (+1 Str bonus)\n  costs 200 gp, while a composite longbow (+4 Str bonus) costs 500 gp.\n\n  For example, Tordek has a +2 Strength bonus. With a regular composite\n  longbow, he gets no modifier on damage rolls. For 200 gp, he can buy a\n  composite longbow (+1 Str bonus), which lets him add +1 to his damage\n  rolls. For 300 gp, he can buy one that lets him add his entire +2 Strength\n  bonus. Even if he paid 400 gp for a composite longbow (+3 Str bonus), he\n  would still get only a +2 bonus on damage rolls and takes a -2\n  penalty on attacks with it because his Strength is insufficient to use the\n  weapon to best advantage. The bow can\'t grant him a higher bonus\n  than he already has.  For purposes of weapon proficiency and similar feats, a\n  composite longbow is treated as if it were a longbow. Thus, if you have\n  Weapon Focus (longbow), that feat applies both to longbows and composite\n  longbows."
+  short_description: "Made from laminated horn, wood or bone and built with a recurve this bow requires great strength to use."
+}
+value {
+  gold: 100
+}
+weight {
+  imperial {
+    pounds {
+      leader: 3
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: MEDIUM
+}
+hardness: 5
+hit_points: 5
+appearance {
+  probability: COMMON
+  appearance: "A composite longbow."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A worn, composite longbow"
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Composite Longbow"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: PIERCING
+  critical {
+    threat {
+    }
+    multiplier: 3
+  }
+  style: RANGED
+  proficiency: MARTIAL
+  range {
+    imperial {
+      feet {
+        leader: 110
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "strength rating +1"
+  item: "mwk weapon"
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "strength rating +2"
+  item: "mwk weapon"
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "strength rating +3"
+  item: "mwk weapon"
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "strength rating +4"
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

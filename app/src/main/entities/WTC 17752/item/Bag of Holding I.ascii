@@ -1,0 +1,126 @@
+entity {
+  name: "Bag of Holding I"
+  category: "bag"
+  category: "wondrous magical item"
+  category: "magical item"
+  category: "extradimensional"
+  synonym: "Holding I, Bag of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 248
+      high: 248
+    }
+  }
+  world: "Generic"
+  description: "This appears to be a common cloth sack about 2 feet by 4 feet in size. The\n  \\Item{bag of holding} opens into a nondimensional space: Its inside is larger\n  than its outside dimensions. Regardless of what is put into the bag (up to\n  250 lb.), it weights 15 lb.\n\n  If the bag is overloaded, or if sharp objects pierce it (from inside or\n  outside), the bag ruptures and is ruined. All contents are lost forever. If a\n  \\Item{bag of holding} is turned inside out, its contents spill out, unharmed,\n  but the bag must be put right before it can be used again. If living\n  creatures are placed within the bag, they can survive for up to 10 minutes,\n  after which time they suffocate. Retrieving a specific item from a \\Item{bag\n  of holding} is a move action---unless the bag contains more than an ordinary\n  backpack would hold, in which case retrieving a specific item is a full-round\n  action.\n\n  If a \\Item{bag of holding} is placed within a \\Item{portable hole}, a rift to\n  the \\Place{Astral Plane} is torn in the space: Bag and hole alike are sucked\n  into the void and lost forever. If a \\Item{portable hole} is placed within a\n  \\Item{bag of holding}, it opens a gate to the \\Place{Astral Plane}: The hole,\n  the bag, and any creatures within a 10-foot radius are drawn there,\n  destroying the \\Item{portable hole} and \\Item{bag of holding} in the\n  process."
+  short_description: "This bag is larger inside than outside."
+}
+value {
+  gold: 2500
+}
+weight {
+  imperial {
+    pounds {
+      leader: 15
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: MEDIUM
+}
+appearance {
+  probability: COMMON
+  appearance: "A common cloth sack, about 2 feet by 4 feet in size."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Sack"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: LIQUID
+  fixed_weight: true
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

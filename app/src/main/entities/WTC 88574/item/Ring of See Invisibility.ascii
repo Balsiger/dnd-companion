@@ -1,0 +1,109 @@
+entity {
+  name: "Ring of See Invisibility"
+  base: "ring"
+  category: "invisible"
+  category: "astral"
+  category: "ethereal"
+  synonym: "See Invisiblity, Ring of"
+  synonym: "Invisibility, Ring of See"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 129
+      high: 129
+    }
+  }
+  world: "Forgotten Realms"
+  description: "This ring allows the wearer to see invisible, astral, or ethereal creatures or objects within 130 feet as if they were normally visible. It does not reveal illusions or creatures that are simply hiding or concealed. Ethereal creatures viewed from the Material Plane appear slightly hazy and unfocused, but the wearer can otherwise see details normally."
+  short_description: "See invisible, astral or ethereal creatures or objects within 130 ft."
+}
+value {
+  gold: 15000
+}
+weight {
+}
+probability: VERY_RARE
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

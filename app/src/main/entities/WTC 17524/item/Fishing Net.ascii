@@ -1,0 +1,144 @@
+entity {
+  name: "Fishing Net"
+  category: "gear"
+  synonym: "Net, Fishing"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "A fishing net, use to catch fish in the water."
+}
+value {
+  gold: 4
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "A delicate, finely spun fishing net."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple fishing net."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A fishing net with several holes."
+}
+appearance {
+  probability: RARE
+  appearance: "A fishing net with many holes."
+}
+substance {
+  material: ROPE
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Fishing Net"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+    imperial {
+      square_yards {
+      }
+      square_feet {
+        leader: 25
+      }
+      square_inches {
+      }
+    }
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

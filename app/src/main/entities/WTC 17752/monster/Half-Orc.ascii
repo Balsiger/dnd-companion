@@ -1,0 +1,19 @@
+entity {
+  name: "Half-Orc"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 204
+      high: 204
+    }
+  }
+  world: "Generic"
+  description: "A simple half-orc commoner."
+  short_description: "A simple half-orc."
+}
+size {
+  size: MEDIUM
+  modifier: TALL
+}
+type: HUMANOID
+main_race: true

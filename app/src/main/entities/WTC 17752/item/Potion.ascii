@@ -1,0 +1,178 @@
+entity {
+  name: "Potion"
+  category: "magic"
+  category: "potion"
+  category: "drinkable"
+  category: "container"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 229
+      high: 229
+    }
+  }
+  world: "Generic"
+  description: "A typical potion or oil consists of 1 ounce of liquid held in a ceramic or\n  glass vial fitted with a tight stopper. The stoppered container usually is no\n  more than 1 wide and 2 inches high. The vial has AC 13, 1 hit point, hardness\n  1, and a break DC of 12. Vials hold 1 ounce of liquid. "
+}
+value {
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: FINE
+}
+hardness: 1
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "Some oily liquid in a metal vial."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some oily liquid in a ceramic vial."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some oily liquid in a glass vial."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some watery liquid in a ceramic vial."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some watery liquid in a glass vial."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some watery liquid in a metal vial."
+}
+appearance {
+  probability: COMMON
+  appearance: "Some clear liquid in a ceramic vial"
+}
+appearance {
+  probability: COMMON
+  appearance: "Some clear liquid in a glass vial"
+}
+appearance {
+  probability: COMMON
+  appearance: "Some clear liquid in a metal vial"
+}
+appearance {
+  probability: COMMON
+  appearance: "Some dark liquid in a ceramic vial"
+}
+appearance {
+  probability: COMMON
+  appearance: "Some dark liquid in a glass vial"
+}
+appearance {
+  probability: COMMON
+  appearance: "Some dark liquid in a metal vial"
+}
+appearance {
+  probability: COMMON
+  appearance: "Some thick liquid in a ceramic vial"
+}
+appearance {
+  probability: COMMON
+  appearance: "Some thick liquid in a glass vial"
+}
+appearance {
+  probability: COMMON
+  appearance: "Some thick liquid in a metal vial"
+}
+substance {
+  thickness {
+  }
+}
+break_dc: 12
+player_name: "Potion"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

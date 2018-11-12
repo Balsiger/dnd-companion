@@ -1,0 +1,114 @@
+entity {
+  name: "Manual of Bodily Health +1"
+  base: "book"
+  category: "book"
+  category: "manual"
+  category: "health"
+  category: "attribute"
+  synonym: "Bodily Health +1, Manual of"
+  synonym: "Health +1, Manual of Bodily"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 261
+      high: 261
+    }
+  }
+  world: "Generic"
+  description: "This thick tome contains tips on health and fitness, but entwined within the\n  words is a powerful magical effect. If anyone reads this book, which takes a\n  total of 48 hours over a minimum of six days, he gains an inherent bonus of\n  from +1 to his Constitution score. Once the book is read, the magic\n  disappears from the pages and it becomes a normal book."
+  short_description: "After reading 48 hours within 6 days gain +1 Con."
+}
+value {
+  gold: 27500
+}
+weight {
+}
+probability: VERY_RARE
+size {
+}
+appearance {
+  probability: COMMON
+  appearance: "A thick tome with tips on health and fitness."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

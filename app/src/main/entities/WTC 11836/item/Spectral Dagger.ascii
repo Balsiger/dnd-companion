@@ -1,0 +1,119 @@
+entity {
+  name: "Spectral Dagger"
+  base: "dagger"
+  category: "dagger"
+  category: "magic"
+  category: "spectral"
+  category: "chill"
+  category: "touch"
+  synonym: "Dagger, Spectral"
+  reference {
+    name: "WTC 11836"
+    pages {
+      low: 144
+      high: 144
+    }
+  }
+  world: "Generic"
+  description: "Fashioned from a bone of a creature that died violently, this appears to be just a dagger hilt made of bone. When a creature grasps the hilt, a dagger \'blade\' of light appears. (Treat the weapon as a dagger for proficiency, feats, and so on). The blade \'winks out\' when the hilt leaves the wielder\'s hand.\n\n  The blade has no attack bonus and deals no damage, but any target struck is affected as by a \\SpellRef{Chill Touch} spell (DC 11). Striking with the \\Item{spectral dagger} is considered a touch attack. Creatures with multiple attacks may use the spectral blade in a full attack option to strike more than one per round just as if they wielded a normal dagger."
+  short_description: "Deals no damage but \\SpellRef{chill touch} (dc 11) with a touch attack."
+}
+value {
+  gold: 20000
+}
+weight {
+}
+probability: VERY_RARE
+size {
+}
+appearance {
+  probability: COMMON
+  appearance: "A dagger hilt of bone with a missing blade."
+}
+substance {
+  material: BONE
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

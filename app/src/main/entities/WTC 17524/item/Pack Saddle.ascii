@@ -1,0 +1,128 @@
+entity {
+  name: "Pack Saddle"
+  category: "mount"
+  synonym: "Saddle, Pack"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 129
+      high: 129
+    }
+    pages {
+      low: 132
+      high: 132
+    }
+  }
+  world: "Generic"
+  description: "A pack saddle holds gear and supplies, but not a rider. It holds as much\n  gear as the mount can carry. (The Monster Manual has notes on how much mounts\n  can carry.)"
+}
+value {
+  gold: 5
+}
+weight {
+  imperial {
+    pounds {
+      leader: 15
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: SMALL
+}
+hardness: 5
+hit_points: 24
+appearance {
+  probability: COMMON
+  appearance: "A saddle for loading goods onto your mount."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Pack Saddle"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

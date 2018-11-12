@@ -1,0 +1,105 @@
+entity {
+  name: "Spell Storing"
+  category: "magic"
+  category: "spell"
+  category: "store"
+  synonym: "spell storing"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 225
+      high: 225
+    }
+  }
+  description: "A spell storing weapon allows a spellcaster to store a single targeted spell\n   of up to 3rd level in the weapon. (The spell must have a casting time of 1\n   standard action.) Any time the weapon strikes a creature and the creature\n   takes damage from it, the weapon can immediately cast the spell on that\n   creature as a free action if the wielder desires. (This special ability is\n   an exception to the general rule that casting a spell from an item takes\n   at least as long as casting that spell normally.) Inflict serious wounds,\n   contagion, blindness, andhold person are all common choices for the stored\n   spell. Once the spell has been cast from the weapon, a spellcaster can\n   cast any other targeted spell of up to 3rd level into it.  The weapon\n   magically imparts to the wielder the name of the spell currently stored\n   within it. A randomly rolled spell storing weapon has a 50% chance to have a\n   spell stored in it already."
+  short_description: "Store single targeted spell up to 3rd level."
+}
+value {
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

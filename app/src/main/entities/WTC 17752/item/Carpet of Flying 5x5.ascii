@@ -1,0 +1,126 @@
+entity {
+  name: "Carpet of Flying 5x5"
+  category: "carpet"
+  category: "fly"
+  category: "magic"
+  category: "furniture"
+  synonym: "Flying Carpet"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 252
+      high: 252
+    }
+  }
+  world: "Generic"
+  description: "This rug is able to fly through the air as if affected by an overland flight\n  spell of unlimited duration. The size, carrying capacity, and speed of the\n  different carpets of flyingare shown on the table below. Beautifully and\n  intricately made, each carpet has its own command word to activate it\342\200\232\303\204\303\256if the\n  device is within voice range, the command word activates it, whether the\n  speaker is on the rug or not. The carpet is then controlled by spoken\n  directions.\n\n  The carpet can carry 200 lbs and has a speed of 40 ft. A carpet of flying can\n  carry up to double its capacity, but doing so reduces its speed to 30\n  feet. It has average maneuverability, but a carpet of flying can still hover"
+  short_description: "A carpet that can fly."
+}
+value {
+  gold: 20000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 8
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: MEDIUM
+}
+appearance {
+  probability: COMMON
+  appearance: "A elaborately stitched rug."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Carpet"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

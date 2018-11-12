@@ -1,0 +1,150 @@
+entity {
+  name: "Hooded Lantern"
+  category: "gear"
+  synonym: "Lantern, Hooded"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "A hooded lantern has shuttered or hinged sides. It clearly illuminates a\n  30-foot radius and provides shadowy illumination in a 60-foot radius. It\n  burns for 6 hours on a pint of oil.  You can carry a hooded lantern in one\n  hand. See page 164 in the \\Product[WTC 17524]{Player\'s Handbook} for more\n  rules on illumination."
+}
+value {
+  gold: 7
+}
+weight {
+  imperial {
+    pounds {
+      leader: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "A hooded lantern made from some polished wood."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple wooded lantern."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A wooded lantern made from unfinished wood."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Hooded Lantern"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+      hours: 6
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: LIQUID
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+      imperial {
+        feet {
+          leader: 30
+        }
+      }
+    }
+    shape: SPHERE
+  }
+  shadowy {
+    distance {
+      imperial {
+        feet {
+          leader: 60
+        }
+      }
+    }
+    shape: SPHERE
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

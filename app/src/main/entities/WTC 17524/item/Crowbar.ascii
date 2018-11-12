@@ -1,0 +1,144 @@
+entity {
+  name: "Crowbar"
+  base: "club"
+  category: "gear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  reference {
+    name: "TSR 11550"
+    pages {
+      low: 110
+      high: 110
+    }
+  }
+  description: "This iron bar is made for levering closed items open. A crowbar is the\n  perfect tool for prying open doors or chests, shattering chains, and the\n  like, and it grants a +2 circumstance bonus on Strength checks made for such\n  purposes. If used in combat, treat a crowbar as a one-handed improvised\n  weapon (see page 113 of the \\Product[WTC 17524]{Player\'s Handbook}) that\n  deals bludgeoning damage equal to that of a club of its size."
+}
+value {
+  gold: 2
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hardness: 10
+hit_points: 30
+appearance {
+  probability: RARE
+  appearance: "A well oiled, finely crafted crowbar."
+}
+appearance {
+  probability: COMMON
+  appearance: "A sturdy crowbar."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A rusty bar of iron."
+}
+substance {
+  material: IRON
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Crowbar"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

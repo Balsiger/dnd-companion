@@ -1,0 +1,105 @@
+entity {
+  name: "Strength Rating +2"
+  base: "strength rating +1"
+  synonym: "Strength Rating"
+  description: "A composite longbow can be made with a high strength rating (representing an\n  especially heavy pull) to take advantage of an above-average Strength score;\n  this feature allows you to add your Strength up to +2 as bonus to damage."
+  short_description: "Allows up to +2 Str bonus to damage."
+}
+value {
+  gold: 200
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+player_name: "(Str +2)"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+qualities {
+  name: "strength rating +2"
+  parameters {
+  }
+  condition {
+  }
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

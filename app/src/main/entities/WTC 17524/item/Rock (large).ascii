@@ -1,0 +1,136 @@
+entity {
+  name: "Rock (large)"
+  category: "rock"
+  category: "weapon"
+  synonym: "Large Rock"
+  synonym: "Rock, Large"
+  world: "Generic"
+  description: "A large rock that can be thrown."
+}
+value {
+}
+weight {
+  imperial {
+    pounds {
+      leader: 20
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: MEDIUM
+  modifier: TALL
+}
+hardness: 8
+appearance {
+  probability: COMMON
+  appearance: "A large, grey rock"
+}
+substance {
+  material: STONE
+  thickness {
+    imperial {
+      feet {
+        leader: 1
+      }
+    }
+  }
+}
+player_name: "Rock (large)"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 2
+        dice: 8
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: BLUDGEONING
+  critical {
+    threat {
+    }
+    multiplier: 2
+  }
+  style: THROWN_TWO_HANDED
+  proficiency: IMPROVISED
+  range {
+    imperial {
+      feet {
+        leader: 180
+      }
+    }
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

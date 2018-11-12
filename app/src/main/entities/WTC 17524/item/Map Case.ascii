@@ -1,0 +1,146 @@
+entity {
+  name: "Map Case"
+  category: "gear"
+  category: "wizard"
+  category: "cleric"
+  synonym: "Case, Map"
+  synonym: "Scroll Case"
+  synonym: "Case, Scroll"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+  }
+  world: "Generic"
+  description: "This capped leather or tin tube holds rolled pieces of parchment or paper."
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: DIMINUTIVE
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "A capped bone tube."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A capped tin tube."
+}
+appearance {
+  probability: COMMON
+  appearance: "A capped leather tube."
+}
+appearance {
+  probability: RARE
+  appearance: "A shabby, capped leather tube."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A dented, capped tin tube."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Map Case"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: GRANULAR
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

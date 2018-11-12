@@ -1,0 +1,120 @@
+entity {
+  name: "Mwk Ammunition"
+  category: "masterwork"
+  synonym: "Masterwork"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 122
+      high: 122
+    }
+  }
+  description: "A masterwork weapon is a finely crafted version of a normal weapon. Wielding\n   it provides a +1 enhancement bonus on attack rolls.\n\n  You can\'t add the masterwork quality to a weapon after it is created; it must\n  be crafted as a masterwork weapon (see the Craft skill, page 70).\n\n  All magic weapons are automatically considered to be of masterwork\n  quality. The enhancement bonus granted by the masterwork quality doesn\'t\n  stack with the enhancement bonus provided by the weapon\'s magic."
+  short_description: "A masterwork version."
+}
+value {
+  gold: 6
+}
+weight {
+}
+probability: UNCOMMON
+size {
+}
+appearance {
+  probability: COMMON
+  appearance: "Good workmanship."
+}
+appearance {
+  probability: COMMON
+  appearance: "Finely crafted."
+}
+appearance {
+  probability: COMMON
+  appearance: "Well made."
+}
+appearance {
+  probability: RARE
+  appearance: "Extraordinarily well made."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

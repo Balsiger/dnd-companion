@@ -1,0 +1,137 @@
+entity {
+  name: "Sledge"
+  category: "gear"
+  synonym: "Sledgehammer"
+  synonym: "Hammer, Sledge"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "This two-handed, iron-headed hammer is good for smashing open treasure\n  chests."
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: SMALL
+}
+hardness: 5
+hit_points: 12
+appearance {
+  probability: VERY_RARE
+  appearance: "A massive sledge with a polished handle."
+}
+appearance {
+  probability: COMMON
+  appearance: "A massive sledge to batter open things."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A massive, slightly rusty sledge."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Sledge"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

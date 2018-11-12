@@ -1,0 +1,142 @@
+entity {
+  name: "Breastplate"
+  synonym: "Plate, Breast"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 123
+      high: 123
+    }
+    pages {
+      low: 124
+      high: 124
+    }
+    pages {
+      low: 125
+      high: 125
+    }
+  }
+  world: "Generic"
+  description: "A breastplate covers your front and your back. It comes with a helmet and\n  greaves (plates to cover your lower legs). A light suit or skirt of studded\n  leather beneath the breastplate protects your limbs without restricting\n  movement much."
+}
+value {
+  gold: 200
+}
+weight {
+  imperial {
+    pounds {
+      leader: 30
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A breastplate."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A battered breastplate."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Breastplate"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+    modifier {
+      value: 5
+      type: ARMOR
+    }
+  }
+  type: MEDIUM
+  max_dexterity: 3
+  check_penalty: -4
+  arcane_failure: 25
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

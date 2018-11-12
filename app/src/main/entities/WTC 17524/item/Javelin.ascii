@@ -1,0 +1,163 @@
+entity {
+  name: "Javelin"
+  category: "spear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 115
+      high: 115
+    }
+    pages {
+      low: 116
+      high: 116
+    }
+    pages {
+      low: 118
+      high: 118
+    }
+  }
+  world: "Generic"
+  description: "This weapon is a light, flexible spear intended for throwing. You can use it\n  in melee, but not well. Since it is not designed for melee, you are treated\n  as nonproficient with it and take a -4 penalty on attack rolls if you\n  use a javelin as a melee weapon."
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: MEDIUM
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A javelin."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A worn javelin."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Javelin"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: PIERCING
+  critical {
+    threat {
+    }
+    multiplier: 2
+  }
+  style: RANGED
+  proficiency: SIMPLE
+  range {
+    imperial {
+      feet {
+        leader: 30
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

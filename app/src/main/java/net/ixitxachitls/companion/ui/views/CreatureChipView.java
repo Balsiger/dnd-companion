@@ -30,7 +30,6 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.Monster;
-import net.ixitxachitls.companion.data.enums.EncounterStatus;
 
 import java.util.Optional;
 
@@ -81,18 +80,6 @@ public class CreatureChipView extends ChipView {
 
   public String getCreatureId() {
     return getDataId();
-  }
-
-  public void setBattleMode(EncounterStatus inBattle) {
-    if (inBattle == EncounterStatus.ENDED) {
-      setBackground(R.color.cell);
-      setSubtitle("");
-    } else {
-      setBackground(R.color.battleDark);
-      if (inBattle != EncounterStatus.STARTING) {
-        setSubtitle("");
-      }
-    }
   }
 
   public void update(Creature<?> creature) {

@@ -1,0 +1,118 @@
+entity {
+  name: "Flaming"
+  category: "magic"
+  category: "fire"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 224
+      high: 224
+    }
+  }
+  world: "Generic"
+  description: "Upon command, a flaming weapon is sheathed in fire. The fire does not harm\n  the wielder. The effect remains until another command is given. A flaming\n  weapon deals an extra 1d6 points of fire damage on a successful hit. Bows,\n  crossbows, and slings so crafted bestow the fire energy upon their\n  ammunition."
+  short_description: "+1d6 fire damage."
+}
+value {
+}
+weight {
+}
+probability: VERY_RARE
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 6
+      }
+      type: FIRE
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -1,0 +1,157 @@
+entity {
+  name: "Spear"
+  category: "spear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 115
+      high: 115
+    }
+    pages {
+      low: 116
+      high: 116
+    }
+    pages {
+      low: 121
+      high: 121
+    }
+  }
+  world: "Generic"
+  description: "One of the simplest weapons in existence, the spear is favored by druids and\n  sorcerers. It can be thrown. If you use a ready action to set a spear against\n  a charge, you deal double damage on a successful hit against a charging\n  character."
+}
+value {
+  gold: 2
+}
+weight {
+  imperial {
+    pounds {
+      leader: 6
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: MEDIUM
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A spear."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A worn spear"
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Spear"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 8
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: PIERCING
+  critical {
+    threat {
+    }
+    multiplier: 3
+  }
+  style: TWOHANDED_MELEE
+  proficiency: SIMPLE
+  range {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

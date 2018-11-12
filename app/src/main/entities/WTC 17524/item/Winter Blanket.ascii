@@ -1,0 +1,155 @@
+entity {
+  name: "Winter Blanket"
+  category: "gear"
+  synonym: "Blanket, Winter"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+  }
+  world: "Generic"
+  description: "A thick, quilted, wool blanket made to keep you warm in cold weather."
+}
+value {
+  silver: 5
+}
+weight {
+  imperial {
+    pounds {
+      leader: 3
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: RARE
+  appearance: "A half-rotten, patchy brown woolen blanket."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A rough, brown woolen blanket."
+}
+appearance {
+  probability: COMMON
+  appearance: "A rough, brown woolen blanket."
+}
+appearance {
+  probability: COMMON
+  appearance: "A fine, brown woolen blanket."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A fine, black woolen blanket."
+}
+appearance {
+  probability: RARE
+  appearance: "A fine, red woolen blanket."
+}
+appearance {
+  probability: RARE
+  appearance: "A fine, blue woolen blanket."
+}
+appearance {
+  probability: RARE
+  appearance: "A fine, green woolen blanket."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A fine, golden embroidered, colored woolen blanket."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Winter Blanket"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

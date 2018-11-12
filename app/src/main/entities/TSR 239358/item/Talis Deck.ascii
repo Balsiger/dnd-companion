@@ -1,0 +1,129 @@
+entity {
+  name: "Talis Deck"
+  category: "cards"
+  category: "game"
+  synonym: "Deck, Talis"
+  reference {
+    name: "TSR 239358"
+    pages {
+      low: 114
+      high: 114
+    }
+  }
+  world: "Generic"
+  description: "Fourth of the four universal games, the Talis deck is used for some non-magical divining, but also for a variety of card games, including whist, poker, talison, elemental empires, and old wizard. The deck consists of the four 12-card planar suits (stones, waves, winds, and flames) and the traditional 22-card major arcana (Sun, Moon, Star, Comet, Throne, Key, Night, etc. . . .). \n\nThe deck offered by Aurora is decorated by illuminators from Candlekeep, where they keep the texts of Alaundo the Sage, and has become the definitive Talis representation in the Realms. \n\nNote: This deck is non-magical in nature, but still a bargain at 3 sp!"
+}
+value {
+  silver: 3
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+  modifier: LONG
+}
+appearance {
+  probability: COMMON
+  appearance: "A used set of Talis cards"
+}
+appearance {
+  probability: RARE
+  appearance: "An unopened set of Talis cards."
+}
+substance {
+  material: PAPER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Talis Deck"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

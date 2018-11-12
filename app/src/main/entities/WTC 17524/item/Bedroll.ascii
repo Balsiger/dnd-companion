@@ -1,0 +1,131 @@
+entity {
+  name: "Bedroll"
+  category: "gear"
+  synonym: "Mat"
+  synonym: "Sleeping Mat"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+  }
+  world: "Generic"
+  description: "You never know where you\'re going to sleep, and a bedroll helps you get\n  better sleep in a hayloft or on the cold ground. A bedroll consists of\n  bedding and a blanket thin enough to be rolled up and tied. In an emergency,\n  it can double as a stretcher."
+}
+value {
+  silver: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: SMALL
+}
+appearance {
+  probability: RARE
+  appearance: "A comfortable bedroll with a silk blanket."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple bedroll with a thin cotton blanket."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A shabby bedroll with holes and a rag as a blanket."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Bedroll"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

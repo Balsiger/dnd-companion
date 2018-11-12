@@ -1,0 +1,124 @@
+entity {
+  name: "Key"
+  category: "mundane"
+  category: "key"
+  description: "A simple key."
+  short_description: "A key."
+}
+value {
+  silver: 1
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: TINY
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple, rusted key"
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple iron key."
+}
+appearance {
+  probability: COMMON
+  appearance: "A glittering iron key."
+}
+substance {
+  material: IRON
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Key"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

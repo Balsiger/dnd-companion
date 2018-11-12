@@ -1,0 +1,144 @@
+entity {
+  name: "Light Wooden Shield"
+  synonym: "Shield, Light, Wooden"
+  synonym: "Shield, Wooden, Light"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 123
+      high: 123
+    }
+    pages {
+      low: 124
+      high: 124
+    }
+    pages {
+      low: 125
+      high: 125
+    }
+  }
+  world: "Generic"
+  description: "You strap a shield to your forearm and grip it with your hand. A light\n  shield\'s weight lets you carry other items in that hand, although you cannot\n  use weapons with it.\n\n  \\emph{Wooden or Steel}: Wooden and steel shields offer the same basic\n  protection, though they respond differently to special attacks (such as warp\n  wood and heat metal).\n\n  \\emph{Shield Bash Attacks:} You can bash an opponent with a heavy shield,\n  using it as an off-hand weapon. See Table 7-5: Weapons for the damage dealt\n  by a shield bash. Used this way, a heavy shield is a martial bludgeoning\n  weapon. For the purpose of penalties on attack rolls, treat a heavy shield as\n  a one-handed weapon. If you use your shield as a weapon, you lose its AC\n  bonus until your next action (usually until the next round). An enhancement\n  bonus on a shield does not improve the effectiveness of a shield bash made\n  with it, but the shield can be made into a magic weapon in its own right."
+}
+value {
+  gold: 3
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A light, wooden shield."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A battered, light, wooden shield."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Light Wooden Shield"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+    modifier {
+      value: 1
+      type: SHIELD
+    }
+  }
+  type: SHIELD
+  max_dexterity: 30
+  check_penalty: -1
+  arcane_failure: 5
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "darkwood armor"
+  item: "mwk armor"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

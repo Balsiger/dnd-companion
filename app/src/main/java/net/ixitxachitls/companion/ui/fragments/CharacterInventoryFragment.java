@@ -33,7 +33,7 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.dynamics.Item;
+import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
@@ -163,9 +163,9 @@ public class CharacterInventoryFragment extends Fragment {
         if (character.isPresent()) {
           Item item = (Item) event.getLocalState();
           if (moveFirst) {
-            //character.get().moveItemFirst(item);
+            character.get().moveItemFirst(item);
           } else {
-            //character.get().moveItemLast(item);
+            character.get().moveItemLast(item);
           }
         }
         return true;
@@ -177,8 +177,7 @@ public class CharacterInventoryFragment extends Fragment {
 
   private boolean removeItem(Object state) {
     if (character.isPresent() && state instanceof Item) {
-      //character.get().remove((Item) state);
-      character.get().store();
+      character.get().remove((Item) state);
       return true;
     }
 

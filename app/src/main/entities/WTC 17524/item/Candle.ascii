@@ -1,0 +1,162 @@
+entity {
+  name: "Candle"
+  category: "gear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+    pages {
+      low: 165
+      high: 165
+    }
+  }
+  world: "Generic"
+  description: "A simple candle."
+}
+value {
+  copper: 1
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: FINE
+}
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "A gilded, ornately decorated candle."
+}
+appearance {
+  probability: RARE
+  appearance: "A red candle."
+}
+appearance {
+  probability: RARE
+  appearance: "A blue candle."
+}
+appearance {
+  probability: RARE
+  appearance: "A green candle."
+}
+appearance {
+  probability: RARE
+  appearance: "A purple candle."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A yellow brown candle made from bees wax."
+}
+appearance {
+  probability: COMMON
+  appearance: "A white candle."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A brown candle."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Candle"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+      hours: 1
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+      imperial {
+        feet {
+        }
+      }
+    }
+    shape: SPHERE
+  }
+  shadowy {
+    distance {
+      imperial {
+        feet {
+          leader: 5
+        }
+      }
+    }
+    shape: SPHERE
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

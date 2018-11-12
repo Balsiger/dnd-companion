@@ -1,0 +1,122 @@
+/*
+ * Copyright (c) 2017-2018 Peter Balsiger
+ * All rights reserved
+ *
+ * This file is part of the Tabletop Companion.
+ *
+ * The Tabletop Companion is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * The Tabletop Companion is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with the Player Companion; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+
+package net.ixitxachitls.companion.ui.views;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.support.annotation.CallSuper;
+import android.support.annotation.ColorRes;
+import android.support.annotation.DrawableRes;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
+import android.view.View;
+
+import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Creature;
+import net.ixitxachitls.companion.data.documents.Images;
+
+import java.util.Optional;
+
+/**
+ * Base title view for creature (characters or monsters).
+ */
+public abstract class CreatureTitleView<T extends Creature> extends TitleView {
+
+  Optional<T> creature = Optional.empty();
+
+  public CreatureTitleView(Context context, @Nullable AttributeSet attributes,
+                           @ColorRes int foregroundColor, @ColorRes int backgroundColor,
+                           @DrawableRes int defaultImage) {
+    super(context, attributes, foregroundColor, backgroundColor, defaultImage);
+  }
+
+  public String getCreatureId() {
+    if (creature.isPresent()) {
+      return creature.get().getId();
+    }
+
+    return "";
+  }
+
+  @CallSuper
+  @Override
+  protected View init(AttributeSet attributes) {
+    View view = super.init(attributes);
+
+    container.setBackgroundColor(getContext().getColor(backgroundColor));
+    setDefaultImage(defaultImage);
+
+    return view;
+  }
+
+  protected void refresh() {
+    setTitle(formatTitle());
+    setSubtitle(formatSubtitle());
+  }
+
+  protected String formatTitle() {
+    if (creature.isPresent()) {
+      return creature.get().getName();
+    }
+
+    return "...loading...";
+  }
+
+  protected String formatSubtitle() {
+    if (creature.isPresent()) {
+      String subtitle = creature.get().getGender().getName();
+      if (creature.get().getRace().isPresent()) {
+        subtitle += " " + creature.get().getRace().get();
+      }
+
+      Optional<Campaign> campaign =
+          CompanionApplication.get(getContext()).campaigns().get(creature.get().getCampaignId());
+      if (campaign.isPresent()) {
+        subtitle += ", " + campaign.get().getName();
+      }
+
+      return subtitle;
+    }
+
+    return "";
+  }
+
+  public void update(Images images) {
+    if (creature.isPresent()) {
+      Optional<Bitmap> bitmap = images.get(creature.get().getId());
+      if (bitmap.isPresent()) {
+        setImageBitmap(bitmap.get());
+      } else {
+        clearImage(defaultImage);
+      }
+    }
+  }
+
+  @CallSuper
+  public void update(T creature) {
+    this.creature = Optional.of(creature);
+
+    refresh();
+    update(CompanionApplication.get().images());
+  }
+}

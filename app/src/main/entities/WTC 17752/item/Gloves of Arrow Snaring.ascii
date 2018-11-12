@@ -1,0 +1,124 @@
+entity {
+  name: "Gloves of Arrow Snaring"
+  category: "gloves"
+  category: "arrow"
+  category: "snare"
+  synonym: "Arrow Snaring, Gloves of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 257
+      high: 257
+    }
+  }
+  description: "Once snugly worn, these gloves seem to meld with the hands, becoming almost\n  invisible. Twice per day, the wearer can act as if he had the Snatch Arrows\n  feat, even if he does not meet the prerequisites for it. Both gloves must be\n  worn for the magic to be effective. At least one hand must be free to take\n  advantage of the magic."
+  short_description: "Twice per day can snatch arrows as the Snatch Arrows feat (once per round while not flat footed catch arrow or range weapon, range weapon can immediately be thrown back)."
+}
+value {
+  gold: 4000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+appearance {
+  probability: COMMON
+  appearance: "Fine, think leather gloves."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Gloves"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

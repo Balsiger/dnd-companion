@@ -1,0 +1,109 @@
+entity {
+  name: "Deathblade Poison"
+  base: "poison"
+  category: "poison"
+  category: "constitution"
+  category: "damage"
+  category: "death"
+  synonym: "Poison, Deathblade"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 279
+      high: 279
+    }
+  }
+  world: "Generic"
+  description: "Injury, Fortitude save DC 20; initial damage 1d6 points of Constitution damage, secondary damage 2d6 points of Constitution damage."
+  short_description: "Injury For DC 20, Con 1d6 damage/Con 2d6 damage"
+}
+value {
+  gold: 1800
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

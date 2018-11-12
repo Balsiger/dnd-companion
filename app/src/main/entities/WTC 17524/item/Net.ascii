@@ -1,0 +1,155 @@
+entity {
+  name: "Net"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 117
+      high: 117
+    }
+    pages {
+      low: 119
+      high: 120
+    }
+  }
+  world: "Generic"
+  description: "A fighting net has small barbs in the weave and a trailing rope to control\n  netted opponents. You use it to entangle enemies.  When you throw a net, you\n  make a ranged touch attack against your target. A net\'s maximum range is 10\n  feet. If you hit, the target is entangled. An entangled creature takes a -2\n  penalty on attack rolls and a -4 penalty on Dexterity, can move at only half\n  speed, and cannot charge or run. If you control the trailing rope by\n  succeeding on an opposed Strength check while holding it, the entangled\n  creature can move only within the limits that the rope allows. If the\n  entangled creature attempts to cast a spell, it must make a DC 15\n  Concentration check or be unable to cast the spell.\n\n  An entangled creature can escape with a DC 20 Escape Artist check (a\n  full-round action). The net has 5 hit points and can be burst with a DC 25\n  Strength check (also a full-round action).\n\n  A net is useful only against creatures within one size category of you. For\n  instance, a Small character wielding a net can entangle Tiny, Small, or\n  Medium creatures.\n\n  A net must be folded to be thrown effectively. The first time you throw your\n  net in a fight, you make a normal ranged touch attack roll. After the net is\n  unfolded, you take a -4 penalty on attack rolls with it. It takes 2\n  rounds for a proficient user to fold a net and twice that long for a\n  nonproficient one to do so."
+}
+value {
+  gold: 20
+}
+weight {
+  imperial {
+    pounds {
+      leader: 6
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A net."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A patched net."
+}
+substance {
+  material: ROPE
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+break_dc: 25
+player_name: "Net"
+weapon {
+  damage {
+    damage {
+      base {
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: NONE
+  critical {
+    threat {
+    }
+  }
+  style: RANGED
+  proficiency: EXOCTIC
+  range {
+    imperial {
+      feet {
+        leader: 10
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -1,0 +1,104 @@
+entity {
+  name: "Keen"
+  category: "keen"
+  category: "magic"
+  synonym: "keen"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 225
+      high: 225
+    }
+  }
+  description: "This ability doubles the threat range of a weapon. For instance, if it is\n  placed on a longsword (which has a normal threat range of 19-20), the keen\n  longsword scores a threat on a 17-20.  Only piercing or slashing weapons can\n  be keen. (If you roll this property randomly for an inappropriate weapon,\n  reroll.)  This benefit doesn\'t stack with any other effect that expands the\n  threat range of a weapon (such as the keen edge spell or the Improved\n  Critical feat)."
+  short_description: "Double threat range for criticals."
+}
+value {
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

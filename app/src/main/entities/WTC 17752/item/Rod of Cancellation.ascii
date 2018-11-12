@@ -1,0 +1,107 @@
+entity {
+  name: "Rod of Cancellation"
+  base: "rod"
+  category: "cancel"
+  category: "magic"
+  synonym: "Cancellation, Rod of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 234
+      high: 234
+    }
+  }
+  world: "Generic"
+  description: "This dreaded rod is a bane to magic items, for its touch drains an item of all magical properties. The item touched must make a DC 23 Will save to prevent the rod from draining it. If a creature is holding it at the time, then the item can use the holder\'s Will save bonus in place of its own if the holder\'s is better. In such cases, contact is made by making a melee touch attack roll. Upon draining an item, the rod itself becomes brittle and cannot be used again. Drained items are only restorable by wish or miracle. (If a sphere of annihilation and a rod of cancellation negate each other, nothing can restore either of them.)"
+  short_description: "Touched magical item Will DC 23 or be drained of magical properties."
+}
+value {
+  gold: 11000
+}
+weight {
+}
+probability: VERY_RARE
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

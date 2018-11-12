@@ -1,0 +1,120 @@
+entity {
+  name: "Armor Lubricant"
+  category: "alchemical"
+  category: "gear"
+  synonym: "Lubricant, Armor"
+  reference {
+    name: "WTC 88578"
+    pages {
+      low: 158
+      high: 159
+    }
+  }
+  world: "Forgotten Realms"
+  description: "This nonmagical oil reduces the friction that impedes movement in metallic\n  armor. Once application of armor lubricant reduces the armor check penalty by\n  1 (to a minimum of 0). Each application takes 1 minute to apply and lasts 1d4\n  hours. It is not possible to apply armor lubricant to armor currently being\n  worn. Armor lubricant provides no benefit to shields or to armor no made\n  primarily of metal.\n\n  Creating one application of armor lubricant requires a successful\n  \\Skill{Alchemy} check (DC 15) and follows the rules outlines in the\n  discussion of Crafti skills in the \\Product{Player\'s Handbook}."
+  short_description: "Reduces armor check penalty by 1 for 1d4 hours."
+}
+value {
+  gold: 40
+}
+weight {
+  imperial {
+    pounds {
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: DIMINUTIVE
+}
+hardness: 100
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "An oily liquid."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Oil"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

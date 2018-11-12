@@ -1,0 +1,125 @@
+entity {
+  name: "Greatclub (large)"
+  base: "greatclub"
+  category: "large"
+  synonym: "Large Greatclub"
+  synonym: "Greatclub, Large"
+}
+value {
+  gold: 10
+}
+weight {
+  imperial {
+    pounds {
+      leader: 16
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: LARGE
+  modifier: LONG
+}
+hardness: 5
+appearance {
+  probability: COMMON
+  appearance: "A large version of a common greatclub."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Greatclub (large)"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 2
+        dice: 8
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

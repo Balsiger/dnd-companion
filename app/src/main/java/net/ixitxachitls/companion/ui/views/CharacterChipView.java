@@ -30,6 +30,8 @@ import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -75,11 +77,16 @@ public class CharacterChipView extends CreatureChipView {
   }
 
   private void clearMessages() {
+    List<View> toRemove = new ArrayList<>();
     for (int i = 0; i < icons.getChildCount(); i++) {
       View view = icons.getChildAt(i);
       if (view instanceof MessageView) {
-        icons.removeView(view);
+        toRemove.add(view);
       }
+    }
+
+    for (View view : toRemove) {
+      icons.removeView(view);
     }
   }
 }

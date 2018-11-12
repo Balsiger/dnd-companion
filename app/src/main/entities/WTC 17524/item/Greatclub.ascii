@@ -1,0 +1,160 @@
+entity {
+  name: "Greatclub"
+  category: "staff"
+  synonym: "Club, Great"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 116
+      high: 116
+    }
+    pages {
+      low: 118
+      high: 118
+    }
+  }
+  world: "Generic"
+  description: "A greatclub is a two-handed version of a regular \\Item{club}.  It is often\n  studded with nails or spikes or ringed by bands of iron."
+}
+value {
+  gold: 5
+}
+weight {
+  imperial {
+    pounds {
+      leader: 8
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: MEDIUM
+}
+hardness: 5
+hit_points: 24
+appearance {
+  probability: COMMON
+  appearance: "A greatclub."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A slightly splintered greatclub."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Greatclub"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 10
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: BLUDGEONING
+  critical {
+    threat {
+    }
+    multiplier: 2
+  }
+  style: TWOHANDED_MELEE
+  proficiency: MARTIAL
+  range {
+    imperial {
+      feet {
+        leader: 10
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

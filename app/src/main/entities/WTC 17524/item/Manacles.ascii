@@ -1,0 +1,133 @@
+entity {
+  name: "Manacles"
+  category: "locks"
+  synonym: "Handcuffs"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "The manacles detailed on Table 7-8: Goods and Services can bind a Medium\n  creature. A manacled creature can use the Escape Artist skill to slip free\n  (DC 30). Breaking the manacles requires a Strength check (DC 26).\n\n  Manacles have hardness 10 and 10 hit points. Most manacles have locks; add\n  the cost of the lock you want to the cost of the manacles.  For the same\n  cost, you can buy manacles for a Small creature. For a Large creature,\n  manacles cost ten times the indicated amount, and for a Huge creature, one\n  hundred times this amount. Gargantuan, Colossal, Tiny, Diminutive, and Fine\n  creatures can be held only by specially made manacles."
+}
+value {
+  gold: 15
+}
+weight {
+  imperial {
+    pounds {
+      leader: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: FINE
+}
+hardness: 10
+hit_points: 10
+appearance {
+  probability: VERY_RARE
+  appearance: "An ornamented set of manacles."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple set or manacles."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A rusty set of manacles."
+}
+substance {
+  material: STEEL
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+break_dc: 26
+player_name: "Manacles"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

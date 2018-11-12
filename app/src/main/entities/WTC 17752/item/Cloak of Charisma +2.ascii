@@ -1,0 +1,128 @@
+entity {
+  name: "Cloak of Charisma +2"
+  category: "magic"
+  category: "wearable"
+  category: "clothing"
+  category: "charisma"
+  category: "abilities"
+  synonym: "Charisma +2, Cloak"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 253
+      high: 253
+    }
+  }
+  world: "Generic"
+  description: "This lightweight and fashionable cloak has a highly decorative silver\n  trim. When in a character\'s possession, it adds a +2 enhancement bonus to her\n  Charisma score."
+  short_description: "Gives a +2 enhancement bonus to Charisma."
+}
+value {
+  gold: 4000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A lightweight, fashionable cloak with a highly decorative silver trim."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Cloak"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

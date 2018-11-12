@@ -1,0 +1,129 @@
+entity {
+  name: "Gold Piece"
+  category: "money"
+  synonym: "Piece, Gold"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 112
+      high: 112
+    }
+    pages {
+      low: 168
+      high: 168
+    }
+  }
+  world: "Generic"
+  description: "A gold piece"
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 50
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: DIMINUTIVE
+}
+hardness: 10
+hit_points: 24
+appearance {
+  probability: COMMON
+  appearance: "A gold piece."
+}
+substance {
+  material: STEEL
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Gold Piece"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -1,0 +1,142 @@
+entity {
+  name: "Thunderstone"
+  category: "alchemical"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 129
+    }
+  }
+  world: "Generic"
+  description: "You can throw this stone as a ranged attack with a range increment of 20\n  feet. When it strikes a hard surface (or is struck hard), it creates a\n  deafening bang that is treated as a sonic attack. Each creature within a\n  10-foot-radius spread must make a DC 15 Fortitude save or be deafened for 1\n  hour. A deafened creature, in addition to the obvious effects, takes a\n  -4 penalty on initiative and has a 20% chance to miscast and lose any\n  spell with a verbal component that it tries to cast.  Since you\n  don\'t need to hit a specific target, you can simply aim at a\n  particular 5-foot square. Treat the target square as AC 5; if you miss, see\n  Throw Splash Weapon, page 158, to determine where the thunderstone lands."
+}
+value {
+  gold: 30
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: FINE
+}
+appearance {
+  probability: COMMON
+  appearance: "A small, rune marked stone."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Thunderstone"
+weapon {
+  damage {
+    damage {
+      base {
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: GRENADE
+  critical {
+    threat {
+    }
+  }
+  style: THROWN_TOUCH
+  proficiency: NONE_PROFICIENCY
+  range {
+    imperial {
+      feet {
+        leader: 20
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+    number: 1
+    dice: 4
+  }
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -1,0 +1,142 @@
+entity {
+  name: "Banded Mail"
+  synonym: "Mail, Banded"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 123
+      high: 123
+    }
+    pages {
+      low: 124
+      high: 124
+    }
+    pages {
+      low: 126
+      high: 126
+    }
+  }
+  world: "Generic"
+  description: "This armor is made of overlapping strips of metal sewn to a backing of\n  leather and chainmail. The strips cover vulnerable areas, while the chain and\n  leather protect the joints and provide freedom of movement. Straps and\n  buckles distribute the weight evenly. The suit includes gauntlets."
+}
+value {
+  gold: 250
+}
+weight {
+  imperial {
+    pounds {
+      leader: 35
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A suite of banded mail."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A battered suite of banded mail."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Banded Mail"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+    modifier {
+      value: 6
+      type: ARMOR
+    }
+  }
+  type: HEAVY
+  max_dexterity: 1
+  check_penalty: -6
+  arcane_failure: 35
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: ""
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

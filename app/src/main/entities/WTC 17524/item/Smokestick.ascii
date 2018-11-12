@@ -1,0 +1,132 @@
+entity {
+  name: "Smokestick"
+  category: "alchemical"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+  }
+  world: "Generic"
+  description: "This alchemically treated wooden stick instantly creates thick, opaque smoke\n  when ignited. The smoke fills a 10-foot cube (treat the effect as a fog\n  cloud spell, except that a moderate or stronger wind dissipates the smoke in\n  1 round). The stick is consumed after 1 round, and the smoke dissipates\n  naturally."
+}
+value {
+  gold: 20
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A wooden stick, treated with some substance."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Smokestick"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+      rounds: 1
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+    number: 1
+    dice: 4
+  }
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

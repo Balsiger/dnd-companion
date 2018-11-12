@@ -1,0 +1,139 @@
+entity {
+  name: "Riding Saddle"
+  category: "saddle"
+  category: "mount"
+  synonym: "Saddle, Riding"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 129
+      high: 129
+    }
+    pages {
+      low: 132
+      high: 132
+    }
+  }
+  world: "Generic"
+  description: "The standard riding saddle supports a rider. "
+}
+value {
+  gold: 30
+}
+weight {
+  imperial {
+    pounds {
+      leader: 30
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: LARGE
+  modifier: LONG
+}
+appearance {
+  probability: COMMON
+  appearance: "A brown leather saddle."
+}
+appearance {
+  probability: COMMON
+  appearance: "A black leather saddle."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A red leather saddle."
+}
+appearance {
+  probability: RARE
+  appearance: "An golden ornamented leather saddle."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

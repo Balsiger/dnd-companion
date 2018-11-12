@@ -1,0 +1,134 @@
+entity {
+  name: "Staff"
+  category: "magic"
+  category: "staff"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 243
+      high: 243
+    }
+  }
+  world: "Generic"
+  description: "A staff is a long shaft of wood that stores several spells. Unlike wands\n  (see page 245), which can contain a wide variety of spells, each staff is of\n  a certain kind and holds specific spells. A staff has 50 charges when\n  created.\n\n  A staff uses the level of the weilder if it\'s higher than the staff\'s level."
+  short_description: "A long shaft of woodd."
+}
+value {
+  copper: 1
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: SMALL
+}
+hardness: 5
+hit_points: 10
+appearance {
+  probability: VERY_RARE
+  appearance: "A fancy staff."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple staff."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A shoddy staff."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+break_dc: 24
+player_name: "Staff"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -41,6 +41,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.CharacterTitleView;
@@ -107,6 +108,10 @@ public class CharacterFragment extends CompanionFragment {
     if (character.isPresent()) {
       update(character.get());
     }
+
+    characters().observe(this, this::update);
+    messages().observe(this, this::update);
+
     return view;
   }
 
@@ -126,7 +131,6 @@ public class CharacterFragment extends CompanionFragment {
 
     this.character = Optional.of(character);
     character.observe(this, this::update);
-    characters().observe(this, this::update);
     this.campaign = campaigns().get(character.getCampaignId());
 
     update(character);
@@ -169,6 +173,11 @@ public class CharacterFragment extends CompanionFragment {
     campaignTitle.text(campaign.get().getName());
     title.update(character);
     title.update(images());
+    title.update(messages());
+  }
+
+  private void update(Messages messages) {
+    title.update(messages);
   }
 
   private void delete() {

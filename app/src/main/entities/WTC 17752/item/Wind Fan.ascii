@@ -1,0 +1,125 @@
+entity {
+  name: "Wind Fan"
+  category: "fan"
+  category: "wind"
+  category: "magic"
+  synonym: "Fan, Wind"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 268
+      high: 268
+    }
+  }
+  world: "Generic"
+  description: "A wind fan appears to be nothing more than a wood and papyrus or cloth\n  instrument with which to create a cooling breeze. By uttering the command\n  word, its possessor causes the fan to generate air movement duplicating a\n  \\SpellRef{gust of wind} spell. The fan can be used once per day with no\n  risk. If it is used more frequently, there is a 20% cumulative chance per\n  usage during that day that the device tears into useless, nonmagical\n  tatters."
+  short_description: "Once per day create a \\SpellRef{gust of wind}; can be used additional times with a 20% cumulative chance to destroying the fan."
+}
+value {
+  gold: 5500
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A fan made from wood and papyrus."
+}
+substance {
+  material: PAPER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Fan"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

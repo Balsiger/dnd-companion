@@ -1,0 +1,112 @@
+entity {
+  name: "Assassin\'s Dagger"
+  base: "dagger"
+  base: "weapon +2"
+  category: "assassin"
+  category: "fortitude"
+  synonym: "Dagger, Assassin\'s"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 226
+      high: 226
+    }
+  }
+  world: "Generic"
+  description: "This wicked-looking, curved +2 daggerpro- vides a +1 bonus to the DC of a\n  Fortitude save forced by the death attack of an assassin."
+  short_description: "+2 Dagger with +1 for assassin\'s death attack For DC."
+}
+value {
+  gold: 18302
+}
+weight {
+}
+probability: VERY_RARE
+size {
+}
+appearance {
+  probability: COMMON
+  appearance: "A wicked looking, curved dagger."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

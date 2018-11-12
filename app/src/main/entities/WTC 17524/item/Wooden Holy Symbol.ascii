@@ -1,0 +1,137 @@
+entity {
+  name: "Wooden Holy Symbol"
+  category: "divine"
+  synonym: "Holy Symbol, Wooden"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 128
+    }
+    pages {
+      low: 129
+      high: 129
+    }
+  }
+  world: "Generic"
+  description: "A holy symbol focuses positive energy. A \\Class{cleric} or \\Class{paladin}\n  uses it as the focus for his spells and as a tool for turning undead. Each\n  religion has its own holy symbol, and a sun symbol is the default holy symbol\n  for clerics not associated with any particular religion.\n\n  A silver holy symbol works no better than a wooden one, but it serves as a\n  mark of status for the wielder."
+}
+value {
+  gold: 1
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: DIMINUTIVE
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "A polished, wooden holy symbol"
+}
+appearance {
+  probability: COMMON
+  appearance: "A wooden holy symbol."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A worn holy symbol."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Wooden Holy Symbol"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

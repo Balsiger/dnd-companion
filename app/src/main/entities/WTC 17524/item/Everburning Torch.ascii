@@ -1,0 +1,142 @@
+entity {
+  name: "Everburning Torch"
+  category: "magic"
+  synonym: "Torch, Everburning"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+  }
+  world: "Generic"
+  description: "This otherwise normal torch has a continual flame spell cast upon it. An\n  everburning torch clearly illuminates a 20-foot radius and provides shadowy\n  illumination out to a 40-foot radius. See page 164 in the \\Product[WTC\n  17524]{Player\'s Handbook} for more rules on illumination."
+}
+value {
+  gold: 110
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A burning torch that does not give off heat."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Everburning Torch"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+      imperial {
+        feet {
+          leader: 20
+        }
+      }
+    }
+    shape: SPHERE
+  }
+  shadowy {
+    distance {
+      imperial {
+        feet {
+          leader: 40
+        }
+      }
+    }
+    shape: SPHERE
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+    modifier: 1
+  }
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

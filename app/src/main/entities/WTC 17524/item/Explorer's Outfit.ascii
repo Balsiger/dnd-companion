@@ -1,0 +1,127 @@
+entity {
+  name: "Explorer\'s Outfit"
+  category: "clothing"
+  synonym: "Outfit, Explorer\'s"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 129
+      high: 129
+    }
+    pages {
+      low: 131
+      high: 131
+    }
+  }
+  world: "Generic"
+  description: "This is a full set of clothes for someone who never knows what to expect. It\n  includes sturdy boots, leather breeches or a skirt, a belt, a shirt (perhaps\n  with a vest or jacket), gloves, and a cloak.  Rather than a leather skirt, a\n  leather overtunic may be worn over a cloth skirt. The clothes have plenty of\n  pockets (especially the cloak). The outfit also includes any extra items you\n  might need, such as a scarf or a wide-brimmed hat."
+}
+value {
+  gold: 10
+}
+weight {
+  imperial {
+    pounds {
+      leader: 8
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A set with sturdy boots, leather breeches, a belt, a shirt, gloves, and a cloak."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Explorer\'s Outfit"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

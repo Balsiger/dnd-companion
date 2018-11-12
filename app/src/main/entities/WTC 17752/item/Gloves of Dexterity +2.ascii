@@ -1,0 +1,136 @@
+entity {
+  name: "Gloves of Dexterity +2"
+  category: "magic"
+  category: "gloves"
+  category: "wearable"
+  category: "dexterity"
+  synonym: "Dexterity +2, Gloves"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 257
+      high: 257
+    }
+  }
+  world: "Generic"
+  description: "These thin leather gloves are very flexible and allow for delicate\n  manipulation. They add to the wearer\'s Dexterity score in the form of an\n  enhancement bonus of +2. Both gloves must be worn for the magic to be\n  effective. "
+  short_description: "Wearing gives +2 enhancement bonus to Dexterity."
+}
+value {
+  gold: 4000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A pair of thin, brown leather gloves."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Gloves"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+  modifier {
+    modifier {
+      modifier {
+        value: 2
+        type: GENERAL
+      }
+    }
+    type: DEXTERITY
+  }
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

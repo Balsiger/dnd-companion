@@ -1,0 +1,142 @@
+entity {
+  name: "Belt"
+  category: "gear"
+  category: "mundane"
+  reference {
+    name: "TSR 9358"
+    pages {
+      low: 81
+      high: 81
+    }
+  }
+  description: "A belt to be put around ones waist."
+  short_description: "A belt."
+}
+value {
+  silver: 3
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: SMALL
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A simple rope use as a belt."
+}
+appearance {
+  probability: COMMON
+  appearance: "A ragged, brown strip of cloth used as belt."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple brown leather belt."
+}
+appearance {
+  probability: RARE
+  appearance: "A simple black leather belt."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "An ornate brown leather belt."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "An ornate black leather belt."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Belt"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

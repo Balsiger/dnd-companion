@@ -1,0 +1,115 @@
+entity {
+  name: "Demon Armor"
+  base: "full plate"
+  base: "armor +4"
+  category: "armor"
+  category: "demon"
+  category: "plate"
+  category: "full"
+  synonym: "Armor, Demon"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 220
+      high: 220
+    }
+  }
+  world: "Generic"
+  description: "This plate armor is fashioned to make the wearer appear to be a demon. The\n  helmet is shaped to look like a horned demon head, and its wearer looks out\n  of the open, tooth-filled mouth.  This +4 full plate allows the wearer to\n  make claw attacks that deal 1d10 points of damage, strike as +1 weapons, and\n  afflict the target as if she had been struck by a \\SpellRef{contagion} spell\n  (Fortitude DC 14 negates). Use of contagion requires a normal melee attack\n  with the claws. The \342\200\232\303\204\303\272claws\342\200\232\303\204\303\271 are built into the armor\342\200\232\303\204\303\264s vambraces and\n  gauntlets.  The armor bestows one negative level on any nonevil creature\n  wearing it. This negative level persists as long as the armor is worn and\n  disappears when the armor is removed.\n\n  The negative level never results in actual level loss, but it cannot be\n  overcome in any way (including restoration spells) while the armor is worn."
+  short_description: "Full Plate +4 with claw attacks (1d10 damage) and \\SpellRef{Contagion} with For DC 14."
+}
+value {
+  gold: 52260
+}
+weight {
+}
+probability: VERY_RARE
+size {
+  size: MEDIUM
+}
+appearance {
+  probability: COMMON
+  appearance: "The armor looks like the hide of a demon."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

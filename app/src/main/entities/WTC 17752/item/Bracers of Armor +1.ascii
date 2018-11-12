@@ -1,0 +1,130 @@
+entity {
+  name: "Bracers of Armor +1"
+  category: "bracers"
+  category: "armor"
+  category: "magic"
+  category: "wondrous"
+  category: "clothing"
+  synonym: "Armor, Bracers of +1"
+  synonym: "+1 Bracers of Armor"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 250
+      high: 250
+    }
+  }
+  world: "Generic"
+  description: "These items appear to be wrist or arm guards. They surround the wearer with\n  an invisible but tangible field of force, granting him an armor bonus of +1,\n  just as though he were wearing armor. Both bracers must be worn for the magic\n  to be effective."
+  short_description: "Bracers providing +1 armor."
+}
+value {
+  gold: 1000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: SMALL
+}
+hardness: 10
+hit_points: 24
+appearance {
+  probability: COMMON
+  appearance: "Metal wrist and arm guards."
+}
+substance {
+  material: IRON
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Bracers"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

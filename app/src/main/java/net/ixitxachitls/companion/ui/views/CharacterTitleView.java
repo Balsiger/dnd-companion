@@ -88,16 +88,14 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
   @Override
   protected List<Message> messageIcons() {
     List<Message> messages = super.messageIcons();
-    messages.addAll(CompanionApplication.get().messages().getMessages(creature.get().getId()));
+    if (creature.isPresent()) {
+      messages.addAll(CompanionApplication.get().messages().getMessages(creature.get().getId()));
+    }
 
     return messages;
   }
 
-  protected void updateMessages() {
-    messages.ensureOnly(messageIcons(), this::createMessageIcon);
-  }
-
   protected MessageView createMessageIcon(Message message) {
-    return new MessageView(getContext(), (Character) creature.get(), message);
+    return new MessageView(getContext(), creature.get(), message);
   }
 }

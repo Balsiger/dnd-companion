@@ -1,0 +1,98 @@
+entity {
+  name: "Bracers of Armor +6"
+  base: "bracers of armor +1"
+  synonym: "Armor, Bracers of +6"
+  synonym: "+6 Bracers of Armor"
+  description: "These items appear to be wrist or arm guards. They surround the wearer with\n  an invisible but tangible field of force, granting him an armor bonus of +6,\n  just as though he were wearing armor. Both bracers must be worn for the magic\n  to be effective."
+  short_description: "Bracers providing +6 armor."
+}
+value {
+  gold: 36000
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

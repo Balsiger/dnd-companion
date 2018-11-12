@@ -152,10 +152,6 @@ public class TitleView extends LinearLayout {
     return new ArrayList<>();
   }
 
-  protected List<Message> messageIcons() {
-    return new ArrayList<>();
-  }
-
   public void updateIcons() {
     icons.ensureOnly(iconDrawableResources(), this::createIcon);
   }
@@ -168,5 +164,17 @@ public class TitleView extends LinearLayout {
     icon.setAdjustViewBounds(true);
 
     return icon;
+  }
+
+  protected List<Message> messageIcons() {
+    return new ArrayList<>();
+  }
+
+  protected void updateMessages() {
+    messages.ensureOnly(messageIcons(), this::createMessageIcon);
+  }
+
+  protected @Nullable MessageView createMessageIcon(Message message) {
+    return null;
   }
 }

@@ -1,0 +1,128 @@
+entity {
+  name: "Metamagic Rod Extend"
+  base: "rod"
+  category: "metamagic"
+  category: "rod"
+  category: "extend"
+  synonym: "Rod, Metamagic (Extend)"
+  synonym: "Extend, Metamagic Rod"
+  synonym: "Metamagic Rod (extend)"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 236
+      high: 236
+    }
+  }
+  world: "Generic"
+  description: "Metamagic rods hold the essence of a metamagic feat but do not change the\n  spell slot of the altered spell. All the rods described here are\n  use-activated (but casting spells in a threatened area still draws an attack\n  of opportunity). A caster may only use one metamagic rod on any given spell,\n  but it is permissible to combine a rod with metamagic feats possessed by\n  the rod\342\200\232\303\204\303\264s wielder. In this case, only the feats possessed by the wielder\n  adjust the spell slot of the spell being cast.\n\n  Possession of a metamagic rod does not confer the associated feat on the\n  owner, only the ability to use the given feat a specified number of times per\n  day. A sorcerer still must take a full-round action when using a metamagic\n  rod, just as if using a metamagic feat he possesses.\n\n  This rod can be used with spells of 6th level or lower. The wielder can cast\n  up to three spells per day that are extended as though using the Extend Spell\n  feat."
+  short_description: "Wielder can cast three spells of 6th level or lower per day extended."
+}
+value {
+  gold: 11000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 5
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple metal rod."
+}
+substance {
+  material: IRON
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Rod"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

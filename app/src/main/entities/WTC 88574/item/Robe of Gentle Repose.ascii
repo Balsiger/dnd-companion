@@ -1,0 +1,124 @@
+entity {
+  name: "Robe of Gentle Repose"
+  category: "robe"
+  category: "decay"
+  category: "undead"
+  synonym: "Gentle Repose, Robe of"
+  reference {
+    name: "WTC 88574"
+    pages {
+      low: 130
+      high: 130
+    }
+  }
+  world: "Forgotten Realms"
+  description: "This simple garment is favored by intelligent corporeal undead, particularly liches. It surrounds the wearer with a constant \\Reference{spell}{Gentle Repose} effect, preventing all decay of his or her corporeal form.\nCaster Level: 3rd; Prerequisites: Craft Wondrous Item,\n"
+  short_description: "Surrounds wearer with constant \\Reference{spell}{Gentle Repose}, preventing all decay."
+}
+value {
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: SMALL
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A simple robe."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Robe"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

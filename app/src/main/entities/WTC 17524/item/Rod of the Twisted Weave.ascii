@@ -1,0 +1,102 @@
+entity {
+  name: "Rod of the Twisted Weave"
+  base: "rod"
+  synonym: "Twisted Weave, Rod of"
+  world: "Forgotten Realms"
+  description: "This rod is a long black scepter with a point at one end. The other end is an intricate design of loosely woven and twisted strands, with raw magical energy glowing pale green in the midst of it, like a burning jet of natural gas. The rod of the twisted Weave functions just like a rod of absorption, automatically absorbing single-target spells or rays (and spell-like abilities duplicating those effects) directed at the possessor or the possessor\342\200\231s gear. However, instead of storing absorbed spell energy, the rod immediately creates a backlash of negative energy that deals 1d6 points of damage per absorbed spell level to the caster of the spell (a successful Will save reduces the damage by half). A negative energy pro- tection spell negates this damage, and undead spellcasters are\nactually healed by this effect.\n\n"
+  short_description: "Absorbs single-target or ray spells and backlashes with 1d6 points of damage per absorbed spell level (Will DC ?? for half)."
+}
+value {
+  gold: 60000
+}
+weight {
+}
+probability: VERY_RARE
+size {
+}
+appearance {
+  probability: RARE
+  appearance: "A long black scepter with a point at one end and another end with an intricate design of loosely woven and twisted strands, with raw magical energy glowing pale green in the midst of it."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

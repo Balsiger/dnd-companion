@@ -1,0 +1,127 @@
+entity {
+  name: "Keoghtom\'s Ointment"
+  category: "ointment"
+  category: "salve"
+  category: "healing"
+  synonym: "Ointment, Keoghtom\'s"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 261
+      high: 261
+    }
+  }
+  world: "Generic"
+  description: "A jar of this unguent is 3 inches in diameter and 1 inch deep and contains\n  five applications. Placed upon a poisoned wound or swallowed, the ointment\n  detoxifies any poison (as \\Spell{neutralize poison}). Applied to a diseased\n  area, it removes disease (as \\Spell{remove disease}). Rubbed on a wound, the\n  ointment cures 1d8+5 points of damage (as \\Spell{cure light wounds})."
+  short_description: "A detoxifying, disease freeing or healing salve."
+}
+value {
+  gold: 4000
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: DIMINUTIVE
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A small jar containing a salve."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Salve"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

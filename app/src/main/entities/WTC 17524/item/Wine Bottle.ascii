@@ -1,0 +1,150 @@
+entity {
+  name: "Wine Bottle"
+  category: "liquid"
+  category: "goods"
+  synonym: "Bottle, Wine"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 126
+      high: 126
+    }
+  }
+  reference {
+    name: "TSR 11550"
+    pages {
+      low: 110
+      high: 110
+    }
+  }
+  world: "Generic"
+  description: "This is a simple bottle, as it is used for wine."
+}
+value {
+  gold: 2
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: DIMINUTIVE
+}
+hardness: 1
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "An elaborately crafted wine bottle."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A wine bottle with a fine label."
+}
+appearance {
+  probability: COMMON
+  appearance: "A common wine bottle."
+}
+appearance {
+  probability: UNCOMMON
+  appearance: "A scratched wine bottle."
+}
+appearance {
+  probability: RARE
+  appearance: "A broken wine bottle."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Wine Bottle"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: GASEOUS
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

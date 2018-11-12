@@ -1,0 +1,128 @@
+entity {
+  name: "Slippers of Spider Climbing"
+  category: "magic"
+  category: "boots"
+  category: "climb"
+  synonym: "Spider Climbing, Slippers of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 266
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "When worn, a pair of these slippers enable movement on vertical surfaces or\n   even upside down along ceilings, leaving the wearer\'s hands free. Her\n   speed is 20 feet. Severely slippery surfaces --- icy, oiled, or greased\n   surfaces --- make these slippers useless. The slippers can be used for 10\n   minutes per day, split up as the wearer chooses."
+  short_description: "10 min/day, Climb 20 ft anywhere, leaving hands free; do not work on slippery surfaces."
+}
+value {
+  gold: 4800
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A set of brown leather slippers."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Slippers"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

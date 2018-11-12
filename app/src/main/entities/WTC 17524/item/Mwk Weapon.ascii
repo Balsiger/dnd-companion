@@ -1,0 +1,129 @@
+entity {
+  name: "Mwk Weapon"
+  category: "masterwork"
+  synonym: "Masterwork"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 122
+      high: 122
+    }
+  }
+  description: "A masterwork weapon is a finely crafted version of a normal weapon. Wielding\n   it provides a +1 enhancement bonus on attack rolls.\n\n  You can\'t add the masterwork quality to a weapon after it is created; it must\n  be crafted as a masterwork weapon (see the Craft skill, page 70). The\n  masterwork quality adds 300 gp to the cost of a normal weapon. For example, a\n  masterwork bastard sword costs 335 gp.\n\n  All magic weapons are automatically considered to be of masterwork\n  quality. The enhancement bonus granted by the masterwork quality doesn\'t\n  stack with the enhancement bonus provided by the weapon\'s magic.\n\n  Even though some types of armor and shields (such as spiked shields) can be\n  used as weapons, you can\'t create a masterwork version of such an item that\n  confers an enhancement bonus on attack rolls. Instead, masterwork armor and\n  shields have lessened armor check penalties (see Masterwork Armor, page\n  126)."
+  short_description: "A masterwork version."
+}
+value {
+  gold: 300
+}
+weight {
+}
+probability: UNCOMMON
+size {
+}
+appearance {
+  probability: COMMON
+  appearance: "Good workmanship."
+}
+appearance {
+  probability: COMMON
+  appearance: "Finely crafted."
+}
+appearance {
+  probability: COMMON
+  appearance: "Well made."
+}
+appearance {
+  probability: RARE
+  appearance: "Extraordinarily well made."
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+  modifier {
+    modifier {
+      modifier {
+        value: 1
+        type: ENHANCEMENT
+      }
+    }
+    type: ATTACK
+  }
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

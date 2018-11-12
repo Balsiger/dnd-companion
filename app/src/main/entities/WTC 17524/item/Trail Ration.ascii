@@ -1,0 +1,136 @@
+entity {
+  name: "Trail Ration"
+  category: "food"
+  category: "gear"
+  synonym: "Ration, Trail"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 127
+      high: 127
+    }
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "Trail rations are compact, dry, high-energy foods suitable for travel, such\n  as jerky, dried fruit, hardtack, and nuts."
+}
+value {
+  silver: 5
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: DIMINUTIVE
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A fine cloth enwrapped package of dry, high-energy foods (jerky, dried fruit, hardtack, and nuts)."
+}
+appearance {
+  probability: COMMON
+  appearance: "A cloth enwrapped package of dry, high-energy foods (jerky, hardtack, and nuts)."
+}
+appearance {
+  probability: COMMON
+  appearance: "A simple cloth enwrapped package of dry, high-energry foods (jerky and hardtack)."
+}
+substance {
+  material: PAPER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Trail Ration"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

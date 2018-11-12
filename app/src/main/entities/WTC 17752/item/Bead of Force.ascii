@@ -1,0 +1,127 @@
+entity {
+  name: "Bead of Force"
+  category: "sphere"
+  category: "magic"
+  category: "force"
+  category: "bead"
+  synonym: "Force, Bead of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 248
+      high: 248
+    }
+  }
+  world: "Generic"
+  description: "This small black sphere appears to be a lusterless pearl. You can throw it\n  up to 60 feet with no range penalties. Upon sharp impact, the bead explodes,\n  sending forth a burst that deals 5d6 points of force damage to all creatures\n  within a 10-foot radius.\n\n  The explosion completely consumes the bead, making this a one-use item."
+  short_description: "Throw up to 60 ft explodes with a 5d6 force burst within 10 ft."
+}
+value {
+  gold: 3000
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: TINY
+}
+appearance {
+  probability: COMMON
+  appearance: "A small lusterless black pearl."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Black Pearl"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

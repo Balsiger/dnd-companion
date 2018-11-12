@@ -1,0 +1,105 @@
+entity {
+  name: "Shadow Armor"
+  category: "shadow"
+  category: "magic"
+  synonym: "shadow"
+  synonym: "Armor, Shadow"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 219
+      high: 219
+    }
+  }
+  description: "This armor is jet black and blurs the wearer whenever she tries to hide,\n  granting a +5 competence bonus on Hide checks.  (The armor\'s armor check\n  penalty still applies normally.)"
+}
+value {
+  gold: 3750
+}
+weight {
+}
+probability: COMMON
+size {
+}
+substance {
+  thickness {
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

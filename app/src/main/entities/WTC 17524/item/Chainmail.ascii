@@ -1,0 +1,141 @@
+entity {
+  name: "Chainmail"
+  synonym: "Mail, Chain"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 123
+      high: 123
+    }
+    pages {
+      low: 124
+      high: 124
+    }
+    pages {
+      low: 125
+      high: 125
+    }
+  }
+  world: "Generic"
+  description: "This armor is made of interlocking metal rings. It includes a layer of\n  quilted fabric worn underneath to prevent chafing and to cushion the impact\n  of blows. Several layers of mail are hung over vital areas. Most of the\n  armor\'s weight hangs from the shoulders, making chainmail uncomfortable to\n  wear for long periods of time. The suit includes gauntlets."
+}
+value {
+  gold: 150
+}
+weight {
+  imperial {
+    pounds {
+      leader: 40
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A suite of chainmail."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A battered suite of chainmail."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Chainmail"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+    modifier {
+      value: 5
+      type: ARMOR
+    }
+  }
+  type: MEDIUM
+  max_dexterity: 2
+  check_penalty: -5
+  arcane_failure: 30
+  speed_fast {
+    imperial {
+      feet {
+        leader: 15
+      }
+    }
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

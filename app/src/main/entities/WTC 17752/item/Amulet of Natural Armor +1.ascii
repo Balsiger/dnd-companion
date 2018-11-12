@@ -1,0 +1,132 @@
+entity {
+  name: "Amulet of Natural Armor +1"
+  category: "magic"
+  category: "armor"
+  category: "amulet"
+  synonym: "Natural Armor +1, Amulet"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 246
+      high: 247
+    }
+  }
+  world: "Generic"
+  description: "This amulet, usually crafted from bone or beast scales, toughens the\n  wearer\'s body and flesh, giving him an enhancement bonus to his natural armor\n  bonus of +1."
+  short_description: "Gives a +1 enhancement bonus to natural armor."
+}
+value {
+  gold: 2000
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 10
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "An amulet made from bone."
+}
+appearance {
+  probability: COMMON
+  appearance: "An amulet made from beast scales."
+}
+substance {
+  material: BONE
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Amulet"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

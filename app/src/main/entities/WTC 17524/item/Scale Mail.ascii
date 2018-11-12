@@ -1,0 +1,137 @@
+entity {
+  name: "Scale Mail"
+  synonym: "Mail, Scale"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 123
+      high: 123
+    }
+    pages {
+      low: 125
+      high: 125
+    }
+  }
+  world: "Generic"
+  description: "This armor consists of a coat and leggings (and perhaps a separate skirt) of\n  leather covered with overlapping pieces of metal, much like the scales of a\n  fish. The suit includes gauntlets."
+}
+value {
+  gold: 50
+}
+weight {
+  imperial {
+    pounds {
+      leader: 30
+    }
+    ounces {
+    }
+  }
+}
+probability: UNCOMMON
+size {
+  size: SMALL
+}
+appearance {
+  probability: COMMON
+  appearance: "A suite of scale mail."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A battered suite of scale mail."
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Scale Mail"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+    modifier {
+      value: 4
+      type: ARMOR
+    }
+  }
+  type: MEDIUM
+  max_dexterity: 3
+  check_penalty: -4
+  arcane_failure: 25
+  speed_fast {
+    imperial {
+      feet {
+        leader: 15
+      }
+    }
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

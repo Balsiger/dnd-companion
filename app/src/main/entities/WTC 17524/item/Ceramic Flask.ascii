@@ -1,0 +1,166 @@
+entity {
+  name: "Ceramic Flask"
+  category: "gear"
+  synonym: "Flask (Ceramic)"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 128
+    }
+  }
+  world: "Generic"
+  description: "This ceramic container is fitted with a tight stopper and holds 1 pint of\n  liquid."
+}
+value {
+  copper: 3
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+      nominator: 1
+      denominator: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: FINE
+}
+hardness: 1
+hit_points: 1
+appearance {
+  probability: VERY_RARE
+  appearance: "An ornamented ceramic flask with a tight stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A blue colored ceramic flask with a tight stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A red colored ceramic flask with a tight stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A green colored ceramic flask with a tight stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A yellow colored ceramic flask with a tight stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A orange colored ceramic flask with a tight stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A black colored ceramic flask with a tight stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A brown colored ceramic flask with a tight stopper."
+}
+appearance {
+  probability: RARE
+  appearance: "A white colored ceramic flask with a tight stopper."
+}
+appearance {
+  probability: COMMON
+  appearance: "An unadorned ceramic flask with a tight stopper."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A shabby, scratched ceramic flask with a stopper."
+}
+substance {
+  material: GLASS
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+  state: GASEOUS
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

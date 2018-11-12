@@ -1,0 +1,126 @@
+entity {
+  name: "Folding Boat"
+  category: "boat"
+  category: "magic"
+  category: "gear"
+  category: "water"
+  synonym: "Boat, Folding"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "A folding boat looks like a small wooden box\342\210\232\302\242\302\254\303\204\302\254\303\256about 12 inches long, 6 inches\n  wide, and 6 inches deep. It can be used to store items like any other box. If\n  a command word is given, however, the box unfolds itself to form a boat 10\n  feet long, 4 feet wide, and 2 feet in depth. A second command word causes it\n  to unfold to a ship 24 feet long, 8 feet wide, and 6 feet deep. Any objects\n  formerly stored in the box now rest inside the boat or ship.\n\n  In its smaller form, the boat has one pair of oars, an anchor, a mast, and a\n  lateen sail. In its larger form, the boat has a deck, single rowing seats,\n  five sets of oars, a steering oar, an anchor, a deck cabin, and a mast with a\n  square sail. The boat can hold four people comfortably, while the ship\n  carries fifteen with ease.  A third word of command causes the boat or ship\n  to fold itself into a box once again. The words of command may be inscribed\n  visibly or invisibly on the box, or they may be written else-where \342\210\232\302\242\302\254\303\204\302\254\303\256 perhaps\n  on an item within the box."
+  short_description: "A small box that can transform into a boat or a ship."
+}
+value {
+  gold: 12500
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: COMMON
+size {
+  size: MEDIUM
+}
+appearance {
+  probability: COMMON
+  appearance: "A small wooden box."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Small Wooden Box"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

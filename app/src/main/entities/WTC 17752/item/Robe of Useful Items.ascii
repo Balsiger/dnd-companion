@@ -1,0 +1,125 @@
+entity {
+  name: "Robe of Useful Items"
+  category: "clothing"
+  category: "robe"
+  synonym: "Useful Items, Robe of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 266
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "This appears to be an unremarkable robe, but a character who dons it notes\n  that it is adorned with small cloth patches of various shapes. Only the\n  wearer of the robe can see these patches, recognize them for what items they\n  become, and detach them. One patch can be detached each round. Detaching a\n  patch causes it to become an actual item, as indicated below. A newly created\n  \\Item{robe of useful items} always has two each of the following patches:\n\n  \\List\n  {\\Item{Dagger}}\n  {\\Item{Bullseye Lantern} (filled and lit)}\n  {\\Item{Mirror} (a highly polished 2-foot-by-4-foot steel mirror}\n  {\\Item{Pole} (10-foot length)}\n  {\\Item{Hempen rope} (50-foot coil)}\n  {\\Item{Sack}}\n\n  In addition, the robe has several other patches (see table).\n\n  Once removed, a patch cannot be replaced."
+  short_description: "A simple robe with detachable patches containing useful items."
+}
+value {
+  gold: 7000
+}
+weight {
+  imperial {
+    pounds {
+      leader: 1
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: MEDIUM
+}
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "An unremarkable, unadorned robe."
+}
+substance {
+  material: CLOTH
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Robe"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

@@ -1,0 +1,160 @@
+entity {
+  name: "Light Pick"
+  category: "hammer"
+  synonym: "Pick, Light"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 116
+      high: 116
+    }
+    pages {
+      low: 120
+      high: 120
+    }
+  }
+  world: "Generic"
+  description: "A pick is designed to concentrate the force of its blow on a small area. A\n  light or heavy pick resembles a \\Item{miner\'s pick} but is specifically\n  designed for war."
+}
+value {
+  gold: 4
+}
+weight {
+  imperial {
+    pounds {
+      leader: 3
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+hardness: 5
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A light pick."
+}
+appearance {
+  probability: VERY_RARE
+  appearance: "A rusty, light pick."
+}
+substance {
+  material: WOOD
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Light Pick"
+weapon {
+  damage {
+    damage {
+      base {
+        number: 1
+        dice: 4
+      }
+      conditional {
+      }
+    }
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  type: PIERCING
+  critical {
+    threat {
+    }
+    multiplier: 4
+  }
+  style: LIGHT_MELEE
+  proficiency: MARTIAL
+  range {
+    imperial {
+      feet {
+        leader: 10
+      }
+    }
+  }
+  reach {
+    imperial {
+      feet {
+        leader: 5
+      }
+    }
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+random {
+  type: MUNDANE
+  multiple {
+  }
+  item: "mwk weapon"
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

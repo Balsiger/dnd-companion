@@ -1,0 +1,128 @@
+entity {
+  name: "Spell Component Pouch"
+  category: "magic"
+  synonym: "Pouch, Spell Component"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 128
+      high: 128
+    }
+    pages {
+      low: 130
+      high: 130
+    }
+  }
+  world: "Generic"
+  description: "This small, watertight leather belt pouch has many compartments. A\n  spellcaster with a spell component pouch is assumed to have all the material\n  components and focuses needed for spellcasting, except for those components\n  that have a specific cost, divine focuses, and focuses that\n  wouldn\'t fit in a pouch (such as the natural pool that a druid\n  needs to look into to cast scrying)."
+}
+value {
+  gold: 5
+}
+weight {
+  imperial {
+    pounds {
+      leader: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: VERY_RARE
+size {
+  size: FINE
+}
+hardness: 2
+hit_points: 1
+appearance {
+  probability: COMMON
+  appearance: "A small leather pouch with a vast amount of spell components."
+}
+substance {
+  material: LEATHER
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Spell Component Pouch"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

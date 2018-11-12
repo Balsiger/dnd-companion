@@ -1,0 +1,106 @@
+entity {
+  name: "Cloak of Resistance +1"
+  base: "cloak"
+  synonym: "Resistance +1, Cloak of"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 253
+      high: 253
+    }
+  }
+  world: "Generic"
+  description: "These garments offer magic protection in the form of a +1 to resistance\n   bonus on all saving throws (Fortitude, Reflex, and Will)."
+  short_description: "+1 resistance to Fort, Ref, Will"
+}
+value {
+  gold: 1000
+}
+weight {
+}
+probability: RARE
+size {
+}
+substance {
+  thickness {
+  }
+}
+player_name: "Cloak"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}

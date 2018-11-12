@@ -1,0 +1,127 @@
+entity {
+  name: "Eyes of the Eagle"
+  category: "crystal"
+  category: "eye"
+  category: "lense"
+  category: "spectacles"
+  synonym: "Eagle, Eyes of the"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 256
+      high: 256
+    }
+  }
+  world: "Generic"
+  description: "These items are made of special crystal and fit over the eyes of the\n  wearer. These lenses grant a +5 competence bonus on Spot checks. Wearing only\n  one of the pair causes a char- acter to become dizzy and, in effect, stunned\n  for 1 round. There- after, the wearer can use the single lens without being\n  stunned so long as she covers her other eye. Of course, she can remove the\n  single lens and see normally at any time, or wear both lenses to end or avoid\n  the dizziness."
+  short_description: "A pair of eye lenses for +5 competence to Spot."
+}
+value {
+  gold: 2500
+}
+weight {
+  imperial {
+    pounds {
+      nominator: 1
+      denominator: 2
+    }
+    ounces {
+    }
+  }
+}
+probability: RARE
+size {
+  size: TINY
+}
+appearance {
+  probability: COMMON
+  appearance: "A pair of crystal lenses."
+}
+substance {
+  material: CRYSTAL
+  thickness {
+    imperial {
+      inches {
+      }
+    }
+  }
+}
+player_name: "Crystal Lenses"
+weapon {
+  damage {
+  }
+  secondary_damage {
+  }
+  splash {
+  }
+  critical {
+    threat {
+    }
+  }
+  range {
+  }
+  reach {
+  }
+}
+wearable {
+  wear {
+  }
+  wear_hastily {
+  }
+  remove {
+  }
+}
+incomplete {
+}
+magic {
+}
+counted {
+}
+multiple {
+}
+multiuse {
+}
+timed {
+  duration {
+    duration {
+    }
+  }
+}
+commodity {
+  area {
+  }
+  length {
+  }
+}
+container {
+  capacity {
+  }
+}
+armor {
+  ac_bonus {
+  }
+  speed_fast {
+  }
+  speed_slow {
+  }
+}
+light {
+  bright {
+    distance {
+    }
+  }
+  shadowy {
+    distance {
+    }
+  }
+}
+composite {
+}
+material {
+  value {
+  }
+  weight_multiplier {
+  }
+  hp_multiplier {
+  }
+}
