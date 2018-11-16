@@ -20,12 +20,13 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_character_statistics"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingEnd="20dp"
     android:paddingStart="20dp"
     android:paddingTop="20dp">
@@ -34,7 +35,7 @@
       android:id="@+id/scrollView"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_above="@+id/item_add">
+      android:layout_weight="1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,45 +44,74 @@
 
       <LinearLayout
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
           android:orientation="horizontal">
 
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total wealth:"
+                android:textStyle="bold"
+                android:theme="@style/LargeText"/>
+
+            <TextView
+                android:id="@+id/wealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="0 gp"
+                android:theme="@style/LargeText"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total weight:"
+                android:textStyle="bold"
+                android:theme="@style/LargeText"/>
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:text="0 lb"
+                android:theme="@style/LargeText"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/item_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total wealth:"
-            android:textStyle="bold"
-            android:theme="@style/LargeText"/>
-
-        <TextView
-            android:id="@+id/wealth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="5dp"
-            android:text="0 gp"
-            android:theme="@style/LargeText"/>
-
-      </LinearLayout>
-
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total weight:"
-            android:textStyle="bold"
-            android:theme="@style/LargeText"/>
-
-        <TextView
-            android:id="@+id/weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="5dp"
-            android:text="0 lb"
-            android:theme="@style/LargeText"/>
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@color/white"
+            app:backgroundTint="@color/item"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:srcCompat="@drawable/ic_add_black_24dp"/>
 
       </LinearLayout>
 
@@ -95,31 +125,40 @@
     </LinearLayout>
   </ScrollView>
 
-  <net.ixitxachitls.companion.ui.views.ImageDropTarget
-      android:id="@+id/item_remove"
-      android:layout_width="40dp"
-      android:layout_height="40dp"
-      android:layout_alignParentBottom="true"
-      android:layout_alignParentStart="true"
-      android:layout_margin="5dp"
-      android:tint="@color/item"
-      app:srcCompat="@drawable/ic_delete_black_24dp"/>
-
-  <android.support.design.widget.FloatingActionButton
-      android:id="@+id/item_add"
-      android:layout_width="wrap_content"
+  <HorizontalScrollView
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"
-      android:layout_alignParentEnd="true"
-      android:layout_alignParentStart="false"
-      android:layout_alignParentTop="false"
-      android:layout_gravity="bottom|end"
-      android:layout_marginBottom="10dp"
-      android:clickable="true"
-      android:focusable="true"
-      android:tint="@color/white"
-      app:backgroundTint="@color/item"
-      app:layout_constraintBottom_toTopOf="@+id/scrollView"
-      app:srcCompat="@drawable/ic_add_black_24dp"/>
+      android:layout_weight="0">
+ia
+    <LinearLayout
+        android:id="@+id/targets"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+      <net.ixitxachitls.companion.ui.views.ImageDropTarget
+          android:id="@+id/item_remove"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:image="@drawable/noun_drop_970982"
+          app:text="Drop"/>
+
+      <net.ixitxachitls.companion.ui.views.ImageDropTarget
+          android:id="@+id/item_sell"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:image="@drawable/noun_coins_845722"
+          app:text="Sell"/>
+
+      <LinearLayout
+          android:id="@+id/targets_characters"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+      </LinearLayout>
+
+
+    </LinearLayout>
+  </HorizontalScrollView>
+
+</LinearLayout>

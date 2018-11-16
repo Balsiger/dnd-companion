@@ -31,6 +31,8 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Message;
+import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.User;
 
 import java.util.List;
@@ -39,7 +41,7 @@ import java.util.Optional;
 /**
  * View for a campaign title.
  */
-public class CampaignTitleView extends TitleView { //extends LinearLayout {
+public class CampaignTitleView extends TitleView {
 
   private Optional<Campaign> campaign = Optional.empty();
 
@@ -64,6 +66,7 @@ public class CampaignTitleView extends TitleView { //extends LinearLayout {
 
   public void update(Campaign campaign) {
     this.campaign = Optional.of(campaign);
+    campaign.getContext().messages().readMessages(campaign.getId());
     refresh();
   }
 
@@ -73,6 +76,10 @@ public class CampaignTitleView extends TitleView { //extends LinearLayout {
 
   public void update(Images images) {
     refresh();
+  }
+
+  public void update(Messages messaages) {
+    updateMessages();
   }
 
   public void refresh() {
@@ -99,5 +106,19 @@ public class CampaignTitleView extends TitleView { //extends LinearLayout {
     }
 
     return resources;
+  }
+
+  @Override
+  protected List<Message> messageIcons() {
+    List<Message> messages = super.messageIcons();
+    if (campaign.isPresent()) {
+      messages.addAll(CompanionApplication.get().messages().getMessages(campaign.get().getId()));
+    }
+
+    return messages;
+  }
+
+  protected MessageView createMessageIcon(Message message) {
+    return new CampaignMessageView(getContext(), campaign.get(), message);
   }
 }

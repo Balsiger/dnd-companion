@@ -39,8 +39,9 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
-import net.ixitxachitls.companion.data.values.Encounters;
+import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 /**
@@ -176,7 +177,7 @@ public abstract class Dialog extends DialogFragment {
     return CompanionApplication.get(getContext());
   }
 
-  protected CompanionContext data() {
+  protected CompanionContext context() {
     return application().context();
   }
 
@@ -184,8 +185,8 @@ public abstract class Dialog extends DialogFragment {
     return application().campaigns();
   }
 
-  protected Encounters battles() {
-    return application().encounters();
+  protected Messages messages() {
+    return application().messages();
   }
 
   protected Monsters monsters() {
@@ -194,6 +195,10 @@ public abstract class Dialog extends DialogFragment {
 
   protected Characters characters() {
     return application().characters();
+  }
+
+  protected User me() {
+    return application().me();
   }
 
   @Override

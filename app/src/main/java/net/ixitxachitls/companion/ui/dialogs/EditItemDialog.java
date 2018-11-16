@@ -69,12 +69,16 @@ public class EditItemDialog extends Dialog {
   private LabelledAutocompleteTextView itemSelection;
   private LabelledMultiAutocompleteTextView templatesSelection;
   private LabelledEditTextView name;
+  private LabelledEditTextView dmName;
   private LabelledEditTextView value;
   private LabelledEditTextView weight;
   private LabelledEditTextView hp;
   private LabelledEditTextView appearance;
   private LabelledEditTextView multiple;
   private LabelledEditTextView multiuse;
+  private LabelledEditTextView timeLeft;
+  private LabelledEditTextView playerNotes;
+  private LabelledEditTextView dmNotes;
   private Wrapper<Button> add;
   private Wrapper<Button> save;
 
@@ -141,6 +145,7 @@ public class EditItemDialog extends Dialog {
     TextWrapper.wrap(view, R.id.id).text(item.isPresent() ? item.get().getId() : "")
         .visible(Misc.onEmulator());
     name = view.findViewById(R.id.name);
+    dmName = view.findViewById(R.id.dm_name);
     value = view.findViewById(R.id.value);
     value.validate(Money::validate);
     weight = view.findViewById(R.id.weight);
@@ -149,6 +154,9 @@ public class EditItemDialog extends Dialog {
     appearance = view.findViewById(R.id.appearance);
     multiple = view.findViewById(R.id.multiple);
     multiuse = view.findViewById(R.id.multiuse);
+    timeLeft = view.findViewById(R.id.time_left);
+    playerNotes = view.findViewById(R.id.player_notes);
+    dmNotes = view.findViewById(R.id.dm_notes);
     add = Wrapper.<Button>wrap(view, R.id.add).onClick(() -> store(true)).disabled();
     save = Wrapper.<Button>wrap(view, R.id.save).onClick(() -> store(false));
     if (item.isPresent()) {
@@ -172,14 +180,35 @@ public class EditItemDialog extends Dialog {
           .map(ItemTemplate::getName)
           .collect(Collectors.toList())));
     }
+
+    dmName.disabled();
+    dmName.setVisibility(amDM() ? View.VISIBLE : View.GONE);
+    dmNotes.setVisibility(amDM() ? View.VISIBLE : View.GONE);
+
+    // We assume that if we have a value, we have everything else as well.
+    if (!item.getValue().isZero()) {
+      hp.text(String.valueOf(item.getHp()));
+      value.text(item.getValue().toString());
+      appearance.text(item.getAppearance());
+      name.text(item.getPlayerName());
+      dmName.text(item.getName());
+      multiple.text(String.valueOf(item.getMultiple()));
+      multiuse.text(String.valueOf(item.getMultiuse()));
+      timeLeft.text(item.getTimeLeft().isNone() ? "" : item.getTimeLeft().toString());
+      // identified
+      playerNotes.text(item.getPlayerNotes());
+      dmNotes.text(item.getDMNotes());
+    }
   }
 
   private void update(List<ItemTemplate> templates) {
+    String fullName = Item.name(templates);
     if (item.isPresent() && creature.isPresent() && creature.get().amPlayer()) {
       name.text(item.get().getPlayerName());
     } else {
-      name.text(Item.name(templates));
+      name.text(fullName);
     }
+    dmName.text(fullName);
     value.text(Item.value(templates).toString());
     weight.text(Item.weight(templates).toString());
     hp.text(String.valueOf(Item.hp(templates)));
@@ -202,10 +231,16 @@ public class EditItemDialog extends Dialog {
       add.enabled();
     } else {
       name.text("");
+      dmName.text("");
       value.text("");
       weight.text("");
       hp.text("");
       appearance.text("");
+      playerNotes.text("");
+      dmNotes.text("");
+      multiuse.text("1");
+      multiple.text("1");
+      timeLeft.text("");
       add.disabled();
     }
 
@@ -235,6 +270,15 @@ public class EditItemDialog extends Dialog {
     }
 
     return Integer.parseInt(multiuse.getText());
+  }
+
+  private Duration parseTimeLeft() {
+    Optional<Duration> parsed = Duration.parse(timeLeft.getText());
+    if (parsed.isPresent()) {
+      return parsed.get();
+    }
+
+    return Duration.ZERO;
   }
 
   private void store(boolean create) {
@@ -275,12 +319,16 @@ public class EditItemDialog extends Dialog {
         item.get().setName(name.getText());
       }
 
+      item.get().setPlayerName(name.getText());
       item.get().setValue(itemValue.get());
       item.get().setTemplates(templates);
       item.get().setHp(Integer.parseInt(hp.getText()));
       item.get().setAppearance(appearance.getText());
       item.get().setMultiple(parseMultiple());
       item.get().setMultiuse(parseMultiuse());
+      item.get().setTimeLeft(parseTimeLeft());
+      item.get().setPlayerNotes(playerNotes.getText());
+      item.get().setDMNotes(dmNotes.getText());
 
       if (creature.get().amPlayer()) {
         if (create) {
@@ -289,11 +337,15 @@ public class EditItemDialog extends Dialog {
           creature.get().updated(item.get());
         }
       } else {
-        Message.createForItem(CompanionApplication.get().context(), creature.get().getId(),
-            item.get(), CompanionApplication.get().context().me().getId());
+        Message.createForItemAdd(
+            CompanionApplication.get().context(), me().getId(), creature.get().getId(), item.get());
       }
 
       save();
     }
+  }
+
+  private boolean amDM() {
+    return creature.isPresent() && creature.get().amDM();
   }
 }

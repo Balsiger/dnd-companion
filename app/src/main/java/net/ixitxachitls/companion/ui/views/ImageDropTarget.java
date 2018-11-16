@@ -23,20 +23,34 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.support.annotation.ColorRes;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.DragEvent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
 
 /**
  * An image view that also serves as a drop target for certain other views.
  */
-public class ImageDropTarget<S> extends android.support.v7.widget.AppCompatImageView
-    implements View.OnDragListener {
+public class ImageDropTarget extends LinearLayout implements View.OnDragListener {
+
+  // State.
+  private final boolean round;
+  private ColorStateList tint;
+
+  // UI elements.
+  private Wrapper<ImageView> image;
+  private TextWrapper<TextView> text;
 
   @FunctionalInterface
   public interface Support {
@@ -52,17 +66,40 @@ public class ImageDropTarget<S> extends android.support.v7.widget.AppCompatImage
   private Optional<Executor> dropExecutor = Optional.empty();
 
   public ImageDropTarget(Context context) {
+    this(context, null);
+  }
+
+  public ImageDropTarget(Context context, AttributeSet attributes) {
+    super(context, attributes);
+    this.round = false;
+
+    TypedArray array =
+        getContext().obtainStyledAttributes(attributes, R.styleable.ImageDropTarget);
+    init(array.getDrawable(R.styleable.ImageDropTarget_image),
+        array.getString(R.styleable.ImageDropTarget_text));
+  }
+
+  public ImageDropTarget(Context context, Drawable icon, String text, boolean round) {
     super(context);
-    setOnDragListener(this);
+    this.round = round;
+
+    init(icon, text);
   }
 
-  public ImageDropTarget(Context context, AttributeSet attrs) {
-    super(context, attrs);
-    setOnDragListener(this);
-  }
+  private void init(Drawable icon, String text) {
+    View view = LayoutInflater.from(getContext()).inflate(
+        round ? R.layout.view_image_drop_target_round : R.layout.view_image_drop_target, this,
+        false);
+    this.image = Wrapper.<ImageView>wrap(view, R.id.icon);
+    this.image.get().setImageDrawable(icon);
+    this.text = TextWrapper.wrap(view, R.id.text).text(text).noWrap();
+    addView(view);
 
-  public ImageDropTarget(Context context, AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
+    if (image.get().getBackgroundTintList() == null) {
+      tint = ColorStateList.valueOf(getResources().getColor(R.color.black, null));
+    } else {
+      tint = image.get().getBackgroundTintList();
+    }
     setOnDragListener(this);
   }
 
@@ -86,15 +123,19 @@ public class ImageDropTarget<S> extends android.support.v7.widget.AppCompatImage
         }
 
       case DragEvent.ACTION_DRAG_ENTERED:
-        setTint(R.color.battle);
+        image.get().setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.drag_over,
+            null)));
+        text.textColor(R.color.drag_over);
         return true;
 
       case DragEvent.ACTION_DRAG_EXITED:
-        setTint(R.color.item);
+        image.get().setImageTintList(tint);
+        text.textColorValue(tint.getDefaultColor());
         return true;
 
       case DragEvent.ACTION_DROP:
-        setTint(R.color.item);
+        image.get().setImageTintList(tint);
+        text.textColorValue(tint.getDefaultColor());
         if (dropExecutor.isPresent()) {
           return dropExecutor.get().execute(event.getLocalState());
         }
@@ -103,9 +144,5 @@ public class ImageDropTarget<S> extends android.support.v7.widget.AppCompatImage
       default:
         return false;
     }
-  }
-
-  private void setTint(@ColorRes int color) {
-    setImageTintList(ColorStateList.valueOf(getResources().getColor(color, null)));
   }
 }

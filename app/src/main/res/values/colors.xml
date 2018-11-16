@@ -74,5 +74,9 @@
   <color name="brightRed">#f00</color>
   <color name="transparent">#00ff0000</color>
   <color name="error">#f00</color>
+  <color name="black">#000</color>
+
+  <color name="drag_over">#ff9100</color>
+  <color name="drag_back">#aaa</color>
 
 </resources>

@@ -56,7 +56,8 @@ public final class EditTextWrapper<V extends EditText>
   }
 
   public void hideLine() {
-    view.setBackgroundColor(view.getContext().getResources().getColor(R.color.transparent, null));
+    view.setBackgroundTintList(ColorStateList.valueOf(
+        view.getContext().getResources().getColor(R.color.transparent, null)));
   }
 
   public static <V extends EditText> EditTextWrapper<V> wrap(View parent, @IdRes int id) {

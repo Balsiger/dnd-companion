@@ -50,10 +50,11 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
   private final Substance substance;
   private final Container container;
   private final Appearances appearances;
+  private final boolean monetary;
 
   protected ItemTemplate(String name, List<String> synonyms, String description, Money value,
                          Weight weight, int hp, Substance substance, Container container,
-                         Appearances appearances) {
+                         Appearances appearances, boolean monetary) {
     super(name);
 
     this.synonyms = synonyms;
@@ -64,6 +65,7 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
     this.substance = substance;
     this.container = container;
     this.appearances = appearances;
+    this.monetary = monetary;
   }
 
   public String getDescription() {
@@ -72,7 +74,7 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
 
   public static ItemTemplate createEmpty(String name) {
     return new ItemTemplate(name, Collections.emptyList(), "", Money.ZERO, Weight.ZERO, 0,
-        Substance.ZERO, Container.NONE, Appearances.EMPTY);
+        Substance.ZERO, Container.NONE, Appearances.EMPTY, false);
   }
 
   public static Entity.ItemTemplateProto defaultProto() {
@@ -85,7 +87,8 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
         Money.fromProto(proto.getValue()), Weight.fromProto(proto.getWeight()),
         proto.getHitPoints(), Substance.fromProto(proto.getSubstance()),
         Container.fromProto(proto.getContainer()),
-        Appearances.fromProto(proto.getAppearanceList()));
+        Appearances.fromProto(proto.getAppearanceList()),
+        proto.getMonetary());
 
     return item;
   }
@@ -121,6 +124,10 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
 
   public boolean isContainer() {
     return container.hasCapacity();
+  }
+
+  public boolean isMonetary() {
+    return monetary;
   }
 
   public int computeHp() {

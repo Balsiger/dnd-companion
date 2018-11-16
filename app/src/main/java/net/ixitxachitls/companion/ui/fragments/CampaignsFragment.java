@@ -58,7 +58,7 @@ public class CampaignsFragment extends CompanionFragment {
 
   private TitleView user;
   private Wrapper<TextView> note;
-  private LinearLayout campaigns;
+  private UpdatableViewGroup<LinearLayout, CampaignTitleView, String> campaigns;
   private UpdatableViewGroup<LinearLayout, CharacterTitleView, String> characters;
 
   public CampaignsFragment() {
@@ -73,7 +73,7 @@ public class CampaignsFragment extends CompanionFragment {
 
     user = view.findViewById(R.id.user);
     user.setAction(() -> show(Type.settings));
-    campaigns = view.findViewById(R.id.campaigns);
+    campaigns = new UpdatableViewGroup<>(view.findViewById(R.id.campaigns));
     characters = new UpdatableViewGroup<>(view.findViewById(R.id.characters));
     note = Wrapper.<TextView>wrap(view, R.id.note).gone();
     Wrapper.wrap(view, R.id.campaign_add)
@@ -104,7 +104,21 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void update(Campaigns campaigns) {
-    this.campaigns.removeAllViews();
+    this.campaigns.ensureOnly(campaigns.getIds(), id -> new CampaignTitleView(getContext()));
+    this.campaigns.update(campaigns.getIds(),
+        (id, view) -> {
+          Optional<Campaign> campaign = campaigns.get(id);
+          if (campaign.isPresent()) {
+            view.update(campaign.get());
+            view.setAction(() -> {
+              CompanionFragments.get().showCampaign(campaign.get(), Optional.of(view));
+            });
+          }
+        });
+
+
+        /*
+    this.campaigns.getView().removeAllViews();
 
     // We have to recreate the campaigns as the transition away from this fragment seems to break
     // them.
@@ -114,14 +128,15 @@ public class CampaignsFragment extends CompanionFragment {
       campaign.observe(this, title::update);
       campaign.getDm().observe(this, title::update);
       title.update(campaign);
-      this.campaigns.addView(title);
+      this.campaigns.getView().addView(title);
       title.setAction(() -> {
         CompanionFragments.get().showCampaign(campaign, Optional.of(title));
       });
       campaignFound = true;
     }
+    */
 
-    note.visible(!campaignFound);
+    note.visible(campaigns.getIds().isEmpty());
 
     user.setTitle(me().getNickname());
     user.setSubtitle(subtitle());
@@ -150,18 +165,13 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void update(Images images) {
-    for (int i = 0; i < campaigns.getChildCount(); i++) {
-      CampaignTitleView title = (CampaignTitleView) campaigns.getChildAt(i);
-      title.update(images);
-    }
-    for (int i = 0; i < characters.getView().getChildCount(); i++) {
-      CharacterTitleView title = (CharacterTitleView) characters.getView().getChildAt(i);
-      title.update(images);
-    }
+    campaigns.simpleUpdate(v -> v.update(images));
+    characters.simpleUpdate(v -> v.update(images));
   }
 
   private void update(Messages messages) {
     characters.simpleUpdate(v -> v.update(messages));
+    campaigns.simpleUpdate(v -> v.update(messages));
   }
 
   private void update(Invites invites) {

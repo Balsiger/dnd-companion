@@ -32,6 +32,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Handling of messages between DM and players or between players.
@@ -39,28 +40,33 @@ import java.util.Map;
 public class Messages extends Documents<Messages> {
   protected static final String PATH = "messages";
 
-  private final Map<String, List<Message>> messagesByCharacterId = new HashMap<>();
+  private final Map<String, Message> messagesById = new HashMap<>();
+  private final Map<String, List<Message>> messagesByOwnerId = new HashMap<>();
 
   public Messages(CompanionContext context) {
     super(context);
   }
 
-  public List<Message> getMessages(String creatureId) {
-    return messagesByCharacterId.getOrDefault(creatureId, Collections.emptyList());
+  public Optional<Message> get(String id) {
+    return Optional.ofNullable(messagesById.get(id));
   }
 
-  public void readMessages(List<String> characterIds) {
-    for (String characterId : characterIds) {
-      readMessages(characterId);
+  public List<Message> getMessages(String id) {
+    return messagesByOwnerId.getOrDefault(id, Collections.emptyList());
+  }
+
+  public void readMessages(List<String> ids) {
+    for (String id : ids) {
+      readMessages(id);
     }
   }
 
-  public void readMessages(String characterId) {
-    if (!messagesByCharacterId.containsKey(characterId)) {
-      CollectionReference reference = db.collection(characterId + "/" + PATH);
+  public void readMessages(String id) {
+    if (!messagesByOwnerId.containsKey(id)) {
+      CollectionReference reference = db.collection(id + "/" + PATH);
       reference.addSnapshotListener((s, e) -> {
         if (e == null) {
-          readMessages(characterId, s.getDocuments());
+          readMessages(id, s.getDocuments());
         } else {
           Status.exception("Cannot read messages!", e);
         }
@@ -72,13 +78,15 @@ public class Messages extends Documents<Messages> {
     delete(messageId);
   }
 
-  private void readMessages(String characterId, List<DocumentSnapshot> snapshots) {
+  private void readMessages(String id, List<DocumentSnapshot> snapshots) {
     List<Message> messages = new ArrayList<>();
     for (DocumentSnapshot snapshot : snapshots) {
-      messages.add(Message.fromData(context, snapshot));
+      Message message = Message.fromData(context, snapshot);
+      messages.add(message);
+      messagesById.put(message.getId(), message);
     }
 
-    messagesByCharacterId.put(characterId, messages);
+    messagesByOwnerId.put(id, messages);
     updated();
   }
 }

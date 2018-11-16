@@ -32,9 +32,11 @@ import net.ixitxachitls.companion.data.CompanionContext;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -47,6 +49,7 @@ public class Characters extends Documents<Characters> {
   private final Map<String, Character> charactersByCharacterId = new HashMap<>();
   private final SortedSetMultimap<String, Character> charactersByCampaignId = TreeMultimap.create();
   private final SortedSetMultimap<String, Character> charactersByPlayerId = TreeMultimap.create();
+  private final Set<String> userIdsLoading = new HashSet<>();
 
   public Characters(CompanionContext context) {
     super(context);
@@ -124,6 +127,12 @@ public class Characters extends Documents<Characters> {
     return minPartyLevel <= level && maxPartyLevel >= level;
   }
 
+  public void addPlayers(Optional<Campaign> campaign) {
+    if (campaign.isPresent()) {
+      addPlayers(campaign.get());
+    }
+  }
+
   public void addPlayers(Campaign campaign) {
     addPlayer(campaign.getDm());
 
@@ -140,7 +149,8 @@ public class Characters extends Documents<Characters> {
   }
 
   public void addPlayer(User player) {
-    if (!charactersByPlayerId.containsKey(player.getId())) {
+    if (!userIdsLoading.contains(player.getId())) {
+      userIdsLoading.add(player.getId());
       CollectionReference reference = db.collection(player.getId() + "/" + PATH);
       reference.addSnapshotListener((s, e) -> {
         if (e == null) {

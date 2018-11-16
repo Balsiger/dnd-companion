@@ -31,7 +31,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.values.Item;
@@ -77,7 +76,12 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     title = Wrapper.<LinearLayout>wrap(view, R.id.title).onTouch(this::handleTouch);
     name = TextWrapper.wrap(view, R.id.name);
     summary = TextWrapper.wrap(view, R.id.summary);
-    TextWrapper.wrap(view, R.id.edit).onClick(this::edit);
+    TextWrapper<TextView> edit = TextWrapper.wrap(view, R.id.edit);
+    if (creature.amPlayer() || creature.amDM()) {
+      edit.onClick(this::edit);
+    } else {
+      edit.gone();
+    }
 
     details = Wrapper.<LinearLayout>wrap(view, R.id.details).gone();
     TextWrapper.wrap(view, R.id.id).text(item.getId()).visible(Misc.onEmulator());
@@ -88,14 +92,6 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
     addView(view);
     setOnDragListener(this);
-
-    // TODO(merlin): If we don't have an id, add one (this can be removed once all the debugging
-    // items got an appropriate id.
-    if (item.getId().isEmpty()) {
-      item.setId(Item.generateId(
-          ((CompanionApplication) context.getApplicationContext()).context()));
-      creature.store();
-    }
   }
 
   public void toggleDetails() {

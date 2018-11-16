@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017-2018 Peter Balsiger
+  ~ All rights reserved
+  ~
+  ~ This file is part of the Tabletop Companion.
+  ~
+  ~ The Tabletop Companion is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ The Tabletop Companion is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with the Player Companion; if not, write to the Free Software
+  ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:theme="@style/LargeText"
+      app:descriptionText="The name of the item to sell."
+      app:labelColor="@color/item"
+      app:labelText="Item to Sell"
+      app:lineColor="@color/item"
+      app:textColor="@color/itemDark"/>
+
+  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      android:id="@+id/seller"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:theme="@style/LargeText"
+      app:descriptionText="The character selling the item."
+      app:labelColor="@color/item"
+      app:labelText="Seller"
+      app:lineColor="@color/item"
+      app:textColor="@color/itemDark"/>
+
+  <TextView
+      android:id="@+id/description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:layout_marginBottom="5dp"
+      android:text="TextView"
+      android:theme="@style/SmallText"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/value_pp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:theme="@style/LargeText"
+        app:descriptionText="The platinum value of the item."
+        app:labelColor="@color/item"
+        app:labelText="Platinum"
+        app:lineColor="@color/item"
+        app:textColor="@color/itemDark"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/value_gp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:theme="@style/LargeText"
+        app:descriptionText="The gold value of the item."
+        app:labelColor="@color/item"
+        app:labelText="Gold"
+        app:lineColor="@color/item"
+        app:textColor="@color/itemDark"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/value_sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:theme="@style/LargeText"
+        app:descriptionText="The silver value of the item."
+        app:labelColor="@color/item"
+        app:labelText="Silver"
+        app:lineColor="@color/item"
+        app:textColor="@color/itemDark"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/value_cp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:inputType="number"
+        android:theme="@style/LargeText"
+        app:descriptionText="The copper value of the item."
+        app:labelColor="@color/item"
+        app:labelText="Copper"
+        app:lineColor="@color/item"
+        app:textColor="@color/itemDark"/>
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/sell"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="20dp"
+      android:layout_weight="1"
+      android:text="Send Money"/>
+
+</LinearLayout>

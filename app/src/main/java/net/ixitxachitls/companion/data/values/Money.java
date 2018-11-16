@@ -136,6 +136,48 @@ public class Money {
         + armor * armor * 1000 + weapon * weapon * 2000;
   }
 
+  public int getPlatinum() {
+    return platinum;
+  }
+
+  public int getGold() {
+    return gold;
+  }
+
+  public int getSilver() {
+    return silver;
+  }
+
+  public int getCopper() {
+    return copper;
+  }
+
+  public Money half() {
+    int platinum = this.platinum;
+    int gold = this.gold;
+    int silver = this.silver;
+    int copper = this.copper;
+
+    if (platinum % 2 != 0) {
+      gold += 5;
+    }
+    platinum /= 2;
+
+    if (gold % 2 != 0) {
+      silver += 5;
+    }
+    gold /= 2;
+
+    if (silver %2 != 0) {
+      copper += 5;
+    }
+    silver /= 2;
+
+    copper /= 2;
+
+    return new Money(platinum, gold, silver, copper, 0, 0);
+  }
+
   public Money simplify() {
     int newCopper = copper;
     int newSilver = silver;

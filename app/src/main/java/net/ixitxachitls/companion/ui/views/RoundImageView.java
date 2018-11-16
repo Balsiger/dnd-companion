@@ -69,6 +69,7 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     } else {
       drawable.setCornerRadius(bitmap.getHeight() * radius / 100);
     }
+
     super.setImageDrawable(drawable);
   }
 

@@ -282,6 +282,20 @@
         android:text="Experience by priyanka from the Noun Project"
         android:theme="@style/LargeText"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Drop by BomSymbols from the Noun Project"
+        android:theme="@style/LargeText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Coins by André Luiz Gollo from the Noun Project"
+        android:theme="@style/LargeText"/>
+
   </LinearLayout>
 
 </LinearLayout>

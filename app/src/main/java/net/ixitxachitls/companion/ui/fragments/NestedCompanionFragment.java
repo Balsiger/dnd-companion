@@ -53,6 +53,10 @@ public class NestedCompanionFragment extends Fragment {
     return context.campaigns();
   }
 
+  public CompanionContext context() {
+    return context;
+  }
+
   public Characters characters() {
     return context.characters();
   }

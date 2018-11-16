@@ -172,6 +172,14 @@ public class Item {
     this.multiuse = multiuse;
   }
 
+  public Duration getTimeLeft() {
+    return timeLeft;
+  }
+
+  public void setTimeLeft(Duration duration) {
+    this.timeLeft = duration;
+  }
+
   public Weight getWeight() {
     Weight weight = weight(templates).multiply(multiple);
     for (Item content : contents) {
@@ -179,6 +187,22 @@ public class Item {
     }
 
     return weight;
+  }
+
+  public String getPlayerNotes() {
+    return playerNotes;
+  }
+
+  public void setPlayerNotes(String notes) {
+    playerNotes = notes;
+  }
+
+  public String getDMNotes() {
+    return dmNotes;
+  }
+
+  public void setDMNotes(String notes) {
+    dmNotes = notes;
   }
 
   public String getDescription() {
@@ -369,6 +393,10 @@ public class Item {
     return Strings.COMMA_JOINER.join(templates.stream()
         .map(ItemTemplate::getDescription)
         .collect(Collectors.toList()));
+  }
+
+  public boolean isMonetary() {
+    return templates.stream().filter(t -> t.isMonetary()).findAny().isPresent();
   }
 
   public static Item read(Map<String, Object> data) {

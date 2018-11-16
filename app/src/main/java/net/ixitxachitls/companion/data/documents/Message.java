@@ -36,34 +36,61 @@ import java.util.Optional;
  */
 public class Message extends Document<Message> {
 
-  private static final String FIELD_CREATURE = "creature";
+  private static final String FIELD_TARGET = "target";
   private static final String FIELD_SOURCE = "source";
+  private static final String FIELD_TYPE = "type";
   private static final String FIELD_XP = "xp";
   private static final String FIELD_ITEM = "item";
 
+  public enum Type { unknown, xp, itemAdd, itemDelete, itemSell };
+
   private static final Document.DocumentFactory<Message> FACTORY = () -> new Message();
 
-  private String creatureId;
+  private String targetId;
   private String sourceId;
+  private Type type;
   private int xp;
   private Optional<Item> item = Optional.empty();
 
-  public static Message createForXp(CompanionContext context, String creatureId, int xp) {
-    Message message = Document.create(FACTORY, context, creatureId + "/" + Messages.PATH);
-    message.creatureId = creatureId;
+  public static Message createForXp(CompanionContext context, String targetId, int xp) {
+    Message message = createBase(context, context.me().getId(), targetId, Type.xp);
     message.xp = xp;
     message.store();
 
     return message;
   }
 
-  public static Message createForItem(CompanionContext context, String creatureId, Item item,
-                                      String sourceId) {
-    Message message = Document.create(FACTORY, context, creatureId + "/" + Messages.PATH);
-    message.creatureId = creatureId;
+  public static Message createForItemAdd(CompanionContext context, String sourceId, String targetId, Item item) {
+    Message message = createBase(context, sourceId, targetId, Type.itemAdd);
     message.item = Optional.of(item);
-    message.sourceId = sourceId;
     message.store();
+
+    return message;
+  }
+
+  public static Message createForItemDelete(CompanionContext context, String targetId, Item item) {
+    Message message = createBase(context, context.me().getId(), targetId, Type.itemDelete);
+    message.item = Optional.of(item);
+    message.store();
+
+    return message;
+  }
+
+  public static Message createForItemSell(CompanionContext context, String sourceId,
+                                          String targetId, Item item) {
+    Message message = createBase(context, sourceId, targetId, Type.itemSell);
+    message.item = Optional.of(item);
+    message.store();
+
+    return message;
+  }
+
+  private static Message createBase(CompanionContext context, String sourceId, String targetId,
+                                    Type type) {
+    Message message = Document.create(FACTORY, context, targetId + "/" + Messages.PATH);
+    message.targetId = targetId;
+    message.sourceId = sourceId;
+    message.type = type;
 
     return message;
   }
@@ -72,20 +99,16 @@ public class Message extends Document<Message> {
     return Document.fromData(FACTORY, context, snapshot);
   }
 
-  public String getCreatureId() {
-    return creatureId;
+  public String getTargetId() {
+    return targetId;
   }
 
-  public boolean isXP() {
-    return xp != 0;
+  public Type getType() {
+    return type;
   }
 
   public int getXP() {
     return xp;
-  }
-
-  public boolean isItem() {
-    return item.isPresent();
   }
 
   public Optional<Item> getItem() {
@@ -101,8 +124,9 @@ public class Message extends Document<Message> {
   protected void read() {
     super.read();
 
-    creatureId = get(FIELD_CREATURE, "");
+    targetId = get(FIELD_TARGET, "");
     sourceId = get(FIELD_SOURCE, "");
+    type = get(FIELD_TYPE, Type.unknown);
     xp = (int) get(FIELD_XP, 0);
     if (has(FIELD_ITEM)) {
       item = Optional.of(Item.read(get(FIELD_ITEM)));
@@ -112,8 +136,9 @@ public class Message extends Document<Message> {
   @Override
   @CallSuper
   protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_CREATURE, creatureId);
+    data.put(FIELD_TARGET, targetId);
     data.put(FIELD_SOURCE, sourceId);
+    data.put(FIELD_TYPE, type.toString());
     if (xp != 0) {
       data.put(FIELD_XP, xp);
     }
@@ -126,13 +151,15 @@ public class Message extends Document<Message> {
 
   @Override
   public String toString() {
-    if (isXP()) {
-      return xp + " for " + creatureId;
+    switch (type) {
+      case xp:
+        return xp + " xp for " + targetId;
+      case itemAdd:
+        return item.get() + " added for " + targetId;
+      case itemDelete:
+        return item.get() + " removed for " + targetId;
+      default:
+        return "unknown to " + targetId;
     }
-    if (isItem()) {
-      return item + " for " + creatureId;
-    }
-
-    return creatureId;
   }
 }

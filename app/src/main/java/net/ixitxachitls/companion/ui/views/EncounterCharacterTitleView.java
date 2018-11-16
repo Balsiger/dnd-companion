@@ -87,6 +87,6 @@ public class EncounterCharacterTitleView extends EncounterTitleView<Character> {
 
   @Override
   protected MessageView createMessageIcon(Message message) {
-    return new MessageView(getContext(), creature.get(), message);
+    return new CharacterMessageView(getContext(), creature.get(), message);
   }
 }

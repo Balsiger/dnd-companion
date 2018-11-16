@@ -39,15 +39,13 @@ import java.util.Optional;
 /**
  * A view to show an icon for a outstanding message and allow to interact with it.
  */
-public class MessageView extends AppCompatImageView {
+public abstract class MessageView extends AppCompatImageView {
 
-  private final Character character;
-  private final Message message;
+  protected final Message message;
 
-  public MessageView(Context context, Character character, Message message) {
+  public MessageView(Context context, Message message) {
     super(context);
 
-    this.character = character;
     this.message = message;
 
     Drawable drawable = getContext().getDrawable(R.drawable.ic_message_text_black_24dp);
@@ -59,12 +57,16 @@ public class MessageView extends AppCompatImageView {
   }
 
   public @ColorInt int iconColor() {
-    if (message.isXP()) {
-      return getContext().getColor(R.color.characterDark);
-    } if (message.isItem()) {
-      return getContext().getColor(R.color.itemDark);
-    } else {
-      return getContext().getColor(R.color.characterDark);
+    switch (message.getType()) {
+      case xp:
+        return getContext().getColor(R.color.characterDark);
+      case itemAdd:
+      case itemDelete:
+      case itemSell:
+        return getContext().getColor(R.color.itemDark);
+
+      default:
+        return getContext().getColor(R.color.black);
     }
   }
 
@@ -73,49 +75,60 @@ public class MessageView extends AppCompatImageView {
     return true;
   }
 
+  protected boolean canHandle() {
+    return false;
+  }
+
   private void onClick(View view) {
-    if (character.amPlayer()) {
-      new ConfirmationPrompt(getContext())
-          .title(title())
-          .message(description())
-          .yes(this::handle)
-          .noNo()
-          .show();
+    if (canHandle()) {
+      if (showConfirmation()) {
+        new ConfirmationPrompt(getContext())
+            .title(title())
+            .message(description())
+            .yes(this::handle)
+            .noNo()
+            .show();
+      } else {
+        handle();
+      }
     }
   }
 
-  private void handle() {
-    if (message.isXP()) {
-      character.addXp(message.getXP());
-    } else if (message.isItem()) {
-      character.add(message.getItem().get());
-    }
-
-    character.getContext().messages().deleteMessage(message.getId());
-    character.store();
+  protected boolean showConfirmation() {
+    return true;
   }
 
-  private String title() {
-    if (message.isXP()) {
-      return "XP Award";
-    } else if (message.isItem()) {
-      return "Received Item";
-    } else {
+  protected abstract void handle();
+
+  protected String title() {
+    switch(message.getType()) {
+      case xp:
+        return "XP Award";
+      case itemAdd:
+        return "Received Item";
+      case itemDelete:
+        return "Removed Item";
+      case itemSell:
+        return "Sold Item";
+      default:
       return "Unsupported Message";
     }
   }
 
-  private String description() {
-    if (message.isXP()) {
-      return "Congratulations!\n"
-          + "You DM has granted " + character.getName() + " " + message.getXP() + " XP!";
-    } else if (message.isItem()) {
-      Optional<Character> source =
-          CompanionApplication.get().characters().get(message.getSourceId());
-      return "You received a '" + message.getItem().get().getName()
-          + (source.isPresent() ? "' from " + source.get().getName() : "' from the DM");
-    } else {
-      return "A generic message that is not currently supported";
+  protected String description() {
+    switch (message.getType()) {
+      case itemDelete:
+        return "The DM removed your '" + message.getItem().get().getName() + "'!";
+
+      case itemSell: {
+        Optional<Character> character =
+            CompanionApplication.get().characters().get(message.getSourceId());
+        return (character.isPresent() ? character.get().getName() : "A character")
+            + " sold a '" + message.getItem().get().getName() + "'.";
+      }
+
+      default:
+        return "A generic message that is not currently supported";
     }
   }
 }

@@ -71,7 +71,7 @@ public class CharacterChipView extends CreatureChipView {
     if (character.amPlayer() || character.amDM()) {
       clearMessages();
       for (Message message : messages.getMessages(character.getId())) {
-        icons.addView(new MessageView(getContext(), character, message), 0);
+        icons.addView(new CharacterMessageView(getContext(), character, message), 0);
       }
     }
   }

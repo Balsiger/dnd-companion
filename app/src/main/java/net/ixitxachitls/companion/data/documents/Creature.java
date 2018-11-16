@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.data.values.TimedCondition;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -234,6 +235,11 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return false;
   }
 
+  public boolean amDM() {
+    Optional<Campaign> campaign = context.campaigns().get(campaignId);
+    return campaign.isPresent() && campaign.get().amDM();
+  }
+
   public boolean canEdit() {
     return false;
   }
@@ -244,7 +250,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public void addInitiatedCondition(TargetedTimedCondition condition) {
     /*
-    if (!condition.getTimedCondition().getSourceId().equals(getCreatureId())) {
+    if (!condition.getTimedCondition().getSourceId().equals(getTargetId())) {
       throw new IllegalArgumentException("source id does not match creature id!");
     }
 
@@ -280,7 +286,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
           Optional<? extends BaseCreature> creature =
               context.creatures().getCreatureOrCharacter(targetId);
           if (creature.isPresent()) {
-            creature.get().removeAffectedCondition(name, getCreatureId());
+            creature.get().removeAffectedCondition(name, getTargetId());
           } else {
             Status.error("Cannot get creature to remove condition " + name + " from: "
                 + Status.nameFor(targetId));
@@ -350,16 +356,56 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public void add(Item item) {
     if (amPlayer()) {
-      items.add(item);
+      int index = itemIndex(item.getId());
+      if (index < 0) {
+        items.add(item);
+      } else {
+        items.set(index, item);
+      }
       store();
     }
   }
 
-  public boolean remove(Item item) {
+  public int itemIndex(String id) {
+    for (int i = 0; i < items.size(); i++) {
+      if (items.get(i).getId().equals(id)) {
+        return i;
+      }
+    }
+
+    return -1;
+  }
+
+  public boolean hasItem(String id) {
+    for (Item item : items) {
+      if (item.getId().equals(id)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  public boolean removeItem(Item item) {
     if (amPlayer()) {
-      items.remove(item);
+      if (!items.remove(item)) {
+        return removeItem(item.getId());
+      }
       store();
       return true;
+    }
+
+    return false;
+  }
+
+  public boolean removeItem(String itemId) {
+    if (amPlayer()) {
+      for (Iterator<Item> i = items.iterator(); i.hasNext(); ) {
+        if (i.next().getId().equals(itemId)) {
+          i.remove();
+          return true;
+        }
+      }
     }
 
     return false;
@@ -370,7 +416,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public boolean moveItemBefore(Item item, Item move) {
-    if (remove(move)) {
+    if (removeItem(move)) {
       if (items.contains(item)) {
         items.add(items.indexOf(item), move);
         store();
@@ -389,7 +435,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public void combine(Item item, Item other) {
-    remove(other);
+    removeItem(other);
     if (item.similar(other)) {
       item.setMultiple(item.getMultiple() + other.getMultiple());
       store();
@@ -397,7 +443,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public boolean moveItemAfter(Item item, Item move) {
-    if (remove(move)) {
+    if (removeItem(move)) {
       if (items.contains(item)) {
         items.add(items.indexOf(item) + 1, move);
         store();
@@ -416,21 +462,21 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public void moveItemFirst(Item item) {
-    if (remove(item)) {
+    if (removeItem(item)) {
       items.add(0, item);
       store();
     }
   }
 
   public void moveItemLast(Item item) {
-    if (remove(item)) {
+    if (removeItem(item)) {
       items.add(item);
       store();
     }
   }
 
   public void moveItemInto(Item container, Item item) {
-    if (remove(item)) {
+    if (removeItem(item)) {
       container.add(item);
       store();
     }

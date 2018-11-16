@@ -27,136 +27,197 @@
               android:orientation="vertical"
               android:padding="20dp">
 
-  <TextView
-      android:id="@+id/id"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:text="TextView"/>
-
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/name"
+  <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_weight="1"
-      android:theme="@style/LargeText"
-      app:descriptionText="The name of the item to use."
-      app:labelColor="@color/item"
-      app:labelText="Name"
-      app:lineColor="@color/item"
-      app:textColor="@color/itemDark"/>
+      android:layout_weight="1">
 
-  <net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView
-      android:id="@+id/item"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:completionThreshold="1"
-      android:theme="@style/LargeText"
-      app:descriptionText="@string/item_description"
-      app:labelColor="@color/item"
-      app:labelText="Item"
-      app:lineColor="@color/item"
-      app:textColor="@color/itemDark"/>
-
-  <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-      android:id="@+id/templates"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:completionThreshold="1"
-      android:theme="@style/LargeText"
-      app:descriptionText="The templates to apply to the base item selected."
-      app:labelColor="@color/item"
-      app:labelText="Templates"
-      app:lineColor="@color/item"
-      app:textColor="@color/itemDark"/>
-
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal">
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/value"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:theme="@style/LargeText"
-        app:descriptionText="The actual value of the item."
-        app:labelColor="@color/item"
-        app:labelText="Value"
-        app:lineColor="@color/item"
-        app:textColor="@color/itemDark"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/weight"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:theme="@style/LargeText"
-        app:descriptionText="The actual weight of the item."
-        app:labelColor="@color/item"
-        app:labelText="Weight"
-        app:lineColor="@color/item"
-        app:textColor="@color/itemDark"/>
+        android:orientation="vertical">
 
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/hp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:theme="@style/LargeText"
-        android:inputType="number"
-        app:descriptionText="The item's current number of hit points."
-        app:labelColor="@color/item"
-        app:labelText="HP"
-        app:lineColor="@color/item"
-        app:textColor="@color/itemDark"/>
+      <TextView
+          android:id="@+id/id"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="TextView"/>
 
-  </LinearLayout>
+      <net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView
+          android:id="@+id/item"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:completionThreshold="1"
+          android:theme="@style/LargeText"
+          app:descriptionText="@string/item_description"
+          app:labelColor="@color/item"
+          app:labelText="Item"
+          app:lineColor="@color/item"
+          app:textColor="@color/itemDark"/>
 
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/appearance"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_weight="1"
-      android:theme="@style/LargeText"
-      app:descriptionText="A short description of the item's appearance."
-      app:labelColor="@color/item"
-      app:labelText="Appearance"
-      app:lineColor="@color/item"
-      app:textColor="@color/itemDark"/>
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/name"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:theme="@style/LargeText"
+          app:descriptionText="The name of the item to use."
+          app:labelColor="@color/item"
+          app:labelText="Name"
+          app:lineColor="@color/item"
+          app:textColor="@color/itemDark"/>
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="horizontal">
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/dm_name"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:theme="@style/LargeText"
+          app:descriptionText="The DM's name for this item."
+          app:labelColor="@color/item"
+          app:labelText="DM Name"
+          app:lineColor="@color/item"
+          app:textColor="@color/itemDark"/>
 
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/multiple"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:theme="@style/LargeText"
-        app:descriptionText="The number of same items to create."
-        android:inputType="number"
-        app:labelColor="@color/item"
-        app:labelText="Multiple"
-        app:lineColor="@color/item"
-        app:textColor="@color/itemDark"/>
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/templates"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:completionThreshold="1"
+          android:theme="@style/LargeText"
+          app:descriptionText="The templates to apply to the base item selected."
+          app:labelColor="@color/item"
+          app:labelText="Templates"
+          app:lineColor="@color/item"
+          app:textColor="@color/itemDark"/>
 
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/multiuse"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:theme="@style/LargeText"
-        app:descriptionText="The number of uses the item provides."
-        app:labelColor="@color/item"
-        android:inputType="number"
-        app:labelText="Multiuse"
-        app:lineColor="@color/item"
-        app:textColor="@color/itemDark"/>
-  </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@style/LargeText"
+            app:descriptionText="The actual value of the item."
+            app:labelColor="@color/item"
+            app:labelText="Value"
+            app:lineColor="@color/item"
+            app:textColor="@color/itemDark"/>
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:theme="@style/LargeText"
+            app:descriptionText="The actual weight of the item."
+            app:labelColor="@color/item"
+            app:labelText="Weight"
+            app:lineColor="@color/item"
+            app:textColor="@color/itemDark"/>
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/hp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@style/LargeText"
+            android:inputType="number"
+            app:descriptionText="The item's current number of hit points."
+            app:labelColor="@color/item"
+            app:labelText="HP"
+            app:lineColor="@color/item"
+            app:textColor="@color/itemDark"/>
+
+      </LinearLayout>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/appearance"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:theme="@style/LargeText"
+          app:descriptionText="A short description of the item's appearance."
+          app:labelColor="@color/item"
+          app:labelText="Appearance"
+          app:lineColor="@color/item"
+          app:textColor="@color/itemDark"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/multiple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@style/LargeText"
+            app:descriptionText="The number of same items to create."
+            android:inputType="number"
+            app:labelColor="@color/item"
+            app:labelText="Multiple"
+            app:lineColor="@color/item"
+            app:textColor="@color/itemDark"/>
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/multiuse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:theme="@style/LargeText"
+            app:descriptionText="The number of uses the item provides."
+            app:labelColor="@color/item"
+            android:inputType="number"
+            app:labelText="Multiuse"
+            app:lineColor="@color/item"
+            app:textColor="@color/itemDark"/>
+      </LinearLayout>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/player_notes"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:theme="@style/LargeText"
+          app:descriptionText="A player's notes for this item."
+          app:labelColor="@color/item"
+          app:labelText="Notes"
+          app:lineColor="@color/item"
+          app:textColor="@color/itemDark"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/dm_notes"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:theme="@style/LargeText"
+          app:descriptionText="A DM's notes for this item."
+          app:labelColor="@color/item"
+          app:labelText="Notes (DM)"
+          app:lineColor="@color/item"
+          app:textColor="@color/itemDark"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/time_left"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:theme="@style/LargeText"
+          app:descriptionText="The time this item has left for functioning."
+          app:labelColor="@color/item"
+          app:labelText="Time Left"
+          app:lineColor="@color/item"
+          app:textColor="@color/itemDark"/>
+
+    </LinearLayout>
+  </ScrollView>
 
   <Button
       android:id="@+id/add"

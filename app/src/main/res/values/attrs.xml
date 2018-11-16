@@ -70,4 +70,9 @@
     <attr name="minLines" format="integer"/>
   </declare-styleable>
 
+  <declare-styleable name="ImageDropTarget">
+    <attr name="image" format="integer"/>
+    <attr name="text" format="string"/>
+  </declare-styleable>
+
 </resources>

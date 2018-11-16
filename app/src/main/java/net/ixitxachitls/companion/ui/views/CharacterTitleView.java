@@ -96,6 +96,6 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
   }
 
   protected MessageView createMessageIcon(Message message) {
-    return new MessageView(getContext(), creature.get(), message);
+    return new CharacterMessageView(getContext(), creature.get(), message);
   }
 }

@@ -21,18 +21,24 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Weight;
@@ -49,7 +55,7 @@ import java.util.Optional;
 /**
  * Child fragment for a characters inventory.
  */
-public class CharacterInventoryFragment extends Fragment {
+public class CharacterInventoryFragment extends NestedCompanionFragment {
 
   private Optional<Character> character = Optional.empty();
   private boolean moveFirst = true;
@@ -59,9 +65,14 @@ public class CharacterInventoryFragment extends Fragment {
   private ViewGroup items;
   private ViewGroup view;
   private Wrapper<Button> addItem;
+  private LinearLayout targets;
+  private LinearLayout targetsCharacters;
   private Wrapper<ImageDropTarget> removeItem;
+  private Wrapper<ImageDropTarget> sellItem;
 
   public CharacterInventoryFragment() {
+    characters().observe(this, this::update);
+    images().observe(this, this::update);
   }
 
   @Override
@@ -78,11 +89,19 @@ public class CharacterInventoryFragment extends Fragment {
         .description("Add Item", "Add an item to the characters inventory.")
         .visible(character.isPresent() &&
             (character.get().amPlayer() || character.get().amDM()));
+    targets = view.findViewById(R.id.targets);
+    targetsCharacters = view.findViewById(R.id.targets_characters);
     removeItem = Wrapper.<ImageDropTarget>wrap(view, R.id.item_remove)
         .description("Remove Item", "Drag an item over the trash to remove it");
     removeItem.get().setSupport(i -> i instanceof Item);
     removeItem.get().setDropExecutor(this::removeItem);
-    removeItem.visible(character.isPresent() && character.get().amPlayer());
+    removeItem.visible(character.isPresent()
+        && (character.get().amPlayer() || character.get().amDM()));
+    sellItem = Wrapper.<ImageDropTarget>wrap(view, R.id.item_sell)
+        .description("Sell Item", "Sell the item, with DM approval.");
+    sellItem.get().setSupport(i -> i instanceof Item);
+    sellItem.get().setDropExecutor(this::sellItem);
+    sellItem.visible(character.isPresent() && character.get().amPlayer());
 
     if (character.isPresent()) {
       update(character.get());
@@ -93,6 +112,8 @@ public class CharacterInventoryFragment extends Fragment {
 
   public void update(Character character) {
     this.character = Optional.of(character);
+
+    characters().addPlayers(character.getCampaign());
 
     if (this.items != null && getContext() != null) {
       Money totalValue = Money.ZERO;
@@ -115,6 +136,36 @@ public class CharacterInventoryFragment extends Fragment {
       this.weight.text(totalWeight.toString());
       view.setOnDragListener((v, e) -> onItemDrag(v, e));
       addItem.visible(character.amPlayer() || character.amDM());
+
+      refreshDropTargets();
+    }
+  }
+
+  private void update(Characters characters) {
+    refreshDropTargets();
+  }
+
+  private void update(Images images) {
+    refreshDropTargets();
+  }
+
+  private void refreshDropTargets() {
+    if (character.isPresent()) {
+      targetsCharacters.removeAllViews();
+      for (Character other : characters().getCampaignCharacters(character.get().getCampaignId())) {
+        if (!other.equals(character)) {
+          Drawable image;
+          if (images().get(other.getId()).isPresent()) {
+            image = new BitmapDrawable(getResources(), images().get(other.getId()).get());
+          } else {
+            image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
+          }
+          ImageDropTarget target = new ImageDropTarget(getContext(), image, other.getName(), true);
+          target.setSupport(i -> i instanceof Item);
+          target.setDropExecutor((i) -> moveItem(i, other));
+          targetsCharacters.addView(target);
+        }
+      }
     }
   }
 
@@ -146,7 +197,7 @@ public class CharacterInventoryFragment extends Fragment {
         return true;
 
       case DragEvent.ACTION_DRAG_LOCATION:
-        int []locations = new int[2];
+        int[] locations = new int[2];
         items.getLocationInWindow(locations);
         moveFirst = event.getY() < locations[1];
         return true;
@@ -160,7 +211,7 @@ public class CharacterInventoryFragment extends Fragment {
         // Fall through to handle like drop!
 
       case DragEvent.ACTION_DROP:
-        if (character.isPresent()) {
+        if (character.isPresent() && character.get().amPlayer()) {
           Item item = (Item) event.getLocalState();
           if (moveFirst) {
             character.get().moveItemFirst(item);
@@ -177,8 +228,37 @@ public class CharacterInventoryFragment extends Fragment {
 
   private boolean removeItem(Object state) {
     if (character.isPresent() && state instanceof Item) {
-      character.get().remove((Item) state);
+      if (character.get().amPlayer()) {
+        character.get().removeItem((Item) state);
+        return true;
+      } else if (character.get().amDM()) {
+        Message.createForItemDelete(
+            CompanionApplication.get().context(), character.get().getId(), (Item) state);
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  private boolean moveItem(Object state, Character target) {
+    if (character.isPresent() && state instanceof Item) {
+      character.get().removeItem((Item) state);
+      Message.createForItemAdd(context(), character.get().getId(), target.getId(), (Item) state);
       return true;
+    }
+
+    return false;
+  }
+
+  private boolean sellItem(Object state) {
+    if (character.isPresent() && state instanceof Item && character.get().amPlayer()
+        && character.get().getCampaign().isPresent()) {
+      character.get().removeItem((Item) state);
+      Message.createForItemSell(
+          CompanionApplication.get().context(), character.get().getId(),
+          character.get().getCampaign().get().getId(), (Item) state);
+      Status.toast("Item has been sold.");
     }
 
     return false;

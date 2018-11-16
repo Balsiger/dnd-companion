@@ -152,6 +152,7 @@ public class CampaignFragment extends CompanionFragment {
         .invisible();
 
     images().observe(this, title::update);
+    messages().observe(this, title::update);
 
     return view;
   }
