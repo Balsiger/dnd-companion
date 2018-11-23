@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Orc Double Axe"
   category: "axe"
   synonym: "Axe, Orc, Double"

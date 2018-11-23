@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Half-Elf Traits"
   reference {
     name: "WTC 17755"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Rend Armor"
   category: "attack"
   synonym: "Armor, Rend"

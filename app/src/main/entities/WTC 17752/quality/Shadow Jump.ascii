@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shadow Jump"
   category: "action"
   category: "attack"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Dance of Ruin"
   category: "attack"
   synonym: "Ruin, Dance of"

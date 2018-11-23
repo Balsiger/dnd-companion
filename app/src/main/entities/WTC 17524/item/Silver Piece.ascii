@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Silver Piece"
   category: "money"
   synonym: "Piece, Silver"

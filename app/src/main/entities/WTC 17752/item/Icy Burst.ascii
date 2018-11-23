@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Icy Burst"
   base: "frost"
   category: "ice"

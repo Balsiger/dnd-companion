@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Woodland Stride"
   category: "option"
   synonym: "Stride, Woodland"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Greater Death Spear"
   base: "longspear"
   base: "weapon +1"

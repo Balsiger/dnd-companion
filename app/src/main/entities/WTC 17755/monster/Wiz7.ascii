@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wiz7"
   world: "Generic"
   description: "Dummy monster for character class."

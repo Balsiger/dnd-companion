@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Not Affected By Reincarnate"
   category: "immunity"
   synonym: "Reincarnate, Not Affected By"

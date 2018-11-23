@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Orb Wraith"
   category: "wraith"
   category: "negative energy"

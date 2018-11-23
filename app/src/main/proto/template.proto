@@ -3,7 +3,7 @@ package net.ixitxachitls.companion.proto;
 
 import "value.proto";
 
-message EntityProto {
+message TemplateProto {
   string id = 1;
   string name = 2;
   repeated string base = 3;
@@ -16,8 +16,8 @@ message EntityProto {
   string incomplete = 10;
 }
 
-message WorldProto {
-  EntityProto entity = 1;
+message WorldTemplateProto {
+  TemplateProto template = 1;
   CalendarProto calendar = 2;
 
   message Names
@@ -31,8 +31,8 @@ message WorldProto {
   repeated Names names = 3;
 }
 
-message MonsterProto {
-  EntityProto entity = 1;
+message MonsterTemplateProto {
+  TemplateProto template = 1;
   SizeProto size = 2;
 
   enum Type {
@@ -317,7 +317,7 @@ message MonsterProto {
   repeated string proficiency = 33;
   bool quadruped = 34;
 
-  repeated ParametrizedEntityProto quality = 35;
+  repeated ParametrizedTemplateProto quality = 35;
 
   message Skill {
     string name = 1;
@@ -328,7 +328,7 @@ message MonsterProto {
 
 message ItemTemplateProto
 {
-  EntityProto entity = 1;
+  TemplateProto template = 1;
   MoneyProto value = 2;
   WeightProto weight = 3;
 
@@ -382,20 +382,20 @@ message ItemTemplateProto
   string player_name = 11;
   bool monetary = 26;
 
-  WeaponProto weapon = 12;
-  WearableProto wearable = 13;
-  IncompleteProto incomplete = 14;
-  MagicProto magic = 15;
-  CountedProto counted = 16;
-  MultipleProto multiple = 17;
-  MultiuseProto multiuse = 18;
-  TimedProto timed = 19;
-  CommodityProto commodity = 20;
-  ContainerProto container = 21;
-  ArmorProto armor = 22;
-  LightProto light = 23;
-  CompositeProto composite = 24;
-  repeated ParametrizedEntityProto qualities = 27;
+  WeaponTemplateProto weapon = 12;
+  WearableTemplateProto wearable = 13;
+  IncompleteTemplateProto incomplete = 14;
+  MagicTemplateProto magic = 15;
+  CountedTemplateProto counted = 16;
+  MultipleTemplateProto multiple = 17;
+  MultiuseTemplateProto multiuse = 18;
+  TimedTemplateProto timed = 19;
+  CommodityTemplateProto commodity = 20;
+  ContainerTemplateProto container = 21;
+  ArmorTemplateProto armor = 22;
+  LightTemplateProto light = 23;
+  CompositeTemplateProto composite = 24;
+  repeated ParametrizedTemplateProto qualities = 27;
 
   message Random
   {
@@ -426,8 +426,8 @@ message ItemTemplateProto
   Material material = 29;
 }
 
-message LevelProto {
-  EntityProto entity = 1;
+message LevelTemplateProto {
+  TemplateProto template = 1;
   string abbreviation = 2;
   string adventures = 3;
   string characteristics = 4;
@@ -446,12 +446,12 @@ message LevelProto {
   repeated Proficiency weapon_proficiency = 17;
   repeated string individual_weapon_proficiency = 18;
   repeated ArmorType armor_proficiency = 19;
-  repeated LeveledEntityProto quality = 20;
+  repeated LeveledTemplateProto quality = 20;
   repeated int32 base_attack = 21;
   repeated int32 fortitude_save = 22;
   repeated int32 reflex_save = 23;
   repeated int32 will_save = 24;
-  repeated LeveledEntityProto bonusFeat = 25;
+  repeated LeveledTemplateProto bonusFeat = 25;
   Ability spell_ability = 26;
 
   message PerLevel {
@@ -461,8 +461,8 @@ message LevelProto {
   repeated PerLevel spells_known = 28;
 }
 
-message QualityProto {
-  EntityProto entity = 1;
+message QualityTemplateProto {
+  TemplateProto template = 1;
 
   enum Type {
     UNKNOWN = 0;
@@ -502,7 +502,7 @@ message QualityProto {
   ModifierProto ac_modifier = 15;
 }
 
-message ParametrizedEntityProto {
+message ParametrizedTemplateProto {
   string name = 1;
   string title = 2;
 
@@ -511,12 +511,12 @@ message ParametrizedEntityProto {
   ConditionalProto condition = 5;
 }
 
-message LeveledEntityProto {
+message LeveledTemplateProto {
   int32 level = 1;
-  ParametrizedEntityProto entity = 2;
+  ParametrizedTemplateProto template = 2;
 }
 
-message WeaponProto
+message WeaponTemplateProto
 {
   DamageProto damage = 1;
   DamageProto secondary_damage = 2;
@@ -548,7 +548,7 @@ message WeaponProto
   SizeProto.Size wielder_size = 14;
 }
 
-message WearableProto
+message WearableTemplateProto
 {
   enum Slot
   {
@@ -572,12 +572,12 @@ message WearableProto
   DurationProto remove = 4;
 }
 
-message IncompleteProto
+message IncompleteTemplateProto
 {
   string text = 1;
 }
 
-message MagicProto
+message MagicTemplateProto
 {
   enum Type
   {
@@ -603,7 +603,7 @@ message MagicProto
   repeated Modifier modifier = 2;
 }
 
-message CountedProto
+message CountedTemplateProto
 {
   int32 count = 1;
 
@@ -622,29 +622,29 @@ message CountedProto
   Unit unit = 2;
 }
 
-message MultipleProto
+message MultipleTemplateProto
 {
   int32 count = 1;
-  CountedProto.Unit unit = 2;
+  CountedTemplateProto.Unit unit = 2;
 }
 
-message MultiuseProto
+message MultiuseTemplateProto
 {
   int32 count = 1;
 }
 
-message TimedProto
+message TimedTemplateProto
 {
   RandomDurationProto duration = 1;
 }
 
-message CommodityProto
+message CommodityTemplateProto
 {
   AreaProto area = 1;
   DistanceProto length = 2;
 }
 
-message ContainerProto
+message ContainerTemplateProto
 {
   VolumeProto capacity = 1;
 
@@ -660,7 +660,7 @@ message ContainerProto
   bool fixed_weight = 3;
 }
 
-message ArmorProto
+message ArmorTemplateProto
 {
   ModifierProto ac_bonus = 1;
 
@@ -682,7 +682,7 @@ message ArmorProto
   DistanceProto speed_slow = 7;
 }
 
-message LightProto
+message LightTemplateProto
 {
   message Light
   {
@@ -702,7 +702,7 @@ message LightProto
   Light shadowy = 2;
 }
 
-message CompositeProto
+message CompositeTemplateProto
 {
   message Or
   {

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Half-plate"
   synonym: "Plate, Half"
   reference {

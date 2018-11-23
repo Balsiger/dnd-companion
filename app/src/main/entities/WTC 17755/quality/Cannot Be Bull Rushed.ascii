@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cannot Be Bull Rushed"
   category: "bull rush"
   category: "immune"

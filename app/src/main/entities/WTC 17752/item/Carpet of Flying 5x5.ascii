@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Carpet of Flying 5x5"
   category: "carpet"
   category: "fly"

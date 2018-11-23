@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Not Subject To Ability Drain"
   category: "immunity"
   synonym: "Ability Drain, Not Subject to"

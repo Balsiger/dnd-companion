@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data;
 
+import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.CreatureConditions;
@@ -39,6 +40,7 @@ public abstract class CompanionContext {
 
   protected Users users;
   protected Campaigns campaigns;
+  protected Adventures adventures;
   protected Encounters encounters;
   protected Monsters monsters;
   protected Characters characters;
@@ -81,6 +83,10 @@ public abstract class CompanionContext {
 
   public CreatureConditions conditions() {
     return conditions;
+  }
+
+  public Adventures adventures() {
+    return adventures;
   }
 
   public Messages messages() {

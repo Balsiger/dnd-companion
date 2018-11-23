@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Staff"
   category: "magic"
   category: "staff"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Natural Lycanthrope"
   category: "resistance"
   synonym: "Lycanthrope, Natural"

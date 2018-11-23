@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Slime Domain"
   category: "action"
   synonym: "Domain, Slime"

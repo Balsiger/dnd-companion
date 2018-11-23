@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cloak of Arachnida"
   category: "magic"
   category: "cloak"

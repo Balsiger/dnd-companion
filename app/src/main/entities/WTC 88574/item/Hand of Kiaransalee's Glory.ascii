@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Hand of Kiaransalee\'s Glory"
   category: "hand"
   category: "ring"

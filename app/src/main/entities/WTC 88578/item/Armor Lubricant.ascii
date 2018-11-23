@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Armor Lubricant"
   category: "alchemical"
   category: "gear"

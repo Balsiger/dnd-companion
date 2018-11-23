@@ -22,7 +22,7 @@
 package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Template;
 
 /**
  * A substance in the game.
@@ -48,18 +48,18 @@ public class Substance {
     return 0;
   }
 
-  public static Substance fromProto(Entity.ItemTemplateProto.Substance proto) {
+  public static Substance fromProto(Template.ItemTemplateProto.Substance proto) {
     return new Substance(convert(proto.getMaterial()), Distance.fromProto(proto.getThickness()));
   }
 
-  public Entity.ItemTemplateProto.Substance toProto() {
-    return Entity.ItemTemplateProto.Substance.newBuilder()
+  public Template.ItemTemplateProto.Substance toProto() {
+    return Template.ItemTemplateProto.Substance.newBuilder()
         .setMaterial(convert(material))
         .setThickness(thickness.toProto())
         .build();
   }
 
-  private static Material convert(Entity.ItemTemplateProto.Substance.Material material) {
+  private static Material convert(Template.ItemTemplateProto.Substance.Material material) {
     switch (material) {
       case UNRECOGNIZED:
       default:
@@ -115,58 +115,58 @@ public class Substance {
     }
   }
 
-  private Entity.ItemTemplateProto.Substance.Material convert(Material material) {
+  private Template.ItemTemplateProto.Substance.Material convert(Material material) {
     switch (material) {
       default:
         Status.error("Cannot convert material " + material);
 
       case unknown:
-        return Entity.ItemTemplateProto.Substance.Material.UNKNOWN;
+        return Template.ItemTemplateProto.Substance.Material.UNKNOWN;
 
       case paper:
-        return Entity.ItemTemplateProto.Substance.Material.PAPER;
+        return Template.ItemTemplateProto.Substance.Material.PAPER;
 
       case cloth:
-        return Entity.ItemTemplateProto.Substance.Material.CLOTH;
+        return Template.ItemTemplateProto.Substance.Material.CLOTH;
 
       case rope:
-        return Entity.ItemTemplateProto.Substance.Material.ROPE;
+        return Template.ItemTemplateProto.Substance.Material.ROPE;
 
       case glass:
-        return Entity.ItemTemplateProto.Substance.Material.GLASS;
+        return Template.ItemTemplateProto.Substance.Material.GLASS;
 
       case ice:
-        return Entity.ItemTemplateProto.Substance.Material.ICE;
+        return Template.ItemTemplateProto.Substance.Material.ICE;
 
       case leather:
-        return Entity.ItemTemplateProto.Substance.Material.LEATHER;
+        return Template.ItemTemplateProto.Substance.Material.LEATHER;
 
       case hide:
-        return Entity.ItemTemplateProto.Substance.Material.HIDE;
+        return Template.ItemTemplateProto.Substance.Material.HIDE;
 
       case wood:
-        return Entity.ItemTemplateProto.Substance.Material.WOOD;
+        return Template.ItemTemplateProto.Substance.Material.WOOD;
 
       case stone:
-        return Entity.ItemTemplateProto.Substance.Material.STONE;
+        return Template.ItemTemplateProto.Substance.Material.STONE;
 
       case iron:
-        return Entity.ItemTemplateProto.Substance.Material.IRON;
+        return Template.ItemTemplateProto.Substance.Material.IRON;
 
       case steel:
-        return Entity.ItemTemplateProto.Substance.Material.STEEL;
+        return Template.ItemTemplateProto.Substance.Material.STEEL;
 
       case crystal:
-        return Entity.ItemTemplateProto.Substance.Material.CRYSTAL;
+        return Template.ItemTemplateProto.Substance.Material.CRYSTAL;
 
       case mithral:
-        return Entity.ItemTemplateProto.Substance.Material.MITHRAL;
+        return Template.ItemTemplateProto.Substance.Material.MITHRAL;
 
       case adamantine:
-        return Entity.ItemTemplateProto.Substance.Material.ADAMANTINE;
+        return Template.ItemTemplateProto.Substance.Material.ADAMANTINE;
 
       case bone:
-        return Entity.ItemTemplateProto.Substance.Material.BONE;
+        return Template.ItemTemplateProto.Substance.Material.BONE;
     }
   }
 }

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gnome Hooked Hammer"
   category: "mace"
   synonym: "Hammer, Gnome Hooked"

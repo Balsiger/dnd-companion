@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Simple Lock"
   category: "locks"
   synonym: "Lock, Simple"

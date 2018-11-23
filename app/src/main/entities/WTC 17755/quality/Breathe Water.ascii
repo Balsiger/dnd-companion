@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Breathe Water"
   world: "Generic"
   description: "The creature is capable of breathing under water (like any fish)."

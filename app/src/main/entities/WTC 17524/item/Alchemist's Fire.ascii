@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Alchemist\'s Fire"
   category: "alchemical"
   reference {

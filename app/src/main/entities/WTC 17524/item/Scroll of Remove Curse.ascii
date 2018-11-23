@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Remove Curse"
   base: "scroll"
   synonym: "Remove Curse, Scroll"

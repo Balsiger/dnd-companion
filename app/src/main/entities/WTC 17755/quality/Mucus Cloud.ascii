@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Mucus Cloud"
   category: "action"
   reference {

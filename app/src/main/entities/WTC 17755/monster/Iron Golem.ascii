@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Iron Golem"
   base: "golem"
   synonym: "Golem, Iron"

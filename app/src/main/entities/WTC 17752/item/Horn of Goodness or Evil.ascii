@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Horn of Goodness or Evil"
   category: "horn"
   category: "good"

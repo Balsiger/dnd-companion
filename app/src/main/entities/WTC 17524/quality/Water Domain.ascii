@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Water Domain"
   category: "action"
   synonym: "Domain, Water"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Bonus Natural Armor"
   category: "resistance"
   synonym: "Natural Armor, Bonus"

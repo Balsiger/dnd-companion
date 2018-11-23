@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Blindsight"
   category: "sense"
   synonym: "Sight, Blind"

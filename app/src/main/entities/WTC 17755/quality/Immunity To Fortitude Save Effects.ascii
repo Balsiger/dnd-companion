@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity To Fortitude Save Effects"
   category: "immunity"
   synonym: "Fortitude Save Effects, Immunity to"

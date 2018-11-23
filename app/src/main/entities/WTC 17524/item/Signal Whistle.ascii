@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Signal Whistle"
   category: "gear"
   synonym: "Whistle, Signal"

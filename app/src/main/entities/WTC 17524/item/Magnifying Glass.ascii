@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Magnifying Glass"
   category: "Glass"
   synonym: "Glass, Magnifying"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Favored Enemies"
   category: "option"
   synonym: "Enemies, Favored"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Rock (large)"
   category: "rock"
   category: "weapon"

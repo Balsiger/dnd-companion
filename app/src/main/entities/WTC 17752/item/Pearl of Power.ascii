@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Pearl of Power"
   category: "magic"
   category: "gem"

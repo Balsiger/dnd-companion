@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gnome"
   reference {
     name: "WTC 17755"

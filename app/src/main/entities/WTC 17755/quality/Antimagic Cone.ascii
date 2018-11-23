@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Antimagic Cone"
   category: "attack"
   synonym: "Cone, Antimagic"

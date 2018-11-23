@@ -26,7 +26,7 @@ import net.ixitxachitls.companion.data.values.Container;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Substance;
 import net.ixitxachitls.companion.data.values.Weight;
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Template;
 
 import java.util.Collections;
 import java.util.List;
@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * A basic item.
  */
-public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
+public class ItemTemplate extends StaticEntry<Template.ItemTemplateProto> {
 
   public enum Probability {
     unknown, common, uncommon, rare, veryRare, unique,
@@ -77,13 +77,13 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
         Substance.ZERO, Container.NONE, Appearances.EMPTY, false);
   }
 
-  public static Entity.ItemTemplateProto defaultProto() {
-    return Entity.ItemTemplateProto.getDefaultInstance();
+  public static Template.ItemTemplateProto defaultProto() {
+    return Template.ItemTemplateProto.getDefaultInstance();
   }
 
-  public static ItemTemplate fromProto(Entity.ItemTemplateProto proto) {
-    ItemTemplate item = new ItemTemplate(proto.getEntity().getName(),
-        proto.getEntity().getSynonymList(), proto.getEntity().getDescription(),
+  public static ItemTemplate fromProto(Template.ItemTemplateProto proto) {
+    ItemTemplate item = new ItemTemplate(proto.getTemplate().getName(),
+        proto.getTemplate().getSynonymList(), proto.getTemplate().getDescription(),
         Money.fromProto(proto.getValue()), Weight.fromProto(proto.getWeight()),
         proto.getHitPoints(), Substance.fromProto(proto.getSubstance()),
         Container.fromProto(proto.getContainer()),
@@ -142,7 +142,7 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
     return appearances.random();
   }
 
-  public static Probability convert(Entity.ItemTemplateProto.Probability probability) {
+  public static Probability convert(Template.ItemTemplateProto.Probability probability) {
     switch (probability) {
       default:
         Status.error("Cannot convert unknown probability: " + probability);
@@ -167,28 +167,28 @@ public class ItemTemplate extends StaticEntry<Entity.ItemTemplateProto> {
     }
   }
 
-  public static Entity.ItemTemplateProto.Probability convert(Probability probability) {
+  public static Template.ItemTemplateProto.Probability convert(Probability probability) {
     switch (probability) {
       default:
         Status.error("Cannot convert unknown probabilyt " + probability);
 
       case unknown:
-        return Entity.ItemTemplateProto.Probability.UNKNOWN;
+        return Template.ItemTemplateProto.Probability.UNKNOWN;
 
       case common:
-        return Entity.ItemTemplateProto.Probability.COMMON;
+        return Template.ItemTemplateProto.Probability.COMMON;
 
       case uncommon:
-        return Entity.ItemTemplateProto.Probability.UNCOMMON;
+        return Template.ItemTemplateProto.Probability.UNCOMMON;
 
       case rare:
-        return Entity.ItemTemplateProto.Probability.RARE;
+        return Template.ItemTemplateProto.Probability.RARE;
 
       case veryRare:
-        return Entity.ItemTemplateProto.Probability.VERY_RARE;
+        return Template.ItemTemplateProto.Probability.VERY_RARE;
 
       case unique:
-        return Entity.ItemTemplateProto.Probability.UNIQUE;
+        return Template.ItemTemplateProto.Probability.UNIQUE;
     }
   }
 

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shadow Illusion"
   category: "action"
   synonym: "Illusion, Shadow"

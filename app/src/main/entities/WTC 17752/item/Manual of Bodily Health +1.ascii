@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Manual of Bodily Health +1"
   base: "book"
   category: "book"

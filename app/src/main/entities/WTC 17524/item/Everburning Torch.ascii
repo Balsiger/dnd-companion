@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Everburning Torch"
   category: "magic"
   synonym: "Torch, Everburning"

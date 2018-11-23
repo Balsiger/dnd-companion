@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wizard\'s Spellbook"
   category: "book"
   synonym: "Spellboo, Wizard\'s"

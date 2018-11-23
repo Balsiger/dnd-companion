@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shadesight"
   category: "sense"
   reference {

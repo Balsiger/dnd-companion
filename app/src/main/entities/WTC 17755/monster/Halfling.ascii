@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Halfling"
   world: "Generic"
   description: "Halflings are cunning, resourceful survivors and opportunists who find room for themselves wherever they can. They might be reliable, hard-working citizens or thieves just waiting for their big chance.\n\nHalflings stand about 3 feet tall and usually weigh between 30 and 35 pounds. They have brown or black eyes. Halfling men often have long sideburns, but beards are rare among them and mustaches almost unseen. Halflings prefer simple, comfortable, and practical clothes. Unlike members of most races, they prefer actual comfort to shows of wealth. Halflings reach adulthood in their early twenties and generally live into the middle of their second century.\n\nHalflings speak Halfling and Common.\n\nMost halflings encountered outside their home are warriors; the information in the statistics block is for one of 1st level."

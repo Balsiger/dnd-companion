@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shadow Blend"
   category: "action"
   category: "attack"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ceramic Vial"
   category: "gear"
   synonym: "Vial (Ceramic)"

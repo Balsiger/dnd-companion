@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Bell"
   category: "gear"
   category: "instrument"

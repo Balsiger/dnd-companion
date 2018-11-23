@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Manifestation"
   category: "action"
   reference {

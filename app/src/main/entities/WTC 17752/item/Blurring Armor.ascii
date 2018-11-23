@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Blurring Armor"
   category: "blur"
   category: "blurring"

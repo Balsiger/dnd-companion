@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Entangle"
   category: "attack"
   synonym: "Entable"

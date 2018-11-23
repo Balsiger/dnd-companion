@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Tenser\'s Floating Disk"
   base: "scroll"
   synonym: "Tenser\'s Floating Disk, Scroll"

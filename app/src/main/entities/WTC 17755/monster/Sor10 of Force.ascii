@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Sor10 of Force"
   category: "sorcerer"
   category: "force"

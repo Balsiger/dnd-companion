@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Assassin\'s Dagger"
   base: "dagger"
   base: "weapon +2"

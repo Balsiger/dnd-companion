@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Turn Resistance"
   category: "resistance"
   synonym: "Resistance, Turn"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wholeness of Body"
   category: "health"
   synonym: "Body, Wholeness of"

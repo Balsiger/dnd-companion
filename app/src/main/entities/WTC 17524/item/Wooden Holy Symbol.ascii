@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wooden Holy Symbol"
   category: "divine"
   synonym: "Holy Symbol, Wooden"

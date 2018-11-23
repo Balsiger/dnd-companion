@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Belt Pouch"
   category: "gear"
   synonym: "Pouch, Belt"

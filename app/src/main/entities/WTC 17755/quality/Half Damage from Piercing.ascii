@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Half Damage from Piercing"
   category: "resistance"
   synonym: "Piercing, Half Damage from"

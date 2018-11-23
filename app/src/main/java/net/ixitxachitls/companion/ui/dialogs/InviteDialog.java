@@ -72,7 +72,7 @@ public class InviteDialog extends Dialog {
     email = view.findViewById(R.id.email);
     invite = Wrapper.<Button>wrap(view, R.id.invite).onClick(this::invite);
 
-    campaign = application().campaigns().get(getArguments().getString(ARG_ID));
+    campaign = campaigns().get(getArguments().getString(ARG_ID));
     refresh();
   }
 

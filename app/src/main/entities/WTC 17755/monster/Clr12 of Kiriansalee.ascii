@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Clr12 of Kiriansalee"
   category: "cleric"
   category: "dummy"

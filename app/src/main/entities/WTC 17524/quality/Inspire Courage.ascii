@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Inspire Courage"
   category: "action"
   category: "attack"

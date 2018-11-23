@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Periapt of Wisdom +2"
   category: "magic"
   category: "wisdom"

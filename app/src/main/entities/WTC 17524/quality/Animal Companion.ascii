@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Animal Companion"
   category: "option"
   synonym: "Companions, Animal"

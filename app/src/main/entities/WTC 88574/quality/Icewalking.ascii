@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Icewalking"
   category: "resistance"
   reference {

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Headband of Intellect +4"
   category: "intellect"
   category: "head"

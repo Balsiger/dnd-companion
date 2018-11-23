@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Silver Holy Symbol"
   synonym: "holy"
   synonym: "silver"

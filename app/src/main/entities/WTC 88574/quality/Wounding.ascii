@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wounding"
   category: "option"
   reference {

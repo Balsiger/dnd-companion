@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Infernal Wound"
   category: "attack"
   synonym: "Wound, Infernal"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Quilted Silk Box"
   category: "container"
   category: "ornamental"

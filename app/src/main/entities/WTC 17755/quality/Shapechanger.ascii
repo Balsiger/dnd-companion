@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shapechanger"
   world: "Generic"
   description: "The creature is capable of changing its shape."

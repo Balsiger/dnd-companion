@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Potion of Cure Moderate Wounds"
   base: "potion"
   description: "As \\SpellRef[Clr 3]{Cure Moderate Wounds}."

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Nature Sense"
   category: "sense"
   synonym: "Sense, Nature"

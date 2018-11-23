@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Crossbow Bolts"
   category: "crossbow"
   category: "ammunition"

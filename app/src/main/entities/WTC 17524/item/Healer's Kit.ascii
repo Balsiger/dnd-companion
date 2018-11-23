@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Healer\'s Kit"
   category: "skill kit"
   category: "healer"

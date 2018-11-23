@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Dire Eel"
   synonym: "Eel, Dire"
   synonym: "Eel, Giant"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Brooch of Shielding"
   category: "magic"
   category: "shield"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ink Cloud"
   category: "action"
   synonym: "Cloud, Ink"

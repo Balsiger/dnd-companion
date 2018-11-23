@@ -1,4 +1,4 @@
-entity {
+template {
   name: "No Natural Healing"
   world: "Generic"
   description: "The creature does not heal naturally, e.g. when resting."

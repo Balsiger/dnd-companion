@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Amulet of Natural Armor +2"
   category: "magic"
   category: "armor"

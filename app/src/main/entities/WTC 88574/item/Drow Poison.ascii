@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Drow Poison"
   base: "poison"
   reference {

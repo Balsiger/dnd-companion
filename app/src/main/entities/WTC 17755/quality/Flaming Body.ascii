@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Flaming Body"
   category: "aura"
   synonym: "Body, Flaming"

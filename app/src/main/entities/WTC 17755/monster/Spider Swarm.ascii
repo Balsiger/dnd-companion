@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spider Swarm"
   category: "swarm"
   category: "spider"

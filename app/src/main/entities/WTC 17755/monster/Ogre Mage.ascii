@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ogre Mage"
   category: "giant"
   synonym: "Mage, Ogre"

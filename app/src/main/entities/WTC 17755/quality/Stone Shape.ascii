@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Stone Shape"
   category: "action"
   synonym: "Shape, Stone"

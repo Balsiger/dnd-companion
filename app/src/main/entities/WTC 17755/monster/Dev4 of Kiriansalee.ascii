@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Dev4 of Kiriansalee"
   description: "Dummy monster until we support character classes."
   short_description: "Dummy replacement for character classes."

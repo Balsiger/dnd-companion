@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Stoneskin"
   base: "scroll"
   synonym: "Stoneskin, Scroll"

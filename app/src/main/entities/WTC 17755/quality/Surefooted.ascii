@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Surefooted"
   category: "walk"
   category: "move"

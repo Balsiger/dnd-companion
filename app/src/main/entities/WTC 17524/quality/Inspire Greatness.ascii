@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Inspire Greatness"
   category: "action"
   synonym: "Greatness, Inspire"

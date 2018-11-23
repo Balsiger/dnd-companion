@@ -2,7 +2,7 @@ syntax = "proto3";
 package net.ixitxachitls.companion.proto;
 
 import "value.proto";
-import "entity.proto";
+import "template.proto";
 
 message SettingsProto {
   string nickname = 1;
@@ -70,8 +70,8 @@ message CharacterProto {
   message Level {
     string name = 1;
     int32 hp = 2;
-    repeated ParametrizedEntityProto quality = 3;
-    repeated ParametrizedEntityProto feat = 4;
+    repeated ParametrizedTemplateProto quality = 3;
+    repeated ParametrizedTemplateProto feat = 4;
     Ability ability_increase = 5;
     repeated string spell_known = 6;
   }
@@ -99,91 +99,51 @@ message ItemProto {
   repeated ItemProto content = 13;
 }
 
-message CompanionMessageProto {
-  message Header {
-    int64 id = 1;
-
-    message Id {
-      string id = 1;
-      string name = 2;
-    }
-    Id sender = 2;
-    Id receiver = 3;
-
-    enum Priority {
-      NORMAL = 0;
-      LOW = 1;
-      HIGH = 2;
-    };
-    Priority priority = 4;
-  }
-  Header header = 1;
-
-  message Payload {
-    message Welcome {
-      string name = 1;
-      string id = 2;
-    }
-
-    message Image {
-      string type = 1;
-      string id = 2;
-      bytes image = 3;
-    }
-
-    message Xp {
-      string campaign_id = 1;
-      string character_id = 2;
-      int32 xp_award = 3;
-    }
-
-    message Condition {
-      string target_id = 1;
-      TimedConditionProto condition = 2;
-    }
-
-    message DeleteCondition {
-      string name = 1;
-      string source_id = 2;
-      string target_id = 3;
-    }
-
-    message Item {
-      string id = 1;
-      ItemProto item = 3;
-      MoneyProto sell_price = 4;
-      string recipient = 5;
-    }
-
-    oneof payload {
-      string debug = 1;
-      Welcome welcome = 2;
-      int64 ack = 3;
-      CampaignProto campaign = 4; // From server only.
-      string campaign_delete = 5;
-      CharacterProto character = 6; // From client only.
-      string character_delete = 7;
-      Image image = 8;
-      Xp xp_award = 9;
-      Condition condition = 10;
-      DeleteCondition condition_delete = 11; // From server only
-      Item item_add = 12; // From server only.
-    }
-  }
-  Payload data = 2;
+message AdventureProto {
+  string id = 1;
+  string name = 2;
 }
 
-message ScheduledMessageProto {
-  enum State {
-    WAITING = 0;
-    PENDING = 1;
-    SENT = 2;
-    ACKED = 3;
-  }
-  State state = 1;
-  int64 last_interaction = 2;
-
-  CompanionMessageProto message = 3;
+message EncounterProto {
+  string id = 1;
+  string adventure = 2;
+  /*
+  repeated string location = 3;
+  string floor = 4;
+  string ceiling = 5;
+  string walls = 6;
+  string feel = 7;
+  string sound = 8;
+  string smell = 9;
+  string taste = 10;
+  string light = 11;
+  string skill = 12;
+  string doors = 13;
+  string number = 2;
+  string title = 3;
+  repeated string monster = 4;
+  repeated string item = 5;
+  repeated string trap = 6;
+  repeated string hazard = 7;
+  repeated string obstacle = 8;
+  repeated string secret = 9;
+  repeated string event = 10;
+  repeated string rule = 11;
+  repeated string spell = 12;
+  repeated int32 encounter_level = 13;
+  repeated string location = 14;
+  string doors = 15;
+  string floor = 16;
+  string ceiling = 17;
+  string walls = 18;
+  string feel = 19;
+  string sound = 20;
+  string smell = 21;
+  string taste = 22;
+  string light = 23;
+  repeated string skill = 24;
+  DistanceProto distance = 25;
+  */
 }
 
 message HistoryProto {

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Boccob\'s Blessed Book"
   category: "book"
   category: "boccob"

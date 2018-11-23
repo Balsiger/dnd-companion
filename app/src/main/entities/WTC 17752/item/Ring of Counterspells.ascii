@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ring of Counterspells"
   base: "ring"
   category: "spell"

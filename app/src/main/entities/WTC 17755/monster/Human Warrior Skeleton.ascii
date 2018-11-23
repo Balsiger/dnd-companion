@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Human Warrior Skeleton"
   synonym: "Skeleton, Human Warrior"
   synonym: "Warrior, Skeleton Human"

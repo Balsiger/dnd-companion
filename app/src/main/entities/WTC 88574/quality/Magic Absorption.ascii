@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Magic Absorption"
   category: "action"
   synonym: "Absorption, Magic"

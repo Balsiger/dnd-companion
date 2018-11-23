@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Death Throes"
   category: "health"
   synonym: "Throes, Death"

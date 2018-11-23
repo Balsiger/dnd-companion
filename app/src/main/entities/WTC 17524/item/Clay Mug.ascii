@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Clay Mug"
   category: "crockery"
   synonym: "Clay Tankard"

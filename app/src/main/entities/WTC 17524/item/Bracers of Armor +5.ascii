@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Bracers of Armor +5"
   base: "bracers of armor +1"
   synonym: "Armor, Bracers of +5"

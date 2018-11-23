@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Mwk Weapon"
   category: "masterwork"
   synonym: "Masterwork"

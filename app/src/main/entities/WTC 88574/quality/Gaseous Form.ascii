@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gaseous Form"
   category: "action"
   synonym: "Form, Gaseous"

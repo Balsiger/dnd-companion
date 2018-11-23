@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Trackless Step"
   category: "aura"
   synonym: "Step, Trackless"

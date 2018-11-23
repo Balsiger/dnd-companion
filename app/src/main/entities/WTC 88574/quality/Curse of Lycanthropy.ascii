@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Curse of Lycanthropy"
   category: "health"
   synonym: "Lycanthropy, Curse of"

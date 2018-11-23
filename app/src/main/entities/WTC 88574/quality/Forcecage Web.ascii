@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Forcecage Web"
   category: "action"
   synonym: "Web, Forcecage"

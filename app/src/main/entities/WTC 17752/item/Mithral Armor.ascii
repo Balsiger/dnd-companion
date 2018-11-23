@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Mithral Armor"
   base: "mwk armor"
   synonym: "Mithral"

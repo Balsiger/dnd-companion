@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Metamagic Rod Extend"
   base: "rod"
   category: "metamagic"

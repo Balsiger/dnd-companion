@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Empathic Link"
   category: "communication"
   synonym: "Link, Empathic"

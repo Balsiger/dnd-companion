@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Nightstick"
   base: "rod"
   category: "rod"

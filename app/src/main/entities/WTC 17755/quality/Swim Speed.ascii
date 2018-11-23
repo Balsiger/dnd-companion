@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Swim Speed"
   category: "action"
   synonym: "Speed, Swim"

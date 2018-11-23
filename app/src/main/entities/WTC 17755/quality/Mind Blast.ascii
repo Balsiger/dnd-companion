@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Mind Blast"
   category: "attack"
   synonym: "Blast, Mind"

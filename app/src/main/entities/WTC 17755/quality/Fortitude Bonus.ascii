@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Fortitude Bonus"
   synonym: "Bonus, Fortitude"
   world: "Generic"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Magic Immunity"
   category: "immunity"
   synonym: "Immunity to Magic"

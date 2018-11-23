@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spit Web"
   category: "web"
   category: "spit"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wolf"
   category: "natural"
   category: "animal"

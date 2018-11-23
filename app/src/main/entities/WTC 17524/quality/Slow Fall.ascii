@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Slow Fall"
   category: "resistance"
   synonym: "Fall, Slow"

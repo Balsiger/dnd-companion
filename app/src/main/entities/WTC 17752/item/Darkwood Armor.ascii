@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Darkwood Armor"
   category: "material"
   category: "magic"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ring of Wizardry I"
   base: "ring"
   category: "ring"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Rebuke Undead"
   category: "action"
   synonym: "Undead, Rebuke"

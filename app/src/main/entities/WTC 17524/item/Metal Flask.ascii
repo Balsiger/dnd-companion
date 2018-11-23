@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Metal Flask"
   category: "gear"
   synonym: "Flask (Metal)"

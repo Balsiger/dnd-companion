@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Violet Ink"
   category: "scribe"
   synonym: "Ink (Violet)"

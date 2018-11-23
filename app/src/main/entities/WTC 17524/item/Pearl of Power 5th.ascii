@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Pearl of Power 5th"
   base: "pearl of power"
   synonym: "Power (5th), Pearl of"

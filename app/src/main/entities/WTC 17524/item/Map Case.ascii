@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Map Case"
   category: "gear"
   category: "wizard"

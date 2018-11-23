@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Stunning Screech"
   category: "attack"
   synonym: "Screech, Stunning"

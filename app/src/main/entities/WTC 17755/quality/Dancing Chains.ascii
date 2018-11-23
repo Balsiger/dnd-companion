@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Dancing Chains"
   category: "attack"
   synonym: "Chains, Dancing"

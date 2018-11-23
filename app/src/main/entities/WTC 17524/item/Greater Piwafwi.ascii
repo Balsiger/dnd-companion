@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Greater Piwafwi"
   base: "cloak of elvenkind"
   synonym: "Piwafwi, Greater"

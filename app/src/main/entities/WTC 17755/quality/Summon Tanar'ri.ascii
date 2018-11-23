@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Summon Tanar\'ri"
   category: "action"
   synonym: "Tanar\'ri, Summon"

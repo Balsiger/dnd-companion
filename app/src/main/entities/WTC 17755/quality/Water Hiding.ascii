@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Water Hiding"
   world: "Generic"
   description: "The creature has a special racial bonus on \\Skill{hide} checks under\n  water."

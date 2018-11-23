@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Fast Movement"
   category: "option"
   synonym: "Movement, Fast"

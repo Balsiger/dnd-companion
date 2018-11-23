@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Winter Blanket"
   category: "gear"
   synonym: "Blanket, Winter"

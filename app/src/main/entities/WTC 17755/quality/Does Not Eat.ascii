@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Does Not Eat"
   world: "Generic"
   description: "The creature does not need to eat, although it can probably do so if it\n  desires."

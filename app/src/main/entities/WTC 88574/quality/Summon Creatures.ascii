@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Summon Creatures"
   category: "action"
   synonym: "Creatures, Summon"

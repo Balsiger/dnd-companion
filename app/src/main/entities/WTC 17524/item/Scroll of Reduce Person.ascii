@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Reduce Person"
   synonym: "Reduce Person, Scroll"
   description: "A scroll with the spell \\SpellRef[Wiz 1]{Reduce Persons}"

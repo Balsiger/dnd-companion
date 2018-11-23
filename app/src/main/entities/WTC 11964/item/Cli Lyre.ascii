@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cli Lyre"
   category: "magic"
   category: "instrument"

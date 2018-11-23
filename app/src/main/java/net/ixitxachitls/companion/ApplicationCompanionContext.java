@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion;
 
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.CreatureConditions;
@@ -43,6 +44,7 @@ public class ApplicationCompanionContext extends CompanionContext {
 
     users = new Users(this);
     campaigns = new Campaigns(this);
+    adventures = new Adventures(this);
     encounters = new Encounters(this);
     monsters = new Monsters(this);
     characters = new Characters(this);

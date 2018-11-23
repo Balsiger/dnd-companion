@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Dagger of Venom"
   base: "dagger"
   base: "mwk weapon"

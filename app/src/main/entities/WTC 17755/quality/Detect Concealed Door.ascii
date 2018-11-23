@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Detect Concealed Door"
   category: "aura"
   synonym: "Door, Detect Concealed"

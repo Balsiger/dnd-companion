@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shadow Essence Poison"
   base: "poison"
   category: "shadow"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Air Mastery"
   category: "aura"
   synonym: "Mastery, Air"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Blast Infidel"
   synonym: "Infidel, Blast"
   reference {

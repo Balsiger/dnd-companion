@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Link"
   category: "communication"
   reference {

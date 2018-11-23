@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Searing Light"
   base: "scroll"
   synonym: "Searing Light, Scroll"

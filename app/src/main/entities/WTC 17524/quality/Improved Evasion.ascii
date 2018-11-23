@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Improved Evasion"
   category: "resistance"
   synonym: "Evasion, Improved"

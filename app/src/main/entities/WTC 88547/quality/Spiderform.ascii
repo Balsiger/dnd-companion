@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spiderform"
   category: "action"
   reference {

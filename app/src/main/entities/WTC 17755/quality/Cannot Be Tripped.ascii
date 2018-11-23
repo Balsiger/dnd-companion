@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cannot Be Tripped"
   category: "trip"
   category: "immune"

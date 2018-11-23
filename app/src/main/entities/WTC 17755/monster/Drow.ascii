@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Drow"
   synonym: "Elf, Dark"
   synonym: "Dark Elf"

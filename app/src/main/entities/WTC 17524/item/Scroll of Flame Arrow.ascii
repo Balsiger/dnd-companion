@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Flame Arrow"
   base: "scroll"
   synonym: "Flame Arrow, Scroll"

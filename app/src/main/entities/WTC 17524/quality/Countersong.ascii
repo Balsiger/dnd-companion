@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Countersong"
   category: "action"
   reference {

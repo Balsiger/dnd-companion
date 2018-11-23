@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spell"
   category: "action"
   category: "option"

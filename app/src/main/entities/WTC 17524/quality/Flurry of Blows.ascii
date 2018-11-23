@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Flurry of Blows"
   category: "attack"
   synonym: "Blows, Flurry of"

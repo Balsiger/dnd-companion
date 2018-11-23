@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity To Visual Effects"
   category: "immunity"
   synonym: "Visual Effects, Immunity to"

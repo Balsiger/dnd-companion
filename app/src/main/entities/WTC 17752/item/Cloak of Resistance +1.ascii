@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cloak of Resistance +1"
   base: "cloak"
   synonym: "Resistance +1, Cloak of"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Trap Sense"
   category: "resistance"
   synonym: "Sense, Trap"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Incorporeal Traits"
   category: "resistance"
   synonym: "Traits, Incorporeal"

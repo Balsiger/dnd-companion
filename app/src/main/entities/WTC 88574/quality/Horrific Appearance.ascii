@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Horrific Appearance"
   category: "aura"
   synonym: "Appereance, Horrific"

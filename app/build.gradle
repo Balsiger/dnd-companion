@@ -173,12 +173,12 @@ def convertToBinaryProto(inputFile, outputFile, proto) {
       executable configurations.protoc.singleFile
       args '--proto_path=' + file('./src/main/proto/')
       args "--encode=$proto"
-      args file('./src/main/proto/entity.proto')
+      args file('./src/main/proto/template.proto')
 
       standardInput = new FileInputStream(file(inputFile))
       standardOutput = new FileOutputStream(file(outputFile))
       errorOutput = System.err
-      //standardOutput = System.out
+      //standardOutput = System.err
     }
   }
 }
@@ -198,11 +198,11 @@ def convertToBinaryProtos(input, type, proto) {
 
 task convertProtoData {
   convertToBinaryProtos('./src/main/entities', 'monster',
-      'net.ixitxachitls.companion.proto.MonsterProto')
+      'net.ixitxachitls.companion.proto.MonsterTemplateProto')
   convertToBinaryProtos('./src/main/entities', 'level',
-      'net.ixitxachitls.companion.proto.LevelProto')
+      'net.ixitxachitls.companion.proto.LevelTemplateProto')
   convertToBinaryProtos('./src/main/entities', 'world',
-      'net.ixitxachitls.companion.proto.WorldProto')
+      'net.ixitxachitls.companion.proto.WorldTemplateProto')
   convertToBinaryProtos('./src/main/entities', 'item',
       'net.ixitxachitls.companion.proto.ItemTemplateProto')
 }

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gnome Traits"
   synonym: "Traits, Gnome"
   reference {

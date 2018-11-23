@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity To Gaze Attacks"
   category: "immunity"
   synonym: "Gaze Attacks, Immunity to"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Chaos Caster"
   category: "option"
   synonym: "Caster, Chaos"

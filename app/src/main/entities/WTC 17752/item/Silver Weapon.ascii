@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Silver Weapon"
   synonym: "Silver"
   reference {

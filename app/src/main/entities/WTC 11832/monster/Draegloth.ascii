@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Draegloth"
   base: "drow"
   category: "fiend"

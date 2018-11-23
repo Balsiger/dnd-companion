@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Black Dragon"
   base: "chromatic dragon"
   category: "chromatic dragon"

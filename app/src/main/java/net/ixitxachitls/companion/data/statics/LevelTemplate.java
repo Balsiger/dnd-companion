@@ -21,24 +21,24 @@
 
 package net.ixitxachitls.companion.data.statics;
 
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Template;
 
 /**
  * All the base information about a level.
  */
-public class LevelTemplate extends StaticEntry<Entity.LevelProto> {
+public class LevelTemplate extends StaticEntry<Template.LevelTemplateProto> {
   public static final String TYPE = "level";
 
   public LevelTemplate(String name) {
     super(name);
   }
 
-  public static Entity.LevelProto defaultProto() {
-    return Entity.LevelProto.getDefaultInstance();
+  public static Template.LevelTemplateProto defaultProto() {
+    return Template.LevelTemplateProto.getDefaultInstance();
   }
 
-  public static LevelTemplate fromProto(Entity.LevelProto proto) {
-    LevelTemplate level = new LevelTemplate(proto.getEntity().getName());
+  public static LevelTemplate fromProto(Template.LevelTemplateProto proto) {
+    LevelTemplate level = new LevelTemplate(proto.getTemplate().getName());
     return level;
   }
 

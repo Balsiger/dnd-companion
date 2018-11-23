@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Lightning Bolt"
   category: "attack"
   synonym: "Bolt, Lightning"

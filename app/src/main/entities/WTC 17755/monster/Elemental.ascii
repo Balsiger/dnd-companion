@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Elemental"
   category: "elemental"
   world: "Generic"

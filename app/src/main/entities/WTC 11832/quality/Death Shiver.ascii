@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Death Shiver"
   category: "action"
   synonym: "Shiver, Death"

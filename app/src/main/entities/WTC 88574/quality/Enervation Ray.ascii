@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Enervation Ray"
   category: "ray"
   category: "enevervation"

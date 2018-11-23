@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Harmed by Positive Energy"
   category: "vulnerability"
   synonym: "Positive Energy, Harmed by"

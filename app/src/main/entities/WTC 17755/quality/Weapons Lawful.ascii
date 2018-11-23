@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Weapons Lawful"
   world: "Generic"
   description: "The creature\'s natural and all its wielded weapons are treated as\n  lawful-aligned for overcoming damage reduction."

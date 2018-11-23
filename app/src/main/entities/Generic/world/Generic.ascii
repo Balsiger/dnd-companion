@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Generic"
   world: "Generic"
   description: "A generic world as a base for campaigns"

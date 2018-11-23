@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Inflict Critical Wounds"
   base: "scroll"
   synonym: "Inflict Critical Wounds, Scroll"

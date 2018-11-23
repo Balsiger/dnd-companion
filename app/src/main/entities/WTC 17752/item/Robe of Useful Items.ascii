@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Robe of Useful Items"
   category: "clothing"
   category: "robe"

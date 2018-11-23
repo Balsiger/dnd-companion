@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Darkvision"
   base: "wand"
   synonym: "Darkvision, Wand"

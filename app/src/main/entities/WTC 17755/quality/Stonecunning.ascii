@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Stonecunning"
   category: "search"
   synonym: "Cunning, Stone"

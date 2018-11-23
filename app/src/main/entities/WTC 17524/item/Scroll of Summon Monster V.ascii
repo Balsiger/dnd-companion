@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Summon Monster V"
   base: "scroll"
   synonym: "Summon Monster V, Scroll"

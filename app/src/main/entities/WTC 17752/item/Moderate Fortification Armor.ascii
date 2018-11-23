@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Moderate Fortification Armor"
   category: "fortification"
   category: "moderate"

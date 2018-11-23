@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Giant Wasp"
   synonym: "Wasp, Giant"
   reference {

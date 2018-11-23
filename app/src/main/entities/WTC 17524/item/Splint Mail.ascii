@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Splint Mail"
   synonym: "Mail, Splint"
   reference {

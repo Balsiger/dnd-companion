@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Forgotten Realms"
   synonym: "FR"
   synonym: "Fearun"

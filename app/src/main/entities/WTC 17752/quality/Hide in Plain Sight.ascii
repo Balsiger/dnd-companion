@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Hide in Plain Sight"
   category: "action"
   synonym: "Plain Sight, Hide in"

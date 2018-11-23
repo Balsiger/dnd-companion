@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Quth-Maren"
   base: "undead"
   category: "undead"

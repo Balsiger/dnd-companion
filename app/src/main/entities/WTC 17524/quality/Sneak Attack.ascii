@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Sneak Attack"
   category: "attack"
   synonym: "Attack, Sneak"

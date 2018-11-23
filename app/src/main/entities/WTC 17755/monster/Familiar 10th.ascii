@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Familiar 10th"
   world: "Generic"
   description: "A placeholder for handling familiars."

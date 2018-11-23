@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Rod of Cancellation"
   base: "rod"
   category: "cancel"

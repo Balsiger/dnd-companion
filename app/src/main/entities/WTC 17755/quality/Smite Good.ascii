@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Smite Good"
   category: "attack"
   synonym: "Good, Smite"

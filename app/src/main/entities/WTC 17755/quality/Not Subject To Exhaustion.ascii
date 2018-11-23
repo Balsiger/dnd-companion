@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Not Subject To Exhaustion"
   category: "immunity"
   category: "exhaustion"

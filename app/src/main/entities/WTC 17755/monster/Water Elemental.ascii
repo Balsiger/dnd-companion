@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Water Elemental"
   base: "elemental"
   synonym: "Elemental, Water"

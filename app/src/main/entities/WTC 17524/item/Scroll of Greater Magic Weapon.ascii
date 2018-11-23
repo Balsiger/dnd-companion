@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Greater Magic Weapon"
   base: "scroll"
   synonym: "Greater Magic Weapon, Scroll"

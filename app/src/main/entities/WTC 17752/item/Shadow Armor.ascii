@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shadow Armor"
   category: "shadow"
   category: "magic"

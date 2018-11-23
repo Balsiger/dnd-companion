@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Unholy Blight 8"
   base: "wand"
   synonym: "Unholy Blight, Wand"

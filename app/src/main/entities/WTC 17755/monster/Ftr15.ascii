@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ftr15"
   category: "dummy"
   synonym: "Fighter 15"

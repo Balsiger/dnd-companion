@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Weapon Proficiency"
   world: "Generic"
   description: "The character is proficient in the named weapon."

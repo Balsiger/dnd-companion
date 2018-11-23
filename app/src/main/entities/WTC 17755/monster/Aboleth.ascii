@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Aboleth"
   reference {
     name: "WTC 17755"

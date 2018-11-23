@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Dismissal"
   base: "scroll"
   synonym: "Dismissal, Scroll"

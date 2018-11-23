@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Not Affected By Raise Dead"
   category: "immunity"
   synonym: "Raise Dead, Not Affected By"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Potion Belt"
   category: "gear"
   category: "container"

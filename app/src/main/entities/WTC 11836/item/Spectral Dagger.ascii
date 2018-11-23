@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spectral Dagger"
   base: "dagger"
   category: "dagger"

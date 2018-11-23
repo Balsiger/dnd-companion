@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Arcane Reach"
   category: "option"
   synonym: "Reach, Arcane"

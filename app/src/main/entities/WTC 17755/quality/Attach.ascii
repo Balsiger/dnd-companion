@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Attach"
   category: "action"
   reference {

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ring of Feather Falling"
   base: "ring"
   category: "spell"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Fiendish Creature 4-7"
   base: "fiendish creature"
   world: "Generic"

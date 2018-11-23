@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Melf\'s Acid Arrow"
   base: "scroll"
   synonym: "Melf\'s Acid Arrow, Scroll"

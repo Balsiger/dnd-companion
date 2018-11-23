@@ -1,4 +1,4 @@
-entity {
+template {
   name: "10 Foot Pole"
   category: "gear"
   synonym: "Pole, 10 Foot"

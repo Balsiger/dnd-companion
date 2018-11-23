@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spell Power"
   category: "option"
   synonym: "Power, Spell"

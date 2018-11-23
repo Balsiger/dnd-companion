@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Oil"
   category: "gear"
   category: "liquid"

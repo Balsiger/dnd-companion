@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Paralyzing Glare"
   category: "aura"
   synonym: "Glare, Paralyzing"

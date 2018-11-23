@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Magic Weapon"
   synonym: "Magic Weapon, Scroll"
   description: "A scroll with the spell \\SpellRef[Wiz 1]{Magic Weapon}"

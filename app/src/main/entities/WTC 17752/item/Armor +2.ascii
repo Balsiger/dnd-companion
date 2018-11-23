@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Armor +2"
   base: "mwk armor"
   category: "magic"

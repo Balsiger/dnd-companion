@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Elder Water Elemental"
   base: "water elemental"
   category: "elemental"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Improved Uncanny Dodge"
   category: "option"
   synonym: "Uncanny Dodge, Improved"

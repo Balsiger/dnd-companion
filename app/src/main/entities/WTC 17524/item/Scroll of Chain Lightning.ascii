@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Chain Lightning"
   base: "scroll"
   synonym: "Chain Lightning, Scroll"

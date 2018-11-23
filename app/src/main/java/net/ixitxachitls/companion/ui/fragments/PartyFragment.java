@@ -36,16 +36,21 @@ import com.google.android.flexbox.FlexboxLayout;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.documents.Adventure;
+import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.values.Encounter;
+import net.ixitxachitls.companion.ui.dialogs.AdventuresDialog;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.CharacterChipView;
 import net.ixitxachitls.companion.ui.views.ChipView;
 import net.ixitxachitls.companion.ui.views.CreatureChipView;
+import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -72,22 +77,26 @@ public class PartyFragment extends NestedCompanionFragment {
   private FlexboxLayout party;
   private TextWrapper<TextView> title;
   private Wrapper<FloatingActionButton> addCharacter;
+  private LabelledTextView adventure;
   private Transition transition = new AutoTransition();
 
   // State.
   private Map<String, CreatureChipView> chipsById = new ConcurrentHashMap<>();
   private Map<String, Character> charactersNeedingInitiative = new HashMap<>();
 
-  public PartyFragment() {}
+  public PartyFragment() {
+  }
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
+    campaigns().observe(this, this::update);
     characters().observe(this, this::update);
     images().observe(this, this::update);
     messages().observe(this, this::update);
+    adventures().observe(this, this::update);
 
     view = (ViewGroup) inflater.inflate(R.layout.fragment_party, container, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
@@ -97,6 +106,8 @@ public class PartyFragment extends NestedCompanionFragment {
     title = TextWrapper.wrap(view, R.id.title);
     party = view.findViewById(R.id.party);
     scroll = Wrapper.wrap(view, R.id.scroll);
+    adventure = view.findViewById(R.id.adventure);
+    adventure.onClick(this::changeAdventure);
 
     addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)
         .onClick(this::createCharacter)
@@ -111,6 +122,24 @@ public class PartyFragment extends NestedCompanionFragment {
     super.onResume();
 
     update(characters());
+  }
+
+  private void update(Campaigns campaigns) {
+    if (campaign.isPresent()) {
+      this.campaign = campaigns().get(campaign.get().getId());
+    }
+
+    update(adventures());
+  }
+
+  private void update(Adventures adventures) {
+    if (campaign.isPresent()) {
+      if (campaign.get().getAdventure().isPresent()) {
+        adventure.text(campaign.get().getAdventure().get().getName());
+      } else {
+        adventure.text("");
+      }
+    }
   }
 
   private void update(Characters characters) {
@@ -142,13 +171,13 @@ public class PartyFragment extends NestedCompanionFragment {
   }
 
   private void update(Images images) {
-    for (ChipView chip: chipsById.values()) {
+    for (ChipView chip : chipsById.values()) {
       chip.update();
     }
   }
 
   private void update(Messages messages) {
-    for (ChipView chip: chipsById.values()) {
+    for (ChipView chip : chipsById.values()) {
       if (chip instanceof CharacterChipView) {
         ((CharacterChipView) chip).update(messages);
       }
@@ -159,6 +188,8 @@ public class PartyFragment extends NestedCompanionFragment {
     this.campaign = Optional.of(campaign);
     this.encounter = Optional.empty();
 
+    adventures().readAdventures(campaign.getId());
+    update(campaigns());
     update(characters());
     update(messages());
   }
@@ -218,5 +249,27 @@ public class PartyFragment extends NestedCompanionFragment {
         }
       }
     }
+  }
+
+  private void changeAdventure() {
+    if (campaign.isPresent()) {
+      AdventuresDialog.newInstance(campaign.get().getId()).display();
+    }
+  }
+
+  private void addAdventure() {
+    if (!adventure.getText().isEmpty()
+        && campaign.isPresent()
+        && !adventureExists(adventure.getText())) {
+      Adventure.create(context(), campaign.get().getId(), adventure.getText()).store();
+    }
+  }
+
+  private boolean adventureExists(String name) {
+    if (campaign.isPresent()) {
+      return adventures().exists(campaign.get().getId(), name);
+    }
+
+    return false;
   }
 }

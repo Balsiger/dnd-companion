@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Create Spawn"
   category: "option"
   synonym: "Spawn, Create"

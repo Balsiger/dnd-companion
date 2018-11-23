@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Common Lamp"
   category: "gear"
   synonym: "Lamp, Common"

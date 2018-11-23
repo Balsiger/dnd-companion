@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Glass Vial"
   category: "gear"
   category: "vial"

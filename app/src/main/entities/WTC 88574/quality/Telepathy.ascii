@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Telepathy"
   category: "communication"
   reference {

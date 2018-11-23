@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Hemp Rope"
   category: "gear"
   category: "climb"

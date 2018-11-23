@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Freezing Fog"
   category: "attack"
   synonym: "Fog, Freezing"

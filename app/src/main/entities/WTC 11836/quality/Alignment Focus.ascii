@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Alignment Focus"
   category: "focus"
   category: "spell"

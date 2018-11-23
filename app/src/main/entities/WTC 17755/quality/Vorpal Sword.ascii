@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Vorpal Sword"
   category: "attack"
   synonym: "Sword, Vorpal"

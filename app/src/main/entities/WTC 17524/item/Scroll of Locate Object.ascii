@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Locate Object"
   base: "scroll"
   synonym: "Locate Object, Scroll"

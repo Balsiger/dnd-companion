@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Divine Perseverance"
   category: "heal"
   category: "divine"

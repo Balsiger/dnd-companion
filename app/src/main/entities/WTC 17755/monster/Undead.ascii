@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Undead"
   description: "Dummy entry to be filled later."
   short_description: "Dummy entry."

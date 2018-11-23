@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gauntlets of Ogre Power"
   category: "gauntlets"
   category: "magic"

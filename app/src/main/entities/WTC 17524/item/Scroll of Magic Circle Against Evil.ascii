@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Magic Circle Against Evil"
   base: "scroll"
   synonym: "Magic Circle Against Evil, Scroll"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Not Subject To Death from Massive Damage"
   category: "immunity"
   synonym: "Death from Massive Damage, Not Subject to"

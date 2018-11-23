@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Very Young Black Dragon"
   base: "black dragon"
   synonym: "Black Dragon, Very Young"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Rock Catching"
   category: "action"
   synonym: "Catching, Rock"

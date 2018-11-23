@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Partial Actions Only"
   category: "action"
   synonym: "Actions Only, Partial"

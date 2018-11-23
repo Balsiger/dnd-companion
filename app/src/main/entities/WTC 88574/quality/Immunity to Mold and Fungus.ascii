@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity to Mold and Fungus"
   category: "immunity"
   synonym: "Mold and Fungus, Immunity"

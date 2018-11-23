@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity To Polymorph"
   category: "immunity"
   synonym: "Polymorph, Immunity to"

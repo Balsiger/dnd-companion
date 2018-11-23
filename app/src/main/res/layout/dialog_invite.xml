@@ -73,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_weight="0"
+        android:tint="@color/campaignDark"
         app:srcCompat="@drawable/account_plus"/>
   </LinearLayout>
 

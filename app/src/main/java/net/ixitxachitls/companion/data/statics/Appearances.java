@@ -21,7 +21,7 @@
 
 package net.ixitxachitls.companion.data.statics;
 
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Template;
 
 import java.util.Collections;
 import java.util.List;
@@ -45,12 +45,12 @@ public class Appearances {
       this.description = description;
     }
 
-    public static Appearance fromProto(Entity.ItemTemplateProto.Appearance proto) {
+    public static Appearance fromProto(Template.ItemTemplateProto.Appearance proto) {
       return new Appearance(ItemTemplate.convert(proto.getProbability()), proto.getAppearance());
     }
 
-    public Entity.ItemTemplateProto.Appearance toProto() {
-      return Entity.ItemTemplateProto.Appearance.newBuilder()
+    public Template.ItemTemplateProto.Appearance toProto() {
+      return Template.ItemTemplateProto.Appearance.newBuilder()
           .setProbability(ItemTemplate.convert(probability))
           .setAppearance(description)
           .build();
@@ -88,13 +88,13 @@ public class Appearances {
     this.totalProbabilities = appearances.stream().mapToInt(Appearance::probability).sum();
   }
 
-  public static Appearances fromProto(List<Entity.ItemTemplateProto.Appearance> appearances) {
+  public static Appearances fromProto(List<Template.ItemTemplateProto.Appearance> appearances) {
     return new Appearances(appearances.stream()
         .map(Appearance::fromProto)
         .collect(Collectors.toList()));
   }
 
-  public List<Entity.ItemTemplateProto.Appearance> toProto() {
+  public List<Template.ItemTemplateProto.Appearance> toProto() {
     return appearances.stream().map(Appearance::toProto).collect(Collectors.toList());
   }
 

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Delay Poison"
   base: "scroll"
   synonym: "Delay Poison, Scroll"

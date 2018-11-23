@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Hold Portal"
   base: "scroll"
   synonym: "Hold Portal, Scroll"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Hide Armor"
   synonym: "Hide"
   reference {

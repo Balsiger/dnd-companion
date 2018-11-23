@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Clr15 of Kiriansalee"
   category: "dummy"
   world: "Forgotten Realms"

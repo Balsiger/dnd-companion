@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Detect Thoughts"
   category: "action"
   synonym: "Thoughts, Detect"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "True Seeing"
   category: "sense"
   synonym: "True Seeing"

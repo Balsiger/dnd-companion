@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scale Mail"
   synonym: "Mail, Scale"
   reference {

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Not Affected By Resurrection"
   category: "immunity"
   synonym: "Resurrection, Not Affected By"

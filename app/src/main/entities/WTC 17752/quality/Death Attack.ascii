@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Death Attack"
   category: "attack"
   synonym: "Attack, Death"

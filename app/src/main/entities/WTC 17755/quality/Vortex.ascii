@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Vortex"
   category: "water"
   reference {

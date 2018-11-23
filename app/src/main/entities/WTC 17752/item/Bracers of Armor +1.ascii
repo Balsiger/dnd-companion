@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Bracers of Armor +1"
   category: "bracers"
   category: "armor"

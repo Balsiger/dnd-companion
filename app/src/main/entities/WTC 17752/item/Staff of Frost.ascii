@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Staff of Frost"
   base: "staff"
   synonym: "Frost, Staff of"

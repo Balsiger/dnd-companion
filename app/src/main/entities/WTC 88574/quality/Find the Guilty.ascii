@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Find the Guilty"
   category: "sense"
   synonym: "Guilty, Find the"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Dispel Magic"
   base: "wand"
   synonym: "Dispel Magic, Wand"

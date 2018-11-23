@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Fast Healing"
   category: "health"
   synonym: "Healing, Fast"

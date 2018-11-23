@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Color Spray"
   base: "scroll"
   synonym: "Color Spray, Scroll"

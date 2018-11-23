@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ammunition +5"
   base: "mwk ammunition"
   synonym: "+5"

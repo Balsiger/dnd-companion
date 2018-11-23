@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Dusty Rose Ioun Stone"
   category: "magic"
   category: "stone"

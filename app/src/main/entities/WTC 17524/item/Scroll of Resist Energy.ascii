@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Resist Energy"
   base: "scroll"
   synonym: "Resist Energyx, Scroll"

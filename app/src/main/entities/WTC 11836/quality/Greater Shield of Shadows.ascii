@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Greater Shield of Shadows"
   category: "resistance"
   synonym: "Shield of Shadows, Greater"

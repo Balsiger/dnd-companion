@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spell-like Ability"
   category: "action"
   synonym: "Ability, Spell-like"

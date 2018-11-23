@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Corporeal Instability"
   category: "action"
   category: "attack"

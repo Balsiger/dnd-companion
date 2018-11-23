@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gnoll"
   world: "Generic"
   description: "Gnolls are hyena-headed, evil humanoids that wander in loose tribes.\n\nMost gnolls have dirty yellow or reddish-brown fur. \n\nA gnoll is a nocturnal carnivore, preferring intelligent creatures for food because they scream more. Gnolls tend to think with their stomachs, and any alliances they make (usually with \\Monster{bugbears}, \\Monster{hobgoblins}, \\Monster{ogres}, \\Monster{orcs}, or \\Monster{trolls}) often fall apart when the gnolls get hungry. They dislike giants and most other humanoids, and they disdain manual labor.\n\nA gnoll is about 7-1/2 feet tall and weighs 300 pounds.\n\nGnolls speak Gnoll.\n"

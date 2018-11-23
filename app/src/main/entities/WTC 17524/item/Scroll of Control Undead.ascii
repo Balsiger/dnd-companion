@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Control Undead"
   base: "scroll"
   synonym: "Control Undead, Scroll"

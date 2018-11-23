@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Corrupting Gaze"
   category: "aura"
   synonym: "Gaze, Corrupting"

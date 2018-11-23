@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Iron Pot"
   category: "gear"
   category: "crockery"

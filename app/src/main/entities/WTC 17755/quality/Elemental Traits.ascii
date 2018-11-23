@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Elemental Traits"
   category: "resistance"
   synonym: "Traits, Elemental"

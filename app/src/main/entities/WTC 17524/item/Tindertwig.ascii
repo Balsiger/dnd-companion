@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Tindertwig"
   category: "alchemical"
   synonym: "Match"

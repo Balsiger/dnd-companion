@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Demon Armor"
   base: "full plate"
   base: "armor +4"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Necklace of Fireballs"
   category: "necklace"
   category: "fireball"

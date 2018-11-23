@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Alternate Form Druid"
   category: "action"
   synonym: "Form Druid, Alternate"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Pack Saddle"
   category: "mount"
   synonym: "Saddle, Pack"

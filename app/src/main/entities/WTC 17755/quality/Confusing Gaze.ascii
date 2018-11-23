@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Confusing Gaze"
   category: "attack"
   synonym: "Gaze, Confusing"

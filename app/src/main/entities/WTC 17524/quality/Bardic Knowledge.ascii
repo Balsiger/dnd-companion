@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Bardic Knowledge"
   category: "action"
   synonym: "Knowledge, Bardic"

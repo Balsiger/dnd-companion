@@ -27,6 +27,7 @@ import android.view.ViewGroup;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.CreatureConditions;
@@ -75,6 +76,10 @@ public class NestedCompanionFragment extends Fragment {
 
   public CreatureConditions conditions() {
     return context.conditions();
+  }
+
+  public Adventures adventures() {
+    return context.adventures();
   }
 
   public User me() {

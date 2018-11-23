@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Negative Energy Touch"
   category: "action"
   synonym: "Touch, Negative Energy"

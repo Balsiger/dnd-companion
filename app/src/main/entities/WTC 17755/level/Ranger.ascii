@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ranger"
   reference {
     name: "WTC 17755"
@@ -52,7 +52,7 @@ armor_proficiency: LIGHT
 armor_proficiency: SHIELD
 quality {
   level: 1
-  entity {
+  template {
     name: "favored enemy"
     parameters {
     }
@@ -60,7 +60,7 @@ quality {
 }
 quality {
   level: 5
-  entity {
+  template {
     name: "favored enemy"
     parameters {
     }
@@ -68,7 +68,7 @@ quality {
 }
 quality {
   level: 10
-  entity {
+  template {
     name: "favored enemy"
     parameters {
     }
@@ -76,7 +76,7 @@ quality {
 }
 quality {
   level: 15
-  entity {
+  template {
     name: "favored enemy"
     parameters {
     }
@@ -84,7 +84,7 @@ quality {
 }
 quality {
   level: 20
-  entity {
+  template {
     name: "favored enemy"
     parameters {
     }
@@ -92,7 +92,7 @@ quality {
 }
 quality {
   level: 1
-  entity {
+  template {
     name: "wild empathy"
     parameters {
     }
@@ -100,7 +100,7 @@ quality {
 }
 quality {
   level: 2
-  entity {
+  template {
     name: "combat style: archery|combat style: two-weapon fighting"
     parameters {
     }
@@ -111,7 +111,7 @@ quality {
 }
 quality {
   level: 4
-  entity {
+  template {
     name: "animal companion"
     parameters {
     }
@@ -202,7 +202,7 @@ will_save: 0
 will_save: 0
 bonusFeat {
   level: 1
-  entity {
+  template {
     name: "track"
     parameters {
     }
@@ -210,7 +210,7 @@ bonusFeat {
 }
 bonusFeat {
   level: 3
-  entity {
+  template {
     name: "endurance"
     parameters {
     }

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Lifesense"
   description: "A \\Monster{dread wraith} notices and locates living creatures within $range, just as if it possessed the blindsight ability. It also senses the strength of their life force automatically, as if it had cast \\SpellRef{deathwatch}.\n"
 }

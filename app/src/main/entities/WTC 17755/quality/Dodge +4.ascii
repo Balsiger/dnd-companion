@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Dodge +4"
   world: "Generic"
   description: "The creature gets a +4 dodge bonus to armor class against $name."

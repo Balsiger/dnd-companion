@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity To Strength Damage"
   category: "immunity"
   synonym: "Strength Damage, Immunity to"

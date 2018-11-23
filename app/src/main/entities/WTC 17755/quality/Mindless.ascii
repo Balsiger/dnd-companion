@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Mindless"
   category: "immunity"
   world: "Generic"

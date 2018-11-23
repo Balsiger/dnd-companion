@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Good Spot"
   world: "Generic"
   description: "The creature has a special racial bonus on any \\Skill{spot} check."

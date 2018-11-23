@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Swallow Whole"
   category: "action"
   synonym: "Whole, Swallow"

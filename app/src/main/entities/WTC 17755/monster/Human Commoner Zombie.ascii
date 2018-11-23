@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Human Commoner Zombie"
   synonym: "Zombie, Human Commoner"
   synonym: "Commoner, Zombie Human"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Horse"
   category: "domesticated"
   category: "mount"

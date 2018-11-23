@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Horrifying Gaze"
   category: "action"
   synonym: "Gaze, Horrifying"

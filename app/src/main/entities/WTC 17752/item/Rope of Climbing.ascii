@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Rope of Climbing"
   category: "magic"
   category: "gear"

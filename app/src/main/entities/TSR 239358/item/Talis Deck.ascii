@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Talis Deck"
   category: "cards"
   category: "game"

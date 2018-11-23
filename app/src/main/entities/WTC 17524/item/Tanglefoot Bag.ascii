@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Tanglefoot Bag"
   category: "alchemical"
   synonym: "Bag, Tanglefoot"

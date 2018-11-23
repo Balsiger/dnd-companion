@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Magic Armor plus 4"
   category: "magical"
   synonym: "Magic Armor +4"

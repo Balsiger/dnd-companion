@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spyglass"
   category: "gear"
   category: "visual"

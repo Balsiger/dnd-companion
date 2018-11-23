@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gloves of Swimming and Climbing"
   category: "gloves"
   category: "clothing"

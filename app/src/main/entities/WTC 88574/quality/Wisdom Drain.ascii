@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wisdom Drain"
   category: "attack"
   synonym: "Drain, Wisdom"

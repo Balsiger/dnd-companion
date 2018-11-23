@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Corrupting Touch"
   category: "attack"
   synonym: "Touch, Corrupting"

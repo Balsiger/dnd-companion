@@ -1,4 +1,4 @@
-entity {
+template {
   name: "AC +1"
   world: "Generic"
   description: "The creature gets an armor class bonus of +1"

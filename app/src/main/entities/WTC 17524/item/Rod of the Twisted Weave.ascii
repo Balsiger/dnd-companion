@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Rod of the Twisted Weave"
   base: "rod"
   synonym: "Twisted Weave, Rod of"

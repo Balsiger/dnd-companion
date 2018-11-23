@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Searing Light"
   base: "wand"
   synonym: "Searing Light, Wand"

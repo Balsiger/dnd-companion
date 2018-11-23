@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Weak Acid"
   category: "attack"
   synonym: "Acid, Weak"

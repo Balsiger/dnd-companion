@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ring of See Invisibility"
   base: "ring"
   category: "invisible"

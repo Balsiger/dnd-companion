@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Restoration"
   base: "scroll"
   synonym: "Restoration, Scroll"

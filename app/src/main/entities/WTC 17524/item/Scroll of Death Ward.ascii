@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Death Ward"
   base: "scroll"
   synonym: "Searing Light, Scroll"

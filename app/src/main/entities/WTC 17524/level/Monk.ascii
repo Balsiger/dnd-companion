@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Monk"
   world: "Generic"
   description: "Dotted across the landscape are monasteries\342\200\224small, walled cloisters inhabited by monks who pursue personal perfection through action as well as contemplation. They train themselves to be versatile warriors skilled at fighting without weapons or armor. The inhabitants of monasteries headed by good masters serve as protectors of the people. Ready for battle even when barefoot and dressed in peasant clothes, monks can travel unnoticed among the populace, catching bandits, warlords, and corrupt nobles unawares. In contrast, the residents of monasteries headed by evil masters rule the surrounding lands through fear, as an evil warlord and his entourage might. Evil monks make ideal spies, infiltrators, and assassins.\n\nThe individual monk is unlikely to care passionately about championing commoners or amassing wealth. She cares primarily for the perfection of her art and, thereby, her personal perfection. Her goal is to achieve a state that is beyond the mortal realm. "
@@ -55,7 +55,7 @@ individual_weapon_proficiency: "sling"
 armor_proficiency: NONE_ARMOR
 quality {
   level: 1
-  entity {
+  template {
     name: "monk ac bonus"
     parameters {
     }
@@ -67,7 +67,7 @@ quality {
 }
 quality {
   level: 5
-  entity {
+  template {
     name: "ac +1"
     parameters {
     }
@@ -75,7 +75,7 @@ quality {
 }
 quality {
   level: 10
-  entity {
+  template {
     name: "ac +1"
     parameters {
     }
@@ -83,7 +83,7 @@ quality {
 }
 quality {
   level: 15
-  entity {
+  template {
     name: "ac +1"
     parameters {
     }
@@ -91,7 +91,7 @@ quality {
 }
 quality {
   level: 20
-  entity {
+  template {
     name: "ac +1"
     parameters {
     }

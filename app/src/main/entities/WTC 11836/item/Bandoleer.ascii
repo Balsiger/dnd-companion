@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Bandoleer"
   category: "gear"
   category: "container"

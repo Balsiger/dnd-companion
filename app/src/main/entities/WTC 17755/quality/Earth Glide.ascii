@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Earth Glide"
   category: "option"
   synonym: "Glide, Earth"

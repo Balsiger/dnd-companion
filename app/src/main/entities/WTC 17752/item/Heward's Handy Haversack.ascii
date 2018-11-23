@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Heward\'s Handy Haversack"
   category: "magic"
   category: "bag"

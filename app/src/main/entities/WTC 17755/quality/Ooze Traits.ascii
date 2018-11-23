@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ooze Traits"
   category: "resistance"
   synonym: "Traits, Ooze"

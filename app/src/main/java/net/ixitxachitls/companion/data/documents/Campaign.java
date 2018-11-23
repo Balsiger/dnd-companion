@@ -49,6 +49,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private static final String FIELD_DATE = "date";
   private static final String FIELD_ENCOUNTER = "encounter";
   private static final String FIELD_INVITES = "invites";
+  private static final String FIELD_ADVENTURE = "adventure";
 
   private static final String GENERIC_NAME = "Generic";
   private static World GENERIC;
@@ -60,6 +61,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private CampaignDate date = new CampaignDate();
   private Encounter encounter = new Encounter(this);
   private List<String> invites = new ArrayList<>();
+  private String adventureId = "";
 
   protected static Campaign create(CompanionContext context, User dm) {
     Campaign campaign = Document.create(FACTORY, context, dm.getId() + "/" + Campaigns.PATH);
@@ -177,6 +179,15 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     store();
   }
 
+  public void setAdventure(Adventure adventure) {
+    this.adventureId = adventure.getId();
+    store();
+  }
+
+  public Optional<Adventure> getAdventure() {
+    return context.adventures().get(adventureId);
+  }
+
   private void uninviteUser(String email) {
     Invites.uninvite(email, getId());
   }
@@ -190,6 +201,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     date = CampaignDate.read(get(FIELD_DATE));
     encounter.read(get(FIELD_ENCOUNTER));
     invites = get(FIELD_INVITES, invites);
+    adventureId = get(FIELD_ADVENTURE, "");
   }
 
   @Override
@@ -199,6 +211,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     data.put(FIELD_DATE, date.write());
     data.put(FIELD_ENCOUNTER, encounter.write());
     data.put(FIELD_INVITES, invites);
+    data.put(FIELD_ADVENTURE, adventureId);
 
     return data;
   }

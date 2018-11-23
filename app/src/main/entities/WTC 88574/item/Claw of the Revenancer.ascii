@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Claw of the Revenancer"
   base: "bracers of armor +5"
   base: "amulet of natural armor +5"

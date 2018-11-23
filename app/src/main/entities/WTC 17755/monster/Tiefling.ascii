@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Tiefling"
   synonym: "Planetouched, Tiefling"
   reference {

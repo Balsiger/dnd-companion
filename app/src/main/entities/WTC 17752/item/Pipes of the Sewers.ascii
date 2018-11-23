@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Pipes of the Sewers"
   category: "magic"
   category: "instrument"

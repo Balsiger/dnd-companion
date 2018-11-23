@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shadow Shift"
   category: "action"
   synonym: "Shift, Shadow"

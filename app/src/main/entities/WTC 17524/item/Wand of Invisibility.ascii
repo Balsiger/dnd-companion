@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Invisibility"
   base: "wand"
   synonym: "Invisibility, Wand"

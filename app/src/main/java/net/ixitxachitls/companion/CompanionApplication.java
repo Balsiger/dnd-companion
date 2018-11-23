@@ -31,6 +31,7 @@ import android.support.multidex.MultiDexApplication;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.CreatureConditions;
@@ -105,6 +106,10 @@ public class CompanionApplication extends MultiDexApplication
 
   public Campaigns campaigns() {
     return context.campaigns();
+  }
+
+  public Adventures adventures() {
+    return context.adventures();
   }
 
   public Encounters encounters() {

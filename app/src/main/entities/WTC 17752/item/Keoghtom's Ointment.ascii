@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Keoghtom\'s Ointment"
   category: "ointment"
   category: "salve"

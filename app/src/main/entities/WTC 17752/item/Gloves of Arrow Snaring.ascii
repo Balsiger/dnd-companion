@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gloves of Arrow Snaring"
   category: "gloves"
   category: "arrow"

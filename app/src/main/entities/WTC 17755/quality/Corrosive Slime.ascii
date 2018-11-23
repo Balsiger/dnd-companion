@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Corrosive Slime"
   category: "aura"
   synonym: "Slime, Corrosive"

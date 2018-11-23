@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Thwart Glyph"
   synonym: "Glyph, Thwart"
   reference {

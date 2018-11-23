@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Stench"
   category: "aura type Ex"
   reference {

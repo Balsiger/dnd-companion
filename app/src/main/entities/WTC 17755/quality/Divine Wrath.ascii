@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Divine Wrath"
   category: "action"
   category: "attack"

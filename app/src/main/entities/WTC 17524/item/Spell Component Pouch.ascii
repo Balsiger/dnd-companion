@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spell Component Pouch"
   category: "magic"
   synonym: "Pouch, Spell Component"

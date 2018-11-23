@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Strength Damage"
   category: "aura"
   synonym: "Damage, Strength"

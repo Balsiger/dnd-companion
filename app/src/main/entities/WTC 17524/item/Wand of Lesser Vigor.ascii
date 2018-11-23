@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Lesser Vigor"
   base: "wand"
   synonym: "Lesser Vigor, Wand"

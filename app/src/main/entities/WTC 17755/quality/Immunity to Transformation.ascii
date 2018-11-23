@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity to Transformation"
   category: "immunity"
   synonym: "Transformation, Immunity to"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Children of the Night"
   category: "action"
   synonym: "Night, Children of"

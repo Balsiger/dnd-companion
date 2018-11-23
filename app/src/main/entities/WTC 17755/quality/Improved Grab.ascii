@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Improved Grab"
   category: "option"
   synonym: "Grab, Improved"

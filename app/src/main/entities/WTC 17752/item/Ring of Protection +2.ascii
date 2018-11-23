@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ring of Protection +2"
   base: "ring"
   category: "protection"

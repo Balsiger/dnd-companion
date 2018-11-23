@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity To Energy Drain"
   category: "immunity"
   synonym: "Energy Drain, Immunity to"

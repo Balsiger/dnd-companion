@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Owl\'s Wisdom"
   base: "scroll"
   synonym: "Owl\'s Wisdom, Scroll"

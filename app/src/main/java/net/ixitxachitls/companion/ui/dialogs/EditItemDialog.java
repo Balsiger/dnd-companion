@@ -131,7 +131,7 @@ public class EditItemDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     itemSelection = view.findViewById(R.id.item);
-    itemSelection.setAdapter(new ArrayAdapter<String>(getContext(),
+    itemSelection.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select,
         Entries.get().getItems().realItems()));
     itemSelection.onChange(this::selectItem);

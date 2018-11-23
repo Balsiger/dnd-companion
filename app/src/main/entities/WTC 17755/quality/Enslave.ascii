@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Enslave"
   category: "action"
   reference {

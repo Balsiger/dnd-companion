@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Bag of Holding I"
   category: "bag"
   category: "wondrous magical item"

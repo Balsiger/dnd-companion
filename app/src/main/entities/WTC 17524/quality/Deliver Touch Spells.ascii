@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Deliver Touch Spells"
   category: "option"
   synonym: "Touch Spells, Deliver"

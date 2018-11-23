@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Foesplitter Axe"
   base: "battleaxe"
   base: "weapon +2"

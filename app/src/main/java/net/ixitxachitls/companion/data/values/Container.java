@@ -22,7 +22,7 @@
 package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Template;
 
 /**
  * A representation of a container from an item template.
@@ -44,18 +44,18 @@ public class Container {
     return state != State.unknown;
   }
 
-  public static Container fromProto(Entity.ContainerProto proto) {
+  public static Container fromProto(Template.ContainerTemplateProto proto) {
     return new Container(Volume.fromProto(proto.getCapacity()), convert(proto.getState()));
   }
 
-  public Entity.ContainerProto toProto() {
-    return Entity.ContainerProto.newBuilder()
+  public Template.ContainerTemplateProto toProto() {
+    return Template.ContainerTemplateProto.newBuilder()
         .setCapacity(capacity.toProto())
         .setState(convert(state))
         .build();
   }
 
-  private static State convert(Entity.ContainerProto.State state) {
+  private static State convert(Template.ContainerTemplateProto.State state) {
     switch (state) {
       default:
         Status.error("Cannot convert capacity state: " + state);
@@ -77,25 +77,25 @@ public class Container {
     }
   }
 
-  private static Entity.ContainerProto.State convert(State state) {
+  private static Template.ContainerTemplateProto.State convert(State state) {
     switch(state) {
       default:
         Status.error("Cannot convert capacity state: " + state);
 
       case unknown:
-        return Entity.ContainerProto.State.UNKNOWN;
+        return Template.ContainerTemplateProto.State.UNKNOWN;
 
       case solid:
-        return Entity.ContainerProto.State.SOLID;
+        return Template.ContainerTemplateProto.State.SOLID;
 
       case granular:
-        return Entity.ContainerProto.State.GRANULAR;
+        return Template.ContainerTemplateProto.State.GRANULAR;
 
       case liquid:
-        return Entity.ContainerProto.State.LIQUID;
+        return Template.ContainerTemplateProto.State.LIQUID;
 
       case gaseous:
-        return Entity.ContainerProto.State.GASEOUS;
+        return Template.ContainerTemplateProto.State.GASEOUS;
     }
   }
 }

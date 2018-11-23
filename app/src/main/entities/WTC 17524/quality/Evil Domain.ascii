@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Evil Domain"
   category: "domain"
   category: "evil"

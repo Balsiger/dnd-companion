@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Crush Item"
   description: "A \\Monster{nightwalker} can destroy any\nweapon or item of Large size or smaller (even magic ones, but\nnot artifacts) by picking it up and crushing it between its\nhands. The nightwalker must make a successful disarm attempt to\ngrab an item held by an opponent. The item is entitled to a DC 34\nFortitude save to resist destruction. The save DC is Strength-based."
 }

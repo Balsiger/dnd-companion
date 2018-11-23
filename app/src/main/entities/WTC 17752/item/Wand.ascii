@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand"
   category: "mundane"
   reference {

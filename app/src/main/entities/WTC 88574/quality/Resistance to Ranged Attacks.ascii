@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Resistance to Ranged Attacks"
   category: "resistance"
   synonym: "Ranged Attacks, Resistance to"

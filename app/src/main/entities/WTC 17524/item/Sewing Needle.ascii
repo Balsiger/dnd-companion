@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Sewing Needle"
   category: "gear"
   synonym: "Needle, Sewing"

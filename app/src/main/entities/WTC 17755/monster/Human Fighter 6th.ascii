@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Human Fighter 6th"
   base: "human fighter 5th"
   synonym: "Fighter, 6th Human"

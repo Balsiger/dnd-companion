@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Alternate Form"
   category: "action"
   synonym: "Form, Alternate"

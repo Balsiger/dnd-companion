@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Vengeful Strike"
   category: "attack"
   synonym: "Strike, Vengeful"

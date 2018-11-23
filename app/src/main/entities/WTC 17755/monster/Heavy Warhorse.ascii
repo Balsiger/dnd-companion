@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Heavy Warhorse"
   base: "horse"
   category: "war"

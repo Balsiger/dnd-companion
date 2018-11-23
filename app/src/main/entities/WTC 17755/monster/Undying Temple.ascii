@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Undying Temple"
   base: "construct"
   synonym: "Temple, Undying"

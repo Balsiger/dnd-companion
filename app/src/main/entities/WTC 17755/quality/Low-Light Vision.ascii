@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Low-Light Vision"
   category: "sense"
   category: "vision"

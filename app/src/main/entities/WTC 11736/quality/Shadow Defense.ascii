@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Shadow Defense"
   category: "resistance"
   synonym: "Defense, Shadow"

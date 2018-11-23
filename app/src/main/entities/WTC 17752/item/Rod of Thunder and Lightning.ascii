@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Rod of Thunder and Lightning"
   base: "rod"
   base: "light mace"

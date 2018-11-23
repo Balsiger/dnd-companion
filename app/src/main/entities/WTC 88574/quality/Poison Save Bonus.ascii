@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Poison Save Bonus"
   synonym: "Bonus, Poison Save"
   reference {

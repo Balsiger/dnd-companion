@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Antitoxin"
   category: "alchemical"
   reference {

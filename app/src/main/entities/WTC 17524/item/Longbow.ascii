@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Longbow"
   category: "bow"
   synonym: "Bow, Long"

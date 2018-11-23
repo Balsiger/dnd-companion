@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Chest"
   category: "gear"
   synonym: "Treasure Chest"

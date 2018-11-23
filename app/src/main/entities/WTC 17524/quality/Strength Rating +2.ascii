@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Strength Rating +2"
   category: "strength"
   category: "rating"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Constrict"
   category: "action"
   world: "Generic"

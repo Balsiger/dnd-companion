@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Chromatic Dragon"
   base: "dragon"
   reference {

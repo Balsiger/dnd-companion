@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Battle Frenzy"
   category: "action"
   synonym: "Frenzy, Batte"

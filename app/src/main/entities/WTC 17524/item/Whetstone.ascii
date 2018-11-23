@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Whetstone"
   category: "gear"
   reference {

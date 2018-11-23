@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll"
   category: "mundane"
   reference {

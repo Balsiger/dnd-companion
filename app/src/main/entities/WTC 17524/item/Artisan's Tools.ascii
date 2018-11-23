@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Artisan\'s Tools"
   category: "tool"
   category: "craft"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Masterwork Musical Instrument"
   category: "instrument"
   category: "music"

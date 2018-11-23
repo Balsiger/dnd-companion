@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Poison Save"
   category: "resistance"
   synonym: "Save, Poison"

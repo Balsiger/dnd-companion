@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Affected As Lawful"
   world: "Generic"
   description: "For all effects the creature is treated as if it has an lawful alignment,\n  even if it hasn\'t. The creature also suffers effects according to its actual\n  alignment."

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ring of Major Fire Resistance"
   base: "ring"
   synonym: "Major Fire Resistance, Ring of"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Crowbar"
   base: "club"
   category: "gear"

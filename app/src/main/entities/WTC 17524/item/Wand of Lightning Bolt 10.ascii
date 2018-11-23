@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Lightning Bolt 10"
   base: "wand"
   synonym: "Lightning Light, Wand"

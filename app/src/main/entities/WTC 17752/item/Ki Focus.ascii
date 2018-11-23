@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Ki Focus"
   category: "ki"
   category: "magic"

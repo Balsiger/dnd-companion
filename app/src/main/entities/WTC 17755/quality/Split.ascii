@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Split"
   category: "resistance"
   reference {

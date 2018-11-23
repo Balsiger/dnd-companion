@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Quelzarn"
   reference {
     name: "TSR 9248"

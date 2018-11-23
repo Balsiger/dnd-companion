@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Trail Ration"
   category: "food"
   category: "gear"

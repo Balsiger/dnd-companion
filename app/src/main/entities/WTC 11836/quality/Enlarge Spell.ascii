@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Enlarge Spell"
   category: "meta magic"
   category: "feat"

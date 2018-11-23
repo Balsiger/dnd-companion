@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Silent Moves Armor"
   category: "silent"
   category: "move"

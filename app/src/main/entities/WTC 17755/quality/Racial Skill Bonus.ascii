@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Racial Skill Bonus"
   category: "bonus"
   category: "skill"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Purity of Body"
   category: "immunity"
   synonym: "Body, Purity of"

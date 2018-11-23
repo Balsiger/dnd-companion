@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Robe of Gentle Repose"
   category: "robe"
   category: "decay"

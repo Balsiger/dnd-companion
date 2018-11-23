@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cloak of Charisma +2"
   category: "magic"
   category: "wearable"

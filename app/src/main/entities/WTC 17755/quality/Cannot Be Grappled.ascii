@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cannot Be Grappled"
   category: "grapple"
   category: "immune"

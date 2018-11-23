@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Hourglass"
   category: "time"
   category: "glass"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Mage Armor"
   base: "wand"
   synonym: "Mage Armor, Wand"

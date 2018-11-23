@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Light Steel Shield"
   synonym: "Shield, Light, Steel"
   synonym: "Shield, Steel, Light"

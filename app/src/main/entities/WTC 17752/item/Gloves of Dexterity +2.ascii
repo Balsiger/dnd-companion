@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Gloves of Dexterity +2"
   category: "magic"
   category: "gloves"

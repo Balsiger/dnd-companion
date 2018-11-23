@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Will Bonus"
   world: "Generic"
   description: "The character gets the given will bonus to all saves."

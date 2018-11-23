@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Potion of Resist Fire"
   base: "potion"
   description: "As \\SpellRef[Wiz 3]{Resist Energy} (fire, 10)."

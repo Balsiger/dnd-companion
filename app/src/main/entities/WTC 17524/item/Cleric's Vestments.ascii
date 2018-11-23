@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cleric\'s Vestments"
   category: "clothing"
   synonym: "Vestments, Cleric\'s"

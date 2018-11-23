@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scimitar"
   category: "sword"
   reference {

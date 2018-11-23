@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Disruption Weapon"
   category: "base"
   category: "magic"

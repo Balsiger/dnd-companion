@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Aura of Despair"
   category: "aura"
   synonym: "Despair, Aura of"

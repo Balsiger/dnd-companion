@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Speak with Spiders"
   category: "communication"
   synonym: "Spiders, Speak with"

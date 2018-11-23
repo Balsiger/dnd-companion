@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Necklace of Fireballs VI"
   base: "necklace of fireballs"
   description: "Spheres for 1 x 10d6, 2 x 8d6, 2 x 6d6, 4 x 4d6."

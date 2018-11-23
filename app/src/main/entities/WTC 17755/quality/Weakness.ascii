@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Weakness"
   category: "attack"
   reference {

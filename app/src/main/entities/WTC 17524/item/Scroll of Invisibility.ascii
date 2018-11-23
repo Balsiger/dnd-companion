@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Invisibility"
   base: "scroll"
   synonym: "Invisibility, Scroll"

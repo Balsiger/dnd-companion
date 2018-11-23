@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Block and Tackle"
   category: "gear"
   category: "machine"

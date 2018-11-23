@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Webwalking"
   category: "immunity"
   reference {

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Wand of Fly"
   base: "wand"
   synonym: "Fly, Wand"

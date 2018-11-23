@@ -115,5 +115,7 @@
   <string name="character_edit_item">Edit Item</string>
   <string name="title_invite">Invite Players</string>
   <string name="sell_item">Sell Item</string>
+  <string name="adventure_descripton">The adventure currently playing.</string>
+  <string name="dialog_adventures_title">Select Adventure</string>
 
 </resources>

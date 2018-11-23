@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Scroll of Ray of Enfeeblement"
   base: "scroll"
   synonym: "Ray of Enfeeblement, Scroll"

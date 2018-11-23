@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Dwarven Waraxe"
   category: "axe"
   synonym: "Waraxe, Dwarven"

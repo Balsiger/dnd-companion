@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Electric Aura"
   category: "aura"
   synonym: "Aura, Electric"

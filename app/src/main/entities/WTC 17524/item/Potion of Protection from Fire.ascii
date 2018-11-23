@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Potion of Protection from Fire"
   base: "potion"
   synonym: "Potion of Proection from Energy (Fire)"

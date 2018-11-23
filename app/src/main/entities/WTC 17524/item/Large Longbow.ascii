@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Large Longbow"
   base: "longbow"
   category: "large"

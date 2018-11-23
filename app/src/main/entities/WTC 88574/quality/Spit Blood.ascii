@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spit Blood"
   category: "action"
   synonym: "Blood, Spit"

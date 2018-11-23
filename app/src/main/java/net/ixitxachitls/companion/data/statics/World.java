@@ -22,12 +22,12 @@
 package net.ixitxachitls.companion.data.statics;
 
 import net.ixitxachitls.companion.data.values.Calendar;
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Template;
 
 /**
  * Data entity for world information.
  */
-public class World extends StaticEntry<Entity.WorldProto> {
+public class World extends StaticEntry<Template.WorldTemplateProto> {
 
   public static final String TYPE = "world";
 
@@ -43,12 +43,12 @@ public class World extends StaticEntry<Entity.WorldProto> {
     return calendar;
   }
 
-  public static Entity.WorldProto defaultProto() {
-    return Entity.WorldProto.getDefaultInstance();
+  public static Template.WorldTemplateProto defaultProto() {
+    return Template.WorldTemplateProto.getDefaultInstance();
   }
 
-  public static World fromProto(Entity.WorldProto proto) {
-    World world = new World(proto.getEntity().getName(),
+  public static World fromProto(Template.WorldTemplateProto proto) {
+    World world = new World(proto.getTemplate().getName(),
         Calendar.fromProto(proto.getCalendar()));
 
     return world;

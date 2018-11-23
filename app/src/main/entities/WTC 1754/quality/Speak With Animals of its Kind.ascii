@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Speak With Animals of its Kind"
   reference {
     name: "WTC 1754"

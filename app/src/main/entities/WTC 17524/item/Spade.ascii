@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Spade"
   category: "gear"
   synonym: "Shovel"

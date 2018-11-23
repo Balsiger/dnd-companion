@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Revenant Shattered Tower Guard"
   base: "drow"
   base: "revenant"

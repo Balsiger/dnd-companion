@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Negative Healing"
   category: "Negative"
   category: "Healing"

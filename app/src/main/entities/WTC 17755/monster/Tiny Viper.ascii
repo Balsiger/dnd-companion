@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Tiny Viper"
   category: "snake"
   category: "poison"

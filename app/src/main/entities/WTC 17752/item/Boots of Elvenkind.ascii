@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Boots of Elvenkind"
   category: "magic"
   category: "clothing"

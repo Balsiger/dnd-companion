@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Cloak of Elvenkind"
   base: "cloak"
   category: "magic"

@@ -21,13 +21,13 @@
 
 package net.ixitxachitls.companion.data.statics;
 
-import net.ixitxachitls.companion.proto.Entity;
+import net.ixitxachitls.companion.proto.Template;
 
 /**
  * The representation of a monster template that can be used to create actual, real monsters in
  * the game.
  */
-public class MonsterTemplate extends StaticEntry<Entity.MonsterProto> {
+public class MonsterTemplate extends StaticEntry<Template.MonsterTemplateProto> {
 
   public static final String TYPE = "monster";
 
@@ -37,12 +37,12 @@ public class MonsterTemplate extends StaticEntry<Entity.MonsterProto> {
     super(name);
   }
 
-  public static Entity.MonsterProto defaultProto() {
-    return Entity.MonsterProto.getDefaultInstance();
+  public static Template.MonsterTemplateProto defaultProto() {
+    return Template.MonsterTemplateProto.getDefaultInstance();
   }
 
-  public static MonsterTemplate fromProto(Entity.MonsterProto proto) {
-    MonsterTemplate template = new MonsterTemplate(proto.getEntity().getName());
+  public static MonsterTemplate fromProto(Template.MonsterTemplateProto proto) {
+    MonsterTemplate template = new MonsterTemplate(proto.getTemplate().getName());
     template.mPrimaryRace = proto.getMainRace();
 
     return template;

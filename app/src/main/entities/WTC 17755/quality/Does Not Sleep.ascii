@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Does Not Sleep"
   world: "Generic"
   description: "The creature does not need to sleep."

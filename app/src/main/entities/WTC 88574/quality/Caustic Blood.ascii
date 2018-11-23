@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Caustic Blood"
   category: "attack"
   synonym: "Blood, Caustic"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Flint and Steel"
   category: "gear"
   synonym: "Lighter"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Summon Shadow"
   category: "action"
   synonym: "Shadow, Summon"

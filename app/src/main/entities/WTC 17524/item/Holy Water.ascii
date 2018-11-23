@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Holy Water"
   category: "divine"
   category: "magical"

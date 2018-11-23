@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Uses Charisma For Concentration Checks"
   category: "resistance"
   synonym: "Concentration Checks, Uses Charisma"

@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Immunity To Sleep Effects"
   category: "immunity"
   synonym: "Sleep Effects, Immunity to"

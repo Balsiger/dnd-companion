@@ -1,4 +1,4 @@
-entity {
+template {
   name: "Barbarian"
   reference {
     name: "WTC 17524"
@@ -46,7 +46,7 @@ weapon_proficiency: MARTIAL
 armor_proficiency: LIGHT
 quality {
   level: 1
-  entity {
+  template {
     name: "Rage"
     parameters {
     }
@@ -55,7 +55,7 @@ quality {
 }
 quality {
   level: 4
-  entity {
+  template {
     name: "Rage"
     parameters {
     }
@@ -64,7 +64,7 @@ quality {
 }
 quality {
   level: 8
-  entity {
+  template {
     name: "Rage"
     parameters {
     }
@@ -73,7 +73,7 @@ quality {
 }
 quality {
   level: 12
-  entity {
+  template {
     name: "Rage"
     parameters {
     }
@@ -82,7 +82,7 @@ quality {
 }
 quality {
   level: 16
-  entity {
+  template {
     name: "Rage"
     parameters {
     }
@@ -91,7 +91,7 @@ quality {
 }
 quality {
   level: 19
-  entity {
+  template {
     name: "Rage"
     parameters {
     }
@@ -100,7 +100,7 @@ quality {
 }
 quality {
   level: 1
-  entity {
+  template {
     name: "Fast Movement"
     parameters {
     }
@@ -108,7 +108,7 @@ quality {
 }
 quality {
   level: 1
-  entity {
+  template {
     name: "Illiteracy"
     parameters {
     }
@@ -116,7 +116,7 @@ quality {
 }
 quality {
   level: 2
-  entity {
+  template {
     name: "Uncanny Dodge"
     parameters {
     }
@@ -124,7 +124,7 @@ quality {
 }
 quality {
   level: 3
-  entity {
+  template {
     name: "Trap Sense"
     parameters {
     }
@@ -132,7 +132,7 @@ quality {
 }
 quality {
   level: 5
-  entity {
+  template {
     name: "Improved Uncanny Dodge"
     parameters {
     }
@@ -140,7 +140,7 @@ quality {
 }
 quality {
   level: 6
-  entity {
+  template {
     name: "Trap Sense"
     parameters {
     }
@@ -148,7 +148,7 @@ quality {
 }
 quality {
   level: 9
-  entity {
+  template {
     name: "Trap Sense"
     parameters {
     }
@@ -156,7 +156,7 @@ quality {
 }
 quality {
   level: 12
-  entity {
+  template {
     name: "Trap Sense"
     parameters {
     }
@@ -164,7 +164,7 @@ quality {
 }
 quality {
   level: 15
-  entity {
+  template {
     name: "Trap Sense"
     parameters {
     }
@@ -172,7 +172,7 @@ quality {
 }
 quality {
   level: 18
-  entity {
+  template {
     name: "Trap Sense"
     parameters {
     }
