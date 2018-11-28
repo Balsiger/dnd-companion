@@ -117,5 +117,7 @@
   <string name="sell_item">Sell Item</string>
   <string name="adventure_descripton">The adventure currently playing.</string>
   <string name="dialog_adventures_title">Select Adventure</string>
+  <string name="dialog_title_levels">Levels</string>
+  <string name="character_select_ability">Increased Ability</string>
 
 </resources>

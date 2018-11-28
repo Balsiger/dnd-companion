@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.values;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.documents.NestedDocument;
 import net.ixitxachitls.companion.data.statics.ItemTemplate;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -40,7 +41,7 @@ import java.util.stream.Collectors;
 /**
  * An item in the game.
  */
-public class Item {
+public class Item extends NestedDocument {
 
   private static final String FIELD_ID = "id";
   private static final String FIELD_NAME = "name";
@@ -347,7 +348,7 @@ public class Item {
   }
 
   private static ItemTemplate template(String name) {
-    Optional<ItemTemplate> template = Entries.get().getItems().get(name);
+    Optional<ItemTemplate> template = Entries.get().getItemTemplates().get(name);
     if (template.isPresent()) {
       return template.get();
     }
@@ -404,7 +405,7 @@ public class Item {
     String name = Values.get(data, FIELD_NAME, "(no name)");
     List<ItemTemplate> templates = new ArrayList<>();
     for (String templateName : Values.get(data, FIELD_TEMPLATES, Collections.emptyList())) {
-      Optional<ItemTemplate> template = Entries.get().getItems().get(templateName);
+      Optional<ItemTemplate> template = Entries.get().getItemTemplates().get(templateName);
       if (template.isPresent()) {
         templates.add(template.get());
       } else {
@@ -430,6 +431,7 @@ public class Item {
         multiple, multiuse, timeLeft, identified, contents);
   }
 
+  @Override
   public Map<String, Object> write() {
     Map<String, Object> data = new HashMap<>();
     data.put(FIELD_ID, id);

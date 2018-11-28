@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,11 +31,15 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.ConditionIconsView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
+import net.ixitxachitls.companion.ui.views.LabelledTextView;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -45,7 +48,7 @@ import java.util.Optional;
 /**
  * Fragment for a character's base statistics
  */
-public class CharacterStatisticsFragment extends Fragment {
+public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
   protected Optional<Character> character = Optional.empty();
 
@@ -61,14 +64,15 @@ public class CharacterStatisticsFragment extends Fragment {
   protected Wrapper<ImageView> xpAdd;
   protected Wrapper<ImageView> xpSubtract;
   protected TextWrapper<TextView> xpNext;
-  protected LabelledEditTextView level;
+  protected LabelledTextView levels;
   protected LabelledEditTextView hp;
   protected Wrapper<ImageView> hpAdd;
   protected Wrapper<ImageView> hpSubtract;
-  protected LabelledEditTextView hpMax;
+  protected LabelledTextView hpMax;
   protected LabelledEditTextView damageNonlethal;
   protected Wrapper<ImageView> hpNonlethalAdd;
   protected Wrapper<ImageView> hpNonlethalSubtract;
+  protected TextWrapper<TextView> levelUp;
 
   public CharacterStatisticsFragment() {
   }
@@ -93,12 +97,12 @@ public class CharacterStatisticsFragment extends Fragment {
     charisma = view.findViewById(R.id.charisma);
 
     xp = view.findViewById(R.id.xp);
-    xp.enabled(false);
+    xp.enabled(false).onBlur(this::redraw);
     xpAdd = Wrapper.<ImageView>wrap(view, R.id.xp_add).gone();
     xpSubtract = Wrapper.<ImageView>wrap(view, R.id.xp_subtract).gone();
     xpNext = TextWrapper.wrap(view, R.id.xp_next);
-    level = view.findViewById(R.id.level);
-    level.enabled(false);
+    levels = view.findViewById(R.id.levels);
+    levelUp = TextWrapper.wrap(view, R.id.level_up);
 
     hp = view.findViewById(R.id.hp);
     hp.enabled(false);
@@ -115,7 +119,16 @@ public class CharacterStatisticsFragment extends Fragment {
     if (character.isPresent()) {
       update(character.get());
     }
+
+    characters().observe(this, this::update);
+
     return view;
+  }
+
+  private void update(Characters characters) {
+    if (character.isPresent()) {
+      update(character.get());
+    }
   }
 
   public void update(Character character) {
@@ -139,8 +152,8 @@ public class CharacterStatisticsFragment extends Fragment {
         Ability.modifier(character.getCharisma()));
 
     xp.text(String.valueOf(character.getXp()));
-    level.text(String.valueOf(character.getLevel()));
-    hp.text(String.valueOf(character.getHp()));
+    hp.text(String.valueOf(character.getHp()))
+        .validate(new EditTextWrapper.RangeValidator(-20, character.getMaxHp()));
     hpMax.text(String.valueOf(character.getMaxHp()));
     damageNonlethal.text(String.valueOf(character.getNonlethalDamage()));
     conditions.update(character);
@@ -152,6 +165,8 @@ public class CharacterStatisticsFragment extends Fragment {
     if (character.isPresent()) {
       xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
       hp.text(String.valueOf(character.get().getHp()));
+      levels.text(Level.summarized(character.get().getLevels()));
+      levelUp.visible(character.get().getMaxLevel() > character.get().getLevel());
     }
   }
 }

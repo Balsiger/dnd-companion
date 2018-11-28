@@ -27,8 +27,6 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.common.base.Preconditions;
 
@@ -37,8 +35,8 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
-import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
+import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
@@ -55,9 +53,9 @@ public class CharacterDialog extends Dialog {
   private Optional<Character> character = Optional.empty();
 
   // UI elements.
-  private EditTextWrapper<EditText> name;
-  private TextWrapper<TextView> gender;
-  private TextWrapper<TextView> race;
+  private LabelledEditTextView name;
+  private LabelledTextView gender;
+  private LabelledTextView race;
   private Wrapper<Button> save;
 
   public CharacterDialog() {}
@@ -95,13 +93,13 @@ public class CharacterDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     if (character.isPresent()) {
-      name = EditTextWrapper.wrap(view, R.id.edit_name)
-          .text(character.get().getName())
-          .label(R.string.campaign_edit_name)
-          .lineColor(R.color.character)
+      name = view.findViewById(R.id.edit_name);
+      name.text(character.get().getName())
           .onChange(this::update);
-      gender = TextWrapper.wrap(view, R.id.edit_gender).onClick(this::editGender);
-      race = TextWrapper.wrap(view, R.id.edit_race).onClick(this::editRace);
+      gender = view.findViewById(R.id.edit_gender);
+      gender.onClick(this::editGender);
+      race = view.findViewById(R.id.edit_race);
+      race.onClick(this::editRace);
       save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
     }
 

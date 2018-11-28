@@ -26,7 +26,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.ui.dialogs.LevelsDialog;
 import net.ixitxachitls.companion.ui.dialogs.NumberPrompt;
 
 /**
@@ -45,14 +45,15 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     wisdom.setAction(this::editAbilities);
     charisma.setAction(this::editAbilities);
 
+    levels.onClick(this::editLevels);
+    levelUp.onClick(this::editLevels);
+
     xp.onBlur(this::changeXp).enabled(true);
     xpAdd.visible().onClick(this::addXp);
     xpSubtract.visible().onClick(this::subtractXp);
-    level.onBlur(this::changeLevel).enabled(true);
     hp.onBlur(this::changeHp).enabled(true);
     hpAdd.visible().onClick(this::addHp);
     hpSubtract.visible().onClick(this::subtractHp);
-    hpMax.onBlur(this::changeMaxHp).enabled(true);
     damageNonlethal.onBlur(this::changeNonlethalDamage).enabled(true);
     hpNonlethalAdd.visible().onClick(this::addNonlethalDamage);
     hpNonlethalSubtract.visible().onClick(this::subtractNonlethalDamage);
@@ -69,25 +70,17 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
         character.get().getCampaignId()).display();
   }
 
+  private void editLevels() {
+    if (character.isPresent()) {
+      LevelsDialog.newInstance(character.get().getId(), character.get().getMaxLevel()).display();
+    }
+  }
+
   private void changeXp() {
     if (character.isPresent() && !xp.getText().isEmpty()) {
       character.get().setXp(Integer.parseInt(xp.getText()));
       character.get().store();
     }
-  }
-
-  private void changeLevel() {
-    Status.error("level change");
-    if (character.isPresent() && !level.getText().isEmpty()) {
-      try {
-        character.get().setLevel(Integer.parseInt(level.getText()));
-      } catch (NumberFormatException e) {
-        character.get().setLevel(1);
-      }
-      character.get().store();
-    }
-
-    redraw();
   }
 
   private void changeHp() {
@@ -96,19 +89,6 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
         character.get().setHp(Integer.parseInt(hp.getText()));
       } catch (NumberFormatException e) {
         character.get().setHp(1);
-      }
-      character.get().store();
-    }
-
-    redraw();
-  }
-
-  private void changeMaxHp() {
-    if (character.isPresent()) {
-      try {
-        character.get().setMaxHp(Integer.parseInt(hpMax.getText()));
-      } catch (NumberFormatException e) {
-        character.get().setMaxHp(1);
       }
       character.get().store();
     }

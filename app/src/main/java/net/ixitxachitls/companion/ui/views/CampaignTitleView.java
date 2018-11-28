@@ -85,7 +85,7 @@ public class CampaignTitleView extends TitleView {
   public void refresh() {
     if (campaign.isPresent()) {
       setTitle(campaign.get().getName());
-      setSubtitle(campaign.get().getWorld().toString() + ", " + campaign.get().getDm());
+      setSubtitle(campaign.get().getWorldTemplate().toString() + ", " + campaign.get().getDm());
 
       updateIcons();
 

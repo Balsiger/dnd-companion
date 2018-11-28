@@ -29,10 +29,13 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.ConditionData;
+import net.ixitxachitls.companion.rules.XP;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * A player character in the game.
@@ -44,6 +47,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
   private static final String FIELD_XP = "xp";
   private static final String FIELD_LEVEL = "level";
+  private static final String FIELD_LEVELS = "levels";
   private static final int DEFAULT_LEVEL = 1;
 
   private User player;
@@ -100,11 +104,44 @@ public class Character extends Creature<Character> implements Comparable<Charact
   }
 
   public int getLevel() {
-    return level;
+    return levels.size();
+  }
+
+  public int getMaxLevel() {
+    return XP.maxLevelForXp(xp);
+  }
+
+  @Override
+  public int getMaxHp() {
+    int hp = 0;
+    for (Level level : levels) {
+      hp += level.getHp() + getConstitutionModifier();
+    }
+
+    return hp;
+  }
+
+  public void setLevels(List<Level> levels) {
+    this.levels = levels;
+    store();
   }
 
   public void setLevel(int level) {
     this.level = level;
+  }
+
+  public List<Level> getLevels() {
+    return levels;
+  }
+
+  public void delete(Level level) {
+    levels.remove(level);
+    store();
+  }
+
+  public void addLevel() {
+    levels.add(new Level());
+    store();
   }
 
   public List<ConditionData> getConditionsHistory() {
@@ -127,6 +164,11 @@ public class Character extends Creature<Character> implements Comparable<Charact
     super.read();
     xp = (int) get(FIELD_XP, 0);
     level = (int) get(FIELD_LEVEL, DEFAULT_LEVEL);
+    levels = new ArrayList<>();
+    for (Map<String, Object> level
+        : get(FIELD_LEVELS, Collections.<Map<String, Object>>emptyList())) {
+      levels.add(Level.read(level));
+    }
   }
 
   @Override
@@ -135,88 +177,12 @@ public class Character extends Creature<Character> implements Comparable<Charact
     data = super.write(data);
     data.put(FIELD_XP, xp);
     data.put(FIELD_LEVEL, level);
+    data.put(FIELD_LEVELS, levels.stream().map(Level::write).collect(Collectors.toList()));
 
     return data;
   }
 
-  /*
-
-  public void setCampaignId(String campaignId) {
-    this.campaignId = campaignId;
-  }
-
-  public void setRace(String name) {
-    race = Entries.get().getMonsters().get(name);
-  }
-
-  public void setGender(Gender gender) {
-    this.gender = gender;
-  }
-
-  public void setBattle(int initiative, int number) {
-    this.initiative = initiative;
-    this.initiativeRandom = RANDOM.nextInt(100_000);
-    this.battleNumber = number;
-
-    // Remove all round based conditions.
-    initiatedConditions = initiatedConditions.stream()
-        .filter(c -> c.getTimedCondition().hasEndDate() || c.getTimedCondition().isPermanent())
-        .collect(Collectors.toList());
-    affectedConditions = affectedConditions.stream()
-        .filter(c -> c.hasEndDate() || c.isPermanent())
-        .collect(Collectors.toList());
-
-    store();
-  }
-
-  public void setXp(int xp) {
-    this.xp = xp;
-  }
-
-  @Override
-  public void addXp(int xp) {
-    this.xp += xp;
-    store();
-
-    if (getCampaign().isPresent()) {
-      context.histories().addedXp(xp, getCampaign().get().getDate(), getCharacterId(), campaignId);
-    }
-  }
-
-  public void setLevel(int index, Level level) {
-    if(levels.size() > index) {
-      levels.set(index, level);
-    } else {
-      addLevel(level);
-    }
-  }
-
-  public void addLevel(Character.Level level) {
-    levels.add(level);
-  }
-
-  // TODO: remove this once we properly support level objets.
-  public void setLevel(int level) {
-    levels.clear();
-    for (int i = 0; i < level; i++) {
-      addLevel(new Character.Level("Barbarian"));
-    }
-  }
-
-  @Override
-  public void addInitiatedCondition(TargetedTimedCondition condition) {
-    if (!condition.isPredefined()) {
-      conditionsHistory.add(condition.getCondition());
-      conditionsHistory =
-          conditionsHistory.subList(0, Math.min(conditionsHistory.size(), MAX_HISTORY));
-    }
-
-    super.addInitiatedCondition(condition);
-  }
-
-   */
-
-  public static class Level {
+  //public static class Level {
     /*
     private int hp;
     private Ability abilityIncrease;
@@ -231,15 +197,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
     public void setHp(int hp) {
       this.hp = hp;
-    }
-
-    @Override
-    public Entry.CharacterProto.Level toProto() {
-      return Entry.CharacterProto.Level.newBuilder()
-          .setName(name)
-          .setHp(hp)
-          //.setAbilityIncrease(abilityIncrease.toProto())
-          .build();
     }
 
     public String summary() {
@@ -267,7 +224,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
       abilityIncrease = ability;
     }
      */
-  }
+  //}
 
   /*
   public ArrayList<String> levelSummaries() {
@@ -280,25 +237,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return summaries;
   }
 
-  public String summarizeLevels() {
-    Multiset<String> countedNames = countedLevelNames();
-    List<String> names = new ArrayList<>();
-    for (String name : countedNames.elementSet()) {
-      names.add(name + " " + countedNames.count(name));
-    }
-
-    return Strings.COMMA_JOINER.join(names);
-  }
-
-  private Multiset<String> countedLevelNames() {
-    Multiset<String> names = HashMultiset.create();
-    for (Level level : levels) {
-      names.add(level.getName());
-    }
-
-    return names;
-  }
-
   public void copy() {
     Entry.CharacterProto.Builder proto = toProto().toBuilder();
     proto.setCreature(proto.getCreature().toBuilder()
@@ -309,34 +247,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
     Character copy = LocalCharacter.fromProto(context, 0, proto.build());
     copy.store();
 }
-
-  @Override
-  public boolean store() {
-    if (super.store()) {
-      if (context.characters().has(this)) {
-        context.characters().update(this);
-      } else {
-        context.characters().add(this);
-        if (getCampaign().isPresent()) {
-          context.histories().created(getName(), getCampaign().get().getDate(),
-              getCharacterId(), getCampaignId());
-        }
-      }
-      return true;
-    }
-
-    return false;
-  }
-
-  @Override
-  public int compareTo(Character that) {
-    int name = this.name.compareTo(that.name);
-    if (name != 0) {
-      return name;
-    }
-
-    return this.getCharacterId().compareTo(that.getCharacterId());
-  }
 
    */
 

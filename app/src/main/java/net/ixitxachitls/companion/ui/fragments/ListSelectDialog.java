@@ -21,12 +21,15 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.annotation.ColorRes;
+import android.support.annotation.LayoutRes;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -35,6 +38,7 @@ import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -47,7 +51,7 @@ public class ListSelectDialog extends Dialog {
   private static final String ARG_VALUES = "values";
 
   private String selected;
-  private ArrayList<Entry> values;
+  private List<Entry> values;
   protected Optional<SelectAction> selectAction = Optional.empty();
 
   @FunctionalInterface
@@ -128,22 +132,20 @@ public class ListSelectDialog extends Dialog {
 
   @Override
   public void createContent(View view) {
-    ListView list = (ListView) view.findViewById(R.id.listSelectView);
-    ArrayAdapter<String> itemAdapter =
-        new ArrayAdapter<>(view.getContext(), R.layout.list_item_select,
-            values.stream().map(m -> m.name).collect(Collectors.toList()));
+    ListView list = view.findViewById(R.id.listSelectView);
+    SelectionArrayAdapter<String> itemAdapter =
+        new SelectionArrayAdapter<>(view.getContext(), R.layout.list_item_select,
+            R.color.character,
+            values.stream().map(m -> m.name).collect(Collectors.toList()), selected);
     list.setAdapter(itemAdapter);
-    list.setSelection(values.indexOf(selected));
-    list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-      @Override
-      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        edited(values.get(position), position);
-      }
-    });
+    list.setOnItemClickListener(
+        (parent, view1, position, id) -> edited(values.get(position), position));
   }
 
-  public void setSelectListener(SelectAction action) {
+  public ListSelectDialog setSelectListener(SelectAction action) {
     this.selectAction = Optional.of(action);
+
+    return this;
   }
 
   protected void edited(Entry value, int position) {
@@ -153,6 +155,33 @@ public class ListSelectDialog extends Dialog {
       selectAction.get().select(value.id);
     } else {
       Log.wtf("select", "listener not set");
+    }
+  }
+
+  private class SelectionArrayAdapter<T> extends ArrayAdapter<T> {
+    private final int selected;
+    private final List<T> entries;
+    private final int selectedColor;
+
+    public SelectionArrayAdapter(Context context, @LayoutRes int layout,
+                                 @ColorRes int selectedColor, List<T> entries, T selected) {
+      super(context, layout, entries);
+      this.selectedColor = selectedColor;
+      this.entries = entries;
+      this.selected = entries.indexOf(selected);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+      View view = super.getView(position, convertView, parent);
+
+      if (position == selected) {
+        view.setBackgroundColor(getResources().getColor(selectedColor, null));
+      } else {
+        view.setBackgroundColor(getResources().getColor(R.color.transparent, null));
+      }
+
+      return view;
     }
   }
 }

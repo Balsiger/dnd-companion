@@ -38,7 +38,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 public class LabelledEditTextView extends AbstractLabelledView {
 
   // Ui elements.
-  private EditTextWrapper<EditText> text;
+  protected EditTextWrapper<EditText> text;
 
   public LabelledEditTextView(Context context) {
     super(context, R.layout.view_labelled_edit_text);

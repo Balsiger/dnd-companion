@@ -27,7 +27,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.statics.World;
+import net.ixitxachitls.companion.data.statics.WorldTemplate;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.Encounter;
@@ -52,12 +52,12 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private static final String FIELD_ADVENTURE = "adventure";
 
   private static final String GENERIC_NAME = "Generic";
-  private static World GENERIC;
+  private static WorldTemplate GENERIC;
 
   // Mutable state.
   private User dm;
   private String name;
-  private World world;
+  private WorldTemplate worldTemplate;
   private CampaignDate date = new CampaignDate();
   private Encounter encounter = new Encounter(this);
   private List<String> invites = new ArrayList<>();
@@ -67,7 +67,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     Campaign campaign = Document.create(FACTORY, context, dm.getId() + "/" + Campaigns.PATH);
 
     campaign.dm = context.users().fromPath(campaign.getPath());
-    campaign.world = generic();
+    campaign.worldTemplate = generic();
     return campaign;
   }
 
@@ -79,7 +79,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     Campaign campaign = Document.getOrCreate(FACTORY, context, id);
 
     campaign.dm = context.users().fromPath(campaign.getPath());
-    campaign.world = generic();
+    campaign.worldTemplate = generic();
 
     return campaign;
   }
@@ -112,12 +112,12 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     this.name = name;
   }
 
-  public World getWorld() {
-    return world;
+  public WorldTemplate getWorldTemplate() {
+    return worldTemplate;
   }
 
-  public void setWorld(String world) {
-    this.world = world(world);
+  public void setWorldTemplate(String worldTemplate) {
+    this.worldTemplate = world(worldTemplate);
   }
 
   public User getDm() {
@@ -129,7 +129,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   }
 
   public Calendar getCalendar() {
-    return world.getCalendar();
+    return worldTemplate.getCalendar();
   }
 
   public CampaignDate getDate() {
@@ -197,7 +197,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   protected void read() {
     super.read();
     name = get(FIELD_NAME, name);
-    world = world(get(FIELD_WORLD, GENERIC_NAME));
+    worldTemplate = world(get(FIELD_WORLD, GENERIC_NAME));
     date = CampaignDate.read(get(FIELD_DATE));
     encounter.read(get(FIELD_ENCOUNTER));
     invites = get(FIELD_INVITES, invites);
@@ -207,7 +207,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   @Override
   protected Map<String, Object> write(Map<String, Object> data) {
     data.put(FIELD_NAME, name);
-    data.put(FIELD_WORLD, world.getName());
+    data.put(FIELD_WORLD, worldTemplate.getName());
     data.put(FIELD_DATE, date.write());
     data.put(FIELD_ENCOUNTER, encounter.write());
     data.put(FIELD_INVITES, invites);
@@ -216,8 +216,8 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     return data;
   }
 
-  private World world(String name) {
-    Optional<World> world = Entries.get().getWorlds().get(name);
+  private WorldTemplate world(String name) {
+    Optional<WorldTemplate> world = Entries.get().getWorldTemplates().get(name);
     if (world.isPresent()) {
       return world.get();
     }
@@ -225,9 +225,9 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     return generic();
   }
 
-  private static World generic() {
+  private static WorldTemplate generic() {
     if (GENERIC == null) {
-      GENERIC = Entries.get().getWorlds().get(GENERIC_NAME).get();
+      GENERIC = Entries.get().getWorldTemplates().get(GENERIC_NAME).get();
     }
 
     return GENERIC;

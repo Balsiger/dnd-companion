@@ -35,7 +35,7 @@ public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
   CONSTITUTION("Constitution", "CON", Value.Ability.CONSTITUTION),
   INTELLIGENCE("Intelligence", "INT", Value.Ability.INTELLIGENCE),
   WISDOM("Wisdom", "WIS", Value.Ability.WISDOM),
-  CHARISMA("CHARISMA", "CHR", Value.Ability.CHARISMA),
+  CHARISMA("Charisma", "CHR", Value.Ability.CHARISMA),
   NONE("None", "-", Value.Ability.NONE);
 
   private final String mName;

@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -31,6 +30,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,11 +64,11 @@ public class CharacterFragment extends CompanionFragment {
   // UI elements.
   protected CharacterTitleView title;
   protected TextWrapper<TextView> campaignTitle;
-  protected Wrapper<FloatingActionButton> edit;
-  protected Wrapper<FloatingActionButton> delete;
-  protected Wrapper<FloatingActionButton> move;
-  protected Wrapper<FloatingActionButton> timed;
-  protected Wrapper<FloatingActionButton> back;
+  protected Wrapper<ImageView> edit;
+  protected Wrapper<ImageView> delete;
+  protected Wrapper<ImageView> move;
+  protected Wrapper<ImageView> timed;
+  protected Wrapper<ImageView> back;
   protected ViewPager pager;
   protected @Nullable CharacterStatisticsFragment statisticsFragment;
   protected @Nullable CharacterInventoryFragment inventoryFragment;
@@ -87,20 +87,20 @@ public class CharacterFragment extends CompanionFragment {
     LinearLayout view = (LinearLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
-    back = Wrapper.<FloatingActionButton>wrap(view, R.id.back)
+    back = Wrapper.<ImageView>wrap(view, R.id.back)
         .onClick(this::goBack)
         .description("Back to Campaign", "Go back to this characters campaign view.");
     title = view.findViewById(R.id.title);
     images().observe(this, title::update);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
 
-    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone();
-    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).onClick(this::delete)
+    edit = Wrapper.<ImageView>wrap(view, R.id.edit).gone();
+    delete = Wrapper.<ImageView>wrap(view, R.id.delete).onClick(this::delete)
         .description("Delete Character", "This will remove this character from your device. If the "
             + "player is active on your WiFi, the character most likely will immediately "
             + "reappear, though.").invisible();
-    move = Wrapper.<FloatingActionButton>wrap(view, R.id.move).gone();
-    timed = Wrapper.<FloatingActionButton>wrap(view, R.id.timed).gone();
+    move = Wrapper.<ImageView>wrap(view, R.id.move).gone();
+    timed = Wrapper.<ImageView>wrap(view, R.id.timed).gone();
 
     pager = view.findViewById(R.id.pager);
     pager.setAdapter(new CharacterPagerAdapter(getChildFragmentManager()));

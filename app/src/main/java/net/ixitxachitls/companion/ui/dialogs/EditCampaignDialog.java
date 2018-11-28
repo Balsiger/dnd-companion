@@ -102,8 +102,8 @@ public class EditCampaignDialog extends Dialog {
       name.onChange(this::update);
       world = view.findViewById(R.id.world);
       world.onClick(this::selectWorld);
-      world.text(campaign.get().getWorld().getName());
-      selectedWorld = campaign.get().getWorld().getName();
+      world.text(campaign.get().getWorldTemplate().getName());
+      selectedWorld = campaign.get().getWorldTemplate().getName();
       save = Wrapper.wrap(view, R.id.save);
       save.onClick(this::save);
       update();
@@ -113,8 +113,8 @@ public class EditCampaignDialog extends Dialog {
   private void selectWorld() {
     if (campaign.isPresent()) {
       ListSelectDialog fragment = ListSelectDialog.newStringInstance(
-          R.string.campaign_select_world, campaign.get().getWorld().getName(),
-          Entries.get().getWorlds().getNames(), R.color.campaign);
+          R.string.campaign_select_world, campaign.get().getWorldTemplate().getName(),
+          Entries.get().getWorldTemplates().getNames(), R.color.campaign);
       fragment.setSelectListener(this::editWorld);
       fragment.display();
     }
@@ -133,7 +133,7 @@ public class EditCampaignDialog extends Dialog {
   protected void save() {
     if (campaign.isPresent()) {
       campaign.get().setName(name.getText());
-      campaign.get().setWorld(selectedWorld);
+      campaign.get().setWorldTemplate(selectedWorld);
       campaign.get().store();
 
       super.save();

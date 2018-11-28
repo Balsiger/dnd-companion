@@ -166,7 +166,8 @@ public class Characters extends Documents<Characters> {
     Map<String, Character> existing = clearPlayerData(player);
 
     for (DocumentSnapshot snapshot : snapshots) {
-      Character character = existing.get(snapshot.getId());
+      // need to use full id here!
+      Character character = existing.get(snapshot.getReference().getPath());
       if (character == null) {
         character = Character.fromData(context, player, snapshot);
       } else {

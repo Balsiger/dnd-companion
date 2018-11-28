@@ -104,7 +104,7 @@ quality {
     name: "combat style: archery|combat style: two-weapon fighting"
     parameters {
     }
-    conditional {
+    condition {
       generic: "wearing light or no armor"
     }
   }
@@ -115,7 +115,7 @@ quality {
     name: "animal companion"
     parameters {
     }
-    conditional {
+    condition {
       generic: "using half level and -3 levels for separate animal companion list"
     }
   }

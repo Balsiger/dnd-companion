@@ -29,7 +29,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.statics.ItemTemplate;
 import net.ixitxachitls.companion.data.statics.LevelTemplate;
 import net.ixitxachitls.companion.data.statics.MonsterTemplate;
-import net.ixitxachitls.companion.data.statics.World;
+import net.ixitxachitls.companion.data.statics.WorldTemplate;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 
 import java.io.IOException;
@@ -46,7 +46,7 @@ public class Entries {
   private static @Nullable Entries singleton = null;
 
   private final MonsterTemplates monsterTemplates = new MonsterTemplates();
-  private final EntriesStore<World> worlds = new EntriesStore<>(World.class);
+  private final EntriesStore<WorldTemplate> worlds = new EntriesStore<>(WorldTemplate.class);
   private final ItemTemplates items = new ItemTemplates();
   private final EntriesStore<LevelTemplate> levels = new EntriesStore<>(LevelTemplate.class);
 
@@ -71,12 +71,16 @@ public class Entries {
     return monsterTemplates;
   }
 
-  public EntriesStore<World> getWorlds() {
+  public EntriesStore<WorldTemplate> getWorldTemplates() {
     return worlds;
   }
 
-  public ItemTemplates getItems() {
+  public ItemTemplates getItemTemplates() {
     return items;
+  }
+
+  public EntriesStore<LevelTemplate> getLevelTemplates() {
+    return levels;
   }
 
   private void load() {
@@ -90,7 +94,7 @@ public class Entries {
               case MonsterTemplate.TYPE:
                 monsterTemplates.read(assetAccessor.open(path + "/" + file));
                 break;
-              case World.TYPE:
+              case WorldTemplate.TYPE:
                 worlds.read(assetAccessor.open(path + "/" + file));
                 break;
               case ItemTemplate.TYPE:

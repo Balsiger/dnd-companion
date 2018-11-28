@@ -63,6 +63,16 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
+  public W toggleVisiblity() {
+    if (view.getVisibility() == View.GONE) {
+      visible();
+    } else {
+      gone();
+    }
+
+    return (W) this;
+  }
+
   private int dpToPx(int dp) {
     DisplayMetrics metrics = view.getContext().getResources().getDisplayMetrics();
     return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, metrics);

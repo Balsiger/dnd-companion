@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import android.support.annotation.CallSuper;
 
 import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.statics.MonsterTemplate;
 import net.ixitxachitls.companion.data.values.ConditionData;
@@ -158,6 +159,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public int getConstitution() {
     return constitution;
+  }
+
+  public int getConstitutionModifier() {
+    return Ability.modifier(constitution);
   }
 
   public void setConstitution(int constitution) {

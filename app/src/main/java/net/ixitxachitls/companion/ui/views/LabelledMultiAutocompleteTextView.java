@@ -30,7 +30,7 @@ import android.widget.MultiAutoCompleteTextView;
 import net.ixitxachitls.companion.R;
 
 /**
- * Created by balsiger on 8/7/18.
+ * A labelled text view allowing multiple selections.
  */
 public class LabelledMultiAutocompleteTextView extends LabelledAutocompleteTextView {
 

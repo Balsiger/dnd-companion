@@ -44,6 +44,27 @@ public final class EditTextWrapper<V extends EditText>
     public boolean validate(String value);
   }
 
+  public static class RangeValidator implements Validator {
+
+    private final int min;
+    private final int max;
+
+    public RangeValidator(int min, int max) {
+      this.min = min;
+      this.max = max;
+    }
+
+    @Override
+    public boolean validate(String input) {
+      try {
+        int value = Integer.parseInt(input);
+        return value >= min && value <= max;
+      } catch (NumberFormatException e) {
+        return false;
+      }
+    }
+  }
+
   private Optional<Validator> validator = Optional.empty();
   private @ColorInt int lineColorValue;
 

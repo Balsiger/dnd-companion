@@ -19,37 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data.statics;
+package net.ixitxachitls.companion.data.documents;
 
-import net.ixitxachitls.companion.proto.Template;
+import java.util.Map;
 
 /**
- * All the base information about a level.
+ * A document that is nested in another document, not separately stored.
  */
-public class LevelTemplate extends StaticEntry<Template.LevelTemplateProto> {
-  public static final String TYPE = "level";
-  private final int maxHp;
-
-  public LevelTemplate() {
-    this("", 0);
-  }
-
-  public LevelTemplate(String name, int maxHp) {
-    super(name);
-    this.maxHp = maxHp;
-  }
-
-  public int getMaxHp() {
-    return maxHp;
-  }
-
-  public static Template.LevelTemplateProto defaultProto() {
-    return Template.LevelTemplateProto.getDefaultInstance();
-  }
-
-  public static LevelTemplate fromProto(Template.LevelTemplateProto proto) {
-    LevelTemplate level = new LevelTemplate(proto.getTemplate().getName(),
-        proto.getHitDice().getDice());
-    return level;
-  }
+public abstract class NestedDocument {
+  abstract public Map<String, Object> write();
 }

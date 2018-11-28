@@ -133,13 +133,13 @@ public class EditItemDialog extends Dialog {
     itemSelection = view.findViewById(R.id.item);
     itemSelection.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select,
-        Entries.get().getItems().realItems()));
+        Entries.get().getItemTemplates().realItems()));
     itemSelection.onChange(this::selectItem);
 
     templatesSelection = view.findViewById(R.id.templates);
     templatesSelection.setAdapter(new ArrayAdapter<String>(getContext(),
         R.layout.list_item_select,
-        Entries.get().getItems().templates()));
+        Entries.get().getItemTemplates().templates()));
     templatesSelection.onChange(this::selectItem);
 
     TextWrapper.wrap(view, R.id.id).text(item.isPresent() ? item.get().getId() : "")
@@ -216,13 +216,13 @@ public class EditItemDialog extends Dialog {
   }
 
   private void selectItem() {
-    baseTemplate = Entries.get().getItems().get(itemSelection.getText());
+    baseTemplate = Entries.get().getItemTemplates().get(itemSelection.getText());
 
     if (baseTemplate.isPresent()) {
       templates = new ArrayList<>();
       templates.add(baseTemplate.get());
       for (String name : templatesSelection.getText().split("\\s*,\\s*")) {
-        Optional<ItemTemplate> template = Entries.get().getItems().get(name);
+        Optional<ItemTemplate> template = Entries.get().getItemTemplates().get(name);
         if (template.isPresent()) {
           templates.add(template.get());
         }

@@ -94,7 +94,6 @@ public class XP {
       55_000, 66_000, 78_000,  91_000, 105_000, 120_000, 136_000, 153_000, 171_000, 190_000
   };
 
-
   public static int xpAward(int encounterLevel, int characterLevel, int partySize) {
     if (partySize <= 0 || encounterLevel <= 0 || characterLevel <= 0 || characterLevel > 20) {
       return 0;
@@ -117,5 +116,15 @@ public class XP {
     }
 
     return xpByLevel[level - 1];
+  }
+
+  public static int maxLevelForXp(int xp) {
+    for (int i = 1; i <= 20; i++) {
+      if (xpForLevel(i) >= xp) {
+        return i;
+      }
+    }
+
+    return 20;
   }
 }

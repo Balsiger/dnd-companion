@@ -30,6 +30,8 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
       android:orientation="vertical">
 
     <LinearLayout
@@ -46,7 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="false"
-        android:layout_marginStart="10dp"
         android:orientation="horizontal">
 
       <view
@@ -110,32 +111,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:layout_weight="1"
-        android:text="Currently, only Dexterity is used to compute iniative. Since that currently only uses the bare Dexterity modifier, make sure that the Dexertity entered results in a DEX modifier matching your initiative modifier."
+        android:text="Abilities are currently used as is, without any modifiers you might have. Thus, include any modifiers from levels, feats or items directly here."
         android:theme="@style/SmallText"/>
 
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/level"
-        android:layout_width="100dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:inputType="number|numberSigned"
-        app:defaultText="1"
-        app:descriptionText="The total effective character level."
-        app:labelColor="@color/characterDark"
-        app:labelText="Level"
-        app:lineColor="@color/characterDark"
-        app:textColor="@color/characterText">
+        android:orientation="horizontal">
 
-    </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/levels"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:descriptionText="The character's level."
+          app:labelColor="@color/characterDark"
+          app:labelText="Level"
+          app:lineColor="@color/characterDark"
+          app:textColor="@color/characterText"/>
+
+      <TextView
+          android:id="@+id/level_up"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:text="Level Up!"
+          android:textColor="@color/characterDark"
+          android:theme="@style/LargeText"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/xp_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:orientation="horizontal">
 
       <ImageView
@@ -180,8 +190,6 @@
         android:id="@+id/hpLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:orientation="horizontal">
 
       <ImageView
@@ -211,10 +219,12 @@
           android:layout_gravity="center_vertical"
           app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
 
-      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
           android:id="@+id/hp_max"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
           android:layout_weight="1"
           android:inputType="number|numberSigned"
           app:defaultText="1"
@@ -222,9 +232,7 @@
           app:labelColor="@color/characterDark"
           app:labelText="Max HP"
           app:lineColor="@color/characterDark"
-          app:textColor="@color/characterText">
-
-      </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+          app:textColor="@color/characterText"/>
 
       <ImageView
           android:id="@+id/hp_nonlethal_subtract"

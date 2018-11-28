@@ -25,42 +25,28 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.TextView;
 
-import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * A text view with a label and description.
  */
-public class LabelledTextView extends AbstractLabelledView {
-  // UI elements.
-  private TextWrapper<TextView> text;
-
+public class LabelledTextView extends LabelledEditTextView {
   public LabelledTextView(Context context) {
-    super(context, R.layout.view_labelled_text);
+    super(context);
   }
 
   public LabelledTextView(Context context, AttributeSet attributes) {
-    super(context, attributes, R.layout.view_labelled_text);
+    super(context, attributes);
   }
 
   @Override
   protected void setup(View view, TypedArray array, TypedArray baseArray) {
     super.setup(view, array, baseArray);
 
-    text = TextWrapper.wrap(view, R.id.text);
-    text.text(array.getString(R.styleable.LabelledEditTextView_defaultText));
-    text.textColorValue(array.getColor(R.styleable.LabelledEditTextView_textColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
-    View line = view.findViewById(R.id.line);
-    line.setBackgroundColor(array.getColor(R.styleable.LabelledEditTextView_lineColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
-  }
-
-  public String getText() {
-    return text.getText();
+    // Prevent the edit text to actually be editable.
+    text.get().setKeyListener(null);
+    text.get().setFocusableInTouchMode(false);
   }
 
   public LabelledTextView text(String text) {

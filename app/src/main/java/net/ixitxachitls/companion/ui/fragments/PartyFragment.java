@@ -96,8 +96,6 @@ public class PartyFragment extends NestedCompanionFragment {
     characters().observe(this, this::update);
     images().observe(this, this::update);
     messages().observe(this, this::update);
-    adventures().observe(this, this::update);
-
     view = (ViewGroup) inflater.inflate(R.layout.fragment_party, container, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
@@ -107,7 +105,12 @@ public class PartyFragment extends NestedCompanionFragment {
     party = view.findViewById(R.id.party);
     scroll = Wrapper.wrap(view, R.id.scroll);
     adventure = view.findViewById(R.id.adventure);
-    adventure.onClick(this::changeAdventure);
+    if (campaign.isPresent() && campaign.get().amDM()) {
+      adventures().observe(this, this::update);
+      adventure.onClick(this::changeAdventure);
+    } else {
+      adventure.gone();
+    }
 
     addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)
         .onClick(this::createCharacter)
@@ -133,7 +136,7 @@ public class PartyFragment extends NestedCompanionFragment {
   }
 
   private void update(Adventures adventures) {
-    if (campaign.isPresent()) {
+    if (campaign.isPresent() && campaign.get().amDM()) {
       if (campaign.get().getAdventure().isPresent()) {
         adventure.text(campaign.get().getAdventure().get().getName());
       } else {

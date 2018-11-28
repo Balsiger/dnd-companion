@@ -27,13 +27,13 @@ import net.ixitxachitls.companion.proto.Template;
 /**
  * Data entity for world information.
  */
-public class World extends StaticEntry<Template.WorldTemplateProto> {
+public class WorldTemplate extends StaticEntry<Template.WorldTemplateProto> {
 
   public static final String TYPE = "world";
 
   private final Calendar calendar;
 
-  protected World(String name, Calendar calendar) {
+  protected WorldTemplate(String name, Calendar calendar) {
     super(name);
 
     this.calendar = calendar;
@@ -47,11 +47,11 @@ public class World extends StaticEntry<Template.WorldTemplateProto> {
     return Template.WorldTemplateProto.getDefaultInstance();
   }
 
-  public static World fromProto(Template.WorldTemplateProto proto) {
-    World world = new World(proto.getTemplate().getName(),
+  public static WorldTemplate fromProto(Template.WorldTemplateProto proto) {
+    WorldTemplate worldTemplate = new WorldTemplate(proto.getTemplate().getName(),
         Calendar.fromProto(proto.getCalendar()));
 
-    return world;
+    return worldTemplate;
   }
 
   @Override
