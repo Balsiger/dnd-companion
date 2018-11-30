@@ -28,10 +28,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 import java.util.Optional;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 /**
  * Store to access entries of a specific type.
@@ -39,8 +39,7 @@ import java.util.Optional;
 public class EntriesStore<T extends Entry<? extends MessageLite>> {
 
   private final Class<T> entryClass;
-  protected final Map<String, T> byName = new HashMap<>();
-  private ArrayList<String> names = null;
+  protected final SortedMap<String, T> byName = new TreeMap<>();
 
   protected EntriesStore(Class<T> entryClass) {
     this.entryClass = entryClass;
@@ -50,7 +49,6 @@ public class EntriesStore<T extends Entry<? extends MessageLite>> {
       throws IOException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
     T entry = fromProto(input);
     byName.put(entry.getName(), entry);
-    names = null;
   }
 
 
@@ -73,12 +71,11 @@ public class EntriesStore<T extends Entry<? extends MessageLite>> {
     return Optional.ofNullable(byName.get(name));
   }
 
-  public ArrayList<String> getNames() {
-    if (names == null) {
-      names = new ArrayList<>(byName.keySet());
-      Collections.sort(names);
-    }
+  public List<String> getNames() {
+    return new ArrayList<>(byName.keySet());
+  }
 
-    return names;
+  public List<T> getValues() {
+    return new ArrayList<>(byName.values());
   }
 }

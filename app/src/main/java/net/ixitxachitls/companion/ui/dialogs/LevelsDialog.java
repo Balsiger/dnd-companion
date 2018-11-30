@@ -40,6 +40,7 @@ import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.statics.LevelTemplate;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -50,6 +51,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Dialog for editing and adding character levels.
@@ -192,7 +194,10 @@ public class LevelsDialog extends Dialog {
     private void selectClass() {
       ListSelectDialog.newStringInstance(
           R.string.character_select_class, className.getText(),
-          Entries.get().getLevelTemplates().getNames(), R.color.character)
+          Entries.get().getLevelTemplates().getValues().stream()
+              .filter(LevelTemplate::isFromPHB)
+              .map(LevelTemplate::getName)
+              .collect(Collectors.toList()), R.color.character)
           .setSelectListener(this::editClass)
           .display();
     }

@@ -58,7 +58,7 @@ public class Level extends NestedDocument {
     if (template.isPresent()) {
       this.template = template.get();
     } else {
-      this.template = new LevelTemplate(templateName, 0);
+      this.template = new LevelTemplate(LevelTemplate.defaultProto(), templateName, 0);
     }
     this.hp = hp;
     this.abilityIncrease = abilityName.isEmpty()
@@ -117,7 +117,7 @@ public class Level extends NestedDocument {
       return template.get();
     }
 
-    return new LevelTemplate(name, 1);
+    return new LevelTemplate(LevelTemplate.defaultProto(), name, 1);
   }
 
   @Override

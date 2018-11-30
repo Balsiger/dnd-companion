@@ -22,20 +22,24 @@
 package net.ixitxachitls.companion.data.statics;
 
 import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.rules.Products;
 
 /**
  * All the base information about a level.
  */
 public class LevelTemplate extends StaticEntry<Template.LevelTemplateProto> {
   public static final String TYPE = "level";
+
+  private final Template.LevelTemplateProto proto;
   private final int maxHp;
 
   public LevelTemplate() {
-    this("", 0);
+    this(defaultProto(), "", 0);
   }
 
-  public LevelTemplate(String name, int maxHp) {
+  public LevelTemplate(Template.LevelTemplateProto proto, String name, int maxHp) {
     super(name);
+    this.proto = proto;
     this.maxHp = maxHp;
   }
 
@@ -43,12 +47,16 @@ public class LevelTemplate extends StaticEntry<Template.LevelTemplateProto> {
     return maxHp;
   }
 
+  public boolean isFromPHB() {
+    return Products.isFromPHB(proto.getTemplate());
+  }
+
   public static Template.LevelTemplateProto defaultProto() {
     return Template.LevelTemplateProto.getDefaultInstance();
   }
 
   public static LevelTemplate fromProto(Template.LevelTemplateProto proto) {
-    LevelTemplate level = new LevelTemplate(proto.getTemplate().getName(),
+    LevelTemplate level = new LevelTemplate(proto, proto.getTemplate().getName(),
         proto.getHitDice().getDice());
     return level;
   }
