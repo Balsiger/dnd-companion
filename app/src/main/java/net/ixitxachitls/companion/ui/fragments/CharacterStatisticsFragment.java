@@ -166,7 +166,8 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
       hp.text(String.valueOf(character.get().getHp()));
       levels.text(Level.summarized(character.get().getLevels()));
-      levelUp.visible(character.get().getMaxLevel() > character.get().getLevel());
+      levelUp.visible(character.get().getMaxLevel() > character.get().getLevel()
+          || (character.get().getXp() == 0 && character.get().getLevel() == 0));
     }
   }
 }

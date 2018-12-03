@@ -30,9 +30,7 @@ import net.ixitxachitls.companion.ui.views.StatusView;
 import net.ixitxachitls.companion.util.Misc;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -42,28 +40,9 @@ import java.util.Optional;
 public class Status {
   private static Optional<StatusView> view = Optional.empty();
   private static List<Action> pendingActions = new ArrayList<>();
-  private static Map<String, String> namesById = new HashMap<>();
 
   public static void setView(StatusView view) {
     Status.view = Optional.of(view);
-  }
-
-  public static void recordId(String id, String name) {
-    namesById.put(id, name);
-  }
-
-  public static String nameFor(String id) {
-    if (namesById.containsKey(id)) {
-      return namesById.get(id);
-    }
-
-    for (String namedId : namesById.keySet()) {
-      if (id.contains(namedId)) {
-        return id.replace(namedId, namesById.get(namedId));
-      }
-    }
-
-    return id;
   }
 
   public static void clearView() {

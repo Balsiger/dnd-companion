@@ -40,7 +40,7 @@ public class User extends Document<User> {
 
   protected static final String PATH = "users";
   private static final String FIELD_NICKNAME = "nickname";
-  private static final String DEFAULT_NICKNAME = "<not specified>";
+  private static final String DEFAULT_NICKNAME = "";
   private static final String FIELD_PHOTO_URL = "photoUrl";
   private static final String FIELD_FEATURES = "features";
 

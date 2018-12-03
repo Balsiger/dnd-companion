@@ -28,6 +28,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.rules.XP;
 
@@ -182,61 +183,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return data;
   }
 
-  //public static class Level {
-    /*
-    private int hp;
-    private Ability abilityIncrease;
-
-    public Level(String name) {
-      super(name);
-    }
-
-    public int getHp() {
-      return hp;
-    }
-
-    public void setHp(int hp) {
-      this.hp = hp;
-    }
-
-    public String summary() {
-      List<String> parts = new ArrayList<>();
-      if(hp > 0) {
-        parts.add(hp + " hp");
-      }
-
-      if(hasAbilityIncrease()) {
-        parts.add("+1 " + abilityIncrease.getShortName());
-      }
-
-      return name + (parts.isEmpty() ? "" : " (" + Strings.COMMA_JOINER.join(parts) + ")");
-    }
-
-    public boolean hasAbilityIncrease() {
-      return abilityIncrease != Ability.NONE && abilityIncrease != Ability.UNKNOWN;
-    }
-
-    public Ability getAbilityIncrease() {
-      return abilityIncrease;
-    }
-
-    public void setAbilityIncrease(Ability ability) {
-      abilityIncrease = ability;
-    }
-     */
-  //}
-
-  /*
-  public ArrayList<String> levelSummaries() {
-    ArrayList<String> summaries = new ArrayList<>();
-
-    for (Character.Level level : levels) {
-      summaries.add(level.summary());
-    }
-
-    return summaries;
-  }
-
+/*
   public void copy() {
     Entry.CharacterProto.Builder proto = toProto().toBuilder();
     proto.setCreature(proto.getCreature().toBuilder()
@@ -258,5 +205,19 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return this.getId().compareTo(that.getId());
+  }
+
+  public void updateConditions(CampaignDate date) {
+    for (CreatureCondition condition : context.conditions().getCreatureConditions(getId())) {
+      if (!condition.getCondition().isPermanent()) {
+        if (condition.getCondition().hasEndDate()) {
+          if (condition.getCondition().getEndDate().before(date)) {
+            context.conditions().delete(condition.getId());
+          }
+        } else {
+          context.conditions().delete(condition.getId());
+        }
+      }
+    }
   }
 }

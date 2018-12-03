@@ -26,6 +26,7 @@ import android.support.annotation.ColorRes;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.widget.LinearLayout;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.CreatureCondition;
 import net.ixitxachitls.companion.util.Strings;
@@ -65,7 +66,7 @@ public class ConditionIconsView extends LinearLayout {
     hp.setHp(creature.getHp(), creature.getMaxHp());
     nonlethal.setNonlethalDamage(creature.getNonlethalDamage(), creature.getHp());
 
-    redraw();
+    update(CompanionApplication.get().conditions().getCreatureConditions(creature.getId()));
   }
 
   private void redraw() {

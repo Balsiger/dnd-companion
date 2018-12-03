@@ -56,6 +56,7 @@ public class CreatureChipView extends ChipView {
     this.perLine = perLine;
 
     icons.addView(conditions);
+    CompanionApplication.get().conditions().readConditions(creature.getId());
 
     update(creature);
   }

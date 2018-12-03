@@ -36,6 +36,7 @@ import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Invites;
 import net.ixitxachitls.companion.data.documents.Messages;
+import net.ixitxachitls.companion.ui.Hints;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
@@ -43,6 +44,7 @@ import net.ixitxachitls.companion.ui.views.CampaignTitleView;
 import net.ixitxachitls.companion.ui.views.CharacterTitleView;
 import net.ixitxachitls.companion.ui.views.TitleView;
 import net.ixitxachitls.companion.ui.views.UpdatableViewGroup;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -60,6 +62,7 @@ public class CampaignsFragment extends CompanionFragment {
   private Wrapper<TextView> note;
   private UpdatableViewGroup<LinearLayout, CampaignTitleView, String> campaigns;
   private UpdatableViewGroup<LinearLayout, CharacterTitleView, String> characters;
+  private TextWrapper<TextView> hint;
 
   public CampaignsFragment() {
     super(Type.campaigns);
@@ -86,6 +89,7 @@ public class CampaignsFragment extends CompanionFragment {
         .description("Add Character", "Create a new character. "
             + "Characters created here will not be in a campaign, but can be moved to any existing "
             + "campaign later.");
+    hint = TextWrapper.wrap(view, R.id.hint);
 
     campaigns().observe(this, this::update);
     characters().observe(this, this::update);
@@ -116,31 +120,11 @@ public class CampaignsFragment extends CompanionFragment {
           }
         });
 
-
-        /*
-    this.campaigns.getView().removeAllViews();
-
-    // We have to recreate the campaigns as the transition away from this fragment seems to break
-    // them.
-    boolean campaignFound = false;
-    for (Campaign campaign : campaigns.getCampaigns()) {
-      CampaignTitleView title = new CampaignTitleView(getContext());
-      campaign.observe(this, title::update);
-      campaign.getDm().observe(this, title::update);
-      title.update(campaign);
-      this.campaigns.getView().addView(title);
-      title.setAction(() -> {
-        CompanionFragments.get().showCampaign(campaign, Optional.of(title));
-      });
-      campaignFound = true;
-    }
-    */
-
     note.visible(campaigns.getIds().isEmpty());
-
     user.setTitle(me().getNickname());
     user.setSubtitle(subtitle());
     user.loadImageUrl(me().getPhotoUrl());
+    hint.text(Hints.nextHint());
   }
 
   private void update(Characters characters) {
@@ -180,11 +164,9 @@ public class CampaignsFragment extends CompanionFragment {
 
   private String subtitle() {
     List<String> parts = new ArrayList<>();
-    if (me().getCampaigns().isEmpty()) {
-      parts.add("Not yet invited to any campaigns");
-    } else if (me().getCampaigns().size() == 1){
+    if (me().getCampaigns().size() == 1) {
       parts.add("Invited to 1 campaign");
-    } else {
+    } else if (me().getCampaigns().size() > 1) {
       parts.add("Invited to " + me().getCampaigns().size() + " campaigns");
     }
     if (!me().getFeatures().isEmpty()) {

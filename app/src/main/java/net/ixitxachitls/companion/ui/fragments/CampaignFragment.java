@@ -41,6 +41,7 @@ import android.widget.Toast;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
@@ -64,7 +65,7 @@ public class CampaignFragment extends CompanionFragment {
 
   private final int PICK_IMAGE = 1;
 
-  protected Campaign campaign;
+  protected Optional<Campaign> campaign = Optional.empty();
 
   // UI elements.
   protected CampaignTitleView title;
@@ -79,9 +80,9 @@ public class CampaignFragment extends CompanionFragment {
   private LinearLayout encounterActions;
   protected Wrapper<ImageView> endEncounter;
   protected Wrapper<ImageView> nextInEncounter;
-  protected Wrapper<ImageView> conditionInEncounter;
   protected Wrapper<ImageView> addMonsterInEncounter;
   protected Wrapper<ImageView> delayInEncounter;
+  protected Wrapper<ImageView> addCondition;
   private Wrapper<ImageView> xp;
 
   public CampaignFragment() {
@@ -133,11 +134,10 @@ public class CampaignFragment extends CompanionFragment {
         .description("Next Participant",
             "Finish the current participants round and go to the next participant")
         .invisible();
-    conditionInEncounter = Wrapper.<ImageView>wrap(view, R.id.encounter_condition)
-        .onClick(this::conditionInEncounter)
+    addCondition = Wrapper.<ImageView>wrap(view, R.id.add_condition)
+        .onClick(this::addCondition)
         .description("Set a Condition",
-            "Set a special condition on one ore multiple characters.")
-        .invisible();
+            "Set a special condition on one ore multiple characters.");
     addMonsterInEncounter = Wrapper.<ImageView>wrap(view, R.id.encounter_add_monster)
         .onClick(this::addMonsterInEncounter)
         .description("Add Monster", "Add a monster to the running encounter.")
@@ -151,6 +151,7 @@ public class CampaignFragment extends CompanionFragment {
         .description("Award XP", "Award experience points to your characters.")
         .invisible();
 
+    campaigns().observe(this, this::update);
     images().observe(this, title::update);
     messages().observe(this, title::update);
 
@@ -158,11 +159,7 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   public void showCampaign(Campaign campaign) {
-    if (this.campaign != null) {
-      this.campaign.unobserve(this);
-    }
-    this.campaign = campaign;
-    this.campaign.observe(this, this::update);
+    this.campaign = Optional.of(campaign);
     party.show(campaign);
     encounter.show(campaign);
     startEncounter.visible(campaign.amDM());
@@ -186,37 +183,41 @@ public class CampaignFragment extends CompanionFragment {
     characters().addPlayers(campaign);
     monsters().addCampaign(campaign.getId());
 
-    update(campaign);
+    update(campaigns());
   }
 
   public boolean shows(String campaignId) {
-    return this.campaign.getId().equals(campaignId);
+    return campaign.isPresent() && campaign.get().getId().equals(campaignId);
   }
 
   @CallSuper
-  protected void update(Campaign campaign) {
-    title.update(campaign);
-    title.update(images());
-    date.text(campaign.getCalendar().format(campaign.getDate()));
-    delete.visible(canDeleteCampaign());
+  protected void update(Campaigns campaigns) {
+    if (campaign.isPresent()) {
+      title.update(campaign.get());
+      title.update(images());
+      date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
+      delete.visible(canDeleteCampaign());
 
-    TransitionManager.beginDelayedTransition((ViewGroup) getView());
-    if (campaign.getEncounter().inBattle()) {
-      party.hide();
-      encounter.show();
-      encounter.update(campaigns());
-      startEncounter.disabled().tint(R.color.actionDisabled);
-      setLayoutWidth(encounterActions, LinearLayout.LayoutParams.WRAP_CONTENT);
-      endEncounter.visible(campaign.amDM());
-      nextInEncounter.visible(campaign.amDM());
-      conditionInEncounter.visible(campaign.amDM() || campaign.getEncounter().amCurrentPlayer());
-      addMonsterInEncounter.visible(campaign.amDM());
-      delayInEncounter.visible(campaign.amDM() || campaign.getEncounter().amCurrentPlayer());
-    } else {
-      party.show();
-      encounter.hide();
-      startEncounter.enabled().tint(R.color.action);
-      setLayoutWidth(encounterActions, 0);
+      TransitionManager.beginDelayedTransition((ViewGroup) getView());
+      if (campaign.get().getEncounter().inBattle()) {
+        party.hide();
+        encounter.show();
+        encounter.update(campaigns());
+        startEncounter.disabled().tint(R.color.actionDisabled);
+        setLayoutWidth(encounterActions, LinearLayout.LayoutParams.WRAP_CONTENT);
+        endEncounter.visible(campaign.get().amDM());
+        nextInEncounter.visible(campaign.get().amDM());
+        addCondition.visible(campaign.get().amDM()
+            || campaign.get().getEncounter().amCurrentPlayer());
+        addMonsterInEncounter.visible(campaign.get().amDM());
+        delayInEncounter.visible(campaign.get().amDM()
+            || campaign.get().getEncounter().amCurrentPlayer());
+      } else {
+        party.show();
+        encounter.hide();
+        startEncounter.enabled().tint(R.color.action);
+        setLayoutWidth(encounterActions, 0);
+      }
     }
   }
 
@@ -238,25 +239,33 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   protected void deleteCampaignOk() {
-    campaigns().delete(campaign);
-    Toast.makeText(getActivity(), getString(R.string.campaign_deleted), Toast.LENGTH_SHORT).show();
-    show(Type.campaigns);
+    if (campaign.isPresent()) {
+      campaigns().delete(campaign.get());
+      Toast.makeText(getActivity(), getString(R.string.campaign_deleted), Toast.LENGTH_SHORT).show();
+      show(Type.campaigns);
+    }
   }
 
   protected boolean canDeleteCampaign() {
-    return campaign.amDM();
+    return campaign.isPresent() && campaign.get().amDM();
   }
 
   private void edit() {
-    EditCampaignDialog.newInstance(campaign.getId()).display();
+    if (campaign.isPresent()) {
+      EditCampaignDialog.newInstance(campaign.get().getId()).display();
+    }
   }
 
   private void editDate() {
-    DateDialog.newInstance(campaign.getId()).display();
+    if (campaign.isPresent()) {
+      DateDialog.newInstance(campaign.get().getId()).display();
+    }
   }
 
   private void invite() {
-    InviteDialog.newInstance(campaign.getId()).display();
+    if (campaign.isPresent()) {
+      InviteDialog.newInstance(campaign.get().getId()).display();
+    }
   }
 
   @Override
@@ -275,56 +284,69 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void startEncounter() {
-    if (!campaign.amDM() || characters().getCampaignCharacters(campaign.getId()).isEmpty()) {
-      Status.error("You have to be DM of a campaign with characters to start an startEncounter.");
-      return;
-    }
+    if (campaign.isPresent()) {
+      if (!campaign.get().amDM()
+          || characters().getCampaignCharacters(campaign.get().getId()).isEmpty()) {
+        Status.error("You have to be DM of a campaign with characters to start an startEncounter.");
+        return;
+      }
 
-    campaign.getEncounter().setup();
+      campaign.get().getEncounter().setup();
+    }
   }
 
   private void endEncounter() {
-    campaign.getEncounter().end();
+    if (campaign.isPresent()) {
+      campaign.get().getEncounter().end();
+    }
   }
 
   private void nextInEncounter() {
-    campaign.getEncounter().creatureDone();
+    if (campaign.isPresent()) {
+      campaign.get().getEncounter().creatureDone();
+    }
   }
 
-  private void conditionInEncounter() {
-    if (campaign.getEncounter().amCurrentPlayer()) {
-      TimedConditionDialog.newInstance(campaign.getEncounter().getCurrentCreatureId(),
-          campaign.getEncounter().getTurn()).display();
-    } else if (campaign.amDM()) {
-      TimedConditionDialog.newInstance(campaign.getId(),
-          campaign.getEncounter().getTurn()).display();
+  private void addCondition() {
+    if (campaign.isPresent()) {
+      if (campaign.get().getEncounter().amCurrentPlayer()) {
+        TimedConditionDialog.newInstance(campaign.get().getEncounter().getCurrentCreatureId(),
+            campaign.get().getEncounter().getTurn()).display();
+      } else if (campaign.get().amDM()) {
+        TimedConditionDialog.newInstance(campaign.get().getId(),
+            campaign.get().getEncounter().getTurn()).display();
+      }
     }
   }
 
   private void addMonsterInEncounter() {
-    if (campaign.amDM()) {
-      MonsterInitiativeDialog.newInstance(campaign.getId(), -1).display();
+    if (campaign.isPresent() && campaign.get().amDM()) {
+      MonsterInitiativeDialog.newInstance(campaign.get().getId(), -1).display();
     }
   }
 
   private void delayInEncounter() {
-    campaign.getEncounter().creatureWait();
+    if (campaign.isPresent()) {
+      campaign.get().getEncounter().creatureWait();
+    }
   }
 
   private void awardXP() {
-    XPDialog.newInstance(campaign.getId()).display();
+    if (campaign.isPresent()) {
+      XPDialog.newInstance(campaign.get().getId()).display();
+    }
   }
 
   @Override
   public void onActivityResult(int requestCode, int resultCode, Intent data) {
     super.onActivityResult(requestCode, resultCode, data);
 
-    if (requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
+    if (campaign.isPresent() && requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
         data != null && data.getData() != null) {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        images().set(campaign.getId(), bitmap);
+        images().set(campaign.get().getId(), bitmap);
       } catch (IOException e) {
         Status.toast("Cannot load image bitmap: " + e);
       }

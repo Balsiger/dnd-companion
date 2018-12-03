@@ -121,7 +121,7 @@ public class XP {
   public static int maxLevelForXp(int xp) {
     for (int i = 1; i <= 20; i++) {
       if (xpForLevel(i) >= xp) {
-        return i;
+        return i - 1;
       }
     }
 

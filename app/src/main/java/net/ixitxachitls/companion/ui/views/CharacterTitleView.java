@@ -54,6 +54,7 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
   public void update(Character character) {
     super.update(character);
 
+    CompanionApplication.get().conditions().readConditions(character.getId());
     setAction(() -> {
       CompanionFragments.get().showCharacter(character, Optional.of(this));
     });

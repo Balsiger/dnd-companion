@@ -43,6 +43,9 @@ import java.util.Optional;
  * An icon for a condition.
  */
 public class ConditionIconView extends android.support.v7.widget.AppCompatImageView {
+
+  private static final int SIZE_PX = 50;
+
   public ConditionIconView(Context context) {
     this(context, null, 0, 0);
   }
@@ -57,12 +60,13 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
       Drawable back = getContext().getDrawable(R.drawable.icon_back);
       back.setTint(getContext().getColor(foregroundColor));
       setBackground(back);
+      setMaxHeight(SIZE_PX);
+      setMaxWidth(SIZE_PX);
+      setAdjustViewBounds(true);
       setOnLongClickListener(v -> {
         new MessageDialog(getContext())
             .title(condition.getCondition().getName())
-            .message(condition.getCondition().getSummary() + "\n\n"
-                + condition.getCondition().getDescription() + "\n\n"
-                + sourceName(condition.getCondition()))
+            .message(summary(condition.getCondition()))
             .show();
         return true;
       });
@@ -79,21 +83,46 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
     }
   }
 
-  private String sourceName(TimedCondition condition) {
+  private String summary(TimedCondition condition) {
     Optional<Character> character =
         CompanionApplication.get().characters().get(condition.getSourceId());
+
+    String summary = condition.getSummary() + "\n\n"
+        + condition.getDescription()
+        + sourceName(character, condition)
+        + duration(character, condition);
+
+    return summary;
+  }
+
+  private String duration(Optional<Character> character, TimedCondition condition) {
+    if (character.isPresent() && (character.get().amPlayer() || character.get().amDM())) {
+      if (condition.isPermanent()) {
+        return "\n\nThis condition is permanent";
+      }
+      if (condition.hasEndDate()) {
+        return "\n\nThis condition is active until " + condition.getEndDate();
+      }
+
+      return "\n\nThis condition is active until round " + condition.getEndRound();
+    }
+
+    return "";
+  }
+
+  private String sourceName(Optional<Character> character, TimedCondition condition) {
     if (character.isPresent()) {
-      return "Through the support of " + character.get().getName() + "!";
+      return "\\n\\nThrough the support of " + character.get().getName() + "!";
     }
 
     Optional<Monster> monster =
         CompanionApplication.get().monsters().get(condition.getSourceId());
     if (monster.isPresent()) {
-      return "You suffer this because of " + monster.get().getName() + "...";
+      return "\n\nYou suffer this because of " + monster.get().getName() + "...";
     }
 
     if (Users.isUserId(condition.getSourceId())) {
-      return "This condition kindly provided by your DM.";
+      return "\n\nThis condition kindly provided by your DM.";
     }
 
     return "I'm sorry, I have no clue where this came from...";

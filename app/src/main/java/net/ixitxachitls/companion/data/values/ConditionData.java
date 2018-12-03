@@ -25,6 +25,7 @@ import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.rules.Conditions;
 
@@ -184,7 +185,7 @@ public class ConditionData {
     private boolean endsBeforeTurn;
     private boolean dmOnly;
     private boolean dismissable = true;
-    @DrawableRes private int icon = 0;
+    @DrawableRes private int icon = R.drawable.icons8_hospital_24;
     @ColorRes private int iconColor = 0;
 
     public Builder(String name) {

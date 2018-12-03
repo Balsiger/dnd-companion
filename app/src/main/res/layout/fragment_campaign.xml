@@ -151,17 +151,6 @@
             app:srcCompat="@drawable/arrow_down_bold"/>
 
         <ImageView
-            android:id="@+id/encounter_condition"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="0"
-            android:contentDescription="Next participant"
-            android:padding="10dp"
-            android:tint="@color/action"
-            app:srcCompat="@drawable/icons8_treatment_100"/>
-
-        <ImageView
             android:id="@+id/encounter_add_monster"
             android:layout_width="50dp"
             android:layout_height="match_parent"
@@ -184,6 +173,17 @@
             app:srcCompat="@drawable/ic_hourglass_full_black_24dp"/>
 
       </LinearLayout>
+
+      <ImageView
+          android:id="@+id/add_condition"
+          android:layout_width="50dp"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="0"
+          android:contentDescription="Next participant"
+          android:padding="10dp"
+          android:tint="@color/action"
+          app:srcCompat="@drawable/icons8_treatment_100"/>
 
       <ImageView
           android:id="@+id/xp"

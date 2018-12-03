@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.CreatureConditions;
 import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.values.Encounter;
@@ -96,6 +97,8 @@ public class PartyFragment extends NestedCompanionFragment {
     characters().observe(this, this::update);
     images().observe(this, this::update);
     messages().observe(this, this::update);
+    conditions().observe(this, this::update);
+
     view = (ViewGroup) inflater.inflate(R.layout.fragment_party, container, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
@@ -183,6 +186,14 @@ public class PartyFragment extends NestedCompanionFragment {
     for (ChipView chip : chipsById.values()) {
       if (chip instanceof CharacterChipView) {
         ((CharacterChipView) chip).update(messages);
+      }
+    }
+  }
+
+  private void update(CreatureConditions conditions) {
+    for (ChipView chip : chipsById.values()) {
+      if (chip instanceof CharacterChipView) {
+        ((CharacterChipView) chip).update(((CharacterChipView) chip).getCharacter());
       }
     }
   }

@@ -24,8 +24,6 @@ package net.ixitxachitls.companion;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.multidex.MultiDexApplication;
 
@@ -64,14 +62,6 @@ public class CompanionApplication extends MultiDexApplication
   @Override
   public void onCreate() {
     application = this;
-
-    try {
-      PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-      Status.error("starting roleplay companion version " + packageInfo.versionName + " #"
-          + packageInfo.versionCode);
-    } catch (PackageManager.NameNotFoundException e) {
-      Status.warning("starting roleplay companion with unknown version");
-    }
     super.onCreate();
 
     Entries.init(this.getAssetAccessor());

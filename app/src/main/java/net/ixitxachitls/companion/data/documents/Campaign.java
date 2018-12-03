@@ -138,6 +138,11 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
   public void setDate(CampaignDate date) {
     this.date = date;
+
+    // Check if any conditions on characters have run out.
+    for (Character character : characters().getCampaignCharacters(getId())) {
+      character.updateConditions(date);
+    }
   }
 
   public Monsters monsters() {

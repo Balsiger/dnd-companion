@@ -159,7 +159,7 @@ public class Encounter {
 
   public void starting(List<String> includedCreatureIds, List<String> surprisedCreatureIds) {
     if (campaign.amDM()) {
-      number++;
+      status = EncounterStatus.STARTING;
       creatureIds = includedCreatureIds;
 
       // Setup initial conditions for characters.
@@ -179,7 +179,6 @@ public class Encounter {
         }
       }
 
-      status = EncounterStatus.STARTING;
       campaign.store();
     }
   }
@@ -348,6 +347,10 @@ public class Encounter {
     if (currentCreatureIndex < creatureIds.size() - 1) {
       String id = creatureIds.remove(currentCreatureIndex);
       creatureIds.add(currentCreatureIndex + 1, id);
+
+      // Remove the flat-footed condition, as the creature is acting now.
+      campaign.getContext().conditions().deleteAll(Conditions.FLAT_FOOTED.getName(),
+          creatureIds.get(currentCreatureIndex));
     }
 
     campaign.store();

@@ -99,7 +99,7 @@ public class LevelsDialog extends Dialog {
       levels.addView(new LineView(getContext(), level, nextLevel++));
     }
 
-    add.visible(nextLevel < maxLevel);
+    add.visible(nextLevel < maxLevel || (character.getXp() == 0 && nextLevel == 1));
   }
 
   @Override

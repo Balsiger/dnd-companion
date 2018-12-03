@@ -337,7 +337,8 @@ public class Calendar {
   public String format(CampaignDate date) {
     return (date.getMonth() > 0 ? formatMonth(date) + " " : "")
         + (date.getDay() > 0 && daysPerMonth(date.getMonth()) != 1
-        ? formatDay(date) + " " : "")
+           ? formatDay(date) + " " : "")
+        + ", "
         + formatYear(date) + " " + formatTime(date);
   }
 
