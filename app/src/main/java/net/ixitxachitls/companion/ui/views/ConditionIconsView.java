@@ -64,6 +64,14 @@ public class ConditionIconsView extends LinearLayout {
 
   public void update(Creature<?> creature) {
     hp.setHp(creature.getHp(), creature.getMaxHp());
+    if (creature.amPlayer()) {
+      hp.onAdjust(v -> {
+        creature.addHp(v);
+        creature.store();
+      });
+    } else {
+      hp.onAdjust(null);
+    }
     nonlethal.setNonlethalDamage(creature.getNonlethalDamage(), creature.getHp());
 
     update(CompanionApplication.get().conditions().getCreatureConditions(creature.getId()));

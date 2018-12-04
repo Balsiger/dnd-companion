@@ -26,8 +26,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.dialogs.LevelsDialog;
-import net.ixitxachitls.companion.ui.dialogs.NumberPrompt;
+import net.ixitxachitls.companion.ui.dialogs.NumberAdjustDialog;
 
 /**
  * Local variant of the character statistics fragment.
@@ -49,14 +50,11 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     levelUp.onClick(this::editLevels);
 
     xp.onBlur(this::changeXp).enabled(true);
-    xpAdd.visible().onClick(this::addXp);
-    xpSubtract.visible().onClick(this::subtractXp);
+    xpAdjust.visible().onClick(this::adjustXp);
     hp.onBlur(this::changeHp).enabled(true);
-    hpAdd.visible().onClick(this::addHp);
-    hpSubtract.visible().onClick(this::subtractHp);
+    hpAdjust.visible().onClick(this::adjustHp);
     damageNonlethal.onBlur(this::changeNonlethalDamage).enabled(true);
-    hpNonlethalAdd.visible().onClick(this::addNonlethalDamage);
-    hpNonlethalSubtract.visible().onClick(this::subtractNonlethalDamage);
+    hpNonlethalAdjust.visible().onClick(this::adjustNonlethalDamage);
 
     return view;
   }
@@ -109,88 +107,48 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     redraw();
   }
 
-  private void addHp() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Add hit points")
-        .message("The number of hit points to add to your current value.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addHp(prompt.getNumber());
-        character.get().store();
-        redraw();
-      }
-    });
-    prompt.show();
+  private void adjustHp() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
+        "HP Adjustment", "Adjust the current HP value.")
+        .setAdjustAction(this::doAdjustHp)
+        .display();
   }
 
-  private void subtractHp() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Subtract hit points")
-        .message("The number of hit points to subtract from your current value.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addHp(-prompt.getNumber());
-        character.get().store();
-        redraw();
-      }
-    });
-    prompt.show();
+  private void doAdjustHp(int value) {
+    if (character.isPresent()) {
+      character.get().addHp(value);
+      character.get().store();
+      redraw();
+    }
   }
 
-  private void addNonlethalDamage() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Add Non Lethal Damaga")
-        .message("The number of hit points to add to your current value of non lethal damage.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addNonlethalDamage(prompt.getNumber());
-        character.get().store();
-        redraw();
-      }
-    });
-    prompt.show();
+  private void adjustNonlethalDamage() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
+        "Nonlethal Damage Adjustment", "Adjust the current nonlethal damage.")
+        .setAdjustAction(this::doAdjustNonlethalDamage)
+        .display();
   }
 
-  private void subtractNonlethalDamage() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Subtract Non Lethal Damage")
-        .message("The number of hit points to subtract from your current value of non lethal "
-            + "damage.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addNonlethalDamage(-prompt.getNumber());
-        character.get().store();
-        redraw();
-      }
-    });
-    prompt.show();
+  private void doAdjustNonlethalDamage(int value) {
+    if (character.isPresent()) {
+      character.get().addNonlethalDamage(value);
+      character.get().store();
+      redraw();
+    }
   }
 
-  private void addXp() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Add XP")
-        .message("The number of XPs to add to your current value.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addXp(prompt.getNumber());
-        character.get().store();
-        redraw();
-      }
-    });
-    prompt.show();
+  private void adjustXp() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_xp, R.color.character,
+        "XP Adjustment", "Adjust the current XP value.")
+        .setAdjustAction(this::doAdjustXp)
+        .display();
   }
 
-  private void subtractXp() {
-    NumberPrompt prompt = new NumberPrompt(getContext())
-        .title("Subtract XP")
-        .message("The number of Xps to subtract from your current value.");
-    prompt.yes(() -> {
-      if (character.isPresent()) {
-        character.get().addXp(-prompt.getNumber());
-        character.get().store();
-        redraw();
-      }
-    });
-    prompt.show();
+  private void doAdjustXp(int value) {
+    if (character.isPresent()) {
+      character.get().addXp(value);
+      character.get().store();
+      redraw();
+    }
   }
 }

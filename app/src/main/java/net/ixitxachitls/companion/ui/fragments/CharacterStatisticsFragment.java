@@ -61,17 +61,14 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   protected AbilityView wisdom;
   protected AbilityView charisma;
   protected LabelledEditTextView xp;
-  protected Wrapper<ImageView> xpAdd;
-  protected Wrapper<ImageView> xpSubtract;
+  protected Wrapper<ImageView> xpAdjust;
   protected TextWrapper<TextView> xpNext;
   protected LabelledTextView levels;
   protected LabelledEditTextView hp;
-  protected Wrapper<ImageView> hpAdd;
-  protected Wrapper<ImageView> hpSubtract;
+  protected Wrapper<ImageView> hpAdjust;
   protected LabelledTextView hpMax;
   protected LabelledEditTextView damageNonlethal;
-  protected Wrapper<ImageView> hpNonlethalAdd;
-  protected Wrapper<ImageView> hpNonlethalSubtract;
+  protected Wrapper<ImageView> hpNonlethalAdjust;
   protected TextWrapper<TextView> levelUp;
 
   public CharacterStatisticsFragment() {
@@ -98,22 +95,19 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
     xp = view.findViewById(R.id.xp);
     xp.enabled(false).onBlur(this::redraw);
-    xpAdd = Wrapper.<ImageView>wrap(view, R.id.xp_add).gone();
-    xpSubtract = Wrapper.<ImageView>wrap(view, R.id.xp_subtract).gone();
+    xpAdjust = Wrapper.<ImageView>wrap(view, R.id.xp_adjust).gone();
     xpNext = TextWrapper.wrap(view, R.id.xp_next);
     levels = view.findViewById(R.id.levels);
     levelUp = TextWrapper.wrap(view, R.id.level_up);
 
     hp = view.findViewById(R.id.hp);
     hp.enabled(false);
-    hpAdd = Wrapper.<ImageView>wrap(view, R.id.hp_add).gone();
-    hpSubtract = Wrapper.<ImageView>wrap(view, R.id.hp_subtract).gone();
+    hpAdjust = Wrapper.<ImageView>wrap(view, R.id.hp_adjust).gone();
     hpMax = view.findViewById(R.id.hp_max);
     hpMax.enabled(false);
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
     damageNonlethal.enabled(false);
-    hpNonlethalAdd = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_add).gone();
-    hpNonlethalSubtract = Wrapper.<ImageView>wrap(view, R.id.hp_nonlethal_subtract).gone();
+    hpNonlethalAdjust = Wrapper.<ImageView>wrap(view, R.id.nonlethal_adjust).gone();
 
     // TODO(merlin): This might be unnecessary?
     if (character.isPresent()) {

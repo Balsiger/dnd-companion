@@ -147,13 +147,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-      <ImageView
-          android:id="@+id/xp_subtract"
-          android:layout_width="wrap_content"
-          android:layout_height="24dp"
-          android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
-
       <net.ixitxachitls.companion.ui.views.LabelledEditTextView
           android:id="@+id/xp"
           android:layout_width="100dp"
@@ -167,11 +160,11 @@
           app:textColor="@color/characterText"/>
 
       <ImageView
-          android:id="@+id/xp_add"
+          android:id="@+id/xp_adjust"
           android:layout_width="wrap_content"
           android:layout_height="24dp"
           android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+          app:srcCompat="@drawable/plus_minus_box"/>
 
       <TextView
           android:id="@+id/xp_next"
@@ -191,13 +184,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-      <ImageView
-          android:id="@+id/hp_subtract"
-          android:layout_width="wrap_content"
-          android:layout_height="24dp"
-          android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
-
       <net.ixitxachitls.companion.ui.views.LabelledEditTextView
           android:id="@+id/hp"
           android:layout_width="match_parent"
@@ -212,11 +198,11 @@
           app:textColor="@color/characterText"/>
 
       <ImageView
-          android:id="@+id/hp_add"
+          android:id="@+id/hp_adjust"
           android:layout_width="wrap_content"
           android:layout_height="24dp"
           android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+          app:srcCompat="@drawable/plus_minus_box"/>
 
       <net.ixitxachitls.companion.ui.views.LabelledTextView
           android:id="@+id/hp_max"
@@ -233,13 +219,6 @@
           app:lineColor="@color/characterDark"
           app:textColor="@color/characterText"/>
 
-      <ImageView
-          android:id="@+id/hp_nonlethal_subtract"
-          android:layout_width="wrap_content"
-          android:layout_height="24dp"
-          android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/ic_minus_box_black_24dp"/>
-
       <net.ixitxachitls.companion.ui.views.LabelledEditTextView
           android:id="@+id/hp_nonlethal"
           android:layout_width="match_parent"
@@ -254,11 +233,12 @@
           app:textColor="@color/characterText"/>
 
       <ImageView
-          android:id="@+id/hp_nonlethal_add"
+          android:id="@+id/nonlethal_adjust"
           android:layout_width="wrap_content"
           android:layout_height="24dp"
           android:layout_gravity="center_vertical"
-          app:srcCompat="@drawable/ic_plus_box_black_24dp"/>
+          app:srcCompat="@drawable/plus_minus_box"/>
+
 
     </LinearLayout>
 

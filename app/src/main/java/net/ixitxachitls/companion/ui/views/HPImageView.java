@@ -29,6 +29,9 @@ import android.view.View;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.rules.Conditions;
+import net.ixitxachitls.companion.ui.dialogs.NumberAdjustDialog;
+
+import java.util.Optional;
 
 import javax.annotation.Nullable;
 
@@ -46,6 +49,7 @@ public class HPImageView extends PartialImageView {
   private final Drawable stableBackground;
   private final Drawable dying;
   private final Drawable dyingBackground;
+  private Optional<NumberAdjustDialog.Action> adjustAction = Optional.empty();
 
   private enum State { alive, dying, stable, dead }
 
@@ -70,7 +74,14 @@ public class HPImageView extends PartialImageView {
     this.dyingBackground.setTint(context.getColor(R.color.characterDark));
     setAdjustViewBounds(true);
 
+    setOnClickListener(this::clicked);
+
     update();
+  }
+
+  public HPImageView onAdjust(@Nullable NumberAdjustDialog.Action action) {
+    this.adjustAction = Optional.ofNullable(action);
+    return this;
   }
 
   public void setHp(int hp, int maxHp) {
@@ -123,6 +134,19 @@ public class HPImageView extends PartialImageView {
         setVisibility(GONE);
         break;
     }
+  }
+
+  protected boolean clicked(View view) {
+    if (adjustAction.isPresent()) {
+      NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
+          "HP Adjustment", "Adjust the current HP value.")
+          .setAdjustAction(adjustAction.get())
+          .display();
+
+      return true;
+    }
+
+    return false;
   }
 
   @Override

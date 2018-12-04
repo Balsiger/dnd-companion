@@ -46,6 +46,8 @@ public class Hints {
               + "hit points per level.")
           .add("If data changed by other players is not updated in your display, try leaving and "
               + "restarting the app (and yes, I am working on it).")
+          .add("For many UI elements you can get additional information and help by long-pressing "
+              + "them.")
       .build();
 
   public static String nextHint() {

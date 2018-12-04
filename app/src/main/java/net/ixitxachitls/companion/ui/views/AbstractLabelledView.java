@@ -84,6 +84,10 @@ abstract class AbstractLabelledView extends LinearLayout {
 
     String name = array.getString(R.styleable.LabelledEditTextView_labelText);
     String description = array.getString(R.styleable.LabelledEditTextView_descriptionText);
+    setDescription(name, description);
+  }
+
+  protected void setDescription(String name, String description) {
     if (description != null && !description.isEmpty()) {
       label.onLongClick(() -> showDescription(name, description));
     }

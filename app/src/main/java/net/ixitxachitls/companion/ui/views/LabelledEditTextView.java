@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.ColorRes;
 import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.View;
@@ -79,6 +80,36 @@ public class LabelledEditTextView extends AbstractLabelledView {
 
   public String getText() {
     return text.getText();
+  }
+
+  public LabelledEditTextView type(int type) {
+    text.get().setInputType(type);
+
+    return this;
+  }
+
+  public LabelledEditTextView label(String label) {
+    this.label.text(label);
+
+    return this;
+  }
+
+  public LabelledEditTextView description(String title, String description) {
+    setDescription(title, description);
+
+    return this;
+  }
+
+  public LabelledEditTextView textColor(@ColorRes int color) {
+    text.textColor(color);
+
+    return this;
+  }
+
+  public LabelledEditTextView lineColor(@ColorRes int color) {
+    text.lineColor(color);
+
+    return this;
   }
 
   public LabelledEditTextView text(String text) {
