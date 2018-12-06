@@ -69,6 +69,7 @@ public class CharacterFragment extends CompanionFragment {
   protected Wrapper<ImageView> move;
   protected Wrapper<ImageView> timed;
   protected Wrapper<ImageView> back;
+  protected Wrapper<ImageView> message;
   protected ViewPager pager;
   protected @Nullable CharacterStatisticsFragment statisticsFragment;
   protected @Nullable CharacterInventoryFragment inventoryFragment;
@@ -101,6 +102,7 @@ public class CharacterFragment extends CompanionFragment {
             + "reappear, though.").invisible();
     move = Wrapper.<ImageView>wrap(view, R.id.move).gone();
     timed = Wrapper.<ImageView>wrap(view, R.id.timed).gone();
+    message = Wrapper.<ImageView>wrap(view, R.id.message).gone();
 
     pager = view.findViewById(R.id.pager);
     pager.setAdapter(new CharacterPagerAdapter(getChildFragmentManager()));

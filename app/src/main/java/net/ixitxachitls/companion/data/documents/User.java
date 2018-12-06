@@ -142,7 +142,7 @@ public class User extends Document<User> {
     return id.startsWith(getId());
   }
 
-  private static boolean isA(String id, String type) {
-    return id.contains("/" + type + "/");
+  public static boolean isUser(String id) {
+    return id.matches(PATH + "/[^/]*/");
   }
 }

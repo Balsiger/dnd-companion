@@ -31,6 +31,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Message;
+import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 
@@ -110,8 +111,10 @@ public abstract class MessageView extends AppCompatImageView {
         return "Removed Item";
       case itemSell:
         return "Sold Item";
+      case text:
+        return "Message from " + sourceName();
       default:
-      return "Unsupported Message";
+        return "Unsupported Message";
     }
   }
 
@@ -121,14 +124,27 @@ public abstract class MessageView extends AppCompatImageView {
         return "The DM removed your '" + message.getItem().get().getName() + "'!";
 
       case itemSell: {
-        Optional<Character> character =
-            CompanionApplication.get().characters().get(message.getSourceId());
-        return (character.isPresent() ? character.get().getName() : "A character")
-            + " sold a '" + message.getItem().get().getName() + "'.";
+        return sourceName() + " sold a '" + message.getItem().get().getName() + "'.";
       }
+      case text:
+        return message.getText();
 
       default:
         return "A generic message that is not currently supported";
     }
+  }
+
+  protected String sourceName() {
+    if (User.isUser(message.getSourceId())) {
+      return "DM";
+    }
+
+    Optional<Character> character =
+        CompanionApplication.get().characters().get(message.getSourceId());
+    if (character.isPresent()) {
+      return character.get().getName();
+    }
+
+    return message.getSourceId();
   }
 }

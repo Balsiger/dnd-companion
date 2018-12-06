@@ -41,8 +41,9 @@ public class Message extends Document<Message> {
   private static final String FIELD_TYPE = "type";
   private static final String FIELD_XP = "xp";
   private static final String FIELD_ITEM = "item";
+  private static final String FIELD_TEXT = "text";
 
-  public enum Type { unknown, xp, itemAdd, itemDelete, itemSell };
+  public enum Type { unknown, xp, itemAdd, itemDelete, itemSell, text };
 
   private static final Document.DocumentFactory<Message> FACTORY = () -> new Message();
 
@@ -51,6 +52,7 @@ public class Message extends Document<Message> {
   private Type type;
   private int xp;
   private Optional<Item> item = Optional.empty();
+  private String text = "";
 
   public static Message createForXp(CompanionContext context, String targetId, int xp) {
     Message message = createBase(context, context.me().getId(), targetId, Type.xp);
@@ -80,6 +82,15 @@ public class Message extends Document<Message> {
                                           String targetId, Item item) {
     Message message = createBase(context, sourceId, targetId, Type.itemSell);
     message.item = Optional.of(item);
+    message.store();
+
+    return message;
+  }
+
+  public static Message createForText(CompanionContext context, String sourceId,
+                                      String targetId, String text) {
+    Message message = createBase(context, sourceId, targetId, Type.text);
+    message.text = text;
     message.store();
 
     return message;
@@ -115,6 +126,10 @@ public class Message extends Document<Message> {
     return item;
   }
 
+  public String getText() {
+    return text;
+  }
+
   public String getSourceId() {
     return sourceId;
   }
@@ -131,6 +146,7 @@ public class Message extends Document<Message> {
     if (has(FIELD_ITEM)) {
       item = Optional.of(Item.read(get(FIELD_ITEM)));
     }
+    text = get(FIELD_TEXT, "");
   }
 
   @Override
@@ -145,6 +161,7 @@ public class Message extends Document<Message> {
     if (item.isPresent()) {
       data.put(FIELD_ITEM, item.get().write());
     }
+    data.put(FIELD_TEXT, text);
 
     return data;
   }
@@ -158,6 +175,8 @@ public class Message extends Document<Message> {
         return item.get() + " added for " + targetId;
       case itemDelete:
         return item.get() + " removed for " + targetId;
+      case text:
+        return text + " sent to " + targetId;
       default:
         return "unknown to " + targetId;
     }

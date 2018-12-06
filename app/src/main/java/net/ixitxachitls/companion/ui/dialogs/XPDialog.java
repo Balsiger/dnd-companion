@@ -26,7 +26,6 @@ import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -121,13 +120,6 @@ public class XPDialog extends Dialog {
       for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
         characterContainer.addView(new XPCharacterView(getContext(), this, character));
       }
-
-      characterContainer.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-          Log.d("GURU", "clicked");
-        }
-      });
 
       fixed1 = view.findViewById(R.id.fixed_1);
       fixed2 = view.findViewById(R.id.fixed_2);

@@ -58,6 +58,7 @@ public class EncounterCharacterTitleView extends EncounterTitleView<Character> {
     });
 
     updateIcons();
+    updateMessages();
   }
 
   public void update(Messages messages) {

@@ -218,6 +218,17 @@
           android:tint="@color/action"
           app:srcCompat="@drawable/ic_delete_black_24dp"/>
 
+      <ImageView
+          android:id="@+id/message"
+          android:layout_width="50dp"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="0"
+          android:contentDescription="Send a message"
+          android:padding="10dp"
+          android:tint="@color/action"
+          app:srcCompat="@drawable/ic_message_text_black_48dp"/>
+
     </LinearLayout>
 
   </HorizontalScrollView>

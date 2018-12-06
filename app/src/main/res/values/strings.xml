@@ -121,5 +121,6 @@
   <string name="character_select_ability">Increased Ability</string>
   <string name="title_dialog_adjust_xp">Adjust XP</string>
   <string name="title_dialog_adjust_hp">Adjust HP</string>
+  <string name="dialog_title_message">Send a Message</string>
 
 </resources>

@@ -319,4 +319,8 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   protected interface DocumentFactory<D> {
     D create();
   }
+
+  protected static boolean isA(String id, String type) {
+    return id.contains("/" + type + "/");
+  }
 }

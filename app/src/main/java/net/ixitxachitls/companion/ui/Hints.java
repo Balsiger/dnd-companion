@@ -48,6 +48,12 @@ public class Hints {
               + "restarting the app (and yes, I am working on it).")
           .add("For many UI elements you can get additional information and help by long-pressing "
               + "them.")
+          .add("You can click on the heart for your hit points to change them, even in the midst "
+              + "of battle.")
+          .add("A long press on a condition will tell you what it is.")
+          .add("You can touch messages to receive them (which will remove them).")
+          .add("A long press on a pending message will tell you what it is, without actually "
+              + "reading it (they will not be removed).")
       .build();
 
   public static String nextHint() {

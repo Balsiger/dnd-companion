@@ -48,6 +48,7 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
 import net.ixitxachitls.companion.ui.dialogs.EditCampaignDialog;
 import net.ixitxachitls.companion.ui.dialogs.InviteDialog;
+import net.ixitxachitls.companion.ui.dialogs.MessageDialog;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 import net.ixitxachitls.companion.ui.dialogs.XPDialog;
@@ -83,6 +84,7 @@ public class CampaignFragment extends CompanionFragment {
   protected Wrapper<ImageView> addMonsterInEncounter;
   protected Wrapper<ImageView> delayInEncounter;
   protected Wrapper<ImageView> addCondition;
+  protected Wrapper<ImageView> sendMessage;
   private Wrapper<ImageView> xp;
 
   public CampaignFragment() {
@@ -150,6 +152,10 @@ public class CampaignFragment extends CompanionFragment {
         .onClick(this::awardXP)
         .description("Award XP", "Award experience points to your characters.")
         .invisible();
+    sendMessage = Wrapper.<ImageView>wrap(view, R.id.message)
+        .onClick(this::sendMessage)
+        .description("Send Message", "Send a message to other characters and the DM")
+        .invisible();
 
     campaigns().observe(this, this::update);
     images().observe(this, title::update);
@@ -179,6 +185,7 @@ public class CampaignFragment extends CompanionFragment {
     }
 
     xp.visible(campaign.amDM());
+    sendMessage.visible(campaign.amDM());
 
     characters().addPlayers(campaign);
     monsters().addCampaign(campaign.getId());
@@ -350,6 +357,12 @@ public class CampaignFragment extends CompanionFragment {
       } catch (IOException e) {
         Status.toast("Cannot load image bitmap: " + e);
       }
+    }
+  }
+
+  private void sendMessage() {
+    if (campaign.isPresent()) {
+      MessageDialog.newInstance(campaign.get().getId(), me().getId()).display();
     }
   }
 }

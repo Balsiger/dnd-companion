@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
+import net.ixitxachitls.companion.ui.dialogs.MessageDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 
 import java.io.IOException;
@@ -68,6 +69,9 @@ public class LocalCharacterFragment extends CharacterFragment {
     timed.visible()
         .onClick(this::timed)
         .description("Add Condition", "Add a timed condition to this and/or other characters.");
+    message.visible()
+        .onClick(this::sendMessage)
+        .description("Send Message", "Send a message to other characters and the DM");
 
     return view;
   }
@@ -138,5 +142,11 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   public boolean canEdit() {
     return campaign.isPresent() && character.isPresent();
+  }
+
+  private void sendMessage() {
+    if (campaign.isPresent() && character.isPresent()) {
+      MessageDialog.newInstance(campaign.get().getId(), character.get().getId()).display();
+    }
   }
 }
