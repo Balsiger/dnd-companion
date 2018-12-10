@@ -30,7 +30,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.common.base.Optional;
+
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.values.ModifiedValue;
+import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -38,6 +43,9 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  * View to show a single ability.
  */
 public class AbilityView extends LinearLayout {
+
+  private Ability ability = Ability.UNKNOWN;
+  private Optional<ModifiedValue> modifiedValue = Optional.absent();
 
   // UI elements.
   private TextWrapper<TextView> value;
@@ -47,6 +55,22 @@ public class AbilityView extends LinearLayout {
     super(context, attributes);
 
     init(attributes);
+  }
+
+  public void setAction(Wrapper.Action action) {
+    setOnClickListener(v -> action.execute());
+  }
+
+  public AbilityView value(Ability ability, ModifiedValue value) {
+    this.ability = ability;
+    this.modifiedValue = Optional.of(value);
+
+    int total = value.total();
+    int modifier = Ability.modifier(total);
+    this.value.text(String.valueOf(total));
+    this.modifier.text((modifier < 0 ? "" : "+") + modifier);
+
+    return this;
   }
 
   private void init(@Nullable AttributeSet attributes) {
@@ -59,15 +83,20 @@ public class AbilityView extends LinearLayout {
     value = TextWrapper.wrap(view, R.id.value).textColor(R.color.characterText);
     modifier = TextWrapper.wrap(view, R.id.modifier).textColor(R.color.characterText);
 
+    setOnLongClickListener(this::showDescription);
+
     addView(view);
   }
 
-  public void setValue(int value, int modifier) {
-    this.value.text(String.valueOf(value));
-    this.modifier.text((modifier < 0 ? "" : "+") + modifier);
-  }
+  private boolean showDescription(View view) {
+    if (modifiedValue.isPresent()) {
+      MessageDialog.create(getContext())
+          .title(ability.getName())
+          .message(modifiedValue.get().describeModifiers())
+          .show();
+      return true;
+    }
 
-  public void setAction(Wrapper.Action action) {
-    setOnClickListener(v -> action.execute());
+    return false;
   }
 }

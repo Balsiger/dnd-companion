@@ -119,12 +119,6 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     return view;
   }
 
-  private void update(Characters characters) {
-    if (character.isPresent()) {
-      update(character.get());
-    }
-  }
-
   public void update(Character character) {
     this.character = Optional.of(character);
 
@@ -132,18 +126,12 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       return;
     }
 
-    strength.setValue(character.getStrength(),
-        Ability.modifier(character.getStrength()));
-    dexterity.setValue(character.getDexterity(),
-        Ability.modifier(character.getDexterity()));
-    constitution.setValue(character.getConstitution(),
-        Ability.modifier(character.getConstitution()));
-    intelligence.setValue(character.getIntelligence(),
-        Ability.modifier(character.getIntelligence()));
-    wisdom.setValue(character.getWisdom(),
-        Ability.modifier(character.getWisdom()));
-    charisma.setValue(character.getCharisma(),
-        Ability.modifier(character.getCharisma()));
+    strength.value(Ability.STRENGTH, character.getStrength());
+    dexterity.value(Ability.DEXTERITY, character.getDexterity());
+    constitution.value(Ability.CONSTITUTION, character.getConstitution());
+    intelligence.value(Ability.INTELLIGENCE, character.getIntelligence());
+    wisdom.value(Ability.WISDOM, character.getWisdom());
+    charisma.value(Ability.CHARISMA, character.getCharisma());
 
     xp.text(String.valueOf(character.getXp()));
     hp.text(String.valueOf(character.getHp()))
@@ -162,6 +150,12 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       levels.text(Level.summarized(character.get().getLevels()));
       levelUp.visible(character.get().getMaxLevel() > character.get().getLevel()
           || (character.get().getXp() == 0 && character.get().getLevel() == 0));
+    }
+  }
+
+  private void update(Characters characters) {
+    if (character.isPresent()) {
+      update(character.get());
     }
   }
 }

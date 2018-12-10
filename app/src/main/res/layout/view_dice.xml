@@ -37,17 +37,17 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="5dp"
-        android:text="... modifier label ..."
+        android:text="... value label ..."
         android:textAlignment="textEnd"
         android:theme="@style/SmallText"/>
 
     <TextView
-        android:id="@+id/modifier"
+        android:id="@+id/value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="5dp"
-        android:text="... modifier ..."
+        android:text="... value ..."
         android:theme="@style/SmallText"/>
   </LinearLayout>
 

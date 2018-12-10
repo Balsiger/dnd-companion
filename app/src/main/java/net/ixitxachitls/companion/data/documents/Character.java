@@ -30,6 +30,8 @@ import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.ConditionData;
+import net.ixitxachitls.companion.data.values.ModifiedValue;
+import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.rules.XP;
 
 import java.util.ArrayList;
@@ -50,33 +52,62 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private static final String FIELD_LEVEL = "level";
   private static final String FIELD_LEVELS = "levels";
   private static final int DEFAULT_LEVEL = 1;
-
+  protected List<ConditionData> conditionsHistory = new ArrayList<>();
   private User player;
-
   private int xp = 0;
   private int level;
   private List<Level> levels = new ArrayList<>();
-  protected List<ConditionData> conditionsHistory = new ArrayList<>();
 
-  protected static Character create(CompanionContext context, String campaignId) {
-    Character character = Document.create(FACTORY, context, context.me().getId() + "/" + PATH);
-
-    character.player = context.me();
-    character.setCampaignId(campaignId);
-
-    return character;
+  public List<ConditionData> getConditionsHistory() {
+    return ImmutableList.copyOf(conditionsHistory);
   }
 
-  protected static Character fromData(CompanionContext context, User player,
-                                      DocumentSnapshot snapshot) {
-    Character character = Document.fromData(FACTORY, context, snapshot);
-    character.player = player;
-
-    return character;
+  public int getLevel() {
+    return levels.size();
   }
 
-  public User getPlayer() {
-    return player;
+  public List<Level> getLevels() {
+    return levels;
+  }
+
+  @Override
+  public int getMaxHp() {
+    int hp = 0;
+    for (Level level : levels) {
+      hp += level.getHp() + getConstitutionModifier();
+    }
+
+    return hp;
+  }
+
+  @Override
+  public ModifiedValue getStrength() {
+    return adjustAbilityForLevels(super.getStrength(), Ability.STRENGTH);
+  }
+
+  @Override
+  public ModifiedValue getDexterity() {
+    return adjustAbilityForLevels(super.getStrength(), Ability.DEXTERITY);
+  }
+
+  @Override
+  public ModifiedValue getConstitution() {
+    return adjustAbilityForLevels(super.getStrength(), Ability.CONSTITUTION);
+  }
+
+  @Override
+  public ModifiedValue getIntelligence() {
+    return adjustAbilityForLevels(super.getStrength(), Ability.INTELLIGENCE);
+  }
+
+  @Override
+  public ModifiedValue getWisdom() {
+    return adjustAbilityForLevels(super.getStrength(), Ability.WISDOM);
+  }
+
+  @Override
+  public ModifiedValue getCharisma() {
+    return adjustAbilityForLevels(super.getStrength(), Ability.CHARISMA);
   }
 
   public boolean amPlayer() {
@@ -90,73 +121,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
   // TODO(merlin): Move this into Document generally?
   public boolean canEdit() {
     return amPlayer() || amDM();
-  }
-
-  public int getXp() {
-    return xp;
-  }
-
-  public void setXp(int xp) {
-    this.xp = xp;
-  }
-
-  public void addXp(int number) {
-    xp += number;
-  }
-
-  public int getLevel() {
-    return levels.size();
-  }
-
-  public int getMaxLevel() {
-    return XP.maxLevelForXp(xp);
-  }
-
-  @Override
-  public int getMaxHp() {
-    int hp = 0;
-    for (Level level : levels) {
-      hp += level.getHp() + getConstitutionModifier();
-    }
-
-    return hp;
-  }
-
-  public void setLevels(List<Level> levels) {
-    this.levels = levels;
-    store();
-  }
-
-  public void setLevel(int level) {
-    this.level = level;
-  }
-
-  public List<Level> getLevels() {
-    return levels;
-  }
-
-  public void delete(Level level) {
-    levels.remove(level);
-    store();
-  }
-
-  public void addLevel() {
-    levels.add(new Level());
-    store();
-  }
-
-  public List<ConditionData> getConditionsHistory() {
-    return ImmutableList.copyOf(conditionsHistory);
-  }
-
-  public int initiativeModifier() {
-    // TODO: this needs treatment of things like feats and items.
-    return Ability.modifier(dexterity);
-  }
-
-  @Override
-  public String toString() {
-    return getName();
   }
 
   @Override
@@ -183,19 +147,39 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return data;
   }
 
-/*
-  public void copy() {
-    Entry.CharacterProto.Builder proto = toProto().toBuilder();
-    proto.setCreature(proto.getCreature().toBuilder()
-        .setName("Copy of " + proto.getCreature().getName())
-        .setId("")
-        .build());
+  public int getMaxLevel() {
+    return XP.maxLevelForXp(xp);
+  }
 
-    Character copy = LocalCharacter.fromProto(context, 0, proto.build());
-    copy.store();
-}
+  public User getPlayer() {
+    return player;
+  }
 
-   */
+  public int getXp() {
+    return xp;
+  }
+
+  public void setLevel(int level) {
+    this.level = level;
+  }
+
+  public void setLevels(List<Level> levels) {
+    this.levels = levels;
+    store();
+  }
+
+  public void setXp(int xp) {
+    this.xp = xp;
+  }
+
+  public void addLevel() {
+    levels.add(new Level());
+    store();
+  }
+
+  public void addXp(int number) {
+    xp += number;
+  }
 
   @Override
   public int compareTo(Character that) {
@@ -205,6 +189,21 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return this.getId().compareTo(that.getId());
+  }
+
+  public void delete(Level level) {
+    levels.remove(level);
+    store();
+  }
+
+  public int initiativeModifier() {
+    // TODO: this needs treatment of things like feats and items.
+    return Ability.modifier(dexterity);
+  }
+
+  @Override
+  public String toString() {
+    return getName();
   }
 
   public void updateConditions(CampaignDate date) {
@@ -219,5 +218,35 @@ public class Character extends Creature<Character> implements Comparable<Charact
         }
       }
     }
+  }
+
+  private ModifiedValue adjustAbilityForLevels(ModifiedValue value, Ability ability) {
+    int number = 1;
+    for (Level level : levels) {
+      if (level.getIncreasedAbility().isPresent() && level.getIncreasedAbility().get() == ability) {
+        value.add(new Modifier(1, Modifier.Type.ABILITY,
+            "Level " + number + ": " + level.toString()));
+      }
+      number++;
+    }
+
+    return value;
+  }
+
+  protected static Character create(CompanionContext context, String campaignId) {
+    Character character = Document.create(FACTORY, context, context.me().getId() + "/" + PATH);
+
+    character.player = context.me();
+    character.setCampaignId(campaignId);
+
+    return character;
+  }
+
+  protected static Character fromData(CompanionContext context, User player,
+                                      DocumentSnapshot snapshot) {
+    Character character = Document.fromData(FACTORY, context, snapshot);
+    character.player = player;
+
+    return character;
   }
 }

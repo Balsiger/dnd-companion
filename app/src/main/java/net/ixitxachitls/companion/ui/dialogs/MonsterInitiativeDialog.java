@@ -88,7 +88,7 @@ public class MonsterInitiativeDialog extends Dialog {
   protected void createContent(View view) {
     name = EditTextWrapper.wrap(view, R.id.name);
     name.text(makeName()).lineColor(R.color.monster);
-    modifier = Wrapper.wrap(view, R.id.modifier);
+    modifier = Wrapper.wrap(view, R.id.value);
     modifier.get().setMaxValue(20 + 20);
     modifier.get().setMinValue(0);
     modifier.get().setValue(20);

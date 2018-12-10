@@ -71,7 +71,7 @@ public class DiceView extends LinearLayout {
 
     label = TextWrapper.wrap(view, R.id.label);
     label.text(array.getString(R.styleable.DiceView_modifier_label));
-    modifierView = TextWrapper.wrap(view, R.id.modifier);
+    modifierView = TextWrapper.wrap(view, R.id.value);
     random = Wrapper.<Button>wrap(view, R.id.random)
         .onClick(this::selectRandom)
         .description("Random", "Instead of selecting the number that you actually rolled on your "

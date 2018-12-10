@@ -102,12 +102,12 @@ public class AbilitiesDialog extends Dialog {
   @Override
   public void save() {
     if (character.isPresent()) {
-      character.get().setStrength(strength.getValue());
-      character.get().setDexterity(dexterity.getValue());
-      character.get().setConstitution(constitution.getValue());
-      character.get().setIntelligence(intelligence.getValue());
-      character.get().setWisdom(wisdom.getValue());
-      character.get().setCharisma(charisma.getValue());
+      character.get().setBaseStrength(strength.getValue());
+      character.get().setBaseDexterity(dexterity.getValue());
+      character.get().setBaseConstitution(constitution.getValue());
+      character.get().setBaseIntelligence(intelligence.getValue());
+      character.get().setBaseWisdom(wisdom.getValue());
+      character.get().setBaseCharisma(charisma.getValue());
       character.get().store();
     }
 
@@ -116,12 +116,12 @@ public class AbilitiesDialog extends Dialog {
 
   protected void update() {
     if (character.isPresent()) {
-      strength.setValue(character.get().getStrength());
-      dexterity.setValue(character.get().getDexterity());
-      constitution.setValue(character.get().getConstitution());
-      intelligence.setValue(character.get().getIntelligence());
-      wisdom.setValue(character.get().getWisdom());
-      charisma.setValue(character.get().getCharisma());
+      strength.setValue(character.get().getStrength().getBase());
+      dexterity.setValue(character.get().getDexterity().getBase());
+      constitution.setValue(character.get().getConstitution().getBase());
+      intelligence.setValue(character.get().getIntelligence().getBase());
+      wisdom.setValue(character.get().getWisdom().getBase());
+      charisma.setValue(character.get().getCharisma().getBase());
     }
   }
 }

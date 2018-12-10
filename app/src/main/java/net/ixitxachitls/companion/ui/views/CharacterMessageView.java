@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.support.annotation.CallSuper;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.documents.Character;
@@ -49,7 +48,6 @@ public class CharacterMessageView extends MessageView {
   }
 
   @Override
-  @CallSuper
   protected void handle() {
     if (canHandle()) {
       switch (message.getType()) {

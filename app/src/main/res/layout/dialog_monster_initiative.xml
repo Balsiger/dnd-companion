@@ -45,7 +45,7 @@
         android:textSize="24sp"/>
 
     <NumberPicker
-        android:id="@+id/modifier"
+        android:id="@+id/value"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"

@@ -71,32 +71,68 @@ public class Level extends NestedDocument {
     this.abilityIncrease = abilityIncrease;
   }
 
-  public LevelTemplate getTemplate() {
-    return template;
-  }
-
-  public void setTemplate(String name) {
-    this.template = readTemplate(name);
-  }
-
   public int getHp() {
     return hp;
   }
 
-  public void setHp(int hp) {
-    this.hp = hp;
+  public Optional<Ability> getIncreasedAbility() {
+    return abilityIncrease;
   }
 
   public int getMaxHp() {
     return template.getMaxHp();
   }
 
+  public LevelTemplate getTemplate() {
+    return template;
+  }
+
+  public void setHp(int hp) {
+    this.hp = hp;
+  }
+
   public void setIncreasedAbility(Ability ability) {
     this.abilityIncrease = Optional.of(ability);
   }
 
-  public Optional<Ability> getIncreasedAbility() {
-    return abilityIncrease;
+  public void setTemplate(String name) {
+    this.template = readTemplate(name);
+  }
+
+  public boolean hasAbilityIncrease() {
+    return abilityIncrease.isPresent()
+        && abilityIncrease.get() != Ability.UNKNOWN
+        && abilityIncrease.get() != Ability.NONE;
+  }
+
+  @Override
+  public String toString() {
+    return template.getName();
+  }
+
+  @Override
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_TEMPLATE, template.getName());
+    data.put(FIELD_HP, hp);
+    if (abilityIncrease.isPresent()) {
+      data.put(FIELD_ABILITY_INCREASE, abilityIncrease.get().getName());
+    }
+
+    return data;
+  }
+
+  public static boolean allowsAbilityIncrease(int levelNumber) {
+    return (levelNumber % 4) == 0;
+  }
+
+  private static Multiset<String> countedNames(List<Level> levels) {
+    Multiset<String> names = HashMultiset.create();
+    for (Level level : levels) {
+      names.add(level.getTemplate().getName());
+    }
+
+    return names;
   }
 
   public static Level read(Map<String, Object> data) {
@@ -120,18 +156,6 @@ public class Level extends NestedDocument {
     return new LevelTemplate(LevelTemplate.defaultProto(), name, 1);
   }
 
-  @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_TEMPLATE, template.getName());
-    data.put(FIELD_HP, hp);
-    if (abilityIncrease.isPresent()) {
-      data.put(FIELD_ABILITY_INCREASE, abilityIncrease.get().getName());
-    }
-
-    return data;
-  }
-
   public static String summarized(List<Level> levels) {
     Multiset<String> summarized = Level.countedNames(levels);
     List<String> names = new ArrayList<>();
@@ -140,24 +164,5 @@ public class Level extends NestedDocument {
     }
 
     return Strings.COMMA_JOINER.join(names);
-  }
-
-  private static Multiset<String> countedNames(List<Level> levels) {
-    Multiset<String> names = HashMultiset.create();
-    for (Level level : levels) {
-      names.add(level.getTemplate().getName());
-    }
-
-    return names;
-  }
-
-  public boolean hasAbilityIncrease() {
-    return abilityIncrease.isPresent()
-        && abilityIncrease.get() != Ability.UNKNOWN
-        && abilityIncrease.get() != Ability.NONE;
-  }
-
-  public static boolean allowsAbilityIncrease(int levelNumber) {
-    return (levelNumber % 4) == 0;
   }
 }

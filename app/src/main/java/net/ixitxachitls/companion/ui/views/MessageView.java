@@ -71,51 +71,8 @@ public abstract class MessageView extends AppCompatImageView {
     }
   }
 
-  private boolean onLongClick(View view) {
-    MessageDialog.create(getContext()).message(description()).title(title()).show();
-    return true;
-  }
-
   protected boolean canHandle() {
     return false;
-  }
-
-  private void onClick(View view) {
-    if (canHandle()) {
-      if (showConfirmation()) {
-        new ConfirmationPrompt(getContext())
-            .title(title())
-            .message(description())
-            .yes(this::handle)
-            .noNo()
-            .show();
-      } else {
-        handle();
-      }
-    }
-  }
-
-  protected boolean showConfirmation() {
-    return true;
-  }
-
-  protected abstract void handle();
-
-  protected String title() {
-    switch(message.getType()) {
-      case xp:
-        return "XP Award";
-      case itemAdd:
-        return "Received Item";
-      case itemDelete:
-        return "Removed Item";
-      case itemSell:
-        return "Sold Item";
-      case text:
-        return "Message from " + sourceName();
-      default:
-        return "Unsupported Message";
-    }
   }
 
   protected String description() {
@@ -134,6 +91,32 @@ public abstract class MessageView extends AppCompatImageView {
     }
   }
 
+  protected abstract void handle();
+
+  private void onClick(View view) {
+    if (canHandle()) {
+      if (showConfirmation()) {
+        new ConfirmationPrompt(getContext())
+            .title(title())
+            .message(description())
+            .yes(this::handle)
+            .noNo()
+            .show();
+      } else {
+        handle();
+      }
+    }
+  }
+
+  private boolean onLongClick(View view) {
+    MessageDialog.create(getContext()).message(description()).title(title()).show();
+    return true;
+  }
+
+  protected boolean showConfirmation() {
+    return true;
+  }
+
   protected String sourceName() {
     if (User.isUser(message.getSourceId())) {
       return "DM";
@@ -146,5 +129,22 @@ public abstract class MessageView extends AppCompatImageView {
     }
 
     return message.getSourceId();
+  }
+
+  protected String title() {
+    switch(message.getType()) {
+      case xp:
+        return "XP Award";
+      case itemAdd:
+        return "Received Item";
+      case itemDelete:
+        return "Removed Item";
+      case itemSell:
+        return "Sold Item";
+      case text:
+        return "Message from " + sourceName();
+      default:
+        return "Unsupported Message";
+    }
   }
 }

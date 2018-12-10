@@ -30,6 +30,7 @@ import net.ixitxachitls.companion.data.statics.MonsterTemplate;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.data.values.Item;
+import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 
@@ -141,55 +142,55 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.nonlethalDamage = nonlethalDamage;
   }
 
-  public int getStrength() {
-    return strength;
+  public ModifiedValue getStrength() {
+    return new ModifiedValue(strength);
   }
 
-  public void setStrength(int strength) {
+  public void setBaseStrength(int strength) {
     this.strength = strength;
   }
 
-  public int getDexterity() {
-    return dexterity;
+  public ModifiedValue getDexterity() {
+    return new ModifiedValue(dexterity);
   }
 
-  public void setDexterity(int dexterity) {
+  public void setBaseDexterity(int dexterity) {
     this.dexterity = dexterity;
   }
 
-  public int getConstitution() {
-    return constitution;
+  public ModifiedValue getConstitution() {
+    return new ModifiedValue(constitution);
   }
 
   public int getConstitutionModifier() {
     return Ability.modifier(constitution);
   }
 
-  public void setConstitution(int constitution) {
+  public void setBaseConstitution(int constitution) {
     this.constitution = constitution;
   }
 
-  public int getIntelligence() {
-    return intelligence;
+  public ModifiedValue getIntelligence() {
+    return new ModifiedValue(intelligence);
   }
 
-  public void setIntelligence(int intelligence) {
+  public void setBaseIntelligence(int intelligence) {
     this.intelligence = intelligence;
   }
 
-  public int getWisdom() {
-    return wisdom;
+  public ModifiedValue getWisdom() {
+    return new ModifiedValue(wisdom);
   }
 
-  public void setWisdom(int wisdom) {
+  public void setBaseWisdom(int wisdom) {
     this.wisdom = wisdom;
   }
 
-  public int getCharisma() {
-    return charisma;
+  public ModifiedValue getCharisma() {
+    return new ModifiedValue(charisma);
   }
 
-  public void setCharisma(int charisma) {
+  public void setBaseCharisma(int charisma) {
     this.charisma = charisma;
   }
 
