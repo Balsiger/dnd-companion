@@ -48,6 +48,7 @@ public class ConditionData {
   private static final String FIELD_DM_ONLY = "dm_only";
   private static final String FIELD_DISMISSABLE = "dismissable";
   private static final String FIELD_ICON = "icon";
+  private static final String FIELD_COLOR = "color";
 
   private final String name;
   private final String description;
@@ -58,10 +59,11 @@ public class ConditionData {
   private final boolean dmOnly;
   private final boolean dismissable;
   @DrawableRes private final int icon;
+  @ColorRes private final int color;
 
   public ConditionData(String name, String description, String summary, Duration duration,
                        boolean predefined, boolean endsBeforeTurn, boolean dmOnly,
-                       boolean dismissable, @DrawableRes int icon) {
+                       boolean dismissable, @DrawableRes int icon, @ColorRes int color) {
     this.name = name;
     this.description = description;
     this.summary = summary;
@@ -71,193 +73,53 @@ public class ConditionData {
     this.dmOnly = dmOnly;
     this.dismissable = dismissable;
     this.icon = icon;
+    this.color = color;
   }
 
-  public String getName() {
-    return name;
+  @ColorRes public int getColor() {
+    return color;
   }
 
   public String getDescription() {
     return description;
   }
 
-  public String getSummary() {
-    return summary;
-  }
-
   public Duration getDuration() {
     return duration;
-  }
-
-  public boolean isPredefined() {
-    return predefined;
-  }
-
-  public boolean endsBeforeTurn() {
-    return endsBeforeTurn;
-  }
-
-  public boolean dmOnly() {
-    return dmOnly();
-  }
-
-  public boolean isDismissable() {
-    return dismissable;
-  }
-
-  public boolean showsIcon() {
-    return icon != 0;
   }
 
   @DrawableRes public int getIcon() {
     return icon;
   }
 
-  public static ConditionData fromProto(Value.ConditionProto proto) {
-    return ConditionData.newBuilder(proto.getName())
-        .description(proto.getDescription())
-        .summary(proto.getSummary())
-        .duration(Duration.fromProto(proto.getDuration()))
-        .predefined(false)
-        .endsBeforeTurn(proto.getEndsBeforeTurn())
-        .build();
-  }
-
-  public Value.ConditionProto toProto() {
-    return Value.ConditionProto.newBuilder()
-        .setName(name)
-        .setDescription(description)
-        .setSummary(summary)
-        .setDuration(duration.toProto())
-        .setEndsBeforeTurn(endsBeforeTurn)
-        .build();
-  }
-
-  public static ConditionData read(@Nullable Map<String, Object> data) {
-    if (data == null) {
-      throw new IllegalArgumentException("Data cannot be null");
-    }
-
-    String name = Values.get(data, FIELD_NAME, "...");
-    String description = Values.get(data, FIELD_DESCRIPTION, "");
-    String summary = Values.get(data, FIELD_SUMMARY, "");
-    Duration duration = Duration.read((Map<String, Object>) data.get(FIELD_DURATION));
-    boolean predefined = Values.get(data, FIELD_PREDEFINED, false);
-    boolean endBeforeTurn = Values.get(data, FIELD_ENDS_BEFORE_TURN, false);
-    boolean dmOnly = Values.get(data, FIELD_DM_ONLY, false);
-    boolean dismissable = Values.get(data, FIELD_DISMISSABLE, true);
-    @DrawableRes int icon = (int) Values.get(data, FIELD_ICON, 0);
-
-    return new ConditionData(
-        name, description, summary, duration, predefined, endBeforeTurn, dmOnly, dismissable, icon);
-  }
-
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_NAME, name);
-    data.put(FIELD_DESCRIPTION, description);
-    data.put(FIELD_SUMMARY, summary);
-    data.put(FIELD_DURATION, duration.write());
-    data.put(FIELD_PREDEFINED, predefined);
-    data.put(FIELD_ENDS_BEFORE_TURN, endsBeforeTurn);
-    data.put(FIELD_DM_ONLY, dmOnly);
-    data.put(FIELD_DISMISSABLE, dismissable);
-    data.put(FIELD_ICON, icon);
-
-    return data;
-  }
-
-  @Override
-  public String toString() {
+  public String getName() {
     return name;
   }
 
-  public static Builder newBuilder(String name) {
-    return new Builder(name);
+  public String getSummary() {
+    return summary;
   }
 
-  public static class Builder {
-    private String name;
-    private String description;
-    private String summary;
-    private Duration duration = Duration.NULL;
-    private boolean predefined;
-    private boolean endsBeforeTurn;
-    private boolean dmOnly;
-    private boolean dismissable = true;
-    @DrawableRes private int icon = R.drawable.icons8_hospital_24;
-    @ColorRes private int iconColor = 0;
+  public boolean isDismissable() {
+    return dismissable;
+  }
 
-    public Builder(String name) {
-      this.name = name;
+  public boolean isPredefined() {
+    return predefined;
+  }
 
-      Optional<ConditionData> existing = Conditions.get(name);
-      if (existing.isPresent()) {
-        this.description = existing.get().description;
-        this.summary = existing.get().summary;
-        this.duration = existing.get().duration;
-        this.predefined = existing.get().predefined;
-        this.endsBeforeTurn = existing.get().endsBeforeTurn;
-        this.dmOnly = existing.get().dmOnly;
-        this.dismissable = existing.get().dismissable;
-        this.icon = existing.get().icon;
-      }
-    }
+  public boolean dmOnly() {
+    return dmOnly();
+  }
 
-    public Builder description(String description) {
-      this.description = description;
-      return this;
-    }
+  public boolean endsBeforeTurn() {
+    return endsBeforeTurn;
+  }
 
-    public Builder summary(String summary) {
-      this.summary = summary;
-      return this;
-    }
-
-    public Builder duration(Duration duration) {
-      this.duration = duration;
-      return this;
-    }
-
-    public Builder predefined() {
-      this.predefined = true;
-      return this;
-    }
-
-    public Builder predefined(boolean predefined) {
-      this.predefined = predefined;
-      return this;
-    }
-
-    public Builder endsBeforeTurn() {
-      this.endsBeforeTurn = true;
-      return this;
-    }
-
-    public Builder endsBeforeTurn(boolean value) {
-      this.endsBeforeTurn = value;
-      return this;
-    }
-
-    public Builder dmOnly() {
-      this.dmOnly = true;
-      return this;
-    }
-
-    public Builder notDismissable() {
-      this.dismissable = false;
-      return this;
-    }
-
-    public Builder icon(@DrawableRes int icon) {
-      this.icon = icon;
-      return this;
-    }
-
-    public ConditionData build() {
-      return new ConditionData(name, description, summary, duration, predefined, endsBeforeTurn,
-          dmOnly, dismissable, icon);
-    }
+  @Override
+  public int hashCode() {
+    return Objects.hash(name, description, summary, duration, predefined, endsBeforeTurn, dmOnly,
+        dismissable, icon);
   }
 
   @Override
@@ -282,8 +144,147 @@ public class ConditionData {
   }
 
   @Override
-  public int hashCode() {
-    return Objects.hash(name, description, summary, duration, predefined, endsBeforeTurn, dmOnly,
-        dismissable, icon);
+  public String toString() {
+    return name;
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_NAME, name);
+    data.put(FIELD_DESCRIPTION, description);
+    data.put(FIELD_SUMMARY, summary);
+    data.put(FIELD_DURATION, duration.write());
+    data.put(FIELD_PREDEFINED, predefined);
+    data.put(FIELD_ENDS_BEFORE_TURN, endsBeforeTurn);
+    data.put(FIELD_DM_ONLY, dmOnly);
+    data.put(FIELD_DISMISSABLE, dismissable);
+    data.put(FIELD_ICON, icon);
+    data.put(FIELD_COLOR, color);
+
+    return data;
+  }
+
+  public static ConditionData fromProto(Value.ConditionProto proto) {
+    return ConditionData.newBuilder(proto.getName())
+        .description(proto.getDescription())
+        .summary(proto.getSummary())
+        .duration(Duration.fromProto(proto.getDuration()))
+        .predefined(false)
+        .endsBeforeTurn(proto.getEndsBeforeTurn())
+        .build();
+  }
+
+  public static Builder newBuilder(String name) {
+    return new Builder(name);
+  }
+
+  public static ConditionData read(@Nullable Map<String, Object> data) {
+    if (data == null) {
+      throw new IllegalArgumentException("Data cannot be null");
+    }
+
+    String name = Values.get(data, FIELD_NAME, "...");
+    String description = Values.get(data, FIELD_DESCRIPTION, "");
+    String summary = Values.get(data, FIELD_SUMMARY, "");
+    Duration duration = Duration.read((Map<String, Object>) data.get(FIELD_DURATION));
+    boolean predefined = Values.get(data, FIELD_PREDEFINED, false);
+    boolean endBeforeTurn = Values.get(data, FIELD_ENDS_BEFORE_TURN, false);
+    boolean dmOnly = Values.get(data, FIELD_DM_ONLY, false);
+    boolean dismissable = Values.get(data, FIELD_DISMISSABLE, true);
+    @DrawableRes int icon = (int) Values.get(data, FIELD_ICON, 0);
+    @ColorRes int color = (int) Values.get(data, FIELD_COLOR, 0);
+
+    return new ConditionData(name, description, summary, duration, predefined, endBeforeTurn,
+        dmOnly, dismissable, icon, color);
+  }
+
+  public static class Builder {
+    private String name;
+    private String description;
+    private String summary;
+    private Duration duration = Duration.NULL;
+    private boolean predefined;
+    private boolean endsBeforeTurn;
+    private boolean dmOnly;
+    private boolean dismissable = true;
+    @DrawableRes private int icon = R.drawable.icons8_hospital_24;
+    @ColorRes private int color = 0;
+
+    public Builder(String name) {
+      this.name = name;
+
+      Optional<ConditionData> existing = Conditions.get(name);
+      if (existing.isPresent()) {
+        this.description = existing.get().description;
+        this.summary = existing.get().summary;
+        this.duration = existing.get().duration;
+        this.predefined = existing.get().predefined;
+        this.endsBeforeTurn = existing.get().endsBeforeTurn;
+        this.dmOnly = existing.get().dmOnly;
+        this.dismissable = existing.get().dismissable;
+        this.icon = existing.get().icon;
+        this.color = existing.get().color;
+      }
+    }
+
+    public ConditionData build() {
+      return new ConditionData(name, description, summary, duration, predefined, endsBeforeTurn,
+          dmOnly, dismissable, icon, color);
+    }
+
+    public Builder color(@ColorRes int color) {
+      this.color = color;
+      return this;
+    }
+
+    public Builder description(String description) {
+      this.description = description;
+      return this;
+    }
+
+    public Builder dmOnly() {
+      this.dmOnly = true;
+      return this;
+    }
+
+    public Builder duration(Duration duration) {
+      this.duration = duration;
+      return this;
+    }
+
+    public Builder endsBeforeTurn() {
+      this.endsBeforeTurn = true;
+      return this;
+    }
+
+    public Builder endsBeforeTurn(boolean value) {
+      this.endsBeforeTurn = value;
+      return this;
+    }
+
+    public Builder icon(@DrawableRes int icon) {
+      this.icon = icon;
+      return this;
+    }
+
+    public Builder notDismissable() {
+      this.dismissable = false;
+      return this;
+    }
+
+    public Builder predefined() {
+      this.predefined = true;
+      return this;
+    }
+
+    public Builder predefined(boolean predefined) {
+      this.predefined = predefined;
+      return this;
+    }
+
+    public Builder summary(String summary) {
+      this.summary = summary;
+      return this;
+    }
   }
 }

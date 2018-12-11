@@ -79,4 +79,8 @@
   <color name="drag_over">#ff9100</color>
   <color name="drag_back">#aaa</color>
 
+  <color name="moderate">#ffcc00</color>
+  <color name="severe">#f17800</color>
+  <color name="extreme">#b90900</color>
+
 </resources>

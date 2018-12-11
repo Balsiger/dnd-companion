@@ -97,6 +97,105 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.checkerboard)
       .build();
+  public static final ConditionData COLD = ConditionData.newBuilder("Cold (unprotected)")
+      .description("At temperatures from 5° to -20°C, unprotected characters take nonlethal "
+          + "damage every hour.")
+      .summary("For DC 15 (+1 per previous check) every hour or take 1d6 nonlethal cold damage.")
+      .predefined()
+      .icon(R.drawable.noun_cold_1421098)
+      .dmOnly()
+      .build();
+  public static final ConditionData COLD_SEVERE_UNPROTECTED =
+      ConditionData.newBuilder("Severe Cold (unprotected)")
+          .description("At temperatures from -20° to -30°C, unprotected characters may take nonlethal "
+              + "damage every 10 minutes.")
+          .summary("For DC 15 (+1 per previous check) every 10 minutes or 1d6 nonlethal damage.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .color(R.color.moderate)
+          .dmOnly()
+          .build();
+  public static final ConditionData COLD_SEVERE_LEVEL_1 =
+      ConditionData.newBuilder("Severe Cold (protection 1)")
+          .description("At temperatures from -20° to -30°C, level 1 protected characters may take "
+              + "nonlethal damage every hour.")
+          .summary("For DC 15 (+1 per previous check) every hour or 1d6 nonlethal damage.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .color(R.color.moderate)
+          .dmOnly()
+          .build();
+  public static final ConditionData COLD_EXTREME_UNPROTECTED =
+      ConditionData.newBuilder("Extreme Cold (unprotected)")
+          .description("At temperatures from -30° to -50°C, unprotected characters take cold "
+              + "damage every 10 minutes.")
+          .summary("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every 10 "
+              + "minutes or take 1d4 nonlethal damage.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .color(R.color.severe)
+          .dmOnly()
+          .build();
+  public static final ConditionData COLD_EXTREME_LEVEL_1 =
+      ConditionData.newBuilder("Extreme Cold (protection 1)")
+          .description("At temperatures from -30° to -50°C, level 1 protected characters take cold "
+              + "damage every 10 minutes.")
+          .summary("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every 10 "
+              + "minutes or take 1d4 nonlethal damage.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .dmOnly()
+          .build();
+  public static final ConditionData COLD_EXTREME_LEVEL_2 =
+      ConditionData.newBuilder("Extreme Cold (protection 2)")
+          .description("At temperatures from -30° to -50°C, level 2 protected characters take cold "
+              + "damage every 10 minutes.")
+          .summary("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every hour "
+              + "or take 1d4 nonlethal damage.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .dmOnly()
+          .build();
+  public static final ConditionData COLD_UNEARTHLY_UNPROTECTED =
+      ConditionData.newBuilder("Unearthly Cold (unprotected)")
+          .description("At temperatures below -50°C, unprotected characters take cold "
+              + "damage every minute.")
+          .summary("1d6 cold damage and 1d4 nonlethal damage per min.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .color(R.color.extreme)
+          .dmOnly()
+          .build();
+  public static final ConditionData COLD_UNEARTHLY_LEVEL_1 =
+      ConditionData.newBuilder("Unearthly Cold (protected 1)")
+          .description("At temperatures below -50°C, level 1 protected characters take cold "
+              + "damage every minute.")
+          .summary("1d6 cold damage and 1d4 nonlethal damage per min.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .color(R.color.extreme)
+          .dmOnly()
+          .build();
+  public static final ConditionData COLD_UNEARTHLY_LEVEL_2 =
+      ConditionData.newBuilder("Unearthly Cold (protected 2)")
+          .description("At temperatures below -50°C, level 2 protected characters take cold "
+              + "damage every 10 minutes.")
+          .summary("1d6 cold damage and 1d4 nonlethal damage per 10 min.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .color(R.color.extreme)
+          .dmOnly()
+          .build();
+  public static final ConditionData COLD_UNEARTHLY_LEVEL_3 =
+      ConditionData.newBuilder("Unearthly Cold (protected 3)")
+          .description("At temperatures below -50°C, level 3 protected characters take cold "
+              + "damage every 10 minutes.")
+          .summary("1d6 cold damage and 1d4 nonlethal damage per 10 min.")
+          .predefined()
+          .icon(R.drawable.noun_cold_1421098)
+          .color(R.color.extreme)
+          .dmOnly()
+          .build();
   public static final ConditionData CONFUSED = ConditionData.newBuilder("Confused")
       .description("A confused character’s actions are determined by rolling d% at the "
           + "beginning of his turn: 01–10, attack caster with melee or ranged weapons (or "
@@ -277,6 +376,15 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_scream_50)
       .build();
+  public static final ConditionData FROSTBITTEN = ConditionData.newBuilder("Frostbite")
+      .description("A frostbitten character can neither run nor charge and takes a –2 penalty "
+          + "to Strength and Dexterity. These penalties end when the character recovers the"
+          + "nonlethal damage she took from the cold and exposure.")
+      .summary("Cannot run or charge, -2 Str, -2 Dex.")
+      .predefined()
+      .icon(R.drawable.noun_ice_cube_154854)
+      .dmOnly()
+      .build();
   public static final ConditionData GRAPPLING = ConditionData.newBuilder("Grappling")
       .description("Engaged in wrestling or some other form of hand-to-hand struggle with one"
           + " or more attackers. A grappling character can undertake only a limited number of "
@@ -305,6 +413,36 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_oppression_48)
       .build();
+  public static final ConditionData HYPOTHERMIA_MILD = ConditionData.newBuilder("Mild Hypothermia")
+      .description("A character with mild hypothermia can neither run nor charge and takes a "
+          + "–2 penalty to Strength and Dexterity. A Heal DC 15 check is needed to recover from "
+          + "mild hypothermia.")
+      .summary("Cannot run or charge, -2 Str and Dex.")
+      .predefined()
+      .icon(R.drawable.noun_icicles_2062030)
+      .dmOnly()
+      .build();
+  public static final ConditionData HYPOTHERMIA_MODERATE =
+      ConditionData.newBuilder("Moderate Hypothermia")
+          .description("An character with moderate hypothermia moves at half speed and takes a "
+              + "–6 penalty to Strength and Dexterity. A Heal DC 15 check is needed to recover from "
+              + "moderate hypothermia to mild hypothermia.")
+          .summary("Cannot run or charge, move at half speed, -6 Str and Dex.")
+          .predefined()
+          .icon(R.drawable.noun_icicles_2062030)
+          .color(R.color.moderate)
+          .dmOnly()
+          .build();
+  public static final ConditionData HYPOTHERMIA_SEVERE =
+      ConditionData.newBuilder("Severe Hypothermia")
+          .description("An character with severate hypothermia is disabled.")
+          .summary("Single move or standard action, cannot run or charge, move at half speed, "
+              + "-6 Str and Dex.")
+          .predefined()
+          .icon(R.drawable.noun_icicles_2062030)
+          .color(R.color.severe)
+          .dmOnly()
+          .build();
   public static final ConditionData INCORPOREAL = ConditionData.newBuilder("Incorporeal")
       .description("Having no physical body. Incorporeal creatures are immune to all "
           + "nonmagical attack forms. They can be harmed only by other incorporeal creatures,"
@@ -410,6 +548,18 @@ public class Conditions {
       .predefined()
       .icon(R.drawable.icons8_fever_50)
       .build();
+  public static final ConditionData SNOW_BLIND = ConditionData.newBuilder("Snow Blind")
+      .description("Spending too much time in a snow field or similar area on a sunny day "
+          + "can make a character snow blind. A snow blind character suffers -2 to AC, loses any "
+          + "Dexterity bonus to AC, moves at half speed only, receives a -4 to Dexterity based skills,"
+          + "has -4 on Search, Spot and other visions based skills, and has a 20% miss chance to "
+          + "hit opponents.")
+      .summary("-2 AC, not Dex to AC, half speed, -4 Dex skills, -4 Search/Spot/vison skills, "
+          + "20% miss chance")
+      .predefined()
+      .icon(R.drawable.noun_goggles_1126061)
+      .dmOnly()
+      .build();
   public static final ConditionData STABLE = ConditionData.newBuilder("Stable")
       .description("A character who was dying but who has stopped losing hit points and still"
           + " has negative hit points is stable. The character is no longer dying, but is "
@@ -465,6 +615,17 @@ public class Conditions {
       .icon(R.drawable.icons8_sleeping_filled_50)
       .predefined()
       .build();
+  public static final ConditionData WHITEOUT = ConditionData.newBuilder("Whiteout")
+      .description("In snowstorms or blizzars with strong or stronger winds, characters get into "
+          + "a whiteout. Characters suffer a -2 to AC, no Dexterity to AC, half speed, "
+          + "-4 on Dexterity checks, -4 on Search, Spot and other vision based skills, "
+          + "and only have a visibility of 5 ft.")
+      .summary("-2 AC, no Dex to AC, half speed, -4 on Dex checks, -4 Search/Spot/vision skills, "
+          + "visiblity 5 ft")
+      .icon(R.drawable.noun_snow_1967559)
+      .predefined()
+      .dmOnly()
+      .build();
 
   public static ImmutableList<ConditionData> CONDITIONS = new ImmutableList.Builder<ConditionData>()
       .add(ABILITY_DAMAGED)
@@ -473,6 +634,16 @@ public class Conditions {
       .add(BLOWN_AWAY)
       .add(CHECKED)
       .add(CONFUSED)
+      .add(COLD)
+      .add(COLD_SEVERE_UNPROTECTED)
+      .add(COLD_SEVERE_LEVEL_1)
+      .add(COLD_EXTREME_UNPROTECTED)
+      .add(COLD_EXTREME_LEVEL_1)
+      .add(COLD_EXTREME_LEVEL_2)
+      .add(COLD_UNEARTHLY_UNPROTECTED)
+      .add(COLD_UNEARTHLY_LEVEL_1)
+      .add(COLD_UNEARTHLY_LEVEL_2)
+      .add(COLD_UNEARTHLY_LEVEL_3)
       .add(COWERING)
       .add(DAZED)
       .add(DAZZLED)
@@ -487,8 +658,12 @@ public class Conditions {
       .add(FATIGUED)
       .add(FLAT_FOOTED)
       .add(FRIGHTENED)
+      .add(FROSTBITTEN)
       .add(GRAPPLING)
       .add(HELPLESS)
+      .add(HYPOTHERMIA_MILD)
+      .add(HYPOTHERMIA_MODERATE)
+      .add(HYPOTHERMIA_SEVERE)
       .add(INCORPOREAL)
       .add(INVISIBLE)
       .add(KNOCKED_DOWN)
@@ -500,12 +675,14 @@ public class Conditions {
       .add(PRONE)
       .add(SHAKEN)
       .add(SICKENED)
+      .add(SNOW_BLIND)
       .add(STABLE)
       .add(STAGGERED)
       .add(STUNNED)
       .add(SURPRISED)
       .add(TURNED)
       .add(UNCONSCIOUS)
+      .add(WHITEOUT)
       .build();
 
   public static final ImmutableMap<String, ConditionData> CONDITIONS_BY_NAME = ImmutableMap.copyOf(

@@ -51,32 +51,28 @@ public class TargetedTimedCondition {
     return condition.getCondition();
   }
 
-  public String getName() {
-    return condition.getName();
-  }
-
   public String getDescription() {
     return condition.getDescription();
-  }
-
-  public String getSummary() {
-    return condition.getSummary();
   }
 
   public Duration getDuration() {
     return condition.getDuration();
   }
 
-  public boolean isPredefined() {
-    return condition.isPredefined();
+  public CampaignDate getEndDate() {
+    return condition.getEndDate();
   }
 
   public int getEndRound() {
     return condition.getEndRound();
   }
 
-  public CampaignDate getEndDate() {
-    return condition.getEndDate();
+  public String getName() {
+    return condition.getName();
+  }
+
+  public String getSummary() {
+    return condition.getSummary();
   }
 
   public List<String> getTargetIds() {
@@ -87,16 +83,21 @@ public class TargetedTimedCondition {
     return condition;
   }
 
+  public boolean isPredefined() {
+    return condition.isPredefined();
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_TARGET_IDS, targetIds);
+    data.put(FIELD_CONDITION, condition.write());
+
+    return data;
+  }
+
   public static TargetedTimedCondition fromProto(Value.TargetedTimedConditionProto proto) {
     return new TargetedTimedCondition(TimedCondition.fromProto(proto.getCondition()),
         proto.getTargetIdList());
-  }
-
-  public Value.TargetedTimedConditionProto toProto() {
-    return Value.TargetedTimedConditionProto.newBuilder()
-        .setCondition(condition.toProto())
-        .addAllTargetId(targetIds)
-        .build();
   }
 
   public static TargetedTimedCondition read(@Nullable Map<String, Object> data) {
@@ -108,13 +109,5 @@ public class TargetedTimedCondition {
     TimedCondition condition = TimedCondition.read((Map<String, Object>) data.get(FIELD_CONDITION));
 
     return new TargetedTimedCondition(condition, targetIds);
-  }
-
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_TARGET_IDS, targetIds);
-    data.put(FIELD_CONDITION, condition.write());
-
-    return data;
   }
 }

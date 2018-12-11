@@ -56,7 +56,9 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center_horizontal"
-          android:layout_marginTop="20dp"/>
+          android:layout_marginStart="20dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginEnd="20dp"/>
 
       <LinearLayout
           android:layout_width="wrap_content"
@@ -99,8 +101,8 @@
         android:id="@+id/campaign_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
         app:backgroundTint="@color/campaign"
         app:srcCompat="@drawable/ic_add_black_24dp"/>
 
@@ -108,8 +110,8 @@
         android:id="@+id/character_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         app:backgroundTint="@color/character"
         app:srcCompat="@drawable/ic_add_black_24dp"/>
   </LinearLayout>

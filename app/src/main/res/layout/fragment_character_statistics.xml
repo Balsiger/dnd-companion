@@ -35,11 +35,34 @@
       android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/conditions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="horizontal">
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_weight="0"
+          android:background="@color/cell"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="ABILITIES"
+          android:textSize="10sp"
+          android:theme="@style/TinyText"/>
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@color/cell"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -111,8 +134,39 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_weight="1"
-        android:text="Abilities are currently used as is, without any modifiers you might have. Thus, include any modifiers from levels, feats or items directly here."
+        android:text="Abilities currently only automatically contain modifiers for levels. Add other modifiers directly in the values here for the moment."
         android:theme="@style/SmallText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_weight="0"
+          android:background="@color/cell"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="LEVEL"
+          android:textSize="10sp"
+          android:theme="@style/TinyText"/>
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@color/cell"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -176,6 +230,45 @@
           android:padding="10dp"
           android:text="(next level at 1000)"
           android:theme="@style/SmallText"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_weight="0"
+          android:background="@color/cell"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="HEALTH"
+          android:textSize="10sp"
+          android:theme="@style/TinyText"/>
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@color/cell"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
     </LinearLayout>
 
     <LinearLayout

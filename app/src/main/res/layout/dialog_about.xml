@@ -62,9 +62,9 @@
   <TableLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="20dp"
+      android:layout_marginStart="20dp"
       android:layout_marginEnd="20dp"
-      android:layout_marginStart="20dp">
+      android:layout_marginBottom="20dp">
 
     <TableRow
         android:layout_width="match_parent"
@@ -181,8 +181,8 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="https://plus.google.com/b/114811571273528989697/"
           android:autoLink="web"
+          android:text="https://plus.google.com/b/114811571273528989697/"
           android:theme="@style/LargeText"/>
     </TableRow>
 
@@ -200,8 +200,8 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/web_address"
           android:autoLink="web"
+          android:text="@string/web_address"
           android:theme="@style/LargeText"/>
     </TableRow>
 
@@ -229,8 +229,8 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginEnd="20dp"
       android:layout_marginStart="20dp"
+      android:layout_marginEnd="20dp"
       android:orientation="vertical">
 
     <TextView
@@ -294,6 +294,41 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Coins by André Luiz Gollo from the Noun Project"
+        android:theme="@style/LargeText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Cold by Landan Lloyd from the Noun Project"
+        android:theme="@style/LargeText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Ice Cube by 23 icons from the Noun Project"
+        android:theme="@style/LargeText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Icicles by icon 54 from the Noun Project"
+        android:theme="@style/LargeText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Goggles by Sofia Espino-Yaeger from the Noun Project"
+        android:theme="@style/LargeText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Snow by Kylie Whittaker from the Noun Project"
         android:theme="@style/LargeText"/>
 
   </LinearLayout>

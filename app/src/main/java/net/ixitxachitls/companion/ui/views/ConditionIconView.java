@@ -56,9 +56,14 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
 
     if (condition != null) {
       setImageResource(condition.getCondition().getCondition().getIcon());
-      setImageTintList(ColorStateList.valueOf(getContext().getColor(backgroundColor)));
       Drawable back = getContext().getDrawable(R.drawable.icon_back);
       back.setTint(getContext().getColor(foregroundColor));
+      if (condition.getCondition().getCondition().getColor() == 0) {
+        setImageTintList(ColorStateList.valueOf(getContext().getColor(backgroundColor)));
+      } else {
+        setImageTintList(ColorStateList.valueOf(getContext().getColor(
+            condition.getCondition().getCondition().getColor())));
+      }
       setBackground(back);
       setMaxHeight(SIZE_PX);
       setMaxWidth(SIZE_PX);
@@ -83,16 +88,8 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
     }
   }
 
-  private String summary(TimedCondition condition) {
-    Optional<Character> character =
-        CompanionApplication.get().characters().get(condition.getSourceId());
-
-    String summary = condition.getSummary() + "\n\n"
-        + condition.getDescription()
-        + sourceName(character, condition)
-        + duration(character, condition);
-
-    return summary;
+  private void dismiss(String conditionId) {
+    CompanionApplication.get().context().conditions().delete(conditionId);
   }
 
   private String duration(Optional<Character> character, TimedCondition condition) {
@@ -128,7 +125,15 @@ public class ConditionIconView extends android.support.v7.widget.AppCompatImageV
     return "I'm sorry, I have no clue where this came from...";
   }
 
-  private void dismiss(String conditionId) {
-    CompanionApplication.get().context().conditions().delete(conditionId);
+  private String summary(TimedCondition condition) {
+    Optional<Character> character =
+        CompanionApplication.get().characters().get(condition.getSourceId());
+
+    String summary = condition.getSummary() + "\n\n"
+        + condition.getDescription()
+        + sourceName(character, condition)
+        + duration(character, condition);
+
+    return summary;
   }
 }
