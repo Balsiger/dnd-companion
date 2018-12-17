@@ -130,6 +130,66 @@ public class PartyFragment extends NestedCompanionFragment {
     update(characters());
   }
 
+  public void refresh() {
+    update(campaigns());
+    update(characters());
+    update(images());
+    update(messages());
+    update(conditions());
+  }
+
+  public void show(Campaign campaign) {
+    this.campaign = Optional.of(campaign);
+    this.encounter = Optional.empty();
+
+    adventures().readAdventures(campaign.getId());
+    update(campaigns());
+    update(characters());
+    update(messages());
+  }
+
+  private void addAdventure() {
+    if (!adventure.getText().isEmpty()
+        && campaign.isPresent()
+        && !adventureExists(adventure.getText())) {
+      Adventure.create(context(), campaign.get().getId(), adventure.getText()).store();
+    }
+  }
+
+  private boolean adventureExists(String name) {
+    if (campaign.isPresent()) {
+      return adventures().exists(campaign.get().getId(), name);
+    }
+
+    return false;
+  }
+
+  private void changeAdventure() {
+    if (campaign.isPresent()) {
+      AdventuresDialog.newInstance(campaign.get().getId()).display();
+    }
+  }
+
+  private void createCharacter() {
+    CharacterDialog.newInstance("", campaign.get().getId()).display();
+  }
+
+  private void redrawChips() {
+    Status.log("redrawing party chips");
+
+    TransitionManager.beginDelayedTransition(view, transition);
+    party.removeAllViews();
+
+    if (campaign.isPresent()) {
+      for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
+        CreatureChipView chip = chipsById.get(character.getId());
+        if (chip != null) {
+          chip.addTo(party);
+        }
+      }
+    }
+  }
+
   private void update(Campaigns campaigns) {
     if (campaign.isPresent()) {
       this.campaign = campaigns().get(campaign.get().getId());
@@ -198,16 +258,6 @@ public class PartyFragment extends NestedCompanionFragment {
     }
   }
 
-  public void show(Campaign campaign) {
-    this.campaign = Optional.of(campaign);
-    this.encounter = Optional.empty();
-
-    adventures().readAdventures(campaign.getId());
-    update(campaigns());
-    update(characters());
-    update(messages());
-  }
-
   private void updateChips() {
     Collection<Character> campaignCharacters =
         characters().getCampaignCharacters(campaign.get().getId());
@@ -243,47 +293,5 @@ public class PartyFragment extends NestedCompanionFragment {
     }
 
     redrawChips();
-  }
-
-  private void createCharacter() {
-    CharacterDialog.newInstance("", campaign.get().getId()).display();
-  }
-
-  private void redrawChips() {
-    Status.log("redrawing party chips");
-
-    TransitionManager.beginDelayedTransition(view, transition);
-    party.removeAllViews();
-
-    if (campaign.isPresent()) {
-      for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
-        CreatureChipView chip = chipsById.get(character.getId());
-        if (chip != null) {
-          chip.addTo(party);
-        }
-      }
-    }
-  }
-
-  private void changeAdventure() {
-    if (campaign.isPresent()) {
-      AdventuresDialog.newInstance(campaign.get().getId()).display();
-    }
-  }
-
-  private void addAdventure() {
-    if (!adventure.getText().isEmpty()
-        && campaign.isPresent()
-        && !adventureExists(adventure.getText())) {
-      Adventure.create(context(), campaign.get().getId(), adventure.getText()).store();
-    }
-  }
-
-  private boolean adventureExists(String name) {
-    if (campaign.isPresent()) {
-      return adventures().exists(campaign.get().getId(), name);
-    }
-
-    return false;
   }
 }

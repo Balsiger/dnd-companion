@@ -21,20 +21,15 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * A D&D value for another value. These are usually a modification number (+ or -) and
  * the type of the value.
  */
 public class Modifier {
-
-  private final int value;
-  private final Type type;
-  private final String source;
-  public Modifier(int value, Type type, String source) {
-    this.value = value;
-    this.type = type;
-    this.source = source;
-  }
 
   // See DMG p. 21.
   public enum Type {
@@ -43,12 +38,27 @@ public class Modifier {
     SHIELD, SIZE, SYNERGY,
   }
 
+  public static final String TYPE_PATTERN =
+      Arrays.asList(Type.values()).stream().map(Type::name).reduce("\\s*", (a, b) -> a + "|" + b);
+
+  private static final String FIELD_VALUE = "value";
+  private static final String FIELD_TYPE = "type";
+  private static final String FIELD_SOURCE = "source";
+  private final int value;
+  private final Type type;
+  private final String source;
+
+  public Modifier(int value, Type type, String source) {
+    this.value = value;
+    this.type = type;
+    this.source = source;
+  }
+
   public int getValue() {
     return value;
   }
 
-  @Override
-  public String toString() {
+  public String toShortString() {
     StringBuilder result = new StringBuilder();
     if (value >= 0)
       result.append("+");
@@ -59,11 +69,25 @@ public class Modifier {
       result.append(" " + name());
     }
 
+    return result.toString();
+  }
+
+  @Override
+  public String toString() {
     if (!source.isEmpty()) {
-      result.append(" (" + source + ")");
+      return toShortString() + " (" + source + ")";
     }
 
-    return result.toString();
+    return toShortString();
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_VALUE, value);
+    data.put(FIELD_TYPE, type.name());
+    data.put(FIELD_SOURCE, source);
+
+    return data;
   }
 
   private String name() {
@@ -90,6 +114,14 @@ public class Modifier {
     return second;
   }
 
+  public static Modifier read(Map<String, Object> data) {
+    int value = (int) Values.get(data, FIELD_VALUE, 0);
+    Type type = Values.get(data, FIELD_TYPE, Type.GENERAL);
+    String source = Values.get(data, FIELD_SOURCE, "");
+
+    return new Modifier(value, type, source);
+  }
+
   public static boolean stacks(Modifier first, Modifier second) {
     // Modifier from the same source, eg. the same spell, don't stack.
     if (first.source.equals(second.source)) {
@@ -105,6 +137,6 @@ public class Modifier {
       return false;
     }
 
-    return false;
+    return true;
   }
 }

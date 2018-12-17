@@ -28,6 +28,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.values.AbilityAdjustment;
+import net.ixitxachitls.companion.data.values.Adjustment;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
@@ -58,23 +60,31 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private int level;
   private List<Level> levels = new ArrayList<>();
 
-  public List<ConditionData> getConditionsHistory() {
-    return ImmutableList.copyOf(conditionsHistory);
+  @Override
+  public ModifiedValue getCharisma() {
+    return adjustAbility(super.getCharisma(), Ability.CHARISMA);
   }
 
-  public int getLevel() {
-    return levels.size();
+  @Override
+  public ModifiedValue getConstitution() {
+    return adjustAbility(super.getConstitution(), Ability.CONSTITUTION);
   }
 
-  public List<Level> getLevels() {
-    return levels;
+  @Override
+  public ModifiedValue getDexterity() {
+    return adjustAbility(super.getDexterity(), Ability.DEXTERITY);
+  }
+
+  @Override
+  public ModifiedValue getIntelligence() {
+    return adjustAbility(super.getIntelligence(), Ability.INTELLIGENCE);
   }
 
   @Override
   public int getMaxHp() {
     int hp = 0;
     for (Level level : levels) {
-      hp += level.getHp() + getConstitutionModifier();
+      hp += Math.min(1, level.getHp() + getConstitutionModifier());
     }
 
     return hp;
@@ -82,43 +92,26 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
   @Override
   public ModifiedValue getStrength() {
-    return adjustAbilityForLevels(super.getStrength(), Ability.STRENGTH);
-  }
-
-  @Override
-  public ModifiedValue getDexterity() {
-    return adjustAbilityForLevels(super.getStrength(), Ability.DEXTERITY);
-  }
-
-  @Override
-  public ModifiedValue getConstitution() {
-    return adjustAbilityForLevels(super.getStrength(), Ability.CONSTITUTION);
-  }
-
-  @Override
-  public ModifiedValue getIntelligence() {
-    return adjustAbilityForLevels(super.getStrength(), Ability.INTELLIGENCE);
+    return adjustAbility(super.getStrength(), Ability.STRENGTH);
   }
 
   @Override
   public ModifiedValue getWisdom() {
-    return adjustAbilityForLevels(super.getStrength(), Ability.WISDOM);
+    return adjustAbility(super.getWisdom(), Ability.WISDOM);
   }
 
   @Override
-  public ModifiedValue getCharisma() {
-    return adjustAbilityForLevels(super.getStrength(), Ability.CHARISMA);
-  }
-
-  public boolean amPlayer() {
-    return player == context.me();
-  }
-
   public boolean amDM() {
     return getCampaignId().startsWith(context.me().getId());
   }
 
+  @Override
+  public boolean amPlayer() {
+    return player == context.me();
+  }
+
   // TODO(merlin): Move this into Document generally?
+  @Override
   public boolean canEdit() {
     return amPlayer() || amDM();
   }
@@ -147,6 +140,27 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return data;
   }
 
+  public List<ConditionData> getConditionsHistory() {
+    return ImmutableList.copyOf(conditionsHistory);
+  }
+
+  public int getLevel() {
+    return levels.size();
+  }
+
+  public void setLevel(int level) {
+    this.level = level;
+  }
+
+  public List<Level> getLevels() {
+    return levels;
+  }
+
+  public void setLevels(List<Level> levels) {
+    this.levels = levels;
+    store();
+  }
+
   public int getMaxLevel() {
     return XP.maxLevelForXp(xp);
   }
@@ -157,15 +171,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
   public int getXp() {
     return xp;
-  }
-
-  public void setLevel(int level) {
-    this.level = level;
-  }
-
-  public void setLevels(List<Level> levels) {
-    this.levels = levels;
-    store();
   }
 
   public void setXp(int xp) {
@@ -218,6 +223,26 @@ public class Character extends Creature<Character> implements Comparable<Charact
         }
       }
     }
+  }
+
+  private ModifiedValue adjustAbility(ModifiedValue value, Ability ability) {
+    adjustAbilityForLevels(value, ability);
+    adjustAbilityForConditions(value, ability);
+    return value;
+  }
+
+  private ModifiedValue adjustAbilityForConditions(ModifiedValue value, Ability ability) {
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment.is(Adjustment.Type.ability)) {
+          if (ability == ((AbilityAdjustment) adjustment).getAbility()) {
+            value.add(((AbilityAdjustment) adjustment).getModifier());
+          }
+        }
+      }
+    }
+
+    return value;
   }
 
   private ModifiedValue adjustAbilityForLevels(ModifiedValue value, Ability ability) {

@@ -50,52 +50,13 @@ public abstract class CreatureTitleView<T extends Creature> extends TitleView {
     super(context, attributes, foregroundColor, backgroundColor, defaultImage);
   }
 
+  public Optional<T> getCreature() {
+    return creature;
+  }
+
   public String getCreatureId() {
     if (creature.isPresent()) {
       return creature.get().getId();
-    }
-
-    return "";
-  }
-
-  @CallSuper
-  @Override
-  protected View init(AttributeSet attributes) {
-    View view = super.init(attributes);
-
-    container.setBackgroundColor(getContext().getColor(backgroundColor));
-    setDefaultImage(defaultImage);
-
-    return view;
-  }
-
-  protected void refresh() {
-    setTitle(formatTitle());
-    setSubtitle(formatSubtitle());
-  }
-
-  protected String formatTitle() {
-    if (creature.isPresent()) {
-      return creature.get().getName();
-    }
-
-    return "...loading...";
-  }
-
-  protected String formatSubtitle() {
-    if (creature.isPresent()) {
-      String subtitle = creature.get().getGender().getName();
-      if (creature.get().getRace().isPresent()) {
-        subtitle += " " + creature.get().getRace().get();
-      }
-
-      Optional<Campaign> campaign =
-          CompanionApplication.get(getContext()).campaigns().get(creature.get().getCampaignId());
-      if (campaign.isPresent()) {
-        subtitle += ", " + campaign.get().getName();
-      }
-
-      return subtitle;
     }
 
     return "";
@@ -118,5 +79,48 @@ public abstract class CreatureTitleView<T extends Creature> extends TitleView {
 
     refresh();
     update(CompanionApplication.get().images());
+  }
+
+  protected String formatSubtitle() {
+    if (creature.isPresent()) {
+      String subtitle = creature.get().getGender().getName();
+      if (creature.get().getRace().isPresent()) {
+        subtitle += " " + creature.get().getRace().get();
+      }
+
+      Optional<Campaign> campaign =
+          CompanionApplication.get(getContext()).campaigns().get(creature.get().getCampaignId());
+      if (campaign.isPresent()) {
+        subtitle += ", " + campaign.get().getName();
+      }
+
+      return subtitle;
+    }
+
+    return "";
+  }
+
+  protected String formatTitle() {
+    if (creature.isPresent()) {
+      return creature.get().getName();
+    }
+
+    return "...loading...";
+  }
+
+  @CallSuper
+  @Override
+  protected View init(AttributeSet attributes) {
+    View view = super.init(attributes);
+
+    container.setBackgroundColor(getContext().getColor(backgroundColor));
+    setDefaultImage(defaultImage);
+
+    return view;
+  }
+
+  protected void refresh() {
+    setTitle(formatTitle());
+    setSubtitle(formatSubtitle());
   }
 }

@@ -23,16 +23,15 @@ package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.CallSuper;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Entries;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.statics.MonsterTemplate;
-import net.ixitxachitls.companion.data.values.ConditionData;
-import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
-import net.ixitxachitls.companion.data.values.TargetedTimedCondition;
 import net.ixitxachitls.companion.data.values.TimedCondition;
+import net.ixitxachitls.companion.rules.Conditions;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -66,14 +65,13 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_INITIATIVE = "initiative";
   private static final String FIELD_ENCOUNTER_NUMBER = "encounter_number";
   private static final String FIELD_ITEMS = "items";
-
+  protected int dexterity;
   private String campaignId = "";
   private String name;
   private Optional<MonsterTemplate> race = Optional.empty();
   private Gender gender = Gender.UNKNOWN;
   private int strength;
   private int constitution;
-  protected int dexterity;
   private int intelligence;
   private int wisdom;
   private int charisma;
@@ -83,31 +81,86 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private List<Item> items = new ArrayList<>();
   private int initiative = 0;
   private int encounterNumber = 0;
-  private List<TargetedTimedCondition> initiatedConditions = new ArrayList<>();
-  private List<TimedCondition> affectedConditions = new ArrayList<>();
 
-  public String getName() {
-    return name;
-  }
+  public List<CreatureCondition> getAdjustedConditions() {
+    List<CreatureCondition> conditions = new ArrayList<>(getConditions());
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    if (getStrength().total() <= 0) {
+      conditions.add(
+          CreatureCondition.create(CompanionApplication.get().context(), getId(),
+              new TimedCondition(Conditions.HELPLESS_STRENGTH_0, getCampaignId())));
+    }
+    if (getDexterity().total() <= 0) {
+      conditions.add(
+          CreatureCondition.create(CompanionApplication.get().context(), getId(),
+              new TimedCondition(Conditions.PARALYZED_DEXTERITY_0, getCampaignId())));
+    }
+    if (getConstitution().total() <= 0) {
+      conditions.add(
+          CreatureCondition.create(CompanionApplication.get().context(), getId(),
+              new TimedCondition(Conditions.DEAD_CONSTITUTION_0, getCampaignId())));
+    }
+    if (getIntelligence().total() <= 0) {
+      conditions.add(
+          CreatureCondition.create(CompanionApplication.get().context(), getId(),
+              new TimedCondition(Conditions.UNCONSCIOUS_INTELLIGENCE_0, getCampaignId())));
+    }
+    if (getWisdom().total() <= 0) {
+      conditions.add(
+          CreatureCondition.create(CompanionApplication.get().context(), getId(),
+              new TimedCondition(Conditions.UNCONSCIOUS_WISDOM_0, getCampaignId())));
+    }
+    if (getCharisma().total() <= 0) {
+      conditions.add(
+          CreatureCondition.create(CompanionApplication.get().context(), getId(),
+              new TimedCondition(Conditions.UNCONSCIOUS_CHARISMA_0, getCampaignId())));
+    }
 
-  public String getCampaignId() {
-    return campaignId;
+    return conditions;
   }
 
   public Optional<Campaign> getCampaign() {
     return context.campaigns().get(campaignId);
   }
 
+  public String getCampaignId() {
+    return campaignId;
+  }
+
   public void setCampaignId(String campaignId) {
     this.campaignId = campaignId;
   }
 
-  public int getInitiative() {
-    return initiative;
+  public ModifiedValue getCharisma() {
+    return new ModifiedValue(charisma, 0);
+  }
+
+  public List<CreatureCondition> getConditions() {
+    return CompanionApplication.get().conditions().getCreatureConditions(getId());
+  }
+
+  public ModifiedValue getConstitution() {
+    return new ModifiedValue(constitution, 0);
+  }
+
+  public int getConstitutionModifier() {
+    return Ability.modifier(getConstitution().total());
+  }
+
+  public ModifiedValue getDexterity() {
+    return new ModifiedValue(dexterity, 0);
+  }
+
+  public int getEncounterNumber() {
+    return encounterNumber;
+  }
+
+  public Gender getGender() {
+    return gender;
+  }
+
+  public void setGender(Gender gender) {
+    this.gender = gender;
   }
 
   public int getHp() {
@@ -118,8 +171,16 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.hp = hp;
   }
 
-  public void addHp(int number) {
-    hp += number;
+  public int getInitiative() {
+    return initiative;
+  }
+
+  public ModifiedValue getIntelligence() {
+    return new ModifiedValue(intelligence, 0);
+  }
+
+  public List<Item> getItems() {
+    return Collections.unmodifiableList(items);
   }
 
   public int getMaxHp() {
@@ -130,99 +191,20 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.maxHp = maxHp;
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
   public int getNonlethalDamage() {
     return nonlethalDamage;
   }
 
-  public void addNonlethalDamage(int number) {
-    nonlethalDamage += number;
-  }
-
   public void setNonlethalDamage(int nonlethalDamage) {
     this.nonlethalDamage = nonlethalDamage;
-  }
-
-  public ModifiedValue getStrength() {
-    return new ModifiedValue(strength);
-  }
-
-  public void setBaseStrength(int strength) {
-    this.strength = strength;
-  }
-
-  public ModifiedValue getDexterity() {
-    return new ModifiedValue(dexterity);
-  }
-
-  public void setBaseDexterity(int dexterity) {
-    this.dexterity = dexterity;
-  }
-
-  public ModifiedValue getConstitution() {
-    return new ModifiedValue(constitution);
-  }
-
-  public int getConstitutionModifier() {
-    return Ability.modifier(constitution);
-  }
-
-  public void setBaseConstitution(int constitution) {
-    this.constitution = constitution;
-  }
-
-  public ModifiedValue getIntelligence() {
-    return new ModifiedValue(intelligence);
-  }
-
-  public void setBaseIntelligence(int intelligence) {
-    this.intelligence = intelligence;
-  }
-
-  public ModifiedValue getWisdom() {
-    return new ModifiedValue(wisdom);
-  }
-
-  public void setBaseWisdom(int wisdom) {
-    this.wisdom = wisdom;
-  }
-
-  public ModifiedValue getCharisma() {
-    return new ModifiedValue(charisma);
-  }
-
-  public void setBaseCharisma(int charisma) {
-    this.charisma = charisma;
-  }
-
-  public Gender getGender() {
-    return gender;
-  }
-
-  public void setInitiative(int encounterNumber, int initiative) {
-    this.encounterNumber = encounterNumber;
-    this.initiative = initiative;
-
-    store();
-  }
-
-  public boolean hasInitiative(int encounterNumber) {
-    return this.encounterNumber == encounterNumber;
-  }
-
-  public Optional<Integer> getInitiative(int encounterNumber) {
-    if (this.encounterNumber == encounterNumber) {
-      return Optional.of(initiative);
-    }
-
-    return Optional.empty();
-  }
-
-  public int getEncounterNumber() {
-    return encounterNumber;
-  }
-
-  public void setGender(Gender gender) {
-    this.gender = gender;
   }
 
   public Optional<MonsterTemplate> getRace() {
@@ -233,12 +215,64 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.race = Entries.get().getMonsterTemplates().get(race);
   }
 
+  public ModifiedValue getStrength() {
+    return new ModifiedValue(strength, 0);
+  }
+
+  public ModifiedValue getWisdom() {
+    return new ModifiedValue(wisdom, 0);
+  }
+
+  public void setBaseCharisma(int charisma) {
+    this.charisma = charisma;
+  }
+
+  public void setBaseConstitution(int constitution) {
+    this.constitution = constitution;
+  }
+
+  public void setBaseDexterity(int dexterity) {
+    this.dexterity = dexterity;
+  }
+
+  public void setBaseIntelligence(int intelligence) {
+    this.intelligence = intelligence;
+  }
+
+  public void setBaseStrength(int strength) {
+    this.strength = strength;
+  }
+
+  public void setBaseWisdom(int wisdom) {
+    this.wisdom = wisdom;
+  }
+
   public void setRace(MonsterTemplate race) {
     this.race = Optional.of(race);
   }
 
-  public boolean amPlayer() {
-    return false;
+  public void add(Item item) {
+    if (amPlayer()) {
+      int index = itemIndex(item.getId());
+      if (index < 0) {
+        items.add(item);
+      } else {
+        items.set(index, item);
+      }
+      store();
+    }
+  }
+
+  public void addCondition(TimedCondition condition) {
+    CreatureCondition.create(context, getId(), condition).store();
+  }
+
+  public void addHp(int number) {
+    hp += number;
+  }
+
+  public void addNonlethalDamage(int number) {
+    nonlethalDamage += number;
   }
 
   public boolean amDM() {
@@ -246,99 +280,28 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return campaign.isPresent() && campaign.get().amDM();
   }
 
+  public boolean amPlayer() {
+    return false;
+  }
+
   public boolean canEdit() {
     return false;
   }
 
-  public List<TargetedTimedCondition> getInitiatedConditions() {
-    return initiatedConditions;
-  }
-
-  public void addInitiatedCondition(TargetedTimedCondition condition) {
-    /*
-    if (!condition.getTimedCondition().getSourceId().equals(getTargetId())) {
-      throw new IllegalArgumentException("source id does not match creature id!");
-    }
-
-    if (isLocal()) {
-      initiatedConditions.add(condition);
+  public void combine(Item item, Item other) {
+    removeItem(other);
+    if (item.similar(other)) {
+      item.setMultiple(item.getMultiple() + other.getMultiple());
       store();
-
-      // Send the condition to all affected characters/creatures.
-      for (String id : condition.getTargetIds()) {
-        Optional<? extends BaseCreature> creature = context.creatures().getCreatureOrCharacter(id);
-        if (creature.isPresent()) {
-          creature.get().addAffectedCondition(condition.getTimedCondition());
-        } else {
-          Status.error("Cannot affect " + id + " with condition " + condition);
-        }
-      }
-
-    } else {
-      Status.error("Cannot add initiated condition to remote character or creature.");
     }
-     */
   }
 
-  public void removeInitiatedCondition(String name) {
-    /*
-    for (Iterator<TargetedTimedCondition> i = initiatedConditions.iterator(); i.hasNext(); ) {
-      TargetedTimedCondition condition = i.next();
-      if (condition.getName().equals(name)) {
-        i.remove();
-        store();
-
-        for (String targetId : condition.getTargetIds()) {
-          Optional<? extends BaseCreature> creature =
-              context.creatures().getCreatureOrCharacter(targetId);
-          if (creature.isPresent()) {
-            creature.get().removeAffectedCondition(name, getTargetId());
-          } else {
-            Status.error("Cannot get creature to remove condition " + name + " from: "
-                + Status.nameFor(targetId));
-          }
-        }
-
-        break;
-      }
+  public Optional<Integer> getInitiative(int encounterNumber) {
+    if (this.encounterNumber == encounterNumber) {
+      return Optional.of(initiative);
     }
-     */
-  }
 
-  public List<TimedCondition> getAffectedConditions() {
-    return affectedConditions;
-  }
-
-  public void addCondition(TimedCondition condition) {
-    CreatureCondition.create(context, getId(), condition).store();
-  }
-
-  public void addAffectedCondition(TimedCondition condition) {
-    affectedConditions.add(condition);
-  }
-
-  public void removeAffectedCondition(String name, String sourceId) {
-    /*
-    if (isLocal()) {
-      for (Iterator<TimedCondition> i = affectedConditions.iterator(); i.hasNext(); ) {
-        TimedCondition condition = i.next();
-        if (condition.getName().equals(name) && condition.getSourceId().equals(sourceId)) {
-          i.remove();
-          store();
-          break;
-        }
-      }
-    } else {
-      context.messenger().sendDeletion(name, sourceId, this);
-    }
-    */
-  }
-
-  public List<ConditionData> getActiveConditions(Encounter encounter) {
-    return affectedConditions.stream()
-        .filter(c -> c.active(encounter))
-        .map(TimedCondition::getCondition)
-        .collect(Collectors.toList());
+    return Optional.empty();
   }
 
   public Optional<Item> getItem(String itemId) {
@@ -356,20 +319,22 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return Optional.empty();
   }
 
-  public List<Item> getItems() {
-    return Collections.unmodifiableList(items);
+  public boolean hasCondition(String name) {
+    return context.conditions().hasCondition(getId(), name);
   }
 
-  public void add(Item item) {
-    if (amPlayer()) {
-      int index = itemIndex(item.getId());
-      if (index < 0) {
-        items.add(item);
-      } else {
-        items.set(index, item);
+  public boolean hasInitiative(int encounterNumber) {
+    return this.encounterNumber == encounterNumber;
+  }
+
+  public boolean hasItem(String id) {
+    for (Item item : items) {
+      if (item.getId().equals(id)) {
+        return true;
       }
-      store();
     }
+
+    return false;
   }
 
   public int itemIndex(String id) {
@@ -382,14 +347,63 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return -1;
   }
 
-  public boolean hasItem(String id) {
-    for (Item item : items) {
-      if (item.getId().equals(id)) {
+  public boolean moveItemAfter(Item item, Item move) {
+    if (removeItem(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item) + 1, move);
+        store();
         return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemAfter(item, move)) {
+            store();
+            return true;
+          }
+        }
       }
     }
 
     return false;
+  }
+
+  public boolean moveItemBefore(Item item, Item move) {
+    if (removeItem(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item), move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemBefore(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
+    }
+
+    return false;
+  }
+
+  public void moveItemFirst(Item item) {
+    if (removeItem(item)) {
+      items.add(0, item);
+      store();
+    }
+  }
+
+  public void moveItemInto(Item container, Item item) {
+    if (removeItem(item)) {
+      container.add(item);
+      store();
+    }
+  }
+
+  public void moveItemLast(Item item) {
+    if (removeItem(item)) {
+      items.add(item);
+      store();
+    }
   }
 
   public boolean removeItem(Item item) {
@@ -417,79 +431,15 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return false;
   }
 
-  public void updated(Item item) {
+  public void setInitiative(int encounterNumber, int initiative) {
+    this.encounterNumber = encounterNumber;
+    this.initiative = initiative;
+
     store();
   }
 
-  public boolean moveItemBefore(Item item, Item move) {
-    if (removeItem(move)) {
-      if (items.contains(item)) {
-        items.add(items.indexOf(item), move);
-        store();
-        return true;
-      } else {
-        for (Item container : items) {
-          if (container.addItemBefore(item, move)) {
-            store();
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-
-  public void combine(Item item, Item other) {
-    removeItem(other);
-    if (item.similar(other)) {
-      item.setMultiple(item.getMultiple() + other.getMultiple());
-      store();
-    }
-  }
-
-  public boolean moveItemAfter(Item item, Item move) {
-    if (removeItem(move)) {
-      if (items.contains(item)) {
-        items.add(items.indexOf(item) + 1, move);
-        store();
-        return true;
-      } else {
-        for (Item container : items) {
-          if (container.addItemAfter(item, move)) {
-            store();
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-
-  public void moveItemFirst(Item item) {
-    if (removeItem(item)) {
-      items.add(0, item);
-      store();
-    }
-  }
-
-  public void moveItemLast(Item item) {
-    if (removeItem(item)) {
-      items.add(item);
-      store();
-    }
-  }
-
-  public void moveItemInto(Item container, Item item) {
-    if (removeItem(item)) {
-      container.add(item);
-      store();
-    }
-  }
-
-  public boolean hasCondition(String name) {
-    return context.conditions().hasCondition(getId(), name);
+  public void updated(Item item) {
+    store();
   }
 
   @Override

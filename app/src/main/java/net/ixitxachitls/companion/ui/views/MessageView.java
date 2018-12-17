@@ -34,7 +34,10 @@ import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
+import net.ixitxachitls.companion.util.Strings;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -84,7 +87,7 @@ public abstract class MessageView extends AppCompatImageView {
         return sourceName() + " sold a '" + message.getItem().get().getName() + "'.";
       }
       case text:
-        return message.getText();
+        return message.getText() + "\n\nSent to " + recipientNames() + ".";
 
       default:
         return "A generic message that is not currently supported";
@@ -92,6 +95,20 @@ public abstract class MessageView extends AppCompatImageView {
   }
 
   protected abstract void handle();
+
+  protected String name(String id) {
+    if (User.isUser(id)) {
+      return "DM";
+    }
+
+    Optional<Character> character =
+        CompanionApplication.get().characters().get(id);
+    if (character.isPresent()) {
+      return character.get().getName();
+    }
+
+    return id;
+  }
 
   private void onClick(View view) {
     if (canHandle()) {
@@ -113,22 +130,21 @@ public abstract class MessageView extends AppCompatImageView {
     return true;
   }
 
+  protected String recipientNames() {
+    List<String> names = new ArrayList<>();
+    for (String recipient : message.getRecipientIds()) {
+      names.add(name(recipient));
+    }
+
+    return Strings.COMMA_JOINER.join(names);
+  }
+
   protected boolean showConfirmation() {
     return true;
   }
 
   protected String sourceName() {
-    if (User.isUser(message.getSourceId())) {
-      return "DM";
-    }
-
-    Optional<Character> character =
-        CompanionApplication.get().characters().get(message.getSourceId());
-    if (character.isPresent()) {
-      return character.get().getName();
-    }
-
-    return message.getSourceId();
+    return name(message.getSourceId());
   }
 
   protected String title() {

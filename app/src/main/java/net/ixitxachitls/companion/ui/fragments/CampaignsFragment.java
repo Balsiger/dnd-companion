@@ -69,6 +69,11 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   @Override
+  public boolean goBack() {
+    return false;
+  }
+
+  @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     LinearLayout view = (LinearLayout)
@@ -107,24 +112,18 @@ public class CampaignsFragment extends CompanionFragment {
     CharacterDialog.newInstance("", "").display();
   }
 
-  private void update(Campaigns campaigns) {
-    this.campaigns.ensureOnly(campaigns.getIds(), id -> new CampaignTitleView(getContext()));
-    this.campaigns.update(campaigns.getIds(),
-        (id, view) -> {
-          Optional<Campaign> campaign = campaigns.get(id);
-          if (campaign.isPresent()) {
-            view.update(campaign.get());
-            view.setAction(() -> {
-              CompanionFragments.get().showCampaign(campaign.get(), Optional.of(view));
-            });
-          }
-        });
+  private String subtitle() {
+    List<String> parts = new ArrayList<>();
+    if (me().getCampaigns().size() == 1) {
+      parts.add("Invited to 1 campaign");
+    } else if (me().getCampaigns().size() > 1) {
+      parts.add("Invited to " + me().getCampaigns().size() + " campaigns");
+    }
+    if (!me().getFeatures().isEmpty()) {
+      parts.add(Strings.COMMA_JOINER.join(me().getFeatures()));
+    }
 
-    note.visible(campaigns.getIds().isEmpty());
-    user.setTitle(me().getNickname());
-    user.setSubtitle(subtitle());
-    user.loadImageUrl(me().getPhotoUrl());
-    hint.text(Hints.nextHint());
+    return Strings.SEMICOLON_JOINER.join(parts);
   }
 
   private void update(Characters characters) {
@@ -162,22 +161,23 @@ public class CampaignsFragment extends CompanionFragment {
     update(campaigns());
   }
 
-  private String subtitle() {
-    List<String> parts = new ArrayList<>();
-    if (me().getCampaigns().size() == 1) {
-      parts.add("Invited to 1 campaign");
-    } else if (me().getCampaigns().size() > 1) {
-      parts.add("Invited to " + me().getCampaigns().size() + " campaigns");
-    }
-    if (!me().getFeatures().isEmpty()) {
-      parts.add(Strings.COMMA_JOINER.join(me().getFeatures()));
-    }
+  private void update(Campaigns campaigns) {
+    this.campaigns.ensureOnly(campaigns.getIds(), id -> new CampaignTitleView(getContext()));
+    this.campaigns.update(campaigns.getIds(),
+        (id, view) -> {
+          Optional<Campaign> campaign = campaigns.get(id);
+          if (campaign.isPresent()) {
+            view.update(campaign.get());
+            view.setAction(() -> {
+              CompanionFragments.get().showCampaign(campaign.get(), Optional.of(view));
+            });
+          }
+        });
 
-    return Strings.SEMICOLON_JOINER.join(parts);
-  }
-
-  @Override
-  public boolean goBack() {
-    return false;
+    note.visible(campaigns.getIds().isEmpty());
+    user.setTitle(me().getNickname());
+    user.setSubtitle(subtitle());
+    user.loadImageUrl(me().getPhotoUrl());
+    hint.text(Hints.nextHint());
   }
 }

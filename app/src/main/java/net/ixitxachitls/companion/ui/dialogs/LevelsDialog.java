@@ -66,19 +66,22 @@ public class LevelsDialog extends Dialog {
   private int maxLevel;
   private int nextLevel;
 
-  public static LevelsDialog newInstance(String characterId, int maxLevel) {
-    LevelsDialog dialog = new LevelsDialog();
-    dialog.setArguments(arguments(R.layout.dialog_levels, R.string.dialog_title_levels,
-        R.color.character, characterId, maxLevel));
-    return dialog;
+  private void add() {
+    levels.addView(new LineView(getContext(), new Level(), nextLevel++));
   }
 
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String characterId, int maxLevel) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ID, characterId);
-    arguments.putInt(ARG_MAX_LEVEL, maxLevel);
-    return arguments;
+  @Override
+  protected void save() {
+    List<Level> levels = new ArrayList<>();
+    for (int i = 0; i < this.levels.getChildCount(); i++) {
+      View view = this.levels.getChildAt(i);
+      if (view instanceof LineView) {
+        levels.add(((LineView) view).toLevel());
+      }
+    }
+
+    character.setLevels(levels);
+    super.save();
   }
 
   @Override
@@ -99,25 +102,22 @@ public class LevelsDialog extends Dialog {
       levels.addView(new LineView(getContext(), level, nextLevel++));
     }
 
-    add.visible(nextLevel < maxLevel || (character.getXp() == 0 && nextLevel == 1));
+    add.visible(true);
   }
 
-  @Override
-  protected void save() {
-    List<Level> levels = new ArrayList<>();
-    for (int i = 0; i < this.levels.getChildCount(); i++) {
-      View view = this.levels.getChildAt(i);
-      if (view instanceof LineView) {
-        levels.add(((LineView) view).toLevel());
-      }
-    }
-
-    character.setLevels(levels);
-    super.save();
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String characterId, int maxLevel) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_ID, characterId);
+    arguments.putInt(ARG_MAX_LEVEL, maxLevel);
+    return arguments;
   }
 
-  private void add() {
-    levels.addView(new LineView(getContext(), new Level(), nextLevel++));
+  public static LevelsDialog newInstance(String characterId, int maxLevel) {
+    LevelsDialog dialog = new LevelsDialog();
+    dialog.setArguments(arguments(R.layout.dialog_levels, R.string.dialog_title_levels,
+        R.color.character, characterId, maxLevel));
+    return dialog;
   }
 
   private class LineView extends LinearLayout {
@@ -161,22 +161,9 @@ public class LevelsDialog extends Dialog {
       addView(view);
     }
 
-    private String summary() {
-      String result = "Level " + number + ": " + className.getText();
-      if (!hp.getText().isEmpty()) {
-        result += ", " + hp.getText() + " hp";
-      }
-      if (!abilityIncrease.getText().isEmpty()
-          && !abilityIncrease.getText().equals(Ability.UNKNOWN.getName())
-          && !abilityIncrease.getText().equals(Ability.NONE.getName())) {
-        result += ", +1 " + abilityIncrease.getText();
-      }
-
-      return result;
-    }
-
-    private void edit() {
-      details.toggleVisiblity();
+    public Level toLevel() {
+      return new Level(className.getText(), Integer.parseInt(hp.getText()),
+          abilityIncrease.getText());
     }
 
     private void delete() {
@@ -191,20 +178,22 @@ public class LevelsDialog extends Dialog {
       ((ViewGroup) getParent()).removeView(this);
     }
 
-    private void selectClass() {
-      ListSelectDialog.newStringInstance(
-          R.string.character_select_class, className.getText(),
-          Entries.get().getLevelTemplates().getValues().stream()
-              .filter(LevelTemplate::isFromPHB)
-              .map(LevelTemplate::getName)
-              .collect(Collectors.toList()), R.color.character)
-          .setSelectListener(this::editClass)
-          .display();
+    private void edit() {
+      details.toggleVisiblity();
+    }
+
+    private void editAbility(String ability) {
+      abilityIncrease.text(ability);
+      refresh();
     }
 
     private void editClass(String className) {
       this.className.text(className);
       refresh();
+    }
+
+    private void refresh() {
+      summary.text(summary());
     }
 
     private void selectAbility() {
@@ -216,18 +205,29 @@ public class LevelsDialog extends Dialog {
           .display();
     }
 
-    private void editAbility(String ability) {
-      abilityIncrease.text(ability);
-      refresh();
+    private void selectClass() {
+      ListSelectDialog.newStringInstance(
+          R.string.character_select_class, className.getText(),
+          Entries.get().getLevelTemplates().getValues().stream()
+              .filter(LevelTemplate::isFromPHB)
+              .map(LevelTemplate::getName)
+              .collect(Collectors.toList()), R.color.character)
+          .setSelectListener(this::editClass)
+          .display();
     }
 
-    private void refresh() {
-      summary.text(summary());
-    }
+    private String summary() {
+      String result = "Level " + number + ": " + className.getText();
+      if (!hp.getText().isEmpty()) {
+        result += ", " + hp.getText() + " hp";
+      }
+      if (!abilityIncrease.getText().isEmpty()
+          && !abilityIncrease.getText().equals(Ability.UNKNOWN.getName())
+          && !abilityIncrease.getText().equals(Ability.NONE.getName())) {
+        result += ", +1 " + abilityIncrease.getText();
+      }
 
-    public Level toLevel() {
-      return new Level(className.getText(), Integer.parseInt(hp.getText()),
-          abilityIncrease.getText());
+      return result;
     }
   }
 }

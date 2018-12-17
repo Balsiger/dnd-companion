@@ -40,7 +40,9 @@ import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -59,19 +61,12 @@ public class MessageDialog extends Dialog {
   private LinearLayout characters;
   private Map<CheckBox, String> checkBoxToCharacterId = new HashMap<>();
 
-  public static MessageDialog newInstance(String campaignId, String senderId) {
-    MessageDialog dialog = new MessageDialog();
-    dialog.setArguments(arguments(R.layout.dialog_message,
-        R.string.dialog_title_message, R.color.character, campaignId, senderId));
-    return dialog;
-  }
+  private CheckBox createCheckBox(Character character) {
+    CheckBox box = new CheckBox(getContext());
+    box.setText(character.getName());
+    checkBoxToCharacterId.put(box, character.getId());
 
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String campaignId, String senderId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_CAMPAIGN, campaignId);
-    arguments.putString(ARG_SENDER, senderId);
-    return arguments;
+    return box;
   }
 
   @Override
@@ -95,32 +90,45 @@ public class MessageDialog extends Dialog {
     }
   }
 
-  private CheckBox createCheckBox(Character character) {
-    CheckBox box = new CheckBox(getContext());
-    box.setText(character.getName());
-    checkBoxToCharacterId.put(box, character.getId());
-
-    return box;
-  }
-
   private void send() {
     if (campaign.isPresent() && sender.isPresent()) {
-      if (!User.isUser(sender.get())) {
-        // Send to DM (campaign), if not sent by it.
-        Message.createForText(context(), sender.get(), campaign.get().getId(), message.getText());
-      }
-
+      List<String> recipients = new ArrayList<>();
       for (int i = 0; i < characters.getChildCount(); i++) {
         if (characters.getChildAt(i) instanceof CheckBox) {
           CheckBox checkBox = (CheckBox) characters.getChildAt(i);
           if (checkBox.isChecked() && checkBoxToCharacterId.containsKey(checkBox)) {
-            Message.createForText(context(), sender.get(), checkBoxToCharacterId.get(checkBox),
-                message.getText());
+            recipients.add(checkBoxToCharacterId.get(checkBox));
           }
         }
+      }
+
+
+      if (!User.isUser(sender.get())) {
+        // Send to DM (campaign), if not sent by them.
+        Message.createForText(context(), sender.get(), campaign.get().getId(), recipients,
+            message.getText());
+      }
+
+      for (String recipient : recipients) {
+        Message.createForText(context(), sender.get(), recipient, recipients, message.getText());
       }
     }
 
     save();
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String campaignId, String senderId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_CAMPAIGN, campaignId);
+    arguments.putString(ARG_SENDER, senderId);
+    return arguments;
+  }
+
+  public static MessageDialog newInstance(String campaignId, String senderId) {
+    MessageDialog dialog = new MessageDialog();
+    dialog.setArguments(arguments(R.layout.dialog_message,
+        R.string.dialog_title_message, R.color.character, campaignId, senderId));
+    return dialog;
   }
 }

@@ -25,8 +25,12 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.values.AbilityAdjustment;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Duration;
+import net.ixitxachitls.companion.data.values.GenericAdjustment;
+import net.ixitxachitls.companion.data.values.Modifier;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,12 +47,14 @@ public class Conditions {
           + "dealing the damage. A character with Strength 0 falls to the ground and is "
           + "helpless. A character with Dexterity 0 is paralyzed. A character with "
           + "Constitution 0 is dead. A character with Intelligence, Wisdom, or Charisma 0 "
-          + "is unconscious. (See Ability Score Loss under Special Abilities earlier in "
-          + "this chapter.)\nAbility damage is different from penalties to ability scores, "
+          + "is unconscious. (See Ability Score Loss under Special Abilities.)\n"
+          + "Ability damage is different from penalties to ability scores, "
           + "which go away when the conditions causing them (fatigue, entanglement, and "
           + "so on) go away.")
-      .summary("Lost one or more ability score points (special effects if score is 0).")
+      .adjustment("-x ability")
+      .adjustment("recover 1 point per day")
       .predefined()
+      .dmOnly()
       .icon(R.drawable.icons8_fragile_48)
       .build();
   public static final ConditionData ABILITY_DRAINED = ConditionData.newBuilder("Ability Drained")
@@ -58,9 +64,9 @@ public class Conditions {
           + "with Dexterity 0 is paralyzed. A character with Constitution 0 is dead. A "
           + "character with Intelligence, Wisdom, or Charisma 0 is unconscious. (See "
           + "Ability Score Loss under Special Abilities earlier in this chapter.)")
-      .summary("Permanently lost one or more ability score points (special effects if score "
-          + "is 0).")
+      .adjustment("-x ability")
       .predefined()
+      .dmOnly()
       .icon(R.drawable.icons8_amputee_48)
       .build();
   public static final ConditionData BLINDED = ConditionData.newBuilder("Blinded")
@@ -72,8 +78,14 @@ public class Conditions {
           + "concealment (50% miss chance) to the blinded character.\n"
           + "Characters who remain blinded for a long time grow accustomed to these "
           + "drawbacks and can overcome some of them (DM’s discretion).")
-      .summary("Cannot see, -2 AC, no Dex bonus to AC, half speed, -4 on Search, Str and Dex "
-          + "checks, 50% miss chance.")
+      .adjustment("cannot see")
+      .adjustment("-2 AC")
+      .adjustment("no Dexterity bonus to AC")
+      .adjustment("half speed")
+      .adjustment("-4 on Search checks")
+      .adjustment("-4 on Strength checks")
+      .adjustment("-4 on Dexterity checks")
+      .adjustment("50% miss chance")
       .predefined()
       .icon(R.drawable.eye_off)
       .build();
@@ -84,8 +96,10 @@ public class Conditions {
           + "damage per 10 feet. A flying creature that is blown away is blown back "
           + "2d6×10 feet and takes 2d6 points of nonlethal damage due to battering and "
           + "buffering.")
-      .summary("Ground: knocked down, rolled 1d4x10 ft and 1d4 nonlethal per 10 feet, "
-          + "Flying: blow back 2d6x10 ft and 2d6 nonlethal.")
+      .adjustment("Ground: knocked down")
+      .adjustment("Ground: rolled 1d4 x 10 ft, 1d4 nonlethal per 10 ft")
+      .adjustment("Flying: blown back 2d6 x 10 ft")
+      .adjustment("Flying: 2d6 nonlethal")
       .predefined()
       .icon(R.drawable.icons8_air_48)
       .build();
@@ -93,14 +107,15 @@ public class Conditions {
       .description("Prevented from achieving forward motion by an applied force, such as wind"
           + ". Checked creatures on the ground merely stop. Checked flying creatures move "
           + "back a distance specified in the description of the effect.")
-      .summary("Unabled to move forward (ground) or moved back (flying).")
+      .adjustment("Ground: Unable to move forward")
+      .adjustment("Flying: Moved back")
       .predefined()
       .icon(R.drawable.checkerboard)
       .build();
   public static final ConditionData COLD = ConditionData.newBuilder("Cold (unprotected)")
       .description("At temperatures from 5° to -20°C, unprotected characters take nonlethal "
           + "damage every hour.")
-      .summary("For DC 15 (+1 per previous check) every hour or take 1d6 nonlethal cold damage.")
+      .adjustment("For DC 15 (+1 per previous check) every hour or take 1d6 nonlethal cold damage.")
       .predefined()
       .icon(R.drawable.noun_cold_1421098)
       .dmOnly()
@@ -109,7 +124,7 @@ public class Conditions {
       ConditionData.newBuilder("Severe Cold (unprotected)")
           .description("At temperatures from -20° to -30°C, unprotected characters may take nonlethal "
               + "damage every 10 minutes.")
-          .summary("For DC 15 (+1 per previous check) every 10 minutes or 1d6 nonlethal damage.")
+          .adjustment("For DC 15 (+1 per previous check) every 10 minutes or 1d6 nonlethal damage.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
           .color(R.color.moderate)
@@ -119,7 +134,7 @@ public class Conditions {
       ConditionData.newBuilder("Severe Cold (protection 1)")
           .description("At temperatures from -20° to -30°C, level 1 protected characters may take "
               + "nonlethal damage every hour.")
-          .summary("For DC 15 (+1 per previous check) every hour or 1d6 nonlethal damage.")
+          .adjustment("For DC 15 (+1 per previous check) every hour or 1d6 nonlethal damage.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
           .color(R.color.moderate)
@@ -129,7 +144,7 @@ public class Conditions {
       ConditionData.newBuilder("Extreme Cold (unprotected)")
           .description("At temperatures from -30° to -50°C, unprotected characters take cold "
               + "damage every 10 minutes.")
-          .summary("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every 10 "
+          .adjustment("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every 10 "
               + "minutes or take 1d4 nonlethal damage.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
@@ -140,7 +155,7 @@ public class Conditions {
       ConditionData.newBuilder("Extreme Cold (protection 1)")
           .description("At temperatures from -30° to -50°C, level 1 protected characters take cold "
               + "damage every 10 minutes.")
-          .summary("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every 10 "
+          .adjustment("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every 10 "
               + "minutes or take 1d4 nonlethal damage.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
@@ -150,7 +165,7 @@ public class Conditions {
       ConditionData.newBuilder("Extreme Cold (protection 2)")
           .description("At temperatures from -30° to -50°C, level 2 protected characters take cold "
               + "damage every 10 minutes.")
-          .summary("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every hour "
+          .adjustment("1d6 cold damage per 10 min, For DC 15 (+1 per previous check) every hour "
               + "or take 1d4 nonlethal damage.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
@@ -160,7 +175,7 @@ public class Conditions {
       ConditionData.newBuilder("Unearthly Cold (unprotected)")
           .description("At temperatures below -50°C, unprotected characters take cold "
               + "damage every minute.")
-          .summary("1d6 cold damage and 1d4 nonlethal damage per min.")
+          .adjustment("1d6 cold damage and 1d4 nonlethal damage per min.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
           .color(R.color.extreme)
@@ -170,7 +185,7 @@ public class Conditions {
       ConditionData.newBuilder("Unearthly Cold (protected 1)")
           .description("At temperatures below -50°C, level 1 protected characters take cold "
               + "damage every minute.")
-          .summary("1d6 cold damage and 1d4 nonlethal damage per min.")
+          .adjustment("1d6 cold damage and 1d4 nonlethal damage per min.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
           .color(R.color.extreme)
@@ -180,7 +195,7 @@ public class Conditions {
       ConditionData.newBuilder("Unearthly Cold (protected 2)")
           .description("At temperatures below -50°C, level 2 protected characters take cold "
               + "damage every 10 minutes.")
-          .summary("1d6 cold damage and 1d4 nonlethal damage per 10 min.")
+          .adjustment("1d6 cold damage and 1d4 nonlethal damage per 10 min.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
           .color(R.color.extreme)
@@ -190,7 +205,7 @@ public class Conditions {
       ConditionData.newBuilder("Unearthly Cold (protected 3)")
           .description("At temperatures below -50°C, level 3 protected characters take cold "
               + "damage every 10 minutes.")
-          .summary("1d6 cold damage and 1d4 nonlethal damage per 10 min.")
+          .adjustment("1d6 cold damage and 1d4 nonlethal damage per 10 min.")
           .predefined()
           .icon(R.drawable.noun_cold_1421098)
           .color(R.color.extreme)
@@ -210,7 +225,7 @@ public class Conditions {
           + "attacks of opportunity against any creature that it is not already devoted to "
           + "attacking (either because of its most recent action or because it has just been "
           + "attacked).")
-      .summary("Character's actions are determined randomly.")
+      .adjustment("Character's actions are determined randomly.")
       .predefined()
       .icon(R.drawable.icons8_puzzled_48)
       .build();
@@ -218,14 +233,16 @@ public class Conditions {
       .description("The character is frozen in fear and can take no actions. A cowering "
           + "character takes a –2 penalty to Armor Class and loses her Dexterity bonus (if "
           + "any).")
-      .summary("Cannot take actions, AC -2, no Dex to AC.")
+      .adjustment("Cannot take actions")
+      .adjustment("-2 AC")
+      .adjustment("No Dex to AC")
       .predefined()
       .icon(R.drawable.icons8_ostrich_head_in_sand_48)
       .build();
   public static final ConditionData DAZED = ConditionData.newBuilder("Dazed")
       .description("The creature is unable to act normally. A dazed creature can take no "
           + "actions, but has no penalty to AC. A dazed condition typically lasts 1 round.")
-      .summary("No action, but no AC penalty.")
+      .adjustment("No action (but no AC penalty)")
       .duration(Duration.rounds(1))
       .predefined()
       .icon(R.drawable.icons8_confused_48)
@@ -234,7 +251,10 @@ public class Conditions {
       .description("The creature is unable to see well because of overstimulation of the "
           + "eyes. A dazzled creature takes a –1 penalty on attack rolls, Search checks, and "
           + "Spot checks.")
-      .summary("Not see well, -1 Attack, Search, Spot.")
+      .adjustment("Not see well")
+      .adjustment("-1 Attack")
+      .adjustment("-1 Search")
+      .adjustment("-1 Spot")
       .predefined()
       .icon(R.drawable.sunglasses)
       .build();
@@ -248,19 +268,25 @@ public class Conditions {
           + "(depending on the spell or device). Either way, resurrected characters need not "
           + "worry about rigor mortis, decomposition, and other conditions that affect dead "
           + "bodies.")
-      .summary("He's dead, Jim.")
+      .adjustment("He's dead, Jim.")
       .predefined()
       .dmOnly()
       .notDismissable()
       .icon(R.drawable.ic_skull_black_36dp)
       .build();
+  public static final ConditionData DEAD_CONSTITUTION_0 =
+      ConditionData.newBuilder("Dead (Con 0)", DEAD)
+          .build();
   public static final ConditionData DEAFENED = ConditionData.newBuilder("Deafened")
       .description("A deafened character cannot hear. She takes a –4 penalty on initiative "
           + "checks, automatically fails Listen checks, and has a 20% chance of spell failure"
           + " when casting spells with verbal components.\n"
           + "Characters who remain deafened for a long time grow accustomed to these "
           + "drawbacks and can overcome some of them (DM’s discretion).")
-      .summary("Cannot hear, -4 Init, fail Listen, 20% spell failure (V).")
+      .adjustment("Cannot hear")
+      .adjustment("-4 Init")
+      .adjustment("-100 Listen")
+      .adjustment("20% spell failure (V)")
       .predefined()
       .icon(R.drawable.icons8_deaf_48)
       .build();
@@ -279,7 +305,7 @@ public class Conditions {
           + "loses 1 hit point. Once an unaided character starts recovering hit points "
           + "naturally, she is no longer in danger of losing hit points (even if her current "
           + "hit points are negative).")
-      .summary("Single move or standard action (might cause damage) each round.")
+      .adjustment("Single move or standard action (might cause damage) each round.")
       .predefined()
       .icon(R.drawable.icons8_wheelchair_48)
       .build();
@@ -290,7 +316,9 @@ public class Conditions {
           + "points), the character rolls d% to see whether she becomes stable. She has a 10% "
           + "chance to become stable. If she does not, she loses 1 hit point. If a dying "
           + "character reaches –10 hit points, she is dead.")
-      .summary("Unconcious and near death, taking no actions but loses 1 hit point per round.")
+      .adjustment("Unconscious and near death")
+      .adjustment("No actions")
+      .adjustment("Lose 1 hp per round")
       .dmOnly()
       .notDismissable()
       .predefined()
@@ -303,9 +331,15 @@ public class Conditions {
           + "checks; loss of 5 hit points; and –1 to effective level (for determining the "
           + "power, duration, DC, and other details of spells or special abilities). I"
           + ".addition, a spellcaster loses one spell or spell slot from the highest spell "
-          + "level castable.")
-      .summary("One ore more negative levels (might be permanent), per level -1 Attack, Saves, "
-          + "Skills, Ability, -5 hp, -1 level, highest level spell.")
+          + "level castable. Apply this condition once per level lost.")
+      .adjustment("1 negative levels")
+      .adjustment("-1 Attack")
+      .adjustment("-1 Saves")
+      .adjustment("-1 Skills")
+      .adjustment("-1 Ability")
+      .adjustment("-5 hp")
+      .adjustment("-1 level")
+      .adjustment("highest level spell lost")
       .predefined()
       .icon(R.drawable.battery_10)
       .build();
@@ -316,7 +350,12 @@ public class Conditions {
           + " run or charge, and takes a –2 penalty on all attack rolls and a –4 penalty to "
           + "Dexterity. An entangled character who attempts to cast a spell must make a "
           + "Concentration check (DC 15 + the spell’s level) or lose the spell.")
-      .summary("Movement impeded, half speed, -2 Attack, -4 Dex, Spell DC 15 + level.")
+      .adjustment("movement impeded")
+      .adjustment("half speed")
+      .adjustment("-2 Attack")
+      .adjustment(new AbilityAdjustment(Ability.DEXTERITY,
+          new Modifier(-4, Modifier.Type.GENERAL, "Entangled")))
+      .adjustment("Spell DC 15 + level or lose spell")
       .predefined()
       .icon(R.drawable.icons8_handcuffs_48)
       .build();
@@ -325,7 +364,11 @@ public class Conditions {
           + "Strength and Dexterity. After 1 hour of complete rest, an exhausted character "
           + "becomes fatigued. A fatigued character becomes exhausted by doing something else"
           + " that would normally cause fatigue.")
-      .summary("Move half speed, -6 Str and Dex.")
+      .adjustment(new GenericAdjustment("half speed"))
+      .adjustment(new AbilityAdjustment(Ability.STRENGTH,
+          new Modifier(-6, Modifier.Type.GENERAL, "exhausted")))
+      .adjustment(new AbilityAdjustment(Ability.DEXTERITY,
+          new Modifier(-6, Modifier.Type.GENERAL, "exhausted")))
       .predefined()
       .notDismissable()
       .icon(R.drawable.icons8_insomnia_48)
@@ -340,7 +383,9 @@ public class Conditions {
           + "such as someone drawing a weapon, casting a spell, or aiming a ranged weapon at "
           + "the fascinated creature, automatically breaks the effect. A fascinated creature’s "
           + "ally may shake it free of the spell as a standard action.")
-      .summary("Entranced, quiet and passive, -4 skill reactions.")
+      .adjustment("Entranced")
+      .adjustment("quiet and passive")
+      .adjustment("-4 skills as reactions")
       .predefined()
       .icon(R.drawable.icons8_galaxy_48)
       .build();
@@ -349,7 +394,12 @@ public class Conditions {
           + " Strength and Dexterity. Doing anything that would normally cause fatigue causes"
           + " the fatigued character to become exhausted. After 8 hours of complete rest, "
           + "fatigued characters are no longer fatigued.")
-      .summary("Cannot run or charge, -2 Str and Dex.")
+      .adjustment("Cannot run")
+      .adjustment("Cannot charage")
+      .adjustment(new AbilityAdjustment(Ability.STRENGTH,
+          new Modifier(-2, Modifier.Type.GENERAL, "Fatigued")))
+      .adjustment(new AbilityAdjustment(Ability.DEXTERITY,
+          new Modifier(-2, Modifier.Type.GENERAL, "Fatigued")))
       .predefined()
       .notDismissable()
       .icon(R.drawable.icons8_slouch_filled_50)
@@ -358,7 +408,9 @@ public class Conditions {
       .description("A character who has not yet acted during a combat is flat-footed, not yet "
           + "reacting normally to the situation. A flat-footed character loses his Dexterity "
           + "bonus to AC (if any) and cannot make attacks of opportunity.")
-      .summary("Not yet acted, no Dex to AC, no attacks of opportunity.")
+      .adjustment("Not yet acted")
+      .adjustment("No Dex to AC")
+      .adjustment("No attacks of opportunity")
       .predefined()
       .endsBeforeTurn()
       .dmOnly()
@@ -372,7 +424,11 @@ public class Conditions {
           + "creature must use such means if they are the only way to escape. Frightened is "
           + "like shaken, except that the creature must flee if possible. Panicked is a more "
           + "extreme state of fear.")
-      .summary("Flees from source of fear, -2 Attack, saves, skills, ability checks.")
+      .adjustment("Flee from source")
+      .adjustment("-2 Attack")
+      .adjustment("-2 Saves")
+      .adjustment("-2 Skills")
+      .adjustment("-2 Ability checks")
       .predefined()
       .icon(R.drawable.icons8_scream_50)
       .build();
@@ -380,7 +436,12 @@ public class Conditions {
       .description("A frostbitten character can neither run nor charge and takes a –2 penalty "
           + "to Strength and Dexterity. These penalties end when the character recovers the"
           + "nonlethal damage she took from the cold and exposure.")
-      .summary("Cannot run or charge, -2 Str, -2 Dex.")
+      .adjustment("Cannot run")
+      .adjustment("Cannot charge")
+      .adjustment(new AbilityAdjustment(Ability.STRENGTH,
+          new Modifier(-2, Modifier.Type.GENERAL, "Frostbitten")))
+      .adjustment(new AbilityAdjustment(Ability.DEXTERITY,
+          new Modifier(-2, Modifier.Type.GENERAL, "Frostbitten")))
       .predefined()
       .icon(R.drawable.noun_ice_cube_154854)
       .dmOnly()
@@ -390,7 +451,12 @@ public class Conditions {
           + " or more attackers. A grappling character can undertake only a limited number of "
           + "actions. He does not threaten any squares, and loses his Dexterity bonus to AC "
           + "(if any) against opponents he isn’t grappling.")
-      .summary("Hand-to-hand struggle, limited actions, does not threaten, no Dex to AC.")
+      .adjustment("Hand-to-hand struggle")
+      .adjustment("Limited actions")
+      .adjustment("Not threatening")
+      .adjustment("No attacks of opportunity")
+      .adjustment("No flanking")
+      .adjustment("No Dex to AC")
       .predefined()
       .icon(R.drawable.icons8_wrestling_48)
       .build();
@@ -399,8 +465,7 @@ public class Conditions {
           + " otherwise completely at an opponent’s mercy. A helpless target is treated as "
           + "having a Dexterity of 0 (–5 modifier). Melee attacks against a helpless target "
           + "get a +4 bonus (equivalent to attacking a prone target). Ranged attacks gets no "
-          + "special bonus against helpless targets. Rogues can sneak attack helpless "
-          + "targets. As a full-round action, an enemy can use a melee weapon to deliver a "
+          + "special bonus against ocund action, an enemy can use a melee weapon to deliver a "
           + "coup de grace to a helpless foe. An enemy can also use a bow or crossbow, "
           + "provided he is adjacent to the target. The attacker automatically hits and "
           + "scores a critical hit. (A rogue also gets her sneak attack damage bonus against "
@@ -409,15 +474,27 @@ public class Conditions {
           + "grace provokes attacks of opportunity. Creatures that are immune to critical "
           + "hits do not take critical damage, nor do they need to make Fortitude saves to "
           + "avoid being killed by a coup de grace.")
-      .summary("Completely at mercy, melee AC -4, can be sneaked, coup the graced.")
+      .adjustment("Completely at mercy")
+      .adjustment("-4 AC melee")
+      .adjustment("can be sneaked")
+      .adjustment("can be coup the graced")
       .predefined()
       .icon(R.drawable.icons8_oppression_48)
+      .build();
+  public static final ConditionData HELPLESS_STRENGTH_0 =
+      ConditionData.newBuilder("Helpless (STR 0)", HELPLESS)
+      .noShow()
       .build();
   public static final ConditionData HYPOTHERMIA_MILD = ConditionData.newBuilder("Mild Hypothermia")
       .description("A character with mild hypothermia can neither run nor charge and takes a "
           + "–2 penalty to Strength and Dexterity. A Heal DC 15 check is needed to recover from "
           + "mild hypothermia.")
-      .summary("Cannot run or charge, -2 Str and Dex.")
+      .adjustment("Cannot run")
+      .adjustment("Cannot charge")
+      .adjustment(new AbilityAdjustment(Ability.STRENGTH, new Modifier(-2,
+          Modifier.Type.GENERAL, "Mild Hypothermia")))
+      .adjustment(new AbilityAdjustment(Ability.DEXTERITY, new Modifier(-2,
+          Modifier.Type.GENERAL, "Mild Hypothermia")))
       .predefined()
       .icon(R.drawable.noun_icicles_2062030)
       .dmOnly()
@@ -427,7 +504,13 @@ public class Conditions {
           .description("An character with moderate hypothermia moves at half speed and takes a "
               + "–6 penalty to Strength and Dexterity. A Heal DC 15 check is needed to recover from "
               + "moderate hypothermia to mild hypothermia.")
-          .summary("Cannot run or charge, move at half speed, -6 Str and Dex.")
+          .adjustment("Cannot run")
+          .adjustment("Cannot charge")
+          .adjustment("half speed")
+          .adjustment(new AbilityAdjustment(Ability.STRENGTH, new Modifier(-6,
+              Modifier.Type.GENERAL, "Mild Hypothermia")))
+          .adjustment(new AbilityAdjustment(Ability.DEXTERITY, new Modifier(-6,
+              Modifier.Type.GENERAL, "Mild Hypothermia")))
           .predefined()
           .icon(R.drawable.noun_icicles_2062030)
           .color(R.color.moderate)
@@ -436,8 +519,14 @@ public class Conditions {
   public static final ConditionData HYPOTHERMIA_SEVERE =
       ConditionData.newBuilder("Severe Hypothermia")
           .description("An character with severate hypothermia is disabled.")
-          .summary("Single move or standard action, cannot run or charge, move at half speed, "
-              + "-6 Str and Dex.")
+          .adjustment("Single move or standard action")
+          .adjustment("Cannot run")
+          .adjustment("Cannot charge")
+          .adjustment("half speed")
+          .adjustment(new AbilityAdjustment(Ability.STRENGTH, new Modifier(-6,
+              Modifier.Type.GENERAL, "Mild Hypothermia")))
+          .adjustment(new AbilityAdjustment(Ability.DEXTERITY, new Modifier(-6,
+              Modifier.Type.GENERAL, "Mild Hypothermia")))
           .predefined()
           .icon(R.drawable.noun_icicles_2062030)
           .color(R.color.severe)
@@ -448,8 +537,11 @@ public class Conditions {
           + "nonmagical attack forms. They can be harmed only by other incorporeal creatures,"
           + " +1 or better magic weapons, spells, spell-like effects, or supernatural effects. "
           + "(See Incorporeality under Special Abilities, earlier in this chapter.)")
-      .summary("No physical body, immunte to nonmagical attacks.")
+      .adjustment("No physical body")
+      .adjustment("Immune to nonmagical attacks")
+      .adjustment("50% chance to ignore most magical attacks")
       .predefined()
+      .dmOnly()
       .icon(R.drawable.icons8_ghost_48)
       .build();
   public static final ConditionData INVISIBLE = ConditionData.newBuilder("Invisible")
@@ -457,7 +549,9 @@ public class Conditions {
           + "rolls against sighted opponents, and ignores its opponents’ Dexterity bonuses to"
           + " AC (if any). (See Invisibility, under Special Abilities, earlier in this "
           + "chapter.)")
-      .summary("Visually undetectable, +2 attack, ignore Dex to AC.")
+      .adjustment("Visually undetectable")
+      .adjustment("+2 attack")
+      .adjustment("ignore Dex to AC")
       .predefined()
       .icon(R.drawable.icons8_invisible_48)
       .build();
@@ -466,7 +560,8 @@ public class Conditions {
           + "velocity (see Table 3–24: Wind Effects, page 95). Creatures on the ground are "
           + "knocked prone by the force of the wind. Flying creatures are instead blown back "
           + "1d6×10 feet.")
-      .summary("Knocked prone (ground) or blown back (flying).")
+      .adjustment("Ground: Knocked prone")
+      .adjustment("Flying: Pushed back")
       .predefined()
       .notDismissable()
       .icon(R.drawable.icons8_boxing_glove_48)
@@ -475,7 +570,10 @@ public class Conditions {
       .description("Experiencing stomach distress. Nauseated creatures are unable to attack, "
           + "cast spells, concentrate on spells, or do  anything else requiring attention. "
           + "The only action such a character can take is a single move action per turn.")
-      .summary("Stomach distress, unable to attack, cast spells, single move only.")
+      .adjustment("Stomach distress")
+      .adjustment("Unable to attaack")
+      .adjustment("Unable to cast spells")
+      .adjustment("Single move only")
       .predefined()
       .icon(R.drawable.icons8_vomited_48)
       .build();
@@ -489,7 +587,10 @@ public class Conditions {
           + "spells, to flee; indeed, the creature must use such means if they are the only "
           + "way to escape.\n"
           + "Panicked is a more extreme state of fear than shaken or frightened.")
-      .summary("Drop anything and flee at top speed, -2 on saves, skills, ability checks.")
+      .adjustment("Drop anything and flee at top speed")
+      .adjustment("-2 on saves")
+      .adjustment("-2 on skills")
+      .adjustment("-2 on abilith checks")
       .predefined()
       .icon(R.drawable.icons8_exercise_48)
       .build();
@@ -501,9 +602,26 @@ public class Conditions {
           + "flap its wings and falls. A paralyzed swimmer can’t swim and may drown. A "
           + "creature can move through a space occupied by a paralyzed creature—ally or not. "
           + "Each square occupied by a paralyzed creature, however, counts as 2 squares.")
-      .summary("Frozen, unable to act, Dex Str to 0 and helpless.")
+      .adjustment("Frozen, unable to act")
+      .adjustment(new AbilityAdjustment(Ability.STRENGTH,
+          new Modifier(-50, Modifier.Type.GENERAL, "Paralyzed")))
+      .adjustment(new AbilityAdjustment(Ability.DEXTERITY,
+          new Modifier(-50, Modifier.Type.GENERAL, "Paralyzed")))
+      .adjustments(HELPLESS)
       .predefined()
       .icon(R.drawable.icons8_no_running_48)
+      .build();
+  public static final ConditionData PARALYZED_DEXTERITY_0 =
+      ConditionData.newBuilder("Paralyzed (Dex 0)", PARALYZED)
+      .build();
+  public static final ConditionData UNCONSCIOUS = ConditionData.newBuilder("Unconscious")
+      .description("Knocked out and helpless. Unconsciousness can result from having current "
+          + "hit points between –1 and –9, or from nonlethal damage in excess of current hit "
+          + "points.")
+      .adjustment("Knocked out")
+      .adjustments(HELPLESS)
+      .icon(R.drawable.icons8_sleeping_filled_50)
+      .predefined()
       .build();
   public static final ConditionData PETRIFIED = ConditionData.newBuilder("Petrified")
       .description("A petrified character has been turned to stone and is considered "
@@ -512,13 +630,15 @@ public class Conditions {
           + " petrified body is incomplete when it returns to flesh, the body is likewise "
           + "incomplete and the DM must assign some amount of permanent hit point loss and/or"
           + " debilitation.")
-      .summary("Turned to stone, considered unconcious.")
+      .adjustment("Turned to stone")
+      .adjustments(UNCONSCIOUS)
       .predefined()
       .icon(R.drawable.icons8_statue_48)
       .build();
   public static final ConditionData PINNED = ConditionData.newBuilder("Pinned")
       .description("Held immobile (but not helpless) in a grapple.")
-      .summary("Held immobile, but not helpless.")
+      .adjustment("Held immobile")
+      .adjustment("Not helpless")
       .predefined()
       .icon(R.drawable.icons8_pin_48)
       .build();
@@ -528,8 +648,11 @@ public class Conditions {
           + "defender who is prone gains a +4 bonus to Armor Class against ranged attacks, but "
           + "takes a -4 penalty to AC against melee attacks. Standing up is a move-equivalent "
           + "action that provokes an attack of opportunity.")
-      .summary("On the ground, -4 Attack (melee), cannot use ranged (except crossbow), +4 AC "
-          + "(ranged), -4 AC (melee).")
+      .adjustment("On the ground")
+      .adjustment("-4 Melee Attack")
+      .adjustment("Cannot use ranged (except crossbow)")
+      .adjustment("+4 AC ranged")
+      .adjustment("-4 AC melee")
       .predefined()
       .icon(R.drawable.icons8_pushups_48)
       .build();
@@ -537,14 +660,21 @@ public class Conditions {
       .description("A shaken character takes a –2 penalty on attack rolls, saving throws, "
           + "skill checks, and ability checks. Shaken is a less severe state of fear than "
           + "frightened or panicked.")
-      .summary("-2 Attack, saves, skills, ability checks.")
+      .adjustment("-2 Attack")
+      .adjustment("-2 saves")
+      .adjustment("-2 skills")
+      .adjustment("-2 ability checks")
       .predefined()
       .icon(R.drawable.icons8_cocktail_shaker_50)
       .build();
   public static final ConditionData SICKENED = ConditionData.newBuilder("Sickened")
       .description("The character takes a –2 penalty on all attack rolls, weapon damage "
           + "rolls, saving throws, skill checks, and ability checks.")
-      .summary("-2 attack, damage, saves, skill, ability checks.")
+      .adjustment("-2 attack")
+      .adjustment("-2 damage")
+      .adjustment("-2 saves")
+      .adjustment("-2 skills")
+      .adjustment("-2 ability checks")
       .predefined()
       .icon(R.drawable.icons8_fever_50)
       .build();
@@ -554,8 +684,14 @@ public class Conditions {
           + "Dexterity bonus to AC, moves at half speed only, receives a -4 to Dexterity based skills,"
           + "has -4 on Search, Spot and other visions based skills, and has a 20% miss chance to "
           + "hit opponents.")
-      .summary("-2 AC, not Dex to AC, half speed, -4 Dex skills, -4 Search/Spot/vison skills, "
-          + "20% miss chance")
+      .adjustment("-2 AC")
+      .adjustment("No Dex to AC")
+      .adjustment("Half speed")
+      .adjustment("-4 Dex skills")
+      .adjustment("-4 Search")
+      .adjustment("-4 Spot")
+      .adjustment("-4 vision skills")
+      .adjustment("20% miss chance")
       .predefined()
       .icon(R.drawable.noun_goggles_1126061)
       .dmOnly()
@@ -570,7 +706,8 @@ public class Conditions {
           + "became stable on his own and hasn’t had help, he is still at risk of losing "
           + "hit points. Each hour, he has a 10% chance of becoming conscious and disabled. "
           + "Otherwise he loses 1 hit point.")
-      .summary("Negative hit points but no more losing any.")
+      .adjustment("Negative hit points")
+      .adjustment("No more losing hp")
       .predefined()
       .icon(R.drawable.icons8_dry_flat_50)
       .build();
@@ -581,20 +718,24 @@ public class Conditions {
           + "character whose current hit points exceed his nonlethal damage is no longer "
           + "staggered; a character whose nonlethal damage exceeds his hit points becomes "
           + "unconscious.")
-      .summary("Nonlethal equal current hp, single move or standard action only.")
+      .adjustment("Nonlethal equal current hp")
+      .adjustment("single move or standard action only")
       .predefined()
       .icon(R.drawable.icons8_elderly_person_48)
       .build();
   public static final ConditionData STUNNED = ConditionData.newBuilder("Stunned")
       .description("A stunned creature drops everything held, can’t take actions, takes a –2 "
           + "penalty to AC, and loses his Dexterity bonus to AC (if any).")
-      .summary("Drop everything, can't take actions, -2 AC, not Dex to AC.")
+      .adjustment("Drop everything")
+      .adjustment("Can't take actions")
+      .adjustment("-2 AC")
+      .adjustment("No Dex to AC")
       .predefined()
       .icon(R.drawable.icons8_action_50)
       .build();
   public static final ConditionData SURPRISED = ConditionData.newBuilder("Surprised")
       .description("A character who is surprised in the startEncounter and thus can't initially act.")
-      .summary("Cannot act in the surprise round.")
+      .adjustment("Cannot act (in surprise round)")
       .predefined()
       .dmOnly()
       .icon(R.drawable.noun_gift_15044)
@@ -603,25 +744,32 @@ public class Conditions {
       .description("Affected by a turn undead attempt. Turned undead flee for 10 rounds (1 "
           + "minute) by the best and fastest means available to them. If they cannot flee, "
           + "they cower.")
-      .summary("Fleed for 10 rounds by fastest means.")
+      .adjustment("Fee by fastest means")
       .predefined()
       .icon(R.drawable.icons8_cross_50)
       .build();
-  public static final ConditionData UNCONSCIOUS = ConditionData.newBuilder("Unconscious")
-      .description("Knocked out and helpless. Unconsciousness can result from having current "
-          + "hit points between –1 and –9, or from nonlethal damage in excess of current hit "
-          + "points.")
-      .summary("Knocked out and helpless.")
-      .icon(R.drawable.icons8_sleeping_filled_50)
-      .predefined()
-      .build();
+  public static final ConditionData UNCONSCIOUS_INTELLIGENCE_0 =
+      ConditionData.newBuilder("Unconscious (Int 0)", UNCONSCIOUS)
+          .build();
+  public static final ConditionData UNCONSCIOUS_WISDOM_0 =
+      ConditionData.newBuilder("Unconscious (Wis 0)", UNCONSCIOUS)
+          .build();
+  public static final ConditionData UNCONSCIOUS_CHARISMA_0 =
+      ConditionData.newBuilder("Unconscious (Cha 0)", UNCONSCIOUS)
+          .build();
   public static final ConditionData WHITEOUT = ConditionData.newBuilder("Whiteout")
       .description("In snowstorms or blizzars with strong or stronger winds, characters get into "
           + "a whiteout. Characters suffer a -2 to AC, no Dexterity to AC, half speed, "
           + "-4 on Dexterity checks, -4 on Search, Spot and other vision based skills, "
           + "and only have a visibility of 5 ft.")
-      .summary("-2 AC, no Dex to AC, half speed, -4 on Dex checks, -4 Search/Spot/vision skills, "
-          + "visiblity 5 ft")
+      .adjustment("-2 AC")
+      .adjustment("No Dex to AC")
+      .adjustment("Half speed")
+      .adjustment("-4 on Dex checks")
+      .adjustment("-4 Search")
+      .adjustment("-4 Spot")
+      .adjustment("-4 vision skills")
+      .adjustment("visibility 5ft")
       .icon(R.drawable.noun_snow_1967559)
       .predefined()
       .dmOnly()

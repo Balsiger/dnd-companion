@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.data.values;
 
 import android.support.annotation.Nullable;
 
-import net.ixitxachitls.companion.proto.Value;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -163,11 +161,6 @@ public class TimedCondition {
     }
 
     return data;
-  }
-
-  public static TimedCondition fromProto(Value.TimedConditionProto proto) {
-    return new TimedCondition(ConditionData.fromProto(proto.getCondition()),
-        proto.getSourceId(), proto.getEndRound(), CampaignDate.fromProto(proto.getEndDate()));
   }
 
   public static TimedCondition read(@Nullable Map<String, Object> data) {

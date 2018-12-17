@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_weight="1"
-        android:text="Abilities currently only automatically contain modifiers for levels. Add other modifiers directly in the values here for the moment."
+        android:text="Abilities currently only automatically contain modifiers for levels and conditions. Add other modifiers directly in the values here for the moment."
         android:theme="@style/SmallText"/>
 
     <LinearLayout
@@ -267,8 +267,8 @@
         android:id="@+id/conditions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
     </LinearLayout>
 
     <LinearLayout

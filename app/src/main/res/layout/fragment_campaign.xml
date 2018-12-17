@@ -67,10 +67,10 @@
       android:id="@+id/actionsContainer"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="0dp"
-      android:background="@color/actionBack"
       android:layout_alignParentStart="true"
-      android:layout_alignParentBottom="true">
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="0dp"
+      android:background="@color/actionBack">
 
     <LinearLayout
         android:id="@+id/actions"
@@ -88,6 +88,17 @@
           android:padding="10dp"
           android:tint="@color/action"
           app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
+
+      <ImageView
+          android:id="@+id/refresh"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="0"
+          android:contentDescription="Refresh"
+          android:padding="10dp"
+          android:tint="@color/action"
+          app:srcCompat="@drawable/ic_refresh_black_36dp"/>
 
       <ImageView
           android:id="@+id/edit"

@@ -24,11 +24,13 @@ package net.ixitxachitls.companion.data.enums;
 import net.ixitxachitls.companion.proto.Value;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Representation of an ability of an entity.
  */
 public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
+
   UNKNOWN("Unknown", "UNK", Value.Ability.UNKNOWN),
   STRENGTH("Strength", "STR", Value.Ability.STRENGTH),
   DEXTERITY("Dexterity", "DEX", Value.Ability.DEXTERITY),
@@ -37,6 +39,11 @@ public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
   WISDOM("Wisdom", "WIS", Value.Ability.WISDOM),
   CHARISMA("Charisma", "CHR", Value.Ability.CHARISMA),
   NONE("None", "-", Value.Ability.NONE);
+
+  public static String PATTERN = Arrays.asList(values()).stream()
+      .map(Ability::getName).reduce((a, b) -> a + "|" + b).get()
+      + "|" + Arrays.asList(values()).stream()
+      .map(Ability::getShortName).reduce((a, b) -> a + "|" + b).get();
 
   private final String mName;
   private final String mShortName;
@@ -48,28 +55,27 @@ public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
     this.mProto = proto;
   }
 
+  @Override
   public String getName() {
     return mName;
   }
 
+  @Override
   public String getShortName() {
     return mShortName;
   }
 
+  @Override
   public Value.Ability toProto() {
     return mProto;
   }
 
-  public static Ability fromProto(Value.Ability proto) {
-    return Enums.fromProto(proto, values());
-  }
-
-  public static ArrayList<String> names() {
-    return Enums.names(values());
-  }
-
   public static Ability fromName(String name) {
     return Enums.fromName(name, values());
+  }
+
+  public static Ability fromProto(Value.Ability proto) {
+    return Enums.fromProto(proto, values());
   }
 
   public static int modifier(int value) {
@@ -77,5 +83,9 @@ public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
       return 0;
 
     return (int) (value / 2) - 5;
+  }
+
+  public static ArrayList<String> names() {
+    return Enums.names(values());
   }
 }

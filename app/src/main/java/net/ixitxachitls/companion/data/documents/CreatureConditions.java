@@ -51,6 +51,45 @@ public class CreatureConditions extends Documents<CreatureConditions> {
     super(context);
   }
 
+  @Override
+  @CallSuper
+  public void delete(String id) {
+    super.delete(id);
+
+    removeFromList(id, conditionsByCreatureId.getOrDefault(id, Collections.emptyList()));
+  }
+
+  public void deleteAll(String name, String creatureId) {
+    for (CreatureCondition condition
+        : conditionsByCreatureId.getOrDefault(creatureId, Collections.emptyList())) {
+      if (condition.getCondition().getName().equals(name)) {
+        delete(condition.getId());
+      }
+    }
+  }
+
+  public void deleteCreatureConditions(String creatureId) {
+    for (CreatureCondition condition : getCreatureConditions(creatureId)) {
+      delete(condition.getId());
+    }
+
+    conditionsByCreatureId.remove(creatureId);
+  }
+
+  public void deleteRoundBasedCreatureConditions() {
+    for (String id : conditionsByCreatureId.keySet()) {
+      deleteRoundBasedCreatureConditions(id);
+    }
+  }
+
+  public void deleteRoundBasedCreatureConditions(String creatureId) {
+    for (CreatureCondition condition : getCreatureConditions(creatureId)) {
+      if (!condition.getCondition().hasEndDate()) {
+        delete(condition.getId());
+      }
+    }
+  }
+
   public List<CreatureCondition> getCreatureConditions(String creatureId) {
     return conditionsByCreatureId.getOrDefault(creatureId, Collections.emptyList());
   }
@@ -59,6 +98,17 @@ public class CreatureConditions extends Documents<CreatureConditions> {
     return getCreatureConditions(creatureId).stream()
         .map(CreatureCondition::getCondition)
         .collect(Collectors.toList());
+  }
+
+  public boolean hasCondition(String creatureId, String name) {
+    for (CreatureCondition condition
+        : conditionsByCreatureId.getOrDefault(creatureId, Collections.emptyList())) {
+      if (condition.getCondition().getName().equals(name)) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   public void readConditions(List<String> creatureIds) {
@@ -89,56 +139,6 @@ public class CreatureConditions extends Documents<CreatureConditions> {
 
     conditionsByCreatureId.put(creatureId, conditions);
     updated();
-  }
-
-  public void deleteRoundBasedCreatureConditions() {
-    for (String id : conditionsByCreatureId.keySet()) {
-      deleteRoundBasedCreatureConditions(id);
-    }
-  }
-
-  public void deleteRoundBasedCreatureConditions(String creatureId) {
-    for (CreatureCondition condition : getCreatureConditions(creatureId)) {
-      if (!condition.getCondition().hasEndDate()) {
-        delete(condition.getId());
-      }
-    }
-  }
-
-  public void deleteCreatureConditions(String creatureId) {
-    for (CreatureCondition condition : getCreatureConditions(creatureId)) {
-      delete(condition.getId());
-    }
-
-    conditionsByCreatureId.remove(creatureId);
-  }
-
-  public boolean hasCondition(String creatureId, String name) {
-    for (CreatureCondition condition
-        : conditionsByCreatureId.getOrDefault(creatureId, Collections.emptyList())) {
-      if (condition.getCondition().getName().equals(name)) {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  @Override
-  @CallSuper
-  public void delete(String id) {
-    super.delete(id);
-
-    removeFromList(id, conditionsByCreatureId.getOrDefault(id, Collections.emptyList()));
-  }
-
-  public void deleteAll(String name, String creatureId) {
-    for (CreatureCondition condition
-        : conditionsByCreatureId.getOrDefault(creatureId, Collections.emptyList())) {
-      if (condition.getCondition().getName().equals(name)) {
-        delete(condition.getId());
-      }
-    }
   }
 
   private void removeFromList(String id, List<CreatureCondition> conditions) {

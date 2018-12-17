@@ -30,6 +30,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -38,30 +39,31 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  */
 public class NumberAdjustDialog extends Dialog {
 
+  private static final String ARG_LABEL = "label";
+  private static final String ARG_DESCRIPTION = "description";
+  private LabelledEditTextView input;
+  private Action action;
   @FunctionalInterface
   public interface Action {
     void adjust(int value);
   }
 
-  private static final String ARG_LABEL = "label";
-  private static final String ARG_DESCRIPTION = "description";
+  public NumberAdjustDialog setAdjustAction(Action action) {
+    this.action = action;
 
-  private LabelledEditTextView input;
-  private Action action;
-
-  public static NumberAdjustDialog newInstance(@StringRes int title, @ColorRes int color,
-                                               String label, String description) {
-    NumberAdjustDialog dialog = new NumberAdjustDialog();
-    dialog.setArguments(arguments(R.layout.dialog_number_adjust, title, color, label, description));
-    return dialog;
+    return this;
   }
 
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String label , String description) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_LABEL, label);
-    arguments.putString(ARG_DESCRIPTION, description);
-    return arguments;
+  private void add() {
+    if (action != null && !input.getText().isEmpty()) {
+      try {
+        action.adjust(Integer.parseInt(input.getText()));
+      } catch (NumberFormatException e) {
+        Status.toast("Invalid number ignored");
+      }
+    }
+
+    save();
   }
 
   @Override
@@ -80,25 +82,30 @@ public class NumberAdjustDialog extends Dialog {
         .onClick(this::subtract);
   }
 
-  public NumberAdjustDialog setAdjustAction(Action action) {
-    this.action = action;
-
-    return this;
-  }
-
-  private void add() {
-    if (action != null) {
-      action.adjust(Integer.parseInt(input.getText()));
-    }
-
-    save();
-  }
-
   private void subtract() {
-    if (action != null) {
-      action.adjust(- Integer.parseInt(input.getText()));
+    if (action != null && !input.getText().isEmpty()) {
+      try {
+        action.adjust(-Integer.parseInt(input.getText()));
+      } catch (NumberFormatException e) {
+        Status.toast("Invalid number ignored");
+      }
     }
 
     save();
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String label , String description) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_LABEL, label);
+    arguments.putString(ARG_DESCRIPTION, description);
+    return arguments;
+  }
+
+  public static NumberAdjustDialog newInstance(@StringRes int title, @ColorRes int color,
+                                               String label, String description) {
+    NumberAdjustDialog dialog = new NumberAdjustDialog();
+    dialog.setArguments(arguments(R.layout.dialog_number_adjust, title, color, label, description));
+    return dialog;
   }
 }

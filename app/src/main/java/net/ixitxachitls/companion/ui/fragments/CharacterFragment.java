@@ -41,6 +41,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.CreatureConditions;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
@@ -79,6 +80,23 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   @Override
+  public boolean goBack() {
+    // TODO(merlin): Maybe there is a better way than this?
+    // Remove the pager from the screen as otherwise transitions try to attach the
+    // view pager title to a weird view and thus an exception is thrown.
+    if (pager.getParent() != null) {
+      ((ViewGroup) pager.getParent()).removeView(pager);
+    }
+
+    if (campaign.isPresent()) {
+      CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
+    } else {
+      CompanionFragments.get().show(Type.campaigns, Optional.empty());
+    }
+    return true;
+  }
+
+  @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
@@ -92,7 +110,6 @@ public class CharacterFragment extends CompanionFragment {
         .onClick(this::goBack)
         .description("Back to Campaign", "Go back to this characters campaign view.");
     title = view.findViewById(R.id.title);
-    images().observe(this, title::update);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
 
     edit = Wrapper.<ImageView>wrap(view, R.id.edit).gone();
@@ -111,10 +128,21 @@ public class CharacterFragment extends CompanionFragment {
       update(character.get());
     }
 
+    images().observe(this, title::update);
     characters().observe(this, this::update);
     messages().observe(this, this::update);
+    conditions().observe(this, this::update);
 
     return view;
+  }
+
+  @Override
+  public void onStart() {
+    super.onStart();
+
+    TabLayout tabs = pager.findViewById(R.id.tabs);
+    tabs.getTabAt(0).setIcon(R.drawable.ic_information_outline_black_24dp);
+    tabs.getTabAt(1).setIcon(R.drawable.noun_backpack_16138);
   }
 
   @Override
@@ -138,13 +166,36 @@ public class CharacterFragment extends CompanionFragment {
     update(character);
   }
 
-  @Override
-  public void onStart() {
-    super.onStart();
+  private void copy() {
+    if (character.isPresent()) {
+      //character.get().copy();
+      Status.toast("The character has been copied.");
+    }
+  }
 
-    TabLayout tabs = pager.findViewById(R.id.tabs);
-    tabs.getTabAt(0).setIcon(R.drawable.ic_information_outline_black_24dp);
-    tabs.getTabAt(1).setIcon(R.drawable.noun_backpack_16138);
+  private void delete() {
+    ConfirmationPrompt.create(getContext())
+        .title(getResources().getString(R.string.character_delete_title))
+        .message(getResources().getString(R.string.character_delete_message))
+        .yes(this::deleteCharacterOk)
+        .show();
+  }
+
+  private void deleteCharacterOk() {
+    if (character.isPresent()) {
+      characters().delete(character.get());
+      Toast.makeText(getActivity(), getString(R.string.character_deleted),
+          Toast.LENGTH_SHORT).show();
+
+      storeOnPause = false;
+      if (campaign.isPresent()) {
+        show(Type.campaign);
+      }
+    }
+  }
+
+  private void update(CreatureConditions conditions) {
+    update(characters());
   }
 
   private void update(Characters characters) {
@@ -180,51 +231,6 @@ public class CharacterFragment extends CompanionFragment {
 
   private void update(Messages messages) {
     title.update(messages);
-  }
-
-  private void delete() {
-    ConfirmationPrompt.create(getContext())
-        .title(getResources().getString(R.string.character_delete_title))
-        .message(getResources().getString(R.string.character_delete_message))
-        .yes(this::deleteCharacterOk)
-        .show();
-  }
-
-  private void deleteCharacterOk() {
-    if (character.isPresent()) {
-      characters().delete(character.get());
-      Toast.makeText(getActivity(), getString(R.string.character_deleted),
-          Toast.LENGTH_SHORT).show();
-
-      storeOnPause = false;
-      if (campaign.isPresent()) {
-        show(Type.campaign);
-      }
-    }
-  }
-
-  private void copy() {
-    if (character.isPresent()) {
-      //character.get().copy();
-      Status.toast("The character has been copied.");
-    }
-  }
-
-  @Override
-  public boolean goBack() {
-    // TODO(merlin): Maybe there is a better way than this?
-    // Remove the pager from the screen as otherwise transitions try to attach the
-    // view pager title to a weird view and thus an exception is thrown.
-    if (pager.getParent() != null) {
-      ((ViewGroup) pager.getParent()).removeView(pager);
-    }
-
-    if (campaign.isPresent()) {
-      CompanionFragments.get().showCampaign(campaign.get(), Optional.of(title));
-    } else {
-      CompanionFragments.get().show(Type.campaigns, Optional.empty());
-    }
-    return true;
   }
 
   public class CharacterPagerAdapter extends FragmentPagerAdapter {

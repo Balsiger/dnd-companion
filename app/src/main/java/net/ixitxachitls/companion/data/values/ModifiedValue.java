@@ -24,70 +24,75 @@ package net.ixitxachitls.companion.data.values;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
- * A base D&D value with potential modifiers.
+ * A base D&D value with potential stackingModifiers.
  */
 public class ModifiedValue {
 
   private final int base;
-  private final List<Modifier> modifiers = new ArrayList<>();
+  private final int min;
+  private final List<Modifier> stackingModifiers = new ArrayList<>();
+  private final List<Modifier> unstackingModifiers = new ArrayList<>();
 
   public ModifiedValue(int base) {
-    this.base = base;
+    this(base, Integer.MIN_VALUE);
   }
 
-  public ModifiedValue add(Modifier modifier) {
-    this.modifiers.add(modifier);
-
-    return this;
+  public ModifiedValue(int base, int min) {
+    this.base = base;
+    this.min = min;
   }
 
   public int getBase() {
     return base;
   }
 
-  public int total() {
-    int total = base;
+  public ModifiedValue add(Modifier modifier) {
+    for (Modifier existing : stackingModifiers) {
+      if (!Modifier.stacks(existing, modifier)) {
+        if (Modifier.precedence(existing, modifier) == modifier) {
+          // The new modifier does not stack with an existing modifier and takes precedence.
+          stackingModifiers.remove(existing);
+          stackingModifiers.add(modifier);
+          unstackingModifiers.add(existing);
+        } else {
+          // The new modifier does not stack with an existing modifier and does not take precedence.
+          unstackingModifiers.add(modifier);
+        }
 
-    for (Modifier modifier : stackedOnly(modifiers)) {
-      total += modifier.getValue();
+        return this;
+      }
     }
 
-    return total;
+    stackingModifiers.add(modifier);
+    return this;
   }
 
   public String describeModifiers() {
     List<String> lines = new ArrayList<>();
-    for (Modifier modifier : modifiers) {
+    lines.add("Base value " + base);
+    for (Modifier modifier : stackingModifiers) {
       lines.add(modifier.toString());
+    }
+    for (Modifier modifier : unstackingModifiers) {
+      lines.add(modifier.toString() + " [does not stack]");
     }
 
     return Strings.NEWLINE_JOINER.join(lines);
   }
 
-  private static List<Modifier> stackedOnly(List<Modifier> modifiers) {
-    List<Modifier> results = new ArrayList<>();
-
-    for (Modifier modifier : modifiers) {
-      addStacked(results, modifier);
+  public int total() {
+    int total = base;
+    for (Modifier modifier : stackingModifiers) {
+      total += modifier.getValue();
     }
 
-    return results;
-  }
-
-  private static void addStacked(List<Modifier> modifiers, Modifier modifierToAdd) {
-    for (Iterator<Modifier> i = modifiers.iterator(); i.hasNext(); ) {
-      Modifier modifier = i.next();
-      if (Modifier.stacks(modifier, modifierToAdd)) {
-        i.remove();
-        modifiers.add(Modifier.precedence(modifier, modifierToAdd));
-        return;
-      }
+    if (total < min) {
+      return min;
+    } else {
+      return total;
     }
-
-    modifiers.add(modifierToAdd);
   }
 }

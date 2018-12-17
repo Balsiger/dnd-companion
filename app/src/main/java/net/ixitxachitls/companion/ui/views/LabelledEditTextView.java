@@ -25,6 +25,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.annotation.ColorRes;
 import android.text.InputType;
+import android.text.Spanned;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.EditText;
@@ -49,8 +50,90 @@ public class LabelledEditTextView extends AbstractLabelledView {
     super(context, attributes, R.layout.view_labelled_edit_text);
   }
 
+  public String getText() {
+    return text.getText();
+  }
+
   public boolean isEmpty() {
     return text.isEmpty();
+  }
+
+  public LabelledEditTextView description(String title, String description) {
+    setDescription(title, description);
+
+    return this;
+  }
+
+  public LabelledEditTextView disabled() {
+    text.hideLine();;
+    return enabled(false);
+  }
+
+  public LabelledEditTextView enabled(boolean enabled) {
+    text.enabled(enabled);
+    return this;
+  }
+
+  public LabelledEditTextView enabled() {
+    return enabled(true);
+  }
+
+  public LabelledEditTextView label(String label) {
+    this.label.text(label);
+
+    return this;
+  }
+
+  public LabelledEditTextView lineColor(@ColorRes int color) {
+    text.lineColor(color);
+
+    return this;
+  }
+
+  public LabelledEditTextView onBlur(Wrapper.Action action) {
+    text.onBlur(action);
+    return this;
+  }
+
+  public LabelledEditTextView onChange(Wrapper.Action action) {
+    text.onChange(action);
+
+    return this;
+  }
+
+  public LabelledEditTextView onEdit(Wrapper.Action action) {
+    text.onEdit(action);
+
+    return this;
+  }
+
+  public LabelledEditTextView text(String text) {
+    this.text.text(text);
+
+    return this;
+  }
+
+  public LabelledEditTextView text(Spanned text) {
+    this.text.text(text);
+
+    return this;
+  }
+
+  public LabelledEditTextView textColor(@ColorRes int color) {
+    text.textColor(color);
+
+    return this;
+  }
+
+  public LabelledEditTextView type(int type) {
+    text.get().setInputType(type);
+
+    return this;
+  }
+
+  public LabelledEditTextView validate(EditTextWrapper.Validator validator) {
+    text.validate(validator);
+    return this;
   }
 
   @Override
@@ -76,81 +159,5 @@ public class LabelledEditTextView extends AbstractLabelledView {
     if (type != 0) {
       text.get().setInputType(type);
     }
-  }
-
-  public String getText() {
-    return text.getText();
-  }
-
-  public LabelledEditTextView type(int type) {
-    text.get().setInputType(type);
-
-    return this;
-  }
-
-  public LabelledEditTextView label(String label) {
-    this.label.text(label);
-
-    return this;
-  }
-
-  public LabelledEditTextView description(String title, String description) {
-    setDescription(title, description);
-
-    return this;
-  }
-
-  public LabelledEditTextView textColor(@ColorRes int color) {
-    text.textColor(color);
-
-    return this;
-  }
-
-  public LabelledEditTextView lineColor(@ColorRes int color) {
-    text.lineColor(color);
-
-    return this;
-  }
-
-  public LabelledEditTextView text(String text) {
-    this.text.text(text);
-
-    return this;
-  }
-
-  public LabelledEditTextView onEdit(Wrapper.Action action) {
-    text.onEdit(action);
-
-    return this;
-  }
-
-  public LabelledEditTextView onChange(Wrapper.Action action) {
-    text.onChange(action);
-
-    return this;
-  }
-
-  public LabelledEditTextView onBlur(Wrapper.Action action) {
-    text.onBlur(action);
-    return this;
-  }
-
-  public LabelledEditTextView enabled(boolean enabled) {
-    text.enabled(enabled);
-    return this;
-  }
-
-  public LabelledEditTextView disabled() {
-    text.hideLine();;
-    return enabled(false);
-  }
-
-  public LabelledEditTextView enabled() {
-    return enabled(true);
-  }
-
-  public LabelledEditTextView validate(EditTextWrapper.Validator validator) {
-    text.validate(validator);
-    return this;
   }
 }

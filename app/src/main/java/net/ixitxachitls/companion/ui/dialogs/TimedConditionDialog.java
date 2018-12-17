@@ -40,6 +40,7 @@ import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.Monster;
+import net.ixitxachitls.companion.data.values.Adjustment;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.TimedCondition;
@@ -49,6 +50,7 @@ import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -87,21 +89,6 @@ public class TimedConditionDialog extends Dialog {
   public TimedConditionDialog() {
   }
 
-  public static TimedConditionDialog newInstance(String creatureOrCampaignId, int currentRound) {
-    TimedConditionDialog dialog = new TimedConditionDialog();
-    dialog.setArguments(arguments(R.layout.dialog_timed_condition,
-        R.string.edit_timed_condition, R.color.character, creatureOrCampaignId, currentRound));
-    return dialog;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String creatureOrCampaignId, int currentRound) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ID, creatureOrCampaignId);
-    arguments.putInt(ARG_ROUND, currentRound);
-    return arguments;
-  }
-
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -118,6 +105,45 @@ public class TimedConditionDialog extends Dialog {
     } else {
       campaign = campaigns().get(id);
     }
+  }
+
+  @Override
+  protected void save() {
+    List<String> ids = new ArrayList<>();
+    for (Map.Entry<String, CheckBox> entry : checkboxesByCreatureId.entrySet()) {
+      if (entry.getValue().isChecked()) {
+        ids.add(entry.getKey());
+      }
+    }
+
+    Duration duration = extractDuration();
+    if (!ids.isEmpty() && !duration.isNone()) {
+      ConditionData cond = ConditionData.newBuilder(condition.getText())
+          .description(description.getText())
+          .adjustments(parseAdjustments(summary.getText(), condition.getText()))
+          .duration(duration)
+          .predefined(predefined)
+          .build();
+      TimedCondition timed;
+      if (duration.isRounds()) {
+        timed = new TimedCondition(cond, id, currentRound + duration.getRounds());
+      } else if (duration.isPermanent()) {
+        timed = new TimedCondition(cond, id);
+      } else {
+        timed = new TimedCondition(cond, id,
+            campaign.get().getCalendar().add(campaign.get().getDate(), duration));
+      }
+      for (String id : ids) {
+        Optional<? extends Creature> target = characters().getCreature(id);
+        if (target.isPresent()) {
+          target.get().addCondition(timed);
+        } else {
+          Status.error("Creature " + id + " not found to add condition!");
+        }
+      }
+    }
+
+    super.save();
   }
 
   @Override
@@ -170,24 +196,6 @@ public class TimedConditionDialog extends Dialog {
     }
   }
 
-  private List<ConditionData> conditions(Creature<?> creature) {
-    List<ConditionData> conditions = new ArrayList<>();
-
-    if (creature instanceof Character) {
-      conditions.addAll(((Character) creature).getConditionsHistory());
-    }
-
-    conditions.addAll(Conditions.CONDITIONS);
-
-    return conditions;
-  }
-
-  private List<String> conditionNames(Creature<?> creature) {
-    return conditions(creature).stream()
-        .map(ConditionData::getName)
-        .collect(Collectors.toList());
-  }
-
   private void addCheckbox(View view, String creatureId, String name) {
     CheckBox checkbox = new CheckBox(getContext());
     checkbox.setText(name);
@@ -199,17 +207,22 @@ public class TimedConditionDialog extends Dialog {
     checkboxesByCreatureId.put(creatureId, checkbox);
   }
 
-  private void selectCondition() {
-    displayCondition(findCondition(creature, condition.getText()));
+  private List<String> conditionNames(Creature<?> creature) {
+    return conditions(creature).stream()
+        .map(ConditionData::getName)
+        .collect(Collectors.toList());
   }
 
-  private void selectCondition(Optional<ConditionData> condition) {
-    if (condition.isPresent()) {
-      this.condition.text(condition.get().getName());
-    } else {
-      this.condition.text("");
+  private List<ConditionData> conditions(Creature<?> creature) {
+    List<ConditionData> conditions = new ArrayList<>();
+
+    if (creature instanceof Character) {
+      conditions.addAll(((Character) creature).getConditionsHistory());
     }
-    displayCondition(condition);
+
+    conditions.addAll(Conditions.CONDITIONS);
+
+    return conditions;
   }
 
   private void displayCondition(Optional<ConditionData> condition) {
@@ -234,7 +247,7 @@ public class TimedConditionDialog extends Dialog {
       permanent.get().setChecked(duration.isPermanent());
 
       description.text(condition.get().getDescription()).enabled(!predefined);
-      summary.text(condition.get().getSummary()).enabled(!predefined);
+      summary.text(condition.get().getSummarySpanned()).enabled(!predefined);
     } else {
       rounds.text("");
       minutes.text("");
@@ -248,6 +261,23 @@ public class TimedConditionDialog extends Dialog {
     update();
   }
 
+  private Duration extractDuration() {
+    if (permanent.get().isChecked()) {
+      return Duration.PERMANENT;
+    }
+
+    if (!rounds.getText().isEmpty()) {
+      return Duration.rounds(extractInt(rounds));
+    }
+
+    return Duration.time(
+        extractInt(years), extractInt(days), extractInt(hours), extractInt(minutes));
+  }
+
+  private int extractInt(LabelledEditTextView view) {
+    return view.getText().isEmpty() ? 0 : Integer.parseInt(view.getText());
+  }
+
   private Optional<ConditionData> findCondition(Optional<? extends Creature<?>> creature, String name) {
     if (creature.isPresent()) {
       for (ConditionData condition : conditions(creature.get())) {
@@ -258,6 +288,39 @@ public class TimedConditionDialog extends Dialog {
     }
 
     return Conditions.get(name);
+  }
+
+  private List<Adjustment> parseAdjustments(String text, String source) {
+    List<String> parts = Arrays.asList(text.split(",\\s*"));
+    List<Adjustment> adjustments = new ArrayList<>();
+    for (String part : parts) {
+      adjustments.add(Adjustment.parse(part, source));
+    }
+
+    return adjustments;
+  }
+
+  private void selectCondition() {
+    displayCondition(findCondition(creature, condition.getText()));
+  }
+
+  private void selectCondition(Optional<ConditionData> condition) {
+    if (condition.isPresent()) {
+      this.condition.text(condition.get().getName());
+    } else {
+      this.condition.text("");
+    }
+    displayCondition(condition);
+  }
+
+  private boolean targetSelected() {
+    for (Map.Entry<String, CheckBox> entry : checkboxesByCreatureId.entrySet()) {
+      if (entry.getValue().isChecked()) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   private void update() {
@@ -296,70 +359,19 @@ public class TimedConditionDialog extends Dialog {
     }
   }
 
-  private boolean targetSelected() {
-    for (Map.Entry<String, CheckBox> entry : checkboxesByCreatureId.entrySet()) {
-      if (entry.getValue().isChecked()) {
-        return true;
-      }
-    }
-
-    return false;
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String creatureOrCampaignId, int currentRound) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_ID, creatureOrCampaignId);
+    arguments.putInt(ARG_ROUND, currentRound);
+    return arguments;
   }
 
-  @Override
-  protected void save() {
-    List<String> ids = new ArrayList<>();
-    for (Map.Entry<String, CheckBox> entry : checkboxesByCreatureId.entrySet()) {
-      if (entry.getValue().isChecked()) {
-        ids.add(entry.getKey());
-      }
-    }
-
-    Duration duration = extractDuration();
-    if (!ids.isEmpty() && !duration.isNone()) {
-      ConditionData cond = ConditionData.newBuilder(condition.getText())
-          .description(description.getText())
-          .summary(summary.getText())
-          .duration(duration)
-          .predefined(predefined)
-          .build();
-      TimedCondition timed;
-      if (duration.isRounds()) {
-        timed = new TimedCondition(cond, id, currentRound + duration.getRounds());
-      } else if (duration.isPermanent()) {
-        timed = new TimedCondition(cond, id);
-      } else {
-        timed = new TimedCondition(cond, id,
-            campaign.get().getCalendar().add(campaign.get().getDate(), duration));
-      }
-      for (String id : ids) {
-        Optional<? extends Creature> target = characters().getCreature(id);
-        if (target.isPresent()) {
-          target.get().addCondition(timed);
-        } else {
-          Status.error("Creature " + id + " not found to add condition!");
-        }
-      }
-    }
-
-    super.save();
-  }
-
-  private Duration extractDuration() {
-    if (permanent.get().isChecked()) {
-      return Duration.PERMANENT;
-    }
-
-    if (!rounds.getText().isEmpty()) {
-      return Duration.rounds(extractInt(rounds));
-    }
-
-    return Duration.time(
-        extractInt(years), extractInt(days), extractInt(hours), extractInt(minutes));
-  }
-
-  private int extractInt(LabelledEditTextView view) {
-    return view.getText().isEmpty() ? 0 : Integer.parseInt(view.getText());
+  public static TimedConditionDialog newInstance(String creatureOrCampaignId, int currentRound) {
+    TimedConditionDialog dialog = new TimedConditionDialog();
+    dialog.setArguments(arguments(R.layout.dialog_timed_condition,
+        R.string.edit_timed_condition, R.color.character, creatureOrCampaignId, currentRound));
+    return dialog;
   }
 
 }

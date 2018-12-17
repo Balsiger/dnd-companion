@@ -26,7 +26,6 @@ import android.support.annotation.ColorRes;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.widget.LinearLayout;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.CreatureCondition;
 import net.ixitxachitls.companion.util.Strings;
@@ -42,13 +41,12 @@ public class ConditionIconsView extends LinearLayout {
 
   private final int backgroundColor;
   private final int foregroundColor;
-  private List<CreatureCondition> conditions = Collections.emptyList();
   private final UpdatableViewGroup<ConditionIconsView, ConditionIconView, CreatureCondition>
       updatable;
-
   // UI elements.
   private final HPImageView hp;
   private final NonlethalImageView nonlethal;
+  private List<CreatureCondition> conditions = Collections.emptyList();
 
   public ConditionIconsView(Context context, @LinearLayoutCompat.OrientationMode int orientation,
                             @ColorRes int foregroundColor, @ColorRes int backgroundColor) {
@@ -60,6 +58,21 @@ public class ConditionIconsView extends LinearLayout {
     setOrientation(orientation);
     hp = new HPImageView(getContext());
     nonlethal = new NonlethalImageView(getContext());
+  }
+
+  public String summary() {
+    String summary = Strings.SEMICOLON_JOINER.join(conditions.stream()
+        .map(c -> c.getCondition().getSummary()).collect(Collectors.toList()));
+    if (summary.isEmpty()) {
+      return "No conditions";
+    }
+
+    return summary;
+  }
+
+  public void update(List<CreatureCondition> conditions) {
+    this.conditions = conditions;
+    redraw();
   }
 
   public void update(Creature<?> creature) {
@@ -74,7 +87,7 @@ public class ConditionIconsView extends LinearLayout {
     }
     nonlethal.setNonlethalDamage(creature.getNonlethalDamage(), creature.getHp());
 
-    update(CompanionApplication.get().conditions().getCreatureConditions(creature.getId()));
+    update(creature.getAdjustedConditions());
   }
 
   private void redraw() {
@@ -84,20 +97,5 @@ public class ConditionIconsView extends LinearLayout {
 
     addView(nonlethal, 0);
     addView(hp, 0);
-  }
-
-  public void update(List<CreatureCondition> conditions) {
-    this.conditions = conditions;
-    redraw();
-  }
-
-  public String summary() {
-    String summary = Strings.SEMICOLON_JOINER.join(conditions.stream()
-        .map(c -> c.getCondition().getSummary()).collect(Collectors.toList()));
-    if (summary.isEmpty()) {
-      return "No conditions";
-    }
-
-    return summary;
   }
 }

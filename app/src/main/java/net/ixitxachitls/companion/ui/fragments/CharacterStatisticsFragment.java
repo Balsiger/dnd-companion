@@ -126,12 +126,12 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       return;
     }
 
-    strength.value(Ability.STRENGTH, character.getStrength());
-    dexterity.value(Ability.DEXTERITY, character.getDexterity());
-    constitution.value(Ability.CONSTITUTION, character.getConstitution());
-    intelligence.value(Ability.INTELLIGENCE, character.getIntelligence());
-    wisdom.value(Ability.WISDOM, character.getWisdom());
-    charisma.value(Ability.CHARISMA, character.getCharisma());
+    strength.update(Ability.STRENGTH, character.getStrength());
+    dexterity.update(Ability.DEXTERITY, character.getDexterity());
+    constitution.update(Ability.CONSTITUTION, character.getConstitution());
+    intelligence.update(Ability.INTELLIGENCE, character.getIntelligence());
+    wisdom.update(Ability.WISDOM, character.getWisdom());
+    charisma.update(Ability.CHARISMA, character.getCharisma());
 
     xp.text(String.valueOf(character.getXp()));
     hp.text(String.valueOf(character.getHp()))
@@ -145,7 +145,8 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
   protected void redraw() {
     if (character.isPresent()) {
-      xpNext.text("(next level " + XP.xpForLevel(character.get().getLevel() + 1) + ")");
+      int level = character.get().getLevel();
+      xpNext.text("(next level " + XP.xpForLevel(level <= 1 ? 2 : level +1) + ")");
       hp.text(String.valueOf(character.get().getHp()));
       levels.text(Level.summarized(character.get().getLevels()));
       levelUp.visible(character.get().getMaxLevel() > character.get().getLevel()

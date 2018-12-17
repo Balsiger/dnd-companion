@@ -53,35 +53,6 @@ public class CampaignTitleView extends TitleView {
     super(context, attributes);
   }
 
-  @Override
-  @CallSuper
-  protected View init(AttributeSet attributes) {
-    View view = super.init(attributes);
-
-    container.setBackgroundColor(getContext().getColor(R.color.campaign));
-    setDefaultImage(R.drawable.image_filter_hdr);
-    return view;
-  }
-
-
-  public void update(Campaign campaign) {
-    this.campaign = Optional.of(campaign);
-    campaign.getContext().messages().readMessages(campaign.getId());
-    refresh();
-  }
-
-  public void update(User dm) {
-    refresh();
-  }
-
-  public void update(Images images) {
-    refresh();
-  }
-
-  public void update(Messages messaages) {
-    updateMessages();
-  }
-
   public void refresh() {
     if (campaign.isPresent()) {
       setTitle(campaign.get().getName());
@@ -98,6 +69,34 @@ public class CampaignTitleView extends TitleView {
     }
   }
 
+  public void update(User dm) {
+    refresh();
+  }
+
+  public void update(Images images) {
+    refresh();
+  }
+
+  public void update(Messages messages) {
+    updateMessages();
+  }
+
+  public void update(Campaign campaign) {
+    this.campaign = Optional.of(campaign);
+    campaign.getContext().messages().readMessages(campaign.getId());
+    refresh();
+  }
+
+  @Override
+  @CallSuper
+  protected View init(AttributeSet attributes) {
+    View view = super.init(attributes);
+
+    container.setBackgroundColor(getContext().getColor(R.color.campaign));
+    setDefaultImage(R.drawable.image_filter_hdr);
+    return view;
+  }
+
   @Override
   protected List<Integer> iconDrawableResources() {
     List<Integer> resources = super.iconDrawableResources();
@@ -111,7 +110,7 @@ public class CampaignTitleView extends TitleView {
   @Override
   protected List<Message> messageIcons() {
     List<Message> messages = super.messageIcons();
-    if (campaign.isPresent()) {
+    if (campaign.isPresent() && campaign.get().amDM()) {
       messages.addAll(CompanionApplication.get().messages().getMessages(campaign.get().getId()));
     }
 

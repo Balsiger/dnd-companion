@@ -31,24 +31,13 @@ import java.util.ArrayList;
 
 public class Enums {
 
-  public static <E extends Named> ArrayList<String> names(E []values) {
-    ArrayList<String> names = new ArrayList<>();
-    for(E value : values)
-      names.add(value.getName());
-
-    return names;
+  public interface Named {
+    String getName();
+    String getShortName();
   }
 
-  public static <E extends Named> ArrayList<String> names(E []values, E ... without) {
-    ArrayList<String> names = new ArrayList<>();
-    for (E value : values) {
-      if (contains(without, value)) {
-        continue;
-      }
-      names.add(value.getName());
-    }
-
-    return names;
+  public interface Proto<P extends Internal.EnumLite> {
+    P toProto();
   }
 
   private static <E extends Named> boolean contains(E [] values, E check) {
@@ -63,7 +52,7 @@ public class Enums {
 
   public static <E extends Named> E fromName(String name, E []values) {
     for(E value : values)
-      if (value.getName().equals(name))
+      if (value.getName().equalsIgnoreCase(name))
         return value;
 
     throw new IllegalArgumentException("cannot convert " + values[0].getClass().getName()
@@ -80,12 +69,23 @@ public class Enums {
         + ": " + proto);
   }
 
-  public interface Named {
-    String getName();
-    String getShortName();
+  public static <E extends Named> ArrayList<String> names(E []values, E ... without) {
+    ArrayList<String> names = new ArrayList<>();
+    for (E value : values) {
+      if (contains(without, value)) {
+        continue;
+      }
+      names.add(value.getName());
+    }
+
+    return names;
   }
 
-  public interface Proto<P extends Internal.EnumLite> {
-    P toProto();
+  public static <E extends Named> ArrayList<String> names(E []values) {
+    ArrayList<String> names = new ArrayList<>();
+    for(E value : values)
+      names.add(value.getName());
+
+    return names;
   }
 }

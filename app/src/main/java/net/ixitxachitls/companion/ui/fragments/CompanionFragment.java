@@ -27,6 +27,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.CreatureConditions;
 import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Invites;
 import net.ixitxachitls.companion.data.documents.Messages;
@@ -54,22 +55,22 @@ public abstract class CompanionFragment extends Fragment {
     return type;
   }
 
+  public abstract boolean goBack();
+
+  @Override
+  public void onResume() {
+    super.onResume();
+
+    Status.log("resumed fragment " + getClass().getSimpleName());
+    CompanionFragments.get().resumed(this);
+  }
+
   public void toast(String message) {
     Status.toast(message);
   }
 
-  protected void show(Type fragment) {
-    CompanionFragments.get().show(fragment, Optional.empty());
-  }
-
-  public abstract boolean goBack();
-
   protected CompanionApplication application() {
     return CompanionApplication.get(getContext());
-  }
-
-  protected User me() {
-    return application().me();
   }
 
   protected Campaigns campaigns() {
@@ -80,7 +81,11 @@ public abstract class CompanionFragment extends Fragment {
     return application().characters();
   }
 
-  protected Monsters monsters() {
+  protected CreatureConditions conditions() {
+    return application().conditions();
+  }
+
+  protected Monsters creatures() {
     return application().monsters();
   }
 
@@ -88,23 +93,23 @@ public abstract class CompanionFragment extends Fragment {
     return application().images();
   }
 
-  protected Messages messages() {
-    return application().messages();
-  }
-
   protected Invites invites() {
     return application().invites();
   }
 
-  protected Monsters creatures() {
+  protected User me() {
+    return application().me();
+  }
+
+  protected Messages messages() {
+    return application().messages();
+  }
+
+  protected Monsters monsters() {
     return application().monsters();
   }
 
-  @Override
-  public void onResume() {
-    super.onResume();
-
-    Status.log("resumed fragment " + getClass().getSimpleName());
-    CompanionFragments.get().resumed(this);
+  protected void show(Type fragment) {
+    CompanionFragments.get().show(fragment, Optional.empty());
   }
 }

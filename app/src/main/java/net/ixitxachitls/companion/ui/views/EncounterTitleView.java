@@ -48,12 +48,11 @@ import java.util.Optional;
 public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView<T> {
 
   private final int selectedColor;
+  protected ConditionIconsView conditions;
   private Transition transition = new AutoTransition();
   private Optional<Encounter> encounter;
-
   // UI elements.
   private View view;
-  protected ConditionIconsView conditions;
 
   public EncounterTitleView(Context context, @Nullable AttributeSet attributeSet,
                             @ColorRes int foregroundColor, @ColorRes int backgroundColor,
@@ -62,23 +61,10 @@ public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView
     this.selectedColor = selectedColor;
   }
 
-  @Override
-  @CallSuper
-  protected View init(AttributeSet attributes) {
-    view = super.init(attributes);
-
-    conditions = new ConditionIconsView(getContext(), LinearLayout.HORIZONTAL, foregroundColor,
-        backgroundColor);
-    LinearLayout titleContainer = view.findViewById(R.id.conditions);
-    titleContainer.setVisibility(VISIBLE);
-    titleContainer.addView(conditions);
-
-    return view;
-  }
-
-  public void update(Encounter encounter, T creature) {
-    this.encounter = Optional.of(encounter);
-    update(creature);
+  public void showSelected(boolean selected) {
+    TransitionManager.beginDelayedTransition((ViewGroup) view, transition);
+    container.setBackgroundColor(getContext().getColor(
+        selected ? selectedColor : backgroundColor));
   }
 
   @Override
@@ -86,11 +72,6 @@ public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView
     super.update(creature);
 
     conditions.update(creature);
-  }
-
-  public void update(List<CreatureCondition> conditions) {
-    this.conditions.update(conditions);
-    refresh();
   }
 
   @Override
@@ -110,9 +91,27 @@ public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView
     return super.formatSubtitle();
   }
 
-  public void showSelected(boolean selected) {
-    TransitionManager.beginDelayedTransition((ViewGroup) view, transition);
-    container.setBackgroundColor(getContext().getColor(
-        selected ? selectedColor : backgroundColor));
+  @Override
+  @CallSuper
+  protected View init(AttributeSet attributes) {
+    view = super.init(attributes);
+
+    conditions = new ConditionIconsView(getContext(), LinearLayout.HORIZONTAL, foregroundColor,
+        backgroundColor);
+    LinearLayout titleContainer = view.findViewById(R.id.conditions);
+    titleContainer.setVisibility(VISIBLE);
+    titleContainer.addView(conditions);
+
+    return view;
+  }
+
+  public void update(List<CreatureCondition> conditions) {
+    this.conditions.update(conditions);
+    refresh();
+  }
+
+  public void update(Encounter encounter, T creature) {
+    this.encounter = Optional.of(encounter);
+    update(creature);
   }
 }

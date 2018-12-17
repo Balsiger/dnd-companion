@@ -27,7 +27,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.CallSuper;
-import android.support.design.widget.FloatingActionButton;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,22 +72,45 @@ public class CampaignFragment extends CompanionFragment {
   protected TextWrapper<TextView> date;
   protected PartyFragment party;
   protected EncounterFragment encounter;
-  protected Wrapper<FloatingActionButton> delete;
-  protected Wrapper<FloatingActionButton> edit;
-  protected Wrapper<FloatingActionButton> calendar;
-  protected Wrapper<FloatingActionButton> invite;
+  protected Wrapper<ImageView> refresh;
+  protected Wrapper<ImageView> delete;
+  protected Wrapper<ImageView> edit;
+  protected Wrapper<ImageView> calendar;
+  protected Wrapper<ImageView> invite;
   protected Wrapper<ImageView> startEncounter;
-  private LinearLayout encounterActions;
   protected Wrapper<ImageView> endEncounter;
   protected Wrapper<ImageView> nextInEncounter;
   protected Wrapper<ImageView> addMonsterInEncounter;
   protected Wrapper<ImageView> delayInEncounter;
   protected Wrapper<ImageView> addCondition;
   protected Wrapper<ImageView> sendMessage;
-  private Wrapper<ImageView> xp;
+  protected LinearLayout encounterActions;
+  protected Wrapper<ImageView> xp;
 
   public CampaignFragment() {
     super(Type.campaign);
+  }
+
+  @Override
+  public boolean goBack() {
+    CompanionFragments.get().show(Type.campaigns, Optional.of(title));
+    return true;
+  }
+
+  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    if (campaign.isPresent() && requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
+        data != null && data.getData() != null) {
+      try {
+        Uri uri = data.getData();
+        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+        images().set(campaign.get().getId(), bitmap);
+      } catch (IOException e) {
+        Status.toast("Cannot load image bitmap: " + e);
+      }
+    }
   }
 
   @Override
@@ -107,18 +129,21 @@ public class CampaignFragment extends CompanionFragment {
     party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     encounter = (EncounterFragment) getChildFragmentManager().findFragmentById(R.id.encounter);
     encounter.hide();
-    delete = Wrapper.<FloatingActionButton>wrap(view, R.id.delete).gone();
+    refresh = Wrapper.<ImageView>wrap(view, R.id.refresh);
+    refresh.onClick(this::refresh)
+        .description("Refresh", "Refresh this view with fresh data.");
+    delete = Wrapper.<ImageView>wrap(view, R.id.delete).gone();
     delete.onClick(this::deleteCampaign).gone()
         .description("Delete", "Delete this campaign. This action cannot be undone and will send "
             + "a deletion request to players to delete this campaign on their devices too. "
             + "You cannot delete a campaign that is currently published or that has local "
             + "characters.");
-    edit = Wrapper.<FloatingActionButton>wrap(view, R.id.edit).gone()
+    edit = Wrapper.<ImageView>wrap(view, R.id.edit).gone()
           .description("Edit", "Change the basic information of the campaign.");
-    calendar = Wrapper.<FloatingActionButton>wrap(view, R.id.calendar).gone()
+    calendar = Wrapper.<ImageView>wrap(view, R.id.calendar).gone()
         .description("Calendar", "Open the calendar for the campaign to allow you to change the "
             + "current date and time of your campaign.");
-    invite = Wrapper.<FloatingActionButton>wrap(view, R.id.invite).gone()
+    invite = Wrapper.<ImageView>wrap(view, R.id.invite).gone()
         .description("Invite", "Invite players to create characters in this campaign.");
     date = TextWrapper.wrap(view, R.id.date)
         .description("Calendar", "Open the calendar for the campaign to allow you to change the "
@@ -197,6 +222,130 @@ public class CampaignFragment extends CompanionFragment {
     return campaign.isPresent() && campaign.get().getId().equals(campaignId);
   }
 
+  private void addCondition() {
+    if (campaign.isPresent()) {
+      if (campaign.get().getEncounter().amCurrentPlayer()) {
+        TimedConditionDialog.newInstance(campaign.get().getEncounter().getCurrentCreatureId(),
+            campaign.get().getEncounter().getTurn()).display();
+      } else if (campaign.get().amDM()) {
+        TimedConditionDialog.newInstance(campaign.get().getId(),
+            campaign.get().getEncounter().getTurn()).display();
+      }
+    }
+  }
+
+  private void addMonsterInEncounter() {
+    if (campaign.isPresent() && campaign.get().amDM()) {
+      MonsterInitiativeDialog.newInstance(campaign.get().getId(), -1).display();
+    }
+  }
+
+  private void awardXP() {
+    if (campaign.isPresent()) {
+      XPDialog.newInstance(campaign.get().getId()).display();
+    }
+  }
+
+  protected boolean canDeleteCampaign() {
+    return campaign.isPresent() && campaign.get().amDM();
+  }
+
+  private void delayInEncounter() {
+    if (campaign.isPresent()) {
+      campaign.get().getEncounter().creatureWait();
+    }
+  }
+
+  protected void deleteCampaign() {
+    ConfirmationPrompt.create(getContext())
+        .title(getResources().getString(R.string.campaign_delete_title))
+        .message(getResources().getString(R.string.campaign_delete_message_remote))
+        .yes(this::deleteCampaignOk)
+        .show();
+  }
+
+  protected void deleteCampaignOk() {
+    if (campaign.isPresent()) {
+      campaigns().delete(campaign.get());
+      Toast.makeText(getActivity(), getString(R.string.campaign_deleted), Toast.LENGTH_SHORT).show();
+      show(Type.campaigns);
+    }
+  }
+
+  private void edit() {
+    if (campaign.isPresent()) {
+      EditCampaignDialog.newInstance(campaign.get().getId()).display();
+    }
+  }
+
+  private void editDate() {
+    if (campaign.isPresent()) {
+      DateDialog.newInstance(campaign.get().getId()).display();
+    }
+  }
+
+  private void editImage() {
+    Intent intent = new Intent();
+    // Show only images, no videos or anything else
+    intent.setType("image/*");
+    intent.setAction(Intent.ACTION_GET_CONTENT);
+    // Always show the chooser (if there are multiple options available)
+    startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+  }
+
+  private void endEncounter() {
+    if (campaign.isPresent()) {
+      campaign.get().getEncounter().end();
+    }
+  }
+
+  private void invite() {
+    if (campaign.isPresent()) {
+      InviteDialog.newInstance(campaign.get().getId()).display();
+    }
+  }
+
+  private void nextInEncounter() {
+    if (campaign.isPresent()) {
+      campaign.get().getEncounter().creatureDone();
+    }
+  }
+
+  private void refresh() {
+    update(campaigns());
+    update(characters());
+
+    title.update(images());
+    title.update(messages());
+
+    encounter.refresh();
+    party.refresh();
+  }
+
+  private void sendMessage() {
+    if (campaign.isPresent()) {
+      MessageDialog.newInstance(campaign.get().getId(), me().getId()).display();
+    }
+  }
+
+  private void setLayoutWidth(LinearLayout layout, int width) {
+    ViewGroup.LayoutParams params = layout.getLayoutParams();
+    params.width = width;
+    layout.setLayoutParams(params);
+  }
+
+  private void startEncounter() {
+    if (campaign.isPresent()) {
+      if (!campaign.get().amDM()
+          || characters().getCampaignCharacters(campaign.get().getId()).isEmpty()) {
+        Status.error("You have to be DM of a campaign with characters to start an startEncounter.");
+        return;
+      }
+
+      campaign.get().getEncounter().setup();
+    }
+  }
+
   @CallSuper
   protected void update(Campaigns campaigns) {
     if (campaign.isPresent()) {
@@ -228,141 +377,6 @@ public class CampaignFragment extends CompanionFragment {
     }
   }
 
-  private void setLayoutWidth(LinearLayout layout, int width) {
-    ViewGroup.LayoutParams params = layout.getLayoutParams();
-    params.width = width;
-    layout.setLayoutParams(params);
-  }
-
   protected void update(Characters characters) {
-  }
-
-  protected void deleteCampaign() {
-    ConfirmationPrompt.create(getContext())
-        .title(getResources().getString(R.string.campaign_delete_title))
-        .message(getResources().getString(R.string.campaign_delete_message_remote))
-        .yes(this::deleteCampaignOk)
-        .show();
-  }
-
-  protected void deleteCampaignOk() {
-    if (campaign.isPresent()) {
-      campaigns().delete(campaign.get());
-      Toast.makeText(getActivity(), getString(R.string.campaign_deleted), Toast.LENGTH_SHORT).show();
-      show(Type.campaigns);
-    }
-  }
-
-  protected boolean canDeleteCampaign() {
-    return campaign.isPresent() && campaign.get().amDM();
-  }
-
-  private void edit() {
-    if (campaign.isPresent()) {
-      EditCampaignDialog.newInstance(campaign.get().getId()).display();
-    }
-  }
-
-  private void editDate() {
-    if (campaign.isPresent()) {
-      DateDialog.newInstance(campaign.get().getId()).display();
-    }
-  }
-
-  private void invite() {
-    if (campaign.isPresent()) {
-      InviteDialog.newInstance(campaign.get().getId()).display();
-    }
-  }
-
-  @Override
-  public boolean goBack() {
-    CompanionFragments.get().show(Type.campaigns, Optional.of(title));
-    return true;
-  }
-
-  private void editImage() {
-    Intent intent = new Intent();
-    // Show only images, no videos or anything else
-    intent.setType("image/*");
-    intent.setAction(Intent.ACTION_GET_CONTENT);
-    // Always show the chooser (if there are multiple options available)
-    startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
-  }
-
-  private void startEncounter() {
-    if (campaign.isPresent()) {
-      if (!campaign.get().amDM()
-          || characters().getCampaignCharacters(campaign.get().getId()).isEmpty()) {
-        Status.error("You have to be DM of a campaign with characters to start an startEncounter.");
-        return;
-      }
-
-      campaign.get().getEncounter().setup();
-    }
-  }
-
-  private void endEncounter() {
-    if (campaign.isPresent()) {
-      campaign.get().getEncounter().end();
-    }
-  }
-
-  private void nextInEncounter() {
-    if (campaign.isPresent()) {
-      campaign.get().getEncounter().creatureDone();
-    }
-  }
-
-  private void addCondition() {
-    if (campaign.isPresent()) {
-      if (campaign.get().getEncounter().amCurrentPlayer()) {
-        TimedConditionDialog.newInstance(campaign.get().getEncounter().getCurrentCreatureId(),
-            campaign.get().getEncounter().getTurn()).display();
-      } else if (campaign.get().amDM()) {
-        TimedConditionDialog.newInstance(campaign.get().getId(),
-            campaign.get().getEncounter().getTurn()).display();
-      }
-    }
-  }
-
-  private void addMonsterInEncounter() {
-    if (campaign.isPresent() && campaign.get().amDM()) {
-      MonsterInitiativeDialog.newInstance(campaign.get().getId(), -1).display();
-    }
-  }
-
-  private void delayInEncounter() {
-    if (campaign.isPresent()) {
-      campaign.get().getEncounter().creatureWait();
-    }
-  }
-
-  private void awardXP() {
-    if (campaign.isPresent()) {
-      XPDialog.newInstance(campaign.get().getId()).display();
-    }
-  }
-
-  @Override
-  public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
-
-    if (campaign.isPresent() && requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
-        data != null && data.getData() != null) {
-      try {
-        Uri uri = data.getData();
-        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        images().set(campaign.get().getId(), bitmap);
-      } catch (IOException e) {
-        Status.toast("Cannot load image bitmap: " + e);
-      }
-    }
-  }
-
-  private void sendMessage() {
-    if (campaign.isPresent()) {
-      MessageDialog.newInstance(campaign.get().getId(), me().getId()).display();
-    }
   }
 }

@@ -96,6 +96,14 @@ public class EncounterFragment extends NestedCompanionFragment {
     return view;
   }
 
+  public void refresh() {
+    update(characters());
+    update(images());
+    update(conditions());
+    update(monsters());
+    update(messages());
+  }
+
   public void show(Campaign campaign) {
     this.encounter = Optional.of(campaign.getEncounter());
 
@@ -160,7 +168,7 @@ public class EncounterFragment extends NestedCompanionFragment {
                 // is not guaranteed to match the type of title view; it should match in
                 // practice, though.
                 ((EncounterTitleView) view).update(encounter.get(), creature.get());
-                view.update(conditions().getCreatureConditions(id));
+                view.update(creature.get().getAdjustedConditions());
                 view.showSelected(id.equals(currentCreatureId));
                 creatures.getView().setVisibility(View.VISIBLE);
               }
@@ -194,6 +202,10 @@ public class EncounterFragment extends NestedCompanionFragment {
       encounter.get().update(conditions);
     }
 
-    creatures.simpleUpdate(v -> v.update(conditions().getCreatureConditions(v.getCreatureId())));
+    creatures.simpleUpdate(v -> {
+      if (v.getCreature().isPresent()) {
+        v.update(v.getCreature().get().getAdjustedConditions());
+      }
+    });
   }
 }
