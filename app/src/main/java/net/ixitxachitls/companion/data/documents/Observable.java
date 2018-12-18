@@ -28,17 +28,14 @@ import android.arch.lifecycle.Observer;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 
-import java.util.List;
-
 /**
  * Abstract base for all documents.
  */
-public abstract class Observable<D extends Observable<D>> {
+public abstract class Observable<D> {
 
   protected final FirebaseFirestore db = FirebaseFirestore.getInstance();
   protected final FirebaseStorage storage = FirebaseStorage.getInstance();
   private final MutableLiveData<D> live = new MutableLiveData<>();
-  private final MutableLiveData<Update> liveDetailed = new MutableLiveData<>();
 
   @FunctionalInterface
   public interface Action {
@@ -58,34 +55,7 @@ public abstract class Observable<D extends Observable<D>> {
     live.removeObservers(owner);
   }
 
-  protected void update(List<String> ids) {
-    live.setValue((D) this);
-    liveDetailed.setValue(new Update(ids));
-  }
-
-  protected void updated() {
-    live.setValue((D) this);
-  }
-
-  public class Update {
-    List<String> ids;
-
-    protected Update(List<String> ids) {
-      this.ids = ids;
-    }
-
-    public boolean hasId(String id) {
-      return ids.contains(id);
-    }
-
-    public boolean hasSupId(String sup) {
-      for (String id : ids) {
-        if (id.startsWith(sup)) {
-          return true;
-        }
-      }
-
-      return false;
-    }
+  protected void updated(D value) {
+    live.setValue(value);
   }
 }

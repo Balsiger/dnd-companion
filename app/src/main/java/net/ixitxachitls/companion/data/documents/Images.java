@@ -27,6 +27,7 @@ import android.graphics.BitmapFactory;
 import net.ixitxachitls.companion.Status;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -34,11 +35,10 @@ import java.util.Optional;
 /**
  * Storage for all dynamic images of entries.
  */
-public class Images extends Observable<Images> {
+public class Images extends Observable<Documents.Update> {
 
-  private static final int MAX_SIZE_BYTES = 1024 * 1024;
   public static final int MAX_PX = 500;
-
+  private static final int MAX_SIZE_BYTES = 1024 * 1024;
   private final Map<String, String> imageHashesById = new HashMap<>();
   private final Map<String, Bitmap> imagesById = new HashMap<>();
 
@@ -55,23 +55,13 @@ public class Images extends Observable<Images> {
     return Optional.ofNullable(imagesById.get(id));
   }
 
-  private void maybeLoad(String id) {
-    storage.getReference(id).getMetadata().addOnSuccessListener(metadata -> {
-      String hash = metadata.getMd5Hash();
-      if (!hash.equals(imageHashesById.get(id))) {
-        load(id);
-        imageHashesById.put(id, hash);
-      }
-    });
-  }
-
   public void load(String id) {
     storage.getReference(id).getBytes(MAX_SIZE_BYTES).addOnSuccessListener(bytes -> {
       Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
       imagesById.put(id, bitmap);
-      updated();
+      updated(new Documents.Update(Collections.singletonList(id)));
     }).addOnFailureListener(e -> {
-      Status.exception("Cannot load file", e);
+      Status.silentException("Cannot load file", e);
       imageHashesById.remove(id);
       imagesById.remove(id);
     });
@@ -84,8 +74,20 @@ public class Images extends Observable<Images> {
 
     imagesById.put(id, bitmap);
     storage.getReference(id).putBytes(out.toByteArray())
-        .addOnSuccessListener(task -> updated())
-        .addOnFailureListener(e -> Status.exception("Could not upload image", e));
+        .addOnSuccessListener(task -> updated(new Documents.Update(id)))
+        .addOnFailureListener(e -> Status.silentException("Could not upload image", e));
+  }
+
+  private void maybeLoad(String id) {
+    storage.getReference(id).getMetadata()
+        .addOnSuccessListener(metadata -> {
+          String hash = metadata.getMd5Hash();
+          if (!hash.equals(imageHashesById.get(id))) {
+            load(id);
+            imageHashesById.put(id, hash);
+          }
+        })
+        .addOnFailureListener(e -> Status.silentException("Cannot load image: ", e));
   }
 
   private static Bitmap scale(Bitmap bitmap) {

@@ -47,6 +47,9 @@ import javax.annotation.Nullable;
  */
 public abstract class Document<D extends Document<D>> extends Observable<D> {
 
+  private final List<Action> whenCompleted = new ArrayList<>();
+  private final List<Action> whenReady = new ArrayList<>();
+  private final List<Action> whenFailed = new ArrayList<>();
   protected CompanionContext context;
   protected boolean temporary = true;
   protected String path;
@@ -55,81 +58,13 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   protected Optional<DocumentReference> reference = Optional.empty();
   protected Optional<DocumentSnapshot> snapshot = Optional.empty();
   private boolean failed = false;
-  private final List<Action> whenCompleted = new ArrayList<>();
-  private final List<Action> whenReady = new ArrayList<>();
-  private final List<Action> whenFailed = new ArrayList<>();
 
-  /**
-   * Create a new document that is not yet saved and will get an automatic id.
-   */
-  protected static <D extends Document<D>> D create(DocumentFactory<D> factory,
-                                                    CompanionContext context, String path) {
-    D document = factory.create();
-    document.context = context;
-    document.id = "";
-    document.path = path;
-    document.collection = document.db.collection(path);
-    document.temporary = false;
-
-    return document;
+  protected interface DocumentFactory<D> {
+    D create();
   }
 
-  protected static <D extends Document<D>> D get(DocumentFactory<D> factory,
-                                                 CompanionContext context,
-                                                 String id) {
-    D document = getOrCreate(factory, context, id);
-    document.temporary = true;
-
-    return document;
-  }
-
-  protected static <D extends Document<D>> D getOrCreate(DocumentFactory<D> factory,
-                                                         CompanionContext context,
-                                                         String id) {
-    D document = factory.create();
-    document.context = context;
-    document.id = extractId(id);
-    document.path = extractPath(id);
-    document.collection = document.db.collection(document.path);
-    document.reference = Optional.of(document.collection.document(document.id));
-    document.reference.get().get().addOnCompleteListener(document::onComplete);
-    document.temporary = false;
-
-    return document;
-  }
-
-  protected static <D extends Document<D>> D fromData(DocumentFactory<D> factory,
-                                                      CompanionContext context,
-                                                      DocumentSnapshot snapshot) {
-    D document = factory.create();
-    document.context = context;
-    document.id = snapshot.getId();
-    document.path = snapshot.getReference().getParent().getPath();
-    document.collection = snapshot.getReference().getParent();
-    document.reference = Optional.of(snapshot.getReference());
-    document.snapshot = Optional.ofNullable(snapshot);
-    document.temporary = false;
-
-    document.read();
-    document.startListening();
-
-    return document;
-  }
-
-  public void onComplete(Task<DocumentSnapshot> task) {
-    if (task.isSuccessful() && task.getResult().exists()) {
-      snapshot = Optional.of(task.getResult());
-      temporary = false;
-      read();
-      execute(whenReady);
-      updated();
-    } else {
-      Status.error("Cannot find data for " + id);
-      failed = true;
-      execute(whenFailed);
-    }
-    startListening();
-    execute(whenCompleted);
+  public CompanionContext getContext() {
+    return context;
   }
 
   public String getId() {
@@ -140,40 +75,39 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return path;
   }
 
-  public CompanionContext getContext() {
-    return context;
+  public boolean isReady() {
+    return snapshot.isPresent();
   }
 
   public boolean isDM(User user) {
     return path.startsWith(user.getId());
   }
 
-  public boolean isReady() {
-    return snapshot.isPresent();
-  }
-
-  public void whenCompleted(Action action) {
-    if (snapshot.isPresent() || failed) {
-      action.execute();
-    } else {
-      whenCompleted.add(action);
-    }
-  }
-
-  public void whenReady(Action action) {
+  public <E extends Enum<E>> E get(String field, E defaultValue) {
     if (snapshot.isPresent()) {
-      action.execute();
-    } else {
-      whenReady.add(action);
+      String value = snapshot.get().getString(field);
+      if (value != null && !value.isEmpty()) {
+        return (E) Enum.valueOf(defaultValue.getClass(), (String) value);
+      }
     }
+
+    return defaultValue;
   }
 
-  public void whenFailed(Action action) {
-    if (failed) {
-      action.execute();
+  public void onComplete(Task<DocumentSnapshot> task) {
+    if (task.isSuccessful() && task.getResult().exists()) {
+      snapshot = Optional.of(task.getResult());
+      temporary = false;
+      read();
+      execute(whenReady);
+      updated((D) this);
     } else {
-      whenFailed.add(action);
+      Status.error("Cannot find data for " + id);
+      failed = true;
+      execute(whenFailed);
     }
+    startListening();
+    execute(whenCompleted);
   }
 
   public void store() {
@@ -195,24 +129,28 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     }
   }
 
-  @CallSuper
-  protected void read() {
-    if (snapshot.isPresent()) {
-      this.id = snapshot.get().getId();
-    }
-  }
-  protected abstract Map<String, Object> write(Map<String, Object> data);
-
-  private static void execute(List<Action> actions) {
-    for (Action action : actions) {
+  public void whenCompleted(Action action) {
+    if (snapshot.isPresent() || failed) {
       action.execute();
+    } else {
+      whenCompleted.add(action);
     }
-
-    actions.clear();
   }
 
-  protected boolean has(String field) {
-    return snapshot.isPresent() && snapshot.get().get(field) != null;
+  public void whenFailed(Action action) {
+    if (failed) {
+      action.execute();
+    } else {
+      whenFailed.add(action);
+    }
+  }
+
+  public void whenReady(Action action) {
+    if (snapshot.isPresent()) {
+      action.execute();
+    } else {
+      whenReady.add(action);
+    }
   }
 
   protected Map<String, Object> get(String field) {
@@ -244,22 +182,12 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
 
     return defaultValue;
   }
+
   protected boolean get(String field, boolean defaultValue) {
     if (snapshot.isPresent()) {
       Boolean value = snapshot.get().getBoolean(field);
       if (value != null) {
         return value;
-      }
-    }
-
-    return defaultValue;
-  }
-
-  public <E extends Enum<E>> E get(String field, E defaultValue) {
-    if (snapshot.isPresent()) {
-      String value = snapshot.get().getString(field);
-      if (value != null && !value.isEmpty()) {
-        return (E) Enum.valueOf(defaultValue.getClass(), (String) value);
       }
     }
 
@@ -288,6 +216,17 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return defaultValue;
   }
 
+  protected boolean has(String field) {
+    return snapshot.isPresent() && snapshot.get().get(field) != null;
+  }
+
+  @CallSuper
+  protected void read() {
+    if (snapshot.isPresent()) {
+      this.id = snapshot.get().getId();
+    }
+  }
+
   protected void startListening() {
     if (reference.isPresent()) {
       reference.get().addSnapshotListener(CompanionApplication.get().getCurrentActivity(),
@@ -303,9 +242,34 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
       this.snapshot = Optional.ofNullable(snapshot);
       if (this.snapshot.isPresent() && this.snapshot.get().exists()) {
         read();
-        updated();
+        updated((D) this);
       }
     }
+  }
+
+  protected abstract Map<String, Object> write(Map<String, Object> data);
+
+  /**
+   * Create a new document that is not yet saved and will get an automatic id.
+   */
+  protected static <D extends Document<D>> D create(DocumentFactory<D> factory,
+                                                    CompanionContext context, String path) {
+    D document = factory.create();
+    document.context = context;
+    document.id = "";
+    document.path = path;
+    document.collection = document.db.collection(path);
+    document.temporary = false;
+
+    return document;
+  }
+
+  private static void execute(List<Action> actions) {
+    for (Action action : actions) {
+      action.execute();
+    }
+
+    actions.clear();
   }
 
   protected static String extractId(String id) {
@@ -316,8 +280,46 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return id.replaceAll("/[^/]*$", "");
   }
 
-  protected interface DocumentFactory<D> {
-    D create();
+  protected static <D extends Document<D>> D fromData(DocumentFactory<D> factory,
+                                                      CompanionContext context,
+                                                      DocumentSnapshot snapshot) {
+    D document = factory.create();
+    document.context = context;
+    document.id = snapshot.getId();
+    document.path = snapshot.getReference().getParent().getPath();
+    document.collection = snapshot.getReference().getParent();
+    document.reference = Optional.of(snapshot.getReference());
+    document.snapshot = Optional.ofNullable(snapshot);
+    document.temporary = false;
+
+    document.read();
+    document.startListening();
+
+    return document;
+  }
+
+  protected static <D extends Document<D>> D get(DocumentFactory<D> factory,
+                                                 CompanionContext context,
+                                                 String id) {
+    D document = getOrCreate(factory, context, id);
+    document.temporary = true;
+
+    return document;
+  }
+
+  protected static <D extends Document<D>> D getOrCreate(DocumentFactory<D> factory,
+                                                         CompanionContext context,
+                                                         String id) {
+    D document = factory.create();
+    document.context = context;
+    document.id = extractId(id);
+    document.path = extractPath(id);
+    document.collection = document.db.collection(document.path);
+    document.reference = Optional.of(document.collection.document(document.id));
+    document.reference.get().get().addOnCompleteListener(document::onComplete);
+    document.temporary = false;
+
+    return document;
   }
 
   protected static boolean isA(String id, String type) {

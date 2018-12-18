@@ -42,12 +42,19 @@ import java.util.stream.Collectors;
  * Monsters available in the games.
  */
 public class Monsters extends Documents<Monsters> {
+  private final Map<String, Monster> monstersByMonsterId = new HashMap<>();
+  private final Multimap<String, Monster> monstersByCampaignId = HashMultimap.create();
   public Monsters(CompanionContext context) {
     super(context);
   }
 
-  private final Map<String, Monster> monstersByMonsterId = new HashMap<>();
-  private final Multimap<String, Monster> monstersByCampaignId = HashMultimap.create();
+  public Collection<Monster> getAll() {
+    return monstersByMonsterId.values();
+  }
+
+  public static boolean isMonsterId(String id) {
+    return id.contains("/monsters/");
+  }
 
   public void addCampaign(String campaignId) {
     if (!monstersByCampaignId.containsKey(campaignId)) {
@@ -60,6 +67,39 @@ public class Monsters extends Documents<Monsters> {
         }
       });
     }
+  }
+
+  public void deleteAllInCampaign(String campaignId) {
+    for (Monster monster : monstersByCampaignId.removeAll(campaignId)) {
+      monstersByMonsterId.remove(monster.getId());
+      delete(monster.getId());
+    }
+  }
+
+  public Optional<Monster> get(String creatureId) {
+    return Optional.ofNullable(monstersByMonsterId.get(creatureId));
+  }
+
+  public Collection<Monster> getCampaignMonsters(String campaignId) {
+    return monstersByCampaignId.get(campaignId);
+  }
+
+  public Optional<? extends Creature<?>> getMonsterOrCharacter(String id) {
+    Optional<? extends Creature<?>> creature = context.characters().get(id);
+    if (!creature.isPresent()) {
+      creature = get(id);
+    }
+
+    return creature;
+  }
+
+  public String nameFor(String id) {
+    Optional<? extends Creature<?>> creature = getMonsterOrCharacter(id);
+    if (creature.isPresent()) {
+      return creature.get().getName();
+    }
+
+    return id;
   }
 
   private void readMonsters(String campaignId, List<DocumentSnapshot> snapshots) {
@@ -87,47 +127,6 @@ public class Monsters extends Documents<Monsters> {
       monstersByMonsterId.put(monster.getId(), monster);
     }
 
-    updated();
-  }
-
-  public Collection<Monster> getCampaignMonsters(String campaignId) {
-    return monstersByCampaignId.get(campaignId);
-  }
-
-  public Optional<Monster> get(String creatureId) {
-    return Optional.ofNullable(monstersByMonsterId.get(creatureId));
-  }
-
-  public Collection<Monster> getAll() {
-    return monstersByMonsterId.values();
-  }
-
-  public Optional<? extends Creature<?>> getMonsterOrCharacter(String id) {
-    Optional<? extends Creature<?>> creature = context.characters().get(id);
-    if (!creature.isPresent()) {
-      creature = get(id);
-    }
-
-    return creature;
-  }
-
-  public String nameFor(String id) {
-    Optional<? extends Creature<?>> creature = getMonsterOrCharacter(id);
-    if (creature.isPresent()) {
-      return creature.get().getName();
-    }
-
-    return id;
-  }
-
-  public static boolean isMonsterId(String id) {
-    return id.contains("/monsters/");
-  }
-
-  public void deleteAllInCampaign(String campaignId) {
-    for (Monster monster : monstersByCampaignId.removeAll(campaignId)) {
-      monstersByMonsterId.remove(monster.getId());
-      delete(monster.getId());
-    }
+    updatedDocuments(snapshots);
   }
 }

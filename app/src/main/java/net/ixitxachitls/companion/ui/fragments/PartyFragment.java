@@ -35,16 +35,10 @@ import android.widget.TextView;
 import com.google.android.flexbox.FlexboxLayout;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Adventure;
-import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Characters;
-import net.ixitxachitls.companion.data.documents.CreatureConditions;
-import net.ixitxachitls.companion.data.documents.Images;
-import net.ixitxachitls.companion.data.documents.Messages;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.ui.dialogs.AdventuresDialog;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
@@ -93,11 +87,11 @@ public class PartyFragment extends NestedCompanionFragment {
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
-    campaigns().observe(this, this::update);
-    characters().observe(this, this::update);
-    images().observe(this, this::update);
-    messages().observe(this, this::update);
-    conditions().observe(this, this::update);
+    campaigns().observe(this, this::refresh);
+    characters().observe(this, this::refresh);
+    images().observe(this, this::refresh);
+    messages().observe(this, this::refresh);
+    conditions().observe(this, this::refresh);
 
     view = (ViewGroup) inflater.inflate(R.layout.fragment_party, container, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
@@ -109,7 +103,7 @@ public class PartyFragment extends NestedCompanionFragment {
     scroll = Wrapper.wrap(view, R.id.scroll);
     adventure = view.findViewById(R.id.adventure);
     if (campaign.isPresent() && campaign.get().amDM()) {
-      adventures().observe(this, this::update);
+      adventures().observe(this, this::refresh);
       adventure.onClick(this::changeAdventure);
     } else {
       adventure.gone();
@@ -127,15 +121,11 @@ public class PartyFragment extends NestedCompanionFragment {
   public void onResume() {
     super.onResume();
 
-    update(characters());
+    refresh();
   }
 
   public void refresh() {
-    update(campaigns());
-    update(characters());
-    update(images());
-    update(messages());
-    update(conditions());
+    refresh(Documents.FULL_UPDATE);
   }
 
   public void show(Campaign campaign) {
@@ -143,9 +133,7 @@ public class PartyFragment extends NestedCompanionFragment {
     this.encounter = Optional.empty();
 
     adventures().readAdventures(campaign.getId());
-    update(campaigns());
-    update(characters());
-    update(messages());
+    refresh();
   }
 
   private void addAdventure() {
@@ -175,8 +163,6 @@ public class PartyFragment extends NestedCompanionFragment {
   }
 
   private void redrawChips() {
-    Status.log("redrawing party chips");
-
     TransitionManager.beginDelayedTransition(view, transition);
     party.removeAllViews();
 
@@ -190,26 +176,18 @@ public class PartyFragment extends NestedCompanionFragment {
     }
   }
 
-  private void update(Campaigns campaigns) {
+  private void refresh(Documents.Update update) {
     if (campaign.isPresent()) {
-      this.campaign = campaigns().get(campaign.get().getId());
-    }
-
-    update(adventures());
-  }
-
-  private void update(Adventures adventures) {
-    if (campaign.isPresent() && campaign.get().amDM()) {
-      if (campaign.get().getAdventure().isPresent()) {
-        adventure.text(campaign.get().getAdventure().get().getName());
-      } else {
-        adventure.text("");
+      // Adventures.
+      if (campaign.get().amDM()) {
+        if (campaign.get().getAdventure().isPresent()) {
+          adventure.text(campaign.get().getAdventure().get().getName());
+        } else {
+          adventure.text("");
+        }
       }
-    }
-  }
 
-  private void update(Characters characters) {
-    if (campaign.isPresent()) {
+      // Characters.
       // Refresh the view buttons and such.
       TransitionManager.beginDelayedTransition(view, transition);
       addCharacter.visible();
@@ -233,24 +211,19 @@ public class PartyFragment extends NestedCompanionFragment {
       }
     }
 
-    update(messages());
-  }
-
-  private void update(Images images) {
+    // Images.
     for (ChipView chip : chipsById.values()) {
       chip.update();
     }
-  }
 
-  private void update(Messages messages) {
+    // Messages.
     for (ChipView chip : chipsById.values()) {
       if (chip instanceof CharacterChipView) {
-        ((CharacterChipView) chip).update(messages);
+        ((CharacterChipView) chip).update(messages());
       }
     }
-  }
 
-  private void update(CreatureConditions conditions) {
+    // Conditions.
     for (ChipView chip : chipsById.values()) {
       if (chip instanceof CharacterChipView) {
         ((CharacterChipView) chip).update(((CharacterChipView) chip).getCharacter());

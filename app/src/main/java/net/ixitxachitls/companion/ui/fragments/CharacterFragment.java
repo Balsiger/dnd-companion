@@ -40,9 +40,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Characters;
-import net.ixitxachitls.companion.data.documents.CreatureConditions;
-import net.ixitxachitls.companion.data.documents.Messages;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.CharacterTitleView;
@@ -128,10 +126,10 @@ public class CharacterFragment extends CompanionFragment {
       update(character.get());
     }
 
-    images().observe(this, title::update);
-    characters().observe(this, this::update);
-    messages().observe(this, this::update);
-    conditions().observe(this, this::update);
+    images().observe(this, title::refresh);
+    characters().observe(this, this::refresh);
+    messages().observe(this, this::refresh);
+    conditions().observe(this, this::refresh);
 
     return view;
   }
@@ -194,14 +192,14 @@ public class CharacterFragment extends CompanionFragment {
     }
   }
 
-  private void update(CreatureConditions conditions) {
-    update(characters());
-  }
-
-  private void update(Characters characters) {
+  private void refresh(Documents.Update update) {
+    // Characters & conditions.
     if (character.isPresent()) {
       update(character.get());
     }
+
+    // Messages.
+    title.refresh(update);
   }
 
   private void update(Character character) {
@@ -226,11 +224,7 @@ public class CharacterFragment extends CompanionFragment {
     campaignTitle.text(campaign.get().getName());
     title.update(character);
     title.update(images());
-    title.update(messages());
-  }
-
-  private void update(Messages messages) {
-    title.update(messages);
+    title.refresh(new Documents.Update(character.getId()));
   }
 
   public class CharacterPagerAdapter extends FragmentPagerAdapter {

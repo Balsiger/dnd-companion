@@ -55,16 +55,62 @@ public class Characters extends Documents<Characters> {
     super(context);
   }
 
+  public List<Character> getAll() {
+    return charactersByCharacterId.values().stream()
+        .sorted()
+        .collect(Collectors.toList());
+  }
+
+  public static boolean isCharacterId(String id) {
+    return id.contains("/characters/");
+  }
+
+  public static boolean isCloseECL(int level, int minPartyLevel, int maxPartyLevel) {
+    return minPartyLevel <= level && maxPartyLevel >= level;
+  }
+
+  public void addPlayers(Optional<Campaign> campaign) {
+    if (campaign.isPresent()) {
+      addPlayers(campaign.get());
+    }
+  }
+
+  public void addPlayers(Campaign campaign) {
+    processPlayer(campaign.getDm());
+
+    for (String email : campaign.getInvites()) {
+      context.invites().doWithUserId(email, (id) -> {
+        User player = context.users().get(id);
+        player.whenReady(() -> processPlayer(player));
+      });
+    }
+  }
+
   public Character create(String campaignId) {
     Character character = Character.create(context, campaignId);
     character.whenReady(() -> {
       charactersByCharacterId.put(character.getId(), character);
       charactersByCampaignId.put(campaignId, character);
       charactersByPlayerId.put(character.getPlayer().getId(), character);
-      updated();
+      updated(campaignId);
     });
 
     return character;
+  }
+
+  public void delete(Character character) {
+    if (character.amPlayer() || character.amDM()) {
+      delete(character.getId());
+      charactersByCharacterId.remove(character.getId());
+      charactersByCampaignId.remove(character.getCampaignId(), character);
+      charactersByPlayerId.remove(character.getPlayer().getId(), character);
+
+      updated(character.getId());
+    }
+  }
+
+  public Optional<Character> get(String characterId) {
+    return Optional.ofNullable(charactersByCharacterId.get(characterId));
   }
 
   public Collection<Character> getCampaignCharacters(String campaignId) {
@@ -75,18 +121,6 @@ public class Characters extends Documents<Characters> {
     return Collections.emptyList();
   }
 
-  public Collection<Character> getPlayerCharacters(String userId) {
-    if (charactersByPlayerId.containsKey(userId)) {
-      return charactersByPlayerId.get(userId);
-    }
-
-    return Collections.emptyList();
-  }
-
-  public Optional<Character> get(String characterId) {
-    return Optional.ofNullable(charactersByCharacterId.get(characterId));
-  }
-
   public Optional<? extends Creature> getCreature(String creatureId) {
     if (isCharacterId(creatureId)) {
       return get(creatureId);
@@ -95,10 +129,12 @@ public class Characters extends Documents<Characters> {
     }
   }
 
-  public List<Character> getAll() {
-    return charactersByCharacterId.values().stream()
-        .sorted()
-        .collect(Collectors.toList());
+  public Collection<Character> getPlayerCharacters(String userId) {
+    if (charactersByPlayerId.containsKey(userId)) {
+      return charactersByPlayerId.get(userId);
+    }
+
+    return Collections.emptyList();
   }
 
   public int maxPartyLevel(String campaignId) {
@@ -123,64 +159,18 @@ public class Characters extends Documents<Characters> {
     return min;
   }
 
-  public static boolean isCloseECL(int level, int minPartyLevel, int maxPartyLevel) {
-    return minPartyLevel <= level && maxPartyLevel >= level;
-  }
-
-  public void addPlayers(Optional<Campaign> campaign) {
-    if (campaign.isPresent()) {
-      addPlayers(campaign.get());
-    }
-  }
-
-  public void addPlayers(Campaign campaign) {
-    addPlayer(campaign.getDm());
-
-    for (String email : campaign.getInvites()) {
-      context.invites().doWithUserId(email, (id) -> {
-        User player = context.users().get(id);
-        player.whenReady(() -> addPlayer(player));
-      });
-    }
-  }
-
-  public static boolean isCharacterId(String id) {
-    return id.contains("/characters/");
-  }
-
-  public void addPlayer(User player) {
+  public void processPlayer(User player) {
     if (!userIdsLoading.contains(player.getId())) {
       userIdsLoading.add(player.getId());
       CollectionReference reference = db.collection(player.getId() + "/" + PATH);
       reference.addSnapshotListener((s, e) -> {
         if (e == null) {
-          readCharacters(player, s.getDocuments());
+          processCharacters(player, s.getDocuments());
         } else {
           Status.exception("Cannot read characters!", e);
         }
       });
     }
-  }
-
-  private void readCharacters(User player, List<DocumentSnapshot> snapshots) {
-    Map<String, Character> existing = clearPlayerData(player);
-
-    for (DocumentSnapshot snapshot : snapshots) {
-      // need to use full id here!
-      Character character = existing.get(snapshot.getReference().getPath());
-      if (character == null) {
-        character = Character.fromData(context, player, snapshot);
-      } else {
-        character.snapshot = Optional.of(snapshot);
-        character.read();
-      }
-
-      charactersByPlayerId.put(player.getId(), character);
-      charactersByCampaignId.put(character.getCampaignId(), character);
-      charactersByCharacterId.put(character.getId(), character);
-    }
-
-    updated();
   }
 
   private Map<String, Character> clearPlayerData(User player) {
@@ -201,14 +191,24 @@ public class Characters extends Documents<Characters> {
         .collect(Collectors.toMap(Character::getId, Function.identity()));
   }
 
-  public void delete(Character character) {
-    if (character.amPlayer() || character.amDM()) {
-      delete(character.getId());
-      charactersByCharacterId.remove(character.getId());
-      charactersByCampaignId.remove(character.getCampaignId(), character);
-      charactersByPlayerId.remove(character.getPlayer().getId(), character);
+  private void processCharacters(User player, List<DocumentSnapshot> snapshots) {
+    Map<String, Character> existing = clearPlayerData(player);
 
-      updated();
+    for (DocumentSnapshot snapshot : snapshots) {
+      // need to use full id here!
+      Character character = existing.get(snapshot.getReference().getPath());
+      if (character == null) {
+        character = Character.fromData(context, player, snapshot);
+      } else {
+        character.snapshot = Optional.of(snapshot);
+        character.read();
+      }
+
+      charactersByPlayerId.put(player.getId(), character);
+      charactersByCampaignId.put(character.getCampaignId(), character);
+      charactersByCharacterId.put(character.getId(), character);
     }
+
+    updatedDocuments(snapshots);
   }
 }

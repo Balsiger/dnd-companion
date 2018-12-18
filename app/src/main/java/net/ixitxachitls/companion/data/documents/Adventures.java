@@ -47,6 +47,11 @@ public class Adventures extends Documents<Adventures> {
     super(context);
   }
 
+  @Override
+  public void delete(String id) {
+    super.delete(id);
+  }
+
   public boolean exists(String campaignId, String name) {
     for (Adventure adventure
         : adventuresByCampaignId.getOrDefault(campaignId, Collections.emptyList())) {
@@ -88,10 +93,6 @@ public class Adventures extends Documents<Adventures> {
     }
 
     adventuresByCampaignId.put(campaignId, adventures);
-    updated();
-  }
-
-  public void delete(String id) {
-    super.delete(id);
+    updatedDocuments(snapshots);
   }
 }

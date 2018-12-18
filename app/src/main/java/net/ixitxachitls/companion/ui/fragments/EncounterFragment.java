@@ -34,15 +34,10 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.Creature;
-import net.ixitxachitls.companion.data.documents.CreatureConditions;
-import net.ixitxachitls.companion.data.documents.Images;
-import net.ixitxachitls.companion.data.documents.Messages;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Monster;
-import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.values.Encounter;
 import net.ixitxachitls.companion.ui.views.DiceView;
 import net.ixitxachitls.companion.ui.views.EncounterCharacterTitleView;
@@ -87,33 +82,22 @@ public class EncounterFragment extends NestedCompanionFragment {
 
     turn = TextWrapper.wrap(view, R.id.turn);
 
-    characters().observe(this, this::update);
-    images().observe(this, this::update);
-    conditions().observe(this, this::update);
-    monsters().observe(this, this::update);
-    messages().observe(this, this::update);
+    characters().observe(this, this::refresh);
+    images().observe(this, this::refresh);
+    conditions().observe(this, this::refresh);
+    monsters().observe(this, this::refresh);
+    messages().observe(this, this::refresh);
 
     return view;
   }
 
   public void refresh() {
-    update(characters());
-    update(images());
-    update(conditions());
-    update(monsters());
-    update(messages());
+    refresh(Documents.FULL_UPDATE);
   }
 
-  public void show(Campaign campaign) {
-    this.encounter = Optional.of(campaign.getEncounter());
-
-    update(characters());
-    update(campaigns());
-    update(conditions());
-  }
-
-  public void update(Campaigns campaigns) {
+  public void refresh(Documents.Update update) {
     if (encounter.isPresent()) {
+      // Campaigns.
       if (encounter.get().isStarting()) {
         turn.text("Waiting for initiative...");
       } else if (encounter.get().isSurprised()) {
@@ -122,14 +106,8 @@ public class EncounterFragment extends NestedCompanionFragment {
         turn.text("Turn " + encounter.get().getTurn());
       }
 
-      // TODO(merlin): Check whether we can ensure just doing the update once, not
-      update(characters());
-    }
-  }
-
-  private void update(Characters characters) {
-    if (encounter.isPresent()) {
-      encounter.get().update(characters);
+      // Characters.
+      encounter.get().update(characters());
       Optional<Character> character =
           encounter.get().firstPlayerCharacterNeedingInitiative();
       if (character.isPresent()) {
@@ -174,38 +152,35 @@ public class EncounterFragment extends NestedCompanionFragment {
               }
             });
       }
-    }
-  }
 
-  private void update(Messages messages) {
+      // Monsters.
+      encounter.get().update(monsters());
+
+      // Conditions.
+      encounter.get().update(conditions());
+    }
+
+    // Messages.
     creatures.simpleUpdate(v -> {
       if (v instanceof EncounterCharacterTitleView) {
-        ((EncounterCharacterTitleView) v).update(messages);
+        ((EncounterCharacterTitleView) v).update(messages());
       }
     });
-  }
 
-  private void update(Monsters monsters) {
-    if (encounter.isPresent()) {
-      encounter.get().update(monsters);
-    }
+    // Images.
+    creatures.simpleUpdate(v -> v.update(images()));
 
-    update(monsters.getContext().characters());
-  }
-
-  private void update(Images images) {
-    creatures.simpleUpdate(v -> v.update(images));
-  }
-
-  private void update(CreatureConditions conditions) {
-    if (encounter.isPresent()) {
-      encounter.get().update(conditions);
-    }
-
+    // Conditions.
     creatures.simpleUpdate(v -> {
       if (v.getCreature().isPresent()) {
         v.update(v.getCreature().get().getAdjustedConditions());
       }
     });
+  }
+
+  public void show(Campaign campaign) {
+    this.encounter = Optional.of(campaign.getEncounter());
+
+    refresh();
   }
 }

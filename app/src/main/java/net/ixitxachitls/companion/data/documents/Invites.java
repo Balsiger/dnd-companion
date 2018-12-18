@@ -56,6 +56,24 @@ public class Invites extends Documents<Invites> {
     void execute(List<String> campaigns);
   }
 
+  @FunctionalInterface
+  public interface UserIdCallback {
+    void execute(String id);
+  }
+
+  public void doWithUserId(String email, UserIdCallback callback) {
+    if (userIdsByEmail.containsKey(email)) {
+      callback.execute(userIdsByEmail.get(email));
+    } else {
+      FirebaseFirestore.getInstance().document(INVITES + "/" + email).get()
+          .addOnSuccessListener(snapshot -> {
+            userIdsByEmail.put(email, snapshot.getString(FIELD_ID));
+            callback.execute(userIdsByEmail.get(email));
+          })
+          .addOnFailureListener(e -> Status.silentException("Cannot read user id for " + email, e));
+    }
+  }
+
   public void listenCampaigns(CampaignsCallback callback) {
     ensureId();
 
@@ -70,23 +88,6 @@ public class Invites extends Documents<Invites> {
 
           callback.execute(campaigns);
         });
-  }
-
-  @FunctionalInterface
-  public interface UserIdCallback {
-    void execute(String id);
-  }
-
-  public void doWithUserId(String email, UserIdCallback callback) {
-    if (userIdsByEmail.containsKey(email)) {
-      callback.execute(userIdsByEmail.get(email));
-    } else {
-      FirebaseFirestore.getInstance().document(INVITES + "/" + email)
-          .get().addOnSuccessListener(snapshot -> {
-        userIdsByEmail.put(email, snapshot.getString(FIELD_ID));
-        callback.execute(userIdsByEmail.get(email));
-      }).addOnFailureListener(e -> Status.exception("Cannot read user id for " + email, e));
-    }
   }
 
   private void ensureId() {

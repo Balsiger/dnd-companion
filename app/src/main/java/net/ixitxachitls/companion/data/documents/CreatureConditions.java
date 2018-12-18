@@ -138,7 +138,7 @@ public class CreatureConditions extends Documents<CreatureConditions> {
     }
 
     conditionsByCreatureId.put(creatureId, conditions);
-    updated();
+    updatedDocuments(snapshots);
   }
 
   private void removeFromList(String id, List<CreatureCondition> conditions) {

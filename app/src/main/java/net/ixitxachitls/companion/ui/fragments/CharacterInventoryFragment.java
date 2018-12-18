@@ -36,8 +36,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Characters;
-import net.ixitxachitls.companion.data.documents.Images;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
@@ -71,8 +70,8 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   private Wrapper<ImageDropTarget> sellItem;
 
   public CharacterInventoryFragment() {
-    characters().observe(this, this::update);
-    images().observe(this, this::update);
+    characters().observe(this, this::refresh);
+    images().observe(this, this::refresh);
   }
 
   @Override
@@ -141,31 +140,11 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     }
   }
 
-  private void update(Characters characters) {
-    refreshDropTargets();
-  }
-
-  private void update(Images images) {
-    refreshDropTargets();
-  }
-
-  private void refreshDropTargets() {
+  private void addItem() {
     if (character.isPresent()) {
-      targetsCharacters.removeAllViews();
-      for (Character other : characters().getCampaignCharacters(character.get().getCampaignId())) {
-        if (!other.equals(character)) {
-          Drawable image;
-          if (images().get(other.getId()).isPresent()) {
-            image = new BitmapDrawable(getResources(), images().get(other.getId()).get());
-          } else {
-            image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
-          }
-          ImageDropTarget target = new ImageDropTarget(getContext(), image, other.getName(), true);
-          target.setSupport(i -> i instanceof Item);
-          target.setDropExecutor((i) -> moveItem(i, other));
-          targetsCharacters.addView(target);
-        }
-      }
+      EditItemDialog.newInstance(character.get().getId()).display();
+    } else {
+      Status.error("No character available!");
     }
   }
 
@@ -183,12 +162,14 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     return new ItemView(getContext(), character.get(), item);
   }
 
-  private void addItem() {
-    if (character.isPresent()) {
-      EditItemDialog.newInstance(character.get().getId()).display();
-    } else {
-      Status.error("No character available!");
+  private boolean moveItem(Object state, Character target) {
+    if (character.isPresent() && state instanceof Item) {
+      character.get().removeItem((Item) state);
+      Message.createForItemAdd(context(), character.get().getId(), target.getId(), (Item) state);
+      return true;
     }
+
+    return false;
   }
 
   private boolean onItemDrag(View view, DragEvent event) {
@@ -226,6 +207,30 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     }
   }
 
+  private void refresh(Documents .Update update) {
+    refreshDropTargets();
+  }
+
+  private void refreshDropTargets() {
+    if (character.isPresent()) {
+      targetsCharacters.removeAllViews();
+      for (Character other : characters().getCampaignCharacters(character.get().getCampaignId())) {
+        if (!other.equals(character)) {
+          Drawable image;
+          if (images().get(other.getId()).isPresent()) {
+            image = new BitmapDrawable(getResources(), images().get(other.getId()).get());
+          } else {
+            image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
+          }
+          ImageDropTarget target = new ImageDropTarget(getContext(), image, other.getName(), true);
+          target.setSupport(i -> i instanceof Item);
+          target.setDropExecutor((i) -> moveItem(i, other));
+          targetsCharacters.addView(target);
+        }
+      }
+    }
+  }
+
   private boolean removeItem(Object state) {
     if (character.isPresent() && state instanceof Item) {
       if (character.get().amPlayer()) {
@@ -236,16 +241,6 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
             CompanionApplication.get().context(), character.get().getId(), (Item) state);
         return true;
       }
-    }
-
-    return false;
-  }
-
-  private boolean moveItem(Object state, Character target) {
-    if (character.isPresent() && state instanceof Item) {
-      character.get().removeItem((Item) state);
-      Message.createForItemAdd(context(), character.get().getId(), target.getId(), (Item) state);
-      return true;
     }
 
     return false;

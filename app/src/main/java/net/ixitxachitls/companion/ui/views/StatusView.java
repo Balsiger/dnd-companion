@@ -44,12 +44,11 @@ import java.io.StringWriter;
  */
 public class StatusView extends LinearLayout {
 
-  // Internal data.
-  private boolean showDebug = false;
-
   // UI elements.
   private final TextWrapper<TextView> messages;
   private final ScrollView messagesScroll;
+  // Internal data.
+  private boolean showDebug = false;
 
   public StatusView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
@@ -68,6 +67,31 @@ public class StatusView extends LinearLayout {
     addView(view);
   }
 
+  public void addErrorMessage(String message) {
+    messages.append(Html.fromHtml("<div><b><font color=\"red\">" + message + "</font></b></div>",
+        Html.FROM_HTML_MODE_COMPACT));
+    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
+  }
+
+  public void addException(String message, Exception e) {
+    StringWriter writer = new StringWriter();
+    PrintWriter printWriter = new PrintWriter(writer);
+    e.printStackTrace(printWriter);
+
+    addMessage(message + "\n" + writer.toString());
+  }
+
+  public void addMessage(String message) {
+    messages.append(Html.fromHtml("<div>" + message + "</div>", Html.FROM_HTML_MODE_COMPACT));
+    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
+  }
+
+  public void addWarningMessage(String message) {
+    messages.append(Html.fromHtml("<div><b>" + message + "</b></div>",
+        Html.FROM_HTML_MODE_COMPACT));
+    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
+  }
+
   public void showException(String message, Exception e) {
     StringWriter writer = new StringWriter();
     PrintWriter printWriter = new PrintWriter(writer);
@@ -83,22 +107,5 @@ public class StatusView extends LinearLayout {
 
   private void clearDebug() {
     messages.text("");
-  }
-
-  public void addMessage(String message) {
-    messages.append(Html.fromHtml("<div>" + message + "</div>", Html.FROM_HTML_MODE_COMPACT));
-    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
-  }
-
-  public void addWarningMessage(String message) {
-    messages.append(Html.fromHtml("<div><b>" + message + "</b></div>",
-        Html.FROM_HTML_MODE_COMPACT));
-    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
-  }
-
-  public void addErrorMessage(String message) {
-    messages.append(Html.fromHtml("<div><b><font color=\"red\">" + message + "</font></b></div>",
-        Html.FROM_HTML_MODE_COMPACT));
-    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
   }
 }

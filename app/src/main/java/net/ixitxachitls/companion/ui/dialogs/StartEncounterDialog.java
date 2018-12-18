@@ -35,9 +35,8 @@ import android.widget.LinearLayout;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Monster;
-import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.ui.views.StartEncounterLineView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -62,26 +61,47 @@ public class StartEncounterDialog extends Dialog {
   private LinearLayout monsters;
   private Wrapper<Button> save;
 
-  public static StartEncounterDialog newInstance(String campaignId) {
-    StartEncounterDialog dialog = new StartEncounterDialog();
-    dialog.setArguments(arguments(R.layout.dialog_start_encounter,
-        R.string.dialog_title_start_battle, R.color.battle, campaignId));
-    return dialog;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String campaignId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId, R.color.battleText);
-    arguments.putString(ARG_ID, campaignId);
-    return arguments;
-  }
-
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
     String id = getArguments().getString(ARG_ID);
     campaign = campaigns().get(id);
+  }
+
+  @Override
+  public void save() {
+    super.save();
+
+    List<String> includedCreatureIds = new ArrayList<>();
+    List<String> surprisedCreatureIds = new ArrayList<>();
+
+    for (int i = 0; i < characters.getChildCount(); i++) {
+      if (characters.getChildAt(i) instanceof StartEncounterLineView) {
+        StartEncounterLineView line = (StartEncounterLineView) characters.getChildAt(i);
+        if (line.isIncluded()) {
+          includedCreatureIds.add(line.getCreatureId());
+        }
+        if (line.isSurprised()) {
+          surprisedCreatureIds.add(line.getCreatureId());
+        }
+      }
+    }
+    for (int i = 0; i < monsters.getChildCount(); i++) {
+      if (monsters.getChildAt(i) instanceof StartEncounterLineView) {
+        StartEncounterLineView line = (StartEncounterLineView) monsters.getChildAt(i);
+        if (line.isIncluded()) {
+          includedCreatureIds.add(line.getCreatureId());
+        }
+        if (line.isSurprised()) {
+          surprisedCreatureIds.add(line.getCreatureId());
+        }
+      }
+    }
+
+    if (campaign.isPresent()) {
+      campaign.get().getEncounter().starting(includedCreatureIds, surprisedCreatureIds);
+    }
   }
 
   @Override
@@ -98,24 +118,28 @@ public class StartEncounterDialog extends Dialog {
           character.getName(), R.color.characterDark, this::update));
     }
 
-    characters().observe(this, this::update);
-    monsters().observe(this, this::update);
+    characters().observe(this, this::refresh);
+    monsters().observe(this, this::refresh);
   }
 
-  private void update(Characters characters) {
+  private void addMonster() {
     if (campaign.isPresent()) {
-      this.characters.removeAllViews();
-      for (Character character : characters.getCampaignCharacters(campaign.get().getId())) {
-        this.characters.addView(new StartEncounterLineView(getContext(), character.getId(),
-            character.getName(), R.color.characterDark, this::update));
-      }
+      MonsterInitiativeDialog.newInstance(campaign.get().getId(), -1).display();
     }
   }
 
-  private void update(Monsters monsters) {
+  private void refresh(Documents.Update update) {
     if (campaign.isPresent()) {
+      // Characters.
+      this.characters.removeAllViews();
+      for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
+        this.characters.addView(new StartEncounterLineView(getContext(), character.getId(),
+            character.getName(), R.color.characterDark, this::update));
+      }
+
+      // Monsters.
       this.monsters.removeAllViews();
-      for (Monster monster : monsters.getCampaignMonsters(campaign.get().getId())) {
+      for (Monster monster : monsters().getCampaignMonsters(campaign.get().getId())) {
         this.monsters.addView(new StartEncounterLineView(getContext(), monster.getId(),
             monster.getName(), R.color.monsterDark, this::update));
       }
@@ -195,44 +219,17 @@ public class StartEncounterDialog extends Dialog {
     save.enabled(!noneIncluded);
   }
 
-  private void addMonster() {
-    if (campaign.isPresent()) {
-      MonsterInitiativeDialog.newInstance(campaign.get().getId(), -1).display();
-    }
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String campaignId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId, R.color.battleText);
+    arguments.putString(ARG_ID, campaignId);
+    return arguments;
   }
 
-  @Override
-  public void save() {
-    super.save();
-
-    List<String> includedCreatureIds = new ArrayList<>();
-    List<String> surprisedCreatureIds = new ArrayList<>();
-
-    for (int i = 0; i < characters.getChildCount(); i++) {
-      if (characters.getChildAt(i) instanceof StartEncounterLineView) {
-        StartEncounterLineView line = (StartEncounterLineView) characters.getChildAt(i);
-        if (line.isIncluded()) {
-          includedCreatureIds.add(line.getCreatureId());
-        }
-        if (line.isSurprised()) {
-          surprisedCreatureIds.add(line.getCreatureId());
-        }
-      }
-    }
-    for (int i = 0; i < monsters.getChildCount(); i++) {
-      if (monsters.getChildAt(i) instanceof StartEncounterLineView) {
-        StartEncounterLineView line = (StartEncounterLineView) monsters.getChildAt(i);
-        if (line.isIncluded()) {
-          includedCreatureIds.add(line.getCreatureId());
-        }
-        if (line.isSurprised()) {
-          surprisedCreatureIds.add(line.getCreatureId());
-        }
-      }
-    }
-
-    if (campaign.isPresent()) {
-      campaign.get().getEncounter().starting(includedCreatureIds, surprisedCreatureIds);
-    }
+  public static StartEncounterDialog newInstance(String campaignId) {
+    StartEncounterDialog dialog = new StartEncounterDialog();
+    dialog.setArguments(arguments(R.layout.dialog_start_encounter,
+        R.string.dialog_title_start_battle, R.color.battle, campaignId));
+    return dialog;
   }
 }

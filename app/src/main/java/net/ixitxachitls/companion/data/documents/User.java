@@ -36,9 +36,8 @@ import java.util.Optional;
  */
 public class User extends Document<User> {
 
-  private static final Factory FACTORY = new Factory();
-
   protected static final String PATH = "users";
+  private static final Factory FACTORY = new Factory();
   private static final String FIELD_NICKNAME = "nickname";
   private static final String DEFAULT_NICKNAME = "";
   private static final String FIELD_PHOTO_URL = "photoUrl";
@@ -49,11 +48,16 @@ public class User extends Document<User> {
   private List<String> campaigns = new ArrayList<>();
   private List<String> features = new ArrayList<>();
 
-  protected static User getOrCreate(CompanionContext context, String id) {
-    User user = Document.getOrCreate(FACTORY, context, PATH + "/" + id);
-    user.whenReady(user::readCampaigns);
+  public List<String> getCampaigns() {
+    return campaigns;
+  }
 
-    return user;
+  public List<String> getFeatures() {
+    return features;
+  }
+
+  public void setFeatures(List<String> features) {
+    this.features = new ArrayList<>(features);
   }
 
   public String getNickname() {
@@ -72,53 +76,8 @@ public class User extends Document<User> {
     this.photoUrl = photoUrl;
   }
 
-  public List<String> getFeatures() {
-    return features;
-  }
-
-  public void setFeatures(List<String> features) {
-    this.features = new ArrayList<>(features);
-  }
-
-  public List<String> getCampaigns() {
-    return campaigns;
-  }
-
-  private void readCampaigns() {
-    context.invites().listenCampaigns(campaigns -> { this.campaigns = campaigns; updated(); });
-  }
-
-  public boolean owns(String id) {
-    return id.startsWith(getId());
-  }
-
-  @Override
-  @CallSuper
-  protected void read() {
-    super.read();
-    nickname = get(FIELD_NICKNAME, DEFAULT_NICKNAME);
-    photoUrl = get(FIELD_PHOTO_URL, "");
-    features = get(FIELD_FEATURES, new ArrayList<>());
-  }
-
-  @Override
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_NICKNAME, nickname);
-    data.put(FIELD_PHOTO_URL, photoUrl);
-    data.put(FIELD_FEATURES, features);
-    return data;
-  }
-
-  @Override
-  public String toString() {
-    return getNickname();
-  }
-
-  private static class Factory implements DocumentFactory<User> {
-    @Override
-    public User create() {
-      return new User();
-    }
+  public static boolean isUser(String id) {
+    return id.matches(PATH + "/[^/]*/");
   }
 
   public boolean amDM(String id) {
@@ -142,7 +101,50 @@ public class User extends Document<User> {
     return id.startsWith(getId());
   }
 
-  public static boolean isUser(String id) {
-    return id.matches(PATH + "/[^/]*/");
+  public boolean owns(String id) {
+    return id.startsWith(getId());
+  }
+
+  @Override
+  public String toString() {
+    return getNickname();
+  }
+
+  @Override
+  @CallSuper
+  protected void read() {
+    super.read();
+    nickname = get(FIELD_NICKNAME, DEFAULT_NICKNAME);
+    photoUrl = get(FIELD_PHOTO_URL, "");
+    features = get(FIELD_FEATURES, new ArrayList<>());
+  }
+
+  @Override
+  protected Map<String, Object> write(Map<String, Object> data) {
+    data.put(FIELD_NICKNAME, nickname);
+    data.put(FIELD_PHOTO_URL, photoUrl);
+    data.put(FIELD_FEATURES, features);
+    return data;
+  }
+
+  private void readCampaigns() {
+    context.invites().listenCampaigns(campaigns -> {
+      this.campaigns = campaigns;
+      updated(this);
+    });
+  }
+
+  protected static User getOrCreate(CompanionContext context, String id) {
+    User user = Document.getOrCreate(FACTORY, context, PATH + "/" + id);
+    user.whenReady(user::readCampaigns);
+
+    return user;
+  }
+
+  private static class Factory implements DocumentFactory<User> {
+    @Override
+    public User create() {
+      return new User();
+    }
   }
 }

@@ -34,9 +34,8 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Adventure;
-import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Campaigns;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -55,18 +54,11 @@ public class AdventuresDialog extends Dialog {
   private LabelledEditTextView name;
   private Wrapper<Button> add;
 
-  public static AdventuresDialog newInstance(String campaignId) {
-    AdventuresDialog dialog = new AdventuresDialog();
-    dialog.setArguments(arguments(R.layout.dialog_adventures, R.string.dialog_adventures_title,
-        R.color.campaign, campaignId));
-    return dialog;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String campaignId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ID, campaignId);
-    return arguments;
+  private void add() {
+    if (campaign.isPresent() && !name.getText().isEmpty()) {
+      Adventure.create(context(), campaign.get().getId(), name.getText()).store();
+      refresh(Documents.FULL_UPDATE);
+    }
   }
 
   @Override
@@ -76,28 +68,13 @@ public class AdventuresDialog extends Dialog {
     add = Wrapper.<Button>wrap(view, R.id.add).onClick(this::add);
 
     campaign = campaigns().get(getArguments().getString(ARG_ID));
-    refresh();
+    refresh(Documents.FULL_UPDATE);
 
-    campaigns().observe(this, this::update);
-    adventures().observe(this, this::update);
+    campaigns().observe(this, this::refresh);
+    adventures().observe(this, this::refresh);
   }
 
-  private void add() {
-    if (campaign.isPresent() && !name.getText().isEmpty()) {
-      Adventure.create(context(), campaign.get().getId(), name.getText()).store();
-      refresh();
-    }
-  }
-
-  private void update(Campaigns campaigns) {
-    refresh();
-  }
-
-  private void update(Adventures adventures) {
-    refresh();
-  }
-
-  private void refresh() {
+  private void refresh(Documents.Update update) {
     adventures.removeAllViews();
     if (campaign.isPresent()) {
       for (Adventure adventure : adventures().getForCampaign(campaign.get().getId())) {
@@ -106,6 +83,20 @@ public class AdventuresDialog extends Dialog {
                 && campaign.get().getAdventure().get().getId().equals(adventure.getId())));
       }
     }
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String campaignId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_ID, campaignId);
+    return arguments;
+  }
+
+  public static AdventuresDialog newInstance(String campaignId) {
+    AdventuresDialog dialog = new AdventuresDialog();
+    dialog.setArguments(arguments(R.layout.dialog_adventures, R.string.dialog_adventures_title,
+        R.color.campaign, campaignId));
+    return dialog;
   }
 
   private class LineView extends LinearLayout {
@@ -128,15 +119,15 @@ public class AdventuresDialog extends Dialog {
       addView(view);
     }
 
+    private void remove() {
+      adventures().delete(adventure.getId());
+      refresh(Documents.FULL_UPDATE);
+    }
+
     private void select() {
       if (campaign.isPresent()) {
         campaign.get().setAdventure(adventure);
       }
-    }
-
-    private void remove() {
-      adventures().delete(adventure.getId());
-      refresh();
     }
   }
 }

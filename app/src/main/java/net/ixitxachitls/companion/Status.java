@@ -41,37 +41,17 @@ public class Status {
   private static Optional<StatusView> view = Optional.empty();
   private static List<Action> pendingActions = new ArrayList<>();
 
+  @FunctionalInterface
+  public interface Action {
+    void execute(StatusView view);
+  }
+
   public static void setView(StatusView view) {
     Status.view = Optional.of(view);
   }
 
   public static void clearView() {
     Status.view = Optional.empty();
-  }
-
-  public static void log(String message) {
-    Log.d("Status", message);
-    if (Misc.IN_UNIT_TEST) {
-      System.out.println(message);
-    }
-    runInView(v -> v.addMessage(message));
-  }
-
-  public static void exception(String message, Exception e) {
-    Log.e("Status", message, e);
-    if (Misc.IN_UNIT_TEST) {
-      System.out.println(message);
-      e.printStackTrace();
-    }
-    runInView(v -> v.showException(message, e));
-  }
-
-  public static void warning(String message) {
-    Log.w("Status", message);
-    if (Misc.IN_UNIT_TEST) {
-      System.out.println(message);
-    }
-    runInView(v -> v.addWarningMessage(message));
   }
 
   public static void error(String message) {
@@ -83,13 +63,21 @@ public class Status {
     runInView(v -> v.addErrorMessage(message));
   }
 
-  public static void toast(String message) {
-    toastOnly(message);
-    log(message);
+  public static void exception(String message, Exception e) {
+    Log.e("Status", message, e);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+      e.printStackTrace();
+    }
+    runInView(v -> v.showException(message, e));
   }
 
-  private static void toastOnly(String message) {
-    runInView(v -> Toast.makeText(v.getContext(), message, Toast.LENGTH_LONG).show());
+  public static void log(String message) {
+    Log.d("Status", message);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+    }
+    runInView(v -> v.addMessage(message));
   }
 
   private static void runInView(Action action) {
@@ -107,14 +95,35 @@ public class Status {
     }
   }
 
+  public static void silentException(String message, Exception e) {
+    Log.e("Status", message, e);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+      e.printStackTrace();
+    }
+    runInView(v -> v.addException(message, e));
+  }
+
+  public static void toast(String message) {
+    toastOnly(message);
+    log(message);
+  }
+
+  private static void toastOnly(String message) {
+    runInView(v -> Toast.makeText(v.getContext(), message, Toast.LENGTH_LONG).show());
+  }
+
   public static void toggleDebug() {
     if (view.isPresent()) {
       view.get().toggleDebug();
     }
   }
 
-  @FunctionalInterface
-  public interface Action {
-    void execute(StatusView view);
+  public static void warning(String message) {
+    Log.w("Status", message);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+    }
+    runInView(v -> v.addWarningMessage(message));
   }
 }

@@ -54,8 +54,9 @@ public class ApplicationCompanionContext extends CompanionContext {
     images = new Images();
   }
 
+  @Override
   public void loggedIn(User me) {
     campaigns.loggedIn(me);
-    characters.addPlayer(me);
+    characters.processPlayer(me);
   }
 }

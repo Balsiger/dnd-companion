@@ -26,7 +26,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.CallSuper;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,8 +39,7 @@ import android.widget.Toast;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Campaigns;
-import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
@@ -182,9 +180,9 @@ public class CampaignFragment extends CompanionFragment {
         .description("Send Message", "Send a message to other characters and the DM")
         .invisible();
 
-    campaigns().observe(this, this::update);
-    images().observe(this, title::update);
-    messages().observe(this, title::update);
+    campaigns().observe(this, this::refresh);
+    images().observe(this, title::refresh);
+    messages().observe(this, title::refresh);
 
     return view;
   }
@@ -215,7 +213,7 @@ public class CampaignFragment extends CompanionFragment {
     characters().addPlayers(campaign);
     monsters().addCampaign(campaign.getId());
 
-    update(campaigns());
+    refresh(Documents.FULL_UPDATE);
   }
 
   public boolean shows(String campaignId) {
@@ -312,14 +310,42 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void refresh() {
-    update(campaigns());
-    update(characters());
-
-    title.update(images());
-    title.update(messages());
+    refresh(Documents.FULL_UPDATE);
+    title.refresh(Documents.FULL_UPDATE);
 
     encounter.refresh();
     party.refresh();
+  }
+
+  protected void refresh(Documents.Update update) {
+    // Campaigns.
+    if (campaign.isPresent()) {
+      title.update(campaign.get());
+      title.refresh(update);
+      date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
+      delete.visible(canDeleteCampaign());
+
+      TransitionManager.beginDelayedTransition((ViewGroup) getView());
+      if (campaign.get().getEncounter().inBattle()) {
+        party.hide();
+        encounter.show();
+        encounter.refresh(update);
+        startEncounter.disabled().tint(R.color.actionDisabled);
+        setLayoutWidth(encounterActions, LinearLayout.LayoutParams.WRAP_CONTENT);
+        endEncounter.visible(campaign.get().amDM());
+        nextInEncounter.visible(campaign.get().amDM());
+        addCondition.visible(campaign.get().amDM()
+            || campaign.get().getEncounter().amCurrentPlayer());
+        addMonsterInEncounter.visible(campaign.get().amDM());
+        delayInEncounter.visible(campaign.get().amDM()
+            || campaign.get().getEncounter().amCurrentPlayer());
+      } else {
+        party.show();
+        encounter.hide();
+        startEncounter.enabled().tint(R.color.action);
+        setLayoutWidth(encounterActions, 0);
+      }
+    }
   }
 
   private void sendMessage() {
@@ -344,39 +370,5 @@ public class CampaignFragment extends CompanionFragment {
 
       campaign.get().getEncounter().setup();
     }
-  }
-
-  @CallSuper
-  protected void update(Campaigns campaigns) {
-    if (campaign.isPresent()) {
-      title.update(campaign.get());
-      title.update(images());
-      date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
-      delete.visible(canDeleteCampaign());
-
-      TransitionManager.beginDelayedTransition((ViewGroup) getView());
-      if (campaign.get().getEncounter().inBattle()) {
-        party.hide();
-        encounter.show();
-        encounter.update(campaigns());
-        startEncounter.disabled().tint(R.color.actionDisabled);
-        setLayoutWidth(encounterActions, LinearLayout.LayoutParams.WRAP_CONTENT);
-        endEncounter.visible(campaign.get().amDM());
-        nextInEncounter.visible(campaign.get().amDM());
-        addCondition.visible(campaign.get().amDM()
-            || campaign.get().getEncounter().amCurrentPlayer());
-        addMonsterInEncounter.visible(campaign.get().amDM());
-        delayInEncounter.visible(campaign.get().amDM()
-            || campaign.get().getEncounter().amCurrentPlayer());
-      } else {
-        party.show();
-        encounter.hide();
-        startEncounter.enabled().tint(R.color.action);
-        setLayoutWidth(encounterActions, 0);
-      }
-    }
-  }
-
-  protected void update(Characters characters) {
   }
 }

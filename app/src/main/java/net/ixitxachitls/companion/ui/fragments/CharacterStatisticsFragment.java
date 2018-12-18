@@ -31,7 +31,7 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Characters;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.rules.XP;
@@ -154,7 +154,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     }
   }
 
-  private void update(Characters characters) {
+  private void update(Documents.Update update) {
     if (character.isPresent()) {
       update(character.get());
     }

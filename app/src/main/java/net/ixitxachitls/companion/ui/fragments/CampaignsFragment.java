@@ -30,12 +30,8 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Characters;
-import net.ixitxachitls.companion.data.documents.Images;
-import net.ixitxachitls.companion.data.documents.Invites;
-import net.ixitxachitls.companion.data.documents.Messages;
+import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.ui.Hints;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
@@ -96,11 +92,11 @@ public class CampaignsFragment extends CompanionFragment {
             + "campaign later.");
     hint = TextWrapper.wrap(view, R.id.hint);
 
-    campaigns().observe(this, this::update);
-    characters().observe(this, this::update);
-    images().observe(this, this::update);
-    messages().observe(this, this::update);
-    invites().observe(this, this::update);
+    campaigns().observe(this, this::refresh);
+    characters().observe(this, this::refresh);
+    images().observe(this, this::refresh);
+    messages().observe(this, this::refresh);
+    invites().observe(this, this::refresh);
     return view;
   }
 
@@ -110,6 +106,50 @@ public class CampaignsFragment extends CompanionFragment {
 
   private void addCharacter() {
     CharacterDialog.newInstance("", "").display();
+  }
+
+  private void refresh(Documents.Update update) {
+    // Characters.
+    List<String> characterIds = characters().getAll().stream()
+        .filter(Character::amPlayer)
+        .map(Character::getId)
+        .collect(Collectors.toList());
+    this.characters.ensureOnly(characterIds, id -> new CharacterTitleView(getContext()));
+    this.characters.update(characterIds, (id, view) -> {
+      Optional<Character> character = characters().get(id);
+      if (character.isPresent()) {
+        view.update(character.get());
+      }
+    });
+
+    note.visible(this.characters.getView().getChildCount() == 0);
+
+    messages().readMessages(characters().getPlayerCharacters(me().getId()).stream()
+        .map(Character::getId)
+        .collect(Collectors.toList()));
+
+    // Images & Messages.
+    campaigns.simpleUpdate(v -> v.refresh(update));
+    characters.simpleUpdate(v -> v.refresh(update));
+
+    // Campaigns & Invites.
+    this.campaigns.ensureOnly(campaigns().getIds(), id -> new CampaignTitleView(getContext()));
+    this.campaigns.update(campaigns().getIds(),
+        (id, view) -> {
+          Optional<Campaign> campaign = campaigns().get(id);
+          if (campaign.isPresent()) {
+            view.update(campaign.get());
+            view.setAction(() -> {
+              CompanionFragments.get().showCampaign(campaign.get(), Optional.of(view));
+            });
+          }
+        });
+
+    note.visible(campaigns().getIds().isEmpty());
+    user.setTitle(me().getNickname());
+    user.setSubtitle(subtitle());
+    user.loadImageUrl(me().getPhotoUrl());
+    hint.text(Hints.nextHint());
   }
 
   private String subtitle() {
@@ -124,60 +164,5 @@ public class CampaignsFragment extends CompanionFragment {
     }
 
     return Strings.SEMICOLON_JOINER.join(parts);
-  }
-
-  private void update(Characters characters) {
-    List<String> characterIds = characters.getAll().stream()
-        .filter(Character::amPlayer)
-        .map(Character::getId)
-        .collect(Collectors.toList());
-    this.characters.ensureOnly(characterIds, id -> new CharacterTitleView(getContext()));
-    this.characters.update(characterIds, (id, view) -> {
-      Optional<Character> character = characters.get(id);
-      if (character.isPresent()) {
-        view.update(character.get());
-      }
-    });
-
-    note.visible(this.characters.getView().getChildCount() == 0);
-
-    messages().readMessages(characters.getPlayerCharacters(me().getId()).stream()
-        .map(Character::getId)
-        .collect(Collectors.toList()));
-    update(messages());
-  }
-
-  private void update(Images images) {
-    campaigns.simpleUpdate(v -> v.update(images));
-    characters.simpleUpdate(v -> v.update(images));
-  }
-
-  private void update(Messages messages) {
-    characters.simpleUpdate(v -> v.update(messages));
-    campaigns.simpleUpdate(v -> v.update(messages));
-  }
-
-  private void update(Invites invites) {
-    update(campaigns());
-  }
-
-  private void update(Campaigns campaigns) {
-    this.campaigns.ensureOnly(campaigns.getIds(), id -> new CampaignTitleView(getContext()));
-    this.campaigns.update(campaigns.getIds(),
-        (id, view) -> {
-          Optional<Campaign> campaign = campaigns.get(id);
-          if (campaign.isPresent()) {
-            view.update(campaign.get());
-            view.setAction(() -> {
-              CompanionFragments.get().showCampaign(campaign.get(), Optional.of(view));
-            });
-          }
-        });
-
-    note.visible(campaigns.getIds().isEmpty());
-    user.setTitle(me().getNickname());
-    user.setSubtitle(subtitle());
-    user.loadImageUrl(me().getPhotoUrl());
-    hint.text(Hints.nextHint());
   }
 }

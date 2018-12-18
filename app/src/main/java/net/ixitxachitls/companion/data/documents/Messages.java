@@ -47,18 +47,16 @@ public class Messages extends Documents<Messages> {
     super(context);
   }
 
+  public void deleteMessage(String messageId) {
+    delete(messageId);
+  }
+
   public Optional<Message> get(String id) {
     return Optional.ofNullable(messagesById.get(id));
   }
 
   public List<Message> getMessages(String id) {
     return messagesByOwnerId.getOrDefault(id, Collections.emptyList());
-  }
-
-  public void readMessages(List<String> ids) {
-    for (String id : ids) {
-      readMessages(id);
-    }
   }
 
   public void readMessages(String id) {
@@ -74,8 +72,10 @@ public class Messages extends Documents<Messages> {
     }
   }
 
-  public void deleteMessage(String messageId) {
-    delete(messageId);
+  public void readMessages(List<String> ids) {
+    for (String id : ids) {
+      readMessages(id);
+    }
   }
 
   private void readMessages(String id, List<DocumentSnapshot> snapshots) {
@@ -87,6 +87,6 @@ public class Messages extends Documents<Messages> {
     }
 
     messagesByOwnerId.put(id, messages);
-    updated();
+    updatedDocuments(snapshots);
   }
 }

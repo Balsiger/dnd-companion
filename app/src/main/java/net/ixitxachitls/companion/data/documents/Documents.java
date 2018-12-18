@@ -23,12 +23,20 @@ package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.CallSuper;
 
+import com.google.firebase.firestore.DocumentSnapshot;
+
 import net.ixitxachitls.companion.data.CompanionContext;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Base class for all document collections.
  */
-public abstract class Documents<D extends Documents<D>> extends Observable<D> {
+public abstract class Documents<D extends Documents<D>> extends Observable<Documents.Update> {
+
+  public final static Update FULL_UPDATE = new FullUpdate();
 
   protected final CompanionContext context;
 
@@ -36,12 +44,66 @@ public abstract class Documents<D extends Documents<D>> extends Observable<D> {
     this.context = context;
   }
 
+  public CompanionContext getContext() {
+    return context;
+  }
+
   @CallSuper
   protected void delete(String id) {
     db.document(id).delete();
   }
 
-  public CompanionContext getContext() {
-    return context;
+  protected void updated(String id) {
+    updated(Collections.singletonList(id));
+  }
+
+  protected void updated(List<String> ids) {
+    updated(new Update(ids));
+  }
+
+  protected void updatedDocuments(List<DocumentSnapshot> snapshots) {
+    updated(snapshots.stream().map(DocumentSnapshot::getId).collect(Collectors.toList()));
+  }
+
+  public static class Update {
+    List<String> ids;
+
+    public Update(List<String> ids) {
+      this.ids = ids;
+    }
+
+    public Update(String id) {
+      this.ids = Collections.singletonList(id);
+    }
+
+    public boolean hasId(String id) {
+      return ids.contains(id);
+    }
+
+    public boolean hasSupId(String sup) {
+      for (String id : ids) {
+        if (id.startsWith(sup)) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+  }
+
+  private static class FullUpdate extends Update {
+    private FullUpdate() {
+      super(Collections.emptyList());
+    }
+
+    @Override
+    public boolean hasId(String id) {
+      return true;
+    }
+
+    @Override
+    public boolean hasSupId(String sup) {
+      return true;
+    }
   }
 }

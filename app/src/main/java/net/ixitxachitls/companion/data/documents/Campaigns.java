@@ -35,6 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Model for all the campaigns available to a user.
@@ -54,8 +55,56 @@ public class Campaigns extends Documents<Campaigns> {
     super(context);
   }
 
+  public List<Campaign> getCampaigns() {
+    return campaigns;
+  }
+
   public ImmutableList<String> getIds() {
     return ids;
+  }
+
+  public static boolean isCampaignId(String id) {
+    return id.contains("/" + PATH + "/");
+  }
+
+  public void add(Campaign campaign) {
+    if (campaign.amDM()) {
+      if (dmCampaignsById.containsKey(campaign.getId())) {
+        throw new IllegalStateException("Campaign already added: " + campaign);
+      }
+
+      dmCampaignsById.put(campaign.getId(), campaign);
+    } else {
+      if (playerCampaignsById.containsKey(campaign.getId())) {
+        throw new IllegalStateException("Campaign already added: " + campaign);
+      }
+
+      playerCampaignsById.put(campaign.getId(), campaign);
+    }
+
+    update(Collections.singletonList(campaign.getId()));
+  }
+
+  public Campaign create() {
+    Campaign campaign = Campaign.create(context, context.me());
+    add(campaign);
+
+    return campaign;
+  }
+
+  public void delete(Campaign campaign) {
+    if (campaign.amDM()) {
+      if (!dmCampaignsById.containsKey(campaign.getId())
+          && !playerCampaignsById.containsKey(campaign.getId())) {
+        throw new IllegalStateException("Campaign to be removed does not exist: " + campaign);
+      }
+
+      campaign.uninviteAll();
+      dmCampaignsById.remove(campaign.getId());
+      playerCampaignsById.remove(campaign.getId());
+      delete(campaign.getId());
+      update(Collections.singletonList(campaign.getId()));
+    }
   }
 
   public Optional<Campaign> get(String id) {
@@ -75,85 +124,47 @@ public class Campaigns extends Documents<Campaigns> {
     }
   }
 
-  public List<Campaign> getCampaigns() {
-    return campaigns;
-  }
-
   public void loggedIn(User me) {
     this.dmCampaigns = db.collection(me.getId() + "/" + PATH);
-    readDMCampaigns();
+    processDMCampaigns();
 
-    me.observeForever(this::readPlayerCampaigns);
-    readPlayerCampaigns(me);
+    me.observeForever(u -> processPlayerCampaigns(me));
+    processPlayerCampaigns(me);
   }
 
-  public Campaign create() {
-    Campaign campaign = Campaign.create(context, context.me());
-    add(campaign);
-
-    return campaign;
+  private boolean changedCampaigns(User me) {
+    return me.getCampaigns().size() != playerCampaignsById.size()
+        || me.getCampaigns().stream()
+           .anyMatch(c -> !playerCampaignsById.containsKey(c))
+        || playerCampaignsById.keySet().stream()
+           .anyMatch(c -> !me.getCampaigns().contains(c));
   }
 
-  public void add(Campaign campaign) {
-    if (campaign.amDM()) {
-      if (dmCampaignsById.containsKey(campaign.getId())) {
-        throw new IllegalStateException("Campaign already added: " + campaign);
-      }
-
-      dmCampaignsById.put(campaign.getId(), campaign);
-    } else {
-      if (playerCampaignsById.containsKey(campaign.getId())) {
-        throw new IllegalStateException("Campaign already added: " + campaign);
-      }
-
-      playerCampaignsById.put(campaign.getId(), campaign);
-    }
-
-    update();
-  }
-
-  public void delete(Campaign campaign) {
-    if (campaign.amDM()) {
-      if (!dmCampaignsById.containsKey(campaign.getId())
-          && !playerCampaignsById.containsKey(campaign.getId())) {
-        throw new IllegalStateException("Campaign to be removed does not exist: " + campaign);
-      }
-
-      campaign.uninviteAll();
-      dmCampaignsById.remove(campaign.getId());
-      playerCampaignsById.remove(campaign.getId());
-      delete(campaign.getId());
-      update();
-    }
-  }
-
-  public static boolean isCampaignId(String id) {
-    return id.contains("/" + PATH + "/");
-  }
-
-  private void readDMCampaigns() {
-    // DM campaigns, from the sub documents of the user.
-    dmCampaigns.get().addOnSuccessListener(task -> readDMCampaigns(task.getDocuments()));
-    dmCampaigns.addSnapshotListener((s, e) -> {
-      if (e == null)  {
-        readDMCampaigns(s.getDocuments());
-      } else {
-        Status.exception("Cannot read campaigns!", e);
-      }
-    });
-  }
-
-  private void readDMCampaigns(List<DocumentSnapshot> documents) {
+  private void processDMCampaigns(List<DocumentSnapshot> documents) {
     dmCampaignsById.clear();
     for (DocumentSnapshot snapshot : documents) {
       Campaign campaign = Campaign.fromData(context, snapshot);
       dmCampaignsById.put(campaign.getId(), campaign);
     }
 
-    update();
+    update(documents.stream().map(DocumentSnapshot::getId).collect(Collectors.toList()));
   }
 
-  private void readPlayerCampaigns(User me) {
+  private void processDMCampaigns() {
+    // DM campaigns, from the sub documents of the user.
+    dmCampaigns.get()
+        .addOnSuccessListener(task -> processDMCampaigns(task.getDocuments()))
+        .addOnFailureListener(e -> Status.silentException("Cannot process DM Campaigns:", e));
+    dmCampaigns.addSnapshotListener((s, e) -> {
+      if (e == null)  {
+        processDMCampaigns(s.getDocuments());
+      } else {
+        Status.exception("Cannot read campaigns!", e);
+      }
+    });
+  }
+
+  private void processPlayerCampaigns(User me) {
     if (changedCampaigns(me)) {
       // Player campaigns, invitations from other users.
       playerCampaignsById.clear();
@@ -166,27 +177,17 @@ public class Campaigns extends Documents<Campaigns> {
         }
       }
 
-      update();
+      update(new ArrayList<>(playerCampaignsById.keySet()));
     }
   }
 
-  private boolean changedCampaigns(User me) {
-    return me.getCampaigns().size() != playerCampaignsById.size()
-        || me.getCampaigns().stream()
-        .filter(c -> !playerCampaignsById.containsKey(c))
-        .findAny().isPresent()
-        || playerCampaignsById.keySet().stream()
-        .filter(c -> !me.getCampaigns().contains(c))
-        .findAny().isPresent();
-  }
-
-  private void update() {
+  private void update(List<String> ids) {
     List<Campaign> all = new ArrayList<>(dmCampaignsById.values());
     all.addAll(playerCampaignsById.values());
     Collections.sort(all);
-    campaigns = ImmutableList.copyOf(all);
+    this.campaigns = ImmutableList.copyOf(all);
     this.ids = campaigns.stream().map(Campaign::getId).collect(ImmutableList.toImmutableList());
 
-    updated();
+    updated(ids);
   }
 }
