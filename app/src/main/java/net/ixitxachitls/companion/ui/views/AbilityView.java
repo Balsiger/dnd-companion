@@ -30,8 +30,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.common.base.Optional;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
@@ -39,13 +37,16 @@ import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.Optional;
+
 /**
  * View to show a single ability.
  */
 public class AbilityView extends LinearLayout {
 
   private Ability ability = Ability.UNKNOWN;
-  private Optional<ModifiedValue> modifiedValue = Optional.absent();
+  private Optional<ModifiedValue> modifiedValue = Optional.empty();
+  private Optional<ModifiedValue> modifiedCheck = Optional.empty();
 
   // UI elements.
   private TextWrapper<TextView> value;
@@ -61,16 +62,27 @@ public class AbilityView extends LinearLayout {
     setOnClickListener(v -> action.execute());
   }
 
-  public AbilityView update(Ability ability, ModifiedValue value) {
+  public AbilityView update(Ability ability, ModifiedValue value, ModifiedValue check) {
     this.ability = ability;
     this.modifiedValue = Optional.of(value);
+    this.modifiedCheck = Optional.of(check);
 
     int total = value.total();
     int modifier = Ability.modifier(total);
+    int checkModifier = check.total();
     this.value.text(String.valueOf(total));
-    this.modifier.text((modifier < 0 ? "" : "+") + modifier);
+
+    if (modifier != checkModifier) {
+      this.modifier.text(formatSigned(modifier) + " / " + formatSigned(checkModifier));
+    } else {
+      this.modifier.text(formatSigned(modifier));
+    }
 
     return this;
+  }
+
+  private String formatSigned(int value) {
+    return (value < 0 ? "" : "+") + value;
   }
 
   private void init(@Nullable AttributeSet attributes) {
@@ -90,9 +102,15 @@ public class AbilityView extends LinearLayout {
 
   private boolean showDescription(View view) {
     if (modifiedValue.isPresent()) {
+      String check = "";
+      if (modifiedCheck.isPresent()
+          && modifiedCheck.get().total() != Ability.modifier(modifiedValue.get().total())) {
+        check = "\n\n" + ability.getName() + " checks:\n" + modifiedCheck.get().describeModifiers();
+      }
+
       MessageDialog.create(getContext())
           .title(ability.getName())
-          .message(modifiedValue.get().describeModifiers())
+          .message(modifiedValue.get().describeModifiers() + check)
           .show();
       return true;
     }

@@ -244,7 +244,7 @@ public class ConditionData {
       this.name = name;
       if (existing.isPresent()) {
         this.description = existing.get().description;
-        this.adjustments = new ArrayList<>(existing.get().adjustments);
+        this.adjustments.addAll(existing.get().adjustments);
         this.duration = existing.get().duration;
         this.predefined = existing.get().predefined;
         this.endsBeforeTurn = existing.get().endsBeforeTurn;
@@ -266,6 +266,7 @@ public class ConditionData {
     }
 
     public Builder adjustments(List<Adjustment> adjustments) {
+      this.adjustments.clear();
       this.adjustments.addAll(adjustments);
       return this;
     }

@@ -27,6 +27,7 @@ import com.google.common.collect.ImmutableMap;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.AbilityAdjustment;
+import net.ixitxachitls.companion.data.values.AbilityCheckAdjustment;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.GenericAdjustment;
@@ -83,8 +84,10 @@ public class Conditions {
       .adjustment("no Dexterity bonus to AC")
       .adjustment("half speed")
       .adjustment("-4 on Search checks")
-      .adjustment("-4 on Strength checks")
-      .adjustment("-4 on Dexterity checks")
+      .adjustment(new AbilityCheckAdjustment(Ability.STRENGTH,
+          new Modifier(-4, Modifier.Type.GENERAL, "Blinded")))
+      .adjustment(new AbilityCheckAdjustment(Ability.DEXTERITY,
+          new Modifier(-4, Modifier.Type.GENERAL, "Blinded")))
       .adjustment("50% miss chance")
       .predefined()
       .icon(R.drawable.eye_off)

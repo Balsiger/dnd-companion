@@ -66,8 +66,18 @@ public class Character extends Creature<Character> implements Comparable<Charact
   }
 
   @Override
+  public ModifiedValue getCharismaCheck() {
+    return adjustAbilityCheck(super.getCharismaCheck(), Ability.CHARISMA);
+  }
+
+  @Override
   public ModifiedValue getConstitution() {
     return adjustAbility(super.getConstitution(), Ability.CONSTITUTION);
+  }
+
+  @Override
+  public ModifiedValue getConstitutionCheck() {
+    return adjustAbilityCheck(super.getConstitutionCheck(), Ability.CONSTITUTION);
   }
 
   @Override
@@ -76,8 +86,18 @@ public class Character extends Creature<Character> implements Comparable<Charact
   }
 
   @Override
+  public ModifiedValue getDexterityCheck() {
+    return adjustAbilityCheck(super.getDexterityCheck(), Ability.DEXTERITY);
+  }
+
+  @Override
   public ModifiedValue getIntelligence() {
     return adjustAbility(super.getIntelligence(), Ability.INTELLIGENCE);
+  }
+
+  @Override
+  public ModifiedValue getIntelligenceCheck() {
+    return adjustAbilityCheck(super.getIntelligenceCheck(), Ability.INTELLIGENCE);
   }
 
   @Override
@@ -96,8 +116,18 @@ public class Character extends Creature<Character> implements Comparable<Charact
   }
 
   @Override
+  public ModifiedValue getStrengthCheck() {
+    return adjustAbilityCheck(super.getStrengthCheck(), Ability.STRENGTH);
+  }
+
+  @Override
   public ModifiedValue getWisdom() {
     return adjustAbility(super.getWisdom(), Ability.WISDOM);
+  }
+
+  @Override
+  public ModifiedValue getWisdomCheck() {
+    return adjustAbilityCheck(super.getWisdomCheck(), Ability.WISDOM);
   }
 
   @Override
@@ -228,6 +258,25 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private ModifiedValue adjustAbility(ModifiedValue value, Ability ability) {
     adjustAbilityForLevels(value, ability);
     adjustAbilityForConditions(value, ability);
+    return value;
+  }
+
+  private ModifiedValue adjustAbilityCheck(ModifiedValue value, Ability ability) {
+    adjustAbilityCheckForConditions(value, ability);
+    return value;
+  }
+
+  private ModifiedValue adjustAbilityCheckForConditions(ModifiedValue value, Ability ability) {
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment.is(Adjustment.Type.abilityCheck)) {
+          if (ability == ((AbilityAdjustment) adjustment).getAbility()) {
+            value.add(((AbilityAdjustment) adjustment).getModifier());
+          }
+        }
+      }
+    }
+
     return value;
   }
 

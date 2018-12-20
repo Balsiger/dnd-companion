@@ -87,7 +87,7 @@ public class Images extends Observable<Documents.Update> {
             imageHashesById.put(id, hash);
           }
         })
-        .addOnFailureListener(e -> Status.silentException("Cannot load image: ", e));
+        .addOnFailureListener(e -> { /* Ignore this as the image could not exist. */ });
   }
 
   private static Bitmap scale(Bitmap bitmap) {

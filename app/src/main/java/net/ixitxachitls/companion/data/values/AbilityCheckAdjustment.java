@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.values;
 
-import android.text.Spanned;
-
 import net.ixitxachitls.companion.data.enums.Ability;
 
 import java.util.Map;
@@ -31,60 +29,26 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * An adjustment to an ability value.
+ * An adjustment for an ability check.
  */
-public class AbilityAdjustment extends Adjustment {
+public class AbilityCheckAdjustment extends AbilityAdjustment {
 
-  protected static final Pattern PARSE_PATTERN = Pattern.compile("(?i:\\s*((?:\\+|-)\\d+)"
-        + "\\s+(" + Modifier.TYPE_PATTERN + ")"
-        + "\\s*(" + Ability.PATTERN + ")\\s*)");
-  protected static final String FIELD_ABILITY = "ability";
-  protected static final String FIELD_MODIFIER = "modifier";
-  private final Ability ability;
-  private final Modifier modifier;
+  private static final Pattern PARSE_PATTERN =
+      Pattern.compile(AbilityAdjustment.PARSE_PATTERN.pattern() + "\\s+check\\s*");
 
-  public AbilityAdjustment(Ability ability, Modifier modifier) {
-    this(Type.ability, ability, modifier);
-  }
-
-  protected AbilityAdjustment(Type type, Ability ability, Modifier modifier) {
-    super(type);
-
-    this.ability = ability;
-    this.modifier = modifier;
-  }
-
-  public Ability getAbility() {
-    return ability;
-  }
-
-  public Modifier getModifier() {
-    return modifier;
-  }
-
-  @Override
-  public Spanned toSpanned() {
-    return toSupportedSpanned();
-  }
-
-  @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = super.write();
-    data.put(FIELD_ABILITY, ability.toString());
-    data.put(FIELD_MODIFIER, modifier.write());
-
-    return data;
+  public AbilityCheckAdjustment(Ability ability, Modifier modifier) {
+    super(Adjustment.Type.abilityCheck, ability, modifier);
   }
 
   @Override
   public String toString() {
-    return modifier.toShortString() + " " + ability.getName();
+    return super.toString() + " check";
   }
 
-  public static Optional<AbilityAdjustment> parseAbility(String text, String source) {
+  public static Optional<AbilityAdjustment> parseAbilityCheck(String text, String source) {
     Matcher matcher = PARSE_PATTERN.matcher(text);
     if (matcher.matches()) {
-      return Optional.of(new AbilityAdjustment(Ability.fromName(matcher.group(3)),
+      return Optional.of(new AbilityCheckAdjustment(Ability.fromName(matcher.group(3)),
           new Modifier(Integer.parseInt(matcher.group(1)),
               matcher.group(2).isEmpty()
                   ? Modifier.Type.GENERAL : Modifier.Type.valueOf(matcher.group(2).toUpperCase()),
@@ -94,10 +58,10 @@ public class AbilityAdjustment extends Adjustment {
     return Optional.empty();
   }
 
-  public static AbilityAdjustment readAbility(Map<String, Object> data) {
+  public static AbilityCheckAdjustment readAbility(Map<String, Object> data) {
     Ability ability = Values.get(data, FIELD_ABILITY, Ability.UNKNOWN);
     Modifier modifier = Modifier.read(Values.get(data, FIELD_MODIFIER));
 
-    return new AbilityAdjustment(ability, modifier);
+    return new AbilityCheckAdjustment(ability, modifier);
   }
 }

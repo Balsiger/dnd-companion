@@ -126,12 +126,14 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       return;
     }
 
-    strength.update(Ability.STRENGTH, character.getStrength());
-    dexterity.update(Ability.DEXTERITY, character.getDexterity());
-    constitution.update(Ability.CONSTITUTION, character.getConstitution());
-    intelligence.update(Ability.INTELLIGENCE, character.getIntelligence());
-    wisdom.update(Ability.WISDOM, character.getWisdom());
-    charisma.update(Ability.CHARISMA, character.getCharisma());
+    strength.update(Ability.STRENGTH, character.getStrength(), character.getStrengthCheck());
+    dexterity.update(Ability.DEXTERITY, character.getDexterity(), character.getDexterityCheck());
+    constitution.update(Ability.CONSTITUTION, character.getConstitution(),
+        character.getConstitutionCheck());
+    intelligence.update(Ability.INTELLIGENCE, character.getIntelligence(),
+        character.getIntelligenceCheck());
+    wisdom.update(Ability.WISDOM, character.getWisdom(), character.getWisdomCheck());
+    charisma.update(Ability.CHARISMA, character.getCharisma(), character.getCharismaCheck());
 
     xp.text(String.valueOf(character.getXp()));
     hp.text(String.valueOf(character.getHp()))

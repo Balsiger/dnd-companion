@@ -135,6 +135,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return new ModifiedValue(charisma, 0);
   }
 
+  public ModifiedValue getCharismaCheck() {
+    return new ModifiedValue(Ability.modifier(getCharisma().total()));
+  }
+
   public List<CreatureCondition> getConditions() {
     return CompanionApplication.get().conditions().getCreatureConditions(getId());
   }
@@ -143,12 +147,20 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return new ModifiedValue(constitution, 0);
   }
 
+  public ModifiedValue getConstitutionCheck() {
+    return new ModifiedValue(Ability.modifier(getConstitution().total()));
+  }
+
   public int getConstitutionModifier() {
     return Ability.modifier(getConstitution().total());
   }
 
   public ModifiedValue getDexterity() {
     return new ModifiedValue(dexterity, 0);
+  }
+
+  public ModifiedValue getDexterityCheck() {
+    return new ModifiedValue(Ability.modifier(getDexterity().total()));
   }
 
   public int getEncounterNumber() {
@@ -177,6 +189,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public ModifiedValue getIntelligence() {
     return new ModifiedValue(intelligence, 0);
+  }
+
+  public ModifiedValue getIntelligenceCheck() {
+    return new ModifiedValue(Ability.modifier(getIntelligence().total()));
   }
 
   public List<Item> getItems() {
@@ -211,16 +227,24 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return race;
   }
 
-  public void setRace(String race) {
-    this.race = Entries.get().getMonsterTemplates().get(race);
+  public void setRace(MonsterTemplate race) {
+    this.race = Optional.of(race);
   }
 
   public ModifiedValue getStrength() {
     return new ModifiedValue(strength, 0);
   }
 
+  public ModifiedValue getStrengthCheck() {
+    return new ModifiedValue(Ability.modifier(getStrength().total()));
+  }
+
   public ModifiedValue getWisdom() {
     return new ModifiedValue(wisdom, 0);
+  }
+
+  public ModifiedValue getWisdomCheck() {
+    return new ModifiedValue(Ability.modifier(getWisdom().total()));
   }
 
   public void setBaseCharisma(int charisma) {
@@ -247,8 +271,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.wisdom = wisdom;
   }
 
-  public void setRace(MonsterTemplate race) {
-    this.race = Optional.of(race);
+  public void setRace(String race) {
+    this.race = Entries.get().getMonsterTemplates().get(race);
   }
 
   public void add(Item item) {
