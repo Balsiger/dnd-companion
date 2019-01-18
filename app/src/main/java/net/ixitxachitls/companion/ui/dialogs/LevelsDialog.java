@@ -36,11 +36,13 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.data.statics.LevelTemplate;
+import net.ixitxachitls.companion.data.templates.FeatTemplate;
+import net.ixitxachitls.companion.data.templates.LevelTemplate;
+import net.ixitxachitls.companion.rules.Levels;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -59,11 +61,9 @@ import java.util.stream.Collectors;
 public class LevelsDialog extends Dialog {
 
   private static final String ARG_ID = "id";
-  private static final String ARG_MAX_LEVEL = "max_level";
 
   private Character character;
   private LinearLayout levels;
-  private int maxLevel;
   private int nextLevel;
 
   private void add() {
@@ -96,7 +96,6 @@ public class LevelsDialog extends Dialog {
     }
 
     character = characters().get(getArguments().getString(ARG_ID)).get();
-    maxLevel = getArguments().getInt(ARG_MAX_LEVEL);
     nextLevel = 1;
     for (Level level : character.getLevels()) {
       levels.addView(new LineView(getContext(), level, nextLevel++));
@@ -106,17 +105,16 @@ public class LevelsDialog extends Dialog {
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String characterId, int maxLevel) {
+                                    @ColorRes int colorId, String characterId) {
     Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
     arguments.putString(ARG_ID, characterId);
-    arguments.putInt(ARG_MAX_LEVEL, maxLevel);
     return arguments;
   }
 
-  public static LevelsDialog newInstance(String characterId, int maxLevel) {
+  public static LevelsDialog newInstance(String characterId) {
     LevelsDialog dialog = new LevelsDialog();
     dialog.setArguments(arguments(R.layout.dialog_levels, R.string.dialog_title_levels,
-        R.color.character, characterId, maxLevel));
+        R.color.character, characterId));
     return dialog;
   }
 
@@ -127,6 +125,7 @@ public class LevelsDialog extends Dialog {
     private final LabelledTextView className;
     private final LabelledEditTextView hp;
     private final LabelledTextView abilityIncrease;
+    private final LabelledTextView feat;
 
     public LineView(Context context, Level level, int number) {
       super(context);
@@ -146,16 +145,23 @@ public class LevelsDialog extends Dialog {
       hp = view.findViewById(R.id.hp);
       hp.validate(new EditTextWrapper.RangeValidator(1, level.getMaxHp())).onBlur(this::refresh);
       abilityIncrease = view.findViewById(R.id.ability_increase);
-      if (Level.allowsAbilityIncrease(number) || level.hasAbilityIncrease()) {
+      if (Levels.allowsAbilityIncrease(number) || level.hasAbilityIncrease()) {
         abilityIncrease.onClick(this::selectAbility);
       } else {
         abilityIncrease.gone();
+      }
+      feat = view.findViewById(R.id.feat);
+      if (Levels.allowsFeat(number)) {
+        feat.onClick(this::selectFeat);
+      } else {
+        feat.gone();
       }
 
       className.text(level.getTemplate().getName());
       hp.text(String.valueOf(level.getHp()));
       abilityIncrease.text(level.getIncreasedAbility().isPresent()
           ? level.getIncreasedAbility().get().getName() : "");
+      feat.text(level.getFeat().isPresent() ? level.getFeat().get().getName() : "");
       refresh();
 
       addView(view);
@@ -163,7 +169,7 @@ public class LevelsDialog extends Dialog {
 
     public Level toLevel() {
       return new Level(className.getText(), Integer.parseInt(hp.getText()),
-          abilityIncrease.getText());
+          abilityIncrease.getText(), feat.getText());
     }
 
     private void delete() {
@@ -192,6 +198,11 @@ public class LevelsDialog extends Dialog {
       refresh();
     }
 
+    private void editFeat(String featName) {
+      this.feat.text(featName);
+      refresh();
+    }
+
     private void refresh() {
       summary.text(summary());
     }
@@ -208,11 +219,22 @@ public class LevelsDialog extends Dialog {
     private void selectClass() {
       ListSelectDialog.newStringInstance(
           R.string.character_select_class, className.getText(),
-          Entries.get().getLevelTemplates().getValues().stream()
+          Templates.get().getLevelTemplates().getValues().stream()
               .filter(LevelTemplate::isFromPHB)
               .map(LevelTemplate::getName)
               .collect(Collectors.toList()), R.color.character)
           .setSelectListener(this::editClass)
+          .display();
+    }
+
+    private void selectFeat() {
+      ListSelectDialog.newStringInstance(
+          R.string.character_select_feat, feat.getText(),
+          Templates.get().getFeatTemplates().getValues().stream()
+              .filter(FeatTemplate::isFromPHB)
+              .map(FeatTemplate::getName)
+              .collect(Collectors.toList()), R.color.character)
+          .setSelectListener(this::editFeat)
           .display();
     }
 
@@ -225,6 +247,9 @@ public class LevelsDialog extends Dialog {
           && !abilityIncrease.getText().equals(Ability.UNKNOWN.getName())
           && !abilityIncrease.getText().equals(Ability.NONE.getName())) {
         result += ", +1 " + abilityIncrease.getText();
+      }
+      if (!feat.getText().isEmpty()) {
+        result += ", " + feat.getText();
       }
 
       return result;

@@ -32,10 +32,10 @@ import android.widget.Button;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.Message;
-import net.ixitxachitls.companion.data.statics.ItemTemplate;
+import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.data.values.Duration;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
@@ -86,30 +86,6 @@ public class EditItemDialog extends Dialog {
     this.item = Optional.empty();
   }
 
-  public static EditItemDialog newInstance(String creatureId) {
-    EditItemDialog dialog = new EditItemDialog();
-    dialog.setArguments(arguments(creatureId, "", R.layout.dialog_edit_item,
-        R.string.character_add_item, R.color.item));
-    return dialog;
-  }
-
-  public static EditItemDialog newInstance(String creatureId, String itemId) {
-    EditItemDialog dialog = new EditItemDialog();
-    dialog.setArguments(arguments(creatureId, itemId, R.layout.dialog_edit_item, R.string
-            .character_edit_item,
-        R.color.item));
-
-    return dialog;
-  }
-
-  protected static Bundle arguments(String creatureId, String itemId, @LayoutRes int layoutId,
-                                    @StringRes int titleId, @ColorRes int colorId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_CREATURE_ID, creatureId);
-    arguments.putString(ARG_ITEM_ID, itemId);
-    return arguments;
-  }
-
   @Override
   public void onCreate(Bundle savedInstance) {
     super.onCreate(savedInstance);
@@ -133,13 +109,13 @@ public class EditItemDialog extends Dialog {
     itemSelection = view.findViewById(R.id.item);
     itemSelection.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select,
-        Entries.get().getItemTemplates().realItems()));
+        Templates.get().getItemTemplates().realItems()));
     itemSelection.onChange(this::selectItem);
 
     templatesSelection = view.findViewById(R.id.templates);
-    templatesSelection.setAdapter(new ArrayAdapter<String>(getContext(),
+    templatesSelection.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select,
-        Entries.get().getItemTemplates().templates()));
+        Templates.get().getItemTemplates().templates()));
     templatesSelection.onChange(this::selectItem);
 
     TextWrapper.wrap(view, R.id.id).text(item.isPresent() ? item.get().getId() : "")
@@ -168,84 +144,8 @@ public class EditItemDialog extends Dialog {
     }
   }
 
-  private void update(Item item) {
-    baseTemplate = item.getBaseTemplate();
-    if (baseTemplate.isPresent()) {
-      // Setting the item selection with actually select the item and thus overwrite
-      // existing templates, thus we do it first.
-      itemSelection.text(baseTemplate.get().getName());
-      templates = item.getTemplates();
-      update(templates);
-      templatesSelection.text(Strings.COMMA_JOINER.join(templates.stream().skip(1)
-          .map(ItemTemplate::getName)
-          .collect(Collectors.toList())));
-    }
-
-    dmName.disabled();
-    dmName.setVisibility(amDM() ? View.VISIBLE : View.GONE);
-    dmNotes.setVisibility(amDM() ? View.VISIBLE : View.GONE);
-
-    // We assume that if we have a value, we have everything else as well.
-    if (!item.getValue().isZero()) {
-      hp.text(String.valueOf(item.getHp()));
-      value.text(item.getValue().toString());
-      appearance.text(item.getAppearance());
-      name.text(item.getPlayerName());
-      dmName.text(item.getName());
-      multiple.text(String.valueOf(item.getMultiple()));
-      multiuse.text(String.valueOf(item.getMultiuse()));
-      timeLeft.text(item.getTimeLeft().isNone() ? "" : item.getTimeLeft().toString());
-      // identified
-      playerNotes.text(item.getPlayerNotes());
-      dmNotes.text(item.getDMNotes());
-    }
-  }
-
-  private void update(List<ItemTemplate> templates) {
-    String fullName = Item.name(templates);
-    if (item.isPresent() && creature.isPresent() && creature.get().amPlayer()) {
-      name.text(item.get().getPlayerName());
-    } else {
-      name.text(fullName);
-    }
-    dmName.text(fullName);
-    value.text(Item.value(templates).toString());
-    weight.text(Item.weight(templates).toString());
-    hp.text(String.valueOf(Item.hp(templates)));
-    appearance.text(Item.appearance(templates));
-  }
-
-  private void selectItem() {
-    baseTemplate = Entries.get().getItemTemplates().get(itemSelection.getText());
-
-    if (baseTemplate.isPresent()) {
-      templates = new ArrayList<>();
-      templates.add(baseTemplate.get());
-      for (String name : templatesSelection.getText().split("\\s*,\\s*")) {
-        Optional<ItemTemplate> template = Entries.get().getItemTemplates().get(name);
-        if (template.isPresent()) {
-          templates.add(template.get());
-        }
-      }
-      update(templates);
-      add.enabled();
-    } else {
-      name.text("");
-      dmName.text("");
-      value.text("");
-      weight.text("");
-      hp.text("");
-      appearance.text("");
-      playerNotes.text("");
-      dmNotes.text("");
-      multiuse.text("1");
-      multiple.text("1");
-      timeLeft.text("");
-      add.disabled();
-    }
-
-    multiple.text("");
-    multiuse.text("");
+  private boolean amDM() {
+    return creature.isPresent() && creature.get().amDM();
   }
 
   private int parseHp() {
@@ -279,6 +179,39 @@ public class EditItemDialog extends Dialog {
     }
 
     return Duration.ZERO;
+  }
+
+  private void selectItem() {
+    baseTemplate = Templates.get().getItemTemplates().get(itemSelection.getText());
+
+    if (baseTemplate.isPresent()) {
+      templates = new ArrayList<>();
+      templates.add(baseTemplate.get());
+      for (String name : templatesSelection.getText().split("\\s*,\\s*")) {
+        Optional<ItemTemplate> template = Templates.get().getItemTemplates().get(name);
+        if (template.isPresent()) {
+          templates.add(template.get());
+        }
+      }
+      update(templates);
+      add.enabled();
+    } else {
+      name.text("");
+      dmName.text("");
+      value.text("");
+      weight.text("");
+      hp.text("");
+      appearance.text("");
+      playerNotes.text("");
+      dmNotes.text("");
+      multiuse.text("1");
+      multiple.text("1");
+      timeLeft.text("");
+      add.disabled();
+    }
+
+    multiple.text("");
+    multiuse.text("");
   }
 
   private void store(boolean create) {
@@ -345,7 +278,74 @@ public class EditItemDialog extends Dialog {
     }
   }
 
-  private boolean amDM() {
-    return creature.isPresent() && creature.get().amDM();
+  private void update(List<ItemTemplate> templates) {
+    String fullName = Item.name(templates);
+    if (item.isPresent() && creature.isPresent() && creature.get().amPlayer()) {
+      name.text(item.get().getPlayerName());
+    } else {
+      name.text(fullName);
+    }
+    dmName.text(fullName);
+    value.text(Item.value(templates).toString());
+    weight.text(Item.weight(templates).toString());
+    hp.text(String.valueOf(Item.hp(templates)));
+    appearance.text(Item.appearance(templates));
+  }
+
+  private void update(Item item) {
+    baseTemplate = item.getBaseTemplate();
+    if (baseTemplate.isPresent()) {
+      // Setting the item selection with actually select the item and thus overwrite
+      // existing templates, thus we do it first.
+      itemSelection.text(baseTemplate.get().getName());
+      templates = item.getTemplates();
+      update(templates);
+      templatesSelection.text(Strings.COMMA_JOINER.join(templates.stream().skip(1)
+          .map(ItemTemplate::getName)
+          .collect(Collectors.toList())));
+    }
+
+    dmName.disabled();
+    dmName.setVisibility(amDM() ? View.VISIBLE : View.GONE);
+    dmNotes.setVisibility(amDM() ? View.VISIBLE : View.GONE);
+
+    // We assume that if we have a value, we have everything else as well.
+    if (!item.getValue().isZero()) {
+      hp.text(String.valueOf(item.getHp()));
+      value.text(item.getValue().toString());
+      appearance.text(item.getAppearance());
+      name.text(item.getPlayerName());
+      dmName.text(item.getName());
+      multiple.text(String.valueOf(item.getMultiple()));
+      multiuse.text(String.valueOf(item.getMultiuse()));
+      timeLeft.text(item.getTimeLeft().isNone() ? "" : item.getTimeLeft().toString());
+      // identified
+      playerNotes.text(item.getPlayerNotes());
+      dmNotes.text(item.getDMNotes());
+    }
+  }
+
+  protected static Bundle arguments(String creatureId, String itemId, @LayoutRes int layoutId,
+                                    @StringRes int titleId, @ColorRes int colorId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_CREATURE_ID, creatureId);
+    arguments.putString(ARG_ITEM_ID, itemId);
+    return arguments;
+  }
+
+  public static EditItemDialog newInstance(String creatureId, String itemId) {
+    EditItemDialog dialog = new EditItemDialog();
+    dialog.setArguments(arguments(creatureId, itemId, R.layout.dialog_edit_item, R.string
+            .character_edit_item,
+        R.color.item));
+
+    return dialog;
+  }
+
+  public static EditItemDialog newInstance(String creatureId) {
+    EditItemDialog dialog = new EditItemDialog();
+    dialog.setArguments(arguments(creatureId, "", R.layout.dialog_edit_item,
+        R.string.character_add_item, R.color.item));
+    return dialog;
   }
 }

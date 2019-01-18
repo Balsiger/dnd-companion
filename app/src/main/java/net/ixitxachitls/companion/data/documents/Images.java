@@ -24,6 +24,9 @@ package net.ixitxachitls.companion.data.documents;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
+
 import net.ixitxachitls.companion.Status;
 
 import java.io.ByteArrayOutputStream;
@@ -31,6 +34,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Storage for all dynamic images of entries.
@@ -42,12 +46,14 @@ public class Images extends Observable<Documents.Update> {
   private final Map<String, String> imageHashesById = new HashMap<>();
   private final Map<String, Bitmap> imagesById = new HashMap<>();
 
-  public Images() {}
+  private final Cache<String, String> pendingById = CacheBuilder.newBuilder()
+      .expireAfterWrite(10, TimeUnit.SECONDS)
+      .build();
+  private final Cache<String, String> inexistentById = CacheBuilder.newBuilder()
+      .expireAfterWrite(1, TimeUnit.MINUTES)
+      .build();
 
-  @FunctionalInterface
-  public interface LoadCallback {
-    public void loaded(Bitmap bitmap);
-  }
+  public Images() {}
 
   public Optional<Bitmap> get(String id) {
     maybeLoad(id);
@@ -55,19 +61,9 @@ public class Images extends Observable<Documents.Update> {
     return Optional.ofNullable(imagesById.get(id));
   }
 
-  public void load(String id) {
-    storage.getReference(id).getBytes(MAX_SIZE_BYTES).addOnSuccessListener(bytes -> {
-      Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-      imagesById.put(id, bitmap);
-      updated(new Documents.Update(Collections.singletonList(id)));
-    }).addOnFailureListener(e -> {
-      Status.silentException("Cannot load file", e);
-      imageHashesById.remove(id);
-      imagesById.remove(id);
-    });
-  }
-
   public void set(String id, Bitmap bitmap) {
+    pendingById.invalidate(id);
+    inexistentById.invalidate(id);
     bitmap = scale(bitmap);
     ByteArrayOutputStream out = new ByteArrayOutputStream();
     bitmap.compress(Bitmap.CompressFormat.JPEG, 50, out);
@@ -78,7 +74,26 @@ public class Images extends Observable<Documents.Update> {
         .addOnFailureListener(e -> Status.silentException("Could not upload image", e));
   }
 
+  private void load(String id) {
+    storage.getReference(id).getBytes(MAX_SIZE_BYTES).addOnSuccessListener(bytes -> {
+      Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+      imagesById.put(id, bitmap);
+      updated(new Documents.Update(Collections.singletonList(id)));
+      pendingById.invalidate(id);
+    }).addOnFailureListener(e -> {
+      Status.silentException("Cannot load file", e);
+      imageHashesById.remove(id);
+      imagesById.remove(id);
+      pendingById.invalidate(id);
+    });
+  }
+
   private void maybeLoad(String id) {
+    if (pendingById.getIfPresent(id) != null || inexistentById.getIfPresent(id) != null) {
+      return;
+    }
+
+    pendingById.put(id, id);
     storage.getReference(id).getMetadata()
         .addOnSuccessListener(metadata -> {
           String hash = metadata.getMd5Hash();
@@ -87,7 +102,10 @@ public class Images extends Observable<Documents.Update> {
             imageHashesById.put(id, hash);
           }
         })
-        .addOnFailureListener(e -> { /* Ignore this as the image could not exist. */ });
+        .addOnFailureListener(e -> {
+          inexistentById.put(id, id);
+          Status.log("No image for " + id);
+        });
   }
 
   private static Bitmap scale(Bitmap bitmap) {

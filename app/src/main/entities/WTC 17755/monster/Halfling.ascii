@@ -34,6 +34,8 @@ abilities {
   wisdom: 9
   intelligence: 10
   charisma: 8
+  racial_strength_modifier: -2
+  racial_dexterity_modifier: 2
 }
 saves {
   fortitude: 4

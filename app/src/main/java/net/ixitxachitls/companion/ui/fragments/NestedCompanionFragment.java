@@ -22,7 +22,7 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.support.v4.app.Fragment;
-import android.view.View;
+import android.support.v4.app.FragmentManager;
 import android.view.ViewGroup;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -37,7 +37,7 @@ import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 
 /**
- * A base framgent for all nested fragments.
+ * A base fragment for all nested fragments.
  */
 public class NestedCompanionFragment extends Fragment {
 
@@ -50,47 +50,53 @@ public class NestedCompanionFragment extends Fragment {
     this.context = CompanionApplication.get().context();
   }
 
-  public Campaigns campaigns() {
-    return context.campaigns();
+  public Adventures adventures() {
+    return context.adventures();
   }
 
-  public CompanionContext context() {
-    return context;
+  public Campaigns campaigns() {
+    return context.campaigns();
   }
 
   public Characters characters() {
     return context.characters();
   }
 
-  public Monsters monsters() {
-    return context.monsters();
+  public CreatureConditions conditions() {
+    return context.conditions();
+  }
+
+  public CompanionContext context() {
+    return context;
+  }
+
+  public void hide() {
+    FragmentManager manager = getChildFragmentManager();
+    manager.beginTransaction()
+        .hide(this)
+        .commit();
   }
 
   public Images images() {
     return context.images();
   }
 
-  public Messages messages() {
-    return context.messages();
-  }
-
-  public CreatureConditions conditions() {
-    return context.conditions();
-  }
-
-  public Adventures adventures() {
-    return context.adventures();
-  }
-
   public User me() {
     return context.me();
   }
 
-  public void hide() {
-    view.setVisibility(View.GONE);
+  public Messages messages() {
+    return context.messages();
+  }
+
+  public Monsters monsters() {
+    return context.monsters();
   }
 
   public void show() {
-    view.setVisibility(View.VISIBLE);
+    FragmentManager manager = getChildFragmentManager();
+    manager.beginTransaction()
+        .show(this)
+        .commit();
   }
 }

@@ -35,8 +35,8 @@ speed {
 natural_armor {
 }
 abilities {
-  dexterity: 2
-  constitution: -2
+  racial_dexterity_modifier: 2
+  racial_constitution_modifier: -2
 }
 saves {
 }

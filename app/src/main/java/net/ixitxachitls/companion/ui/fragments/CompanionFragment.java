@@ -42,7 +42,7 @@ import java.util.Optional;
  */
 public abstract class CompanionFragment extends Fragment {
 
-  public enum Type {settings, campaigns, campaign, character, localCharacter};
+  public enum Type {settings, campaigns, campaign, character, miniatures, localCharacter};
 
   private final Type type;
 

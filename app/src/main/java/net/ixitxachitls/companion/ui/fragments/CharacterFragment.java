@@ -37,7 +37,6 @@ import android.widget.Toast;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
@@ -162,13 +161,6 @@ public class CharacterFragment extends CompanionFragment {
     this.campaign = campaigns().get(character.getCampaignId());
 
     update(character);
-  }
-
-  private void copy() {
-    if (character.isPresent()) {
-      //character.get().copy();
-      Status.toast("The character has been copied.");
-    }
   }
 
   private void delete() {

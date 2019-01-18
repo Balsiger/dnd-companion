@@ -101,6 +101,13 @@ message MonsterTemplateProto {
     int32 wisdom = 4;
     int32 intelligence = 5;
     int32 charisma = 6;
+
+    int32 racial_strength_modifier = 7;
+    int32 racial_dexterity_modifier = 8;
+    int32 racial_constitution_modifier = 9;
+    int32 racial_intelligence_modifier = 10;
+    int32 racial_wisdom_modifier = 11;
+    int32 racial_charisma_modifier = 12;
   }
   Abilities abilities = 9;
 
@@ -326,14 +333,12 @@ message MonsterTemplateProto {
   repeated Skill skill = 36;
 }
 
-message ItemTemplateProto
-{
+message ItemTemplateProto {
   TemplateProto template = 1;
   MoneyProto value = 2;
   WeightProto weight = 3;
 
-  enum Probability
-  {
+  enum Probability {
     UNKNOWN = 0;
     COMMON = 1;
     UNCOMMON = 2;
@@ -346,17 +351,14 @@ message ItemTemplateProto
   int32 hardness = 6;
   int32 hit_points = 7;
 
-  message Appearance
-  {
+  message Appearance {
     Probability probability = 1;
     string appearance = 2;
   }
   repeated Appearance appearance = 8;
 
-  message Substance
-  {
-    enum Material
-    {
+  message Substance {
+    enum Material {
       UNKNOWN = 0;
       PAPER = 1;
       CLOTH = 2;
@@ -397,10 +399,8 @@ message ItemTemplateProto
   CompositeTemplateProto composite = 24;
   repeated ParametrizedTemplateProto qualities = 27;
 
-  message Random
-  {
-    enum Type
-    {
+  message Random {
+    enum Type {
       UNKNOWN = 0;
       MUNDANE = 1;
     }
@@ -410,11 +410,9 @@ message ItemTemplateProto
   }
   repeated Random random = 28;
 
-  message Material
-  {
+  message Material {
     MoneyProto value = 1;
-    enum ValueType
-    {
+    enum ValueType {
       UNKNOWN = 0;
       PER_POUND = 1;
     }
@@ -682,14 +680,11 @@ message ArmorTemplateProto
   DistanceProto speed_slow = 7;
 }
 
-message LightTemplateProto
-{
-  message Light
-  {
+message LightTemplateProto {
+  message Light {
     DistanceProto distance = 1;
 
-    enum Shape
-    {
+    enum Shape {
       UNKNOWN = 0;
       CONE = 1;
       CYLINDER = 2;
@@ -702,8 +697,7 @@ message LightTemplateProto
   Light shadowy = 2;
 }
 
-message CompositeTemplateProto
-{
+message CompositeTemplateProto {
   message Or
   {
     repeated string name = 1;
@@ -711,3 +705,51 @@ message CompositeTemplateProto
   repeated Or contains = 1;
 }
 
+message FeatTemplateProto {
+  TemplateProto template = 1;
+
+  enum Type {
+    UNKNOWN = 0;
+    GENERAL = 1;
+    ITEM_CREATION = 2;
+    METAMAGIC = 3;
+    REGIONAL = 4;
+    SPECIAL = 5;
+    FIGHTER = 6;
+  }
+  Type type = 2;
+  string benefit = 3;
+  string special = 4;
+  string normal = 5;
+  string prerequisites = 6;
+
+  ModifierProto attack_modifier = 8;
+  ModifierProto damage_modifier = 9;
+  int32 additional_attacks = 10;
+  RestrictionProto condition = 11;
+  ModifierProto initiative_modifier = 12;
+  repeated NameAndModifierProto skill_modifier = 13;
+  ModifierProto strength_modifier = 14;
+  ModifierProto dexterity_modifier = 15;
+  ModifierProto constitution_modifier = 16;
+  ModifierProto intelligence_modifier = 17;
+  ModifierProto wisdom_modifier = 18;
+  ModifierProto charisma_modifier = 19;
+  ModifierProto fortitude_modifier = 20;
+  ModifierProto will_modifier = 21;
+  ModifierProto reflex_modifier = 22;
+}
+
+message MiniatureTemplateProto {
+  TemplateProto template = 1;
+
+  string set = 2;
+  int32 number = 3;
+  string number_affix = 4;
+  string race = 5;
+  string type = 6;
+  repeated string subtype = 7;
+  repeated string class = 8;
+  SizeProto.Size size = 9;
+  string origin = 10;
+}

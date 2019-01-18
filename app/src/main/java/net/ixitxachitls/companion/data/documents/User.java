@@ -23,13 +23,22 @@ package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.CallSuper;
 
+import com.google.firebase.firestore.DocumentReference;
+
 import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 /**
  * The data for a single user.
@@ -37,16 +46,23 @@ import java.util.Optional;
 public class User extends Document<User> {
 
   protected static final String PATH = "users";
+  private static final String MINIATURE_PATH = "/miniatures/miniatures";
   private static final Factory FACTORY = new Factory();
   private static final String FIELD_NICKNAME = "nickname";
   private static final String DEFAULT_NICKNAME = "";
   private static final String FIELD_PHOTO_URL = "photoUrl";
   private static final String FIELD_FEATURES = "features";
+  private static final String FIELD_MINIATURE_OWNED = "owned";
+  private static final String FIELD_MINIATURE_LOCATIONS = "locations";
 
   private String nickname;
   private String photoUrl = "";
   private List<String> campaigns = new ArrayList<>();
   private List<String> features = new ArrayList<>();
+  private Map<String, Long> miniatures = new HashMap<>();
+  private Optional<DocumentReference> miniaturesDocument = Optional.empty();
+  private boolean miniaturesLoading = false;
+  private SortedMap<String, MiniatureFilter> locations = new TreeMap<>();
 
   public List<String> getCampaigns() {
     return campaigns;
@@ -58,6 +74,10 @@ public class User extends Document<User> {
 
   public void setFeatures(List<String> features) {
     this.features = new ArrayList<>(features);
+  }
+
+  public Set<Map.Entry<String, MiniatureFilter>> getLocations() {
+    return locations.entrySet();
   }
 
   public String getNickname() {
@@ -78,6 +98,11 @@ public class User extends Document<User> {
 
   public static boolean isUser(String id) {
     return id.matches(PATH + "/[^/]*/");
+  }
+
+  public void addLocation(String location, MiniatureFilter filter) {
+    locations.put(location, filter);
+    writeMiniatures();
   }
 
   public boolean amDM(String id) {
@@ -101,8 +126,85 @@ public class User extends Document<User> {
     return id.startsWith(getId());
   }
 
+  public long getMiniatureCount(String name) {
+    return miniatures.getOrDefault(name, 0L);
+  }
+
+  public String locationFor(MiniatureTemplate template) {
+    SortedMap<MiniatureFilter, String> filteredLocations = new TreeMap<MiniatureFilter, String>();
+    for (Map.Entry<String, MiniatureFilter> location : locations.entrySet()) {
+      if (location.getValue().matches(template)) {
+        filteredLocations.put(location.getValue(), location.getKey());
+      }
+    }
+
+    if (filteredLocations.isEmpty()) {
+      return "";
+    }
+
+    return filteredLocations.values().iterator().next();
+  }
+
   public boolean owns(String id) {
     return id.startsWith(getId());
+  }
+
+  public void readMiniatures() {
+    if (miniaturesLoading) {
+      return;
+    }
+
+    miniaturesLoading = true;
+    if (!miniaturesDocument.isPresent()) {
+      miniaturesDocument = Optional.of(db.document(getId() + MINIATURE_PATH));
+    }
+
+    miniaturesDocument.get().get().addOnCompleteListener(task -> {
+      miniaturesLoading = false;
+      if (task.isSuccessful() ) {
+        miniaturesDocument = Optional.of(task.getResult().getReference());
+        Object data = task.getResult().get(FIELD_MINIATURE_OWNED);
+        if (data != null) {
+          if (miniatures.isEmpty()) {
+            miniatures.putAll((Map<String, Long>) data);
+          } else {
+            Map<String, Long> existing = new HashMap<>(miniatures);
+            miniatures.putAll((Map<String, Long>) data);
+            miniatures.putAll(existing);
+            writeMiniatures();
+          }
+        }
+
+        data = task.getResult().get(FIELD_MINIATURE_LOCATIONS);
+        if (data != null) {
+          Map<String, MiniatureFilter> parsed = readLocations((Map<String, Object>) data);
+          if (locations.isEmpty()) {
+            locations.putAll(parsed);
+          } else {
+            Map<String, MiniatureFilter> existing = new HashMap<>(locations);
+            locations.putAll(parsed);
+            locations.putAll(existing);
+            writeMiniatures();
+          }
+        }
+
+        verifyMiniatures();
+      }
+    });
+  }
+
+  public void removeLocation(String location) {
+    locations.remove(location);
+    writeMiniatures();
+  }
+
+  public void setMiniatureCount(String miniature, long count) {
+    miniatures.put(miniature, count);
+    writeMiniatures();
+  }
+
+  public void setMiniatureCountNoSave(String miniature, long count) {
+    miniatures.put(miniature, count);
   }
 
   @Override
@@ -132,6 +234,45 @@ public class User extends Document<User> {
       this.campaigns = campaigns;
       updated(this);
     });
+  }
+
+  private SortedMap<String, MiniatureFilter> readLocations(Map<String, Object> data) {
+    SortedMap<String, MiniatureFilter> locations = new TreeMap<>();
+
+    for (Map.Entry<String, Object> entry : data.entrySet()) {
+      locations.put(entry.getKey(), MiniatureFilter.read((Map<String, Object>)entry.getValue()));
+    }
+
+    return locations;
+  }
+
+  private void verifyMiniatures() {
+    for (String miniature : miniatures.keySet()) {
+      if (!Templates.get().getMiniatureTemplates().get(miniature).isPresent()) {
+        Status.error("Cannot find owned miniature " + miniature);
+        break;  // Only show the first missing to avoid toast spamming!
+      }
+    }
+  }
+
+  private Map<String, Map<String, Object>> writeLocations() {
+    Map<String, Map<String, Object>> store = new HashMap<>();
+    for (Map.Entry<String, MiniatureFilter> location : locations.entrySet()) {
+      store.put(location.getKey(), location.getValue().write());
+    }
+
+    return store;
+  }
+
+  private void writeMiniatures() {
+    if (miniaturesLoading || !miniaturesDocument.isPresent()) {
+      return;
+    }
+
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_MINIATURE_OWNED, miniatures);
+    data.put(FIELD_MINIATURE_LOCATIONS, writeLocations());
+    miniaturesDocument.get().update(data);
   }
 
   protected static User getOrCreate(CompanionContext context, String id) {

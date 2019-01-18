@@ -231,9 +231,18 @@ public class Character extends Creature<Character> implements Comparable<Charact
     store();
   }
 
-  public int initiativeModifier() {
-    // TODO: this needs treatment of things like feats and items.
-    return Ability.modifier(dexterity);
+  public ModifiedValue initiativeModifier() {
+    ModifiedValue value = new ModifiedValue("Initiative", 0, true);
+    value.add(new Modifier(Ability.modifier(getDexterity().total()), Modifier.Type.ABILITY,
+        "Dexterity"));
+
+    for (Level level : levels) {
+      if (level.getFeat().isPresent()) {
+        value.add(level.getFeat().get().getInitiativeAdjustment());
+      }
+    }
+
+    return value;
   }
 
   @Override
@@ -258,6 +267,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private ModifiedValue adjustAbility(ModifiedValue value, Ability ability) {
     adjustAbilityForLevels(value, ability);
     adjustAbilityForConditions(value, ability);
+    adjustAbilityForRace(value, ability);
     return value;
   }
 
@@ -302,6 +312,17 @@ public class Character extends Creature<Character> implements Comparable<Charact
             "Level " + number + ": " + level.toString()));
       }
       number++;
+    }
+
+    return value;
+  }
+
+  private ModifiedValue adjustAbilityForRace(ModifiedValue value, Ability ability) {
+    if (getRace().isPresent()) {
+      int modifier = getRace().get().getAbilityAdjustment(ability);
+      if (modifier != 0) {
+        value.add(new Modifier(modifier, Modifier.Type.RACIAL, getRace().get().getName()));
+      }
     }
 
     return value;

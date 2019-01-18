@@ -42,9 +42,14 @@
   <color name="itemText">#fff</color>
 
   <color name="className">#ffd54f</color>
-  <color name="classNameLight">#ffff81 </color>
+  <color name="classNameLight">#ffff81</color>
   <color name="classNameDark">#c8a415</color>
   <color name="classNameText">#000</color>
+
+  <color name="miniature">#d4e157</color>
+  <color name="miniatureLight">#ffff89</color>
+  <color name="miniatureDark">#a0af22</color>
+  <color name="miniatureText">#000</color>
 
   <!-- colors for character status -->
   <color name="alive">#f00</color>
@@ -82,5 +87,7 @@
   <color name="moderate">#ffcc00</color>
   <color name="severe">#f17800</color>
   <color name="extreme">#b90900</color>
+  <color name="modified_value">#f5bd2e</color>
+  <color name="filtered">#ff2929</color>
 
 </resources>

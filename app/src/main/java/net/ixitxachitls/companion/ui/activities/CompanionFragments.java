@@ -38,6 +38,7 @@ import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
 import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.LocalCharacterFragment;
+import net.ixitxachitls.companion.ui.fragments.MiniaturesFragment;
 import net.ixitxachitls.companion.ui.fragments.UserFragment;
 
 import java.util.Optional;
@@ -63,30 +64,32 @@ public class CompanionFragments {
   private Optional<UserFragment> settingsFragment = Optional.empty();
   private Optional<CharacterFragment> characterFragment = Optional.empty();
   private Optional<LocalCharacterFragment> localCharacterFragment = Optional.empty();
+  private Optional<MiniaturesFragment> miniaturesFragment = Optional.empty();
 
   private CompanionFragments(CompanionContext context, FragmentManager fragmentManager) {
     this.context = context;
     this.fragmentManager = fragmentManager;
   }
 
-  public void resumed(CompanionFragment fragment) {
-    currentFragment = Optional.of(fragment);
-  }
-
-  public static void init(CompanionContext context, FragmentManager fragmentManager) {
-    if (singleton == null) {
-      singleton = new CompanionFragments(context, fragmentManager);
-    } else {
-      singleton.fragmentManager = fragmentManager;
-    }
-  }
-
-  public static CompanionFragments get() {
-    return singleton;
-  }
-
   public FragmentManager getFragmentManager() {
     return fragmentManager;
+  }
+
+  public void display(Dialog dialog) {
+    fragmentManager.beginTransaction().add(dialog, null).commit();
+    fragmentManager.executePendingTransactions();
+  }
+
+  public boolean goBack() {
+    if (!currentFragment.isPresent()) {
+      return false;
+    }
+
+    return currentFragment.get().goBack();
+  }
+
+  public void resumed(CompanionFragment fragment) {
+    currentFragment = Optional.of(fragment);
   }
 
   public void show() {
@@ -129,47 +132,14 @@ public class CompanionFragments {
         if (!campaignFragment.isPresent()) {
           campaignFragment = Optional.of(new CampaignFragment());
         }
-
         return show(campaignFragment.get(), sharedElement);
+
+      case miniatures:
+        if (!miniaturesFragment.isPresent()) {
+          miniaturesFragment = Optional.of(new MiniaturesFragment());
+        }
+        return show(miniaturesFragment.get(), sharedElement);
     }
-  }
-
-  private CompanionFragment show(CompanionFragment fragment,
-                                 Optional<View> sharedTransitionElement) {
-    Status.log("showing fragment " + fragment.getClass().getSimpleName());
-    if (fragment == currentFragment.orElse(null)) {
-      return fragment;
-    }
-    
-    // Shared element transition.
-    FragmentTransaction transaction = fragmentManager.beginTransaction();
-    if (sharedTransitionElement.isPresent()) {
-      currentFragment.get().setExitTransition(fade(ENTER_FADE_DURATION_MS, 0));
-      currentFragment.get().setReenterTransition(fade(ENTER_FADE_DURATION_MS,
-          EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
-
-      fragment.setSharedElementEnterTransition(new ChangeBounds());
-      sharedTransitionElement.get().setTransitionName(TRANSITION_NAME);
-      fragment.setSharedElementReturnTransition(new ChangeBounds());
-
-      fragment.setEnterTransition(fade(ENTER_FADE_DURATION_MS,
-          EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
-      fragment.setReturnTransition(fade(ENTER_FADE_DURATION_MS, 0));
-
-      transaction.addSharedElement(sharedTransitionElement.get(), TRANSITION_NAME);
-    }
-
-    transaction.replace(R.id.content, fragment).commitAllowingStateLoss();
-    fragmentManager.executePendingTransactions();
-    return fragment;
-  }
-
-  public boolean goBack() {
-    if (!currentFragment.isPresent()) {
-      return false;
-    }
-
-    return currentFragment.get().goBack();
   }
 
   public void showCampaign(Campaign campaign, Optional<View> shared) {
@@ -195,6 +165,13 @@ public class CompanionFragments {
     }
   }
 
+  public boolean showsCampaign(String campaignId) {
+    return campaignFragment.isPresent()
+        && currentFragment.isPresent()
+        && currentFragment.get() == campaignFragment.get()
+        && campaignFragment.get().shows(campaignId);
+  }
+
   private Fade fade(int duration, int delay) {
     Fade fade = new Fade();
     fade.setStartDelay(delay);
@@ -202,15 +179,45 @@ public class CompanionFragments {
     return fade;
   }
 
-  public void display(Dialog dialog) {
-    fragmentManager.beginTransaction().add(dialog, null).commit();
+  private CompanionFragment show(CompanionFragment fragment,
+                                 Optional<View> sharedTransitionElement) {
+    Status.log("showing fragment " + fragment.getClass().getSimpleName());
+    if (fragment == currentFragment.orElse(null)) {
+      return fragment;
+    }
+
+    // Shared element transition.
+    FragmentTransaction transaction = fragmentManager.beginTransaction();
+    if (sharedTransitionElement.isPresent()) {
+      currentFragment.get().setExitTransition(fade(ENTER_FADE_DURATION_MS, 0));
+      currentFragment.get().setReenterTransition(fade(ENTER_FADE_DURATION_MS,
+          EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
+
+      fragment.setSharedElementEnterTransition(new ChangeBounds());
+      sharedTransitionElement.get().setTransitionName(TRANSITION_NAME);
+      fragment.setSharedElementReturnTransition(new ChangeBounds());
+
+      fragment.setEnterTransition(fade(ENTER_FADE_DURATION_MS,
+          EXIT_FADE_DURATION_MS + MOVE_DURATION_MS));
+      fragment.setReturnTransition(fade(ENTER_FADE_DURATION_MS, 0));
+
+      transaction.addSharedElement(sharedTransitionElement.get(), TRANSITION_NAME);
+    }
+
+    transaction.replace(R.id.content, fragment).commitAllowingStateLoss();
     fragmentManager.executePendingTransactions();
+    return fragment;
   }
 
-  public boolean showsCampaign(String campaignId) {
-    return campaignFragment.isPresent()
-        && currentFragment.isPresent()
-        && currentFragment.get() == campaignFragment.get()
-        && campaignFragment.get().shows(campaignId);
+  public static CompanionFragments get() {
+    return singleton;
+  }
+
+  public static void init(CompanionContext context, FragmentManager fragmentManager) {
+    if (singleton == null) {
+      singleton = new CompanionFragments(context, fragmentManager);
+    } else {
+      singleton.fragmentManager = fragmentManager;
+    }
   }
 }

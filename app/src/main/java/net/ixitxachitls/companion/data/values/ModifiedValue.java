@@ -31,22 +31,38 @@ import java.util.List;
  */
 public class ModifiedValue {
 
+  private final String name;
   private final int base;
   private final int min;
+  private final boolean signed;
   private final List<Modifier> stackingModifiers = new ArrayList<>();
   private final List<Modifier> unstackingModifiers = new ArrayList<>();
 
-  public ModifiedValue(int base) {
-    this(base, Integer.MIN_VALUE);
+  public ModifiedValue(String name, int base, boolean signed) {
+    this(name, base, Integer.MIN_VALUE, signed);
   }
 
-  public ModifiedValue(int base, int min) {
+  public ModifiedValue(String name, int base, int min, boolean signed) {
+    this.name = name;
     this.base = base;
     this.min = min;
+    this.signed = signed;
   }
 
   public int getBase() {
     return base;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public ModifiedValue add(List<Modifier> modifiers) {
+    for (Modifier modifier : modifiers) {
+      add(modifier);
+    }
+
+    return this;
   }
 
   public ModifiedValue add(Modifier modifier) {
@@ -94,5 +110,14 @@ public class ModifiedValue {
     } else {
       return total;
     }
+  }
+
+  public String totalFormatted() {
+    int total = total();
+    if (signed) {
+      return (total < 0 ? "" : "+") + total;
+    }
+
+    return String.valueOf(total);
   }
 }

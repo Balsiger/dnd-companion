@@ -24,9 +24,10 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 
-import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.data.statics.LevelTemplate;
+import net.ixitxachitls.companion.data.templates.FeatTemplate;
+import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.data.values.Values;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -44,17 +45,19 @@ public class Level extends NestedDocument {
   private static final String FIELD_TEMPLATE = "template";
   private static final String FIELD_HP = "hp";
   private static final String FIELD_ABILITY_INCREASE = "ability";
+  private static final String FIELD_FEAT = "feat";
 
   private LevelTemplate template;
   private int hp;
-  private Optional<Ability> abilityIncrease;
+  private Optional<Ability> abilityIncrease = Optional.empty();
+  private Optional<FeatTemplate> feat = Optional.empty();
 
   public Level() {
-    this(new LevelTemplate(), 0, Optional.empty());
+    this(new LevelTemplate(), 0, Optional.empty(), Optional.empty());
   }
 
-  public Level(String templateName, int hp, String abilityName) {
-    Optional<LevelTemplate> template = Entries.get().getLevelTemplates().get(templateName);
+  public Level(String templateName, int hp, String abilityName, String featName) {
+    Optional<LevelTemplate> template = Templates.get().getLevelTemplates().get(templateName);
     if (template.isPresent()) {
       this.template = template.get();
     } else {
@@ -63,20 +66,35 @@ public class Level extends NestedDocument {
     this.hp = hp;
     this.abilityIncrease = abilityName.isEmpty()
         ? Optional.empty() : Optional.of(Ability.fromName(abilityName));
+    this.feat = Templates.get().getFeatTemplates().get(featName);
   }
 
-  public Level(LevelTemplate template, int hp, Optional<Ability> abilityIncrease) {
+  public Level(LevelTemplate template, int hp, Optional<Ability> abilityIncrease,
+               Optional<FeatTemplate> feat) {
     this.template = template;
     this.hp = hp;
     this.abilityIncrease = abilityIncrease;
+    this.feat = feat;
+  }
+
+  public Optional<FeatTemplate> getFeat() {
+    return feat;
   }
 
   public int getHp() {
     return hp;
   }
 
+  public void setHp(int hp) {
+    this.hp = hp;
+  }
+
   public Optional<Ability> getIncreasedAbility() {
     return abilityIncrease;
+  }
+
+  public void setIncreasedAbility(Ability ability) {
+    this.abilityIncrease = Optional.of(ability);
   }
 
   public int getMaxHp() {
@@ -85,14 +103,6 @@ public class Level extends NestedDocument {
 
   public LevelTemplate getTemplate() {
     return template;
-  }
-
-  public void setHp(int hp) {
-    this.hp = hp;
-  }
-
-  public void setIncreasedAbility(Ability ability) {
-    this.abilityIncrease = Optional.of(ability);
   }
 
   public void setTemplate(String name) {
@@ -118,12 +128,11 @@ public class Level extends NestedDocument {
     if (abilityIncrease.isPresent()) {
       data.put(FIELD_ABILITY_INCREASE, abilityIncrease.get().getName());
     }
+    if (feat.isPresent()) {
+      data.put(FIELD_FEAT, feat.get().getName());
+    }
 
     return data;
-  }
-
-  public static boolean allowsAbilityIncrease(int levelNumber) {
-    return (levelNumber % 4) == 0;
   }
 
   private static Multiset<String> countedNames(List<Level> levels) {
@@ -143,12 +152,14 @@ public class Level extends NestedDocument {
     if (Values.has(data, FIELD_ABILITY_INCREASE)) {
       abilityIncrease = Optional.of(Ability.fromName(Values.get(data, FIELD_ABILITY_INCREASE, "")));
     }
+    Optional<FeatTemplate> feat =
+        Templates.get().getFeatTemplates().get(Values.get(data, FIELD_FEAT, ""));
 
-    return new Level(template, hp, abilityIncrease);
+    return new Level(template, hp, abilityIncrease, feat);
   }
 
   private static LevelTemplate readTemplate(String name) {
-    Optional<LevelTemplate> template = Entries.get().getLevelTemplates().get(name);
+    Optional<LevelTemplate> template = Templates.get().getLevelTemplates().get(name);
     if (template.isPresent()) {
       return template.get();
     }

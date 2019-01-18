@@ -141,9 +141,17 @@ public class Campaigns extends Documents<Campaigns> {
   }
 
   private void processDMCampaigns(List<DocumentSnapshot> documents) {
+    Map<String, Campaign> existing = new HashMap<>(dmCampaignsById);
     dmCampaignsById.clear();
     for (DocumentSnapshot snapshot : documents) {
-      Campaign campaign = Campaign.fromData(context, snapshot);
+      Campaign campaign = existing.get(snapshot.getReference().getPath());
+      if (campaign == null) {
+        campaign = Campaign.fromData(context, snapshot);
+      } else {
+        campaign.snapshot = Optional.of(snapshot);
+        campaign.read();
+      }
+
       dmCampaignsById.put(campaign.getId(), campaign);
     }
 
@@ -169,11 +177,9 @@ public class Campaigns extends Documents<Campaigns> {
       // Player campaigns, invitations from other users.
       playerCampaignsById.clear();
       for (String campaignId : me.getCampaigns()) {
-        Optional<Campaign> campaign = context.campaigns().get(campaignId);
+        Optional<Campaign> campaign = get(campaignId);
         if (campaign.isPresent()) {
           playerCampaignsById.put(campaignId, campaign.get());
-        } else {
-          // TODO(merlin): Remove the campaign from the user.
         }
       }
 
@@ -186,8 +192,9 @@ public class Campaigns extends Documents<Campaigns> {
     all.addAll(playerCampaignsById.values());
     Collections.sort(all);
     this.campaigns = ImmutableList.copyOf(all);
-    this.ids = campaigns.stream().map(Campaign::getId).collect(ImmutableList.toImmutableList());
+    this.ids =
+        ImmutableList.copyOf(campaigns.stream().map(Campaign::getId).collect(Collectors.toList()));
 
-    updated(ids);
+    updated(this.ids);
   }
 }

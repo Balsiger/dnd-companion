@@ -122,5 +122,8 @@
   <string name="title_dialog_adjust_xp">Adjust XP</string>
   <string name="title_dialog_adjust_hp">Adjust HP</string>
   <string name="dialog_title_message">Send a Message</string>
+  <string name="character_select_feat">Select Feat</string>
+  <string name="user_location_description">The location of your miniatures.</string>
+  <string name="user_location_label">Miniature Location</string>
 
 </resources>

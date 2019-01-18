@@ -31,7 +31,7 @@ import android.widget.Button;
 import com.google.common.base.Strings;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
@@ -58,25 +58,6 @@ public class EditCampaignDialog extends Dialog {
 
   public EditCampaignDialog() {}
 
-  public static EditCampaignDialog newInstance() {
-    return newInstance("");
-  }
-
-  public static EditCampaignDialog newInstance(String id) {
-    EditCampaignDialog fragment = new EditCampaignDialog();
-    fragment.setArguments(arguments(R.layout.dialog_edit_campaign,
-        id.isEmpty() ? R.string.campaign_title_add : R.string.campaign_title_edit,
-        R.color.campaign, id));
-    return fragment;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String campaignId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ID, campaignId);
-    return arguments;
-  }
-
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -93,6 +74,18 @@ public class EditCampaignDialog extends Dialog {
     }
   }
 
+  protected void save() {
+    if (campaign.isPresent()) {
+      campaign.get().setName(name.getText());
+      campaign.get().setWorldTemplate(selectedWorld);
+      campaign.get().store();
+
+      super.save();
+      campaign.get().whenReady(() ->
+          CompanionFragments.get().showCampaign(campaign.get(), Optional.empty()));
+    }
+
+  }
 
   @Override
   protected void createContent(View view) {
@@ -110,19 +103,19 @@ public class EditCampaignDialog extends Dialog {
     }
   }
 
+  private void editWorld(String value) {
+    selectedWorld = value;
+    update();
+  }
+
   private void selectWorld() {
     if (campaign.isPresent()) {
       ListSelectDialog fragment = ListSelectDialog.newStringInstance(
           R.string.campaign_select_world, campaign.get().getWorldTemplate().getName(),
-          Entries.get().getWorldTemplates().getNames(), R.color.campaign);
+          Templates.get().getWorldTemplates().getNames(), R.color.campaign);
       fragment.setSelectListener(this::editWorld);
       fragment.display();
     }
-  }
-
-  private void editWorld(String value) {
-    selectedWorld = value;
-    update();
   }
 
   protected void update() {
@@ -130,16 +123,22 @@ public class EditCampaignDialog extends Dialog {
     save.visible(name.getText().length() > 0);
   }
 
-  protected void save() {
-    if (campaign.isPresent()) {
-      campaign.get().setName(name.getText());
-      campaign.get().setWorldTemplate(selectedWorld);
-      campaign.get().store();
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String campaignId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_ID, campaignId);
+    return arguments;
+  }
 
-      super.save();
-      campaign.get().whenReady(() ->
-          CompanionFragments.get().showCampaign(campaign.get(), Optional.empty()));
-    }
+  public static EditCampaignDialog newInstance(String id) {
+    EditCampaignDialog fragment = new EditCampaignDialog();
+    fragment.setArguments(arguments(R.layout.dialog_edit_campaign,
+        id.isEmpty() ? R.string.campaign_title_add : R.string.campaign_title_edit,
+        R.color.campaign, id));
+    return fragment;
+  }
 
+  public static EditCampaignDialog newInstance() {
+    return newInstance("");
   }
 }

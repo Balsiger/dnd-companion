@@ -33,6 +33,7 @@ public class Strings {
   public static final Joiner NEWLINE_JOINER = Joiner.on("\n").skipNulls();
   public static final Joiner SPACE_JOINER = Joiner.on(" ").skipNulls();
   public static final Joiner SEMICOLON_JOINER = Joiner.on("; ").skipNulls();
+  public static final Joiner PIPE_JOINER = Joiner.on("|").skipNulls();
   private static final String SPACES =
       "                                                                      "
           + "                                                                     "

@@ -21,7 +21,7 @@
 
 package net.ixitxachitls.companion.data;
 
-import net.ixitxachitls.companion.data.statics.ItemTemplate;
+import net.ixitxachitls.companion.data.templates.ItemTemplate;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 /**
  * Storage for all item templates.
  */
-public class ItemTemplates extends EntriesStore<ItemTemplate> {
+public class ItemTemplates extends TemplatesStore<ItemTemplate> {
   protected ItemTemplates() {
     super(ItemTemplate.class);
   }

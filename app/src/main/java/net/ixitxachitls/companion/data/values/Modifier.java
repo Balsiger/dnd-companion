@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.proto.Value;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,9 +35,9 @@ public class Modifier {
 
   // See DMG p. 21.
   public enum Type {
-    GENERAL, ABILITY, ALCHEMICAL, ARMOR, CIRCUMSTANCE, COMPETENCE, DEFLECTION, DODGE, ENHANCEMENT, EQUIPMENT,
-    INHERENT, INSIGHT, LUCK, MORALE, NATURAL_ARMOR, PROFANE, RACIAL, RAGE, RESISTANCE, SACRED,
-    SHIELD, SIZE, SYNERGY,
+    GENERAL, ABILITY, ALCHEMICAL, ARMOR, CIRCUMSTANCE, COMPETENCE, DEFLECTION, DODGE, ENHANCEMENT,
+    EQUIPMENT, INHERENT, INSIGHT, LUCK, MORALE, NATURAL_ARMOR, PROFANE, RACIAL, RAGE, RESISTANCE,
+    SACRED, SHIELD, SIZE, SYNERGY, UNKNOWN
   }
 
   public static final String TYPE_PATTERN =
@@ -92,6 +94,64 @@ public class Modifier {
 
   private String name() {
     return type.name().toLowerCase().replace("_", " ");
+  }
+
+  private static Type convert(Value.ModifierProto.Type type) {
+    switch (type) {
+      default:
+      case UNRECOGNIZED:
+      case UNKNOWN:
+        return Type.UNKNOWN;
+
+      case DODGE:
+        return Type.DODGE;
+
+      case ARMOR:
+        return Type.ARMOR;
+
+      case EQUIPMENT:
+        return Type.EQUIPMENT;
+
+      case SHIELD:
+        return Type.SHIELD;
+
+      case GENERAL:
+        return Type.GENERAL;
+
+      case NATURAL_ARMOR:
+        return Type.NATURAL_ARMOR;
+
+      case ABILITY:
+        return Type.ABILITY;
+
+      case SIZE:
+        return Type.SIZE;
+
+      case RACIAL:
+        return Type.RACIAL;
+
+      case CIRCUMSTANCE:
+        return Type.CIRCUMSTANCE;
+
+      case ENHANCEMENT:
+        return Type.ENHANCEMENT;
+
+      case DEFLECTION:
+        return Type.DEFLECTION;
+
+      case RAGE:
+        return Type.RAGE;
+
+      case COMPETENCE:
+        return Type.COMPETENCE;
+
+      case SYNERGY:
+        return Type.SYNERGY;
+    }
+  }
+
+  public static Modifier fromProto(Value.ModifierProto.Modifier proto, String source) {
+    return new Modifier(proto.getValue(), convert(proto.getType()), source);
   }
 
   public static Modifier precedence(Modifier first, Modifier second) {

@@ -28,7 +28,7 @@ import android.os.Bundle;
 import android.support.multidex.MultiDexApplication;
 
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
@@ -59,51 +59,20 @@ public class CompanionApplication extends MultiDexApplication
     this.assetAccessor = new ApplicationAssetAccessor(this);
   }
 
-  @Override
-  public void onCreate() {
-    application = this;
-    super.onCreate();
-
-    Entries.init(this.getAssetAccessor());
-
-    context = new ApplicationCompanionContext();
-    registerActivityLifecycleCallbacks(this);
-  }
-
-  public static CompanionApplication get() {
-    return application;
-  }
-
-  public static CompanionApplication get(Context context) {
-    return (CompanionApplication) context.getApplicationContext();
+  public AssetAccessor getAssetAccessor() {
+    return assetAccessor;
   }
 
   public Activity getCurrentActivity() {
     return currentActivity;
   }
 
-  public AssetAccessor getAssetAccessor() {
-    return assetAccessor;
-  }
-
-  public CompanionContext context() {
-    return context;
-  }
-
-  public User me() {
-    return context.me();
-  }
-
-  public Campaigns campaigns() {
-    return context.campaigns();
-  }
-
   public Adventures adventures() {
     return context.adventures();
   }
 
-  public Encounters encounters() {
-    return context.encounters();
+  public Campaigns campaigns() {
+    return context.campaigns();
   }
 
   public Characters characters() {
@@ -114,16 +83,28 @@ public class CompanionApplication extends MultiDexApplication
     return context.conditions();
   }
 
+  public CompanionContext context() {
+    return context;
+  }
+
+  public Encounters encounters() {
+    return context.encounters();
+  }
+
   public Images images() {
     return context.images();
   }
 
-  public Messages messages() {
-    return context.messages();
-  }
-
   public Invites invites() {
     return context.invites();
+  }
+
+  public User me() {
+    return context.me();
+  }
+
+  public Messages messages() {
+    return context.messages();
   }
 
   public Monsters monsters() {
@@ -159,5 +140,24 @@ public class CompanionApplication extends MultiDexApplication
 
   @Override
   public void onActivityDestroyed(Activity activity) {
+  }
+
+  @Override
+  public void onCreate() {
+    application = this;
+    super.onCreate();
+
+    Templates.init(this.getAssetAccessor());
+
+    context = new ApplicationCompanionContext();
+    registerActivityLifecycleCallbacks(this);
+  }
+
+  public static CompanionApplication get() {
+    return application;
+  }
+
+  public static CompanionApplication get(Context context) {
+    return (CompanionApplication) context.getApplicationContext();
   }
 }

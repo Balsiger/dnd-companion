@@ -21,7 +21,7 @@
 
 package net.ixitxachitls.companion.data;
 
-import net.ixitxachitls.companion.data.statics.MonsterTemplate;
+import net.ixitxachitls.companion.data.templates.MonsterTemplate;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,18 +32,12 @@ import java.util.Collections;
 /**
  * General information and storage for monsters.
  */
-public class MonsterTemplates extends EntriesStore<MonsterTemplate> {
+public class MonsterTemplates extends TemplatesStore<MonsterTemplate> {
 
   private ArrayList<String> primaryRaces = null;
 
   public MonsterTemplates() {
     super(MonsterTemplate.class);
-  }
-
-  protected void read(InputStream input)
-      throws InvocationTargetException, NoSuchMethodException, IllegalAccessException, IOException {
-    super.read(input);
-    primaryRaces = null;
   }
 
   public ArrayList<String> primaryRaces() {
@@ -58,5 +52,11 @@ public class MonsterTemplates extends EntriesStore<MonsterTemplate> {
       Collections.sort(primaryRaces);
     }
     return primaryRaces;
+  }
+
+  protected void read(InputStream input)
+      throws InvocationTargetException, NoSuchMethodException, IllegalAccessException, IOException {
+    super.read(input);
+    primaryRaces = null;
   }
 }

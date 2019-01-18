@@ -24,10 +24,10 @@ package net.ixitxachitls.companion.data.documents;
 import android.support.annotation.CallSuper;
 
 import net.ixitxachitls.companion.CompanionApplication;
-import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
-import net.ixitxachitls.companion.data.statics.MonsterTemplate;
+import net.ixitxachitls.companion.data.templates.MonsterTemplate;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.TimedCondition;
@@ -132,11 +132,11 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public ModifiedValue getCharisma() {
-    return new ModifiedValue(charisma, 0);
+    return new ModifiedValue("Charisma", charisma, 0, false);
   }
 
   public ModifiedValue getCharismaCheck() {
-    return new ModifiedValue(Ability.modifier(getCharisma().total()));
+    return new ModifiedValue("Charisma Check", Ability.modifier(getCharisma().total()), true);
   }
 
   public List<CreatureCondition> getConditions() {
@@ -144,11 +144,11 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public ModifiedValue getConstitution() {
-    return new ModifiedValue(constitution, 0);
+    return new ModifiedValue("Constitution", constitution, 0, false);
   }
 
   public ModifiedValue getConstitutionCheck() {
-    return new ModifiedValue(Ability.modifier(getConstitution().total()));
+    return new ModifiedValue("Constitution Check", Ability.modifier(getConstitution().total()), true);
   }
 
   public int getConstitutionModifier() {
@@ -156,11 +156,11 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public ModifiedValue getDexterity() {
-    return new ModifiedValue(dexterity, 0);
+    return new ModifiedValue("Dexterity", dexterity, 0, false);
   }
 
   public ModifiedValue getDexterityCheck() {
-    return new ModifiedValue(Ability.modifier(getDexterity().total()));
+    return new ModifiedValue("Dexterity Check", Ability.modifier(getDexterity().total()), true);
   }
 
   public int getEncounterNumber() {
@@ -188,11 +188,12 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public ModifiedValue getIntelligence() {
-    return new ModifiedValue(intelligence, 0);
+    return new ModifiedValue("Intelligence", intelligence, 0, false);
   }
 
   public ModifiedValue getIntelligenceCheck() {
-    return new ModifiedValue(Ability.modifier(getIntelligence().total()));
+    return
+        new ModifiedValue("Intelligence Check", Ability.modifier(getIntelligence().total()), true);
   }
 
   public List<Item> getItems() {
@@ -232,19 +233,19 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public ModifiedValue getStrength() {
-    return new ModifiedValue(strength, 0);
+    return new ModifiedValue("Strength", strength, 0, false);
   }
 
   public ModifiedValue getStrengthCheck() {
-    return new ModifiedValue(Ability.modifier(getStrength().total()));
+    return new ModifiedValue("Strength Check", Ability.modifier(getStrength().total()), true);
   }
 
   public ModifiedValue getWisdom() {
-    return new ModifiedValue(wisdom, 0);
+    return new ModifiedValue("Wisdom", wisdom, 0, false);
   }
 
   public ModifiedValue getWisdomCheck() {
-    return new ModifiedValue(Ability.modifier(getWisdom().total()));
+    return new ModifiedValue("Wisdom Check", Ability.modifier(getWisdom().total()), true);
   }
 
   public void setBaseCharisma(int charisma) {
@@ -272,7 +273,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public void setRace(String race) {
-    this.race = Entries.get().getMonsterTemplates().get(race);
+    this.race = Templates.get().getMonsterTemplates().get(race);
   }
 
   public void add(Item item) {
@@ -472,7 +473,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     super.read();
     name = get(FIELD_NAME, "");
     gender = get(FIELD_GENDER, Gender.UNKNOWN);
-    race = Entries.get().getMonsterTemplates().get(get(FIELD_RACE, DEFAULT_RACE));
+    race = Templates.get().getMonsterTemplates().get(get(FIELD_RACE, DEFAULT_RACE));
     campaignId = get(FIELD_CAMPAIGN, DEFAULT_CAMPAIGN);
     strength = (int) get(FIELD_STRENGTH, DEFAULT_ATTRIBUTE);
     dexterity= (int) get(FIELD_DEXTERITY, DEFAULT_ATTRIBUTE);

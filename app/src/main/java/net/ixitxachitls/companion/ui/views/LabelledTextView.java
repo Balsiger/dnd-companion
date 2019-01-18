@@ -32,12 +32,25 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
  * A text view with a label and description.
  */
 public class LabelledTextView extends LabelledEditTextView {
+
   public LabelledTextView(Context context) {
     super(context);
   }
 
   public LabelledTextView(Context context, AttributeSet attributes) {
     super(context, attributes);
+  }
+
+  public LabelledTextView enabled(boolean enabled) {
+    text.enabled(enabled);
+
+    return this;
+  }
+
+  public LabelledTextView text(String text) {
+    this.text.text(text);
+
+    return this;
   }
 
   @Override
@@ -47,22 +60,11 @@ public class LabelledTextView extends LabelledEditTextView {
     // Prevent the edit text to actually be editable.
     text.get().setKeyListener(null);
     text.get().setFocusableInTouchMode(false);
-  }
-
-  public LabelledTextView text(String text) {
-    this.text.text(text);
-
-    return this;
+    text.hideLine();
   }
 
   public LabelledTextView onClick(Wrapper.Action action) {
     text.onClick(action);
-
-    return this;
-  }
-
-  public LabelledTextView enabled(boolean enabled) {
-    text.enabled(enabled);
 
     return this;
   }

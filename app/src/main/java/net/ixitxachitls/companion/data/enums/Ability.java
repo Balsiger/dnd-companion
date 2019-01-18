@@ -45,29 +45,29 @@ public enum Ability implements Enums.Named, Enums.Proto<Value.Ability> {
       + "|" + Arrays.asList(values()).stream()
       .map(Ability::getShortName).reduce((a, b) -> a + "|" + b).get();
 
-  private final String mName;
-  private final String mShortName;
-  private final Value.Ability mProto;
+  private final String name;
+  private final String shortName;
+  private final Value.Ability proto;
 
   Ability(String name, String shortName, Value.Ability proto) {
-    this.mName = name;
-    this.mShortName = shortName;
-    this.mProto = proto;
+    this.name = name;
+    this.shortName = shortName;
+    this.proto = proto;
   }
 
   @Override
   public String getName() {
-    return mName;
+    return name;
   }
 
   @Override
   public String getShortName() {
-    return mShortName;
+    return shortName;
   }
 
   @Override
   public Value.Ability toProto() {
-    return mProto;
+    return proto;
   }
 
   public static Ability fromName(String name) {

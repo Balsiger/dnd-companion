@@ -16,17 +16,6 @@ buildscript {
 
 apply plugin: 'com.google.protobuf'
 apply plugin: 'com.android.application'
-apply plugin: 'de.mobilej.unmock'
-
-unMock {
-  keep "android.net.Uri"
-  keep "android.content.ContentValues"
-  keep "android.content.UriMatcher"
-  keep "android.database.AbstractCursor"
-  keep "android.database.MatrixCursor"
-  keep "android.net.nsd.NsdServiceInfo"
-  keep "android.graphics.BitmapFactory"
-}
 
 android {
   compileSdkVersion 27
@@ -133,11 +122,12 @@ dependencies {
   implementation 'com.android.support:multidex:1.0.3'
   implementation 'com.google.android.gms:play-services-drive:16.0.0'
   implementation 'com.google.android:flexbox:1.0.0'
-  implementation 'com.google.firebase:firebase-core:16.0.5'
-  implementation 'com.google.firebase:firebase-auth:16.0.5'
-  implementation 'com.google.firebase:firebase-firestore:17.1.3'
+  implementation 'com.google.firebase:firebase-core:16.0.6'
+  implementation 'com.google.firebase:firebase-auth:16.1.0'
+  implementation 'com.google.firebase:firebase-firestore:17.1.5'
   implementation 'com.google.firebase:firebase-storage:16.0.5'
   implementation 'com.firebaseui:firebase-ui-auth:4.2.0'
+  implementation 'com.google.firebase:firebase-database:16.0.5'
   testImplementation 'junit:junit:4.12'
   testImplementation 'org.mockito:mockito-core:2.19.0'
   testImplementation 'org.powermock:powermock-api-mockito2:1.7.0RC2'
@@ -161,7 +151,6 @@ dependencies {
   implementation 'android.arch.lifecycle:extensions:1.1.1'
   testImplementation 'android.arch.core:core-testing:1.1.1'
   androidTestImplementation 'android.arch.core:core-testing:1.1.1'
-  unmock 'org.robolectric:android-all:4.3_r2-robolectric-0'
 }
 
 
@@ -211,6 +200,10 @@ task convertProtoData {
       'net.ixitxachitls.companion.proto.WorldTemplateProto')
   convertToBinaryProtos('./src/main/entities', 'item',
       'net.ixitxachitls.companion.proto.ItemTemplateProto')
+  convertToBinaryProtos('./src/main/entities', 'feat',
+      'net.ixitxachitls.companion.proto.FeatTemplateProto')
+  convertToBinaryProtos('./src/main/entities', 'miniature',
+      'net.ixitxachitls.companion.proto.MiniatureTemplateProto')
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -26,8 +26,8 @@ import android.support.annotation.CallSuper;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.Entries;
-import net.ixitxachitls.companion.data.statics.WorldTemplate;
+import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.data.templates.WorldTemplate;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.Encounter;
@@ -63,33 +63,34 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private List<String> invites = new ArrayList<>();
   private String adventureId = "";
 
-  protected static Campaign create(CompanionContext context, User dm) {
-    Campaign campaign = Document.create(FACTORY, context, dm.getId() + "/" + Campaigns.PATH);
-
-    campaign.dm = context.users().fromPath(campaign.getPath());
-    campaign.worldTemplate = generic();
-    return campaign;
+  public Optional<Adventure> getAdventure() {
+    return context.adventures().get(adventureId);
   }
 
-  /**
-   * Get the campaign with the given id. If it does not exist, a campaign with the given
-   * id is created. If you want to handle non existing campaigns, make sure not to store this.
-   */
-  protected static Campaign getOrCreate(CompanionContext context, String id) {
-    Campaign campaign = Document.getOrCreate(FACTORY, context, id);
-
-    campaign.dm = context.users().fromPath(campaign.getPath());
-    campaign.worldTemplate = generic();
-
-    return campaign;
+  public void setAdventure(Adventure adventure) {
+    this.adventureId = adventure.getId();
+    store();
   }
 
-  protected static Campaign fromData(CompanionContext context, DocumentSnapshot snapshot) {
-    Campaign campaign = Document.fromData(FACTORY, context, snapshot);
+  public Calendar getCalendar() {
+    return worldTemplate.getCalendar();
+  }
 
-    campaign.dm = context.users().fromPath(campaign.getPath());
+  public CampaignDate getDate() {
+    return date;
+  }
 
-    return campaign;
+  public void setDate(CampaignDate date) {
+    this.date = date;
+
+    // Check if any conditions on characters have run out.
+    for (Character character : characters().getCampaignCharacters(getId())) {
+      character.updateConditions(date);
+    }
+  }
+
+  public User getDm() {
+    return dm;
   }
 
   public Encounter getEncounter() {
@@ -120,127 +121,12 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     this.worldTemplate = world(worldTemplate);
   }
 
-  public User getDm() {
-    return dm;
-  }
-
   public boolean amDM() {
     return context.me() == dm;
   }
 
-  public Calendar getCalendar() {
-    return worldTemplate.getCalendar();
-  }
-
-  public CampaignDate getDate() {
-    return date;
-  }
-
-  public void setDate(CampaignDate date) {
-    this.date = date;
-
-    // Check if any conditions on characters have run out.
-    for (Character character : characters().getCampaignCharacters(getId())) {
-      character.updateConditions(date);
-    }
-  }
-
-  public Monsters monsters() {
-    return context.monsters();
-  }
-
   public Characters characters() {
     return context.characters();
-  }
-
-  public Optional<Character> getCharacter(String id) {
-    return context.characters().get(id);
-  }
-
-  public void invite(String email) {
-    if (!invites.contains(email)) {
-      invites.add(email);
-      store();
-
-      Invites.invite(email, getId());
-    }
-  }
-
-  public void uninvite(String email) {
-    if (invites.contains(email)) {
-      invites.remove(email);
-      store();
-
-      Invites.uninvite(email, getId());
-    }
-  }
-
-  public void uninviteAll() {
-    for (String email : invites) {
-      uninviteUser(email);
-    }
-
-    invites.clear();
-    store();
-  }
-
-  public void setAdventure(Adventure adventure) {
-    this.adventureId = adventure.getId();
-    store();
-  }
-
-  public Optional<Adventure> getAdventure() {
-    return context.adventures().get(adventureId);
-  }
-
-  private void uninviteUser(String email) {
-    Invites.uninvite(email, getId());
-  }
-
-  @Override
-  @CallSuper
-  protected void read() {
-    super.read();
-    name = get(FIELD_NAME, name);
-    worldTemplate = world(get(FIELD_WORLD, GENERIC_NAME));
-    date = CampaignDate.read(get(FIELD_DATE));
-    encounter.read(get(FIELD_ENCOUNTER));
-    invites = get(FIELD_INVITES, invites);
-    adventureId = get(FIELD_ADVENTURE, "");
-  }
-
-  @Override
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_NAME, name);
-    data.put(FIELD_WORLD, worldTemplate.getName());
-    data.put(FIELD_DATE, date.write());
-    data.put(FIELD_ENCOUNTER, encounter.write());
-    data.put(FIELD_INVITES, invites);
-    data.put(FIELD_ADVENTURE, adventureId);
-
-    return data;
-  }
-
-  private WorldTemplate world(String name) {
-    Optional<WorldTemplate> world = Entries.get().getWorldTemplates().get(name);
-    if (world.isPresent()) {
-      return world.get();
-    }
-
-    return generic();
-  }
-
-  private static WorldTemplate generic() {
-    if (GENERIC == null) {
-      GENERIC = Entries.get().getWorldTemplates().get(GENERIC_NAME).get();
-    }
-
-    return GENERIC;
-  }
-
-  @Override
-  public String toString() {
-    return getName() + " (" + getId() + ")";
   }
 
   @Override
@@ -267,6 +153,120 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     }
 
     return getId().compareTo(other.getId());
+  }
+
+  public Optional<Character> getCharacter(String id) {
+    return context.characters().get(id);
+  }
+
+  public void invite(String email) {
+    if (!invites.contains(email)) {
+      invites.add(email);
+      store();
+
+      Invites.invite(email, getId());
+    }
+  }
+
+  public Monsters monsters() {
+    return context.monsters();
+  }
+
+  @Override
+  public String toString() {
+    return getName() + " (" + getId() + ")";
+  }
+
+  public void uninvite(String email) {
+    if (invites.contains(email)) {
+      invites.remove(email);
+      store();
+
+      Invites.uninvite(email, getId());
+    }
+  }
+
+  public void uninviteAll() {
+    for (String email : invites) {
+      uninviteUser(email);
+    }
+
+    invites.clear();
+    store();
+  }
+
+  @Override
+  @CallSuper
+  protected void read() {
+    super.read();
+    name = get(FIELD_NAME, name);
+    worldTemplate = world(get(FIELD_WORLD, GENERIC_NAME));
+    date = CampaignDate.read(get(FIELD_DATE));
+    encounter.read(get(FIELD_ENCOUNTER));
+    invites = get(FIELD_INVITES, invites);
+    adventureId = get(FIELD_ADVENTURE, "");
+  }
+
+  @Override
+  protected Map<String, Object> write(Map<String, Object> data) {
+    data.put(FIELD_NAME, name);
+    data.put(FIELD_WORLD, worldTemplate.getName());
+    data.put(FIELD_DATE, date.write());
+    data.put(FIELD_ENCOUNTER, encounter.write());
+    data.put(FIELD_INVITES, invites);
+    data.put(FIELD_ADVENTURE, adventureId);
+
+    return data;
+  }
+
+  private void uninviteUser(String email) {
+    Invites.uninvite(email, getId());
+  }
+
+  private WorldTemplate world(String name) {
+    Optional<WorldTemplate> world = Templates.get().getWorldTemplates().get(name);
+    if (world.isPresent()) {
+      return world.get();
+    }
+
+    return generic();
+  }
+
+  protected static Campaign create(CompanionContext context, User dm) {
+    Campaign campaign = Document.create(FACTORY, context, dm.getId() + "/" + Campaigns.PATH);
+
+    campaign.dm = context.users().fromPath(campaign.getPath());
+    campaign.worldTemplate = generic();
+    return campaign;
+  }
+
+  protected static Campaign fromData(CompanionContext context, DocumentSnapshot snapshot) {
+    Campaign campaign = Document.fromData(FACTORY, context, snapshot);
+
+    campaign.dm = context.users().fromPath(campaign.getPath());
+
+    return campaign;
+  }
+
+  private static WorldTemplate generic() {
+    if (GENERIC == null) {
+      GENERIC = Templates.get().getWorldTemplates().get(GENERIC_NAME).get();
+    }
+
+    return GENERIC;
+  }
+
+  /**
+   * Get the campaign with the given id. If it does not exist, a campaign with the given
+   * id is created. If you want to handle non existing campaigns, make sure not to store this.
+   */
+  protected static Campaign getOrCreate(CompanionContext context, String id) {
+    Campaign campaign = Document.getOrCreate(FACTORY, context, id);
+
+    campaign.dm = context.users().fromPath(campaign.getPath());
+    campaign.worldTemplate = generic();
+
+    return campaign;
   }
 
 }

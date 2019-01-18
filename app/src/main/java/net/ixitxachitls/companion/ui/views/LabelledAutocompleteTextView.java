@@ -54,30 +54,16 @@ public class LabelledAutocompleteTextView extends AbstractLabelledView {
     super(context, attributes, layoutId);
   }
 
-  @Override
-  protected void setup(View view, TypedArray array, TypedArray baseArray) {
-    super.setup(view, array, baseArray);
-
-    text = EditTextWrapper.wrap(view, R.id.text);
-    text.text(array.getString(R.styleable.LabelledEditTextView_defaultText));
-    text.textColorValue(array.getColor(R.styleable.LabelledEditTextView_textColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
-    text.lineColorValue(array.getColor(R.styleable.LabelledEditTextView_lineColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
-  }
-
   public String getText() {
     return text.getText();
   }
 
-  public LabelledAutocompleteTextView text(String text) {
-    this.text.text(text);
-
-    return this;
+  public void setAdapter(ArrayAdapter<String> adapter) {
+    text.get().setAdapter(adapter);
   }
 
-  public LabelledAutocompleteTextView onEdit(Wrapper.Action action) {
-    text.onEdit(action);
+  public LabelledAutocompleteTextView enabled(boolean enabled) {
+    text.enabled(enabled);
 
     return this;
   }
@@ -88,8 +74,8 @@ public class LabelledAutocompleteTextView extends AbstractLabelledView {
     return this;
   }
 
-  public LabelledAutocompleteTextView onFocus(Wrapper.Action action) {
-    text.get().setOnFocusChangeListener((view, hasFocus) -> action.execute());
+  public LabelledAutocompleteTextView onEdit(Wrapper.Action action) {
+    text.onEdit(action);
 
     return this;
   }
@@ -107,17 +93,37 @@ public class LabelledAutocompleteTextView extends AbstractLabelledView {
     return this;
   }
 
+  public LabelledAutocompleteTextView onFocus(Wrapper.Action action) {
+    text.get().setOnFocusChangeListener((view, hasFocus) -> action.execute());
+
+    return this;
+  }
+
   public void showDropDown() {
     text.get().showDropDown();
   }
 
-  public void setAdapter(ArrayAdapter<String> adapter) {
-    text.get().setAdapter(adapter);
-  }
-
-  public LabelledAutocompleteTextView enabled(boolean enabled) {
-    text.enabled(enabled);
+  public LabelledAutocompleteTextView text(String text) {
+    this.text.text(text);
 
     return this;
+  }
+
+  public LabelledAutocompleteTextView threshold(int threshold) {
+    text.get().setThreshold(threshold);
+
+    return this;
+  }
+
+  @Override
+  protected void setup(View view, TypedArray array, TypedArray baseArray) {
+    super.setup(view, array, baseArray);
+
+    text = EditTextWrapper.wrap(view, R.id.text);
+    text.text(array.getString(R.styleable.LabelledEditTextView_defaultText));
+    text.textColorValue(array.getColor(R.styleable.LabelledEditTextView_textColor,
+        getContext().getResources().getColor(R.color.colorPrimary, null)));
+    text.lineColorValue(array.getColor(R.styleable.LabelledEditTextView_lineColor,
+        getContext().getResources().getColor(R.color.colorPrimary, null)));
   }
 }

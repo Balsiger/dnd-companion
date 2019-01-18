@@ -112,6 +112,15 @@
 
     </LinearLayout>
 
+    <net.ixitxachitls.companion.ui.views.LabelledTextView
+        android:id="@+id/feat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:descriptionText="The selected feat for that level."
+        app:labelColor="@color/characterDark"
+        app:labelText="Feat"
+        app:lineColor="@color/characterDark"
+        app:textColor="@color/characterText"/>
 
   </LinearLayout>
 

@@ -57,11 +57,49 @@
           android:layout_width="100dp"
           android:layout_height="100dp"
           android:layout_gravity="center_vertical"
-          android:layout_marginEnd="10dp"
           android:layout_marginStart="20dp"
+          android:layout_marginEnd="10dp"
           android:layout_weight="0"
           app:srcCompat="@drawable/ic_person_black_48dp"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <LinearLayout
+          android:id="@+id/locations"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:orientation="vertical"/>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            app:descriptionText="@string/user_location_description"
+            app:labelColor="@color/white"
+            app:labelText="@string/user_location_label"
+            app:lineColor="@color/white"
+            app:textColor="@color/white"/>
+
+        <ImageView
+            android:id="@+id/add_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_add_white_24dp"/>
+      </LinearLayout>
     </LinearLayout>
 
     <net.ixitxachitls.companion.ui.views.LabelledEditTextView

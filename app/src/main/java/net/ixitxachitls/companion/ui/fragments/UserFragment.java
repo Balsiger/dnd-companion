@@ -21,22 +21,30 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.documents.MiniatureFilter;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.dialogs.MiniatureFilterDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.RoundImageView;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Arrays;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -51,9 +59,18 @@ public class UserFragment extends CompanionFragment {
   private LabelledEditTextView features;
   private Wrapper<Button> save;
   private RoundImageView image;
+  private LinearLayout locations;
+  private LabelledEditTextView location;
+  private Wrapper<ImageView> addLocation;
 
   public UserFragment() {
     super(Type.settings);
+  }
+
+  @Override
+  public boolean goBack() {
+    CompanionFragments.get().show(Type.campaigns, Optional.empty());
+    return true;
   }
 
   @Override
@@ -68,11 +85,14 @@ public class UserFragment extends CompanionFragment {
     nickname.onEdit(this::editNickname).onChange(this::update);
     features = view.findViewById(R.id.features);
     features.onEdit(this::editFeatures);
-    save = Wrapper.wrap(view, R.id.save);
-    save.onClick(this::save);
+    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
     image = view.findViewById(R.id.image);
     image.loadImageUrl(me.getPhotoUrl());
+    locations = view.findViewById(R.id.locations);
+    location = view.findViewById(R.id.location);
+    addLocation = Wrapper.<ImageView>wrap(view, R.id.add_location).onClick(this::addLocation);
 
+    me().readMiniatures();
     update();
     return view;
   }
@@ -86,26 +106,31 @@ public class UserFragment extends CompanionFragment {
     features.text(Strings.COMMA_JOINER.join(me.getFeatures()));
   }
 
-  private void save() {
-    editNickname();
-    me.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
-    me.store();
-
-    CompanionFragments.get().show(Type.campaigns, Optional.empty());
+  private void addLocation() {
+    if (!location.isEmpty()) {
+      MiniatureFilterDialog.newInstance().onSaved(this::addLocation).display();
+    }
   }
 
-  protected void editNickname() {
-    me.setNickname(nickname.getText());
+  private void addLocation(MiniatureFilter filter) {
+    me().addLocation(location.getText(), filter);
+    update();
   }
 
   protected void editFeatures() {
     me.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
   }
 
-  @Override
-  public boolean goBack() {
+  protected void editNickname() {
+    me.setNickname(nickname.getText());
+  }
+
+  private void save() {
+    editNickname();
+    me.setFeatures(Arrays.asList(features.getText().split("\\s*,\\s*")));
+    me.store();
+
     CompanionFragments.get().show(Type.campaigns, Optional.empty());
-    return true;
   }
 
   private void update() {
@@ -115,6 +140,55 @@ public class UserFragment extends CompanionFragment {
       } else {
         save.get().setVisibility(View.INVISIBLE);
       }
+    }
+
+    locations.removeAllViews();
+    for (Map.Entry<String, MiniatureFilter> location : me().getLocations()) {
+      locations.addView(new LocationLineView(getContext(), location.getKey(), location.getValue()));
+    }
+  }
+
+  private class LocationLineView extends LinearLayout {
+    private final String location;
+    private final MiniatureFilter filter;
+    private final TextWrapper<TextView> locationText;
+
+    private LocationLineView(Context context, String location, MiniatureFilter filter) {
+      super(context);
+
+      View view =
+          LayoutInflater.from(getContext()).inflate(R.layout.fragment_miniature_location_line,
+              this, false);
+
+      this.location = location;
+      this.filter = filter;
+      locationText = TextWrapper.wrap(view, R.id.location).onClick(this::edit);
+      Wrapper.wrap(view, R.id.delete).onClick(this::delete);
+
+      update();
+      addView(view);
+    }
+
+    private void delete() {
+      me().removeLocation(location);
+      UserFragment.this.update();
+    }
+
+    private void edit() {
+      MiniatureFilterDialog.newInstance().onSaved(this::update).display();
+    }
+
+    private String summary() {
+      return location + ", " + filter.getSummary();
+    }
+
+    private void update() {
+      locationText.text(summary());
+    }
+
+    private void update(MiniatureFilter filter) {
+      me().addLocation(location, filter);
+      update();
     }
   }
 }

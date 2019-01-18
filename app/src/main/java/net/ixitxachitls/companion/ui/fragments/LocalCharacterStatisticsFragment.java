@@ -59,26 +59,25 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     return view;
   }
 
-  private void editAbilities() {
-    if (!character.isPresent()) {
-      return;
-    }
-
-    AbilitiesDialog.newInstance(character.get().getId(),
-        character.get().getCampaignId()).display();
+  private void adjustHp() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
+        "HP Adjustment", "Adjust the current HP value.")
+        .setAdjustAction(this::doAdjustHp)
+        .display();
   }
 
-  private void editLevels() {
-    if (character.isPresent()) {
-      LevelsDialog.newInstance(character.get().getId(), character.get().getMaxLevel()).display();
-    }
+  private void adjustNonlethalDamage() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
+        "Nonlethal Damage Adjustment", "Adjust the current nonlethal damage.")
+        .setAdjustAction(this::doAdjustNonlethalDamage)
+        .display();
   }
 
-  private void changeXp() {
-    if (character.isPresent() && !xp.getText().isEmpty()) {
-      character.get().setXp(Integer.parseInt(xp.getText()));
-      character.get().store();
-    }
+  private void adjustXp() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_xp, R.color.character,
+        "XP Adjustment", "Adjust the current XP value.")
+        .setAdjustAction(this::doAdjustXp)
+        .display();
   }
 
   private void changeHp() {
@@ -107,11 +106,11 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     redraw();
   }
 
-  private void adjustHp() {
-    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
-        "HP Adjustment", "Adjust the current HP value.")
-        .setAdjustAction(this::doAdjustHp)
-        .display();
+  private void changeXp() {
+    if (character.isPresent() && !xp.getText().isEmpty()) {
+      character.get().setXp(Integer.parseInt(xp.getText()));
+      character.get().store();
+    }
   }
 
   private void doAdjustHp(int value) {
@@ -122,13 +121,6 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     }
   }
 
-  private void adjustNonlethalDamage() {
-    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
-        "Nonlethal Damage Adjustment", "Adjust the current nonlethal damage.")
-        .setAdjustAction(this::doAdjustNonlethalDamage)
-        .display();
-  }
-
   private void doAdjustNonlethalDamage(int value) {
     if (character.isPresent()) {
       character.get().addNonlethalDamage(value);
@@ -137,18 +129,26 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     }
   }
 
-  private void adjustXp() {
-    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_xp, R.color.character,
-        "XP Adjustment", "Adjust the current XP value.")
-        .setAdjustAction(this::doAdjustXp)
-        .display();
-  }
-
   private void doAdjustXp(int value) {
     if (character.isPresent()) {
       character.get().addXp(value);
       character.get().store();
       redraw();
+    }
+  }
+
+  private void editAbilities() {
+    if (!character.isPresent()) {
+      return;
+    }
+
+    AbilitiesDialog.newInstance(character.get().getId(),
+        character.get().getCampaignId()).display();
+  }
+
+  private void editLevels() {
+    if (character.isPresent()) {
+      LevelsDialog.newInstance(character.get().getId()).display();
     }
   }
 }

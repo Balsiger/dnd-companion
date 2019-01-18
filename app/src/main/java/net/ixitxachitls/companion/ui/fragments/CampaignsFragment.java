@@ -91,6 +91,9 @@ public class CampaignsFragment extends CompanionFragment {
             + "Characters created here will not be in a campaign, but can be moved to any existing "
             + "campaign later.");
     hint = TextWrapper.wrap(view, R.id.hint);
+    Wrapper.wrap(view, R.id.miniatures)
+        .onClick(this::showMiniatures)
+        .description("Miniatures", "Brows and modify your miniatures catalog.");
 
     campaigns().observe(this, this::refresh);
     characters().observe(this, this::refresh);
@@ -150,6 +153,10 @@ public class CampaignsFragment extends CompanionFragment {
     user.setSubtitle(subtitle());
     user.loadImageUrl(me().getPhotoUrl());
     hint.text(Hints.nextHint());
+  }
+
+  private void showMiniatures() {
+    CompanionFragments.get().show(Type.miniatures, Optional.empty());
   }
 
   private String subtitle() {

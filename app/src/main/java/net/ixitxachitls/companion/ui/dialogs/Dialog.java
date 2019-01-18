@@ -45,10 +45,12 @@ import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
+import java.util.Optional;
+
 /**
  * Base for all the edit fragments for the companion.
  */
-public abstract class Dialog extends DialogFragment {
+public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
 
   private static final String ARG_LAYOUT = "layout";
   private static final String ARG_TITLE = "title";
@@ -56,17 +58,139 @@ public abstract class Dialog extends DialogFragment {
   private static final String ARG_COLOR = "color";
   private static final String ARG_TEXT_COLOR = "text-color";
   private static final int WIDTH = 1500;
-
   // The following values are only filled after onCreate().
   protected int layoutId;
   protected String title;
   protected int color;
   protected int textColor;
-
+  private Optional<Action<T>> onSaved = Optional.empty();
   private View content;
 
   // Required empty constructor, don't add anything here.
   protected Dialog() {}
+
+  @FunctionalInterface
+  public interface Action<T> {
+    void execute(T value);
+  }
+
+  protected T getValue() {
+    return null;
+  }
+
+  public void display() {
+    CompanionFragments.get().display(this);
+  }
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    if (getArguments() != null) {
+      layoutId = getArguments().getInt(ARG_LAYOUT);
+      title = getArguments().getString(ARG_TITLE_STRING, "");
+      if (title == null || title.isEmpty()) {
+        title = getString(getArguments().getInt(ARG_TITLE));
+      }
+      color = getArguments().getInt(ARG_COLOR, 0);
+      textColor = getArguments().getInt(ARG_TEXT_COLOR, 0);
+    } else {
+      layoutId = 0;
+      title = "";
+      color = 0;
+      textColor = 0;
+    }
+  }
+
+  @Override
+  public void onStart() {
+    super.onStart();
+
+    if (content != null && content.getLayoutParams().width == ViewGroup.LayoutParams.MATCH_PARENT) {
+      int width = Resources.getSystem().getDisplayMetrics().widthPixels;
+      if (width < WIDTH) {
+        width = ViewGroup.LayoutParams.MATCH_PARENT;
+      }
+
+      getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
+    }
+  }
+
+  @Override
+  public void onDestroyView() {
+    super.onDestroyView();
+  }
+
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                           Bundle savedInstanceState) {
+    LinearLayout view = (LinearLayout) inflater.inflate(R.layout.fragment_edit, container, false);
+    TextView titleView = view.findViewById(R.id.title);
+    titleView.setText(title);
+    titleView.setBackgroundColor(getResources().getColor(color, null));
+    if (textColor != 0) {
+      titleView.setTextColor(getResources().getColor(textColor, null));
+    }
+
+    content = inflater.inflate(layoutId, container, false);
+    createContent(content);
+    view.addView(content);
+
+    return view;
+  }
+
+  public D onSaved(Action<T> action) {
+    onSaved = Optional.of(action);
+
+    return (D)this;
+  }
+
+  protected Adventures adventures() {
+    return application().adventures();
+  }
+
+  protected CompanionApplication application() {
+    return CompanionApplication.get(getContext());
+  }
+
+  protected Campaigns campaigns() {
+    return application().campaigns();
+  }
+
+  protected Characters characters() {
+    return application().characters();
+  }
+
+  private void close() {
+    dismiss();
+  }
+
+  protected CompanionContext context() {
+    return application().context();
+  }
+
+  protected abstract void createContent(View view);
+
+  protected User me() {
+    return application().me();
+  }
+
+  protected Messages messages() {
+    return application().messages();
+  }
+
+  protected Monsters monsters() {
+    return application().monsters();
+  }
+
+  @CallSuper
+  protected void save() {
+    close();
+
+    if (onSaved.isPresent()) {
+      onSaved.get().execute(getValue());
+    }
+  }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int color) {
@@ -108,108 +232,4 @@ public abstract class Dialog extends DialogFragment {
 
     return arguments;
   }
-
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    if (getArguments() != null) {
-      layoutId = getArguments().getInt(ARG_LAYOUT);
-      title = getArguments().getString(ARG_TITLE_STRING, "");
-      if (title == null || title.isEmpty()) {
-        title = getString(getArguments().getInt(ARG_TITLE));
-      }
-      color = getArguments().getInt(ARG_COLOR, 0);
-      textColor = getArguments().getInt(ARG_TEXT_COLOR, 0);
-    } else {
-      layoutId = 0;
-      title = "";
-      color = 0;
-      textColor = 0;
-    }
-  }
-
-  public void display() {
-    CompanionFragments.get().display(this);
-  }
-
-  @Override
-  public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                           Bundle savedInstanceState) {
-    LinearLayout view = (LinearLayout) inflater.inflate(R.layout.fragment_edit, container, false);
-    TextView titleView = view.findViewById(R.id.title);
-    titleView.setText(title);
-    titleView.setBackgroundColor(getResources().getColor(color, null));
-    if (textColor != 0) {
-      titleView.setTextColor(getResources().getColor(textColor, null));
-    }
-
-    content = inflater.inflate(layoutId, container, false);
-    createContent(content);
-    view.addView(content);
-
-    return view;
-  }
-
-  @Override
-  public void onStart() {
-    super.onStart();
-
-    if (content != null && content.getLayoutParams().width == ViewGroup.LayoutParams.MATCH_PARENT) {
-      int width = Resources.getSystem().getDisplayMetrics().widthPixels;
-      if (width < WIDTH) {
-        width = ViewGroup.LayoutParams.MATCH_PARENT;
-      }
-
-      getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
-    }
-  }
-
-  @CallSuper
-  protected void save() {
-    close();
-  }
-
-  private void close() {
-    dismiss();
-  }
-
-  protected CompanionApplication application() {
-    return CompanionApplication.get(getContext());
-  }
-
-  protected CompanionContext context() {
-    return application().context();
-  }
-
-  protected Campaigns campaigns() {
-    return application().campaigns();
-  }
-
-  protected Adventures adventures() {
-    return application().adventures();
-  }
-
-  protected Messages messages() {
-    return application().messages();
-  }
-
-  protected Monsters monsters() {
-    return application().monsters();
-  }
-
-  protected Characters characters() {
-    return application().characters();
-  }
-
-  protected User me() {
-    return application().me();
-  }
-
-  @Override
-  public void onDestroyView() {
-    super.onDestroyView();
-  }
-
-  protected abstract void createContent(View view);
 }

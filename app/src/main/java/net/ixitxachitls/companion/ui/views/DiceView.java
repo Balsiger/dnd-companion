@@ -36,6 +36,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -47,18 +48,15 @@ import java.util.Random;
 public class DiceView extends LinearLayout {
 
   private static final Random RANDOM = new Random();
-
+  private final DiceAdapter adapter = new DiceAdapter();
+  private final TextWrapper<TextView> label;
+  private final ModifiedValueView modifierView;
+  private final Wrapper<Button> random;
   private int modifier;
   private int dice;
   private SelectAction action;
-  private final DiceAdapter adapter = new DiceAdapter();
-
   // UI elements.
   private GridView grid;
-
-  private final TextWrapper<TextView> label;
-  private final TextWrapper<TextView> modifierView;
-  private final Wrapper<Button> random;
 
   public DiceView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
@@ -71,7 +69,7 @@ public class DiceView extends LinearLayout {
 
     label = TextWrapper.wrap(view, R.id.label);
     label.text(array.getString(R.styleable.DiceView_modifier_label));
-    modifierView = TextWrapper.wrap(view, R.id.value);
+    modifierView = view.findViewById(R.id.value);
     random = Wrapper.<Button>wrap(view, R.id.random)
         .onClick(this::selectRandom)
         .description("Random", "Instead of selecting the number that you actually rolled on your "
@@ -83,8 +81,28 @@ public class DiceView extends LinearLayout {
     addView(view);
   }
 
-  private void selectRandom() {
-    select(RANDOM.nextInt(dice) + 1);
+  @FunctionalInterface
+  public interface SelectAction {
+    public void select(int selection);
+  }
+
+  public void setDice(int dice) {
+    this.dice = dice;
+
+    grid.setAdapter(adapter);
+  }
+
+  public void setLabel(String text) {
+    label.text(text);
+  }
+
+  public void setModifier(ModifiedValue modifier) {
+    this.modifier = modifier.total();
+    this.modifierView.set(modifier);
+  }
+
+  public void setSelectAction(SelectAction action) {
+    this.action = action;
   }
 
   private void select(int number) {
@@ -93,23 +111,8 @@ public class DiceView extends LinearLayout {
     }
   }
 
-  public void setSelectAction(SelectAction action) {
-    this.action = action;
-  }
-
-  public void setLabel(String text) {
-    label.text(text);
-  }
-
-  public void setModifier(int modifier) {
-    this.modifier = modifier;
-    this.modifierView.text(modifier >= 0 ? "+" + modifier : String.valueOf(modifier));
-  }
-
-  public void setDice(int dice) {
-    this.dice = dice;
-
-    grid.setAdapter(adapter);
+  private void selectRandom() {
+    select(RANDOM.nextInt(dice) + 1);
   }
 
   private class DiceAdapter extends BaseAdapter {
@@ -145,10 +148,5 @@ public class DiceView extends LinearLayout {
 
       return text;
     }
-  }
-
-  @FunctionalInterface
-  public interface SelectAction {
-    public void select(int selection);
   }
 }

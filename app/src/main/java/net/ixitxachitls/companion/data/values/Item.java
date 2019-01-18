@@ -23,9 +23,9 @@ package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.Entries;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.NestedDocument;
-import net.ixitxachitls.companion.data.statics.ItemTemplate;
+import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
@@ -94,51 +94,36 @@ public class Item extends NestedDocument {
     this.contents = new ArrayList(contents);
   }
 
-  public String getId() {
-    return id;
+  public String getAppearance() {
+    return appearance;
   }
 
-  // TODO(merlin): Remove this once the single caller is gone.
-  @Deprecated
-  public void setId(String id) {
-    this.id = id;
+  public void setAppearance(String appearance) {
+    this.appearance = appearance;
   }
 
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getPlayerName() {
-    return playerName;
-  }
-
-  public void setPlayerName(String name) {
-    this.playerName = name;
-  }
-
-  public List<ItemTemplate> getTemplates() {
-    return Collections.unmodifiableList(templates);
-  }
-
-  public void setTemplates(List<ItemTemplate> templates) {
-    this.templates = new ArrayList<>(templates);
-  }
-
-  public Money getValue() {
-    Money totalValue = value.multiply(multiple);
-    for (Item content : contents) {
-      totalValue = totalValue.add(content.getValue());
+  public Optional<ItemTemplate> getBaseTemplate() {
+    if (templates.isEmpty()) {
+      return Optional.empty();
     }
 
-    return totalValue;
+    return Optional.of(templates.get(0));
   }
 
-  public void setValue(Money value) {
-    this.value = value;
+  public List<Item> getContents() {
+    return Collections.unmodifiableList(this.contents);
+  }
+
+  public String getDMNotes() {
+    return dmNotes;
+  }
+
+  public void setDMNotes(String notes) {
+    dmNotes = notes;
+  }
+
+  public String getDescription() {
+    return description(templates);
   }
 
   public int getHp() {
@@ -149,12 +134,14 @@ public class Item extends NestedDocument {
     this.hp = hp;
   }
 
-  public String getAppearance() {
-    return appearance;
+  public String getId() {
+    return id;
   }
 
-  public void setAppearance(String appearance) {
-    this.appearance = appearance;
+  // TODO(merlin): Remove this once the single caller is gone.
+  @Deprecated
+  public void setId(String id) {
+    this.id = id;
   }
 
   public int getMultiple() {
@@ -173,12 +160,57 @@ public class Item extends NestedDocument {
     this.multiuse = multiuse;
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getPlayerName() {
+    return playerName;
+  }
+
+  public void setPlayerName(String name) {
+    this.playerName = name;
+  }
+
+  public String getPlayerNotes() {
+    return playerNotes;
+  }
+
+  public void setPlayerNotes(String notes) {
+    playerNotes = notes;
+  }
+
+  public List<ItemTemplate> getTemplates() {
+    return Collections.unmodifiableList(templates);
+  }
+
+  public void setTemplates(List<ItemTemplate> templates) {
+    this.templates = new ArrayList<>(templates);
+  }
+
   public Duration getTimeLeft() {
     return timeLeft;
   }
 
   public void setTimeLeft(Duration duration) {
     this.timeLeft = duration;
+  }
+
+  public Money getValue() {
+    Money totalValue = value.multiply(multiple);
+    for (Item content : contents) {
+      totalValue = totalValue.add(content.getValue());
+    }
+
+    return totalValue;
+  }
+
+  public void setValue(Money value) {
+    this.value = value;
   }
 
   public Weight getWeight() {
@@ -190,69 +222,33 @@ public class Item extends NestedDocument {
     return weight;
   }
 
-  public String getPlayerNotes() {
-    return playerNotes;
-  }
-
-  public void setPlayerNotes(String notes) {
-    playerNotes = notes;
-  }
-
-  public String getDMNotes() {
-    return dmNotes;
-  }
-
-  public void setDMNotes(String notes) {
-    dmNotes = notes;
-  }
-
-  public String getDescription() {
-    return description(templates);
-  }
-
-  public List<Item> getContents() {
-    return Collections.unmodifiableList(this.contents);
-  }
-
-  public Optional<ItemTemplate> getBaseTemplate() {
-    if (templates.isEmpty()) {
-      return Optional.empty();
-    }
-
-    return Optional.of(templates.get(0));
-  }
-
-  public Optional<Item> getNestedItem(String itemId) {
-    for (Item item : contents) {
-      if (item.getId().equals(itemId)) {
-        return Optional.of(item);
-      }
-
-      Optional<Item> nested = item.getNestedItem(itemId);
-      if (nested.isPresent()) {
-        return nested;
+  public boolean isContainer() {
+    for (ItemTemplate template : templates) {
+      if (template.isContainer()) {
+        return true;
       }
     }
 
-    return Optional.empty();
+    return false;
   }
 
-  public String summary() {
-    return getValue().toString() + " / " + getWeight().toString();
+  public boolean isMonetary() {
+    return templates.stream().filter(t -> t.isMonetary()).findAny().isPresent();
   }
 
   public void add(Item item) {
     contents.add(item);
   }
 
-  public boolean remove(Item item) {
-    if (contents.remove(item)) {
+  public boolean addItemAfter(Item item, Item move) {
+    if (contents.contains(item)) {
+      contents.add(contents.indexOf(item) + 1, move);
       return true;
-    }
-
-    for (Item container : contents) {
-      if (container.remove(item)) {
-        return true;
+    } else {
+      for (Item container : contents) {
+        if (container.addItemAfter(item, move)) {
+          return true;
+        }
       }
     }
 
@@ -274,37 +270,28 @@ public class Item extends NestedDocument {
     return false;
   }
 
-  public boolean addItemAfter(Item item, Item move) {
-    if (contents.contains(item)) {
-      contents.add(contents.indexOf(item) + 1, move);
-      return true;
-    } else {
-      for (Item container : contents) {
-        if (container.addItemAfter(item, move)) {
-          return true;
-        }
+  public Optional<Item> getNestedItem(String itemId) {
+    for (Item item : contents) {
+      if (item.getId().equals(itemId)) {
+        return Optional.of(item);
+      }
+
+      Optional<Item> nested = item.getNestedItem(itemId);
+      if (nested.isPresent()) {
+        return nested;
       }
     }
 
-    return false;
+    return Optional.empty();
   }
 
-  public static Item create(CompanionContext context, String ... names) {
-    List<ItemTemplate> templates =
-        Arrays.asList(names).stream().map(Item::template).collect(Collectors.toList());
-    String name = name(templates);
-    return new Item(generateId(context), name, templates, hp(templates), value(templates),
-        appearance(templates), names[0], "", "", 0, 0, Duration.ZERO, false,
-        Collections.emptyList());
-  }
+  public boolean remove(Item item) {
+    if (contents.remove(item)) {
+      return true;
+    }
 
-  public static String generateId(CompanionContext context) {
-    return context.me().getId() + "-" + new Date().getTime();
-  }
-
-  public boolean isContainer() {
-    for (ItemTemplate template : templates) {
-      if (template.isContainer()) {
+    for (Item container : contents) {
+      if (container.remove(item)) {
         return true;
       }
     }
@@ -327,6 +314,37 @@ public class Item extends NestedDocument {
         && similar(templates, other.templates);
   }
 
+  public String summary() {
+    return getValue().toString() + " / " + getWeight().toString();
+  }
+
+  @Override
+  public String toString() {
+    return name + " (" + value + ")";
+  }
+
+  @Override
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_ID, id);
+    data.put(FIELD_NAME, name);
+    data.put(FIELD_TEMPLATES,
+        templates.stream().map(ItemTemplate::getName).collect(Collectors.toList()));
+    data.put(FIELD_HP, hp);
+    data.put(FIELD_VALUE, value.write());
+    data.put(FIELD_APPEARANCE, appearance);
+    data.put(FIELD_PLAYER_NAME, playerName);
+    data.put(FIELD_PLAYER_NOTES, playerNotes);
+    data.put(FIELD_DM_NOTES, dmNotes);
+    data.put(FIELD_MULTIPLE, multiple);
+    data.put(FIELD_MULTIUSE, multiuse);
+    data.put(FIELD_TIME_LEFT, timeLeft.write());
+    data.put(FIELD_IDENTIFIED, identified);
+    data.put(FIELD_CONTENTS, contents.stream().map(Item::write).collect(Collectors.toList()));
+
+    return data;
+  }
+
   private boolean similar(List<ItemTemplate> first, List<ItemTemplate> second) {
     List<String> firstNames =
         first.stream().map(ItemTemplate::getName).collect(Collectors.toList());
@@ -342,52 +360,19 @@ public class Item extends NestedDocument {
     return secondNames.isEmpty();
   }
 
-  @Override
-  public String toString() {
-    return name + " (" + value + ")";
-  }
-
-  private static ItemTemplate template(String name) {
-    Optional<ItemTemplate> template = Entries.get().getItemTemplates().get(name);
-    if (template.isPresent()) {
-      return template.get();
-    }
-
-    return ItemTemplate.createEmpty(name);
-  }
-
-  public static String name(List<ItemTemplate> templates) {
-    return Strings.SPACE_JOINER.join(templates.stream()
-        .map(ItemTemplate::getNamePart)
-        .collect(Collectors.toList()));
-  }
-
-  public static int hp(List<ItemTemplate> templates) {
-    return templates.stream().mapToInt(ItemTemplate::computeHp).sum();
-  }
-
-  public static Money value(List<ItemTemplate> templates) {
-    Money total = Money.ZERO;
-    for (ItemTemplate template : templates) {
-      total = total.add(template.getValue());
-    }
-
-    return total.resolveMagic();
-  }
-
-  public static Weight weight(List<ItemTemplate> templates) {
-    Weight total = Weight.ZERO;
-    for (ItemTemplate template : templates) {
-      total = total.add(template.getWeight());
-    }
-
-    return total;
-  }
-
   public static String appearance(List<ItemTemplate> templates) {
     return Strings.SPACE_JOINER.join(templates.stream()
         .map(ItemTemplate::computeAppearance)
         .collect(Collectors.toList()));
+  }
+
+  public static Item create(CompanionContext context, String ... names) {
+    List<ItemTemplate> templates =
+        Arrays.asList(names).stream().map(Item::template).collect(Collectors.toList());
+    String name = name(templates);
+    return new Item(generateId(context), name, templates, hp(templates), value(templates),
+        appearance(templates), names[0], "", "", 0, 0, Duration.ZERO, false,
+        Collections.emptyList());
   }
 
   public static String description(List<ItemTemplate> templates) {
@@ -396,8 +381,18 @@ public class Item extends NestedDocument {
         .collect(Collectors.toList()));
   }
 
-  public boolean isMonetary() {
-    return templates.stream().filter(t -> t.isMonetary()).findAny().isPresent();
+  public static String generateId(CompanionContext context) {
+    return context.me().getId() + "-" + new Date().getTime();
+  }
+
+  public static int hp(List<ItemTemplate> templates) {
+    return templates.stream().mapToInt(ItemTemplate::computeHp).sum();
+  }
+
+  public static String name(List<ItemTemplate> templates) {
+    return Strings.SPACE_JOINER.join(templates.stream()
+        .map(ItemTemplate::getNamePart)
+        .collect(Collectors.toList()));
   }
 
   public static Item read(Map<String, Object> data) {
@@ -405,7 +400,7 @@ public class Item extends NestedDocument {
     String name = Values.get(data, FIELD_NAME, "(no name)");
     List<ItemTemplate> templates = new ArrayList<>();
     for (String templateName : Values.get(data, FIELD_TEMPLATES, Collections.emptyList())) {
-      Optional<ItemTemplate> template = Entries.get().getItemTemplates().get(templateName);
+      Optional<ItemTemplate> template = Templates.get().getItemTemplates().get(templateName);
       if (template.isPresent()) {
         templates.add(template.get());
       } else {
@@ -431,25 +426,30 @@ public class Item extends NestedDocument {
         multiple, multiuse, timeLeft, identified, contents);
   }
 
-  @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_ID, id);
-    data.put(FIELD_NAME, name);
-    data.put(FIELD_TEMPLATES,
-        templates.stream().map(ItemTemplate::getName).collect(Collectors.toList()));
-    data.put(FIELD_HP, hp);
-    data.put(FIELD_VALUE, value.write());
-    data.put(FIELD_APPEARANCE, appearance);
-    data.put(FIELD_PLAYER_NAME, playerName);
-    data.put(FIELD_PLAYER_NOTES, playerNotes);
-    data.put(FIELD_DM_NOTES, dmNotes);
-    data.put(FIELD_MULTIPLE, multiple);
-    data.put(FIELD_MULTIUSE, multiuse);
-    data.put(FIELD_TIME_LEFT, timeLeft.write());
-    data.put(FIELD_IDENTIFIED, identified);
-    data.put(FIELD_CONTENTS, contents.stream().map(Item::write).collect(Collectors.toList()));
+  private static ItemTemplate template(String name) {
+    Optional<ItemTemplate> template = Templates.get().getItemTemplates().get(name);
+    if (template.isPresent()) {
+      return template.get();
+    }
 
-    return data;
+    return ItemTemplate.createEmpty(name);
+  }
+
+  public static Money value(List<ItemTemplate> templates) {
+    Money total = Money.ZERO;
+    for (ItemTemplate template : templates) {
+      total = total.add(template.getValue());
+    }
+
+    return total.resolveMagic();
+  }
+
+  public static Weight weight(List<ItemTemplate> templates) {
+    Weight total = Weight.ZERO;
+    for (ItemTemplate template : templates) {
+      total = total.add(template.getWeight());
+    }
+
+    return total;
   }
 }

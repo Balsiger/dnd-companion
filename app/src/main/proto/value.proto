@@ -86,10 +86,8 @@ message SizeProto {
   Modifier modifier = 2;
 }
 
-message ModifierProto
-{
-  enum Type
-  {
+message ModifierProto {
+  enum Type {
     UNKNOWN = 0;
     DODGE = 1;
     ARMOR = 2;
@@ -108,8 +106,7 @@ message ModifierProto
     SYNERGY = 15;
   }
 
-  message Modifier
-  {
+  message Modifier {
     int32 value = 1;
     Type type = 2;
     string condition = 3;
@@ -117,12 +114,14 @@ message ModifierProto
   repeated Modifier modifier = 1;
 }
 
-message DamageProto
-{
-  message Damage
-  {
-    enum Type
-    {
+message NameAndModifierProto {
+  string name = 1;
+  ModifierProto modifier = 2;
+}
+
+message DamageProto {
+  message Damage {
+    enum Type {
       UNKNOWN = 0;
       FIRE = 1;
       ELECTRICAL = 2;
@@ -409,6 +408,24 @@ message VolumeProto
   Liters liters = 4;
 }
 
+message RestrictionProto {
+  string generic = 1;
+  WeaponStyle weapon_style = 2;
+  Ability ability = 3;
+
+  message Limit {
+    enum Operator {
+      ABOVE = 0;
+      ABOVE_OR_EQUAL = 1;
+      EQUAL = 2;
+      BELOW_OR_EQUAL = 3;
+      BELOW = 4;
+    }
+    Operator operator = 1;
+    int32 value = 2;
+  }
+  Limit limit = 4;
+}
 
 // Shared enums.
 

@@ -49,8 +49,10 @@ public class AbilityView extends LinearLayout {
   private Optional<ModifiedValue> modifiedCheck = Optional.empty();
 
   // UI elements.
-  private TextWrapper<TextView> value;
+  private TextWrapper<ModifiedValueView> value;
   private TextWrapper<TextView> modifier;
+  private LinearLayout checkContainer;
+  private TextWrapper<ModifiedValueView> check;
 
   public AbilityView(Context context, @Nullable AttributeSet attributes) {
     super(context, attributes);
@@ -67,16 +69,11 @@ public class AbilityView extends LinearLayout {
     this.modifiedValue = Optional.of(value);
     this.modifiedCheck = Optional.of(check);
 
-    int total = value.total();
-    int modifier = Ability.modifier(total);
+    int modifier = Ability.modifier(value.total());
     int checkModifier = check.total();
-    this.value.text(String.valueOf(total));
-
-    if (modifier != checkModifier) {
-      this.modifier.text(formatSigned(modifier) + " / " + formatSigned(checkModifier));
-    } else {
-      this.modifier.text(formatSigned(modifier));
-    }
+    this.value.get().set(value);
+    this.check.get().set(check);
+    this.checkContainer.setVisibility(modifier == check.total() ? GONE : VISIBLE);
 
     return this;
   }
@@ -92,10 +89,13 @@ public class AbilityView extends LinearLayout {
         .inflate(R.layout.view_ability, null, false);
     TextWrapper.wrap(view, R.id.name).text(array.getString(R.styleable.AbilityView_attribute_name))
         .textColor(R.color.characterDark);
-    value = TextWrapper.wrap(view, R.id.value).textColor(R.color.characterText);
+    value = TextWrapper.<ModifiedValueView>wrap(view, R.id.value).textColor(R.color.characterText);
     modifier = TextWrapper.wrap(view, R.id.modifier).textColor(R.color.characterText);
+    check = TextWrapper.<ModifiedValueView>wrap(view, R.id.check).textColor(R.color.characterText);
+    checkContainer = view.findViewById(R.id.check_container);
+    checkContainer.setVisibility(GONE);
 
-    setOnLongClickListener(this::showDescription);
+    //setOnLongClickListener(this::showDescription);
 
     addView(view);
   }
