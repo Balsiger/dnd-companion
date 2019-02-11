@@ -30,7 +30,6 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,9 +41,9 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.views.ActionBarView;
 import net.ixitxachitls.companion.ui.views.CharacterTitleView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
-import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
 
@@ -62,12 +61,11 @@ public class CharacterFragment extends CompanionFragment {
   // UI elements.
   protected CharacterTitleView title;
   protected TextWrapper<TextView> campaignTitle;
-  protected Wrapper<ImageView> edit;
-  protected Wrapper<ImageView> delete;
-  protected Wrapper<ImageView> move;
-  protected Wrapper<ImageView> timed;
-  protected Wrapper<ImageView> back;
-  protected Wrapper<ImageView> message;
+  protected ActionBarView.Action edit;
+  protected ActionBarView.Action delete;
+  protected ActionBarView.Action move;
+  protected ActionBarView.Action timed;
+  protected ActionBarView.Action message;
   protected ViewPager pager;
   protected @Nullable CharacterStatisticsFragment statisticsFragment;
   protected @Nullable CharacterInventoryFragment inventoryFragment;
@@ -103,23 +101,29 @@ public class CharacterFragment extends CompanionFragment {
     LinearLayout view = (LinearLayout)
         inflater.inflate(R.layout.fragment_character, container, false);
 
-    back = Wrapper.<ImageView>wrap(view, R.id.back)
-        .onClick(this::goBack)
-        .description("Back to Campaign", "Go back to this characters campaign view.");
     title = view.findViewById(R.id.title);
     campaignTitle = TextWrapper.wrap(view, R.id.campaign);
 
-    edit = Wrapper.<ImageView>wrap(view, R.id.edit).gone();
-    delete = Wrapper.<ImageView>wrap(view, R.id.delete).onClick(this::delete)
-        .description("Delete Character", "This will remove this character from your device. If the "
-            + "player is active on your WiFi, the character most likely will immediately "
-            + "reappear, though.").invisible();
-    move = Wrapper.<ImageView>wrap(view, R.id.move).gone();
-    timed = Wrapper.<ImageView>wrap(view, R.id.timed).gone();
-    message = Wrapper.<ImageView>wrap(view, R.id.message).gone();
-
     pager = view.findViewById(R.id.pager);
     pager.setAdapter(new CharacterPagerAdapter(getChildFragmentManager()));
+
+    clearActions();
+    addAction(R.drawable.ic_arrow_back_black_24dp, "Back to Campaign",
+        "Go back to this characters campaign view.")
+        .onClick(this::goBack);
+    edit = addAction(R.drawable.ic_mode_edit_black_24dp,
+        "Edit Character", "Edit the basic character traits").hide();
+    timed = addAction(R.drawable.icons8_treatment_100, "Add Condition",
+        "Add a timed condition to this and/or other characters.")
+        .hide();
+    move = addAction(R.drawable.ic_launch_black_24dp, "Move Character",
+        "This button moves the character to an other campaign.").hide();
+    message = addAction(R.drawable.ic_message_text_black_48dp, "Send Message",
+        "Send a message to other characters and the DM").hide();
+    delete = addAction(R.drawable.ic_delete_black_24dp, "Delete Character",
+        "This will remove this character from your device. If the "
+            + "player is active on your WiFi, the character most likely will immediately "
+            + "reappear, though.").onClick(this::delete);
 
     if (character.isPresent()) {
       update(character.get());
@@ -211,7 +215,7 @@ public class CharacterFragment extends CompanionFragment {
     campaign = CompanionApplication.get(getContext()).campaigns()
         .get(character.getCampaignId());
 
-    delete.visible(character.amPlayer() || character.amDM());
+    delete.show(character.amPlayer() || character.amDM());
 
     campaignTitle.text(campaign.get().getName());
     title.update(character);

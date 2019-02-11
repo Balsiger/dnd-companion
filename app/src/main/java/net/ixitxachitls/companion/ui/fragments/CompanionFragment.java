@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.os.AsyncTask;
+import android.support.annotation.DrawableRes;
 import android.support.v4.app.Fragment;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -33,7 +35,11 @@ import net.ixitxachitls.companion.data.documents.Invites;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
+import net.ixitxachitls.companion.data.documents.Users;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.activities.MainActivity;
+import net.ixitxachitls.companion.ui.views.ActionBarView;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
 
@@ -65,8 +71,20 @@ public abstract class CompanionFragment extends Fragment {
     CompanionFragments.get().resumed(this);
   }
 
+  public void refresh() {};
+
   public void toast(String message) {
     Status.toast(message);
+  }
+
+  protected ActionBarView.Action addAction(@DrawableRes int drawable, String title,
+                                           String description) {
+    return ((MainActivity) getActivity()).addAction(drawable, title, description);
+  }
+
+  protected ActionBarView.ActionGroup addActionGroup(@DrawableRes int drawable, String title,
+                                                     String description) {
+    return ((MainActivity) getActivity()).addActionGroup(drawable, title, description);
   }
 
   protected CompanionApplication application() {
@@ -81,12 +99,23 @@ public abstract class CompanionFragment extends Fragment {
     return application().characters();
   }
 
+  protected void clearActions() {
+    ((MainActivity) getActivity()).clearActions();
+  }
+
   protected CreatureConditions conditions() {
     return application().conditions();
   }
 
   protected Monsters creatures() {
     return application().monsters();
+  }
+
+  protected void finishLoading(String text) {
+    // Not sure why this sometimes ends up null...
+    if (getActivity() != null) {
+      ((MainActivity) getActivity()).finishLoading(text);
+    }
   }
 
   protected Images images() {
@@ -109,7 +138,23 @@ public abstract class CompanionFragment extends Fragment {
     return application().monsters();
   }
 
+  protected void runBackground(String description, Wrapper.Action action) {
+    startLoading(description);
+    AsyncTask.execute( () -> {
+      action.execute();
+      getActivity().runOnUiThread(() -> finishLoading(description));
+    });
+  }
+
   protected void show(Type fragment) {
     CompanionFragments.get().show(fragment, Optional.empty());
+  }
+
+  protected void startLoading(String text) {
+    ((MainActivity) getActivity()).startLoading(text);
+  }
+
+  protected Users users() {
+    return application().users();
   }
 }

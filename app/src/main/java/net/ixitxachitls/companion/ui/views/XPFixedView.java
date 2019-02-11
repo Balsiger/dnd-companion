@@ -29,7 +29,7 @@ import net.ixitxachitls.companion.ui.dialogs.XPDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
 /**
- * View for a single fixed xp reward value.
+ * View for a single fixed xpAction reward value.
  */
 public class XPFixedView extends TextView {
 
@@ -66,19 +66,14 @@ public class XPFixedView extends TextView {
     refresh();
   }
 
-  @Override
-  protected void onAttachedToWindow() {
-    super.onAttachedToWindow();
-
-    if (!isLast) {
-      text.margin(TextWrapper.Margin.RIGHT, 5);
-    }
-
-    text.weight(1);
-  }
-
   public int getValue() {
     return base * count;
+  }
+
+  public void clear() {
+    count = 0;
+
+    refresh();
   }
 
   public void increase() {
@@ -89,10 +84,15 @@ public class XPFixedView extends TextView {
     refresh();
   }
 
-  public void clear() {
-    count = 0;
+  @Override
+  protected void onAttachedToWindow() {
+    super.onAttachedToWindow();
 
-    refresh();
+    if (!isLast) {
+      text.margin(TextWrapper.Margin.RIGHT, 5);
+    }
+
+    text.weight(1);
   }
 
   private void refresh() {

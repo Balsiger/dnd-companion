@@ -51,6 +51,26 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   private final int PICK_IMAGE = 1;
 
+  public boolean canEdit() {
+    return campaign.isPresent() && character.isPresent();
+  }
+
+  @Override
+  public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+
+    if (requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
+        data != null && data.getData() != null && character.isPresent()) {
+      try {
+        Uri uri = data.getData();
+        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
+        images().set(character.get().getId(), bitmap);
+      } catch (IOException e) {
+        Status.toast("Cannot load image bitmap: " + e);
+      }
+    }
+  }
+
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
@@ -58,22 +78,21 @@ public class LocalCharacterFragment extends CharacterFragment {
 
     title.setAction(this::editBase);
     title.setImageAction(this::editImage);
-    edit.visible()
-        .onClick(this::editBase)
-        .description("Edit Character", "Edit the basic character traits");
-    delete.description("Delete Character", "Delete this character. This will irrevocably delete "
-        + "the character and will send a deletion request to the DM and all other players.");
-    move.visible()
-        .onClick(this::move)
-        .description("Move Character", "This button moves the character to an other campaign.");
-    timed.visible()
-        .onClick(this::timed)
-        .description("Add Condition", "Add a timed condition to this and/or other characters.");
-    message.visible()
-        .onClick(this::sendMessage)
-        .description("Send Message", "Send a message to other characters and the DM");
+    edit.show().onClick(this::editBase);
+    timed.hide().onClick(this::timed);
+    move.show().onClick(this::move);
+    message.show().onClick(this::sendMessage);
 
     return view;
+  }
+
+  private void editBase() {
+    if (!canEdit() || !character.isPresent()) {
+      return;
+    }
+
+    CharacterDialog.newInstance(character.get().getId(),
+        character.get().getCampaignId()).display();
   }
 
   private void editImage() {
@@ -85,15 +104,6 @@ public class LocalCharacterFragment extends CharacterFragment {
       // Always show the chooser (if there are multiple options available)
       startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
     }
-  }
-
-  private void editBase() {
-    if (!canEdit() || !character.isPresent()) {
-      return;
-    }
-
-    CharacterDialog.newInstance(character.get().getId(),
-        character.get().getCampaignId()).display();
   }
 
   private void move() {
@@ -118,35 +128,15 @@ public class LocalCharacterFragment extends CharacterFragment {
     }
   }
 
-  private void timed() {
-    if (character.isPresent()) {
-      TimedConditionDialog.newInstance(character.get().getId(), 0).display();
-    }
-  }
-
-  @Override
-  public void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
-
-    if (requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
-        data != null && data.getData() != null && character.isPresent()) {
-      try {
-        Uri uri = data.getData();
-        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        images().set(character.get().getId(), bitmap);
-      } catch (IOException e) {
-        Status.toast("Cannot load image bitmap: " + e);
-      }
-    }
-  }
-
-  public boolean canEdit() {
-    return campaign.isPresent() && character.isPresent();
-  }
-
   private void sendMessage() {
     if (campaign.isPresent() && character.isPresent()) {
       MessageDialog.newInstance(campaign.get().getId(), character.get().getId()).display();
+    }
+  }
+
+  private void timed() {
+    if (character.isPresent()) {
+      TimedConditionDialog.newInstance(character.get().getId(), 0).display();
     }
   }
 }

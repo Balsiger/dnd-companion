@@ -40,7 +40,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import java.util.Optional;
 
 /**
- * Dialog fragment to edit the abilities of a character or monster.
+ * Dialog fragment to editAction the abilities of a character or monster.
  */
 public class AbilitiesDialog extends Dialog {
 
@@ -58,21 +58,6 @@ public class AbilitiesDialog extends Dialog {
   private Optional<Character> character = Optional.empty();
 
   public AbilitiesDialog() {}
-
-  public static AbilitiesDialog newInstance(String characterId, String campaignId) {
-    AbilitiesDialog fragment = new AbilitiesDialog();
-    fragment.setArguments(arguments(R.layout.dialog_edit_abilities,
-        R.string.edit_abilities, R.color.character, characterId, campaignId));
-    return fragment;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String characterId, String campaignId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ID, characterId);
-    arguments.putString(ARG_CAMPAIGN_ID, campaignId);
-    return arguments;
-  }
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -123,5 +108,20 @@ public class AbilitiesDialog extends Dialog {
       wisdom.setValue(character.get().getWisdom().getBase());
       charisma.setValue(character.get().getCharisma().getBase());
     }
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String characterId, String campaignId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_ID, characterId);
+    arguments.putString(ARG_CAMPAIGN_ID, campaignId);
+    return arguments;
+  }
+
+  public static AbilitiesDialog newInstance(String characterId, String campaignId) {
+    AbilitiesDialog fragment = new AbilitiesDialog();
+    fragment.setArguments(arguments(R.layout.dialog_edit_abilities,
+        R.string.edit_abilities, R.color.character, characterId, campaignId));
+    return fragment;
   }
 }

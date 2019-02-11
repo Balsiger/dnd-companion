@@ -66,7 +66,7 @@ public class CampaignTitleView extends TitleView {
 
       updateIcons();
 
-      Optional<Bitmap> bitmap = CompanionApplication.get().images().get(campaign.get().getId());
+      Optional<Bitmap> bitmap = CompanionApplication.get().images().get(campaign.get().getId(), 1);
       if (bitmap.isPresent()) {
         setImageBitmap(bitmap.get());
       } else {
@@ -115,6 +115,7 @@ public class CampaignTitleView extends TitleView {
     return messages;
   }
 
+  @Override
   protected MessageView createMessageIcon(Message message) {
     return new CampaignMessageView(getContext(), campaign.get(), message);
   }

@@ -217,8 +217,8 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       for (Character other : characters().getCampaignCharacters(character.get().getCampaignId())) {
         if (!other.equals(character)) {
           Drawable image;
-          if (images().get(other.getId()).isPresent()) {
-            image = new BitmapDrawable(getResources(), images().get(other.getId()).get());
+          if (images().get(other.getId(), 1).isPresent()) {
+            image = new BitmapDrawable(getResources(), images().get(other.getId(), 1).get());
           } else {
             image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
           }

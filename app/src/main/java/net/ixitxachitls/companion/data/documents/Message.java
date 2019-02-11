@@ -44,7 +44,7 @@ public class Message extends Document<Message> {
   private static final String FIELD_RECIPIENTS = "recipientIds";
   private static final String FIELD_SOURCE = "source";
   private static final String FIELD_TYPE = "type";
-  private static final String FIELD_XP = "xp";
+  private static final String FIELD_XP = "xpAction";
   private static final String FIELD_ITEM = "item";
   private static final String FIELD_TEXT = "text";
 
@@ -90,7 +90,7 @@ public class Message extends Document<Message> {
   public String toString() {
     switch (type) {
       case xp:
-        return xp + " xp for " + targetId;
+        return xp + " xpAction for " + targetId;
       case itemAdd:
         return item.get() + " added for " + targetId;
       case itemDelete:

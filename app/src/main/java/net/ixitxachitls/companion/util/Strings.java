@@ -34,6 +34,7 @@ public class Strings {
   public static final Joiner SPACE_JOINER = Joiner.on(" ").skipNulls();
   public static final Joiner SEMICOLON_JOINER = Joiner.on("; ").skipNulls();
   public static final Joiner PIPE_JOINER = Joiner.on("|").skipNulls();
+  public static final Joiner AND_JOINER = Joiner.on("&").skipNulls();
   private static final String SPACES =
       "                                                                      "
           + "                                                                     "

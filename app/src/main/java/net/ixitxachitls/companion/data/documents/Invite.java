@@ -30,7 +30,7 @@ import net.ixitxachitls.companion.data.CompanionContext;
 import java.util.Map;
 
 /**
- * An invite from one user to another to participate in a campaign.
+ * An inviteAction from one user to another to participate in a campaign.
  */
 public class Invite extends Document<Invite> {
 
@@ -38,13 +38,6 @@ public class Invite extends Document<Invite> {
 
 
   private String campaign;
-
-  public static void createAndStore(CompanionContext context, String email, String campaignId) {
-  }
-
-  protected static Invite fromData(CompanionContext context, DocumentSnapshot snapshot) {
-    return Document.fromData(FACTORY, context, snapshot);
-  }
 
   @Override
   @CallSuper
@@ -56,5 +49,12 @@ public class Invite extends Document<Invite> {
   @CallSuper
   protected Map<String, Object> write(Map<String, Object> data) {
     return data;
+  }
+
+  public static void createAndStore(CompanionContext context, String email, String campaignId) {
+  }
+
+  protected static Invite fromData(CompanionContext context, DocumentSnapshot snapshot) {
+    return Document.fromData(FACTORY, context, snapshot);
   }
 }

@@ -32,12 +32,11 @@ import java.util.Optional;
  */
 public class Users extends Documents<Users> {
   private Optional<User> me = Optional.empty();
+  private Map<String, User> usersById = new HashMap<>();
 
   public Users(CompanionContext context) {
     super(context);
   }
-
-  private Map<String, User> usersById = new HashMap<>();
 
   public User getMe() {
     if (me.isPresent()) {
@@ -45,6 +44,15 @@ public class Users extends Documents<Users> {
     }
 
     throw new IllegalStateException("Tried to get logged in user before user logged in!");
+  }
+
+  public static boolean isUserId(String id) {
+    return id.startsWith(User.PATH + "/");
+  }
+
+  public User fromPath(String path) {
+    String email = path.replaceAll(User.PATH + "/(.*?)/.*", "$1");
+    return get(email);
   }
 
   public User get(String id) {
@@ -57,11 +65,6 @@ public class Users extends Documents<Users> {
     return user;
   }
 
-  public User fromPath(String path) {
-    String email = path.replaceAll(User.PATH + "/(.*?)/.*", "$1");
-    return get(email);
-  }
-
   public void login(String id, String photoUrl) {
     me = Optional.of(get(id));
     me.get().whenCompleted(() -> {
@@ -72,9 +75,5 @@ public class Users extends Documents<Users> {
     });
 
     usersById.put(me.get().getId(), me.get());
-  }
-
-  public static boolean isUserId(String id) {
-    return id.startsWith(User.PATH + "/");
   }
 }

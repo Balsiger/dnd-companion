@@ -57,27 +57,12 @@ public class XPDialog extends Dialog {
 
   private static final String ARG_CAMPAIGN_ID = "campaign_id";
   private static final int MAX_ECL = 30;
-
-  private Optional<Campaign> campaign = Optional.empty();
   private final List<TextWrapper<TextView>> eclViews = new ArrayList<>();
+  private Optional<Campaign> campaign = Optional.empty();
   private int selectedECL = 0;
   private LinearLayout characterContainer;
   private LinearLayout fixed1;
   private LinearLayout fixed2;
-
-  public static XPDialog newInstance(String campaignId) {
-    XPDialog dialog = new XPDialog();
-    dialog.setArguments(arguments(R.layout.dialog_xp,
-        R.string.title_xp_rewards, R.color.campaign, campaignId));
-    return dialog;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String campaignId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_CAMPAIGN_ID, campaignId);
-    return arguments;
-  }
 
   @Override
   public void onCreate(Bundle state) {
@@ -95,7 +80,7 @@ public class XPDialog extends Dialog {
       int minPartyLevel = characters().minPartyLevel(campaign.get().getId());
       int maxPartyLevel = characters().maxPartyLevel(campaign.get().getId());
       for (int i = 1; i <= MAX_ECL; i++) {
-        // Don't display this if characters would not get xp anyway.
+        // Don't display this if characters would not get xpAction anyway.
         if (XP.xpAward(i, minPartyLevel, 1) <= 0 && XP.xpAward(i, maxPartyLevel, 1) <= 0) {
           eclViews.add(null);
           continue;
@@ -134,19 +119,6 @@ public class XPDialog extends Dialog {
     }
   }
 
-  private void selectEcl(int level) {
-    if (selectedECL > 0) {
-      eclViews.get(selectedECL - 1).backgroundColor(R.color.cell);
-    }
-    selectedECL = level;
-
-    if (selectedECL > 0) {
-      eclViews.get(selectedECL - 1).backgroundColor(R.color.colorAccent);
-    }
-
-    refresh();
-  }
-
   public void refresh() {
     int selectedCharacters = selectedCharacters();
     int fixedXp = selectedCharacters > 0 ? fixedXP() / selectedCharacters : 0;
@@ -158,32 +130,6 @@ public class XPDialog extends Dialog {
         view.setXP(0);
       }
     }
-  }
-
-  private int fixedXP() {
-    return fixedXP(fixed1) + fixedXP(fixed2);
-  }
-
-  private int fixedXP(LinearLayout layout) {
-    int total = 0;
-    for (int i = 0; i < layout.getChildCount(); i++) {
-      XPFixedView view = (XPFixedView) layout.getChildAt(i);
-      total += view.getValue();
-    }
-
-    return total;
-  }
-
-  private int selectedCharacters() {
-    int selected = 0;
-    for (int i = 0; i < characterContainer.getChildCount(); i++) {
-      XPCharacterView view = (XPCharacterView) characterContainer.getChildAt(i);
-      if (view.isSelected()) {
-        selected++;
-      }
-    }
-
-    return selected;
   }
 
   private void awardEcl() {
@@ -198,5 +144,58 @@ public class XPDialog extends Dialog {
     }
 
     save();
+  }
+
+  private int fixedXP(LinearLayout layout) {
+    int total = 0;
+    for (int i = 0; i < layout.getChildCount(); i++) {
+      XPFixedView view = (XPFixedView) layout.getChildAt(i);
+      total += view.getValue();
+    }
+
+    return total;
+  }
+
+  private int fixedXP() {
+    return fixedXP(fixed1) + fixedXP(fixed2);
+  }
+
+  private void selectEcl(int level) {
+    if (selectedECL > 0) {
+      eclViews.get(selectedECL - 1).backgroundColor(R.color.cell);
+    }
+    selectedECL = level;
+
+    if (selectedECL > 0) {
+      eclViews.get(selectedECL - 1).backgroundColor(R.color.colorAccent);
+    }
+
+    refresh();
+  }
+
+  private int selectedCharacters() {
+    int selected = 0;
+    for (int i = 0; i < characterContainer.getChildCount(); i++) {
+      XPCharacterView view = (XPCharacterView) characterContainer.getChildAt(i);
+      if (view.isSelected()) {
+        selected++;
+      }
+    }
+
+    return selected;
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String campaignId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_CAMPAIGN_ID, campaignId);
+    return arguments;
+  }
+
+  public static XPDialog newInstance(String campaignId) {
+    XPDialog dialog = new XPDialog();
+    dialog.setArguments(arguments(R.layout.dialog_xp,
+        R.string.title_xp_rewards, R.color.campaign, campaignId));
+    return dialog;
   }
 }

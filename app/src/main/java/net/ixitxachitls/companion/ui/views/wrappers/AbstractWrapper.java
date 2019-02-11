@@ -27,7 +27,6 @@ import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -35,18 +34,23 @@ import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.ui.Alert;
 import net.ixitxachitls.companion.ui.MessageDialog;
+import net.ixitxachitls.companion.util.TouchListener;
+
+import java.util.Optional;
 
 /**
  * Abstact base wrapper.
  */
 public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
-  protected final V view;
+
+  public enum Margin { LEFT, RIGHT, TOP, BOTTOM }
+  public enum Padding { LEFT, RIGHT, TOP, BOTTOM, ALL, LEFT_RIGHT, TOP_BOTTOM }
+
+  protected final V view;;
+  protected Optional<TouchListener> touchListener = Optional.empty();
 
   // State values that need to be set on attach.
-  private int gravity;
-
-  public enum Margin { LEFT, RIGHT, TOP, BOTTOM };
-  public enum Padding { LEFT, RIGHT, TOP, BOTTOM, ALL, LEFT_RIGHT, TOP_BOTTOM };
+  private int gravity;;
 
   @SuppressWarnings("unchecked")
   protected AbstractWrapper(View parent, @IdRes int id) {
@@ -63,19 +67,169 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
-  public W toggleVisiblity() {
-    if (view.getVisibility() == View.GONE) {
-      visible();
+  public W description(String name, String description) {
+    onLongClick(()
+        -> MessageDialog.create(get().getContext()).message(description).title(name).show());
+
+    return (W) this;
+  }
+
+  public W description(String name, @LayoutRes int layout) {
+    onLongClick(()
+        -> MessageDialog.create(get().getContext()).layout(layout).title(name).show());
+
+    return (W) this;
+  }
+
+  public W disabled() {
+    return enabled(false);
+  }
+
+  public W elevate(int elevation) {
+    view.setElevation(2 * elevation);
+    view.setPadding(view.getPaddingLeft() - elevation,
+        view.getPaddingTop() - elevation,
+        view.getPaddingRight(),
+        view.getPaddingBottom());
+
+    return (W) this;
+  }
+
+  public W enabled(boolean enabled) {
+    view.setEnabled(enabled);
+
+    return (W) this;
+  }
+
+  public W enabled() {
+    return enabled(true);
+  }
+
+  public V get() {
+    return view;
+  }
+
+  public W gone() {
+    view.setVisibility(View.GONE);
+
+    return (W) this;
+  }
+
+  public W height(int height) {
+    view.getLayoutParams().height = height;
+
+    return (W) this;
+  }
+
+  public W invisible() {
+    view.setVisibility(View.INVISIBLE);
+
+    return (W) this;
+  }
+
+  // NOTE: This method _MUST_ be called after adding the view to the parent.
+  @SuppressWarnings("unchecked")
+  public W margin(Margin position, int marginDp) {
+    int marginPx = dpToPx(marginDp);
+    int left = 0;
+    int top = 0;
+    int right = 0;
+    int bottom = 0;
+
+    switch (position) {
+      case LEFT:
+        left = marginPx;
+        break;
+
+      case RIGHT:
+        right = marginPx;
+        break;
+
+      case TOP:
+        top = marginPx;
+        break;
+
+      case BOTTOM:
+        bottom = marginPx;
+        break;
+    }
+
+    ViewGroup.LayoutParams params = view.getLayoutParams();
+    if (params instanceof ViewGroup.MarginLayoutParams) {
+      ((ViewGroup.MarginLayoutParams) params).setMargins(left, top, right, bottom);
     } else {
-      gone();
+      Alert.show(view.getContext(), "Rendering error",
+          "Layout params " + params.getClass() + " not supported. Margin not set.");
+    }
+
+    view.setLayoutParams(params);
+
+    return (W) this;
+  }
+
+  public W onBlur(Wrapper.Action action) {
+    view.setOnFocusChangeListener((view, hasFocus) -> {
+      if (!hasFocus) {
+        action.execute();
+      }
+    });
+
+    return (W) this;
+  }
+
+  public W onClick(Wrapper.Action action) {
+    if (action != null) {
+      view.setOnClickListener(v -> action.execute());
     }
 
     return (W) this;
   }
 
-  private int dpToPx(int dp) {
-    DisplayMetrics metrics = view.getContext().getResources().getDisplayMetrics();
-    return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, metrics);
+  public W onDoubleTap(Wrapper.Action action) {
+    if (!touchListener.isPresent()) {
+      touchListener = Optional.of(new TouchListener(view.getContext()));
+      view.setOnTouchListener(touchListener.get());
+    }
+
+    touchListener.get().onDoubleTap(action);
+    return (W) this;
+  }
+
+  public W onFocusLost(Wrapper.Action action) {
+    view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+      @Override
+      public void onFocusChange(View v, boolean hasFocus) {
+        if (!hasFocus) {
+          action.execute();
+        }
+      }
+    });
+
+    return (W) this;
+  }
+
+  public W onLongClick(Wrapper.Action action) {
+    view.setOnLongClickListener(v -> { action.execute(); return true; });
+
+    return (W) this;
+  }
+
+  public W onTouch(Wrapper.TouchAction action) {
+    view.setOnTouchListener((v, event) -> action.execute(event));
+
+    return (W) this;
+  }
+
+  public W onTouch(Wrapper.Action action, int onAction) {
+    view.setOnTouchListener((v, event) -> {
+      if (event.getAction() == onAction) {
+        action.execute();
+        return true;
+      }
+      return false;
+    });
+
+    return (W) this;
   }
 
   public W padding(Padding position, int paddingDp) {
@@ -125,42 +279,39 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
-  // NOTE: This method _MUST_ be called after adding the view to the parent.
-  @SuppressWarnings("unchecked")
-  public W margin(Margin position, int marginDp) {
-    int marginPx = dpToPx(marginDp);
-    int left = 0;
-    int top = 0;
-    int right = 0;
-    int bottom = 0;
+  public W removeClick() {
+    view.setOnClickListener(null);
 
-    switch (position) {
-      case LEFT:
-        left = marginPx;
-        break;
+    return (W) this;
+  }
 
-      case RIGHT:
-        right = marginPx;
-        break;
-
-      case TOP:
-        top = marginPx;
-        break;
-
-      case BOTTOM:
-        bottom = marginPx;
-        break;
+  public W tint(@ColorRes int color) {
+    if (view instanceof ImageView) {
+      ((ImageView) view).setImageTintList(ColorStateList.valueOf(
+          view.getContext().getColor(color)));
     }
 
-    ViewGroup.LayoutParams params = view.getLayoutParams();
-    if (params instanceof ViewGroup.MarginLayoutParams) {
-      ((ViewGroup.MarginLayoutParams) params).setMargins(left, top, right, bottom);
+    return (W) this;
+  }
+
+  public W toggleVisiblity() {
+    if (view.getVisibility() == View.GONE) {
+      visible();
     } else {
-      Alert.show(view.getContext(), "Rendering error",
-          "Layout params " + params.getClass() + " not supported. Margin not set.");
+      gone();
     }
 
-    view.setLayoutParams(params);
+    return (W) this;
+  }
+
+  public W visible(boolean visible) {
+    view.setVisibility(visible ? View.VISIBLE : View.GONE);
+
+    return (W) this;
+  }
+
+  public W visible() {
+    view.setVisibility(View.VISIBLE);
 
     return (W) this;
   }
@@ -179,152 +330,14 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
-  public W onClick(Wrapper.Action action) {
-    view.setOnClickListener(v -> action.execute());
-
-    return (W) this;
-  }
-
-  public W removeClick() {
-    view.setOnClickListener(null);
-
-    return (W) this;
-  }
-
-  public W onTouch(Wrapper.TouchAction action) {
-    view.setOnTouchListener((v, event) -> action.execute(event));
-
-    return (W) this;
-  }
-
-  public W onBlur(Wrapper.Action action) {
-    view.setOnFocusChangeListener((view, hasFocus) -> {
-      if (!hasFocus) {
-        action.execute();
-      }
-    });
-
-    return (W) this;
-  }
-
-  public W description(String name, String description) {
-    onLongClick(()
-        -> MessageDialog.create(get().getContext()).message(description).title(name).show());
-
-    return (W) this;
-  }
-
-  public W description(String name, @LayoutRes int layout) {
-    onLongClick(()
-        -> MessageDialog.create(get().getContext()).layout(layout).title(name).show());
-
-    return (W) this;
-  }
-
-  public W onLongClick(Wrapper.Action action) {
-    view.setOnLongClickListener(v -> { action.execute(); return true; });
-
-    return (W) this;
-  }
-
-  public W onTouch(Wrapper.Action action, int onAction) {
-    view.setOnTouchListener(new View.OnTouchListener() {
-      @Override
-      public boolean onTouch(View v, MotionEvent event) {
-        if (event.getAction() == onAction) {
-          action.execute();
-          return true;
-        }
-        return false;
-      }
-    });
-
-    return (W) this;
-  }
-
-  public W onFocusLost(Wrapper.Action action) {
-    view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-      @Override
-      public void onFocusChange(View v, boolean hasFocus) {
-        if (!hasFocus) {
-          action.execute();
-        }
-      }
-    });
-
-    return (W) this;
-  }
-
-  public W elevate(int elevation) {
-    view.setElevation(2 * elevation);
-    view.setPadding(view.getPaddingLeft() - elevation,
-        view.getPaddingTop() - elevation,
-        view.getPaddingRight(),
-        view.getPaddingBottom());
-
-    return (W) this;
-  }
-
-  public W visible(boolean visible) {
-    view.setVisibility(visible ? View.VISIBLE : View.GONE);
-
-    return (W) this;
-  }
-
-  public W visible() {
-    view.setVisibility(View.VISIBLE);
-
-    return (W) this;
-  }
-
-  public W invisible() {
-    view.setVisibility(View.INVISIBLE);
-
-    return (W) this;
-  }
-
-  public W gone() {
-    view.setVisibility(View.GONE);
-
-    return (W) this;
-  }
-
-  public W enabled(boolean enabled) {
-    view.setEnabled(enabled);
-
-    return (W) this;
-  }
-
-  public W enabled() {
-    return enabled(true);
-  }
-
-  public W disabled() {
-    return enabled(false);
-  }
-
-  public W tint(@ColorRes int color) {
-    if (view instanceof ImageView) {
-      ((ImageView) view).setImageTintList(ColorStateList.valueOf(
-          view.getContext().getColor(color)));
-    }
-
-    return (W) this;
-  }
-
-  public V get() {
-    return view;
-  }
-
   public W width(int width) {
     view.getLayoutParams().width = width;
 
     return (W) this;
   }
 
-  public W height(int height) {
-    view.getLayoutParams().height = height;
-
-    return (W) this;
+  private int dpToPx(int dp) {
+    DisplayMetrics metrics = view.getContext().getResources().getDisplayMetrics();
+    return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, metrics);
   }
 }

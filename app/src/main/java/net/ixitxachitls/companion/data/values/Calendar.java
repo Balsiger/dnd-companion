@@ -33,100 +33,18 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * A calendar representation of a world.
+ * A calendarAction representation of a world.
  */
 public class Calendar {
 
-  public static class Year implements Comparable<Year> {
-    private final int number;
-    private final String name;
-
-    public Year(int number, String name)
-    {
-      this.number = number;
-      this.name = name;
-    }
-
-    public int getNumber() {
-      return number;
-    }
-
-    public String getName() {
-      return name;
-    }
-
-    @Override
-    public int compareTo(Year other) {
-      int compared = Integer.compare(this.number, other.number);
-      if (compared != 0) {
-        return compared;
-      }
-
-      return name.compareTo(other.name);
-    }
-
-    @Override
-    public String toString()
-    {
-      return number + " " + name;
-    }
-  }
-
-  public static class Month
-  {
-    private final String name;
-    private final int days;
-    private final int leapYears;
-
-    public Month(String name, int days)
-    {
-      this(name, days, 0);
-    }
-
-    public Month(String name, int days, int leapYears)
-    {
-      this.name = name;
-      this.days = days;
-      this.leapYears = leapYears;
-    }
-
-    public String getName()
-    {
-      return name;
-    }
-
-    public int getDays()
-    {
-      return days;
-    }
-
-    public int getLeapYears()
-    {
-      return leapYears;
-    }
-
-    @Override
-    public String toString()
-    {
-      return name
-          + " ("
-          + days + " "
-          + (days == 1 ? "day" : "days")
-          + (leapYears == 0 ? "" : " every " + leapYears + " years")
-          + ")";
-    }
-  }
-
   private static final int NIGHT_HOURS = 8;
   private static final int MORNING_HOURS = 6;
-
   private final List<Year> years;
   private final List<Month> months;
   private final int daysPerWeek;
   private final int hoursPerDay;
   private final int minutesPerHour;
   private final int secondsPerMinute;
-
   @VisibleForTesting
   public Calendar(List<Year> years, List<Month> months, int daysPerWeek, int hoursPerDay,
                    int minutesPerHour, int secondsPerMinute) {
@@ -136,25 +54,6 @@ public class Calendar {
     this.hoursPerDay = hoursPerDay;
     this.minutesPerHour = minutesPerHour;
     this.secondsPerMinute = secondsPerMinute;
-  }
-
-
-  public List<Year> getYears()
-  {
-    return Collections.unmodifiableList(years);
-  }
-
-  public List<Month> getMonths()
-  {
-    return Collections.unmodifiableList(months);
-  }
-
-  public Month getMonth(int inMonth)
-  {
-    if (inMonth <= 0 || inMonth > months.size())
-      Status.toast("invalid month given: " + inMonth + ", must be 1 based.");
-
-    return months.get(inMonth - 1);
   }
 
   public int getDaysPerWeek() {
@@ -169,8 +68,114 @@ public class Calendar {
     return minutesPerHour;
   }
 
+  public List<Month> getMonths()
+  {
+    return Collections.unmodifiableList(months);
+  }
+
   public int getSecondsPerMinute() {
     return secondsPerMinute;
+  }
+
+  public List<Year> getYears()
+  {
+    return Collections.unmodifiableList(years);
+  }
+
+  public CampaignDate add(CampaignDate date, Duration duration) {
+    return manipulateDate(date, duration.getYears(), 0, duration.getDays(), duration.getHours(),
+        duration.getMinutes());
+  }
+
+  public CampaignDate addMinutes(CampaignDate date, int minutes) {
+    return manipulateDate(date, 0, 0, 0, 0, minutes);
+  }
+
+  public Duration dateDifference(CampaignDate current, CampaignDate next) {
+    int minutes = minutes(next) - minutes(current);
+
+    int years = minutes / (daysPerYear() * hoursPerDay * minutesPerHour);
+    minutes -= years * (daysPerYear() * hoursPerDay * minutesPerHour);
+
+    int days = minutes / (hoursPerDay * minutesPerHour);
+    minutes -= days * (hoursPerDay * minutesPerHour);
+
+    int hours = minutes / minutesPerHour;
+    minutes -= hours * minutesPerHour;
+
+    return Duration.time(years, days, hours, minutes);
+  }
+
+  public int daysPerMonth(int inMonth) {
+    if (inMonth == 0 || inMonth >= getMonths().size())
+      return 0;
+
+    return getMonths().get(inMonth - 1).getDays();
+  }
+
+  // TODO(merlin): Does not handle leap years!
+  public int daysPerYear() {
+    int days = 0;
+    for (int month = 0; month < months.size(); month++) {
+      days += months.get(month).days;
+    }
+
+    return days;
+  }
+
+  public int daysWithinYear(CampaignDate date) {
+    int days = date.getDay() - 1;
+    for (int i = 1; i < date.getMonth(); i++) {
+      days += getMonth(i).days;
+    }
+
+    return days;
+  }
+
+  public String format(CampaignDate date) {
+    return (date.getMonth() > 0 ? formatMonth(date) + " " : "")
+        + (date.getDay() > 0 && daysPerMonth(date.getMonth()) != 1
+           ? formatDay(date) + " " : "")
+        + ", "
+        + formatYear(date) + " " + formatTime(date);
+  }
+
+  public String formatDay(CampaignDate date) {
+    if (date.getDay() == 0 || daysPerMonth(date.getMonth()) == 1)
+      return "";
+
+    return String.valueOf(date.getDay());
+  }
+
+  public String formatMonth(CampaignDate date) {
+    if (date.getMonth() == 0)
+      return "";
+
+    if (getMonths().size() >= date.getMonth())
+      return getMonths().get(date.getMonth() - 1).getName();
+
+    return String.valueOf(date.getMonth());
+  }
+
+  public String formatTime(CampaignDate date) {
+    return Strings.pad(date.getHour(), 2, true) + ":" + Strings.pad(date.getMinute(), 2, true);
+  }
+
+  public String formatYear(CampaignDate date) {
+    Optional<Calendar.Year> calendarYear = getYear(date.getYear());
+    if (calendarYear.isPresent() && !calendarYear.get().getName().isEmpty()) {
+      return calendarYear.get().getName() + " (" + date.getYear() + ")";
+    }
+
+    return String.valueOf(date.getYear());
+  }
+
+  public Month getMonth(int inMonth)
+  {
+    if (inMonth <= 0 || inMonth > months.size())
+      Status.toast("invalid month given: " + inMonth + ", must be 1 based.");
+
+    return months.get(inMonth - 1);
   }
 
   public Optional<Year> getYear(int number) {
@@ -181,6 +186,33 @@ public class Calendar {
     }
 
     return Optional.empty();
+  }
+
+  // TODO(merlin): Does not handle leap years.
+  public int minutes(CampaignDate date) {
+    return minutesWithinYear(date) +
+        (date.getYear() - 1) * daysPerYear() * minutesPerHour * hoursPerDay;
+  }
+
+  public int minutesWithinYear(CampaignDate date) {
+    int minutes = date.getMinute();
+    minutes += date.getHour() * minutesPerHour;
+    minutes += daysWithinYear(date) * minutesPerHour * hoursPerDay;
+
+    return minutes;
+  }
+
+  public CampaignDate nextMorning(CampaignDate date) {
+    int mins = NIGHT_HOURS * getMinutesPerHour();
+    int morning = getHoursPerDay() * getMinutesPerHour()
+        + MORNING_HOURS * getMinutesPerHour()
+        - dailyMinutes(date.getHour(), date.getMinute());
+
+    if (mins < morning) {
+      return addMinutes(date, morning);
+    } else {
+      return addMinutes(date, mins);
+    }
   }
 
   public CampaignDate normalize(CampaignDate date) {
@@ -240,123 +272,34 @@ public class Calendar {
     return new CampaignDate(year, month, day, hour, minute);
   }
 
-  public CampaignDate addMinutes(CampaignDate date, int minutes) {
-    return manipulateDate(date, 0, 0, 0, 0, minutes);
-  }
+  public Value.CalendarProto toProto()
+  {
+    Value.CalendarProto.Builder proto = Value.CalendarProto.newBuilder();
 
-  public CampaignDate add(CampaignDate date, Duration duration) {
-    return manipulateDate(date, duration.getYears(), 0, duration.getDays(), duration.getHours(),
-        duration.getMinutes());
-  }
+    Collections.sort(years);
 
-  public Duration dateDifference(CampaignDate current, CampaignDate next) {
-    int minutes = minutes(next) - minutes(current);
+    for(Year year : years)
+      proto.addYear(Value.CalendarProto.Year.newBuilder()
+          .setStart(year.number)
+          .setName(year.name)
+          .build());
+    for(Month month : months)
+      proto.addMonth(Value.CalendarProto.Month.newBuilder()
+          .setName(month.name)
+          .setDays(month.days)
+          .setLeapYears(month.leapYears)
+          .build());
 
-    int years = minutes / (daysPerYear() * hoursPerDay * minutesPerHour);
-    minutes -= years * (daysPerYear() * hoursPerDay * minutesPerHour);
+    proto.setDaysPerWeek(daysPerWeek);
+    proto.setHoursPerDay(hoursPerDay);
+    proto.setMinutesPerHour(minutesPerHour);
+    proto.setSecondsPerMinute(secondsPerMinute);
 
-    int days = minutes / (hoursPerDay * minutesPerHour);
-    minutes -= days * (hoursPerDay * minutesPerHour);
-
-    int hours = minutes / minutesPerHour;
-    minutes -= hours * minutesPerHour;
-
-    return Duration.time(years, days, hours, minutes);
-  }
-
-  public int minutesWithinYear(CampaignDate date) {
-    int minutes = date.getMinute();
-    minutes += date.getHour() * minutesPerHour;
-    minutes += daysWithinYear(date) * minutesPerHour * hoursPerDay;
-
-    return minutes;
-  }
-
-  // TODO(merlin): Does not handle leap years.
-  public int minutes(CampaignDate date) {
-    return minutesWithinYear(date) +
-        (date.getYear() - 1) * daysPerYear() * minutesPerHour * hoursPerDay;
-  }
-
-  public int daysWithinYear(CampaignDate date) {
-    int days = date.getDay() - 1;
-    for (int i = 1; i < date.getMonth(); i++) {
-      days += getMonth(i).days;
-    }
-
-    return days;
-  }
-
-  public CampaignDate nextMorning(CampaignDate date) {
-    int mins = NIGHT_HOURS * getMinutesPerHour();
-    int morning = getHoursPerDay() * getMinutesPerHour()
-        + MORNING_HOURS * getMinutesPerHour()
-        - dailyMinutes(date.getHour(), date.getMinute());
-
-    if (mins < morning) {
-      return addMinutes(date, morning);
-    } else {
-      return addMinutes(date, mins);
-    }
+    return proto.build();
   }
 
   private int dailyMinutes(int hour, int minute) {
     return hour * getMinutesPerHour() + minute;
-  }
-
-  public String formatTime(CampaignDate date) {
-    return Strings.pad(date.getHour(), 2, true) + ":" + Strings.pad(date.getMinute(), 2, true);
-  }
-
-  public String formatMonth(CampaignDate date) {
-    if (date.getMonth() == 0)
-      return "";
-
-    if (getMonths().size() >= date.getMonth())
-      return getMonths().get(date.getMonth() - 1).getName();
-
-    return String.valueOf(date.getMonth());
-  }
-
-  public String formatYear(CampaignDate date) {
-    Optional<Calendar.Year> calendarYear = getYear(date.getYear());
-    if (calendarYear.isPresent() && !calendarYear.get().getName().isEmpty()) {
-      return calendarYear.get().getName() + " (" + date.getYear() + ")";
-    }
-
-    return String.valueOf(date.getYear());
-  }
-
-  public String formatDay(CampaignDate date) {
-    if (date.getDay() == 0 || daysPerMonth(date.getMonth()) == 1)
-      return "";
-
-    return String.valueOf(date.getDay());
-  }
-
-  public String format(CampaignDate date) {
-    return (date.getMonth() > 0 ? formatMonth(date) + " " : "")
-        + (date.getDay() > 0 && daysPerMonth(date.getMonth()) != 1
-           ? formatDay(date) + " " : "")
-        + ", "
-        + formatYear(date) + " " + formatTime(date);
-  }
-
-  public int daysPerMonth(int inMonth) {
-    if (inMonth == 0 || inMonth >= getMonths().size())
-      return 0;
-
-    return getMonths().get(inMonth - 1).getDays();
-  }
-
-  // TODO(merlin): Does not handle leap years!
-  public int daysPerYear() {
-    int days = 0;
-    for (int month = 0; month < months.size(); month++) {
-      days += months.get(month).days;
-    }
-
-    return days;
   }
 
   private CampaignDate manipulateDate(CampaignDate date, int years, int months, int days,
@@ -364,16 +307,6 @@ public class Calendar {
     CampaignDate manipulated = new CampaignDate(date.getYear() + years, date.getMonth() + months,
         date.getDay() + days, date.getHour() + hours, date.getMinute() + minutes);
     return normalize(manipulated);
-  }
-
-  private class YearMonth {
-    private final int year;
-    private final int month;
-
-    private YearMonth(int year, int month) {
-      this.year = year;
-      this.month = month;
-    }
   }
 
   private YearMonth normalizeMonths(int year, int month) {
@@ -403,43 +336,6 @@ public class Calendar {
     return new YearMonth(year, month);
   }
 
-  @Override
-  public String toString()
-  {
-    return years + "; "
-        + months + "; "
-        + daysPerWeek + " days per week; "
-        + hoursPerDay + " hours per day; "
-        + minutesPerHour + " minutes per hour; "
-        + secondsPerMinute + " seconds per minute";
-  }
-
-  public Value.CalendarProto toProto()
-  {
-    Value.CalendarProto.Builder proto = Value.CalendarProto.newBuilder();
-
-    Collections.sort(years);
-
-    for(Year year : years)
-      proto.addYear(Value.CalendarProto.Year.newBuilder()
-          .setStart(year.number)
-          .setName(year.name)
-          .build());
-    for(Month month : months)
-      proto.addMonth(Value.CalendarProto.Month.newBuilder()
-          .setName(month.name)
-          .setDays(month.days)
-          .setLeapYears(month.leapYears)
-          .build());
-
-    proto.setDaysPerWeek(daysPerWeek);
-    proto.setHoursPerDay(hoursPerDay);
-    proto.setMinutesPerHour(minutesPerHour);
-    proto.setSecondsPerMinute(secondsPerMinute);
-
-    return proto.build();
-  }
-
   public static Calendar fromProto(Value.CalendarProto proto)
   {
     List<Year> years = new ArrayList<>();
@@ -455,4 +351,105 @@ public class Calendar {
         proto.getHoursPerDay(), proto.getMinutesPerHour(),
         proto.getSecondsPerMinute());
   }
+
+  public static class Year implements Comparable<Year> {
+    private final int number;
+    private final String name;
+
+    public Year(int number, String name)
+    {
+      this.number = number;
+      this.name = name;
+    }
+
+    public String getName() {
+      return name;
+    }
+
+    public int getNumber() {
+      return number;
+    }
+
+    @Override
+    public int compareTo(Year other) {
+      int compared = Integer.compare(this.number, other.number);
+      if (compared != 0) {
+        return compared;
+      }
+
+      return name.compareTo(other.name);
+    }
+
+    @Override
+    public String toString()
+    {
+      return number + " " + name;
+    }
+  }
+
+  public static class Month
+  {
+    private final String name;
+    private final int days;
+    private final int leapYears;
+
+    public Month(String name, int days)
+    {
+      this(name, days, 0);
+    }
+
+    public Month(String name, int days, int leapYears)
+    {
+      this.name = name;
+      this.days = days;
+      this.leapYears = leapYears;
+    }
+
+    public int getDays()
+    {
+      return days;
+    }
+
+    public int getLeapYears()
+    {
+      return leapYears;
+    }
+
+    public String getName()
+    {
+      return name;
+    }
+
+    @Override
+    public String toString()
+    {
+      return name
+          + " ("
+          + days + " "
+          + (days == 1 ? "day" : "days")
+          + (leapYears == 0 ? "" : " every " + leapYears + " years")
+          + ")";
+    }
+  }  @Override
+  public String toString()
+  {
+    return years + "; "
+        + months + "; "
+        + daysPerWeek + " days per week; "
+        + hoursPerDay + " hours per day; "
+        + minutesPerHour + " minutes per hour; "
+        + secondsPerMinute + " seconds per minute";
+  }
+
+  private class YearMonth {
+    private final int year;
+    private final int month;
+
+    private YearMonth(int year, int month) {
+      this.year = year;
+      this.month = month;
+    }
+  }
+
+
 }

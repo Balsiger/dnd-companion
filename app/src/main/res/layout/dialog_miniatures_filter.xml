@@ -20,70 +20,105 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-  <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/name"
+  <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:labelColor="@color/miniatureDark"
-      app:labelText="Name"/>
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:padding="20dp">
 
-  <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-      android:id="@+id/races"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:labelColor="@color/miniatureDark"
-      app:labelText="Races"/>
+    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Name"/>
 
-  <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-      android:id="@+id/sets"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:labelColor="@color/miniatureDark"
-      app:labelText="Sets"/>
+    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+        android:id="@+id/races"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Races"/>
 
-  <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-      android:id="@+id/types"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:labelColor="@color/miniatureDark"
-      app:labelText="Types"/>
+    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+        android:id="@+id/sets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Sets"/>
 
-  <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-      android:id="@+id/classes"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:labelColor="@color/miniatureDark"
-      app:labelText="Classes"/>
+    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+        android:id="@+id/types"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Types"/>
 
-  <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-      android:id="@+id/sizes"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:labelColor="@color/miniatureDark"
-      app:labelText="Sizes"/>
+    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+        android:id="@+id/classes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Classes"/>
 
-  <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-      android:id="@+id/origins"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      app:labelColor="@color/miniatureDark"
-      app:labelText="Origins"/>
+    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+        android:id="@+id/sizes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Sizes"/>
 
-  <Button
-      android:id="@+id/save"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginTop="20dp"
-      android:text="Filter"
-      android:textAlignment="center"/>
+    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+        android:id="@+id/origins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Origins"/>
 
-</LinearLayout>
+    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+        android:id="@+id/owned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Owned"/>
+
+    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+        android:id="@+id/locations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelColor="@color/miniatureDark"
+        app:labelText="Locations"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+      <Button
+          android:id="@+id/clear"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginEnd="20dp"
+          android:text="Clear"
+          android:textAlignment="center"/>
+
+      <Button
+          android:id="@+id/save"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:text="Filter"
+          android:textAlignment="center"/>
+
+    </LinearLayout>
+  </LinearLayout>
+
+</ScrollView>

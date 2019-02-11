@@ -54,6 +54,8 @@ public class Hints {
           .add("You can touch messages to receive them (which will remove them).")
           .add("A long press on a pending message will tell you what it is, without actually "
               + "reading it (they will not be removed).")
+          .add("You can double tap an image to reload it. Images will automatically reload from "
+              + "time to time, but that might be too slow sometimes.")
       .build();
 
   public static String nextHint() {

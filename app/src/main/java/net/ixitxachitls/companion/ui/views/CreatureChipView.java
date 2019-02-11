@@ -61,6 +61,10 @@ public class CreatureChipView extends ChipView {
     update(creature);
   }
 
+  public String getCreatureId() {
+    return getDataId();
+  }
+
   @Override
   public void onMeasure(int width, int height) {
     super.onMeasure(width, height);
@@ -79,12 +83,8 @@ public class CreatureChipView extends ChipView {
     }
   }
 
-  public String getCreatureId() {
-    return getDataId();
-  }
-
   public void update(Creature<?> creature) {
-    Optional<Bitmap> bitmap = CompanionApplication.get().images().get(creature.getId());
+    Optional<Bitmap> bitmap = CompanionApplication.get().images().get(creature.getId(), 1);
     if (bitmap.isPresent()) {
       image.get().setImageBitmap(bitmap.get());
     }

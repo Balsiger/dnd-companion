@@ -24,6 +24,7 @@ package net.ixitxachitls.companion;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.multidex.MultiDexApplication;
 
@@ -38,15 +39,19 @@ import net.ixitxachitls.companion.data.documents.Invites;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
+import net.ixitxachitls.companion.data.documents.Users;
 import net.ixitxachitls.companion.data.values.Encounters;
 import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
+import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 /**
  * The main application for the companion.
  */
 public class CompanionApplication extends MultiDexApplication
     implements Application.ActivityLifecycleCallbacks {
+
+  private static final String PROGRESS_LOADING = "entities";
 
   private static CompanionApplication application;
 
@@ -118,6 +123,15 @@ public class CompanionApplication extends MultiDexApplication
 
   @Override
   public void onActivityStarted(Activity activity) {
+    if (currentActivity instanceof MainActivity) {
+      MainActivity main = (MainActivity) currentActivity;
+      main.startLoading(PROGRESS_LOADING);
+      AsyncTask.execute(() -> {
+        Templates.init(CompanionApplication.this.getAssetAccessor());
+        main.runOnUiThread(() -> main.finishLoading(PROGRESS_LOADING));
+      });
+    }
+
     currentActivity = activity;
   }
 
@@ -147,10 +161,12 @@ public class CompanionApplication extends MultiDexApplication
     application = this;
     super.onCreate();
 
-    Templates.init(this.getAssetAccessor());
-
-    context = new ApplicationCompanionContext();
+    context = new ApplicationCompanionContext(this);
     registerActivityLifecycleCallbacks(this);
+  }
+
+  public Users users() {
+    return context.users();
   }
 
   public static CompanionApplication get() {

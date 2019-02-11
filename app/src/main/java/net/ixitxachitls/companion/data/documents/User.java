@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.CallSuper;
 
+import com.google.common.collect.SortedSetMultimap;
+import com.google.common.collect.TreeMultimap;
 import com.google.firebase.firestore.DocumentReference;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -38,7 +40,10 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.SortedMap;
+import java.util.SortedSet;
 import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 /**
  * The data for a single user.
@@ -62,7 +67,7 @@ public class User extends Document<User> {
   private Map<String, Long> miniatures = new HashMap<>();
   private Optional<DocumentReference> miniaturesDocument = Optional.empty();
   private boolean miniaturesLoading = false;
-  private SortedMap<String, MiniatureFilter> locations = new TreeMap<>();
+  private SortedSetMultimap<String, MiniatureFilter> locations = TreeMultimap.create();
 
   public List<String> getCampaigns() {
     return campaigns;
@@ -76,8 +81,15 @@ public class User extends Document<User> {
     this.features = new ArrayList<>(features);
   }
 
+  public List<String> getLocationValues() {
+    List<String> values = new ArrayList<>();
+    values.add("");
+    values.addAll(locations.keySet());
+    return values;
+  }
+
   public Set<Map.Entry<String, MiniatureFilter>> getLocations() {
-    return locations.entrySet();
+    return locations.entries();
   }
 
   public String getNickname() {
@@ -88,12 +100,25 @@ public class User extends Document<User> {
     this.nickname = nickname;
   }
 
+  public List<String> getOwnedValues() {
+    SortedSet<Long> owned = new TreeSet(miniatures.values());
+    owned.add(0L);
+    return new ArrayList<>(owned.stream().map(String::valueOf).collect(Collectors.toList()));
+  }
+
   public String getPhotoUrl() {
     return photoUrl;
   }
 
   public void setPhotoUrl(String photoUrl) {
     this.photoUrl = photoUrl;
+  }
+
+  public SortedSet<Map.Entry<String, MiniatureFilter>> getPrioritizedLocations() {
+    SortedSet<Map.Entry<String, MiniatureFilter>> sorted =
+        new TreeSet<>((first, second) -> first.getValue().compareTo(second.getValue()));
+    sorted.addAll(locations.entries());
+    return sorted;
   }
 
   public static boolean isUser(String id) {
@@ -132,8 +157,8 @@ public class User extends Document<User> {
 
   public String locationFor(MiniatureTemplate template) {
     SortedMap<MiniatureFilter, String> filteredLocations = new TreeMap<MiniatureFilter, String>();
-    for (Map.Entry<String, MiniatureFilter> location : locations.entrySet()) {
-      if (location.getValue().matches(template)) {
+    for (Map.Entry<String, MiniatureFilter> location : locations.entries()) {
+      if (location.getValue().matches(this, template)) {
         filteredLocations.put(location.getValue(), location.getKey());
       }
     }
@@ -149,8 +174,9 @@ public class User extends Document<User> {
     return id.startsWith(getId());
   }
 
-  public void readMiniatures() {
+  public void readMiniatures(Callback callback) {
     if (miniaturesLoading) {
+      callback.done();
       return;
     }
 
@@ -177,11 +203,12 @@ public class User extends Document<User> {
 
         data = task.getResult().get(FIELD_MINIATURE_LOCATIONS);
         if (data != null) {
-          Map<String, MiniatureFilter> parsed = readLocations((Map<String, Object>) data);
+          SortedSetMultimap<String, MiniatureFilter> parsed =
+              readLocations((Map<String, Object>) data);
           if (locations.isEmpty()) {
             locations.putAll(parsed);
           } else {
-            Map<String, MiniatureFilter> existing = new HashMap<>(locations);
+            SortedSetMultimap<String, MiniatureFilter> existing = TreeMultimap.create(locations);
             locations.putAll(parsed);
             locations.putAll(existing);
             writeMiniatures();
@@ -189,22 +216,25 @@ public class User extends Document<User> {
         }
 
         verifyMiniatures();
+        callback.done();
       }
     });
   }
 
-  public void removeLocation(String location) {
-    locations.remove(location);
+  public void removeLocation(String location, MiniatureFilter filter) {
+    locations.remove(location, filter);
     writeMiniatures();
   }
 
   public void setMiniatureCount(String miniature, long count) {
-    miniatures.put(miniature, count);
-    writeMiniatures();
-  }
-
-  public void setMiniatureCountNoSave(String miniature, long count) {
-    miniatures.put(miniature, count);
+    if (miniatures.getOrDefault(miniature, 0L) != count) {
+      if (count == 0) {
+        miniatures.remove(miniature);
+      } else{
+        miniatures.put(miniature, count);
+      }
+      writeMiniatures();
+    }
   }
 
   @Override
@@ -236,29 +266,39 @@ public class User extends Document<User> {
     });
   }
 
-  private SortedMap<String, MiniatureFilter> readLocations(Map<String, Object> data) {
-    SortedMap<String, MiniatureFilter> locations = new TreeMap<>();
+  private SortedSetMultimap<String, MiniatureFilter> readLocations(Map<String, Object> data) {
+    SortedSetMultimap<String, MiniatureFilter> locations = TreeMultimap.create();
 
     for (Map.Entry<String, Object> entry : data.entrySet()) {
-      locations.put(entry.getKey(), MiniatureFilter.read((Map<String, Object>)entry.getValue()));
+      locations.putAll(entry.getKey(),
+          ((List<Map<String, Object>>)entry.getValue()).stream()
+              .map(v -> MiniatureFilter.read(entry.getKey(), v))
+              .collect(Collectors.toList()));
     }
 
     return locations;
   }
 
   private void verifyMiniatures() {
+    boolean toasted = false;
     for (String miniature : miniatures.keySet()) {
       if (!Templates.get().getMiniatureTemplates().get(miniature).isPresent()) {
-        Status.error("Cannot find owned miniature " + miniature);
-        break;  // Only show the first missing to avoid toast spamming!
+        Templates.get().getMiniatureTemplates().addDummy(miniature);
+        if (!toasted) {
+          Status.error("Cannot find owned miniature " + miniature);
+          // Only show the first missing to avoid toast spamming!
+          toasted = true;
+        }
       }
     }
   }
 
-  private Map<String, Map<String, Object>> writeLocations() {
-    Map<String, Map<String, Object>> store = new HashMap<>();
-    for (Map.Entry<String, MiniatureFilter> location : locations.entrySet()) {
-      store.put(location.getKey(), location.getValue().write());
+  private Map<String, List<Map<String, Object>>> writeLocations() {
+    Map<String, List<Map<String, Object>>> store = new HashMap<>();
+    for (String location: locations.keySet()) {
+      store.put(location, locations.get(location).stream()
+          .map(MiniatureFilter::write)
+          .collect(Collectors.toList()));
     }
 
     return store;
@@ -277,7 +317,10 @@ public class User extends Document<User> {
 
   protected static User getOrCreate(CompanionContext context, String id) {
     User user = Document.getOrCreate(FACTORY, context, PATH + "/" + id);
-    user.whenReady(user::readCampaigns);
+    user.whenReady(() -> {
+      user.readCampaigns();
+      context.users().updated(id);
+    });
 
     return user;
   }

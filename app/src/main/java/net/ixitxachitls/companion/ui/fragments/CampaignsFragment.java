@@ -54,6 +54,11 @@ import java.util.stream.Collectors;
  */
 public class CampaignsFragment extends CompanionFragment {
 
+  private static final String LOADING_CHARACTERS = "characters";
+  private static final String LOADING_CAMPAIGNS = "campaigns";
+  private static final String LOADING_IMAGES = "images";
+  private static final String LOADING_USER = "user";
+
   private TitleView user;
   private Wrapper<TextView> note;
   private UpdatableViewGroup<LinearLayout, CampaignTitleView, String> campaigns;
@@ -75,6 +80,7 @@ public class CampaignsFragment extends CompanionFragment {
     LinearLayout view = (LinearLayout)
         inflater.inflate(R.layout.fragment_campaigns, container, false);
 
+    clearActions();
     user = view.findViewById(R.id.user);
     user.setAction(() -> show(Type.settings));
     campaigns = new UpdatableViewGroup<>(view.findViewById(R.id.campaigns));
@@ -84,7 +90,7 @@ public class CampaignsFragment extends CompanionFragment {
         .onClick(this::addCampaign)
         .description("Add Campaign", "Create a new campaign. "
             + "You will be the Dungeon Master of the campaign. The campaign will only be visible "
-            + "to player you invite to it.");
+            + "to player you inviteAction to it.");
     Wrapper.wrap(view, R.id.character_add)
         .onClick(this::addCharacter)
         .description("Add Character", "Create a new character. "
@@ -95,11 +101,18 @@ public class CampaignsFragment extends CompanionFragment {
         .onClick(this::showMiniatures)
         .description("Miniatures", "Brows and modify your miniatures catalog.");
 
-    campaigns().observe(this, this::refresh);
-    characters().observe(this, this::refresh);
-    images().observe(this, this::refresh);
-    messages().observe(this, this::refresh);
-    invites().observe(this, this::refresh);
+    startLoading(LOADING_CAMPAIGNS);
+    campaigns().observe(this, this::refreshCampaigns);
+    invites().observe(this, this::refreshCampaigns);
+    startLoading(LOADING_CHARACTERS);
+    characters().observe(this, this::refreshCharacters);
+    startLoading(LOADING_IMAGES);
+    images().observe(this, this::refreshDisplay);
+    messages().observe(this, this::refreshDisplay);
+    startLoading(LOADING_USER);
+    users().observe(this, this::refreshUser);;
+
+    hint.text(Hints.nextHint());
     return view;
   }
 
@@ -111,31 +124,7 @@ public class CampaignsFragment extends CompanionFragment {
     CharacterDialog.newInstance("", "").display();
   }
 
-  private void refresh(Documents.Update update) {
-    // Characters.
-    List<String> characterIds = characters().getAll().stream()
-        .filter(Character::amPlayer)
-        .map(Character::getId)
-        .collect(Collectors.toList());
-    this.characters.ensureOnly(characterIds, id -> new CharacterTitleView(getContext()));
-    this.characters.update(characterIds, (id, view) -> {
-      Optional<Character> character = characters().get(id);
-      if (character.isPresent()) {
-        view.update(character.get());
-      }
-    });
-
-    note.visible(this.characters.getView().getChildCount() == 0);
-
-    messages().readMessages(characters().getPlayerCharacters(me().getId()).stream()
-        .map(Character::getId)
-        .collect(Collectors.toList()));
-
-    // Images & Messages.
-    campaigns.simpleUpdate(v -> v.refresh(update));
-    characters.simpleUpdate(v -> v.refresh(update));
-
-    // Campaigns & Invites.
+  private void refreshCampaigns(Documents.Update update) {
     this.campaigns.ensureOnly(campaigns().getIds(), id -> new CampaignTitleView(getContext()));
     this.campaigns.update(campaigns().getIds(),
         (id, view) -> {
@@ -148,11 +137,48 @@ public class CampaignsFragment extends CompanionFragment {
           }
         });
 
-    note.visible(campaigns().getIds().isEmpty());
+    note.visible(this.characters.getView().getChildCount() == 0 || campaigns().getIds().isEmpty());
+    campaigns.simpleUpdate(v -> v.refresh(update));
+
+    finishLoading(LOADING_CAMPAIGNS);
+  }
+
+  private void refreshCharacters(Documents.Update update) {
+    List<String> characterIds = characters().getAll().stream()
+        .filter(Character::amPlayer)
+        .map(Character::getId)
+        .collect(Collectors.toList());
+    this.characters.ensureOnly(characterIds, id -> new CharacterTitleView(getContext()));
+    this.characters.update(characterIds, (id, view) -> {
+      Optional<Character> character = characters().get(id);
+      if (character.isPresent()) {
+        view.update(character.get());
+      }
+    });
+
+    note.visible(this.characters.getView().getChildCount() == 0 || campaigns().getIds().isEmpty());
+    characters.simpleUpdate(v -> v.refresh(update));
+
+    messages().readMessages(characters().getPlayerCharacters(me().getId()).stream()
+        .map(Character::getId)
+        .collect(Collectors.toList()));
+
+    finishLoading(LOADING_CHARACTERS);
+  }
+
+  private void refreshDisplay(Documents.Update update) {
+    campaigns.simpleUpdate(v -> v.refresh(update));
+    characters.simpleUpdate(v -> v.refresh(update));
+
+    finishLoading(LOADING_IMAGES);
+  }
+
+  private void refreshUser(Documents.Update update) {
     user.setTitle(me().getNickname());
     user.setSubtitle(subtitle());
     user.loadImageUrl(me().getPhotoUrl());
-    hint.text(Hints.nextHint());
+
+    finishLoading(LOADING_USER);
   }
 
   private void showMiniatures() {

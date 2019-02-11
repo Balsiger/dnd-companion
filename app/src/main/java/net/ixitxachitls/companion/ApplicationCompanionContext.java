@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion;
 
+import android.app.Application;
+
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaigns;
@@ -39,7 +41,7 @@ import net.ixitxachitls.companion.data.values.Encounters;
  */
 public class ApplicationCompanionContext extends CompanionContext {
 
-  ApplicationCompanionContext() {
+  ApplicationCompanionContext(Application application) {
     super();
 
     users = new Users(this);
@@ -51,7 +53,7 @@ public class ApplicationCompanionContext extends CompanionContext {
     invites = new Invites(this);
     conditions = new CreatureConditions(this);
     messages = new Messages(this);
-    images = new Images();
+    images = new Images(application);
   }
 
   @Override

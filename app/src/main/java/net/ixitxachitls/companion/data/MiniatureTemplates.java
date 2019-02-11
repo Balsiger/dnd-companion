@@ -22,7 +22,9 @@
 package net.ixitxachitls.companion.data;
 
 import net.ixitxachitls.companion.data.documents.MiniatureFilter;
+import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
+import net.ixitxachitls.companion.proto.Template;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +39,7 @@ import java.util.stream.Collectors;
 public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
 
   private List<MiniatureTemplate> filtered = new ArrayList<>();
-  private MiniatureFilter filter = new MiniatureFilter();
+  private MiniatureFilter filter = new MiniatureFilter("filter");
 
   protected MiniatureTemplates() {
     super(MiniatureTemplate.class);
@@ -87,6 +89,15 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     return new ArrayList<>(sets);
   }
 
+  public List<String> getSizes() {
+    SortedSet<String> sizes = new TreeSet<>();
+    for (MiniatureTemplate template : byName.values()) {
+      sizes.add(template.getSize().getName());
+    }
+
+    return new ArrayList<>(sizes);
+  }
+
   public int getTotalNumber() {
     return byName.size();
   }
@@ -105,9 +116,16 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     return filtered.size() != byName.size();
   }
 
-  public void filter(MiniatureFilter filter) {
+  public void addDummy(String name) {
+    byName.put(name,
+        new MiniatureTemplate(name, Template.MiniatureTemplateProto.getDefaultInstance()));
+  }
+
+  public void filter(User me, MiniatureFilter filter) {
     this.filter = filter;
-    filtered = byName.values().stream().filter(filter::matches).collect(Collectors.toList());
+    filtered = byName.values().stream()
+        .filter(f -> filter.matches(me, f))
+        .collect(Collectors.toList());
   }
 
   public Optional<MiniatureTemplate> first() {
@@ -116,6 +134,18 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     }
 
     return Optional.of(filtered.get(0));
+  }
+
+  public Optional<MiniatureTemplate> get(int index) {
+    if (index >= 0 && filtered.size() > index) {
+      return Optional.of(filtered.get(index));
+    }
+
+    return Optional.empty();
+  }
+
+  public int getNumber(MiniatureTemplate miniature) {
+    return filtered.indexOf(miniature) + 1;
   }
 
   public Optional<MiniatureTemplate> last() {
@@ -145,7 +175,7 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
       return Optional.of(filtered.get(found + 1));
     }
 
-    return first();
+    return current;
   }
 
   public Optional<MiniatureTemplate> previous(Optional<MiniatureTemplate> current) {
@@ -162,6 +192,6 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
       return Optional.of(filtered.get(found - 1));
     }
 
-    return last();
+    return current;
   }
 }

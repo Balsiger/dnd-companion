@@ -47,10 +47,10 @@ import java.util.stream.Collectors;
  */
 public class Character extends Creature<Character> implements Comparable<Character> {
 
+  public static final String PATH = "characters";
   private static final DocumentFactory<Character> FACTORY = () -> new Character();
-  private static final String PATH = "characters";
 
-  private static final String FIELD_XP = "xp";
+  private static final String FIELD_XP = "xpAction";
   private static final String FIELD_LEVEL = "level";
   private static final String FIELD_LEVELS = "levels";
   private static final int DEFAULT_LEVEL = 1;

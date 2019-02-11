@@ -34,36 +34,10 @@ import net.ixitxachitls.companion.R;
 import java.util.Optional;
 
 /**
- * Wrapper for edit texts.
+ * Wrapper for editAction texts.
  */
 public final class EditTextWrapper<V extends EditText>
     extends AbstractTextWrapper<V, EditTextWrapper<V>> {
-
-  @FunctionalInterface
-  public interface Validator {
-    public boolean validate(String value);
-  }
-
-  public static class RangeValidator implements Validator {
-
-    private final int min;
-    private final int max;
-
-    public RangeValidator(int min, int max) {
-      this.min = min;
-      this.max = max;
-    }
-
-    @Override
-    public boolean validate(String input) {
-      try {
-        int value = Integer.parseInt(input);
-        return value >= min && value <= max;
-      } catch (NumberFormatException e) {
-        return false;
-      }
-    }
-  }
 
   private Optional<Validator> validator = Optional.empty();
   private @ColorInt int lineColorValue;
@@ -71,22 +45,28 @@ public final class EditTextWrapper<V extends EditText>
   private EditTextWrapper(View parent, @IdRes int id) {
     super(parent, id);
   }
-
   private EditTextWrapper(V view) {
     super(view);
+  }
+
+  @FunctionalInterface
+  public interface Validator {
+    public boolean validate(String value);
+  }
+
+  public EditTextWrapper<V> clearError() {
+    return lineColorValue(lineColorValue);
+  }
+
+  public EditTextWrapper<V> error() {
+    view.setBackgroundTintList(ColorStateList.valueOf(
+        view.getResources().getColor(R.color.error, null)));
+    return this;
   }
 
   public void hideLine() {
     view.setBackgroundTintList(ColorStateList.valueOf(
         view.getContext().getResources().getColor(R.color.transparent, null)));
-  }
-
-  public static <V extends EditText> EditTextWrapper<V> wrap(View parent, @IdRes int id) {
-    return new EditTextWrapper<>(parent, id);
-  }
-
-  public static <V extends EditText> EditTextWrapper<V> wrap(V view) {
-    return new EditTextWrapper<V>(view);
   }
 
   public EditTextWrapper<V> label(@StringRes int label) {
@@ -125,13 +105,32 @@ public final class EditTextWrapper<V extends EditText>
     }
   }
 
-  public EditTextWrapper<V> error() {
-    view.setBackgroundTintList(ColorStateList.valueOf(
-        view.getResources().getColor(R.color.error, null)));
-    return this;
+  public static <V extends EditText> EditTextWrapper<V> wrap(View parent, @IdRes int id) {
+    return new EditTextWrapper<>(parent, id);
   }
 
-  public EditTextWrapper<V> clearError() {
-    return lineColorValue(lineColorValue);
+  public static <V extends EditText> EditTextWrapper<V> wrap(V view) {
+    return new EditTextWrapper<V>(view);
+  }
+
+  public static class RangeValidator implements Validator {
+
+    private final int min;
+    private final int max;
+
+    public RangeValidator(int min, int max) {
+      this.min = min;
+      this.max = max;
+    }
+
+    @Override
+    public boolean validate(String input) {
+      try {
+        int value = Integer.parseInt(input);
+        return value >= min && value <= max;
+      } catch (NumberFormatException e) {
+        return false;
+      }
+    }
   }
 }

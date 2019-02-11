@@ -24,6 +24,8 @@ package net.ixitxachitls.companion.data;
 import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.MessageLite;
 
+import net.ixitxachitls.companion.Status;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
@@ -75,9 +77,13 @@ public class TemplatesStore<T extends Entry<? extends MessageLite>> {
     return entry;
   }
 
-  protected void read(InputStream input)
+  protected void read(String name, InputStream input)
       throws IOException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
     T entry = fromProto(input);
+    if (entry.getName().isEmpty()) {
+      Status.toast("Empty name when reading: '" + name + "'");
+    }
+
     byName.put(entry.getName(), entry);
   }
 }

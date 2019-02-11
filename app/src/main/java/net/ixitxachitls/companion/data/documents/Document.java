@@ -59,8 +59,14 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   protected Optional<DocumentSnapshot> snapshot = Optional.empty();
   private boolean failed = false;
 
+  @FunctionalInterface
   protected interface DocumentFactory<D> {
     D create();
+  }
+
+  @FunctionalInterface
+  public interface Callback {
+    void done();
   }
 
   public CompanionContext getContext() {

@@ -41,7 +41,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import java.util.Optional;
 
 /**
- * Dialog to invite players to a campaign.
+ * Dialog to inviteAction players to a campaign.
  */
 public class InviteDialog extends Dialog {
 
@@ -51,20 +51,6 @@ public class InviteDialog extends Dialog {
   private LinearLayout invites;
   private LabelledEditTextView email;
   private Wrapper<Button> invite;
-
-  public static InviteDialog newInstance(String campaignId) {
-    InviteDialog dialog = new InviteDialog();
-    dialog.setArguments(arguments(R.layout.dialog_invite, R.string.title_invite, R.color.campaign,
-        campaignId));
-    return dialog;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String campaignId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ID, campaignId);
-    return arguments;
-  }
 
   @Override
   protected void createContent(View view) {
@@ -76,6 +62,13 @@ public class InviteDialog extends Dialog {
     refresh();
   }
 
+  private void invite() {
+    if (campaign.isPresent() && !email.getText().isEmpty()) {
+      campaign.get().invite(email.getText());
+      refresh();
+    }
+  }
+
   private void refresh() {
     invites.removeAllViews();
     if (campaign.isPresent()) {
@@ -85,18 +78,25 @@ public class InviteDialog extends Dialog {
     }
   }
 
-  private void invite() {
-    if (campaign.isPresent() && !email.getText().isEmpty()) {
-      campaign.get().invite(email.getText());
-      refresh();
-    }
-  }
-
   private void uninvite(String email) {
     if (campaign.isPresent()) {
       campaign.get().uninvite(email);
       refresh();
     }
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String campaignId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_ID, campaignId);
+    return arguments;
+  }
+
+  public static InviteDialog newInstance(String campaignId) {
+    InviteDialog dialog = new InviteDialog();
+    dialog.setArguments(arguments(R.layout.dialog_invite, R.string.title_invite, R.color.campaign,
+        campaignId));
+    return dialog;
   }
 
   private class LineView extends LinearLayout {

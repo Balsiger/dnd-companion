@@ -42,7 +42,7 @@ import java.util.stream.Collectors;
  */
 public class Campaigns extends Documents<Campaigns> {
 
-  protected static final String PATH = "campaigns";
+  public static final String PATH = "campaigns";
 
   private CollectionReference dmCampaigns;
 
@@ -86,10 +86,7 @@ public class Campaigns extends Documents<Campaigns> {
   }
 
   public Campaign create() {
-    Campaign campaign = Campaign.create(context, context.me());
-    add(campaign);
-
-    return campaign;
+    return Campaign.create(context, context.me());
   }
 
   public void delete(Campaign campaign) {
@@ -155,7 +152,7 @@ public class Campaigns extends Documents<Campaigns> {
       dmCampaignsById.put(campaign.getId(), campaign);
     }
 
-    update(documents.stream().map(DocumentSnapshot::getId).collect(Collectors.toList()));
+    update(documents.stream().map(d -> d.getReference().getPath()).collect(Collectors.toList()));
   }
 
   private void processDMCampaigns() {
@@ -195,6 +192,6 @@ public class Campaigns extends Documents<Campaigns> {
     this.ids =
         ImmutableList.copyOf(campaigns.stream().map(Campaign::getId).collect(Collectors.toList()));
 
-    updated(this.ids);
+    updated(ids);
   }
 }

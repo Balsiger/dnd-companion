@@ -244,7 +244,7 @@ public class EditItemDialog extends Dialog {
     if (!itemValue.isPresent()) {
       Status.error("Cannot parse item value!");
     } else if (!creature.isPresent()) {
-      Status.error("No creature to edit item in!");
+      Status.error("No creature to editAction item in!");
     } else {
       if (creature.get().amPlayer()) {
         item.get().setPlayerName(name.getText());

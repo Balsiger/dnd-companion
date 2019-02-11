@@ -55,85 +55,9 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabIndicatorColor="@color/character"
-        android:layout_gravity="bottom" />
+        android:layout_gravity="bottom"
+        app:tabIndicatorColor="@color/character" />
 
   </android.support.v4.view.ViewPager>
-
-  <LinearLayout
-      android:id="@+id/actions"
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:layout_marginBottom="0dp"
-      android:background="@color/actionBack"
-      android:orientation="horizontal">
-
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:contentDescription="Go back"
-        android:padding="10dp"
-        android:layout_gravity="center_vertical"
-        android:tint="@color/action"
-        app:srcCompat="@drawable/ic_arrow_back_black_24dp"/>
-
-    <ImageView
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:contentDescription="Edit base values"
-        android:padding="10dp"
-        android:layout_gravity="center_vertical"
-        android:tint="@color/action"
-        app:srcCompat="@drawable/ic_mode_edit_black_24dp"/>
-
-    <ImageView
-        android:id="@+id/timed"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:contentDescription="Add condition"
-        android:padding="10dp"
-        android:layout_gravity="center_vertical"
-        android:tint="@color/action"
-        app:srcCompat="@drawable/icons8_treatment_100"/>
-
-    <ImageView
-        android:id="@+id/move"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:contentDescription="Move character"
-        android:padding="10dp"
-        android:layout_gravity="center_vertical"
-        android:tint="@color/action"
-        app:srcCompat="@drawable/ic_launch_black_24dp"/>
-
-    <ImageView
-        android:id="@+id/delete"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:contentDescription="Delete character"
-        android:padding="10dp"
-        android:layout_gravity="center_vertical"
-        android:tint="@color/action"
-        app:srcCompat="@drawable/ic_delete_black_24dp"/>
-
-    <ImageView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:layout_weight="0"
-        android:contentDescription="Send Message"
-        android:padding="10dp"
-        android:tint="@color/action"
-        app:srcCompat="@drawable/ic_message_text_black_48dp"/>
-
-  </LinearLayout>
 
 </LinearLayout>

@@ -26,6 +26,7 @@ import android.support.annotation.CallSuper;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Collections;
 import java.util.List;
@@ -58,11 +59,13 @@ public abstract class Documents<D extends Documents<D>> extends Observable<Docum
   }
 
   protected void updated(List<String> ids) {
-    updated(new Update(ids));
+    if (!ids.isEmpty()) {
+      updated(new Update(ids));
+    }
   }
 
   protected void updatedDocuments(List<DocumentSnapshot> snapshots) {
-    updated(snapshots.stream().map(DocumentSnapshot::getId).collect(Collectors.toList()));
+    updated(snapshots.stream().map(d -> d.getReference().getPath()).collect(Collectors.toList()));
   }
 
   public static class Update {
@@ -88,6 +91,21 @@ public abstract class Documents<D extends Documents<D>> extends Observable<Docum
       }
 
       return false;
+    }
+
+    public boolean hasType(String type) {
+      for (String id: ids) {
+        if (Character.isA(id, type)) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    @Override
+    public String toString() {
+      return Strings.COMMA_JOINER.join(ids);
     }
   }
 

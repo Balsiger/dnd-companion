@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -44,17 +45,23 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
 
   private static final String EMPTY = "(empty)";
 
+  private Optional<MiniatureFilter> filter = Optional.empty();
   private LabelledEditTextView name;
   private LabelledMultiAutocompleteTextView races;
   private LabelledMultiAutocompleteTextView sets;
   private LabelledMultiAutocompleteTextView types;
   private LabelledMultiAutocompleteTextView classes;
+  private LabelledMultiAutocompleteTextView sizes;
   private LabelledMultiAutocompleteTextView origins;
+  private LabelledMultiAutocompleteTextView owned;
+  private LabelledMultiAutocompleteTextView locations;
 
+  @Override
   protected MiniatureFilter getValue() {
-    return new MiniatureFilter(name.getText(),
+    return new MiniatureFilter("filter", name.getText(),
         parseMulti(races.getText()), parseMulti(sets.getText()), parseMulti(types.getText()),
-        parseMulti(classes.getText()), parseMulti(origins.getText()));
+        parseMulti(classes.getText()), parseMulti(sizes.getText()), parseMulti(origins.getText()),
+        parseMulti(owned.getText()), parseMulti(locations.getText()));
   }
 
   @Override
@@ -85,15 +92,53 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
         .onFocus(classes::showDropDown).threshold(1);
     classes.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select,
-        Templates.get().getMiniatureTemplates().getClasses()));
+        showEmpty(Templates.get().getMiniatureTemplates().getClasses())));
+    sizes = view.findViewById(R.id.sizes);
+    sizes.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getSizes()))
+        .onFocus(sizes::showDropDown).threshold(1);
+    sizes.setAdapter(new ArrayAdapter<>(getContext(),
+        R.layout.list_item_select,
+        showEmpty(Templates.get().getMiniatureTemplates().getSizes())));
     origins = view.findViewById(R.id.origins);
     origins.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getOrigins()))
         .onFocus(origins::showDropDown).threshold(1);
     origins.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select,
-        Templates.get().getMiniatureTemplates().getOrigins()));
+        showEmpty(Templates.get().getMiniatureTemplates().getOrigins())));
+    owned = view.findViewById(R.id.owned);
+    owned.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getOwned()))
+        .onFocus(owned::showDropDown).threshold(1);
+    owned.setAdapter(new ArrayAdapter<>(getContext(),
+        R.layout.list_item_select, showEmpty(me().getOwnedValues())));
+    locations = view.findViewById(R.id.locations);
+    locations.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getLocations()))
+        .onFocus(locations::showDropDown).threshold(1);
+    locations.setAdapter(new ArrayAdapter<>(getContext(),
+        R.layout.list_item_select, showEmpty(me().getLocationValues())));
 
     Wrapper.wrap(view, R.id.save).onClick(this::save);
+    Wrapper.wrap(view, R.id.clear).onClick(this::clear);
+
+    if (filter.isPresent()) {
+      setupFilter(filter.get());
+    }
+  }
+
+  // TODO(merlin): Check whether we have to remove this and instead set the filter via
+  // setArguments().
+  private void setFilter(MiniatureFilter filter) {
+    this.filter = Optional.of(filter);
+  }
+
+  private void clear() {
+    name.text("");
+    races.text("");
+    types.text("");
+    classes.text("");
+    sizes.text("");
+    origins.text("");
+    owned.text("");
+    locations.text("");
   }
 
   private String formatMulti(List<String> texts) {
@@ -112,14 +157,26 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     return hideEmpty(Arrays.asList(text.split(",\\s*")));
   }
 
+  private void setupFilter(MiniatureFilter filter) {
+    name.text(filter.getName());
+    races.text(Strings.COMMA_JOINER.join(filter.getRaces()));
+    types.text(Strings.COMMA_JOINER.join(filter.getTypes()));
+    classes.text(Strings.COMMA_JOINER.join(filter.getClasses()));
+    sizes.text(Strings.COMMA_JOINER.join(filter.getSizes()));
+    origins.text(Strings.COMMA_JOINER.join(filter.getOrigins()));
+    owned.text(Strings.COMMA_JOINER.join(filter.getOwned()));
+    locations.text(Strings.COMMA_JOINER.join(filter.getLocations()));
+  }
+
   private List<String> showEmpty(List<String> texts) {
     return texts.stream().map(s -> s.isEmpty() ? EMPTY : s).collect(Collectors.toList());
   }
 
-  public static MiniatureFilterDialog newInstance() {
+  public static MiniatureFilterDialog newInstance(MiniatureFilter filter) {
     MiniatureFilterDialog dialog = new MiniatureFilterDialog();
     dialog.setArguments(arguments(R.layout.dialog_miniatures_filter, "Filter Miniatures",
         R.color.miniature));
+    dialog.setFilter(filter);
 
     return dialog;
   }

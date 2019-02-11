@@ -21,17 +21,23 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.annotation.Nullable;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.util.FileCache;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
@@ -42,21 +48,44 @@ import java.util.concurrent.TimeUnit;
 public class Images extends Observable<Documents.Update> {
 
   public static final int MAX_PX = 500;
+
   private static final int MAX_SIZE_BYTES = 1024 * 1024;
+
   private final Map<String, String> imageHashesById = new HashMap<>();
   private final Map<String, Bitmap> imagesById = new HashMap<>();
 
-  private final Cache<String, String> pendingById = CacheBuilder.newBuilder()
+  private final Cache<String, List<Callback>> pendingById = CacheBuilder.newBuilder()
       .expireAfterWrite(10, TimeUnit.SECONDS)
       .build();
   private final Cache<String, String> inexistentById = CacheBuilder.newBuilder()
       .expireAfterWrite(1, TimeUnit.MINUTES)
       .build();
 
-  public Images() {}
+  private final FileCache fileCache;
 
-  public Optional<Bitmap> get(String id) {
-    maybeLoad(id);
+  public Images(Context context) {
+    fileCache = new FileCache(context, "images/");
+  }
+
+  @FunctionalInterface
+  public interface Callback {
+    void ready(Optional<Bitmap> bitmap);
+  }
+
+  public void get(String id, int maxAgeHours, Callback callback) {
+    if (!fileCache.isOld(id, maxAgeHours)) {
+      callback.ready(getCached(id, maxAgeHours));
+    } else {
+      maybeLoad(id, callback);
+    }
+  }
+
+  public Optional<Bitmap> get(String id, int maxAgeHours) {
+    if (!fileCache.isOld(id, maxAgeHours)) {
+      return getCached(id, maxAgeHours);
+    }
+
+    maybeLoad(id, null);
 
     return Optional.ofNullable(imagesById.get(id));
   }
@@ -74,26 +103,59 @@ public class Images extends Observable<Documents.Update> {
         .addOnFailureListener(e -> Status.silentException("Could not upload image", e));
   }
 
+  private void callback(String id, Optional<Bitmap> bitmap) {
+    if (pendingById.getIfPresent(id) != null) {
+      pendingById.getIfPresent(id).stream().forEach(c -> c.ready(bitmap));
+      pendingById.invalidate(id);
+    }
+  }
+
+  private List<Callback> createCallbackList(@Nullable Callback callback) {
+    List<Callback> list = new ArrayList<>();
+    if (callback != null) {
+      list.add(callback);
+    }
+
+    return list;
+  }
+
+  private Optional<Bitmap> getCached(String id, int maxAgeHours) {
+    try {
+      return Optional.of(BitmapFactory.decodeStream(fileCache.get(id)));
+    } catch (IOException e) {
+      Status.exception("Cannot load cached image '" + id + "'", e);
+      return Optional.empty();
+    }
+  }
+
   private void load(String id) {
     storage.getReference(id).getBytes(MAX_SIZE_BYTES).addOnSuccessListener(bytes -> {
       Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
       imagesById.put(id, bitmap);
+      store(id, bytes);
       updated(new Documents.Update(Collections.singletonList(id)));
-      pendingById.invalidate(id);
+      callback(id, Optional.of(bitmap));
     }).addOnFailureListener(e -> {
       Status.silentException("Cannot load file", e);
       imageHashesById.remove(id);
       imagesById.remove(id);
-      pendingById.invalidate(id);
+      callback(id, Optional.empty());
     });
   }
 
-  private void maybeLoad(String id) {
-    if (pendingById.getIfPresent(id) != null || inexistentById.getIfPresent(id) != null) {
+  private void maybeLoad(String id, @Nullable Callback callback) {
+    if (pendingById.getIfPresent(id) != null) {
+      if (callback != null) {
+        pendingById.getIfPresent(id).add(callback);
+      }
       return;
     }
 
-    pendingById.put(id, id);
+    if (inexistentById.getIfPresent(id) != null) {
+      return;
+    }
+
+    pendingById.put(id, createCallbackList(callback));
     storage.getReference(id).getMetadata()
         .addOnSuccessListener(metadata -> {
           String hash = metadata.getMd5Hash();
@@ -105,7 +167,16 @@ public class Images extends Observable<Documents.Update> {
         .addOnFailureListener(e -> {
           inexistentById.put(id, id);
           Status.log("No image for " + id);
+          callback(id, Optional.empty());
         });
+  }
+
+  private void store(String id, byte[] bytes) {
+    try {
+      fileCache.write(id).write(bytes);
+    } catch (IOException e) {
+      Status.exception("Failed to write image '" + id + "': ", e);
+    }
   }
 
   private static Bitmap scale(Bitmap bitmap) {

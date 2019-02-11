@@ -41,12 +41,14 @@ public class LabelledTextView extends LabelledEditTextView {
     super(context, attributes);
   }
 
+  @Override
   public LabelledTextView enabled(boolean enabled) {
     text.enabled(enabled);
 
     return this;
   }
 
+  @Override
   public LabelledTextView text(String text) {
     this.text.text(text);
 
@@ -57,7 +59,7 @@ public class LabelledTextView extends LabelledEditTextView {
   protected void setup(View view, TypedArray array, TypedArray baseArray) {
     super.setup(view, array, baseArray);
 
-    // Prevent the edit text to actually be editable.
+    // Prevent the editAction text to actually be editable.
     text.get().setKeyListener(null);
     text.get().setFocusableInTouchMode(false);
     text.hideLine();

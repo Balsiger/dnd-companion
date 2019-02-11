@@ -54,9 +54,10 @@ public class MonsterTemplates extends TemplatesStore<MonsterTemplate> {
     return primaryRaces;
   }
 
-  protected void read(InputStream input)
+  @Override
+  protected void read(String name, InputStream input)
       throws InvocationTargetException, NoSuchMethodException, IllegalAccessException, IOException {
-    super.read(input);
+    super.read(name, input);
     primaryRaces = null;
   }
 }

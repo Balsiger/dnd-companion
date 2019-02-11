@@ -29,6 +29,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -61,7 +62,7 @@ public class UserFragment extends CompanionFragment {
   private RoundImageView image;
   private LinearLayout locations;
   private LabelledEditTextView location;
-  private Wrapper<ImageView> addLocation;
+  private ProgressBar progress;
 
   public UserFragment() {
     super(Type.settings);
@@ -90,9 +91,11 @@ public class UserFragment extends CompanionFragment {
     image.loadImageUrl(me.getPhotoUrl());
     locations = view.findViewById(R.id.locations);
     location = view.findViewById(R.id.location);
-    addLocation = Wrapper.<ImageView>wrap(view, R.id.add_location).onClick(this::addLocation);
+    Wrapper.<ImageView>wrap(view, R.id.add_location).onClick(this::addLocation);
+    progress = view.findViewById(R.id.progress);
 
-    me().readMiniatures();
+    progress.setIndeterminate(true);
+    me().readMiniatures(this::miniaturesLoaded);
     update();
     return view;
   }
@@ -108,7 +111,8 @@ public class UserFragment extends CompanionFragment {
 
   private void addLocation() {
     if (!location.isEmpty()) {
-      MiniatureFilterDialog.newInstance().onSaved(this::addLocation).display();
+      MiniatureFilterDialog.newInstance(new MiniatureFilter("dialog")).onSaved(this::addLocation)
+          .display();
     }
   }
 
@@ -123,6 +127,11 @@ public class UserFragment extends CompanionFragment {
 
   protected void editNickname() {
     me.setNickname(nickname.getText());
+  }
+
+  private void miniaturesLoaded() {
+    progress.setVisibility(View.GONE);
+    update();
   }
 
   private void save() {
@@ -144,6 +153,7 @@ public class UserFragment extends CompanionFragment {
 
     locations.removeAllViews();
     for (Map.Entry<String, MiniatureFilter> location : me().getLocations()) {
+    //for (Map.Entry<String, MiniatureFilter> location : me().getPrioritizedLocations()) {
       locations.addView(new LocationLineView(getContext(), location.getKey(), location.getValue()));
     }
   }
@@ -156,12 +166,13 @@ public class UserFragment extends CompanionFragment {
     private LocationLineView(Context context, String location, MiniatureFilter filter) {
       super(context);
 
+      this.location = location;
+      this.filter = filter;
+
       View view =
           LayoutInflater.from(getContext()).inflate(R.layout.fragment_miniature_location_line,
               this, false);
 
-      this.location = location;
-      this.filter = filter;
       locationText = TextWrapper.wrap(view, R.id.location).onClick(this::edit);
       Wrapper.wrap(view, R.id.delete).onClick(this::delete);
 
@@ -170,12 +181,12 @@ public class UserFragment extends CompanionFragment {
     }
 
     private void delete() {
-      me().removeLocation(location);
+      me().removeLocation(location, filter);
       UserFragment.this.update();
     }
 
     private void edit() {
-      MiniatureFilterDialog.newInstance().onSaved(this::update).display();
+      MiniatureFilterDialog.newInstance(filter).onSaved(this::update).display();
     }
 
     private String summary() {

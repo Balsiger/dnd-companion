@@ -71,6 +71,10 @@ public class CompanionFragments {
     this.fragmentManager = fragmentManager;
   }
 
+  public Optional<CompanionFragment> getCurrentFragment() {
+    return currentFragment;
+  }
+
   public FragmentManager getFragmentManager() {
     return fragmentManager;
   }

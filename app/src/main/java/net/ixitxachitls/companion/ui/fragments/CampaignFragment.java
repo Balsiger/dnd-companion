@@ -30,10 +30,7 @@ import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import net.ixitxachitls.companion.R;
@@ -49,9 +46,8 @@ import net.ixitxachitls.companion.ui.dialogs.MessageDialog;
 import net.ixitxachitls.companion.ui.dialogs.MonsterInitiativeDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 import net.ixitxachitls.companion.ui.dialogs.XPDialog;
+import net.ixitxachitls.companion.ui.views.ActionBarView;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
-import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
-import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -67,23 +63,17 @@ public class CampaignFragment extends CompanionFragment {
 
   // UI elements.
   protected CampaignTitleView title;
-  protected TextWrapper<TextView> date;
   protected PartyFragment party;
   protected EncounterFragment encounter;
-  protected Wrapper<ImageView> refresh;
-  protected Wrapper<ImageView> delete;
-  protected Wrapper<ImageView> edit;
-  protected Wrapper<ImageView> calendar;
-  protected Wrapper<ImageView> invite;
-  protected Wrapper<ImageView> startEncounter;
-  protected Wrapper<ImageView> endEncounter;
-  protected Wrapper<ImageView> nextInEncounter;
-  protected Wrapper<ImageView> addMonsterInEncounter;
-  protected Wrapper<ImageView> delayInEncounter;
-  protected Wrapper<ImageView> addCondition;
-  protected Wrapper<ImageView> sendMessage;
-  protected LinearLayout encounterActions;
-  protected Wrapper<ImageView> xp;
+
+  protected ActionBarView.Action editAction;
+  protected ActionBarView.Action calendarAction;
+  protected ActionBarView.ActionGroup encounterGroup;
+  protected ActionBarView.Action addConditionAction;
+  protected ActionBarView.Action xpAction;
+  protected ActionBarView.Action inviteAction;
+  protected ActionBarView.Action sendMessageAction;
+  protected ActionBarView.Action deleteAction;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -93,6 +83,15 @@ public class CampaignFragment extends CompanionFragment {
   public boolean goBack() {
     CompanionFragments.get().show(Type.campaigns, Optional.of(title));
     return true;
+  }
+
+  @Override
+  public void refresh() {
+    refresh(Documents.FULL_UPDATE);
+    title.refresh(Documents.FULL_UPDATE);
+
+    encounter.refresh();
+    party.refresh();
   }
 
   @Override
@@ -119,66 +118,51 @@ public class CampaignFragment extends CompanionFragment {
     RelativeLayout view = (RelativeLayout)
         inflater.inflate(R.layout.fragment_campaign, container, false);
 
-    Wrapper.<ImageView>wrap(view, R.id.back)
-        .onClick(this::goBack)
-        .description("Back", "Go back to the list of campaigns.");
     title = view.findViewById(R.id.title);
     title.setImageAction(this::editImage);
     party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     encounter = (EncounterFragment) getChildFragmentManager().findFragmentById(R.id.encounter);
     encounter.hide();
-    refresh = Wrapper.<ImageView>wrap(view, R.id.refresh);
-    refresh.onClick(this::refresh)
-        .description("Refresh", "Refresh this view with fresh data.");
-    delete = Wrapper.<ImageView>wrap(view, R.id.delete).gone();
-    delete.onClick(this::deleteCampaign).gone()
-        .description("Delete", "Delete this campaign. This action cannot be undone and will send "
+
+    clearActions();
+    addAction(R.drawable.ic_arrow_back_black_24dp, "Back", "Go back to main overview.")
+        .onClick(this::goBack);
+    editAction = addAction(R.drawable.ic_mode_edit_black_24dp,
+        "Edit", "Change the basic information of the campaign.").onClick(this::edit).hide();
+    calendarAction = addAction(R.drawable.ic_today_black_24dp, "Calendar",
+        "Open the calendarAction for the campaign to allow you to change the "
+            + "current date and time of your campaign.").onClick(this::editDate).hide();
+    encounterGroup = addActionGroup(R.drawable.ic_sword_cross_black_24dp, "Start Encounter",
+        "Start an encounter (combat).").onClick(this::startEncounter).shrink();
+    encounterGroup.addAction(R.drawable.ic_stop_black_24dp, "End Encounter", "Stop the encounter")
+        .onClick(this::endEncounter);
+    encounterGroup.addAction(R.drawable.arrow_down_bold, "Next Participant",
+        "Finish the current participants round and go to the next participant")
+        .onClick(this::nextInEncounter);
+    encounterGroup.addAction(R.drawable.noun_monster_693507, "Add Monster",
+        "Add a monster to the running encounter.")
+        .onClick(this::addMonsterInEncounter);
+    encounterGroup.addAction(R.drawable.ic_hourglass_full_black_24dp, "Delay",
+        "Delay the current creatures turn.")
+        .onClick(this::delayInEncounter);
+    addConditionAction = addAction(R.drawable.icons8_treatment_100, "Set a Condition",
+        "Set a special condition on one ore multiple characters.")
+        .onClick(this::addCondition);
+    xpAction = addAction(R.drawable.noun_experience_1705256, "Award XP",
+        "Award experience points to your characters.")
+        .onClick(this::awardXP);
+    inviteAction = addAction(R.drawable.account_plus, "Invite",
+        "Invite players to create characters in this campaign.")
+        .onClick(this::invite);
+    sendMessageAction = addAction(R.drawable.ic_message_text_black_24dp, "Send Message",
+        "Send a message to other characters and the DM")
+        .onClick(this::sendMessage);
+    deleteAction = addAction(R.drawable.ic_delete_black_24dp, "Delete",
+        "Delete this campaign. This action cannot be undone and will send "
             + "a deletion request to players to delete this campaign on their devices too. "
             + "You cannot delete a campaign that is currently published or that has local "
-            + "characters.");
-    edit = Wrapper.<ImageView>wrap(view, R.id.edit).gone()
-          .description("Edit", "Change the basic information of the campaign.");
-    calendar = Wrapper.<ImageView>wrap(view, R.id.calendar).gone()
-        .description("Calendar", "Open the calendar for the campaign to allow you to change the "
-            + "current date and time of your campaign.");
-    invite = Wrapper.<ImageView>wrap(view, R.id.invite).gone()
-        .description("Invite", "Invite players to create characters in this campaign.");
-    date = TextWrapper.wrap(view, R.id.date)
-        .description("Calendar", "Open the calendar for the campaign to allow you to change the "
-            + "current date and time of your campaign.");
-    startEncounter = Wrapper.<ImageView>wrap(view, R.id.encounter_start)
-        .onClick(this::startEncounter)
-        .description("Start Encounter", "Start an encounter (combat).");
-    encounterActions = view.findViewById(R.id.actions_encounter);
-    endEncounter = Wrapper.<ImageView>wrap(view, R.id.encounter_end)
-        .onClick(this::endEncounter)
-        .description("End Encounter", "Stop the encounter")
-        .invisible();
-    nextInEncounter = Wrapper.<ImageView>wrap(view, R.id.encounter_next)
-        .onClick(this::nextInEncounter)
-        .description("Next Participant",
-            "Finish the current participants round and go to the next participant")
-        .invisible();
-    addCondition = Wrapper.<ImageView>wrap(view, R.id.add_condition)
-        .onClick(this::addCondition)
-        .description("Set a Condition",
-            "Set a special condition on one ore multiple characters.");
-    addMonsterInEncounter = Wrapper.<ImageView>wrap(view, R.id.encounter_add_monster)
-        .onClick(this::addMonsterInEncounter)
-        .description("Add Monster", "Add a monster to the running encounter.")
-        .invisible();
-    delayInEncounter = Wrapper.<ImageView>wrap(view, R.id.encounter_delay)
-        .onClick(this::delayInEncounter)
-        .description("Delay", "Delay the current creatures turn.")
-        .invisible();
-    xp = Wrapper.<ImageView>wrap(view, R.id.xp)
-        .onClick(this::awardXP)
-        .description("Award XP", "Award experience points to your characters.")
-        .invisible();
-    sendMessage = Wrapper.<ImageView>wrap(view, R.id.message)
-        .onClick(this::sendMessage)
-        .description("Send Message", "Send a message to other characters and the DM")
-        .invisible();
+            + "characters.")
+        .onClick(this::deleteCampaign).hide();
 
     campaigns().observe(this, this::refresh);
     images().observe(this, title::refresh);
@@ -191,24 +175,19 @@ public class CampaignFragment extends CompanionFragment {
     this.campaign = Optional.of(campaign);
     party.show(campaign);
     encounter.show(campaign);
-    startEncounter.visible(campaign.amDM());
+    encounterGroup.show(campaign.amDM());
+    calendarAction.show(campaign.amDM());
+    editAction.show(campaign.amDM());
+    inviteAction.show(campaign.amDM());
+    xpAction.show(campaign.amDM());
+    sendMessageAction.show(campaign.amDM());
 
     if (campaign.amDM()) {
       title.setAction(this::edit);
-      edit.onClick(this::edit).visible();
-      calendar.onClick(this::editDate).visible();
-      invite.onClick(this::invite).visible();
-      date.onClick(this::editDate);
     } else {
       title.removeAction();
-      edit.removeClick().gone();
-      calendar.removeClick().gone();
-      invite.removeClick().gone();
-      date.removeClick();
     }
 
-    xp.visible(campaign.amDM());
-    sendMessage.visible(campaign.amDM());
 
     characters().addPlayers(campaign);
     monsters().addCampaign(campaign.getId());
@@ -309,41 +288,26 @@ public class CampaignFragment extends CompanionFragment {
     }
   }
 
-  private void refresh() {
-    refresh(Documents.FULL_UPDATE);
-    title.refresh(Documents.FULL_UPDATE);
-
-    encounter.refresh();
-    party.refresh();
-  }
-
   protected void refresh(Documents.Update update) {
     // Campaigns.
     if (campaign.isPresent()) {
       title.update(campaign.get());
       title.refresh(update);
-      date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
-      delete.visible(canDeleteCampaign());
+      deleteAction.show(canDeleteCampaign());
 
       TransitionManager.beginDelayedTransition((ViewGroup) getView());
       if (campaign.get().getEncounter().inBattle()) {
         party.hide();
         encounter.show();
         encounter.refresh(update);
-        startEncounter.disabled().tint(R.color.actionDisabled);
-        setLayoutWidth(encounterActions, LinearLayout.LayoutParams.WRAP_CONTENT);
-        endEncounter.visible(campaign.get().amDM());
-        nextInEncounter.visible(campaign.get().amDM());
-        addCondition.visible(campaign.get().amDM()
-            || campaign.get().getEncounter().amCurrentPlayer());
-        addMonsterInEncounter.visible(campaign.get().amDM());
-        delayInEncounter.visible(campaign.get().amDM()
+        encounterGroup.expand();
+        addConditionAction.show(campaign.get().amDM()
             || campaign.get().getEncounter().amCurrentPlayer());
       } else {
         party.show();
         encounter.hide();
-        startEncounter.enabled().tint(R.color.action);
-        setLayoutWidth(encounterActions, 0);
+        encounterGroup.shrink();
+        addConditionAction.show();
       }
     }
   }
@@ -352,12 +316,6 @@ public class CampaignFragment extends CompanionFragment {
     if (campaign.isPresent()) {
       MessageDialog.newInstance(campaign.get().getId(), me().getId()).display();
     }
-  }
-
-  private void setLayoutWidth(LinearLayout layout, int width) {
-    ViewGroup.LayoutParams params = layout.getLayoutParams();
-    params.width = width;
-    layout.setLayoutParams(params);
   }
 
   private void startEncounter() {

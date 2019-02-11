@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -28,4 +29,16 @@ import java.util.Map;
  */
 public abstract class NestedDocument {
   abstract public Map<String, Object> write();
+
+  protected void write(Map<String, Object> data, String name, String value) {
+    if (!name.isEmpty() && !value.isEmpty()) {
+      data.put(name, value);
+    }
+  }
+
+  protected void write(Map<String, Object> data, String name, List<String> values) {
+    if (!values.isEmpty()) {
+      data.put(name, values);
+    }
+  }
 }

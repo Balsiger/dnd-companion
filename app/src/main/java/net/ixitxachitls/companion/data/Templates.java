@@ -90,25 +90,25 @@ public class Templates {
         for (String type : assetAccessor.list(PATH_ENTITIES + "/" + reference)) {
           String path = PATH_ENTITIES + "/" + reference + "/" + type;
           for (String file : assetAccessor.list(path)) {
-            Status.log(path + "::" + file);
+            String name = path + "/" + file;
             switch (type) {
               case MonsterTemplate.TYPE:
-                monsterTemplates.read(assetAccessor.open(path + "/" + file));
+                monsterTemplates.read(name, assetAccessor.open(name));
                 break;
               case WorldTemplate.TYPE:
-                worlds.read(assetAccessor.open(path + "/" + file));
+                worlds.read(name, assetAccessor.open(name));
                 break;
               case ItemTemplate.TYPE:
-                items.read(assetAccessor.open(path + "/" + file));
+                items.read(name, assetAccessor.open(name));
                 break;
               case LevelTemplate.TYPE:
-                levels.read(assetAccessor.open(path + "/" + file));
+                levels.read(name, assetAccessor.open(name));
                 break;
               case FeatTemplate.TYPE:
-                feats.read(assetAccessor.open(path + "/" + file));
+                feats.read(name, assetAccessor.open(name));
                 break;
               case MiniatureTemplate.TYPE:
-                miniatures.read(assetAccessor.open(path + "/" + file));
+                miniatures.read(name, assetAccessor.open(name));
                 break;
               default:
                 Status.error("Unsupported type " + type + " found!");

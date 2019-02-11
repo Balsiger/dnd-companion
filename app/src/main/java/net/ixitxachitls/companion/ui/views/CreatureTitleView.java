@@ -64,7 +64,7 @@ public abstract class CreatureTitleView<T extends Creature> extends TitleView {
 
   public void update(Images images) {
     if (creature.isPresent()) {
-      Optional<Bitmap> bitmap = images.get(creature.get().getId());
+      Optional<Bitmap> bitmap = images.get(creature.get().getId(), 1);
       if (bitmap.isPresent()) {
         setImageBitmap(bitmap.get());
       } else {

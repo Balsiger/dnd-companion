@@ -1,0 +1,11 @@
+template {
+  name: "Horse"
+  description: "Part of the Adventurer's Camp Promo"
+}
+set: "Monster Menagerie 2"
+number: 44
+number_affix: "B"
+race: "Horse"
+type: "Beast"
+subtype: "Animal"
+size: LARGE

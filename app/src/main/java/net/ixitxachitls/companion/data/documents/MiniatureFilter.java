@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.google.common.collect.ImmutableList;
 
@@ -45,36 +46,56 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
   private static final String FIELD_SETS = "sets";
   private static final String FIELD_TYPES = "types";
   private static final String FIELD_CLASSES = "classes";
+  private static final String FIELD_SIZES = "sizes";
   private static final String FIELD_ORIGINS = "origins";
+  private static final String FIELD_OWNED = "owned";
+  private static final String FIELD_LOCATIONS = "locations";
 
+  private final String id;
   private final String name;
   private final ImmutableList<String> races;
   private final ImmutableList<String> sets;
   private final ImmutableList<String> types;
   private final ImmutableList<String> classes;
+  private final ImmutableList<String> sizes;
   private final ImmutableList<String> origins;
+  private final ImmutableList<String> owned;
+  private final ImmutableList<String> locations;
 
-  public MiniatureFilter() {
+  public MiniatureFilter(String id) {
+    this.id = id;
     this.name = "";
     this.races = ImmutableList.of();
     this.sets = ImmutableList.of();
     this.types = ImmutableList.of();
     this.classes = ImmutableList.of();
+    this.sizes = ImmutableList.of();
     this.origins = ImmutableList.of();
+    this.owned = ImmutableList.of();
+    this.locations = ImmutableList.of();
   }
 
-  public MiniatureFilter(String name, List<String> races, List<String> sets, List<String> types,
-                         List<String> classes, List<String> origins) {
+  public MiniatureFilter(String id, String name, List<String> races, List<String> sets,
+                         List<String> types, List<String> classes, List<String> sizes,
+                         List<String> origins, List<String> owned, List<String> locations) {
+    this.id = id;
     this.name = name;
     this.races = ImmutableList.copyOf(races);
     this.sets = ImmutableList.copyOf(sets);
     this.types = ImmutableList.copyOf(types);
     this.classes = ImmutableList.copyOf(classes);
+    this.sizes = ImmutableList.copyOf(sizes);
     this.origins = ImmutableList.copyOf(origins);
+    this.owned = ImmutableList.copyOf(owned);
+    this.locations = ImmutableList.copyOf(locations);
   }
 
   public List<String> getClasses() {
     return classes;
+  }
+
+  public List<String> getLocations() {
+    return locations;
   }
 
   public String getName() {
@@ -85,12 +106,20 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
     return origins;
   }
 
+  public List<String> getOwned() {
+    return owned;
+  }
+
   public List<String> getRaces() {
     return races;
   }
 
   public List<String> getSets() {
     return sets;
+  }
+
+  public List<String> getSizes() {
+    return sizes;
   }
 
   public String getSummary() {
@@ -102,16 +131,25 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
       parts.add("race is " + Strings.PIPE_JOINER.join(races));
     }
     if (!sets.isEmpty()) {
-      parts.add("sets is " + Strings.PIPE_JOINER.join(races));
+      parts.add("sets is " + Strings.PIPE_JOINER.join(sets));
     }
     if (!types.isEmpty()) {
-      parts.add("types is " + Strings.PIPE_JOINER.join(races));
+      parts.add("types is " + Strings.AND_JOINER.join(types));
     }
     if (!classes.isEmpty()) {
-      parts.add("classes is " + Strings.PIPE_JOINER.join(races));
+      parts.add("classes is " + Strings.PIPE_JOINER.join(classes));
+    }
+    if (!sizes.isEmpty()) {
+      parts.add("sizes is " + Strings.PIPE_JOINER.join(sizes));
     }
     if (!origins.isEmpty()) {
-      parts.add("origins is " + Strings.PIPE_JOINER.join(races));
+      parts.add("origins is " + Strings.PIPE_JOINER.join(origins));
+    }
+    if (!owned.isEmpty()) {
+      parts.add("owned is " + Strings.PIPE_JOINER.join(owned));
+    }
+    if (!locations.isEmpty()) {
+      parts.add("locations is " + Strings.PIPE_JOINER.join(locations));
     }
 
     return Strings.COMMA_JOINER.join(parts);
@@ -123,33 +161,61 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
 
   @Override
   public int compareTo(@NonNull MiniatureFilter that) {
-    int byScore = Integer.compare(this.sortScore(), that.sortScore());
+    int byScore = Integer.compare(that.sortScore(), this.sortScore());
     if (byScore != 0) {
       return byScore;
     }
 
-    // TODO(merlin): This is not enough, but might work in practice?
-    return this.name.compareTo(that.name);
+    int text = this.fullText().compareTo(that.fullText());
+    if (text != 0) {
+      return text;
+    }
+
+    return this.id.compareTo(that.id);
   }
 
-  public boolean matches(MiniatureTemplate miniature) {
+  public String fullText() {
+    List<String> texts = new ArrayList<>();
+    texts.addAll(locations);
+    texts.addAll(sets);
+    texts.addAll(sizes);
+    texts.addAll(races);
+    texts.addAll(types);
+    texts.addAll(classes);
+    texts.addAll(owned);
+    texts.add(name);
+
+    return Strings.PIPE_JOINER.join(texts);
+  }
+
+  public boolean matches(User me, MiniatureTemplate miniature) {
+    if (miniature.getName().contains("Yuan-Ti")) {
+      Log.d("log", "Owlbear");
+    }
     return (name.isEmpty() || miniature.getName().toLowerCase().contains(name.toLowerCase()))
         && (races.isEmpty() || races.contains(miniature.getRace()))
         && (sets.isEmpty() || sets.contains(miniature.getSet()))
         && (types.isEmpty() || matchesType(miniature, types))
         && (classes.isEmpty() || matchesClass(miniature, classes))
-        && (origins.isEmpty() || origins.contains(miniature.getOrigin()));
+        && (sizes.isEmpty() || sizes.contains(miniature.getSize().getName()))
+        && (origins.isEmpty() || origins.contains(miniature.getOrigin()))
+        && (owned.isEmpty()
+            || owned.contains(String.valueOf(me.getMiniatureCount(miniature.getName()))))
+        && (locations.isEmpty() || locations.contains(me.locationFor(miniature)));
   }
 
   @Override
   public Map<String, Object> write() {
     Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_NAME, name);
-    data.put(FIELD_RACES, races);
-    data.put(FIELD_SETS, sets);
-    data.put(FIELD_TYPES, types);
-    data.put(FIELD_CLASSES, classes);
-    data.put(FIELD_ORIGINS, origins);
+    write(data, FIELD_NAME, name);
+    write(data, FIELD_RACES, races);
+    write(data, FIELD_SETS, sets);
+    write(data, FIELD_TYPES, types);
+    write(data, FIELD_CLASSES, classes);
+    write(data, FIELD_SIZES, sizes);
+    write(data, FIELD_ORIGINS, origins);
+    write(data, FIELD_OWNED, owned);
+    write(data, FIELD_LOCATIONS, locations);
 
     return data;
   }
@@ -165,32 +231,39 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
   }
 
   private boolean matchesType(MiniatureTemplate miniature, List<String> types) {
-    if (types.contains(miniature.getType())) {
-      return true;
-    }
-
-    for (String subtype : miniature.getSubtypes()) {
-      if (types.contains(subtype)) {
-        return true;
+    for (String type : types) {
+      if (!type.equals(miniature.getType())) {
+        if (!miniature.getSubtypes().contains(type)) {
+          return false;
+        }
       }
     }
 
-    return false;
+    return true;
   }
 
   private int sortScore() {
-    return name.length() + races.size() + sets.size() + types.size() + classes.size()
-        + origins.size();
+    return locations.size() * 17
+        + sets.size() * 13
+        + sizes.size() * 11
+        + races.size() * 7
+        + types.size() * 5
+        + classes.size() * 3
+        + owned.size() + name.length();
   }
 
-  public static MiniatureFilter read(Map<String, Object> data) {
+  public static MiniatureFilter read(String id, Map<String, Object> data) {
     String name = Values.get(data, FIELD_NAME, "");
     List<String> races = Values.get(data, FIELD_RACES, Collections.emptyList());
     List<String> sets = Values.get(data, FIELD_SETS, Collections.emptyList());
     List<String> types = Values.get(data, FIELD_TYPES, Collections.emptyList());
     List<String> classes = Values.get(data, FIELD_CLASSES, Collections.emptyList());
+    List<String> sizes = Values.get(data, FIELD_SIZES, Collections.emptyList());
     List<String> origins = Values.get(data, FIELD_ORIGINS, Collections.emptyList());
+    List<String> owned = Values.get(data, FIELD_OWNED, Collections.emptyList());
+    List<String> locations = Values.get(data, FIELD_LOCATIONS, Collections.emptyList());
 
-    return new MiniatureFilter(name, races, sets, types, classes, origins);
+    return new MiniatureFilter(id, name, races, sets, types, classes, sizes, origins, owned,
+        locations);
   }
 }

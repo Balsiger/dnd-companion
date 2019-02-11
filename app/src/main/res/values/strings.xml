@@ -20,7 +20,7 @@
     </string>
   <string name="delete_campaign_icon">Delete the @string/campaign_add_title</string>
 
-  <!-- campaign edit -->
+  <!-- campaign editAction -->
   <string name="campaign_title_add">Add Campaign</string>
   <string name="campaign_title_edit">Edit Campaign</string>
   <string name="campaign_edit_name">Name</string>

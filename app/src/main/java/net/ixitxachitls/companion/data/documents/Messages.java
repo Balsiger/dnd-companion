@@ -38,7 +38,7 @@ import java.util.Optional;
  * Handling of messages between DM and players or between players.
  */
 public class Messages extends Documents<Messages> {
-  protected static final String PATH = "messages";
+  public static final String PATH = "messages";
 
   private final Map<String, Message> messagesById = new HashMap<>();
   private final Map<String, List<Message>> messagesByOwnerId = new HashMap<>();
@@ -61,6 +61,7 @@ public class Messages extends Documents<Messages> {
 
   public void readMessages(String id) {
     if (!messagesByOwnerId.containsKey(id)) {
+      Status.log("reading messages for " + id);
       CollectionReference reference = db.collection(id + "/" + PATH);
       reference.addSnapshotListener((s, e) -> {
         if (e == null) {

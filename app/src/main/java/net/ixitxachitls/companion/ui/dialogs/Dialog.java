@@ -48,7 +48,7 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import java.util.Optional;
 
 /**
- * Base for all the edit fragments for the companion.
+ * Base for all the editAction fragments for the companion.
  */
 public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
 
