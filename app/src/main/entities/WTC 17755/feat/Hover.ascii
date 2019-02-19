@@ -1,0 +1,41 @@
+template {
+  name: "Hover"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 304
+      high: 304
+    }
+  }
+  world: "Generic"
+  description: "The creature can come to a halt in midair."
+  short_description: "Can halt in midair (no win attack, attack with all appendages, use breath weapon or spells, create buffeting wind)."
+}
+type: GENERAL
+benefit: "When flying, the creature can halt its forward motion and hover in\n  place as a move action. It can then fly in any direction, including\n  straight down or straight up, at half speed, regardless of its\n  maneuverability.\n\n  If a creature begins its turn hovering, it can hover in place for the turn\n  and take a full-round action. A hovering creature cannot make wing attacks,\n  but it can attack with all other limbs and appendages it could use in a full\n  attack. The creature can instead use a breath weapon or cast a spell instead\n  of making physical attacks, if it could normally do so.\n\n  If a creature of Large size or larger hovers within 20 feet of the ground in\n  an area with lots of loose debris, the draft from its wings creates a\n  hemispherical cloud with a radius of 60 feet. The winds so generated can\n  snuff torches, small campfires, exposed lanterns, and other small, open\n  flames of nonmagical origin. Clear vision within the cloud is limited to 10\n  feet. Creatures have concealment at 15 to 20 feet (20% miss chance). At 25\n  feet or more, creatures have total concealment (50% miss chance, and\n  opponents cannot use sight to locate the creature).\n\n  Those caught in the cloud must succeed on a Concentration check (DC 10 + 1/2\n  creature\342\200\232\303\204\303\264s HD) to cast a spell."
+normal: "Without this feat, the creature\'s secondary attacks with natural weapons take a -5 pentaly."
+prerequisites: "Fly speed"
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

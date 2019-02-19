@@ -1,0 +1,41 @@
+template {
+  name: "Twin Sword Style"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 46
+      high: 46
+    }
+  }
+  world: "Forgotten Realms"
+  description: "You have mastered a defensive style based on wielding a blade in each hand."
+  short_description: "Gain +2 shield bonus to AC against one melee opponent."
+}
+type: REGIONAL
+benefit: "When fighting with two blades (dagger, longsword, rapier, scimitar, or short sword, in any combination), you can designate a melee opponent during your action and gain +2 shield bonus to your Armor Class against attacks from that opponent. This bonus stacks with the shield bonus from a buckler or animated shield. You can select a new melee opponent as a free action on your turn. You lose this bonus if you are caught flat-footed or lose your Dexterity bonus to AC for any reason."
+special: "You may select this feat only as a 1st-level character. You may have only one regional feat."
+prerequisites: "Elf (Menzoberranzan or Waterdeep), half-elf (Waterdeep), or human (Sembia or Waterdeep), proficient with martial weapons"
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

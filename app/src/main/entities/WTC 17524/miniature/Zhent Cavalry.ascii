@@ -1,0 +1,10 @@
+template {
+  name: "Zhent Cavalry"
+}
+set: "Lords of Madness"
+number: 58
+type: "Humanoid"
+race: "Human"
+size: LARGE
+class: "Fighter"
+subtype: "Mounted"

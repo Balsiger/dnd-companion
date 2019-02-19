@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Pureblood (Bow)"
+}
+set: "Storm King\'s Thunder"
+number: 23
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: MEDIUM

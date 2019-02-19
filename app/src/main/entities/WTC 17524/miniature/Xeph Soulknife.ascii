@@ -1,0 +1,9 @@
+template {
+  name: "Xeph Soulknife"
+}
+set: "Giants of Legend"
+number: 22
+type: "Humanoid"
+race: "Xeph"
+class: "Sorcerer"
+size: MEDIUM

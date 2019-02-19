@@ -31,6 +31,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import net.ixitxachitls.companion.R;
@@ -48,6 +49,7 @@ import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 import net.ixitxachitls.companion.ui.dialogs.XPDialog;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
 import net.ixitxachitls.companion.ui.views.CampaignTitleView;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -65,7 +67,6 @@ public class CampaignFragment extends CompanionFragment {
   protected CampaignTitleView title;
   protected PartyFragment party;
   protected EncounterFragment encounter;
-
   protected ActionBarView.Action editAction;
   protected ActionBarView.Action calendarAction;
   protected ActionBarView.ActionGroup encounterGroup;
@@ -74,6 +75,11 @@ public class CampaignFragment extends CompanionFragment {
   protected ActionBarView.Action inviteAction;
   protected ActionBarView.Action sendMessageAction;
   protected ActionBarView.Action deleteAction;
+  private TextWrapper<TextView> date;
+  private ActionBarView.Action stopEncounter;
+  private ActionBarView.Action nextEncounter;
+  private ActionBarView.Action addMonster;
+  private ActionBarView.Action delayEncounter;
 
   public CampaignFragment() {
     super(Type.campaign);
@@ -120,6 +126,9 @@ public class CampaignFragment extends CompanionFragment {
 
     title = view.findViewById(R.id.title);
     title.setImageAction(this::editImage);
+    date = TextWrapper.wrap(view, R.id.date)
+        .description("Calendar", "Open the calendar for the campaign to allow you to change the "
+            + "current date and time of your campaign.");
     party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     encounter = (EncounterFragment) getChildFragmentManager().findFragmentById(R.id.encounter);
     encounter.hide();
@@ -134,15 +143,15 @@ public class CampaignFragment extends CompanionFragment {
             + "current date and time of your campaign.").onClick(this::editDate).hide();
     encounterGroup = addActionGroup(R.drawable.ic_sword_cross_black_24dp, "Start Encounter",
         "Start an encounter (combat).").onClick(this::startEncounter).shrink();
-    encounterGroup.addAction(R.drawable.ic_stop_black_24dp, "End Encounter", "Stop the encounter")
+    stopEncounter = encounterGroup.addAction(R.drawable.ic_stop_black_24dp, "End Encounter", "Stop the encounter")
         .onClick(this::endEncounter);
-    encounterGroup.addAction(R.drawable.arrow_down_bold, "Next Participant",
+    nextEncounter = encounterGroup.addAction(R.drawable.arrow_down_bold, "Next Participant",
         "Finish the current participants round and go to the next participant")
         .onClick(this::nextInEncounter);
-    encounterGroup.addAction(R.drawable.noun_monster_693507, "Add Monster",
+    addMonster = encounterGroup.addAction(R.drawable.noun_monster_693507, "Add Monster",
         "Add a monster to the running encounter.")
         .onClick(this::addMonsterInEncounter);
-    encounterGroup.addAction(R.drawable.ic_hourglass_full_black_24dp, "Delay",
+    delayEncounter = encounterGroup.addAction(R.drawable.ic_hourglass_full_black_24dp, "Delay",
         "Delay the current creatures turn.")
         .onClick(this::delayInEncounter);
     addConditionAction = addAction(R.drawable.icons8_treatment_100, "Set a Condition",
@@ -181,11 +190,17 @@ public class CampaignFragment extends CompanionFragment {
     inviteAction.show(campaign.amDM());
     xpAction.show(campaign.amDM());
     sendMessageAction.show(campaign.amDM());
+    stopEncounter.show(campaign.amDM());
+    addMonster.show(campaign.amDM());
+    nextEncounter.show(campaign.amDM());
+    delayEncounter.show(campaign.amDM());
 
     if (campaign.amDM()) {
       title.setAction(this::edit);
+      date.onClick(this::editDate);
     } else {
       title.removeAction();
+      date.removeClick();
     }
 
 
@@ -293,6 +308,7 @@ public class CampaignFragment extends CompanionFragment {
     if (campaign.isPresent()) {
       title.update(campaign.get());
       title.refresh(update);
+      date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
       deleteAction.show(canDeleteCampaign());
 
       TransitionManager.beginDelayedTransition((ViewGroup) getView());

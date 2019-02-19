@@ -1,0 +1,9 @@
+template {
+  name: "Xorn Ravager"
+}
+set: "Against the Giants"
+number: 30
+race: "Xorn"
+type: "Elemental"
+subtype: "Earth"
+size: MEDIUM

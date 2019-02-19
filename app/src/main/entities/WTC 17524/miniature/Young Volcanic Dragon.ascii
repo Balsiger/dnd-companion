@@ -1,0 +1,10 @@
+template {
+  name: "Young Volcanic Dragon"
+}
+set: "Lords of Madness"
+number: 57
+race: "Volcanic Dragon"
+type: "Dragon"
+subtype: "Fire"
+size: LARGE
+subtype: "Primordial"

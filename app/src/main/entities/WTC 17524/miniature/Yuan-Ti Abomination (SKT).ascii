@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Abomination (SKT)"
+}
+set: "Storm King\'s Thunder"
+number: 39
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: MEDIUM

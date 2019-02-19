@@ -1,0 +1,9 @@
+template {
+  name: "Zhent Champion"
+}
+set: "Lords of Madness"
+number: 59
+type: "Humanoid"
+race: "Human"
+size: MEDIUM
+class: "Fighter"

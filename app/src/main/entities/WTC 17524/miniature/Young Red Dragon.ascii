@@ -1,0 +1,9 @@
+template {
+  name: "Young Red Dragon"
+}
+set: "Dungeons of Dread"
+number: 9
+race: "Red Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Metallic"

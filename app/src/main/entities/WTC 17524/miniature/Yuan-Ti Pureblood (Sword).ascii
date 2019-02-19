@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Pureblood (Sword)"
+}
+set: "Storm King\'s Thunder"
+number: 22
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: MEDIUM

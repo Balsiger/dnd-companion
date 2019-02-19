@@ -125,5 +125,6 @@
   <string name="character_select_feat">Select Feat</string>
   <string name="user_location_description">The location of your miniatures.</string>
   <string name="user_location_label">Miniature Location</string>
+  <string name="edit_location">Edit Location</string>
 
 </resources>

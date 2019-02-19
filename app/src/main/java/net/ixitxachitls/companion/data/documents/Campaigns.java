@@ -157,9 +157,6 @@ public class Campaigns extends Documents<Campaigns> {
 
   private void processDMCampaigns() {
     // DM campaigns, from the sub documents of the user.
-    dmCampaigns.get()
-        .addOnSuccessListener(task -> processDMCampaigns(task.getDocuments()))
-        .addOnFailureListener(e -> Status.silentException("Cannot process DM Campaigns:", e));
     dmCampaigns.addSnapshotListener((s, e) -> {
       if (e == null)  {
         processDMCampaigns(s.getDocuments());

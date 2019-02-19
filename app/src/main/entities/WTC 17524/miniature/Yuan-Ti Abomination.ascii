@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Abomination"
+}
+set: "Aberrations"
+number: 59
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: LARGE

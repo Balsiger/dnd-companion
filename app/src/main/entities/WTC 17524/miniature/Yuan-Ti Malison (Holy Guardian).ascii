@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Malison (Holy Guardian)"
+}
+set: "Desert of Desolation"
+number: 60
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: MEDIUM

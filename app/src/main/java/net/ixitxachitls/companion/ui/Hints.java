@@ -33,7 +33,7 @@ public class Hints {
   private static final ImmutableList<String> hints =
       new ImmutableList.Builder<String>()
           .add("Abilities currently don't include any modifiers for levels, items or feats.")
-          .add("You can create move characters from one campaign to another.")
+          .add("You can move characters from one campaign to another.")
           .add("Red lines below a value signal an invalid value. Most of such values can still be "
               + "used, but might not be according to the rules.")
           .add("Feedback is welcome at companion@ixitxachitls.net. Thanks!")

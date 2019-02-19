@@ -1,0 +1,9 @@
+template {
+  name: "Zorbo"
+}
+set: "Tomb of Annihilation"
+number: 4
+race: "Zorbo"
+type: "Monstrosity"
+subtype: "Humanoid"
+size: SMALL

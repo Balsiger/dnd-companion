@@ -85,6 +85,12 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   public List<CreatureCondition> getAdjustedConditions() {
     List<CreatureCondition> conditions = new ArrayList<>(getConditions());
 
+    // Monsters don't yet have ability scores...
+    if (this instanceof Monster) {
+      return conditions;
+    }
+
+
     if (getStrength().total() <= 0) {
       conditions.add(
           CreatureCondition.create(CompanionApplication.get().context(), getId(),
@@ -228,8 +234,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return race;
   }
 
-  public void setRace(MonsterTemplate race) {
-    this.race = Optional.of(race);
+  public void setRace(String race) {
+    this.race = Templates.get().getMonsterTemplates().get(race);
   }
 
   public ModifiedValue getStrength() {
@@ -272,8 +278,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.wisdom = wisdom;
   }
 
-  public void setRace(String race) {
-    this.race = Templates.get().getMonsterTemplates().get(race);
+  public void setRace(MonsterTemplate race) {
+    this.race = Optional.of(race);
   }
 
   public void add(Item item) {

@@ -70,8 +70,8 @@ public class AbilityView extends LinearLayout {
     this.modifiedCheck = Optional.of(check);
 
     int modifier = Ability.modifier(value.total());
-    int checkModifier = check.total();
     this.value.get().set(value);
+    this.modifier.text(String.valueOf(modifier));
     this.check.get().set(check);
     this.checkContainer.setVisibility(modifier == check.total() ? GONE : VISIBLE);
 

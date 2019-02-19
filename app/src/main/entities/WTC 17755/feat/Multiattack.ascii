@@ -1,0 +1,41 @@
+template {
+  name: "Multiattack"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 304
+      high: 304
+    }
+  }
+  world: "Generic"
+  description: "The creature is adept at using all its natural weapons at once."
+  short_description: "Attack with all natural weapons at once (-2 penalty)."
+}
+type: GENERAL
+benefit: "The creature\'s secondary attacks with natural weapo\342\200\232\303\204\303\256s take only a -2 penalty"
+normal: "Without this feat, the creature\'s secondary attacks with natural weapons take a -5 pentaly."
+prerequisites: "Three or more natural attacks"
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

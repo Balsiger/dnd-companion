@@ -1,0 +1,9 @@
+template {
+  name: "Xeph Warrior"
+}
+set: "Angelfire"
+number: 30
+type: "Humanoid"
+race: "Xeph"
+class: "Fighter"
+size: MEDIUM

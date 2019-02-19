@@ -1,0 +1,9 @@
+template {
+  name: "Yeenoghu"
+}
+set: "Lords of Madness"
+number: 56
+race: "Yeenoghu"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

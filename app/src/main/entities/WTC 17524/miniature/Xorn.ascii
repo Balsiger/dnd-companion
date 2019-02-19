@@ -1,0 +1,8 @@
+template {
+  name: "Xorn"
+}
+set: "Rage of Demons"
+number: 40
+race: "Xorn"
+type: "Elemental"
+subtype: "Earth"

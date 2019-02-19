@@ -1,0 +1,10 @@
+template {
+  name: "Zhentarim Fighter"
+}
+set: "Archfiends"
+number: 40
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

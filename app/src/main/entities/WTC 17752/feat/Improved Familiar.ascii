@@ -1,0 +1,40 @@
+template {
+  name: "Improved Familiar"
+  reference {
+    name: "WTC 17752"
+    pages {
+      low: 200
+      high: 200
+    }
+  }
+  world: "Generic"
+  description: "This feat allows spellcasters to acquire a new familiar from a non-standard list, but only when they could normally acquire a new familiar (see page 52 of the Player\342\200\232\303\204\303\264s Handbook)."
+  short_description: "Possibility to gain more powerful familiars."
+}
+type: GENERAL
+benefit: "When choosing a familiar, the creatures listed on page 200 in the Dungeon Master\'s Guide are also available to the spellcaster. The spellcaster may choose a familiar with an alignment up to one step away on each of the alignment axes (lawful through chaotic, good through evil). For example, a chaotic good spellcaster could acquire a neutral familiar. A lawful neutral spellcaster could acquire a neutral good familiar."
+prerequisites: "Ability to acquire a new familiar, compatible alignment, sufficiently high level (see below)."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

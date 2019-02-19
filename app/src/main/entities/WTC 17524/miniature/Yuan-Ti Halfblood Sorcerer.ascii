@@ -1,0 +1,11 @@
+template {
+  name: "Yuan-Ti Halfblood Sorcerer"
+}
+set: "War of the Dragon Queen"
+number: 60
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+class: "Sorcerer"
+size: MEDIUM

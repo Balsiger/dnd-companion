@@ -104,7 +104,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
   public int getMaxHp() {
     int hp = 0;
     for (Level level : levels) {
-      hp += Math.min(1, level.getHp() + getConstitutionModifier());
+      hp += Math.max(1, level.getHp() + getConstitutionModifier());
     }
 
     return hp;
@@ -308,7 +308,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
     int number = 1;
     for (Level level : levels) {
       if (level.getIncreasedAbility().isPresent() && level.getIncreasedAbility().get() == ability) {
-        value.add(new Modifier(1, Modifier.Type.ABILITY,
+        value.add(new Modifier(1, Modifier.Type.GENERAL,
             "Level " + number + ": " + level.toString()));
       }
       number++;

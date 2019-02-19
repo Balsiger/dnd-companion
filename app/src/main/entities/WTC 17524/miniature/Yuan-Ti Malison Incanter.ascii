@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Malison Incanter"
+}
+set: "Demonweb"
+number: 29
+type: "Humanoid"
+subtype: "Reptile"
+subtype: "Serpent"
+race: "Yuan-Ti"
+size: MEDIUM

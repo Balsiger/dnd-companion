@@ -36,6 +36,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -44,6 +45,7 @@ import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * View for actionsView (and progress).
@@ -125,8 +127,11 @@ public class ActionBarView extends LinearLayout {
 
   public class Action {
     private final Wrapper<ImageButton> button;
+    private final String title;
+    private Optional<Wrapper.Action> action = Optional.empty();
 
     private Action(@DrawableRes int icon, String title, String description) {
+      this.title = title;
       button = createButton(icon, title, description);
     }
 
@@ -151,7 +156,7 @@ public class ActionBarView extends LinearLayout {
     }
 
     public Action onClick(Wrapper.Action action) {
-      button.onClick(action);
+      this.action = Optional.of(action);
       return this;
     }
 
@@ -174,6 +179,13 @@ public class ActionBarView extends LinearLayout {
       return this;
     }
 
+    private void clicked() {
+      CompanionApplication.get().logEvent(title, title, "action");
+      if (action.isPresent()) {
+        action.get().execute();
+      }
+    }
+
     private Wrapper<ImageButton> createButton(int icon, String title, String description) {
       Wrapper<ImageButton> button = Wrapper.wrap(new ImageButton(getContext()));
       button.get().setImageDrawable(getContext().getDrawable(icon));
@@ -183,6 +195,7 @@ public class ActionBarView extends LinearLayout {
       button.tint(R.color.action);
       button.get().setScaleType(ImageView.ScaleType.FIT_CENTER);
       button.get().setAdjustViewBounds(true);
+      button.onClick(this::clicked);
 
       return button;
     }

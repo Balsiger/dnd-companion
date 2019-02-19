@@ -90,4 +90,20 @@
   <color name="modified_value">#f5bd2e</color>
   <color name="filtered">#ff2929</color>
 
+  <!-- location colors -->
+  <color name="location_blue">#44f</color>
+  <color name="location_red">#f44</color>
+  <color name="location_green">#4a4</color>
+  <color name="location_white">#fff</color>
+  <color name="location_black">#000</color>
+  <color name="location_orange">#FF9800</color>
+  <color name="location_yellow">#FFEB3B</color>
+  <color name="location_light_blue">#00BCD4</color>
+  <color name="location_light_green">#75F133</color>
+  <color name="location_grey">#aaa</color>
+  <color name="location_brown">#523101</color>
+  <color name="location_pink">#F953FF</color>
+  <color name="location_violet">#9C27B0</color>
+  <color name="location_transparent">#000f</color>
+
 </resources>

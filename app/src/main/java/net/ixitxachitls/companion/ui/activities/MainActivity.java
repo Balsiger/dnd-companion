@@ -83,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
     actions.finishLoading(text);
   }
 
+  public void logEvent(String id, String name, String type) {
+    Bundle bundle = new Bundle();
+    bundle.putString(FirebaseAnalytics.Param.ITEM_ID, id);
+    bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
+    bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, type);
+    analytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+  }
+
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.

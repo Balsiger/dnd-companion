@@ -1,0 +1,9 @@
+template {
+  name: "Young Adamantine Dragon"
+}
+set: "Against the Giants"
+number: 52
+race: "Adamantine Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Planar"

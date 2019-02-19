@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.CallSuper;
 
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -100,9 +99,9 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return defaultValue;
   }
 
-  public void onComplete(Task<DocumentSnapshot> task) {
-    if (task.isSuccessful() && task.getResult().exists()) {
-      snapshot = Optional.of(task.getResult());
+  public void onUpdate(DocumentSnapshot snapshot, FirebaseFirestoreException e) {
+    if (snapshot != null || e == null) {
+      this.snapshot = Optional.of(snapshot);
       temporary = false;
       read();
       execute(whenReady);
@@ -127,7 +126,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
       collection.add(write(new HashMap<>())).addOnCompleteListener(task -> {
         if (task.isSuccessful()) {
           reference = Optional.of(task.getResult());
-          reference.get().get().addOnCompleteListener(this::onComplete);
+          reference.get().addSnapshotListener(this::onUpdate);
         } else {
           Status.error("Writing failed for " + this);
         }
@@ -322,7 +321,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     document.path = extractPath(id);
     document.collection = document.db.collection(document.path);
     document.reference = Optional.of(document.collection.document(document.id));
-    document.reference.get().get().addOnCompleteListener(document::onComplete);
+    document.reference.get().addSnapshotListener(document::onUpdate);
     document.temporary = false;
 
     return document;

@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Anathema"
+}
+set: "Against the Giants"
+number: 10
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: HUGE

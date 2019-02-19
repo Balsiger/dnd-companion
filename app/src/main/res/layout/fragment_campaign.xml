@@ -58,7 +58,7 @@
       android:id="@+id/encounter"
       android:name="net.ixitxachitls.companion.ui.fragments.EncounterFragment"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="match_parent"
       android:layout_above="@+id/actionsContainer"
       android:layout_below="@+id/date"
       android:tag="encounter"/>

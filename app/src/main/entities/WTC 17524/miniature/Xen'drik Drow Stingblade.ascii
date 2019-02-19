@@ -1,0 +1,8 @@
+template {
+  name: "Xen\'drik Drow Stingblade"
+}
+set: "Dungeon Delve"
+number: 38
+type: "Humanoid"
+race: "Drow"
+size: MEDIUM

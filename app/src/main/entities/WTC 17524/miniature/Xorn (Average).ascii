@@ -1,0 +1,9 @@
+template {
+  name: "Xorn (Average)"
+}
+set: "Underdark"
+number: 28
+race: "Xorn"
+type: "Elemental"
+subtype: "Earth"
+size: MEDIUM

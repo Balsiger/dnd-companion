@@ -26,6 +26,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -62,7 +63,9 @@ public class LabelledTextView extends LabelledEditTextView {
     // Prevent the editAction text to actually be editable.
     text.get().setKeyListener(null);
     text.get().setFocusableInTouchMode(false);
-    text.hideLine();
+    if (array.getColor(R.styleable.LabelledEditTextView_lineColor, 0) == 0) {
+      text.hideLine();
+    }
   }
 
   public LabelledTextView onClick(Wrapper.Action action) {

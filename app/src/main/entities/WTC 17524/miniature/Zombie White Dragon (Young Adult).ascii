@@ -1,0 +1,8 @@
+template {
+  name: "Zombie White Dragon (Young Adult)"
+}
+set: "Death Knell"
+number: 60
+type: "Undead"
+race: "Zombie"
+size: LARGE

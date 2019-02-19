@@ -1,0 +1,9 @@
+template {
+  name: "Ziraj the Hunter"
+}
+set: "Dragon Heist"
+number: 9
+type: "Humanoid"
+race: "Half-Orc"
+class: "Paladin"
+size: MEDIUM

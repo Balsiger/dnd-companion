@@ -27,6 +27,7 @@ import android.transition.ChangeBounds;
 import android.transition.Fade;
 import android.view.View;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
@@ -106,6 +107,7 @@ public class CompanionFragments {
   }
 
   public CompanionFragment show(CompanionFragment.Type fragment, Optional<View> sharedElement) {
+    CompanionApplication.get().logEvent(fragment.toString(), fragment.name(), "view");
     switch(fragment) {
       case settings:
         if (!settingsFragment.isPresent()) {
@@ -167,13 +169,6 @@ public class CompanionFragments {
         characterFragment.get().showCharacter(character);
       }
     }
-  }
-
-  public boolean showsCampaign(String campaignId) {
-    return campaignFragment.isPresent()
-        && currentFragment.isPresent()
-        && currentFragment.get() == campaignFragment.get()
-        && campaignFragment.get().shows(campaignId);
   }
 
   private Fade fade(int duration, int delay) {

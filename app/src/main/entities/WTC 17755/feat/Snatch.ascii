@@ -1,0 +1,40 @@
+template {
+  name: "Snatch"
+  reference {
+    name: "WTC 17755"
+    pages {
+      low: 304
+      high: 304
+    }
+  }
+  world: "Generic"
+  description: "The creature can grab opponents much smaller than itself and\n  hold them in its mouth or claw."
+  short_description: "Start improved grapple when hitting with claw or bite (if three or more sizes smaller automatic bite or claw damage each round), no Ref save against breath weapon if held in mouth, can drop creature as a free action (flung 1d6 x 10 ft for 1d6 damage per 10 ft, or drop from height)."
+}
+type: GENERAL
+benefit: "The creature can choose to start a grapple when it hits with a claw or bite\n  attack, as though it had the improved grab special attack. If the creature\n  gets a hold on a creature three or more sizes smaller, it squeezes each round\n  for automatic bite or claw damage. A snatched opponent held in the creature\342\200\232\303\204\303\264s\n  mouth is not allowed a Reflex save against the creature\342\200\232\303\204\303\264s breath weapon, if\n  it has one.  The creature can drop a creature it has snatched as a free\n  action or use a standard action to fling it aside. A flung creature travels\n  1d6\342\210\232\303\26310 feet, and takes 1d6 points of damage per 10 feet traveled. If the\n  creature flings a snatched opponent while flying, the opponent takes this\n  amount or falling damage, whichever is greater."
+prerequisites: "Size Huge or larger"
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

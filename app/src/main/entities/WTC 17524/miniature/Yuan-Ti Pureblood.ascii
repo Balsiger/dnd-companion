@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Pureblood"
+}
+set: "Archfiends"
+number: 60
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Yuan-Ti Swiftscale"
+}
+set: "Dungeons of Dread S"
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: MEDIUM

@@ -38,7 +38,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
 import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeMap;
@@ -88,10 +87,6 @@ public class User extends Document<User> {
     return values;
   }
 
-  public Set<Map.Entry<String, MiniatureFilter>> getLocations() {
-    return locations.entries();
-  }
-
   public String getNickname() {
     return nickname;
   }
@@ -121,13 +116,12 @@ public class User extends Document<User> {
     return sorted;
   }
 
-  public static boolean isUser(String id) {
-    return id.matches(PATH + "/[^/]*/");
+  public SortedSetMultimap<String, MiniatureFilter> getSortedLocations() {
+    return locations;
   }
 
-  public void addLocation(String location, MiniatureFilter filter) {
-    locations.put(location, filter);
-    writeMiniatures();
+  public static boolean isUser(String id) {
+    return id.matches(PATH + "/[^/]*/");
   }
 
   public boolean amDM(String id) {
@@ -149,6 +143,10 @@ public class User extends Document<User> {
 
   public boolean amPlayer(String id) {
     return id.startsWith(getId());
+  }
+
+  public SortedSet<MiniatureFilter> getLocationFilters(String location) {
+    return locations.get(location);
   }
 
   public long getMiniatureCount(String name) {
@@ -221,9 +219,13 @@ public class User extends Document<User> {
     });
   }
 
-  public void removeLocation(String location, MiniatureFilter filter) {
-    locations.remove(location, filter);
-    writeMiniatures();
+  public void setLocation(String location, SortedSet<MiniatureFilter> filters) {
+    if (!location.isEmpty()) {
+      locations.removeAll(location);
+      locations.putAll(location, filters);
+
+      writeMiniatures();
+    }
   }
 
   public void setMiniatureCount(String miniature, long count) {

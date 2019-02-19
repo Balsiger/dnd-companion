@@ -1,0 +1,8 @@
+template {
+  name: "Young Green Dragon"
+}
+set: "Dungeons of Dread S"
+race: "Green Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Chromatic"

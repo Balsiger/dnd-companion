@@ -1,0 +1,8 @@
+template {
+  name: "Xill"
+}
+set: "Archfiends"
+number: 39
+race: "Xill"
+type: "Monstrosity"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Zombie (GL)"
+}
+set: "Giants of Legend"
+number: 40
+type: "Undead"
+race: "Zombie"
+size: MEDIUM

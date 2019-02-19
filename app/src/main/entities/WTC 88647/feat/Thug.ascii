@@ -1,0 +1,41 @@
+template {
+  name: "Thug"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 45
+      high: 45
+    }
+  }
+  world: "Forgotten Realms"
+  description: "You have a knack for getting the jump on the competition and pushing people\n  around. While others debate, you act."
+  short_description: "Gain a +2 on initiative checks, and a +2 on \\Skill{Appraise} and \\Skill{Intimidate} checks."
+}
+type: REGIONAL
+benefit: "You gain a +2 bonus on initiative checks and a +2 bonus on \\Skill{Appraise} and \\Skill{Intimidate} checks."
+special: "You may select this feat only as a 1st-level character. You may only have one regional feat."
+prerequisites: "\\Monster{Centaur} (the Plateau of \\Place{Thay}),\n                     \\Monster{dwarf} (\\Place{Underdark} [\\Place{Northdark}] or \\Place{Waterdeep}), \\Monster{gnoll} (the Plateau of \\Place{Thay}), \\Monster{grimlock} (\\Place{Underdark} [\\Place{Reeshov}]), \\Monster{human} (the \\Place{Dragon Coast}, the \\Place{Moonsea}, the \\Place{Nelanthe Isles}, \\Place{Unther}, the \\Place{Vast}, or the \\Place{Vilhon Reach}), \\Monster{orc} (\\Place{Amn}, \\Place{Thesk}, or \\Place{Underdark} [\\Place{Northdark}]), or planetouched (\\Place{Impiltur}, the \\Place{Silver Marches}, \\Place{Unther}, or the \\Place{Western Heartlands})."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

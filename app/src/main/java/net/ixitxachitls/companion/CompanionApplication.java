@@ -104,6 +104,12 @@ public class CompanionApplication extends MultiDexApplication
     return context.invites();
   }
 
+  public void logEvent(String id, String name, String type) {
+    if (currentActivity instanceof MainActivity) {
+      ((MainActivity) currentActivity).logEvent(id, name, type);
+    }
+  }
+
   public User me() {
     return context.me();
   }

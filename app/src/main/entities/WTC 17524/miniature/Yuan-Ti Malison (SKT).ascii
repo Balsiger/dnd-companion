@@ -1,0 +1,10 @@
+template {
+  name: "Yuan-Ti Malison (SKT)"
+}
+set: "Storm King\'s Thunder"
+number: 36
+type: "Humanoid"
+subtype: "Serpent"
+subtype: "Reptile"
+race: "Yuan-Ti"
+size: DIMINUTIVE

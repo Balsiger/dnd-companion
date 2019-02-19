@@ -1,0 +1,40 @@
+template {
+  name: "Pernicious Magic"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 42
+      high: 42
+    }
+  }
+  world: "Forgotten Realms"
+  description: "You can use the Shadow Weave to make your spells harder for Weave users to resist."
+  short_description: "+4 to caster level check against Weave user\'s spell resistance (not for evocation and transmutation spells)."
+}
+type: METAMAGIC
+benefit: "You gain a +4 bonus on caster level checks made to defeat a Weave user\'s spell resistance. All creatures employing spells or spell-like abilities are considered Weave users unless they posses the \\Feat{Shadow Weave Magic} feat. This benefit stacks with those from \\Feat{Spell Penetration} and \\Feat{Greater Spell Penetration} feats, but it does not extend to spells you cast from the schools of evocation or transmutation."
+prerequisites: "Shadow Weave Magic"
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

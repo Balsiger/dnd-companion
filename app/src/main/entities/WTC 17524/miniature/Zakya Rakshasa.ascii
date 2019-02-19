@@ -1,0 +1,8 @@
+template {
+  name: "Zakya Rakshasa"
+}
+set: "War Drums"
+number: 43
+race: "Rakshasa"
+type: "Fiend"
+size: MEDIUM

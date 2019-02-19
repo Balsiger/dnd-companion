@@ -1,0 +1,8 @@
+template {
+  name: "Young Minotaur"
+}
+set: "Archfiends"
+number: 59
+race: "Minotaur"
+type: "Monstrosity"
+size: MEDIUM

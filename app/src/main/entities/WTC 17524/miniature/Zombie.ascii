@@ -1,0 +1,8 @@
+template {
+  name: "Zombie"
+}
+set: "Harbinger"
+number: 58
+type: "Undead"
+race: "Zombie"
+size: MEDIUM
