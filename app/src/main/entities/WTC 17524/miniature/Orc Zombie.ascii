@@ -1,0 +1,8 @@
+template {
+  name: "Orc Zombie"
+}
+set: "Against the Giants"
+number: 27
+type: "Undead"
+subtype: "Zombie"
+size: MEDIUM

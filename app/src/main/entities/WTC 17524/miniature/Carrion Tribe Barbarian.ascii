@@ -1,0 +1,9 @@
+template {
+  name: "Carrion Tribe Barbarian"
+}
+set: "Aberrations"
+number: 46
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

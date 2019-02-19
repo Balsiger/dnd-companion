@@ -1,0 +1,10 @@
+template {
+  name: "Chillfire Destroyer"
+}
+set: "Legendary Evils"
+number: 8
+race: "Chillfire Destroyer"
+type: "Elemental"
+subtype: "Cold"
+subtype: "Fire"
+size: LARGE

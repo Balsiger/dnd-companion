@@ -1,0 +1,8 @@
+template {
+  name: "Lurking Wraith"
+}
+set: "Against the Giants"
+number: 51
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

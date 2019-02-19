@@ -1,0 +1,9 @@
+template {
+  name: "Ravenous Dire Rat"
+}
+set: "Against the Giants"
+number: 57
+race: "Dire Rat"
+type: "Beast"
+subtype: "Dire"
+size: MEDIUM

@@ -1,0 +1,42 @@
+template {
+  name: "Rapid Reload"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 99
+      high: 99
+    }
+  }
+  world: "Generic"
+  description: "Choose a type of crossbow (hand, light, or heavy). You can reload a crossbow\n  of that type more quickly than normal."
+  short_description: "Reload crossbow more quickly"
+}
+type: GENERAL
+benefit: "The time required for you to reload your chosen type of\n                    crossbow is reduced to a free action (for a hand or light\n                    crossbow) or a move action (for a heavy crossbow).\n                    Reloading a crossbow still provokes an attack of oppor-\n                    tunity.  If you have selected this feat for hand crossbow\n                    or light crossbow, you may fire that weapon as many times\n                    in a full attack action as you could attack if you were\n                    using a bow."
+special: "You can gain Rapid Reload multiple times. Each time you\n                    take the feat, it applies to a new type of crossbow.  A\n                    fighter may select Rapid Reload as one of his fighter bonus\n                    feats (see page 38)."
+normal: "A character with- out this feat needs a move action to\n                    reload a hand or light crossbow, or a full- round action to\n                    reload a heavy crossbow."
+prerequisites: "Weapon Proficiency (crossbow type chosen)."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

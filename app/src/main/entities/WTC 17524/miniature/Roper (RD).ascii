@@ -1,0 +1,8 @@
+template {
+  name: "Roper (RD)"
+}
+set: "Rage of Demons"
+number: 28
+race: "Roper"
+type: "Monstrosity"
+subtype: "Earth"

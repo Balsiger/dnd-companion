@@ -1,0 +1,10 @@
+template {
+  name: "Ultroloth (TA)"
+}
+set: "Tomb of Annihilation"
+number: 34
+race: "Ultroloth"
+type: "Fiend"
+subtype: "Demon"
+subtype: "Yugoloth"
+size: MEDIUM

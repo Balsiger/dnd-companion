@@ -1,0 +1,9 @@
+template {
+  name: "Large Gold Dragon (Juvenile)"
+}
+race: "Gold Dragon"
+set: "Night Below"
+number: 10
+type: "Dragon"
+size: LARGE
+subtype: "Metallic"

@@ -1,0 +1,11 @@
+template {
+  name: "Werebear"
+}
+set: "Angelfire"
+number: 13
+race: "Wearbear"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+class: "Fighter"
+size: LARGE

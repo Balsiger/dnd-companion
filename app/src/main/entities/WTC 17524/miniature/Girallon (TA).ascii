@@ -1,0 +1,9 @@
+template {
+  name: "Girallon (TA)"
+}
+set: "Tomb of Annihilation"
+number: 31
+race: "Girallon"
+type: "Monstrosity"
+subtype: "Humanoid"
+size: LARGE

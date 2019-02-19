@@ -1,0 +1,9 @@
+template {
+  name: "Bearded Devil"
+}
+set: "Harbinger"
+number: 40
+race: "Bearded Devil"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

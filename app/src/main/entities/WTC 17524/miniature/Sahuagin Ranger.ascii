@@ -1,0 +1,10 @@
+template {
+  name: "Sahuagin Ranger"
+}
+set: "Aberrations"
+number: 42
+type: "Humanoid"
+subtype: "Aquatic"
+race: "Sahuagin"
+class: "Ranger"
+size: MEDIUM

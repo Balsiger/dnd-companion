@@ -1,0 +1,9 @@
+template {
+  name: "Drow Wizard"
+}
+set: "Dragon Eye"
+number: 50
+type: "Humanoid"
+race: "Drow"
+class: "Wizard"
+size: MEDIUM

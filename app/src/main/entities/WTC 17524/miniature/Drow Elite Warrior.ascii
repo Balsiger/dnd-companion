@@ -1,0 +1,8 @@
+template {
+  name: "Drow Elite Warrior"
+}
+set: "Monster Menagerie 2"
+number: 6
+type: "Humanoid"
+race: "Drow"
+size: MEDIUM

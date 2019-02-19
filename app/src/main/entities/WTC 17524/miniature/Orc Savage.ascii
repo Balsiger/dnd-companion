@@ -1,0 +1,9 @@
+template {
+  name: "Orc Savage"
+}
+set: "Death Knell"
+number: 57
+type: "Humanoid"
+race: "Orc"
+class: "Barbarian"
+size: MEDIUM

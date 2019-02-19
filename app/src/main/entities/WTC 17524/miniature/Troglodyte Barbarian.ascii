@@ -1,0 +1,10 @@
+template {
+  name: "Troglodyte Barbarian"
+}
+set: "Underdark"
+number: 59
+type: "Humanoid"
+race: "Troglodyte"
+subtype: "Reptile"
+class: "Barbarian"
+size: MEDIUM

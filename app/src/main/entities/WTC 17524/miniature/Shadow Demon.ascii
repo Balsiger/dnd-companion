@@ -1,0 +1,9 @@
+template {
+  name: "Shadow Demon"
+}
+set: "Dungeons of Dread"
+number: 16
+race: "Shadow Demon"
+type: "Fiend"
+subtype: "Demon"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Drow Blademaster"
+}
+set: "Desert of Desolation"
+number: 46
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: MEDIUM

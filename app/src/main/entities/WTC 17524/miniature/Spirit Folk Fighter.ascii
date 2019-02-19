@@ -1,0 +1,9 @@
+template {
+  name: "Spirit Folk Fighter"
+}
+set: "Underdark"
+number: 23
+race: "Spirit Folk"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM

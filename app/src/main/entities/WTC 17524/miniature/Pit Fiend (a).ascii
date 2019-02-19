@@ -1,0 +1,9 @@
+template {
+  name: "Pit Fiend (a)"
+}
+set: "Dragon Heist"
+number: 32
+race: "Pit Fiend"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Mezzoloth"
+}
+set: "Blood War"
+number: 41
+race: "Mezzoloth"
+type: "Fiend"
+subtype: "Demon"
+size: MEDIUM

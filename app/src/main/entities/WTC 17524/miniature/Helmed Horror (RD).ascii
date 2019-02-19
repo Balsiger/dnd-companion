@@ -1,0 +1,8 @@
+template {
+  name: "Helmed Horror (RD)"
+}
+set: "Rage of Demons"
+number: 42
+race: "Helmed Horror"
+type: "Construct"
+size: MEDIUM

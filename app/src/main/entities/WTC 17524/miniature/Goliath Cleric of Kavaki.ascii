@@ -1,0 +1,9 @@
+template {
+  name: "Goliath Cleric of Kavaki"
+}
+set: "War of the Dragon Queen"
+number: 12
+race: "Goliatha"
+type: "Humanoid"
+class: "Cleric"
+size: MEDIUM

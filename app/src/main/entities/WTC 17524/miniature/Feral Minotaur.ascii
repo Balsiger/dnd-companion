@@ -1,0 +1,8 @@
+template {
+  name: "Feral Minotaur"
+}
+set: "Angelfire"
+number: 53
+race: "Minotaur"
+type: "Monstrosity"
+size: LARGE

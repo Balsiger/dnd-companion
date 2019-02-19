@@ -1,0 +1,9 @@
+template {
+  name: "Lemure"
+}
+set: "Giants of Legend"
+number: 34
+race: "Lemure"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

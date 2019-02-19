@@ -1,0 +1,9 @@
+template {
+  name: "Drow Archer"
+}
+set: "Harbinger"
+number: 60
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: MEDIUM

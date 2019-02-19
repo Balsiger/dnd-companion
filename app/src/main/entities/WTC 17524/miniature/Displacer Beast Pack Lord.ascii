@@ -1,0 +1,8 @@
+template {
+  name: "Displacer Beast Pack Lord"
+}
+set: "War of the Dragon Queen"
+number: 29
+race: "Displacer Beat"
+type: "Monstrosity"
+size: HUGE

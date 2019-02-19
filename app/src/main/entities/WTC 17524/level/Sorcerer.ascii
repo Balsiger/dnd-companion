@@ -1,0 +1,574 @@
+template {
+  name: "Sorcerer"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 51
+      high: 55
+    }
+  }
+  world: "Generic"
+  description: "Sorcerers create magic the\nway a poet creates poems, with\ninborn talent honed by\npractice. They have no books, no\nmentors, no theories\342\200\224just raw\npower that they direct at will.\nSome sorcerers claim that the blood\nof dragons courses through their veins.\nThat claim may even be true in some\ncases\342\200\224it is common knowledge that certain\npowerful dragons can take humanoid form and\neven have humanoid lovers, and it\342\200\231s difficult\nto prove that a given sorcerer does not have\na dragon ancestor. It\342\200\231s true that sorcerers\noften have striking good looks, usually\nwith a touch of the exotic that hints\nat an unusual heritage. Others\nhold that the claim is either an\nunsubstantiated boast on the\npart of certain sorcerers or\nenvious gossip on the\npart of those who lack\nthe sorcerer\342\200\231s gift."
+  short_description: "A magic user with inborn talent."
+}
+abbreviation: "Sor"
+adventures: "The\ntypical sorcerer adventures in order to\nimprove his abilities. Only by testing\nhis limits can he expand them. A\nsorcerer\342\200\231s power is inborn\342\200\224part of\nhis soul. Developing this power is a quest\nin itself for many sorcerers, regardless of how\nthey wish to use their power.\nSome good sorcerers are driven by the\nneed to prove themselves. Marked as\ndifferent by their power, they seek to win\na place in society and to prove themselves to others. Evil sorcerers,\nhowever, also feel themselves set apart from others\342\200\224apart and\nabove. They adventure to gain power over those they look down\nupon."
+characteristics: "Sorcerers cast spells through innate power\nrather than through careful training and study. Their magic is\nintuitive rather than logical. Sorcerers know fewer spells than\nwizards do and acquire powerful spells more slowly than wizards,\nbut they can cast spells more often and have no need to select and\nprepare their spells ahead of time. Sorcerers do not specialize in\ncertain schools of magic the way wizards sometimes do.\n\nSince sorcerers gain their powers without undergoing the years of\nrigorous study that wizards go through, they don\342\200\231t have the\nbackground of arcane knowledge than most wizards have. However,\nthey do have more time to learn fighting skills, and they are\nproficient with simple weapons."
+alignment_options: "For a sorcerer, magic is an intuitive art, not a science.\nSorcery favors the free, chaotic, creative spirit over the disciplined\nmind, so sorcerers tend slightly toward chaos over law."
+religion: "Some sorcerers favor Boccob (god of magic), while\nothers revere Wee Jas (goddess of death and magic). However, many\nsorcerers follow some other deity, or none at all. (Wizards typically\nlearn to follow Boccob or Wee Jas from their mentors, but most\nsorcerers are self-taught, with no master to induct them into a\nreligion)."
+background: "Sorcerers develop rudimentary powers at puberty.\nTheir first spells are incomplete, spontaneous, uncontrolled, and\nsometimes dangerous. A household with a budding sorcerer in it\nmay be troubled by strange sounds or lights, which can create the\nimpression that the place is haunted. Eventually, the young sorcerer\nunderstands the power that he has been wielding unintentionally.\nFrom that point on, he can begin practicing and improving his\npowers.\n\nSometimes a sorcerer is fortunate enough to come under the care\nof an older, more experienced sorcerer, someone who can help him\nunderstand and use his new powers. More often, however, sorcerers\nare on their own, feared by erstwhile friends and misunderstood by\nfamily.\n\nSorcerers have no sense of identity as a group. Unlike wizards,\nthey gain little by sharing their knowledge and have no strong\nincentive to work together."
+races: "Most sorcerers are humans or half-elves, but the innate\ntalent for sorcery is unpredictable, and it can show up in any of the\ncommon races.\n\nArcane spellcasters from savage lands or from among the brutal\nhumanoids are more likely to be sorcerers than wizards. Kobolds are\nespecially likely to take up this path, and they are fierce, if inarticulate, proponents of the \342\200\234blood of the dragons\342\200\235 theory."
+otherClasses: "Sorcerers find that they have the most in\ncommon with members of other largely self-taught classes, such as\ndruids and rogues. They sometimes find themselves at odds with\nmembers of the more disciplined classes, such as paladins and\nmonks. Since they cast the same spells as wizards but do so in a\ndifferent way, they sometimes find themselves in competition with\nwizards."
+role: "A sorcerer tends to define his role based on his spell\nselection. A sorcerer who focuses on damage-dealing spells becomes\na center of the party\342\200\231s offensive power. Another may rely on more\nsubtle magics, such as charms and illusions, and thus take a quieter\nrole. A party with a sorcerer should strongly consider including a\nsecond spellcaster, such as a bard, cleric, druid, or even a wizard, to\nmake up for the sorcerer\342\200\231s lack of versatility. Since a sorcerer often\nhas a powerful presence that gives him a way with people, he may\nserve as the \342\200\234face\342\200\235 for an adventuring party, negotiating, bargaining,\nand speaking for others. The sorcerer\342\200\231s spells often help him sway\nothers or gain information, so he makes an excellent spy or diplomat\nfor an adventuring party."
+important_abilities: "Charisma determines how powerful a spell a sorcerer\ncan cast, how many spells he can cast per day, and how hard those\nspells are to resist (see Spells, below). Like a wizard, a sorcerer benefits from high Dexterity and Constitution scores.\n"
+allowed_alignment: ANY_ALIGNMENT
+hit_dice {
+  number: 1
+  dice: 4
+}
+skill_points: 2
+class_skill: "bluff"
+class_skill: "concentration"
+class_skill: "craft"
+class_skill: "knowledge arcana"
+class_skill: "profession"
+class_skill: "spellcraft"
+weapon_proficiency: SIMPLE
+armor_proficiency: NONE_ARMOR
+quality {
+  level: 1
+  template {
+    name: "summon familiar"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+will_save: 2
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+spell_ability: CHARISMA
+spells_per_day {
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: 3
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: 3
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 3
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 3
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 3
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 3
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 3
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 3
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 3
+  value: 4
+  value: 6
+}
+spells_known {
+  value: 4
+  value: 5
+  value: 5
+  value: 6
+  value: 6
+  value: 7
+  value: 7
+  value: 8
+  value: 8
+  value: 9
+  value: 9
+  value: 9
+  value: 9
+  value: 9
+  value: 9
+  value: 9
+  value: 9
+  value: 9
+  value: 9
+  value: 9
+}
+spells_known {
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 3
+}

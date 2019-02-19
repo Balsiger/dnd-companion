@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Garl Glittergold"
+}
+set: "Aberrations"
+number: 14
+race: "Gnome"
+type: "Humanoid"
+class: "Cleric"
+size: SMALL

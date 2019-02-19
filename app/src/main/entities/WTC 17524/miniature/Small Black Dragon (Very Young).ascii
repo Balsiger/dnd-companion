@@ -1,0 +1,10 @@
+template {
+  name: "Small Black Dragon (Very Young)"
+}
+set: "War of the Dragon Queen"
+number: 53
+race: "Black Dragon"
+type: "Dragon"
+subtype: "Aquatic"
+size: SMALL
+subtype: "Chromatic"

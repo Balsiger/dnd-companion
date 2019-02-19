@@ -1,0 +1,8 @@
+template {
+  name: "Half-Elf Assassin"
+}
+set: "Against the Giants"
+number: 44
+type: "Humanoid"
+race: "Half-Elf"
+size: MEDIUM

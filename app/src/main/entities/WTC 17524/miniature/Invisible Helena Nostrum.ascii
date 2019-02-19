@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Helena Nostrum"
+}
+set: "Storm King\'s Thunder"
+number: 38
+type: "Humanoid"
+race: "Human"
+size: MEDIUM
+subtype: "Invisible"
+class: "Fighter"

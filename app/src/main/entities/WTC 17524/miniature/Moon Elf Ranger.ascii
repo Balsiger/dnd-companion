@@ -1,0 +1,9 @@
+template {
+  name: "Moon Elf Ranger"
+}
+set: "Elemental Evil"
+number: 18
+type: "Humanoid"
+race: "Elf"
+class: "Ranger"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Tiefling Cleric"
+}
+set: "Desert of Desolation"
+number: 24
+type: "Humanoid"
+race: "Tiefling"
+class: "Cleric"
+size: MEDIUM

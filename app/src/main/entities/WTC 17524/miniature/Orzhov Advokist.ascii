@@ -1,0 +1,9 @@
+template {
+  name: "Orzhov Advokist"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 20
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

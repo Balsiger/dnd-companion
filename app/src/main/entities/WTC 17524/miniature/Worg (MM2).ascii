@@ -1,0 +1,8 @@
+template {
+  name: "Worg (MM2)"
+}
+set: "Monster Menagerie 2"
+number: 31
+race: "Worg"
+type: "Monstrosity"
+size: LARGE

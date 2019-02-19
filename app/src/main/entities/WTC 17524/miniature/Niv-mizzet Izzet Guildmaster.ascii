@@ -1,0 +1,9 @@
+template {
+  name: "Niv-mizzet Izzet Guildmaster"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 45
+race: "Red Dragon"
+type: "Dragon"
+size: GARGANTUAN
+subtype: "Chromatic"

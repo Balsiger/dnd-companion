@@ -1,0 +1,9 @@
+template {
+  name: "Large Shadow Dragon (Adult)"
+}
+set: "Night Below"
+number: 57
+race: "Shadow Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Planar"

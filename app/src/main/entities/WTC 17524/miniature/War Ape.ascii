@@ -1,0 +1,9 @@
+template {
+  name: "War Ape"
+}
+set: "War of the Dragon Queen"
+number: 22
+race: "Ape"
+type: "Beast"
+subtype: "Animal"
+size: MEDIUM

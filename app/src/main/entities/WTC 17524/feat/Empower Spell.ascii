@@ -1,0 +1,39 @@
+template {
+  name: "Empower Spell"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 93
+      high: 93
+    }
+  }
+  world: "Generic"
+  description: "You can cast spells to greater effect."
+  short_description: "Increase spell\342\200\232\303\204\303\264s variable, numeric effects by 50%"
+}
+type: METAMAGIC
+benefit: "All variable, numeric effects of an empowered spell are\n                    increased by one-half. An empowered spell deals half again\n                    as much damage as normal, cures half again as many hit\n                    points, affects half again as many targets, and so forth,\n                    as appropriate. For example, an empowered magic missile\n                    deals 1-1/2 times its normal damage (roll 1d4+1 and\n                    multiply the result by 1-1/2 for each missile). Saving\n                    throws and opposed rolls (such as the one you make when you\n                    cast dispel magic) are not affected, nor are spells without\n                    random variables. An empowered spell uses up a spell slot\n                    two levels higher than the spell\342\200\232\303\204\303\264s actual level."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

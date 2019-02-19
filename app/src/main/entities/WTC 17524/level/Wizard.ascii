@@ -1,0 +1,424 @@
+template {
+  name: "Wizard"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 55
+      high: 58
+    }
+  }
+  world: "Generic"
+  description: "A few unintelligible words and fleeting gestures carry more power\nthan a battleaxe, when they are the words and gestures of a wizard.\nThese simple acts make magic seem easy, but they only hint at the\ntime the wizard must spend poring over her spellbook preparing\neach spell for casting, and the years before that spent in apprenticeship to learn the arts of magic.\n\nWizards depend on intensive study to create their magic. They\nexamine musty old tomes, debate magical theory with their peers,\nand practice minor magics whenever they can. For a wizard, magic is\nnot a talent but a difficult, rewarding art."
+  short_description: "A master or the arcane arts."
+}
+abbreviation: "Wiz"
+adventures: "Wizards conduct their adventures with caution and\nforethought. When prepared, they can use their spells to devastating\neffect. When caught by surprise, they are vulnerable. They seek\nknowledge, power, and the resources to conduct their studies. They\nmay also have any of the noble or ignoble motivations that other\nadventurers have."
+characteristics: "The wizard\342\200\231s strength is her spells. Everything\nelse is secondary. She learns new spells as she experiments and\ngrows in experience, and she can also learn them from other wizards. In addition to learning new spells, a wizard can, over time,\nlearn to manipulate her spells so they go farther, work better, or are\nimproved in some other way.\n\nSome wizards prefer to specialize in a certain type of magic.\nSpecialization makes a wizard more powerful in her chosen field,\nbut it denies her access to some of the spells that lie outside that\nfield. (See School Specialization, page 57.)\n\nLike a sorcerer, a wizard can call a familiar\342\200\224a small, magical\nanimal companion that serves her. For some wizards, their familiars\nare their only true friends."
+alignment_options: "Overall, wizards show a slight tendency toward law\nover chaos because the study of magic rewards those who are\ndisciplined. Illusionists and transmuters, however, are masters of\ndeception and change, respectively. They favor chaos over law."
+religion: "Wizards commonly revere Boccob (god of magic).\nSome, especially necromancers or simply more misanthropic wiz-\nards, prefer Wee Jas (goddess of death and magic). Evil necromancers are known to worship Nerull (god of death). Wizards in general\nare more devoted to their studies than to their spiritual sides."
+background: "to their studies than to their spiritual sides.\nBackground: Wizards recognize each other as comrades or rivals.\nEven wizards from very different cultures or magical traditions have\nmuch in common because they all conform to the same laws of\nmagic. Unlike fighters or rogues, wizards see themselves as\nmembers of a distinct, if diverse, group. In civilized lands where\nwizards study in academies, schools, or guilds, wizards also identify\nthemselves and others according to membership in these formal\norganizations. But while a guild magician may look down her nose\nat a rustic wizard who learned his arts from a doddering hermit, she\nnevertheless can\342\200\231t deny the rustic\342\200\231s identity as a wizard."
+races: "Humans take to magic for any of various reasons: curiosity, ambition, lust for power, or just personal inclination. Human\nwizards tend to be practical innovators, creating new spells or using\nold spells creatively.\n\nElves are enthralled by magic, and many of them become wizards\nfor love of the art. Elf wizards see themselves as artists, and they\nhold magic in high regard as a wondrous mystery, as opposed to the\nmore pragmatic human wizards, who see magic more as a set of tools\nor tricks.\n\nIllusion magic comes so simply to gnomes that becoming an\nillusionist is just natural to brighter and more talented ones. Gnome\nwizards who don\342\200\231t specialize in the school of illusion are rare, but\nthey don\342\200\231t suffer under any special stigma.\n\nHalf-elf wizards feel both the elf\342\200\231s attraction to magic and the\n\nhuman\342\200\231s drive to conquer and understand. Some of the most pow-\nerful wizards are half-elves.\n\nDwarf and halfling wizards are rare because their societies don\342\200\231t\nencourage the study of magic. Half-orc wizards are rare because few\nhalf-orcs have the brains necessary for wizardry.\nDrow (evil, subterranean elves) often take up wizardry,\nbut wizards are quite rare among the savage humanoids."
+otherClasses: "Wizards prefer to work with\nmembers of other classes. They love to cast their\nspells from behind strong fighters, to \342\200\234magic up\342\200\235\nrogues and send them out to scout, and to rely on\nthe divine healing of clerics. They may find\nmembers of certain classes (such as sorcerers,\nrogues, and bards) to be not quite serious\nenough, but they\342\200\231re not judgmental."
+role: "The wizard\342\200\231s role depends somewhat on\nher spell selection, but most wizards share certain\nsimilarities in function. They are among the most\noffensively minded of the spellcasting classes, with a\nbroad range of options available for neutralizing\nenemies. Some wizards provide great support to\ntheir comrades by way of their spells, while others\nmay focus on divination or other facets of\nwizardry."
+important_abilities: "Intelligence determines how powerful a spell a\nwizard can cast, how many spells\nshe can cast, and how hard\nthose spells are to resist (see Spells, below). A\nhigh Dexterity score is helpful for a wizard, who\ntypically wears little or no armor, because it\nprovides her with a bonus to Armor Class. A\ngood Constitution score gives a wizard extra\nhit points, a resource that she is otherwise\nvery low on.\n"
+allowed_alignment: ANY_ALIGNMENT
+hit_dice {
+  number: 1
+  dice: 4
+}
+skill_points: 2
+class_skill: "conentration"
+class_skill: "craft"
+class_skill: "decipher script"
+class_skill: "knowledge"
+class_skill: "profession"
+class_skill: "spellcraft"
+weapon_proficiency: NONE_PROFICIENCY
+individual_weapon_proficiency: "club"
+individual_weapon_proficiency: "dagger"
+individual_weapon_proficiency: "heavy crossbow"
+individual_weapon_proficiency: "light crossbow"
+individual_weapon_proficiency: "quarterstaff"
+armor_proficiency: NONE_ARMOR
+quality {
+  level: 1
+  template {
+    name: "summon familiar"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "scribe scroll"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 0
+base_attack: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+will_save: 2
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+bonusFeat {
+  level: 5
+  template {
+    name: "wizard feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 10
+  template {
+    name: "wizard feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 15
+  template {
+    name: "wizard feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 20
+  template {
+    name: "wizard feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+spell_ability: INTELLIGENCE
+spells_per_day {
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 3
+  value: 4
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}

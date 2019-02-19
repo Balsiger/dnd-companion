@@ -1,0 +1,11 @@
+template {
+  name: "Half-Illithid Lizardfolk"
+}
+set: "Aberrations"
+number: 34
+race: "Half-Illithid"
+type: "Aberration"
+subtype: "Reptile"
+subtype: "Lizardfolk"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Crocodile"
+}
+set: "Dragon Heist"
+number: 30
+race: "Crocodile"
+type: "Beast"
+subtype: "Animal"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Elf Arcane Archer"
+}
+set: "Against the Giants"
+number: 60
+type: "Humanoid"
+race: "Elf"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Sun Elf Guard"
+}
+set: "Tyranny of Dragons"
+number: 9
+type: "Humanoid"
+race: "Elf"
+size: MEDIUM

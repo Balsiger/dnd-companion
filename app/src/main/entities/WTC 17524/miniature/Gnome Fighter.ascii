@@ -1,0 +1,9 @@
+template {
+  name: "Gnome Fighter"
+}
+set: "Dragon Eye"
+number: 3
+type: "Humanoid"
+race: "Gnome"
+class: "Fighter"
+size: SMALL

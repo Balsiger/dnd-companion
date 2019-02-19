@@ -1,0 +1,9 @@
+template {
+  name: "Kobold Sorcerer"
+}
+set: "Aberrations"
+number: 38
+type: "Humanoid"
+race: "Kobold"
+class: "Sorcerer"
+size: SMALL

@@ -1,0 +1,8 @@
+template {
+  name: "Air Myrmidon"
+}
+set: "Rage of Demons"
+number: 22
+race: "Air Myrmidon"
+type: "Elemental"
+subtype: "Air"

@@ -1,0 +1,41 @@
+template {
+  name: "Weapon Finesse"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 102
+      high: 102
+    }
+  }
+  world: "Generic"
+  description: "You are especially skilled at using weapons that can benefit as much from\n  Dexterity as from Strength."
+  short_description: "Use Dex modifier instead of Str modifier on attack rolls"
+}
+type: GENERAL
+benefit: "With a light weapon, rapier, whip, or spiked chain made\n                    for a creature of your size category, you may use your\n                    Dexterity modifier instead of your Strength modifier on\n                    attack rolls. If you carry a shield, its armor check\n                    penalty applies to your attack rolls."
+special: "A fighter may select Weapon Finesse as one of his fighter\n                    bonus feats (see page 38).\n\n                    Natural weapons are always considered light weapons."
+prerequisites: "Base attack bonus +1."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

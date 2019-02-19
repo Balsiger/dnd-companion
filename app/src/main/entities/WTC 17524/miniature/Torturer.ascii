@@ -1,0 +1,9 @@
+template {
+  name: "Torturer"
+}
+set: "Unhallowed"
+number: 45
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

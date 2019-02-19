@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Elf Fighter"
+}
+set: "Monster Menagerie 2"
+number: 11
+type: "Humanoid"
+race: "Elf"
+class: "Fighter"
+size: MEDIUM
+subtype: "Invisible"

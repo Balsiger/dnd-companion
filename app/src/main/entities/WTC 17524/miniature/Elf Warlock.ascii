@@ -1,0 +1,7 @@
+template {
+  name: "Elf Warlock"
+}
+set: "Dungeons of Dread S"
+type: "Humanoid"
+race: "Elf"
+size: MEDIUM

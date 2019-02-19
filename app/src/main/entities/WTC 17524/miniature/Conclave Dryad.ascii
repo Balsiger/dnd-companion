@@ -1,0 +1,9 @@
+template {
+  name: "Conclave Dryad"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 11
+type: "Fey"
+subtype: "Plant"
+race: "Dryad"
+size: MEDIUM

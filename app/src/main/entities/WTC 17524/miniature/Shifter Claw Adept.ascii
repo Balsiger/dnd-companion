@@ -1,0 +1,8 @@
+template {
+  name: "Shifter Claw Adept"
+}
+set: "Against the Giants"
+number: 38
+type: "Humanoid"
+race: "Shifter"
+size: MEDIUM

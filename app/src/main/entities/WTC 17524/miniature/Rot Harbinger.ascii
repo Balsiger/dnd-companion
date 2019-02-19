@@ -1,0 +1,9 @@
+template {
+  name: "Rot Harbinger"
+}
+race: "Rot Harbinger"
+set: "Lords of Madness"
+number: 41
+type: "Undead"
+subtype: "Humanoid"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Grell (RD)"
+}
+set: "Rage of Demons"
+number: 43
+race: "Grell"
+type: "Aberration"
+subtype: "Blind"

@@ -1,0 +1,10 @@
+template {
+  name: "Male Human Fighter"
+}
+set: "Player\'s Handbook Heroes"
+number: 1
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

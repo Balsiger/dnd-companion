@@ -1,0 +1,9 @@
+template {
+  name: "Night Hag"
+}
+set: "War Drums"
+number: 37
+race: "Night Hag"
+type: "Fey"
+subtype: "Hag"
+size: MEDIUM

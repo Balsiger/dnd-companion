@@ -1,0 +1,8 @@
+template {
+  name: "Vargouille"
+}
+set: "Angelfire"
+number: 49
+type: "Fiend"
+race: "Vargouille"
+size: SMALL

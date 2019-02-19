@@ -1,0 +1,8 @@
+template {
+  name: "Orc Skeleton"
+}
+set: "Underdark"
+number: 55
+type: "Undead"
+race: "Skeleton"
+size: MEDIUM

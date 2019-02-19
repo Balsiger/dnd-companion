@@ -1,0 +1,9 @@
+template {
+  name: "Spined Devil"
+}
+set: "Desert of Desolation"
+number: 37
+race: "Spined Devil"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

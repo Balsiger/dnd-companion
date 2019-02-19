@@ -1,0 +1,10 @@
+template {
+  name: "Warforged Artificer"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 2
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Unicorn"
+}
+set: "Dungeon Delve"
+number: 36
+race: "Unicorn"
+type: "Celestial"
+size: LARGE

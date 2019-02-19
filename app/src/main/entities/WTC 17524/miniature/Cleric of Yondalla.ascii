@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Yondalla"
+}
+set: "Harbinger"
+number: 2
+type: "Humanoid"
+race: "Halfling"
+class: "Cleric"
+size: SMALL

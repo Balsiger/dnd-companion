@@ -1,0 +1,9 @@
+template {
+  name: "Indentured Spirit"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 4
+race: "Indentured Spirit"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

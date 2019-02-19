@@ -1,0 +1,8 @@
+template {
+  name: "Githzerai Zerth"
+}
+set: "Dungeon Delve"
+number: 19
+race: "Githzerai"
+type: "Humanoid"
+size: MEDIUM

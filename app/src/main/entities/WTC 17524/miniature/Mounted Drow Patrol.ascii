@@ -1,0 +1,9 @@
+template {
+  name: "Mounted Drow Patrol"
+}
+set: "Underdark"
+number: 54
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: LARGE

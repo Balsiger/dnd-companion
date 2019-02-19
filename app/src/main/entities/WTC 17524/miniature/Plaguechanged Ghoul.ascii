@@ -1,0 +1,9 @@
+template {
+  name: "Plaguechanged Ghoul"
+}
+set: "Against the Giants"
+number: 28
+type: "Humanoid"
+subtype: "Undead"
+race: "Ghoul"
+size: MEDIUM

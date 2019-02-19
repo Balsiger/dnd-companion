@@ -1,0 +1,9 @@
+template {
+  name: "Magmin (MM3)"
+}
+set: "Monster Menagerie 3"
+number: 1
+race: "Magmin"
+type: "Elemental"
+subtype: "Fire"
+size: SMALL

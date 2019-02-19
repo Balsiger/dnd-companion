@@ -1,0 +1,8 @@
+template {
+  name: "Owlbear"
+}
+set: "Harbinger"
+number: 54
+race: "Owlbear"
+type: "Monstrosity"
+size: LARGE

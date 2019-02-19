@@ -1,0 +1,9 @@
+template {
+  name: "Dracolich"
+}
+set: "War of the Dragon Queen"
+number: 31
+race: "Dracolich"
+type: "Undead"
+subtype: "Dragon"
+size: HUGE

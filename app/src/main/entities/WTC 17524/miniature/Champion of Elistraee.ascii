@@ -1,0 +1,9 @@
+template {
+  name: "Champion of Elistraee"
+}
+set: "Archfiends"
+number: 12
+race: "Drow"
+type: "Humanoid"
+class: "Cleric"
+size: MEDIUM

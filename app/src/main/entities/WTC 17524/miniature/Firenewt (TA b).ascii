@@ -1,0 +1,10 @@
+template {
+  name: "Firenewt (TA b)"
+}
+set: "Tomb of Annihilation"
+number: 12
+race: "Firenewt"
+type: "Humanoid"
+subtype: "Fire"
+subtype: "Reptilian"
+size: MEDIUM

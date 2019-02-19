@@ -1,0 +1,10 @@
+template {
+  name: "Aspect of Kord"
+}
+set: "Underdark"
+number: 13
+type: "Celestial"
+subtype: "Chaotic"
+subtype: "Extraplanar"
+subtype: "Good"
+size: LARGE

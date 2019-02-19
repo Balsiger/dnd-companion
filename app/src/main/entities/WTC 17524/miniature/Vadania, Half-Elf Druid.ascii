@@ -1,0 +1,9 @@
+template {
+  name: "Vadania, Half-Elf Druid"
+}
+set: "Harbinger"
+number: 29
+type: "Humanoid"
+race: "Half-Elf"
+class: "Druid"
+size: MEDIUM

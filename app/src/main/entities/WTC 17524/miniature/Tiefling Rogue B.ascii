@@ -1,0 +1,8 @@
+template {
+  name: "Tiefling Rogue B"
+}
+set: "Monster Menagerie 3"
+number: 35
+type: "Humanoid"
+race: "Tiefling"
+size: MEDIUM

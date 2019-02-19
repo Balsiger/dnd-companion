@@ -1,0 +1,9 @@
+template {
+  name: "Drider"
+}
+set: "Desert of Desolation"
+number: 45
+race: "Drider"
+type: "Monstrosity"
+subtype: "Spider"
+size: LARGE

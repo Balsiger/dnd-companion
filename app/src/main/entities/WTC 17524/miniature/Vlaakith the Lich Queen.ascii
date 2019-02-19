@@ -1,0 +1,10 @@
+template {
+  name: "Vlaakith the Lich Queen"
+}
+set: "Blood War"
+number: 60
+race: "Lich"
+type: "Undead"
+class: "Wizard"
+size: MEDIUM
+subtype: "Humanoid"

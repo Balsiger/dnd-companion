@@ -1,0 +1,9 @@
+template {
+  name: "Storm Silverhand"
+}
+set: "Blood War"
+number: 23
+type: "Humanoid"
+race: "Human"
+class: "Bard"
+size: MEDIUM

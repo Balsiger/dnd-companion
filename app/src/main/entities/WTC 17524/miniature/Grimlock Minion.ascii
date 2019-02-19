@@ -1,0 +1,9 @@
+template {
+  name: "Grimlock Minion"
+}
+set: "Dungeon Delve"
+number: 23
+race: "Grimlock"
+type: "Humanoid"
+subtype: "Blind"
+size: MEDIUM

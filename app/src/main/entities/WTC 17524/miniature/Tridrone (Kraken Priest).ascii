@@ -1,0 +1,9 @@
+template {
+  name: "Tridrone (Kraken Priest)"
+}
+set: "Monster Menagerie 3"
+number: 12
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

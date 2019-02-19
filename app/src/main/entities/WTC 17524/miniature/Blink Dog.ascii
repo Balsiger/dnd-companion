@@ -1,0 +1,8 @@
+template {
+  name: "Blink Dog"
+}
+set: "Rage of Demons"
+number: 35
+race: "Blink Dog"
+type: "Fey"
+size: MEDIUM

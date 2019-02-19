@@ -1,0 +1,9 @@
+template {
+  name: "Guardian Mummy"
+}
+set: "Desert of Desolation"
+number: 28
+race: "Mummy"
+type: "Undead"
+subtype: "Humanoid"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Half-Orc Assassin"
+}
+set: "Harbinger"
+number: 65
+type: "Humanoid"
+race: "Half-Orc"
+class: "Rogue"
+size: MEDIUM

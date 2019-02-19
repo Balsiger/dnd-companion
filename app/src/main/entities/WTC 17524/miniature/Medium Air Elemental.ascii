@@ -1,0 +1,9 @@
+template {
+  name: "Medium Air Elemental"
+}
+set: "Dragon Eye"
+number: 23
+race: "Air Elemental"
+type: "Elemental"
+subtype: "Air"
+size: MEDIUM

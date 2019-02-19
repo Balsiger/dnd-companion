@@ -1,0 +1,9 @@
+template {
+  name: "Githzerai Monk"
+}
+set: "Underdark"
+number: 4
+race: "Githzerai"
+type: "Humanoid"
+class: "Monk"
+size: MEDIUM

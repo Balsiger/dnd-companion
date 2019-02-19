@@ -1,0 +1,39 @@
+template {
+  name: "Agile"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 89
+      high: 89
+    }
+  }
+  world: "Generic"
+  description: "You are particularly flexible and poised."
+  short_description: "+2 bonus on Balance and Escape Artist checks"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Balance checks and Escape Artist\n                    checks."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,9 @@
+template {
+  name: "Bat Familiar"
+}
+set: "Unhallowed"
+number: 30
+race: "Bat"
+type: "Beast"
+subtype: "Familiar"
+size: DIMINUTIVE

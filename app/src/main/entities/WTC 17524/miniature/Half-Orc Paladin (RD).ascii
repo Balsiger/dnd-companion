@@ -1,0 +1,8 @@
+template {
+  name: "Half-Orc Paladin (RD)"
+}
+set: "Rage of Demons"
+number: 15
+type: "Humanoid"
+race: "Half-Orc"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Flame Snake (Lesser)"
+}
+set: "Desert of Desolation"
+number: 42
+race: "Flame Snake"
+type: "Elemental"
+subtype: "Fire"
+size: MEDIUM

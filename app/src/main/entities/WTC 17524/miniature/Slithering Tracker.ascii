@@ -1,0 +1,8 @@
+template {
+  name: "Slithering Tracker"
+}
+set: "Dragon Eye"
+number: 18
+race: "Slithering Tracker"
+type: "Ooze"
+size: MEDIUM

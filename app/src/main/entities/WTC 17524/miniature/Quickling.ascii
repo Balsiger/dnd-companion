@@ -1,0 +1,8 @@
+template {
+  name: "Quickling"
+}
+set: "Tyranny of Dragons"
+number: 3
+race: "Quickling"
+type: "Fey"
+size: SMALL

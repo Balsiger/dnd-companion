@@ -1,0 +1,13 @@
+template {
+  name: "Aspect of Lolth"
+}
+race: "Drider"
+set: "Archfiends"
+number: 46
+type: "Fiend"
+subtype: "Chaotic"
+subtype: "Evil"
+subtype: "Extraplanar"
+subtype: "Aspect"
+subtype: "Spider"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Armored Guulvorg"
+}
+set: "Against the Giants"
+number: 13
+race: "Buulvorg"
+type: "Beast"
+size: HUGE

@@ -1,0 +1,10 @@
+template {
+  name: "Elder Iron Dragon"
+}
+set: "Legendary Evils"
+number: 16
+race: "Iron Dragon"
+type: "Dragon"
+subtype: "Dark One"
+size: HUGE
+subtype: "Ferrous"

@@ -1,0 +1,8 @@
+template {
+  name: "Grick"
+}
+set: "Dungeons of Dread"
+number: 45
+race: "Grick"
+type: "Monstrosity"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Monodrone"
+}
+set: "Tomb of Annihilation"
+number: 10
+race: "Monodrone"
+type: "Construct"
+subtype: "Modron"
+size: MEDIUM

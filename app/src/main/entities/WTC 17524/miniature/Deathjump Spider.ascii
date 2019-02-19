@@ -1,0 +1,9 @@
+template {
+  name: "Deathjump Spider"
+}
+set: "Dungeons of Dread"
+number: 54
+race: "Deathjump Spider"
+type: "Vermin"
+subtype: "Spider"
+size: MEDIUM

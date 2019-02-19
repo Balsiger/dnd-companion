@@ -1,0 +1,9 @@
+template {
+  name: "Flind Captain"
+}
+set: "Death Knell"
+number: 54
+type: "Humanoid"
+race: "Gnoll"
+class: "Fighter"
+size: MEDIUM

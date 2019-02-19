@@ -1,0 +1,8 @@
+template {
+  name: "Bryn Lightfingers"
+}
+set: "Monster Menagerie"
+number: 21
+type: "Humanoid"
+race: "Halfling"
+size: MEDIUM

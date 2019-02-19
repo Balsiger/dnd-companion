@@ -1,0 +1,10 @@
+template {
+  name: "Goblin Adept"
+}
+set: "Death Knell"
+number: 34
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+class: "Wizard"
+size: SMALL

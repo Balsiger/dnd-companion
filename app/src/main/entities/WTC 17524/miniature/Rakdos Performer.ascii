@@ -1,0 +1,9 @@
+template {
+  name: "Rakdos Performer"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 41
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: LARGE

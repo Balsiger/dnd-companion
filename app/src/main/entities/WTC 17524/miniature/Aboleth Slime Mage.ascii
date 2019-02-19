@@ -1,0 +1,9 @@
+template {
+  name: "Aboleth Slime Mage"
+}
+set: "Dangerous Delves"
+number: 1
+race: "Aboleth"
+type: "Aberration"
+subtype: "Aquatic"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Glabrezu"
+}
+set: "Giants of Legend"
+number: 70
+race: "Glabrezu"
+type: "Fiend"
+subtype: "Demon"
+size: HUGE

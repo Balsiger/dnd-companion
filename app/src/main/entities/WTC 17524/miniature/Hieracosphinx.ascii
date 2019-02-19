@@ -1,0 +1,8 @@
+template {
+  name: "Hieracosphinx"
+}
+set: "Elemental Evil"
+number: 31
+race: "Hieracosphinx"
+type: "Monstrosity"
+size: LARGE

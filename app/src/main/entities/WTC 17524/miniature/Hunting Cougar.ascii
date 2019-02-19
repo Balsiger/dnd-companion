@@ -1,0 +1,9 @@
+template {
+  name: "Hunting Cougar"
+}
+set: "War Drums"
+number: 19
+race: "Cougar"
+type: "Beast"
+subtype: "Animal"
+size: MEDIUM

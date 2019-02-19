@@ -1,0 +1,10 @@
+template {
+  name: "Fiendish Snake"
+}
+set: "Blood War"
+number: 50
+race: "Snake"
+type: "Fiend"
+subtype: "Animal"
+subtype: "Oversized"
+size: MEDIUM

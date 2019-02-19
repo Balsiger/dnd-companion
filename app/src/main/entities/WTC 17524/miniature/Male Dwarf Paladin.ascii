@@ -1,0 +1,9 @@
+template {
+  name: "Male Dwarf Paladin"
+}
+set: "Player\'s Handbook Heroes"
+number: 13
+type: "Humanoid"
+race: "Dwarf"
+class: "Paladin"
+size: MEDIUM

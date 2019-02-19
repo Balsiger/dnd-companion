@@ -1,0 +1,8 @@
+template {
+  name: "Male Shifter Ranger"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 13
+type: "Humanoid"
+race: "Shifter"
+size: MEDIUM

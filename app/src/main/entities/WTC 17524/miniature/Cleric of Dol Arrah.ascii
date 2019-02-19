@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Dol Arrah"
+}
+set: "Angelfire"
+number: 2
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

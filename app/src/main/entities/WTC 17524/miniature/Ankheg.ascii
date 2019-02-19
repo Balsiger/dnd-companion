@@ -1,0 +1,8 @@
+template {
+  name: "Ankheg"
+}
+set: "Underdark"
+number: 30
+race: "Ankheg"
+type: "Monstrosity"
+size: LARGE

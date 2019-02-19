@@ -1,0 +1,10 @@
+template {
+  name: "Alusair Obarskyr"
+}
+set: "Aberrations"
+number: 1
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

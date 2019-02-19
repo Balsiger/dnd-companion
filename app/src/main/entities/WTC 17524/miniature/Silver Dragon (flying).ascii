@@ -1,0 +1,9 @@
+template {
+  name: "Silver Dragon (flying)"
+}
+set: "Tyranny of Dragons"
+number: 42
+race: "Silver Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Metallic"

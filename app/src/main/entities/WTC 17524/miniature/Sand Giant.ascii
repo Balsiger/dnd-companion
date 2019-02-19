@@ -1,0 +1,8 @@
+template {
+  name: "Sand Giant"
+}
+set: "War Drums"
+number: 9
+race: "Sand Giant"
+type: "Giant"
+size: LARGE

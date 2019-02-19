@@ -1,0 +1,9 @@
+template {
+  name: "Beholder Lich"
+}
+set: "Unhallowed"
+number: 31
+race: "Lich"
+type: "Undead"
+subtype: "Beholder"
+size: LARGE

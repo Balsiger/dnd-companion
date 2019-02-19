@@ -1,0 +1,8 @@
+template {
+  name: "Neogi Master"
+}
+set: "Monster Menagerie 3"
+number: 36
+type: "Aberration"
+race: "Neogi"
+size: MEDIUM

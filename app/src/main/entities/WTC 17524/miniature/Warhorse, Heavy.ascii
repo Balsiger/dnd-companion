@@ -1,0 +1,9 @@
+template {
+  name: "Warhorse, Heavy"
+}
+set: "Desert of Desolation"
+number: 13
+race: "Horse"
+type: "Beast"
+subtype: "Animal"
+size: LARGE

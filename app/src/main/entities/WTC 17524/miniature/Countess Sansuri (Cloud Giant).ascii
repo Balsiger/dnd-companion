@@ -1,0 +1,9 @@
+template {
+  name: "Countess Sansuri (Cloud Giant)"
+}
+set: "Storm King\'s Thunder"
+number: 42
+race: "Cloud Giant"
+type: "Giant"
+subtype: "Aquatic"
+size: HUGE

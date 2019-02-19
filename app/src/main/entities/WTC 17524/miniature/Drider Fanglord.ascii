@@ -1,0 +1,9 @@
+template {
+  name: "Drider Fanglord"
+}
+set: "Savage Encounters"
+number: 12
+race: "Drider"
+type: "Monstrosity"
+subtype: "Spider"
+size: LARGE

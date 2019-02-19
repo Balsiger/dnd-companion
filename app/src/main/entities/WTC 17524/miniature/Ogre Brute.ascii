@@ -1,0 +1,9 @@
+template {
+  name: "Ogre Brute"
+}
+set: "Desert of Desolation"
+number: 52
+type: "Giant"
+race: "Ogre"
+class: "Barbarian"
+size: LARGE

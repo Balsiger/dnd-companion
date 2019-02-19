@@ -1,0 +1,10 @@
+template {
+  name: "Frost Titan"
+}
+set: "Legendary Evils"
+number: 20
+race: "Frost Titan"
+type: "Elemental"
+subtype: "Cold"
+subtype: "Titan"
+size: HUGE

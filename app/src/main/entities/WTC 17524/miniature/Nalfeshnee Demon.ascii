@@ -1,0 +1,8 @@
+template {
+  name: "Nalfeshnee Demon"
+}
+set: "Rage of Demons"
+number: 47
+race: "Nalfeshnee"
+type: "Fiend"
+subtype: "Demon"

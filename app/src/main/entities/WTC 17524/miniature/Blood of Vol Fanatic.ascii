@@ -1,0 +1,9 @@
+template {
+  name: "Blood of Vol Fanatic"
+}
+set: "Desert of Desolation"
+number: 27
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

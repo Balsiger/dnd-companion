@@ -1,0 +1,9 @@
+template {
+  name: "Bullywug"
+}
+set: "Monster Menagerie 2"
+number: 5
+race: "Bullywug"
+type: "Humanoid"
+subtype: "Aquatic"
+size: MEDIUM

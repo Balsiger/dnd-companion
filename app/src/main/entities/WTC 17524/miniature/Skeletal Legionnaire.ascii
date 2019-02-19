@@ -1,0 +1,8 @@
+template {
+  name: "Skeletal Legionnaire"
+}
+set: "War Drums"
+number: 39
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Huge Red Dragon (Young Adult)"
+}
+set: "Giants of Legend"
+number: 71
+race: "Red Dragon"
+type: "Dragon"
+size: HUGE
+subtype: "Metallic"

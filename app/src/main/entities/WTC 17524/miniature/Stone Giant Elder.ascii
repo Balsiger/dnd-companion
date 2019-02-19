@@ -1,0 +1,9 @@
+template {
+  name: "Stone Giant Elder"
+}
+set: "Tyranny of Dragons"
+number: 26
+race: "Stone Giant"
+type: "Giant"
+subtype: "Earth"
+size: LARGE

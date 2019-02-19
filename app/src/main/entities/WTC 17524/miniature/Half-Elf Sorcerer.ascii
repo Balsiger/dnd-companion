@@ -1,0 +1,9 @@
+template {
+  name: "Half-Elf Sorcerer"
+}
+set: "Dragon Eye"
+number: 20
+type: "Humanoid"
+race: "Half-Elf"
+class: "Sorcerer"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Huge Fiendish Spider"
+}
+set: "War of the Dragon Queen"
+number: 46
+race: "Spider"
+type: "Fiend"
+subtype: "Spider"
+size: HUGE

@@ -1,0 +1,11 @@
+template {
+  name: "Ice Archon"
+}
+set: "Dungeons of Dread"
+number: 29
+race: "Ice Archon"
+type: "Elemental"
+subtype: "Water"
+subtype: "Cold"
+subtype: "Archon"
+size: MEDIUM

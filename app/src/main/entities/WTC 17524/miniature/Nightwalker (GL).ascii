@@ -1,0 +1,8 @@
+template {
+  name: "Nightwalker (GL)"
+}
+set: "Giants of Legend"
+number: 72
+race: "Nightwalker"
+type: "Undead"
+size: HUGE

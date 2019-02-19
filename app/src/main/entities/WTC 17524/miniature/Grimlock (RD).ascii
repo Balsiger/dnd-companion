@@ -1,0 +1,9 @@
+template {
+  name: "Grimlock (RD)"
+}
+set: "Rage of Demons"
+number: 10
+race: "Grimlock"
+type: "Humanoid"
+subtype: "Blind"
+size: MEDIUM

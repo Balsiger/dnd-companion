@@ -1,0 +1,9 @@
+template {
+  name: "Merfolk"
+}
+set: "Monster Menagerie"
+number: 17
+type: "Humanoid"
+subtype: "Aquatic"
+race: "Merfolk"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Kobold Skirmisher"
+}
+set: "Dragon Eye"
+number: 35
+type: "Humanoid"
+race: "Kobold"
+class: "Fighter"
+size: SMALL

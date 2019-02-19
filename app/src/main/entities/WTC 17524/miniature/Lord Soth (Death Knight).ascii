@@ -1,0 +1,8 @@
+template {
+  name: "Lord Soth (Death Knight)"
+}
+set: "Giants of Legend"
+number: 36
+type: "Humanoid"
+subtype: "Undead"
+size: MEDIUM

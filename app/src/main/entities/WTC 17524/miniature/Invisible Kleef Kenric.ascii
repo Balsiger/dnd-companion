@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Kleef Kenric"
+}
+set: "Storm King\'s Thunder"
+number: 20
+type: "Humanoid"
+race: "Human"
+size: MEDIUM
+subtype: "Invisible"
+class: "Fighter"

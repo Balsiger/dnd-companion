@@ -1,0 +1,9 @@
+template {
+  name: "Asharra (invisible)"
+}
+set: "Tomb of Annihilation"
+number: 23
+race: "Aarakocra"
+type: "Humanoid"
+class: "Wizard"
+size: MEDIUM

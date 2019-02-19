@@ -1,0 +1,9 @@
+template {
+  name: "Ettercap"
+}
+set: "Giants of Legend"
+number: 47
+race: "Ettercap"
+type: "Monstrosity"
+subtype: "Spider"
+size: MEDIUM

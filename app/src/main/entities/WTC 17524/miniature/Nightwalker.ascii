@@ -1,0 +1,9 @@
+template {
+  name: "Nightwalker"
+}
+set: "Savage Encounters"
+number: 26
+race: "Nightwalker"
+type: "Undead"
+size: LARGE
+subtype: "Humanoid"

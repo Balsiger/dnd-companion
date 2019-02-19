@@ -1,0 +1,9 @@
+template {
+  name: "Noble (b)"
+}
+set: "Dragon Heist"
+number: 5
+type: "Humanoid"
+race: "Human"
+class: "Expert"
+size: MEDIUM

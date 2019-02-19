@@ -1,0 +1,9 @@
+template {
+  name: "Female Eladrin Sorcerer"
+}
+set: "Player\'s Handbook Heroes"
+number: 11
+type: "Humanoid"
+race: "Eladrin"
+class: "Sorcerer"
+size: MEDIUM

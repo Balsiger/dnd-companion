@@ -1,0 +1,8 @@
+template {
+  name: "Doppelganger"
+}
+set: "Tyranny of Dragons"
+number: 15
+type: "Monstrosity"
+subtype: "Shapechanger"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Skeleton"
+}
+set: "Harbinger"
+number: 55
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Nightmare (RD)"
+}
+set: "Rage of Demons"
+number: 31
+race: "Nightmare"
+type: "Fiend"
+subtype: "Mount"
+subtype: "Flying"

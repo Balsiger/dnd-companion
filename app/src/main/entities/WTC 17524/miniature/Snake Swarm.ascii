@@ -1,0 +1,10 @@
+template {
+  name: "Snake Swarm"
+}
+set: "Dungeon Delve"
+number: 35
+race: "Snake Swarm"
+type: "Beast"
+subtype: "Reptile"
+subtype: "Swarm"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Drider (RD)"
+}
+set: "Rage of Demons"
+number: 26
+race: "Drider"
+type: "Monstrosity"
+subtype: "Spider"

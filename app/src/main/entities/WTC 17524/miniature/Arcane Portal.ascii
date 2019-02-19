@@ -1,0 +1,7 @@
+template {
+  name: "Arcane Portal"
+}
+set: "Lords of Madness"
+number: 1
+type: "Object"
+size: MEDIUM

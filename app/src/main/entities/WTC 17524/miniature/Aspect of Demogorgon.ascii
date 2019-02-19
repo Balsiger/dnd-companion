@@ -1,0 +1,12 @@
+template {
+  name: "Aspect of Demogorgon"
+}
+set: "Archfiends"
+number: 45
+type: "Fiend"
+subtype: "Earth"
+subtype: "Chaotic"
+subtype: "Evil"
+subtype: "Extraplanar"
+subtype: "Tana'ri"
+size: LARGE

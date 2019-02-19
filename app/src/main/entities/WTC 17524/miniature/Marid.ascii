@@ -1,0 +1,10 @@
+template {
+  name: "Marid"
+}
+set: "Unhallowed"
+number: 21
+race: "Marid"
+type: "Elemental"
+subtype: "Genie"
+subtype: "Water"
+size: LARGE

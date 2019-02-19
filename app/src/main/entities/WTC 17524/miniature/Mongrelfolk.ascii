@@ -1,0 +1,8 @@
+template {
+  name: "Mongrelfolk"
+}
+set: "Aberrations"
+number: 40
+race: "Mongrelfolk"
+type: "Humanoid"
+size: MEDIUM

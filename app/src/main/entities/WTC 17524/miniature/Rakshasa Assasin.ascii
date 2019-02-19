@@ -1,0 +1,8 @@
+template {
+  name: "Rakshasa Assasin"
+}
+set: "Demonweb"
+number: 7
+race: "Rakshasa"
+type: "Fiend"
+size: MEDIUM

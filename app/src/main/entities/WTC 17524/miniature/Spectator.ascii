@@ -1,0 +1,9 @@
+template {
+  name: "Spectator"
+}
+set: "Rage of Demons"
+number: 44
+race: "Beholder"
+type: "Aberration"
+subtype: "Beholder"
+size: MEDIUM

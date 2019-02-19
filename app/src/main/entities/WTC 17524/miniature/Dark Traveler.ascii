@@ -1,0 +1,9 @@
+template {
+  name: "Dark Traveler"
+}
+set: "Death Knell"
+number: 16
+type: "Humanoid"
+race: "Human"
+class: "Sorcerer"
+size: MEDIUM

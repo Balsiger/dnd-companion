@@ -1,0 +1,10 @@
+template {
+  name: "Succubus"
+}
+set: "Blood War"
+number: 59
+race: "Succubus"
+type: "Fiend"
+subtype: "Devil"
+subtype: "Shapechanger"
+size: MEDIUM

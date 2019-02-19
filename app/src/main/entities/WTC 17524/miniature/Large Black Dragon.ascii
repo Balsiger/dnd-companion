@@ -1,0 +1,10 @@
+template {
+  name: "Large Black Dragon"
+}
+set: "Unhallowed"
+number: 55
+race: "Black Dragon"
+type: "Dragon"
+subtype: "Aquatic"
+size: LARGE
+subtype: "Chromatic"

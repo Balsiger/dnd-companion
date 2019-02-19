@@ -1,0 +1,10 @@
+template {
+  name: "Manticore (MM)"
+}
+set: "Monster Menagerie"
+number: 41
+race: "Manticore"
+type: "Monstrosity"
+subtype: "Flying"
+subtype: "Winged"
+size: LARGE

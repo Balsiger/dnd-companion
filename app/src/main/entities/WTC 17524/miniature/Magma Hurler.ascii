@@ -1,0 +1,9 @@
+template {
+  name: "Magma Hurler"
+}
+set: "War of the Dragon Queen"
+number: 49
+race: "Magma Hurler"
+type: "Elemental"
+subtype: "Earth"
+size: MEDIUM

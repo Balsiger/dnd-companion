@@ -1,0 +1,40 @@
+template {
+  name: "Quicken Spell"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "You can cast a spell with a moment\342\200\232\303\204\303\264s thought."
+  short_description: "Cast spells as free action"
+}
+type: METAMAGIC
+benefit: "Casting a quickened spell is a free action. You can per-\n                    form another action, even casting another spell, in the\n                    same round as you cast a quickened spell. You may cast only\n                    one quickened spell per round. A spell whose casting time\n                    is more than 1 full-round action cannot be quickened. A\n                    quickened spell uses up a spell slot four levels higher\n                    than the spell\342\200\232\303\204\303\264s actual level. Casting a quickened spell\n                    doesn\342\200\232\303\204\303\264t provoke an attack of opportunity."
+special: "This feat can\342\200\232\303\204\303\264t be applied to any spell cast spontaneously\n                    (including sorcerer spells, bard spells, and cleric or\n                    druid spells cast spontaneously), since applying a\n                    metamagic feat to a spontaneously cast spell automatically\n                    increases the casting time to a full-round action."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,11 @@
+template {
+  name: "Rimefire Griffon"
+}
+set: "Legendary Evils"
+number: 32
+race: "Griffon"
+type: "Monstrosity"
+subtype: "Winged"
+subtype: "Cold"
+subtype: "Mount"
+size: LARGE

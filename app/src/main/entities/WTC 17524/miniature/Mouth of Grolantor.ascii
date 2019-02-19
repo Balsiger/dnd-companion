@@ -1,0 +1,8 @@
+template {
+  name: "Mouth of Grolantor"
+}
+set: "Monster Menagerie 3"
+number: 27
+race: "Hill Giant"
+type: "Giant"
+size: HUGE

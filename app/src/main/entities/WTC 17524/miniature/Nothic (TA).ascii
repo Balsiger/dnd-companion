@@ -1,0 +1,8 @@
+template {
+  name: "Nothic (TA)"
+}
+set: "Tomb of Annihilation"
+number: 35
+race: "Nothic"
+type: "Aberration"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Minotaur Thug"
+}
+set: "Legendary Evils"
+number: 29
+race: "Minotaur"
+type: "Monstrosity"
+size: MEDIUM

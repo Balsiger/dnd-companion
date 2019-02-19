@@ -1,0 +1,9 @@
+template {
+  name: "Male Tiefling Warlord"
+}
+set: "Player\'s Handbook Heroes"
+number: 4
+type: "Humanoid"
+race: "Tiefling"
+class: "Fighter"
+size: MEDIUM

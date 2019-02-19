@@ -1,0 +1,10 @@
+template {
+  name: "Soldier of Thrane"
+}
+set: "Death Knell"
+number: 9
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

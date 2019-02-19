@@ -1,0 +1,8 @@
+template {
+  name: "Lich"
+}
+set: "Monster Menagerie"
+number: 35
+type: "Humanoid"
+subtype: "Undead"
+size: MEDIUM

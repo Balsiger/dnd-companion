@@ -1,0 +1,8 @@
+template {
+  name: "Ogre (EE)"
+}
+set: "Elemental Evil"
+number: 25
+type: "Giant"
+race: "Ogre"
+size: LARGE

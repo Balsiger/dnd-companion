@@ -1,0 +1,9 @@
+template {
+  name: "Elf Warmage"
+}
+set: "Blood War"
+number: 5
+type: "Humanoid"
+race: "Elf"
+class: "Wizard"
+size: MEDIUM

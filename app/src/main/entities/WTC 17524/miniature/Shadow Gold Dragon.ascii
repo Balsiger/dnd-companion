@@ -1,0 +1,9 @@
+template {
+  name: "Shadow Gold Dragon"
+}
+set: "Rage of Demons"
+number: 54
+race: "Gold Dragon"
+type: "Dragon"
+subtype: "Flying"
+subtype: "Planar"

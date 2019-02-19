@@ -1,0 +1,8 @@
+template {
+  name: "Minotaur Battle Shaman"
+}
+set: "Dungeon Delve"
+number: 30
+race: "Minotaur"
+type: "Monstrosity"
+size: MEDIUM

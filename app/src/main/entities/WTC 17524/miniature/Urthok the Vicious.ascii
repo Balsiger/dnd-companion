@@ -1,0 +1,10 @@
+template {
+  name: "Urthok the Vicious"
+}
+set: "Dragon Eye"
+number: 39
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+class: "Fighter"
+size: MEDIUM

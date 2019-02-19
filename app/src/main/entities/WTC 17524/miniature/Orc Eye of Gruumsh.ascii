@@ -1,0 +1,8 @@
+template {
+  name: "Orc Eye of Gruumsh"
+}
+set: "Dungeon Delve"
+number: 31
+type: "Humanoid"
+race: "Orc"
+size: MEDIUM

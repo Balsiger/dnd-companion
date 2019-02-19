@@ -1,0 +1,9 @@
+template {
+  name: "Su-Monster"
+}
+set: "Tomb of Annihilation"
+number: 11
+race: "Su-Monster"
+type: "Monstrosity"
+subtype: "Humanoid"
+size: MEDIUM

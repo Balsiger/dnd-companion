@@ -1,0 +1,9 @@
+template {
+  name: "Black Slaad"
+}
+set: "Savage Encounters"
+number: 4
+race: "Black Slaad"
+type: "Aberration"
+subtype: "Slaad"
+size: LARGE

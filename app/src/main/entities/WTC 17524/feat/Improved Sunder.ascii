@@ -1,0 +1,42 @@
+template {
+  name: "Improved Sunder"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 96
+      high: 96
+    }
+  }
+  world: "Generic"
+  description: "You are skilled at attacking your opponents\342\200\232\303\204\303\264 weapons and shields, as well as\n  other objects."
+  short_description: "+4 bonus on sunder attempts; no attack of opportunity"
+}
+type: GENERAL
+benefit: "When you strike at an object held or carried by an\n                    opponent (such as a weapon or shield), you do not provoke\n                    an attack of opportunity (see Sunder, page 158).\n\n                    You also gain a +4 bonus on any attack roll made to attack\n                    an object held or carried by another character."
+special: "A fighter may select Improved Sunder as one of his fighter\n                    bonus feats (see page 38)."
+normal: "Without this feat, you provoke an attack of opportunity\n                    when you strike at an object held or carried by another\n                    character."
+prerequisites: "Str 13, Power Attack."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,9 @@
+template {
+  name: "Mercenary General"
+}
+set: "Desert of Desolation"
+number: 21
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

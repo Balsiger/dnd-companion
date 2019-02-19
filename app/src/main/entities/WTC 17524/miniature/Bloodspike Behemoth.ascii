@@ -1,0 +1,8 @@
+template {
+  name: "Bloodspike Behemoth"
+}
+set: "Savage Encounters"
+number: 5
+type: "Beast"
+subtype: "Reptile"
+size: LARGE

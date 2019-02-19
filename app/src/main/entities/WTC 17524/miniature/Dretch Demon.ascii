@@ -1,0 +1,9 @@
+template {
+  name: "Dretch Demon"
+}
+set: "Rage of Demons"
+number: 2
+race: "Dretch"
+type: "Fiend"
+subtype: "Demon"
+size: SMALL

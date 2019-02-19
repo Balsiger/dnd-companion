@@ -1,0 +1,9 @@
+template {
+  name: "Gray Slaad B"
+}
+set: "Monster Menagerie 3"
+number: 21
+race: "Gray Slaad"
+type: "Aberration"
+subtype: "Slaad"
+size: MEDIUM

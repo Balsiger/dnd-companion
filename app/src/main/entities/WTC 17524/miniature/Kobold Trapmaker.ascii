@@ -1,0 +1,9 @@
+template {
+  name: "Kobold Trapmaker"
+}
+set: "Night Below"
+number: 35
+type: "Humanoid"
+race: "Kobold"
+class: "Expert"
+size: SMALL

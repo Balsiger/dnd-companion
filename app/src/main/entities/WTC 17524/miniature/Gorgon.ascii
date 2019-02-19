@@ -1,0 +1,8 @@
+template {
+  name: "Gorgon"
+}
+set: "Unhallowed"
+number: 39
+race: "Gorgon"
+type: "Monstrosity"
+size: LARGE

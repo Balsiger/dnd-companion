@@ -1,0 +1,9 @@
+template {
+  name: "Bugbear Lancebreaker"
+}
+set: "Against the Giants"
+number: 14
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Bugbear"
+size: MEDIUM

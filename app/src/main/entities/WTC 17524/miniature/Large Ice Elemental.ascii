@@ -1,0 +1,10 @@
+template {
+  name: "Large Ice Elemental"
+}
+set: "Unhallowed"
+number: 29
+race: "Ice Elemental"
+type: "Elemental"
+subtype: "Air"
+subtype: "Cold"
+size: LARGE

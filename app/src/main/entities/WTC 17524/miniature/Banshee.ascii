@@ -1,0 +1,8 @@
+template {
+  name: "Banshee"
+}
+set: "Rage of Demons"
+number: 21
+race: "Banshee"
+type: "Undead"
+subtype: "Humanoid"

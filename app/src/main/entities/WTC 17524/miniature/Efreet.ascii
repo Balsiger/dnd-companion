@@ -1,0 +1,10 @@
+template {
+  name: "Efreet"
+}
+set: "Rage of Demons"
+number: 33
+race: "Efreeti"
+type: "Elemental"
+subtype: "Genie"
+subtype: "Fire"
+subtype: "Flying"

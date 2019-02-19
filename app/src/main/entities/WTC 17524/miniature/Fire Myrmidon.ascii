@@ -1,0 +1,9 @@
+template {
+  name: "Fire Myrmidon"
+}
+set: "Elemental Evil"
+number: 34
+race: "Fire Myrmidon"
+type: "Elemental"
+subtype: "Fire"
+size: MEDIUM

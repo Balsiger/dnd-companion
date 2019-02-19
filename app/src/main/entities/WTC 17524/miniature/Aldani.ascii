@@ -1,0 +1,13 @@
+template {
+  name: "Aldani"
+}
+set: "Tomb of Annihilation"
+number: 13
+race: "Aldani"
+type: "Monstrosity"
+subtype: "Aquatic"
+subtype: "Lobsterfolk"
+subtype: "Yurian"
+subtype: "Crabman"
+subtype: "Lobster Man"
+size: MEDIUM

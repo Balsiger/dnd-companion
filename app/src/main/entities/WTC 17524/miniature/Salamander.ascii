@@ -1,0 +1,10 @@
+template {
+  name: "Salamander"
+}
+set: "Dragon Eye"
+number: 37
+race: "Salamander"
+type: "Elemental"
+subtype: "Fire"
+subtype: "Reptile"
+size: MEDIUM

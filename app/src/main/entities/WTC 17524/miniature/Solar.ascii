@@ -1,0 +1,9 @@
+template {
+  name: "Solar"
+}
+set: "Blood War"
+number: 10
+race: "Solar"
+type: "Celestial"
+subtype: "Angel"
+size: LARGE

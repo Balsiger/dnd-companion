@@ -1,0 +1,9 @@
+template {
+  name: "Githzerai Monk (Flame)"
+}
+set: "Storm King\'s Thunder"
+number: 19
+race: "Githzerai"
+type: "Humanoid"
+class: "Monk"
+size: MEDIUM

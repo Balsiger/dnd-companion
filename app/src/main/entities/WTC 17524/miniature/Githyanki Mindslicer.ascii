@@ -1,0 +1,8 @@
+template {
+  name: "Githyanki Mindslicer"
+}
+set: "Savage Encounters"
+number: 15
+race: "Githyanki"
+type: "Humanoid"
+size: MEDIUM

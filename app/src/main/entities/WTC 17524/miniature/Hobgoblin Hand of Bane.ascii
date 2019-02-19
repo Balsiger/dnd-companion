@@ -1,0 +1,9 @@
+template {
+  name: "Hobgoblin Hand of Bane"
+}
+set: "Savage Encounters"
+number: 21
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+size: MEDIUM

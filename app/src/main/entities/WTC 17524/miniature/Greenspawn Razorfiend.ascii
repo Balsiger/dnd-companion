@@ -1,0 +1,9 @@
+template {
+  name: "Greenspawn Razorfiend"
+}
+set: "War of the Dragon Queen"
+number: 35
+race: "Greenspawn"
+subtype: "Dragonspawn"
+type: "Monstrosity"
+size: LARGE

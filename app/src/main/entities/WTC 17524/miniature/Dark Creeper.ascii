@@ -1,0 +1,10 @@
+template {
+  name: "Dark Creeper"
+}
+set: "Underdark"
+number: 42
+race: "Dark Creeper"
+type: "Humanoid"
+subtype: "Dark One"
+class: "Fighter"
+size: SMALL

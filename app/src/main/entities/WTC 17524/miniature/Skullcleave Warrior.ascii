@@ -1,0 +1,10 @@
+template {
+  name: "Skullcleave Warrior"
+}
+set: "Against the Giants"
+number: 24
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

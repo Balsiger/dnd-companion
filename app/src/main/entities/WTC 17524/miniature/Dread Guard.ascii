@@ -1,0 +1,8 @@
+template {
+  name: "Dread Guard"
+}
+set: "Archfiends"
+number: 31
+race: "Dread Guard"
+type: "Construct"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Orc Mauler"
+}
+set: "War Drums"
+number: 55
+type: "Humanoid"
+race: "Orc"
+class: "Fighter"
+class: "Barbarian"
+size: MEDIUM

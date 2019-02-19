@@ -1,0 +1,10 @@
+template {
+  name: "Rat Swarm (SE)"
+}
+set: "Savage Encounters"
+number: 28
+race: "Rat Swarm"
+type: "Vermin"
+subtype: "Rat"
+subtype: "Swarm"
+size: MEDIUM

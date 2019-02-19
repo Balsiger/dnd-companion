@@ -1,0 +1,8 @@
+template {
+  name: "Witchknife"
+}
+set: "War of the Dragon Queen"
+number: 41
+race: "Witchknife"
+type: "Humanoid"
+size: MEDIUM

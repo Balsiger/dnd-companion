@@ -1,0 +1,10 @@
+template {
+  name: "Poison Dusk Lizardfolk"
+}
+set: "War of the Dragon Queen"
+number: 40
+type: "Humanoid"
+subtype: "Reptile"
+subtype: "Lizardfolk"
+class: "Ranger"
+size: MEDIUM

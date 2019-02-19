@@ -1,0 +1,8 @@
+template {
+  name: "Neogi Great Older Master"
+}
+set: "Lords of Madness"
+number: 33
+type: "Aberration"
+race: "Neogi"
+size: LARGE

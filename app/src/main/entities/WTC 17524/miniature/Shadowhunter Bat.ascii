@@ -1,0 +1,9 @@
+template {
+  name: "Shadowhunter Bat"
+}
+set: "Dungeons of Dread"
+number: 58
+race: "Bat"
+type: "Monstrosity"
+subtype: "Winged"
+size: MEDIUM

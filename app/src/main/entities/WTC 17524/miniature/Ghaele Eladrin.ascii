@@ -1,0 +1,8 @@
+template {
+  name: "Ghaele Eladrin"
+}
+set: "Angelfire"
+number: 19
+type: "Humanoid"
+race: "Eladrin"
+size: MEDIUM

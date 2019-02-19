@@ -1,0 +1,9 @@
+template {
+  name: "Uthgardt Barbarian (Hair)"
+}
+set: "Monster Menagerie 2"
+number: 33
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

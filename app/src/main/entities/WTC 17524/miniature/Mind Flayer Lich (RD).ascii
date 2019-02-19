@@ -1,0 +1,8 @@
+template {
+  name: "Mind Flayer Lich (RD)"
+}
+set: "Rage of Demons"
+number: 38
+race: "Lich"
+type: "Undead"
+subtype: "Humanoid"

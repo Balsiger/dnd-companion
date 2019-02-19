@@ -1,0 +1,9 @@
+template {
+  name: "Justice Archon"
+}
+set: "Angelfire"
+number: 5
+race: "Justice Archon"
+type: "Celestial"
+subtype: "Archon"
+size: MEDIUM

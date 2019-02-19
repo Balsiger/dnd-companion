@@ -1,0 +1,9 @@
+template {
+  name: "Baaz Draconian"
+}
+set: "Dragon Eye"
+number: 28
+race: "Draconian"
+type: "Dragon"
+subtype: "Humanoid"
+size: MEDIUM

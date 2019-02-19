@@ -1,0 +1,8 @@
+template {
+  name: "Dwarf Beguiler"
+}
+set: "Lords of Madness"
+number: 13
+type: "Humanoid"
+race: "Dwarf"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Feygrove Choker"
+}
+set: "Dungeon Delve"
+number: 14
+race: "Choker"
+type: "Aberration"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Basilisk"
+}
+set: "Giants of Legend"
+number: 13
+race: "Basilisk"
+type: "Monstrosity"
+subtype: "Reptile"
+size: MEDIUM

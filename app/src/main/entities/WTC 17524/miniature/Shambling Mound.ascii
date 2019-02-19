@@ -1,0 +1,8 @@
+template {
+  name: "Shambling Mound"
+}
+set: "Harbinger"
+number: 36
+race: "Shambling Mound"
+type: "Plant"
+size: LARGE

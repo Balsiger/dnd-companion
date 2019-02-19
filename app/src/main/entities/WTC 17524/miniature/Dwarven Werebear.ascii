@@ -1,0 +1,9 @@
+template {
+  name: "Dwarven Werebear"
+}
+set: "Dragon Eye"
+number: 10
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: MEDIUM

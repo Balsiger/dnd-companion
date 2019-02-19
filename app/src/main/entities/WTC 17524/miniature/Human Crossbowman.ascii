@@ -1,0 +1,10 @@
+template {
+  name: "Human Crossbowman"
+}
+set: "Dragon Eye"
+number: 5
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Crossbow"

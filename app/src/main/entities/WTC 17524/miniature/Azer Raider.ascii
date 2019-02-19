@@ -1,0 +1,10 @@
+template {
+  name: "Azer Raider"
+}
+set: "Harbinger"
+number: 32
+race: "Azer"
+type: "Elemental"
+subtype: "Fire"
+subtype: "Humanoid"
+size: MEDIUM

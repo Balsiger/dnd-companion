@@ -1,0 +1,8 @@
+template {
+  name: "Mind Flayer"
+}
+set: "Harbinger"
+number: 50
+race: "Mind Flayer"
+type: "Aberration"
+size: MEDIUM

@@ -1,0 +1,40 @@
+template {
+  name: "Craft Rod"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 92
+      high: 92
+    }
+  }
+  world: "Generic"
+  description: "You can create magic rods, which have varied magical effects."
+  short_description: "Create magic rods"
+}
+type: ITEM_CREATION
+benefit: "You can create any rod whose prerequisites you meet (see\n                    the Dungeon Master\342\200\232\303\204\303\264s Guide for prerequisites and other\n                    infor- mation on rods). Crafting a rod takes one day for\n                    each 1,000 gp in its base price. To craft a rod, you must\n                    spend 1/25 of its base price in XP and use up raw materials\n                    costing one-half of its base price.\n\n                    Some rods incur extra costs in material components or XP,\n                    as noted in their descriptions. These costs are in addition\n                    to those derived from the rod\342\200\232\303\204\303\264s base price."
+prerequisites: "Caster level 9th."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,8 @@
+template {
+  name: "Fire Bat"
+}
+set: "Against the Giants"
+number: 26
+type: "Elemental"
+subtype: "Fire"
+size: MEDIUM

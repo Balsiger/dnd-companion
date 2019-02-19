@@ -1,0 +1,8 @@
+template {
+  name: "Carrion Crawler"
+}
+set: "Dragon Eye"
+number: 41
+race: "Carrion Crawler"
+type: "Monstrosity"
+size: LARGE

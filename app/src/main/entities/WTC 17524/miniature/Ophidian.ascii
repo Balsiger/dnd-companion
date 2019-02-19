@@ -1,0 +1,9 @@
+template {
+  name: "Ophidian"
+}
+set: "Angelfire"
+number: 57
+race: "Ophidian"
+type: "Monstrosity"
+subtype: "Reptile"
+size: MEDIUM

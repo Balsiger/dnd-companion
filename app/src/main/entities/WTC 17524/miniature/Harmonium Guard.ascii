@@ -1,0 +1,10 @@
+template {
+  name: "Harmonium Guard"
+}
+set: "Blood War"
+number: 8
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

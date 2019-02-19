@@ -1,0 +1,9 @@
+template {
+  name: "Valenar Commander"
+}
+set: "Aberrations"
+number: 21
+type: "Humanoid"
+race: "Elf"
+class: "Fighter"
+size: MEDIUM

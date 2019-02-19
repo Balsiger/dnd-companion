@@ -1,0 +1,9 @@
+template {
+  name: "Iron Dragon Prowler (Adult)"
+}
+set: "Demonweb"
+number: 60
+race: "Iron Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Ferrous"

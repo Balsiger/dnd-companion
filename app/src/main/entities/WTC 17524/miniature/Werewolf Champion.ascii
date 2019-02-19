@@ -1,0 +1,10 @@
+template {
+  name: "Werewolf Champion"
+}
+set: "Desert of Desolation"
+number: 58
+race: "Werewolf"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: MEDIUM

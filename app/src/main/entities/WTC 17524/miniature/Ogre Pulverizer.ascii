@@ -1,0 +1,8 @@
+template {
+  name: "Ogre Pulverizer"
+}
+set: "Demonweb"
+number: 30
+type: "Giant"
+race: "Ogre"
+size: LARGE

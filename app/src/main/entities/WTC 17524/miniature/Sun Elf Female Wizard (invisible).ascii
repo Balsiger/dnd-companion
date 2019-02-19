@@ -1,0 +1,9 @@
+template {
+  name: "Sun Elf Female Wizard (invisible)"
+}
+set: "Tyranny of Dragons"
+number: 49
+type: "Humanoid"
+race: "Elf"
+class: "Wizard"
+size: MEDIUM

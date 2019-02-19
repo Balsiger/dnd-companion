@@ -1,0 +1,8 @@
+template {
+  name: "Sprite (Sword)"
+}
+set: "Storm King\'s Thunder"
+number: 2
+race: "Sprite"
+type: "Fey"
+size: SMALL

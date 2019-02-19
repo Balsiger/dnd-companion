@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Half-Orc Barbarian"
+}
+set: "Monster Menagerie 2"
+number: 19
+type: "Humanoid"
+race: "Half-Orc"
+class: "Barbarian"
+size: MEDIUM
+subtype: "Invisible"

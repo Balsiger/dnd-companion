@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Syreth"
+}
+set: "War of the Dragon Queen"
+number: 3
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Stirge Drone"
+}
+set: "Demonweb"
+number: 56
+race: "Stirge"
+type: "Beast"
+size: SMALL

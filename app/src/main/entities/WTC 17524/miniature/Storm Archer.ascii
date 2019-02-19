@@ -1,0 +1,9 @@
+template {
+  name: "Storm Archer"
+}
+set: "War of the Dragon Queen"
+number: 16
+type: "Humanoid"
+race: "Elf"
+class: "Fighter"
+size: MEDIUM

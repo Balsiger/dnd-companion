@@ -1,0 +1,10 @@
+template {
+  name: "King Hekaton (Storm Giant)"
+}
+set: "Storm King\'s Thunder"
+number: 41
+type: "Giant"
+race: "Storm Giant"
+subtype: "Aquatic"
+subtype: "Giant"
+size: HUGE

@@ -1,0 +1,10 @@
+template {
+  name: "Death Slaad"
+}
+set: "Underdark"
+number: 43
+race: "Death Slaad"
+type: "Aberration"
+subtype: "Slaad"
+subtype: "Shapechanger"
+size: MEDIUM

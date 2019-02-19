@@ -1,0 +1,9 @@
+template {
+  name: "Count Strahd Von Zarovich, Vampire"
+}
+set: "Unhallowed"
+number: 35
+race: "Vampire"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

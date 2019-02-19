@@ -1,0 +1,40 @@
+template {
+  name: "Improved Counterspell"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 95
+      high: 95
+    }
+  }
+  world: "Generic"
+  description: "You understand the nuances of magic to such an extent that you can counter\n  your opponent\342\200\232\303\204\303\264s spells with great efficiency."
+  short_description: "Counterspell with spell of same school"
+}
+type: GENERAL
+benefit: "When counterspelling, you may use a spell of the same\n                    school that is one or more spell levels higher than the\n                    target spell."
+normal: "Without this feat, you may counter a spell only with the\n                    same spell or with a spell specifically designated as\n                    countering the target spell."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

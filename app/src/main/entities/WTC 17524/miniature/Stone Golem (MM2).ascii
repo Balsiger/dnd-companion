@@ -1,0 +1,9 @@
+template {
+  name: "Stone Golem (MM2)"
+}
+set: "Monster Menagerie 2"
+number: 30
+race: "Stone Golem"
+type: "Construct"
+subtype: "Golem"
+size: LARGE

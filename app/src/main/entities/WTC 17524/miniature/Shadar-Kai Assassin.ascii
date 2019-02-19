@@ -1,0 +1,9 @@
+template {
+  name: "Shadar-Kai Assassin"
+}
+set: "Desert of Desolation"
+number: 35
+type: "Humanoid"
+race: "Shadar-Kai"
+class: "Rogue"
+size: MEDIUM

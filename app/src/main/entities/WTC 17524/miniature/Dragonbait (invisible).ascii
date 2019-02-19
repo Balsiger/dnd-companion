@@ -1,0 +1,9 @@
+template {
+  name: "Dragonbait (invisible)"
+}
+set: "Tomb of Annihilation"
+number: 39
+race: "Saurial"
+subtype: "Reptilian"
+subtype: "Saurial"
+size: MEDIUM

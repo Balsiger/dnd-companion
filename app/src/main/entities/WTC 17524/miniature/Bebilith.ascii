@@ -1,0 +1,10 @@
+template {
+  name: "Bebilith"
+}
+set: "Lords of Madness"
+race: "Bebilith"
+number: 3
+type: "Fiend"
+subtype: "Chaotic"
+subtype: "Evil"
+size: HUGE

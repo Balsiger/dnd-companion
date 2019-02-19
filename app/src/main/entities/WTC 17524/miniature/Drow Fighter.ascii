@@ -1,0 +1,9 @@
+template {
+  name: "Drow Fighter"
+}
+set: "Giants of Legend"
+number: 45
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: MEDIUM

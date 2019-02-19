@@ -1,0 +1,9 @@
+template {
+  name: "Displacer Serpent"
+}
+set: "Giants of Legend"
+number: 43
+race: "Displacer Serpent"
+type: "Monstrosity"
+subtype: ""
+size: MEDIUM

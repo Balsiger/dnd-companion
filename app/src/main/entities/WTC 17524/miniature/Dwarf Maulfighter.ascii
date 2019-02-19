@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Maulfighter"
+}
+set: "Desert of Desolation"
+number: 4
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

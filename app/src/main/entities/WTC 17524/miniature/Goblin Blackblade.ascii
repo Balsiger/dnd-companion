@@ -1,0 +1,10 @@
+template {
+  name: "Goblin Blackblade"
+}
+set: "War Drums"
+number: 30
+type: "Humanoid"
+race: "Goblin"
+subtype: "Goblinoid"
+class: "Rogue"
+size: SMALL

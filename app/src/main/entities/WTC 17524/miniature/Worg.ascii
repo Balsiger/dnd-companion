@@ -1,0 +1,8 @@
+template {
+  name: "Worg"
+}
+set: "Harbinger"
+number: 80
+race: "Worg"
+type: "Monstrosity"
+size: MEDIUM

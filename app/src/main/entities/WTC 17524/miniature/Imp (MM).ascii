@@ -1,0 +1,9 @@
+template {
+  name: "Imp (MM)"
+}
+set: "Monster Menagerie"
+number: 2
+race: "Imp"
+type: "Fiend"
+subtype: "Devil"
+size: TINY

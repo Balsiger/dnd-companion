@@ -1,0 +1,8 @@
+template {
+  name: "Corruption Corpse"
+}
+set: "Demonweb"
+number: 46
+type: "Undead"
+subtype: "Zombie"
+size: MEDIUM

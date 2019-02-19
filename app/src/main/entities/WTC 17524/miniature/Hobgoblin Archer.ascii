@@ -1,0 +1,10 @@
+template {
+  name: "Hobgoblin Archer"
+}
+set: "War Drums"
+number: 32
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+class: "Fighter"
+size: MEDIUM

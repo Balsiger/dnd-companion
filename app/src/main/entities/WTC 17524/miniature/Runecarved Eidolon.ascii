@@ -1,0 +1,8 @@
+template {
+  name: "Runecarved Eidolon"
+}
+set: "Dungeons of Dread"
+number: 49
+race: "Eidolon"
+type: "Construct"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Wood Elf Skirmisher"
+}
+set: "Harbinger"
+number: 31
+type: "Humanoid"
+race: "Elf"
+class: "Ranger"
+size: MEDIUM

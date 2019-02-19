@@ -1,0 +1,9 @@
+template {
+  name: "Concord Illithid"
+}
+set: "Demonweb"
+number: 25
+race: "Mind Flayer"
+type: "Aberration"
+subtype: "Mind Flayer"
+size: MEDIUM

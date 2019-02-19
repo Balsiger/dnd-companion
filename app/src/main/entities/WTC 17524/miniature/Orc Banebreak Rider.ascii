@@ -1,0 +1,9 @@
+template {
+  name: "Orc Banebreak Rider"
+}
+set: "Night Below"
+number: 59
+type: "Humanoid"
+race: "Orc"
+class: "Barbarian"
+size: LARGE

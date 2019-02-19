@@ -1,0 +1,11 @@
+template {
+  name: "Warforged Hero"
+}
+set: "Aberrations"
+number: 10
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Redcap"
+}
+set: "Tomb of Annihilation"
+number: 1
+race: "Redcap"
+type: "Fey"
+size: SMALL

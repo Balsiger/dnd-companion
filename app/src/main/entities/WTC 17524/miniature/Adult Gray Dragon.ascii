@@ -1,0 +1,9 @@
+template {
+  name: "Adult Gray Dragon"
+}
+set: "Savage Encounters"
+number: 1
+race: "Gray Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Faerunian"

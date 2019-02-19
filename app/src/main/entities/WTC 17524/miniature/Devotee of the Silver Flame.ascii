@@ -1,0 +1,10 @@
+template {
+  name: "Devotee of the Silver Flame"
+}
+set: "Unhallowed"
+number: 4
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

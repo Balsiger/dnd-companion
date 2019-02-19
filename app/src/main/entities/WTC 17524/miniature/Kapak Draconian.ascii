@@ -1,0 +1,9 @@
+template {
+  name: "Kapak Draconian"
+}
+set: "Dragon Eye"
+number: 34
+race: "Draconian"
+type: "Dragon"
+subtype: "Humanoid"
+size: MEDIUM

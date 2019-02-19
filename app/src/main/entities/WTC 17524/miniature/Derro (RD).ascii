@@ -1,0 +1,9 @@
+template {
+  name: "Derro (RD)"
+}
+set: "Rage of Demons"
+number: 1
+race: "Derro"
+type: "Humanoid"
+subtype: ""
+size: SMALL

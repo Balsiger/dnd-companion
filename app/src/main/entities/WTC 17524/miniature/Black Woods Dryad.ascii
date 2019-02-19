@@ -1,0 +1,9 @@
+template {
+  name: "Black Woods Dryad"
+}
+set: "Desert of Desolation"
+number: 14
+race: "Dryad"
+type: "Fey"
+subtype: "Plant"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Kenku Warrior"
+}
+set: "Lords of Madness"
+number: 25
+type: "Humanoid"
+race: "Kenku"
+size: MEDIUM

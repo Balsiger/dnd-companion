@@ -1,0 +1,9 @@
+template {
+  name: "Devis, Half-Elf Bard"
+}
+set: "Harbinger"
+number: 20
+type: "Humanoid"
+race: "Half-Elf"
+class: "Bard"
+size: MEDIUM

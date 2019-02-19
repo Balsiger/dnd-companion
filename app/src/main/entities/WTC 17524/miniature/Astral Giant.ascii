@@ -1,0 +1,9 @@
+template {
+  name: "Astral Giant"
+}
+set: "Lords of Madness"
+number: 2
+race: "Astral Giant"
+type: "Giant"
+subtype: "Humanoid"
+size: LARGE

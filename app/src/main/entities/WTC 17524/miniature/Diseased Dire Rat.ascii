@@ -1,0 +1,9 @@
+template {
+  name: "Diseased Dire Rat"
+}
+set: "War of the Dragon Queen"
+number: 28
+race: "Dire Rat"
+type: "Beast"
+subtype: "Dire"
+size: MEDIUM

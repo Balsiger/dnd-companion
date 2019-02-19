@@ -1,0 +1,9 @@
+template {
+  name: "Deathlock"
+}
+set: "Death Knell"
+number: 50
+race: "Deathlock"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

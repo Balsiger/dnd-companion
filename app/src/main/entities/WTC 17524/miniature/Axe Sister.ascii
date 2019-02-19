@@ -1,0 +1,9 @@
+template {
+  name: "Axe Sister"
+}
+set: "Harbinger"
+number: 16
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

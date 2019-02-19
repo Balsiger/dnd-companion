@@ -1,0 +1,8 @@
+template {
+  name: "Gauth"
+}
+set: "Archfiends"
+number: 34
+race: "Gauth"
+type: "Aberration"
+size: MEDIUM

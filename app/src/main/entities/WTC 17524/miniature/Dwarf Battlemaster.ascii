@@ -1,0 +1,7 @@
+template {
+  name: "Dwarf Battlemaster"
+}
+set: "Dungeons of Dread S"
+type: "Humanoid"
+race: "Dwarf"
+size: MEDIUM

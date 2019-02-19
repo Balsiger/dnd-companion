@@ -1,0 +1,8 @@
+template {
+  name: "Darkling"
+}
+set: "Dragon Heist"
+number: 2
+race: "Darkling"
+type: "Fey"
+size: SMALL

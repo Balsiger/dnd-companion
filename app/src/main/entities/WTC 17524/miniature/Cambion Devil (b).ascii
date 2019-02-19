@@ -1,0 +1,9 @@
+template {
+  name: "Cambion Devil (b)"
+}
+set: "Dragon Heist"
+number: 17
+race: "Cambion"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

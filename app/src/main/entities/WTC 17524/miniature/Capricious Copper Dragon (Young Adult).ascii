@@ -1,0 +1,9 @@
+template {
+  name: "Capricious Copper Dragon (Young Adult)"
+}
+set: "Desert of Desolation"
+number: 23
+race: "Copper Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Metallic"

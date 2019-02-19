@@ -1,0 +1,8 @@
+template {
+  name: "Large Astral Construct"
+}
+set: "Unhallowed"
+number: 18
+race: "Astral Construct"
+type: "Construct"
+size: LARGE

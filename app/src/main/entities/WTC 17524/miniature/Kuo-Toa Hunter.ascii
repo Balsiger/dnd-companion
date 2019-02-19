@@ -1,0 +1,9 @@
+template {
+  name: "Kuo-Toa Hunter"
+}
+set: "Night Below"
+number: 54
+type: "Humanoid"
+race: "Kuo-Toa"
+class: "Ranger"
+size: MEDIUM

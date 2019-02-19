@@ -1,0 +1,8 @@
+template {
+  name: "Rakshasa (MM)"
+}
+set: "Monster Menagerie"
+number: 36
+race: "Rakshasa"
+type: "Fiend"
+size: MEDIUM

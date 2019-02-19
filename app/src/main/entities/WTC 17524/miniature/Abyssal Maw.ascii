@@ -1,0 +1,11 @@
+template {
+  name: "Abyssal Maw"
+}
+set: "Dragon Eye"
+number: 43
+race: "Abyssal Maw"
+type: "Fiend"
+subtype: "Chaotic"
+subtype: "Evil"
+subtype: "Extraplanar"
+size: MEDIUM

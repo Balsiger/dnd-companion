@@ -1,0 +1,10 @@
+template {
+  name: "Hobgoblin Talon of Tiamat"
+}
+set: "War of the Dragon Queen"
+number: 36
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+class: "Fighter"
+size: MEDIUM

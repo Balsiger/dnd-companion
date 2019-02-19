@@ -1,0 +1,9 @@
+template {
+  name: "Skyjec Roc"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 30
+type: "Monstrosity"
+subtype: "Winged"
+race: "Roc"
+size: LARGE

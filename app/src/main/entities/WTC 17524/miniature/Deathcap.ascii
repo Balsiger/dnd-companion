@@ -1,0 +1,10 @@
+template {
+  name: "Deathcap"
+}
+set: "Demonweb"
+number: 54
+race: "Deathcap"
+type: "Plant"
+subtype: "Mushroom"
+subtype: "Combat Complication"
+size: MEDIUM

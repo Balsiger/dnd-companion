@@ -1,0 +1,8 @@
+template {
+  name: "Drow Adventurer"
+}
+set: "Demonweb"
+number: 11
+type: "Humanoid"
+race: "Drow"
+size: MEDIUM

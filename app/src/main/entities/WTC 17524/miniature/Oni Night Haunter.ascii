@@ -1,0 +1,8 @@
+template {
+  name: "Oni Night Haunter"
+}
+set: "Lords of Madness"
+number: 35
+race: "Oni"
+type: "Humanoid"
+size: LARGE

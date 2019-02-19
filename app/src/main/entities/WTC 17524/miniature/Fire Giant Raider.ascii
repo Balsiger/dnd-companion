@@ -1,0 +1,9 @@
+template {
+  name: "Fire Giant Raider"
+}
+set: "Against the Giants"
+number: 19
+race: "Fire Giant"
+type: "Giant"
+subtype: "Fire"
+size: LARGE

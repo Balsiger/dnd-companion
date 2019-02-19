@@ -1,0 +1,9 @@
+template {
+  name: "Scorpion Clan Drow Fighter"
+}
+set: "Angelfire"
+number: 34
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: MEDIUM

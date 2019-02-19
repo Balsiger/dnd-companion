@@ -1,0 +1,9 @@
+template {
+  name: "Small White Dragon (Very Young)"
+}
+set: "Dragon Eye"
+number: 59
+race: "White Dragon"
+type: "Dragon"
+size: SMALL
+subtype: "Chromatic"

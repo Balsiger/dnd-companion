@@ -1,0 +1,8 @@
+template {
+  name: "Kenku (Bow)"
+}
+set: "Storm King\'s Thunder"
+number: 11
+race: "Kenku"
+type: "Humanoid"
+size: MEDIUM

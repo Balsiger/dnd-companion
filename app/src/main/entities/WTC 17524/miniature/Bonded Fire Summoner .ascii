@@ -1,0 +1,8 @@
+template {
+  name: "Bonded Fire Summoner "
+}
+set: "War of the Dragon Queen"
+number: 10
+race: "Half-Elf"
+class: "Wizard"
+size: MEDIUM

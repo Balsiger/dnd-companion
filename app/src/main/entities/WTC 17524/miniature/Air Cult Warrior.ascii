@@ -1,0 +1,10 @@
+template {
+  name: "Air Cult Warrior"
+}
+set: "Elemental Evil"
+number: 14
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Crossbow"

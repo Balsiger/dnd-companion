@@ -1,0 +1,9 @@
+template {
+  name: "Helena Nostrum"
+}
+set: "Storm King\'s Thunder"
+number: 38
+type: "Humanoid"
+race: "Human"
+size: MEDIUM
+class: "Fighter"

@@ -1,0 +1,9 @@
+template {
+  name: "Vrock"
+}
+set: "Dungeons of Dread"
+number: 20
+race: "Vrock"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

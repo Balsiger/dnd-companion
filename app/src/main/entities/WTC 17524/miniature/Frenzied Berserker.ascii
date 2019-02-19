@@ -1,0 +1,9 @@
+template {
+  name: "Frenzied Berserker"
+}
+set: "Aberrations"
+number: 17
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

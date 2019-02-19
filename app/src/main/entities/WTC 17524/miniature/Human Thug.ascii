@@ -1,0 +1,10 @@
+template {
+  name: "Human Thug"
+}
+set: "Harbinger"
+number: 47
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

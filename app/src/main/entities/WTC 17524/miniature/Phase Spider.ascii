@@ -1,0 +1,10 @@
+template {
+  name: "Phase Spider"
+}
+set: "Monster Menagerie"
+number: 28
+race: "Phase Spider"
+type: "Monstrosity"
+subtype: "Spider"
+subtype: "Demon"
+size: LARGE

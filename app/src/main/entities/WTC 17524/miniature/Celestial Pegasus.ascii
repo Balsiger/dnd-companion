@@ -1,0 +1,8 @@
+template {
+  name: "Celestial Pegasus"
+}
+set: "Angelfire"
+number: 15
+race: "Pegasus"
+type: "Celestial"
+size: LARGE

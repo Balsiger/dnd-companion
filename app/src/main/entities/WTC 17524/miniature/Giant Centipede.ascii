@@ -1,0 +1,10 @@
+template {
+  name: "Giant Centipede"
+}
+set: "Dungeons of Dread"
+number: 56
+race: "Giant Centipede"
+type: "Beast"
+subtype: "Oversized"
+subtype: "Animal"
+size: MEDIUM

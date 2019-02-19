@@ -1,0 +1,11 @@
+template {
+  name: "Blackspawn Exterminator"
+}
+set: "War of the Dragon Queen"
+number: 42
+race: "Dragonspawn"
+type: "Monstrosity"
+subtype: "Dragonspawn"
+subtype: "Dragon"
+class: "Rogue"
+size: MEDIUM

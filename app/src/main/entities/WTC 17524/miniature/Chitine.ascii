@@ -1,0 +1,8 @@
+template {
+  name: "Chitine"
+}
+set: "Dragon Eye"
+number: 47
+race: "Chitine"
+type: "Monstrosity"
+size: SMALL

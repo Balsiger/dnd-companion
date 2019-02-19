@@ -1,0 +1,9 @@
+template {
+  name: "Large White Dragon (Young Adult)"
+}
+set: "Night Below"
+number: 58
+race: "White Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Chromatic"

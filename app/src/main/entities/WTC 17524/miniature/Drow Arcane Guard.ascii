@@ -1,0 +1,10 @@
+template {
+  name: "Drow Arcane Guard"
+}
+set: "Underdark"
+number: 47
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+class: "Wizard"
+size: MEDIUM

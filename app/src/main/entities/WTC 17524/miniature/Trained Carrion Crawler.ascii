@@ -1,0 +1,8 @@
+template {
+  name: "Trained Carrion Crawler"
+}
+set: "Night Below"
+number: 42
+race: "Carrion Crawler"
+type: "Monstrosity"
+size: LARGE

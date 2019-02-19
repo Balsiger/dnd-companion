@@ -1,0 +1,7 @@
+template {
+  name: "Kuo-toa Archpriest"
+}
+set: "Rage of Demons"
+number: 24
+type: "Humanoid"
+race: "Kuo-Toa"

@@ -1,0 +1,10 @@
+template {
+  name: "Bluespawn Godslayer"
+}
+set: "War of the Dragon Queen"
+number: 26
+race: "Bluespawn"
+type: "Monstrosity"
+subtype: "Dragonspawn"
+subtype: "Reptile"
+size: HUGE

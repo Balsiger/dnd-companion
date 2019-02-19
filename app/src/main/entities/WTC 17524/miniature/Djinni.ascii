@@ -1,0 +1,10 @@
+template {
+  name: "Djinni"
+}
+set: "Angelfire"
+number: 17
+race: "Djinni"
+type: "Elemental"
+subtype: "Air"
+subtype: "Genie"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Skeletal Dwarf"
+}
+set: "Death Knell"
+number: 40
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

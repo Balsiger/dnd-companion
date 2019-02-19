@@ -1,0 +1,9 @@
+template {
+  name: "Drow Arachnomancer"
+}
+set: "Underdark"
+number: 46
+type: "Humanoid"
+race: "Drow"
+class: "Cleric"
+size: MEDIUM

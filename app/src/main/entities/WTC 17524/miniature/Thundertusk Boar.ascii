@@ -1,0 +1,9 @@
+template {
+  name: "Thundertusk Boar"
+}
+set: "Desert of Desolation"
+number: 9
+race: "Boar"
+type: "Beast"
+subtype: "Animal"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Stone Giant"
+}
+set: "Angelfire"
+number: 8
+race: "Stone Giant"
+type: "Giant"
+subtype: "Earth"
+size: LARGE

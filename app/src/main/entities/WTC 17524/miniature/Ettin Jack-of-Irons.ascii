@@ -1,0 +1,8 @@
+template {
+  name: "Ettin Jack-of-Irons"
+}
+set: "Dungeons of Dread"
+number: 38
+race: "Ettin"
+type: "Giant"
+size: LARGE

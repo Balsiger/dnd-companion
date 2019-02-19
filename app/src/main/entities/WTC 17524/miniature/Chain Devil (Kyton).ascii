@@ -1,0 +1,9 @@
+template {
+  name: "Chain Devil (Kyton)"
+}
+set: "Dungeon Delve"
+number: 11
+race: "Chain Devil"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

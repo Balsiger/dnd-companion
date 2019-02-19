@@ -1,0 +1,11 @@
+template {
+  name: "Warforged Wizard"
+}
+set: "Death Knell"
+number: 11
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+class: "Wizard"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Mercykiller"
+}
+set: "Blood War"
+number: 40
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

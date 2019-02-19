@@ -1,0 +1,9 @@
+template {
+  name: "Wemic Barbarian"
+}
+set: "War Drums"
+number: 25
+race: "Wemic"
+type: "Monstrosity"
+class: "Barbarian"
+size: LARGE

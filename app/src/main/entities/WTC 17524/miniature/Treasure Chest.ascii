@@ -1,0 +1,7 @@
+template {
+  name: "Treasure Chest"
+}
+set: "Monster Menagerie 3"
+number: 45
+type: "Object"
+size: LARGE

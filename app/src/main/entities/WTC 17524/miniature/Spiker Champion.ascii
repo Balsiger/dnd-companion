@@ -1,0 +1,8 @@
+template {
+  name: "Spiker Champion"
+}
+set: "Angelfire"
+number: 7
+race: "Spiker"
+type: "Monstrosity"
+size: MEDIUM

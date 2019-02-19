@@ -1,0 +1,9 @@
+template {
+  name: "Hyena"
+}
+set: "Harbinger"
+number: 67
+race: "Hyena"
+type: "Beast"
+subtype: "Animal"
+size: MEDIUM

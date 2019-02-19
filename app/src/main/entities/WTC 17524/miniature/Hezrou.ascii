@@ -1,0 +1,9 @@
+template {
+  name: "Hezrou"
+}
+set: "Legendary Evils"
+number: 25
+race: "Hezrou"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

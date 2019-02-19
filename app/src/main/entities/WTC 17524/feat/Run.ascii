@@ -1,0 +1,40 @@
+template {
+  name: "Run"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 99
+      high: 99
+    }
+  }
+  world: "Generic"
+  description: "You are fleet of foot."
+  short_description: "Run 5 times normal speed, +4 bonus on Jump checks made after a running start"
+}
+type: GENERAL
+benefit: "When run- ning, you move five times your normal speed (if\n                    wearing medium, light, or no armor and carry- ing no more\n                    than a medium load) or four times your speed (if wearing\n                    heavy armor or carrying a heavy load). If you make a jump\n                    after a running start (see the Jump skill des- cription,\n                    page 77), you gain a +4 bonus on your Jump check. While\n                    run- ning, you retain your Dex- terity bonus to AC."
+normal: "You move four times your speed while running (if wearing\n                    med- ium, light or no armor and carrying no more than a\n                    light load) or three times your speed (if wearing heavy\n                    armor or carrying a medium or heavy load), and you lose\n                    your Dexterity bonus to AC."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

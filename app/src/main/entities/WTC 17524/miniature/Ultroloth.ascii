@@ -1,0 +1,10 @@
+template {
+  name: "Ultroloth"
+}
+set: "Unhallowed"
+number: 47
+race: "Ultroloth"
+type: "Fiend"
+subtype: "Demon"
+subtype: "Yugoloth"
+size: MEDIUM

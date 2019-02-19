@@ -1,0 +1,10 @@
+template {
+  name: "Rat Swarm"
+}
+set: "Unhallowed"
+number: 23
+race: "Rat Swarm"
+type: "Vermin"
+subtype: "Rat"
+subtype: "Swarm"
+size: TINY

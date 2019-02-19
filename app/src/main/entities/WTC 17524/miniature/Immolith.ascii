@@ -1,0 +1,12 @@
+template {
+  name: "Immolith"
+}
+set: "Dungeons of Dread"
+number: 15
+race: "Immolith"
+type: "Fiend"
+subtype: "Demon"
+subtype: "Undead"
+subtype: "Humanoid"
+subtype: "Tana'ri"
+size: LARGE

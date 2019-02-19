@@ -1,0 +1,10 @@
+template {
+  name: "Brown Bear"
+}
+set: "Dragon Heist"
+number: 25
+race: "Brown Bear"
+type: "Beast"
+subtype: "Animal"
+subtype: "Bear"
+size: LARGE

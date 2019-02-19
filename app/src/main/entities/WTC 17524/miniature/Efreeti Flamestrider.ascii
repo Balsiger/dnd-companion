@@ -1,0 +1,10 @@
+template {
+  name: "Efreeti Flamestrider"
+}
+set: "Against the Giants"
+number: 5
+race: "Efreeti"
+type: "Elemental"
+subtype: "Genie"
+subtype: "Fire"
+size: LARGE

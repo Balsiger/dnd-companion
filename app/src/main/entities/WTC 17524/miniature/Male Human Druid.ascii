@@ -1,0 +1,9 @@
+template {
+  name: "Male Human Druid"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 17
+type: "Humanoid"
+race: "Human"
+class: "Druid"
+size: MEDIUM

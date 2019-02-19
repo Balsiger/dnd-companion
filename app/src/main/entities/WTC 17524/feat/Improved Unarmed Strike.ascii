@@ -1,0 +1,41 @@
+template {
+  name: "Improved Unarmed Strike"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 96
+      high: 97
+    }
+  }
+  world: "Generic"
+  description: "You are skilled at fighting while unarmed."
+  short_description: "Considered armed even when unarmed"
+}
+type: GENERAL
+benefit: "You are considered to be armed even when unarmed \342\200\232\303\204\303\256 that\n                    is, you do not provoke attacks or opportunity from armed\n                    opponents when you attack them while unarmed. However, you\n                    still get an attack of opportunity against any opponent who\n                    makes an unarmed attack on you.\n\n                    In addition, your unarmed strikes can deal lethal or\n                    nonlethal damage, at your option."
+special: "A monk automatically gains Improved Unarmed Strike as a\n                    bonus feat at 1st level. She need not select it.\n\n                    A fighter may select Improved Unarmed Strike as one of his\n                    fighter bonus feats (see page 38)."
+normal: "Without this feat, you are considered unarmed when\n                    attacking with an unarmed strike, and you can deal only\n                    nonlethal damage with such an attack."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

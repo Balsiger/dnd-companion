@@ -1,0 +1,7 @@
+template {
+  name: "Carrion Crawler (RD)"
+}
+set: "Rage of Demons"
+number: 27
+race: "Carrion Crawler"
+type: "Monstrosity"

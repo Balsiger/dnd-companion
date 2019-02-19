@@ -1,0 +1,8 @@
+template {
+  name: "Eldritch Giant"
+}
+set: "War of the Dragon Queen"
+number: 34
+race: "Eldritch Giant"
+type: "Giant"
+size: HUGE

@@ -1,0 +1,9 @@
+template {
+  name: "Delver Sergeant"
+}
+set: "Night Below"
+number: 5
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

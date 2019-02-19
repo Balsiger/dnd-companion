@@ -1,0 +1,8 @@
+template {
+  name: "Troglodyte Zombie"
+}
+set: "Harbinger"
+number: 56
+type: "Undead"
+race: "Zombie"
+size: MEDIUM

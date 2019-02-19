@@ -1,0 +1,9 @@
+template {
+  name: "Elemental Wall"
+}
+set: "War Drums"
+number: 6
+race: "Elemental Wall"
+type: "Elemental"
+subtype: "Earth"
+size: LARGE

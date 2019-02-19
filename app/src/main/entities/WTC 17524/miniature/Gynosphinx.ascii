@@ -1,0 +1,9 @@
+template {
+  name: "Gynosphinx"
+}
+set: "Monster Menagerie 2"
+number: 41
+race: "Gynosphinx"
+type: "Monstrosity"
+subtype: "Winged"
+size: LARGE

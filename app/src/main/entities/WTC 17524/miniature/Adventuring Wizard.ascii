@@ -1,0 +1,9 @@
+template {
+  name: "Adventuring Wizard"
+}
+set: "Aberrations"
+number: 12
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

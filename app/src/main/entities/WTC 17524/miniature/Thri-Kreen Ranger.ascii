@@ -1,0 +1,9 @@
+template {
+  name: "Thri-Kreen Ranger"
+}
+set: "Harbinger"
+number: 38
+race: "Thri-Kreen"
+type: "Humanoid"
+class: "Ranger"
+size: MEDIUM

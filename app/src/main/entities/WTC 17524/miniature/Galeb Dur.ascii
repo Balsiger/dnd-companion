@@ -1,0 +1,9 @@
+template {
+  name: "Galeb Dur"
+}
+set: "Against the Giants"
+number: 36
+race: "Galeb Duhr"
+type: "Elemental"
+subtype: "Earth"
+size: MEDIUM

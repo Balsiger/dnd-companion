@@ -1,0 +1,7 @@
+template {
+  name: "Ancient Silver Dragon"
+}
+set: "Elemental Evil"
+type: "Dragon"
+size: HUGE
+subtype: "Metallic"

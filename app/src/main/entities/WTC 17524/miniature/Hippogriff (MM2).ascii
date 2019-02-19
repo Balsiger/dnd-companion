@@ -1,0 +1,10 @@
+template {
+  name: "Hippogriff (MM2)"
+}
+set: "Monster Menagerie 2"
+number: 27
+race: "Hippogriff"
+type: "Monstrosity"
+subtype: "Mount"
+subtype: "Winged"
+size: LARGE

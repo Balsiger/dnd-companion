@@ -1,0 +1,41 @@
+template {
+  name: "Mobility"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "You are skilled at dodging past opponents and avoiding blows."
+  short_description: "+4 dodge bonus to AC against some attacks of opportunity"
+}
+type: GENERAL
+benefit: "You get a +4 dodge bonus to Armor Class against attacks of\n                    opportunity caused when you move out of or within a\n                    threatened area. A condition that makes you lose your\n                    Dexterity bonus to Armor Class (if any) also makes you lose\n                    dodge bonuses. Dodge bonuses (such as this one and a\n                    dwarf\342\200\232\303\204\303\264s racial bonus on dodge attempts against giants)\n                    stack with each other, unlike most types of bonuses."
+special: "A fighter may select Mobility as one of his fighter bonus\n                    feats (see page 38)."
+prerequisites: "Dex 13, Dodge."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

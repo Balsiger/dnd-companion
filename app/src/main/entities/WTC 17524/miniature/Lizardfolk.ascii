@@ -1,0 +1,9 @@
+template {
+  name: "Lizardfolk"
+}
+set: "Harbinger"
+number: 35
+type: "Humanoid"
+subtype: "Reptile"
+race: "Lizardfolk"
+size: MEDIUM

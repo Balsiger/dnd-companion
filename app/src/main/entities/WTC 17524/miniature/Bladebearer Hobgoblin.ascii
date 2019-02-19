@@ -1,0 +1,10 @@
+template {
+  name: "Bladebearer Hobgoblin"
+}
+set: "Aberrations"
+number: 27
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+class: "Fighter"
+size: MEDIUM

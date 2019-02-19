@@ -1,0 +1,8 @@
+template {
+  name: "Tiefling Necromancer"
+}
+set: "Savage Encounters"
+number: 37
+type: "Humanoid"
+race: "Tiefling"
+size: LARGE

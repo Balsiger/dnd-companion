@@ -1,0 +1,9 @@
+template {
+  name: "Golden Protector"
+}
+set: "War of the Dragon Queen"
+number: 5
+type: "Dragon"
+subtype: "Reptile"
+size: LARGE
+subtype: "Metallic"

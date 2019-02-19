@@ -1,0 +1,8 @@
+template {
+  name: "Medusa (MM)"
+}
+set: "Monster Menagerie"
+number: 18
+race: "Medusa"
+type: "Monstrosity"
+size: MEDIUM

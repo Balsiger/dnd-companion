@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Caver"
+}
+set: "Death Knell"
+number: 4
+type: "Humanoid"
+race: "Dwarf"
+class: "Ranger"
+size: MEDIUM

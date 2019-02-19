@@ -1,0 +1,10 @@
+template {
+  name: "Achaierai"
+}
+set: "Aberrations"
+number: 26
+race: "Achaierai"
+type: "Fiend"
+subtype: "Evil"
+subtype: "Extraplanar"
+size: LARGE

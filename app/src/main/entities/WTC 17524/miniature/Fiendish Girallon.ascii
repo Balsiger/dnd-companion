@@ -1,0 +1,9 @@
+template {
+  name: "Fiendish Girallon"
+}
+set: "War Drums"
+number: 47
+race: "Girallon"
+type: "Fiend"
+subtype: "Animal"
+size: LARGE

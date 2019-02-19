@@ -1,0 +1,8 @@
+template {
+  name: "Fomorian"
+}
+set: "Giants of Legend"
+number: 69
+race: "Fomorian"
+type: "Giant"
+size: HUGE

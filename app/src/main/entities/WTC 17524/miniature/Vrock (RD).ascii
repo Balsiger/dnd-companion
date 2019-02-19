@@ -1,0 +1,8 @@
+template {
+  name: "Vrock (RD)"
+}
+set: "Rage of Demons"
+number: 29
+race: "Vrock"
+type: "Fiend"
+subtype: "Demon"

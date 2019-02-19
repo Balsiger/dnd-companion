@@ -1,0 +1,9 @@
+template {
+  name: "Deathpriest of Orcus"
+}
+set: "Against the Giants"
+number: 3
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

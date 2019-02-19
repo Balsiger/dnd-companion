@@ -1,0 +1,8 @@
+template {
+  name: "Gazer"
+}
+set: "Monster Menagerie 3"
+number: 4
+race: "Gazer"
+type: "Aberration"
+size: TINY

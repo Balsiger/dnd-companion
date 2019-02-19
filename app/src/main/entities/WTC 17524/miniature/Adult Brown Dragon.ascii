@@ -1,0 +1,9 @@
+template {
+  name: "Adult Brown Dragon"
+}
+set: "Legendary Evils"
+number: 1
+race: "Brown Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Independent"

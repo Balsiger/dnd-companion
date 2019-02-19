@@ -1,0 +1,8 @@
+template {
+  name: "Female Elf Druid"
+}
+set: "Player\'s Handbook Heroes"
+number: 17
+type: "Humanoid"
+race: "Elf"
+class: "Druid"

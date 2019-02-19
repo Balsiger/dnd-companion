@@ -1,0 +1,9 @@
+template {
+  name: "Nightmare"
+}
+set: "Desert of Desolation"
+number: 30
+race: "Nightmare"
+type: "Fiend"
+subtype: "Mount"
+size: LARGE

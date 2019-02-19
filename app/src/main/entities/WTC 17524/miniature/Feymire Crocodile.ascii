@@ -1,0 +1,10 @@
+template {
+  name: "Feymire Crocodile"
+}
+set: "Lords of Madness"
+number: 18
+race: "Crocodile"
+type: "Beast"
+subtype: "Reptile"
+subtype: "Animal"
+size: HUGE

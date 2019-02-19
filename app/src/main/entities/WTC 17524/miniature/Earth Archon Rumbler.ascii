@@ -1,0 +1,10 @@
+template {
+  name: "Earth Archon Rumbler"
+}
+set: "Legendary Evils"
+number: 14
+race: "Earth Archon"
+type: "Elemental"
+subtype: "Earth"
+subtype: "Archon"
+size: MEDIUM

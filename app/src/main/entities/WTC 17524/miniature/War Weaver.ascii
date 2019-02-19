@@ -1,0 +1,9 @@
+template {
+  name: "War Weaver"
+}
+set: "War of the Dragon Queen"
+number: 9
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

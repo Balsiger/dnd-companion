@@ -1,0 +1,9 @@
+template {
+  name: "Girallon"
+}
+set: "Demonweb"
+number: 59
+race: "Girallon"
+type: "Monstrosity"
+subtype: "Humanoid"
+size: LARGE

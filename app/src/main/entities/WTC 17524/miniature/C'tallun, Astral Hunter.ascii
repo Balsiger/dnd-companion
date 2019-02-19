@@ -1,0 +1,8 @@
+template {
+  name: "C\'tallun, Astral Hunter"
+}
+set: "Lords of Madness"
+number: 8
+race: "Mind Flayer"
+type: "Aberration"
+size: MEDIUM

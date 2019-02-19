@@ -1,0 +1,9 @@
+template {
+  name: "Half-Red Dragon Fighter"
+}
+set: "Tyranny of Dragons"
+number: 36
+race: "Half-Dragon"
+type: "Dragon"
+subtype: "Humanoid"
+size: MEDIUM

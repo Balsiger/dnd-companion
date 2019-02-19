@@ -1,0 +1,9 @@
+template {
+  name: "Soulknife Infiltrator"
+}
+set: "Blood War"
+number: 44
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Elf Swashbuckler"
+}
+set: "Angelfire"
+number: 18
+type: "Humanoid"
+race: "Elf"
+class: "Rogue"
+size: MEDIUM

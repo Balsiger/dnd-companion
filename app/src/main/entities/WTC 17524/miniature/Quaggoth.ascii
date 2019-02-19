@@ -1,0 +1,7 @@
+template {
+  name: "Quaggoth"
+}
+set: "Rage of Demons"
+number: 17
+race: "Quaggoth"
+type: "Humanoid"

@@ -1,0 +1,9 @@
+template {
+  name: "Black Shadow Dragon (flying)"
+}
+set: "Tyranny of Dragons"
+number: 30
+race: "Black Shadow Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Planar"

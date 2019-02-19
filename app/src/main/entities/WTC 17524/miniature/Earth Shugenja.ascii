@@ -1,0 +1,9 @@
+template {
+  name: "Earth Shugenja"
+}
+set: "Underdark"
+number: 3
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

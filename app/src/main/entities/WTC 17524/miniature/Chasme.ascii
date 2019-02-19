@@ -1,0 +1,9 @@
+template {
+  name: "Chasme"
+}
+set: "Blood War"
+number: 45
+race: "Chasme"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

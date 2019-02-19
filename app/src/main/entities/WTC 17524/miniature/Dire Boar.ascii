@@ -1,0 +1,9 @@
+template {
+  name: "Dire Boar"
+}
+set: "Harbinger"
+number: 34
+race: "Dire Boar"
+type: "Beast"
+subtype: "Dire"
+size: LARGE

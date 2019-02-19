@@ -1,0 +1,9 @@
+template {
+  name: "Green Dragon (Very Young)"
+}
+set: "Aberrations"
+number: 32
+race: "Green Dragon"
+type: "Dragon"
+size: MEDIUM
+subtype: "Chromatic"

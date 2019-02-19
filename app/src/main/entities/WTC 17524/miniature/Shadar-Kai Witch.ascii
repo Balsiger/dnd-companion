@@ -1,0 +1,8 @@
+template {
+  name: "Shadar-Kai Witch"
+}
+set: "Lords of Madness"
+number: 43
+type: "Humanoid"
+race: "Shadar-Kai"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Duergar Fighter"
+}
+set: "Rage of Demons"
+number: 7
+type: "Humanoid"
+race: "Duergar"
+size: MEDIUM

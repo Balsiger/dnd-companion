@@ -1,0 +1,11 @@
+template {
+  name: "Rime Hound"
+}
+set: "Lords of Madness"
+number: 38
+race: "Rime Hound"
+type: "Monstrosity"
+subtype: "Cold"
+subtype: "Earth"
+subtype: "Mount"
+size: HUGE

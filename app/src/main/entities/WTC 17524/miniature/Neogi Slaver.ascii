@@ -1,0 +1,8 @@
+template {
+  name: "Neogi Slaver"
+}
+set: "Lords of Madness"
+number: 34
+type: "Aberration"
+race: "Neogi"
+size: MEDIUM

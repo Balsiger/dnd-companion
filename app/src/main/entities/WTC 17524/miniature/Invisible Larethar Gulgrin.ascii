@@ -1,0 +1,9 @@
+template {
+  name: "Invisible Larethar Gulgrin"
+}
+set: "Monster Menagerie"
+number: 6
+type: "Humanoid"
+race: "Dwarf"
+subtype: "Invisible"
+size: MEDIUM

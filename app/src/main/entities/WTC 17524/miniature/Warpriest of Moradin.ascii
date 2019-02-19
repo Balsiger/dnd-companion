@@ -1,0 +1,9 @@
+template {
+  name: "Warpriest of Moradin"
+}
+set: "War Drums"
+number: 14
+type: "Humanoid"
+race: "Dwarf"
+class: "Cleric"
+size: MEDIUM

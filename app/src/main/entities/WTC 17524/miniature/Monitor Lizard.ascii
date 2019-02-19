@@ -1,0 +1,10 @@
+template {
+  name: "Monitor Lizard"
+}
+set: "Underdark"
+number: 29
+race: "Monitor Lizard"
+type: "Beast"
+subtype: "Reptile"
+subtype: "Animal"
+size: MEDIUM

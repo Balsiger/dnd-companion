@@ -1,0 +1,8 @@
+template {
+  name: "Rakshasa Baron"
+}
+set: "Dungeons of Dread"
+number: 22
+race: "Rakshasa"
+type: "Fiend"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Goblin (Sword)"
+}
+set: "Monster Menagerie 2"
+number: 3
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: SMALL

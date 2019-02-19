@@ -1,0 +1,8 @@
+template {
+  name: "Minotaur Mangler"
+}
+set: "Lords of Madness"
+number: 31
+race: "Minotaur"
+type: "Monstrosity"
+size: MEDIUM

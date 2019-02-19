@@ -1,0 +1,9 @@
+template {
+  name: "Githyanki Fighter"
+}
+set: "Archfiends"
+number: 51
+race: "Githyanki"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM

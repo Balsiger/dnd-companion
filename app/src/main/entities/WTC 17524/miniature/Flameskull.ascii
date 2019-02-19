@@ -1,0 +1,9 @@
+template {
+  name: "Flameskull"
+}
+set: "War Drums"
+number: 29
+race: "Flameskull"
+type: "Undead"
+subtype: "Skeleton"
+size: TINY

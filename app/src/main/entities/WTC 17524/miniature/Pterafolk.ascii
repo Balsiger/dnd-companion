@@ -1,0 +1,9 @@
+template {
+  name: "Pterafolk"
+}
+set: "Tomb of Annihilation"
+number: 28
+race: "Pterafolk"
+type: "Monstrosity"
+subtype: "Winged"
+size: LARGE

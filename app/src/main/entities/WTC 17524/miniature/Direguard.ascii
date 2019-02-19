@@ -1,0 +1,9 @@
+template {
+  name: "Direguard"
+}
+set: "Angelfire"
+number: 38
+race: "Direguard"
+type: "Undead"
+subtype: "Skeleton"
+size: MEDIUM

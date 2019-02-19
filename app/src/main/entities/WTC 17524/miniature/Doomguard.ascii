@@ -1,0 +1,9 @@
+template {
+  name: "Doomguard"
+}
+set: "Blood War"
+number: 47
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

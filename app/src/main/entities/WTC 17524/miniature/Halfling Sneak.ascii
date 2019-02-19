@@ -1,0 +1,9 @@
+template {
+  name: "Halfling Sneak"
+}
+set: "Underdark"
+number: 19
+type: "Humanoid"
+race: "Halfling"
+class: "Rogue"
+size: SMALL

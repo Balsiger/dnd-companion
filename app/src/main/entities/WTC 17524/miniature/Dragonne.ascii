@@ -1,0 +1,9 @@
+template {
+  name: "Dragonne"
+}
+set: "War Drums"
+number: 17
+race: "Dragonne"
+type: "Monstrosity"
+subtype: "Winged"
+size: LARGE

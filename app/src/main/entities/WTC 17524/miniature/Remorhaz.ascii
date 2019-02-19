@@ -1,0 +1,8 @@
+template {
+  name: "Remorhaz"
+}
+set: "Legendary Evils"
+number: 31
+race: "Remorhaz"
+type: "Monstrosity"
+size: HUGE

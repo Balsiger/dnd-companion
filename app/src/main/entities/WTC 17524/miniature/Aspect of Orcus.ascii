@@ -1,0 +1,12 @@
+template {
+  name: "Aspect of Orcus"
+}
+set: "Archfiends"
+number: 47
+type: "Fiend"
+subtype: "Chaotic"
+subtype: "Evil"
+subtype: "Extraplanar"
+subtype: "Tana'ri"
+subtype: "Demon"
+size: LARGE

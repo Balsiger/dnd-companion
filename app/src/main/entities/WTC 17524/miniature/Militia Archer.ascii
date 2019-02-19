@@ -1,0 +1,10 @@
+template {
+  name: "Militia Archer"
+}
+set: "Desert of Desolation"
+number: 7
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Bow"

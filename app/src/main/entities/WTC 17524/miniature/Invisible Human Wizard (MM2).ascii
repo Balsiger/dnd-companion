@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Human Wizard (MM2)"
+}
+set: "Monster Menagerie 2"
+number: 21
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM
+subtype: "Invisible"

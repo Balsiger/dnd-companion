@@ -1,0 +1,10 @@
+template {
+  name: "Windfiend Fury"
+}
+set: "Savage Encounters"
+number: 39
+race: "Windfiend"
+type: "Elemental"
+subtype: "Air"
+subtype: "Water"
+size: LARGE

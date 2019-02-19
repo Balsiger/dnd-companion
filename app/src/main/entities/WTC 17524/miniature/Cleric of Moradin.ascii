@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Moradin"
+}
+set: "Dragon Eye"
+number: 1
+type: "Humanoid"
+race: "Dwarf"
+class: "Cleric"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Eye of the Flame (Beholder)"
+}
+set: "Dungeons of Dread"
+number: 14
+race: "Beholder"
+type: "Aberration"
+size: LARGE

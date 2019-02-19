@@ -1,0 +1,9 @@
+template {
+  name: "Mummy"
+}
+set: "Harbinger"
+number: 51
+race: "Mummy"
+type: "Undead"
+subtype: "Humanoid"
+size: MEDIUM

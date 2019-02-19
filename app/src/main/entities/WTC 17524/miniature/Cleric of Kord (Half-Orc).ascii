@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Kord (Half-Orc)"
+}
+set: "Archfiends"
+number: 13
+type: "Humanoid"
+race: "Half-Orc"
+class: "Cleric"
+size: MEDIUM

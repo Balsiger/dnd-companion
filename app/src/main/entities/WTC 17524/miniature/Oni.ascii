@@ -1,0 +1,8 @@
+template {
+  name: "Oni"
+}
+set: "Dungeons of Dread"
+number: 11
+race: "Oni"
+type: "Humanoid"
+size: LARGE

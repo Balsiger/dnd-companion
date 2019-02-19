@@ -1,0 +1,9 @@
+template {
+  name: "Cerebrilith"
+}
+set: "Night Below"
+number: 48
+race: "Cerabrilith"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

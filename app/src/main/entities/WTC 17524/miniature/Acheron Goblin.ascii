@@ -1,0 +1,10 @@
+template {
+  name: "Acheron Goblin"
+}
+set: "Blood War"
+number: 28
+type: "Humanoid"
+race: "Goblin"
+subtype: "Goblinoid"
+class: "Fighter"
+size: SMALL

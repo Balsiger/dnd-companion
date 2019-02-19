@@ -1,0 +1,9 @@
+template {
+  name: "Phalanx Soldier"
+}
+set: "Unhallowed"
+number: 7
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

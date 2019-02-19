@@ -1,0 +1,9 @@
+template {
+  name: "Nebin, Gnome Illusionist"
+}
+set: "Harbinger"
+number: 28
+type: "Humanoid"
+race: "Gnome"
+class: "Sorcerer"
+size: SMALL

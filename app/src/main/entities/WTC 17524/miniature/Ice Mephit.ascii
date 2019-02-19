@@ -1,0 +1,10 @@
+template {
+  name: "Ice Mephit"
+}
+set: "Night Below"
+number: 34
+race: "Ice Mephit"
+type: "Elemental"
+subtype: "Air"
+subtype: "Cold"
+size: SMALL

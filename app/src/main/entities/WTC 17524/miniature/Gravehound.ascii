@@ -1,0 +1,8 @@
+template {
+  name: "Gravehound"
+}
+set: "Archfiends"
+number: 41
+race: "Gravehound"
+type: "Beast"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Hobgoblin Soldier"
+}
+set: "Rage of Demons"
+number: 12
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+size: MEDIUM

@@ -1,0 +1,42 @@
+template {
+  name: "Tower Shield Proficiency"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 101
+      high: 101
+    }
+  }
+  world: "Generic"
+  description: "You are proficient with tower shields."
+  short_description: "No armor check penalty on attack rolls"
+}
+type: GENERAL
+benefit: "You can use a tower shield and suffer only the standard\n                    penalties (see Table 7\342\200\232\303\204\303\2546: Armor and Shields, page 123)."
+special: "Fighters automatically have Tower Shield Proficiency as a\n                    bonus feat. They need not select it."
+normal: "A character who is using a shield with which he or she is\n                    not proficient takes the shield\342\200\232\303\204\303\264s armor check penalty on\n                    attack rolls and on all skill checks that involve moving,\n                    including Ride."
+prerequisites: "Shield Proficiency."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

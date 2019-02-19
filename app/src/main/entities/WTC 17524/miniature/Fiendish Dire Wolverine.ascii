@@ -1,0 +1,10 @@
+template {
+  name: "Fiendish Dire Wolverine"
+}
+set: "Angelfire"
+number: 54
+race: "Dire Wolverine"
+type: "Fiend"
+subtype: "Dire"
+subtype: "Animal"
+size: LARGE

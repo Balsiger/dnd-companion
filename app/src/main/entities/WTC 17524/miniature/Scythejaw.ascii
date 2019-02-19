@@ -1,0 +1,8 @@
+template {
+  name: "Scythejaw"
+}
+set: "Demonweb"
+number: 36
+race: "Scythejaw"
+type: "Undead"
+size: MEDIUM

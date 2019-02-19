@@ -1,0 +1,9 @@
+template {
+  name: "Warden of the Wood"
+}
+set: "War of the Dragon Queen"
+number: 18
+type: "Humanoid"
+race: "Half-Elf"
+class: "Druid"
+size: MEDIUM

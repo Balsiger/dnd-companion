@@ -1,0 +1,8 @@
+template {
+  name: "Ogre Skirmisher"
+}
+set: "War of the Dragon Queen"
+number: 51
+type: "Giant"
+race: "Ogre"
+size: LARGE

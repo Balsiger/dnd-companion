@@ -1,0 +1,9 @@
+template {
+  name: "Shadow Demon (RD)"
+}
+set: "Rage of Demons"
+number: 20
+race: "Shadow Demon"
+type: "Fiend"
+subtype: "Demon"
+subtype: "Flying"

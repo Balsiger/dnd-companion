@@ -1,0 +1,10 @@
+template {
+  name: "Rot Grub Swarm"
+}
+set: "Lords of Madness"
+number: 40
+race: "Rot Grub Swarm"
+type: "Vermin"
+subtype: "Swarm"
+subtype: "Bug"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Hellcat"
+}
+set: "Blood War"
+number: 33
+race: "Hellcat"
+type: "Fiend"
+size: LARGE

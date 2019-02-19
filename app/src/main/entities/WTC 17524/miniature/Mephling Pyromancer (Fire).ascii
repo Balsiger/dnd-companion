@@ -1,0 +1,10 @@
+template {
+  name: "Mephling Pyromancer (Fire)"
+}
+set: "War Drums"
+number: 21
+race: "Mephling Pyromancer"
+type: "Humanoid"
+class: "Sorcerer"
+class: "Rogue"
+size: SMALL

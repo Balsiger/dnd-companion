@@ -1,0 +1,9 @@
+template {
+  name: "Chillborn"
+}
+set: "Dungeons of Dread"
+number: 12
+race: "Chillborn"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

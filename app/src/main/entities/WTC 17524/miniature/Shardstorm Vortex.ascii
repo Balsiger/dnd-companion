@@ -1,0 +1,9 @@
+template {
+  name: "Shardstorm Vortex"
+}
+set: "Savage Encounters"
+number: 32
+race: "Shardstorm Vortekx"
+subtype: "Air"
+subtype: "Earth"
+size: MEDIUM

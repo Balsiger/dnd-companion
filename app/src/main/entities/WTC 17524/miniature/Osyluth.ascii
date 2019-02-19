@@ -1,0 +1,9 @@
+template {
+  name: "Osyluth"
+}
+set: "Desert of Desolation"
+number: 31
+race: "Osyluth"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE

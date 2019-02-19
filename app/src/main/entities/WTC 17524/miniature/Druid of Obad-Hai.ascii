@@ -1,0 +1,9 @@
+template {
+  name: "Druid of Obad-Hai"
+}
+set: "Dragon Eye"
+number: 27
+type: "Humanoid"
+race: "Human"
+class: "Druid"
+size: MEDIUM

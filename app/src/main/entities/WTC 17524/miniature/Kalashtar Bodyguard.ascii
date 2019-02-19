@@ -1,0 +1,9 @@
+template {
+  name: "Kalashtar Bodyguard"
+}
+set: "Night Below"
+number: 9
+type: "Humanoid"
+race: "Kalashtar"
+class: "Fighter"
+size: MEDIUM

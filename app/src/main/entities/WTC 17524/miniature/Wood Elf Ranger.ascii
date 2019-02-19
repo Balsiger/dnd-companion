@@ -1,0 +1,9 @@
+template {
+  name: "Wood Elf Ranger"
+}
+set: "War Drums"
+number: 26
+type: "Humanoid"
+race: "Elf"
+class: "Ranger"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Valiant Cavalry"
+}
+set: "Night Below"
+number: 12
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: LARGE
+subtype: "Mounted"

@@ -1,0 +1,9 @@
+template {
+  name: "Fen Hydra"
+}
+set: "Dungeons of Dread"
+number: 55
+race: "Hydra"
+type: "Monstrosity"
+subtype: "Reptile"
+size: LARGE

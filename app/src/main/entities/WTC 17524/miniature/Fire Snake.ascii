@@ -1,0 +1,10 @@
+template {
+  name: "Fire Snake"
+}
+set: "Elemental Evil"
+number: 4
+race: "Fire Snake"
+type: "Elemental"
+subtype: "Reptilian"
+subtype: "Fire"
+size: SMALL

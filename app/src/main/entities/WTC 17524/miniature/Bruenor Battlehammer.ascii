@@ -1,0 +1,9 @@
+template {
+  name: "Bruenor Battlehammer"
+}
+set: "Desert of Desolation"
+number: 10
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

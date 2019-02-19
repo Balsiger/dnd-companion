@@ -1,0 +1,9 @@
+template {
+  name: "Slayer of Domiel"
+}
+set: "Underdark"
+number: 12
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM

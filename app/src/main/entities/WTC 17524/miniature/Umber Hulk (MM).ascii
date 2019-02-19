@@ -1,0 +1,9 @@
+template {
+  name: "Umber Hulk (MM)"
+}
+set: "Monster Menagerie"
+number: 42
+race: "Umber Hulk"
+type: "Monstrosity"
+subtype: "Humanoid"
+size: LARGE

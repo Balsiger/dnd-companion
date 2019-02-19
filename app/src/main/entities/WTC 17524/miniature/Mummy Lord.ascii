@@ -1,0 +1,10 @@
+template {
+  name: "Mummy Lord"
+}
+set: "Death Knell"
+number: 39
+race: "Mummy"
+type: "Undead"
+subtype: "Humanoid"
+class: "Cleric"
+size: MEDIUM

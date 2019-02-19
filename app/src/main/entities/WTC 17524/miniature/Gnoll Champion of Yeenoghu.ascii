@@ -1,0 +1,7 @@
+template {
+  name: "Gnoll Champion of Yeenoghu"
+}
+set: "Rage of Demons"
+number: 37
+type: "Humanoid"
+race: "Gnoll"

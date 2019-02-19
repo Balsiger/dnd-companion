@@ -1,0 +1,8 @@
+template {
+  name: "Skalmad, the Troll King"
+}
+set: "Dungeon Delve"
+number: 34
+race: "Troll"
+type: "Giant"
+size: LARGE

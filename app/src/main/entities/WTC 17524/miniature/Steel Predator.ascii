@@ -1,0 +1,8 @@
+template {
+  name: "Steel Predator"
+}
+set: "Angelfire"
+number: 48
+race: "Steel Predator"
+type: "Construct"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Choker"
+}
+set: "Aberrations"
+number: 47
+race: "Choker"
+type: "Aberration"
+size: SMALL

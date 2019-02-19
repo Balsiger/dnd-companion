@@ -1,0 +1,9 @@
+template {
+  name: "Earth Element Gargoyle"
+}
+set: "Blood War"
+number: 48
+race: "Gargoyle"
+type: "Elemental"
+subtype: "Earth"
+size: MEDIUM

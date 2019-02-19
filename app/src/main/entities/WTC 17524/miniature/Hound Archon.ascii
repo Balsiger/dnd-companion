@@ -1,0 +1,9 @@
+template {
+  name: "Hound Archon"
+}
+set: "Harbinger"
+number: 7
+race: "Hound Archon"
+type: "Celestial"
+subtype: "Archon"
+size: MEDIUM

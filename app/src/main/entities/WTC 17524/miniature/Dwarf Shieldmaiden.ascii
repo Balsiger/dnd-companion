@@ -1,0 +1,8 @@
+template {
+  name: "Dwarf Shieldmaiden"
+}
+set: "Dungeons of Dread"
+number: 33
+type: "Humanoid"
+race: "Dwarf"
+size: MEDIUM

@@ -1,0 +1,11 @@
+template {
+  name: "Guard Drake"
+}
+set: "Demonweb"
+number: 48
+race: "Drake"
+type: "Dragon"
+subtype: "Drake"
+subtype: "Reptile"
+size: MEDIUM
+subtype: "Lesser"

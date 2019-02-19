@@ -1,0 +1,9 @@
+template {
+  name: "Renegade Warlock"
+}
+set: "Death Knell"
+number: 23
+type: "Humanoid"
+race: "Human"
+class: "Sorcerer"
+size: MEDIUM

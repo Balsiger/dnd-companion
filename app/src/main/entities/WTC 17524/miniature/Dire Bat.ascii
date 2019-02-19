@@ -1,0 +1,9 @@
+template {
+  name: "Dire Bat"
+}
+set: "Underdark"
+number: 44
+race: "Dire Bat"
+type: "Beast"
+subtype: "Dire"
+size: LARGE

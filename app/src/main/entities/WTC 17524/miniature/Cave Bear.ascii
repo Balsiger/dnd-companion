@@ -1,0 +1,9 @@
+template {
+  name: "Cave Bear"
+}
+set: "Against the Giants"
+number: 31
+race: "Cave Bear"
+type: "Beast"
+subtype: "Animal"
+size: MEDIUM

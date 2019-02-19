@@ -1,0 +1,9 @@
+template {
+  name: "Eternal Blade"
+}
+set: "Desert of Desolation"
+number: 17
+type: "Humanoid"
+race: "Elf"
+class: "Fighter"
+size: MEDIUM

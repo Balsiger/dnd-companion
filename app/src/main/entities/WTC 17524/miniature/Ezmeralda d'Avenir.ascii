@@ -1,0 +1,9 @@
+template {
+  name: "Ezmeralda d\'Avenir"
+}
+set: "Monster Menagerie"
+number: 39
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+size: MEDIUM

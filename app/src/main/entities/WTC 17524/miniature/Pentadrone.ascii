@@ -1,0 +1,9 @@
+template {
+  name: "Pentadrone"
+}
+set: "Dragon Eye"
+number: 28
+race: "Pentadrone"
+type: "Construct"
+subtype: "Modron"
+size: LARGE

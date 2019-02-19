@@ -1,0 +1,9 @@
+template {
+  name: "Umber Hulk Delver"
+}
+set: "Desert of Desolation"
+number: 57
+race: "Umber Hulk"
+type: "Monstrosity"
+subtype: "Humanoid"
+size: LARGE

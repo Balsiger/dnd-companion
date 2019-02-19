@@ -1,0 +1,9 @@
+template {
+  name: "Half-Orc Fighter"
+}
+set: "Harbinger"
+number: 43
+type: "Humanoid"
+race: "Half-Orc"
+class: "Fighter"
+size: MEDIUM

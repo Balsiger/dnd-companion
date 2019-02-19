@@ -1,0 +1,8 @@
+template {
+  name: "Drow Archmage"
+}
+set: "Rage of Demons"
+number: 23
+type: "Humanoid"
+race: "Drow"
+size: MEDIUM

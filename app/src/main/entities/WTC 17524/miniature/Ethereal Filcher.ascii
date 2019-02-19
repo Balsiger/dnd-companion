@@ -1,0 +1,8 @@
+template {
+  name: "Ethereal Filcher"
+}
+set: "Aberrations"
+number: 23
+race: "Ethereal Filcher"
+type: "Aberration"
+size: MEDIUM

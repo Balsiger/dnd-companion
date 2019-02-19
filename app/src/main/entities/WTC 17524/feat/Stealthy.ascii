@@ -1,0 +1,39 @@
+template {
+  name: "Stealthy"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 101
+      high: 101
+    }
+  }
+  world: "Generic"
+  description: "You are particularly good at avoiding notice."
+  short_description: "+2 bonus on Hide and Move Silently checks"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Hide checks and Move Silently\n                    checks."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

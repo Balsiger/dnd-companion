@@ -1,0 +1,8 @@
+template {
+  name: "Krenshar"
+}
+set: "Night Below"
+number: 43
+race: "Krenshar"
+type: "Monstrosity"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Salamander Archer"
+}
+set: "Savage Encounters"
+number: 30
+race: "Salamander"
+type: "Elemental"
+subtype: "Fire"
+subtype: "Reptile"
+size: LARGE

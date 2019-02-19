@@ -1,0 +1,9 @@
+template {
+  name: "Ragnarra, Psychic Warrior"
+}
+set: "Archfiends"
+number: 21
+race: "Maenad"
+type: "Humanoid"
+class: "Sorcerer"
+size: MEDIUM

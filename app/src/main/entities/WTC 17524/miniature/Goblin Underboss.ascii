@@ -1,0 +1,11 @@
+template {
+  name: "Goblin Underboss"
+}
+set: "War Drums"
+number: 31
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+class: "Fighter"
+class: "Rogue"
+size: SMALL

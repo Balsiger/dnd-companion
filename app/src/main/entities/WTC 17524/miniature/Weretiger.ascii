@@ -1,0 +1,10 @@
+template {
+  name: "Weretiger"
+}
+set: "Angelfire"
+number: 28
+race: "Weretiger"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: LARGE

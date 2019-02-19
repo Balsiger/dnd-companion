@@ -1,0 +1,8 @@
+template {
+  name: "Ghaele of Winter"
+}
+set: "Dungeon Delve"
+number: 17
+type: "Humanoid"
+race: "Eladrin"
+size: MEDIUM

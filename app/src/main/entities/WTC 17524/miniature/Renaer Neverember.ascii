@@ -1,0 +1,9 @@
+template {
+  name: "Renaer Neverember"
+}
+set: "Dragon Heist"
+number: 19
+type: "Humanoid"
+race: "Human"
+class: "Expert"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Ettercap (RD)"
+}
+set: "Rage of Demons"
+number: 18
+race: "Ettercap"
+type: "Monstrosity"
+subtype: "Spider"
+size: MEDIUM

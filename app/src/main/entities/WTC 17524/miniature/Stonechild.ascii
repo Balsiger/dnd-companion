@@ -1,0 +1,8 @@
+template {
+  name: "Stonechild"
+}
+set: "Dragon Eye"
+number: 9
+type: "Humanoid"
+subtype: "Earth"
+size: MEDIUM

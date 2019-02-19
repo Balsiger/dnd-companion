@@ -1,0 +1,9 @@
+template {
+  name: "Ember, Human Monk"
+}
+set: "Harbinger"
+number: 4
+type: "Humanoid"
+race: "Human"
+class: "Monk"
+size: MEDIUM

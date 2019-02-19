@@ -1,0 +1,8 @@
+template {
+  name: "Dwarf Warlord"
+}
+set: "Dungeons of Dread"
+number: 1
+type: "Humanoid"
+race: "Dwarf"
+size: MEDIUM

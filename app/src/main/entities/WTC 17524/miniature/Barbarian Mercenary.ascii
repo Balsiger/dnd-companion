@@ -1,0 +1,9 @@
+template {
+  name: "Barbarian Mercenary"
+}
+set: "Dragon Eye"
+number: 25
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Emerald Orb Wizard"
+}
+set: "Dungeons of Dread"
+number: 44
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

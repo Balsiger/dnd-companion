@@ -1,0 +1,8 @@
+template {
+  name: "Beholder Eye Tyrant"
+}
+set: "Dungeon Delve"
+number: 5
+race: "Beholder"
+type: "Aberration"
+size: LARGE

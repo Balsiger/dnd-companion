@@ -1,0 +1,9 @@
+template {
+  name: "Guardian Naga"
+}
+set: "Night Below"
+number: 8
+race: "Guardian Naga"
+type: "Monstrosity"
+subtype: "Reptile"
+size: LARGE

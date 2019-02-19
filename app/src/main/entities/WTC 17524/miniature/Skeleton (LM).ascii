@@ -1,0 +1,8 @@
+template {
+  name: "Skeleton (LM)"
+}
+set: "Lords of Madness"
+number: 45
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

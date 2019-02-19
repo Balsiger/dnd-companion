@@ -1,0 +1,9 @@
+template {
+  name: "Blue Wyrmling"
+}
+set: "Dragon Eye"
+number: 29
+race: "Blue Dragon"
+type: "Dragon"
+size: SMALL
+subtype: "Chromatic"

@@ -1,0 +1,8 @@
+template {
+  name: "Dragonborn Defender"
+}
+set: "Against the Giants"
+number: 15
+race: "Dragonborn"
+type: "Humanoid"
+size: MEDIUM

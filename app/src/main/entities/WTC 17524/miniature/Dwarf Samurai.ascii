@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Samurai"
+}
+set: "Death Knell"
+number: 6
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

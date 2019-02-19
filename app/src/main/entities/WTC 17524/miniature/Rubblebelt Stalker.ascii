@@ -1,0 +1,8 @@
+template {
+  name: "Rubblebelt Stalker"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 9
+race: "Lizardfolk"
+type: "Humanoid"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Blood Scarab"
+}
+set: "Dungeon Delve"
+number: 8
+race: "Blood Scarab"
+type: "Beast"
+subtype: "Scarab"
+subtype: "Bug"
+size: MEDIUM

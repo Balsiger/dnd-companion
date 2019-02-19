@@ -1,0 +1,9 @@
+template {
+  name: "Marilith (SE)"
+}
+set: "Savage Encounters"
+number: 25
+race: "Marilith"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

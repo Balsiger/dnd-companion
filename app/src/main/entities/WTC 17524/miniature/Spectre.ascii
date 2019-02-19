@@ -1,0 +1,8 @@
+template {
+  name: "Spectre"
+}
+set: "Death Knell"
+number: 42
+race: "Spectre"
+type: "Undead"
+size: MEDIUM

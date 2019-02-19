@@ -1,0 +1,8 @@
+template {
+  name: "Orc Terrorblade"
+}
+set: "Dungeon Delve"
+number: 32
+type: "Humanoid"
+race: "Orc"
+size: MEDIUM

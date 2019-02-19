@@ -1,0 +1,9 @@
+template {
+  name: "Gnoll Sergeant"
+}
+set: "Giants of Legend"
+number: 50
+type: "Humanoid"
+race: "Gnoll"
+class: "Fighter"
+size: MEDIUM

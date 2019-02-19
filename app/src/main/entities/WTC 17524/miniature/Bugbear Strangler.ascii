@@ -1,0 +1,9 @@
+template {
+  name: "Bugbear Strangler"
+}
+set: "Demonweb"
+number: 32
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Bugbear"
+size: MEDIUM

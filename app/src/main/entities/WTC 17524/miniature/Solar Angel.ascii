@@ -1,0 +1,9 @@
+template {
+  name: "Solar Angel"
+}
+set: "Elemental Evil"
+number: 30
+race: "Solar"
+type: "Celestial"
+subtype: "Angel"
+size: LARGE

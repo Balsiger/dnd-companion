@@ -1,0 +1,10 @@
+template {
+  name: "Aasimar Favored Soul"
+}
+set: "Aberrations"
+number: 11
+race: "Aasimar"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

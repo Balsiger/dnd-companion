@@ -1,0 +1,9 @@
+template {
+  name: "Human Town Guard"
+}
+set: "Lords of Madness"
+number: 22
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Balor"
+}
+set: "Legendary Evils"
+number: 4
+race: "Balor"
+type: "Fiend"
+subtype: "Demon"
+size: HUGE

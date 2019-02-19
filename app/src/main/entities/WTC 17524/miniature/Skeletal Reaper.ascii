@@ -1,0 +1,8 @@
+template {
+  name: "Skeletal Reaper"
+}
+set: "Blood War"
+number: 58
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

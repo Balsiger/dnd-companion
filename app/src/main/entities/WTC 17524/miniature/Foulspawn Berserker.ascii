@@ -1,0 +1,8 @@
+template {
+  name: "Foulspawn Berserker"
+}
+set: "Savage Encounters"
+number: 13
+race: "Foulspawn"
+type: "Aberration"
+size: MEDIUM

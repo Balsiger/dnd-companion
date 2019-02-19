@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Wizard"
+}
+set: "Angelfire"
+number: 4
+type: "Humanoid"
+race: "Dwarf"
+class: "Wizard"
+size: MEDIUM

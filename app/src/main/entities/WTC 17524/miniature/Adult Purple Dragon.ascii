@@ -1,0 +1,9 @@
+template {
+  name: "Adult Purple Dragon"
+}
+set: "Savage Encounters"
+number: 2
+race: "Purple Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Fearunian"

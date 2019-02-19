@@ -1,0 +1,10 @@
+template {
+  name: "Arcanix Guard"
+}
+set: "War Drums"
+number: 2
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

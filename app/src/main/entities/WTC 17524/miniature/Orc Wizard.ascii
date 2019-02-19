@@ -1,0 +1,9 @@
+template {
+  name: "Orc Wizard"
+}
+set: "Blood War"
+number: 56
+type: "Humanoid"
+race: "Orc"
+class: "Wizard"
+size: MEDIUM

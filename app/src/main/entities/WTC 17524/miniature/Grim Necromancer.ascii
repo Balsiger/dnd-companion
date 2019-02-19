@@ -1,0 +1,9 @@
+template {
+  name: "Grim Necromancer"
+}
+set: "Death Knell"
+number: 36
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

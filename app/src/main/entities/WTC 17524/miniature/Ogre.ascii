@@ -1,0 +1,8 @@
+template {
+  name: "Ogre"
+}
+set: "Harbinger"
+number: 71
+type: "Giant"
+race: "Ogre"
+size: LARGE

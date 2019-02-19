@@ -1,0 +1,9 @@
+template {
+  name: "Artemis Entreri"
+}
+set: "Underdark"
+number: 32
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM

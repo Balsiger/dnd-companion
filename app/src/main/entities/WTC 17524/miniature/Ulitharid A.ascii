@@ -1,0 +1,9 @@
+template {
+  name: "Ulitharid A"
+}
+set: "Monster Menagerie 3"
+number: 37
+type: "Aberration"
+race: "Ulitharid"
+subtype: "Mind Flayer"
+size: LARGE

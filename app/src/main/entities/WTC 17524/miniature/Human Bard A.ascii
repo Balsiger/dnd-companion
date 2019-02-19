@@ -1,0 +1,9 @@
+template {
+  name: "Human Bard A"
+}
+set: "Monster Menagerie 3"
+number: 19
+type: "Humanoid"
+race: "Human"
+class: "Bard"
+size: MEDIUM

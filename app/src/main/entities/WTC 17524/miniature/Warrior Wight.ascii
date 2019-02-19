@@ -1,0 +1,9 @@
+template {
+  name: "Warrior Wight"
+}
+set: "Dungeons of Dread"
+number: 17
+race: "Wight"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

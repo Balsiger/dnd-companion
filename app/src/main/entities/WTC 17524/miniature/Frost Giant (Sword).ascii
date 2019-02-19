@@ -1,0 +1,9 @@
+template {
+  name: "Frost Giant (Sword)"
+}
+set: "Storm King\'s Thunder"
+number: 29
+race: "Frost Giant"
+type: "Giant"
+subtype: "Cold"
+size: HUGE

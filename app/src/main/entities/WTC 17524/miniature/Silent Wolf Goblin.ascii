@@ -1,0 +1,11 @@
+template {
+  name: "Silent Wolf Goblin"
+}
+set: "Aberrations"
+number: 43
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+class: "Ranger"
+class: "Rogue"
+size: SMALL

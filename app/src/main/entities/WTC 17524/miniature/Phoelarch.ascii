@@ -1,0 +1,9 @@
+template {
+  name: "Phoelarch"
+}
+set: "Angelfire"
+number: 23
+race: "Phoelarch"
+type: "Monstrosity"
+subtype: "Fire"
+size: MEDIUM

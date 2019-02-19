@@ -1,0 +1,8 @@
+template {
+  name: "Marut"
+}
+set: "Underdark"
+number: 9
+race: "Marut"
+type: "Construct"
+size: LARGE

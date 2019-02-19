@@ -1,0 +1,8 @@
+template {
+  name: "Bladerager Troll"
+}
+set: "Dungeon Delve"
+number: 7
+race: "Troll"
+type: "Giant"
+size: LARGE

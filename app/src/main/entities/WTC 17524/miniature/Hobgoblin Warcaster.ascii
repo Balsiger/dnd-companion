@@ -1,0 +1,9 @@
+template {
+  name: "Hobgoblin Warcaster"
+}
+set: "Demonweb"
+number: 47
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+size: MEDIUM

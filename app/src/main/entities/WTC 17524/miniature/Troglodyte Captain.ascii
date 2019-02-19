@@ -1,0 +1,10 @@
+template {
+  name: "Troglodyte Captain"
+}
+set: "Underdark"
+number: 40
+type: "Humanoid"
+race: "Troglodyte"
+subtype: "Reptile"
+class: "Fighter"
+size: MEDIUM

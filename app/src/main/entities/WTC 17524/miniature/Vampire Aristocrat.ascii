@@ -1,0 +1,10 @@
+template {
+  name: "Vampire Aristocrat"
+}
+set: "Archfiends"
+number: 57
+race: "Vampire"
+type: "Undead"
+class: "Expert"
+size: MEDIUM
+subtype: "Humanoid"

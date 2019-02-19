@@ -1,0 +1,9 @@
+template {
+  name: "Wizard of Turmish"
+}
+set: "Unhallowed"
+number: 27
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

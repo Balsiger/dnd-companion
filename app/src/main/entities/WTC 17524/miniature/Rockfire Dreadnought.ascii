@@ -1,0 +1,10 @@
+template {
+  name: "Rockfire Dreadnought"
+}
+set: "Savage Encounters"
+number: 29
+race: "Rockfire Dreadnought"
+type: "Elemental"
+subtype: "Earth"
+subtype: "Fire"
+size: LARGE

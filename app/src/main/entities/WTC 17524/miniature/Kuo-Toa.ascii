@@ -1,0 +1,8 @@
+template {
+  name: "Kuo-Toa"
+}
+set: "Harbinger"
+number: 68
+type: "Humanoid"
+race: "Kuo-Toa"
+size: MEDIUM

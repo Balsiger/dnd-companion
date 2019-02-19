@@ -1,0 +1,41 @@
+template {
+  name: "Improved Critical"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 95
+      high: 95
+    }
+  }
+  world: "Generic"
+  description: "Choose one type of weapon, such as longsword or greataxe. With that weapon,\n  you know how to hit where it hurts."
+  short_description: "Double threat range of weapon"
+}
+type: GENERAL
+benefit: "When using the weapon you selected, your threat range is\n                    doubled. For example, a longsword usually threatens a\n                    critical hit on a roll of 19\342\200\232\303\204\303\25420 (two numbers). If a\n                    character using a longsword has Improved Critical\n                    (longsword), the threat range becomes 17\342\200\232\303\204\303\25420 (four\n                    numbers)."
+special: "You can gain Improved Critical multiple times. The effects\n                    do not stack. Each time you take the feat, it applies to a\n                    new type of weapon.\n\n                    This effect doesn\342\200\232\303\204\303\264t stack with any other effect that\n                    expands the threat range of a weapon (such as the keen edge\n                    spell).\n\n                    A fighter may select Improved Critical as one of his\n                    fighter bonus feats (see page 38)."
+prerequisites: "Proficient with weapon, base attack bonus +8."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

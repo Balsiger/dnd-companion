@@ -1,0 +1,9 @@
+template {
+  name: "Wood Elf Druid"
+}
+set: "Tyranny of Dragons"
+number: 16
+type: "Humanoid"
+race: "Elf"
+class: "Druid"
+size: MEDIUM

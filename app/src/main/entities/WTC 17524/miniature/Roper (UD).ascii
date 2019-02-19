@@ -1,0 +1,9 @@
+template {
+  name: "Roper (UD)"
+}
+set: "Underdark"
+number: 56
+race: "Roper"
+type: "Monstrosity"
+subtype: "Earth"
+size: LARGE

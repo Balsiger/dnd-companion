@@ -1,0 +1,8 @@
+template {
+  name: "Cyclops"
+}
+set: "Desert of Desolation"
+number: 40
+race: "Cyclops"
+type: "Giant"
+size: LARGE

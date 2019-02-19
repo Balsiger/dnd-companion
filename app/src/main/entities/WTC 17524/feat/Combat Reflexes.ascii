@@ -1,0 +1,41 @@
+template {
+  name: "Combat Reflexes"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 92
+      high: 92
+    }
+  }
+  world: "Generic"
+  description: "You can respond quickly and repeatedly to opponents who let their defenses\n  down."
+  short_description: "Additional attacks of opportunity (+Dex bonus)"
+}
+type: GENERAL
+benefit: "When foes leave themselves open, you may make a number of\n                    additional attacks of opportunity equal to your Dexterity\n                    bonus. For example, a fighter with a Dexterity of 15 can\n                    make a total of three attacks of opportunity in 1 round\342\200\232\303\204\303\256the\n                    one attack of opportunity any character is entitled to,\n                    plus two more because of his +2 Dexterity bonus. If four\n                    goblins move out of the character\342\200\232\303\204\303\264s threatened squares, he\n                    can make one attack of opportunity each against three of\n                    the four. You can still make only one attack of opportunity\n                    per opportunity.\n\n                    With this feat, you may also make attacks of opportunity\n                    while flat-footed."
+special: "The Combat Reflexes feat does not allow a rogue to use\n                    her opportunist ability (see page 51) more than once per\n                    round.\n\n                    A fighter may select Combat Reflexes as one of his fighter\n                    bonus feats (see page 38). A monk may select Combat\n                    Reflexes as a bonus feat at 2nd level."
+normal: "A character without this feat can make only one attack of\n                    opportunity per round and can\342\200\232\303\204\303\264t make attacks of opportunity\n                    while flat-footed."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

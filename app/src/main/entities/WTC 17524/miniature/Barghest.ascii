@@ -1,0 +1,11 @@
+template {
+  name: "Barghest"
+}
+set: "Harbinger"
+number: 39
+race: "Barghest"
+type: "Fiend"
+subtype: "Shapechanger"
+subtype: "Evil"
+subtype: "Lawful"
+size: MEDIUM

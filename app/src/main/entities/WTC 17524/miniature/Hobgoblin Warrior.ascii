@@ -1,0 +1,10 @@
+template {
+  name: "Hobgoblin Warrior"
+}
+set: "Dragon Eye"
+number: 33
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+class: "Fighter"
+size: MEDIUM

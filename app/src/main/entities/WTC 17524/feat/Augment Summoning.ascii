@@ -1,0 +1,40 @@
+template {
+  name: "Augment Summoning"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 89
+      high: 89
+    }
+  }
+  world: "Generic"
+  description: "Your summoned creatures are more powerful than normal."
+  short_description: "Summoned creatures gain +4 Str, +4 Con"
+}
+type: GENERAL
+benefit: "Each creature you conjure with any summon spell gains a +4\n                    enhancement bonus to Strength and Constitution for the\n                    duration of the spell that summoned it."
+prerequisites: "Spell Focus (conjuration)."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

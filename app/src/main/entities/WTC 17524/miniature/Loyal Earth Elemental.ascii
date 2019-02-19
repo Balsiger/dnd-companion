@@ -1,0 +1,9 @@
+template {
+  name: "Loyal Earth Elemental"
+}
+set: "Underdark"
+number: 8
+race: "Earth Elemental"
+type: "Elemental"
+subtype: "Earth"
+size: LARGE

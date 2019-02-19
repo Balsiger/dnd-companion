@@ -1,0 +1,8 @@
+template {
+  name: "Satyr (MM)"
+}
+set: "Monster Menagerie"
+number: 15
+race: "Satyr"
+type: "Fey"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Fire Bat (EE)"
+}
+set: "Elemental Evil"
+number: 5
+race: "Fire Bat"
+type: "Elemental"
+subtype: "Fire"
+size: SMALL

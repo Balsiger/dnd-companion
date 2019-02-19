@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Lathander"
+}
+set: "Archfiends"
+number: 1
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

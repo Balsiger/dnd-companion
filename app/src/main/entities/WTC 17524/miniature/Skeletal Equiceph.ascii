@@ -1,0 +1,8 @@
+template {
+  name: "Skeletal Equiceph"
+}
+set: "Underdark"
+number: 39
+race: "Skeleton"
+type: "Undead"
+size: LARGE

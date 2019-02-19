@@ -1,0 +1,9 @@
+template {
+  name: "Invisible Mind Flayer"
+}
+set: "Monster Menagerie 2"
+number: 34
+race: "Mind Flayer"
+type: "Aberration"
+size: MEDIUM
+subtype: "Invisible"

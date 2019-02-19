@@ -1,0 +1,8 @@
+template {
+  name: "Ettin Spirit-Talker"
+}
+set: "Demonweb"
+number: 42
+race: "Ettin"
+type: "Giant"
+size: LARGE

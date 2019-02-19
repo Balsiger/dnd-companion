@@ -1,0 +1,9 @@
+template {
+  name: "Burning Skeleton"
+}
+set: "Death Knell"
+number: 49
+race: "Burning Skeleton"
+type: "Undead"
+subtype: "Skeleton"
+size: MEDIUM

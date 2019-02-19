@@ -1,0 +1,9 @@
+template {
+  name: "Earth Elemental"
+}
+set: "Elemental Evil"
+number: 19
+race: "Earth Elemental"
+type: "Elemental"
+subtype: "Earth"
+size: MEDIUM

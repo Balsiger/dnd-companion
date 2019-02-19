@@ -1,0 +1,9 @@
+template {
+  name: "Ogre Executioner"
+}
+set: "Unhallowed"
+number: 43
+type: "Giant"
+race: "Ogre"
+class: "Fighter"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Shardsoul Slayer"
+}
+set: "Demonweb"
+number: 15
+race: "Shardsoul Slayer"
+type: "Construct"
+size: MEDIUM

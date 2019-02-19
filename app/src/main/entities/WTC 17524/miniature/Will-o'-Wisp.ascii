@@ -1,0 +1,8 @@
+template {
+  name: "Will-o\'-Wisp"
+}
+set: "Lords of Madness"
+number: 55
+race: "Will-o\'-Wisp"
+type: "Undead"
+size: SMALL

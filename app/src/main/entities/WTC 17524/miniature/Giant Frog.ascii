@@ -1,0 +1,10 @@
+template {
+  name: "Giant Frog"
+}
+set: "Death Knell"
+number: 28
+race: "Giant Frog"
+type: "Beast"
+subtype: "Oversized"
+subtype: "Animal"
+size: MEDIUM

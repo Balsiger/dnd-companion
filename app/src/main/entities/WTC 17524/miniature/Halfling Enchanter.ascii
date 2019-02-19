@@ -1,0 +1,9 @@
+template {
+  name: "Halfling Enchanter"
+}
+set: "Desert of Desolation"
+number: 18
+type: "Humanoid"
+race: "Halfling"
+class: "Wizard"
+size: SMALL

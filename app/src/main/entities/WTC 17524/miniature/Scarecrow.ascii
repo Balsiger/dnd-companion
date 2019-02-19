@@ -1,0 +1,8 @@
+template {
+  name: "Scarecrow"
+}
+set: "Storm King\'s Thunder"
+number: 9
+race: "Scarecrow"
+type: "Construct"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Mialee, Elf Wizard"
+}
+set: "Archfiends"
+number: 10
+type: "Humanoid"
+race: "Elf"
+class: "Wizard"
+size: MEDIUM

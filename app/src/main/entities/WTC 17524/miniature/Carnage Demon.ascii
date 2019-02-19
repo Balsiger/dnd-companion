@@ -1,0 +1,9 @@
+template {
+  name: "Carnage Demon"
+}
+set: "Night Below"
+number: 47
+race: "Carnage Demon"
+type: "Fiend"
+subtype: "Demon"
+size: MEDIUM

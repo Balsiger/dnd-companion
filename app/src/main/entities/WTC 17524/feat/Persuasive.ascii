@@ -1,0 +1,39 @@
+template {
+  name: "Persuasive"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "You have a way with words and body language."
+  short_description: "+2 bonus on Bluff checks and Intimidate checks"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Bluff checks and Intimidate\n                    checks."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

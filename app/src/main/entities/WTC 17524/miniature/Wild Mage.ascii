@@ -1,0 +1,9 @@
+template {
+  name: "Wild Mage"
+}
+set: "Night Below"
+number: 24
+type: "Humanoid"
+race: "Human"
+class: "Sorcerer"
+size: MEDIUM

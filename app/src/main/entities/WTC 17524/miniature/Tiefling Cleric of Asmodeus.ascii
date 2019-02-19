@@ -1,0 +1,8 @@
+template {
+  name: "Tiefling Cleric of Asmodeus"
+}
+set: "Demonweb"
+number: 8
+type: "Humanoid"
+race: "Tiefling"
+size: MEDIUM

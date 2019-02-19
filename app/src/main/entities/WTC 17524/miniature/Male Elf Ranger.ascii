@@ -1,0 +1,9 @@
+template {
+  name: "Male Elf Ranger"
+}
+set: "Player\'s Handbook Heroes"
+number: 3
+type: "Humanoid"
+race: "Elf"
+class: "Ranger"
+size: MEDIUM

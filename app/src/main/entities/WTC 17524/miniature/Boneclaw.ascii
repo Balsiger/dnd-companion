@@ -1,0 +1,9 @@
+template {
+  name: "Boneclaw"
+}
+set: "Death Knell"
+number: 47
+race: "Boneclaw"
+type: "Undead"
+subtype: "Humanoid"
+size: LARGE

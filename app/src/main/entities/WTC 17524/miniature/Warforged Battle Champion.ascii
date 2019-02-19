@@ -1,0 +1,10 @@
+template {
+  name: "Warforged Battle Champion"
+}
+set: "Demonweb"
+number: 45
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+size: MEDIUM

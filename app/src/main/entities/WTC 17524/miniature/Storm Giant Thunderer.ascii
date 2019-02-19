@@ -1,0 +1,9 @@
+template {
+  name: "Storm Giant Thunderer"
+}
+set: "Against the Giants"
+number: 39
+race: "Storm Giant"
+subtype: "Aquatic"
+type: "Giant"
+size: LARGE

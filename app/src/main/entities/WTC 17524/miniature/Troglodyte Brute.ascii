@@ -1,0 +1,9 @@
+template {
+  name: "Troglodyte Brute"
+}
+set: "Demonweb"
+number: 51
+type: "Humanoid"
+race: "Troglodyte"
+subtype: "Reptile"
+size: MEDIUM

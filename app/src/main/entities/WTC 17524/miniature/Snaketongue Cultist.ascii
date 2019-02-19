@@ -1,0 +1,9 @@
+template {
+  name: "Snaketongue Cultist"
+}
+set: "Desert of Desolation"
+number: 56
+type: "Humanoid"
+race: "Human"
+class: "Druid"
+size: MEDIUM

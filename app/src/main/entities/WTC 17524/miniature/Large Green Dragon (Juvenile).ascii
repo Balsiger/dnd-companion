@@ -1,0 +1,9 @@
+template {
+  name: "Large Green Dragon (Juvenile)"
+}
+set: "War of the Dragon Queen"
+number: 38
+race: "Green Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Chromatic"

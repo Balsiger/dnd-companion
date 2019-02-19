@@ -1,0 +1,10 @@
+template {
+  name: "Ravenous Vampire"
+}
+set: "Death Knell"
+number: 58
+race: "Vampire"
+type: "Undead"
+class: "Barbarian"
+size: MEDIUM
+subtype: "Humanoid"

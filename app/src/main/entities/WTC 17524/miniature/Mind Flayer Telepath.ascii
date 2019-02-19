@@ -1,0 +1,8 @@
+template {
+  name: "Mind Flayer Telepath"
+}
+set: "Aberrations"
+number: 39
+race: "Mind Flayer"
+type: "Aberration"
+size: MEDIUM

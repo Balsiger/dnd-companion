@@ -1,0 +1,8 @@
+template {
+  name: "Shield Dwarf Wizard"
+}
+set: "Rage of Demons"
+number: 8
+type: "Humanoid"
+race: "Dwarf"
+size: MEDIUM

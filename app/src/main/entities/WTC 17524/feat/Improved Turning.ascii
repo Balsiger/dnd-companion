@@ -1,0 +1,40 @@
+template {
+  name: "Improved Turning"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 96
+      high: 96
+    }
+  }
+  world: "Generic"
+  description: "Your turning or rebuking attempts are more powerful than normal."
+  short_description: "+1 level for turning check"
+}
+type: GENERAL
+benefit: "You turn or rebuke creatures as if you were one level\n                    higher than you are in the class that grants you the\n                    ability."
+prerequisites: "Ability to turn or rebuke creatures."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

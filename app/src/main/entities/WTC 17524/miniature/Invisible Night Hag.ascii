@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Night Hag"
+}
+set: "Storm King\'s Thunder"
+number: 34
+race: "Night Hag"
+type: "Fey"
+size: MEDIUM
+subtype: "Hag"
+subtype: "Invisible"

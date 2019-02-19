@@ -1,0 +1,9 @@
+template {
+  name: "Human Cleric of Bahamut"
+}
+set: "Desert of Desolation"
+number: 5
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

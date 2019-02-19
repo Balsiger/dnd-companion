@@ -1,0 +1,9 @@
+template {
+  name: "Mummy (MM)"
+}
+set: "Monster Menagerie"
+number: 10
+race: "Mummy"
+type: "Undead"
+subtype: "Humanoid"
+size: MEDIUM

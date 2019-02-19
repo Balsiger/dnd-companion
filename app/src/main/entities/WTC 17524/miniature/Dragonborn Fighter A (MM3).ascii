@@ -1,0 +1,9 @@
+template {
+  name: "Dragonborn Fighter A (MM3)"
+}
+set: "Monster Menagerie 3"
+number: 20
+race: "Dragonborn"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Verdant Reaver"
+}
+set: "Night Below"
+number: 22
+race: "Verdant Reaver"
+type: "Plant"
+size: LARGE

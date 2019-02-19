@@ -1,0 +1,9 @@
+template {
+  name: "Hunting Hyena"
+}
+set: "War of the Dragon Queen"
+number: 47
+race: "Hyena"
+type: "Beast"
+subtype: "Animal"
+size: MEDIUM

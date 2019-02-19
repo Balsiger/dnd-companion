@@ -1,0 +1,9 @@
+template {
+  name: "Iron Golem"
+}
+set: "Underdark"
+number: 25
+race: "Iron Golem"
+type: "Construct"
+subtype: "Golem"
+size: LARGE

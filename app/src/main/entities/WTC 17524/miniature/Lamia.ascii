@@ -1,0 +1,8 @@
+template {
+  name: "Lamia"
+}
+set: "Dungeons of Dread"
+number: 30
+race: "Lamia"
+type: "Monstrosity"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Artus Cimber (invisible)"
+}
+set: "Tomb of Annihilation"
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Bow"

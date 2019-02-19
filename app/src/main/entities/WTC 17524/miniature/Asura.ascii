@@ -1,0 +1,11 @@
+template {
+  name: "Asura"
+}
+set: "Unhallowed"
+number: 13
+race: "Asura"
+type: "Celestial"
+subtype: "Chaotic"
+subtype: "Good"
+subtype: "Humanoid"
+size: MEDIUM

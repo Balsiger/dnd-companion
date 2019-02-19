@@ -1,0 +1,9 @@
+template {
+  name: "Githyanki Renegade"
+}
+set: "Giants of Legend"
+number: 16
+race: "Githyanki"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM

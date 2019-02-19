@@ -1,0 +1,11 @@
+template {
+  name: "Bugbear Footpad"
+}
+set: "Giants of Legend"
+number: 42
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Bugbear"
+class: "Fighter"
+class: "Rogue"
+size: MEDIUM

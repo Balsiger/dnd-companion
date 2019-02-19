@@ -1,0 +1,10 @@
+template {
+  name: "Fiendish Tyrannosaurus"
+}
+set: "Giants of Legend"
+number: 68
+race: "Tyrannosaurus"
+type: "Fiend"
+subtype: "Reptile"
+subtype: "Dinosaur"
+size: HUGE

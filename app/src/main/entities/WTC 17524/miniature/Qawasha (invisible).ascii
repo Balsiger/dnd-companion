@@ -1,0 +1,9 @@
+template {
+  name: "Qawasha (invisible)"
+}
+set: "Tomb of Annihilation"
+number: 7
+type: "Humanoid"
+race: "Human"
+class: "Druid"
+size: MEDIUM

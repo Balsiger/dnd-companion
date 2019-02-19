@@ -1,0 +1,9 @@
+template {
+  name: "Halfling Outrider"
+}
+set: "Dragon Eye"
+number: 21
+type: "Humanoid"
+race: "Halfling"
+class: "Fighter"
+size: MEDIUM

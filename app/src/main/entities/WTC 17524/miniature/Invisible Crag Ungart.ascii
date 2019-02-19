@@ -1,0 +1,9 @@
+template {
+  name: "Invisible Crag Ungart"
+}
+set: "Storm King\'s Thunder"
+number: 7
+race: "Dwarf"
+type: "Humanoid"
+size: SMALL
+subtype: "Invisible"

@@ -1,0 +1,8 @@
+template {
+  name: "Inisivible Shield Dwarf Fighter"
+}
+set: "Elemental Evil"
+number: 46
+type: "Humanoid"
+race: "Dwarf"
+size: MEDIUM

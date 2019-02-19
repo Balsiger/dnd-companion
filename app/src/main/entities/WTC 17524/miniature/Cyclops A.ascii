@@ -1,0 +1,8 @@
+template {
+  name: "Cyclops A"
+}
+set: "Monster Menagerie 3"
+number: 26
+race: "Cyclops"
+type: "Giant"
+size: HUGE

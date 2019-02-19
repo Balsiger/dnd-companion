@@ -1,0 +1,10 @@
+template {
+  name: "Naga"
+}
+set: "Desert of Desolation"
+number: 43
+race: "Naga"
+type: "Aberration"
+subtype: "Naga"
+subtype: "Reptile"
+size: LARGE

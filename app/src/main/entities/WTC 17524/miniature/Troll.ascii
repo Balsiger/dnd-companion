@@ -1,0 +1,8 @@
+template {
+  name: "Troll"
+}
+set: "Harbinger"
+number: 77
+type: "Giant"
+race: "Troll"
+size: LARGE

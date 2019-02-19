@@ -1,0 +1,9 @@
+template {
+  name: "Trihorn Behemoth"
+}
+set: "Lords of Madness"
+number: 53
+race: "Behemoth"
+type: "Beast"
+subtype: "Mount"
+size: HUGE

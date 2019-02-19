@@ -1,0 +1,9 @@
+template {
+  name: "Goblin Runner"
+}
+set: "Against the Giants"
+number: 21
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: SMALL

@@ -1,0 +1,9 @@
+template {
+  name: "Blazing Skeleton"
+}
+set: "Against the Giants"
+number: 48
+race: "Blazing Skeleton"
+type: "Undead"
+subtype: "Skeleton"
+size: MEDIUM

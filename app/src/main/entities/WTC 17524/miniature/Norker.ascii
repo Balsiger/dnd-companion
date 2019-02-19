@@ -1,0 +1,9 @@
+template {
+  name: "Norker"
+}
+set: "Savage Encounters"
+number: 27
+type: "Humanoid"
+race: "Norker"
+subtype: "Goblinoid"
+size: SMALL

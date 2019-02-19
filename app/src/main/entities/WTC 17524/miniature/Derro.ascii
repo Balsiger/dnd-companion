@@ -1,0 +1,8 @@
+template {
+  name: "Derro"
+}
+set: "War Drums"
+number: 46
+race: "Derro"
+type: "Humanoid"
+size: SMALL

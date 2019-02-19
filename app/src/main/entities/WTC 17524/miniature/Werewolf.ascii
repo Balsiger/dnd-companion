@@ -1,0 +1,10 @@
+template {
+  name: "Werewolf"
+}
+set: "Giants of Legend"
+number: 60
+race: "Werewolf"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: MEDIUM

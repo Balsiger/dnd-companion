@@ -1,0 +1,9 @@
+template {
+  name: "Orc Brute"
+}
+set: "Giants of Legend"
+number: 56
+type: "Humanoid"
+race: "Orc"
+class: "Barbarian"
+size: MEDIUM

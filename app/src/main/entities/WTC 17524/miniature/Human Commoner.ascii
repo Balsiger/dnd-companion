@@ -1,0 +1,9 @@
+template {
+  name: "Human Commoner"
+}
+set: "Harbinger"
+number: 8
+type: "Humanoid"
+race: "Human"
+class: "Expert"
+size: MEDIUM

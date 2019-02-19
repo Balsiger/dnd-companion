@@ -1,0 +1,6 @@
+template {
+  name: "City of the Dead Statues and Monuments"
+}
+set: "Dragon Heist"
+number: 45
+type: "Object"

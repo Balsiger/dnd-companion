@@ -1,0 +1,9 @@
+template {
+  name: "Fire Giant"
+}
+set: "Giants of Legend"
+number: 31
+race: "Fire Giant"
+type: "Giant"
+subtype: "Fire"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Vampire Guildmaster"
+}
+set: "Savage Encounters"
+number: 38
+race: "Vampire"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

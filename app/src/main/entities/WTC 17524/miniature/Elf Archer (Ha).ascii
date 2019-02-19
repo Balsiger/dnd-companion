@@ -1,0 +1,9 @@
+template {
+  name: "Elf Archer (Ha)"
+}
+set: "Harbinger"
+number: 21
+type: "Humanoid"
+race: "Elf"
+class: "Fighter"
+size: MEDIUM

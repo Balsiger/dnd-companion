@@ -1,0 +1,9 @@
+template {
+  name: "Redspawn Firebelcher"
+}
+set: "War of the Dragon Queen"
+number: 52
+race: "Redspawn"
+type: "Dragonspawn"
+subtype: "Humanoid"
+size: LARGE

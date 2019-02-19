@@ -1,0 +1,9 @@
+template {
+  name: "Air Mephit"
+}
+set: "Unhallowed"
+number: 12
+race: "Air Mephit"
+type: "Elemental"
+subtype: "Air"
+size: SMALL

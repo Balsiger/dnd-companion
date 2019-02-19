@@ -1,0 +1,9 @@
+template {
+  name: "Northlands Fighter"
+}
+set: "Starter Set"
+number: 50
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

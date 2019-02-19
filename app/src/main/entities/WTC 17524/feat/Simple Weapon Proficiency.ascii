@@ -1,0 +1,41 @@
+template {
+  name: "Simple Weapon Proficiency"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 100
+      high: 100
+    }
+  }
+  world: "Generic"
+  description: "You understand how to use all types of simple weapons in combat (see Table\n  7\342\200\232\303\204\303\2545: Weapons, page 116, for a list of simple weapons)."
+  short_description: "No \342\200\232\303\204\303\2544 penalty on attack rolls with simple weapons"
+}
+type: GENERAL
+benefit: "You make attack rolls with simple weapons normally."
+special: "All characters except for druids, monks, rogues, and\n                    wizards are automatically proficient with all simple\n                    weapons. They need not select this feat.\n\n                    A sorcerer or wizard who casts the spell Tenser\342\200\232\303\204\303\264s\n                    transformation on himself or herself gains proficiency with\n                    all simple weapons for the duration of the spell."
+normal: "When using a weapon with which you are not proficient, you\n                    take a \342\200\232\303\204\303\2544 penalty on attack rolls."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

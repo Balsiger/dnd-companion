@@ -1,0 +1,9 @@
+template {
+  name: "Death Knight (Dragonborn Paladin)"
+}
+set: "Savage Encounters"
+number: 10
+race: "Death Knight"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

@@ -1,0 +1,9 @@
+template {
+  name: "Chuul"
+}
+set: "Legendary Evils"
+number: 9
+race: "Chuul"
+type: "Aberration"
+subtype: "Aquatic"
+size: LARGE

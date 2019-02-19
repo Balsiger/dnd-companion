@@ -1,0 +1,8 @@
+template {
+  name: "Halfling Paladin"
+}
+set: "Dungeons of Dread"
+number: 4
+type: "Humanoid"
+race: "Halfling"
+size: SMALL

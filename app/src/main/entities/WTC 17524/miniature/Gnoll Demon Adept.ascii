@@ -1,0 +1,8 @@
+template {
+  name: "Gnoll Demon Adept"
+}
+set: "Demonweb"
+number: 28
+type: "Humanoid"
+race: "Gnoll"
+size: MEDIUM

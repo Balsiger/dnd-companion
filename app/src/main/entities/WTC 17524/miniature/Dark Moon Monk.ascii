@@ -1,0 +1,9 @@
+template {
+  name: "Dark Moon Monk"
+}
+set: "Archfiends"
+number: 30
+type: "Humanoid"
+race: "Human"
+class: "Monk"
+size: MEDIUM

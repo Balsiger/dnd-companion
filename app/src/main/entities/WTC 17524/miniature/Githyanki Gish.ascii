@@ -1,0 +1,8 @@
+template {
+  name: "Githyanki Gish"
+}
+set: "Savage Encounters"
+number: 14
+race: "Githyanki"
+type: "Humanoid"
+size: MEDIUM

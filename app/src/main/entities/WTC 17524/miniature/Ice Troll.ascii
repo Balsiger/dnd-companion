@@ -1,0 +1,10 @@
+template {
+  name: "Ice Troll"
+}
+set: "Aberrations"
+number: 53
+race: "Ice Troll"
+type: "Giant"
+subtype: "Cold"
+subtype: "Troll"
+size: LARGE

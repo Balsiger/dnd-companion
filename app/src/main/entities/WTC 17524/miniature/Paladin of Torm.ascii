@@ -1,0 +1,9 @@
+template {
+  name: "Paladin of Torm"
+}
+set: "Archfiends"
+number: 7
+type: "Humanoid"
+race: "Human"
+class: "Paladin"
+size: MEDIUM

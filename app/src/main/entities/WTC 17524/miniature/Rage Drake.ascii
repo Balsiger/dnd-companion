@@ -1,0 +1,11 @@
+template {
+  name: "Rage Drake"
+}
+set: "Desert of Desolation"
+number: 53
+race: "Rake Drake"
+type: "Dragon"
+subtype: "Reptile"
+subtype: "Drake"
+size: LARGE
+subtype: "Lesser"

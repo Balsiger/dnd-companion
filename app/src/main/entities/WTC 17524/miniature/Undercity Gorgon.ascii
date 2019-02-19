@@ -1,0 +1,9 @@
+template {
+  name: "Undercity Gorgon"
+}
+race: "Medusa"
+set: "Guildmaster\'s Guide to Ravnica"
+number: 34
+type: "Monstrosity"
+subtype: "Humanoid"
+size: MEDIUM

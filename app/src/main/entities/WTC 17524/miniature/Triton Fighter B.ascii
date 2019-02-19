@@ -1,0 +1,8 @@
+template {
+  name: "Triton Fighter B"
+}
+set: "Monster Menagerie 3"
+number: 38
+race: "Triton"
+type: "Humanoid"
+size: MEDIUM

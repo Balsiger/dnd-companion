@@ -1,0 +1,8 @@
+template {
+  name: "Cadaver Collector"
+}
+set: "War of the Dragon Queen"
+number: 27
+race: "Cadaver Collector"
+type: "Construct"
+size: LARGE

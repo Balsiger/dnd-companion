@@ -1,0 +1,8 @@
+template {
+  name: "Shadar-Kai Warrior"
+}
+set: "Lords of Madness"
+number: 42
+type: "Humanoid"
+race: "Shadar-Kai"
+size: MEDIUM

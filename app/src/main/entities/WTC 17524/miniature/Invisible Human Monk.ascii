@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Human Monk"
+}
+set: "Monster Menagerie 2"
+number: 10
+type: "Humanoid"
+race: "Human"
+class: "Monk"
+size: MEDIUM
+subtype: "Invisible"

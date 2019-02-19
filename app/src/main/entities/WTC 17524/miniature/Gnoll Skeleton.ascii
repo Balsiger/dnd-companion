@@ -1,0 +1,8 @@
+template {
+  name: "Gnoll Skeleton"
+}
+set: "Aberrations"
+number: 52
+type: "Undead"
+race: "Skeleton"
+size: MEDIUM

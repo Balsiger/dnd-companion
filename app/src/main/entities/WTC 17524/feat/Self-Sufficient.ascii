@@ -1,0 +1,39 @@
+template {
+  name: "Self-Sufficient"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 100
+      high: 100
+    }
+  }
+  world: "Generic"
+  description: "You can take care of yourself in harsh environments and situations."
+  short_description: "+2 bonus on Heal and Survival checks"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Heal checks and Survival\n                    checks."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Earth Genasi Fighter"
+}
+set: "Elemental Evil"
+number: 49
+race: "Earth Genasi"
+type: "Humanoid"
+subtype: "Earth"
+size: MEDIUM
+subtype: "Invisible"

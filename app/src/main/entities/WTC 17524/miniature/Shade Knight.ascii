@@ -1,0 +1,8 @@
+template {
+  name: "Shade Knight"
+}
+set: "Dungeons of Dread"
+number: 53
+race: "Shade"
+type: "Humanoid"
+size: MEDIUM

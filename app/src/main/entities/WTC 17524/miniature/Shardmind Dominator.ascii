@@ -1,0 +1,10 @@
+template {
+  name: "Shardmind Dominator"
+}
+set: "Lords of Madness"
+number: 44
+race: "Shardmind"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+size: MEDIUM

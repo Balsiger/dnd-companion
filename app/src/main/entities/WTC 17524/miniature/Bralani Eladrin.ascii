@@ -1,0 +1,10 @@
+template {
+  name: "Bralani Eladrin"
+}
+set: "Blood War"
+number: 14
+race: "Eladrin"
+type: "Humanoid"
+subtype: "Chaotic"
+subtype: "Good"
+size: MEDIUM

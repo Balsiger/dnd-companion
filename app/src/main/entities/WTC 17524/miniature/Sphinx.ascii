@@ -1,0 +1,8 @@
+template {
+  name: "Sphinx"
+}
+set: "Desert of Desolation"
+number: 8
+race: "Sphinx"
+type: "Monstrosity"
+size: LARGE

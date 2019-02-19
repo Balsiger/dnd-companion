@@ -1,0 +1,10 @@
+template {
+  name: "Earth Mephit"
+}
+set: "Night Below"
+number: 6
+race: "Eearth Mephit"
+type: "Elemental"
+subtype: "Earth"
+subtype: "Mephit"
+size: SMALL

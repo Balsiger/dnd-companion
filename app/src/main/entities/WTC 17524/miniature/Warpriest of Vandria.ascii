@@ -1,0 +1,9 @@
+template {
+  name: "Warpriest of Vandria"
+}
+set: "Night Below"
+number: 23
+type: "Humanoid"
+race: "Elf"
+class: "Cleric"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Foulspawn Grue"
+}
+set: "Dungeon Delve"
+number: 15
+race: "Foulspawn"
+type: "Aberration"
+size: SMALL

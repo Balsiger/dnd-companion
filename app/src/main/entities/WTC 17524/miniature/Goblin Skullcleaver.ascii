@@ -1,0 +1,9 @@
+template {
+  name: "Goblin Skullcleaver"
+}
+set: "Savage Encounters"
+number: 16
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: SMALL

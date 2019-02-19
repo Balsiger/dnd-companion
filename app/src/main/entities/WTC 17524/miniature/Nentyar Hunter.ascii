@@ -1,0 +1,9 @@
+template {
+  name: "Nentyar Hunter"
+}
+set: "Underdark"
+number: 20
+race: "Human"
+type: "Plant"
+class: "Ranger"
+size: MEDIUM

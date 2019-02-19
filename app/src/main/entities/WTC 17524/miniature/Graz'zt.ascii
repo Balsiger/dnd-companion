@@ -1,0 +1,9 @@
+template {
+  name: "Graz\'zt"
+}
+set: "Savage Encounters"
+number: 19
+race: "Graz\'zt"
+type: "Fiend"
+subtype: "Demon"
+size: MEDIUM

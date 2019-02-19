@@ -1,0 +1,8 @@
+template {
+  name: "Owlbear Rager"
+}
+set: "Blood War"
+number: 57
+race: "Owlbear"
+type: "Monstrosity"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Goblin Hucker"
+}
+set: "Monster Menagerie 3"
+number: 43
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: LARGE

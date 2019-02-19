@@ -1,0 +1,9 @@
+template {
+  name: "Quadrone"
+}
+set: "Monster Menagerie 3"
+number: 18
+race: "Quadrone"
+type: "Construct"
+subtype: "Modron"
+size: MEDIUM

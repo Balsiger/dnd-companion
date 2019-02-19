@@ -1,0 +1,9 @@
+template {
+  name: "White Dragon"
+}
+set: "Elemental Evil"
+number: 41
+race: "White Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Chromatic"

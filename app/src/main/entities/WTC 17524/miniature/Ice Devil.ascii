@@ -1,0 +1,9 @@
+template {
+  name: "Ice Devil"
+}
+set: "Blood War"
+number: 35
+race: "Ice Devil"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Icingdeath, Gargantuan White Dragon (Great Wyrm)"
+}
+set: "Icons"
+number: 3
+race: "White Dragon"
+type: "Dragon"
+size: GARGANTUAN
+subtype: "Chromatic"

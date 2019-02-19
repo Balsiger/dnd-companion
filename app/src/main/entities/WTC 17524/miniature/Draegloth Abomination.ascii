@@ -1,0 +1,9 @@
+template {
+  name: "Draegloth Abomination"
+}
+set: "Lords of Madness"
+number: 11
+race: "Draegloth"
+type: "Fiend"
+subtype: "Demon"
+size: HUGE

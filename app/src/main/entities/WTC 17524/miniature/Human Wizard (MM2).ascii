@@ -1,0 +1,9 @@
+template {
+  name: "Human Wizard (MM2)"
+}
+set: "Monster Menagerie"
+number: 21
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

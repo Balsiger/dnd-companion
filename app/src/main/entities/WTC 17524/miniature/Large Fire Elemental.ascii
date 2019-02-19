@@ -1,0 +1,9 @@
+template {
+  name: "Large Fire Elemental"
+}
+set: "Desert of Desolation"
+number: 51
+race: "Fire Elemental"
+type: "Elemental"
+subtype: "Fire"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Sergeant"
+}
+set: "Giants of Legend"
+number: 2
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

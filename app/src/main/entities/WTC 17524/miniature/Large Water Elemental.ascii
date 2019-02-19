@@ -1,0 +1,9 @@
+template {
+  name: "Large Water Elemental"
+}
+set: "Blood War"
+number: 38
+race: "Water Elemental"
+type: "Elemental"
+subtype: "Water"
+size: LARGE

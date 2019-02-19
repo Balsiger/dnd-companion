@@ -1,0 +1,9 @@
+template {
+  name: "Cloaktrick Rogue"
+}
+set: "Against the Giants"
+number: 43
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM

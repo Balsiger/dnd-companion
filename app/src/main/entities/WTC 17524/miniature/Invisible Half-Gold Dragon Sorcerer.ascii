@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Half-Gold Dragon Sorcerer"
+}
+set: "Monster Menagerie 2"
+number: 37
+race: "Half-Dragon"
+type: "Humanoid"
+subtype: "Dragon"
+size: MEDIUM
+subtype: "Invisible"

@@ -1,0 +1,9 @@
+template {
+  name: "Bodak Skulk"
+}
+set: "Savage Encounters"
+number: 6
+race: "Bodak"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

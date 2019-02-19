@@ -1,0 +1,9 @@
+template {
+  name: "Bladesinger"
+}
+set: "Dragon Eye"
+number: 13
+race: "Elf"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM

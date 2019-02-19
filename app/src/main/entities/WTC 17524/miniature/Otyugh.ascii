@@ -1,0 +1,8 @@
+template {
+  name: "Otyugh"
+}
+set: "Giants of Legend"
+number: 27
+race: "Otyugh"
+type: "Aberration"
+size: LARGE

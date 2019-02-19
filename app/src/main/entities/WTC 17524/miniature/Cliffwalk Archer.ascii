@@ -1,0 +1,10 @@
+template {
+  name: "Cliffwalk Archer"
+}
+set: "Desert of Desolation"
+number: 15
+race: "Shifter"
+type: "Humanoid"
+subtype: "Shapechanger"
+class: "Barbarian"
+size: MEDIUM

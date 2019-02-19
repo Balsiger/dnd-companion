@@ -1,0 +1,9 @@
+template {
+  name: "Terror Wight"
+}
+set: "War Drums"
+number: 41
+race: "Wight"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

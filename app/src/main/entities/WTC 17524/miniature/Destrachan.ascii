@@ -1,0 +1,9 @@
+template {
+  name: "Destrachan"
+}
+set: "Aberrations"
+number: 29
+race: "Destrachan"
+type: "Aberration"
+subtype: "Blind"
+size: LARGE

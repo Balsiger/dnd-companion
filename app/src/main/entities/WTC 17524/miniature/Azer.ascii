@@ -1,0 +1,10 @@
+template {
+  name: "Azer"
+}
+set: "Storm King\'s Thunder"
+number: 24
+race: "Azer"
+type: "Elemental"
+subtype: "Fire"
+subtype: "Humanoid"
+size: MEDIUM

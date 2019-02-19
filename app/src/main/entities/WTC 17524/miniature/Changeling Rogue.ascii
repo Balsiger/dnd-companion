@@ -1,0 +1,10 @@
+template {
+  name: "Changeling Rogue"
+}
+set: "Unhallowed"
+number: 14
+race: "Changeling"
+type: "Humanoid"
+subtype: "Shapechanger"
+class: "Rogue"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Duergar Cleric of Asmodeus"
+}
+set: "Legendary Evils"
+number: 12
+type: "Humanoid"
+race: "Duergar"
+size: MEDIUM

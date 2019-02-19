@@ -1,0 +1,9 @@
+template {
+  name: "Cazi Alphelandra"
+}
+set: "Storm King\'s Thunder"
+number: 6
+race: "Elf"
+type: "Humanoid"
+class: "Ranger"
+size: SMALL

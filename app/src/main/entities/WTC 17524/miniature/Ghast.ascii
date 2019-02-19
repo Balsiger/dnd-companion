@@ -1,0 +1,8 @@
+template {
+  name: "Ghast"
+}
+set: "Giants of Legend"
+number: 49
+type: "Undead"
+race: "Ghast"
+size: MEDIUM

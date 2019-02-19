@@ -1,0 +1,40 @@
+template {
+  name: "Scribe Scroll"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 99
+      high: 100
+    }
+  }
+  world: "Generic"
+  description: "Scribing a scroll takes one day for each 1,000 gp in its base price. The\n  base price of a scroll is its spell level \342\210\232\303\263 its caster level \342\210\232\303\263 25 gp. To\n  scribe a scroll, you must spend 1/25 of this base price in XP and use up raw\n  materials costing one-half of this base price.\n\n  Any scroll that stores a spell with a costly material component or an XP cost\n  also carries a commensurate cost. In addition to the costs derived from the\n  Mialee casts a spell from a scroll she scribed.\n\n  base price, you must expend the material component or pay the XP when\n  scribing the scroll.\n\n  You can create scrolls, from which you or another spellcaster can cast the\n  scribed spells. See the Dungeon Master\342\200\232\303\204\303\264s Guide for rules on scrolls."
+  short_description: "Create magic scrolls"
+}
+type: GENERAL
+benefit: "You can create a scroll of any spell that you know."
+prerequisites: "Caster level 1st."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

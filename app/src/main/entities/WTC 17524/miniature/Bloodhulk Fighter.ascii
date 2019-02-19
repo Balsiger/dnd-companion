@@ -1,0 +1,9 @@
+template {
+  name: "Bloodhulk Fighter"
+}
+set: "Death Knell"
+number: 46
+race: "Bloodhulk"
+type: "Undead"
+subtype: "Humanoid"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Farmer"
+}
+set: "Desert of Desolation"
+number: 11
+type: "Humanoid"
+race: "Human"
+class: "Expert"
+size: MEDIUM

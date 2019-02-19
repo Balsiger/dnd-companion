@@ -1,0 +1,8 @@
+template {
+  name: "Medium Astral Construct"
+}
+set: "Giants of Legend"
+number: 20
+race: "Astral Construct"
+type: "Construct"
+size: MEDIUM

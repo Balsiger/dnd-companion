@@ -1,0 +1,10 @@
+template {
+  name: "Soldier of Cormyr"
+}
+set: "Archfiends"
+number: 8
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

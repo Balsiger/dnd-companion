@@ -1,0 +1,9 @@
+template {
+  name: "Aurak Draconian"
+}
+set: "Legendary Evils"
+number: 3
+race: "Draconian"
+type: "Dragon"
+subtype: "Humanoid"
+size: MEDIUM

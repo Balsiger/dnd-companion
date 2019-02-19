@@ -1,0 +1,10 @@
+template {
+  name: "Goblin Fighter"
+}
+set: "Tyranny of Dragons"
+number: 6
+type: "Humanoid"
+race: "Goblin"
+subtype: "Goblinoid"
+class: "Fighter"
+size: SMALL

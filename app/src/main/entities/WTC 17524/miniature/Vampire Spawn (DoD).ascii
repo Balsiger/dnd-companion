@@ -1,0 +1,8 @@
+template {
+  name: "Vampire Spawn (DoD)"
+}
+set: "Dungeons of Dread"
+number: 23
+type: "Humanoid"
+subtype: "Undead"
+size: MEDIUM

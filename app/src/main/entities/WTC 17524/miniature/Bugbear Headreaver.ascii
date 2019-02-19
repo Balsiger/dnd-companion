@@ -1,0 +1,9 @@
+template {
+  name: "Bugbear Headreaver"
+}
+set: "Dungeons of Dread"
+number: 32
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Bugbear"
+size: MEDIUM

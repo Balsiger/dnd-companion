@@ -1,0 +1,8 @@
+template {
+  name: "Dryad"
+}
+set: "Monster Menagerie"
+number: 11
+type: "Fey"
+subtype: "Plant"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Longstrider Ranger (Shifter)"
+}
+set: "Angelfire"
+number: 22
+type: "Humanoid"
+race: "Shifter"
+class: "Ranger"
+size: MEDIUM

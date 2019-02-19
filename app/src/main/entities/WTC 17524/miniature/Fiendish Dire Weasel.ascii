@@ -1,0 +1,10 @@
+template {
+  name: "Fiendish Dire Weasel"
+}
+set: "Aberrations"
+number: 31
+race: "Dire Weasel"
+type: "Fiend"
+subtype: "Dire"
+subtype: "Animal"
+size: MEDIUM

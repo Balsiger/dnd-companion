@@ -1,0 +1,10 @@
+template {
+  name: "Merrow (TA a)"
+}
+set: "Tomb of Annihilation"
+number: 26
+race: "Merrow"
+type: "Monstrosity"
+subtype: "Giant"
+subtype: "Aquatic"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Lillend"
+}
+set: "Blood War"
+number: 19
+race: "Lillend"
+type: "Monstrosity"
+subtype: ""
+size: LARGE

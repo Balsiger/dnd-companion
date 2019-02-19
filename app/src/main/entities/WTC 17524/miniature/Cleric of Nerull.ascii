@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Nerull"
+}
+set: "Dragon Eye"
+number: 30
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

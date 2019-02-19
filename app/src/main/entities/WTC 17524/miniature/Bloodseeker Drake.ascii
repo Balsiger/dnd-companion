@@ -1,0 +1,11 @@
+template {
+  name: "Bloodseeker Drake"
+}
+set: "Dungeon Delve"
+number: 9
+race: "Bloodseeker Drake"
+type: "Dragon"
+subtype: "Drake"
+subtype: "Reptile"
+size: MEDIUM
+subtype: "Lesser"

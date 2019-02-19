@@ -1,0 +1,8 @@
+template {
+  name: "Kuyutha, Exarch of Bahamut"
+}
+set: "Demonweb"
+number: 2
+type: "Humanoid"
+race: "Dragonborn"
+size: LARGE

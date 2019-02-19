@@ -1,0 +1,8 @@
+template {
+  name: "Rhek"
+}
+set: "Aberrations"
+number: 9
+race: "Rhek"
+type: "Humanoid"
+size: MEDIUM

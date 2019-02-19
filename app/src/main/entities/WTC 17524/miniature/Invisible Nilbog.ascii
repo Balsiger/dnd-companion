@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Nilbog"
+}
+set: "Monster Menagerie 3"
+number: 15
+type: "Humanoid"
+race: "Nilbog"
+subtype: "Goblinoid"
+size: MEDIUM
+subtype: "Invisible"

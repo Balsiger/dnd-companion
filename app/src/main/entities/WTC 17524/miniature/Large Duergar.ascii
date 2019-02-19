@@ -1,0 +1,9 @@
+template {
+  name: "Large Duergar"
+}
+set: "War Drums"
+number: 36
+type: "Humanoid"
+race: "Duergar"
+class: "Fighter"
+size: LARGE

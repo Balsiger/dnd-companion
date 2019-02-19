@@ -1,0 +1,8 @@
+template {
+  name: "Medusa"
+}
+set: "Harbinger"
+number: 49
+race: "Medusa"
+type: "Monstrosity"
+size: MEDIUM

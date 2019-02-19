@@ -1,0 +1,9 @@
+template {
+  name: "Specter"
+}
+set: "Savage Encounters"
+number: 36
+race: "Specter"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

@@ -1,0 +1,8 @@
+template {
+  name: "Gnoll Huntmaster"
+}
+set: "Dungeon Delve"
+number: 20
+type: "Humanoid"
+race: "Gnoll"
+size: MEDIUM

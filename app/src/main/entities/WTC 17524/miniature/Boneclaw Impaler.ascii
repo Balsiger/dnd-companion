@@ -1,0 +1,9 @@
+template {
+  name: "Boneclaw Impaler"
+}
+set: "Against the Giants"
+number: 49
+race: "Boneclaw"
+type: "Undead"
+size: LARGE
+subtype: "Humanoid"

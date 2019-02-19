@@ -1,0 +1,9 @@
+template {
+  name: "Chain Golem"
+}
+set: "Against the Giants"
+number: 42
+race: "Chain Golem"
+type: "Construct"
+subtype: "Golem"
+size: HUGE

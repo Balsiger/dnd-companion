@@ -1,0 +1,9 @@
+template {
+  name: "Illydia Maethellyn"
+}
+set: "Monster Menagerie"
+number: 24
+type: "Humanoid"
+race: "Elf"
+class: "Cleric"
+size: MEDIUM

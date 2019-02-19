@@ -1,0 +1,8 @@
+template {
+  name: "Spell Weaver"
+}
+set: "Lords of Madness"
+number: 46
+race: "Spell Weaver"
+type: "Monstrosity"
+size: MEDIUM

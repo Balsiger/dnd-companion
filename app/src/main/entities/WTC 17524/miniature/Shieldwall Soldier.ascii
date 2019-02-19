@@ -1,0 +1,10 @@
+template {
+  name: "Shieldwall Soldier"
+}
+set: "War Drums"
+number: 10
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

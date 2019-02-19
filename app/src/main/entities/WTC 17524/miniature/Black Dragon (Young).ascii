@@ -1,0 +1,10 @@
+template {
+  name: "Black Dragon (Young)"
+}
+set: "Dragon Eye"
+number: 44
+race: "Black Dragon"
+type: "Dragon"
+subtype: "Aquatic"
+size: MEDIUM
+subtype: "Chromatic"

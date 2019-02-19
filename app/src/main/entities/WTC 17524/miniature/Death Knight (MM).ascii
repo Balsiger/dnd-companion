@@ -1,0 +1,9 @@
+template {
+  name: "Death Knight (MM)"
+}
+set: "Monster Menagerie"
+number: 38
+race: "Death Knight"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

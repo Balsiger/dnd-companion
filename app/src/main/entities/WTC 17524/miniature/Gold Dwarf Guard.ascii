@@ -1,0 +1,9 @@
+template {
+  name: "Gold Dwarf Guard"
+}
+set: "Elemental Evil"
+number: 15
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

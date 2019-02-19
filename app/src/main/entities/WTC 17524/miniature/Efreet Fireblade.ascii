@@ -1,0 +1,10 @@
+template {
+  name: "Efreet Fireblade"
+}
+set: "Lords of Madness"
+number: 14
+race: "Efreeti"
+type: "Elemental"
+subtype: "Genie"
+subtype: "Fire"
+size: LARGE

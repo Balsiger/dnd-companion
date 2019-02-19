@@ -1,0 +1,8 @@
+template {
+  name: "Tundra Scout"
+}
+set: "War of the Dragon Queen"
+number: 57
+type: "Humanoid"
+subtype: "Giant"
+size: HUGE

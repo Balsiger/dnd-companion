@@ -1,0 +1,10 @@
+template {
+  name: "Shadow"
+}
+set: "Night Below"
+number: 60
+race: "Shadow"
+type: "Undead"
+subtype: "Incorporeal"
+size: MEDIUM
+subtype: "Humanoid"

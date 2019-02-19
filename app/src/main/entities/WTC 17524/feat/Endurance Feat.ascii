@@ -1,0 +1,51 @@
+template {
+  name: "Endurance Feat"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 93
+      high: 93
+    }
+  }
+  world: "Generic"
+  description: "You are capable of amazing feats of stamina."
+  short_description: "+4 bonus on checks or saves to resist nonlethal damage"
+}
+type: GENERAL
+benefit: "You gain a +4 bonus on the following checks and saves: \\list{Swim checks made to resist nonlethal damage (see page 84),}                    Constitution checks made to continue running (see page                    144), Constitution checks made to avoid nonlethal damage                    from a forced march (see page 164), Constitution checks                    made to hold your breath (see page 84), Constitution checks                    made to avoid nonlethal damage from starvation or thirst                    (see page 304 of the Dun- geon Master\342\200\232\303\204\303\264s Guide), Fortitude                    saves made to avoid nonlethal damage from hot or cold                    environments (see pages 302 and 303 of the Dungeon Master\342\200\232\303\204\303\264s                    Guide), and Forti- tude saves made to resist damage from                    suffocation (see page 304 of the Dun- geon Master\342\200\232\303\204\303\264s                    Guide). Also, you may sleep in light or medium armor                    without becoming fatigued."
+special: "A ranger automatically gains Endurance as a bonus feat at                    3rd level (see page 48). He need not select it."
+normal: "A character without this feat who sleeps in medium or                    heavier armor is automatically fatigued the next day."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+skill_modifier {
+  name: "swim"
+  modifier {
+    modifier {
+      value: 4
+      type: GENERAL
+      condition: "to resist non-lethal damage"
+    }
+  }
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

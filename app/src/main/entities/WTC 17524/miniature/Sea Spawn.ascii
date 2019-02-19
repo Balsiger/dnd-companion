@@ -1,0 +1,8 @@
+template {
+  name: "Sea Spawn"
+}
+set: "Monster Menagerie 3"
+number: 23
+race: "Sea Spawn"
+type: "Humanoid"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Vampire Vizier"
+}
+set: "Dungeons of Dread"
+number: 28
+race: "Vampire"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

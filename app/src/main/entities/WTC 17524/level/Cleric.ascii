@@ -1,0 +1,394 @@
+template {
+  name: "Cleric"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 30
+      high: 33
+    }
+  }
+  world: "Generic"
+  description: "The handiwork of the gods is everywhere \342\200\224 in places of natural\nbeauty, in mighty crusades, in soaring temples, and in the hearts of\nworshipers. Like people, gods run the gamut from benevolent to\nmalicious, reserved to intrusive, simple to inscrutable. The gods,\nhowever, work mostly through intermediaries \342\200\224 their clerics. Good\nclerics heal, protect, and avenge. Evil clerics pillage, destroy, and\nsabotage. A cleric uses the power of his god to make his god\342\200\231s will\nmanifest. And if a cleric uses his god\342\200\231s power to improve his own lot,\nthat\342\200\231s to be expected, too."
+  short_description: "An intermediary between the gods and the world."
+}
+abbreviation: "Clr"
+adventures: "Ideally, a cleric\342\200\231s adventures support his god\342\200\231s\ncauses, at least in a general way. A good cleric, for example, helps\nthose in need. If, through noble acts, he can improve the reputation\nto his god or temple, that\342\200\231s even better. An evil cleric seeks to\nincrease his own power and that of his deity, so that others will\nrespect and fear both.\n\nClerics sometimes receive orders, or at least suggestions, from\ntheir ecclesiastical superiors, directing them to undertake missions\nfor the church. The clerics and their companions are compensated\nfairly for these missions, and the church may be especially generous\nwith the casting of needed spells or divine magic items as payment.\n\nOf course, clerics are people, too, and they may have any or all the\nmore common motivations for adventuring."
+characteristics: "Clerics are masters of divine magic, which is\nespecially good at healing. Even an inexperienced cleric can bring\npeople back from the brink of death, and an experienced cleric can\nbring back people who have crossed over that brink.\n\nAs channelers of divine energy, clerics can affect undead creatures. A good cleric can turn away or even destroy undead; an evil\ncleric can bring undead under his control.\n\nClerics have some combat training. They can use simple weapons,\nand they are trained in the use of armor, since armor does not\ninterfere with divine spells the way it does with arcane spells."
+alignment_options: "Like the gods they serve, clerics can be of any\nalignment. Because people more readily worship good deities than\nneutral or evil ones, there are more good than evil clerics. Clerics\nalso tend toward law instead of chaos, since lawful religions tend to\nbe more structured and better able to recruit and train clerics than\nchaotic ones.\n\nTypically, a cleric is the same alignment as his deity, though some\nclerics are one step away from their respective deities in alignment.\nFor example, most clerics of Heironeous, the god of valor (who is\nlawful good) are lawful good, but some are lawful neutral or neutral\ngood. Additionally, a cleric may not be neutral (that is, neutral on\nboth the good\342\200\223evil axis and the lawful\342\200\223chaotic axis) unless his deity\nis neutral."
+religion: "Every reasonably well-known deity has clerics devoted\nto him or her, so clerics can be of any religion. The deity most\ncommon worshiped by human clerics in civilized lands is \\God{Pelor} (god\nof the sun). The majority of nonhuman clerics are devoted to the\nchief god of the appropriate racial pantheon. Most clerics are\nofficially ordained members of religious organizations, commonly\ncalled churches. Each has sworn to uphold the ideals of his church.\n\nSome clerics devote themselves not to a god but to a cause or a\nsource of divine power. These characters wield magic the way clerics\ndevoted to individual gods do, but they are not associated with any\nreligious institution or any particular practice of worship. A cleric\ndevoted to good and law, for example, may be on friendly terms with\nthe clerics of lawful and good deities and may extol the virtues of a\ngood and lawful life, but he is not a functionary in a church\nhierarchy."
+background: "Most clerics join their churches as young adults,\nthough some are devoted to a god\342\200\231s service from a young age, and a\nfew feel the call later in life. While some clerics are tightly bound to\ntheir churches\342\200\231 activities on a daily basis, others have more freedom\nto conduct their lives as they please, as long as they do so in\naccordance with their gods\342\200\231 wishes.\n\nClerics of a given religion are all supposed to get along, though\nschisms within a church are often more bitter than conflicts\nbetween religions. Clerics who share some basic ideals, such as\ngoodness or lawfulness, may find common cause with each other\nand see themselves as part of an order or body that supersedes any\ngiven religion. Clerics of opposed goals, however, are sworn enemies. In civilized lands, open warfare between religions occurs only\nduring civil wars and similar social upheavals, but vicious\npoliticking between opposed churches is common."
+races: "All the common races are represented in this class, since\nthe need for religion and divine magic is universal. The clerics of\nmost races, however, are too focused on their religious duties to\nundertake an adventurer\342\200\231s life. Crusading, adventuring clerics most\noften come from the human and dwarf races.\n\nAmong the savage humanoids, clerics are less common. The\nexception is troglodytes, who take well to divine magic and are often\nled by priests, who make a practice of sacrificing and devouring\ncaptives."
+otherClasses: "In an adventuring party, the cleric is everybody\342\200\231s\nfriend and often the glue that holds the party together. As the one\nwho can channel divine energy, a cleric is a capable healer, and\nadventurers of every class appreciate being put back together after\nthey\342\200\231ve taken some hard knocks. Clerics sometimes clash with\ndruids, since druids represent an older, more primal relationship\nbetween the mortal and the divine. Mostly, though, the\nreligion of a cleric determines how he gets along with\nothers. A cleric of \\God{Olidammara} (god of thieves), gets along\nfine with rogues and ne\342\200\231er-do-wells, for example,\nwhile a cleric of \\God{Heironeous} (god of valor)\nrankles at such company."
+role: "The cleric serves as a typical group\342\200\231s\nprimary healer, diviner, and defensive\nspecialist. He can hold his own in a fight\nbut usually isn\342\200\231t well served by charging to\nthe front of combat. The cleric\342\200\231s domains and\nspell selection can greatly affect his role as\nwell."
+important_abilities: "Wisdom determines how\npowerful a spell a cleric can cast, how many\nspells he can cast per day, and how hard those\nspells are to resist (see Spells, below). A high\nConstitution score improves a cleric\342\200\231s hit\npoints, and a high Charisma score\nimproves his ability to turn undead.\n\nConcentration (Con), Craft (Int), Diplomacy (Cha), Heal (Wis),\nKnowledge (arcana) (Int), Knowledge (history) (Int), Knowledge\n(religion) (Int), Knowledge (the planes) (Int), Profession (Wis), and\nSpellcraft (Int)."
+hit_dice {
+  number: 1
+  dice: 8
+}
+skill_points: 2
+class_skill: "concentration"
+class_skill: "craft"
+class_skill: "diplomacy"
+class_skill: "heal"
+class_skill: "knowledge arcana"
+class_skill: "knowledge history"
+class_skill: "knowledge religion"
+class_skill: "knowledge the planes"
+class_skill: "profession"
+class_skill: "spellcraft"
+weapon_proficiency: SIMPLE
+armor_proficiency: LIGHT
+armor_proficiency: MEDIUM
+armor_proficiency: HEAVY
+armor_proficiency: SHIELD
+quality {
+  level: 1
+  template {
+    name: "Spontaneous Casting"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "Cannot cast opposing spells"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "Turn undead"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+fortitude_save: 2
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+will_save: 2
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+spell_ability: WISDOM
+spells_per_day {
+  value: 3
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 3
+  value: 4
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}

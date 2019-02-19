@@ -1,0 +1,9 @@
+template {
+  name: "Crucian"
+}
+set: "Giants of Legend"
+number: 24
+race: "Crucian"
+type: "Monstrosity"
+subtype: "Reptile"
+size: MEDIUM

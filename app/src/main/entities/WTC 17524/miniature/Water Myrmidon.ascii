@@ -1,0 +1,8 @@
+template {
+  name: "Water Myrmidon"
+}
+set: "Rage of Demons"
+number: 19
+race: "Water Myrmidon"
+type: "Elemental"
+subtype: "Water"

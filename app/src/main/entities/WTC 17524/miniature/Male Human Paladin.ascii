@@ -1,0 +1,9 @@
+template {
+  name: "Male Human Paladin"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 6
+type: "Humanoid"
+race: "Human"
+class: "Paladin"
+size: MEDIUM

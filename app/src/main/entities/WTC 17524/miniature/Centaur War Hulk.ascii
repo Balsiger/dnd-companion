@@ -1,0 +1,9 @@
+template {
+  name: "Centaur War Hulk"
+}
+set: "Blood War"
+number: 15
+race: "Centaur"
+type: "Monstrosity"
+class: "Fighter"
+size: LARGE

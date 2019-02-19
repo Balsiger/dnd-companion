@@ -1,0 +1,10 @@
+template {
+  name: "Greater Barghest"
+}
+set: "Night Below"
+number: 31
+race: "Barghest"
+type: "Fiend"
+subtype: "Demon"
+subtype: "Shapechanger"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Dire Ape"
+}
+set: "Dragon Eye"
+number: 26
+race: "Dire Ape"
+type: "Beast"
+subtype: "Dire"
+size: LARGE

@@ -1,0 +1,10 @@
+template {
+  name: "Demonweb Swarm"
+}
+set: "Desert of Desolation"
+number: 41
+race: "Demonweb Swarm"
+type: "Vermin"
+subtype: "Spider"
+subtype: "Swarm"
+size: DIMINUTIVE

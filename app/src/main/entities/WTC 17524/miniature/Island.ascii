@@ -1,0 +1,7 @@
+template {
+  name: "Island"
+}
+set: "Monster Menagerie 3"
+number: 45
+size: HUGE
+type: "Object"

@@ -1,0 +1,41 @@
+template {
+  name: "Spell Mastery"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 100
+      high: 100
+    }
+  }
+  world: "Generic"
+  description: "You are so intimately familiar with certain spells that you don\342\200\232\303\204\303\264t need a\n  spellbook to prepare them anymore."
+  short_description: "Can prepare some spells without spellbook"
+}
+type: SPECIAL
+benefit: "Each time you take this feat, choose a number of spells\n                    equal to your Intelligence modifier that you already\n                    know. From that point on, you can prepare these spells\n                    without referring to a spellbook."
+normal: "Without this feat, you must use a spellbook to prepare all\n                    your spells, except read magic."
+prerequisites: "Wizard level 1st."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,9 @@
+template {
+  name: "Longtooth Barbarian (Shifter)"
+}
+set: "Aberrations"
+number: 19
+type: "Humanoid"
+race: "Shifter"
+class: "Barbarian"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Elf Ranger"
+}
+set: "Harbinger"
+number: 23
+type: "Humanoid"
+race: "Elf"
+class: "Ranger"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Githyanki Warrior (MM)"
+}
+set: "Monster Menagerie"
+number: 16
+race: "Githyanki"
+type: "Humanoid"
+size: MEDIUM

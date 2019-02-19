@@ -1,0 +1,44 @@
+template {
+  name: "Improved Initiative"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 96
+      high: 96
+    }
+  }
+  world: "Generic"
+  description: "You can react more quickly than normal in a fight."
+  short_description: "+4 bonus on initiative checks"
+}
+type: GENERAL
+benefit: "You get a +4 bonus on initiative checks."
+special: "A fighter may select Improved Initiative as one of his\nfighter bonus feats (see page 38)."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+  modifier {
+    value: 4
+    type: GENERAL
+  }
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

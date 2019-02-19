@@ -1,0 +1,8 @@
+template {
+  name: "Crownwing"
+}
+set: "Lords of Madness"
+number: 7
+race: "Crownwing"
+type: "Aberration"
+size: LARGE

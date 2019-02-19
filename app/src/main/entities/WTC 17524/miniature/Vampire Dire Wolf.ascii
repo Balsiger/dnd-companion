@@ -1,0 +1,9 @@
+template {
+  name: "Vampire Dire Wolf"
+}
+set: "Unhallowed"
+number: 59
+race: "Dire Wolf"
+type: "Undead"
+subtype: "Vampire"
+size: LARGE

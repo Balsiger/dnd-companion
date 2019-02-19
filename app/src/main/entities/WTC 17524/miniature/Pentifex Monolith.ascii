@@ -1,0 +1,9 @@
+template {
+  name: "Pentifex Monolith"
+}
+set: "Unhallowed"
+number: 6
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+size: MEDIUM

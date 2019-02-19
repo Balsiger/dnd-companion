@@ -1,0 +1,8 @@
+template {
+  name: "Ogre Ravager"
+}
+set: "Dragon Eye"
+number: 56
+type: "Giant"
+race: "Ogre"
+size: LARGE

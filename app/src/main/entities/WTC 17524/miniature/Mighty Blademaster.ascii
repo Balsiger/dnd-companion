@@ -1,0 +1,9 @@
+template {
+  name: "Mighty Blademaster"
+}
+set: "Against the Giants"
+number: 23
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

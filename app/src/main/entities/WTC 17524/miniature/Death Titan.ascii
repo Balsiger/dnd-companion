@@ -1,0 +1,8 @@
+template {
+  name: "Death Titan"
+}
+set: "Against the Giants"
+number: 50
+race: "Death Titan"
+type: "Giant"
+size: HUGE

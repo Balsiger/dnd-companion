@@ -1,0 +1,9 @@
+template {
+  name: "Dragon Totem Hero"
+}
+set: "War Drums"
+number: 16
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

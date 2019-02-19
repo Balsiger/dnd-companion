@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Gruumsh"
+}
+set: "Harbinger"
+number: 59
+race: "Orc"
+type: "Humanoid"
+class: "Cleric"
+size: MEDIUM

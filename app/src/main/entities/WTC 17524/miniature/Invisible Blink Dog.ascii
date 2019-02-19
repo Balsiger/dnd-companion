@@ -1,0 +1,8 @@
+template {
+  name: "Invisible Blink Dog"
+}
+set: "Rage of Demons"
+number: 52
+race: "Blink Dog"
+type: "Fey"
+subtype: "Invisible"

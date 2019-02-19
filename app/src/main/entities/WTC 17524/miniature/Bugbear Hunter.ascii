@@ -1,0 +1,9 @@
+template {
+  name: "Bugbear Hunter"
+}
+set: "Rage of Demons"
+number: 36
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Bugbear"
+size: MEDIUM

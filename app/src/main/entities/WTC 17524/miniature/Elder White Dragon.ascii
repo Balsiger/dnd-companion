@@ -1,0 +1,9 @@
+template {
+  name: "Elder White Dragon"
+}
+set: "Against the Giants"
+number: 59
+race: "White Dragon"
+type: "Dragon"
+size: HUGE
+subtype: "Chromatic"

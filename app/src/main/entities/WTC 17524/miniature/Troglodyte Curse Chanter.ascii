@@ -1,0 +1,9 @@
+template {
+  name: "Troglodyte Curse Chanter"
+}
+set: "Demonweb"
+number: 52
+type: "Humanoid"
+race: "Troglodyte"
+subtype: "Reptile"
+size: MEDIUM

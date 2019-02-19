@@ -1,0 +1,10 @@
+template {
+  name: "Visejaw Crocodile"
+}
+set: "Desert of Desolation"
+number: 22
+race: "Crocodile"
+type: "Beast"
+subtype: "Animal"
+subtype: "Reptile"
+size: LARGE

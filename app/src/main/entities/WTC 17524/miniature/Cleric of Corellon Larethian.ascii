@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Corellon Larethian"
+}
+set: "Harbinger"
+number: 18
+type: "Humanoid"
+race: "Elf"
+class: "Cleric"
+size: MEDIUM

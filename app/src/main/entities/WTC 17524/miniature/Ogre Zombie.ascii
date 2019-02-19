@@ -1,0 +1,8 @@
+template {
+  name: "Ogre Zombie"
+}
+set: "Aberrations"
+number: 56
+type: "Undead"
+subtype: "Zombie"
+size: LARGE

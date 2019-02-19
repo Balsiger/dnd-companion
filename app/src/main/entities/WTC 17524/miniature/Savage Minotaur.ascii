@@ -1,0 +1,8 @@
+template {
+  name: "Savage Minotaur"
+}
+set: "Savage Encounters"
+number: 31
+type: "Monstrosity"
+race: "Minotaur"
+size: LARGE

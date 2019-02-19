@@ -1,0 +1,9 @@
+template {
+  name: "Champion of Yondalla"
+}
+set: "Death Knell"
+number: 1
+type: "Humanoid"
+race: "Halfling"
+class: "Fighter"
+size: SMALL

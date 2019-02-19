@@ -1,0 +1,9 @@
+template {
+  name: "Northland Fighter (invisible)"
+}
+set: "Tyranny of Dragons"
+number: 50
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

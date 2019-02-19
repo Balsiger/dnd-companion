@@ -1,0 +1,12 @@
+template {
+  name: "Lord of Blades"
+}
+set: "Blood War"
+number: 39
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+class: "Fighter"
+class: "Sorcerer"
+size: MEDIUM

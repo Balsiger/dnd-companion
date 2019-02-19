@@ -1,0 +1,9 @@
+template {
+  name: "Iymrith (Storm Giant)"
+}
+set: "Storm King\'s Thunder"
+number: 44
+race: "Storm Giant"
+type: "Giant"
+subtype: "Aquatic"
+size: HUGE

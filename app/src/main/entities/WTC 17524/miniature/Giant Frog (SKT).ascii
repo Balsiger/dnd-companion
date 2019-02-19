@@ -1,0 +1,10 @@
+template {
+  name: "Giant Frog (SKT)"
+}
+set: "Storm King\'s Thunder"
+number: 8
+race: "Giant Frog"
+type: "Beast"
+subtype: "Oversized"
+subtype: "Animal"
+size: MEDIUM

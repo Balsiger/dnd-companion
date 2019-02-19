@@ -1,0 +1,9 @@
+template {
+  name: "Trostani Selesnya Guildmaster"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 44
+type: "Humanoid"
+race: "Human"
+class: "Druid"
+size: LARGE

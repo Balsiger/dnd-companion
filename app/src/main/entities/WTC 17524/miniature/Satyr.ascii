@@ -1,0 +1,8 @@
+template {
+  name: "Satyr"
+}
+set: "Underdark"
+number: 22
+race: "Satyr"
+type: "Fey"
+size: MEDIUM

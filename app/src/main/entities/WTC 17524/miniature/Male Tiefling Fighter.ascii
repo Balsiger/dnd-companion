@@ -1,0 +1,8 @@
+template {
+  name: "Male Tiefling Fighter"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 15
+type: "Humanoid"
+race: "Tiefling"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Helmed Horror"
+}
+set: "Underdark"
+number: 37
+race: "Helmed Horror"
+type: "Construct"
+size: MEDIUM

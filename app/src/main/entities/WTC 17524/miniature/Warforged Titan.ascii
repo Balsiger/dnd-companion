@@ -1,0 +1,10 @@
+template {
+  name: "Warforged Titan"
+}
+set: "Giants of Legend"
+number: 65
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+size: HUGE

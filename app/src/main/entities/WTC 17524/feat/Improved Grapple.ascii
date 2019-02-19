@@ -1,0 +1,42 @@
+template {
+  name: "Improved Grapple"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 95
+      high: 96
+    }
+  }
+  world: "Generic"
+  description: "You are skilled at grappling opponents."
+  short_description: "+4 bonus on grapple checks; no attack of opportunity"
+}
+type: GENERAL
+benefit: "You do not provoke an attack of opportunity when you make\n                    a touch attack to start a grapple. You also gain a +4 bonus\n                    on all grapple checks, regardless of whether you started\n                    the grapple."
+special: "A fighter may select Improved Grapple as one of his\n                    fighter bonus feats (see page 38).\n\n                    A monk may select Improved Grapple as a bonus feat at 1st\n                    level, even if she does not meet the prerequisites."
+normal: "Without this feat, you provoke an attack of opportunity\n                    when you make a touch attack to start a grapple."
+prerequisites: "Dex 13, Improved Unarmed Strike."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

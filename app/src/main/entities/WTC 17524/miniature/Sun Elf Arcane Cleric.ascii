@@ -1,0 +1,9 @@
+template {
+  name: "Sun Elf Arcane Cleric"
+}
+set: "Dragon Heist"
+number: 22
+type: "Humanoid"
+race: "Elf"
+class: "Cleric"
+size: MEDIUM

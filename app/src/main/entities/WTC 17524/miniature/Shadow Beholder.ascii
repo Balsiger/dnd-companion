@@ -1,0 +1,7 @@
+template {
+  name: "Shadow Beholder"
+}
+set: "Rage of Demons"
+number: 55
+type: "Aberration"
+race: "Beholder"

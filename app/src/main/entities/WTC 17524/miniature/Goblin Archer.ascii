@@ -1,0 +1,9 @@
+template {
+  name: "Goblin Archer"
+}
+set: "Rage of Demons"
+number: 4
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: SMALL

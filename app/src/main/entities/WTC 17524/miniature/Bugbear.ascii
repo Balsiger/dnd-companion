@@ -1,0 +1,10 @@
+template {
+  name: "Bugbear"
+}
+set: "Dragon Eye"
+number: 46
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Bugbear"
+subtype: "Goblinoid"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Combat Medic"
+}
+set: "War Drums"
+number: 5
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

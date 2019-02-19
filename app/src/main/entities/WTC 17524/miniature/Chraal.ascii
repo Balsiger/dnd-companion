@@ -1,0 +1,10 @@
+template {
+  name: "Chraal"
+}
+race: "Chraal"
+set: "Angelfire"
+number: 37
+type: "Elemental"
+subtype: "Water"
+subtype: "Cold"
+size: LARGE

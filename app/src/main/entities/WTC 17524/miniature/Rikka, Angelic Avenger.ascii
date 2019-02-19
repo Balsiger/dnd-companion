@@ -1,0 +1,10 @@
+template {
+  name: "Rikka, Angelic Avenger"
+}
+set: "Underdark"
+number: 21
+race: "Angelic Avenger"
+type: "Celestial"
+subtype: "Angel"
+class: "Barbarian"
+size: MEDIUM

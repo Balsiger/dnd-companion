@@ -1,0 +1,9 @@
+template {
+  name: "Thri-Kreen (Chatkcha)"
+}
+set: "Storm King\'s Thunder"
+number: 17
+race: "Thri-Kreen"
+type: "Humanoid"
+subtype: "Psionic"
+size: MEDIUM

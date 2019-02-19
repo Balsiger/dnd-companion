@@ -1,0 +1,11 @@
+template {
+  name: "Silver Sorcerer (Half-Dragon)"
+}
+set: "Dragon Eye"
+number: 24
+race: "Half-Dragon"
+type: "Dragon"
+subtype: "Humanoid"
+class: "Sorcerer"
+size: MEDIUM
+subtype: "Metallic"

@@ -1,0 +1,9 @@
+template {
+  name: "Mina, Dark Cleric"
+}
+set: "Angelfire"
+number: 45
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

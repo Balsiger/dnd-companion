@@ -1,0 +1,9 @@
+template {
+  name: "Taer"
+}
+set: "Aberrations"
+number: 58
+race: "Taer"
+type: "Giant"
+subtype: "Cold"
+size: MEDIUM

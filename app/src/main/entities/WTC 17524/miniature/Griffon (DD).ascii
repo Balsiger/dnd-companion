@@ -1,0 +1,10 @@
+template {
+  name: "Griffon (DD)"
+}
+set: "Dungeons of Dread"
+number: 40
+race: "Griffon"
+type: "Monstrosity"
+subtype: "Mount"
+subtype: "Winged"
+size: LARGE

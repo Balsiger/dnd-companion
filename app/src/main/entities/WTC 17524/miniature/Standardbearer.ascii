@@ -1,0 +1,9 @@
+template {
+  name: "Standardbearer"
+}
+set: "Giants of Legend"
+number: 3
+type: "Humanoid"
+race: "Human"
+class: "Paladin"
+size: MEDIUM

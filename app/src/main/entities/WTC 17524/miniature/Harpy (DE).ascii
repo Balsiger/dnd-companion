@@ -1,0 +1,8 @@
+template {
+  name: "Harpy (DE)"
+}
+set: "Dragon Eye"
+number: 53
+race: "Harpy"
+type: "Monstrosity"
+size: MEDIUM

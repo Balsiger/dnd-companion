@@ -1,0 +1,39 @@
+template {
+  name: "Lightning Reflexes"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 97
+      high: 97
+    }
+  }
+  world: "Generic"
+  description: "You have faster than normal reflexes."
+  short_description: "+2 bonus on Reflex saves"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Reflex saving throws."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

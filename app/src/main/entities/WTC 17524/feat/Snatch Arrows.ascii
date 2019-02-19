@@ -1,0 +1,41 @@
+template {
+  name: "Snatch Arrows"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 100
+      high: 100
+    }
+  }
+  world: "Generic"
+  description: "You are adept at grabbing incoming arrows, as well as crossbow bolts,\n  spears, and other projectile or thrown weapons."
+  short_description: "Catch a deflected ranged attack"
+}
+type: GENERAL
+benefit: "When using the Deflect Arrows feat (page 93), you may\n                    catch the weapon instead of just deflecting it. Thrown\n                    weapons, such as spears or axes, can immediately be thrown\n                    back at the original attacker (even though it isn\342\200\232\303\204\303\264t your\n                    turn) or kept for later use.\n\n                    You must have at least one hand free (holding nothing) to\n                    use this feat."
+special: "A fighter may select Snatch Arrows as one of his fighter\n                    bonus feats (see page 38)."
+prerequisites: "Dex 15, Deflect Arrows, Improved Unarmed Strike."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

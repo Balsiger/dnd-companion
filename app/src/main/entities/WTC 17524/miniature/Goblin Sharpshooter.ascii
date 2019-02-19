@@ -1,0 +1,9 @@
+template {
+  name: "Goblin Sharpshooter"
+}
+set: "Dungeon Delve"
+number: 22
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: SMALL

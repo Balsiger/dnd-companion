@@ -1,0 +1,8 @@
+template {
+  name: "Cyclops Hewer"
+}
+set: "Demonweb"
+number: 41
+race: "Cyclops"
+type: "Giant"
+size: LARGE

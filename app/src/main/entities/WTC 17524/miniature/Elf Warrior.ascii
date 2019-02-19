@@ -1,0 +1,9 @@
+template {
+  name: "Elf Warrior"
+}
+set: "Aberrations"
+number: 16
+type: "Humanoid"
+race: "Elf"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Bugbear (Axe)"
+}
+set: "Monster Menagerie 2"
+number: 12
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Bugbear"
+subtype: "Goblinoid"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Jozan, Cleric of Pelor"
+}
+set: "Harbinger"
+number: 14
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Huge Fire Elemental"
+}
+set: "War of the Dragon Queen"
+number: 20
+race: "Fire Elemental"
+type: "Elemental"
+subtype: "Fire"
+size: HUGE

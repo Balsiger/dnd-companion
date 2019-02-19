@@ -1,0 +1,8 @@
+template {
+  name: "Lich Necromancer"
+}
+set: "Giants of Legend"
+number: 53
+type: "Humanoid"
+subtype: "Undead"
+size: MEDIUM

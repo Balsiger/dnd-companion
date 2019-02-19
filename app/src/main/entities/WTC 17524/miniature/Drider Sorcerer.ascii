@@ -1,0 +1,9 @@
+template {
+  name: "Drider Sorcerer"
+}
+set: "Giants of Legend"
+number: 44
+race: "Drider"
+type: "Monstrosity"
+subtype: "Spider"
+size: LARGE

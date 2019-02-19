@@ -1,0 +1,9 @@
+template {
+  name: "Drizzt, Drow Ranger"
+}
+set: "Icons"
+number: 1
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: MEDIUM

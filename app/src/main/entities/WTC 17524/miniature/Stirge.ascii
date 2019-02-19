@@ -1,0 +1,8 @@
+template {
+  name: "Stirge"
+}
+set: "War of the Dragon Queen"
+number: 56
+race: "Stirge"
+type: "Beast"
+size: TINY

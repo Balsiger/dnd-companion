@@ -1,0 +1,41 @@
+template {
+  name: "Shot On The Run"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 100
+      high: 100
+    }
+  }
+  world: "Generic"
+  description: "You are highly trained in skirmish ranged weapon tactics."
+  short_description: "Move before and after ranged attack"
+}
+type: GENERAL
+benefit: "When using the attack action with a ranged weapon, you can\n                    move both before and after the attack, provided that your\n                    total distance moved is not greater than your speed."
+special: "A fighter may select Shot on the Run as one of his fighter\n                    bonus feats (see page 38)."
+prerequisites: "Dex 13, Dodge, Mobility, Point Blank Shot, base attack\n                    bonus +4."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

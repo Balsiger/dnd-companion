@@ -1,0 +1,9 @@
+template {
+  name: "Manticore Sniper"
+}
+set: "Desert of Desolation"
+number: 29
+race: "Manticore"
+type: "Monstrosity"
+subtype: "Winged"
+size: LARGE

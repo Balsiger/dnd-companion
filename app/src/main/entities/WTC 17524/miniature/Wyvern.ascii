@@ -1,0 +1,9 @@
+template {
+  name: "Wyvern"
+}
+set: "Aberrations"
+number: 25
+race: "Wyvern"
+type: "Dragon"
+size: LARGE
+subtype: "Lesser"

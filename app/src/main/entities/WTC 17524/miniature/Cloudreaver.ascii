@@ -1,0 +1,9 @@
+template {
+  name: "Cloudreaver"
+}
+set: "War of the Dragon Queen"
+number: 44
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Centaur (MM)"
+}
+set: "Monster Menagerie"
+number: 31
+race: "Centaur"
+type: "Monstrosity"
+size: LARGE

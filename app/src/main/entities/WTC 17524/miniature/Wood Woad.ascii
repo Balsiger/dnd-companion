@@ -1,0 +1,8 @@
+template {
+  name: "Wood Woad"
+}
+set: "Death Knell"
+number: 29
+race: "Woad"
+type: "Plant"
+size: MEDIUM

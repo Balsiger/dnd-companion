@@ -1,0 +1,41 @@
+template {
+  name: "Greater Weapon Specialization"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 95
+      high: 95
+    }
+  }
+  world: "Generic"
+  description: "Choose one type of weapon, such as greataxe, for which you have already\n  selected Weapon Specialization. You can also choose unarmed strike or grapple\n  as your weapon for purposes of this feat.\n\n  You deal extra damage when using this weapon."
+  short_description: "+4 bonus on damage rolls with selected weapon"
+}
+type: GENERAL
+benefit: "You gain a +2 bonus on all damage rolls you make using the\n                    selected weapon. This bonus stacks with other bonuses on\n                    damage rolls, including the one from Weapon Specialization\n                    (see below)."
+special: "You can gain Greater Weapon Specialization multiple\n                    times. Its effects do not stack. Each time you take the\n                    feat, it applies to a new type of weapon.\n\n                    A fighter may select Greater Weapon Specialization as one\n                    of his fighter bonus feats (see page 38)."
+prerequisites: "Proficiency with selected weapon, Greater Weapon Focus\n                    with selected weapon, Weapon Focus with selected weapon,\n                    Weapon Specialization with selected weapon, fighter level\n                    12th."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,9 @@
+template {
+  name: "Guard of Mithral Hall"
+}
+set: "Night Below"
+number: 7
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

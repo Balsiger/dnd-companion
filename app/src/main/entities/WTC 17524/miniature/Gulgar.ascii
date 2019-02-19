@@ -1,0 +1,9 @@
+template {
+  name: "Gulgar"
+}
+set: "War Drums"
+number: 27
+race: "Gulgar"
+type: "Monstrosity"
+subtype: "Earth"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Kamadan"
+}
+set: "Tomb of Annihilation"
+number: 27
+race: "Kamadan"
+type: "Monstrosity"
+size: LARGE

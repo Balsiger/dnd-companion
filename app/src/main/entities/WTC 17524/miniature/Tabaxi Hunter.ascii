@@ -1,0 +1,8 @@
+template {
+  name: "Tabaxi Hunter"
+}
+set: "Tomb of Annihilation"
+number: 21
+type: "Humanoid"
+race: "Tabaxi"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Karsite Fighter"
+}
+set: "Blood War"
+number: 36
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

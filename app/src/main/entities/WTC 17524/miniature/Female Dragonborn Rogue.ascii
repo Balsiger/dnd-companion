@@ -1,0 +1,9 @@
+template {
+  name: "Female Dragonborn Rogue"
+}
+set: "Player\'s Handbook Heroes"
+number: 2
+type: "Humanoid"
+race: "Dragonborn"
+class: "Rogue"
+size: MEDIUM

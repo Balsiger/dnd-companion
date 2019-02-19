@@ -1,0 +1,9 @@
+template {
+  name: "Acererak"
+}
+set: "Tomb of Annihilation"
+number: 38
+race: "Lich"
+type: "Undead"
+subtype: "Humanoid"
+size: MEDIUM

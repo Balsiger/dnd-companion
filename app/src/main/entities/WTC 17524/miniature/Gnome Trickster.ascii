@@ -1,0 +1,9 @@
+template {
+  name: "Gnome Trickster"
+}
+set: "Blood War"
+number: 17
+type: "Humanoid"
+race: "Gnome"
+class: "Rogue"
+size: SMALL

@@ -1,0 +1,9 @@
+template {
+  name: "Duergar Slaver"
+}
+set: "Unhallowed"
+number: 38
+type: "Humanoid"
+race: "Duergar"
+class: "Fighter"
+size: MEDIUM

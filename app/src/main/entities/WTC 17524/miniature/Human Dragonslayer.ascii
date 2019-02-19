@@ -1,0 +1,9 @@
+template {
+  name: "Human Dragonslayer"
+}
+set: "Archfiends"
+number: 4
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

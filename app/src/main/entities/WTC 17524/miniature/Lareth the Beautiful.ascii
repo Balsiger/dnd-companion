@@ -1,0 +1,9 @@
+template {
+  name: "Lareth the Beautiful"
+}
+set: "Giants of Legend"
+number: 52
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

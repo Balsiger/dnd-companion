@@ -1,0 +1,9 @@
+template {
+  name: "Voice of Battle"
+}
+set: "Death Knell"
+number: 25
+type: "Humanoid"
+race: "Human"
+class: "Bard"
+size: MEDIUM

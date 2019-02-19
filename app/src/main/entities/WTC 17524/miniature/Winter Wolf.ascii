@@ -1,0 +1,9 @@
+template {
+  name: "Winter Wolf"
+}
+set: "Underdark"
+number: 60
+race: "Wolf"
+type: "Monstrosity"
+subtype: "Animal"
+size: LARGE

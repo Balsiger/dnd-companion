@@ -1,0 +1,10 @@
+template {
+  name: "Whitespawn Hordeling"
+}
+set: "War of the Dragon Queen"
+number: 59
+race: "Hordeling"
+type: "Monstrosity"
+subtype: "Dragonspawn"
+subtype: "Reptile"
+size: SMALL

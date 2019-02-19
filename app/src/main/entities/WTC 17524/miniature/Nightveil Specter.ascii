@@ -1,0 +1,9 @@
+template {
+  name: "Nightveil Specter"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 42
+race: "Nightveil Specter"
+type: "Undead"
+size: LARGE
+subtype: "Humanoid"

@@ -1,0 +1,7 @@
+template {
+  name: "Darkmantle (SKT)"
+}
+set: "Storm King\'s Thunder"
+number: 4
+race: "Darkmantle"
+type: "Monstrosity"

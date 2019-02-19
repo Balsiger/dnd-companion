@@ -1,0 +1,11 @@
+template {
+  name: "Gold Champion (Half-Dragon)"
+}
+set: "Dragon Eye"
+number: 4
+race: "Half-Dragon"
+type: "Dragon"
+subtype: "Humanoid"
+class: "Fighter"
+size: MEDIUM
+subtype: "Metallic"

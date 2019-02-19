@@ -1,0 +1,8 @@
+template {
+  name: "Rust Monster (RD)"
+}
+set: "Rage of Demons"
+number: 39
+race: "Rust Monster"
+type: "Monstrosity"
+size: MEDIUM

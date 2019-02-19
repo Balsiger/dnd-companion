@@ -1,0 +1,9 @@
+template {
+  name: "Medium Fire Elemental"
+}
+set: "Archfiends"
+number: 54
+race: "Fire Elemental"
+type: "Elemental"
+subtype: "Fire"
+size: MEDIUM

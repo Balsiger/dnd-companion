@@ -1,0 +1,8 @@
+template {
+  name: "Elf Archer"
+}
+set: "Dungeons of Dread"
+number: 6
+type: "Humanoid"
+race: "Elf"
+size: MEDIUM

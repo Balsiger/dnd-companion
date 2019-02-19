@@ -1,0 +1,8 @@
+template {
+  name: "Medusa Archer"
+}
+set: "Night Below"
+number: 37
+race: "Medusa"
+type: "Monstrosity"
+size: MEDIUM

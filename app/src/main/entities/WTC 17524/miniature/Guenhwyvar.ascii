@@ -1,0 +1,8 @@
+template {
+  name: "Guenhwyvar"
+}
+set: "Underdark"
+number: 17
+race: "Panther"
+type: "Beast"
+size: MEDIUM

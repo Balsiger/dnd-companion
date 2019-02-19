@@ -1,0 +1,10 @@
+template {
+  name: "Storm Giant Quintessent"
+}
+set: "Monster Menagerie 3"
+number: 41
+race: "Storm Giant"
+type: "Giant"
+subtype: "Cold"
+subtype: "Storm"
+size: HUGE

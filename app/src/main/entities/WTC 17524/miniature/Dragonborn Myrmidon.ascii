@@ -1,0 +1,8 @@
+template {
+  name: "Dragonborn Myrmidon"
+}
+set: "Against the Giants"
+number: 16
+race: "Dragonborn"
+type: "Humanoid"
+size: MEDIUM

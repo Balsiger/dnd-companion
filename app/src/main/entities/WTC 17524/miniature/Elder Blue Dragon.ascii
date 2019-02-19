@@ -1,0 +1,9 @@
+template {
+  name: "Elder Blue Dragon"
+}
+set: "Lords of Madness"
+number: 15
+race: "Blue Dragon"
+type: "Dragon"
+size: HUGE
+subtype: "Chromatic"

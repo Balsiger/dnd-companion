@@ -1,0 +1,8 @@
+template {
+  name: "Beholder (MM2)"
+}
+set: "Monster Menagerie 2"
+number: 42
+race: "Beholder"
+type: "Aberration"
+size: LARGE

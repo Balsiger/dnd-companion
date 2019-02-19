@@ -1,0 +1,9 @@
+template {
+  name: "Troglodyte"
+}
+set: "Dragon Eye"
+number: 60
+type: "Humanoid"
+race: "Troglodyte"
+subtype: "Reptile"
+size: MEDIUM

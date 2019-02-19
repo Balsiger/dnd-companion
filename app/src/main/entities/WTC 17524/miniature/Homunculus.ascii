@@ -1,0 +1,8 @@
+template {
+  name: "Homunculus"
+}
+set: "Storm King\'s Thunder"
+number: 5
+race: "Homunculus"
+type: "Construct"
+size: SMALL

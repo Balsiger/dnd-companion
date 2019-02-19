@@ -1,0 +1,9 @@
+template {
+  name: "Female Eladrin Fighter"
+}
+set: "Player\'s Handbook Heroes"
+number: 6
+type: "Humanoid"
+race: "Eladrin"
+class: "Fighter"
+size: MEDIUM

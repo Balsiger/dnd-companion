@@ -1,0 +1,9 @@
+template {
+  name: "Azorius Homunculus"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 14
+race: "Homunculus"
+type: "Humanoid"
+subtype: "Construct"
+size: TINY

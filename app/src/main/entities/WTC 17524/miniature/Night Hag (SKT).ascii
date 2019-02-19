@@ -1,0 +1,9 @@
+template {
+  name: "Night Hag (SKT)"
+}
+set: "Storm King\'s Thunder"
+number: 34
+race: "Night Hag"
+type: "Fey"
+subtype: "Hag"
+size: MEDIUM

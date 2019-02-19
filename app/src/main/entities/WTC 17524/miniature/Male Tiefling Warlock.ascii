@@ -1,0 +1,9 @@
+template {
+  name: "Male Tiefling Warlock"
+}
+set: "Player\'s Handbook Heroes"
+number: 8
+type: "Humanoid"
+race: "Tiefling"
+class: "Warlock"
+size: MEDIUM

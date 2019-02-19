@@ -1,0 +1,8 @@
+template {
+  name: "Lifeleech Otyugh"
+}
+set: "Night Below"
+number: 44
+race: "Otyugh"
+type: "Aberration"
+size: LARGE

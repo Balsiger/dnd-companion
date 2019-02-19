@@ -1,0 +1,10 @@
+template {
+  name: "Bluespawn Stormlizard"
+}
+set: "Blood War"
+number: 30
+race: "Bluespawn"
+type: "Monstrosity"
+subtype: "Dragonspawn"
+subtype: "Reptile"
+size: LARGE

@@ -1,0 +1,10 @@
+template {
+  name: "Griffon Cavalry (dh)"
+}
+set: "Dragon Heist"
+number: 42
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: LARGE
+subtype: "Mounted"

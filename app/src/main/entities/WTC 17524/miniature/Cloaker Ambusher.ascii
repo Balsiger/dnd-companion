@@ -1,0 +1,9 @@
+template {
+  name: "Cloaker Ambusher"
+}
+set: "Lords of Madness"
+number: 5
+race: "Cloaker"
+type: "Aberration"
+subtype: ""
+size: LARGE

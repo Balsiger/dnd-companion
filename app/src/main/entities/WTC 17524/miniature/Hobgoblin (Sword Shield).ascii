@@ -1,0 +1,9 @@
+template {
+  name: "Hobgoblin (Sword Shield)"
+}
+set: "Monster Menagerie 2"
+number: 18
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+size: MEDIUM

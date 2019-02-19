@@ -1,0 +1,9 @@
+template {
+  name: "Hero of Valhalla"
+}
+set: "Blood War"
+number: 18
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

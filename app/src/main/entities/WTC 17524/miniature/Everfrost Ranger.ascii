@@ -1,0 +1,9 @@
+template {
+  name: "Everfrost Ranger"
+}
+set: "Dungeons of Dread"
+number: 39
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+size: MEDIUM

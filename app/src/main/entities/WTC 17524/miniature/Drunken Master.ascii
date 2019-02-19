@@ -1,0 +1,9 @@
+template {
+  name: "Drunken Master"
+}
+set: "Dragon Eye"
+number: 17
+type: "Humanoid"
+race: "Human"
+class: "Monk"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Blood Slaad"
+}
+set: "Demonweb"
+number: 38
+race: "Blood Slaad"
+type: "Aberration"
+subtype: "Slaad"
+size: LARGE

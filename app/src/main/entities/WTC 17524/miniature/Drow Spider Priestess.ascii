@@ -1,0 +1,9 @@
+template {
+  name: "Drow Spider Priestess"
+}
+set: "Desert of Desolation"
+number: 47
+type: "Humanoid"
+race: "Drow"
+class: "Cleric"
+size: MEDIUM

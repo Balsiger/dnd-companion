@@ -1,0 +1,9 @@
+template {
+  name: "Storm Giant"
+}
+set: "Giants of Legend"
+number: 63
+race: "Storm Giant"
+subtype: "Aquatic"
+type: "Giant"
+size: HUGE

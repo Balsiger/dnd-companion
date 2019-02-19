@@ -1,0 +1,9 @@
+template {
+  name: "Quasit (RD)"
+}
+set: "Rage of Demons"
+number: 5
+race: "Quasit"
+type: "Fiend"
+subtype: "Demon"
+size: SMALL

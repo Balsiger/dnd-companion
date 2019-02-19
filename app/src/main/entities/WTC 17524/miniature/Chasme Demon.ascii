@@ -1,0 +1,9 @@
+template {
+  name: "Chasme Demon"
+}
+set: "Rage of Demons"
+number: 30
+race: "Chasme"
+type: "Fiend"
+subtype: "Demon"
+subtype: "Flying"

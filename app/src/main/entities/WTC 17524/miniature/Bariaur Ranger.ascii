@@ -1,0 +1,10 @@
+template {
+  name: "Bariaur Ranger"
+}
+set: "Aberrations"
+number: 13
+race: "Bariaur"
+type: "Monstrosity"
+subtype: "Humanoid"
+class: "Ranger"
+size: MEDIUM

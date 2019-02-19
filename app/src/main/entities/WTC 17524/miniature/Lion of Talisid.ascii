@@ -1,0 +1,9 @@
+template {
+  name: "Lion of Talisid"
+}
+set: "War Drums"
+number: 20
+type: "Humanoid"
+race: "Elf"
+class: "Druid"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Lion Falcon Monk"
+}
+set: "Dragon Eye"
+number: 6
+type: "Humanoid"
+race: "Human"
+class: "Monk"
+size: MEDIUM

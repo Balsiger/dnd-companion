@@ -1,0 +1,10 @@
+template {
+  name: "Rot Scarab Swarm"
+}
+set: "Desert of Desolation"
+number: 32
+race: "Rot Scarab Swarm"
+type: "Vermin"
+subtype: "Swarm"
+subtype: "Bug"
+size: DIMINUTIVE

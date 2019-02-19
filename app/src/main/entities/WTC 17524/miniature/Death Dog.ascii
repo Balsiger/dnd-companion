@@ -1,0 +1,8 @@
+template {
+  name: "Death Dog"
+}
+set: "Monster Menagerie 3"
+number: 9
+race: "Death Dog"
+type: "Monstrosity"
+size: MEDIUM

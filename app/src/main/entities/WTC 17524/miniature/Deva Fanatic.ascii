@@ -1,0 +1,8 @@
+template {
+  name: "Deva Fanatic"
+}
+set: "Lords of Madness"
+number: 9
+race: "Deva"
+type: "Celestial"
+size: MEDIUM

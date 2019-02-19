@@ -1,0 +1,9 @@
+template {
+  name: "Greyhawk City Militia"
+}
+set: "Night Below"
+number: 13
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

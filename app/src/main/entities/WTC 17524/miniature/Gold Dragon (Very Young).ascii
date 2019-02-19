@@ -1,0 +1,9 @@
+template {
+  name: "Gold Dragon (Very Young)"
+}
+set: "Death Knell"
+number: 7
+race: "Gold Dragon"
+type: "Dragon"
+size: MEDIUM
+subtype: "Metallic"

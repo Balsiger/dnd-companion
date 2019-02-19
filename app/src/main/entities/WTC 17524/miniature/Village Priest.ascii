@@ -1,0 +1,9 @@
+template {
+  name: "Village Priest"
+}
+set: "Angelfire"
+number: 12
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

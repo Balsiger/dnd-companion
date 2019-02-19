@@ -1,0 +1,10 @@
+template {
+  name: "Snig, Worg Rider"
+}
+set: "War Drums"
+number: 40
+type: "Humanoid"
+race: "Goblin"
+subtype: "Goblinoid"
+class: "Fighter"
+size: LARGE

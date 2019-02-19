@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Ezmeralda d\'Avenir"
+}
+set: "Monster Menagerie"
+number: 39
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+size: MEDIUM
+subtype: "Invisible"

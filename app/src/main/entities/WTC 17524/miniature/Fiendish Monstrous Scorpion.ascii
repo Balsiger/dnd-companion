@@ -1,0 +1,10 @@
+template {
+  name: "Fiendish Monstrous Scorpion"
+}
+set: "Death Knell"
+number: 53
+race: "Fiendish Monstrous Scorpion"
+type: "Fiend"
+subtype: "Oversized"
+subtype: "Animal"
+size: LARGE

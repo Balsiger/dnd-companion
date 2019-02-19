@@ -1,0 +1,8 @@
+template {
+  name: "Spiderbound Drow Warrior"
+}
+set: "Demonweb"
+number: 22
+type: "Humanoid"
+race: "Drow"
+size: MEDIUM

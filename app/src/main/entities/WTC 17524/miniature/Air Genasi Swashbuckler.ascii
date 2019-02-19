@@ -1,0 +1,11 @@
+template {
+  name: "Air Genasi Swashbuckler"
+}
+set: "Blood War"
+number: 13
+race: "Air Genasi"
+type: "Humanoid"
+subtype: "Air"
+subtype: "Genasi"
+class: "Rogue"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Drow Enforcer"
+}
+set: "Night Below"
+number: 51
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: MEDIUM

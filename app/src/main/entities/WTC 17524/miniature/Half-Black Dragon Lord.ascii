@@ -1,0 +1,10 @@
+template {
+  name: "Half-Black Dragon Lord"
+}
+set: "Tyranny of Dragons"
+number: 33
+race: "Half-Dragon"
+type: "Dragon"
+subtype: "Humanoid"
+size: MEDIUM
+subtype: "Chromatic"

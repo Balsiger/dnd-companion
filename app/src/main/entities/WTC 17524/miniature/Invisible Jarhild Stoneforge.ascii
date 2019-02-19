@@ -1,0 +1,9 @@
+template {
+  name: "Invisible Jarhild Stoneforge"
+}
+set: "Monster Menagerie"
+number: 5
+type: "Humanoid"
+race: "Dwarf"
+size: MEDIUM
+subtype: "Invisible"

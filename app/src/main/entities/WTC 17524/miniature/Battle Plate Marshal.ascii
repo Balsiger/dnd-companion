@@ -1,0 +1,9 @@
+template {
+  name: "Battle Plate Marshal"
+}
+set: "Underdark"
+number: 1
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

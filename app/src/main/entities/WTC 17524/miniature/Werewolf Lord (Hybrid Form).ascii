@@ -1,0 +1,11 @@
+template {
+  name: "Werewolf Lord (Hybrid Form)"
+}
+set: "Unhallowed"
+number: 60
+race: "Werewolf"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+class: "Barbarian"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Draegloth (TA)"
+}
+set: "Tomb of Annihilation"
+number: 42
+race: "Draegloth"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

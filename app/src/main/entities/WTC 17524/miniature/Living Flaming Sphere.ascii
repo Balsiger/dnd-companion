@@ -1,0 +1,9 @@
+template {
+  name: "Living Flaming Sphere"
+}
+set: "Blood War"
+number: 27
+race: "Living Flaming Sphere"
+type: "Ooze"
+subtype: "Fire"
+size: MEDIUM

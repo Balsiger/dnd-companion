@@ -1,0 +1,8 @@
+template {
+  name: "Hammerer"
+}
+set: "Blood War"
+number: 7
+race: "Hammerer"
+type: "Construct"
+size: MEDIUM

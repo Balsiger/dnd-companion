@@ -1,0 +1,9 @@
+template {
+  name: "Female Human Wizard"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 1
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

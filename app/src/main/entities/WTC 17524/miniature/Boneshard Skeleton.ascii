@@ -1,0 +1,9 @@
+template {
+  name: "Boneshard Skeleton"
+}
+set: "Desert of Desolation"
+number: 39
+race: "Boneshard Skeleton"
+type: "Undead"
+subtype: "Skeleton"
+size: MEDIUM

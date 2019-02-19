@@ -1,0 +1,9 @@
+template {
+  name: "Giant Four-armed Gargoyle"
+}
+set: "Tomb of Annihilation"
+number: 44
+race: "Gargoyle"
+type: "Elemental"
+subtype: "Earth"
+size: LARGE

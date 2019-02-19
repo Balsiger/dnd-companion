@@ -1,0 +1,9 @@
+template {
+  name: "Dire Rat"
+}
+set: "Giants of Legend"
+number: 30
+race: "Dire Rat"
+type: "Beast"
+subtype: "Dire"
+size: SMALL

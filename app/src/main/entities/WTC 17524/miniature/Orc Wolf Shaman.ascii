@@ -1,0 +1,9 @@
+template {
+  name: "Orc Wolf Shaman"
+}
+set: "Angelfire"
+number: 58
+type: "Humanoid"
+race: "Orc"
+class: "Barbarian"
+size: MEDIUM

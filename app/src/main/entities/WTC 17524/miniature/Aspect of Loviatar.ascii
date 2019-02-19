@@ -1,0 +1,11 @@
+template {
+  name: "Aspect of Loviatar"
+}
+set: "Night Below"
+number: 26
+type: "Fiend"
+subtype: "Evil"
+subtype: "Extraplanar"
+subtype: "Lawful"
+subtype: "Aspect"
+size: MEDIUM

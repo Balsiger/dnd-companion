@@ -1,0 +1,8 @@
+template {
+  name: "Cloud Giant"
+}
+set: "Giants of Legend"
+number: 62
+race: "Clout Giant"
+type: "Giant"
+size: HUGE

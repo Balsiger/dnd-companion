@@ -1,0 +1,8 @@
+template {
+  name: "Hook Horror (Ab)"
+}
+set: "Aberrations"
+number: 35
+race: "Hook Horror"
+type: "Monstrosity"
+size: LARGE

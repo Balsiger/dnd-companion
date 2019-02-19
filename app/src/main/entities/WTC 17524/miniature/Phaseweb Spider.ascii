@@ -1,0 +1,10 @@
+template {
+  name: "Phaseweb Spider"
+}
+set: "Demonweb"
+number: 26
+race: "Phaseweb Spider"
+type: "Monstrosity"
+subtype: "Spider"
+subtype: "Demon"
+size: LARGE

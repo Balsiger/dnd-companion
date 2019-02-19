@@ -1,0 +1,9 @@
+template {
+  name: "Gnome Recruit"
+}
+set: "Harbinger"
+number: 24
+type: "Humanoid"
+race: "Gnome"
+class: "Fighter"
+size: SMALL

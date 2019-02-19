@@ -1,0 +1,10 @@
+template {
+  name: "Goblin Warrior"
+}
+set: "Dragon Eye"
+number: 32
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+class: "Fighter"
+size: SMALL

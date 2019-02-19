@@ -1,0 +1,8 @@
+template {
+  name: "Foulspawn Hulk"
+}
+set: "Legendary Evils"
+number: 17
+race: "Foulspawn"
+type: "Aberration"
+size: LARGE

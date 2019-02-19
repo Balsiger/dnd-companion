@@ -1,0 +1,10 @@
+template {
+  name: "Magma Mephit"
+}
+set: "Monster Menagerie 3"
+number: 2
+race: "Magma Mephit"
+type: "Elemental"
+subtype: "Fire"
+subtype: "Mephit"
+size: SMALL

@@ -1,0 +1,9 @@
+template {
+  name: "Blue"
+}
+set: "Giants of Legend"
+number: 29
+race: "Blue"
+type: "Humanoid"
+subtype: "Goblinoid"
+size: SMALL

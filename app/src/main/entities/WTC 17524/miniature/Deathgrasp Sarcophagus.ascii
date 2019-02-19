@@ -1,0 +1,9 @@
+template {
+  name: "Deathgrasp Sarcophagus"
+}
+set: "Demonweb"
+number: 10
+race: "Deathgrasp Sarcophagus"
+type: "Construct"
+subtype: "Demon"
+size: MEDIUM

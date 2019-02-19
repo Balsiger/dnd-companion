@@ -1,0 +1,10 @@
+template {
+  name: "Griffon"
+}
+set: "Death Knell"
+number: 20
+race: "Griffon"
+type: "Monstrosity"
+subtype: "Winged"
+subtype: "Mount"
+size: LARGE

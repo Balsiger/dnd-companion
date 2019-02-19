@@ -1,0 +1,9 @@
+template {
+  name: "Mezzodemon"
+}
+set: "Demonweb"
+number: 4
+race: "Mezzodemon"
+type: "Fiend"
+subtype: "Demon"
+size: MEDIUM

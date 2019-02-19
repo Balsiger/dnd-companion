@@ -1,0 +1,11 @@
+template {
+  name: "Death Knight (DK)"
+}
+set: "Death Knell"
+number: 33
+race: "Death Knight"
+type: "Undead"
+class: "Fighter"
+class: "Paladin"
+size: MEDIUM
+subtype: "Humanoid"

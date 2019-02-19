@@ -1,0 +1,10 @@
+template {
+  name: "Graypeak Goblin Archer"
+}
+set: "Unhallowed"
+number: 40
+type: "Humanoid"
+race: "Goblin"
+subtype: "Goblinoid"
+class: "Ranger"
+size: SMALL

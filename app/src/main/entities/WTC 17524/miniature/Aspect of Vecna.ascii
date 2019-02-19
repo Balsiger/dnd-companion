@@ -1,0 +1,8 @@
+template {
+  name: "Aspect of Vecna"
+}
+set: "Dungeon Delve"
+number: 3
+type: "Undead"
+subtype: "Humanoid"
+size: MEDIUM

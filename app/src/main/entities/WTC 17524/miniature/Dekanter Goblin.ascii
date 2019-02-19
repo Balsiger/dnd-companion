@@ -1,0 +1,9 @@
+template {
+  name: "Dekanter Goblin"
+}
+set: "Aberrations"
+number: 28
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: MEDIUM

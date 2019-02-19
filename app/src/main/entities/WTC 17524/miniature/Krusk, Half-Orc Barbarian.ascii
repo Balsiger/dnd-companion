@@ -1,0 +1,9 @@
+template {
+  name: "Krusk, Half-Orc Barbarian"
+}
+set: "Harbinger"
+number: 26
+type: "Humanoid"
+race: "Half-Orc"
+class: "Barbarian"
+size: MEDIUM

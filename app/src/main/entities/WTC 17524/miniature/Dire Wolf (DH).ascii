@@ -1,0 +1,10 @@
+template {
+  name: "Dire Wolf (DH)"
+}
+set: "Dragon Eye"
+number: 31
+race: "Dire Wolf"
+type: "Beast"
+subtype: "Dire"
+subtype: "Wolf"
+size: LARGE

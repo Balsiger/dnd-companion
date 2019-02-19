@@ -1,0 +1,8 @@
+template {
+  name: "Nothic"
+}
+set: "Archfiends"
+number: 36
+race: "Nothic"
+type: "Aberration"
+size: MEDIUM

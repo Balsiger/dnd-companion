@@ -1,0 +1,9 @@
+template {
+  name: "Archmage"
+}
+set: "Angelfire"
+number: 14
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

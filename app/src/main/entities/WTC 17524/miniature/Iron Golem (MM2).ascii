@@ -1,0 +1,9 @@
+template {
+  name: "Iron Golem (MM2)"
+}
+set: "Monster Menagerie 2"
+number: 28
+race: "Iron Golem"
+type: "Construct"
+subtype: "Golem"
+size: LARGE

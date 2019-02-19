@@ -1,0 +1,9 @@
+template {
+  name: "Gold Dwarf Soldier"
+}
+set: "Underdark"
+number: 5
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

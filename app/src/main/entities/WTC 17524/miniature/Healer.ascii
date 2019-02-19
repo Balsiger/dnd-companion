@@ -1,0 +1,9 @@
+template {
+  name: "Healer"
+}
+set: "Archfiends"
+number: 9
+type: "Humanoid"
+race: "Human"
+class: "Expert"
+size: MEDIUM

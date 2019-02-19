@@ -1,0 +1,9 @@
+template {
+  name: "Wild Elf Raider"
+}
+set: "Angelfire"
+number: 29
+type: "Humanoid"
+race: "Elf"
+class: "Barbarian"
+size: MEDIUM

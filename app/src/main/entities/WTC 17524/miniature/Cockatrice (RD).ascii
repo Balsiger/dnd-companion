@@ -1,0 +1,8 @@
+template {
+  name: "Cockatrice (RD)"
+}
+set: "Rage of Demons"
+number: 6
+race: "Cockatrice"
+type: "Monstrosity"
+size: SMALL

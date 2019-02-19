@@ -1,0 +1,9 @@
+template {
+  name: "Kerwyn, Human Rogue"
+}
+set: "Dragon Eye"
+number: 22
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM

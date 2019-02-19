@@ -1,0 +1,40 @@
+template {
+  name: "Natural Spell"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "You can cast spells while in a wild shape."
+  short_description: "Cast spells while in wild shape"
+}
+type: GENERAL
+benefit: "You can complete the verbal and somatic components of\n                    spells while in a wild shape. For example, while in the\n                    form of a hawk, you could substitute screeches and gestures\n                    with your talons for the normal verbal and somatic\n                    components of a spell. You can also use any material\n                    components or focuses you possess, even if such items are\n                    melded within your current form. This feat does not permit\n                    the use of magic items while you are in a form that could\n                    not ordinarily use them, and you do not gain the ability to\n                    speak while in a wild shape."
+prerequisites: "Wis 13, wild shape ability."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

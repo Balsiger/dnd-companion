@@ -1,0 +1,8 @@
+template {
+  name: "Cloud Giant (Scimitar)"
+}
+set: "Storm King\'s Thunder"
+number: 28
+race: "Cloud Giant"
+type: "Giant"
+size: HUGE

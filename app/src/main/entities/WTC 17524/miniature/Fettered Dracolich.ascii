@@ -1,0 +1,9 @@
+template {
+  name: "Fettered Dracolich"
+}
+set: "Lords of Madness"
+number: 17
+race: "Dracolich"
+type: "Undead"
+subtype: "Dragon"
+size: LARGE

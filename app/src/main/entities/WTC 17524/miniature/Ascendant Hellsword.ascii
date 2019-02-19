@@ -1,0 +1,9 @@
+template {
+  name: "Ascendant Hellsword"
+}
+set: "Dungeons of Dread"
+number: 21
+race: "Ascendant Hellsword"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

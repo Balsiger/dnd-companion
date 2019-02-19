@@ -1,0 +1,8 @@
+template {
+  name: "Unicorn (MM)"
+}
+set: "Monster Menagerie"
+number: 27
+race: "Unicorn"
+type: "Celestial"
+size: LARGE

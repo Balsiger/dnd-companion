@@ -1,0 +1,8 @@
+template {
+  name: "Pegasus (flying)"
+}
+set: "Tyranny of Dragons"
+number: 28
+race: "Pegasus"
+type: "Celestial"
+size: LARGE

@@ -1,0 +1,10 @@
+template {
+  name: "Swarm of Spiders"
+}
+set: "Underdark"
+number: 58
+race: "Spider"
+type: "Vermin"
+subtype: "Spider"
+subtype: "Swarm"
+size: LARGE

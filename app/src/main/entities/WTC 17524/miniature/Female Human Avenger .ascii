@@ -1,0 +1,8 @@
+template {
+  name: "Female Human Avenger "
+}
+set: "Player\'s Handbook Heroes 2"
+number: 4
+type: "Humanoid"
+race: "Human"
+class: "Fighter"

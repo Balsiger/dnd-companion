@@ -1,0 +1,8 @@
+template {
+  name: "Orc"
+}
+set: "Monster Menagerie"
+number: 13
+type: "Humanoid"
+race: "Orc"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Wyvern (flying)"
+}
+set: "Tyranny of Dragons"
+number: 29
+race: "Wyvern"
+type: "Dragon"
+subtype: "Reptile"
+size: LARGE
+subtype: "Lesser"

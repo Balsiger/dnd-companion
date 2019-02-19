@@ -1,0 +1,8 @@
+template {
+  name: "Ulitharid B"
+}
+set: "Monster Menagerie 3"
+number: 37
+type: "Aberration"
+race: "Ulitharid"
+size: LARGE

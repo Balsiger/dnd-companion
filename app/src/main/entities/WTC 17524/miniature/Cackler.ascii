@@ -1,0 +1,9 @@
+template {
+  name: "Cackler"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 2
+race: "Cackler"
+type: "Fiend"
+subtype: "Demon"
+size: SMALL

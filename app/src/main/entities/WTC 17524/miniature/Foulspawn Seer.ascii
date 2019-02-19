@@ -1,0 +1,8 @@
+template {
+  name: "Foulspawn Seer"
+}
+set: "Legendary Evils"
+number: 19
+race: "Foulspawn"
+type: "Aberration"
+size: MEDIUM

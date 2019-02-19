@@ -1,0 +1,9 @@
+template {
+  name: "Halfling Ranger"
+}
+set: "Archfiends"
+number: 17
+type: "Humanoid"
+race: "Halfling"
+class: "Ranger"
+size: SMALL

@@ -1,0 +1,9 @@
+template {
+  name: "Goblin Wolf Rider"
+}
+set: "Savage Encounters"
+number: 17
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: MEDIUM

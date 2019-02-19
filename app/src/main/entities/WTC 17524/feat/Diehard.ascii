@@ -1,0 +1,41 @@
+template {
+  name: "Diehard"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 93
+      high: 93
+    }
+  }
+  world: "Generic"
+  description: "You can remain conscious after attacks that would fell others."
+  short_description: "Remain conscious at \342\200\232\303\204\303\2541 to \342\200\232\303\204\303\2549 hp"
+}
+type: GENERAL
+benefit: "When reduced to between \342\200\232\303\204\303\2541 and \342\200\232\303\204\303\2549 hit points, you\n                    automatically become stable. You don\342\200\232\303\204\303\264t have to roll d% to\n                    see if you lose 1 hit point each round.\n\n                    When reduced to negative hit points, you may choose to act\n                    as if you were disabled, rather than dying. You must make\n                    this decision as soon as you are reduced to negative hit\n                    points (even if it isn\342\200\232\303\204\303\264t your turn). If you do not choose\n                    to act as if you were disabled, you immediately fall\n                    unconscious.\n\n                    When using this feat, you can take either a single move or\n                    stan- dard action each turn, but not both, and you cannot\n                    take a full-round action. You can take a move action\n                    without further injuring yourself, but if you perform any\n                    standard action (or any other action the DM deems as\n                    strenuous, including some free actions, such as casting a\n                    quickened spell) you take 1 point of damage after\n                    completing the act. If you reach \342\200\232\303\204\303\25410 hit points, you\n                    immediately ie."
+normal: "A character without this feat who is reduced to between \342\200\232\303\204\303\2541\n                    and \342\200\232\303\204\303\2549 hit points is unconscious and dying, as described in\n                    Chapter 8: Combat."
+prerequisites: "Endurance."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

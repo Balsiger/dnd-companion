@@ -1,0 +1,8 @@
+template {
+  name: "Clawborn Scorrow"
+}
+set: "Night Below"
+number: 49
+race: "Clawborn Scorrow"
+type: "Aberration"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Solara Thann"
+}
+set: "Storm King\'s Thunder"
+number: 33
+type: "Humanoid"
+race: "Human"
+size: MEDIUM
+class: "Fighter"

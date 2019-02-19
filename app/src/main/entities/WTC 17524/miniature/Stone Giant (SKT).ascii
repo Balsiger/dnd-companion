@@ -1,0 +1,9 @@
+template {
+  name: "Stone Giant (SKT)"
+}
+set: "Storm King\'s Thunder"
+number: 30
+race: "Stone Giant"
+type: "Giant"
+subtype: "Earth"
+size: HUGE

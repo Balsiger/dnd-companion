@@ -1,0 +1,9 @@
+template {
+  name: "Minsc and Boo (invisible)"
+}
+set: "Tomb of Annihilation"
+number: 40
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+size: MEDIUM

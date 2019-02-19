@@ -1,0 +1,10 @@
+template {
+  name: "Blackroot Treant"
+}
+set: "Against the Giants"
+number: 53
+race: "Treant"
+type: "Undead"
+subtype: "Plant"
+subtype: "Treant"
+size: HUGE

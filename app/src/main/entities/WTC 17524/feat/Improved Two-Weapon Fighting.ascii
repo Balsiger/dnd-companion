@@ -1,0 +1,42 @@
+template {
+  name: "Improved Two-Weapon Fighting"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 96
+      high: 96
+    }
+  }
+  world: "Generic"
+  description: "You are an expert in fighting two-handed."
+  short_description: "Gain second off-hand attack"
+}
+type: GENERAL
+benefit: "In addition to the standard single extra attack you get\n                    with an off-hand weapon, you get a second attack with it,\n                    albeit at a \342\200\232\303\204\303\254 5 penalty (see Table 8\342\200\232\303\204\303\25410, page 160)."
+special: "A fighter may select Improved Two-Weapon Fighting as one\n                    of his fighter bonus feats.\n\n                    A 6th-level ranger who has chosen the two-weapon combat\n                    style is treated as having Improved Two-Weapon Fighting,\n                    even if he does not have the prerequisites for it, but only\n                    when he is wearing light or no armor (see page 48)."
+normal: "Without this feat, you can only get a single extra attack\n                    with an off-hand weapon."
+prerequisites: "Dex 17, Two-Weapon Fighting, base attack bonus +6."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

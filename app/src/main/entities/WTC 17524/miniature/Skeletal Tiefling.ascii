@@ -1,0 +1,8 @@
+template {
+  name: "Skeletal Tiefling"
+}
+set: "Savage Encounters"
+number: 34
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

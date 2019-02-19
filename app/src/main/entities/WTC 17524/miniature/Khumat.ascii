@@ -1,0 +1,9 @@
+template {
+  name: "Khumat"
+}
+set: "War Drums"
+number: 35
+race: "Khumat"
+type: "Monstrosity"
+subtype: "Humanoid"
+size: LARGE

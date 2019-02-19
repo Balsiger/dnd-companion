@@ -1,0 +1,11 @@
+template {
+  name: "Azer Fighter"
+}
+set: "War of the Dragon Queen"
+number: 19
+race: "Azer"
+type: "Elemental"
+subtype: "Fire"
+subtype: "Humanoid"
+class: "Fighter"
+size: MEDIUM

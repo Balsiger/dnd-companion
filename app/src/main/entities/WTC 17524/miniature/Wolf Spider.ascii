@@ -1,0 +1,9 @@
+template {
+  name: "Wolf Spider"
+}
+set: "Elemental Evil"
+number: 8
+race: "Wolf Spider"
+type: "Monstrosity"
+subtype: "Spider"
+size: MEDIUM

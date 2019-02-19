@@ -1,0 +1,8 @@
+template {
+  name: "Autumn Wind Ranger"
+}
+set: "Demonweb"
+number: 37
+race: "Elf"
+type: "Humanoid"
+size: MEDIUM

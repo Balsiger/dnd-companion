@@ -1,0 +1,10 @@
+template {
+  name: "Bonechill Chimera"
+}
+set: "Dungeon Delve"
+number: 10
+race: "Bonechill Chimera"
+type: "Monstrosity"
+subtype: "Chimera"
+subtype: "Winged"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Web Golem"
+}
+set: "Demonweb"
+number: 57
+race: "Web Golem"
+type: "Construct"
+subtype: "Golem"
+size: LARGE

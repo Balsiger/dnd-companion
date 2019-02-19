@@ -1,0 +1,9 @@
+template {
+  name: "Frost Giant (GL)"
+}
+set: "Giants of Legend"
+number: 48
+race: "Frost Giant"
+type: "Giant"
+subtype: "Cold"
+size: LARGE

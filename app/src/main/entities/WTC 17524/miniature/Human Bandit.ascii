@@ -1,0 +1,10 @@
+template {
+  name: "Human Bandit"
+}
+set: "Demonweb"
+number: 34
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM
+subtype: "Shield"

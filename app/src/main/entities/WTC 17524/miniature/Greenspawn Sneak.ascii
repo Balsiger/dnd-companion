@@ -1,0 +1,9 @@
+template {
+  name: "Greenspawn Sneak"
+}
+set: "Blood War"
+number: 32
+race: "Greenspawn"
+subtype: "Dragonspawn"
+type: "Monstrosity"
+size: SMALL

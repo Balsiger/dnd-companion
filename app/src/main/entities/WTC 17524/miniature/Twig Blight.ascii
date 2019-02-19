@@ -1,0 +1,8 @@
+template {
+  name: "Twig Blight"
+}
+set: "War of the Dragon Queen"
+number: 58
+race: "Twig Blight"
+type: "Plant"
+size: SMALL

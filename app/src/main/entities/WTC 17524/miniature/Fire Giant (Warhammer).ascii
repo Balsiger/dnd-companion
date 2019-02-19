@@ -1,0 +1,9 @@
+template {
+  name: "Fire Giant (Warhammer)"
+}
+set: "Storm King\'s Thunder"
+number: 32
+race: "Fire Giant"
+type: "Giant"
+subtype: "Fire"
+size: HUGE

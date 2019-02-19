@@ -1,0 +1,8 @@
+template {
+  name: "Strahd Zombie"
+}
+set: "Unhallowed"
+number: 44
+race: "Zombie"
+type: "Undead"
+size: MEDIUM

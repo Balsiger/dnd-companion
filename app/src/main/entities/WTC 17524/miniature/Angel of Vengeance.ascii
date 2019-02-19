@@ -1,0 +1,9 @@
+template {
+  name: "Angel of Vengeance"
+}
+set: "Desert of Desolation"
+number: 1
+race: "Angel"
+type: "Celestial"
+subtype: "Angel"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Graycloak Ranger"
+}
+set: "Archfiends"
+number: 16
+type: "Humanoid"
+race: "Elf"
+class: "Ranger"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Hook Horror"
+}
+set: "Dungeons of Dread"
+number: 57
+race: "Hook Horror"
+type: "Monstrosity"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Vampire Spawn A (mm3)"
+}
+set: "Monster Menagerie 3"
+number: 10
+type: "Humanoid"
+subtype: "Undead"
+size: MEDIUM

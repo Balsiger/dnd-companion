@@ -1,0 +1,42 @@
+template {
+  name: "Exotic Weapon Proficiency"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 94
+      high: 94
+    }
+  }
+  world: "Generic"
+  description: "Choose a type of exotic weapon, such as dire flail or shuriken (see Table\n  7\342\200\232\303\204\303\2545: Weapons, page 116, for a list of exotic weapons). You understand how to\n  use that type of exotic weapon in combat."
+  short_description: "No penalty on attacks with specific exotic weapon"
+}
+type: GENERAL
+benefit: "You make attack rolls with the weapon normally."
+special: "You can gain Exotic Weapon Proficiency multiple times.\n\n                    Each time you take the feat, it applies to a new type of\n                    exotic weapon. Proficiency with the bastard sword or the\n                    dwarven waraxe has an additional prerequisite of Str 13.\n\n                    A fighter may select Exotic Weapon Proficiency as one of\n                    his fighter bonus feats (see page 38)."
+normal: "A character who uses a weapon with which he or she is not\n                    proficient takes a \342\200\232\303\204\303\2544 penalty on attack rolls."
+prerequisites: "Base attack bonus +1 (plus Str 13 for bastard sword or\n                    dwarven waraxe)."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

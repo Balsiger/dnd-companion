@@ -1,0 +1,11 @@
+template {
+  name: "Wererat Rogue (Hybrid Form)"
+}
+set: "War of the Dragon Queen"
+number: 39
+race: "Wererat"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+class: "Rogue"
+size: MEDIUM

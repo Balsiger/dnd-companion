@@ -1,0 +1,39 @@
+template {
+  name: "Spell Penetration"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 100
+      high: 100
+    }
+  }
+  world: "Generic"
+  description: "Your spells are especially potent, breaking through spell resistance more\n  readily than normal."
+  short_description: "+2 bonus on caster level checks to defeat spell resistance"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on caster level checks (1d20 + caster\n                    level) made to overcome a creature\342\200\232\303\204\303\264s spell resistance."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

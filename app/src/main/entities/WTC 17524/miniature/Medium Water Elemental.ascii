@@ -1,0 +1,9 @@
+template {
+  name: "Medium Water Elemental"
+}
+set: "Dragon Eye"
+number: 36
+race: "Water Elemental"
+type: "Elemental"
+subtype: "Water"
+size: MEDIUM

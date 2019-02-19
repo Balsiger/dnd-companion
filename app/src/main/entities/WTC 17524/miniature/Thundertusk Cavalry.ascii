@@ -1,0 +1,9 @@
+template {
+  name: "Thundertusk Cavalry"
+}
+set: "Blood War"
+number: 12
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: LARGE

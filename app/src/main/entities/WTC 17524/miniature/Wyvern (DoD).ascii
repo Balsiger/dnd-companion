@@ -1,0 +1,10 @@
+template {
+  name: "Wyvern (DoD)"
+}
+set: "Dungeons of Dread"
+number: 42
+race: "Wyvern"
+type: "Dragon"
+subtype: "Reptile"
+size: LARGE
+subtype: "Lesser"

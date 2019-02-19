@@ -1,0 +1,8 @@
+template {
+  name: "Psychic Sentinel"
+}
+set: "Legendary Evils"
+number: 30
+race: "Psychic Sentinel"
+type: "Construct"
+size: LARGE

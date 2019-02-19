@@ -1,0 +1,9 @@
+template {
+  name: "Blackscale Lizardfolk"
+}
+set: "Angelfire"
+number: 32
+type: "Humanoid"
+subtype: "Reptile"
+subtype: "Lizardfolk"
+size: LARGE

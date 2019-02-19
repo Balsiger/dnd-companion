@@ -1,0 +1,9 @@
+template {
+  name: "Large Copper Dragon (Young Adult)"
+}
+set: "Angelfire"
+number: 21
+race: "Copper Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Metallic"

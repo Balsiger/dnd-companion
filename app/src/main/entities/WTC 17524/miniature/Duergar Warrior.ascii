@@ -1,0 +1,9 @@
+template {
+  name: "Duergar Warrior"
+}
+set: "Archfiends"
+number: 32
+type: "Humanoid"
+race: "Duergar"
+class: "Fighter"
+size: MEDIUM

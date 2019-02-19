@@ -1,0 +1,8 @@
+template {
+  name: "Thaskor"
+}
+set: "Death Knell"
+number: 44
+race: "Thaskor"
+type: "Monstrosity"
+size: LARGE

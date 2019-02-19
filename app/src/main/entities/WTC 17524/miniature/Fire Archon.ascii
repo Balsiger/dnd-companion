@@ -1,0 +1,10 @@
+template {
+  name: "Fire Archon"
+}
+set: "Desert of Desolation"
+number: 50
+race: "Fire Archon"
+type: "Elemental"
+subtype: "Fire"
+subtype: "Archon"
+size: MEDIUM

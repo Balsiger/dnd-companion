@@ -1,0 +1,8 @@
+template {
+  name: "Hill Giant B"
+}
+set: "Monster Menagerie 3"
+number: 28
+race: "Hill Giant"
+type: "Giant"
+size: HUGE

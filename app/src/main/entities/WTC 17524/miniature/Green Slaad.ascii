@@ -1,0 +1,9 @@
+template {
+  name: "Green Slaad"
+}
+set: "Blood War"
+number: 53
+race: "Green Slaad"
+type: "Aberration"
+subtype: "Slaad"
+size: LARGE

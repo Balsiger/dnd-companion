@@ -1,0 +1,9 @@
+template {
+  name: "Elf Pyromancer"
+}
+set: "Harbinger"
+number: 22
+type: "Humanoid"
+race: "Elf"
+class: "Wizard"
+size: MEDIUM

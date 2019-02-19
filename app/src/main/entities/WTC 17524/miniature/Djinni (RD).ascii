@@ -1,0 +1,10 @@
+template {
+  name: "Djinni (RD)"
+}
+set: "Rage of Demons"
+number: 32
+race: "Djinni"
+type: "Elemental"
+subtype: "Air"
+subtype: "Genie"
+subtype: "Flying"

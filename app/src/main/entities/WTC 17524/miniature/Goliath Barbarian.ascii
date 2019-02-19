@@ -1,0 +1,9 @@
+template {
+  name: "Goliath Barbarian"
+}
+set: "Death Knell"
+number: 18
+race: "Goliath"
+type: "Humanoid"
+class: "Barbarian"
+size: MEDIUM

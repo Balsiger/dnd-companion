@@ -1,0 +1,8 @@
+template {
+  name: "Swordwing"
+}
+set: "Lords of Madness"
+number: 49
+race: "Swordwing"
+type: "Aberration"
+size: MEDIUM

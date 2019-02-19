@@ -1,0 +1,9 @@
+template {
+  name: "Grinning Imp"
+}
+set: "Demonweb"
+number: 5
+race: "Imp"
+type: "Fiend"
+subtype: "Devil"
+size: SMALL

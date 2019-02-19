@@ -1,0 +1,10 @@
+template {
+  name: "Draegloth"
+}
+set: "Underdark"
+number: 45
+race: "Draegloth"
+type: "Fiend"
+subtype: "Demon"
+class: "Barbarian"
+size: LARGE

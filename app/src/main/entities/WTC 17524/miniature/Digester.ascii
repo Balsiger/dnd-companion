@@ -1,0 +1,8 @@
+template {
+  name: "Digester"
+}
+set: "Night Below"
+number: 16
+race: "Digester"
+type: "Monstrosity"
+size: MEDIUM

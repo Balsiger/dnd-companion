@@ -1,0 +1,9 @@
+template {
+  name: "Bolraza, Priestess of Bane"
+}
+set: "Legendary Evils"
+number: 7
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+size: MEDIUM

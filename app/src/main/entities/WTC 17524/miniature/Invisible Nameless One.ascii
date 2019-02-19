@@ -1,0 +1,9 @@
+template {
+  name: "Invisible Nameless One"
+}
+set: "Monster Menagerie 3"
+number: 40
+type: "Humanoid"
+class: "Fighter"
+race: "Human"
+size: MEDIUM

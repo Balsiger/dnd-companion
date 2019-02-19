@@ -1,0 +1,620 @@
+template {
+  name: "Bard"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 26
+      high: 30
+    }
+  }
+  world: "Generic"
+  description: "It is said that music has a special magic, and the bard proves that\nsaying true. Wandering across the land, gathering lore, telling stories, working magic with his music, and living on the gratitude of\nhis audience \342\200\224 such is the life of a bard. When chance or opportunity draws them into a conflict, bards serve as diplomats, negotiators, messengers, scouts, and spies.\n\nA bard\342\200\231s magic comes from the heart. If his heart is good, a bard\nbrings hope and courage to the downtrodden and uses his tricks,\nmusic, and magic to thwart the schemes of evildoers. If the nobles of\nthe land are corrupt, the good bard is an enemy of the state,\ncunningly evading capture and raising the spirits of the oppressed.\nBut music can spring from an evil heart as well. Evil bards forego\nblatant violence in favor of manipulation, holding sway over the\nhearts and minds of others and taking what enraptured audiences\n\342\200\234willingly\342\200\235 give."
+  short_description: "A diplomat, negotiators, messenger, scout, or spy."
+  incomplete: "number per day does not include level"
+}
+abbreviation: "Brd"
+adventures: "Bards see adventures as opportunities to learn. They\npractice their many skills and abilities, and they especially relish the\nopportunity to enter a long-forgotten tomb, to discover ancient\nworks of magic, to decipher old tomes, to travel to strange places, to\nencounter exotic creatures, and to learn new songs and stories. Bards\nlove to accompany heroes (and villains), joining their entourage to\nwitness their deeds firsthand\342\200\224a bard who can tell a marvelous story\nfrom personal experience earns renown among his fellows. Indeed,\nafter telling so many stories about heroes doing mighty deeds, many\nbards take these themes to heart and assume heroic roles themselves."
+characteristics: "A bard brings forth magic from his soul, not\nfrom a book. He can cast only a small number of spells, but he can\ndo so without selecting or preparing them in advance. His magic\nemphasizes charms and illusions over the more dramatic evocation\nspells that wizards and sorcerers often use.\nIn addition to spells, a bard works magic with his music and\npoetry. He can encourage allies, hold his audiences rapt, and counter\nmagical effects that rely on speech or sound.\nBards have some of the skills that rogues have, although bards\nthey are not as focused on skill mastery as rogues are. A bard listens\nto stories as well as telling them, of course, so he has a vast knowledge of local events and noteworthy items."
+alignment_options: "Bards are wanderers, guided by whim and intuition\nrather than by tradition or law. The spontaneous talent, magic, and\nlifestyle of the bard are incompatible with a lawful alignment."
+religion: "Bards revere \\God{Fharlanghn} (god of roads). They sometimes camp near his wayside shrines, hoping to earn some coin from\nthe travelers who stop to leave offerings for the god. Many bards,\neven those who are not elves, worship \\God{Corellon Larethian}, god of\nelves and patron of poetry and music. Many good bards are partial to\n\\God{Pelor} (god of the sun), believing that he watches over them in their\ntravels. Bards given to chaos and occasional larceny favor\n\\God{Olidammara} (god of thieves). Those who have turned to evil ways\nare known to worship \\God{Erythnul} (the god of slaughter), though few\nwill admit to it. In any event, bards spend so much time on the road\nthat, while they may be devoted to a deity, they are rarely devoted to\nany particular temple."
+background: "An apprentice bard learns his skills from a\nsingle experienced bard, whom he follows and serves until he is\nready to strike out on his own. Many bards were once young runaways or orphans, befriended by wandering bards who became\ntheir mentors. Since bards occasionally congregate in informal\n\'colleges,\' the apprentice bard may\nmeet many of the more prominent\nbards in the area. Still, the bard has no\nstrong allegiance to bards as a whole.\nIn fact, some bards are highly\ncompetitive with other bards, jealous\nof their reputations and defensive\nabout their territories."
+races: "Bards are commonly \\Monster{human}, \\Monster{gnome}, \\Monster{elf}, or \\Monster{half-elf}.\n\\Monster{Humans} take well to the wandering life and adapt easily to new lands and customs. \\Monster{Gnomes}\nhave a sense of humor and\ntrickery that lends itself to a\nbardic career. \\Monster{Elves} are talented\nin music and magic, so\nthe career of the \\Class{bard}\ncomes naturally to them.\n\nA bard\342\200\231s wandering ways\nsuit many half-elves, who\noften feel like strangers\neven when at home.\n\\Monster{Half-orcs}, even those raised\namong humans, find themselves\nill suited to the demands of a\nbard\342\200\231s career. There are no bardic\ntraditions among \\Monster{dwarves},\nor \\Monster{halflings}, though\noccasional individuals of these races\nfind teachers to train them in the ways\nof the bard.\n\nBards are exceedingly rare among the savage humanoids, except\namong \\Monster{centaurs}. \\Monster{Centaur} bards sometimes train the children of\n\\Monster{humans} or other humanoids."
+otherClasses: "A bard works well\nwith companions of other classes. He\noften serves as the spokesman of the\nparty, using his social skills for the\nparty\342\200\231s benefit. In a party without a\nwizard or sorcerer, the bard contributes his magic. In a party\nwithout a rogue, he uses his skills.\n\nA bard is curious about the ways\nof more focused or dedicated\nadventurers, so he often tries to\npick up pointers from\nfighters, sorcerers, and\nrogues."
+role: "The bard is perhaps the\nultimate generalist. In most\nadventuring groups, he works best\nin a supporting role. He can\342\200\231t usually\nmatch the stealth of the ranger or\nthe rogue, the spellcasting\npower of the cleric or the\nwizard, or the combat prowess\nof the barbarian or the fighter.\nHowever, he makes all the\nother characters better at what\nthey do, and he can often fill in\nfor another character when needed.\n\nFor a typical group of four\ncharacters, the bard is perhaps\nthe most useful fifth character to\nconsider adding, and he can make a\ngreat team leader."
+important_abilities: "Charisma determines how\npowerful a spell a bard can cast, how many\nspells he can cast per day, and how hard\nthose spells are to resist (see Spells, below). Charisma, Dexterity, and\nIntelligence are important for many of the bard\342\200\231s class skills.\n"
+allowed_alignment: CHAOTIC_EVIL
+allowed_alignment: CHOATIC_NETURAL
+allowed_alignment: CHAOTIC_GOOD
+allowed_alignment: NEUTRAL_EVIL
+allowed_alignment: TRUE_NEUTRAL
+allowed_alignment: NEUTRAL_GOOD
+hit_dice {
+  number: 1
+  dice: 6
+}
+skill_points: 6
+class_skill: "appraise"
+class_skill: "balance"
+class_skill: "bluff"
+class_skill: "climb"
+class_skill: "concentration"
+class_skill: "craft"
+class_skill: "decipher script"
+class_skill: "diplomacy"
+class_skill: "disguise"
+class_skill: "escape artist"
+class_skill: "gather information"
+class_skill: "hide"
+class_skill: "jump"
+class_skill: "knowledge"
+class_skill: "listen"
+class_skill: "move silently"
+class_skill: "perform"
+class_skill: "profession"
+class_skill: "sense motive"
+class_skill: "sleight of hand"
+class_skill: "speak language"
+class_skill: "spellcraft"
+class_skill: "swim"
+class_skill: "tumble"
+class_skill: "use magic device"
+weapon_proficiency: SIMPLE
+individual_weapon_proficiency: "longsword"
+individual_weapon_proficiency: "rapier"
+individual_weapon_proficiency: "sap"
+individual_weapon_proficiency: "short sword"
+individual_weapon_proficiency: "shortbow"
+individual_weapon_proficiency: "whip"
+armor_proficiency: LIGHT
+armor_proficiency: SHIELD
+quality {
+  level: 1
+  template {
+    name: "bardic music"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "countersong"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "fascinate"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "inspire courage"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 3
+  template {
+    name: "inspire competence"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 6
+  template {
+    name: "suggestion"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 8
+  template {
+    name: "inspire courage"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 9
+  template {
+    name: "inspire greatness"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 12
+  template {
+    name: "song of freedom"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 14
+  template {
+    name: "inspire courage"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 15
+  template {
+    name: "inspire heroics"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 18
+  template {
+    name: "mass suggestion"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 20
+  template {
+    name: "inspire courage"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "cast spells in armor"
+    parameters {
+    }
+    condition {
+      generic: "light armor"
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "bardic knowledge"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 0
+reflex_save: 2
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 1
+will_save: 2
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+spell_ability: CHARISMA
+spells_per_day {
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: 0
+  value: 1
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 0
+  value: 1
+  value: 2
+  value: 3
+  value: 4
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_known {
+  value: 4
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_known {
+  value: -1
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+}
+spells_known {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}

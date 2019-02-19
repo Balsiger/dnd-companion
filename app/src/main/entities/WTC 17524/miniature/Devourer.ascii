@@ -1,0 +1,8 @@
+template {
+  name: "Devourer"
+}
+set: "Unhallowed"
+number: 36
+race: "Devourer"
+type: "Fiend"
+size: LARGE

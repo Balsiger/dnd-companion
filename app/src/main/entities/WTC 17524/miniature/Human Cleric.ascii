@@ -1,0 +1,9 @@
+template {
+  name: "Human Cleric"
+}
+set: "Monster Menagerie 2"
+number: 9
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

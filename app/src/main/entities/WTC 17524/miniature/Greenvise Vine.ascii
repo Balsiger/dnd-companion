@@ -1,0 +1,8 @@
+template {
+  name: "Greenvise Vine"
+}
+set: "Savage Encounters"
+number: 20
+race: "Greenvise Vine"
+type: "Plant"
+size: LARGE

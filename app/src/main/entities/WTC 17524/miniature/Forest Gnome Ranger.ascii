@@ -1,0 +1,9 @@
+template {
+  name: "Forest Gnome Ranger"
+}
+set: "Elemental Evil"
+number: 2
+type: "Humanoid"
+race: "Gnome"
+class: "Ranger"
+size: SMALL

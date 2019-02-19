@@ -1,0 +1,9 @@
+template {
+  name: "Couatl"
+}
+set: "Death Knell"
+number: 2
+race: "Couatl"
+type: "Celestial"
+subtype: "Reptile"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Warrior Skeleton"
+}
+set: "Archfiends"
+number: 43
+type: "Undead"
+race: "Skeleton"
+size: MEDIUM

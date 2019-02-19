@@ -1,0 +1,8 @@
+template {
+  name: "Drow Captain"
+}
+set: "Rage of Demons"
+number: 16
+type: "Humanoid"
+race: "Drow"
+size: SMALL

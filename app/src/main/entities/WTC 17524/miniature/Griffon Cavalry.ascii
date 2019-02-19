@@ -1,0 +1,10 @@
+template {
+  name: "Griffon Cavalry"
+}
+set: "War of the Dragon Queen"
+number: 13
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: LARGE
+subtype: "Mounted"

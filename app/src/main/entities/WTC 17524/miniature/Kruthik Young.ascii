@@ -1,0 +1,9 @@
+template {
+  name: "Kruthik Young"
+}
+set: "Dungeon Delve"
+number: 28
+race: "Kruthik"
+type: "Beast"
+subtype: "Reptile"
+size: SMALL

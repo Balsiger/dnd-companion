@@ -1,0 +1,9 @@
+template {
+  name: "Invisible Mind Flayer Lich"
+}
+set: "Rage of Demons"
+number: 53
+race: "Lich"
+type: "Undead"
+subtype: "Mind Flayer"
+subtype: "Invisible"

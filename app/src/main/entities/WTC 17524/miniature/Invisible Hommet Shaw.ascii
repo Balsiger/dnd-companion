@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Hommet Shaw"
+}
+set: "Monster Menagerie"
+number: 22
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM
+subtype: "Invisible"

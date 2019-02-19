@@ -1,0 +1,8 @@
+template {
+  name: "Kalliroth, Githyanki Pirate"
+}
+set: "Lords of Madness"
+number: 24
+type: "Humanoid"
+race: "Githyanki"
+size: MEDIUM

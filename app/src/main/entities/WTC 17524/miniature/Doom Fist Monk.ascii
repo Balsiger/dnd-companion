@@ -1,0 +1,10 @@
+template {
+  name: "Doom Fist Monk"
+}
+set: "War of the Dragon Queen"
+number: 30
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+class: "Monk"
+size: MEDIUM

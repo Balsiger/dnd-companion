@@ -1,0 +1,9 @@
+template {
+  name: "Knight of Chalice"
+}
+set: "Unhallowed"
+number: 5
+type: "Humanoid"
+race: "Elf"
+class: "Paladin"
+size: MEDIUM

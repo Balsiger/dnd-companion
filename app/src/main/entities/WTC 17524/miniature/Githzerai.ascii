@@ -1,0 +1,9 @@
+template {
+  name: "Githzerai"
+}
+set: "Archfiends"
+number: 23
+race: "Githzerai"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM

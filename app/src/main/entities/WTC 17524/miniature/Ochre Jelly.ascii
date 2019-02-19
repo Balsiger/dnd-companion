@@ -1,0 +1,9 @@
+template {
+  name: "Ochre Jelly"
+}
+set: "Against the Giants"
+number: 56
+race: "Ochre Jelly"
+type: "Ooze"
+subtype: "Blind"
+size: MEDIUM

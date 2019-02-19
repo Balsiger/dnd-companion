@@ -1,0 +1,9 @@
+template {
+  name: "Precognitive Mage"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 1
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Phase Spider"
+}
+set: "Monster Menagerie"
+number: 28
+type: "Monstrosity"
+subtype: "Spider"
+subtype: "Demon"
+subtype: "Invisible"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Dire Bear"
+}
+set: "Death Knell"
+number: 26
+race: "Dire Bear"
+type: "Beast"
+subtype: "Dire"
+size: LARGE

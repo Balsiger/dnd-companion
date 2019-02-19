@@ -1,0 +1,8 @@
+template {
+  name: "Bulette"
+}
+set: "Dungeons of Dread"
+number: 53
+race: "Bulette"
+type: "Monstrosity"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Jarlaxle Baenre"
+}
+set: "Dragon Heist"
+number: 38
+type: "Humanoid"
+race: "Drow"
+size: MEDIUM

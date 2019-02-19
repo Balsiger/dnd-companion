@@ -1,0 +1,9 @@
+template {
+  name: "Forest Troll"
+}
+set: "Death Knell"
+number: 55
+race: "Troll"
+type: "Giant"
+subtype: "Troll"
+size: MEDIUM

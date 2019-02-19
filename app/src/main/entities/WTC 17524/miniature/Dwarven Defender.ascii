@@ -1,0 +1,9 @@
+template {
+  name: "Dwarven Defender"
+}
+set: "Dragon Eye"
+number: 2
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

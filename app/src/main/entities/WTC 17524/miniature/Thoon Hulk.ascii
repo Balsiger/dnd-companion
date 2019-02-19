@@ -1,0 +1,8 @@
+template {
+  name: "Thoon Hulk"
+}
+set: "Demonweb"
+number: 23
+type: "Aberration"
+race: "Mind Flayer"
+size: LARGE

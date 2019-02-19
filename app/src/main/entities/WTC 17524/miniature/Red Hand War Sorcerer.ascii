@@ -1,0 +1,9 @@
+template {
+  name: "Red Hand War Sorcerer"
+}
+set: "Blood War"
+number: 43
+type: "Goblinoid"
+race: "Hobgoblin"
+class: "Wizard"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Will-o\'-Wisps"
+}
+set: "Monster Menagerie"
+number: 3
+race: "Will-o\'-Wisp"
+type: "Undead"
+size: SMALL

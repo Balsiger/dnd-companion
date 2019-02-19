@@ -1,0 +1,9 @@
+template {
+  name: "Blood Fiend"
+}
+race: "Blood Fiend"
+set: "Lords of Madness"
+number: 4
+type: "Fiend"
+subtype: "Abomination"
+size: MEDIUM

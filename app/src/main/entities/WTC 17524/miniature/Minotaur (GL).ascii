@@ -1,0 +1,8 @@
+template {
+  name: "Minotaur (GL)"
+}
+set: "Giants of Legend"
+number: 54
+race: "Minotaur"
+type: "Monstrosity"
+size: LARGE

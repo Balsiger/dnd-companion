@@ -1,0 +1,10 @@
+template {
+  name: "Efreeti"
+}
+set: "Angelfire"
+number: 39
+race: "Efreeti"
+type: "Elemental"
+subtype: "Genie"
+subtype: "Fire"
+size: LARGE

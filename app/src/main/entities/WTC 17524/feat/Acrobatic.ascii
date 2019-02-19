@@ -1,0 +1,39 @@
+template {
+  name: "Acrobatic"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 89
+      high: 89
+    }
+  }
+  world: "Generic"
+  description: "You have excellent body awareness and coordination."
+  short_description: "+2 bonus on Jump and Tumble checks"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Jump checks and Tumble checks."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,9 @@
+template {
+  name: "Hill Dwarf Warrior"
+}
+set: "Aberrations"
+number: 7
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

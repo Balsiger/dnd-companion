@@ -1,0 +1,9 @@
+template {
+  name: "Astral Stalker"
+}
+set: "Desert of Desolation"
+number: 26
+type: "Aberration"
+subtype: "Extraplanar"
+subtype: "Humanoid"
+size: MEDIUM

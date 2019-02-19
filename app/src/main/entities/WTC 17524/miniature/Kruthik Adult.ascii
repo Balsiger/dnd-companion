@@ -1,0 +1,9 @@
+template {
+  name: "Kruthik Adult"
+}
+set: "Demonweb"
+number: 55
+race: "Kruthik"
+type: "Beast"
+subtype: "Reptile"
+size: MEDIUM

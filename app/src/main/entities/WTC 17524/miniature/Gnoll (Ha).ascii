@@ -1,0 +1,8 @@
+template {
+  name: "Gnoll (Ha)"
+}
+set: "Harbinger"
+number: 64
+type: "Humanoid"
+race: "Gnoll"
+size: MEDIUM

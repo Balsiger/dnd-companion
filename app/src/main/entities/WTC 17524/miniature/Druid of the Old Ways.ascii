@@ -1,0 +1,9 @@
+template {
+  name: "Druid of the Old Ways"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 24
+type: "Humanoid"
+race: "Centaur"
+class: "Druid"
+size: MEDIUM

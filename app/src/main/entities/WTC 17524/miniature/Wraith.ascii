@@ -1,0 +1,9 @@
+template {
+  name: "Wraith"
+}
+set: "Harbinger"
+number: 53
+race: "Wraith"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

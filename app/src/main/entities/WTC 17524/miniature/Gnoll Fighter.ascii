@@ -1,0 +1,9 @@
+template {
+  name: "Gnoll Fighter"
+}
+set: "Elemental Evil"
+number: 22
+type: "Humanoid"
+race: "Gnoll"
+class: "Fighter"
+size: MEDIUM

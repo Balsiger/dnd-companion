@@ -1,0 +1,9 @@
+template {
+  name: "Solamith"
+}
+set: "Demonweb"
+number: 16
+race: "Solamith"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

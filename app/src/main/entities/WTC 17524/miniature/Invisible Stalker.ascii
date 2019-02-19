@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Stalker"
+}
+set: "Monster Menagerie"
+number: 33
+race: "Invisible Stalker"
+type: "Elemental"
+subtype: "Invisible"
+size: MEDIUM
+subtype: "Air"

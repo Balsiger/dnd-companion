@@ -1,0 +1,9 @@
+template {
+  name: "Hunched Giant (Maur)"
+}
+set: "Underdark"
+number: 51
+race: "Maur"
+type: "Giant"
+subtype: "Earth"
+size: LARGE

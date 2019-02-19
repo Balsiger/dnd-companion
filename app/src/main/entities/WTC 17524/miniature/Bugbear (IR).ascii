@@ -1,0 +1,10 @@
+template {
+  name: "Bugbear (IR)"
+}
+set: "Tyranny of Dragons"
+number: 21
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Bugbear"
+size: MEDIUM
+

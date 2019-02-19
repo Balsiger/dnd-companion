@@ -1,0 +1,9 @@
+template {
+  name: "Human Marauder"
+}
+set: "Lords of Madness"
+number: 21
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+size: MEDIUM

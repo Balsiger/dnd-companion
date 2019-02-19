@@ -1,0 +1,9 @@
+template {
+  name: "Vicious Bearded Devil"
+}
+set: "Demonweb"
+number: 9
+race: "Bearded Devil"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

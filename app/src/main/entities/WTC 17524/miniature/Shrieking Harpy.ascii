@@ -1,0 +1,8 @@
+template {
+  name: "Shrieking Harpy"
+}
+set: "Desert of Desolation"
+number: 55
+race: "Harpy"
+type: "Monstrosity"
+size: MEDIUM

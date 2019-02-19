@@ -1,0 +1,9 @@
+template {
+  name: "Large Bronze Dragon (Juvenile)"
+}
+set: "War Drums"
+number: 7
+race: "Bronze Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Metallic"

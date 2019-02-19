@@ -1,0 +1,10 @@
+template {
+  name: "Bluespawn Ambusher"
+}
+set: "Night Below"
+number: 28
+race: "Bluespawn"
+type: "Monstrosity"
+subtype: "Dragonspawn"
+subtype: "Reptile"
+size: MEDIUM

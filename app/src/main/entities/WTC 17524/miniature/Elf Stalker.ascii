@@ -1,0 +1,9 @@
+template {
+  name: "Elf Stalker"
+}
+set: "Underdark"
+number: 15
+type: "Humanoid"
+race: "Elf"
+class: "Ranger"
+size: MEDIUM

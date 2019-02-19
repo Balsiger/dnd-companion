@@ -1,0 +1,8 @@
+template {
+  name: "Valenar Nomad Charger"
+}
+set: "Blood War"
+number: 24
+type: "Humanoid"
+race: "Elf"
+size: LARGE

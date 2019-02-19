@@ -1,0 +1,9 @@
+template {
+  name: "Couatl (TA invisible)"
+}
+set: "Tomb of Annihilation"
+number: 37
+race: "Couatl"
+type: "Celestial"
+subtype: "Reptile"
+size: MEDIUM

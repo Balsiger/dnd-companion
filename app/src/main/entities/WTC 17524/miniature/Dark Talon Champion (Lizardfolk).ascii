@@ -1,0 +1,9 @@
+template {
+  name: "Dark Talon Champion (Lizardfolk)"
+}
+set: "Unhallowed"
+number: 51
+race: "Lizardfolk"
+type: "Humanoid"
+subtype: "Reptile"
+size: MEDIUM

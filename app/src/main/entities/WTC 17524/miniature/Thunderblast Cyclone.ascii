@@ -1,0 +1,10 @@
+template {
+  name: "Thunderblast Cyclone"
+}
+set: "Against the Giants"
+number: 9
+race: "Cyclone"
+type: "Elemental"
+subtype: "Air"
+subtype: "Storm"
+size: HUGE

@@ -1,0 +1,10 @@
+template {
+  name: "Wererat"
+}
+set: "Dragon Eye"
+number: 40
+race: "Wererat"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: MEDIUM

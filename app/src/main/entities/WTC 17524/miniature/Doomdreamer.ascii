@@ -1,0 +1,9 @@
+template {
+  name: "Doomdreamer"
+}
+set: "Legendary Evils"
+number: 11
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

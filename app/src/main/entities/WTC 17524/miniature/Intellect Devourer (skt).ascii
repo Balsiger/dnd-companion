@@ -1,0 +1,8 @@
+template {
+  name: "Intellect Devourer (skt)"
+}
+set: "Storm King\'s Thunder"
+number: 1
+race: "Intellect Devourer"
+type: "Aberration"
+size: SMALL

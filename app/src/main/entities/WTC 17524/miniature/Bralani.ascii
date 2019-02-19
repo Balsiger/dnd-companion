@@ -1,0 +1,10 @@
+template {
+  name: "Bralani"
+}
+set: "Dungeons of Dread"
+number: 60
+race: "Eladrin"
+type: "Humanoid"
+subtype: "Chaotic"
+subtype: "Good"
+size: MEDIUM

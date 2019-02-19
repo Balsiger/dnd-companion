@@ -1,0 +1,9 @@
+template {
+  name: "Brass Dragon (flying)"
+}
+set: "Tyranny of Dragons"
+race: "Brass Dragon"
+type: "Dragon"
+subtype: "Flying"
+size: LARGE
+subtype: "Metallic"

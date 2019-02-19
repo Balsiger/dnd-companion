@@ -1,0 +1,8 @@
+template {
+  name: "Owlbear (EE)"
+}
+set: "Elemental Evil"
+number: 26
+type: "Monstrosity"
+race: "Owlbear"
+size: LARGE

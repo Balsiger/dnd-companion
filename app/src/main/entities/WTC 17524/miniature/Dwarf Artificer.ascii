@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Artificer"
+}
+set: "Death Knell"
+number: 3
+type: "Humanoid"
+race: "Dwarf"
+class: "Sorcerer"
+size: MEDIUM

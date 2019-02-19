@@ -1,0 +1,9 @@
+template {
+  name: "Myconid Guard"
+}
+set: "Aberrations"
+number: 41
+race: "Myconid"
+type: "Plant"
+subtype: "Mushroom"
+size: MEDIUM

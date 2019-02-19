@@ -1,0 +1,9 @@
+template {
+  name: "Grell"
+}
+set: "Death Knell"
+number: 35
+race: "Grell"
+type: "Aberration"
+subtype: "Blind"
+size: MEDIUM

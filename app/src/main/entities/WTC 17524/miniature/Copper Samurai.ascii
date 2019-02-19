@@ -1,0 +1,9 @@
+template {
+  name: "Copper Samurai"
+}
+set: "Dragon Eye"
+number: 15
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

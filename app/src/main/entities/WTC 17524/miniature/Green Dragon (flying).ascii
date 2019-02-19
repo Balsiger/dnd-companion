@@ -1,0 +1,9 @@
+template {
+  name: "Green Dragon (flying)"
+}
+set: "Tyranny of Dragons"
+number: 31
+race: "Green Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Chromatic"

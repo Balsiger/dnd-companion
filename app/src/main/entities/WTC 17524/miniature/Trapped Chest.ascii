@@ -1,0 +1,8 @@
+template {
+  name: "Trapped Chest"
+}
+set: "Lords of Madness"
+number: 51
+type: "Object"
+size: MEDIUM
+subtype: "Trap"

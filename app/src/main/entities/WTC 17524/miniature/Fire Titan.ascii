@@ -1,0 +1,10 @@
+template {
+  name: "Fire Titan"
+}
+set: "Against the Giants"
+number: 12
+race: "Fire Titan"
+type: "Elemental"
+subtype: "Fire"
+subtype: "Giant"
+size: HUGE

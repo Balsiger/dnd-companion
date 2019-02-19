@@ -1,0 +1,640 @@
+template {
+  name: "Druid"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 33
+      high: 37
+    }
+  }
+  world: "Generic"
+  description: "The fury of a storm, the gentle strength of the morning sun, the\ncunning of the fox, the power of the bear \342\200\224 all these and more are at\nthe druid\342\200\231s command. The druid however, claims no mastery over\nnature. That claim, she says, is the empty boast of a city dweller. The\ndruid gains her power not by ruling nature but by being at one with\nit. To trespassers in a druid\342\200\231s sacred grove, and to those who feel her\nwrath, the distinction is overly fine."
+  short_description: "One with the nature."
+  incomplete: "Cannot use metal armor, can use natural attacks"
+}
+abbreviation: "Drd"
+adventures: "Druids adventure to gain knowledge (especially\nabout animals and plants unfamiliar to them) and power. Sometimes, their superiors call on their services. Druids may also bring\ntheir power to bear against those who threaten what they love,\nwhich more often includes ancient stands of trees or trackless\nmountains than people. While druids accept that which is horrific\nor cruel in nature, they hate that which is unnatural, including\naberrations (such as beholders and carrion crawlers) and undead\n(such as zombies and vampires). Druids sometimes lead raids against\nsuch creatures, especially when they encroach on the druids\342\200\231\nterritory."
+characteristics: "Druids cast divine spells much the same way\nclerics do, though most get their spells from the power of nature\nrather than from deities. Their spells are oriented toward nature and\nanimals. In addition to spells, druids gain an increasing array of\nmagical powers, including the ability to take the shapes of animals,\nas they advance in level.\n\nThe armor of a druid are restricted by traditional oaths to the\nitems noted in Weapon and Armor proficiency (below),All other\narmor is prohibited. Though a druid could learn to wear full plate,\nputting it on would violate her oath and suppress her druidic\npowers.\n\nDruids avoid carrying much worked metal with them because it\ninterferes with the pure and primal nature that they attempt to\nembody."
+alignment_options: "Druids, in keeping with nature\342\200\231s ultimate indifference, must maintain at least some measure of dispassion. As such,\nthey must be neutral on at least one alignment axis (chaotic\342\200\223lawful\nor good\342\200\223evil), if not both. Just as nature encompasses such\ndichotomies as life and death, beauty and horror, and peace and\nviolence, so two druids can manifest different or even opposite\nalignments (neutral good and neutral evil, for instance) and still be\npart of the druidic tradition."
+religion: "A druid reveres nature above all. She gains her magical\npower either from the force of nature itself or from a nature deity.\nThe typical druid pursues a mystic spirituality of transcendent union\nwith nature rather than devoting herself to a divine entity. Still,\nsome druids revere or at least respect either Obad-Hai (god of\nnature) or Ehlonna (goddess of the woodlands)."
+background: "Though their organization is invisible to most\noutsiders, who consider druids to be loners, druids are actually part\nof a society that spans the land, ignoring political borders. A\nprospective druid is inducted into this society through secret rituals,\nincluding tests that not all survive. Only after achieving some level\nof competence is the druid allowed to strike out on her own.\n\nAll druids are nominally members of this druidic society, though\nsome individuals are so isolated that they have never seen any highranking members of the society or participated in druidic\ngatherings. All druids recognize each other as brothers and sisters.\nLike true creatures of the wilderness, however, druids sometimes\ncompete with or even prey on each other.\n\nA druid may be expected to perform services for\nhigher-ranking druids, though proper payment is\ntendered for such assignments. Likewise, a\nlower-ranking druid may appeal for aid from\nher higher-ranking comrades in exchange for a\nfair price in coin or service.\n\nDruids may live in small towns, but they always\nspend a good portion of their time in wild\nareas. Even large cities surrounded by\ncultivated land as far as the eye can see often\nhave druid groves nearby\342\200\224small, wild\nrefuges where druids live and which they\nprotect fiercely. Near coastal cities, such\nrefuges may be nearby islands, where the\ndruids can find the isolation they need."
+races: "Elves and gnomes have an\naffinity for natural lands and often\nbecome druids. Humans and half-elves also frequently adopt this path,\nand druids are particularly common\namong savage humans. Dwarves,\nhalflings, and half-orcs are\nrarely druids.\n\nFew from among the\nbrutal humanoids are\ninducted into druidic society, though\ngnolls have a fair\ncontingent of evil\ndruids among them.\nGnoll druids are\naccepted, though perhaps not\nwelcomed, by druids of other races."
+otherClasses: "The druid shares with rangers and\nmany barbarians a reverence for nature and a familiarity with\nnatural lands. She doesn\342\200\231t much understand the urban mannerism\ntypical of a rogue, and she finds arcane magic disruptive and slightly\ndistasteful. The typical druid also dislikes the paladin\342\200\231s devotion to\nabstract ideals instead of \342\200\234the real world.\342\200\235 Druids, however, are\nnothing if not accepting of diversity, and they take little offense at\nother characters, even those very different from them."
+role: "The druid enjoys extraordinary versatility. Though she\nlacks the sheer healing power of the cleric, she makes up for it with\nadditional offensive power, thanks to her spell selection and wild\nshape ability. A druid back up by another secondary healer (such as a\npaladin) can prove extremely valuable to a group of adventurers. Her\nanimal companion also provides valuable melee combat support."
+important_abilities: "Wisdom determines how powerful a spell a druid can\ncast, how many spells she can cast per day, and how hard those\nspells are to resist. To cast a spell, a druid must have a Wisdom score\nof 10 + the spell\342\200\231s level. A druid gets bonus spells based on Wisdom.\n\nThe Difficulty Class of a saving throw against a druid\342\200\231s spell is 10 +\nthe spell\342\200\231s level + the druid\342\200\231s Wisdom value.\n\nSince a druid wears light or medium armor, a high Dexterity\nscore greatly improves her defensive ability."
+allowed_alignment: NEUTRAL_GOOD
+allowed_alignment: LAWFUL_NEUTRAL
+allowed_alignment: TRUE_NEUTRAL
+allowed_alignment: CHOATIC_NETURAL
+allowed_alignment: NEUTRAL_EVIL
+hit_dice {
+  number: 1
+  dice: 8
+}
+skill_points: 4
+class_skill: "concentration"
+class_skill: "craft"
+class_skill: "diplomacy"
+class_skill: "handle animal"
+class_skill: "heal"
+class_skill: "knowledge nature"
+class_skill: "listen"
+class_skill: "profession"
+class_skill: "ride"
+class_skill: "spellcraft"
+class_skill: "spot"
+class_skill: "survival"
+class_skill: "swim"
+weapon_proficiency: NONE_PROFICIENCY
+individual_weapon_proficiency: "club"
+individual_weapon_proficiency: "dagger"
+individual_weapon_proficiency: "dart"
+individual_weapon_proficiency: "quarterstaff"
+individual_weapon_proficiency: "scimitar"
+individual_weapon_proficiency: "sickle"
+individual_weapon_proficiency: "shortspear"
+individual_weapon_proficiency: "sling"
+individual_weapon_proficiency: "spear"
+armor_proficiency: LIGHT
+armor_proficiency: MEDIUM
+armor_proficiency: SHIELD
+quality {
+  level: 1
+  template {
+    name: "spontenous casting"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "cannot cast opposed spells"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "animal companion"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "nature sense"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "wild empathy"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 2
+  template {
+    name: "woodland stride"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 3
+  template {
+    name: "trackless step"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 4
+  template {
+    name: "resist nature\'s lure"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 5
+  template {
+    name: "wild shape"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 6
+  template {
+    name: "wild shape"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 7
+  template {
+    name: "wild shape"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 8
+  template {
+    name: "wild shape large"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 9
+  template {
+    name: "venom immunity"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 10
+  template {
+    name: "wild shape"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 11
+  template {
+    name: "wild shape tiny"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 12
+  template {
+    name: "wild shape plant"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 13
+  template {
+    name: "a thousand faces"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 14
+  template {
+    name: "wild shape"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 15
+  template {
+    name: "timeless body"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 16
+  template {
+    name: "wild shape huge"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+quality {
+  level: 17
+  template {
+    name: "wild shape elemental"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 19
+  template {
+    name: "wild shape"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 19
+  template {
+    name: "wild shape elemental"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 20
+  template {
+    name: "wild shape elemental"
+    parameters {
+    }
+    per_day: 1
+    condition {
+    }
+  }
+}
+quality {
+  level: 20
+  template {
+    name: "wild shape elemental huge"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+fortitude_save: 2
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+will_save: 2
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 1
+spell_ability: WISDOM
+spells_per_day {
+  value: 3
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+  value: 6
+}
+spells_per_day {
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+  value: 5
+  value: 5
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 3
+  value: 4
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 2
+  value: 3
+  value: 3
+  value: 4
+}
+spells_per_day {
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: -1
+  value: 1
+  value: 2
+  value: 3
+  value: 4
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}

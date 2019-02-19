@@ -1,0 +1,9 @@
+template {
+  name: "Drizzt, Drow Ranger (AF)"
+}
+set: "Archfiends"
+number: 14
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: MEDIUM

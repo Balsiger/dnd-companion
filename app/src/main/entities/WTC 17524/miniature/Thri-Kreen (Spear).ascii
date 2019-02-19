@@ -1,0 +1,9 @@
+template {
+  name: "Thri-Kreen (Spear)"
+}
+set: "Storm King\'s Thunder"
+number: 16
+race: "Thri-Kreen"
+type: "Humanoid"
+subtype: "Psionic"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Ibixian (Goatfolk)"
+}
+set: "Death Knell"
+number: 21
+race: "Ibixan"
+type: "Monstrosity"
+size: MEDIUM

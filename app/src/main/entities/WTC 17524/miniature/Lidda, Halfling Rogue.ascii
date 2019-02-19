@@ -1,0 +1,9 @@
+template {
+  name: "Lidda, Halfling Rogue"
+}
+set: "Harbinger"
+number: 27
+type: "Humanoid"
+race: "Halfling"
+class: "Rogue"
+size: SMALL

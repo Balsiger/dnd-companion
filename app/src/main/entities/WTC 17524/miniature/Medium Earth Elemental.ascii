@@ -1,0 +1,9 @@
+template {
+  name: "Medium Earth Elemental"
+}
+set: "Archfiends"
+number: 6
+race: "Earth Elemental"
+type: "Elemental"
+subtype: "Earth"
+size: MEDIUM

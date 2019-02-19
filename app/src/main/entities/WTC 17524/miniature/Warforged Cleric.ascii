@@ -1,0 +1,10 @@
+template {
+  name: "Warforged Cleric"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 5
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+size: MEDIUM

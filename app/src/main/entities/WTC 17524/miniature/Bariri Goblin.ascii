@@ -1,0 +1,9 @@
+template {
+  name: "Bariri Goblin"
+}
+set: "Tomb of Annihilation"
+number: 2
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+size: SMALL

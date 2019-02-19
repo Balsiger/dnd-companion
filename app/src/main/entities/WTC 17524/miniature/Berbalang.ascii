@@ -1,0 +1,8 @@
+template {
+  name: "Berbalang"
+}
+set: "Dungeon Delve"
+number: 6
+race: "Berbalang"
+type: "Aberration"
+size: MEDIUM

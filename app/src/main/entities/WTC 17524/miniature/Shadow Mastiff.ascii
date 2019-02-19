@@ -1,0 +1,8 @@
+template {
+  name: "Shadow Mastiff"
+}
+set: "Desert of Desolation"
+number: 36
+race: "Shadow Mastiff"
+type: "Monstrosity"
+size: MEDIUM

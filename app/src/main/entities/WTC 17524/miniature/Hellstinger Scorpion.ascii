@@ -1,0 +1,10 @@
+template {
+  name: "Hellstinger Scorpion"
+}
+set: "Dungeon Delve"
+number: 25
+race: "Hellstinger Scorpion"
+type: "Fiend"
+subtype: "Animal"
+subtype: "Oversized"
+size: LARGE

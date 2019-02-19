@@ -1,0 +1,9 @@
+template {
+  name: "Wizened Elder Watcher"
+}
+set: "War of the Dragon Queen"
+number: 23
+race: "Elder Watcher"
+type: "Plant"
+class: "Druid"
+size: MEDIUM

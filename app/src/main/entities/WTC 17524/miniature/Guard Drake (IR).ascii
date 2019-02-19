@@ -1,0 +1,11 @@
+template {
+  name: "Guard Drake (IR)"
+}
+set: "Tyranny of Dragons"
+number: 22
+race: "Drake"
+type: "Dragon"
+subtype: "Drake"
+subtype: "Reptile"
+size: MEDIUM
+subtype: "Lesser"

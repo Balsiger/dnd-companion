@@ -1,0 +1,9 @@
+template {
+  name: "Brass Samurai "
+}
+set: "War Drums"
+number: 15
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

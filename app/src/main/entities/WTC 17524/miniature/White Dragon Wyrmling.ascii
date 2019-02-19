@@ -1,0 +1,9 @@
+template {
+  name: "White Dragon Wyrmling"
+}
+set: "Monster Menagerie 2"
+number: 24
+race: "White Dragon"
+type: "Dragon"
+size: MEDIUM
+subtype: "Chromatic"

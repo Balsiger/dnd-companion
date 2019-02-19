@@ -1,0 +1,9 @@
+template {
+  name: "Marilith"
+}
+set: "Blood War"
+number: 55
+race: "Marilith"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

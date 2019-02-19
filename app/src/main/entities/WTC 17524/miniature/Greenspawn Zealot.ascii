@@ -1,0 +1,9 @@
+template {
+  name: "Greenspawn Zealot"
+}
+set: "Night Below"
+number: 32
+race: "Greenspawn"
+type: "Monstrosity"
+subtype: "Dragonspawn"
+size: MEDIUM

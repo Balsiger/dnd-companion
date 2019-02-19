@@ -1,0 +1,8 @@
+template {
+  name: "Male Human Invoker"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 9
+type: "Humanoid"
+race: "Human"
+class: "Wizard"

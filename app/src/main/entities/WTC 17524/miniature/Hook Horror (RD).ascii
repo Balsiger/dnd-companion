@@ -1,0 +1,8 @@
+template {
+  name: "Hook Horror (RD)"
+}
+set: "Rage of Demons"
+number: 45
+race: "Hook Horror"
+type: "Monstrosity"
+subtype: ""

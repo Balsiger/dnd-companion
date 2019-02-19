@@ -1,0 +1,9 @@
+template {
+  name: "Sword Archon"
+}
+set: "Angelfire"
+number: 9
+race: "Sword Archon"
+type: "Celestial"
+subtype: "Archon"
+size: LARGE

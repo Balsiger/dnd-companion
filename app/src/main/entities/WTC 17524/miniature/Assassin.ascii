@@ -1,0 +1,9 @@
+template {
+  name: "Assassin"
+}
+set: "Night Below"
+number: 27
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM

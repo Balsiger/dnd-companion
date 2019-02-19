@@ -1,0 +1,9 @@
+template {
+  name: "Regdar, Human Fighter"
+}
+set: "Dragon Eye"
+number: 12
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

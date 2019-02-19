@@ -1,0 +1,8 @@
+template {
+  name: "Shield Guardian (dh)"
+}
+set: "Dragon Heist"
+number: 27
+race: "Shield Guardian"
+type: "Construct"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Brawler"
+}
+set: "Desert of Desolation"
+number: 3
+type: "Humanoid"
+race: "Dwarf"
+class: "Monk"
+size: MEDIUM

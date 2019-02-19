@@ -1,0 +1,9 @@
+template {
+  name: "Elephant"
+}
+set: "Dragon Heist"
+number: 43
+race: "Elephant"
+type: "Beast"
+subtype: "Animal"
+size: HUGE

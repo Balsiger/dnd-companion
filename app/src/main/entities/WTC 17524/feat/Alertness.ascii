@@ -1,0 +1,58 @@
+template {
+  name: "Alertness"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 89
+      high: 89
+    }
+  }
+  world: "Generic"
+  description: "You have finely tuned senses."
+  short_description: "+2 bonus on Listen and Spot checks"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Listen checks and Spot checks."
+special: "The master of a familiar (see the Familiars sidebar, page\n52) gains the benefit of the Alertness feat whenever the\nfamiliar is within arm\342\200\231s reach."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+skill_modifier {
+  name: "Listen"
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+    }
+  }
+}
+skill_modifier {
+  name: "Spot"
+  modifier {
+    modifier {
+      value: 2
+      type: GENERAL
+    }
+  }
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

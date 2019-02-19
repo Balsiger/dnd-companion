@@ -1,0 +1,10 @@
+template {
+  name: "City Watch (b)"
+}
+set: "Dragon Heist"
+number: 7
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

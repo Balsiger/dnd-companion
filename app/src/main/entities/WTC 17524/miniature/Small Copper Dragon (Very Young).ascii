@@ -1,0 +1,9 @@
+template {
+  name: "Small Copper Dragon (Very Young)"
+}
+set: "War of the Dragon Queen"
+number: 14
+race: "Copper Dragon"
+type: "Dragon"
+size: SMALL
+subtype: "Metallic"

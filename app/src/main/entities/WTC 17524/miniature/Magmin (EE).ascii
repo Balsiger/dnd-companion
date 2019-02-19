@@ -1,0 +1,9 @@
+template {
+  name: "Magmin (EE)"
+}
+set: "Elemental Evil"
+number: 1
+race: "Magmin"
+type: "Elemental"
+subtype: "Fire"
+size: SMALL

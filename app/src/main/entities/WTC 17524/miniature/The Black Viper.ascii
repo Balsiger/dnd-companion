@@ -1,0 +1,9 @@
+template {
+  name: "The Black Viper"
+}
+set: "Dragon Heist"
+number: 23
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM

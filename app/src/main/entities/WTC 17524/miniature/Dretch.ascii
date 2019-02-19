@@ -1,0 +1,9 @@
+template {
+  name: "Dretch"
+}
+set: "Dragon Eye"
+number: 48
+race: "Dretch"
+type: "Fiend"
+subtype: "Demon"
+size: SMALL

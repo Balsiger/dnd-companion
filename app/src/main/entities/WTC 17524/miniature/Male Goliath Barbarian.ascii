@@ -1,0 +1,8 @@
+template {
+  name: "Male Goliath Barbarian"
+}
+set: "Player\'s Handbook Heroes"
+number: 18
+type: "Humanoid"
+race: "Goliath"
+size: MEDIUM

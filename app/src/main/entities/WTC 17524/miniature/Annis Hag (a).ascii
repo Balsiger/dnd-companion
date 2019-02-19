@@ -1,0 +1,9 @@
+template {
+  name: "Annis Hag (a)"
+}
+set: "Dragon Heist"
+number: 26
+race: "Annis Hag"
+type: "Fey"
+subtype: "Hag"
+size: LARGE

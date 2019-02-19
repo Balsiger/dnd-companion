@@ -1,0 +1,9 @@
+template {
+  name: "Kobold Warrior"
+}
+set: "Harbinger"
+number: 48
+type: "Humanoid"
+race: "Kobold"
+class: "Fighter"
+size: SMALL

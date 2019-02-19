@@ -1,0 +1,9 @@
+template {
+  name: "Crazed Kuo-Toa"
+}
+set: "Demonweb"
+number: 53
+race: "Kuo-Toa"
+type: "Humanoid"
+subtype: "Kuo-Toa"
+size: MEDIUM

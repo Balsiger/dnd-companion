@@ -1,0 +1,12 @@
+template {
+  name: "Invisible Aasimar Paladin"
+}
+set: "Monster Menagerie 3"
+number: 39
+race: "Aasimar"
+type: "Humanoid"
+subtype: "Celestial"
+subtype: "Planetouched"
+subtype: "Aasimar"
+size: MEDIUM
+subtype: "Invisible"

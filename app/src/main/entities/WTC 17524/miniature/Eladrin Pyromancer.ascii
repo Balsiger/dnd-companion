@@ -1,0 +1,8 @@
+template {
+  name: "Eladrin Pyromancer"
+}
+set: "Against the Giants"
+number: 45
+type: "Humanoid"
+race: "Eladrin"
+size: MEDIUM

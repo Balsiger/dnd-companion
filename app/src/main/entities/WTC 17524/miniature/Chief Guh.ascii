@@ -1,0 +1,8 @@
+template {
+  name: "Chief Guh"
+}
+set: "Storm King\'s Thunder"
+number: 45
+race: "Hill Giant"
+type: "Giant"
+size: GARGANTUAN

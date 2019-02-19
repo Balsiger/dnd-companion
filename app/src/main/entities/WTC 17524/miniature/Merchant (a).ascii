@@ -1,0 +1,9 @@
+template {
+  name: "Merchant (a)"
+}
+set: "Dragon Heist"
+number: 6
+type: "Humanoid"
+race: "Human"
+class: "Expert"
+size: MEDIUM

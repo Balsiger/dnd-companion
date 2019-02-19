@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Sniper"
+}
+set: "Blood War"
+number: 3
+type: "Humanoid"
+race: "Dwarf"
+class: "Ranger"
+size: MEDIUM

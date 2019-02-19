@@ -1,0 +1,9 @@
+template {
+  name: "Chultan Zombie"
+}
+set: "Tomb of Annihilation"
+number: 9
+race: "Zombie"
+type: "Undead"
+subtype: "Zombie"
+size: MEDIUM

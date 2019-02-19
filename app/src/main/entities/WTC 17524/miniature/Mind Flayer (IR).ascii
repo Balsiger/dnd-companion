@@ -1,0 +1,8 @@
+template {
+  name: "Mind Flayer (IR)"
+}
+set: "Tyranny of Dragons"
+number: 35
+race: "Mind Flayer"
+type: "Aberration"
+size: MEDIUM

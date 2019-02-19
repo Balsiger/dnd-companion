@@ -1,0 +1,9 @@
+template {
+  name: "Mirt"
+}
+set: "Dragon Heist"
+number: 10
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

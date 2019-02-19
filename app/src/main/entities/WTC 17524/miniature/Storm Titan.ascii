@@ -1,0 +1,10 @@
+template {
+  name: "Storm Titan"
+}
+set: "Legendary Evils"
+number: 37
+race: "Storm Titan"
+type: "Elemental"
+subtype: "Aquatic"
+subtype: "Giant"
+size: HUGE

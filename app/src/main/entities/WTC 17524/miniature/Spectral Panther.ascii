@@ -1,0 +1,8 @@
+template {
+  name: "Spectral Panther"
+}
+set: "Dungeons of Dread"
+number: 59
+race: "Panther"
+type: "Beast"
+size: MEDIUM

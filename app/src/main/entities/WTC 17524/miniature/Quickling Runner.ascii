@@ -1,0 +1,8 @@
+template {
+  name: "Quickling Runner"
+}
+set: "Demonweb"
+number: 49
+race: "Quickling"
+type: "Fey"
+size: SMALL

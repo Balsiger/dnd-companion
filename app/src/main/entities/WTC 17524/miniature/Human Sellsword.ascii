@@ -1,0 +1,8 @@
+template {
+  name: "Human Sellsword"
+}
+set: "Dungeons of Dread S"
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

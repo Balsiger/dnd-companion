@@ -1,0 +1,9 @@
+template {
+  name: "Angel of Retribution"
+}
+set: "Against the Giants"
+number: 40
+race: "Angel"
+type: "Celestial"
+subtype: "Angel"
+size: LARGE

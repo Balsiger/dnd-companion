@@ -1,0 +1,8 @@
+template {
+  name: "Tiefling Warlock"
+}
+set: "Dungeons of Dread"
+number: 47
+type: "Humanoid"
+race: "Tiefling"
+size: MEDIUM

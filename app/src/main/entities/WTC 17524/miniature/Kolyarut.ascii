@@ -1,0 +1,8 @@
+template {
+  name: "Kolyarut"
+}
+set: "Blood War"
+number: 9
+race: "Kolyarut"
+type: "Construct"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Warforged Infiltrator"
+}
+set: "Dungeons of Dread"
+number: 48
+race: "Warforged"
+type: "Construct"
+subtype: "Humanoid"
+subtype: "Living Construct"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Brutal Ogre Warhulk"
+}
+set: "Demonweb"
+number: 39
+type: "Giant"
+race: "Ogre"
+size: LARGE

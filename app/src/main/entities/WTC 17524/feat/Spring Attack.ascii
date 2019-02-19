@@ -1,0 +1,41 @@
+template {
+  name: "Spring Attack"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 100
+      high: 101
+    }
+  }
+  world: "Generic"
+  description: "You are trained in fast melee attacks and fancy footwork."
+  short_description: "Move before and after melee attack, no AoO from target."
+}
+type: GENERAL
+benefit: "When using the attack action with a melee weapon, you can\n                    move both before and after the attack, provided that your\n                    total distance moved is not greater than your speed. Moving\n                    in this way does not provoke an attack of opportunity from\n                    the defender you attack, though it might provoke attacks of\n                    opportunity from other creatures, if appropriate. You can\342\200\232\303\204\303\264t\n                    use this feat if you are wearing heavy armor.  You must\n                    move at least 5 feet both before and after you make your\n                    attack in order to utilize the benefits of Spring Attack."
+special: "A fighter may select Spring Attack as one of his fighter\n                    bonus feats (see page 38)."
+prerequisites: "Dex 13, Dodge, Mobility, base attack bonus +4."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

@@ -1,0 +1,8 @@
+template {
+  name: "Gibbering Mouther (MM3)"
+}
+set: "Monster Menagerie 3"
+number: 24
+race: "Gibbering Mouther"
+type: "Aberration"
+size: MEDIUM

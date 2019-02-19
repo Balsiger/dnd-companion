@@ -1,0 +1,9 @@
+template {
+  name: "Inspired Lieutenant"
+}
+set: "War Drums"
+number: 33
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

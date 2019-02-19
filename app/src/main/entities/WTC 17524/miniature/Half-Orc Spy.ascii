@@ -1,0 +1,9 @@
+template {
+  name: "Half-Orc Spy"
+}
+set: "Blood War"
+number: 6
+type: "Humanoid"
+race: "Half-Orc"
+class: "Rogue"
+size: MEDIUM

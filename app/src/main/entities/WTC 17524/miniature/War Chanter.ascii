@@ -1,0 +1,9 @@
+template {
+  name: "War Chanter"
+}
+set: "Giants of Legend"
+number: 21
+type: "Humanoid"
+race: "Human"
+class: "Bard"
+size: MEDIUM

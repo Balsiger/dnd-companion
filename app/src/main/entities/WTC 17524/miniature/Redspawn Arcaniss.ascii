@@ -1,0 +1,9 @@
+template {
+  name: "Redspawn Arcaniss"
+}
+set: "Unhallowed"
+number: 56
+race: "Redspawn"
+type: "Humanoid"
+subtype: "Dragonspawn"
+size: MEDIUM

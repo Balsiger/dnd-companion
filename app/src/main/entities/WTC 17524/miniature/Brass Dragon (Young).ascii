@@ -1,0 +1,9 @@
+template {
+  name: "Brass Dragon (Young)"
+}
+set: "Dragon Eye"
+number: 14
+race: "Brass Dragon"
+type: "Dragon"
+size: MEDIUM
+subtype: "Metallic"

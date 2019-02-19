@@ -1,0 +1,10 @@
+template {
+  name: "Abyssal Skulker"
+}
+set: "Angelfire"
+number: 51
+race: "Abyssal Skulker"
+type: "Fiend"
+subtype: "Chaotic"
+subtype: "Evil"
+size: SMALL

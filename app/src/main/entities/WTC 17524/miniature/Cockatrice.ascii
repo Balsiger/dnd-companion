@@ -1,0 +1,8 @@
+template {
+  name: "Cockatrice"
+}
+set: "Against the Giants"
+number: 32
+race: "Cockatrice"
+type: "Monstrosity"
+size: MEDIUM

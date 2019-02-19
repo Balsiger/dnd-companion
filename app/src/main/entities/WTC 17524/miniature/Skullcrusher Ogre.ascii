@@ -1,0 +1,9 @@
+template {
+  name: "Skullcrusher Ogre"
+}
+set: "Death Knell"
+number: 41
+type: "Giant"
+race: "Ogre"
+class: "Fighter"
+size: LARGE

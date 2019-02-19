@@ -1,0 +1,10 @@
+template {
+  name: "Goblin Skirmisher"
+}
+set: "Dragon Eye"
+number: 31
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+class: "Fighter"
+size: SMALL

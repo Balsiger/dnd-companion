@@ -1,0 +1,9 @@
+template {
+  name: "Celestial Black Bear"
+}
+set: "Aberrations"
+number: 3
+race: "Black Bear"
+type: "Celestial"
+subtype: "Animal"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Arbalester"
+}
+set: "Dangerous Delves"
+number: 2
+race: "Homunculus"
+type: "Construct"
+size: LARGE

@@ -1,0 +1,11 @@
+template {
+  name: "Earth Genasi Fighter"
+}
+set: "Elemental Evil"
+number: 24
+race: "Earth Genasi"
+type: "Humanoid"
+subtype: "Earth"
+subtype: "Genasi"
+class: "Fighter"
+size: MEDIUM

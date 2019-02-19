@@ -1,0 +1,9 @@
+template {
+  name: "Azorius Arrester"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 22
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Snig the Axe"
+}
+set: "Archfiends"
+number: 38
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Goblin"
+class: "Fighter"
+size: SMALL

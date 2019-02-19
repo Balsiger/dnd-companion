@@ -1,0 +1,9 @@
+template {
+  name: "Bladeling Fighter"
+}
+set: "Giants of Legend"
+number: 28
+race: "Bladeling"
+type: "Monstrosity"
+subtype: "Lawful"
+size: MEDIUM

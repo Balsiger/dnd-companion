@@ -1,0 +1,10 @@
+template {
+  name: "Thayan Knight"
+}
+set: "Dragon Eye"
+number: 38
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

@@ -1,0 +1,10 @@
+template {
+  name: "Svirfneblin Rogue"
+}
+set: "Elemental Evil"
+number: 3
+race: "Gnome"
+type: "Humanoid"
+subtype: "Svirfneblin"
+class: "Rogue"
+size: SMALL

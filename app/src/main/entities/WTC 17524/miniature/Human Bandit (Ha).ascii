@@ -1,0 +1,9 @@
+template {
+  name: "Human Bandit (Ha)"
+}
+set: "Harbinger"
+number: 66
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

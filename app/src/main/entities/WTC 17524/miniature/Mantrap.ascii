@@ -1,0 +1,7 @@
+template {
+  name: "Mantrap"
+}
+set: "Tomb of Annihilation"
+number: 30
+race: "Mantrap"
+type: "Plant"

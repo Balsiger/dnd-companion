@@ -1,0 +1,9 @@
+template {
+  name: "Manshoon"
+}
+set: "Lords of Madness"
+number: 28
+race: "Lich"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

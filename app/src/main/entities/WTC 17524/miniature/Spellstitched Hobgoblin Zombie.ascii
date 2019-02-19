@@ -1,0 +1,9 @@
+template {
+  name: "Spellstitched Hobgoblin Zombie"
+}
+set: "Death Knell"
+number: 43
+race: "Zombie"
+type: "Undead"
+subtype: "Zombie"
+size: MEDIUM

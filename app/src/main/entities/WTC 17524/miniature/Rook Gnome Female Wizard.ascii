@@ -1,0 +1,9 @@
+template {
+  name: "Rook Gnome Female Wizard"
+}
+set: "Tyranny of Dragons"
+number: 1
+type: "Humanoid"
+race: "Gnome"
+class: "Wizard"
+size: SMALL

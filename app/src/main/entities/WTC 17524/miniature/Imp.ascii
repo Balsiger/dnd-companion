@@ -1,0 +1,9 @@
+template {
+  name: "Imp"
+}
+set: "Angelfire"
+number: 43
+race: "Imp"
+type: "Fiend"
+subtype: "Devil"
+size: TINY

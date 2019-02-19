@@ -1,0 +1,9 @@
+template {
+  name: "Gargoyle (DE)"
+}
+set: "Dragon Eye"
+number: 52
+race: "Gargoyle"
+type: "Elemental"
+subtype: "Earth"
+size: MEDIUM

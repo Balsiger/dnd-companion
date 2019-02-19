@@ -1,0 +1,9 @@
+template {
+  name: "Sphinx of Judgment"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 31
+race: "Sphinx"
+type: "Monstrosity"
+subtype: "Winged"
+size: LARGE

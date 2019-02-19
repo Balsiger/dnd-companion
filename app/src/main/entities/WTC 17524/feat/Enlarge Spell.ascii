@@ -1,0 +1,39 @@
+template {
+  name: "Enlarge Spell"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 94
+      high: 94
+    }
+  }
+  world: "Generic"
+  description: "You can cast spells farther than normal."
+  short_description: "Double spell\342\200\232\303\204\303\264s range"
+}
+type: METAMAGIC
+benefit: "You can alter a spell with a range of close, medium, or\n                    long to increase its range by 100%. An enlarged spell with\n                    a range of close now has a range of 50 ft. + 5 ft./level,\n                    while medium-range spells have a range of 200 ft. + 20\n                    ft./level and long-range spells have a range of 800 ft. +\n                    80 ft./level. An enlarged spell uses up a spell slot one\n                    level higher than the spell\342\200\232\303\204\303\264s actual level.\n\n                    Spells whose ranges are not defined by distance, as well as\n                    spells whose ranges are not close, medium, or long, do not\n                    have increased ranges."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

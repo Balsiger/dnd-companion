@@ -1,0 +1,9 @@
+template {
+  name: "Moon Elf Fighter"
+}
+set: "Archfiends"
+number: 20
+type: "Humanoid"
+race: "Elf"
+class: "Fighter"
+size: MEDIUM

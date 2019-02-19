@@ -1,0 +1,9 @@
+template {
+  name: "Elf Conjurer"
+}
+set: "Desert of Desolation"
+number: 16
+type: "Humanoid"
+race: "Elf"
+class: "Wizard"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Darkenbeast"
+}
+set: "Elemental Evil"
+number: 37
+race: "Darkenbeast"
+type: "Monstrosity"
+subtype: "Winged"
+size: MEDIUM

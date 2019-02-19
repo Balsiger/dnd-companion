@@ -1,0 +1,8 @@
+template {
+  name: "Orc (Warhammer)"
+}
+set: "Monster Menagerie 2"
+number: 7
+type: "Humanoid"
+race: "Orc"
+size: MEDIUM

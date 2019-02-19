@@ -1,0 +1,9 @@
+template {
+  name: "Evoker\'s Apprentice"
+}
+set: "Harbinger"
+number: 5
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

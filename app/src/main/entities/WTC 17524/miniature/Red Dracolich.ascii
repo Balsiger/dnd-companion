@@ -1,0 +1,11 @@
+template {
+  name: "Red Dracolich"
+}
+set: "Rage of Demons"
+number: 48
+race: "Red Dracolich"
+type: "Undead"
+subtype: "Dragon"
+subtype: "Flying"
+size: LARGE
+subtype: "Chromatic"

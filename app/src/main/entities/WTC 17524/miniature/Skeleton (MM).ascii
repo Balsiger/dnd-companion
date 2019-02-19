@@ -1,0 +1,8 @@
+template {
+  name: "Skeleton (MM)"
+}
+set: "Monster Menagerie"
+number: 12
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

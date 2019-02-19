@@ -1,0 +1,10 @@
+template {
+  name: "Wereboar A"
+}
+set: "Monster Menagerie 3"
+number: 22
+race: "Wearboar"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: MEDIUM

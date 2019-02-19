@@ -1,0 +1,9 @@
+template {
+  name: "Female Human Barbarian"
+}
+set: "Player\'s Handbook Heroes 2"
+number: 16
+type: "Humanoid"
+race: "Human"
+class: "Barbarian"
+size: MEDIUM

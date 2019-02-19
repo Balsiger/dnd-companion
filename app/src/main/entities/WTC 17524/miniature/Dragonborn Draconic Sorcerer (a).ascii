@@ -1,0 +1,9 @@
+template {
+  name: "Dragonborn Draconic Sorcerer (a)"
+}
+set: "Dragon Heist"
+number: 12
+race: "Dragonborn"
+type: "Humanoid"
+class: "Sorcerer"
+size: MEDIUM

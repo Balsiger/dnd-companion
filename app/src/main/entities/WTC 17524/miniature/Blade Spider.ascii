@@ -1,0 +1,9 @@
+template {
+  name: "Blade Spider"
+}
+set: "Desert of Desolation"
+number: 38
+race: "Blade Spider"
+type: "Vermin"
+subtype: "Spider"
+size: LARGE

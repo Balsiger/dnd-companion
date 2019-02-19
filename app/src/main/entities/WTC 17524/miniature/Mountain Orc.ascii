@@ -1,0 +1,9 @@
+template {
+  name: "Mountain Orc"
+}
+set: "Aberrations"
+number: 55
+type: "Humanoid"
+race: "Orc"
+class: "Barbarian"
+size: MEDIUM

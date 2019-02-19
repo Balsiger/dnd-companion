@@ -1,0 +1,9 @@
+template {
+  name: "Ettercap Webspinner"
+}
+set: "Desert of Desolation"
+number: 48
+race: "Ettercap"
+type: "Monstrosity"
+subtype: "Spider"
+size: MEDIUM

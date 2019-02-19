@@ -1,0 +1,8 @@
+template {
+  name: "Hill Giant (Club)"
+}
+set: "Storm King\'s Thunder"
+number: 31
+race: "Hill Giant"
+type: "Giant"
+size: HUGE

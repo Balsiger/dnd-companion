@@ -1,0 +1,8 @@
+template {
+  name: "Ogre Mage"
+}
+set: "Angelfire"
+number: 46
+type: "Giant"
+race: "Ogre"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Spellscale Sorcerer"
+}
+set: "War of the Dragon Queen"
+number: 15
+race: "Dragonblood"
+type: "Humanoid"
+class: "Sorcerer"
+size: MEDIUM

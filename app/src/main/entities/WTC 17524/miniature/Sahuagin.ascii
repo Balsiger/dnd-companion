@@ -1,0 +1,10 @@
+template {
+  name: "Sahuagin"
+}
+set: "Desert of Desolation"
+number: 33
+type: "Humanoid"
+subtype: "Aquatic"
+race: "Sahuagin"
+class: "Ranger"
+size: MEDIUM

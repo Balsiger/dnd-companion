@@ -1,0 +1,10 @@
+template {
+  name: "Bronze Dragon"
+}
+set: "Elemental Evil"
+number: 43
+race: "Bronze Dragon"
+type: "Dragon"
+subtype: "Flying"
+size: LARGE
+subtype: "Metallic"

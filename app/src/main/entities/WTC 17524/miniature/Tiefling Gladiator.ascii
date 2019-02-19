@@ -1,0 +1,9 @@
+template {
+  name: "Tiefling Gladiator"
+}
+set: "Against the Giants"
+number: 25
+type: "Humanoid"
+race: "Tiefling"
+class: "Fighter"
+size: MEDIUM

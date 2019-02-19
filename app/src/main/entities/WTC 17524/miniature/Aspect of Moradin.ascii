@@ -1,0 +1,11 @@
+template {
+  name: "Aspect of Moradin"
+}
+set: "War Drums"
+number: 3
+type: "Celestial"
+subtype: "Extraplanar"
+subtype: "Good"
+subtype: "Lawful"
+subtype: "Aspect"
+size: LARGE

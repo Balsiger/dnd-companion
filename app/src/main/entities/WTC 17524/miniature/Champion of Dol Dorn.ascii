@@ -1,0 +1,9 @@
+template {
+  name: "Champion of Dol Dorn"
+}
+set: "Night Below"
+number: 3
+race: "Dwarf"
+type: "Humanoid"
+class: "Cleric"
+size: MEDIUM

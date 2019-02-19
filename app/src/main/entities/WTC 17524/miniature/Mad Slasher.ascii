@@ -1,0 +1,8 @@
+template {
+  name: "Mad Slasher"
+}
+set: "Aberrations"
+number: 54
+race: "Mad Slasher"
+type: "Aberration"
+size: MEDIUM

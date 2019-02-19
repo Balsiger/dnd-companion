@@ -1,0 +1,10 @@
+template {
+  name: "Sahuagin Baron"
+}
+set: "Desert of Desolation"
+number: 34
+type: "Humanoid"
+subtype: "Aquatic"
+race: "Sahuagin"
+class: "Fighter"
+size: LARGE

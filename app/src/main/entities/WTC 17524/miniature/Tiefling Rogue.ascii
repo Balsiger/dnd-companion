@@ -1,0 +1,9 @@
+template {
+  name: "Tiefling Rogue"
+}
+set: "Desert of Desolation"
+number: 25
+type: "Humanoid"
+race: "Tiefling"
+class: "Rogue"
+size: MEDIUM

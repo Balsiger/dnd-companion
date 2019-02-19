@@ -1,0 +1,9 @@
+template {
+  name: "Male Dwarf Rogue"
+}
+set: "Player\'s Handbook Heroes"
+number: 5
+type: "Humanoid"
+race: "Dwarf"
+class: "Rogue"
+size: MEDIUM

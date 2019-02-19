@@ -1,0 +1,8 @@
+template {
+  name: "Inivislble Gold Dwarf Guard"
+}
+set: "Elemental Evil"
+number: 47
+race: "Dwarf"
+type: "Humanoid"
+size: MEDIUM

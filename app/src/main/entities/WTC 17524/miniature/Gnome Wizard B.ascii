@@ -1,0 +1,9 @@
+template {
+  name: "Gnome Wizard B"
+}
+set: "Monster Menagerie 3"
+number: 11
+type: "Humanoid"
+race: "Gnome"
+size: SMALL
+class: "Wizard"

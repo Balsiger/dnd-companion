@@ -1,0 +1,9 @@
+template {
+  name: "Ghostly Consort"
+}
+set: "Angelfire"
+number: 41
+race: "Ghostly Consort"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

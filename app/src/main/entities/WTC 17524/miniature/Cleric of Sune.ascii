@@ -1,0 +1,9 @@
+template {
+  name: "Cleric of Sune"
+}
+set: "Unhallowed"
+number: 15
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Sahuagin (MM2)"
+}
+set: "Monster Menagerie 2"
+number: 13
+type: "Humanoid"
+subtype: "Aquatic"
+race: "Sahuagin"
+size: MEDIUM

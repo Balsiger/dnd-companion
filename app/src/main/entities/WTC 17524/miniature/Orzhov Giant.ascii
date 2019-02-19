@@ -1,0 +1,8 @@
+template {
+  name: "Orzhov Giant"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 32
+race: "Orzhov Giant"
+type: "Giant"
+size: LARGE

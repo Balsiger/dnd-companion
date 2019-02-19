@@ -1,0 +1,10 @@
+template {
+  name: "Hobgoblin Marshal"
+}
+set: "Night Below"
+number: 33
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+class: "Fighter"
+size: MEDIUM

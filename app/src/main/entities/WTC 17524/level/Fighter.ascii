@@ -1,0 +1,275 @@
+template {
+  name: "Fighter"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 37
+      high: 39
+    }
+  }
+  world: "Generic"
+  description: "The questing knight, the conquering\noverlord, the king\342\200\231s champion, the\nelite foot soldier, the hardened\nmercenary, and the bandit king \342\200\224\nall are fighters. Fighters can be\nstalwart defenders of those in\nneed, cruel marauders, or gutsy\nadventurers. Some are among\nthe land\342\200\231s best souls, willing to\nface death for the greater good.\nOthers are among the worst, with\nno qualms about killing for private\ngain, or even for sport. Fighters\nwho are not actively adventuring\nmay be soldiers, guards,\nbodyguards, champions, or\ncriminal enforcers. An adventuring fighter might call himself a warrior, a\nmercenary, a thug, or simply an adventurer."
+  short_description: "A professional combatant."
+}
+abbreviation: "Ftr"
+adventures: "Most fighters see adventures, raids, and dangerous missions as\ntheir job. Some have patrons who pay\nthem regularly. Others prefer to live\nlike prospectors, taking great risks in\nhopes of the big haul. Some fighters are more\ncivic-minded and use their combat skills to protect endangered\npeople who cannot defend themselves. Whatever their initial\nmotivations, however, fighters often wind up living for the thrill of\ncombat and adventure."
+characteristics: "Of all classes, fighters have the best all-around\nfighting capabilities (hence the name). Fighters are familiar with all\nthe standard weapons and armors. In addition to general fighting\nprowess, each fighter develops particular specialties of his own. A\ngiven fighter may be especially capable with certain weapons,\nanother might be trained to execute specific fancy maneuvers. As\nfighters gain experience, they get more opportunities to develop\ntheir fighting skills. Thanks to their focus on combat maneuvers,\nthey can master the most difficult ones relatively quickly."
+alignment_options: "Fighters may be of any alignment. Good fighters are\noften crusading types who seek out and fight evil. Lawful fighters\nmay be champions who protect the land and its people. Chaotic\nfighters may be wandering mercenaries. Evil fighters tend to be\nbullies and petty villains who simply take what they want by\nbrute force."
+religion: "Fighters often worship Heironeous (god of valor),\nKord (god of strength), St. Cuthbert (god of retribution),\nHextor (god of tyranny), or Erythnul (god of slaughter).\nA fighter may style himself as a crusader in the\nservice of his god, or he may just want someone to\npray to before putting his life on the line yet\nanother time."
+background: "Fighters come to their\nprofession in many ways. Most have had\nformal training in a noble\342\200\231s army or at\nleast in the local militia. Some have\ntrained in formal academies. Others are\nself-taught\342\200\224unpolished but well\ntested. A fighter may have taken up the\nsword as a way to escape\nthe limits of life on\nthe farm, or he may be\nfollowing a proud family\ntradition. Fighters share no\nspecial identity. They do not see\nthemselves as a group or\nbrotherhood. Those who hail from a\nparticular academy, mercenary company, or lord\342\200\231s regiment, however, share a\ncertain camaraderie."
+races: "Human fighters are usually\nveterans of some military service, typically from\nmore mundane parents. Dwarf fighters are\ncommonly former members of the well-trained\nstrike teams that protect the underground\ndwarven kingdoms. They are typically members\nof warrior families that can trace their lineages\nback for millennia, and they may have rivalries or\nalliances with other dwarf fighters of a different\nlineage. Elf fighters are typically skilled with the\nlongsword. They are proud of their ability at\nswordplay and eager to demonstrate or test it.\nHalf-orc fighters are often selftaught outcasts who have achieved\nenough skill to earn recognition and\nsomething akin to respect. Gnome and\nhalfling fighters usually stay in their own communities as part of the\narea militia rather than adventuring. Half-elves are rarely fighters,\nbut they may take up swordplay in honor of the elven tradition.\n\nAmong the brutal humanoids, few can manage the discipline it\ntakes to be a true fighter. The militaristic hobgoblins, however,\nproduce quite a number of strong and skilled fighters."
+otherClasses: "The fighter excels in a straight fight, but he relies\non others for magical support, healing, and scouting. On a team, it is\nhis job to man the front lines, protect the other party members, and\nbring the tough opponents down. Fighters might not understand\nthe arcane ways of wizards or share the faith of clerics, but they\nrecognize the value of teamwork."
+role: "In most adventuring parties, the fighter serves as a melee\ncombatant, charging into the fray while his comrades support him\nwith spells, ranged attacks, and other effects. Fighters who favor\nranged combat can prove very deadly, though without other melee\nsupport, they can find themselves in front-line combat more often\nthan they might prefer."
+important_abilities: "Strength is especially important for fighters because it\nimproves their melee attack and damage rolls. Constitution is\nimportant for giving fighters lots of hit points, which they need in\ntheir many battles. Dexterity is important for fighters who want\nto be good archers or who want access to certain Dexterity-oriented feats, but the heavy armor that fighters usually wear\nreduces the benefit of a\nvery high Dexterity\nscore.\n\nClimb (Str), Craft (Int),\nHandle Animal (Cha),\nIntimidate (Cha), Jump (Str),\nRide (Dex), and Swim (Str)."
+allowed_alignment: ANY_ALIGNMENT
+hit_dice {
+  number: 1
+  dice: 10
+}
+skill_points: 2
+class_skill: "climb"
+class_skill: "craft"
+class_skill: "handle animal"
+class_skill: "intimidate"
+class_skill: "jump"
+class_skill: "ride"
+class_skill: "swim"
+weapon_proficiency: SIMPLE
+weapon_proficiency: MARTIAL
+armor_proficiency: LIGHT
+armor_proficiency: MEDIUM
+armor_proficiency: HEAVY
+armor_proficiency: SHIELD
+armor_proficiency: TOWER_SHIELD
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 1
+fortitude_save: 2
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+fortitude_save: 1
+fortitude_save: 0
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+reflex_save: 1
+reflex_save: 0
+reflex_save: 0
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+will_save: 1
+will_save: 0
+will_save: 0
+bonusFeat {
+  level: 1
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 2
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 4
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 6
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 8
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 10
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 12
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 14
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 16
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 18
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+bonusFeat {
+  level: 20
+  template {
+    name: "fighter feat"
+    parameters {
+    }
+    condition {
+    }
+  }
+}
+spell_ability: NONE
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_per_day {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}
+spells_known {
+}

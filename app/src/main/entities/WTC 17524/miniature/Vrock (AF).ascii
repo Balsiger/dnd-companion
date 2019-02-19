@@ -1,0 +1,9 @@
+template {
+  name: "Vrock (AF)"
+}
+set: "Archfiends"
+number: 58
+race: "Vrock"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

@@ -1,0 +1,10 @@
+template {
+  name: "Water Archon Shoal Reaver"
+}
+set: "Lords of Madness"
+number: 54
+race: "Water Archon"
+type: "Elemental"
+subtype: "Acquatic"
+subtype: "Water"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Peryton"
+}
+set: "Elemental Evil"
+number: 23
+race: "Peryton"
+type: "Monstrosity"
+subtype: "Winged"
+size: MEDIUM

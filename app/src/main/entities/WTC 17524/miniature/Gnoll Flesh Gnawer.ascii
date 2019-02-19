@@ -1,0 +1,8 @@
+template {
+  name: "Gnoll Flesh Gnawer"
+}
+set: "Monster Menagerie 3"
+number: 16
+type: "Humanoid"
+race: "Gnoll"
+size: MEDIUM

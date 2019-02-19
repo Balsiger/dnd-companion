@@ -1,0 +1,9 @@
+template {
+  name: "Spy (b)"
+}
+set: "Dragon Heist"
+number: 16
+type: "Humanoid"
+race: "Human"
+class: "Rogue"
+size: MEDIUM

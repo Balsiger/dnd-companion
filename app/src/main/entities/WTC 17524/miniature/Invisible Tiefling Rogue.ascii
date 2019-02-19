@@ -1,0 +1,9 @@
+template {
+  name: "Invisible Tiefling Rogue"
+}
+set: "Monster Menagerie 3"
+number: 35
+type: "Humanoid"
+race: "Tiefling"
+size: MEDIUM
+subtype: "Invisible"

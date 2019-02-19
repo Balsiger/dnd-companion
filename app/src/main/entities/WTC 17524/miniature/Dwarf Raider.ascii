@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Raider"
+}
+set: "Angelfire"
+number: 3
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

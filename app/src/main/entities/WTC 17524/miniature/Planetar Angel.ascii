@@ -1,0 +1,10 @@
+template {
+  name: "Planetar Angel"
+}
+set: "Monster Menagerie 2"
+number: 29
+race: "Planetar"
+type: "Celestial"
+subtype: "Angel"
+subtype: "Flying"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Legion Devil Legionnaire"
+}
+set: "Savage Encounters"
+number: 24
+race: "Legion Devil"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Dragonborn Fighter"
+}
+set: "War of the Dragon Queen"
+number: 4
+race: "Dragonborn"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM

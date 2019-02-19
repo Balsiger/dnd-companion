@@ -1,0 +1,9 @@
+template {
+  name: "Free League Ranger"
+}
+set: "Blood War"
+number: 16
+type: "Humanoid"
+race: "Human"
+class: "Ranger"
+size: MEDIUM

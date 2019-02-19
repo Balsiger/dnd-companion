@@ -1,0 +1,10 @@
+template {
+  name: "Mercenary Sergeant"
+}
+set: "Underdark"
+number: 27
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

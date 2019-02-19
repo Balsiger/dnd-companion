@@ -1,0 +1,8 @@
+template {
+  name: "War Troll"
+}
+set: "Legendary Evils"
+number: 39
+race: "Troll"
+type: "Giant"
+size: LARGE

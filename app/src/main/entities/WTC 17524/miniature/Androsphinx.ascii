@@ -1,0 +1,9 @@
+template {
+  name: "Androsphinx"
+}
+set: "Monster Menagerie 2"
+number: 43
+race: "Androsphinx"
+type: "Monstrosity"
+subtype: "Winged"
+size: LARGE

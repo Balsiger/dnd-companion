@@ -1,0 +1,8 @@
+template {
+  name: "Harpy"
+}
+set: "Dungeon Delve"
+number: 24
+race: "Harpy"
+type: "Monstrosity"
+size: MEDIUM

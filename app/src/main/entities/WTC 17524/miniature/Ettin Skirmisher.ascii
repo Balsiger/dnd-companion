@@ -1,0 +1,8 @@
+template {
+  name: "Ettin Skirmisher"
+}
+set: "Death Knell"
+number: 52
+race: "Ettin"
+type: "Giant"
+size: LARGE

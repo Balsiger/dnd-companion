@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Illydia Maethellyn"
+}
+set: "Monster Menagerie"
+number: 24
+type: "Humanoid"
+race: "Elf"
+class: "Cleric"
+size: MEDIUM
+subtype: "Invisible"

@@ -1,0 +1,10 @@
+template {
+  name: "Giant Scorpion"
+}
+set: "Tomb of Annihilation"
+number: 29
+race: "Giant Scorpion"
+type: "Beast"
+subtype: "Oversized"
+subtype: "Animal"
+size: LARGE

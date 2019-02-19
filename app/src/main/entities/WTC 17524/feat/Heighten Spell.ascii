@@ -1,0 +1,39 @@
+template {
+  name: "Heighten Spell"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 95
+      high: 95
+    }
+  }
+  world: "Generic"
+  description: "You can cast a spell as if it were a higher-level spell than it actually\n  is."
+  short_description: "Cast spells as higher level"
+}
+type: METAMAGIC
+benefit: "A heightened spell has a higher spell level than normal\n                    (up to a maximum of 9th level). Unlike other metamagic\n                    feats, Heighten Spell actually increases the effective\n                    level of the spell that it modifies. All effects dependent\n                    on spell level (such as saving throw DCs and ability to\n                    penetrate a lesser globe of invulnerability) are calculated\n                    according to the heightened level. The heightened spell is\n                    as difficult to prepare and cast as a spell of its\n                    effective level. For example, a cleric could prepare hold\n                    person as a 4th-level spell (instead of a 2nd-level spell),\n                    and it would in all ways be treated as a 4th-level spell."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

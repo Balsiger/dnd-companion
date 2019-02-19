@@ -1,0 +1,9 @@
+template {
+  name: "Fire Giant Dreadnaught"
+}
+set: "Monster Menagerie 3"
+number: 30
+race: "Fire Giant"
+type: "Giant"
+subtype: "Fire"
+size: HUGE

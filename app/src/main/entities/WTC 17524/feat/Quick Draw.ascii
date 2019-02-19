@@ -1,0 +1,42 @@
+template {
+  name: "Quick Draw"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "You can draw weapons with startling speed."
+  short_description: "Draw weapon as free weapon"
+}
+type: GENERAL
+benefit: "You can draw a weapon as a free action instead of as a\n                    move action. You can draw a hidden weapon (see the Sleight\n                    of Hand skill, page 81) as a move action.\n\n                    A character who has selected this feat may throw weapons at\n                    his full normal rate of attacks (much like a character with\n                    a bow)."
+special: "A fighter may select Quick Draw as one of his fighter\n                    bonus feats (see page 38)."
+normal: "Without this feat, you may draw a weapon as a move action,\n                    or (if your bStun opponent with unarmed strikease attack\n                    bonus is +1 or higher) as a free\n                    action as part of movement (see page 142). Without this\n                    feat, you can draw a hidden weapon as a standard action."
+prerequisites: "Base attack bonus +1."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

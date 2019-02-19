@@ -1,0 +1,8 @@
+template {
+  name: "Kuo-Toa Whip (mm3)"
+}
+set: "Monster Menagerie 3"
+number: 17
+type: "Humanoid"
+race: "Kuo-Toa"
+size: MEDIUM

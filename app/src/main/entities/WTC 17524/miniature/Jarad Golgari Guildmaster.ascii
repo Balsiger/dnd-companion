@@ -1,0 +1,9 @@
+template {
+  name: "Jarad Golgari Guildmaster"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 23
+type: "Humanoid"
+race: "Human"
+class: "Druid"
+size: MEDIUM

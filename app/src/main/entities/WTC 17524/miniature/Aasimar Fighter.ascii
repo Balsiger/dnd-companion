@@ -1,0 +1,9 @@
+template {
+  name: "Aasimar Fighter"
+}
+set: "War of the Dragon Queen"
+number: 1
+type: "Humanoid"
+race: "Aasimar"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Iron Defender"
+}
+set: "Dungeons of Dread"
+number: 36
+race: "Iron Defender"
+type: "Construct"
+size: MEDIUM

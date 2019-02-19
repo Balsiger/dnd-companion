@@ -1,0 +1,10 @@
+template {
+  name: "Emerald Claw Soldier"
+}
+set: "Aberrations"
+number: 30
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

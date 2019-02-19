@@ -1,0 +1,9 @@
+template {
+  name: "Balor (UD)"
+}
+set: "Underdark"
+number: 41
+race: "Balor"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

@@ -1,0 +1,8 @@
+template {
+  name: "Aarakocra (flying)"
+}
+set: "Tyranny of Dragons"
+number: 37
+race: "Aarakocra"
+type: "Humanoid"
+size: MEDIUM

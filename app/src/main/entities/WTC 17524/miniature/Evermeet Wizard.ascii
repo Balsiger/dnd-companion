@@ -1,0 +1,9 @@
+template {
+  name: "Evermeet Wizard"
+}
+set: "Archfiends"
+number: 15
+type: "Humanoid"
+race: "Elf"
+class: "Wizard"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Halfling Brawler"
+}
+set: "Unhallowed"
+number: 17
+type: "Humanoid"
+race: "Halfling"
+size: SMALL

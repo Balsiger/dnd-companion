@@ -1,0 +1,8 @@
+template {
+  name: "Centaur"
+}
+set: "Harbinger"
+number: 17
+race: "Centaur"
+type: "Monstrosity"
+size: LARGE

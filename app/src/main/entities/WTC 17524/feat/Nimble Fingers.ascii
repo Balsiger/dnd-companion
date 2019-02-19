@@ -1,0 +1,39 @@
+template {
+  name: "Nimble Fingers"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "You are adept at manipulating small, delicate objects."
+  short_description: "+2 bonus on Disable Device and Open Lock checks"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Disable Device checks and Open\n                    Lock checks."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

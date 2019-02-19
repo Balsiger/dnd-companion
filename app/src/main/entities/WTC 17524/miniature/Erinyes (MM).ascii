@@ -1,0 +1,10 @@
+template {
+  name: "Erinyes (MM)"
+}
+set: "Monster Menagerie"
+number: 34
+race: "Erinyes"
+type: "Fiend"
+subtype: "Devil"
+subtype: "Flying"
+size: MEDIUM

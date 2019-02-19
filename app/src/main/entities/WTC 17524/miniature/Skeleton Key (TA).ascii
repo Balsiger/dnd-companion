@@ -1,0 +1,8 @@
+template {
+  name: "Skeleton Key (TA)"
+}
+set: "Tomb of Annihilation"
+number: 6
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

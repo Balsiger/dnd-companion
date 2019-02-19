@@ -1,0 +1,9 @@
+template {
+  name: "Exarch of Tyranny "
+}
+set: "Night Below"
+number: 30
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

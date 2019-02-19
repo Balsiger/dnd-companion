@@ -1,0 +1,9 @@
+template {
+  name: "Wight (EE)"
+}
+set: "Elemental Evil"
+number: 16
+race: "Wight"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

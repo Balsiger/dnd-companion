@@ -1,0 +1,7 @@
+template {
+  name: "Grick (GL)"
+}
+set: "Giants of Legend"
+number: 51
+race: "Grick"
+type: "Monstrosity"

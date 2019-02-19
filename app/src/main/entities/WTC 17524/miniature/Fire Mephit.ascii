@@ -1,0 +1,9 @@
+template {
+  name: "Fire Mephit"
+}
+set: "Unhallowed"
+number: 52
+race: "Fire Mephit"
+type: "Elemental"
+subtype: "Fire"
+size: SMALL

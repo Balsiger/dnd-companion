@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Axefighter"
+}
+set: "Harbinger"
+number: 3
+type: "Humanoid"
+race: "Dwarf"
+class: "Fighter"
+size: MEDIUM

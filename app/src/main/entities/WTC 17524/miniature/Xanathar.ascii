@@ -1,0 +1,8 @@
+template {
+  name: "Xanathar"
+}
+set: "Dragon Heist"
+number: 44
+type: "Aberration"
+race: "Beholder"
+size: LARGE

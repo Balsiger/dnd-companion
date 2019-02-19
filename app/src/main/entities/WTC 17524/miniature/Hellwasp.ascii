@@ -1,0 +1,8 @@
+template {
+  name: "Hellwasp"
+}
+set: "Against the Giants"
+number: 55
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

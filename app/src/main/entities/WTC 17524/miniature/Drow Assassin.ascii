@@ -1,0 +1,8 @@
+template {
+  name: "Drow Assassin"
+}
+set: "Demonweb"
+number: 20
+type: "Humanoid"
+race: "Drow"
+size: MEDIUM

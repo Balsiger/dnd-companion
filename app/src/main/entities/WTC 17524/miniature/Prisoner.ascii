@@ -1,0 +1,9 @@
+template {
+  name: "Prisoner"
+}
+set: "Night Below"
+number: 40
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

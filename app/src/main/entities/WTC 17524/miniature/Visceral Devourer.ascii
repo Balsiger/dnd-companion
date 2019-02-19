@@ -1,0 +1,9 @@
+template {
+  name: "Visceral Devourer"
+}
+set: "Against the Giants"
+number: 7
+race: "Devourer"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

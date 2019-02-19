@@ -1,0 +1,9 @@
+template {
+  name: "Large Earth Elemental"
+}
+set: "Harbinger"
+number: 9
+race: "Earth Elemental"
+type: "Elemental"
+subtype: "Earth"
+size: LARGE

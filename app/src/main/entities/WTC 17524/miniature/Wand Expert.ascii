@@ -1,0 +1,9 @@
+template {
+  name: "Wand Expert"
+}
+set: "Angelfire"
+number: 27
+type: "Humanoid"
+race: "Elf"
+class: "Wizard"
+size: MEDIUM

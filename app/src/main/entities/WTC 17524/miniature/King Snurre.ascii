@@ -1,0 +1,10 @@
+template {
+  name: "King Snurre"
+}
+set: "Giants of Legend"
+number: 53
+race: "Fire Giant"
+type: "Giant"
+subtype: "Fire"
+class: "Fighter"
+size: LARGE

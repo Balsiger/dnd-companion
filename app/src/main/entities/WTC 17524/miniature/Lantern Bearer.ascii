@@ -1,0 +1,9 @@
+template {
+  name: "Lantern Bearer"
+}
+set: "Underdark"
+number: 7
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Tsucora Quori"
+}
+set: "Unhallowed"
+number: 46
+race: "Quori"
+type: "Aberration"
+size: LARGE

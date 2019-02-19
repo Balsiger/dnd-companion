@@ -1,0 +1,8 @@
+template {
+  name: "Hill Giant"
+}
+set: "Archfiends"
+number: 53
+race: "Hill Giant"
+type: "Giant"
+size: LARGE

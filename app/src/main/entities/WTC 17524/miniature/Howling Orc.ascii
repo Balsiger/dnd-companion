@@ -1,0 +1,8 @@
+template {
+  name: "Howling Orc"
+}
+set: "War Drums"
+number: 52
+type: "Humanoid"
+race: "Orc"
+size: MEDIUM

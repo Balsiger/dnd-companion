@@ -1,0 +1,9 @@
+template {
+  name: "Horned Devil"
+}
+set: "Blood War"
+number: 34
+race: "Horned Devil"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE

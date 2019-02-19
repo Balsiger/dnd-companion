@@ -1,0 +1,8 @@
+template {
+  name: "Shield Dwarf Fighter"
+}
+set: "Elemental Evil"
+number: 7
+type: "Humanoid"
+race: "Dwarf"
+size: MEDIUM

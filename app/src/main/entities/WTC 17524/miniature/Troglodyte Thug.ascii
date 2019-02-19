@@ -1,0 +1,10 @@
+template {
+  name: "Troglodyte Thug"
+}
+set: "War Drums"
+number: 59
+type: "Humanoid"
+race: "Troglodyte"
+subtype: "Reptile"
+class: "Fighter"
+size: MEDIUM

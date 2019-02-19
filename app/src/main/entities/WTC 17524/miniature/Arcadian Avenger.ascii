@@ -1,0 +1,10 @@
+template {
+  name: "Arcadian Avenger"
+}
+set: "Night Below"
+number: 1
+type: "Celestial"
+subtype: "Extraplanar"
+subtype: "Good"
+subtype: "Lawful"
+size: MEDIUM

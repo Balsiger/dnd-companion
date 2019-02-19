@@ -1,0 +1,9 @@
+template {
+  name: "Flamebrother Salamander"
+}
+set: "Angelfire"
+number: 40
+race: "Salamander"
+type: "Elemental"
+subtype: "Fire"
+size: SMALL

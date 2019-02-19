@@ -1,0 +1,9 @@
+template {
+  name: "Kruthik Hatchling"
+}
+set: "Death Knell"
+number: 37
+race: "Kruthik"
+type: "Beast"
+subtype: "Reptile"
+size: SMALL

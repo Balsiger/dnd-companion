@@ -1,0 +1,8 @@
+template {
+  name: "Thri-Kreen Mantis Warrior"
+}
+set: "Lords of Madness"
+number: 50
+type: "Humanoid"
+race: "Thri-Kreen"
+size: MEDIUM

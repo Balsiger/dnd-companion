@@ -1,0 +1,8 @@
+template {
+  name: "Feral Troll"
+}
+set: "Desert of Desolation"
+number: 49
+type: "Giant"
+race: "Troll"
+size: LARGE

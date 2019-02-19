@@ -1,0 +1,9 @@
+template {
+  name: "Degenerate Cultist of Orcus"
+}
+set: "Against the Giants"
+number: 4
+type: "Humanoid"
+race: "Human"
+size: MEDIUM
+class: "Fighter"

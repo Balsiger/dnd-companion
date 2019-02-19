@@ -1,0 +1,9 @@
+template {
+  name: "Mordenkainen the Mage"
+}
+set: "Giants of Legend"
+number: 26
+type: "Humanoid"
+race: "Human"
+class: "Wizard"
+size: MEDIUM

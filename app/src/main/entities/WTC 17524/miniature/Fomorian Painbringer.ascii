@@ -1,0 +1,8 @@
+template {
+  name: "Fomorian Painbringer"
+}
+set: "Lords of Madness"
+number: 19
+race: "Fomorian"
+type: "Giant"
+size: HUGE

@@ -1,0 +1,10 @@
+template {
+  name: "Dark Naga"
+}
+set: "Underdark"
+number: 33
+race: "Dark Naga"
+type: "Aberration"
+subtype: "Reptile"
+subtype: "Naga"
+size: LARGE

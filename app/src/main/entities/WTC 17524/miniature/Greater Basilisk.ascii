@@ -1,0 +1,9 @@
+template {
+  name: "Greater Basilisk"
+}
+set: "Night Below"
+number: 19
+race: "Basilisk"
+type: "Monstrosity"
+subtype: "Reptile"
+size: LARGE

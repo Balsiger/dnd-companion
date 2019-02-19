@@ -1,0 +1,9 @@
+template {
+  name: "Hell Hound"
+}
+set: "Harbinger"
+number: 44
+race: "Hell Hound"
+type: "Fiend"
+subtype: "Fire"
+size: MEDIUM

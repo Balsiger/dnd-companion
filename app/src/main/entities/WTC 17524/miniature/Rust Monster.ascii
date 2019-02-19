@@ -1,0 +1,8 @@
+template {
+  name: "Rust Monster"
+}
+set: "Dungeon Delve"
+number: 33
+race: "Rust Monster"
+type: "Monstrosity"
+size: MEDIUM

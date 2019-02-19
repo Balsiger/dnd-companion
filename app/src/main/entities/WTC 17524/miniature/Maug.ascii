@@ -1,0 +1,9 @@
+template {
+  name: "Maug"
+}
+set: "Blood War"
+number: 26
+race: "Maut"
+type: "Construct"
+class: "Fighter"
+size: LARGE

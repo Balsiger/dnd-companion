@@ -1,0 +1,8 @@
+template {
+  name: "Kobold Zombie"
+}
+set: "War of the Dragon Queen"
+number: 37
+type: "Undead"
+race: "Zombie"
+size: SMALL

@@ -1,0 +1,9 @@
+template {
+  name: "Scarlet Brotherhood Monk"
+}
+set: "Giants of Legend"
+number: 39
+type: "Humanoid"
+race: "Human"
+class: "Monk"
+size: MEDIUM

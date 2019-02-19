@@ -1,0 +1,8 @@
+template {
+  name: "Drow Demonbinder"
+}
+set: "Demonweb"
+number: 12
+type: "Humanoid"
+race: "Drow"
+size: MEDIUM

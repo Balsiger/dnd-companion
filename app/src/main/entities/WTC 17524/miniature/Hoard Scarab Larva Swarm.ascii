@@ -1,0 +1,9 @@
+template {
+  name: "Hoard Scarab Larva Swarm"
+}
+set: "Legendary Evils"
+number: 26
+race: "Hoard Scarab"
+type: "Vermin"
+subtype: "Swarm"
+size: MEDIUM

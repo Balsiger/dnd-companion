@@ -1,0 +1,9 @@
+template {
+  name: "Bandit"
+}
+set: "Storm King\'s Thunder"
+number: 15
+type: "Humanoid"
+race: "Human"
+size: MEDIUM
+class: "Fighter"

@@ -1,0 +1,8 @@
+template {
+  name: "Minotaur (MM)"
+}
+set: "Monster Menagerie"
+number: 43
+race: "Minotaur"
+type: "Monstrosity"
+size: LARGE

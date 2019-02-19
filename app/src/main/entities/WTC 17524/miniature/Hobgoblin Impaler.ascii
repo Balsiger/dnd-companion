@@ -1,0 +1,11 @@
+template {
+  name: "Hobgoblin Impaler"
+}
+set: "Angelfire"
+number: 42
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+class: "Rogue"
+class: "Fighter"
+size: MEDIUM

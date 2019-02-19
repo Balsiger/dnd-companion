@@ -1,0 +1,9 @@
+template {
+  name: "Ravenous Ghoul"
+}
+set: "Desert of Desolation"
+number: 54
+type: "Humanoid"
+subtype: "Undead"
+race: "Ghoul"
+size: MEDIUM

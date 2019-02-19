@@ -1,0 +1,9 @@
+template {
+  name: "Half-Orc Executioner"
+}
+set: "Underdark"
+number: 36
+type: "Humanoid"
+race: "Half-Orc"
+class: "Barbarian"
+size: MEDIUM

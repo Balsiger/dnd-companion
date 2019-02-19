@@ -1,0 +1,8 @@
+template {
+  name: "Stormrage Shambler"
+}
+set: "Unhallowed"
+number: 24
+race: "Shambler"
+type: "Plant"
+size: LARGE

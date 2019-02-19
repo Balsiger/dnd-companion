@@ -1,0 +1,8 @@
+template {
+  name: "Orc Archer (LM)"
+}
+set: "Lords of Madness"
+number: 36
+type: "Humanoid"
+race: "Orc"
+size: MEDIUM

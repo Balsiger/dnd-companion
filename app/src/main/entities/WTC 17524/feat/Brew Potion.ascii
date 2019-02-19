@@ -1,0 +1,40 @@
+template {
+  name: "Brew Potion"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 89
+      high: 89
+    }
+  }
+  world: "Generic"
+  description: "You can create potions, which carry spells within themselves. See the\n  Dungeon Master\342\200\232\303\204\303\264s Guide for rules on potions."
+  short_description: "Create magic potions"
+}
+type: ITEM_CREATION
+benefit: "You can create a potion of any 3rd-level or lower spell\n                    that you know and that targets one or more\n                    creatures. Brewing a potion takes one day. When you create\n                    a potion, you set the caster level, which must be\n                    sufficient to cast the spell in question and no higher than\n                    your own level. The base price of a potion is its spell\n                    level \342\210\232\303\263 its caster level \342\210\232\303\263 50 gp. To brew a potion, you\n                    must spend 1/25 of this base price in XP and use up raw\n                    materials costing one half this base price.\n\n                    When you create a potion, you make any choices that you\n                    would normally make when casting the spell. Whoever drinks\n                    the potion is the target of the spell.\n\n                    Any potion that stores a spell with a costly material\n                    component or an XP cost also carries a commensurate\n                    cost. In addition to the costs derived from the base price,\n                    you must expend the material component or pay the XP when\n                    creating the potion."
+prerequisites: "Caster level 3rd."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

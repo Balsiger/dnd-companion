@@ -1,0 +1,9 @@
+template {
+  name: "Stone Juggernaut"
+  description: "Put in the huge box as it\'s too big for the other boxes."
+}
+set: "Tomb of Annihilation"
+number: 43
+race: "Stone Juggernaut"
+type: "Construct"
+size: HUGE

@@ -1,0 +1,39 @@
+template {
+  name: "Deceitful"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 93
+      high: 93
+    }
+  }
+  world: "Generic"
+  description: "You have a knack for disguising the truth."
+  short_description: "+2 bonus on Disguise and Forgery checks"
+}
+type: GENERAL
+benefit: "You get a +2 bonus on all Disguise checks and Forgery\n                    checks."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

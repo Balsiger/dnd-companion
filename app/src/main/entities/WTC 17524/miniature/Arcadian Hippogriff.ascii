@@ -1,0 +1,9 @@
+template {
+  name: "Arcadian Hippogriff"
+}
+set: "Blood War"
+number: 1
+race: "Hippogriff"
+type: "Monstrosity"
+subtype: "Mount"
+size: LARGE

@@ -1,0 +1,10 @@
+template {
+  name: "Mud Mephit"
+}
+set: "Monster Menagerie 3"
+number: 2
+race: "Mud Mephit"
+type: "Elemental"
+subtype: "Earth"
+subtype: "Mephit"
+size: SMALL

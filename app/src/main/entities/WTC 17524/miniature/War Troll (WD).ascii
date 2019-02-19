@@ -1,0 +1,8 @@
+template {
+  name: "War Troll (WD)"
+}
+set: "War Drums"
+number: 42
+type: "Giant"
+race: "Troll"
+size: LARGE

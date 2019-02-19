@@ -1,0 +1,8 @@
+template {
+  name: "Minotaur Skeleton"
+}
+set: "Giants of Legend"
+number: 55
+race: "Skeleton"
+type: "Undead"
+size: LARGE

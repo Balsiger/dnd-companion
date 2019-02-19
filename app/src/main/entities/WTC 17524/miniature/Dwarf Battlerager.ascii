@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Battlerager"
+}
+set: "Unhallowed"
+number: 16
+type: "Humanoid"
+race: "Dwarf"
+class: "Barbarian"
+size: MEDIUM

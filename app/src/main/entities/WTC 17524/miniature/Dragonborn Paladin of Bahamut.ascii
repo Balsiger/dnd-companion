@@ -1,0 +1,8 @@
+template {
+  name: "Dragonborn Paladin of Bahamut"
+}
+set: "Demonweb"
+number: 1
+race: "Dragonborn"
+type: "Humanoid"
+size: MEDIUM

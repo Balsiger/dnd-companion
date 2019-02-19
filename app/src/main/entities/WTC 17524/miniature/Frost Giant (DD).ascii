@@ -1,0 +1,9 @@
+template {
+  name: "Frost Giant (DD)"
+}
+set: "Dungeon Delve"
+number: 16
+race: "Frost Giant"
+type: "Giant"
+subtype: "Cold"
+size: LARGE

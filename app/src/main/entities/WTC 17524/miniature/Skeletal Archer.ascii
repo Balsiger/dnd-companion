@@ -1,0 +1,8 @@
+template {
+  name: "Skeletal Archer"
+}
+set: "Angelfire"
+number: 50
+race: "Skeleton"
+type: "Undead"
+size: MEDIUM

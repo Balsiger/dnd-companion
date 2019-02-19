@@ -1,0 +1,9 @@
+template {
+  name: "Wight"
+}
+set: "Harbinger"
+number: 52
+race: "Wight"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

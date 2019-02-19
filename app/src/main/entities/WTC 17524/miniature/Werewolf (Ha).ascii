@@ -1,0 +1,10 @@
+template {
+  name: "Werewolf (Ha)"
+}
+set: "Harbinger"
+number: 79
+race: "Werewolf"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: MEDIUM

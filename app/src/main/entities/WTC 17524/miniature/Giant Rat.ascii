@@ -1,0 +1,10 @@
+template {
+  name: "Giant Rat"
+}
+set: "Monster Menagerie 2"
+number: 1
+race: "Giant Rat"
+type: "Beast"
+subtype: "Oversized"
+subtype: "Animal"
+size: SMALL

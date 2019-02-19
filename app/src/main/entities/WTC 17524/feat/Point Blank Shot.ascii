@@ -1,0 +1,50 @@
+template {
+  name: "Point Blank Shot"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "You are skilled at making well-placed shots with ranged weapons at close\nrange."
+  short_description: "+1 bonus on ranged attack and damage within 30 ft."
+}
+type: GENERAL
+benefit: "You get a +1 bonus on attack and damage rolls with rangedweapons at ranges of up to 30 feet."
+special: "A fighter may select Point Blank Shot as one of hisfighter bonus feats (see page 38)."
+attack_modifier {
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "within 30 ft"
+  }
+}
+damage_modifier {
+  modifier {
+    value: 1
+    type: GENERAL
+    condition: "within 30 ft"
+  }
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

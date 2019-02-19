@@ -1,0 +1,10 @@
+template {
+  name: "Dire Bear Mauler"
+}
+set: "Demonweb"
+number: 58
+race: "Dire Bear"
+type: "Beast"
+subtype: "Primal"
+subtype: "Dire"
+size: LARGE

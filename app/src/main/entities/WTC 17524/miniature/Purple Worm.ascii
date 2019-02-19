@@ -1,0 +1,9 @@
+template {
+  name: "Purple Worm"
+}
+set: "War of the Dragon Queen"
+number: 21
+race: "Purple Worm"
+type: "Monstrosity"
+subtype: "Blind"
+size: HUGE

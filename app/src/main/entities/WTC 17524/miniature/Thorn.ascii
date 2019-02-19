@@ -1,0 +1,8 @@
+template {
+  name: "Thorn"
+}
+set: "Angelfire"
+number: 25
+race: "Thorn"
+type: "Fey"
+size: SMALL

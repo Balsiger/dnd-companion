@@ -1,0 +1,8 @@
+template {
+  name: "Shadow Flayer"
+}
+set: "Demonweb"
+number: 21
+race: "Mind Flayer"
+type: "Aberration"
+size: MEDIUM

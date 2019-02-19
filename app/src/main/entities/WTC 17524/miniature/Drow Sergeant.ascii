@@ -1,0 +1,9 @@
+template {
+  name: "Drow Sergeant"
+}
+set: "Archfiends"
+number: 50
+type: "Humanoid"
+race: "Drow"
+class: "Fighter"
+size: MEDIUM

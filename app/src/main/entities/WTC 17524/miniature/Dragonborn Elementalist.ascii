@@ -1,0 +1,8 @@
+template {
+  name: "Dragonborn Elementalist"
+}
+set: "Lords of Madness"
+number: 12
+race: "Dragonborn"
+type: "Humanoid"
+size: MEDIUM

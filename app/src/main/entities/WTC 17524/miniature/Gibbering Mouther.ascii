@@ -1,0 +1,8 @@
+template {
+  name: "Gibbering Mouther"
+}
+set: "Aberrations"
+number: 50
+race: "Gibbering Mouther"
+type: "Aberration"
+size: MEDIUM

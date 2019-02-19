@@ -1,0 +1,9 @@
+template {
+  name: "Umber Hulk"
+}
+set: "Harbinger"
+number: 78
+race: "Umber Hulk"
+type: "Monstrosity"
+subtype: "Humanoid"
+size: LARGE

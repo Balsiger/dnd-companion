@@ -1,0 +1,10 @@
+template {
+  name: "Sharn Redcloak"
+}
+set: "Demonweb"
+number: 44
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Bow"

@@ -1,0 +1,9 @@
+template {
+  name: "Hill Giant Chieftain"
+}
+set: "War Drums"
+number: 50
+race: "Hill Giant"
+type: "Giant"
+class: "Fighter"
+size: LARGE

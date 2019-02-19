@@ -1,0 +1,10 @@
+template {
+  name: "Mind Flayer Lich"
+}
+set: "Night Below"
+number: 38
+race: "Lich"
+type: "Undead"
+class: "Wizard"
+size: MEDIUM
+subtype: "Humanoid"

@@ -1,0 +1,10 @@
+template {
+  name: "Man-at-Arms (Ha)"
+}
+set: "Harbinger"
+number: 10
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

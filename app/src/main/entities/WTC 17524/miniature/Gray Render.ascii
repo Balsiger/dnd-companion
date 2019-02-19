@@ -1,0 +1,8 @@
+template {
+  name: "Gray Render"
+}
+set: "Underdark"
+number: 48
+race: "Gray Render"
+type: "Monstrosity"
+size: LARGE

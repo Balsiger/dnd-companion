@@ -1,0 +1,9 @@
+template {
+  name: "Large Silver Dragon (Juvenile)"
+}
+set: "Archfiends"
+number: 5
+race: "Silver Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Metallic"

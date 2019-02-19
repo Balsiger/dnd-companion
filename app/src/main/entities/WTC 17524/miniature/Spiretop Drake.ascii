@@ -1,0 +1,10 @@
+template {
+  name: "Spiretop Drake"
+}
+set: "Demonweb"
+number: 35
+race: "Spiretop Drake"
+subtype: "Drake"
+type: "Dragon"
+size: SMALL
+subtype: "Lesser"

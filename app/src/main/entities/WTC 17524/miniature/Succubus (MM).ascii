@@ -1,0 +1,11 @@
+template {
+  name: "Succubus (MM)"
+}
+set: "Monster Menagerie"
+number: 37
+race: "Succubus"
+type: "Fiend"
+subtype: "Devil"
+subtype: "Shapechanger"
+subtype: "Flying"
+size: MEDIUM

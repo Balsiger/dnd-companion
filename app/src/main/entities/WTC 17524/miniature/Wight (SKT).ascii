@@ -1,0 +1,9 @@
+template {
+  name: "Wight (SKT)"
+}
+set: "Storm King\'s Thunder"
+number: 21
+race: "Wight"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

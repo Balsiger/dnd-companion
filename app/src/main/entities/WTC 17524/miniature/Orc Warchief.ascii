@@ -1,0 +1,8 @@
+template {
+  name: "Orc Warchief"
+}
+set: "Lords of Madness"
+number: 37
+type: "Humanoid"
+race: "Orc"
+size: MEDIUM

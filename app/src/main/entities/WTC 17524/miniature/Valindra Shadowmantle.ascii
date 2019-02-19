@@ -1,0 +1,9 @@
+template {
+  name: "Valindra Shadowmantle"
+}
+set: "Tomb of Annihilation"
+number: 18
+type: "Undead"
+race: "Lich"
+size: MEDIUM
+subtype: "Humanoid"

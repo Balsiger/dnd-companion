@@ -1,0 +1,9 @@
+template {
+  name: "Stout Heart Halfling Female Bard"
+}
+set: "Tyranny of Dragons"
+number: 2
+type: "Humanoid"
+race: "Halfling"
+class: "Bard"
+size: SMALL

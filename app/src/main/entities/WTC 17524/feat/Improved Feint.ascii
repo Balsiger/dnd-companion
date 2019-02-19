@@ -1,0 +1,41 @@
+template {
+  name: "Improved Feint"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 95
+      high: 95
+    }
+  }
+  world: "Generic"
+  description: "You are skilled at misdirecting your opponent\342\200\232\303\204\303\264s attention in combat."
+  short_description: "Feint in combat as move action"
+}
+type: GENERAL
+benefit: "You can make a Bluff check to feint in combat as a move\n                    action."
+normal: "Feinting in combat is a standard action.\n\n                    A fighter may select Improved Feint as one of his fighter\n                    bonus feats (see page 38)."
+prerequisites: "Int 13, Combat Expertise."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

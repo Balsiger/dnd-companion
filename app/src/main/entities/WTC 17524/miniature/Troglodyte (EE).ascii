@@ -1,0 +1,9 @@
+template {
+  name: "Troglodyte (EE)"
+}
+set: "Elemental Evil"
+number: 10
+type: "Humanoid"
+race: "Troglodyte"
+subtype: "Reptile"
+size: MEDIUM

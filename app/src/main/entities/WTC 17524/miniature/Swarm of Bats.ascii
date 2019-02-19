@@ -1,0 +1,11 @@
+template {
+  name: "Swarm of Bats"
+}
+set: "Monster Menagerie"
+number: 25
+race: "Bat"
+type: "Beast"
+subtype: "Animal"
+subtype: "Swarm"
+subtype: "Flying"
+size: LARGE

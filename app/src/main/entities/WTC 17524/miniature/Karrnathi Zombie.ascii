@@ -1,0 +1,8 @@
+template {
+  name: "Karrnathi Zombie"
+}
+set: "War Drums"
+number: 34
+type: "Undead"
+subtype: "Zombie"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Half-Elf Bow Initiate"
+}
+set: "Aberrations"
+number: 18
+type: "Humanoid"
+race: "Half-Elf"
+class: "Fighter"
+size: MEDIUM

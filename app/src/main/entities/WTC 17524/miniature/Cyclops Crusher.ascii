@@ -1,0 +1,8 @@
+template {
+  name: "Cyclops Crusher"
+}
+set: "Dungeon Delve"
+number: 13
+race: "Cyclops"
+type: "Giant"
+size: LARGE

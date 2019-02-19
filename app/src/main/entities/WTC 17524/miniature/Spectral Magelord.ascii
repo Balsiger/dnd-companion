@@ -1,0 +1,9 @@
+template {
+  name: "Spectral Magelord"
+}
+set: "Dungeons of Dread"
+number: 46
+race: "Spectral Magelord"
+type: "Undead"
+subtype: "Spirit"
+size: MEDIUM

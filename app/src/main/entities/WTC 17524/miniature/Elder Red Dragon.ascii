@@ -1,0 +1,9 @@
+template {
+  name: "Elder Red Dragon"
+}
+set: "Against the Giants"
+number: 11
+race: "Red Dragon"
+type: "Dragon"
+size: HUGE
+subtype: "Chromatic"

@@ -1,0 +1,8 @@
+template {
+  name: "Fomorian (SKT)"
+}
+set: "Storm King\'s Thunder"
+number: 26
+race: "Fomorian"
+type: "Giant"
+size: LARGE

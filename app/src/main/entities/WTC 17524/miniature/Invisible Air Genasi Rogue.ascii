@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Air Genasi Rogue"
+}
+set: "Elemental Evil"
+number: 50
+race: "Air Genasi"
+type: "Humanoid"
+subtype: "Air"
+subtype: "Invisible"
+size: MEDIUM

@@ -1,0 +1,8 @@
+template {
+  name: "Formian Warrior"
+}
+set: "Aberrations"
+number: 22
+race: "Formian"
+type: "Aberration"
+size: MEDIUM

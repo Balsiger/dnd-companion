@@ -1,0 +1,9 @@
+template {
+  name: "Drow Elf Ranger Drizzt (invisible)"
+}
+set: "Tyranny of Dragons"
+number: 46
+type: "Humanoid"
+race: "Drow"
+class: "Ranger"
+size: MEDIUM

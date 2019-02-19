@@ -1,0 +1,10 @@
+template {
+  name: "Water Cult Warrior"
+}
+set: "Elemental Evil"
+number: 13
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

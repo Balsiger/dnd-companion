@@ -1,0 +1,10 @@
+template {
+  name: "Magma Brute"
+}
+set: "Dungeons of Dread"
+number: 19
+race: "Magma Brute"
+type: "Elemental"
+subtype: "Earth"
+subtype: "Fire"
+size: LARGE

@@ -1,0 +1,10 @@
+template {
+  name: "Aspect of Bane"
+}
+set: "Archfiends"
+number: 28
+type: "Fiend"
+subtype: "Evil"
+subtype: "Lawful"
+subtype: "Extraplanar"
+size: LARGE

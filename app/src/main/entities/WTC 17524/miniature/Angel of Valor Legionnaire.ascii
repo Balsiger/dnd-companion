@@ -1,0 +1,9 @@
+template {
+  name: "Angel of Valor Legionnaire"
+}
+set: "Savage Encounters"
+number: 3
+race: "Angel"
+type: "Celestial"
+subtype: "Angel"
+size: MEDIUM

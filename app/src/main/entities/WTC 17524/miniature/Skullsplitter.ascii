@@ -1,0 +1,9 @@
+template {
+  name: "Skullsplitter"
+}
+set: "Aberrations"
+number: 44
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

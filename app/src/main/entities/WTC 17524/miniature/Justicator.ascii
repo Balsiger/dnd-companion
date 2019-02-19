@@ -1,0 +1,8 @@
+template {
+  name: "Justicator"
+}
+set: "Underdark"
+number: 26
+race: "Justicator"
+type: "Celestial"
+size: LARGE

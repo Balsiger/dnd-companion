@@ -1,0 +1,9 @@
+template {
+  name: "Hobgoblin Guard"
+}
+set: "Against the Giants"
+number: 22
+type: "Humanoid"
+subtype: "Goblinoid"
+race: "Hobgoblin"
+size: MEDIUM

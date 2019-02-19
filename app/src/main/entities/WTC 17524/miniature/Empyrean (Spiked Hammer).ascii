@@ -1,0 +1,9 @@
+template {
+  name: "Empyrean (Spiked Hammer)"
+}
+set: "Monster Menagerie 3"
+number: 25
+race: "Empyrian"
+type: "Celestial"
+subtype: "Titan"
+size: HUGE

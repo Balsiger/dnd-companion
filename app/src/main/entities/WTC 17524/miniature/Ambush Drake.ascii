@@ -1,0 +1,9 @@
+template {
+  name: "Ambush Drake"
+}
+set: "Death Knell"
+number: 30
+type: "Dragon"
+subtype: "Drake"
+size: MEDIUM
+subtype: "Lesser"

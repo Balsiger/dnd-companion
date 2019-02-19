@@ -1,0 +1,9 @@
+template {
+  name: "Macetail Behemoth"
+}
+set: "Desert of Desolation"
+number: 6
+race: "Macetail Behemoth"
+type: "Beast"
+subtype: "Reptile"
+size: LARGE

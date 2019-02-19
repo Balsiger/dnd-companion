@@ -1,0 +1,9 @@
+template {
+  name: "Lord Victoro"
+}
+set: "Dragon Heist"
+number: 39
+type: "Humanoid"
+race: "Human"
+class: "Expert"
+size: MEDIUM

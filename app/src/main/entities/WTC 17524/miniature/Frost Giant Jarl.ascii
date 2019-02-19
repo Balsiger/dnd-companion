@@ -1,0 +1,9 @@
+template {
+  name: "Frost Giant Jarl"
+}
+set: "Night Below"
+number: 52
+race: "Frost Giant"
+type: "Giant"
+subtype: "Cold"
+size: LARGE

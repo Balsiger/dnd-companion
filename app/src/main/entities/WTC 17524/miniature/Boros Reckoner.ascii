@@ -1,0 +1,9 @@
+template {
+  name: "Boros Reckoner"
+}
+set: "Guildmaster\'s Guide to Ravnica"
+number: 40
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

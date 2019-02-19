@@ -1,0 +1,8 @@
+template {
+  name: "Gnoll (MM3)"
+}
+set: "Monster Menagerie 3"
+number: 7
+type: "Humanoid"
+race: "Gnoll"
+size: MEDIUM

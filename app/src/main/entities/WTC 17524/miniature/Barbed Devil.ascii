@@ -1,0 +1,9 @@
+template {
+  name: "Barbed Devil"
+}
+set: "Angelfire"
+number: 35
+race: "Hamatula"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

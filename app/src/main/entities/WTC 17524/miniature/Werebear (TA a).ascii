@@ -1,0 +1,10 @@
+template {
+  name: "Werebear (TA a)"
+}
+set: "Tomb of Annihilation"
+number: 20
+race: "Wearbear"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: MEDIUM

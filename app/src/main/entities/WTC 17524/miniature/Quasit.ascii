@@ -1,0 +1,9 @@
+template {
+  name: "Quasit"
+}
+set: "Giants of Legend"
+number: 57
+race: "Quasit"
+type: "Fiend"
+subtype: "Demon"
+size: TINY

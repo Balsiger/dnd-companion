@@ -1,0 +1,8 @@
+template {
+  name: "Halfling Archer"
+}
+set: "Demonweb"
+number: 3
+type: "Humanoid"
+race: "Halfling"
+size: SMALL

@@ -1,0 +1,10 @@
+template {
+  name: "Arcanoloth A"
+}
+set: "Monster Menagerie 3"
+number: 34
+race: "Arcanoloth"
+type: "Fiend"
+subtype: "Yugoloth"
+subtype: "Demon"
+size: MEDIUM

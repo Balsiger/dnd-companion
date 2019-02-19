@@ -1,0 +1,9 @@
+template {
+  name: "Kobold Soldier"
+}
+set: "Angelfire"
+number: 44
+type: "Humanoid"
+race: "Kobold"
+class: "Fighter"
+size: SMALL

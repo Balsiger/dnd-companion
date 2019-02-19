@@ -1,0 +1,9 @@
+template {
+  name: "Grimlock"
+}
+set: "Dragon Eye"
+number: 42
+race: "Grimlock"
+type: "Humanoid"
+subtype: "Blind"
+size: MEDIUM

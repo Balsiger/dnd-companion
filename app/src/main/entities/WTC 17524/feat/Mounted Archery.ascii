@@ -1,0 +1,41 @@
+template {
+  name: "Mounted Archery"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 98
+      high: 98
+    }
+  }
+  world: "Generic"
+  description: "You are skilled at using ranged weapons while mounted."
+  short_description: "Half penalty for ranged attacks while mounted"
+}
+type: GENERAL
+benefit: "The penalty you take when using a ranged weapon while\n                    mounted is halved: \342\200\232\303\204\303\2542 instead of \342\200\232\303\204\303\2544 if your mount is taking\n                    a double move, and \342\200\232\303\204\303\2544 instead of \342\200\232\303\204\303\2548 if your mount is\n                    running (see Mounted Combat, page 157)."
+special: "A fighter may select Mounted Archery as one of his fighter\n                    bonus feats (see page 38)."
+prerequisites: "Ride 1 rank, Mounted Combat."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

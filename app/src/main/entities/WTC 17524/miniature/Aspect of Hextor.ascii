@@ -1,0 +1,10 @@
+template {
+  name: "Aspect of Hextor"
+}
+set: "War Drums"
+number: 28
+type: "Fiend"
+subtype: "Evil"
+subtype: "Extraplanar"
+subtype: "Lawful"
+size: LARGE

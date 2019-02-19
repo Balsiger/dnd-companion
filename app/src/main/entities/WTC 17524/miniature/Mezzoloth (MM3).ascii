@@ -1,0 +1,9 @@
+template {
+  name: "Mezzoloth (MM3)"
+}
+set: "Monster Menagerie 3"
+number: 13
+race: "Mezzoloth"
+type: "Fiend"
+subtype: "Demon"
+size: MEDIUM

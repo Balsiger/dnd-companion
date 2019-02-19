@@ -1,0 +1,9 @@
+template {
+  name: "Deathlock Wight"
+}
+set: "Demonweb"
+number: 18
+race: "Deathlock Wight"
+type: "Undead"
+subtype: "Humanoid"
+size: MEDIUM

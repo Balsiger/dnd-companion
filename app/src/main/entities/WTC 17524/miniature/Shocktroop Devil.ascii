@@ -1,0 +1,9 @@
+template {
+  name: "Shocktroop Devil"
+}
+set: "Against the Giants"
+number: 1
+race: "Shocktroop Devil"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE

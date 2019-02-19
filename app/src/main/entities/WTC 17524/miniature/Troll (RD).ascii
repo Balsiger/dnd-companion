@@ -1,0 +1,7 @@
+template {
+  name: "Troll (RD)"
+}
+set: "Rage of Demons"
+number: 25
+type: "Giant"
+race: "Troll"

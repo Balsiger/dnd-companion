@@ -1,0 +1,9 @@
+template {
+  name: "Clay Golem"
+}
+set: "Dungeon Delve"
+number: 12
+race: "Clay Golem"
+type: "Construct"
+subtype: "Golem"
+size: LARGE

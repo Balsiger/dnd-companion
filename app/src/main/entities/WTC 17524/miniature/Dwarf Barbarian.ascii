@@ -1,0 +1,9 @@
+template {
+  name: "Dwarf Barbarian"
+}
+set: "Dragon Eye"
+number: 18
+type: "Humanoid"
+race: "Dwarf"
+class: "Barbarian"
+size: MEDIUM

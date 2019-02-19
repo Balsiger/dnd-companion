@@ -1,0 +1,8 @@
+template {
+  name: "Shadow Hulk"
+}
+set: "Against the Giants"
+number: 29
+race: "Hulk"
+type: "Monstrosity"
+size: HUGE

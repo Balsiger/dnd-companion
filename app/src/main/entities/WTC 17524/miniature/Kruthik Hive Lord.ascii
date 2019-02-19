@@ -1,0 +1,9 @@
+template {
+  name: "Kruthik Hive Lord"
+}
+set: "Demonweb"
+number: 50
+race: "Kruthik"
+type: "Beast"
+subtype: "Reptile"
+size: LARGE

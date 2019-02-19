@@ -1,0 +1,9 @@
+template {
+  name: "Anvil of Thunder"
+}
+set: "Aberrations"
+number: 2
+race: "Dwarf"
+type: "Humanoid"
+class: "Fighter"
+size: MEDIUM

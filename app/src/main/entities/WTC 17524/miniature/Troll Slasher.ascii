@@ -1,0 +1,8 @@
+template {
+  name: "Troll Slasher"
+}
+set: "Angelfire"
+number: 59
+type: "Giant"
+race: "Troll"
+size: LARGE

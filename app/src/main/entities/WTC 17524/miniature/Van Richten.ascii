@@ -1,0 +1,9 @@
+template {
+  name: "Van Richten"
+}
+set: "Unhallowed"
+number: 10
+type: "Humanoid"
+race: "Human"
+class: "Cleric"
+size: MEDIUM

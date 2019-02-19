@@ -1,0 +1,7 @@
+template {
+  name: "Arcane Ballista"
+}
+set: "War Drums"
+number: 1
+type: "Construct"
+size: LARGE

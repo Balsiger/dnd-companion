@@ -1,0 +1,9 @@
+template {
+  name: "Clay Golem (AF)"
+}
+set: "Archfiends"
+number: 25
+race: "Clay Golem"
+type: "Construct"
+subtype: "Golem"
+size: LARGE

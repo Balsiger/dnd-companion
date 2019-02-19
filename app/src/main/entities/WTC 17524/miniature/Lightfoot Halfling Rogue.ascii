@@ -1,0 +1,8 @@
+template {
+  name: "Lightfoot Halfling Rogue"
+}
+set: "Tyranny of Dragons"
+number: 51
+type: "Humanoid"
+race: "Halfling"
+class: "Rogue"

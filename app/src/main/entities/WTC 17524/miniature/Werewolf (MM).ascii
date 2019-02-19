@@ -1,0 +1,10 @@
+template {
+  name: "Werewolf (MM)"
+}
+set: "Monster Menagerie"
+number: 20
+race: "Werewolf"
+type: "Humanoid"
+subtype: "Shapechanger"
+subtype: "Lycanthrope"
+size: MEDIUM

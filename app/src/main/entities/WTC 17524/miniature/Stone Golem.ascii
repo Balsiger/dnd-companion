@@ -1,0 +1,9 @@
+template {
+  name: "Stone Golem"
+}
+set: "Giants of Legend"
+number: 4
+race: "Stone Golem"
+type: "Construct"
+subtype: "Golem"
+size: LARGE

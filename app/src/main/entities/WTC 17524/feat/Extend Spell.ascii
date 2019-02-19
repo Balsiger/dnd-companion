@@ -1,0 +1,39 @@
+template {
+  name: "Extend Spell"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 94
+      high: 94
+    }
+  }
+  world: "Generic"
+  description: "You can cast spells that last longer than normal."
+  short_description: "Double spell\342\200\232\303\204\303\264s duration"
+}
+type: METAMAGIC
+benefit: "An extended spell lasts twice as long as normal. A spell\n                    with a duration of concentration, instantaneous, or\n                    permanent is not affected by this feat. An extended spell\n                    uses up a spell slot one level higher than the spell\342\200\232\303\204\303\264s\n                    actual level."
+attack_modifier {
+}
+damage_modifier {
+}
+initiative_modifier {
+}
+strength_modifier {
+}
+dexterity_modifier {
+}
+constitution_modifier {
+}
+intelligence_modifier {
+}
+wisdom_modifier {
+}
+charisma_modifier {
+}
+fortitude_modifier {
+}
+will_modifier {
+}
+reflex_modifier {
+}

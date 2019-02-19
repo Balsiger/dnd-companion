@@ -1,0 +1,8 @@
+template {
+  name: "Lady Vol"
+}
+set: "Night Below"
+number: 36
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

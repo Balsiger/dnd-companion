@@ -1,0 +1,9 @@
+template {
+  name: "Bullywug Guard"
+}
+set: "Savage Encounters"
+number: 7
+race: "Bullywug"
+type: "Humanoid"
+subtype: "Aquatic"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Golden Wyvern Initiate"
+}
+set: "Against the Giants"
+number: 46
+type: "Humanoid"
+race: "Human"
+size: MEDIUM
+class: "Wizard"

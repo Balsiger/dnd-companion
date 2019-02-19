@@ -1,0 +1,9 @@
+template {
+  name: "Svirfneblin Fighter"
+}
+set: "Tyranny of Dragons"
+number: 4
+type: "Humanoid"
+race: "Gnome"
+class: "Fighter"
+size: SMALL

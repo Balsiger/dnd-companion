@@ -1,0 +1,9 @@
+template {
+  name: "Manticore"
+}
+set: "Giants of Legend"
+number: 37
+race: "Manticore"
+type: "Monstrosity"
+subtype: "Winged"
+size: LARGE

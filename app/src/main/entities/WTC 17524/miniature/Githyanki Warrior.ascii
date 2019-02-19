@@ -1,0 +1,8 @@
+template {
+  name: "Githyanki Warrior"
+}
+set: "Dungeon Delve"
+number: 18
+race: "Githyanki"
+type: "Humanoid"
+size: MEDIUM

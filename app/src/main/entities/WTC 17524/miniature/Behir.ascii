@@ -1,0 +1,8 @@
+template {
+  name: "Behir"
+}
+set: "Giants of Legend"
+number: 66
+race: "Behir"
+type: "Monstrosity"
+size: HUGE

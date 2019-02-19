@@ -1,0 +1,8 @@
+template {
+  name: "Kenku Wing Mage"
+}
+set: "Lords of Madness"
+number: 26
+type: "Humanoid"
+race: "Kenku"
+size: MEDIUM

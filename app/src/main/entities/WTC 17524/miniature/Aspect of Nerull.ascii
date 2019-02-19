@@ -1,0 +1,10 @@
+template {
+  name: "Aspect of Nerull"
+}
+set: "Death Knell"
+number: 31
+type: "Fiend"
+subtype: "Aspect"
+subtype: "Evil"
+subtype: "Extraplanar"
+size: LARGE

@@ -1,0 +1,9 @@
+template {
+  name: "Pseudodragon"
+}
+set: "Unhallowed"
+number: 22
+race: "Pseudodragon"
+type: "Dragon"
+subtype: "Reptile"
+size: TINY

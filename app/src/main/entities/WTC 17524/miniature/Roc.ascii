@@ -1,0 +1,8 @@
+template {
+  name: "Roc"
+}
+set: "Lords of Madness"
+number: 39
+race: "Roc"
+type: "Monstrosity"
+size: HUGE

@@ -1,0 +1,9 @@
+template {
+  name: "Goristro"
+}
+set: "Legendary Evils"
+number: 24
+race: "Goristro"
+type: "Fiend"
+subtype: "Demon"
+size: HUGE

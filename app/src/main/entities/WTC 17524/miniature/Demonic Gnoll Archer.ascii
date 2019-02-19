@@ -1,0 +1,10 @@
+template {
+  name: "Demonic Gnoll Archer"
+}
+set: "War of the Dragon Queen"
+number: 45
+race: "Gnoll"
+type: "Humanoid"
+class: "Ranger"
+class: "Barbarian"
+size: MEDIUM

@@ -1,0 +1,10 @@
+template {
+  name: "Inspired Shock Trooper"
+}
+set: "Unhallowed"
+number: 41
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM
+subtype: "Shield"

@@ -1,0 +1,8 @@
+template {
+  name: "Nessian Warhound"
+}
+set: "Unhallowed"
+number: 42
+race: "Nessian Warhound"
+type: "Fiend"
+size: LARGE

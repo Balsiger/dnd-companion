@@ -1,0 +1,9 @@
+template {
+  name: "Roper"
+}
+set: "Against the Giants"
+number: 58
+race: "Roper"
+type: "Monstrosity"
+subtype: "Earth"
+size: LARGE

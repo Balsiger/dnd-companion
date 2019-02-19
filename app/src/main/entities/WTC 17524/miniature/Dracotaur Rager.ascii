@@ -1,0 +1,10 @@
+template {
+  name: "Dracotaur Rager"
+}
+set: "Night Below"
+number: 50
+race: "Dracotaur"
+type: "Dragon"
+subtype: "Reptile"
+class: "Barbarian"
+size: LARGE

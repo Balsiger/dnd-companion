@@ -1,0 +1,8 @@
+template {
+  name: "Aspect of Bahamut"
+}
+set: "War of the Dragon Queen"
+number: 2
+type: "Dragon"
+size: HUGE
+subtype: "Metallic"

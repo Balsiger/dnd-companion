@@ -1,0 +1,9 @@
+template {
+  name: "Tavern Brawler"
+}
+set: "War of the Dragon Queen"
+number: 17
+type: "Humanoid"
+race: "Human"
+class: "Fighter"
+size: MEDIUM

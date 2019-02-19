@@ -1,0 +1,9 @@
+template {
+  name: "Gnoll Barbarian"
+}
+set: "Blood War"
+number: 52
+type: "Humanoid"
+race: "Gnoll"
+class: "Barbarian"
+size: MEDIUM

@@ -1,0 +1,9 @@
+template {
+  name: "Bright Naga"
+}
+set: "Dragon Eye"
+number: 45
+race: "Bright Naga"
+type: "Aberration"
+subtype: "Naga"
+size: LARGE

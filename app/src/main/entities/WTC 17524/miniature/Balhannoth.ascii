@@ -1,0 +1,8 @@
+template {
+  name: "Balhannoth"
+}
+set: "Dungeons of Dread"
+race: "Balhannoth"
+number: 25
+type: "Aberration"
+size: LARGE

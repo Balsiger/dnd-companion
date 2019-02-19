@@ -1,0 +1,9 @@
+template {
+  name: "Large Monstrous Spider"
+}
+set: "Dragon Eye"
+number: 54
+race: "Monstrous Spider"
+type: "Vermin"
+subtype: "Spider"
+size: LARGE
