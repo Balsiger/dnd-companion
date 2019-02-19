@@ -47,3 +47,5 @@ captures/
 .DS_Store
 .externalNativeBuild
 app/google-services.json
+
+firestore/
