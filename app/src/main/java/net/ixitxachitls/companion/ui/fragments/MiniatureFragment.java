@@ -53,7 +53,6 @@ public class MiniatureFragment extends NestedCompanionFragment {
   private LabelledTextView race;
   private LabelledTextView type;
   private LabelledTextView classes;
-  private LabelledTextView origin;
   private LabelledEditTextView owned;
   private LabelledTextView location;
   private TextWrapper<TextView> number;
@@ -75,7 +74,6 @@ public class MiniatureFragment extends NestedCompanionFragment {
     race = view.findViewById(R.id.race);
     type = view.findViewById(R.id.type);
     classes = view.findViewById(R.id.classes);
-    origin = view.findViewById(R.id.origin);
     location = view.findViewById(R.id.location);
     owned = view.findViewById(R.id.owned);
 
@@ -148,7 +146,6 @@ public class MiniatureFragment extends NestedCompanionFragment {
       type.text(formatType());
       classes.text(Strings.COMMA_JOINER.join(miniature.get().getClasses()));
       classes.setVisibility(miniature.get().getClasses().isEmpty() ? View.GONE : View.VISIBLE);
-      origin.text(miniature.get().getOrigin());
       long miniatureCount = me().getMiniatureCount(miniature.get().getName());
       owned.text(miniatureCount == 0 ? "" : String.valueOf(miniatureCount));
       location.text(me().locationFor(miniature.get()));
@@ -160,7 +157,6 @@ public class MiniatureFragment extends NestedCompanionFragment {
       race.text("");
       type.text("");
       classes.setVisibility(View.GONE);
-      origin.text("");
       owned.text("");
       location.text("");
     }

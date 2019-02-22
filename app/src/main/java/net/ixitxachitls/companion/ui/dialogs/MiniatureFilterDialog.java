@@ -52,16 +52,15 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
   private LabelledMultiAutocompleteTextView types;
   private LabelledMultiAutocompleteTextView classes;
   private LabelledMultiAutocompleteTextView sizes;
-  private LabelledMultiAutocompleteTextView origins;
   private LabelledMultiAutocompleteTextView owned;
   private LabelledMultiAutocompleteTextView locations;
 
   @Override
   protected MiniatureFilter getValue() {
-    return new MiniatureFilter("filter", name.getText(),
+    return new MiniatureFilter(name.getText(),
         parseMulti(races.getText()), parseMulti(sets.getText()), parseMulti(types.getText()),
-        parseMulti(classes.getText()), parseMulti(sizes.getText()), parseMulti(origins.getText()),
-        parseMulti(owned.getText()), parseMulti(locations.getText()));
+        parseMulti(classes.getText()), parseMulti(sizes.getText()), parseMulti(owned.getText()),
+        parseMulti(locations.getText()));
   }
 
   @Override
@@ -99,12 +98,6 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     sizes.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select,
         showEmpty(Templates.get().getMiniatureTemplates().getSizes())));
-    origins = view.findViewById(R.id.origins);
-    origins.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getOrigins()))
-        .onFocus(origins::showDropDown).threshold(1);
-    origins.setAdapter(new ArrayAdapter<>(getContext(),
-        R.layout.list_item_select,
-        showEmpty(Templates.get().getMiniatureTemplates().getOrigins())));
     owned = view.findViewById(R.id.owned);
     owned.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getOwned()))
         .onFocus(owned::showDropDown).threshold(1);
@@ -114,7 +107,7 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     locations.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getLocations()))
         .onFocus(locations::showDropDown).threshold(1);
     locations.setAdapter(new ArrayAdapter<>(getContext(),
-        R.layout.list_item_select, showEmpty(me().getLocationValues())));
+        R.layout.list_item_select, showEmpty(me().getLocationNames())));
 
     Wrapper.wrap(view, R.id.save).onClick(this::save);
     Wrapper.wrap(view, R.id.clear).onClick(this::clear);
@@ -136,7 +129,6 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     types.text("");
     classes.text("");
     sizes.text("");
-    origins.text("");
     owned.text("");
     locations.text("");
   }
@@ -163,7 +155,6 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     types.text(Strings.COMMA_JOINER.join(filter.getTypes()));
     classes.text(Strings.COMMA_JOINER.join(filter.getClasses()));
     sizes.text(Strings.COMMA_JOINER.join(filter.getSizes()));
-    origins.text(Strings.COMMA_JOINER.join(filter.getOrigins()));
     owned.text(Strings.COMMA_JOINER.join(filter.getOwned()));
     locations.text(Strings.COMMA_JOINER.join(filter.getLocations()));
   }

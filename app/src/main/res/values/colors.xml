@@ -105,5 +105,7 @@
   <color name="location_pink">#F953FF</color>
   <color name="location_violet">#9C27B0</color>
   <color name="location_transparent">#000f</color>
+  <color name="location_selected_dark">#ffeb3b</color>
+  <color name="location_selected_bright">#000</color>
 
 </resources>

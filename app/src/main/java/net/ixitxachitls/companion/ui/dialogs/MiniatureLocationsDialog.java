@@ -29,14 +29,14 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.common.collect.SortedSetMultimap;
-
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.MiniatureFilter;
+import net.ixitxachitls.companion.data.documents.MiniatureLocation;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
-import java.util.Collection;
+import java.util.SortedSet;
 
 /**
  * Dialog for editing miniature locations.
@@ -64,10 +64,10 @@ public class MiniatureLocationsDialog extends Dialog {
   private void update() {
     locationsContainer.removeAllViews();
 
-    SortedSetMultimap<String, MiniatureFilter> locations = me().getSortedLocations();
-    for (String location : locations.keySet()) {
+    SortedSet<MiniatureLocation> locations = me().getSortedLocations();
+    for (MiniatureLocation location : me().getSortedLocations()) {
       locationsContainer.addView(new MiniatureLocationCard(getContext(), locationsContainer,
-          location, locations.get(location)).getCard());
+          location).getCard());
     }
   }
 
@@ -80,20 +80,22 @@ public class MiniatureLocationsDialog extends Dialog {
 
   private class MiniatureLocationCard {
 
-    private final String location;
-    private final Collection<MiniatureFilter> filters;
+    private final MiniatureLocation location;
+
+    // UI.
     private final LinearLayout filterContainer;
     private final TextWrapper<TextView> locationView;
     private final CardView card;
 
-    public MiniatureLocationCard(Context context, ViewGroup container, String location,
-                                 Collection<MiniatureFilter> filters) {
+    public MiniatureLocationCard(Context context, ViewGroup container, MiniatureLocation location) {
       this.location = location;
-      this.filters = filters;
 
       card = (CardView) LayoutInflater.from(context).inflate(R.layout.card_miniature_location,
           container, false);
       Wrapper.wrap(card).onClick(this::edit);
+      Wrapper.wrap(card, R.id.delete)
+          .description("Delete", "Delete the location.")
+          .onClick(this::delete);
 
       locationView = TextWrapper.wrap(card, R.id.location);
       filterContainer = card.findViewById(R.id.filters);
@@ -104,14 +106,34 @@ public class MiniatureLocationsDialog extends Dialog {
       return card;
     }
 
+    private void delete() {
+      ConfirmationPrompt.create(getContext())
+          .title("Delete Location").message("You really want to delete this location?")
+          .yes(this::doDelete)
+          .show();
+    }
+
+    private void doDelete() {
+      me().deleteLocation(location.getName());
+      MiniatureLocationsDialog.this.update();
+    }
+
     private void edit() {
-      MiniatureLocationEditDialog.newInstance(location).onSaved((o) -> this.update()).display();
+      MiniatureLocationEditDialog.newInstance(location.getName())
+          .onSaved((o) -> MiniatureLocationsDialog.this.update()).display();
     }
 
     private void update() {
-      locationView.text(location);
+      locationView.text(location.getName());
+      locationView.get().setBackgroundColor(location.getColor());
+      if (location.getColor() == getContext().getColor(R.color.location_black)
+          || location.getColor() == getContext().getColor(R.color.location_brown)) {
+        locationView.textColor(R.color.white);
+      } else {
+        locationView.textColor(R.color.black);
+      }
       filterContainer.removeAllViews();
-      for (MiniatureFilter filter : filters) {
+      for (MiniatureFilter filter : location.getFilters()) {
         filterContainer.addView(
             TextWrapper.wrap(new TextView(getContext())).text(filter.getSummary()).get());
       }

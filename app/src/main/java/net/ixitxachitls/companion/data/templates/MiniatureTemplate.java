@@ -52,10 +52,6 @@ public class MiniatureTemplate extends StoredTemplate<Template .MiniatureTemplat
     return proto.getNumberAffix();
   }
 
-  public String getOrigin() {
-    return proto.getOrigin();
-  }
-
   public String getRace() {
     return proto.getRace();
   }

@@ -22,22 +22,27 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.MiniatureFilter;
+import net.ixitxachitls.companion.data.documents.MiniatureLocation;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
-import java.util.SortedSet;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * Dialog for editing a single miniature location.
@@ -45,33 +50,61 @@ import java.util.SortedSet;
 public class MiniatureLocationEditDialog extends Dialog {
 
   private static final String ARG_LOCATION = "location";
-  private LabelledEditTextView locationInput;
-  private SortedSet<MiniatureFilter> filters;
-  private LinearLayout filterContainer;
 
-  private void add(MiniatureFilter filter) {
-    filters.add(filter);
+  private String originalName;
+  private MiniatureLocation location;
+
+  // UI.
+  private LabelledEditTextView locationInput;
+  private LinearLayout filterContainer;
+  private LinearLayout colorContainer;
+  private Map<Integer, ImageView> colorViews = new HashMap<>();
+  private Wrapper<View> noColor;
+
+  private void setColor(int color) {
+    location.setColor(color);
+
     update();
   }
 
   private void addFilter() {
-    MiniatureFilterDialog.newInstance(new MiniatureFilter("dialog")).onSaved(this::addedFilter)
+    MiniatureFilterDialog.newInstance(new MiniatureFilter()).onSaved(this::addFilter)
     .display();
   }
 
-  private void addedFilter(MiniatureFilter filter) {
-    filters.add(filter);
+  private void addFilter(MiniatureFilter filter) {
+    location.add(filter);
     update();
   }
 
   @Override
   protected void createContent(View view) {
-    String location = getArguments().getString(ARG_LOCATION);
-    filters = me().getLocationFilters(location);
+    originalName = getArguments().getString(ARG_LOCATION);
+    Optional<MiniatureLocation> location = me().getLocation(originalName);
+    if (location.isPresent()) {
+      this.location = location.get();
+    } else {
+      this.location = new MiniatureLocation();
+    }
 
     locationInput = view.findViewById(R.id.location);
-    locationInput.text(location);
+    locationInput.text(originalName);
     filterContainer = view.findViewById(R.id.filters);
+    colorContainer = view.findViewById(R.id.colors);
+    noColor = Wrapper.wrap(view, R.id.color_none).onClick(() -> setColor(0));
+
+    // Colors.
+    for (int i = 0; i < colorContainer.getChildCount(); i++) {
+      if (colorContainer.getChildAt(i) instanceof ImageView) {
+        ImageView colorView = (ImageView) colorContainer.getChildAt(i);
+        if (colorView.getDrawable() instanceof ColorDrawable) {
+          int color = ((ColorDrawable) colorView.getDrawable()).getColor();
+          colorViews.put(color, colorView);
+          Wrapper.wrap(colorView).onClick(() -> setColor(color));
+        }
+      }
+    }
+
     Wrapper.wrap(view, R.id.save).onClick(this::save);
     Wrapper.wrap(view, R.id.add_filter).onClick(this::addFilter);
 
@@ -80,20 +113,46 @@ public class MiniatureLocationEditDialog extends Dialog {
 
   @Override
   public void save() {
-    super.save();
+    location.setName(locationInput.getText());
+    me().replaceLocation(originalName, location);
 
-    me().setLocation(locationInput.getText(), filters);
+    super.save();
   }
 
   private void delete(MiniatureFilter filter) {
-    filters.remove(filter);
+    location.remove(filter);
     update();
+  }
+
+  private void select(View view) {
+    view.setBackground(new ColorDrawable(getContext().getColor(R.color.location_selected_bright)));
+    if (view instanceof TextView) {
+      ((TextView) view).setTextColor(getContext().getColor(R.color.white));
+    }
+  }
+
+  private void unselect(View view) {
+    view.setBackground(null);
+    if (view instanceof TextView) {
+      ((TextView) view).setTextColor(getContext().getColor(R.color.black));
+    }
   }
 
   private void update() {
     filterContainer.removeAllViews();
-    for (MiniatureFilter filter : filters) {
+    for (MiniatureFilter filter : location.getFilters()) {
       filterContainer.addView(new LocationLineView(getContext(), filter));
+    }
+
+    unselect(noColor.get());
+    for (ImageView view : colorViews.values()) {
+      unselect(view);
+    }
+
+    if (colorViews.containsKey(location.getColor())) {
+      select(colorViews.get(location.getColor()));
+    } else {
+      select(noColor.get());
     }
   }
 
@@ -145,7 +204,7 @@ public class MiniatureLocationEditDialog extends Dialog {
 
     private void update(MiniatureFilter filter) {
       MiniatureLocationEditDialog.this.delete(this.filter);
-      MiniatureLocationEditDialog.this.add(filter);
+      MiniatureLocationEditDialog.this.addFilter(filter);
       this.filter = filter;
     }
   }

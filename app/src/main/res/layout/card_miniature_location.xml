@@ -32,19 +32,24 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:orientation="vertical"
-      android:padding="10dp">
+      android:paddingEnd="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
         android:orientation="horizontal">
 
       <TextView
           android:id="@+id/location"
           android:layout_width="100dp"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center_vertical|fill_vertical"
-          android:padding="10dp"
+          android:layout_height="match_parent"
+          android:layout_marginEnd="10dp"
+          android:ellipsize="end"
+          android:gravity="center_vertical"
+          android:maxLines="1"
+          android:paddingStart="10dp"
+          android:paddingEnd="10dp"
           android:text="..."
           android:theme="@style/LargeText"/>
 
@@ -53,9 +58,10 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_gravity="center_vertical"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
           android:layout_weight="1"
-          android:orientation="vertical"
-          >
+          android:orientation="vertical">
       </LinearLayout>
 
       <ImageButton

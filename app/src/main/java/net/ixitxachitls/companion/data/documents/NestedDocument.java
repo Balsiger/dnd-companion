@@ -28,6 +28,7 @@ import java.util.Map;
  * A document that is nested in another document, not separately stored.
  */
 public abstract class NestedDocument {
+
   abstract public Map<String, Object> write();
 
   protected void write(Map<String, Object> data, String name, String value) {

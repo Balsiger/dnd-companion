@@ -130,13 +130,6 @@
           app:labelColor="@color/miniatureDark"
           app:labelText="Classes"/>
 
-      <net.ixitxachitls.companion.ui.views.LabelledTextView
-          android:id="@+id/origin"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          app:labelColor="@color/miniatureDark"
-          app:labelText="Origin"/>
-
     </LinearLayout>
 
   </ScrollView>

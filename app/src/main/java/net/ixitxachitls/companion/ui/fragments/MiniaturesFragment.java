@@ -38,6 +38,7 @@ import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.MiniatureFilter;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.dialogs.MiniatureConfigurationDialog;
 import net.ixitxachitls.companion.ui.dialogs.MiniatureFilterDialog;
 import net.ixitxachitls.companion.ui.dialogs.MiniatureLocationsDialog;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
@@ -118,9 +119,12 @@ public class MiniaturesFragment extends CompanionFragment {
     filterAction = addAction(R.drawable.ic_filter_variant_black_24dp, "Filter",
         "Filter the displayed miniatures")
         .onClick(this::filter);
-    addAction(R.drawable.ic_settings_black_24dp, "Locations",
+    addAction(R.drawable.ic_map_marker_black_24dp, "Locations",
         "Define or change the locations your miniatures are stored.")
         .onClick(this::editLocations);
+    addAction(R.drawable.ic_settings_black_24dp, "Configuration",
+        "Configure the miniatures displayed.")
+        .onClick(this::config);
 
     startLoading(LOADING_MINIATURES);
     me().readMiniatures(this::miniaturesLoaded);
@@ -130,6 +134,10 @@ public class MiniaturesFragment extends CompanionFragment {
 
   private void back() {
     CompanionFragments.get().show(Type.campaigns, Optional.empty());
+  }
+
+  private void config() {
+    MiniatureConfigurationDialog.newInstance().display();
   }
 
   private void editLocations() {

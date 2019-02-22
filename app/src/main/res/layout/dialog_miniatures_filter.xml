@@ -74,13 +74,6 @@
         app:labelText="Sizes"/>
 
     <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/origins"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/miniatureDark"
-        app:labelText="Origins"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
         android:id="@+id/owned"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

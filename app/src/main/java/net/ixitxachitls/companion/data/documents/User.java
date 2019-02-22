@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.CallSuper;
 
-import com.google.common.collect.SortedSetMultimap;
-import com.google.common.collect.TreeMultimap;
 import com.google.firebase.firestore.DocumentReference;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -35,9 +33,11 @@ import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeMap;
@@ -58,6 +58,7 @@ public class User extends Document<User> {
   private static final String FIELD_FEATURES = "features";
   private static final String FIELD_MINIATURE_OWNED = "owned";
   private static final String FIELD_MINIATURE_LOCATIONS = "locations";
+  private static final String FIELD_MINIATURE_HIDDEN_SETS = "hidden-sets";
 
   private String nickname;
   private String photoUrl = "";
@@ -66,7 +67,8 @@ public class User extends Document<User> {
   private Map<String, Long> miniatures = new HashMap<>();
   private Optional<DocumentReference> miniaturesDocument = Optional.empty();
   private boolean miniaturesLoading = false;
-  private SortedSetMultimap<String, MiniatureFilter> locations = TreeMultimap.create();
+  private SortedMap<String, MiniatureLocation> locations = new TreeMap<>();
+  private Set<String> hiddenSets = new HashSet<>();
 
   public List<String> getCampaigns() {
     return campaigns;
@@ -80,7 +82,7 @@ public class User extends Document<User> {
     this.features = new ArrayList<>(features);
   }
 
-  public List<String> getLocationValues() {
+  public List<String> getLocationNames() {
     List<String> values = new ArrayList<>();
     values.add("");
     values.addAll(locations.keySet());
@@ -109,15 +111,15 @@ public class User extends Document<User> {
     this.photoUrl = photoUrl;
   }
 
-  public SortedSet<Map.Entry<String, MiniatureFilter>> getPrioritizedLocations() {
-    SortedSet<Map.Entry<String, MiniatureFilter>> sorted =
-        new TreeSet<>((first, second) -> first.getValue().compareTo(second.getValue()));
-    sorted.addAll(locations.entries());
-    return sorted;
+  public SortedSet<MiniatureLocation> getSortedLocations() {
+    return new TreeSet<>(locations.values());
   }
 
-  public SortedSetMultimap<String, MiniatureFilter> getSortedLocations() {
-    return locations;
+  public void setHiddenSets(List<String> sets) {
+    hiddenSets.clear();
+    hiddenSets.addAll(sets);
+
+    writeMiniatures();
   }
 
   public static boolean isUser(String id) {
@@ -145,19 +147,29 @@ public class User extends Document<User> {
     return id.startsWith(getId());
   }
 
-  public SortedSet<MiniatureFilter> getLocationFilters(String location) {
-    return locations.get(location);
+  public void deleteLocation(String name) {
+    locations.remove(name);
+    writeMiniatures();
+  }
+
+  public Optional<MiniatureLocation> getLocation(String location) {
+    return Optional.ofNullable(locations.get(location));
   }
 
   public long getMiniatureCount(String name) {
     return miniatures.getOrDefault(name, 0L);
   }
 
+  public boolean hasSetHidden(String name) {
+    return hiddenSets.contains(name);
+  }
+
   public String locationFor(MiniatureTemplate template) {
     SortedMap<MiniatureFilter, String> filteredLocations = new TreeMap<MiniatureFilter, String>();
-    for (Map.Entry<String, MiniatureFilter> location : locations.entries()) {
-      if (location.getValue().matches(this, template)) {
-        filteredLocations.put(location.getValue(), location.getKey());
+    for (MiniatureLocation location : locations.values()) {
+      Optional<MiniatureFilter> matches = location.matches(this, template);
+      if (matches.isPresent()) {
+        filteredLocations.put(matches.get(), location.getName());
       }
     }
 
@@ -201,16 +213,15 @@ public class User extends Document<User> {
 
         data = task.getResult().get(FIELD_MINIATURE_LOCATIONS);
         if (data != null) {
-          SortedSetMultimap<String, MiniatureFilter> parsed =
-              readLocations((Map<String, Object>) data);
-          if (locations.isEmpty()) {
-            locations.putAll(parsed);
-          } else {
-            SortedSetMultimap<String, MiniatureFilter> existing = TreeMultimap.create(locations);
-            locations.putAll(parsed);
-            locations.putAll(existing);
-            writeMiniatures();
+          for (MiniatureLocation location : ((List<Map<String, Object>>) data).stream()
+              .map(MiniatureLocation::read).collect(Collectors.toList())) {
+            locations.put(location.getName(), location);
           }
+        }
+
+        data = task.getResult().get(FIELD_MINIATURE_HIDDEN_SETS);
+        if (data != null) {
+          hiddenSets.addAll((List<String>) data);
         }
 
         verifyMiniatures();
@@ -219,14 +230,12 @@ public class User extends Document<User> {
     });
   }
 
-  public void setLocation(String location, SortedSet<MiniatureFilter> filters) {
-    if (!location.isEmpty()) {
-      locations.removeAll(location);
-      locations.putAll(location, filters);
+  public void replaceLocation(String originalName, MiniatureLocation location) {
+    locations.remove(originalName);
+    locations.put(location.getName(), location);
 
-      writeMiniatures();
-    }
-  }
+    writeMiniatures();
+   }
 
   public void setMiniatureCount(String miniature, long count) {
     if (miniatures.getOrDefault(miniature, 0L) != count) {
@@ -268,19 +277,6 @@ public class User extends Document<User> {
     });
   }
 
-  private SortedSetMultimap<String, MiniatureFilter> readLocations(Map<String, Object> data) {
-    SortedSetMultimap<String, MiniatureFilter> locations = TreeMultimap.create();
-
-    for (Map.Entry<String, Object> entry : data.entrySet()) {
-      locations.putAll(entry.getKey(),
-          ((List<Map<String, Object>>)entry.getValue()).stream()
-              .map(v -> MiniatureFilter.read(entry.getKey(), v))
-              .collect(Collectors.toList()));
-    }
-
-    return locations;
-  }
-
   private void verifyMiniatures() {
     boolean toasted = false;
     for (String miniature : miniatures.keySet()) {
@@ -295,17 +291,6 @@ public class User extends Document<User> {
     }
   }
 
-  private Map<String, List<Map<String, Object>>> writeLocations() {
-    Map<String, List<Map<String, Object>>> store = new HashMap<>();
-    for (String location: locations.keySet()) {
-      store.put(location, locations.get(location).stream()
-          .map(MiniatureFilter::write)
-          .collect(Collectors.toList()));
-    }
-
-    return store;
-  }
-
   private void writeMiniatures() {
     if (miniaturesLoading || !miniaturesDocument.isPresent()) {
       return;
@@ -313,7 +298,10 @@ public class User extends Document<User> {
 
     Map<String, Object> data = new HashMap<>();
     data.put(FIELD_MINIATURE_OWNED, miniatures);
-    data.put(FIELD_MINIATURE_LOCATIONS, writeLocations());
+    data.put(FIELD_MINIATURE_LOCATIONS, locations.values().stream()
+        .map(MiniatureLocation::write).collect(Collectors.toList()));
+    data.put(FIELD_MINIATURE_HIDDEN_SETS, new ArrayList<>(hiddenSets));
+
     miniaturesDocument.get().update(data);
   }
 

@@ -751,5 +751,4 @@ message MiniatureTemplateProto {
   repeated string subtype = 7;
   repeated string class = 8;
   SizeProto.Size size = 9;
-  string origin = 10;
 }

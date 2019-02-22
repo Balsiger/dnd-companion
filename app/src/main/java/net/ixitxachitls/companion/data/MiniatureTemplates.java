@@ -39,7 +39,7 @@ import java.util.stream.Collectors;
 public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
 
   private List<MiniatureTemplate> filtered = new ArrayList<>();
-  private MiniatureFilter filter = new MiniatureFilter("filter");
+  private MiniatureFilter filter = new MiniatureFilter();
 
   protected MiniatureTemplates() {
     super(MiniatureTemplate.class);
@@ -60,15 +60,6 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
 
   public int getFilteredNumber() {
     return filtered.size();
-  }
-
-  public List<String> getOrigins() {
-    SortedSet<String> origins = new TreeSet<>();
-    for (MiniatureTemplate template : byName.values()) {
-      origins.add(template.getOrigin());
-    }
-
-    return new ArrayList<>(origins);
   }
 
   public List<String> getRaces() {
