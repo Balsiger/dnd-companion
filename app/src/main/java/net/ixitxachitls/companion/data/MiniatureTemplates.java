@@ -27,6 +27,7 @@ import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 import net.ixitxachitls.companion.proto.Template;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.SortedSet;
@@ -38,6 +39,7 @@ import java.util.stream.Collectors;
  */
 public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
 
+  private List<MiniatureTemplate> configured = new ArrayList<>();
   private List<MiniatureTemplate> filtered = new ArrayList<>();
   private MiniatureFilter filter = new MiniatureFilter();
 
@@ -45,9 +47,18 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     super(MiniatureTemplate.class);
   }
 
+  public List<String> getAllSets() {
+    SortedSet<String> sets = new TreeSet<>();
+    for (MiniatureTemplate template : byName.values()) {
+      sets.add(template.getSet());
+    }
+
+    return new ArrayList<>(sets);
+  }
+
   public List<String> getClasses() {
     SortedSet<String> classes = new TreeSet<>();
-    for (MiniatureTemplate template : byName.values()) {
+    for (MiniatureTemplate template : configured) {
       classes.addAll(template.getClasses());
     }
 
@@ -64,7 +75,7 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
 
   public List<String> getRaces() {
     SortedSet<String> races = new TreeSet<>();
-    for (MiniatureTemplate template : byName.values()) {
+    for (MiniatureTemplate template : configured) {
       races.add(template.getRace());
     }
 
@@ -73,7 +84,7 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
 
   public List<String> getSets() {
     SortedSet<String> sets = new TreeSet<>();
-    for (MiniatureTemplate template : byName.values()) {
+    for (MiniatureTemplate template : configured) {
       sets.add(template.getSet());
     }
 
@@ -82,7 +93,7 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
 
   public List<String> getSizes() {
     SortedSet<String> sizes = new TreeSet<>();
-    for (MiniatureTemplate template : byName.values()) {
+    for (MiniatureTemplate template : configured) {
       sizes.add(template.getSize().getName());
     }
 
@@ -90,12 +101,12 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
   }
 
   public int getTotalNumber() {
-    return byName.size();
+    return configured.size();
   }
 
   public List<String> getTypes() {
     SortedSet<String> types = new TreeSet<>();
-    for (MiniatureTemplate template : byName.values()) {
+    for (MiniatureTemplate template : configured) {
       types.add(template.getType());
       types.addAll(template.getSubtypes());
     }
@@ -104,27 +115,21 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
   }
 
   public boolean isFiltered() {
-    return filtered.size() != byName.size();
+    return filtered.size() != configured.size();
   }
 
   public void addDummy(String name) {
-    byName.put(name,
-        new MiniatureTemplate(name, Template.MiniatureTemplateProto.getDefaultInstance()));
+    MiniatureTemplate template =
+        new MiniatureTemplate(name, Template.MiniatureTemplateProto.getDefaultInstance());
+    byName.put(name, template);
+    configured.add(template);
   }
 
   public void filter(User me, MiniatureFilter filter) {
     this.filter = filter;
-    filtered = byName.values().stream()
+    filtered = configured.stream()
         .filter(f -> filter.matches(me, f))
         .collect(Collectors.toList());
-  }
-
-  public Optional<MiniatureTemplate> first() {
-    if (filtered.isEmpty()) {
-      return Optional.empty();
-    }
-
-    return Optional.of(filtered.get(0));
   }
 
   public Optional<MiniatureTemplate> get(int index) {
@@ -139,50 +144,17 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     return filtered.indexOf(miniature) + 1;
   }
 
-  public Optional<MiniatureTemplate> last() {
-    if (filtered.isEmpty()) {
-      return Optional.empty();
-    }
-
-    return Optional.of(filtered.get(filtered.size() - 1));
-  }
-
   @Override
   public void loaded() {
-    filtered.addAll(byName.values());
+    configured.addAll(byName.values());
+    filtered.addAll(filtered);
   }
 
-  public Optional<MiniatureTemplate> next(Optional<MiniatureTemplate> current) {
-    if (!current.isPresent()) {
-      return first();
-    }
-
-    if (filtered.isEmpty()) {
-      return Optional.empty();
-    }
-
-    int found = filtered.indexOf(current.get());
-    if (found >= 0 && found + 1 < filtered.size()) {
-      return Optional.of(filtered.get(found + 1));
-    }
-
-    return current;
-  }
-
-  public Optional<MiniatureTemplate> previous(Optional<MiniatureTemplate> current) {
-    if (!current.isPresent()) {
-      return last();
-    }
-
-    if (filtered.isEmpty()) {
-      return Optional.empty();
-    }
-
-    int found = filtered.indexOf(current.get());
-    if (found >= 0 && found - 1 >= 0) {
-      return Optional.of(filtered.get(found - 1));
-    }
-
-    return current;
+  public void updateSets(User me, Collection<String> hidden) {
+    configured.clear();
+    configured.addAll(byName.values().stream()
+        .filter(t -> !hidden.contains(t.getSet()))
+        .collect(Collectors.toList()));
+    filter(me, filter);
   }
 }

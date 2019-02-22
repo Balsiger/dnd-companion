@@ -137,7 +137,7 @@ public class MiniaturesFragment extends CompanionFragment {
   }
 
   private void config() {
-    MiniatureConfigurationDialog.newInstance().display();
+    MiniatureConfigurationDialog.newInstance().onSaved(o -> update()).display();
   }
 
   private void editLocations() {
@@ -156,13 +156,18 @@ public class MiniaturesFragment extends CompanionFragment {
     } else {
       filterAction.uncolor();
     }
-    pagerAdapter.notifyDataSetChanged();
+    update();
     seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber());
   }
 
 
   private void miniaturesLoaded() {
     finishLoading(LOADING_MINIATURES);
+    update();
+  }
+
+  private void update() {
+    pagerAdapter.notifyDataSetChanged();
   }
 
   public class PagerAdapter extends FragmentStatePagerAdapter {

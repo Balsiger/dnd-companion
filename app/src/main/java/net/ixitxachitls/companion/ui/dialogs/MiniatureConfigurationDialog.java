@@ -52,7 +52,7 @@ public class MiniatureConfigurationDialog extends Dialog {
     container = view.findViewById(R.id.sets);
     Wrapper.wrap(view, R.id.save).onClick(this::save);
 
-    for (String set : Templates.get().getMiniatureTemplates().getSets()) {
+    for (String set : Templates.get().getMiniatureTemplates().getAllSets()) {
       container.addView(createCheckBox(set));
     }
   }

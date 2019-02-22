@@ -120,6 +120,7 @@ public class User extends Document<User> {
     hiddenSets.addAll(sets);
 
     writeMiniatures();
+    Templates.get().getMiniatureTemplates().updateSets(this, hiddenSets);
   }
 
   public static boolean isUser(String id) {
@@ -222,6 +223,7 @@ public class User extends Document<User> {
         data = task.getResult().get(FIELD_MINIATURE_HIDDEN_SETS);
         if (data != null) {
           hiddenSets.addAll((List<String>) data);
+          Templates.get().getMiniatureTemplates().updateSets(this, hiddenSets);
         }
 
         verifyMiniatures();
