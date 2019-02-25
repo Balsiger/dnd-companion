@@ -103,6 +103,8 @@ public class ActionBarView extends LinearLayout {
 
   public void clearActions() {
     actionsView.removeAllViews();
+    progressGroups.clear();
+    refreshProgress();
   }
 
   public void finishLoading(String text) {

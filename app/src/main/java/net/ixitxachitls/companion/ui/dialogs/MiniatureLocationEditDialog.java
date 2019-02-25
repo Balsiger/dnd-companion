@@ -68,7 +68,7 @@ public class MiniatureLocationEditDialog extends Dialog {
   }
 
   private void addFilter() {
-    MiniatureFilterDialog.newInstance(new MiniatureFilter()).onSaved(this::addFilter)
+    MiniatureFilterDialog.newInstance(new MiniatureFilter(), false).onSaved(this::addFilter)
     .display();
   }
 
@@ -197,7 +197,7 @@ public class MiniatureLocationEditDialog extends Dialog {
     }
 
     private void edit() {
-      MiniatureFilterDialog.newInstance(filter)
+      MiniatureFilterDialog.newInstance(filter, false)
           .onSaved(this::update).display();
       MiniatureLocationEditDialog.this.update();
     }

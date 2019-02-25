@@ -176,7 +176,8 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
         && (classes.isEmpty() || matchesClass(miniature, classes))
         && (sizes.isEmpty() || sizes.contains(miniature.getSize().getName()))
         && (owned.isEmpty()
-            || owned.contains(String.valueOf(me.getMiniatureCount(miniature.getName()))))
+            || owned.contains(String.valueOf(me.getMiniatureCount(miniature.getName())))
+            || owned.contains("> 0") && me.getMiniatureCount(miniature.getName()) > 0)
         && (locations.isEmpty() || locations.contains(me.locationFor(miniature)));
   }
 

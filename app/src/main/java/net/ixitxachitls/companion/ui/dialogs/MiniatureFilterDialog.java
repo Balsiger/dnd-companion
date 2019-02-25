@@ -46,6 +46,8 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
   private static final String EMPTY = "(empty)";
 
   private Optional<MiniatureFilter> filter = Optional.empty();
+  private boolean allowLocation;
+
   private LabelledEditTextView name;
   private LabelledMultiAutocompleteTextView races;
   private LabelledMultiAutocompleteTextView sets;
@@ -101,13 +103,19 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     owned = view.findViewById(R.id.owned);
     owned.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getOwned()))
         .onFocus(owned::showDropDown).threshold(1);
+    List<String> ownedOptions = showEmpty(me().getOwnedValues());
+    ownedOptions.add("> 0");
     owned.setAdapter(new ArrayAdapter<>(getContext(),
-        R.layout.list_item_select, showEmpty(me().getOwnedValues())));
+        R.layout.list_item_select, ownedOptions));
     locations = view.findViewById(R.id.locations);
     locations.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getLocations()))
         .onFocus(locations::showDropDown).threshold(1);
     locations.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select, showEmpty(me().getLocationNames())));
+    if (!allowLocation) {
+      owned.gone();
+      locations.gone();
+    }
 
     Wrapper.wrap(view, R.id.save).onClick(this::save);
     Wrapper.wrap(view, R.id.clear).onClick(this::clear);
@@ -115,6 +123,10 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     if (filter.isPresent()) {
       setupFilter(filter.get());
     }
+  }
+
+  private void setAllowLocations(boolean allowLocations) {
+    this.allowLocation = allowLocations;
   }
 
   // TODO(merlin): Check whether we have to remove this and instead set the filter via
@@ -163,11 +175,12 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     return texts.stream().map(s -> s.isEmpty() ? EMPTY : s).collect(Collectors.toList());
   }
 
-  public static MiniatureFilterDialog newInstance(MiniatureFilter filter) {
+  public static MiniatureFilterDialog newInstance(MiniatureFilter filter, boolean allowLocations) {
     MiniatureFilterDialog dialog = new MiniatureFilterDialog();
     dialog.setArguments(arguments(R.layout.dialog_miniatures_filter, "Filter Miniatures",
         R.color.miniature));
     dialog.setFilter(filter);
+    dialog.setAllowLocations(allowLocations);
 
     return dialog;
   }

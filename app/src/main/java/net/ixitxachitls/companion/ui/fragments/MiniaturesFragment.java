@@ -145,7 +145,7 @@ public class MiniaturesFragment extends CompanionFragment {
   }
 
   private void filter() {
-    MiniatureFilterDialog.newInstance(Templates.get().getMiniatureTemplates().getFilter())
+    MiniatureFilterDialog.newInstance(Templates.get().getMiniatureTemplates().getFilter(), true)
         .onSaved(this::filtered).display();
   }
 
