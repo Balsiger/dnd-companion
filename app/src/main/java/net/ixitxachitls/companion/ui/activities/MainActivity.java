@@ -34,6 +34,8 @@ import android.view.View;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
+import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
+import com.google.common.collect.ImmutableMap;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -41,19 +43,33 @@ import com.google.firebase.auth.FirebaseUser;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
 import net.ixitxachitls.companion.ui.views.StatusView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
 
-  public static final int SIGN_IN_CODE = 1;
+  public static final int CODE_SIGN_IN = 1;
+  public static final int CODE_DRVIE_AUTH = 2;
+
+  private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("YYYY-MM-DD");
 
   private FirebaseAnalytics analytics;
 
@@ -61,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
   private StatusView status;
   private ActionBarView actions;
   private SwipeRefreshLayout refresh;
+  private Optional<DriveStorage> drive = Optional.empty();
 
   public MainActivity() {
   }
@@ -71,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   public ActionBarView.ActionGroup addActionGroup(@DrawableRes int drawable, String title,
-                                             String description) {
+                                                  String description) {
     return actions.addActionGroup(drawable, title, description);
   }
 
@@ -119,6 +136,11 @@ public class MainActivity extends AppCompatActivity {
             .addOnCompleteListener(task -> finish());
         return true;
 
+      case R.id.action_export:
+        // Try to export again.
+        export();
+        return true;
+
       default:
         return super.onOptionsItemSelected(item);
     }
@@ -155,6 +177,44 @@ public class MainActivity extends AppCompatActivity {
     android.os.Process.killProcess(android.os.Process.myPid());
   }
 
+  private void export() {
+    if (!drive.isPresent()) {
+      drive = Optional.of(new DriveStorage(getApplicationContext()));
+    }
+
+    CompanionApplication application = CompanionApplication.get();
+    application.me().readMiniatures(() -> {
+      drive.get().save(
+          getString(R.string.app_name) + " " + DATE_FORMAT.format(new Date()),
+          ImmutableMap.<String, String>builder()
+              .put(application.me().getNickname(),
+                  formatData(application.me().write(new HashMap<>())))
+              .put("Miniatures",
+                  formatData(application.me().writeMiniatures()))
+              .putAll(application.campaigns().getDMCampaigns().stream()
+                  .collect(Collectors.toMap(Campaign::getName, c -> formatData(c.write()))))
+              .putAll(application.characters().getPlayerCharacters(application.me().getId())
+                  .stream()
+                  .collect(Collectors.toMap(Character::getName, c -> formatData(c.write()))))
+              .build(),
+          () -> Status.toast("All data has been successfully exported to Drive."),
+          e -> {
+            if (e instanceof UserRecoverableAuthIOException) {
+              startActivityForResult(((UserRecoverableAuthIOException) e).getIntent(),
+                  CODE_DRVIE_AUTH);
+            }
+          });
+    });
+  }
+
+  private String formatData(Map<String, Object> data) {
+    try {
+      return new JSONObject(data).toString(2);
+    } catch (JSONException e) {
+      return data.toString();
+    }
+  }
+
   private void noExit() {
     // Nothing to do here, we just ignore the with to exit.
   }
@@ -164,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
     super.onActivityResult(requestCode, resultCode, data);
 
     switch (requestCode) {
-      case SIGN_IN_CODE:
+      case CODE_SIGN_IN:
         IdpResponse response = IdpResponse.fromResultIntent(data);
 
         if (resultCode == RESULT_OK) {
@@ -186,6 +246,11 @@ public class MainActivity extends AppCompatActivity {
               .message("Login failed with error: " + response.getError().getMessage())
               .show();
         }
+        break;
+
+      case CODE_DRVIE_AUTH:
+        export();
+        break;
     }
   }
 
@@ -212,7 +277,7 @@ public class MainActivity extends AppCompatActivity {
     startActivityForResult(AuthUI.getInstance()
         .createSignInIntentBuilder()
         .setAvailableProviders(providers)
-        .build(), SIGN_IN_CODE);
+        .build(), CODE_SIGN_IN);
 
     super.onCreate(state);
 

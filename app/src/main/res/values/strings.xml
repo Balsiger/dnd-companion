@@ -2,12 +2,8 @@
   <string name="app_name">Roleplay Companion</string>
 
   <!-- menu strings -->
-  <string name="action_settings">Settings</string>
-  <string name="action_reset">Reset</string>
   <string name="action_export">Export to Drive</string>
   <string name="action_import">Import from Drive</string>
-  <string name="action_local">Swtich to local</string>
-  <string name="action_remote">Switch to remote</string>
 
   <!-- campaign selection -->
   <string name="campaign_title">Select a campaign:</string>

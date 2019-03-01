@@ -59,6 +59,10 @@ public class Campaigns extends Documents<Campaigns> {
     return campaigns;
   }
 
+  public List<Campaign> getDMCampaigns() {
+    return new ArrayList<>(dmCampaignsById.values());
+  }
+
   public ImmutableList<String> getIds() {
     return ids;
   }

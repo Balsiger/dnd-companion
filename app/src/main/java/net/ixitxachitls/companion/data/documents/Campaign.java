@@ -33,6 +33,7 @@ import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.Encounter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -193,6 +194,10 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
     invites.clear();
     store();
+  }
+
+  public Map<String, Object> write() {
+    return write(new HashMap<>());
   }
 
   @Override

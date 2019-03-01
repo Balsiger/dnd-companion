@@ -119,7 +119,7 @@ public class User extends Document<User> {
     hiddenSets.clear();
     hiddenSets.addAll(sets);
 
-    writeMiniatures();
+    storeMiniatures();
     Templates.get().getMiniatureTemplates().updateSets(this, hiddenSets);
   }
 
@@ -150,7 +150,7 @@ public class User extends Document<User> {
 
   public void deleteLocation(String name) {
     locations.remove(name);
-    writeMiniatures();
+    storeMiniatures();
   }
 
   public Optional<MiniatureLocation> getLocation(String location) {
@@ -208,7 +208,7 @@ public class User extends Document<User> {
             Map<String, Long> existing = new HashMap<>(miniatures);
             miniatures.putAll((Map<String, Long>) data);
             miniatures.putAll(existing);
-            writeMiniatures();
+            storeMiniatures();
           }
         }
 
@@ -236,7 +236,7 @@ public class User extends Document<User> {
     locations.remove(originalName);
     locations.put(location.getName(), location);
 
-    writeMiniatures();
+    storeMiniatures();
    }
 
   public void setMiniatureCount(String miniature, long count) {
@@ -246,13 +246,23 @@ public class User extends Document<User> {
       } else{
         miniatures.put(miniature, count);
       }
-      writeMiniatures();
+      storeMiniatures();
     }
   }
 
   @Override
   public String toString() {
     return getNickname();
+  }
+
+  public Map<String, Object> writeMiniatures() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_MINIATURE_OWNED, miniatures);
+    data.put(FIELD_MINIATURE_LOCATIONS, locations.values().stream()
+        .map(MiniatureLocation::write).collect(Collectors.toList()));
+    data.put(FIELD_MINIATURE_HIDDEN_SETS, new ArrayList<>(hiddenSets));
+
+    return data;
   }
 
   @Override
@@ -265,7 +275,7 @@ public class User extends Document<User> {
   }
 
   @Override
-  protected Map<String, Object> write(Map<String, Object> data) {
+  public Map<String, Object> write(Map<String, Object> data) {
     data.put(FIELD_NICKNAME, nickname);
     data.put(FIELD_PHOTO_URL, photoUrl);
     data.put(FIELD_FEATURES, features);
@@ -277,6 +287,14 @@ public class User extends Document<User> {
       this.campaigns = campaigns;
       updated(this);
     });
+  }
+
+  private void storeMiniatures() {
+    if (miniaturesLoading || !miniaturesDocument.isPresent()) {
+      return;
+    }
+
+    miniaturesDocument.get().update(writeMiniatures());
   }
 
   private void verifyMiniatures() {
@@ -291,20 +309,6 @@ public class User extends Document<User> {
         }
       }
     }
-  }
-
-  private void writeMiniatures() {
-    if (miniaturesLoading || !miniaturesDocument.isPresent()) {
-      return;
-    }
-
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_MINIATURE_OWNED, miniatures);
-    data.put(FIELD_MINIATURE_LOCATIONS, locations.values().stream()
-        .map(MiniatureLocation::write).collect(Collectors.toList()));
-    data.put(FIELD_MINIATURE_HIDDEN_SETS, new ArrayList<>(hiddenSets));
-
-    miniaturesDocument.get().update(data);
   }
 
   protected static User getOrCreate(CompanionContext context, String id) {
