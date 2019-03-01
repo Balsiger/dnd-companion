@@ -43,8 +43,6 @@ import com.google.firebase.auth.FirebaseUser;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
@@ -187,15 +185,16 @@ public class MainActivity extends AppCompatActivity {
       drive.get().save(
           getString(R.string.app_name) + " " + DATE_FORMAT.format(new Date()),
           ImmutableMap.<String, String>builder()
-              .put(application.me().getNickname(),
+              .put("User - " + application.me().getNickname(),
                   formatData(application.me().write(new HashMap<>())))
-              .put("Miniatures",
+              .put("User - Miniatures",
                   formatData(application.me().writeMiniatures()))
               .putAll(application.campaigns().getDMCampaigns().stream()
-                  .collect(Collectors.toMap(Campaign::getName, c -> formatData(c.write()))))
+                  .collect(Collectors.toMap(c -> "Campaign - " + c.getName(),
+                      c -> formatData(c.write()))))
               .putAll(application.characters().getPlayerCharacters(application.me().getId())
                   .stream()
-                  .collect(Collectors.toMap(Character::getName, c -> formatData(c.write()))))
+                  .collect(Collectors.toMap(c -> "Character - " + c.getName(), c -> formatData(c.write()))))
               .build(),
           () -> Status.toast("All data has been successfully exported to Drive."),
           e -> {
