@@ -26,8 +26,6 @@ weight {
     pounds {
       leader: 10
     }
-    ounces {
-    }
   }
 }
 probability: RARE
@@ -46,13 +44,7 @@ appearance {
 }
 substance {
   material: WOOD
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Scythe"
 weapon {
   damage {
@@ -61,18 +53,10 @@ weapon {
         number: 2
         dice: 4
       }
-      conditional {
-      }
     }
-  }
-  secondary_damage {
-  }
-  splash {
   }
   type: SLASHING
   critical {
-    threat {
-    }
     multiplier: 4
   }
   style: TWOHANDED_MELEE
@@ -92,71 +76,7 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
-  multiple {
-  }
   item: "mwk weapon"
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
 }

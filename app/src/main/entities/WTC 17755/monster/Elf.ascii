@@ -32,13 +32,9 @@ speed {
     }
   }
 }
-natural_armor {
-}
 abilities {
   racial_dexterity_modifier: 2
   racial_constitution_modifier: -2
-}
-saves {
 }
 primary_attack {
   attacks {
@@ -107,8 +103,6 @@ organization {
     modifier: 10
   }
   plus {
-    number {
-    }
     text: "2 3rd level sergeants and 1 leader of 3rd-6th level"
   }
 }
@@ -120,8 +114,6 @@ organization {
     modifier: 30
   }
   plus {
-    number {
-    }
     text: "20% noncombatants and 1 3rd level sergeant per 10 adults, 5 5th-level lieutenants, and 3 7th-level captains"
   }
 }
@@ -175,13 +167,9 @@ proficiency: "shortbow"
 proficiency: "composite shortbow"
 quality {
   name: "elf traits"
-  parameters {
-  }
   }
 quality {
   name: "low-light vision"
-  parameters {
-  }
   }
 skill {
   name: "appraise"

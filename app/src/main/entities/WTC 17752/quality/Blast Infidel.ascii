@@ -12,23 +12,3 @@ template {
   description: "A hierophant can use negative energy spells to their maximum effect on creatures with an alignment opposed to the hierophant. (See the table below for a list of which alignments are opposed to each alignment.) Any spell with a description that involves inflicting or channeling negative energy (inflict spells, mass inflict light wounds, harm) cast on a creature of the opposed alignment works as if under the effect of a Maximize Spell feat (without using a higher-level spell slot). Undead affected by this ability heal the maximized amount of damage."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

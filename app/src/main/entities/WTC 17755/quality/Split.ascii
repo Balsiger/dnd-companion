@@ -12,23 +12,3 @@ template {
   description: "Slashing and piercing weapons deal no damage to a black pudding. Instead the\n   creature splits into two identical puddings, each with half of the\n   original\342\200\232\303\204\303\264s current hit points (round down). A pudding with 10 hit points or\n   less cannot be further split and dies if reduced to 0 hit points."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

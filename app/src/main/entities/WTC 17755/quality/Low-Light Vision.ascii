@@ -15,23 +15,3 @@ template {
   short_description: "See twice as far in starlight, moonlight, torchlight or similar."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

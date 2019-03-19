@@ -13,23 +13,3 @@ template {
   description: "Any creature within 30 feet that meets the officer\'s gaze must succeed at a Fortitude save (DC 17) or take 2d10 points of damage plus 1d4 points of Charisma drain."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

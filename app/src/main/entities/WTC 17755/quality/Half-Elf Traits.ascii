@@ -10,21 +10,7 @@ template {
   description: "Common traits for half-elves.\n\nA half-elf does not have the elf \342\200\231s ability to notice secret doors simply by passing\nnear them, but still get\'s bonuses on listen, search and spot.\n\nHalf-elves get along naturally with all people. This bonus may not apply in situations or settings where half-elves are viewed with distrust (such as isolated human settlements), at the DM\342\200\231s option."
   short_description: "Common traits for half-elves."
 }
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-skill_modifier {
+ skill_modifier {
   key: "listen"
   modifier {
     modifier {
@@ -68,10 +54,4 @@ skill_modifier {
       type: RACIAL
     }
   }
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
 }

@@ -13,23 +13,3 @@ template {
   description: "The creature was born a lycanthrope and has full control over her\n  lycanthropy. She never needs to make Control Shape checks."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

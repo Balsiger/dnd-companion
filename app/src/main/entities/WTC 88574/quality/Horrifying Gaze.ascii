@@ -13,23 +13,3 @@ template {
   description: "A living creature within 30 feet that meets a quth-maren\'s deathless gaze\nmust succeed at a Will save (DC 17) or cower in fear (lose Dexterity bonus to\nAC, unable to act, any foe gains a +2 bonus on attack rolls)."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

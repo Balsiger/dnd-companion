@@ -15,21 +15,7 @@ template {
   incomplete: "Does not check that a ranger has to select an already selected enemy when selecting a new one (cannot select two new enemies at level 5, for example)."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-skill_modifier {
+ skill_modifier {
   key: "bluff"
   modifier {
     modifier {
@@ -79,14 +65,10 @@ skill_modifier {
     }
   }
 }
-attack_modifier {
-}
 damage_modifier {
   modifier {
     value: 2
     type: GENERAL
     condition: "against $enemy"
   }
-}
-ac_modifier {
 }

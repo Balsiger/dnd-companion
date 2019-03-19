@@ -12,23 +12,3 @@ template {
   description: "All \\Monster{kuo-toas} secrete an oily film that makes them difficult to grapple or snare. Webs, magical or otherwise, don\'t afect kuo-toas, and they usually can wriggle free from most other forms of confinement."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

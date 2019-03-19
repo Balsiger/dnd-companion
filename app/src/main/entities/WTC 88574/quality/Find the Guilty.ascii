@@ -13,23 +13,3 @@ template {
   description: "So long as a revenant and its killer are on the same plane of existence, the\n  revenant knows in which direction its killer can be found and how far away he\n  or she is. Depending on the magical abilities of the base creature, this\n  extraordinary sense may even be made to work across planar boundaries."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

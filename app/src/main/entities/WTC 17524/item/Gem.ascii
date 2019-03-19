@@ -4,15 +4,11 @@ template {
   world: "Generic"
   description: "A simple proxy for the real gems to be implemented later."
 }
-value {
-}
 weight {
   imperial {
     pounds {
       nominator: 1
       denominator: 10
-    }
-    ounces {
     }
   }
 }
@@ -28,89 +24,5 @@ appearance {
 }
 substance {
   material: STONE
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Gem"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}

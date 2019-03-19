@@ -19,14 +19,6 @@ size {
   modifier: LONG
 }
 type: ANIMAL
-hit_dice {
-}
-natural_armor {
-}
-abilities {
-}
-saves {
-}
 space {
   imperial {
     feet {
@@ -43,32 +35,20 @@ reach {
 }
 feat {
   name: "Endurance"
-  parameters {
-  }
 }
 feat {
   name: "Run"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: PLAINS
 organization {
   type: DOMESTICATED
-  number {
-  }
-}
-challenge_rating {
 }
 quality {
   name: "low-light vision"
-  parameters {
-  }
   }
 quality {
   name: "scent"
-  parameters {
-  }
   }
 skill {
   name: "listen"

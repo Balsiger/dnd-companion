@@ -12,23 +12,3 @@ template {
   description: "A fire elemental\342\200\232\303\204\303\264s slam attack deals bludgeoning damage plus fire damage\n  from the elemental\342\200\232\303\204\303\264s flaming body. Those hit by a fire elemental\342\200\232\303\204\303\262s slam\n  attack also must succeed on a Reflex save or catch on fire. The flame burns\n  for 1d4 rounds. The save DC varies with the elemental\342\200\232\303\204\303\264s size (see the table\n  below). A burning creature can take a move action to put out the flame. The\n  save DC is Constitution-based.  Creatures hitting a fire elemental with\n  natural weapons or unarmed attacks take fire damage as though hit by the\n  elemental\342\200\232\303\204\303\264s attack, and also catch on fire unless they succeed on a Reflex\n  save."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -14,27 +14,3 @@ template {
 type: GENERAL
 benefit: "Your spells resist dispelling attempts made by Weave users. All creatures employing spells or spell-like abilities are considered Weave users unless they possess the \\Feat{Shadow Weave Magic} feat. When a Weave user makes a dispel check to dispel one of your spells (including using \\Spell{dispel magic} to counterspell a spell you are casting), the DC is 15 + your caster level. This benefit does not extend to spells you cast from the schools of evocation or transmutation."
 prerequisites: "Shadow Weave Magic"
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

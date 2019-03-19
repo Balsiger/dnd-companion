@@ -13,23 +13,3 @@ template {
   description: "Mindless (no Intelligence score and immunity to all mindaffecting effects\n  (charms, compulsions, phantasms, patterns, and morale effects)."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

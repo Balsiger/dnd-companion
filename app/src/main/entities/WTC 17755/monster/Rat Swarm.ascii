@@ -43,8 +43,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 3
 abilities {
   strength: 2
@@ -83,33 +81,17 @@ space {
     }
   }
 }
-reach {
-  imperial {
-    feet {
-    }
-  }
-}
-feat {
+ feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Finesse"
-  parameters {
-  }
 }
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 2
 }

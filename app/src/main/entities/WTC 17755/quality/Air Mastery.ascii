@@ -13,23 +13,3 @@ template {
   description: "Airborne creatures take a \342\200\232\303\204\303\2541 penalty on attack and damage rolls against an\n  air elemental."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

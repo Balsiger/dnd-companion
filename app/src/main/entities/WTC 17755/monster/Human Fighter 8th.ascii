@@ -6,36 +6,18 @@ template {
   description: "A standard eighth level fighter"
   short_description: "A 8th level fighter"
 }
-size {
-}
 type: HUMANOID
 subtype: HUMAN
 hit_dice {
   number: 8
   dice: 10
 }
-natural_armor {
-}
 base_attack: 8
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 8
 }

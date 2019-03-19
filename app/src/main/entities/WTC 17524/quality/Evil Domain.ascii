@@ -15,23 +15,3 @@ template {
   incomplete: "+1 class level not currently computed in"
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

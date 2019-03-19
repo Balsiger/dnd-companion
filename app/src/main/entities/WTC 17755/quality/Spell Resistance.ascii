@@ -14,24 +14,4 @@ template {
   short_description: "Spells and spell-like abilities require a caster level check of $value to work."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-name_format: "<name> $value"
-ac_modifier {
-}
+ name_format: "<name> $value"

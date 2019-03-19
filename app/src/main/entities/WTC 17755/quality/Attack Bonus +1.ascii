@@ -10,28 +10,10 @@ template {
   description: "The creatures gets +1 racial bonus on attack rolls against $name.\n"
   short_description: "+1 racial attack bonus against $name."
 }
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
+ attack_modifier {
   modifier {
     value: 1
     type: RACIAL
     condition: "against $name"
   }
-}
-damage_modifier {
-}
-ac_modifier {
 }

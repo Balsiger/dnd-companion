@@ -12,23 +12,3 @@ template {
   description: "A \\Monster{roper}\342\200\232\303\204\303\264s strands can sap an opponent\342\200\232\303\204\303\264s strength. Anyone grabbed\n   by a strand must succeed on a DC 18 Fortitude save or take 2d8 points of\n   Strength damage. The save DC is Constitution-based."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -20,23 +20,3 @@ template {
   description: "Animals, whether wild or domesticated, can sense the unnatural presence of the creature at a distance of $range. They do not willingly approach nearer than that and panic if forced to do so; they remain panicked as long as they are within that range."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

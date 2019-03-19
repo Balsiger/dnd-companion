@@ -56,8 +56,6 @@ abilities {
   intelligence: -1
   charisma: 1
 }
-saves {
-}
 primary_attack {
   attacks {
     modifier: 2
@@ -74,31 +72,17 @@ primary_attack {
     }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 feat {
   name: "Run"
-  parameters {
-  }
 }
 climate: WARM
 terrain: AQUATIC_TERRAIN
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 3
 }

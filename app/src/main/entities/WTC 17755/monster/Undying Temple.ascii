@@ -17,15 +17,7 @@ hit_dice {
 }
 speed {
   mode: RUN
-  distance {
-    imperial {
-      feet {
-      }
-    }
-  }
-}
-natural_armor {
-}
+ }
 base_attack: 7
 abilities {
   strength: -1
@@ -44,23 +36,11 @@ space {
     }
   }
 }
-reach {
-  imperial {
-    feet {
-    }
-  }
-}
-climate: ANY
+ climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 20
 }

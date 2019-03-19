@@ -25,8 +25,6 @@ weight {
     pounds {
       leader: 2
     }
-    ounces {
-    }
   }
 }
 probability: RARE
@@ -45,13 +43,7 @@ appearance {
 }
 substance {
   material: WOOD
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Composite Shortbow"
 weapon {
   damage {
@@ -60,18 +52,10 @@ weapon {
         number: 1
         dice: 6
       }
-      conditional {
-      }
     }
-  }
-  secondary_damage {
-  }
-  splash {
   }
   type: PIERCING
   critical {
-    threat {
-    }
     multiplier: 3
   }
   style: RANGED
@@ -91,85 +75,17 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
-  multiple {
-  }
   item: "strength rating +1"
   item: "mwk weapon"
 }
 random {
   type: MUNDANE
-  multiple {
-  }
   item: "mwk weapon"
 }
 random {
   type: MUNDANE
-  multiple {
-  }
   item: "strength rating +2"
   item: "mwk weapon"
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
 }

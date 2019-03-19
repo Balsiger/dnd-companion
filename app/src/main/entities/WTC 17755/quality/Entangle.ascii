@@ -13,23 +13,3 @@ template {
   description: "A balor\342\200\232\303\204\303\264s +1 flaming whip entangles foes much like an attack with a net. The\n  whip has 20 hit points. The whip needs no folding. If it hits, the target\n  and the balor immediately make opposed Strength checks; if the balor wins, it\n  drags the target against its flaming body (see below). The target remains\n  anchored against the balor\342\200\232\303\204\303\264s body until it escapes the whip."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

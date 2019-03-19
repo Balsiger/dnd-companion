@@ -13,23 +13,3 @@ template {
   description: "Rhuallith delivers poison (Fortitude save DC 19) with a successful touch\n  attack. The initial and secondary damage is the same (1d3 points of Strength\n  damage). She can elect not to secrete poison. Secreted poison cannot be\n  harvested or saved for any purpose."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

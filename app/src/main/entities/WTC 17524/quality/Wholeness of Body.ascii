@@ -13,23 +13,3 @@ template {
   description: "At 7th level or higher, a monk can heal her own wounds. She can heal a\n  number of hit points of damage equal to twice her current monk level each\n  day, and she can spread this healing out among several uses."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

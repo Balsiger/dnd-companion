@@ -26,8 +26,6 @@ weight {
     pounds {
       leader: 2
     }
-    ounces {
-    }
   }
 }
 probability: RARE
@@ -46,13 +44,7 @@ appearance {
 }
 substance {
   material: LEATHER
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Whip"
 weapon {
   damage {
@@ -62,18 +54,10 @@ weapon {
         dice: 3
       }
       type: NONLETHAL
-      conditional {
-      }
     }
-  }
-  secondary_damage {
-  }
-  splash {
   }
   type: SLASHING
   critical {
-    threat {
-    }
     multiplier: 2
   }
   style: ONEHANDED_MELEE
@@ -93,71 +77,7 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
-  multiple {
-  }
   item: "mwk weapon"
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
 }

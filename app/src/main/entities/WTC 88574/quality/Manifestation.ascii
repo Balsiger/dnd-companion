@@ -12,23 +12,3 @@ template {
   description: "When the creature manifests, it becomes visible but is still incorporeal. It\n  can use its $name against material opponents."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

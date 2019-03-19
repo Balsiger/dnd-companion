@@ -32,8 +32,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 1
 abilities {
   strength: 13
@@ -54,13 +52,7 @@ primary_attack {
   }
   mode: WEAPON
   style: MELEE
-  damage {
-    damage {
-      base {
-      }
-          }
-  }
-}
+ }
 space {
   imperial {
     feet {

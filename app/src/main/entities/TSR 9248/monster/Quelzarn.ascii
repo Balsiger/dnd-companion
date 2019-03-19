@@ -56,8 +56,6 @@ abilities {
   intelligence: 7
   charisma: 15
 }
-saves {
-}
 primary_attack {
   attacks {
     modifier: 1
@@ -73,10 +71,6 @@ primary_attack {
     }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Iron Will"
 }
@@ -87,13 +81,7 @@ climate: WARM
 terrain: AQUATIC_TERRAIN
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 6
 }

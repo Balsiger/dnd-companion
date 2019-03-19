@@ -11,23 +11,3 @@ template {
   description: "A familiar and the master can communicate verbally as if they were using a common language. Other creatures do not understand the communication without magical help."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

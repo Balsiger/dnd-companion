@@ -7,14 +7,10 @@ template {
   world: "Generic"
   description: "A large rock that can be thrown."
 }
-value {
-}
 weight {
   imperial {
     pounds {
       leader: 20
-    }
-    ounces {
     }
   }
 }
@@ -46,18 +42,10 @@ weapon {
         number: 2
         dice: 8
       }
-      conditional {
-      }
     }
-  }
-  secondary_damage {
-  }
-  splash {
   }
   type: BLUDGEONING
   critical {
-    threat {
-    }
     multiplier: 2
   }
   style: THROWN_TWO_HANDED
@@ -68,69 +56,5 @@ weapon {
         leader: 180
       }
     }
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

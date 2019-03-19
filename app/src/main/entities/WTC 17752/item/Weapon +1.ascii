@@ -16,103 +16,15 @@ value {
   gold: 300
   magic_weapon: 1
 }
-weight {
-}
 probability: UNCOMMON
-size {
-}
 hardness: 1
 hit_points: 1
-substance {
-  thickness {
-  }
-}
-weapon {
+ weapon {
   damage {
     damage {
       base {
         modifier: 1
       }
-      conditional {
-      }
     }
   }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-    imperial {
-      feet {
-      }
-    }
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}
+ }

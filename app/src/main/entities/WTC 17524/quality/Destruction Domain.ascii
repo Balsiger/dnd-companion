@@ -13,23 +13,3 @@ template {
   description: "You gain the smite power, the supernatural ability to make a single melee\n  attack with a +4 bonus on attack rolls and a bonus on damage rolls equal to\n  your cleric level (if you hit).  You must declare the smite before making the\n  attack. This ability is usable once per day."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

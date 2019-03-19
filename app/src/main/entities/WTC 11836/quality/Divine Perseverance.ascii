@@ -17,23 +17,3 @@ template {
   description: "Once per day, if the creature is brought to -1 lower hit points, she is automatically cured of 1d8 +5 damage."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

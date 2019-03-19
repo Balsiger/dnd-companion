@@ -11,22 +11,6 @@ template {
   description: "Chromatic dragons form the evil branch of dragonkind. They are aggressive, greedy, vain, and nasty"
   short_description: "The evil branch of dragonkind."
 }
-size {
-}
-hit_dice {
-}
-natural_armor {
-}
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
-challenge_rating {
-}
 skill {
   name: "appraise"
 }

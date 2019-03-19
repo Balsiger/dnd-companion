@@ -24,8 +24,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 1
 abilities {
   strength: 13
@@ -47,13 +45,7 @@ primary_attack {
   }
   mode: WEAPON
   style: MELEE
-  damage {
-    damage {
-      base {
-      }
-    }
-  }
-}
+ }
 space {
   imperial {
     feet {
@@ -74,8 +66,6 @@ feat {
 }
 climate: TEMPERATE
 terrain: MOUNTAIN
-challenge_rating {
-}
 language {
   modifier: AUTOMATIC
   name: DWARVEN
@@ -117,8 +107,6 @@ quality {
 }
 quality {
   name: "stonecunning"
-  parameters {
-  }
 }
 quality {
   name: "weapon familiarity"
@@ -140,18 +128,12 @@ quality {
 }
 quality {
   name: "stability"
-  parameters {
-  }
 }
 quality {
   name: "poison save +2"
-  parameters {
-  }
 }
 quality {
   name: "spell save +2"
-  parameters {
-  }
 }
 quality {
   name: "attack bonus +1"

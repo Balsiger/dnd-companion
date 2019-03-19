@@ -13,24 +13,4 @@ template {
   short_description: "Damage dealt is nonlethal (except $lethal) and healed by $value per round."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-name_format: "<name> $value"
-ac_modifier {
-}
+ name_format: "<name> $value"

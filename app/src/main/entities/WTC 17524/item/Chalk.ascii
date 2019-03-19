@@ -21,8 +21,6 @@ weight {
       nominator: 1
       denominator: 100
     }
-    ounces {
-    }
   }
 }
 probability: UNCOMMON
@@ -74,86 +72,4 @@ appearance {
   probability: VERY_RARE
   appearance: "A broken piece of white chalk."
 }
-substance {
-  thickness {
-  }
-}
-player_name: "Chalk"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}
+ player_name: "Chalk"

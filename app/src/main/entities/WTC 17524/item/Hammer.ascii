@@ -23,8 +23,6 @@ weight {
     pounds {
       leader: 2
     }
-    ounces {
-    }
   }
 }
 probability: RARE
@@ -47,13 +45,7 @@ appearance {
 }
 substance {
   material: IRON
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Hammer"
 weapon {
   damage {
@@ -62,18 +54,10 @@ weapon {
         number: 1
         dice: 4
       }
-      conditional {
-      }
     }
-  }
-  secondary_damage {
-  }
-  splash {
   }
   type: PIERCING
   critical {
-    threat {
-    }
     multiplier: 2
   }
   style: LIGHT_MELEE
@@ -91,67 +75,5 @@ weapon {
         leader: 5
       }
     }
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

@@ -18,8 +18,6 @@ size {
 }
 type: HUMANOID
 subtype: ELF
-hit_dice {
-}
 speed {
   mode: RUN
   distance {
@@ -29,8 +27,6 @@ speed {
       }
     }
   }
-}
-natural_armor {
 }
 base_attack: 1
 abilities {
@@ -50,26 +46,14 @@ primary_attack {
   }
   mode: WEAPON
   style: MELEE
-  damage {
-    damage {
-      base {
-      }
-    }
-  }
-}
+ }
 secondary_attack {
   attacks {
     modifier: 1
   }
   mode: WEAPON
   style: RANGED
-  damage {
-    damage {
-      base {
-      }
-    }
-  }
-}
+ }
 space {
   imperial {
     feet {
@@ -88,13 +72,7 @@ climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 1
 }

@@ -15,25 +15,5 @@ template {
   incomplete: "not handled that loosing benefits if wearing medium or heavy armor."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-bonus_feat: "rapid shot"
+ bonus_feat: "rapid shot"
 bonus_feat: "two weapon defense"
-ac_modifier {
-}

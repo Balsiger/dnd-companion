@@ -3,23 +3,3 @@ template {
   description: "A nightwalker can summon undead creatures once per night: 7-12 \\Monster{shadows}, 2-5 \\Monster{greater shadows}, or 1-2 \\Monster{dread wraiths}. The undead arrive in 1d10 rounds and serve for 1 hour or until released. "
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

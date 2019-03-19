@@ -19,14 +19,10 @@ template {
   world: "Generic"
   description: "The quarterstaff is the favorite weapon of many characters, from travelers,\n   peasants, and merchants to monks, rangers, and wizards. A quarterstaff is a\n   double weapon. You can fight with it as if fighting with two weapons, but if\n   you do, you incur all the normal attack penalties associated with fighting\n   with two weapons, just as if you were using a one-handed weapon and a light\n   weapon (see Two-Weapon Fighting, page 160 in \\Product[WTC 17524]{Player\'s\n   Handbook}). You can also strike with either end singly, a fact that allows\n   you to take full advantage of openings in your opponent\'s defenses. A\n   creature wielding a quarterstaff in one hand can\'t use it as a double\n   weapon---only one end of the weapon can be used in any given round.\n\n  The quarterstaff is a special monk weapon. This designation gives a monk (see\n  Chapter 3: Classes) wielding a quarterstaff special options."
 }
-value {
-}
 weight {
   imperial {
     pounds {
       leader: 4
-    }
-    ounces {
     }
   }
 }
@@ -46,13 +42,7 @@ appearance {
 }
 substance {
   material: WOOD
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Quarterstaff"
 weapon {
   damage {
@@ -61,18 +51,10 @@ weapon {
         number: 1
         dice: 6
       }
-      conditional {
-      }
     }
-  }
-  secondary_damage {
-  }
-  splash {
   }
   type: BLUDGEONING
   critical {
-    threat {
-    }
     multiplier: 2
   }
   style: TWOHANDED_MELEE
@@ -92,71 +74,7 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
-  multiple {
-  }
   item: "mwk weapon"
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
 }

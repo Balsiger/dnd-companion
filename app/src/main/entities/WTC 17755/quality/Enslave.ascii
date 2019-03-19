@@ -12,23 +12,3 @@ template {
   description: "Three times per day, an \\Monster{aboleth} can attempt to enslave any one\n  living creature within 30 feet. The target must succeed on a DC 17 Will save\n  or be affected as though by a \\Spell{dominate person} spell (caster level\n  16th). An enslaved creature obeys the \\Monster{aboleth}\'s telepathic commands\n  until freed by \\Spell{remove curse}, and can attempt a new Will save every 24\n  hours to break free. The control is also broken if the \\Monster{aboleth} dies\n  or travels more than 1 mile from its slave. The save DC is Charisma-based."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

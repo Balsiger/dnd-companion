@@ -12,23 +12,3 @@ template {
   description: "When the creature enters combat, there is a cumulative 1% chance each round that its demon spirit breaks free and goes berserk. The uncontrolled golem goes on a rampage, attacking the nearest living creature or smashing some object smaller than itself if no creature is within reach, then moving on to spread more destruction. A divine spellcaster of a drow deity, if within 60 feet, can try (Diplomacy DC 19) to regain control by speaking firmly and persuasively to the golem. Resting for 1 minute resets the golem\342\200\231s berserk chance to 0%."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -84,8 +84,6 @@ reach {
 }
 feat {
   name: "Track"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Focus"
@@ -100,13 +98,9 @@ climate: TEMPERATE
 terrain: FOREST
 organization {
   type: SOLITARY
-  number {
-  }
 }
 organization {
   type: PAIR
-  number {
-  }
 }
 organization {
   type: PACK
@@ -135,18 +129,12 @@ advancement {
 combat: "A favorite tactic is to send a few individuals against the foe\342\200\231s front\nwhile the rest of the pack circles and attacks from the flanks or rear."
 quality {
   name: "trip"
-  parameters {
-  }
   }
 quality {
   name: "low-light vision"
-  parameters {
-  }
   }
 quality {
   name: "scent"
-  parameters {
-  }
   }
 skill {
   name: "hide"

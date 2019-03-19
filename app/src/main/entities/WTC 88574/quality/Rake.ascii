@@ -12,23 +12,3 @@ template {
   description: "On any round that a nycaloth has a hold on an opponent (see Improved Grab),\n  it can make two rake attacks (+15 melee) with its hind legs for 1d6+5 points\n  of damage each."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

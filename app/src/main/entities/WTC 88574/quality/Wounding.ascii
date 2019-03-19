@@ -12,23 +12,3 @@ template {
   description: "A wound resulting from a nycaloth\342\200\232\303\204\303\264s claw attack bleeds for an additional 1\n  point of damage per round thereafter. Multiple wounds from such attacks\n  result in cumulative bleeding loss (two wounds for 2 points of damage per\n  round, and so on). The bleeding can be stopped only by a successful Heal\n  check (DC 15) or the application of a cure spell or some other healing spell\n  (heal, healing circle, or the like)."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

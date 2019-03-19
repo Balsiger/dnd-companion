@@ -26,8 +26,6 @@ weight {
       nominator: 1
       denominator: 100
     }
-    ounces {
-    }
   }
 }
 probability: RARE
@@ -47,86 +45,4 @@ appearance {
   probability: VERY_RARE
   appearance: "Some watery, brown liquid."
 }
-substance {
-  thickness {
-  }
-}
-player_name: "Black Liquid"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}
+ player_name: "Black Liquid"

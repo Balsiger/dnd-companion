@@ -13,23 +13,3 @@ template {
   description: "A displacer beast gains a +2 resistance bonus on saves against any ranged\n  spell or ranged magical attack that specifically targets it, except for\n  ranged touch attacks."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

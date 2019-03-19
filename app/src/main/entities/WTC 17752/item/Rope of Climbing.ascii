@@ -23,97 +23,11 @@ weight {
     pounds {
       leader: 3
     }
-    ounces {
-    }
   }
 }
 probability: COMMON
-size {
-}
 appearance {
   probability: COMMON
   appearance: "60 feet of thin rope."
 }
-substance {
-  thickness {
-  }
-}
-player_name: "Rope"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}
+ player_name: "Rope"

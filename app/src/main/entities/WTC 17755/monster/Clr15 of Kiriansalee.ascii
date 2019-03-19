@@ -5,74 +5,42 @@ template {
   description: "Dummy setup for a cleric of Kiransalee until character levels are properly supported."
   short_description: "Dummy monster until character levels are supported"
 }
-size {
-}
 type: HUMANOID
 subtype: HUMAN
 hit_dice {
   number: 15
   dice: 12
 }
-natural_armor {
-}
 base_attack: 11
-abilities {
-}
 saves {
   fortitude: 9
   will: 9
   reflex: 5
 }
-space {
-}
-reach {
-}
 feat {
   name: "Extra Turning"
-  parameters {
-  }
 }
 feat {
   name: "Greater Spell Focus"
-  parameters {
-  }
 }
 feat {
   name: "Greater Spell Penetration"
-  parameters {
-  }
 }
 feat {
   name: "Lightning Reflexes"
-  parameters {
-  }
 }
 feat {
   name: "Spell Focus"
-  parameters {
-  }
 }
 feat {
   name: "Spell Penetration"
-  parameters {
-  }
 }
 feat {
   name: "Survivor"
-  parameters {
-  }
 }
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
-challenge_rating {
-}
+ }
 skill {
   name: "Concentration"
 }

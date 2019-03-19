@@ -16,27 +16,3 @@ benefit: "Choose one of the creature\342\200\232\303\204\303\264s spell-like abi
 special: "This feat can be taken multiple times. Each time it is\ntaken, the creature can apply it to a different one of its spell-like\nabilities."
 normal: "Normally the use of a spell-like ability requires a standard action and provokes an attack of opportunity unless noted otherwise."
 prerequisites: "Spell-like ability at caster level 10th or higher."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

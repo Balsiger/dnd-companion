@@ -13,23 +13,3 @@ template {
   description: "A keening spirit that hits a living target with its incorporeal touch\n  attack deals 1d8 points of damage. Against ethereal opponents, it adds its\n  Strength modifier to attack and damage rolls. Against material opponents, it\n  adds its Dexterity modifier to attack rolls only."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

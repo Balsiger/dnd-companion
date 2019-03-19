@@ -15,27 +15,3 @@ type: GENERAL
 benefit: "When flying, the creature can take a move action\n                    (including a dive) and another standard action at any point\n                    during the move. The creature cannot take a second move\n                    action during a round when it makes a flyby attack."
 normal: "Without this feat, the creature takes a standard action\n                    either before or after its move."
 prerequisites: "Fly speed"
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

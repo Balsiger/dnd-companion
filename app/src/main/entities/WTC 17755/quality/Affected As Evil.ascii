@@ -4,23 +4,3 @@ template {
   description: "For all effects the creature is treated as if it has an evil alignment,\n  even if it hasn\'t. The creature also suffers effects according to its actual\n  alignment."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -56,8 +56,6 @@ abilities {
   intelligence: 15
   charisma: 17
 }
-saves {
-}
 primary_attack {
   attacks {
     modifier: 4
@@ -74,44 +72,22 @@ primary_attack {
     }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Combat Casting"
-  parameters {
-  }
 }
 feat {
   name: "Iron Will"
-  parameters {
-  }
 }
 terrain: UNDERGROUND
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: BROOD
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 7
 }

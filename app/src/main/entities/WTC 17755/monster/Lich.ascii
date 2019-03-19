@@ -4,12 +4,8 @@ template {
   description: "A lich is an undead spellcaster, usually a wizard or sorcerer but sometimes a cleric or other spellcaster, who has used its magical powers to unnaturally extend its life.\n\nAs a rule, these creatures are scheming and, some say, insane. They hunger for ever greater power, long-forgotten knowledge, and the most terrible of arcane secrets. Because the shadow of death does not hang over them, they often conceive plans taking years, decades, or even centuries to come to fruition.\n\nA lich is a gaunt and skeletal humanoid with withered flesh stretched tight across horribly visible bones. Its eyes have long ago been lost to decay, but bright pinpoints of crimson light burn on in the empty sockets. Even the least of these creatures was a pow- erful person in life, so they often are draped in once-grand clothing. Multiclass fighters or clerics may still bear the armor of a warrior. Like its body, however, the garb of a lich shows all too well the weight of years. Decay and corruption are its constant companion.\n\nLiches speak Common plus any other languages they knew in life."
   short_description: "An undead spellcaster."
 }
-size {
-}
 type: UNDEAD
 subtype: NONE_SUBTYPE
-hit_dice {
-}
 natural_armor {
   modifier {
     value: 5
@@ -21,8 +17,6 @@ abilities {
   wisdom: 2
   intelligence: 2
   charisma: 2
-}
-saves {
 }
 primary_attack {
   attacks {
@@ -56,28 +50,18 @@ secondary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 organization {
   type: SOLITARY
   number {
     modifier: 1
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: TROUPE
   number {
     modifier: 1
   }
   plus {
-    number {
-    }
     text: "number: 1\ndice: 3\nmodifier: 1\nvampires, number: 1\ndice: 4\nmodifier: 4\nvampire spawn"
   }
 }

@@ -6,36 +6,18 @@ template {
   description: "A standard fifth level fighter"
   short_description: "A 5th level fighter"
 }
-size {
-}
 type: HUMANOID
 subtype: HUMAN
 hit_dice {
   number: 5
   dice: 10
 }
-natural_armor {
-}
 base_attack: 5
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 5
 }

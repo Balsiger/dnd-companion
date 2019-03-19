@@ -15,21 +15,7 @@ template {
   short_description: "Grants a +2 damage bonus to attacks."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
+ attack_modifier {
   modifier {
     value: -2
     type: GENERAL
@@ -42,6 +28,4 @@ damage_modifier {
     type: GENERAL
     condition: "Strength above 14"
   }
-}
-ac_modifier {
 }

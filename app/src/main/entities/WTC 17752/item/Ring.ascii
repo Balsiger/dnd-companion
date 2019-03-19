@@ -14,15 +14,11 @@ template {
   description: "Although exceptions exist that are crafted from glass or bone, the vast\n   majority of rings are forged from metal---usually precious metals such as\n   gold, silver, and platinum."
   short_description: "A ring."
 }
-value {
-}
 weight {
   imperial {
     pounds {
       nominator: 1
       denominator: 100
-    }
-    ounces {
     }
   }
 }
@@ -50,90 +46,6 @@ appearance {
 }
 substance {
   material: STEEL
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 break_dc: 25
 player_name: "Ring"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}

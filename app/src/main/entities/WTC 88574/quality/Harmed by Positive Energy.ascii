@@ -13,23 +13,3 @@ template {
   description: "Because of the negative energy that suffuses its frame, a kir-lanan is\n  vulnerable to attacks using positive energy, just as undead are. It takes\n  damage from cure spells, holy water, and blessed weapons. It cannot be\n  turned, but it is uncomfortable around such displays of positive energy and\n  generally seeks to avoid a turning cleric anyway.\n\n  Like undead, a kir-lanan is healed by inflict spells and other applications\n  of negative energy. It gains 5 temporary hit points for each negative level\n  it would gain from an energy drain effect, such as enervation, energy drain,\n  or a shadow dragon\342\200\232\303\204\303\264s breath weapon."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

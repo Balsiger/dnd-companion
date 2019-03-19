@@ -13,23 +13,3 @@ template {
   description: "Range 30 ft., Will DC 15 negates. A chain devil can make its face resemble\n  one of an opponent\342\200\232\303\204\303\264s departed loved ones or bitter enemies. Those who fail\n  their saves take a \342\200\232\303\204\303\2542 penalty on attack rolls for 1d3 rounds. The save DC is\n  Charisma-based."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

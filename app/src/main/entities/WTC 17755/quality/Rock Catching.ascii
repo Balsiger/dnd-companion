@@ -13,23 +13,3 @@ template {
   description: "A stone giant gains a +4 racial bonus on its Reflex save when attempting to\n  catch a thrown rock."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

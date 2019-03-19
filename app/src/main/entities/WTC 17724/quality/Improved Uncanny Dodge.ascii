@@ -14,23 +14,3 @@ template {
   description: "The character can no longer be flanked; she can react to opponents on\n  opposite sides of her as easily as she can react to a single attacker. This\n  defense denies a \\Class{rogue} the ability to sneak attack the character by\n  flanking her, unless the attacker has at least four more \\Class{rogue} levels\n  than the target does.\n\n  If a character already has uncanny dodge (see above) from a second class, the\n  character automatically gains improved uncanny dodge instead, and the levels\n  from the classes that grant uncanny dodge stack to determine the minimum\n  \\Class{rogue} level required to flank the character."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

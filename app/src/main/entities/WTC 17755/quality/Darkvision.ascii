@@ -13,24 +13,4 @@ template {
   short_description: "See in the dark to a distance of $range."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-name_format: "<name> $range"
-ac_modifier {
-}
+ name_format: "<name> $range"

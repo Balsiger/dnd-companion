@@ -19,8 +19,6 @@ weight {
     pounds {
       leader: 1
     }
-    ounces {
-    }
   }
 }
 probability: VERY_RARE
@@ -35,74 +33,16 @@ appearance {
 }
 substance {
   material: IRON
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Sunrod"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
+  timed {
   duration {
     duration {
       hours: 6
     }
   }
 }
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
+  light {
   bright {
     distance {
       imperial {
@@ -122,15 +62,5 @@ light {
       }
     }
     shape: SPHERE
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

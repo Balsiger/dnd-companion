@@ -13,23 +13,3 @@ template {
   description: "The creature secrets a digestive acid that dissolves organic material and\n  metal quickly, but does not affect stone. Any melee hit or constrict attack\n  deals acid damage, and the opponent\'s armor and clothing dissolve and become\n  useless immediately unless they succeed on DC 21 Reflex saves. A metal or\n  wooden weapon that strikes a \\Monster{black pudding} also dissolves\n  immediately unless it succeeds on a DC 21 Reflex save. The save DCs are\n  Consitution-based.\n\n  The pudding\'s acidic touch deals 21 points of damage per round to wooden or\n  metal objects, but the ooze must remain in contact with the object for 1 full\n  round to deal this damage."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

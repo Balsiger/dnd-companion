@@ -100,13 +100,7 @@ climate: ANY
 terrain: UNDERGROUND
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 7
 }

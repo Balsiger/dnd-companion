@@ -13,23 +13,3 @@ template {
   description: "All baatezu can see perfectly in darkness of any kind, even that created by\n  a deeper darkness spell."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

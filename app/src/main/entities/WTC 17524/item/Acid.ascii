@@ -19,8 +19,6 @@ weight {
     pounds {
       leader: 1
     }
-    ounces {
-    }
   }
 }
 probability: VERY_RARE
@@ -32,11 +30,7 @@ appearance {
   probability: COMMON
   appearance: "Inside the flask is a clear liquid."
 }
-substance {
-  thickness {
-  }
-}
-break_dc: 3
+ break_dc: 3
 player_name: "Acid"
 weapon {
   damage {
@@ -46,11 +40,7 @@ weapon {
         dice: 6
       }
       type: ACID
-      conditional {
-      }
     }
-  }
-  secondary_damage {
   }
   splash {
     damage {
@@ -58,14 +48,10 @@ weapon {
         modifier: 1
       }
       type: ACID
-      conditional {
-      }
     }
   }
   type: GRENADE
   critical {
-    threat {
-    }
     multiplier: 2
   }
   style: THROWN_TOUCH
@@ -85,72 +71,10 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
   multiple {
     number: 2
     dice: 4
-  }
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

@@ -14,23 +14,3 @@ template {
   description: "A creature who merely passes within 5 feet of a secret or concealed door is\n  entitled to a \\Skill{Search} check to notice it as if he or she were actively\n  looking for the door."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

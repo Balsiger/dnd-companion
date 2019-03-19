@@ -23,8 +23,6 @@ weight {
     pounds {
       leader: 5
     }
-    ounces {
-    }
   }
 }
 probability: UNCOMMON
@@ -41,62 +39,8 @@ appearance {
   probability: VERY_RARE
   appearance: "A battered buckler."
 }
-substance {
-  thickness {
-  }
-}
-player_name: "Buckler"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
+ player_name: "Buckler"
+  armor {
   ac_bonus {
     modifier {
       value: 1
@@ -106,34 +50,8 @@ armor {
   type: SHIELD
   check_penalty: -1
   arcane_failure: 5
-  speed_fast {
-  }
-  speed_slow {
-  }
 }
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
-  multiple {
-  }
   item: "mwk armor"
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
 }

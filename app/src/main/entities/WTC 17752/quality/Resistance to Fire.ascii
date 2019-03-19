@@ -13,23 +13,3 @@ template {
   description: "A creature with resistance to fire has the ability (usually extraordinary)\n  to ignore some fire damage) each round, but it does not have total immunity.\n  Each resistance ability is defined by what energy type it resists and how\n  many points of damage are resisted. It doesn\342\200\232\303\204\303\264t matter whether the damage has\n  a mundane or magical source.\n\n  When resistance completely negates the damage from an energy attack, the\n  attack does not disrupt a spell.  This resistance does not stack with the\n  resistance that a spell, such as \\Spell{endure elements}, might provide."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

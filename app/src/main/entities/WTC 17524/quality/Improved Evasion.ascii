@@ -13,23 +13,3 @@ template {
   description: "At 9th level, a monk\342\200\232\303\204\303\264s evasion ability improves. She still takes no damage\n  on a successful Reflex saving throw against attacks such as a dragon\342\200\232\303\204\303\264s breath\n  weapon or a fireball, but henceforth she takes only half damage on a failed\n  save. A helpless monk (such as one who is unconscious or paralysed) does\n  not gain the benefit of improved evasion."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

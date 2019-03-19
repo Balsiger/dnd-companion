@@ -13,25 +13,7 @@ template {
   incomplete: "does not handle Wisdom score above 27."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
+ ac_modifier {
   modifier {
     value: 1
     type: GENERAL

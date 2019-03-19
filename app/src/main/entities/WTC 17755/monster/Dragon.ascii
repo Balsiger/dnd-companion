@@ -11,22 +11,6 @@ template {
   description: "True dragons are winged, reptilelike creatures of ancient lineage. They are known and feared for their size, physical prowess, and magical abilities. The oldest dragons are among the most powerful creatures in the world.\n\nThe known varieties of true dragons (as opposed to other creatures that have the dragon type) fall into two broad categories: chromatic and metallic. The chromatic dragons are black, blue, green, red, and white; they are all evil and extremely fierce. The metallic dragons are brass, bronze, copper, gold, and silver; they are all good, usually noble, and highly respected by the wise.\n\nAll true dragons gain more abilities and greater power as they age. (Other creatures that have the dragon type do not.) They range in length from several feet upon hatching to more than 100 feet after attaining the status of great wyrm. The size of a particular dragon varies according to age and variety.\n\nThough they are fearsome predators, dragons scavenge when necessary and can eat almost anything if they are hungry enough. A dragon\342\200\231s metabolism operates like a highly efficient furnace and can metabolize even inorganic material. Some dragons have developed a taste for such fare.\n\nAlthough goals and ideals vary among varieties, all dragons are covetous. They like to hoard wealth, collecting mounds of coins and gathering as many gems, jewels, and magic items as possible. Those with large hoards are loath to leave them for long, venturing out of their lairs only to patrol the immediate area or to get food. For dragons, there is no such thing as enough treasure. It\342\200\231s pleasing to look at, and they bask in its radiance. Dragons like to make beds of their hoards, shaping nooks and mounds to fit their bodies. By the time a dragon matures to the age of great wyrm, hundreds of gems and coins may be imbedded in its hide.\n\nAll dragons speak Draconic.\n\n\\bold{Dragon Overland Movement}\n\nChromatic and metallic dragons are exceedingly strong flyers and can cover vast distances quickly. A dragon\342\200\231s overland flying speed is a function of its tactical fly speed, as shown on the table below.\n\nDragons do not tire as quickly as other creatures when moving overland on the ground. If a dragon attempts a hustle or a forced march, check for nonlethal damage once every 2 hours instead of every hour (see page 164 of the Player\342\200\231s Handbook).\n\n\\bold{Dragonhide}\n\nArmorsmiths can work with the hides of dragons to produce armor or shields of masterwork quality (see Dragonhide under Special Materials, page 283 of the Dungeon Master\342\200\231s Guide).\n"
   short_description: "A winged, reptilelike creature of ancient lineage."
 }
-size {
-}
-hit_dice {
-}
-natural_armor {
-}
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
-challenge_rating {
-}
 language {
   modifier: AUTOMATIC
   name: DRACONIC

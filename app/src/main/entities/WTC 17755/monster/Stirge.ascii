@@ -39,8 +39,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 1
 abilities {
   strength: 3
@@ -50,11 +48,7 @@ abilities {
   intelligence: 1
   charisma: 6
 }
-saves {
-}
 primary_attack {
-  attacks {
-  }
   mode: TOUCH
   style: MELEE
   damage {
@@ -65,31 +59,17 @@ primary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Finesse"
-  parameters {
-  }
 }
 climate: WARM
 terrain: MARSH
 organization {
   type: COLONY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   nominator: 1
   denominator: 2

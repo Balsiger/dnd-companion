@@ -9,33 +9,19 @@ template {
   description: "A dummy monster for currently unsupported character classes."
   short_description: "Dummy monster for character class."
 }
-size {
-}
 hit_dice {
   number: 12
   dice: 8
 }
 base_attack: 9
-abilities {
-}
 saves {
   fortitude: 9
   will: 12
   reflex: 4
 }
-space {
-}
-reach {
-}
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 12
 }

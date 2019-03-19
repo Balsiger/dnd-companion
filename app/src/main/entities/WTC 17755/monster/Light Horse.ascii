@@ -5,8 +5,6 @@ template {
   description: "The statistics presented here describe smaller breeds of working horses such as quarter horses and Arabians as well as wild horses. These animals are usually ready for useful work by age two. A light horse cannot fight while carrying a rider.\n\n\\bold{Carrying Capacity:} A light load for a light horse is up to 150 pounds; a medium load, 151\342\200\223300 pounds; and a heavy load, 301\342\200\223450 pounds. A light horse can drag 2,250 pounds."
   short_description: "A smaller breed of horse."
 }
-size {
-}
 hit_dice {
   number: 3
   dice: 8
@@ -55,10 +53,6 @@ secondary_attack {
       }
           }
   }
-}
-space {
-}
-reach {
 }
 challenge_rating {
   leader: 1

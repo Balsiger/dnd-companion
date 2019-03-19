@@ -12,23 +12,3 @@ template {
   description: "The creature can obtain a familiar. Doing so takes 24 hours and uses up\n  magical materials that cost 100 gp. A familiar is a magical beast that\n  resembles a small animal and is unusually tough and intelligent. The creature\n  serves as a companion and servant.\n\n  The sorcerer chooses the kind of familiar he gets. As the sorcerer advances\n  in level, his familiar also increases in power.\n\n  If the familiar dies or is dismissed by the sorcerer, the sorcerer must\n  attempt a DC 15 Fortitude saving throw. Failure means he loses 200 experience\n  points per level; success reduces the loss to one-half that\n  amount. However, a creatures\342\200\232\303\204\303\264s experience point total can never go below 0 as\n  the result of a familiar\342\200\232\303\204\303\264s demise or dismissal. For example, suppose that\n  Hennet is a 3rd-level sorcerer with 3,230 XP when his owl familiar is killed\n  by a bugbear. Hennet makes a successful saving throw, so he loses 300 XP,\n  dropping him below 3,000 XP and back to 2nd level (see the Dungeon Master\342\200\232\303\204\303\264s\n  Guide for rules for losing levels). A slain or dismissed familiar cannot be\n  replaced for a year and day. A slain familiar can be raised from the dead\n  just as a character can be, and it does not lose a level or a Constitution\n  point when this happy event occurs.\n\n  A character with more than one class that grants a familiar may have only one\n  familiar at a time."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

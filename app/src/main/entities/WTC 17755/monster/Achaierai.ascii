@@ -48,8 +48,6 @@ abilities {
   intelligence: 11
   charisma: 16
 }
-saves {
-}
 primary_attack {
   attacks {
     modifier: 2
@@ -66,8 +64,6 @@ primary_attack {
   }
 }
 secondary_attack {
-  attacks {
-  }
   mode: BITE
   style: MELEE
   damage {
@@ -79,44 +75,22 @@ secondary_attack {
     }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Dodge"
-  parameters {
-  }
 }
 feat {
   name: "Mobility"
-  parameters {
-  }
 }
 feat {
   name: "Spring Attack"
-  parameters {
-  }
 }
 terrain: INFERNAL_BATTLEFIELD_OF_ACHERON
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: FLOCK
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 5
 }

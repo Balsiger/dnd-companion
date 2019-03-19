@@ -17,43 +17,9 @@ template {
 value {
   gold: 8000
 }
-weight {
-}
 probability: RARE
-size {
-}
-substance {
-  thickness {
-  }
-}
-player_name: "Ring"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
+ player_name: "Ring"
+  magic {
   modifier {
     modifier {
       modifier {
@@ -62,55 +28,5 @@ magic {
       }
     }
     type: ARMOR_CLASS
-  }
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

@@ -19,15 +19,11 @@ template {
   world: "Generic"
   description: "A sling hurls lead bullets. It doesn\'t shoot as far as a crossbow, nor is it\n  as powerful as a bow, but it\'s cheap and easy to improvise from common\n  materials. Druids and halflings favor slings. Your Strength modifier applies\n  to damage rolls when you use a sling, just as it does for thrown weapons. You\n  can fire, but not load, a sling with one hand. Loading a sling is a move\n  action that requires two hands and provokes attacks of opportunity.\n\n  You can hurl ordinary stones with a sling, but stones are not as dense or as\n  round as bullets. Thus, such an attack deals damage as if the weapon were\n  designed for a creature one size category smaller than you (for instance, 1d3\n  instead of 1d4, or 1d2 instead of 1d3) and you take a -1 penalty on\n  attack rolls."
 }
-value {
-}
 weight {
   imperial {
     pounds {
       nominator: 1
       denominator: 10
-    }
-    ounces {
     }
   }
 }
@@ -47,13 +43,7 @@ appearance {
 }
 substance {
   material: LEATHER
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Sling"
 weapon {
   damage {
@@ -62,18 +52,10 @@ weapon {
         number: 1
         dice: 4
       }
-      conditional {
-      }
     }
-  }
-  secondary_damage {
-  }
-  splash {
   }
   type: BLUDGEONING
   critical {
-    threat {
-    }
     multiplier: 2
   }
   style: RANGED
@@ -93,71 +75,7 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
-  multiple {
-  }
   item: "mwk weapon"
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
 }

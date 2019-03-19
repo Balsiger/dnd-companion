@@ -3,23 +3,3 @@ template {
   description: "A \\Monster{dread wraith} notices and locates living creatures within $range, just as if it possessed the blindsight ability. It also senses the strength of their life force automatically, as if it had cast \\SpellRef{deathwatch}.\n"
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

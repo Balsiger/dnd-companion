@@ -12,23 +12,3 @@ template {
   description: "A shade has 60-foot darkvision. It can see normally through any darkness\n  effects, but not through fog, invisibility, obscurement, and so forth."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

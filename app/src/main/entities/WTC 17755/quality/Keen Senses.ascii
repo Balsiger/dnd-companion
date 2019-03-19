@@ -13,23 +13,3 @@ template {
   description: "A dragon sees four times as well a human in shadowy illumination and twice\n  as well in normal light. It also has darkvision out to 120 feet."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

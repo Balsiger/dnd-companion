@@ -31,8 +31,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 1
 abilities {
   strength: 13
@@ -51,13 +49,7 @@ primary_attack {
   }
   mode: WEAPON
   style: MELEE
-  damage {
-    damage {
-      base {
-      }
-          }
-  }
-}
+ }
 space {
   imperial {
     feet {
@@ -74,8 +66,6 @@ reach {
 }
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 climate: WARM
 terrain: HILLS
@@ -94,8 +84,6 @@ organization {
     dice: 10
   }
   plus {
-    number {
-    }
     text: "50 noncombatants, 1 3rd-level sergeant per 20 adults, 1 leader of 4-6h level"
   }
 }
@@ -114,8 +102,6 @@ organization {
     dice: 10
   }
   plus {
-    number {
-    }
     text: "0 noncombatants plus 1 3rd-level sergeant per 20 adults, 1 or 2 lieutenants of 4th or 5th level, 1 leader of 6th\342\200\2238th level, 2\342\200\2234 dire wolves, and 1\342\200\2234 ogres or 1\342\200\2232 trolls)"
   }
 }

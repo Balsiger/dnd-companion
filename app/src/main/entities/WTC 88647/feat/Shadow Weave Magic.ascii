@@ -14,27 +14,3 @@ template {
 type: GENERAL
 benefit: "From now on, your spells tap the Shadow Weave instead of teh Weave. You can also activate magic items that use the Shadow Weave without taking damage.\n\nThe saving throw for every spell you cast from schools of enchantment, illusion, and necromancy increases by +1. You also get a +1 bonus on caster level checks to overcome spell resistance with spells from these schools.\n\nThe Shadow Weave proves less optimal for effects involving energy or matter. Your effective caster level for spells you cast from the schools of evocation or transmutation (except spells with the darkness descriptor) is reduced by one. A 1-st level Shadow Weave user cannot cast spells from these schools at all.\n\nYou can no longer cast spells with the light descriptor. No matter what school they are from, such spells automatically fail. Your ability to use items that produce light effects is also limited --- you cannot invoke an item\'s light power it is activation is spell completion or spell-trigger.\n\nFrom now on, any magic item you create is Shadow Weave item (see Chapter 2 of the Forgotten Realms Campaign Setting)."
 prerequisites: "Wis 15 or patron deity \\God{Shar}."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

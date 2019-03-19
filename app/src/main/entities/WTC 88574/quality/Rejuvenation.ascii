@@ -21,23 +21,3 @@ template {
   description: "If destroyed, Alisannara restores herself in 2d4 days if she makes a\n  successful level check (DC 16)."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

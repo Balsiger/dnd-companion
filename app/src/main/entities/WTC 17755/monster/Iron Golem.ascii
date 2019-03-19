@@ -39,26 +39,10 @@ natural_armor {
     type: NATURAL_ARMOR
   }
 }
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
-challenge_rating {
-}
+ }
 encounter: "This metallic automaton is twice the height of a normal human and resembles an armored giant."
 combat: "Iron golems are mighty combatants. They strike with deadly accuracy and incredible force. Their bodies are nearly invulnerable but can be reduced to piles of rubbish by rust monsters."

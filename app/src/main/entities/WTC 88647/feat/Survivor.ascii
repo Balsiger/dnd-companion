@@ -15,27 +15,3 @@ type: REGIONAL
 benefit: "You get a +2 bonus to Fortitude saves and a +2 bonus on Survival Checks."
 special: "You may select this feat only as a 1st-level character. You may only have one regional feat."
 prerequisites: "Dwarf (Chult or the Great Glacier), Elf (the Chondalwood, the Inner Sea, or the Outer Sea), Human (Anauroch, Chult, the Great Glacier, Narfell, or the Shar), Kuo-toa (Underdark [Sloopdilmonpolop]), Slyth (Underdark [Fluvenilstra]), or Taer (the Icrerim Mountains)"
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

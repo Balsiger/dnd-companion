@@ -21,8 +21,6 @@ weight {
       nominator: 1
       denominator: 2
     }
-    ounces {
-    }
   }
 }
 probability: UNCOMMON
@@ -41,16 +39,8 @@ appearance {
 }
 substance {
   material: LEATHER
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Bandoleer"
 container {
-  capacity {
-  }
   state: GRANULAR
 }

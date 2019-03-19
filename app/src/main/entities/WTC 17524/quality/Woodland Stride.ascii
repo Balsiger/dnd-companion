@@ -20,23 +20,3 @@ template {
   description: "A druid may move through any sort of undergrowth (such as natural thorns,\n  briars, overgrown areas, and similar terrain) at her normal speed and with-\n  out taking damage or suffering any other impairment. However, thorns, briars,\n  and overgrown areas that have been magically manipulated to impede motion\n  still affect her."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

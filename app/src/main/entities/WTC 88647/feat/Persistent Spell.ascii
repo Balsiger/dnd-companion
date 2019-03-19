@@ -13,27 +13,3 @@ template {
 type: METAMAGIC
 benefit: "A persistent spell has a duration of 24 hours. The persistent spell must have a personal range or fixed range (for example, Spell{comprehend languages} or \\Spell{detect magic}). Spells of instantaneous duration cannot be affected by this feat, nor can spells whose effects are discharged. You need not concentrate on spells such as \\Spell{detect magic} or \\Spell{detect thoughts} to be aware of the mere precense or absence of the thing detected, but you must still concentrate to gain additional information as normal. Concentration on such a spell is a standard action that does not provoke an attack of opportunity. A persistent spells uses up a spell slot 6 levels higher than the spell\'s actual level."
 prerequisites: "Extend Spell"
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

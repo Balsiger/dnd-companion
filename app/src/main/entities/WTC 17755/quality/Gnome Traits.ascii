@@ -13,15 +13,7 @@ template {
   short_description: "Gnome racial traits."
   incomplete: "+1 to DC for save vs illusions spells"
 }
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-ability_modifier {
+ ability_modifier {
   ability: CONSTITUTION
   modifier {
     modifier {
@@ -91,6 +83,4 @@ damage_modifier {
     type: GENERAL
     condition: "against kobolds or goblinoids"
   }
-}
-ac_modifier {
 }

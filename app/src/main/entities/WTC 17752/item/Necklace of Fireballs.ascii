@@ -16,14 +16,10 @@ template {
   description: "This device appears to be nothing but beads on a string, sometimes with the\n  ends tied together to form a necklace. (It does not count as an item worn\n  around the neck for the purpose of determining which of a character\'s worn\n  magic items is effective.) If a character holds it, however, all can see the\n  strand as it really is\'a golden chain from which hang a number of golden\n  spheres. The spheres are detachable by the wearer (and only by the wearer),\n  who can easily hurl one of them up to 70 feet. When a sphere arrives at the\n  end of its trajectory, it detonates as a \\Spell{fireball} spell (Reflex DC 14\n  half).  Spheres come in different strengths, ranging from those that deal 2d6\n  points of fire damage to those that deal 10d6.\n\n  If the necklace is being worn or carried by a character who fails her saving\n  throw against a magical fire attack, the item must make a saving throw as\n  well (with a save bonus of +7). If the necklace fails to save, all its\n  remaining spheres detonate simultaneously, often with regrettable\n  consequences for the wearer."
   short_description: "A necklage with detachable orbs, throw to 70 ft for fireball (Ref DC 14)."
 }
-value {
-}
 weight {
   imperial {
     pounds {
       leader: 1
-    }
-    ounces {
     }
   }
 }
@@ -37,89 +33,5 @@ appearance {
 }
 substance {
   material: IRON
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Necklace"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}

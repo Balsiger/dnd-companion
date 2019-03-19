@@ -11,23 +11,3 @@ template {
   description: "Any living creature that begins its turn with a swarm in its space must succeed on a DC 11 Fortitude save or be nauseated for 1 round. The save DC is Constitution-based."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

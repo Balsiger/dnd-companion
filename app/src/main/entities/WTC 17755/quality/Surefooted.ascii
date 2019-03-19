@@ -7,15 +7,7 @@ template {
   short_description: "+2 Dex to avoid slipping or falling"
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-ability_modifier {
+ ability_modifier {
   ability: DEXTERITY
   modifier {
     modifier {
@@ -24,16 +16,4 @@ ability_modifier {
       condition: "avoiding slipping or falling"
     }
   }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
 }

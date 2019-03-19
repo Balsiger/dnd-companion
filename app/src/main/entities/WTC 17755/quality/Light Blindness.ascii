@@ -13,23 +13,3 @@ template {
   description: "Abrupt exposure to bright light (such as sunlight or a \\Spell{daylight} spell) blinds \\Monster{kuo-toas} for 1 round. On subsequent rounds, they are dazzled while operating in bright light."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

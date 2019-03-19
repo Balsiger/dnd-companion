@@ -12,23 +12,3 @@ template {
   description: "A dire bat uses echo-location to pinpoint creatures within 40\n  feet. Opponents still have total concealment against the bat unless it can\n  actually see them."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

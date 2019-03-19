@@ -13,23 +13,3 @@ template {
   description: "Turn or destroy fire creatures as a good cleric turns undead. Rebuke,\n  command, or bolster water creatures as an evil cleric rebukes undead. Use\n  these abilities a total number of times per day equal to 3 + your Charisma\n  modifier. This granted power is a supernatural ability."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

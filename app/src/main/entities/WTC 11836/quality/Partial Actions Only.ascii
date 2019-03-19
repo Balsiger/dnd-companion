@@ -14,23 +14,3 @@ template {
   description: "Death tyrants are slow and unresponsive, so they can perform only partial\n  actions. Thus, they can move or attack, but can do both only if they charge\n  (a partial charge)."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -17,15 +17,7 @@ template {
 value {
   gold: 40
 }
-weight {
-  imperial {
-    pounds {
-    }
-    ounces {
-    }
-  }
-}
-probability: RARE
+ probability: RARE
 size {
   size: DIMINUTIVE
 }
@@ -35,86 +27,4 @@ appearance {
   probability: COMMON
   appearance: "An oily liquid."
 }
-substance {
-  thickness {
-  }
-}
-player_name: "Oil"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}
+ player_name: "Oil"

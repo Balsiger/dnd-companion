@@ -13,23 +13,3 @@ template {
   description: "Twice per day, a bearded devil can work itself into a battle frenzy similar\n  to the barbarian\342\200\232\303\204\303\264s rage (+4 Strength, +4 Constitution, +2 morale bonus on\n  Will saves, \342\200\232\303\204\303\2542 AC penalty). The frenzy lasts for 6 rounds, and the bearded\n  devil suffers no ill effects afterward."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

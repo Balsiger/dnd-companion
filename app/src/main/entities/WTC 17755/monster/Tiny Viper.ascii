@@ -90,28 +90,14 @@ space {
     }
   }
 }
-reach {
-  imperial {
-    feet {
-    }
-  }
-}
-feat {
+ feat {
   name: "Weapon Finesse"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: MARSH
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   nominator: 1
   denominator: 3

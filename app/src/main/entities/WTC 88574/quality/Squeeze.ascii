@@ -12,23 +12,3 @@ template {
   description: "A chuul that gets a hold automatically deals claw damage, plus an additional\n  1d8 points of bludgeoning damage from the crushing force each round the hold\n  is maintained."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

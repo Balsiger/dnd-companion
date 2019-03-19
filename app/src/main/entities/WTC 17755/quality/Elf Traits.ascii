@@ -14,15 +14,7 @@ template {
   }
   description: "Elves possess the following racial traits."
 }
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-ability_modifier {
+ ability_modifier {
   ability: DEXTERITY
   modifier {
     modifier {
@@ -42,16 +34,12 @@ ability_modifier {
 }
 immunity: SLEEP_SPELLS
 immunity: SLEEP_EFFECTS
-reflex_modifier {
-}
 will_modifier {
   modifier {
     value: 2
     type: RACIAL
     condition: "against enchantment spells or effects"
   }
-}
-fortitude_modifier {
 }
 skill_modifier {
   key: "listen"
@@ -79,10 +67,4 @@ skill_modifier {
       type: RACIAL
     }
   }
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
 }

@@ -24,8 +24,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 1
 abilities {
   strength: 11
@@ -47,13 +45,7 @@ primary_attack {
   }
   mode: WEAPON
   style: MELEE
-  damage {
-    damage {
-      base {
-      }
-          }
-  }
-}
+ }
 space {
   imperial {
     feet {
@@ -90,8 +82,6 @@ organization {
     modifier: 10
   }
   plus {
-    number {
-    }
     text: "2 3rd level sergeants and 1 leader of 3rd-4th level"
   }
 }
@@ -103,8 +93,6 @@ organization {
     modifier: 30
   }
   plus {
-    number {
-    }
     text: "100 noncombatants plus 1 3rd-level sergeant per 20 adults, 5th-level lieutenants, 3 7th-level captains, 1d5+5 dogs, 1d4+1 riding dogs"
   }
 }

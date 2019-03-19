@@ -13,23 +13,3 @@ template {
   description: "The character is trained in the use of poison and never risks accidentally\n  poisoning themselves when applying poison to a blade."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

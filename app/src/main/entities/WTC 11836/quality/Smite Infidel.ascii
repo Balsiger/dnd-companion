@@ -13,23 +13,3 @@ template {
   description: "Once per day, a divine champion may attempt to smite a creature with a different patron deity (or no patron deity at all) with one normal melee attack. She adds her Charisma bonus to the attack roll and deals 1 extra point of damage per divine champion level. If the divine champion acceidentally smites someone of the same patron, the smite has no effect but is still used up for that day. If the divine champion is also a Paladin, she may use smite evil and this ability separately or combine them into a single strike if the target is evil and of a different faith."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

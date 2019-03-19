@@ -58,13 +58,7 @@ primary_attack {
   }
   mode: WEAPON
   style: MELEE
-  damage {
-    damage {
-      base {
-      }
-          }
-  }
-}
+ }
 primary_attack {
   attacks {
     modifier: 1
@@ -96,35 +90,23 @@ reach {
 }
 feat {
   name: "Combat Reflexes"
-  parameters {
-  }
 }
 feat {
   name: "Iron Will"
-  parameters {
-  }
 }
 feat {
   name: "Point Blank Shot"
-  parameters {
-  }
 }
 feat {
   name: "Power Attack"
-  parameters {
-  }
 }
 feat {
   name: "Precise Shot"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: MOUNTAIN
 organization {
   type: SOLITARY
-  number {
-  }
 }
 organization {
   type: GANG
@@ -142,8 +124,6 @@ organization {
     modifier: 5
   }
   plus {
-    number {
-    }
     text: "35% noncombatants"
   }
 }
@@ -155,8 +135,6 @@ organization {
     modifier: 5
   }
   plus {
-    number {
-    }
     text: "1 elder"
   }
 }
@@ -168,8 +146,6 @@ organization {
     modifier: 5
   }
   plus {
-    number {
-    }
     text: "1 elder"
   }
 }
@@ -181,8 +157,6 @@ organization {
     modifier: 5
   }
   plus {
-    number {
-    }
     text: "1 elder"
   }
 }
@@ -229,18 +203,12 @@ possession {
 }
 quality {
   name: "rock throwing"
-  parameters {
-  }
   }
 quality {
   name: "darkvision"
-  parameters {
-  }
   }
 quality {
   name: "rock catching"
-  parameters {
-  }
   }
 skill {
   name: "climb"

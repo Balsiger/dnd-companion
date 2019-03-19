@@ -44,8 +44,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 1
 abilities {
   strength: 1
@@ -82,24 +80,14 @@ space {
     }
   }
 }
-reach {
-  imperial {
-    feet {
-    }
-  }
-}
-climate: WARM
+ climate: WARM
 terrain: FOREST
 organization {
   type: SOLITARY
   number {
     modifier: 1
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: TANGLE
   number {
@@ -107,11 +95,7 @@ organization {
     dice: 3
     modifier: 1
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: COLONY
   number {
@@ -119,11 +103,7 @@ organization {
     dice: 6
     modifier: 6
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 1
 }

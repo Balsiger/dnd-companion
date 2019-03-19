@@ -5,27 +5,9 @@ template {
   short_description: "AC +1"
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
+ attack_modifier {
   modifier {
     value: 1
     type: GENERAL
   }
-}
-damage_modifier {
-}
-ac_modifier {
 }

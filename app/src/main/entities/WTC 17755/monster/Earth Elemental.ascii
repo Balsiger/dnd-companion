@@ -5,33 +5,13 @@ template {
   world: "Generic"
   description: "Earth elementals are immensely strong and tough. The larger ones can pound almost anything into rubble. They seldom leave their home plane except when summoned elsewhere by a spell.\nWhen summoned to the Material Plane, an earth elemental consists of whatever types of dirt, stones, precious metals, and gems it was conjured from.\nEarth elementals speak Terran but rarely choose to do so. An earth elemental\'s voice sounds like an echo in a deep tunnel, the rumbling of an earthquake, or the grinding of plates of stone."
 }
-size {
-}
 type: ELEMENTAL
 subtype: EARTH
-hit_dice {
-}
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
 climate: ANY
 terrain: ELEMENTAL_PLANE_OF_EARTH
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
-challenge_rating {
-}
+ }
 treasure: NONE_TREASURE
 alignment: TRUE_NEUTRAL
 alignment_status: USUALLY

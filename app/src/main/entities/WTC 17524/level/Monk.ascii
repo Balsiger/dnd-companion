@@ -64,8 +64,6 @@ quality {
   level: 1
   template {
     name: "monk ac bonus"
-    parameters {
-    }
     per_day: 999
     condition {
       generic: "not immobilized, helpless, wearing armor, wearing shield, medium load, heavy load"
@@ -76,81 +74,25 @@ quality {
   level: 5
   template {
     name: "ac +1"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 10
   template {
     name: "ac +1"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "ac +1"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 20
   template {
     name: "ac +1"
-    parameters {
-    }
-    condition {
-    }
   }
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
 }
 bonusFeat {
   level: 1

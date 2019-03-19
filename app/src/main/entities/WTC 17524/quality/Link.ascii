@@ -12,23 +12,3 @@ template {
   description: "A druid can handle her animal companion as a free action, or push it as a\n  move action, even if she doesn\342\200\232\303\204\303\264t have any ranks in the Handle Animal\n  skill. The druid gains a +4 circumstance bonus on all wild empathy checks and\n  Handle Animal checks made regarding an animal companion."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -18,28 +18,8 @@ size {
 }
 type: HUMANOID
 subtype: HUMAN
-hit_dice {
-}
-natural_armor {
-}
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
-challenge_rating {
-}
+ }

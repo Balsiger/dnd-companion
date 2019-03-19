@@ -13,23 +13,3 @@ template {
   description: "This ability is similar to \\Quality{Blindsense}, but is far more\n  discerning. Using nonvisual senses, such as sensitivity to vibrations, keen\n  smell, acute hearing, or echolocation, a creature with blindsight maneuvers\n  and fights as well as a sighted creature. Invisibility, darkness, and most\n  kinds of concealment are irrelevant, though the creature must have line of\n  effect to a creature or object to discern that creature or object. The\n  ability\'s range is dependent on the creature. The creature usually does not\n  need to make \\Skill{Spot} or \\Skill{Listen} checks to notice creatures within\n  range of its blindsight ability. Unless noted otherwise, blindsight is\n  continuous, and the creature need do nothing to use it. Some forms of\n  blindsight, however, must be triggered as a free action. If so, this is noted\n  in the creature\'s description. If a creature must trigger its blindsight\n  ability, the creature gains the benefits of blindsight only during its\n  turn."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -14,27 +14,3 @@ template {
 type: METAMAGIC
 benefit: "You gain a +4 bonus on caster level checks made to defeat a Weave user\'s spell resistance. All creatures employing spells or spell-like abilities are considered Weave users unless they posses the \\Feat{Shadow Weave Magic} feat. This benefit stacks with those from \\Feat{Spell Penetration} and \\Feat{Greater Spell Penetration} feats, but it does not extend to spells you cast from the schools of evocation or transmutation."
 prerequisites: "Shadow Weave Magic"
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

@@ -11,15 +11,7 @@ template {
   description: "The creature is exceptionally stable on its feet. It has a +4 bonus on ability checks made to resist being bull rushed or tripped when standing on the ground (but not\nwhen climbing, flying, riding, or otherwise not standing firmly on the ground)."
   short_description: "+4 on ability checks to resist bull rush or trip."
 }
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-ability_modifier {
+ ability_modifier {
   ability: STRENGTH
   modifier {
     modifier {
@@ -38,16 +30,4 @@ ability_modifier {
       condition: "resisting trip when standing on the ground"
     }
   }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
 }

@@ -6,36 +6,18 @@ template {
   description: "A standard seventh level fighter"
   short_description: "A 7th level fighter"
 }
-size {
-}
 type: HUMANOID
 subtype: HUMAN
 hit_dice {
   number: 7
   dice: 10
 }
-natural_armor {
-}
 base_attack: 7
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 7
 }

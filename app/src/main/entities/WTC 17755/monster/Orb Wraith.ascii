@@ -71,8 +71,6 @@ primary_attack {
   style: RANGED
   damage {
     damage {
-      base {
-      }
       effect: "1d4 negative levels"
           }
   }
@@ -93,70 +91,42 @@ reach {
 }
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Blind-Fight"
-  parameters {
-  }
 }
 feat {
   name: "Combat Reflexes"
-  parameters {
-  }
 }
 feat {
   name: "Dodge"
-  parameters {
-  }
 }
 feat {
   name: "Improved Critical"
-  parameters {
-  }
 }
 feat {
   name: "Improved Critical"
-  parameters {
-  }
 }
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 feat {
   name: "Mobility"
-  parameters {
-  }
 }
 feat {
   name: "Spring Attack"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-  }
 }
 climate: ANY
 terrain: UNDERGROUND
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 19
 }

@@ -24,8 +24,6 @@ weight {
       nominator: 1
       denominator: 10
     }
-    ounces {
-    }
   }
 }
 probability: COMMON
@@ -65,79 +63,17 @@ appearance {
   probability: UNCOMMON
   appearance: "A brown candle."
 }
-substance {
-  thickness {
-  }
-}
-player_name: "Candle"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
+ player_name: "Candle"
+  timed {
   duration {
     duration {
       hours: 1
     }
   }
 }
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
+  light {
   bright {
-    distance {
-      imperial {
-        feet {
-        }
-      }
-    }
-    shape: SPHERE
+     shape: SPHERE
   }
   shadowy {
     distance {
@@ -148,15 +84,5 @@ light {
       }
     }
     shape: SPHERE
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

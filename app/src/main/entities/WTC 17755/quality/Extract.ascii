@@ -12,23 +12,3 @@ template {
   description: "A \\Monster{Mind Flayer} that begins its turn with all four tentacles attached and that makes a successful grapple check, automatically extracts the opponent\'s brain, instantly killing that creature. This power is useless against constructs, elementals, oozes, plants, and undead. It is not instantly fatal to foes with multiple heads, such as \\Monster{ettins} and \\Monster{hydras}."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

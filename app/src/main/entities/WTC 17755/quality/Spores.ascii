@@ -12,23 +12,3 @@ template {
   description: "A vrock can release masses of spores from its body once every 3 rounds as a\n  free action. The spores automatically deal 1d8 points of damage to all\n  creatures adjacent to the vrock. They then penetrate the skin and grow,\n  dealing an additional 1d4 points of damage each round for 10 rounds. At the\n  end of this time, the victim is covered with a tangle of viny growths. (The\n  vines are harmless and wither away in 1d4 days.) A delay poison spell stops\n  the spores\342\200\232\303\204\303\264 growth for its duration. Bless, neutralize poison, or remove\n  disease kills the spores, as does sprinkling the victim with a vial of holy\n  water.  "
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

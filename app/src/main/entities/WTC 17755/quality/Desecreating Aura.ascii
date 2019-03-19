@@ -3,23 +3,3 @@ template {
   description: "All \\Monster{nightshades} give off a 20-foot- radius emanation of utter desecration, imbuing their surroundings with negative energy. This ability works much like a desecrate spell, except that the nightshade\'s evil is so great that it is treated as the shrine of an evil power. All undead within 20 feet of the nightshade (including the creature itself ) gain a +2 profane bonus on attack rolls, damage rolls, and saving throws, and +2 hit points per HD. (The nightshade Hit Dice, attack, and save entries given here include these profane bonuses.) Charisma checks made to turn undead within this area take a +6 penalty.\n\nA \\Monster{nightshade}\'s desecrating aura cannot be dispelled except by a dispel evil spell or similar effect. If the effect is dispelled, the \\Monster{nightshade} can resume it as a free action on its next turn. Its desecrating aura is suppressed if a nightshade enters a consecrated or hallowed area, but the \\Monster{nightshade}\'s presence also suppresses the consecrated or hallowed effect for as long as it remains in the area. "
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

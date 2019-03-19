@@ -4,23 +4,3 @@ template {
   description: "The creature does not have a soul. It\'s soul and body are a single\n  unit. When it is slain, no soul is set loose. Spells that restore souls to\n  their bodies such as \\Spell{raise dead}, \\Spell{reincarnate}, and\n  \\Spell{resurrection}, don\'t work. It takes a different magical effect, such\n  as \\Spell{limited wish}, \\Spell{wish}, \\Spell{miracle}, or \\Spell{true\n  resurrection} to restore the creature to life."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

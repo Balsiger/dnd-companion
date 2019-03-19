@@ -76,20 +76,14 @@ reach {
 }
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Endurance"
-  parameters {
-  }
 }
 climate: WARM
 terrain: PLAINS
 organization {
   type: DOMESTICATED
-  number {
-  }
 }
 challenge_rating {
   leader: 1
@@ -100,18 +94,12 @@ alignment_status: ALWAYS
 combat: "A mule\342\200\231s powerful kick can be dangerous."
 quality {
   name: "low-light vision"
-  parameters {
-  }
   }
 quality {
   name: "scent"
-  parameters {
-  }
   }
 quality {
   name: "surefooted"
-  parameters {
-  }
   }
 skill {
   name: "listen"

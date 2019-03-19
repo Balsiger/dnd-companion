@@ -13,15 +13,7 @@ template {
   description: "The creatures gets a +2 racial bonus to saves against poison."
   short_description: "+2 racial bonus against poison."
 }
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
+ reflex_modifier {
   modifier {
     value: 2
     type: RACIAL
@@ -41,10 +33,4 @@ fortitude_modifier {
     type: RACIAL
     condition: "against poison"
   }
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
 }

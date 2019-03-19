@@ -23,8 +23,6 @@ weight {
     pounds {
       leader: 1
     }
-    ounces {
-    }
   }
 }
 probability: COMMON
@@ -39,13 +37,7 @@ appearance {
 }
 substance {
   material: WOOD
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Torch"
 weapon {
   damage {
@@ -54,26 +46,16 @@ weapon {
         number: 1
         dice: 3
       }
-      conditional {
-      }
     }
     damage {
       base {
         modifier: 1
       }
       type: FIRE
-      conditional {
-      }
     }
-  }
-  secondary_damage {
-  }
-  splash {
   }
   type: BLUDGEONING
   critical {
-    threat {
-    }
     multiplier: 2
   }
   style: LIGHT_MELEE
@@ -93,50 +75,14 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
+ timed {
   duration {
     duration {
       hours: 1
     }
   }
 }
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
+  light {
   bright {
     distance {
       imperial {
@@ -156,15 +102,5 @@ light {
       }
     }
     shape: SPHERE
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

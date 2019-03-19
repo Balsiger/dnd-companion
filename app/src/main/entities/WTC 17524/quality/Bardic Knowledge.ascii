@@ -13,23 +13,3 @@ template {
   description: "A bard picks up a lot of stray knowledge while wandering the land and\n  learning stories from other bards. He may make a special bardic knowledge\n  check with a bonus equal to his bard level + his Intelligence modifier to see\n  whether he knows some relevant information about local notable people,\n  legendary items, or noteworthy places. (If the bard has 5 or more ranks in\n  Knowledge (history), he gains a +2 bonus on this check.)\n\n  A successful bardic knowledge check will not reveal the powers of a magic\n  item but may give a hint as to its general function. A bard may not take 10\n  or take 20 on this check; this sort of knowledge is essentially random. The\n  DM can determine the Difficulty Class of the check by referring to the table\n  above."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

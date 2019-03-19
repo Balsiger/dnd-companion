@@ -13,23 +13,3 @@ template {
   description: "Rhuallith uses her total character level when determining level-based\n  factors (range, duration, and so forth) of her arachnemancer spells."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

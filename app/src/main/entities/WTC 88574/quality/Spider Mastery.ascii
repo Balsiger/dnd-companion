@@ -13,23 +13,3 @@ template {
   description: "A drider vampire can compel a spiderkind creature (see Spiderkind sidebar)\n  to obey its mental commands. An unwilling, intelligent target that fails a\n  Will saving throw (DC 18) obeys one command as if under a suggestionspell.\n\n  A successful save allows the creature to resist the command, but the drider\n  vampire can attempt to command it again next round. Commanding an\n  unwilling target requires a standard action; otherwise, issuing commands is a\n  free action. "
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

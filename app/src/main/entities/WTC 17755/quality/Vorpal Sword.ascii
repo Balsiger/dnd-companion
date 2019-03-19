@@ -13,23 +13,3 @@ template {
   description: "Every balor carries a +1 vorpal longsword that looks like a flame or a bolt\n  of lightning."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -75,13 +75,7 @@ reach {
 }
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 11
 }

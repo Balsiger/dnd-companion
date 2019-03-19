@@ -4,10 +4,6 @@ template {
   description: "A placeholder for handling familiars."
   short_description: "Familiar placeholder."
 }
-size {
-}
-hit_dice {
-}
 natural_armor {
   modifier {
     value: 6
@@ -17,20 +13,6 @@ natural_armor {
 abilities {
   intelligence: 11
 }
-saves {
-}
-space {
-}
-reach {
-}
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
-challenge_rating {
-}
+ }

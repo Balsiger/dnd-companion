@@ -44,20 +44,12 @@ quality {
   level: 1
   template {
     name: "summon familiar"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "scribe scroll"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 base_attack: 0
@@ -150,8 +142,6 @@ bonusFeat {
       feat_type: METAMAGIC
       feat_name: "Spell Mastery"
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -162,8 +152,6 @@ bonusFeat {
       feat_type: ITEM_CREATION
       feat_type: METAMAGIC
       feat_name: "Spell Mastery"
-    }
-    condition {
     }
   }
 }
@@ -176,8 +164,6 @@ bonusFeat {
       feat_type: METAMAGIC
       feat_name: "Spell Mastery"
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -188,8 +174,6 @@ bonusFeat {
       feat_type: ITEM_CREATION
       feat_type: METAMAGIC
       feat_name: "Spell Mastery"
-    }
-    condition {
     }
   }
 }
@@ -413,24 +397,4 @@ spells_per_day {
   value: 2
   value: 3
   value: 4
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
 }

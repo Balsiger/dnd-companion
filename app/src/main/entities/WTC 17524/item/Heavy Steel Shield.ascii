@@ -29,8 +29,6 @@ weight {
     pounds {
       leader: 15
     }
-    ounces {
-    }
   }
 }
 probability: UNCOMMON
@@ -46,62 +44,8 @@ appearance {
   probability: VERY_RARE
   appearance: "A battered, heavy, steel shield."
 }
-substance {
-  thickness {
-  }
-}
-player_name: "Heavy Steel Shield"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
+ player_name: "Heavy Steel Shield"
+  armor {
   ac_bonus {
     modifier {
       value: 2
@@ -112,34 +56,8 @@ armor {
   max_dexterity: 30
   check_penalty: -2
   arcane_failure: 15
-  speed_fast {
-  }
-  speed_slow {
-  }
 }
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
-  multiple {
-  }
   item: "mwk armor"
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
 }

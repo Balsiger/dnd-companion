@@ -13,23 +13,3 @@ template {
   description: "An elemental has the following traits:\n    \\list{Darkvision out to 60 feet.}\n    \\list{Immunity to poison, sleep effects, paralysis, and stunning.}\n    \\list{Not subject to critical hits or flanking.}\n\n    \\list{Unlike most other living creatures, an elemental does not have a dual\n          nature\342\200\232\303\204\303\256its soul and body form one unit. When an elemental is slain,\n          no soul is set loose. Spells that restore souls to their bodies, such\n          as raise dead, reincarnate, andresurrection, don\342\200\232\303\204\303\264t work on an\n          elemental. It takes a different magical effect, such as limited wish,\n          wish, miracle, ortrue resurrection, to restore it to life.}\n    \\list{Proficient with natural weapons only, unless generally humanoid in\n          form, in which case proficient with all simple weapons and any\n          weapons mentioned in its entry.}\n    \\list{Proficient with whatever type of armor (light, medium, or heavy) that\n          it is described as wearing, as well as all lighter types.  Elementals\n          not indicated as wearing armor are not proficient with\n          armor. Elementals are proficient with shields if they are proficient\n          with any form of armor.}\n    \\list{Elementals do not eat, sleep, or breathe.}"
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

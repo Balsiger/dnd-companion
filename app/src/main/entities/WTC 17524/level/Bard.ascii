@@ -71,138 +71,84 @@ quality {
   level: 1
   template {
     name: "bardic music"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "countersong"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "fascinate"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "inspire courage"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 3
   template {
     name: "inspire competence"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 6
   template {
     name: "suggestion"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 8
   template {
     name: "inspire courage"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 9
   template {
     name: "inspire greatness"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 12
   template {
     name: "song of freedom"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 14
   template {
     name: "inspire courage"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "inspire heroics"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 18
   template {
     name: "mass suggestion"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 20
   template {
     name: "inspire courage"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "cast spells in armor"
-    parameters {
-    }
     condition {
       generic: "light armor"
     }
@@ -212,10 +158,6 @@ quality {
   level: 1
   template {
     name: "bardic knowledge"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 base_attack: 0
@@ -452,12 +394,6 @@ spells_per_day {
   value: 3
   value: 4
 }
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
 spells_known {
   value: 4
   value: 5
@@ -611,10 +547,4 @@ spells_known {
   value: 3
   value: 4
   value: 4
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
 }

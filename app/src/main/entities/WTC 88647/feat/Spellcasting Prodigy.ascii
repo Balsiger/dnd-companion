@@ -15,27 +15,3 @@ type: GENERAL
 benefit: "For the purpose of determining bonus spells, the the ability score that controls your spellcasting (Charisma for bards and sorcerers, Wisdom for divine spellcasters, or Intelligence for wizards) as 2 points higher than its actual value."
 special: "You can gain \\Feat{Spellcasting Prodigy} multiple times. Each time you take the feat it applies to a different spellcasting ability score. You can take this feat even if you don\'d have any levels in a spelcasting class yet."
 prerequisites: "You may select this feat only as a 1st-level character."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

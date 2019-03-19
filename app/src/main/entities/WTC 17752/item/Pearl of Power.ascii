@@ -14,15 +14,11 @@ template {
   description: "This seemingly normal pearl of average size and luster is a potent aid to\n  all spellcasters who prepare spells (clerics, druids, rangers, paladins, and\n  wizards). Once per day on command, a pearl of power enables the possessor to\n  recall any one spell that she had prepared and then cast. The spell is then\n  prepared again, just as if it had not been cast."
   short_description: "Restores a spell cast once per day."
 }
-value {
-}
 weight {
   imperial {
     pounds {
       nominator: 1
       denominator: 10
-    }
-    ounces {
     }
   }
 }
@@ -36,89 +32,5 @@ appearance {
 }
 substance {
   material: CRYSTAL
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 player_name: "Pearl"
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
-  }
-}

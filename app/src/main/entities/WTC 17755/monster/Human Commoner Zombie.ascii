@@ -47,11 +47,7 @@ abilities {
   intelligence: -1
   charisma: 1
 }
-saves {
-}
 primary_attack {
-  attacks {
-  }
   mode: SLAM
   style: MELEE
   damage {
@@ -65,8 +61,6 @@ primary_attack {
   }
 }
 primary_attack {
-  attacks {
-  }
   mode: WEAPON
   style: MELEE
   damage {
@@ -79,26 +73,14 @@ primary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Toughness"
-  parameters {
-  }
 }
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   nominator: 1
   denominator: 2

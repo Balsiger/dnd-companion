@@ -13,23 +13,3 @@ template {
   description: "No mortal magic can permanently affect or fix a chaos beast\342\200\232\303\204\303\264s form. Effects\n  such as polymorphing or petrifica- tion force the creature into a new shape,\n  but at the start of its next turn it immediately returns to its mutable form\n  as a free action."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

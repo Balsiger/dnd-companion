@@ -14,27 +14,3 @@ template {
 type: METAMAGIC
 benefit: "Any Weave user who employs a divination spell (such as \\Spell{detect magic}), spell-like ability, or magic item that could detect magical aura of one of your spells must make a successful level check (DC 11 + your caster level) to succeed. Similarly, a Weave user attempting to reveal the effects of one of your spells spells via a divination spell (such as \\Spell{See Invisibility}) must make a caster level check to succeed. The Weave user may check only once for each divination spell used, no matter how many of your spell effects are operating in the area. All creatures employing spells or spell-like abilities are considered Weave users unless the posses the \\Feat{Shadow Weave Magic} feat.\n\nThis benefit does not extend to spells cast from the schools of evocation or transmutation."
 prerequisites: "Shadow Weave Magic"
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

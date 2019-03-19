@@ -31,8 +31,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 1
 abilities {
   strength: 11
@@ -63,8 +61,6 @@ reach {
 }
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: PLAINS
@@ -84,8 +80,6 @@ organization {
     modifier: 9
   }
   plus {
-    number {
-    }
     text: "100% noncombatants, 1 3rd level sergeant per 20 adults, 1 leader of 4th to 6th level "
   }
 }
@@ -97,8 +91,6 @@ organization {
     modifier: 9
   }
   plus {
-    number {
-    }
     text: "with warg mounts"
   }
 }
@@ -110,8 +102,6 @@ organization {
     modifier: 39
   }
   plus {
-    number {
-    }
     text: "100% noncombatants,  1 3rd-level sergeant per 20 adults, 1 or 2 lieutenants of 4th or 5th level, 1 leader of 6th\342\200\2238th level, 10\342\200\22324 worgs, and 2\342\200\2234 dire wolves"
   }
 }

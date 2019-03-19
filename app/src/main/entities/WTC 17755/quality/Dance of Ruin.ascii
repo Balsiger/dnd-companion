@@ -13,23 +13,3 @@ template {
   description: "To use this ability, a group of at least three vrocks must join hands in a\n  circle, dancing wildly and chanting. At the end of 3 rounds of dancing, a\n  wave of crackling energy flashes outward in a 100-foot radius. All creatures\n  except for demons within the radius take 20d6 points of damage (Reflex DC 18\n  half ). Stunning, paralyzing, or slaying one of the vrocks stops the\n  dance. The save DC is Charisma-based.  "
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

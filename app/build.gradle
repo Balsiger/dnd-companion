@@ -100,8 +100,6 @@ protobuf {
         remove java
       }
       task.plugins {
-        lite {
-        }
       }
     }
   }

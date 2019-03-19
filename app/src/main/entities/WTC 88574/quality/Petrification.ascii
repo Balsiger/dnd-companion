@@ -12,23 +12,3 @@ template {
   description: "The bite of a jade spider injects a glowing green venom that turns the\n  victim to stone. A creature bitten by the spider must succeed at a Fortitude\n  save (DC 22) or immediately turn to stone. "
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

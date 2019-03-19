@@ -14,18 +14,8 @@ template {
   description: "Upon command, a shock weapon is sheathed in crackling electricity. The\n  electricity does not harm the wielder. The effect remains until another\n  command is given. A shock weapon deals an extra 1d6 points of electricity\n  damage on a successful hit.  Bows, crossbows, and slings so crafted bestow\n  the electricity energy upon their ammunition."
   short_description: "+1d6 electrical damage"
 }
-value {
-}
-weight {
-}
 probability: COMMON
-size {
-}
-substance {
-  thickness {
-  }
-}
-weapon {
+ weapon {
   damage {
     damage {
       base {
@@ -33,87 +23,13 @@ weapon {
         dice: 6
       }
       type: ELECTRICAL
-      conditional {
-      }
     }
   }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
+   reach {
     imperial {
       feet {
         leader: 5
       }
     }
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

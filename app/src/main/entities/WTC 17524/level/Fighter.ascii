@@ -129,8 +129,6 @@ bonusFeat {
     parameters {
       feat_type: FIGHTER
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -139,8 +137,6 @@ bonusFeat {
     name: "Fighter Feat"
     parameters {
       feat_type: FIGHTER
-    }
-    condition {
     }
   }
 }
@@ -151,8 +147,6 @@ bonusFeat {
     parameters {
       feat_type: FIGHTER
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -161,8 +155,6 @@ bonusFeat {
     name: "Fighter Feat"
     parameters {
       feat_type: FIGHTER
-    }
-    condition {
     }
   }
 }
@@ -173,8 +165,6 @@ bonusFeat {
     parameters {
       feat_type: FIGHTER
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -183,8 +173,6 @@ bonusFeat {
     name: "Fighter Feat"
     parameters {
       feat_type: FIGHTER
-    }
-    condition {
     }
   }
 }
@@ -195,8 +183,6 @@ bonusFeat {
     parameters {
       feat_type: FIGHTER
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -205,8 +191,6 @@ bonusFeat {
     name: "Fighter Feat"
     parameters {
       feat_type: FIGHTER
-    }
-    condition {
     }
   }
 }
@@ -217,8 +201,6 @@ bonusFeat {
     parameters {
       feat_type: FIGHTER
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -228,8 +210,6 @@ bonusFeat {
     parameters {
       feat_type: FIGHTER
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -238,8 +218,6 @@ bonusFeat {
     name: "Fighter Feat"
     parameters {
       feat_type: FIGHTER
-    }
-    condition {
     }
   }
 }

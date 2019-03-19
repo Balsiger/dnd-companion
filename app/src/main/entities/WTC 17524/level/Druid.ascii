@@ -62,259 +62,159 @@ quality {
   level: 1
   template {
     name: "spontenous casting"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "cannot cast opposed spells"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "animal companion"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "nature sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "wild empathy"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 2
   template {
     name: "woodland stride"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 3
   template {
     name: "trackless step"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 4
   template {
     name: "resist nature\'s lure"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 5
   template {
     name: "wild shape"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 6
   template {
     name: "wild shape"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 7
   template {
     name: "wild shape"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 8
   template {
     name: "wild shape large"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 9
   template {
     name: "venom immunity"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 10
   template {
     name: "wild shape"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 11
   template {
     name: "wild shape tiny"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 12
   template {
     name: "wild shape plant"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 13
   template {
     name: "a thousand faces"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 14
   template {
     name: "wild shape"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "timeless body"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 16
   template {
     name: "wild shape huge"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 17
   template {
     name: "wild shape elemental"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 19
   template {
     name: "wild shape"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 19
   template {
     name: "wild shape elemental"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 20
   template {
     name: "wild shape elemental"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 20
   template {
     name: "wild shape elemental huge"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 base_attack: 0
@@ -617,24 +517,4 @@ spells_per_day {
   value: 2
   value: 3
   value: 4
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
 }

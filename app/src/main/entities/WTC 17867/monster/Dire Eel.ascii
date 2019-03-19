@@ -50,8 +50,6 @@ abilities {
   intelligence: 1
   charisma: 2
 }
-saves {
-}
 primary_attack {
   attacks {
     modifier: 1
@@ -68,10 +66,6 @@ primary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Improved Initiative"
 }
@@ -85,22 +79,10 @@ climate: WARM
 terrain: AQUATIC_TERRAIN
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: PAIR
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 3
 }

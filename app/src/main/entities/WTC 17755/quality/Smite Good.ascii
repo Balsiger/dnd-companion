@@ -13,23 +13,3 @@ template {
   description: "Once per day the creature can make a normal melee attack to deal extra\n  damage equal to its HD total (maximum of +20) against a good foe."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

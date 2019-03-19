@@ -13,23 +13,3 @@ template {
   description: "At 4th level or higher, a monk within arm\342\200\232\303\204\303\264s reach of a wall can use it to\n  slow her descent. When first using this ability, she takes damage as if the\n  fall were 20 feet shorter than it actually is.  The monk\342\200\232\303\204\303\264s ability to slow\n  her fall (that is, to reduce the effective distance of the fall when next to\n  a wall) improves with her monk level until at 20th level she can use a nearby\n  wall to slow her descent and fall any distance without harm. See the Special\n  column on Table 3\342\200\232\303\204\303\25410 for details."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

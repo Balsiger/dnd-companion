@@ -13,23 +13,3 @@ template {
   description: "If a bebilith hits with both claw attacks, it pulls apart any armor worn by\n  its foe.  This attack deals 4d6+18 points of damage to the opponent\342\200\232\303\204\303\264s\n  armor. Creatures not wearing armor are unaffected by this special\n  attack. Armor re- duced to 0 hit points is destroyed. Damaged armor may be\n  repaired with a successful Craft (armorsmithing) check."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

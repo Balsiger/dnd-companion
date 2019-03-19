@@ -13,23 +13,3 @@ template {
   description: "Once per day, a shadow adept can use a standard action to create a double of himself woven from shadowstuff. The double has the ability scores, base AC, hit points, saves, and attack bonuses as its creator, but no equipment. (Any apparent clothing or equipment is nonfunctional). The double can attack the creator\'s enemies if given a weapon or items (since it can use anything its creator can), or function as the target of a \\SpellRef{project image} spell, duplicating the creator\'s actions and acting as the origin of the creator\'s spells when it is in direct line of sight. Mentally commanding the double is a free action. Using it as the originator of a spell counts as an action for the creator and the double.\n\nThe double lasts 1 round per caster level. The death of the double does not affect the shadow adept or vice versa. The double still lasts to the end of its duration if its creator dies."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

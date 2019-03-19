@@ -13,23 +13,3 @@ template {
   description: "The character has an intuitive sense that alerts her to danger from traps,\ngiving her a bonus on Reflex saves made to avoid traps and a dodge bonus to\nAC against attacks made by traps. Trap sense bonuses gained from multiple\nclasses stack."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

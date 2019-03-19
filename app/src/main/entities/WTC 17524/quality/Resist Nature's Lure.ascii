@@ -20,23 +20,3 @@ template {
   description: "A druid gains a +4 bonus on saving throws against the spell-like abilities\n  of fey (such as dryads, pixies, and sprites)."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

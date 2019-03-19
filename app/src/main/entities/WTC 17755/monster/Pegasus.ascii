@@ -54,8 +54,6 @@ abilities {
   intelligence: 10
   charisma: 13
 }
-saves {
-}
 primary_attack {
   attacks {
     modifier: 2
@@ -72,8 +70,6 @@ primary_attack {
   }
 }
 secondary_attack {
-  attacks {
-  }
   mode: BITE
   style: MELEE
   damage {
@@ -85,49 +81,23 @@ secondary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Flyby Attack"
-  parameters {
-  }
 }
 feat {
   name: "Iron Will"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: FOREST
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: PAIR
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: HERD
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 3
 }

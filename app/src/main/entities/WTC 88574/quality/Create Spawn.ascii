@@ -20,23 +20,3 @@ template {
   description: "A humanoid or monstrous humanoid $name rises as a spawn under the killers control $duration after $type."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

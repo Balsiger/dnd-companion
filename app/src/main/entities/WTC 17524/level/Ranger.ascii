@@ -54,68 +54,42 @@ quality {
   level: 1
   template {
     name: "favored enemy"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 5
   template {
     name: "favored enemy"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 10
   template {
     name: "favored enemy"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "favored enemy"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 20
   template {
     name: "favored enemy"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "wild empathy"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 2
   template {
     name: "combat style: archery|combat style: two-weapon fighting"
-    parameters {
-    }
     condition {
       generic: "wearing light or no armor"
     }
@@ -125,8 +99,6 @@ quality {
   level: 4
   template {
     name: "animal companion"
-    parameters {
-    }
     condition {
       generic: "using half level and -3 levels for separate animal companion list"
     }
@@ -219,8 +191,6 @@ bonusFeat {
     parameters {
       feat_name = "Track"
     }
-    condition {
-    }
   }
 }
 bonusFeat {
@@ -230,14 +200,10 @@ bonusFeat {
     parameters {
       feat_name = "Endurance"
     }
-    condition {
-    }
   }
 }
 spell_ability: WISDOM
 spells_per_day {
-}
-spells_per_day {
   value: -1
   value: -1
   value: -1
@@ -324,34 +290,4 @@ spells_per_day {
   value: 1
   value: 2
   value: 3
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
 }

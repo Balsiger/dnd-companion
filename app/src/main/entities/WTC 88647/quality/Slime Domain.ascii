@@ -13,23 +13,3 @@ template {
   description: "You can rebuke or command oozes as an evil cleric rebukes or commands undead. This ability is usable a number of times per day equal to 3 + your Charisma modifier."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

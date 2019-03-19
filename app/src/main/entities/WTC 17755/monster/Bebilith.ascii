@@ -83,13 +83,7 @@ primary_attack {
   }
   mode: WEB
   style: RANGED
-  damage {
-    damage {
-      base {
-      }
-    }
-  }
-}
+ }
 secondary_attack {
   attacks {
     modifier: 2
@@ -121,40 +115,24 @@ reach {
 }
 feat {
   name: "Cleave"
-  parameters {
-  }
 }
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 feat {
   name: "Improved Grapple"
-  parameters {
-  }
 }
 feat {
   name: "Power Attack"
-  parameters {
-  }
 }
 feat {
   name: "Track"
-  parameters {
-  }
 }
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 10
 }

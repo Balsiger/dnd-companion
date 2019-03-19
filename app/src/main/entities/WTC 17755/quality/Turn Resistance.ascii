@@ -13,23 +13,3 @@ template {
   description: "A creature with this special quality (usually an undead) is less easily\n  affected by clerics or paladins (see Turn or Rebuke Undead, page 159 of the\n  Player\342\200\232\303\204\303\264s Handbook). When resolving a turn, rebuke, command, or bolster\n  attempt, add the indicated number to the creature\342\200\232\303\204\303\264s Hit Dice total. For\n  example, a shadow has 3 Hit Dice and +2 turn resistance. Attempts to turn,\n  rebuke, command, or bolster treat the shadow as though it had 5 Hit Dice,\n  though it is a 3 HD creature for any other purpose."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

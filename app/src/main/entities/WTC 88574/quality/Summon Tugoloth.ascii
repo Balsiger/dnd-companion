@@ -13,23 +13,3 @@ template {
   description: "Once per day, a nycaloth can attempt to summon another nycaloth (or, if you\n  are using Manual of the Planes, 1d3 mezzoloths) with a 30% chance of\n  success. Summoned yugoloths remain for 1 hour, and they cannot use their own\n  summon abilities during that time. There is a 25% chance that a summoned\n  yugoloth turns on its summoner, attacking immediately (and hoping for a\n  reward from whomever was threatening the first yugoloth). "
 }
 type: SPELL_LIKE
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

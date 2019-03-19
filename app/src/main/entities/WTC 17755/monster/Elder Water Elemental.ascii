@@ -86,53 +86,31 @@ reach {
 }
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Cleave"
-  parameters {
-  }
 }
 feat {
   name: "Great Cleave"
-  parameters {
-  }
 }
 feat {
   name: "Improved Critical"
-  parameters {
-  }
 }
 feat {
   name: "Improved Bull Rush"
-  parameters {
-  }
 }
 feat {
   name: "Improved Sunder"
-  parameters {
-  }
 }
 feat {
   name: "Iron Will"
-  parameters {
-  }
 }
 feat {
   name: "Lightning Reflexes"
-  parameters {
-  }
 }
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 11
 }

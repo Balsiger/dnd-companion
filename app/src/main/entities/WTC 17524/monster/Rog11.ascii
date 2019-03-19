@@ -10,32 +10,16 @@ template {
   world: "Generic"
   description: "A dummy monster until NPC classes are supported."
 }
-size {
-}
 hit_dice {
   number: 11
   dice: 6
 }
 base_attack: 8
-abilities {
-}
 saves {
   fortitude: 3
   will: 3
   reflex: 7
 }
-space {
-}
-reach {
-}
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
-challenge_rating {
-}
+ }

@@ -48,166 +48,102 @@ quality {
   level: 1
   template {
     name: "Rage"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 4
   template {
     name: "Rage"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 8
   template {
     name: "Rage"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 12
   template {
     name: "Rage"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 16
   template {
     name: "Rage"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 19
   template {
     name: "Rage"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "Fast Movement"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "Illiteracy"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 2
   template {
     name: "Uncanny Dodge"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 3
   template {
     name: "Trap Sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 5
   template {
     name: "Improved Uncanny Dodge"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 6
   template {
     name: "Trap Sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 9
   template {
     name: "Trap Sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 12
   template {
     name: "Trap Sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "Trap Sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 18
   template {
     name: "Trap Sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 base_attack: 1
@@ -290,43 +226,3 @@ will_save: 0
 will_save: 1
 will_save: 0
 will_save: 0
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}

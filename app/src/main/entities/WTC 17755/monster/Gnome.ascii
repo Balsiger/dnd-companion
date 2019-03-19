@@ -31,8 +31,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 1
 abilities {
   strength: 11
@@ -61,8 +59,6 @@ reach {
       leader: 5
     }
   }
-}
-challenge_rating {
 }
 language {
   modifier: AUTOMATIC
@@ -99,13 +95,9 @@ language {
 encounter: "This humanoid stands a little more than half as high as a human. It has\na compact build, dark tan skin, fair hair, and large eyes."
 quality {
   name: "gnome traits"
-  parameters {
-  }
   }
 quality {
   name: "low-light vision"
-  parameters {
-  }
   }
 quality {
   name: "weapon familiarity"

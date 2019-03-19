@@ -15,23 +15,3 @@ template {
   description: "The divine champion channels a portion of her patron\'s power into wrath, giving her a +3 bonus on attack rolls, damage, and saving throws for a number of rounds equal to her Charisma bonus. During this time, the divine champion also has damage reduction 5/-. This ability can be used once per day and is invoked as a free action."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

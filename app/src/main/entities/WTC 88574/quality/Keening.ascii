@@ -12,23 +12,3 @@ template {
   description: "A keening spirit\'s most dreaded weapon is its wail or keen. This ability\nfunctions like the wail of the banshee spell, but it affects any number of\ncreatures within a 30-foot spread centered on the keening spirit. A\nsuccessful Fortitude save (DC 10 + 1/2 keening spirit\'s HD + keening spirit\'s\nCharisma modifier) negates the effect. A keening spirit can use this ability\nonly once per day. "
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

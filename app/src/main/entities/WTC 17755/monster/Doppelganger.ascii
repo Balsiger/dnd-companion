@@ -45,11 +45,7 @@ abilities {
   intelligence: 13
   charisma: 13
 }
-saves {
-}
 primary_attack {
-  attacks {
-  }
   mode: SLAM
   style: MELEE
   damage {
@@ -62,49 +58,23 @@ primary_attack {
     }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Dodge"
-  parameters {
-  }
 }
 feat {
   name: "Great Fortitude"
-  parameters {
-  }
 }
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: PAIR
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: GANG
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 3
 }

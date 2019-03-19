@@ -8,8 +8,6 @@ template {
   description: "These animals are similar to heavy horses but are trained and bred for strength and aggression. A heavy warhorse can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.\n\n\\bold{Carrying Capacity:} A light load for a heavy warhorse is up to 300 pounds; a medium load, 301\342\200\223600 pounds; and a heavy load, 601\342\200\223900 pounds. A heavy warhorse can drag 4,500 pounds.\n"
   short_description: "A heavy horse trained for fighting."
 }
-size {
-}
 hit_dice {
   number: 4
   dice: 8
@@ -73,10 +71,6 @@ secondary_attack {
       }
           }
   }
-}
-space {
-}
-reach {
 }
 challenge_rating {
   leader: 2

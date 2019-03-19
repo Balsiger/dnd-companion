@@ -6,8 +6,6 @@ template {
   description: "These animals or similar to light horses but are trained and bred for strength and aggression. They usually are not ready for warfare before age three. A light warhorse can fight while carrying a rider, but the rider cannot also attack unless he or she succeeds on a Ride check.\n\n\\bold{Carrying Capacity:} A light load for a light warhorse is up to 230 pounds; a medium load, 231\342\200\223460 pounds; and a heavy load, 461\342\200\223690 pounds. A light warhorse can drag 3,450 pounds."
   short_description: "A light, war trained horse."
 }
-size {
-}
 hit_dice {
   number: 3
   dice: 8
@@ -71,10 +69,6 @@ secondary_attack {
       }
           }
   }
-}
-space {
-}
-reach {
 }
 challenge_rating {
   leader: 1

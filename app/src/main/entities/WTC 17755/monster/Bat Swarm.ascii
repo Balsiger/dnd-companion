@@ -44,8 +44,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 base_attack: 2
 abilities {
   strength: 3
@@ -83,33 +81,17 @@ space {
     }
   }
 }
-reach {
-  imperial {
-    feet {
-    }
-  }
-}
-feat {
+ feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Lightning Reflexes"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: DESERT
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: FLIGHT
   number {
@@ -117,11 +99,7 @@ organization {
     dice: 3
     modifier: 1
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: COLONY
   number {
@@ -129,11 +107,7 @@ organization {
     dice: 10
     modifier: 10
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 2
 }

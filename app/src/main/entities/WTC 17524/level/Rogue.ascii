@@ -67,240 +67,144 @@ quality {
   level: 1
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 3
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 5
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 7
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 9
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 11
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 13
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 17
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 19
   template {
     name: "sneak attack"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "trap finding"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 2
   template {
     name: "evasion"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 3
   template {
     name: "trap sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 4
   template {
     name: "uncanny dodge"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 6
   template {
     name: "trap sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 8
   template {
     name: "improved uncanny dodge"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 9
   template {
     name: "trap sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 10
   template {
     name: "speak with animals of its kind"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 12
   template {
     name: "trap sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 13
   template {
     name: "special ability"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "trap sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 16
   template {
     name: "speak with animals of its kind"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 18
   template {
     name: "trap sense"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 19
   template {
     name: "special ability"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 base_attack: 0
@@ -383,43 +287,3 @@ will_save: 0
 will_save: 1
 will_save: 0
 will_save: 0
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}

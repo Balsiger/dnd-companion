@@ -12,23 +12,3 @@ template {
   description: "Taharak\342\200\232\303\204\303\264s touch acts as a rod of withering, dealing 1d4 points of Strength\n  damage and 1d4 points of Constitution damage with a successful incorporeal\n  touch attack (Fort DC 28 negates). If Taharak scores a critical hit, the\n  damage is Constitution drain instead."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

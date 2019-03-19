@@ -19,8 +19,6 @@ weight {
     pounds {
       leader: 1
     }
-    ounces {
-    }
   }
 }
 probability: VERY_RARE
@@ -31,30 +29,10 @@ appearance {
   probability: COMMON
   appearance: "A small, rune marked stone."
 }
-substance {
-  thickness {
-  }
-}
-player_name: "Thunderstone"
+ player_name: "Thunderstone"
 weapon {
-  damage {
-    damage {
-      base {
-      }
-      conditional {
-      }
-    }
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  type: GRENADE
-  critical {
-    threat {
-    }
-  }
-  style: THROWN_TOUCH
+   type: GRENADE
+   style: THROWN_TOUCH
   proficiency: NONE_PROFICIENCY
   range {
     imperial {
@@ -71,72 +49,10 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
   multiple {
     number: 1
     dice: 4
-  }
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

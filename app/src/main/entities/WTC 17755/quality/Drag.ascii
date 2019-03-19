@@ -12,23 +12,3 @@ template {
   description: "If a \\Monster{roper} hits with a strand attack, the strand latches onto the\n   opponent\342\200\232\303\204\303\264s body. This deals no damage but drags the stuck opponent 10 feet\n   closer each subsequent round (provoking no attack of opportunity) unless\n   that creature breaks free, which requires a DC 23 Escape Artist check or a\n   DC 19 Strength check. The check DCs are Strength-based, and the Escape\n   Artist DC includes a +4 racial bonus. A roper can draw in a creature within\n   10 feet of itself and bite with a +4 attack bonus in the same round.  A\n   strand has 10 hit points and can be attacked by making a successful sunder\n   attempt. However, attacking a roper\342\200\232\303\204\303\264s strand does not provoke an attack of\n   opportunity. If the strand is currently attached to a target, the roper\n   takes a \342\200\232\303\204\303\2544 penalty on its opposed attack roll to resist the sunder\n   attempt. Severing a strand deals no damage to a roper."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

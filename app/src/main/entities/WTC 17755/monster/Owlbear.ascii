@@ -45,8 +45,6 @@ abilities {
   intelligence: 2
   charisma: 10
 }
-saves {
-}
 primary_attack {
   attacks {
     modifier: 2
@@ -64,8 +62,6 @@ primary_attack {
   }
 }
 secondary_attack {
-  attacks {
-  }
   mode: BITE
   style: MELEE
   damage {
@@ -78,49 +74,23 @@ secondary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Track"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: FOREST
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: PAIR
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: PACK
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 4
 }

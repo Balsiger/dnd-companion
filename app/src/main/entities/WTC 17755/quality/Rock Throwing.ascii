@@ -12,23 +12,3 @@ template {
   description: "The range increment is $range for a stone giant\342\200\232\303\204\303\264s thrown rocks. It uses\n  both hands when throwing a rock."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

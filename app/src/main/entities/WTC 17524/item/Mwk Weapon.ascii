@@ -15,11 +15,7 @@ template {
 value {
   gold: 300
 }
-weight {
-}
 probability: UNCOMMON
-size {
-}
 appearance {
   probability: COMMON
   appearance: "Good workmanship."
@@ -36,37 +32,7 @@ appearance {
   probability: RARE
   appearance: "Extraordinarily well made."
 }
-substance {
-  thickness {
-  }
-}
-weapon {
-  damage {
-  }
-  secondary_damage {
-  }
-  splash {
-  }
-  critical {
-    threat {
-    }
-  }
-  range {
-  }
-  reach {
-  }
-}
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
+  magic {
   modifier {
     modifier {
       modifier {
@@ -75,55 +41,5 @@ magic {
       }
     }
     type: ATTACK
-  }
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
-  duration {
-    duration {
-    }
-  }
-}
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

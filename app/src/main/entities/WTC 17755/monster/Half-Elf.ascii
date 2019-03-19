@@ -18,8 +18,6 @@ size {
 }
 type: HUMANOID
 subtype: ELF
-hit_dice {
-}
 speed {
   mode: RUN
   distance {
@@ -29,12 +27,6 @@ speed {
       }
     }
   }
-}
-natural_armor {
-}
-abilities {
-}
-saves {
 }
 space {
   imperial {
@@ -50,8 +42,6 @@ reach {
     }
   }
 }
-challenge_rating {
-}
 language {
   modifier: AUTOMATIC
   name: COMMON
@@ -62,18 +52,12 @@ language {
 }
 quality {
   name: "immunity to sleep effects"
-  parameters {
-  }
   }
 quality {
   name: "low-light vision"
-  parameters {
-  }
   }
 quality {
   name: "half-elf traits"
-  parameters {
-  }
   }
 skill {
   name: "appraise"

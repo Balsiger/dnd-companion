@@ -82,36 +82,20 @@ secondary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Combat Reflexes"
-  parameters {
-  }
 }
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 climate: ANY
 terrain: WINDSWEPT_DEPTHS_OF_PANDEMONIUM
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: GANG
   number {
@@ -119,11 +103,7 @@ organization {
     dice: 3
     modifier: 1
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: PACK
   number {
@@ -131,11 +111,7 @@ organization {
     dice: 5
     modifier: 5
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 3
 }

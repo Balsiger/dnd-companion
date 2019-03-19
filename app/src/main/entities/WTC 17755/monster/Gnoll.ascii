@@ -48,13 +48,7 @@ primary_attack {
   }
   mode: WEAPON
   style: MELEE
-  damage {
-    damage {
-      base {
-      }
-          }
-  }
-}
+ }
 space {
   imperial {
     feet {
@@ -71,20 +65,14 @@ reach {
 }
 feat {
   name: "Power Attack"
-  parameters {
-  }
 }
 climate: WARM
 terrain: PLAINS
 organization {
   type: SOLITARY
-  number {
-  }
 }
 organization {
   type: PAIR
-  number {
-  }
 }
 organization {
   type: HUNTING_PARTY
@@ -94,8 +82,6 @@ organization {
     modifier: 1
   }
   plus {
-    number {
-    }
     text: "1d2 hyenas"
   }
 }
@@ -106,8 +92,6 @@ organization {
     dice: 10
   }
   plus {
-    number {
-    }
     text: "50% non-combatants, 1 3rd-level sergeant per 20 adults, 1 leader of 4-6 level, 1d4+4 hyenas"
   }
 }
@@ -118,8 +102,6 @@ organization {
     dice: 10
   }
   plus {
-    number {
-    }
     text: "1 3rd-level sergeant per 20 adults, 1d2 lieutenants of 4th or 5th level, 1 leader of 6th to 8th level, 1d6+6 hyenas, underground lairs also have 1d3 trolls"
   }
 }

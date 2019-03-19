@@ -13,23 +13,3 @@ template {
   description: "The creature can assume the shape of any Small or Medium humanoid. In\n  humanoid form, the creatures loses its natural attacks. The creature can\n  remain in its humanoid form until it chooses to assume a new one. A change in\n  form cannot be dispelled, but the creature revers to its natural form when\n  killed. A \\Spell{true seeing} spell or ability reveals its natural form."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

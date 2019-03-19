@@ -47,184 +47,112 @@ quality {
   level: 1
   template {
     name: "detect evail"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "smite evil"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 2
   template {
     name: "lay on hands"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 4
   template {
     name: "turn undead"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 5
   template {
     name: "smite evil"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "auta of good"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 2
   template {
     name: "divine grace"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 3
   template {
     name: "aura of courage"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 3
   template {
     name: "divine health"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 5
   template {
     name: "special mount"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 6
   template {
     name: "remove disease"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 9
   template {
     name: "remove disease"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 10
   template {
     name: "smite evil"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 quality {
   level: 12
   template {
     name: "remove disease"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "remove disease"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "smite evil"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 15
   template {
     name: "remove disease"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 20
   template {
     name: "smite evil"
-    parameters {
-    }
     per_day: 1
-    condition {
-    }
   }
 }
 base_attack: 1
@@ -309,8 +237,6 @@ will_save: 0
 will_save: 0
 spell_ability: CHARISMA
 spells_per_day {
-}
-spells_per_day {
   value: -1
   value: -1
   value: -1
@@ -397,34 +323,4 @@ spells_per_day {
   value: 1
   value: 2
   value: 3
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_per_day {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
 }

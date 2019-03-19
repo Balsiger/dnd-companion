@@ -86,35 +86,21 @@ reach {
 }
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Run"
-  parameters {
-  }
 }
 feat {
   name: "Track"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: FOREST
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 3
 }

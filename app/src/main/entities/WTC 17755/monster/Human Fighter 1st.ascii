@@ -13,15 +13,11 @@ template {
   description: "A standard first level fighter"
   short_description: "A 1st level fighter"
 }
-size {
-}
 type: HUMANOID
 subtype: HUMAN
 hit_dice {
   number: 1
   dice: 10
-}
-natural_armor {
 }
 base_attack: 1
 abilities {
@@ -32,38 +28,20 @@ abilities {
   intelligence: 10
   charisma: 8
 }
-saves {
-}
-space {
-}
-reach {
-}
 feat {
   name: "Exotic Weapon Proficiency"
-  parameters {
-  }
 }
 feat {
   name: "Power Attack"
-  parameters {
-  }
 }
 feat {
   name: "Blind-Fight"
-  parameters {
-  }
 }
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 1
 }

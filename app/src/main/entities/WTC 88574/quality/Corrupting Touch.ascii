@@ -13,23 +13,3 @@ template {
   description: "When the ghost hits a living target with its incorporeal touch attack, it deals 1d4 points of damage (or 1d4+2 against ethereal opponents)."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

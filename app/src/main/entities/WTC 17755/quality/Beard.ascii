@@ -12,23 +12,3 @@ template {
   description: "If a bearded devil hits a single opponent with both claw attacks, it\n  automatically hits with its beard. The affected creature takes 1d8+2 points\n  of damage and must succeed on a DC 16 Fortitude save or be infected with a\n  vile disease known as devil chills (incubation period 1d4 days, damage 1d4\n  Str). Damage is dealt each day until the afflicted creature succeeds on three\n  consecutive Fortitude saves, the disease is cured magically, or the creature\n  dies. The save DC is Constitution-based."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

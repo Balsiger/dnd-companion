@@ -12,29 +12,11 @@ template {
   world: "Generic"
   description: "A construct is an animated object or artificially constructed creature."
 }
-size {
-}
 type: CONSTRUCT
 subtype: NONE_SUBTYPE
-hit_dice {
-}
 abilities {
   constitution: -1
 }
-saves {
-}
-space {
-}
-reach {
-}
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
-challenge_rating {
-}
+ }

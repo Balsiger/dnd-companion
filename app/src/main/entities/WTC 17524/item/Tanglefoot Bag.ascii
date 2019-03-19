@@ -20,8 +20,6 @@ weight {
     pounds {
       leader: 4
     }
-    ounces {
-    }
   }
 }
 probability: VERY_RARE
@@ -35,38 +33,12 @@ appearance {
 }
 substance {
   material: LEATHER
-  thickness {
-    imperial {
-      inches {
-      }
-    }
-  }
-}
+ }
 break_dc: 3
 player_name: "Tanglefoot Bag"
 weapon {
-  damage {
-    damage {
-      base {
-      }
-      conditional {
-      }
-    }
-  }
-  secondary_damage {
-  }
-  splash {
-    damage {
-      base {
-      }
-      conditional {
-      }
-    }
-  }
-  type: GRENADE
+   type: GRENADE
   critical {
-    threat {
-    }
     multiplier: 2
   }
   style: THROWN_TOUCH
@@ -86,73 +58,17 @@ weapon {
     }
   }
 }
-wearable {
-  wear {
-  }
-  wear_hastily {
-  }
-  remove {
-  }
-}
-incomplete {
-}
-magic {
-}
-counted {
-}
-multiple {
-}
-multiuse {
-}
-timed {
+ timed {
   duration {
     duration {
       rounds: 1
     }
   }
 }
-commodity {
-  area {
-  }
-  length {
-  }
-}
-container {
-  capacity {
-  }
-}
-armor {
-  ac_bonus {
-  }
-  speed_fast {
-  }
-  speed_slow {
-  }
-}
-light {
-  bright {
-    distance {
-    }
-  }
-  shadowy {
-    distance {
-    }
-  }
-}
-composite {
-}
-random {
+ random {
   type: MUNDANE
   multiple {
     number: 1
     dice: 4
-  }
-}
-material {
-  value {
-  }
-  weight_multiplier {
-  }
-  hp_multiplier {
   }
 }

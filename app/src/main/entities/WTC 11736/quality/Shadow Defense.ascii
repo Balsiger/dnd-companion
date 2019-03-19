@@ -13,23 +13,3 @@ template {
   description: "Add this value to a shadow adept\'s saving throws against spells from the shools of Enchanment, Illusion, and Necromancy, and spells with the darkness descriptior."
 }
 type: SUPERNATURAL
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

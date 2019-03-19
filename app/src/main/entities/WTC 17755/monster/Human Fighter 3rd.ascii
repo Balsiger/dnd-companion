@@ -6,61 +6,33 @@ template {
   description: "A standard third level fighter"
   short_description: "A 3rd level fighter"
 }
-size {
-}
 type: HUMANOID
 subtype: HUMAN
 hit_dice {
   number: 3
   dice: 10
 }
-natural_armor {
-}
 base_attack: 3
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
 feat {
   name: "Exotic Weapon Proficiency"
-  parameters {
-  }
 }
 feat {
   name: "Power Attack"
-  parameters {
-  }
 }
 feat {
   name: "Blind-Fight"
-  parameters {
-  }
 }
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-  }
 }
 climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 3
 }

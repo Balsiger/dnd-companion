@@ -39,10 +39,6 @@ quality {
   level: 1
   template {
     name: "summon familiar"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 base_attack: 0

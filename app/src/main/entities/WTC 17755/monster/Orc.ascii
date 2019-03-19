@@ -46,11 +46,7 @@ abilities {
   intelligence: 8
   charisma: 6
 }
-saves {
-}
 primary_attack {
-  attacks {
-  }
   mode: WEAPON
   style: MELEE
   damage {
@@ -64,8 +60,6 @@ primary_attack {
   }
 }
 primary_attack {
-  attacks {
-  }
   mode: WEAPON
   style: RANGED
   damage {
@@ -77,26 +71,14 @@ primary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: HILLS
 organization {
   type: GANG
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   nominator: 1
   denominator: 2

@@ -15,27 +15,3 @@ type: REGIONAL
 benefit: "You gain a +2 bonus on Will saves and a +2 bonus on \\Skill{Concentration} checks."
 special: "You may select this feat only as a 1st-level character. You may only have one regional feat."
 prerequisites: "\\Monster{chitin (\\Place{Underdark} [\\Place{Yatchol}], \\Monsetr{elf} (\\Place{Everska} or The \\Place{Yuirwood}), \\Monster{gnome} (the \\Place{Western Heartlands}), \\Monster{halfling} (\\Place{Luiren}), \\Monster{human} (\\Place{Aglarond}, \\Place{Cormyr}, \\Place{Shadovar}, \\Place{Shou Expatriate}, or \\Place{Thay}), \\Monster{planetouched} (\\Place{Mulhorand}), or \\Monster{slyth} (\\Place{Underdark} [\\Place{Fluvenilstra}])"
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

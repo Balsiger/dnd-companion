@@ -30,8 +30,6 @@ speed {
     }
   }
 }
-natural_armor {
-}
 abilities {
   strength: 9
   dexterity: 9
@@ -40,11 +38,7 @@ abilities {
   intelligence: 9
   charisma: 9
 }
-saves {
-}
 primary_attack {
-  attacks {
-  }
   mode: FIST
   style: MELEE
   damage {
@@ -74,8 +68,6 @@ climate: ANY
 terrain: ANY_TERRAIN
 organization {
   type: ANY
-  number {
-  }
 }
 challenge_rating {
   nominator: 1

@@ -13,23 +13,3 @@ template {
   description: "A creature with the fast healing special ability regains hit points at an\n  exceptionally fast rate, usually 1 or more hit points per round, as given in\n  the creature\'s entry (for example, a \\Monster{vampire} has fast healing\n  5). Except where noted here, fast healing is just like natural healing (see\n  page 146 of the \\Product{Player\'s Handbook}). Fast Healing does not restore\n  hit points lost from starvation, thirst, or suffocation, and it does not\n  allow a creature to regrow lost body parts. Unless otherwise noted, it does\n  not allow lost body parts to be reattached."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

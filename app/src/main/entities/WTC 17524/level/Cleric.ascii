@@ -45,30 +45,18 @@ quality {
   level: 1
   template {
     name: "Spontaneous Casting"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "Cannot cast opposing spells"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 quality {
   level: 1
   template {
     name: "Turn undead"
-    parameters {
-    }
-    condition {
-    }
   }
 }
 base_attack: 0
@@ -371,24 +359,4 @@ spells_per_day {
   value: 2
   value: 3
   value: 4
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
-}
-spells_known {
 }

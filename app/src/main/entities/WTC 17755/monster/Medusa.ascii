@@ -85,30 +85,18 @@ reach {
 }
 feat {
   name: "Point Blank Shot"
-  parameters {
-  }
 }
 feat {
   name: "Precise Shot"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Finesse"
-  parameters {
-  }
 }
 climate: TEMPERATE
 terrain: MARSH
 organization {
   type: SOLITARY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
+ }
 organization {
   type: COVEY
   number {
@@ -116,11 +104,7 @@ organization {
     dice: 3
     modifier: 1
   }
-  plus {
-    number {
-    }
-  }
-}
+ }
 challenge_rating {
   leader: 7
 }

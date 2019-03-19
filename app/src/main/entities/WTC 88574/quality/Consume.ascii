@@ -12,23 +12,3 @@ template {
   description: "When a maurezhi slays a sentient living creature (Intelligence score 3 or\n  higher) and consumes the body, it gains additional power from this grisly\n  food. It must begin eating the corpse within 10 minutes of its death and\n  requires 30 minutes to complete the consumption. If the maurezhi is\n  interrupted during this process, it can\342\200\232\303\204\303\264t completely consume the corpse or\n  gain the benefits.  A creature that has been consumed by a maurezhi cannot be\n  restored to life through any form of raising or resurrection that requires\n  part of the corpse. A wish, miracle, or true resurrection spell can restore a\n  devoured victim to life, but there is a 50% chance that even such powerful\n  magic will fail.  There is no limit to the number of corpses a maurezhi can\n  devour in this fashion, but it advances (see below) only by devouring the\n  corpses of creatures whose Hit Dice or levels are at least half its own\n  current Hit Dice. For example, a maurezhi of 13 Hit Dice can advance only by\n  devouring the corpse of a character of at least 7th level.  For each suitable\n  corpse a maurezhi consumes, its hit Dice, natural armor bonus, Strength,\n  Intelligence, and base attack bonus each increase by +1. Its base saving\n  throw bonuses improve according to its new Hit Dice. It gains additional\n  skill points equal to 8 + its Intelligence modifier, and it spends these\n  additional points on skills possessed by its victim (all of which are treated\n  as class skills for the maurezhi). If the added Hit Die brings the maurezhi\342\200\232\303\204\303\264s\n  total to any multiple of four, it gains a new feat as well, which it can\n  choose from among the feats its previous victims had, assuming that it meets\n  the necessary prerequisites.  In addition, the maurezhi gains access to the\n  memories of the creature it has consumed, can speak any language that\n  creature knew, and can assume that creature\342\200\232\303\204\303\264s form (see below).  The maurezhi\n  can reach a maximum of 20 Hit Dice through advancement. Its challenge rating,\n  damage reduction and spell resistance improve with advancement as shown on\n  the table below.  Maurezhi Damage Spell Total HD Reduction Resistance CR 5\342\200\232\303\204\303\2547\n  10/+1 19 9 8\342\200\232\303\204\303\2549 15/+1 20 10 10\342\200\232\303\204\303\25414 20/+2 21 11 15\342\200\232\303\204\303\25419 20/+2 22 12 20 30/+3 23 13\n  "
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

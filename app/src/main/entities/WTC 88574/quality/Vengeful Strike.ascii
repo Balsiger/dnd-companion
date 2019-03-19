@@ -13,23 +13,3 @@ template {
   description: "Any melee attack the revenant makes against its killer inflicts an\n  additional +1d10 points of damage. "
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

@@ -13,23 +13,3 @@ template {
   description: "Once per day a vrock can attempt to summon $random \\Monster{$name} or\n  another vrock with a $chance chance of success. This ability is the\n  equivalent of a 3rd-level spell."
 }
 type: SPELL_LIKE
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

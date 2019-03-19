@@ -9,24 +9,8 @@ template {
   description: "Black dragons are evil-tempered, cunning, and malevolent, characteristics that are reflected in their crafty, sinister faces.\n\nBlack dragon are sometimes known as skull dragons because of their skeletal faces. Adding to the skeletal impression is the gradual deterioration of the hide around the base of the horn and the cheekbones. This deterioration increases with age and does not harm the dragon. On hatching, a black dragon\342\200\231s scales are thin, small, and glossy. As the dragon ages, they become larger, thicker, and duller, helping it camouflage itself in swamps and marshes.\n\nBlack dragons lair in large, damp caves and multi chambered underground caverns. They smell of rotting vegetation and foul water, with an acidic undertone. Older dragons hide the entrance to their lairs using plant growth. Black dragons dine primarily on fish, mollusks, and other aquatic creatures. They also hunt for red\nmeat but like to \342\200\234pickle\342\200\235 it by letting it lie in ponds within the lair for days before eating it.\n\nBlack dragons are especially fond of coins. Older dragons sometimes capture and question humanoids about stockpiles of gold, silver, and platinum coins before killing them."
   short_description: "A black color chromatic dragon favoring acid."
 }
-size {
-}
-hit_dice {
-}
-natural_armor {
-}
-abilities {
-}
-saves {
-}
-space {
-}
-reach {
-}
 climate: WARM
 terrain: MARSH
-challenge_rating {
-}
 treasure: TRIPLE
 alignment: CHAOTIC_EVIL
 alignment_status: ALWAYS

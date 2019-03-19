@@ -7,12 +7,8 @@ template {
   description: "A keening spirit is a kind of ghost, created specifically from the spirit of an evil female elf of any elf subtype. Known for its constant weeping and groaning, the creature is sometimes referred to as a groaning spirit. It shares most of the characteristics of the ghost template described in the Monster Manual except special attacks and special qualities; those it receives are\ndetailed below."
   short_description: "A kind of ghost created from an evil female elf, known for its constant weeping and groaning."
 }
-size {
-}
 type: HUMANOID
 subtype: HUMAN
-hit_dice {
-}
 speed {
   mode: FLY
   distance {
@@ -22,12 +18,6 @@ speed {
       }
     }
   }
-}
-natural_armor {
-}
-abilities {
-}
-saves {
 }
 primary_attack {
   attacks {
@@ -44,21 +34,9 @@ primary_attack {
           }
   }
 }
-space {
-}
-reach {
-}
 organization {
   type: ANY
-  number {
-  }
-  plus {
-    number {
-    }
-  }
-}
-challenge_rating {
-}
+ }
 language {
   modifier: AUTOMATIC
   name: ABOLETH

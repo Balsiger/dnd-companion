@@ -13,23 +13,3 @@ template {
   world: "Forgotten Realms"
   description: "The creature chooses one component of his deity\'s alignment. He now casts spells of that alignment at a +1 caster level. If its deity is neutral, it chooses one component of its alignment for this focus. If the creature and his deity are neutral, the creature chooses chaos, evil, good, or law as its focus."
 }
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}

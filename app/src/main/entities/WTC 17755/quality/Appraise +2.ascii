@@ -12,21 +12,7 @@ template {
   short_description: "+2 racial to appraise if dealing with $name"
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-skill_modifier {
+ skill_modifier {
   key: "appraise"
   modifier {
     modifier {
@@ -35,10 +21,4 @@ skill_modifier {
       condition: "dealing with $name"
     }
   }
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
 }

@@ -16,23 +16,3 @@ template {
   description: "The Undying Temple is harmed by positive energy (including cure spells) and healed by negative energy (including inflict spells)."
 }
 type: EXTRAORDINARY
-speed {
-  distance {
-  }
-}
-speed_expression {
-  literal {
-  }
-}
-reflex_modifier {
-}
-will_modifier {
-}
-fortitude_modifier {
-}
-attack_modifier {
-}
-damage_modifier {
-}
-ac_modifier {
-}
