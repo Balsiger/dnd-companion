@@ -12,29 +12,5 @@ template {
   short_description: "Create magic rings"
 }
 type: ITEM_CREATION
-benefit: "You can create any ring whose prerequisites you meet (see\n                    the Dungeon Master\342\200\232\303\204\303\264s Guide for prerequisites and other\n                    infor- mation on rings). Crafting a ring takes one day for\n                    each 1,000 gp in its base price. To craft a ring, you must\n                    spend 1/25 of its base price in XP and use up raw materials\n                    costing one-half of its base price.\n\n                    You can also mend a broken ring if it is one that you could\n                    make.\n\n                    Doing so costs half the XP, half the raw materials, and\n                    half the time it would take to forge that ring in the first\n                    place.\n\n                    Some magic rings incur extra costs in material components\n                    or XP, as noted in their descriptions. For example, a ring\n                    of three wishes costs 15,000 XP in addition to costs\n                    derived from its base price (as many XP as it costs to cast\n                    wish three times). You must pay such a cost to forge such a\n                    ring or to mend a broken one."
+benefit: "You can create any ring whose prerequisites you meet (see the Dungeon Master's Guide for prerequisites and other information on rings). Crafting a ring takes one day for each 1,000 gp in its base price. To craft a ring, you must spend 1/25 of its base price in XP and use up raw materials costing one-half of its base price. \n\nYou can also mend a broken ring if it is one that you could make. \n\nDoing so costs half the XP, half the raw materials, and half the time it would take to forge that ring in the first place. \n\nSome magic rings incur extra costs in material components or XP, as noted in their descriptions. For example, a ring of three wishes costs 15,000 XP in addition to costs derived from its base price (as many XP as it costs to cast wish three times). You must pay such a cost to forge such a ring or to mend a broken one."
 prerequisites: "Caster level 12th."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

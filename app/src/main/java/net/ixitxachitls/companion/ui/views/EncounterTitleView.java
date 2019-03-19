@@ -79,7 +79,7 @@ public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView
     if (creature.isPresent() && encounter.isPresent()) {
       if (encounter.get().isStarting()) {
         if (creature.get().hasInitiative(encounter.get().getNumber())) {
-          return "Init " + creature.get().getInitiative();
+          return "Init " + creature.get().getEncounterInitiative();
         } else {
           return "Waiting for initiative...";
         }

@@ -8,34 +8,10 @@ template {
     }
   }
   world: "Generic"
-  description: "You are the sort of person others want to follow, and you have done some\n  work attempting to recruit cohorts and followers."
+  description: "You are the sort of person others want to follow, and you have done some work attempting to recruit cohorts and followers."
   short_description: "Attract cohort and followers"
 }
 type: GENERAL
-benefit: "You can attract loyal companions and devoted followers,\n                    subordinates who assist you. Your DM has information on\n                    what sort of cohort and how many followers you can\n                    recruit."
-special: "Check with your DM before selecting this feat, and work\n                    with your DM to determine an appropriate cohort and\n                    followers for your character (the Dungeon Master\342\200\232\303\204\303\264s Guide\n                    has more information on cohorts and followers)."
+benefit: "You can attract loyal companions and devoted followers, subordinates who assist you. Your DM has information on what sort of cohort and how many followers you can recruit."
+special: "Check with your DM before selecting this feat, and work with your DM to determine an appropriate cohort and followers for your character (the Dungeon Master's Guide has more information on cohorts and followers)."
 prerequisites: "Character level 6th."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

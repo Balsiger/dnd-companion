@@ -79,13 +79,9 @@ reach {
 }
 feat {
   name: "Iron Will"
-  parameters {
-  }
 }
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 climate: WARM
 terrain: AQUATIC_TERRAIN

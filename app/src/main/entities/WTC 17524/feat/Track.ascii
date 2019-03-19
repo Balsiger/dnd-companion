@@ -8,34 +8,10 @@ template {
     }
   }
   world: "Generic"
-  description: "You can follow the trails of creatures and characters across most types of\n  terrain."
+  description: "You can follow the trails of creatures and characters across most types of terrain."
   short_description: "Use Survival skill to track"
 }
 type: GENERAL
-benefit: "To find tracks or to follow them for 1 mile requires a\n                    successful Survival check. You must make another Survival\n                    check every time the tracks become difficult to follow,\n                    such as when other tracks cross them or when the tracks\n                    backtrack and diverge.\n\n                    You move at half your normal speed (or at your normal speed\n                    with a \342\200\232\303\204\303\2545 penalty on the check, or at up to twice your\n                    normal speed with a \342\200\232\303\204\303\25420 penalty on the check). The DC\n                    depends on the surface and the prevailing conditions, as\n                    given on the table below: Surface Survival DC Surface\n                    Survival DC Very soft ground 5 Firm ground 15 Soft ground\n                    10 Hard ground 20 Very Soft Ground: Any surface (fresh\n                    snow, thick dust, wet mud) that holds deep, clear\n                    impressions of footprints.\n\n                    Soft Ground: Any surface soft enough to yield to pressure,\n                    but firmer than wet mud or fresh snow, in which a creature\n                    leaves frequent but shallow footprints.\n\n                    Firm Ground: Most normal outdoor surfaces (such as lawns,\n                    fields, woods, and the like) or exceptionally soft or dirty\n                    indoor surfaces (thick rugs and very dirty or dusty\n                    floors). The creature might leave some traces (broken\n                    branches or tufts of hair), but it leaves only occasional\n                    or partial footprints.\n\n                    Hard Ground: Any surface that doesn\342\200\232\303\204\303\264t hold footprints at\n                    all, such as bare rock or an indoor floor. Most streambeds\n                    fall into this category, since any footprints left behind\n                    are obscured or washed away. The creature leaves only\n                    traces (scuff marks or displaced pebbles).\n\n                    Several modifiers may apply to the Survival check, as given\n                    on the table below.\n\n                    Condition Survival DC Modifier Every three creatures in the\n                    group being tracked \342\200\232\303\204\303\2541 Size of creature or creatures being\n                    tracked:1 Fine +8 Diminutive +4 Tiny +2 Small +1 Medium +0\n                    Large \342\200\232\303\204\303\2541 Huge \342\200\232\303\204\303\2542 Gargantuan \342\200\232\303\204\303\2544 Colossal \342\200\232\303\204\303\2548 Every 24 hours\n                    since the trail was made +1 Every hour of rain since the\n                    trail was made +1 Fresh snow cover since the trail was made\n                    +10 Poor visibility:2 Overcast or moonless night +6\n                    Moonlight +3 Fog or precipitation +3 Tracked party hides\n                    trail (and moves at half speed) +5 1 For a group of mixed\n                    sizes, apply only the modifier for the largest size\n                    category.\n\n                    2 Apply only the largest modifier from this category.\n\n                    If you fail a Survival check, you can retry after 1 hour\n                    (outdoors) or 10 minutes (indoors) of searching."
-special: "A ranger automatically has Track as a bonus feat. He need\n                    not select it.\n\n                    This feat does not allow you to find or follow the tracks\n                    made by a subject of a pass without trace spell."
-normal: "Without this feat, you can use the Survival skill to find\n                    tracks, but you can follow them only if the DC for the task\n                    is 10 or lower. Alternatively, you can use the Search skill\n                    to find a footprint or similar sign of a creature\342\200\232\303\204\303\264s passage\n                    using the DCs given above, but you can\342\200\232\303\204\303\264t use Search to\n                    follow tracks, even if someone else has already found\n                    them."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "To find tracks or to follow them for 1 mile requires a successful Survival check. You must make another Survival check every time the tracks become difficult to follow, such as when other tracks cross them or when the tracks backtrack and diverge. \n\nYou move at half your normal speed (or at your normal speed with a -5 penalty on the check, or at up to twice your normal speed with a -20 penalty on the check). The DC depends on the surface and the prevailing conditions, as given on the table below: Surface Survival DC Surface Survival DC Very soft ground 5 Firm ground 15 Soft ground 10 Hard ground 20 Very Soft Ground: Any surface (fresh snow, thick dust, wet mud) that holds deep, clear impressions of footprints. \n\nSoft Ground: Any surface soft enough to yield to pressure, but firmer than wet mud or fresh snow, in which a creature leaves frequent but shallow footprints. \n\nFirm Ground: Most normal outdoor surfaces (such as lawns, fields, woods, and the like) or exceptionally soft or dirty indoor surfaces (thick rugs and very dirty or dusty floors). The creature might leave some traces (broken branches or tufts of hair), but it leaves only occasional or partial footprints. \n\nHard Ground: Any surface that doesn't hold footprints at all, such as bare rock or an indoor floor. Most streambeds fall into this category, since any footprints left behind are obscured or washed away. The creature leaves only traces (scuff marks or displaced pebbles). \n\nSeveral modifiers may apply to the Survival check, as given on the table below. \n\nCondition Survival DC Modifier Every three creatures in the group being tracked -1 Size of creature or creatures being tracked:1 Fine +8 Diminutive +4 Tiny +2 Small +1 Medium +0 Large -1 Huge -2 Gargantuan -4 Colossal -8 Every 24 hours since the trail was made +1 Every hour of rain since the trail was made +1 Fresh snow cover since the trail was made +10 Poor visibility:2 Overcast or moonless night +6 Moonlight +3 Fog or precipitation +3 Tracked party hides trail (and moves at half speed) +5 1 For a group of mixed sizes, apply only the modifier for the largest size category. \n\n2 Apply only the largest modifier from this category. \n\nIf you fail a Survival check, you can retry after 1 hour (outdoors) or 10 minutes (indoors) of searching."
+special: "A ranger automatically has Track as a bonus feat. He need not select it. \n\nThis feat does not allow you to find or follow the tracks made by a subject of a pass without trace spell."
+normal: "Without this feat, you can use the Survival skill to find tracks, but you can follow them only if the DC for the task is 10 or lower. Alternatively, you can use the Search skill to find a footprint or similar sign of a creature's passage using the DCs given above, but you can't use Search to follow tracks, even if someone else has already found them."

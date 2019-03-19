@@ -9,31 +9,7 @@ template {
   }
   world: "Generic"
   description: "You can cast spells to maximum effect."
-  short_description: "Maximize spell\342\200\232\303\204\303\264s variable, numeric effects"
+  short_description: "Maximize spell's variable, numeric effects"
 }
 type: METAMAGIC
-benefit: "All variable, numeric effects of a spell modified by this\n                    feat are maximized. A maximized spell deals maximum damage,\n                    cures the maximum number of hit points, affects the maximum\n                    number of targets, etc., as appropriate. For example, a\n                    maximized fireball deals 6 points of damage per caster\n                    level (up to a maximum of 60 points of damage at 10th\n                    caster level). Saving throws and opposed rolls (such as the\n                    one you make when you cast dispel magic) are not affected,\n                    nor are spells without random variables. A maximized spell\n                    uses up a spell slot three levels higher than the spell\342\200\232\303\204\303\264s\n                    actual level.\n\n                    An empowered, maximized spell gains the separate benefits\n                    of each feat: the maximum result plus one-half the normally\n                    rolled result. An empowered, maximized fireball cast by a\n                    15th-level wizard deals points of damage equal to 60 plus\n                    one half of 10d6."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "All variable, numeric effects of a spell modified by this feat are maximized. A maximized spell deals maximum damage, cures the maximum number of hit points, affects the maximum number of targets, etc., as appropriate. For example, a maximized fireball deals 6 points of damage per caster level (up to a maximum of 60 points of damage at 10th caster level). Saving throws and opposed rolls (such as the one you make when you cast dispel magic) are not affected, nor are spells without random variables. A maximized spell uses up a spell slot three levels higher than the spell's actual level. \n\nAn empowered, maximized spell gains the separate benefits of each feat: the maximum result plus one-half the normally rolled result. An empowered, maximized fireball cast by a 15th-level wizard deals points of damage equal to 60 plus one half of 10d6."

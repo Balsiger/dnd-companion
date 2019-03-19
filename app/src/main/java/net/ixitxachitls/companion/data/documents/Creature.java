@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.templates.MonsterTemplate;
+import net.ixitxachitls.companion.data.values.Distance;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.TimedCondition;
@@ -79,7 +80,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private int maxHp;
   private int nonlethalDamage;
   private List<Item> items = new ArrayList<>();
-  private int initiative = 0;
+  private int encounterInitiative = 0;
   private int encounterNumber = 0;
 
   public List<CreatureCondition> getAdjustedConditions() {
@@ -89,7 +90,6 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     if (this instanceof Monster) {
       return conditions;
     }
-
 
     if (getStrength().total() <= 0) {
       conditions.add(
@@ -169,6 +169,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return new ModifiedValue("Dexterity Check", Ability.modifier(getDexterity().total()), true);
   }
 
+  public int getEncounterInitiative() {
+    return encounterInitiative;
+  }
+
   public int getEncounterNumber() {
     return encounterNumber;
   }
@@ -187,10 +191,6 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public void setHp(int hp) {
     this.hp = hp;
-  }
-
-  public int getInitiative() {
-    return initiative;
   }
 
   public ModifiedValue getIntelligence() {
@@ -236,6 +236,14 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public void setRace(String race) {
     this.race = Templates.get().getMonsterTemplates().get(race);
+  }
+
+  public Distance getSpeed() {
+    if (race.isPresent()) {
+      return race.get().getWalkingSpeed();
+    }
+
+    return Distance.ZERO;
   }
 
   public ModifiedValue getStrength() {
@@ -327,9 +335,9 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
   }
 
-  public Optional<Integer> getInitiative(int encounterNumber) {
+  public Optional<Integer> getEncounterInitiative(int encounterNumber) {
     if (this.encounterNumber == encounterNumber) {
-      return Optional.of(initiative);
+      return Optional.of(encounterInitiative);
     }
 
     return Optional.empty();
@@ -462,9 +470,9 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return false;
   }
 
-  public void setInitiative(int encounterNumber, int initiative) {
+  public void setEncounterInitiative(int encounterNumber, int initiative) {
     this.encounterNumber = encounterNumber;
-    this.initiative = initiative;
+    this.encounterInitiative = initiative;
 
     store();
   }
@@ -490,7 +498,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     hp = (int) get(FIELD_HP, 0);
     maxHp = (int) get(FIELD_MAX_HP, 0);
     nonlethalDamage = (int) get(FIELD_NONLETHAL, 0);
-    initiative = (int) get(FIELD_INITIATIVE, 0);
+    encounterInitiative = (int) get(FIELD_INITIATIVE, 0);
     encounterNumber = (int) get(FIELD_ENCOUNTER_NUMBER, 0);
     items = new ArrayList<>();
     for (Map<String, Object> item
@@ -517,7 +525,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     data.put(FIELD_HP, hp);
     data.put(FIELD_MAX_HP, maxHp);
     data.put(FIELD_NONLETHAL, nonlethalDamage);
-    data.put(FIELD_INITIATIVE, initiative);
+    data.put(FIELD_INITIATIVE, encounterInitiative);
     data.put(FIELD_ENCOUNTER_NUMBER, encounterNumber);
     data.put(FIELD_ITEMS, items.stream().map(Item::write).collect(Collectors.toList()));
 
@@ -549,7 +557,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     private int compareInit(Creature first, Creature second) {
-      int compare = Integer.compare(second.initiative, first.initiative);
+      int compare = Integer.compare(second.encounterInitiative, first.encounterInitiative);
       if (compare != 0) {
         return compare;
       }

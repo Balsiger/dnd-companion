@@ -36,24 +36,14 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Level;
-import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.data.templates.FeatTemplate;
-import net.ixitxachitls.companion.data.templates.LevelTemplate;
-import net.ixitxachitls.companion.rules.Levels;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
-import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
-import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
-import net.ixitxachitls.companion.ui.views.LabelledTextView;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Dialog for editing and adding character levels.
@@ -64,10 +54,31 @@ public class LevelsDialog extends Dialog {
 
   private Character character;
   private LinearLayout levels;
-  private int nextLevel;
 
   private void add() {
-    levels.addView(new LineView(getContext(), new Level(), nextLevel++));
+    LineView line = new LineView(getContext(), new Level(), levels.getChildCount() + 1);
+    levels.addView(line);
+    line.edit();
+  }
+
+  @Override
+  protected void createContent(View view) {
+    levels = view.findViewById(R.id.levels);
+    Wrapper<ImageView> add = Wrapper.<ImageView>wrap(view, R.id.add).onClick(this::add);
+    Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
+
+    if (!characters().get(getArguments().getString(ARG_ID)).isPresent()) {
+      Status.toast("Cannot find character to show levels!");
+      super.save();
+    }
+
+    character = characters().get(getArguments().getString(ARG_ID)).get();
+    int totalLevel = 1;
+    for (Level level : character.getLevels()) {
+      levels.addView(new LineView(getContext(), level, totalLevel++));
+    }
+
+    add.visible(true);
   }
 
   @Override
@@ -84,24 +95,14 @@ public class LevelsDialog extends Dialog {
     super.save();
   }
 
-  @Override
-  protected void createContent(View view) {
-    levels = view.findViewById(R.id.levels);
-    Wrapper<ImageView> add = Wrapper.<ImageView>wrap(view, R.id.add).onClick(this::add);
-    Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
-
-    if (!characters().get(getArguments().getString(ARG_ID)).isPresent()) {
-      Status.toast("Cannot find character to show levels!");
-      super.save();
+  private void refresh() {
+    int totalLevel = 1;
+    for (int i = 0; i < levels.getChildCount(); i++) {
+      View child = levels.getChildAt(i);
+      if (child instanceof LineView) {
+        ((LineView) child).refresh(totalLevel++);
+      }
     }
-
-    character = characters().get(getArguments().getString(ARG_ID)).get();
-    nextLevel = 1;
-    for (Level level : character.getLevels()) {
-      levels.addView(new LineView(getContext(), level, nextLevel++));
-    }
-
-    add.visible(true);
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
@@ -119,16 +120,14 @@ public class LevelsDialog extends Dialog {
   }
 
   private class LineView extends LinearLayout {
+
     private final TextWrapper<TextView> summary;
-    private final Wrapper<LinearLayout> details;
-    private final int number;
-    private final LabelledTextView className;
-    private final LabelledEditTextView hp;
-    private final LabelledTextView abilityIncrease;
-    private final LabelledTextView feat;
+    private int number;
+    private Level level;
 
     public LineView(Context context, Level level, int number) {
       super(context);
+      this.level = level;
       this.number = number;
 
       View view = LayoutInflater.from(getContext()).inflate(R.layout.view_line_level, this, false);
@@ -136,40 +135,18 @@ public class LevelsDialog extends Dialog {
       Wrapper.wrap(view, R.id.edit).onClick(this::edit);
       Wrapper.wrap(view, R.id.delete).onClick(this::delete);
 
-      details = Wrapper.wrap(view, R.id.details);
-      if (!level.getTemplate().getName().isEmpty()) {
-        details.gone();
-      }
-      className = view.findViewById(R.id.class_name);
-      className.onClick(this::selectClass);
-      hp = view.findViewById(R.id.hp);
-      hp.validate(new EditTextWrapper.RangeValidator(1, level.getMaxHp())).onBlur(this::refresh);
-      abilityIncrease = view.findViewById(R.id.ability_increase);
-      if (Levels.allowsAbilityIncrease(number) || level.hasAbilityIncrease()) {
-        abilityIncrease.onClick(this::selectAbility);
-      } else {
-        abilityIncrease.gone();
-      }
-      feat = view.findViewById(R.id.feat);
-      if (Levels.allowsFeat(number)) {
-        feat.onClick(this::selectFeat);
-      } else {
-        feat.gone();
-      }
-
-      className.text(level.getTemplate().getName());
-      hp.text(String.valueOf(level.getHp()));
-      abilityIncrease.text(level.getIncreasedAbility().isPresent()
-          ? level.getIncreasedAbility().get().getName() : "");
-      feat.text(level.getFeat().isPresent() ? level.getFeat().get().getName() : "");
       refresh();
 
       addView(view);
     }
 
+    public void refresh(int number) {
+      this.number = number;
+      refresh();
+    }
+
     public Level toLevel() {
-      return new Level(className.getText(), Integer.parseInt(hp.getText()),
-          abilityIncrease.getText(), feat.getText());
+      return level;
     }
 
     private void delete() {
@@ -182,77 +159,20 @@ public class LevelsDialog extends Dialog {
 
     private void doDelete() {
       ((ViewGroup) getParent()).removeView(this);
+      LevelsDialog.this.refresh();
     }
 
     private void edit() {
-      details.toggleVisiblity();
-    }
-
-    private void editAbility(String ability) {
-      abilityIncrease.text(ability);
-      refresh();
-    }
-
-    private void editClass(String className) {
-      this.className.text(className);
-      refresh();
-    }
-
-    private void editFeat(String featName) {
-      this.feat.text(featName);
-      refresh();
+      LevelDialog.newInstance(character.getId(), number).onSaved(this::saved).display();
     }
 
     private void refresh() {
-      summary.text(summary());
+      summary.text(level.summary(number));
     }
 
-    private void selectAbility() {
-      ListSelectDialog.newStringInstance(
-          R.string.character_select_ability,
-          abilityIncrease.getText(),
-          Ability.names(), R.color.character)
-          .setSelectListener(this::editAbility)
-          .display();
-    }
-
-    private void selectClass() {
-      ListSelectDialog.newStringInstance(
-          R.string.character_select_class, className.getText(),
-          Templates.get().getLevelTemplates().getValues().stream()
-              .filter(LevelTemplate::isFromPHB)
-              .map(LevelTemplate::getName)
-              .collect(Collectors.toList()), R.color.character)
-          .setSelectListener(this::editClass)
-          .display();
-    }
-
-    private void selectFeat() {
-      ListSelectDialog.newStringInstance(
-          R.string.character_select_feat, feat.getText(),
-          Templates.get().getFeatTemplates().getValues().stream()
-              .filter(FeatTemplate::isFromPHB)
-              .map(FeatTemplate::getName)
-              .collect(Collectors.toList()), R.color.character)
-          .setSelectListener(this::editFeat)
-          .display();
-    }
-
-    private String summary() {
-      String result = "Level " + number + ": " + className.getText();
-      if (!hp.getText().isEmpty()) {
-        result += ", " + hp.getText() + " hp";
-      }
-      if (!abilityIncrease.getText().isEmpty()
-          && !abilityIncrease.getText().equals(Ability.UNKNOWN.getName())
-          && !abilityIncrease.getText().equals(Ability.NONE.getName())) {
-        result += ", +1 " + abilityIncrease.getText();
-      }
-      if (!feat.getText().isEmpty()) {
-        result += ", " + feat.getText();
-      }
-
-      return result;
+    private void saved(Level level) {
+      this.level = level;
+      refresh();
     }
   }
 }

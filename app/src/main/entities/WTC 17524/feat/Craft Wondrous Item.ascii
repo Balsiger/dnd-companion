@@ -8,33 +8,9 @@ template {
     }
   }
   world: "Generic"
-  description: "You can create a wide variety of magic items, such as a crystal ball or a\n  flying carpet."
+  description: "You can create a wide variety of magic items, such as a crystal ball or a flying carpet."
   short_description: "Create magic wondrous items"
 }
 type: ITEM_CREATION
-benefit: "You can create any wondrous item whose prerequisites you\n                    meet (see the Dungeon Master\342\200\232\303\204\303\264s Guide for prerequisites and\n                    other information on wondrous items). Enchanting a wondrous\n                    item takes one day for each 1,000 gp in its price. To\n                    enchant a wondrous item, you must spend 1/25 of the item\342\200\232\303\204\303\264s\n                    price in XP and use up raw materials costing half of this\n                    price.\n\n                    You can also mend a broken wondrous item if it is one that\n                    you could make. Doing so costs half the XP, half the raw\n                    materials, and half the time it would take to craft that\n                    item in the first place.\n\n                    Some wondrous items incur extra costs in material\n                    components or XP, as noted in their descriptions. These\n                    costs are in addition to those derived from the item\342\200\232\303\204\303\264s base\n                    price. You must pay such a cost to create an item or to\n                    mend a broken one."
+benefit: "You can create any wondrous item whose prerequisites you meet (see the Dungeon Master's Guide for prerequisites and other information on wondrous items). Enchanting a wondrous item takes one day for each 1,000 gp in its price. To enchant a wondrous item, you must spend 1/25 of the item's price in XP and use up raw materials costing half of this price. \n\nYou can also mend a broken wondrous item if it is one that you could make. Doing so costs half the XP, half the raw materials, and half the time it would take to craft that item in the first place. \n\nSome wondrous items incur extra costs in material components or XP, as noted in their descriptions. These costs are in addition to those derived from the item's base price. You must pay such a cost to create an item or to mend a broken one."
 prerequisites: "Caster level 3rd."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

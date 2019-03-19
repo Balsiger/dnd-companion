@@ -8,35 +8,11 @@ template {
     }
   }
   world: "Generic"
-  description: "You can bash with a shield while retaining its shield bonus to your Armor\n  Class."
+  description: "You can bash with a shield while retaining its shield bonus to your Armor Class."
   short_description: "Retain shield bonus to AC when shield bashing"
 }
-type: GENERAL
-benefit: "When you perform a shield bash, you may still apply the\n                    shield\342\200\232\303\204\303\264s shield bonus to your AC."
-special: "A fighter may select Improved Shield Bash as one of his\n                    fighter bonus feats (see page 38)."
-normal: "Without this feat, a character who performs a shield bash\n                    loses the shield\342\200\232\303\204\303\264s shield bonus to AC until his or her next\n                    turn."
+type: FIGHTER
+benefit: "When you perform a shield bash, you may still apply the shield's shield bonus to your AC."
+special: "A fighter may select Improved Shield Bash as one of his fighter bonus feats (see page 38)."
+normal: "Without this feat, a character who performs a shield bash loses the shield's shield bonus to AC until his or her next turn."
 prerequisites: "Shield Proficiency."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

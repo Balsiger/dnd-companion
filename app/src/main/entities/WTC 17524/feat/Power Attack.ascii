@@ -11,31 +11,7 @@ template {
   description: "You can make exceptionally powerful melee attacks."
   short_description: "Trade attack bonus for damage (up to base attack bonus)"
 }
-type: GENERAL
-benefit: "On your action, before making attack rolls for a round,\n                    you may choose to subtract a number from all melee attack\n                    rolls and add the same number to all melee damage\n                    rolls. This number may not exceed your base attack\n                    bonus. The penalty on attacks and bonus on damage apply\n                    until your next turn."
-special: "If you attack with a two-handed weapon, or with a one-\n                    handed weapon wielded in two hands, instead add twice the\n                    number subtracted from your attack rolls. You can\342\200\232\303\204\303\264t add the\n                    bonus from Power Attack to the damage dealt with a light\n                    weapon (except with unarmed strikes or natural weapon\n                    attacks), even though the penalty on attack rolls still\n                    applies. (Normally, you treat a double weapon as a\n                    one-handed weapon and a light weapon. If you choose to use\n                    a double weapStun opponent with unarmed strike on like a\n                    two-handed weapon, attacking with\n                    only one end of it in a round, you treat it as a two-handed\n                    weapon.)  A fighter may select Power Attack as one of his\n                    fighter bonus feats (see page 38)."
+type: FIGHTER
+benefit: "On your action, before making attack rolls for a round, you may choose to subtract a number from all melee attack rolls and add the same number to all melee damage rolls. This number may not exceed your base attack bonus. The penalty on attacks and bonus on damage apply until your next turn."
+special: "If you attack with a two-handed weapon, or with a onehanded weapon wielded in two hands, instead add twice the number subtracted from your attack rolls. You can't add the bonus from Power Attack to the damage dealt with a light weapon (except with unarmed strikes or natural weapon attacks), even though the penalty on attack rolls still applies. (Normally, you treat a double weapon as a one-handed weapon and a light weapon. If you choose to use a double weapStun opponent with unarmed strike on like a two-handed weapon, attacking with only one end of it in a round, you treat it as a two-handed weapon.)  A fighter may select Power Attack as one of his fighter bonus feats (see page 38)."
 prerequisites: "Str 13."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

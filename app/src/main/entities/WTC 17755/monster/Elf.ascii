@@ -83,21 +83,11 @@ reach {
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-    text {
-      name: "qualifier"
-      text: "longbow"
-    }
-  }
+  weapon: "Longbow"
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-    text {
-      name: "qualifier"
-      text: "composite longbow"
-    }
-  }
+  weapon: "Composite Longbow"
 }
 climate: TEMPERATE
 terrain: FOREST
@@ -206,3 +196,27 @@ skill {
   name: "appraise"
 }
 main_race: true
+automatic_feat {
+  name: "Martial Weapon Proficiency"
+  weapon: "Longsword"
+}
+automatic_feat {
+  name: "Martial Weapon Proficiency"
+  weapon: "Rapier"
+}
+automatic_feat {
+  name: "Martial Weapon Proficiency"
+  weapon: "Longbow"
+}
+automatic_feat {
+  name: "Martial Weapon Proficiency"
+  weapon: "Composite Longbow"
+}
+automatic_feat {
+  name: "Martial Weapon Proficiency"
+  weapon: "Shortbow"
+}
+automatic_feat {
+  name: "Martial Weapon Proficiency"
+  weapon: "Composite Shortbow"
+}

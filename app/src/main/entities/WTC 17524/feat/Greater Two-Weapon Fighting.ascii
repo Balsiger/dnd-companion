@@ -11,31 +11,7 @@ template {
   description: "You are a master at fighting two-handed."
   short_description: "Gain third off-hand attack"
 }
-type: GENERAL
-benefit: "You get a third attack with your off-hand weapon, albeit\n                    at a \342\200\232\303\204\303\25410 penalty."
-special: "A fighter may select Greater Two-Weapon Fighting as\n                    one of his fighter bonus feats (see page 38).\n\n                    An 11th-level ranger who has chosen the two-weapon combat\n                    style is treated as having Greater Two-Weapon Fighting,\n                    even if he does not have the prerequisites for it, but only\n                    when he is wearing light or no armor (see page 48)."
-prerequisites: "Dex 19, Improved Two-Weapon Fighting, Two-Weapon Fighting,\n                    base attack bonus +11."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+type: FIGHTER
+benefit: "You get a third attack with your off-hand weapon, albeit at a -10 penalty."
+special: "A fighter may select Greater Two-Weapon Fighting as one of his fighter bonus feats (see page 38). \n\nAn 11th-level ranger who has chosen the two-weapon combat style is treated as having Greater Two-Weapon Fighting, even if he does not have the prerequisites for it, but only when he is wearing light or no armor (see page 48)."
+prerequisites: "Dex 19, Improved Two-Weapon Fighting, Two-Weapon Fighting, base attack bonus +11."

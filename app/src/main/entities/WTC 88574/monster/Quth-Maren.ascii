@@ -86,23 +86,15 @@ reach {
 }
 feat {
   name: "Alertness"
-  parameters {
-  }
 }
 feat {
   name: "Blind-Fight"
-  parameters {
-  }
 }
 feat {
   name: "Power Attack"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-  }
 }
 climate: ANY
 terrain: UNDERGROUND

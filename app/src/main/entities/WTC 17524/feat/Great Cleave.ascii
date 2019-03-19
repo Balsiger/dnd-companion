@@ -8,34 +8,10 @@ template {
     }
   }
   world: "Generic"
-  description: "You can wield a melee weapon with such power that you can strike multiple\n  times when you fell your foes."
+  description: "You can wield a melee weapon with such power that you can strike multiple times when you fell your foes."
   short_description: "No limit to cleave attacks each round"
 }
-type: GENERAL
-benefit: "This feat works like Cleave, except that there is no limit\n                    to the number of times you can use it per round."
-special: "A fighter may select Great Cleave as one of his fighter\n                    bonus feats (see page 38)."
+type: FIGHTER
+benefit: "This feat works like Cleave, except that there is no limit to the number of times you can use it per round."
+special: "A fighter may select Great Cleave as one of his fighter bonus feats (see page 38)."
 prerequisites: "Str 13, Cleave, Power Attack, base attack bonus +4."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

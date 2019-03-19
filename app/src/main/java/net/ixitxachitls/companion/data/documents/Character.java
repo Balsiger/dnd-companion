@@ -26,8 +26,10 @@ import android.support.annotation.CallSuper;
 import com.google.common.collect.ImmutableList;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.data.values.AbilityAdjustment;
 import net.ixitxachitls.companion.data.values.Adjustment;
 import net.ixitxachitls.companion.data.values.CampaignDate;
@@ -39,8 +41,11 @@ import net.ixitxachitls.companion.rules.XP;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -55,6 +60,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private static final String FIELD_LEVEL = "level";
   private static final String FIELD_LEVELS = "levels";
   private static final int DEFAULT_LEVEL = 1;
+
   protected List<ConditionData> conditionsHistory = new ArrayList<>();
   private User player;
   private int xp = 0;
@@ -217,6 +223,31 @@ public class Character extends Creature<Character> implements Comparable<Charact
     xp += number;
   }
 
+  public Set<FeatTemplate> collectFeats() {
+    Set<FeatTemplate> feats = new HashSet<>();
+
+    // Feats set in levels.
+    for (Level level: levels) {
+      if (level.getFeat().isPresent()) {
+        feats.add(level.getFeat().get());
+      }
+      if (level.getClassFeat().isPresent()) {
+        feats.add(level.getClassFeat().get());
+      }
+      if (level.getRacialFeat().isPresent()) {
+        feats.add(level.getRacialFeat().get());
+      }
+      feats.addAll(level.getAutomaticFeats());
+    }
+
+    // Automatic feats by race.
+
+
+    // Automatic feats by class.
+
+    return feats;
+  }
+
   @Override
   public int compareTo(Character that) {
     int name = this.getName().compareTo(that.getName());
@@ -232,6 +263,26 @@ public class Character extends Creature<Character> implements Comparable<Charact
     store();
   }
 
+  public int getClassLevel(String className, int totalLevel) {
+    int classLevel = 0;
+    for (int i = 0; i < totalLevel && i < levels.size(); i++) {
+      Level level = levels.get(i);
+      if (level.getTemplate().getName().equals(className)) {
+        classLevel++;
+      }
+    }
+
+    return classLevel;
+  }
+
+  public Optional<Level> getLevel(int number) {
+    if (number > 0 && number - 1 < levels.size()) {
+      return Optional.of(levels.get(number - 1));
+    }
+
+    return Optional.empty();
+  }
+
   public ModifiedValue initiativeModifier() {
     ModifiedValue value = new ModifiedValue("Initiative", 0, true);
     value.add(new Modifier(Ability.modifier(getDexterity().total()), Modifier.Type.ABILITY,
@@ -244,6 +295,18 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return value;
+  }
+
+  public void setLevel(int number, Level level) {
+    if (number - 1 < levels.size()) {
+      levels.set(number - 1, level);
+      store();
+    } else if (number - 1 == levels.size()) {
+      levels.add(level);
+      store();
+    } else {
+      Status.error("Cannot add level " + number);
+    }
   }
 
   @Override

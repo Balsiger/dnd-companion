@@ -34,20 +34,6 @@ public class Monster extends Creature<Monster> {
   protected static final String PATH = "monsters";
   private static final DocumentFactory<Monster> FACTORY = () -> new Monster();
 
-  public static Monster create(CompanionContext context, String campaignId, String name,
-                                  int initiativeModifier, int encounterNumber) {
-    Monster monster = Document.create(FACTORY, context, campaignId + "/" + PATH);
-    monster.setName(name);
-    monster.setCampaignId(campaignId);
-    monster.setInitiative(encounterNumber, Dice.d20() + initiativeModifier);
-
-    return monster;
-  }
-
-  protected static Monster fromData(CompanionContext context, DocumentSnapshot snapshot) {
-    return Document.fromData(FACTORY, context, snapshot);
-  }
-
   @Override
   public boolean hasInitiative(int encounterNumber) {
     return true;
@@ -56,5 +42,19 @@ public class Monster extends Creature<Monster> {
   @Override
   public String toString() {
     return getName();
+  }
+
+  public static Monster create(CompanionContext context, String campaignId, String name,
+                                  int initiativeModifier, int encounterNumber) {
+    Monster monster = Document.create(FACTORY, context, campaignId + "/" + PATH);
+    monster.setName(name);
+    monster.setCampaignId(campaignId);
+    monster.setEncounterInitiative(encounterNumber, Dice.d20() + initiativeModifier);
+
+    return monster;
+  }
+
+  protected static Monster fromData(CompanionContext context, DocumentSnapshot snapshot) {
+    return Document.fromData(FACTORY, context, snapshot);
   }
 }

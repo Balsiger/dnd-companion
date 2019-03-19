@@ -11,31 +11,7 @@ template {
   description: "You are trained at making a devastating mounted charge."
   short_description: "Attack Double damage with mounted charge"
 }
-type: GENERAL
-benefit: "When mounted and using the charge action, you deal double\n                    damage with a melee weapon (or triple damage with a\n                   lance)."
-special: "A fighter may select Spirited Charge as one of his fighter\n                    bonus feats (see page 38)."
+type: FIGHTER
+benefit: "When mounted and using the charge action, you deal double damage with a melee weapon (or triple damage with a lance)."
+special: "A fighter may select Spirited Charge as one of his fighter bonus feats (see page 38)."
 prerequisites: "Ride 1 rank, Mounted Combat, Ride-By Attack."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

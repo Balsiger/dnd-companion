@@ -153,12 +153,7 @@ message MonsterTemplateProto {
   repeated Attack secondary_attack = 12;
   DistanceProto space = 13;
   DistanceProto reach = 14;
-
-  message Feat {
-    string name = 1;
-    ParametersProto parameters = 2;
-  }
-  repeated Feat feat = 15;
+  repeated FeatSelection feat = 15;
 
   enum Climate {
     UNKNOWN_CLIMATE = 0;
@@ -331,6 +326,9 @@ message MonsterTemplateProto {
     int32 ranks = 2;
   }
   repeated Skill skill = 36;
+
+  bool bonus_feat = 37;
+  repeated FeatSelection automatic_feat = 38;
 }
 
 message ItemTemplateProto {
@@ -457,6 +455,7 @@ message LevelTemplateProto {
   }
   repeated PerLevel spells_per_day = 27;
   repeated PerLevel spells_known = 28;
+  repeated string automatic_feat = 29;
 }
 
 message QualityTemplateProto {
@@ -707,17 +706,7 @@ message CompositeTemplateProto {
 
 message FeatTemplateProto {
   TemplateProto template = 1;
-
-  enum Type {
-    UNKNOWN = 0;
-    GENERAL = 1;
-    ITEM_CREATION = 2;
-    METAMAGIC = 3;
-    REGIONAL = 4;
-    SPECIAL = 5;
-    FIGHTER = 6;
-  }
-  Type type = 2;
+  FeatType type = 2;
   string benefit = 3;
   string special = 4;
   string normal = 5;

@@ -12,28 +12,4 @@ template {
   short_description: "Cast spells without somatic components"
 }
 type: METAMAGIC
-benefit: "A stilled spell can be cast with no somatic components.\n\n                    Spells without somatic components are not affected. A\n                    stilled spell uses up a spell slot one level higher than\n                    the spell\342\200\232\303\204\303\264s actual level."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "A stilled spell can be cast with no somatic components. \n\nSpells without somatic components are not affected. A stilled spell uses up a spell slot one level higher than the spell's actual level."

@@ -13,28 +13,4 @@ template {
 }
 type: GENERAL
 benefit: "You gain +3 hit points."
-special: "A character may gain this feat multiple times. Its effects\n                    stack."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+special: "A character may gain this feat multiple times. Its effects stack."

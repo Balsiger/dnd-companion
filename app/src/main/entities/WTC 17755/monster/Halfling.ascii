@@ -70,12 +70,7 @@ reach {
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-    text {
-      name: "qualifier"
-      text: "longsword"
-    }
-  }
+  weapon: "Longsword"
 }
 climate: WARM
 terrain: PLAINS

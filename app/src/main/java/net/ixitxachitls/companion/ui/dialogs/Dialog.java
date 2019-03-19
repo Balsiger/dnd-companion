@@ -139,6 +139,7 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
     return view;
   }
 
+  @SuppressWarnings("unchecked")
   public D onSaved(Action<T> action) {
     onSaved = Optional.of(action);
 

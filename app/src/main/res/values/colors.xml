@@ -107,5 +107,7 @@
   <color name="location_transparent">#000f</color>
   <color name="location_selected_dark">#ffeb3b</color>
   <color name="location_selected_bright">#000</color>
+  <color name="labelled_line_disabled">#ccc</color>
+  <color name="labelled_label_disabled">#ccc</color>
 
 </resources>

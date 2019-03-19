@@ -11,31 +11,7 @@ template {
   description: "You are skilled in mounted combat."
   short_description: "Negate hits on mount with Ride check"
 }
-type: GENERAL
-benefit: "Once per round when your mount is hit in combat, you may\n                    attempt a Ride check (as a reaction) to negate the hit. The\n                    hit is negated if your Ride check result is greater than\n                    the opponent\342\200\232\303\204\303\264s attack roll. (Essentially, the Ride check\n                    result becomes the mount\342\200\232\303\204\303\264s Armor Class if it\342\200\232\303\204\303\264s higher than\n                    the mount\342\200\232\303\204\303\264s regular AC.)"
-special: "A fighter may select Mounted Combat as one of his fighter\n                    bonus feats (see page 38)."
+type: FIGHTER
+benefit: "Once per round when your mount is hit in combat, you may attempt a Ride check (as a reaction) to negate the hit. The hit is negated if your Ride check result is greater than the opponent's attack roll. (Essentially, the Ride check result becomes the mount's Armor Class if it's higher than the mount's regular AC.)"
+special: "A fighter may select Mounted Combat as one of his fighter bonus feats (see page 38)."
 prerequisites: "Ride 1 rank."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

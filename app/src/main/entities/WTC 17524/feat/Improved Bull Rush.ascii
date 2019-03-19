@@ -11,31 +11,7 @@ template {
   description: "You know how to push opponents back."
   short_description: "+4 bonus on bull rush attempts; no attack of opportunity"
 }
-type: GENERAL
-benefit: "When you perform a bull rush (page 154), you do not\n                    provoke an attack of opportunity from the defender. You\n                    also gain a +4 bonus on the opposed Strength check you make\n                    to push back the defender."
-special: "A fighter may select Improved Bull Rush as one of his\n                    fighter bonus feats (see page 38)."
+type: FIGHTER
+benefit: "When you perform a bull rush (page 154), you do not provoke an attack of opportunity from the defender. You also gain a +4 bonus on the opposed Strength check you make to push back the defender."
+special: "A fighter may select Improved Bull Rush as one of his fighter bonus feats (see page 38)."
 prerequisites: "Str 13, Power Attack."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

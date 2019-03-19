@@ -12,28 +12,4 @@ template {
   short_description: "+2 bonus on Handle Animal and Ride checks"
 }
 type: GENERAL
-benefit: "You get a +2 bonus on all Handle Animal checks and Ride\n                    checks."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "You get a +2 bonus on all Handle Animal checks and Ride checks."

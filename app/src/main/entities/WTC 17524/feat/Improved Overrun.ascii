@@ -11,32 +11,8 @@ template {
   description: "You are skilled at knocking down opponents."
   short_description: "+4 bonus on overrun attempts; no attack of opportunity"
 }
-type: GENERAL
-benefit: "When you attempt to overrun an opponent, the target may\n                    not choose to avoid you. You also gain a +4 bonus on your\n                    Strength check to knock down your opponent."
-special: "A fighter may select Improved Overrun as one of his\n                    fighter bonus feats (see page 38)."
-normal: "Without this feat, the target of an overrun can choose to\n                    avoid you or to block you."
+type: FIGHTER
+benefit: "When you attempt to overrun an opponent, the target may not choose to avoid you. You also gain a +4 bonus on your Strength check to knock down your opponent."
+special: "A fighter may select Improved Overrun as one of his fighter bonus feats (see page 38)."
+normal: "Without this feat, the target of an overrun can choose to avoid you or to block you."
 prerequisites: "Str 13, Power Attack."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

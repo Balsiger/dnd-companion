@@ -49,7 +49,7 @@ public class CreatureChipView extends ChipView {
 
   protected CreatureChipView(Context context, Creature creature, @ColorRes int chipColor,
                              @ColorRes int highlightColor, @DrawableRes int drawable, int perLine) {
-    super(context, creature.getId(), creature.getName(), "init " + creature.getInitiative(),
+    super(context, creature.getId(), creature.getName(), "init " + creature.getEncounterInitiative(),
         chipColor, highlightColor, drawable);
 
     this.conditions = new ConditionIconsView(context, VERTICAL, highlightColor, chipColor);

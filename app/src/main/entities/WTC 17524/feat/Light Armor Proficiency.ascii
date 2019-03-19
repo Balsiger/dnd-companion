@@ -9,34 +9,10 @@ template {
     }
   }
   world: "Generic"
-  description: "You are proficient with light armor (see Table 7\342\200\232\303\204\303\2546: Armor and Shields, page\n  123)."
+  description: "You are proficient with light armor (see Table 7-6: Armor and Shields, page 123)."
   short_description: "No armor check penalty on attack rolls"
 }
 type: GENERAL
-benefit: "When you wear a type of armor with which you are\n                    proficient, the armor check penalty for that armor applies\n                    only to Balance, Climb, Escape Artist, Hide, Jump, Move\n                    Silently, Pick Pocket, and Tumble checks."
-special: "All characters except wizards, sorcerers, and monks\n                    automatically have Armor Proficiency (light) as a bonus\n                    feat.  They need not select it."
-normal: "A character who is wearing armor with which she is not\n                    proficient applies its armor check penalty to attack rolls\n                    and to all skill checks that involve moving, including\n                    Ride."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Balance, Climb, Escape Artist, Hide, Jump, Move Silently, Pick Pocket, and Tumble checks."
+special: "All characters except wizards, sorcerers, and monks automatically have Armor Proficiency (light) as a bonus feat.  They need not select it."
+normal: "A character who is wearing armor with which she is not proficient applies its armor check penalty to attack rolls and to all skill checks that involve moving, including Ride."

@@ -9,35 +9,11 @@ template {
     }
   }
   world: "Generic"
-  description: "You are proficient with medium armor (see Table 7\342\200\232\303\204\303\2546: Armor and Shields, page\n  123)."
+  description: "You are proficient with medium armor (see Table 7-6: Armor and Shields, page 123)."
   short_description: "No armor check penalty on attack rolls"
 }
 type: GENERAL
 benefit: "See Armor Proficiency (light)."
-special: "Fighters,\n                    barbarians, paladins, clerics, druids, and bards\n                    automatically have Armor Proficiency (medium) as a bonus\n                    feat. They need not select it."
+special: "Fighters, barbarians, paladins, clerics, druids, and bards automatically have Armor Proficiency (medium) as a bonus feat. They need not select it."
 normal: "See Armor Proficiency (light)."
 prerequisites: "Armor Proficiency (light)."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

@@ -8,33 +8,9 @@ template {
     }
   }
   world: "Generic"
-  description: "Choose a skill, such as Move Silently. You have a special knack with that\n  skill."
+  description: "Choose a skill, such as Move Silently. You have a special knack with that skill."
   short_description: "+3 bonus on checks with selected skill"
 }
 type: GENERAL
 benefit: "You get a +3 bonus on all checks involving that skill."
-special: "You can gain this feat multiple times. Its effects do not\n                    stack. Each time you take the feat, it applies to a new\n                    skill."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+special: "You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new skill."

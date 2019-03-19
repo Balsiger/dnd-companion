@@ -144,8 +144,11 @@ will_save: 1
 bonusFeat {
   level: 5
   template {
-    name: "wizard feat"
+    name: "Wizard Feat"
     parameters {
+      feat_type: ITEM_CREATION
+      feat_type: METAMAGIC
+      feat_name: "Spell Mastery"
     }
     condition {
     }
@@ -154,8 +157,11 @@ bonusFeat {
 bonusFeat {
   level: 10
   template {
-    name: "wizard feat"
+    name: "Wizard Feat"
     parameters {
+      feat_type: ITEM_CREATION
+      feat_type: METAMAGIC
+      feat_name: "Spell Mastery"
     }
     condition {
     }
@@ -164,8 +170,11 @@ bonusFeat {
 bonusFeat {
   level: 15
   template {
-    name: "wizard feat"
+    name: "Wizard Feat"
     parameters {
+      feat_type: ITEM_CREATION
+      feat_type: METAMAGIC
+      feat_name: "Spell Mastery"
     }
     condition {
     }
@@ -174,8 +183,11 @@ bonusFeat {
 bonusFeat {
   level: 20
   template {
-    name: "wizard feat"
+    name: "Wizard Feat"
     parameters {
+      feat_type: ITEM_CREATION
+      feat_type: METAMAGIC
+      feat_name: "Spell Mastery"
     }
     condition {
     }

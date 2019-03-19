@@ -12,30 +12,6 @@ template {
   short_description: "No armor check penalty on attack rolls"
 }
 type: GENERAL
-benefit: "You can use a shield and take only the standard penalties\n                    (see Table 7\342\200\232\303\204\303\2546: Armor and Shields, page 123)."
-special: "Barbarians, bards, clerics, druids, fighters, paladins,\n                    and rangers automatically have Shield Proficiency as a\n                    bonus feat. They need not select it."
-normal: "When you are using a shield with which you are not\n                    proficient, you take the shield\342\200\232\303\204\303\264s armor check penalty on\n                    attack rolls and on all skill checks that involve moving,\n                    including Ride checks."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "You can use a shield and take only the standard penalties (see Table 7-6: Armor and Shields, page 123)."
+special: "Barbarians, bards, clerics, druids, fighters, paladins, and rangers automatically have Shield Proficiency as a bonus feat. They need not select it."
+normal: "When you are using a shield with which you are not proficient, you take the shield's armor check penalty on attack rolls and on all skill checks that involve moving, including Ride checks."

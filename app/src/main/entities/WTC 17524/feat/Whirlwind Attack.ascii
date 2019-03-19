@@ -11,31 +11,7 @@ template {
   description: "You can strike nearby opponents in an amazing, spinning attack."
   short_description: "One melee attack against each opponent within reach"
 }
-type: GENERAL
-benefit: "When you use the full attack action, you can give up your\n                    regular attacks and instead make one melee attack at your\n                    full base attack bonus against each opponent within\n                    reach.\n\n                    When you use the Whirlwind Attack feat, you also forfeit\n                    any bonus or extra attacks granted by other feats, spells,\n                    or abilities (such as the Cleave feat or the haste\n                    spell)."
-special: "A fighter may select Whirlwind Attack as one of his\n                    fighter bonus feats."
-prerequisites: "Dex 13, Int 13, Combat Expertise, Dodge, Mobility, Spring\n                    Attack, base attack bonus +4."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+type: FIGHTER
+benefit: "When you use the full attack action, you can give up your regular attacks and instead make one melee attack at your full base attack bonus against each opponent within reach. \n\nWhen you use the Whirlwind Attack feat, you also forfeit any bonus or extra attacks granted by other feats, spells, or abilities (such as the Cleave feat or the haste spell)."
+special: "A fighter may select Whirlwind Attack as one of his fighter bonus feats."
+prerequisites: "Dex 13, Int 13, Combat Expertise, Dodge, Mobility, Spring Attack, base attack bonus +4."

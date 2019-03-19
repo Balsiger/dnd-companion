@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.support.annotation.StyleRes;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
@@ -52,9 +53,17 @@ public class ModifiedValueView extends AppCompatTextView {
     init();
   }
 
-  public void set(ModifiedValue value) {
+  public ModifiedValueView set(ModifiedValue value) {
     setText(value.totalFormatted());
     setOnLongClickListener((v) -> this.showDescription(value));
+
+    return this;
+  }
+
+  public ModifiedValueView style(@StyleRes int style) {
+    setTextAppearance(style);
+
+    return this;
   }
 
   private void init() {

@@ -9,31 +9,7 @@ template {
   }
   world: "Generic"
   description: "You can increase the area of your spells."
-  short_description: "Double spell\342\200\232\303\204\303\264s area"
+  short_description: "Double spell's area"
 }
 type: METAMAGIC
-benefit: "You Can Alter A Burst, Emanation, Line, Or Spread Shaped\n                    Spell To Increase Its Area. Any Numeric Measurements Of The\n                    Spell\342\200\232\303\204\303\264s area increase by 100%. For example, a fireball\n                    spell (which normally produces a 20-foot-radius spread)\n                    that is widened now fills a 40-foot- Radius Spread. A\n                    Widened Spell Uses Up A Spell Slot Three Levels Higher Than\n                    The Spell\342\200\232\303\204\303\264s Actual Level.\n\n                    Spells that do not have an area of one of these four sorts\n                    are not affected by this feat."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "You Can Alter A Burst, Emanation, Line, Or Spread Shaped Spell To Increase Its Area. Any Numeric Measurements Of The Spell's area increase by 100%. For example, a fireball spell (which normally produces a 20-foot-radius spread) that is widened now fills a 40-foot Radius Spread. A Widened Spell Uses Up A Spell Slot Three Levels Higher Than The Spell's Actual Level. \n\nSpells that do not have an area of one of these four sorts are not affected by this feat."

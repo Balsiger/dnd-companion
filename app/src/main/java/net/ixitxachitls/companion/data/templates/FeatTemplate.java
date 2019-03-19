@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.rules.Products;
 
 import java.util.List;
@@ -40,10 +41,18 @@ public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
     this.proto = proto;
   }
 
+  public String getDescription() {
+    return proto.getTemplate().getDescription();
+  }
+
   public List<Modifier> getInitiativeAdjustment() {
     return proto.getInitiativeModifier().getModifierList().stream()
         .map(p -> Modifier.fromProto(p, name))
         .collect(Collectors.toList());
+  }
+
+  public Value.FeatType getType() {
+    return proto.getType();
   }
 
   public boolean isFromPHB() {

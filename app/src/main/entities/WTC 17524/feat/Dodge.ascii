@@ -11,31 +11,7 @@ template {
   description: "You are adept at dodging blows."
   short_description: "+1 dodge bonus to AC against selected target"
 }
-type: GENERAL
-benefit: "During your action, you designate an opponent and receive\n                    a +1 dodge bonus to Armor Class against attacks from that\n                    opponent. You can select a new opponent on any action.\n\n                    A condition that makes you lose your Dexterity bonus to\n                    Armor Class (if any) also makes you lose dodge\n                    bonuses. Also, dodge bonuses (such as this one and a\n                    dwarf\342\200\232\303\204\303\264s racial bonus on dodge attempts against giants)\n                    stack with each other, unlike most other types of\n                    bonuses."
-special: "A fighter may select Dodge as one of his fighter bonus\n                    feats (see page 38)."
+type: FIGHTER
+benefit: "During your action, you designate an opponent and receive a +1 dodge bonus to Armor Class against attacks from that opponent. You can select a new opponent on any action. \n\nA condition that makes you lose your Dexterity bonus to Armor Class (if any) also makes you lose dodge bonuses. Also, dodge bonuses (such as this one and a dwarf's racial bonus on dodge attempts against giants) stack with each other, unlike most other types of bonuses."
+special: "A fighter may select Dodge as one of his fighter bonus feats (see page 38)."
 prerequisites: "Dex 13."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

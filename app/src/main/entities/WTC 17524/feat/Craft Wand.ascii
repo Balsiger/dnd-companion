@@ -8,33 +8,9 @@ template {
     }
   }
   world: "Generic"
-  description: "You can create wands, which hold spells (see the Dungeon Master\342\200\232\303\204\303\264s Guide for\n  rules on wands)."
+  description: "You can create wands, which hold spells (see the Dungeon Master's Guide for rules on wands)."
   short_description: "Create magic wands"
 }
 type: ITEM_CREATION
-benefit: "You can create a wand of any 4th-level or lower spell that\n                    you know. Crafting a wand takes one day for each 1,000 gp\n                    in its base price. The base price of a wand is its caster\n                    level \342\210\232\303\263 the spell level \342\210\232\303\263 750 gp. To craft a wand, you must\n                    spend 1/25 of this base price in XP and use up raw\n                    materials costing one-half of this base price. A newly\n                    created wand has 50 charges.\n\n                    Any wand that stores a spell with a costly material\n                    component or an XP cost also carries a commensurate\n                    cost. In addition to the cost derived from the base price,\n                    you must expend fifty copies of the material component or\n                    pay fifty times the XPcost."
+benefit: "You can create a wand of any 4th-level or lower spell that you know. Crafting a wand takes one day for each 1,000 gp in its base price. The base price of a wand is its caster level * the spell level * 750 gp. To craft a wand, you must spend 1/25 of this base price in XP and use up raw materials costing one-half of this base price. A newly created wand has 50 charges. \n\nAny wand that stores a spell with a costly material component or an XP cost also carries a commensurate cost. In addition to the cost derived from the base price, you must expend fifty copies of the material component or pay fifty times the XP cost."
 prerequisites: "Caster level 5th."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

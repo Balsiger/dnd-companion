@@ -11,31 +11,7 @@ template {
   description: "You are skilled at making fast attacks for your mount."
   short_description: "Move before and after a mounted charge"
 }
-type: GENERAL
-benefit: "When you are mounted and use the charge action, you may\n                    move and attack as if with a standard charge and then move\n                    again (continuing the straight line of the charge). Your\n                    total movement for the round can\342\200\232\303\204\303\264t exceed double your\n                    mounted speed. You and your mount do not provoke an attack\n                    of opportunity from the opponent that you attack."
-special: "A fighter may select Ride-By Attack as one of his fighter\n                    bonus feats (see page 38)."
+type: FIGHTER
+benefit: "When you are mounted and use the charge action, you may move and attack as if with a standard charge and then move again (continuing the straight line of the charge). Your total movement for the round can't exceed double your mounted speed. You and your mount do not provoke an attack of opportunity from the opponent that you attack."
+special: "A fighter may select Ride-By Attack as one of his fighter bonus feats (see page 38)."
 prerequisites: "Ride 1 rank, Mounted Combat."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

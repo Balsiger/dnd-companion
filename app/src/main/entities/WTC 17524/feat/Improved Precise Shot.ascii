@@ -11,32 +11,8 @@ template {
   description: "Your ranged attacks can ignore the effects of cover or concealment."
   short_description: "Ignore less than total cover/concealment on ranged attack"
 }
-type: GENERAL
-benefit: "Your ranged attacks ignore the AC bonus granted to targets\n                    by anything less than total cover, and the miss chance\n                    granted to targets by anything less than total\n                    concealment. Total cover and total concealment provide\n                    their normal benefits against your ranged attacks.\n\n                    In addition, when you shoot or throw ranged weapons at a\n                    grappling opponent, you automatically strike at the\n                    opponent you have chosen."
-special: "A fighter may select Improved Precise Shot as one of his\n                    fighter bonus feats (see page 38).\n\n                    An 11th-level ranger who has chosen the archery combat\n                    style is treated as having Improved Precise Shot, even if\n                    he does not have the prerequisites for it, but only when he\n                    is wearing light or no armor (see page 48)."
-normal: "See pages 150\342\200\232\303\204\303\254152 for rules on the effects of cover and\n                    concealment. Without this feat, a character who shoots or\n                    throws a ranged weapon at a target involved in a grapple\n                    must roll randomly to see which grappling combatant the\n                    attack strikes."
-prerequisites: "Dex 19, Point Blank Shot, Precise Shot, base attack bonus\n                    +11."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+type: FIGHTER
+benefit: "Your ranged attacks ignore the AC bonus granted to targets by anything less than total cover, and the miss chance granted to targets by anything less than total concealment. Total cover and total concealment provide their normal benefits against your ranged attacks. \n\nIn addition, when you shoot or throw ranged weapons at a grappling opponent, you automatically strike at the opponent you have chosen."
+special: "A fighter may select Improved Precise Shot as one of his fighter bonus feats (see page 38). \n\nAn 11th-level ranger who has chosen the archery combat style is treated as having Improved Precise Shot, even if he does not have the prerequisites for it, but only when he is wearing light or no armor (see page 48)."
+normal: "See pages 150-152 for rules on the effects of cover and concealment. Without this feat, a character who shoots or throws a ranged weapon at a target involved in a grapple must roll randomly to see which grappling combatant the attack strikes."
+prerequisites: "Dex 19, Point Blank Shot, Precise Shot, base attack bonus +11."

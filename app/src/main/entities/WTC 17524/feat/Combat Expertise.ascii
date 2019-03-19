@@ -11,32 +11,8 @@ template {
   description: "You are trained at using your combat skill for defense as well as offense."
   short_description: "Trade attack bonus for AC (max 5 points)"
 }
-type: GENERAL
-benefit: "When you use the attack action or the full attack action\n                    in melee, you can take a penalty of as much as \342\200\232\303\204\303\2545 on your\n                    attack roll and add the same number (+5 or less) as a dodge\n                    bonus to your Armor Class. This number may not exceed your\n                    base attack bonus.\n\n                    The changes to attack rolls and Armor Class last until your\n                    next action."
-special: "A fighter may select Combat Expertise as one of his\n                    fighter bonus feats (see page 38)."
-normal: "A character without the Combat Expertise feat can fight\n                    defensively while using the attack or full attack action to\n                    take a \342\200\232\303\204\303\2544 penalty on attack rolls and gain a +2 dodge bonus\n                    to Armor Class."
+type: FIGHTER
+benefit: "When you use the attack action or the full attack action in melee, you can take a penalty of as much as +5 on your attack roll and add the same number (+5 or less) as a dodge bonus to your Armor Class. This number may not exceed your base attack bonus.\n\nThe changes to attack rolls and Armor Class last until your next action."
+special: "A fighter may select Combat Expertise as one of his fighter bonus feats (see page 38)."
+normal: "A character without the Combat Expertise feat can fight defensively while using the attack or full attack action to take a -4 penalty on attack rolls and gain a +2 dodge bonus to Armor Class."
 prerequisites: "Int 13."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

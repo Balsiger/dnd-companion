@@ -12,29 +12,5 @@ template {
   short_description: "Cast spells without verbal components"
 }
 type: METAMAGIC
-benefit: "A silent spell can be cast with no verbal components.\n\n                    Spells without verbal components are not affected. A silent\n                    spell uses up a spell slot one level higher than the\n                    spell\342\200\232\303\204\303\264s actual level."
+benefit: "A silent spell can be cast with no verbal components. \n\nSpells without verbal components are not affected. A silent spell uses up a spell slot one level higher than the spell's actual level."
 special: "Bard spells cannot be enhanced by this metamagic feat."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

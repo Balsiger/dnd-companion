@@ -22,6 +22,10 @@
 package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.util.Strings;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A physical distance in the game
@@ -41,12 +45,6 @@ public class Distance {
     this.inches = inches;
   }
 
-  public static Distance fromProto(Value.DistanceProto proto) {
-    return new Distance(Rational.fromProto(proto.getImperial().getMiles()),
-        Rational.fromProto(proto.getImperial().getFeet()),
-        Rational.fromProto(proto.getImperial().getInches()));
-  }
-
   public Value.DistanceProto toProto() {
     return Value.DistanceProto.newBuilder()
         .setImperial(Value.DistanceProto.Imperial.newBuilder()
@@ -55,5 +53,28 @@ public class Distance {
             .setInches(inches.toProto())
             .build())
         .build();
+  }
+
+  @Override
+  public String toString() {
+    List<String> parts = new ArrayList<>();
+
+    if (!miles.isNull()) {
+      parts.add(miles + " miles");
+    }
+    if (!feet.isNull()) {
+      parts.add(feet + " feet");
+    }
+    if (!inches.isNull()) {
+      parts.add(inches + " inches");
+    }
+
+    return Strings.SPACE_JOINER.join(parts);
+  }
+
+  public static Distance fromProto(Value.DistanceProto proto) {
+    return new Distance(Rational.fromProto(proto.getImperial().getMiles()),
+        Rational.fromProto(proto.getImperial().getFeet()),
+        Rational.fromProto(proto.getImperial().getInches()));
   }
 }

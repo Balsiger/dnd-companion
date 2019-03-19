@@ -1,7 +1,7 @@
 template {
   name: "Human"
   reference {
-    name: "WTC 17752"
+    name: "WTC 17755"
     pages {
       low: 109
       high: 109
@@ -123,3 +123,4 @@ skill {
   name: "use rope"
 }
 main_race: true
+bonus_feat: true

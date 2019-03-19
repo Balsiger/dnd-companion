@@ -91,20 +91,14 @@ reach {
 }
 feat {
   name: "Combat Expertise"
-  parameters {
-  }
 }
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 climate: COLD_CLIMATE
 terrain: HILLS
 organization {
   type: SOLITARY
-  number {
-  }
 }
 organization {
   type: PAIR

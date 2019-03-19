@@ -8,34 +8,10 @@ template {
     }
   }
   world: "Generic"
-  description: "Choose a type of martial weapon, such as a longbow (see Table 7\342\200\232\303\204\303\2545: Weapons,\n  page 116, for a list of martial weapons). You understand how to use that type\n  of martial weapon in combat.\n\n  Use this feat to expand the list of weapons with which you are proficient\n  beyond the basic list in your class description."
+  description: "Choose a type of martial weapon, such as a longbow (see Table 7-5: Weapons, page 116, for a list of martial weapons). You understand how to use that type of martial weapon in combat. \n\nUse this feat to expand the list of weapons with which you are proficient beyond the basic list in your class description."
   short_description: "No penalty on attacks with specific martial weapon"
 }
 type: GENERAL
 benefit: "You make attack rolls with the selected weapon normally."
-special: "Barbarians, fighters, paladins, and rangers are proficient\n                    with all martial weapons. They need not select this feat.\n\n                    You can gain Martial Weapon Proficiency multiple\n                    times. Each time you take the feat, it applies to a new\n                    type of weapon.\n\n                    A cleric who chooses the War domain automatically gains the\n                    Martial Weapon Proficiency feat related to his deity\342\200\232\303\204\303\264s\n                    favored weapon as a bonus feat, if the weapon is a martial\n                    one. He need not select it.\n\n                    A sorcerer or wizard who casts the spell Tenser\342\200\232\303\204\303\264s\n                    transformation on himself or herself gains proficiency with\n                    all martial weapons for the duration of the spell."
-normal: "When using a weapon with which you are not proficient, you\n                    take a \342\200\232\303\204\303\2544 penalty on attack rolls."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+special: "Barbarians, fighters, paladins, and rangers are proficient with all martial weapons. They need not select this feat. \n\nYou can gain Martial Weapon Proficiency multiple times. Each time you take the feat, it applies to a new type of weapon. \n\nA cleric who chooses the War domain automatically gains the Martial Weapon Proficiency feat related to his deity's favored weapon as a bonus feat, if the weapon is a martial one. He need not select it. \n\nA sorcerer or wizard who casts the spell Tenser's transformation on himself or herself gains proficiency with all martial weapons for the duration of the spell."
+normal: "When using a weapon with which you are not proficient, you take a -4 penalty on attack rolls."

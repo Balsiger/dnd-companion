@@ -8,33 +8,9 @@ template {
     }
   }
   world: "Generic"
-  description: "Choose a school of magic to which you already have applied the Spell Focus\n  feat. Your spells of that school are now even more potent than before."
+  description: "Choose a school of magic to which you already have applied the Spell Focus feat. Your spells of that school are now even more potent than before."
   short_description: "+1 bonus on save DCs against specific school of magic ($name)."
 }
 type: GENERAL
-benefit: "Add +1 to the Difficulty Class for all saving throws\n                    against spells from the school of magic you select. This\n                    bonus stacks with the bonus from Spell Focus."
-special: "You can gain this feat multiple times. Its effects do not\n                    stack. Each time you take the feat, it applies to a new\n                    school of magic to which you already have applied the Spell\n                    Focus feat."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "Add +1 to the Difficulty Class for all saving throws against spells from the school of magic you select. This bonus stacks with the bonus from Spell Focus."
+special: "You can gain this feat multiple times. Its effects do not stack. Each time you take the feat, it applies to a new school of magic to which you already have applied the Spell Focus feat."

@@ -218,6 +218,8 @@ message ParametersProto
     SkillSubtype skill_subtype = 2;
   }
   repeated SkillSubtypeParam skill_subtype = 7;
+  repeated FeatType feat_type = 8;
+  repeated string feat_name = 9;
 }
 
 message ReferenceProto
@@ -427,6 +429,12 @@ message RestrictionProto {
   Limit limit = 4;
 }
 
+message FeatSelection {
+  string name = 1;
+  string weapon = 2;
+  string spell_school = 3;
+}
+
 // Shared enums.
 
 enum WeaponStyle {
@@ -547,6 +555,16 @@ enum BattleStatus {
   STARTING = 1;
   SURPRISED = 2;
   ONGOING = 3;
+}
+
+enum FeatType {
+  UNKNOWN_FEAT_TYPE = 0;
+  GENERAL = 1;
+  ITEM_CREATION = 2;
+  METAMAGIC = 3;
+  REGIONAL = 4;
+  SPECIAL = 5;
+  FIGHTER = 6;
 }
 
 

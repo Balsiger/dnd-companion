@@ -109,48 +109,30 @@ reach {
 }
 feat {
   name: "Cleave"
-  parameters {
-  }
 }
 feat {
   name: "Dodge"
-  parameters {
-  }
 }
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 feat {
   name: "Mobility"
-  parameters {
-  }
 }
 feat {
   name: "Power Attack"
-  parameters {
-  }
 }
 feat {
   name: "Spring Attack"
-  parameters {
-  }
 }
 feat {
   name: "Sunder"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Specialization"
-  parameters {
-  }
 }
 climate: ANY
 terrain: UNDERGROUND

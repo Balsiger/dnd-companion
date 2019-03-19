@@ -103,13 +103,9 @@ reach {
 }
 feat {
   name: "Blind-Fight"
-  parameters {
-  }
 }
 feat {
   name: "Power Attack"
-  parameters {
-  }
 }
 climate: ANY
 terrain: UNDERGROUND

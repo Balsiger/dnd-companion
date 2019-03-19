@@ -11,31 +11,7 @@ template {
   description: "You are trained in using your mount to knock down opponents."
   short_description: "Target cannot avoid mounted overrun"
 }
-type: GENERAL
-benefit: "When you attempt to overrun an opponent while mounted,\n                    your target may not choose to avoid you. Your mount may\n                    make one hoof attack against any target you knock down,\n                    gaining the standard +4 bonus on attack rolls against prone\n                    targets (see Overrun, page 157)."
-special: "A fighter may select Trample as one of his fighter bonus\n                    feats (see page 38)."
+type: FIGHTER
+benefit: "When you attempt to overrun an opponent while mounted, your target may not choose to avoid you. Your mount may make one hoof attack against any target you knock down, gaining the standard +4 bonus on attack rolls against prone targets (see Overrun, page 157)."
+special: "A fighter may select Trample as one of his fighter bonus feats (see page 38)."
 prerequisites: "Ride 1 rank, Mounted Combat."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

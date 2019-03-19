@@ -23,54 +23,104 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.ColorRes;
+import android.text.InputType;
+import android.text.Spanned;
 import android.util.AttributeSet;
-import android.view.View;
+import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * A text view with a label and description.
  */
-public class LabelledTextView extends LabelledEditTextView {
+public class LabelledTextView<T extends LabelledTextView, S extends TextView>
+    extends LabelledView<T, S> {
 
-  public LabelledTextView(Context context) {
-    super(context);
-  }
+  private TextWrapper<? extends TextView> text;
 
   public LabelledTextView(Context context, AttributeSet attributes) {
     super(context, attributes);
-  }
 
-  @Override
-  public LabelledTextView enabled(boolean enabled) {
-    text.enabled(enabled);
+    view(createTextView());
+    text = TextWrapper.wrap(getView());
+    text.get().setTextAppearance(R.style.LargeText);
 
-    return this;
-  }
+    TypedArray styles =
+        getContext().obtainStyledAttributes(attributes, R.styleable.LabelledTextView);
+    TypedArray baseStyles =
+        getContext().obtainStyledAttributes(attributes, new int [] { android.R.attr.inputType, });
 
-  @Override
-  public LabelledTextView text(String text) {
-    this.text.text(text);
-
-    return this;
-  }
-
-  @Override
-  protected void setup(View view, TypedArray array, TypedArray baseArray) {
-    super.setup(view, array, baseArray);
-
-    // Prevent the editAction text to actually be editable.
-    text.get().setKeyListener(null);
-    text.get().setFocusableInTouchMode(false);
-    if (array.getColor(R.styleable.LabelledEditTextView_lineColor, 0) == 0) {
-      text.hideLine();
+    String defaultText = styles.getString(R.styleable.LabelledTextView_defaultText);
+    if (defaultText != null) {
+      text.text(defaultText);
     }
+    text.textColorValue(styles.getColor(R.styleable.LabelledTextView_textColor,
+        getContext().getResources().getColor(R.color.colorPrimary, null)));
+    int lines = styles.getInt(R.styleable.LabelledTextView_minLines, 1);
+    if (lines > 1) {
+      text.get().setMinLines(lines);
+      text.get().setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+      text.get().setHorizontallyScrolling(false);
+    }
+    int type = baseStyles.getInt(0, 0);
+    if (type != 0) {
+      text.get().setInputType(type);
+    }
+
+    styles.recycle();
   }
 
-  public LabelledTextView onClick(Wrapper.Action action) {
+  public String getText() {
+    return text.getText();
+  }
+
+  public T disabled() {
+    return enabled(false);
+  }
+
+  public T enabled() {
+    return enabled(true);
+  }
+
+  public T enabled(boolean enabled) {
+    text.enabled(enabled);
+    return super.enabled(enabled);
+  }
+
+  public T onClick(Wrapper.Action action) {
     text.onClick(action);
 
-    return this;
+    return (T) this;
+  }
+
+  public T text(String text) {
+    this.text.text(text);
+
+    return (T) this;
+  }
+
+  public T text(Spanned text) {
+    this.text.text(text);
+
+    return (T) this;
+  }
+
+  public T textColor(@ColorRes int color) {
+    text.textColor(color);
+
+    return (T) this;
+  }
+
+  public T type(int type) {
+    text.get().setInputType(type);
+
+    return (T) this;
+  }
+
+  protected S createTextView() {
+    return (S) new TextView(getContext());
   }
 }

@@ -11,7 +11,7 @@ template {
   description: "You can use ranged weapons with exceptional speed."
   short_description: "Shot One extra ranged attack each round"
 }
-type: GENERAL
+type: FIGHTER
 benefit: "You can get one extra attack per round with a ranged                    weapon. The attack is at your highest base attack bonus,                    but each attack you make in that round (the extra one and                    the normal ones) takes a -2 penalty. You must use the full                    attack action (see page 143) to use this feat."
 special: "A fighter may select Rapid Shot as one of his fighter                    bonus feats (see page 38).                    A 2nd-level ranger who has chosen the archery combat style                    is treated as having Rapid Shot, even if he does not have                    the prerequisites for it, but only when he is wearing light                    or no armor (see page 48)."
 prerequisites: "Dex 13, Point Blank Shot."
@@ -21,26 +21,4 @@ attack_modifier {
     type: GENERAL
   }
 }
-damage_modifier {
-}
 additional_attacks: 1
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

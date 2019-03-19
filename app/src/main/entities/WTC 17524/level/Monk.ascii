@@ -152,3 +152,33 @@ spells_known {
 }
 spells_known {
 }
+bonusFeat {
+  level: 1
+  template {
+    name: "Monk Feat"
+    parameters {
+      feat_name: "Improved Grapple"
+      feat_name: "Stunning Fist"
+    }
+  }
+}
+bonusFeat {
+  level: 2
+  template {
+    name: "Monk Feat"
+    parameters {
+      feat_name: "Combat Reflexes"
+      feat_name: "Deflex Arrows"
+    }
+  }
+}
+bonusFeat {
+  level: 6
+  template {
+    name: "Monk Feat"
+    parameters {
+      feat_name: "Improved Disarm"
+      feat_name: "Improved Trip"
+    }
+  }
+}

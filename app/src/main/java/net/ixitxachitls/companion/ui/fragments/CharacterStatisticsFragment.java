@@ -29,16 +29,23 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.flexbox.FlexboxLayout;
+
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.rules.XP;
+import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.ConditionIconsView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
+import net.ixitxachitls.companion.ui.views.LabelledView;
+import net.ixitxachitls.companion.ui.views.ModifiedValueView;
+import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -70,6 +77,9 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   protected LabelledEditTextView damageNonlethal;
   protected Wrapper<ImageView> hpNonlethalAdjust;
   protected TextWrapper<TextView> levelUp;
+  protected LabelledView<LabelledView, ModifiedValueView> initiative;
+  protected LabelledTextView speed;
+  protected FlexboxLayout feats;
 
   public CharacterStatisticsFragment() {
   }
@@ -94,7 +104,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     charisma = view.findViewById(R.id.charisma);
 
     xp = view.findViewById(R.id.xp);
-    xp.enabled(false).onBlur(this::redraw);
+    xp.disabled().onBlur(this::redraw);
     xpAdjust = Wrapper.<ImageView>wrap(view, R.id.xp_adjust).gone();
     xpNext = TextWrapper.wrap(view, R.id.xp_next);
     levels = view.findViewById(R.id.levels);
@@ -108,6 +118,12 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
     damageNonlethal.enabled(false);
     hpNonlethalAdjust = Wrapper.<ImageView>wrap(view, R.id.nonlethal_adjust).gone();
+    initiative = view.findViewById(R.id.initiative);
+    initiative.view(new ModifiedValueView(getContext()));
+    initiative.getView().style(R.style.LargeText);
+    speed = view.findViewById(R.id.speed);
+
+    feats = view.findViewById(R.id.feats);
 
     // TODO(merlin): This might be unnecessary?
     if (character.isPresent()) {
@@ -141,6 +157,30 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     hpMax.text(String.valueOf(character.getMaxHp()));
     damageNonlethal.text(String.valueOf(character.getNonlethalDamage()));
     conditions.update(character);
+    initiative.getView().set(character.initiativeModifier());
+    speed.text(character.getSpeed().toString());
+
+    // We sometimes call update before actually having a context.
+    if (getContext() != null) {
+      feats.removeAllViews();
+      boolean first = true;
+      for (FeatTemplate feat : character.collectFeats()) {
+        if (first) {
+          first = false;
+        } else {
+          feats.addView(TextWrapper.wrap(new TextView(getContext()))
+              .text(",")
+              .textStyle(R.style.LargeText)
+              .padding(AbstractWrapper.Padding.RIGHT, 10)
+              .get());
+        }
+
+        TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()));
+        text.text(feat.getName()).textStyle(R.style.LargeText).onClick(() -> showFeat(feat));
+
+        feats.addView(text.get());
+      }
+    }
 
     redraw();
   }
@@ -154,6 +194,10 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       levelUp.visible(character.get().getMaxLevel() > character.get().getLevel()
           || (character.get().getXp() == 0 && character.get().getLevel() == 0));
     }
+  }
+
+  private void showFeat(FeatTemplate feat) {
+    MessageDialog.create(getContext()).title(feat.getName()).message(feat.getDescription()).show();
   }
 
   private void update(Documents.Update update) {

@@ -12,28 +12,4 @@ template {
   short_description: "+4 bonus on Concentration checks for defensive casting"
 }
 type: GENERAL
-benefit: "You get a +4 bonus on Concentration checks made to cast a\n                    spell or use a spell-like ability while on the defensive\n                    (see Casting on the Defensive, page 140) or while you are\n                    grappling or pinned."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "You get a +4 bonus on Concentration checks made to cast a spell or use a spell-like ability while on the defensive (see Casting on the Defensive, page 140) or while you are grappling or pinned."

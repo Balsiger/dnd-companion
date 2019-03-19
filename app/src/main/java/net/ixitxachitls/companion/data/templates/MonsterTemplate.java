@@ -22,7 +22,13 @@
 package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.values.Distance;
+import net.ixitxachitls.companion.data.values.Speed;
 import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.proto.Value;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * The representation of a monster template that can be used to create actual, real monsters in
@@ -54,8 +60,22 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getAbilities().getIntelligence();
   }
 
+  public List<Speed> getSpeeds() {
+    return proto.getSpeedList().stream().map(Speed::fromProto).collect(Collectors.toList());
+  }
+
   public int getStrengthAdjustment() {
     return proto.getAbilities().getStrength();
+  }
+
+  public Distance getWalkingSpeed() {
+    for (Value.SpeedProto speed: proto.getSpeedList()) {
+      if (speed.getMode() == Value.SpeedProto.Mode.RUN) {
+        return Distance.fromProto(speed.getDistance());
+      }
+    }
+
+    return Distance.ZERO;
   }
 
   public int getWisdomAdjustment() {
@@ -91,6 +111,10 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
       case CHARISMA:
         return proto.getAbilities().getRacialCharismaModifier();
     }
+  }
+
+  public boolean hasBonusFeat(int level) {
+    return level == 1 && proto.getBonusFeat();
   }
 
   @Override

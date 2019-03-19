@@ -11,31 +11,7 @@ template {
   description: "You can follow through with powerful blows."
   short_description: "Extra melee attack after dropping target"
 }
-type: GENERAL
-benefit: "If you deal a creature enough damage to make it drop\n                    (typically by dropping it to below 0 hit points or killing\n                    it), you get an immediate, extra melee attack against\n                    another creature within reach. You cannot take a 5-foot\n                    step before making this extra attack.\n\n                    The extra attack is with the same weapon and at the same\n                    bonus as he attack that dropped the previous creature. You\n                    can use this ability once per round."
-special: "A fighter may select Cleave as one of his fighter bonus\n                    feats (see page 38)."
+type: FIGHTER
+benefit: "If you deal a creature enough damage to make it drop (typically by dropping it to below 0 hit points or killing it), you get an immediate, extra melee attack against another creature within reach. You cannot take a 5-foot step before making this extra attack.\n\nThe extra attack is with the same weapon and at the same bonus as he attack that dropped the previous creature. You can use this ability once per round."
+special: "A fighter may select Cleave as one of his fighter bonus feats (see page 38)."
 prerequisites: "Str 13, Power Attack."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

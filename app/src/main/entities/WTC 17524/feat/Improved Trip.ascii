@@ -8,35 +8,11 @@ template {
     }
   }
   world: "Generic"
-  description: "You are trained not only in tripping opponents safely but also in following\n  through with an attack."
+  description: "You are trained not only in tripping opponents safely but also in following through with an attack."
   short_description: "+4 bonus on trip attempts; no attack of opportunity"
 }
-type: GENERAL
-benefit: "You do not provoke an attack of opportunity when you\n                    attempt to trip an opponent while you are unarmed. You also\n                    gain a +4 bonus on your Strength check to trip your\n                    opponent.\n\n                    If you trip an opponent in melee combat, you immediately\n                    get a melee attack against that opponent as if you hadn\342\200\232\303\204\303\264t\n                    used your attack for the trip attempt. For example, at 11th\n                    level, Tordek gets three attacks at bonuses of +11, +6, and\n                    +1. In the current round, he attempts to trip his\n                    opponent. His first attempt fails (using up his first\n                    attack). His second attempt succeeds, and he immediately\n                    makes a melee attack against his opponent with a bonus of\n                    +6.\n\n                    Finally, he takes his last attack at a bonus of +1."
-special: "At 6th level, a monk may select Improved Trip as a bonus\n                    feat, even if she does not have the prerequisites.\n\n                    A fighter may select Improved Trip as one of his fighter\n                    bonus feats (see page 38)."
-normal: "Without this feat, you provoke an attack of opportunity\n                    when you attempt to trip an opponent while you are\n                    unarmed. See Trip, page 158."
+type: FIGHTER
+benefit: "You do not provoke an attack of opportunity when you attempt to trip an opponent while you are unarmed. You also gain a +4 bonus on your Strength check to trip your opponent. \n\nIf you trip an opponent in melee combat, you immediately get a melee attack against that opponent as if you hadn't used your attack for the trip attempt. For example, at 11th level, Tordek gets three attacks at bonuses of +11, +6, and +1. In the current round, he attempts to trip his opponent. His first attempt fails (using up his first attack). His second attempt succeeds, and he immediately makes a melee attack against his opponent with a bonus of +6. \n\nFinally, he takes his last attack at a bonus of +1."
+special: "At 6th level, a monk may select Improved Trip as a bonus feat, even if she does not have the prerequisites. \n\nA fighter may select Improved Trip as one of his fighter bonus feats (see page 38)."
+normal: "Without this feat, you provoke an attack of opportunity when you attempt to trip an opponent while you are unarmed. See Trip, page 158."
 prerequisites: "Int 13, Combat Expertise."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

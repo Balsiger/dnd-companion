@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.content.res.ColorStateList;
+import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
@@ -62,7 +63,11 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   }
 
   public W backgroundColor(@ColorRes int color) {
-    view.setBackgroundColor(view.getResources().getColor(color, null));
+    return backgroundColorValue(view.getContext().getColor(color));
+  }
+
+  public W backgroundColorValue(@ColorInt int color) {
+    view.setBackgroundColor(color);
 
     return (W) this;
   }

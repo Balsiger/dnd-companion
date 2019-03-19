@@ -12,28 +12,4 @@ template {
   short_description: "+2 bonus on Disable Device and Open Lock checks"
 }
 type: GENERAL
-benefit: "You get a +2 bonus on all Disable Device checks and Open\n                    Lock checks."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}
+benefit: "You get a +2 bonus on all Disable Device checks and Open Lock checks."

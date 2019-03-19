@@ -22,70 +22,31 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.support.annotation.ColorRes;
-import android.text.InputType;
-import android.text.Spanned;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.EditText;
 
-import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * A editable text view with a label and description.
  */
-public class LabelledEditTextView extends AbstractLabelledView {
+public class LabelledEditTextView extends LabelledTextView<LabelledEditTextView, EditText> {
 
   // Ui elements.
   protected EditTextWrapper<EditText> text;
 
-  public LabelledEditTextView(Context context) {
-    super(context, R.layout.view_labelled_edit_text);
-  }
-
   public LabelledEditTextView(Context context, AttributeSet attributes) {
-    super(context, attributes, R.layout.view_labelled_edit_text);
-  }
-
-  public String getText() {
-    return text.getText();
+    super(context, attributes);
   }
 
   public boolean isEmpty() {
     return text.isEmpty();
   }
 
-  public LabelledEditTextView description(String title, String description) {
-    setDescription(title, description);
-
-    return this;
-  }
-
-  public LabelledEditTextView disabled() {
-    text.hideLine();;
-    return enabled(false);
-  }
-
-  public LabelledEditTextView enabled(boolean enabled) {
-    text.enabled(enabled);
-    return this;
-  }
-
-  public LabelledEditTextView enabled() {
-    return enabled(true);
-  }
-
   public LabelledEditTextView label(String label) {
     this.label.text(label);
-
-    return this;
-  }
-
-  public LabelledEditTextView lineColor(@ColorRes int color) {
-    text.lineColor(color);
 
     return this;
   }
@@ -107,57 +68,18 @@ public class LabelledEditTextView extends AbstractLabelledView {
     return this;
   }
 
-  public LabelledEditTextView text(String text) {
-    this.text.text(text);
-
-    return this;
-  }
-
-  public LabelledEditTextView text(Spanned text) {
-    this.text.text(text);
-
-    return this;
-  }
-
-  public LabelledEditTextView textColor(@ColorRes int color) {
-    text.textColor(color);
-
-    return this;
-  }
-
-  public LabelledEditTextView type(int type) {
-    text.get().setInputType(type);
-
-    return this;
-  }
-
   public LabelledEditTextView validate(EditTextWrapper.Validator validator) {
     text.validate(validator);
     return this;
   }
 
   @Override
-  protected void setup(View view, TypedArray array, TypedArray baseArray) {
-    super.setup(view, array, baseArray);
+  protected EditText createTextView() {
+    text = EditTextWrapper.wrap(new EditText(getContext()));
+    text.get().setBackground(null);
+    text.padding(AbstractWrapper.Padding.BOTTOM, 0);
+    text.padding(AbstractWrapper.Padding.TOP, 0);
 
-    text = EditTextWrapper.wrap(view, R.id.text);
-    String defaultText = array.getString(R.styleable.LabelledEditTextView_defaultText);
-    if (defaultText != null) {
-      text.text(defaultText);
-    }
-    text.textColorValue(array.getColor(R.styleable.LabelledEditTextView_textColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
-    text.lineColorValue(array.getColor(R.styleable.LabelledEditTextView_lineColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
-    int lines = array.getInt(R.styleable.LabelledEditTextView_minLines, 1);
-    if (lines > 1) {
-      text.get().setMinLines(lines);
-      text.get().setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
-      text.get().setHorizontallyScrolling(false);
-    }
-    int type = baseArray.getInt(ATTR_INPUT_TYPE, 0);
-    if (type != 0) {
-      text.get().setInputType(type);
-    }
+    return text.get();
   }
 }

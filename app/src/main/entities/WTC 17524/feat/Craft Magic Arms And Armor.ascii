@@ -12,29 +12,5 @@ template {
   short_description: "Create magic weapons, armor, and shields"
 }
 type: ITEM_CREATION
-benefit: "You can create any magic weapon, armor, or shield whose\n                    prerequisites you meet (see the Dungeon Master\342\200\232\303\204\303\264s Guide for\n                    prerequisites and other information on these\n                    items). Enhancing a weapon, suit of armor, or shield takes\n                    one day for each 1,000 gp in the price of its magical\n                    features. To enhance a weapon, suit of armor, or shield,\n                    you must spend 1/25 of its features\342\200\232\303\204\303\264 total price in XP and\n                    use up raw materials costing one-half of this total\n                    price.\n\n                    The weapon, armor, or shield to be enhanced must\n                    be a mas- terwork item that you provide. Its cost is not\n                    included in the above cost.\n\n                    You can also mend a broken magic weapon, suit of armor, or\n                    shield if it is one that you could make. Doing so costs\n                    half the XP, half the raw materials, and half the time it\n                    would take to craft that item in the first place."
+benefit: "You can create any magic weapon, armor, or shield whose prerequisites you meet (see the Dungeon Master's Guide for prerequisites and other information on these items). Enhancing a weapon, suit of armor, or shield takes one day for each 1,000 gp in the price of its magical features. To enhance a weapon, suit of armor, or shield, you must spend 1/25 of its features' total price in XP and use up raw materials costing one-half of this total price. \n\nThe weapon, armor, or shield to be enhanced must be a masterwork item that you provide. Its cost is not included in the above cost. \n\nYou can also mend a broken magic weapon, suit of armor, or shield if it is one that you could make. Doing so costs half the XP, half the raw materials, and half the time it would take to craft that item in the first place."
 prerequisites: "Caster level 5th."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

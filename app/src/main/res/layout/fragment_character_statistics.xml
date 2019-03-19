@@ -175,7 +175,7 @@
 
       <net.ixitxachitls.companion.ui.views.LabelledTextView
           android:id="@+id/levels"
-          android:layout_width="match_parent"
+          android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
           app:descriptionText="The character's level."
@@ -193,25 +193,20 @@
           android:textColor="@color/characterDark"
           android:theme="@style/LargeText"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/xp_line"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
       <net.ixitxachitls.companion.ui.views.LabelledEditTextView
           android:id="@+id/xp"
           android:layout_width="100dp"
           android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
           android:inputType="number|numberSigned"
           app:defaultText="0"
           app:descriptionText="The amount of XP this character currently has."
           app:labelColor="@color/characterDark"
           app:labelText="XP"
           app:lineColor="@color/characterDark"
-          app:textColor="@color/characterText"/>
+          app:textColor="@color/characterText">
+
+      </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
 
       <ImageView
           android:id="@+id/xp_adjust"
@@ -249,7 +244,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="0"
-          android:text="HEALTH"
+          android:text="HEALTH &amp; MOVEMENT"
           android:textSize="10sp"
           android:theme="@style/TinyText"/>
 
@@ -267,7 +262,9 @@
         android:id="@+id/conditions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:orientation="vertical">
     </LinearLayout>
 
@@ -332,8 +329,74 @@
           android:layout_gravity="center_vertical"
           app:srcCompat="@drawable/plus_minus_box"/>
 
+      <net.ixitxachitls.companion.ui.views.LabelledView
+          android:id="@+id/initiative"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:layout_weight="1"
+          app:defaultText=""
+          app:descriptionText="The characters initiative modifier."
+          app:labelColor="@color/characterDark"
+          app:labelText="Initiative"
+          app:lineColor="@color/characterDark"
+          app:textColor="@color/characterText"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/speed"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:layout_weight="1"
+          app:defaultText=""
+          app:descriptionText="The characters speed."
+          app:labelColor="@color/characterDark"
+          app:labelText="Speed"
+          app:lineColor="@color/characterDark"
+          app:textColor="@color/characterText"/>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_weight="0"
+          android:background="@color/cell"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="FEATS"
+          android:textSize="10sp"
+          android:theme="@style/TinyText"/>
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@color/cell"/>
+
+    </LinearLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/feats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+    </com.google.android.flexbox.FlexboxLayout>
 
   </LinearLayout>
 </ScrollView>

@@ -11,32 +11,8 @@ template {
   description: "You know how to disarm opponents in melee combat."
   short_description: "+4 bonus on disarm attempts; no attack of opportunity"
 }
-type: GENERAL
-benefit: "You do not provoke an attack of opportunity when you\n                    attempt to disarm an opponent, nor does the opponent have a\n                    chance to disarm you. You also gain a +4 bonus on the\n                    opposed attack roll you make to disarm your opponent."
-special: "A fighter may select Improved Disarm as one of his fighter\n                    bonus feats (see page 38).\n\n                    A monk may select Improved Disarm as a bonus feat at 6th\n                    level, even if she does not meet the prerequisites."
+type: FIGHTER
+benefit: "You do not provoke an attack of opportunity when you attempt to disarm an opponent, nor does the opponent have a chance to disarm you. You also gain a +4 bonus on the opposed attack roll you make to disarm your opponent."
+special: "A fighter may select Improved Disarm as one of his fighter bonus feats (see page 38). \n\nA monk may select Improved Disarm as a bonus feat at 6th level, even if she does not meet the prerequisites."
 normal: "See the normal disarm rules, page 155."
 prerequisites: "Int 13, Combat Expertise."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

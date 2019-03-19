@@ -74,18 +74,12 @@ reach {
 }
 feat {
   name: "Improved Initiative"
-  parameters {
-  }
 }
 feat {
   name: "Toughness"
-  parameters {
-  }
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-  }
 }
 climate: WARM
 terrain: AQUATIC_TERRAIN

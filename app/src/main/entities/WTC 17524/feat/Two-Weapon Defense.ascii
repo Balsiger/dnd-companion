@@ -1,0 +1,17 @@
+template {
+  name: "Two-Weapon Defense"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 102
+      high: 102
+    }
+  }
+  world: "Generic"
+  description: "Your two-weapon fighting style bolsters your defense as well as your offense."
+  short_description: "Off-hand weapon grants +1 shield bonus to AC"
+}
+type: FIGHTER
+benefit: "When wielding a double weapon or two weapons (not including natural weapons or unarmed strikes), you gain a +1 shield bonus to your AC. \n\nWhen you are fighting defensively or using the total defense action, this shield bonus increases to +2."
+special: "A fighter may select Two-Weapon Defense as one of his fighter bonus feats."
+prerequisites: "Dex 15, Two-Weapon Fighting."

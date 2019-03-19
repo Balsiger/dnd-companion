@@ -58,9 +58,31 @@ abstract class AbstractLabelledView extends LinearLayout {
     setup(attributes, layout);
   }
 
+  public void gone() {
+    setVisibility(GONE);
+  }
+
+  protected void setDescription(String name, String description) {
+    if (description != null && !description.isEmpty()) {
+      label.onLongClick(() -> showDescription(name, description));
+    }
+  }
+
+  @CallSuper
+  protected void setup(View view, TypedArray array, TypedArray baseArray) {
+    label = TextWrapper.wrap(view, R.id.label);
+    label.text(array.getString(R.styleable.LabelledView_labelText));
+    label.textColorValue(array.getColor(R.styleable.LabelledView_labelColor,
+        getContext().getResources().getColor(R.color.colorPrimary, null)));
+
+    String name = array.getString(R.styleable.LabelledView_labelText);
+    String description = array.getString(R.styleable.LabelledView_descriptionText);
+    setDescription(name, description);
+  }
+
   private void setup(@Nullable AttributeSet attributes, @LayoutRes int layout) {
     TypedArray array =
-        getContext().obtainStyledAttributes(attributes, R.styleable.LabelledEditTextView);
+        getContext().obtainStyledAttributes(attributes, R.styleable.LabelledTextView);
     TypedArray baseArray =
         getContext().obtainStyledAttributes(attributes, new int [] { android.R.attr.inputType, });
 
@@ -75,29 +97,7 @@ abstract class AbstractLabelledView extends LinearLayout {
     array.recycle();
   }
 
-  @CallSuper
-  protected void setup(View view, TypedArray array, TypedArray baseArray) {
-    label = TextWrapper.wrap(view, R.id.label);
-    label.text(array.getString(R.styleable.LabelledEditTextView_labelText));
-    label.textColorValue(array.getColor(R.styleable.LabelledEditTextView_labelColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
-
-    String name = array.getString(R.styleable.LabelledEditTextView_labelText);
-    String description = array.getString(R.styleable.LabelledEditTextView_descriptionText);
-    setDescription(name, description);
-  }
-
-  protected void setDescription(String name, String description) {
-    if (description != null && !description.isEmpty()) {
-      label.onLongClick(() -> showDescription(name, description));
-    }
-  }
-
   private void showDescription(String name, String description) {
     new MessageDialog(getContext()).title(name).message(description).show();
-  }
-
-  public void gone() {
-    setVisibility(GONE);
   }
 }

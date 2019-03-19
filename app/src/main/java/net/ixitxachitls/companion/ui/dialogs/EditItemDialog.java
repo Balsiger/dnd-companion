@@ -42,6 +42,7 @@ import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView;
+import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Misc;
@@ -71,7 +72,7 @@ public class EditItemDialog extends Dialog {
   private LabelledEditTextView name;
   private LabelledEditTextView dmName;
   private LabelledEditTextView value;
-  private LabelledEditTextView weight;
+  private LabelledTextView weight;
   private LabelledEditTextView hp;
   private LabelledEditTextView appearance;
   private LabelledEditTextView multiple;
@@ -125,7 +126,6 @@ public class EditItemDialog extends Dialog {
     value = view.findViewById(R.id.value);
     value.validate(Money::validate);
     weight = view.findViewById(R.id.weight);
-    weight.disabled();
     hp = view.findViewById(R.id.hp);
     appearance = view.findViewById(R.id.appearance);
     multiple = view.findViewById(R.id.multiple);

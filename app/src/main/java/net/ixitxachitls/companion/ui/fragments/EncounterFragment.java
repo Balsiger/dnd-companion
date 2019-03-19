@@ -115,7 +115,7 @@ public class EncounterFragment extends NestedCompanionFragment {
         initiative.setModifier(character.get().initiativeModifier());
         initiative.setSelectAction(i -> {
           TransitionManager.beginDelayedTransition(view, transition);
-          character.get().setInitiative(encounter.get().getNumber(), i);
+          character.get().setEncounterInitiative(encounter.get().getNumber(), i);
         });
 
         initiative.setVisibility(View.VISIBLE);

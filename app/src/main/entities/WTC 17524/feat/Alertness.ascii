@@ -13,13 +13,7 @@ template {
 }
 type: GENERAL
 benefit: "You get a +2 bonus on all Listen checks and Spot checks."
-special: "The master of a familiar (see the Familiars sidebar, page\n52) gains the benefit of the Alertness feat whenever the\nfamiliar is within arm\342\200\231s reach."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
+special: "The master of a familiar (see the Familiars sidebar, page 52) gains the benefit of the Alertness feat whenever the familiar is within arm's reach."
 skill_modifier {
   name: "Listen"
   modifier {
@@ -37,22 +31,4 @@ skill_modifier {
       type: GENERAL
     }
   }
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
 }

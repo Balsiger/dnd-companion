@@ -8,35 +8,11 @@ template {
     }
   }
   world: "Generic"
-  description: "You can fight with a weapon in each hand. You can make one extra attack each\n  round with the second weapon."
+  description: "You can fight with a weapon in each hand. You can make one extra attack each round with the second weapon."
   short_description: "Reduce two-weapon fighting penalties by 2/6"
 }
-type: GENERAL
-benefit: "Your penalties on attack rolls for fighting with two\n                    weapons are reduced. The penalty for your primary hand\n                    lessens by 2 and the one for your off hand lessens by 6."
-special: "A 2nd-level ranger who has chosen the two-weapon combat\n                    style is treated as having Two-Weapon Fighting, even if he\n                    does not have the prerequisite for it, but only when he is\n                    wearing light or no armor (see page 48).\n\n                    A fighter may select Two-Weapon Fighting as one of his\n                    fighter bonus feats (see page 38)."
-normal: "See Two-Weapon Fighting, page 160, and Table 8\342\200\232\303\204\303\25410:\n                    Two-Weapon Fighting Penalties, page 160."
+type: FIGHTER
+benefit: "Your penalties on attack rolls for fighting with two weapons are reduced. The penalty for your primary hand lessens by 2 and the one for your off hand lessens by 6."
+special: "A 2nd-level ranger who has chosen the two-weapon combat style is treated as having Two-Weapon Fighting, even if he does not have the prerequisite for it, but only when he is wearing light or no armor (see page 48). \n\nA fighter may select Two-Weapon Fighting as one of his fighter bonus feats (see page 38)."
+normal: "See Two-Weapon Fighting, page 160, and Table 8-10: Two-Weapon Fighting Penalties, page 160."
 prerequisites: "Dex 15."
-attack_modifier {
-}
-damage_modifier {
-}
-initiative_modifier {
-}
-strength_modifier {
-}
-dexterity_modifier {
-}
-constitution_modifier {
-}
-intelligence_modifier {
-}
-wisdom_modifier {
-}
-charisma_modifier {
-}
-fortitude_modifier {
-}
-will_modifier {
-}
-reflex_modifier {
-}

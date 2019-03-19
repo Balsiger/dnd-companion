@@ -34,6 +34,7 @@ import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
+import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -53,8 +54,8 @@ public class SellItemDialog extends Dialog {
 
   private Optional<Message> message = Optional.empty();
 
-  private LabelledEditTextView name;
-  private LabelledEditTextView seller;
+  private LabelledTextView name;
+  private LabelledTextView seller;
   private LabelledEditTextView valuePP;
   private LabelledEditTextView valueGP;
   private LabelledEditTextView valueSP;
@@ -62,20 +63,6 @@ public class SellItemDialog extends Dialog {
   private Wrapper<Button> sendMoney;
 
   public SellItemDialog() {}
-
-  public static SellItemDialog newInstance(String messageId) {
-    SellItemDialog dialog = new SellItemDialog();
-    dialog.setArguments(arguments(messageId, R.layout.dialog_sell_item,
-        R.string.sell_item, R.color.item));
-    return dialog;
-  }
-
-  protected static Bundle arguments(String messageId, @LayoutRes int layoutId,
-                                    @StringRes int titleId, @ColorRes int colorId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_MESSAGE_ID, messageId);
-    return arguments;
-  }
 
   @Override
   public void onCreate(Bundle savedInstance) {
@@ -90,10 +77,8 @@ public class SellItemDialog extends Dialog {
   @Override
   protected void createContent(View view) {
     name = view.findViewById(R.id.name);
-    name.disabled();
     name.text(name());
     seller = view.findViewById(R.id.seller);
-    seller.disabled();
     seller.text(seller());
     TextWrapper.wrap(view, R.id.description).text(description());
     valuePP = view.findViewById(R.id.value_pp);
@@ -106,28 +91,33 @@ public class SellItemDialog extends Dialog {
     refreshValue();
   }
 
-  private String name() {
-    if (message.isPresent() && message.get().getItem().isPresent()) {
-      return message.get().getItem().get().getName();
-    } else {
-      return "Item not found.";
-    }
-  }
-
-  private String seller() {
-    if (message.isPresent()) {
-      Optional<Character> character = characters().get(message.get().getSourceId());
-      if (character.isPresent()) {
-        return character.get().getName();
-      }
-    }
-
-    return "Unknown seller";
+  private Item createCoins(String name, int number) {
+    Item item = Item.create(context(), name);
+    item.setMultiple(number);
+    return item;
   }
 
   private String description() {
     if (message.isPresent() && message.get().getItem().isPresent()) {
       return message.get().getItem().get().getDMNotes();
+    } else {
+      return "Item not found.";
+    }
+  }
+
+  private void maybeAddItemMessage(String itemName, String itemCount) {
+    if (!itemCount.isEmpty()) {
+      int count = Integer.parseInt(itemCount);
+      if (count > 0) {
+        Message.createForItemAdd(context(), me().getId(), message.get().getSourceId(),
+            createCoins(itemName, count));
+      }
+    }
+  }
+
+  private String name() {
+    if (message.isPresent() && message.get().getItem().isPresent()) {
+      return message.get().getItem().get().getName();
     } else {
       return "Item not found.";
     }
@@ -148,8 +138,15 @@ public class SellItemDialog extends Dialog {
     }
   }
 
-  private String valueOrEmpty(int value) {
-    return value == 0 ? "" : String.valueOf(value);
+  private String seller() {
+    if (message.isPresent()) {
+      Optional<Character> character = characters().get(message.get().getSourceId());
+      if (character.isPresent()) {
+        return character.get().getName();
+      }
+    }
+
+    return "Unknown seller";
   }
 
   private void sendMoney() {
@@ -165,19 +162,21 @@ public class SellItemDialog extends Dialog {
     save();
   }
 
-  private void maybeAddItemMessage(String itemName, String itemCount) {
-    if (!itemCount.isEmpty()) {
-      int count = Integer.parseInt(itemCount);
-      if (count > 0) {
-        Message.createForItemAdd(context(), me().getId(), message.get().getSourceId(),
-            createCoins(itemName, count));
-      }
-    }
+  private String valueOrEmpty(int value) {
+    return value == 0 ? "" : String.valueOf(value);
   }
 
-  private Item createCoins(String name, int number) {
-    Item item = Item.create(context(), name);
-    item.setMultiple(number);
-    return item;
+  protected static Bundle arguments(String messageId, @LayoutRes int layoutId,
+                                    @StringRes int titleId, @ColorRes int colorId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_MESSAGE_ID, messageId);
+    return arguments;
+  }
+
+  public static SellItemDialog newInstance(String messageId) {
+    SellItemDialog dialog = new SellItemDialog();
+    dialog.setArguments(arguments(messageId, R.layout.dialog_sell_item,
+        R.string.sell_item, R.color.item));
+    return dialog;
   }
 }
