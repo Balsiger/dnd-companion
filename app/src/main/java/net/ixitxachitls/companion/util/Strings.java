@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.util;
 import com.google.common.base.Joiner;
 
 import java.util.Date;
+import java.util.Optional;
 
 /**
  * Utilities for handling strings.
@@ -71,15 +72,12 @@ public class Strings {
     return minutes + "m " + seconds + "s";
   }
 
-  public static String pad(String inText, int inLength, boolean inLeft)
-  {
-    if(inText.length() >= inLength)
-      return inText;
+  public static Optional<String> optionalIfEmpty(String value) {
+    if (value == null || value.trim().isEmpty()) {
+      return Optional.empty();
+    }
 
-    if(inLeft)
-      return SPACES.substring(0, inLength - inText.length()) + inText;
-    else
-      return inText + SPACES.substring(0, inLength - inText.length());
+    return Optional.of(value);
   }
 
   public static String pad(long inNumber, int inLength, boolean inLeft)
@@ -93,5 +91,16 @@ public class Strings {
       return ZEROES.substring(0, inLength - text.length()) + text;
     else
       return text + SPACES.substring(0, inLength - text.length());
+  }
+
+  public static String pad(String inText, int inLength, boolean inLeft)
+  {
+    if(inText.length() >= inLength)
+      return inText;
+
+    if(inLeft)
+      return SPACES.substring(0, inLength - inText.length()) + inText;
+    else
+      return inText + SPACES.substring(0, inLength - inText.length());
   }
 }

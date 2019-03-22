@@ -133,7 +133,7 @@ will_save: 0
 will_save: 1
 will_save: 0
 will_save: 1
-bonusFeat {
+bonus_feat {
   level: 5
   template {
     name: "Wizard Feat"
@@ -144,7 +144,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 10
   template {
     name: "Wizard Feat"
@@ -155,7 +155,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 15
   template {
     name: "Wizard Feat"
@@ -166,7 +166,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 20
   template {
     name: "Wizard Feat"

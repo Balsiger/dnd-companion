@@ -228,6 +228,18 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
         + owned.size() + name.length();
   }
 
+  public static MiniatureFilter read(Data data) {
+    return new MiniatureFilter(
+        data.get(FIELD_NAME, ""),
+        data.getList(FIELD_RACES, Collections.emptyList()),
+        data.getList(FIELD_SETS, Collections.emptyList()),
+        data.getList(FIELD_TYPES, Collections.emptyList()),
+        data.getList(FIELD_CLASSES, Collections.emptyList()),
+        data.getList(FIELD_SIZES, Collections.emptyList()),
+        data.getList(FIELD_OWNED, Collections.emptyList()),
+        data.getList(FIELD_LOCATIONS, Collections.emptyList()));
+  }
+
   public static MiniatureFilter read(Map<String, Object> data) {
     String name = Values.get(data, FIELD_NAME, "");
     List<String> races = Values.get(data, FIELD_RACES, Collections.emptyList());

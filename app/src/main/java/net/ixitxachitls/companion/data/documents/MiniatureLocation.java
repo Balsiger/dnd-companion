@@ -110,6 +110,15 @@ public class MiniatureLocation extends NestedDocument
     return data;
   }
 
+  public static MiniatureLocation read(Data data) {
+    return new MiniatureLocation(
+        data.get(FIELD_NAME, ""),
+        data.getNestedList(FIELD_FILTERS).stream()
+            .map(MiniatureFilter::read)
+            .collect(Collectors.toList()),
+        data.get(FIELD_COLOR, 0));
+  }
+
   public static MiniatureLocation read(Map<String, Object> data) {
     String name = Values.get(data, FIELD_NAME, "");
     List<MiniatureFilter> filters =

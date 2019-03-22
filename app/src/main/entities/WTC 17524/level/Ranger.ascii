@@ -184,21 +184,21 @@ will_save: 0
 will_save: 1
 will_save: 0
 will_save: 0
-bonusFeat {
+bonus_feat {
   level: 1
   template {
     name: "Ranger Feat"
     parameters {
-      feat_name = "Track"
+      feat_name: "Track"
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 3
   template {
     name: "Ranger Feat"
     parameters {
-      feat_name = "Endurance"
+      feat_name: "Endurance"
     }
   }
 }

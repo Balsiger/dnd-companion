@@ -32,6 +32,7 @@ import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -98,7 +99,7 @@ public class User extends Document<User> {
   }
 
   public List<String> getOwnedValues() {
-    SortedSet<Long> owned = new TreeSet(miniatures.values());
+    SortedSet<Long> owned = new TreeSet<>(miniatures.values());
     owned.add(0L);
     return new ArrayList<>(owned.stream().map(String::valueOf).collect(Collectors.toList()));
   }
@@ -200,31 +201,25 @@ public class User extends Document<User> {
       miniaturesLoading = false;
       if (task.isSuccessful() ) {
         miniaturesDocument = Optional.of(task.getResult().getReference());
-        Object data = task.getResult().get(FIELD_MINIATURE_OWNED);
-        if (data != null) {
-          if (miniatures.isEmpty()) {
-            miniatures.putAll((Map<String, Long>) data);
-          } else {
-            Map<String, Long> existing = new HashMap<>(miniatures);
-            miniatures.putAll((Map<String, Long>) data);
-            miniatures.putAll(existing);
-            storeMiniatures();
-          }
+        Data data = Data.fromSnapshot(task.getResult());
+        if (miniatures.isEmpty()) {
+          miniatures.putAll(data.getMap(FIELD_MINIATURE_OWNED, 0L));
+        } else {
+          Map<String, Long> existing = new HashMap<>(miniatures);
+          miniatures.putAll(data.getMap(FIELD_MINIATURE_OWNED, 0L));
+          miniatures.putAll(existing);
+          storeMiniatures();
         }
 
-        data = task.getResult().get(FIELD_MINIATURE_LOCATIONS);
-        if (data != null) {
-          for (MiniatureLocation location : ((List<Map<String, Object>>) data).stream()
-              .map(MiniatureLocation::read).collect(Collectors.toList())) {
-            locations.put(location.getName(), location);
-          }
+        for (MiniatureLocation location :
+            data.getNestedList(FIELD_MINIATURE_LOCATIONS)
+                .stream()
+                .map(MiniatureLocation::read)
+                .collect(Collectors.toList())) {
+          locations.put(location.getName(), location);
         }
 
-        data = task.getResult().get(FIELD_MINIATURE_HIDDEN_SETS);
-        if (data != null) {
-          hiddenSets.addAll((List<String>) data);
-          Templates.get().getMiniatureTemplates().updateSets(this, hiddenSets);
-        }
+        hiddenSets.addAll(data.getList(FIELD_MINIATURE_HIDDEN_SETS, Collections.emptyList()));
 
         verifyMiniatures();
         callback.done();
@@ -290,6 +285,8 @@ public class User extends Document<User> {
   }
 
   private void storeMiniatures() {
+    if (true) return;
+
     if (miniaturesLoading || !miniaturesDocument.isPresent()) {
       return;
     }

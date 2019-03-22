@@ -122,7 +122,7 @@ will_save: 0
 will_save: 1
 will_save: 0
 will_save: 0
-bonusFeat {
+bonus_feat {
   level: 1
   template {
     name: "Fighter Feat"
@@ -131,7 +131,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 2
   template {
     name: "Fighter Feat"
@@ -140,7 +140,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 4
   template {
     name: "Fighter Feat"
@@ -149,7 +149,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 6
   template {
     name: "Fighter Feat"
@@ -158,7 +158,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 8
   template {
     name: "Fighter Feat"
@@ -167,7 +167,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 10
   template {
     name: "Fighter Feat"
@@ -176,7 +176,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 12
   template {
     name: "Fighter Feat"
@@ -185,7 +185,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 14
   template {
     name: "Fighter Feat"
@@ -194,7 +194,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 16
   template {
     name: "Fighter Feat"
@@ -203,7 +203,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 18
   template {
     name: "Fighter Feat"
@@ -212,7 +212,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 20
   template {
     name: "Fighter Feat"

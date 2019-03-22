@@ -88,17 +88,19 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return path.startsWith(user.getId());
   }
 
+  @SuppressWarnings("unchecked")
   public <E extends Enum<E>> E get(String field, E defaultValue) {
     if (snapshot.isPresent()) {
       String value = snapshot.get().getString(field);
       if (value != null && !value.isEmpty()) {
-        return (E) Enum.valueOf(defaultValue.getClass(), (String) value);
+        return Enum.valueOf((Class<E>) defaultValue.getClass(), (String) value);
       }
     }
 
     return defaultValue;
   }
 
+  @SuppressWarnings("unchecked")
   public void onUpdate(DocumentSnapshot snapshot, FirebaseFirestoreException e) {
     if (snapshot != null || e == null) {
       this.snapshot = Optional.of(snapshot);
@@ -158,6 +160,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     }
   }
 
+  @SuppressWarnings("unchecked")
   protected Map<String, Object> get(String field) {
     if (snapshot.isPresent()) {
       return (Map<String, Object>) snapshot.get().get(field);
@@ -199,6 +202,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return defaultValue;
   }
 
+  @SuppressWarnings("unchecked")
   protected <T> T get(String field, T defaultValue) {
     if (snapshot.isPresent()) {
       T value = (T) snapshot.get().get(field);
@@ -210,6 +214,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return defaultValue;
   }
 
+  @SuppressWarnings("unchecked")
   protected <T> List<T> get(String field, List<T> defaultValue) {
     if (snapshot.isPresent()) {
       List<T> value = (List<T>) snapshot.get().get(field);
@@ -239,6 +244,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     }
   }
 
+  @SuppressWarnings("unchecked")
   private void updated(@Nullable DocumentSnapshot snapshot,
                        @Nullable FirebaseFirestoreException e) {
     if (e != null) {

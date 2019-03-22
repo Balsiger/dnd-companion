@@ -94,7 +94,7 @@ quality {
     name: "ac +1"
   }
 }
-bonusFeat {
+bonus_feat {
   level: 1
   template {
     name: "Monk Feat"
@@ -104,7 +104,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 2
   template {
     name: "Monk Feat"
@@ -114,7 +114,7 @@ bonusFeat {
     }
   }
 }
-bonusFeat {
+bonus_feat {
   level: 6
   template {
     name: "Monk Feat"

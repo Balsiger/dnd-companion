@@ -147,7 +147,7 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
   @Override
   public void loaded() {
     configured.addAll(byName.values());
-    filtered.addAll(filtered);
+    filtered.addAll(configured);
   }
 
   public void updateSets(User me, Collection<String> hidden) {

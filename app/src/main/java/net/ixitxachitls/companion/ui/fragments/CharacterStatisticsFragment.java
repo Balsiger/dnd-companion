@@ -34,6 +34,7 @@ import com.google.android.flexbox.FlexboxLayout;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
+import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.templates.FeatTemplate;
@@ -164,7 +165,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     if (getContext() != null) {
       feats.removeAllViews();
       boolean first = true;
-      for (FeatTemplate feat : character.collectFeats()) {
+      for (Feat feat : character.collectFeats()) {
         if (first) {
           first = false;
         } else {
@@ -176,7 +177,8 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
         }
 
         TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()));
-        text.text(feat.getName()).textStyle(R.style.LargeText).onClick(() -> showFeat(feat));
+        text.text(feat.getName()).textStyle(R.style.LargeText)
+            .onClick(() -> showFeat(feat.getTemplate()));
 
         feats.addView(text.get());
       }

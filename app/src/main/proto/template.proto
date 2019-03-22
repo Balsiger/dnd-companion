@@ -447,7 +447,7 @@ message LevelTemplateProto {
   repeated int32 fortitude_save = 22;
   repeated int32 reflex_save = 23;
   repeated int32 will_save = 24;
-  repeated LeveledTemplateProto bonusFeat = 25;
+  repeated LeveledTemplateProto bonus_feat = 25;
   Ability spell_ability = 26;
 
   message PerLevel {

@@ -29,7 +29,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.data.values.AbilityAdjustment;
 import net.ixitxachitls.companion.data.values.Adjustment;
 import net.ixitxachitls.companion.data.values.CampaignDate;
@@ -223,8 +222,8 @@ public class Character extends Creature<Character> implements Comparable<Charact
     xp += number;
   }
 
-  public Set<FeatTemplate> collectFeats() {
-    Set<FeatTemplate> feats = new HashSet<>();
+  public Set<Feat> collectFeats() {
+    Set<Feat> feats = new HashSet<>();
 
     // Feats set in levels.
     for (Level level: levels) {
