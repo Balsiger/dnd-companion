@@ -1,0 +1,9 @@
+template {
+  name: "Tiefling Battlemaster"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 7
+race: "Tiefling"
+type: "Humanoid"
+size: MEDIUM
+class: "Fighter"

@@ -1,0 +1,9 @@
+template {
+  name: "Elf Cleric of the Grave"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 9
+race: "Elf"
+type: "Humanoid"
+size: MEDIUM
+class: "Cleric"

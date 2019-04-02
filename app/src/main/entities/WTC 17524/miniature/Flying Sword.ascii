@@ -1,0 +1,8 @@
+template {
+  name: "Flying Sword"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 4
+race: "Flying Sword"
+type: "Construct"
+size: MEDIUM

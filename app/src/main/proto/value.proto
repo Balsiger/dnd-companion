@@ -431,8 +431,7 @@ message RestrictionProto {
 
 message FeatSelection {
   string name = 1;
-  string weapon = 2;
-  string spell_school = 3;
+  repeated string qualifier = 2;
 }
 
 // Shared enums.

@@ -1,0 +1,8 @@
+template {
+  name: "Beholder Zombie"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 29
+race: "Zombie"
+type: "Undead"
+size: LARGE

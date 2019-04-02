@@ -1,0 +1,8 @@
+template {
+  name: "Murial"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 30
+race: "Murial"
+type: "Monstrosity"
+size: LARGE

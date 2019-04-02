@@ -43,36 +43,144 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Simple fragmemt to select an item from a list.
+ * Simple dialog to select an item from a list.
  */
 public class ListSelectDialog extends Dialog {
 
   private static final String ARG_SELECTED = "selected";
   private static final String ARG_VALUES = "values";
+  private static final String ARG_REQUIRED = "required";
 
-  private String selected;
-  private List<Entry> values;
   protected Optional<SelectAction> selectAction = Optional.empty();
+  protected int selectionsRequired = 1;
+  protected int selectedValues = 0;
+  protected List<String> selected = new ArrayList<>();
+  private List<Entry> values;
+  private boolean multiple = false;
+
+  public ListSelectDialog() {
+    // Required empty public constructor
+  }
 
   @FunctionalInterface
   public interface SelectAction {
-    void select(String id);
+    void select(List<String> id);
+  }
+
+  public ListSelectDialog setSelectListener(SelectAction action) {
+    this.selectAction = Optional.of(action);
+
+    return this;
+  }
+
+  public ListSelectDialog multiple() {
+    this.multiple = true;
+
+    return this;
+  }
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    if (getArguments() != null) {
+      selected = getArguments().getStringArrayList(ARG_SELECTED);
+      values = getArguments().getParcelableArrayList(ARG_VALUES);
+      selectionsRequired = getArguments().getInt(ARG_REQUIRED);
+    } else {
+      selected = new ArrayList<>();
+      values = new ArrayList<>();
+      selectionsRequired = 1;
+    }
+  }
+
+  @Override
+  public void createContent(View view) {
+    ListView list = view.findViewById(R.id.listSelectView);
+    SelectionArrayAdapter<String> itemAdapter =
+        new SelectionArrayAdapter<>(view.getContext(), R.layout.list_item_select,
+            R.color.character,
+            values.stream().map(m -> m.name).collect(Collectors.toList()), selected);
+    list.setAdapter(itemAdapter);
+    list.setOnItemClickListener(
+        (parent, view1, position, id) -> edited(values.get(position), position));
+    if (multiple) {
+      list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+    }
+  }
+
+  protected void edited(Entry value, int position) {
+    selectedValues++;
+    if (selected.size() >= selectedValues) {
+      selected.set(selectedValues - 1, value.id);
+    } else {
+      selected.add(value.id);
+    }
+
+    if (selectAction.isPresent()) {
+      if (selected.size() >= selectionsRequired) {
+        save();
+        selectAction.get().select(selected);
+      }
+    } else {
+      save();
+      Log.wtf("select", "listener not set");
+    }
+  }
+
+  protected static Bundle arguments(int layoutId, int titleId, int color, List<String> selected,
+                                    int required, Collection<Entry> values) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, color);
+    arguments.putStringArrayList(ARG_SELECTED, new ArrayList<>(selected));
+    arguments.putParcelableArrayList(ARG_VALUES, new ArrayList<Entry>(values));
+    arguments.putInt(ARG_REQUIRED, required);
+    return arguments;
+  }
+
+  public static ListSelectDialog newInstance(int titleId, List<String> selected,
+                                             Collection<Entry> values, int color) {
+    ListSelectDialog dialog = new ListSelectDialog();
+    Bundle arguments = arguments(R.layout.fragment_list_select, titleId, color, selected, 1, values);
+    dialog.setArguments(arguments);
+    return dialog;
+  }
+
+  public static ListSelectDialog newInstance(int titleId, List<String> selected, int required,
+                                             Collection<Entry> values, int color) {
+    ListSelectDialog fragment = new ListSelectDialog();
+    Bundle arguments = arguments(R.layout.fragment_list_select, titleId, color, selected, required,
+        values);
+    fragment.setArguments(arguments);
+    return fragment;
+  }
+
+  public static ListSelectDialog newStringInstance(int titleId, List<String> selected,
+                                                   Collection<String> values, int color) {
+    return newInstance(titleId, selected,
+        values.stream().map(m -> new Entry(m, m)).collect(Collectors.toList()), color);
+  }
+
+  public static ListSelectDialog newStringInstance(int titleId, List<String> selected, int required,
+                                                   Collection<String> values, int color) {
+    return newInstance(titleId, selected, required,
+        values.stream().map(m -> new Entry(m, m)).collect(Collectors.toList()), color);
   }
 
   public static class Entry implements Parcelable {
-    private final String name;
-    private final String id;
-
     public static final Parcelable.Creator<Entry> CREATOR
         = new Parcelable.Creator<Entry>() {
+      @Override
       public Entry createFromParcel(Parcel parcel) {
         return new Entry(parcel.readString(), parcel.readString());
       }
 
+      @Override
       public Entry[] newArray(int size) {
         return new Entry[size];
       }
     };
+    private final String name;
+    private final String id;
 
     public Entry(String name, String id) {
       this.name = name;
@@ -91,91 +199,24 @@ public class ListSelectDialog extends Dialog {
     }
   }
 
-  public ListSelectDialog() {
-    // Required empty public constructor
-  }
-
-  public static ListSelectDialog newStringInstance(int titleId, String selected,
-                                                   Collection<String> values, int color) {
-    return newInstance(titleId, selected,
-        values.stream().map(m -> new Entry(m, m)).collect(Collectors.toList()), color);
-  }
-
-  public static ListSelectDialog newInstance(int titleId, String selected,
-                                             Collection<Entry> values, int color) {
-    ListSelectDialog fragment = new ListSelectDialog();
-    Bundle arguments = arguments(R.layout.fragment_list_select, titleId, color, selected, values);
-    fragment.setArguments(arguments);
-    return fragment;
-  }
-
-  protected static Bundle arguments(int layoutId, int titleId, int color, String selected,
-                                    Collection<Entry> values) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, color);
-    arguments.putString(ARG_SELECTED, selected);
-    arguments.putParcelableArrayList(ARG_VALUES, new ArrayList<Entry>(values));
-    return arguments;
-  }
-
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    if (getArguments() != null) {
-      selected = getArguments().getString(ARG_SELECTED);
-      values = getArguments().getParcelableArrayList(ARG_VALUES);
-    } else {
-      selected = "";
-      values = new ArrayList<>();
-    }
-  }
-
-  @Override
-  public void createContent(View view) {
-    ListView list = view.findViewById(R.id.listSelectView);
-    SelectionArrayAdapter<String> itemAdapter =
-        new SelectionArrayAdapter<>(view.getContext(), R.layout.list_item_select,
-            R.color.character,
-            values.stream().map(m -> m.name).collect(Collectors.toList()), selected);
-    list.setAdapter(itemAdapter);
-    list.setOnItemClickListener(
-        (parent, view1, position, id) -> edited(values.get(position), position));
-  }
-
-  public ListSelectDialog setSelectListener(SelectAction action) {
-    this.selectAction = Optional.of(action);
-
-    return this;
-  }
-
-  protected void edited(Entry value, int position) {
-    save();
-
-    if (selectAction.isPresent()) {
-      selectAction.get().select(value.id);
-    } else {
-      Log.wtf("select", "listener not set");
-    }
-  }
-
   private class SelectionArrayAdapter<T> extends ArrayAdapter<T> {
-    private final int selected;
-    private final List<T> entries;
+    private final List<Integer> selected;
     private final int selectedColor;
 
     public SelectionArrayAdapter(Context context, @LayoutRes int layout,
-                                 @ColorRes int selectedColor, List<T> entries, T selected) {
+                                 @ColorRes int selectedColor, List<T> entries, List<T> selected) {
       super(context, layout, entries);
       this.selectedColor = selectedColor;
-      this.entries = entries;
-      this.selected = entries.indexOf(selected);
+      this.selected = selected.stream()
+          .map(s -> entries.indexOf(s))
+          .collect(Collectors.toList());
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
       View view = super.getView(position, convertView, parent);
 
-      if (position == selected) {
+      if (selected.contains(position)) {
         view.setBackgroundColor(getResources().getColor(selectedColor, null));
       } else {
         view.setBackgroundColor(getResources().getColor(R.color.transparent, null));

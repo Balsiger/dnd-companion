@@ -159,9 +159,10 @@ public class Character extends Creature<Character> implements Comparable<Charact
     xp = (int) get(FIELD_XP, 0);
     level = (int) get(FIELD_LEVEL, DEFAULT_LEVEL);
     levels = new ArrayList<>();
+    int i = 1;
     for (Map<String, Object> level
         : get(FIELD_LEVELS, Collections.<Map<String, Object>>emptyList())) {
-      levels.add(Level.read(level));
+      levels.add(Level.read(level, i++));
     }
   }
 
@@ -236,13 +237,15 @@ public class Character extends Creature<Character> implements Comparable<Charact
       if (level.getRacialFeat().isPresent()) {
         feats.add(level.getRacialFeat().get());
       }
+
+      // Automatic feats by class.
       feats.addAll(level.getAutomaticFeats());
     }
 
     // Automatic feats by race.
-
-
-    // Automatic feats by class.
+    if (getRace().isPresent()) {
+      feats.addAll(getRace().get().getAutomaticFeats());
+    }
 
     return feats;
   }

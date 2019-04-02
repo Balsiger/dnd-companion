@@ -215,6 +215,10 @@ task convertProtoData {
       'net.ixitxachitls.companion.proto.FeatTemplateProto')
   convertToBinaryProtos('./src/main/entities', 'miniature',
       'net.ixitxachitls.companion.proto.MiniatureTemplateProto')
+  convertToBinaryProtos('./src/main/entities', 'skill',
+      'net.ixitxachitls.companion.proto.SkillTemplateProto')
+  convertToBinaryProtos('./src/main/entities', 'spell',
+      'net.ixitxachitls.companion.proto.SpellTemplateProto')
 }
 
 apply plugin: 'com.google.gms.google-services'

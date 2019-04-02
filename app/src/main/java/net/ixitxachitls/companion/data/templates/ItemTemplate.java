@@ -51,10 +51,12 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
   private final Container container;
   private final Appearances appearances;
   private final boolean monetary;
+  private final Template.ItemTemplateProto proto;
 
   protected ItemTemplate(String name, List<String> synonyms, String description, Money value,
                          Weight weight, int hp, Substance substance, Container container,
-                         Appearances appearances, boolean monetary) {
+                         Appearances appearances, boolean monetary,
+                         Template.ItemTemplateProto proto) {
     super(name);
 
     this.synonyms = synonyms;
@@ -66,6 +68,7 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     this.container = container;
     this.appearances = appearances;
     this.monetary = monetary;
+    this.proto = proto;
   }
 
   public String getDescription() {
@@ -107,6 +110,10 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
 
   public boolean isTemplate() {
     return weight.isZero() || value.isZero();
+  }
+
+  public boolean isWeapon() {
+    return proto.hasWeapon();
   }
 
   public String computeAppearance() {
@@ -178,7 +185,7 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
 
   public static ItemTemplate createEmpty(String name) {
     return new ItemTemplate(name, Collections.emptyList(), "", Money.ZERO, Weight.ZERO, 0,
-        Substance.ZERO, Container.NONE, Appearances.EMPTY, false);
+        Substance.ZERO, Container.NONE, Appearances.EMPTY, false, defaultProto());
   }
 
   public static net.ixitxachitls.companion.proto.Template.ItemTemplateProto defaultProto() {
@@ -192,7 +199,7 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
         proto.getHitPoints(), Substance.fromProto(proto.getSubstance()),
         Container.fromProto(proto.getContainer()),
         Appearances.fromProto(proto.getAppearanceList()),
-        proto.getMonetary());
+        proto.getMonetary(), proto);
 
     return item;
   }

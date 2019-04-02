@@ -24,7 +24,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/primaryBack"
     android:orientation="vertical">
 
@@ -220,6 +220,7 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:autoLink="email"
           android:text="@string/contact_email"
           android:theme="@style/LargeText"/>
     </TableRow>
@@ -228,7 +229,7 @@
 
   <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="match_parent"
       android:layout_marginStart="20dp"
       android:layout_marginEnd="20dp"
       android:orientation="vertical">
@@ -240,96 +241,107 @@
         android:textStyle="bold"
         android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Puppeteer by Luis Prado from the Noun Project"
-        android:theme="@style/LargeText"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Viking by TiRo from the Noun Project"
-        android:theme="@style/LargeText"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Log by Lucas Helle from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Backpack by Joe Harrison from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Monster by omar vargas from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Snow by Kylie Whittaker from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Backpack by Joe Harrison from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Viking by TiRo from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Experience by priyanka from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Goggles by Sofia Espino-Yaeger from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Drop by BomSymbols from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Puppeteer by Luis Prado from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Coins by André Luiz Gollo from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Monster by omar vargas from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Cold by Landan Lloyd from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Experience by priyanka from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Ice Cube by 23 icons from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Icicles by icon 54 from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Icicles by icon 54 from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Ice Cube by 23 icons from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Goggles by Sofia Espino-Yaeger from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Coins by André Luiz Gollo from the Noun Project"
+            android:theme="@style/LargeText"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Snow by Kylie Whittaker from the Noun Project"
-        android:theme="@style/LargeText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Log by Lucas Helle from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Drop by BomSymbols from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Cold by Landan Lloyd from the Noun Project"
+            android:theme="@style/LargeText"/>
+      </LinearLayout>
+    </ScrollView>
 
   </LinearLayout>
 

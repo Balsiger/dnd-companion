@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.proto.Template;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.SortedSet;
@@ -130,6 +131,18 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     filtered = configured.stream()
         .filter(f -> filter.matches(me, f))
         .collect(Collectors.toList());
+
+    if (!filter.getSets().isEmpty()) {
+      // Sort by number.
+      Collections.sort(filtered, (first, second) -> {
+        int compare = Integer.compare(first.getNumber(), second.getNumber());
+        if (compare != 0) {
+          return compare;
+        }
+
+        return first.getNumberAffix().compareTo(second.getNumberAffix());
+      });
+    }
   }
 
   public Optional<MiniatureTemplate> get(int index) {

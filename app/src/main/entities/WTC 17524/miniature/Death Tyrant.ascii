@@ -1,0 +1,8 @@
+template {
+  name: "Death Tyrant"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 44
+race: "Death Tyrant"
+type: "Undead"
+size: LARGE

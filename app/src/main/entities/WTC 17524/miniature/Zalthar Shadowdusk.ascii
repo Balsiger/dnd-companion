@@ -1,0 +1,9 @@
+template {
+  name: "Zalthar Shadowdusk"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 35
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Fighter"

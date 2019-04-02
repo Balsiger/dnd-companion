@@ -1,5 +1,5 @@
 template {
-  name: "Armor Proficiency"
+  name: "Armor Proficiency (Medium)"
   synonym: "Armor Proficiency, Medium"
   reference {
     name: "WTC 17524"
@@ -13,7 +13,7 @@ template {
   short_description: "No armor check penalty on attack rolls"
 }
 type: GENERAL
-benefit: "See Armor Proficiency (light)."
+benefit: "When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Balance, Climb, Escape Artist, Hide, Jump, Move Silently, Pick Pocket, and Tumble checks."
+normal: "A character who is wearing armor with which she is not proficient applies its armor check penalty to attack rolls and to all skill checks that involve moving, including Ride."
 special: "Fighters, barbarians, paladins, clerics, druids, and bards automatically have Armor Proficiency (medium) as a bonus feat. They need not select it."
-normal: "See Armor Proficiency (light)."
-prerequisites: "Armor Proficiency (light)."
+prerequisites: "Armor Proficiency (Light)."

@@ -1,0 +1,8 @@
+template {
+  name: "Grey Ooze"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 12
+race: "Grey Ooze"
+type: "Ooze"
+size: MEDIUM

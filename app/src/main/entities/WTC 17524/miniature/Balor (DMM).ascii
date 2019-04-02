@@ -1,0 +1,9 @@
+template {
+  name: "Balor (DMM)"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 43
+race: "Balor"
+type: "Fiend"
+subtype: "Demon"
+size: HUGE

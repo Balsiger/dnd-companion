@@ -23,6 +23,11 @@ package net.ixitxachitls.companion.util;
 
 import android.os.Build;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 /**
  * Various static small functions.
  */
@@ -33,6 +38,13 @@ public class Misc {
 
   private Misc() {}
 
+  public static <T> List<T> filterPresent(Optional<T> ... elements) {
+    return Arrays.asList(elements).stream()
+        .filter(Optional::isPresent)
+        .map(Optional::get)
+        .collect(Collectors.toList());
+  }
+
   public static boolean onEmulator() {
     // This is null in tests.
     if (Build.PRODUCT != null) {
@@ -41,5 +53,4 @@ public class Misc {
       return false;
     }
   }
-
 }

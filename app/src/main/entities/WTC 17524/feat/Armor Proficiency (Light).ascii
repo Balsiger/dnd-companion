@@ -1,5 +1,5 @@
 template {
-  name: "Light Armor Proficiency"
+  name: "Armor Proficiency (Light)"
   synonym: "Armor Proficiency, Light"
   reference {
     name: "WTC 17524"
@@ -14,5 +14,5 @@ template {
 }
 type: GENERAL
 benefit: "When you wear a type of armor with which you are proficient, the armor check penalty for that armor applies only to Balance, Climb, Escape Artist, Hide, Jump, Move Silently, Pick Pocket, and Tumble checks."
-special: "All characters except wizards, sorcerers, and monks automatically have Armor Proficiency (light) as a bonus feat.  They need not select it."
+special: "All characters except wizards, sorcerers, and monks automatically have Armor Proficiency (light) as a bonus feat. They need not select it."
 normal: "A character who is wearing armor with which she is not proficient applies its armor check penalty to attack rolls and to all skill checks that involve moving, including Ride."

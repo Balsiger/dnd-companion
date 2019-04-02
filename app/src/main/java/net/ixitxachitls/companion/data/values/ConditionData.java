@@ -204,8 +204,9 @@ public class ConditionData {
     String name = Values.get(data, FIELD_NAME, "...");
     String description = Values.get(data, FIELD_DESCRIPTION, "");
     List<Adjustment> adjustments = Values.getRawList(data, FIELD_ADJUSTMENTS).stream()
-        .map(m -> Adjustment.read(m))
+        .map(Adjustment::read)
         .collect(Collectors.toList());
+    @SuppressWarnings("unchecked")
     Duration duration = Duration.read((Map<String, Object>) data.get(FIELD_DURATION));
     boolean predefined = Values.get(data, FIELD_PREDEFINED, false);
     boolean endBeforeTurn = Values.get(data, FIELD_ENDS_BEFORE_TURN, false);

@@ -1,0 +1,9 @@
+template {
+  name: "Berserker Leader"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 17
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Barbarian"

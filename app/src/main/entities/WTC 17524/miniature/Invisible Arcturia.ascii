@@ -1,0 +1,9 @@
+template {
+  name: "Invisible Arcturia"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 39
+race: "Arcturia"
+type: "Fey"
+size: MEDIUM
+number_affix: "i"

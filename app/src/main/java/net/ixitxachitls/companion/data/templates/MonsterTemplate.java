@@ -21,12 +21,14 @@
 
 package net.ixitxachitls.companion.data.templates;
 
+import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.Distance;
 import net.ixitxachitls.companion.data.values.Speed;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,6 +44,12 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
   protected MonsterTemplate(String name, Template.MonsterTemplateProto proto) {
     super(name);
     this.proto = proto;
+  }
+
+  public Collection<Feat> getAutomaticFeats() {
+    return proto.getAutomaticFeatList().stream()
+        .map(p -> new Feat(p, "Automatic feat as " + proto.getTemplate().getName()))
+        .collect(Collectors.toList());
   }
 
   public int getCharismaAdjustment() {

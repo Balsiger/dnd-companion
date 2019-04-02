@@ -1,0 +1,10 @@
+template {
+  name: "Goristro (DMM)"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 31
+race: "Goristro"
+type: "Fiend"
+subtype: "Demon"
+size: HUGE
+

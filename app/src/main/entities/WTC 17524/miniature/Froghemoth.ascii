@@ -1,0 +1,8 @@
+template {
+  name: "Froghemoth"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 25
+race: "Froghemoth"
+type: "Monstrosity"
+size: HUGE

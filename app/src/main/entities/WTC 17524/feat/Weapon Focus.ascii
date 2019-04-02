@@ -22,3 +22,4 @@ attack_modifier {
     condition: "attacking with \\$name"
   }
 }
+requires_qualifier: WEAPON

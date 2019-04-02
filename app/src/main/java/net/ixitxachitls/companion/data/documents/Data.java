@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.documents;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.Status;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -80,12 +82,16 @@ public abstract class Data {
 
     @Override
     protected <T> T getRaw(String field, T defaultValue) {
-      T value = (T) snapshot.get(field);
-      if (value == null) {
-        return defaultValue;
+      try {
+        T value = (T) snapshot.get(field);
+        if (value != null) {
+          return value;
+        }
+      } catch (ClassCastException e) {
+        Status.error("Error converting data for " + field);
       }
 
-      return value;
+      return defaultValue;
     }
   }
 
@@ -99,12 +105,16 @@ public abstract class Data {
 
     @Override
     protected <T> T getRaw(String field, T defaultValue) {
-      T value = (T) data.get(field);
-      if (value == null) {
-        return defaultValue;
+      try {
+        T value = (T) data.get(field);
+        if (value != null) {
+          return value;
+        }
+      } catch (ClassCastException e) {
+        Status.error("Error converting data for " + field);
       }
 
-      return value;
+      return defaultValue;
     }
   }
 }

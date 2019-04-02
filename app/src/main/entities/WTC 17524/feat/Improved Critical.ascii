@@ -15,3 +15,4 @@ type: FIGHTER
 benefit: "When using the weapon you selected, your threat range is doubled. For example, a longsword usually threatens a critical hit on a roll of 19-20 (two numbers). If a character using a longsword has Improved Critical (longsword), the threat range becomes 17-20 (four numbers)."
 special: "You can gain Improved Critical multiple times. The effects do not stack. Each time you take the feat, it applies to a new type of weapon. \n\nThis effect doesn't stack with any other effect that expands the threat range of a weapon (such as the keen edge spell). \n\nA fighter may select Improved Critical as one of his fighter bonus feats (see page 38)."
 prerequisites: "Proficient with weapon, base attack bonus +8."
+requires_qualifier: WEAPON

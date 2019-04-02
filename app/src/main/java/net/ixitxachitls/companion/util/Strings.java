@@ -80,6 +80,14 @@ public class Strings {
     return Optional.of(value);
   }
 
+  public static String orEmpty(Optional<? extends Object> value) {
+    if (value.isPresent()) {
+      return value.get().toString();
+    }
+
+    return "";
+  }
+
   public static String pad(long inNumber, int inLength, boolean inLeft)
   {
     String text = Long.toString(inNumber);

@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Necromancer"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 34
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Wizard"
+number_affix: "i"

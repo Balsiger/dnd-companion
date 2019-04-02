@@ -1,0 +1,9 @@
+template {
+  name: "Trobriand"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 41
+race: "Human"
+type: "Humanoid"
+size: LARGE
+class: "Wizard"

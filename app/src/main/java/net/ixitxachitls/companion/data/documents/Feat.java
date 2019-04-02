@@ -27,7 +27,9 @@ import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.data.values.Values;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.util.Strings;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,37 +43,39 @@ import java.util.Optional;
 public class Feat extends NestedDocument {
 
   private static final String FIELD_NAME = "name";
-  private static final String FIELD_WEAPON = "weapon";
-  private static final String FIELD_SPELL_SCHOOL = "spell_school";
+  private static final String FIELD_QUALIFIERS = "qualifier";
 
   private final FeatTemplate template;
-  private final Optional<String> weapon;
-  private final Optional<String> spellSchool;
+  private final List<String> qualifiers;
+  private final String source;
 
-  public Feat(String name) {
-    this(name, Optional.empty(), Optional.empty());
+  public Feat(String name, String source) {
+    this(name, Collections.emptyList(), source);
   }
 
-  public Feat(Value.FeatSelection selection) {
-    this(selection.getName(), fromEmpty(selection.getWeapon()),
-        fromEmpty(selection.getSpellSchool()));
+  public Feat(Value.FeatSelection selection, String source) {
+    this(selection.getName(), selection.getQualifierList(), source);
   }
 
-  public Feat(FeatTemplate template) {
+  public Feat(FeatTemplate template, String source) {
+    this(template, Collections.emptyList(), source);
+  }
+
+  public Feat(FeatTemplate template, List<String> qualifiers, String source) {
     this.template = template;
-    this.weapon = Optional.empty();
-    this.spellSchool = Optional.empty();
+    this.qualifiers = qualifiers;
+    this.source = source;
   }
 
-  private Feat(String name, Optional<String> weapon, Optional<String> spellSchool) {
+  private Feat(String name, List<String> qualifiers, String source) {
     Optional<FeatTemplate> feat = Templates.get().getFeatTemplates().get(name);
     if (feat.isPresent()) {
       template = feat.get();
     } else {
       template = new FeatTemplate(Template.FeatTemplateProto.getDefaultInstance(), name);
     }
-    this.weapon = weapon;
-    this.spellSchool = spellSchool;
+    this.qualifiers = qualifiers;
+    this.source = source;
   }
 
   public List<Modifier> getInitiativeAdjustment() {
@@ -82,13 +86,29 @@ public class Feat extends NestedDocument {
     return template.getName();
   }
 
+  public List<String> getQualifiers() {
+    return qualifiers;
+  }
+
+  public String getSource() {
+    return source;
+  }
+
   public FeatTemplate getTemplate() {
     return template;
   }
 
+  public String getTitle() {
+    if (!qualifiers.isEmpty()) {
+      return getName() + " (" + Strings.COMMA_JOINER.join(qualifiers) + ")";
+    }
+
+    return getName();
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(template.getName(), weapon.hashCode(), spellSchool.hashCode());
+    return Objects.hash(template.getName(), qualifiers.hashCode());
   }
 
   @Override
@@ -98,19 +118,24 @@ public class Feat extends NestedDocument {
 
     Feat feat = (Feat) other;
     return template.getName().equals(feat.template)
-        && weapon.equals(feat.weapon)
-        && spellSchool.equals(feat.spellSchool);
+        && qualifiers.equals(feat.qualifiers);
+  }
+
+  @Override
+  public String toString() {
+    return getTitle();
+  }
+
+  public Feat withQualifiers(List<String> qualifiers) {
+    return new Feat(template, qualifiers, source);
   }
 
   @Override
   public Map<String, Object> write() {
     Map<String, Object> data = new HashMap<>();
     data.put(FIELD_NAME, template.getName());
-    if (weapon.isPresent()) {
-      data.put(FIELD_WEAPON, weapon.get());
-    }
-    if (spellSchool.isPresent()) {
-      data.put(FIELD_SPELL_SCHOOL, spellSchool.get());
+    if (!qualifiers.isEmpty()) {
+      data.put(FIELD_QUALIFIERS, qualifiers);
     }
 
     return data;
@@ -124,8 +149,8 @@ public class Feat extends NestedDocument {
     return Optional.of(value);
   }
 
-  public static Feat read(Map<String, Object> data) {
-    return new Feat(Values.get(data, FIELD_NAME, ""), fromEmpty(Values.get(data, FIELD_WEAPON, "")),
-        fromEmpty(Values.get(data, FIELD_SPELL_SCHOOL, "")));
+  public static Feat read(Map<String, Object> data, String source) {
+    return new Feat(Values.get(data, FIELD_NAME, ""),
+        Values.get(data, FIELD_QUALIFIERS, Collections.emptyList()), source);
   }
 }

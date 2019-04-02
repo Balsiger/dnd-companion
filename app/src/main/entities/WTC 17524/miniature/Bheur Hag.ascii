@@ -1,0 +1,9 @@
+template {
+  name: "Bheur Hag"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 22
+race: "Bheur Hag"
+subtype: "Hag"
+type: "Fey"
+size: MEDIUM

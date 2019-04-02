@@ -61,22 +61,20 @@ public class Level extends NestedDocument {
         Optional.empty());
   }
 
-  public Level(String templateName, int hp, String abilityName, String featName,
+  public Level(String templateName, int number, int hp, String abilityName, String featName,
                String racialFeatName, String classFeatName) {
-    Optional<LevelTemplate> template = Templates.get().getLevelTemplates().get(templateName);
-    if (template.isPresent()) {
-      this.template = template.get();
-    } else {
-      this.template = new LevelTemplate(LevelTemplate.defaultProto(), templateName, 0);
-    }
+    this.template = Templates.get().getOrCreateLevel(templateName);
     this.hp = hp;
     this.abilityIncrease = abilityName.isEmpty()
         ? Optional.empty() : Optional.of(Ability.fromName(abilityName));
-    this.feat = featName.isEmpty() ? Optional.empty() : Optional.of(new Feat(featName));
+    this.feat = featName.isEmpty() ? Optional.empty() : Optional.of(new Feat(featName,
+        "Selected at level " + number));
     this.racialFeat =
-        racialFeatName.isEmpty() ? Optional.empty() : Optional.of(new Feat(racialFeatName));
+        racialFeatName.isEmpty() ? Optional.empty() : Optional.of(new Feat(racialFeatName,
+            "Racial feat from level " + number));
     this.classFeat =
-        classFeatName.isEmpty() ? Optional.empty() : Optional.of(new Feat(classFeatName));
+        classFeatName.isEmpty() ? Optional.empty() : Optional.of(new Feat(classFeatName,
+            "Special class feat from level " + number));
   }
 
   public Level(LevelTemplate template, int hp, Optional<Ability> abilityIncrease,
@@ -92,7 +90,7 @@ public class Level extends NestedDocument {
 
   public List<Feat> getAutomaticFeats() {
     return template.getAutomaticFeats().stream()
-        .map(t -> new Feat(t))
+        .map(t -> new Feat(t, "Automatic Feat from " + template.getName()))
         .collect(Collectors.toList());
   }
 
@@ -153,13 +151,13 @@ public class Level extends NestedDocument {
       result += ", +1 " + abilityIncrease.get().getShortName();
     }
     if (feat.isPresent()) {
-      result += ", " + feat.get().getName();
+      result += ", " + feat.get().getTitle();
     }
     if (racialFeat.isPresent()) {
-      result += ", " + racialFeat.get().getName();
+      result += ", " + racialFeat.get().getTitle();
     }
     if (classFeat.isPresent()) {
-      result += ", " + classFeat.get().getName();
+      result += ", " + classFeat.get().getTitle();
     }
 
     return result;
@@ -179,13 +177,13 @@ public class Level extends NestedDocument {
       data.put(FIELD_ABILITY_INCREASE, abilityIncrease.get().getName());
     }
     if (feat.isPresent()) {
-      data.put(FIELD_FEAT, feat.get().getName());
+      data.put(FIELD_FEAT, feat.get().write());
     }
     if (racialFeat.isPresent()) {
-      data.put(FIELD_RACIAL_FEAT, racialFeat.get().getName());
+      data.put(FIELD_RACIAL_FEAT, racialFeat.get().write());
     }
     if (classFeat.isPresent()) {
-      data.put(FIELD_CLASS_FEAT, classFeat.get().getName());
+      data.put(FIELD_CLASS_FEAT, classFeat.get().write());
     }
 
     return data;
@@ -200,15 +198,23 @@ public class Level extends NestedDocument {
     return names;
   }
 
-  public static Level read(Map<String, Object> data) {
-    String name = Values.get(data, FIELD_TEMPLATE, "");
+  public static Level read(Map<String, Object> data, int number) {
+    LevelTemplate template = Templates.get().getOrCreateLevel(Values.get(data, FIELD_TEMPLATE, ""));
     int hp = (int) Values.get(data, FIELD_HP, 0);
-    String abilityIncrease = Values.get(data, FIELD_ABILITY_INCREASE, "");
-    String feat = Values.get(data, FIELD_FEAT, "");
-    String racialFeat = Values.get(data, FIELD_RACIAL_FEAT, "");
-    String classFeat = Values.get(data, FIELD_CLASS_FEAT, "");
 
-    return new Level(name, hp, abilityIncrease, feat, racialFeat, classFeat);
+    Optional<Ability> abilityIncrease = Values.get(data, FIELD_ABILITY_INCREASE, "").isEmpty()
+        ? Optional.empty()
+        : Optional.of(Ability.fromName(Values.get(data, FIELD_ABILITY_INCREASE, "")));
+    Optional<Feat> feat = Values.has(data, FIELD_FEAT) ?
+        Optional.of(Feat.read(Values.get(data, FIELD_FEAT), "Level " + number))
+        : Optional.empty();
+    Optional<Feat> racialFeat = Values.has(data, FIELD_RACIAL_FEAT) ?
+        Optional.of(Feat.read(Values.get(data, FIELD_RACIAL_FEAT), "Level " + number))
+        : Optional.empty();
+    Optional<Feat> classFeat = Values.has(data, FIELD_CLASS_FEAT) ?
+        Optional.of(Feat.read(Values.get(data, FIELD_CLASS_FEAT), "Level " + number))
+        : Optional.empty();
+    return new Level(template, hp, abilityIncrease, feat, racialFeat, classFeat);
   }
 
   private static LevelTemplate readTemplate(String name) {

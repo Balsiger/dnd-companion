@@ -37,7 +37,6 @@ import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
@@ -46,12 +45,12 @@ import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.LabelledView;
 import net.ixitxachitls.companion.ui.views.ModifiedValueView;
-import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Fragment for a character's base statistics
@@ -164,21 +163,14 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     // We sometimes call update before actually having a context.
     if (getContext() != null) {
       feats.removeAllViews();
-      boolean first = true;
-      for (Feat feat : character.collectFeats()) {
-        if (first) {
-          first = false;
-        } else {
-          feats.addView(TextWrapper.wrap(new TextView(getContext()))
-              .text(",")
-              .textStyle(R.style.LargeText)
-              .padding(AbstractWrapper.Padding.RIGHT, 10)
-              .get());
-        }
-
-        TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()));
-        text.text(feat.getName()).textStyle(R.style.LargeText)
-            .onClick(() -> showFeat(feat.getTemplate()));
+      Set<Feat> collectedFeats = character.collectFeats();
+      int i = 1;
+      for (Feat feat : collectedFeats) {
+        boolean last = i++ == collectedFeats.size();
+        TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()))
+            .noWrap();
+        text.text(feat.getTitle() + (last ? "" : ", ")).textStyle(R.style.SmallText)
+            .onClick(() -> showFeat(feat));
 
         feats.addView(text.get());
       }
@@ -198,8 +190,9 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     }
   }
 
-  private void showFeat(FeatTemplate feat) {
-    MessageDialog.create(getContext()).title(feat.getName()).message(feat.getDescription()).show();
+  private void showFeat(Feat feat) {
+    String message = feat.getSource() + "\n\n" + feat.getTemplate().getDescription();
+    MessageDialog.create(getContext()).title(feat.getTitle()).message(message).show();
   }
 
   private void update(Documents.Update update) {

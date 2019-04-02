@@ -1,0 +1,9 @@
+template {
+  name: "Veteran"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 3
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Fighter"

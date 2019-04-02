@@ -1,0 +1,10 @@
+template {
+  name: "Invisible Kerestra Delvingstone"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 38
+race: "Undead"
+type: "Humanoid"
+size: MEDIUM
+number_affix: "i"
+

@@ -1,0 +1,11 @@
+template {
+  name: "Invisible Dezmyr Shadowdusk"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 36
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Fighter"
+number_affix: "i"
+

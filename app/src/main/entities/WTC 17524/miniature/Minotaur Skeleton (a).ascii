@@ -1,0 +1,9 @@
+template {
+  name: "Minotaur Skeleton (a)"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 32
+race: "Skeleton"
+type: "Undead"
+size: LARGE
+number_affix: "a"

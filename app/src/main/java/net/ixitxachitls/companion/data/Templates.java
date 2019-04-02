@@ -31,11 +31,14 @@ import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 import net.ixitxachitls.companion.data.templates.MonsterTemplate;
+import net.ixitxachitls.companion.data.templates.SkillTemplate;
+import net.ixitxachitls.companion.data.templates.SpellTemplate;
 import net.ixitxachitls.companion.data.templates.WorldTemplate;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Optional;
 
 /**
  * Storage place for all templates.
@@ -53,6 +56,8 @@ public class Templates {
   private final TemplatesStore<LevelTemplate> levels = new TemplatesStore<>(LevelTemplate.class);
   private final TemplatesStore<FeatTemplate> feats = new TemplatesStore<>(FeatTemplate.class);
   private final MiniatureTemplates miniatures = new MiniatureTemplates();
+  private final TemplatesStore<SkillTemplate> skills = new TemplatesStore<>(SkillTemplate.class);
+  private final TemplatesStore<SpellTemplate> spells = new TemplatesStore<>(SpellTemplate.class);
 
   private final AssetAccessor assetAccessor;
 
@@ -80,8 +85,25 @@ public class Templates {
     return monsterTemplates;
   }
 
+  public TemplatesStore<SkillTemplate> getSkillTemplates() {
+    return skills;
+  }
+
+  public TemplatesStore<SpellTemplate> getSpellTemplates() {
+    return spells;
+  }
+
   public TemplatesStore<WorldTemplate> getWorldTemplates() {
     return worlds;
+  }
+
+  public LevelTemplate getOrCreateLevel(String name) {
+    Optional<LevelTemplate> template = getLevelTemplates().get(name);
+    if (template.isPresent()) {
+      return template.get();
+    }
+
+    return new LevelTemplate(LevelTemplate.defaultProto(), name, 0);
   }
 
   private void load() {
@@ -110,6 +132,12 @@ public class Templates {
               case MiniatureTemplate.TYPE:
                 miniatures.read(name, assetAccessor.open(name));
                 break;
+              case SkillTemplate.TYPE:
+                skills.read(name, assetAccessor.open(name));
+                break;
+              case SpellTemplate.TYPE:
+                spells.read(name, assetAccessor.open(name));
+                break;
               default:
                 Status.error("Unsupported type " + type + " found!");
                 break;
@@ -124,6 +152,8 @@ public class Templates {
       levels.loaded();
       feats.loaded();
       miniatures.loaded();
+      skills.loaded();
+      spells.loaded();
     } catch (IOException | NoSuchMethodException | IllegalAccessException
         | InvocationTargetException e) {
       Status.error("Loading of entries from internal storage failed: " + e);

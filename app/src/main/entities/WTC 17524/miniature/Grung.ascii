@@ -1,0 +1,8 @@
+template {
+  name: "Grung"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 6
+race: "Grung"
+type: "Humanoid"
+size: MEDIUM

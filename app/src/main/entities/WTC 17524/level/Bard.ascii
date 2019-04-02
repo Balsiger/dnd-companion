@@ -548,3 +548,7 @@ spells_known {
   value: 4
   value: 4
 }
+automatic_feat: "Armor Proficiency (Light)"
+automatic_feat: "Armor Proficiency (Medium)"
+automatic_feat: "Shield Proficiency"
+automatic_feat: "Simple Weapon Proficiency"

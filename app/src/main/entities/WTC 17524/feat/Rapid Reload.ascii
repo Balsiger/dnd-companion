@@ -16,3 +16,4 @@ benefit: "The time required for you to reload your chosen type of crossbow is re
 special: "You can gain Rapid Reload multiple times. Each time you take the feat, it applies to a new type of crossbow.  A fighter may select Rapid Reload as one of his fighter bonus feats (see page 38)."
 normal: "A character without this feat needs a move action to reload a hand or light crossbow, or a fullround action to reload a heavy crossbow."
 prerequisites: "Weapon Proficiency (crossbow type chosen)."
+requires_qualifier: WEAPON

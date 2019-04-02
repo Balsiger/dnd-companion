@@ -1,0 +1,10 @@
+template {
+  name: "Halaster Blackcloak"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 40
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Wizard"
+

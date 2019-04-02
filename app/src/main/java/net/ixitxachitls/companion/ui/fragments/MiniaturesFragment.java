@@ -97,7 +97,7 @@ public class MiniaturesFragment extends CompanionFragment {
     });
 
     seek = view.findViewById(R.id.seek);
-    seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber());
+    seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber() - 1);
     seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
       @Override
       public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -157,7 +157,7 @@ public class MiniaturesFragment extends CompanionFragment {
       filterAction.uncolor();
     }
     update();
-    seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber());
+    seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber() - 1);
   }
 
 

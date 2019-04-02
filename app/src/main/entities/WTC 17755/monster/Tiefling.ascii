@@ -69,12 +69,7 @@ reach {
 }
 feat {
   name: "Weapon Focus"
-  parameters {
-    text {
-      name: "qualifier"
-      text: "rapier"
-    }
-  }
+  weapon: "Rapier"
 }
 climate: TEMPERATE
 terrain: PLAINS

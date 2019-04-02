@@ -1,0 +1,8 @@
+template {
+  name: "Tressym"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 5
+race: "Tressym"
+type: "Beast"
+size: SMALL

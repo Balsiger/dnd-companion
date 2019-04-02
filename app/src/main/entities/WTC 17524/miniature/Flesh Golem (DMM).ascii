@@ -1,0 +1,9 @@
+template {
+  name: "Flesh Golem (DMM)"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 18
+race: "Flesh Golem"
+type: "Construct"
+subtype: "Golem"
+size: LARGE

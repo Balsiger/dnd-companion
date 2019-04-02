@@ -29,6 +29,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.common.base.Preconditions;
+import com.google.common.collect.Lists;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Templates;
@@ -39,6 +40,8 @@ import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -63,7 +66,8 @@ public class CharacterDialog extends Dialog {
   public void editGender() {
     if (character.isPresent()) {
       ListSelectDialog edit = ListSelectDialog.newStringInstance(R.string.character_edit_gender,
-          character.get().getGender().getName(), Gender.names(), R.color.character);
+          Lists.newArrayList(character.get().getGender().getName()), Gender.names(),
+          R.color.character);
       edit.setSelectListener(this::updateGender);
       edit.display();
     }
@@ -72,7 +76,9 @@ public class CharacterDialog extends Dialog {
   public void editRace() {
     if (character.isPresent()) {
       ListSelectDialog edit = ListSelectDialog.newStringInstance(R.string.character_edit_race,
-          character.get().getRace().isPresent() ? character.get().getRace().get().getName() : "",
+          character.get().getRace().isPresent()
+              ? Lists.newArrayList(character.get().getRace().get().getName())
+              : Collections.emptyList(),
           Templates.get().getMonsterTemplates().primaryRaces(), R.color.character);
       edit.setSelectListener(this::updateRace);
       edit.display();
@@ -90,18 +96,6 @@ public class CharacterDialog extends Dialog {
       character = Optional.of(characters().create(campaignId));
     } else {
       character = characters().get(characterId);
-    }
-  }
-
-  @Override
-  protected void save() {
-    if (character.isPresent()) {
-      character.get().setName(name.getText());
-      character.get().setGender(Gender.fromName(gender.getText()));
-      character.get().setRace(race.getText());
-      character.get().store();
-
-      super.save();
     }
   }
 
@@ -129,6 +123,18 @@ public class CharacterDialog extends Dialog {
     update();
   }
 
+  @Override
+  protected void save() {
+    if (character.isPresent()) {
+      character.get().setName(name.getText());
+      character.get().setGender(Gender.fromName(gender.getText()));
+      character.get().setRace(race.getText());
+      character.get().store();
+
+      super.save();
+    }
+  }
+
   protected void update() {
     if (character.isPresent()) {
       if (name.getText().length() == 0
@@ -142,9 +148,9 @@ public class CharacterDialog extends Dialog {
     }
   }
 
-  private boolean updateGender(String value) {
+  private boolean updateGender(List<String> values) {
     if (character.isPresent()) {
-      gender.text(value);
+      gender.text(values.get(0));
       update();
 
       return true;
@@ -153,9 +159,9 @@ public class CharacterDialog extends Dialog {
     return false;
   }
 
-  private boolean updateRace(String value) {
+  private boolean updateRace(List<String> values) {
     if (character.isPresent()) {
-      race.text(value);
+      race.text(values.get(0));
       update();
 
       return true;

@@ -1,0 +1,10 @@
+template {
+  name: "Otto"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 26
+race: "Fearie Dragon"
+type: "Dragon"
+size: LARGE
+subtype: "Invisible"
+subtype: "Lesser"

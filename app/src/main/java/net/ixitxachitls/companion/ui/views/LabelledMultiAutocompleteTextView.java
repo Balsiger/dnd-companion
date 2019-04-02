@@ -22,31 +22,30 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.MultiAutoCompleteTextView;
 
-import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 
 /**
  * A labelled text view allowing multiple selections.
  */
-public class LabelledMultiAutocompleteTextView extends LabelledAutocompleteTextView {
-
-  public LabelledMultiAutocompleteTextView(Context context) {
-    super(context);
-  }
+public class LabelledMultiAutocompleteTextView
+    extends LabelledAutocompleteTextView<LabelledMultiAutocompleteTextView, MultiAutoCompleteTextView> {
 
   public LabelledMultiAutocompleteTextView(Context context, AttributeSet attributes) {
-    super(context, attributes, R.layout.view_labelled_multiautocomplete);
+    super(context, attributes);
   }
 
   @Override
-  protected void setup(View view, TypedArray array, TypedArray baseArray) {
-    super.setup(view, array, baseArray);
+  protected MultiAutoCompleteTextView createTextView() {
+    text = EditTextWrapper.wrap(new MultiAutoCompleteTextView(getContext()));
+    text.get().setBackground(null);
+    text.padding(AbstractWrapper.Padding.BOTTOM, 0);
+    text.padding(AbstractWrapper.Padding.TOP, 0);
+    text.get().setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());
 
-    ((MultiAutoCompleteTextView) text.get()).setTokenizer(
-        new MultiAutoCompleteTextView.CommaTokenizer());
+    return text.get();
   }
 }

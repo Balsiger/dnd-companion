@@ -1,0 +1,9 @@
+template {
+  name: "Veteran Leader"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 14
+race: "Human"
+type: "Humanoid"
+size: HUGE
+class: "Fighter"

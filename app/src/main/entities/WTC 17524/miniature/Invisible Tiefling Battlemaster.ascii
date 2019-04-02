@@ -1,0 +1,10 @@
+template {
+  name: "Invisibile Tiefling Battlemaster"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 7
+race: "Tiefling"
+type: "Humanoid"
+size: MEDIUM
+class: "Fighter"
+number_affix: "i"

@@ -226,3 +226,8 @@ will_save: 0
 will_save: 1
 will_save: 0
 will_save: 0
+automatic_feat: "Armor Proficiency (Light)"
+automatic_feat: "Armor Proficiency (Medium)"
+automatic_feat: "Martial Weapon Proficiency"
+automatic_feat: "Shield Proficiency"
+automatic_feat: "Simple Weapon Proficiency"

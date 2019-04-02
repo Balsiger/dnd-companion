@@ -727,6 +727,16 @@ message FeatTemplateProto {
   ModifierProto fortitude_modifier = 20;
   ModifierProto will_modifier = 21;
   ModifierProto reflex_modifier = 22;
+
+  enum Qualifier {
+    UNKNOWN = 0;
+    NONE = 1;
+    WEAPON = 2;
+    SCHOOL = 3;
+    SKILL = 4;
+    SPELLS = 5;
+  }
+  Qualifier requires_qualifier = 23;
 }
 
 message MiniatureTemplateProto {
@@ -740,4 +750,199 @@ message MiniatureTemplateProto {
   repeated string subtype = 7;
   repeated string class = 8;
   SizeProto.Size size = 9;
+}
+
+message SkillTemplateProto {
+  TemplateProto template = 1;
+
+  Ability ability = 2;
+  string check = 3;
+  string action = 4;
+  string retry = 5;
+  string special = 6;
+  string synergy_text = 7;
+  string restriction_text = 8;
+  string untrained = 9;
+
+  enum Restriction
+  {
+    UNKNOWN_RESTRICTION = 0;
+    TRAINED_ONLY = 1;
+    ARMOR_CHECK_PENALTY = 2;
+    SUBTYPE_ONLY = 3;
+    DOUBLE_ARMOR_CHECK_PENALTY = 4;
+  }
+  repeated Restriction restriction = 10;
+
+  enum Modifier
+  {
+    UNKNOWN_MODIFIER = 0;
+    SPEED = 1;
+    SIZE = 2;
+  }
+  repeated Modifier modifier = 11;
+
+  message DC
+  {
+    int32 number = 1;
+    string text = 2;
+  }
+  repeated DC dc = 12;
+
+  message Synergy
+  {
+    string name = 1;
+    string condition = 2;
+  }
+  repeated Synergy synergy = 13;
+}
+
+message SpellTemplateProto {
+  TemplateProto template = 1;
+
+  enum School
+  {
+    UNKNOWN_SCHOOL = 0;
+    ABJURATION = 1;
+    CONJURATION = 2;
+    DIVINATION = 3;
+    ENCHANTMENT = 4;
+    EVOACATION = 5;
+    ILLUSION = 6;
+    NECROMANCY = 7;
+    TRANSMUTATION = 8;
+    UNIVERSAL = 9;
+  }
+  School school = 2;
+
+  enum Subschool
+  {
+    UNKNOWN_SUBSCHOOL = 0;
+    NONE = 1;
+    CALLING = 2;
+    CREATION_OR_CALLING = 3;
+    CREATION = 4;
+    HEALING = 5;
+    SUMMONING = 6;
+    TELEPORTATION = 7;
+    SCRYING = 8;
+    CHARM = 9;
+    COMPULSION = 10;
+    FIGMENT_OR_GLAMER = 11;
+    FIGMENT = 12;
+    GLAMER = 13;
+    PATTERN = 14;
+    PHANTASM = 15;
+    SHADOW = 16;
+  }
+  repeated Subschool subschool = 3;
+  string summary = 4;
+
+  enum Descriptor
+  {
+    UNKNOWN_DESCRIPTOR = 0;
+    ACID = 1;
+    AIR = 2;
+    CHAOTIC = 3;
+    COLD = 4;
+    DARKNESS = 5;
+    DEATH = 6;
+    EARTH = 7;
+    ELECTRICITY = 8;
+    EVIL = 9;
+    FEAR = 10;
+    FIRE_OR_COLD = 11;
+    FIRE = 12;
+    FORCE = 13;
+    GOOD = 14;
+    LANGUAGE_DEPENDENT = 15;
+    LAWFUL = 16;
+    LIGHT = 17;
+    MIND_AFFECTING = 18;
+    SCRYING_DESCRIPTOR = 19;
+    SONIC = 20;
+    WATER = 21;
+    SEE_TEXT = 22;
+  }
+  repeated Descriptor descriptor = 5;
+
+  message Level {
+    SpellClass spell_class = 1;
+    int32 level = 2;
+  }
+  repeated Level level = 6;
+
+  enum Components
+  {
+    UNKNOWN_COMPONENT = 0;
+    VERBOSE = 1;
+    SOMATIC = 2;
+    MATERIAL_DEVINE_FOCUS = 3;
+    MATERIAL = 4;
+    FOCUS_DIVINE_FOCUS = 5;
+    FOCUS = 6;
+    DIVINE_FOCUS = 7;
+    EXPERIENCE_POINTS = 8;
+  }
+  repeated Components components = 7;
+
+  message Material
+  {
+    string use = 1;
+    repeated string component = 2;
+  }
+  repeated Material material = 8;
+  Material focus = 9;
+  DurationProto casting_time = 10;
+
+  enum Range
+  {
+    UNKNOWN_RANGE = 0;
+    PERSONAL_OR_TOUCH = 1;
+    PERSONAL_AND_TOUCH = 2;
+    PERSONAL_OR_CLOSE = 3;
+    PERSONAL = 4;
+    TOUCH = 5;
+    CLOSE = 6;
+    MEDIUM = 7;
+    LONG = 8;
+    UNLIMITED = 9;
+    FOURTY_FEET_PER_LEVEL = 10;
+    SEE_TEXT_RANGE = 11;
+    ANYWHERE_WITHIN_AREA_WARDED = 12;
+    ONE_MILE_PER_LEVEL = 13;
+    UP_TO_TEN_FEET_PER_LEVEL = 14;
+  }
+  Range special_range = 11;
+  DistanceProto range = 12;
+
+  message Effect
+  {
+    DistanceProto distance = 1;
+
+    enum Type
+    {
+      UNKNOWN = 0;
+      RAY = 1;
+      SPREAD = 2;
+    }
+    Type type = 2;
+    string description = 3;
+  }
+  Effect effect = 13;
+  string target = 14;
+  string area = 15;
+
+  message Duration
+  {
+    string duration_description = 1;
+    DurationProto duration = 2;
+    string levels = 3;
+    DurationProto additional_duration = 4;
+    string flags = 5;
+    string description = 6;
+  }
+  Duration duration = 16;
+  string saving_throw = 17;
+  string spell_resistance = 18;
 }

@@ -39,6 +39,8 @@ import net.ixitxachitls.companion.ui.dialogs.MessageDialog;
 import net.ixitxachitls.companion.ui.dialogs.TimedConditionDialog;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -108,7 +110,7 @@ public class LocalCharacterFragment extends CharacterFragment {
 
   private void move() {
     ListSelectDialog fragment = ListSelectDialog.newInstance(
-        R.string.character_select_campaign, "",
+        R.string.character_select_campaign, Collections.emptyList(),
         campaigns().getCampaigns().stream()
             .map(m -> new ListSelectDialog.Entry(m.getName(), m.getId()))
             .collect(Collectors.toList()),
@@ -117,12 +119,12 @@ public class LocalCharacterFragment extends CharacterFragment {
     fragment.display();
   }
 
-  private void move(String campaignId) {
+  private void move(List<String> campaignIds) {
     if (character.isPresent()) {
-      character.get().setCampaignId(campaignId);
+      character.get().setCampaignId(campaignIds.get(0));
     }
 
-    Optional<Campaign> campaign = campaigns().get(campaignId);
+    Optional<Campaign> campaign = campaigns().get(campaignIds.get(0));
     if (campaign.isPresent()) {
       CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
     }

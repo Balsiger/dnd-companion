@@ -1,0 +1,8 @@
+template {
+  name: "Piercer"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 19
+race: "Piercer"
+type: "Aberration"
+size: MEDIUM

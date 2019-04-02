@@ -568,3 +568,4 @@ spells_known {
   value: 2
   value: 3
 }
+automatic_feat: "Simple Weapon Proficiency"

@@ -1,0 +1,8 @@
+template {
+  name: "Halaster's Lab"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 45
+race: "Object"
+type: "Object"
+size: HUGE

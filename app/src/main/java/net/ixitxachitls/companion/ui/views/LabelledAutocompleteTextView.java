@@ -22,65 +22,67 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.content.res.TypedArray;
-import android.support.annotation.LayoutRes;
 import android.util.AttributeSet;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.MultiAutoCompleteTextView;
 
-import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
  * Labelled view for an autocomplete text view.
  */
-public class LabelledAutocompleteTextView extends AbstractLabelledView {
+public class LabelledAutocompleteTextView
+    <T extends LabelledAutocompleteTextView, V extends AutoCompleteTextView>
+    extends LabelledTextView<T, V> {
 
   // Ui elements.
-  protected EditTextWrapper<? extends AutoCompleteTextView> text;
-
-  public LabelledAutocompleteTextView(Context context) {
-    super(context, R.layout.view_labelled_autocomplete);
-  }
+  protected EditTextWrapper<V> text;
 
   public LabelledAutocompleteTextView(Context context, AttributeSet attributes) {
-    super(context, attributes, R.layout.view_labelled_autocomplete);
+    super(context, attributes);
   }
 
-  protected LabelledAutocompleteTextView(Context context, AttributeSet attributes,
-                                         @LayoutRes int layoutId) {
-    super(context, attributes, layoutId);
-  }
-
+  @Override
   public String getText() {
     return text.getText();
+  }
+
+  @Override
+  protected V createTextView() {
+    text = EditTextWrapper.<V>wrap((V) new MultiAutoCompleteTextView(getContext()));
+    text.get().setBackground(null);
+    text.padding(AbstractWrapper.Padding.BOTTOM, 0);
+    text.padding(AbstractWrapper.Padding.TOP, 0);
+
+    return (V) text.get();
   }
 
   public void setAdapter(ArrayAdapter<String> adapter) {
     text.get().setAdapter(adapter);
   }
 
-  public LabelledAutocompleteTextView enabled(boolean enabled) {
-    text.enabled(enabled);
+  public T onBlur(Wrapper.Action action) {
+    text.onBlur(action);
 
-    return this;
+    return (T) this;
   }
 
-  public LabelledAutocompleteTextView onChange(Wrapper.Action action) {
+  public T onChange(Wrapper.Action action) {
     text.onChange(action);
 
-    return this;
+    return (T) this;
   }
 
-  public LabelledAutocompleteTextView onEdit(Wrapper.Action action) {
+  public T onEdit(Wrapper.Action action) {
     text.onEdit(action);
 
-    return this;
+    return (T) this;
   }
 
-  public LabelledAutocompleteTextView onFocus(Wrapper.Action focusAction,
+  public T onFocus(Wrapper.Action focusAction,
                                               Wrapper.Action focusLostAction) {
     text.get().setOnFocusChangeListener((view, hasFocus) -> {
       if (hasFocus) {
@@ -90,40 +92,28 @@ public class LabelledAutocompleteTextView extends AbstractLabelledView {
       }
     });
 
-    return this;
+    return (T) this;
   }
 
-  public LabelledAutocompleteTextView onFocus(Wrapper.Action action) {
+  public T onFocus(Wrapper.Action action) {
     text.get().setOnFocusChangeListener((view, hasFocus) -> action.execute());
 
-    return this;
+    return (T) this;
   }
 
   public void showDropDown() {
     text.get().showDropDown();
   }
 
-  public LabelledAutocompleteTextView text(String text) {
-    this.text.text(text);
-
-    return this;
-  }
-
-  public LabelledAutocompleteTextView threshold(int threshold) {
+  public T threshold(int threshold) {
     text.get().setThreshold(threshold);
 
-    return this;
+    return (T) this;
   }
 
-  @Override
-  protected void setup(View view, TypedArray array, TypedArray baseArray) {
-    super.setup(view, array, baseArray);
+  public T validate(EditTextWrapper.Validator validator) {
+    text.validate(validator);
 
-    text = EditTextWrapper.wrap(view, R.id.text);
-    text.text(array.getString(R.styleable.LabelledTextView_defaultText));
-    text.textColorValue(array.getColor(R.styleable.LabelledTextView_textColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
-    text.lineColorValue(array.getColor(R.styleable.LabelledView_lineColor,
-        getContext().getResources().getColor(R.color.colorPrimary, null)));
+    return (T) this;
   }
 }

@@ -31,23 +31,15 @@ import java.util.Map;
 public class Values {
 
   public static Map<String, Object> get(Map<String, Object> data, String field) {
-    if (data.containsKey(field)) {
+    if (data.containsKey(field) && data.get(field) instanceof Map) {
       return (Map<String, Object>) data.get(field);
     }
 
     return Collections.emptyMap();
   }
 
-  public static List<Map<String, Object>> getRawList(Map<String, Object> data, String field) {
-    if (data.containsKey(field)) {
-      return (List<Map<String, Object>>) data.get(field);
-    }
-
-    return Collections.emptyList();
-  }
-
   public static String get(Map<String, Object> data, String field, String defaultValue) {
-    if (data.containsKey(field)) {
+    if (data.containsKey(field) && data.get(field) instanceof String) {
       return (String) data.get(field);
     }
 
@@ -55,7 +47,7 @@ public class Values {
   }
 
   public static long get(Map<String, Object> data, String field, long defaultValue) {
-    if (data.containsKey(field)) {
+    if (data.containsKey(field) && data.get(field) instanceof Long) {
       return (long) data.get(field);
     }
 
@@ -63,7 +55,7 @@ public class Values {
   }
 
   public static boolean get(Map<String, Object> data, String field, boolean defaultValue) {
-    if (data.containsKey(field)) {
+    if (data.containsKey(field) && data.get(field) instanceof Boolean) {
       return (boolean) data.get(field);
     }
 
@@ -71,7 +63,7 @@ public class Values {
   }
 
   public static <E extends Enum<E>> E get(Map<String, Object> data, String field, E defaultValue) {
-    if (data.containsKey(field)) {
+    if (data.containsKey(field) && data.get(field) instanceof Enum) {
       return (E) Enum.valueOf(defaultValue.getClass(), (String) data.get(field));
     }
 
@@ -80,11 +72,19 @@ public class Values {
 
   public static List<String> get(Map<String, Object> data, String field,
                                  List<String> defaultValue) {
-    if (data.containsKey(field)) {
+    if (data.containsKey(field) && data.get(field) instanceof List) {
       return (List<String>) data.get(field);
     }
 
     return defaultValue;
+  }
+
+  public static List<Map<String, Object>> getRawList(Map<String, Object> data, String field) {
+    if (data.containsKey(field) && data.get(field) instanceof List) {
+      return (List<Map<String, Object>>) data.get(field);
+    }
+
+    return Collections.emptyList();
   }
 
   public static boolean has(Map<String, Object> data, String field) {

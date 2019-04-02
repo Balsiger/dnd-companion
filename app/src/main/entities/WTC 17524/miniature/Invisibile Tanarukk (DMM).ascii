@@ -1,0 +1,11 @@
+template {
+  name: "Invisibile Tanarukk (DMM)"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 37
+race: "Tanarukk"
+type: "Fiend"
+subtype: "Demon"
+size: MEDIUM
+number_affix: "i"
+

@@ -27,21 +27,26 @@ import android.support.annotation.LayoutRes;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.common.collect.Lists;
+
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.rules.Levels;
+import net.ixitxachitls.companion.rules.Spells;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -60,24 +65,29 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
   private int characterLevel = 0;
   private int classLevel = 0;
   private Level level;
+  private Optional<Feat> feat = Optional.empty();
+  private Optional<Feat> racialFeat = Optional.empty();
+  private Optional<Feat> classFeat = Optional.empty();
 
   // UI.
   private LabelledTextView className;
   private LabelledEditTextView hp;
   private LabelledTextView abilityIncrease;
-  private LabelledTextView feat;
-  private LabelledTextView racialFeat;
-  private LabelledTextView classFeat;
+  private LabelledTextView featView;
+  private LabelledTextView racialFeatView;
+  private LabelledTextView classFeatView;
 
   @Override
   protected Level getValue() {
-    if (className == null || hp == null || abilityIncrease == null || feat == null ||
-        racialFeat == null || classFeat == null) {
+    if (className == null || hp == null || abilityIncrease == null) {
       return new Level();
     }
 
-    return new Level(className.getText(), Integer.parseInt(hp.getText()), abilityIncrease.getText(),
-        feat.getText(), racialFeat.getText(), classFeat.getText());
+    return new Level(Templates.get().getOrCreateLevel(className.getText()),
+        Integer.parseInt(hp.getText()),
+        abilityIncrease.getText().isEmpty()
+            ? Optional.empty() : Optional.of(Ability.fromName(abilityIncrease.getText())),
+        feat, racialFeat, classFeat);
   }
 
   @Override
@@ -108,28 +118,31 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     } else {
       abilityIncrease.disabled();
     }
-    feat = view.findViewById(R.id.feat);
-    racialFeat = view.findViewById(R.id.racial_feat);
-    classFeat = view.findViewById(R.id.class_feat);
+    featView = view.findViewById(R.id.feat);
+    racialFeatView = view.findViewById(R.id.racial_feat);
+    classFeatView = view.findViewById(R.id.class_feat);
     if (Levels.allowsFeat(characterLevel)) {
-      feat.onClick(this::selectFeat);
+      featView.onClick(this::selectFeat);
     } else {
-      feat.disabled();
+      featView.disabled();
     }
     if (character.getRace().isPresent()
         && character.getRace().get().hasBonusFeat(characterLevel)) {
-      racialFeat.onClick(this::selectRacialFeat);
+      racialFeatView.onClick(this::selectRacialFeat);
     } else {
-      racialFeat.disabled();
+      racialFeatView.disabled();
     }
 
+    feat = level.getFeat();
+    classFeat = level.getClassFeat();
+    racialFeat = level.getRacialFeat();
     className.text(level.getTemplate().getName());
     hp.text(String.valueOf(level.getHp()));
     abilityIncrease.text(level.getIncreasedAbility().isPresent()
         ? level.getIncreasedAbility().get().getName() : "");
-    feat.text(level.getFeat().isPresent() ? level.getFeat().get().getName() : "");
-    racialFeat.text(level.getRacialFeat().isPresent() ? level.getRacialFeat().get().getName(): "");
-    classFeat.text(level.getClassFeat().isPresent() ? level.getClassFeat().get().getName() : "");
+    featView.text(feat.isPresent() ? feat.get().getTitle() : "");
+    racialFeatView.text(racialFeat.isPresent() ? racialFeat.get().getTitle(): "");
+    classFeatView.text(classFeat.isPresent() ? classFeat.get().getTitle() : "");
 
     refresh();
   }
@@ -150,25 +163,93 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     }
   }
 
-  private void editAbility(String ability) {
-    abilityIncrease.text(ability);
+  private void editAbility(List<String> ability) {
+    abilityIncrease.text(ability.get(0));
   }
 
-  private void editClass(String className) {
-    this.className.text(className);
+  private void editClass(List<String> className) {
+    this.className.text(className.get(0));
     refresh(); // The class level could have changed.
   }
 
-  private void editClassFeat(String featName) {
-    this.classFeat.text(featName);
+  private void editClassFeat(List<String> featName) {
+    classFeat = Optional.of(new Feat(featName.get(0), "Level " + characterLevel));
+    this.classFeatView.text(classFeat.get().getTitle());
+
+    editQualifier(classFeat, this::editClassFeatQualifier);
   }
 
-  private void editFeat(String featName) {
-    this.feat.text(featName);
+  private void editClassFeatQualifier(List<String> qualifiers) {
+    classFeat = Optional.of(classFeat.get().withQualifiers(qualifiers));
+    this.classFeatView.text(classFeat.get().getTitle());
   }
 
-  private void editRacialFeat(String featName) {
-    this.racialFeat.text(featName);
+  private void editFeat(List<String> featName) {
+    feat = Optional.of(new Feat(featName.get(0), "Level " + characterLevel));
+    this.featView.text(feat.get().getTitle());
+
+    editQualifier(feat, this::editFeatQualifier);
+  }
+
+  private void editFeatQualifier(List<String> qualifiers) {
+    feat = Optional.of(feat.get().withQualifiers(qualifiers));
+    this.featView.text(feat.get().getTitle());
+  }
+
+  private void editQualifier(Optional<Feat> feat, ListSelectDialog.SelectAction action) {
+    if (!feat.isPresent()) {
+      return;
+    }
+
+    switch (feat.get().getTemplate().getRequiredQualifier()) {
+      case none:
+        break;
+
+      case weapon:
+        ListSelectDialog.newStringInstance(R.string.feat_qualifier_weapon,
+            feat.get().getQualifiers(), Templates.get().getItemTemplates().weapons(),
+            R.color.character)
+            .setSelectListener(action)
+            .display();
+        break;
+
+      case school:
+        ListSelectDialog.newStringInstance(R.string.feat_qualifier_school,
+            new ArrayList<>(feat.get().getQualifiers()), Spells.schools(), R.color.character)
+            .setSelectListener(action)
+            .display();
+        break;
+
+      case skill:
+        ListSelectDialog.newStringInstance(R.string.feat_qualifier_skill,
+            new ArrayList<>(feat.get().getQualifiers()),
+            Templates.get().getSkillTemplates().getNames(),
+            R.color.character)
+            .setSelectListener(action)
+            .display();
+        break;
+
+      case spells:
+        ListSelectDialog.newStringInstance(R.string.feat_qualifier_spells,
+            new ArrayList<>(feat.get().getQualifiers()), 3,
+            Templates.get().getSpellTemplates().getNames(),
+            R.color.character)
+            .setSelectListener(action)
+            .display();
+        break;
+    }
+  }
+
+  private void editRacialFeat(List<String> featName) {
+    racialFeat = Optional.of(new Feat(featName.get(0), "Level " + characterLevel));
+    this.racialFeatView.text(racialFeat.get().getTitle());
+
+    editQualifier(racialFeat, this::editRacialFeatQualifier);
+  }
+
+  private void editRacialFeatQualifier(List<String> qualifiers) {
+    racialFeat = Optional.of(racialFeat.get().withQualifiers(qualifiers));
+    this.racialFeatView.text(racialFeat.get().getTitle());
   }
 
   private void refresh() {
@@ -180,17 +261,17 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
 
     Optional<LevelTemplate> level = Templates.get().getLevelTemplates().get(className.getText());
     if (level.isPresent() && level.get().hasBonusFeat(classLevel)) {
-      classFeat.enabled();
-      classFeat.onClick(this::selectClassFeat);
+      classFeatView.enabled();
+      classFeatView.onClick(this::selectClassFeat);
     } else {
-      classFeat.disabled();
+      classFeatView.disabled();
     }
   }
 
   private void selectAbility() {
     ListSelectDialog.newStringInstance(
         R.string.character_select_ability,
-        abilityIncrease.getText(),
+        Lists.newArrayList(abilityIncrease.getText()),
         Ability.names(), R.color.character)
         .setSelectListener(this::editAbility)
         .display();
@@ -198,7 +279,7 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
 
   private void selectClass() {
     ListSelectDialog.newStringInstance(
-        R.string.character_select_class, className.getText(),
+        R.string.character_select_class, Lists.newArrayList(className.getText()),
         Templates.get().getLevelTemplates().getValues().stream()
             .filter(LevelTemplate::isFromPHB)
             .map(LevelTemplate::getName)
@@ -209,7 +290,9 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
 
   private void selectClassFeat() {
     ListSelectDialog.newStringInstance(
-        R.string.character_select_feat, feat.getText(),
+        R.string.character_select_feat,
+        classFeat.isPresent()
+            ? Lists.newArrayList(classFeat.get().getName()) : Collections.emptyList(),
         bonusFeats().stream().map(FeatTemplate::getName).collect(Collectors.toList()),
         R.color.character)
         .setSelectListener(this::editClassFeat)
@@ -218,7 +301,8 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
 
   private void selectFeat() {
     ListSelectDialog.newStringInstance(
-        R.string.character_select_feat, feat.getText(),
+        R.string.character_select_feat,
+        feat.isPresent() ? Lists.newArrayList(feat.get().getName()) : Collections.emptyList(),
         Templates.get().getFeatTemplates().getValues().stream()
             .filter(FeatTemplate::isFromPHB)
             .map(FeatTemplate::getName)
@@ -229,7 +313,9 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
 
   private void selectRacialFeat() {
     ListSelectDialog.newStringInstance(
-        R.string.character_select_feat, feat.getText(),
+        R.string.character_select_feat,
+        racialFeat.isPresent()
+            ? Lists.newArrayList(racialFeat.get().getName()) : Collections.emptyList(),
         Templates.get().getFeatTemplates().getValues().stream()
             .filter(FeatTemplate::isFromPHB)
             .map(FeatTemplate::getName)

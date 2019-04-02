@@ -29,6 +29,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.common.base.Strings;
+import com.google.common.collect.Lists;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Templates;
@@ -39,6 +40,7 @@ import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -74,19 +76,6 @@ public class EditCampaignDialog extends Dialog {
     }
   }
 
-  protected void save() {
-    if (campaign.isPresent()) {
-      campaign.get().setName(name.getText());
-      campaign.get().setWorldTemplate(selectedWorld);
-      campaign.get().store();
-
-      super.save();
-      campaign.get().whenReady(() ->
-          CompanionFragments.get().showCampaign(campaign.get(), Optional.empty()));
-    }
-
-  }
-
   @Override
   protected void createContent(View view) {
     if (campaign.isPresent()) {
@@ -103,15 +92,29 @@ public class EditCampaignDialog extends Dialog {
     }
   }
 
-  private void editWorld(String value) {
-    selectedWorld = value;
+  @Override
+  protected void save() {
+    if (campaign.isPresent()) {
+      campaign.get().setName(name.getText());
+      campaign.get().setWorldTemplate(selectedWorld);
+      campaign.get().store();
+
+      super.save();
+      campaign.get().whenReady(() ->
+          CompanionFragments.get().showCampaign(campaign.get(), Optional.empty()));
+    }
+
+  }
+
+  private void editWorld(List<String> value) {
+    selectedWorld = value.get(0);
     update();
   }
 
   private void selectWorld() {
     if (campaign.isPresent()) {
       ListSelectDialog fragment = ListSelectDialog.newStringInstance(
-          R.string.campaign_select_world, campaign.get().getWorldTemplate().getName(),
+          R.string.campaign_select_world, Lists.newArrayList(campaign.get().getWorldTemplate().getName()),
           Templates.get().getWorldTemplates().getNames(), R.color.campaign);
       fragment.setSelectListener(this::editWorld);
       fragment.display();

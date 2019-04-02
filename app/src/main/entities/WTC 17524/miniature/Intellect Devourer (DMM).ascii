@@ -1,0 +1,8 @@
+template {
+  name: "Intellect Devourer (DMM)"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 8
+race: "Intellect Devourer"
+type: "Aberration"
+size: SMALL

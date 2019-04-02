@@ -33,8 +33,11 @@ import java.util.stream.Collectors;
  * A template for feats.
  */
 public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
+
+  public enum Qualifier { none, weapon, school, skill, spells }
+
   public static final String TYPE = "feat";
-  private final Template.FeatTemplateProto proto;
+  private final Template.FeatTemplateProto proto;;
 
   public FeatTemplate(Template.FeatTemplateProto proto, String name) {
     super(name);
@@ -51,12 +54,35 @@ public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
         .collect(Collectors.toList());
   }
 
+  public Qualifier getRequiredQualifier() {
+    switch (proto.getRequiresQualifier()) {
+      default:
+      case UNRECOGNIZED:
+      case UNKNOWN:
+      case NONE:
+        return Qualifier.none;
+      case WEAPON:
+        return Qualifier.weapon;
+      case SKILL:
+        return Qualifier.skill;
+      case SPELLS:
+        return Qualifier.spells;
+      case SCHOOL:
+        return Qualifier.school;
+    }
+  }
+
   public Value.FeatType getType() {
     return proto.getType();
   }
 
   public boolean isFromPHB() {
     return Products.isFromPHB(proto.getTemplate());
+  }
+
+  public boolean requiresQualifier() {
+    return proto.getRequiresQualifier() != Template.FeatTemplateProto.Qualifier.UNKNOWN
+        && proto.getRequiresQualifier() != Template.FeatTemplateProto.Qualifier.NONE;
   }
 
   public static Template.FeatTemplateProto defaultProto() {

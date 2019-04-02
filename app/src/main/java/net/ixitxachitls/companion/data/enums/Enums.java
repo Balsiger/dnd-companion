@@ -69,6 +69,7 @@ public class Enums {
         + ": " + proto);
   }
 
+  @SuppressWarnings("unchecked")
   public static <E extends Named> ArrayList<String> names(E []values, E ... without) {
     ArrayList<String> names = new ArrayList<>();
     for (E value : values) {

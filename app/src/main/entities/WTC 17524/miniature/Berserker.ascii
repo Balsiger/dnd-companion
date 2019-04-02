@@ -1,0 +1,9 @@
+template {
+  name: "Berserker"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 13
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Barbarian"

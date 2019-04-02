@@ -122,5 +122,9 @@
   <string name="user_location_description">The location of your miniatures.</string>
   <string name="user_location_label">Miniature Location</string>
   <string name="edit_location">Edit Location</string>
+  <string name="feat_qualifier_weapon">Feat Qualifier (Weapon)</string>
+  <string name="feat_qualifier_school">Feat Qualifier (School)</string>
+  <string name="feat_qualifier_skill">Feat Qualifier (Skill)</string>
+  <string name="feat_qualifier_spells">Feat Qualifier (Multiple Spells)</string>
 
 </resources>

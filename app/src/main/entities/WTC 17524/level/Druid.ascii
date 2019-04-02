@@ -518,3 +518,6 @@ spells_per_day {
   value: 3
   value: 4
 }
+automatic_feat: "Armor Proficiency (Light)"
+automatic_feat: "Armor Proficiency (Medium)"
+automatic_feat: "Shield Proficiency"

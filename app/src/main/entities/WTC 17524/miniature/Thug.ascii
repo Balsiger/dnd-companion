@@ -1,0 +1,10 @@
+template {
+  name: "Thug"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 2
+race: "Human"
+type: "Humanoid"
+size: MEDIUM
+class: "Fighter"
+

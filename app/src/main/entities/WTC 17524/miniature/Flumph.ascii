@@ -1,0 +1,8 @@
+template {
+  name: "Flumph"
+}
+set: "Waterdeep: Dungeon of the Mad Mage"
+number: 1
+race: "Flumph"
+type: "Aberration"
+size: MEDIUM

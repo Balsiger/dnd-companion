@@ -49,4 +49,12 @@ public class ItemTemplates extends TemplatesStore<ItemTemplate> {
         .sorted()
         .collect(Collectors.toList());
   }
+
+  public List<String> weapons() {
+    return byName.values().stream()
+        .filter(ItemTemplate::isWeapon)
+        .map(ItemTemplate::getName)
+        .sorted()
+        .collect(Collectors.toList());
+  }
 }
