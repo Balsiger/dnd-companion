@@ -330,6 +330,25 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
   }
 
+  public List<String> validateLevels() {
+    List<String> errors = new ArrayList<>();
+    int number = 1;
+    for (Level level : levels) {
+      errors.addAll(level.validate(this, number++));
+    }
+
+    // Check number of levels.
+    if (levels.size() > getMaxLevel()) {
+      errors.add(getName() + " has more levels than the XP allows. Should only have "
+          + getMaxLevel() + " levels");
+    } else if (levels.size() < getMaxLevel()) {
+      errors.add(getName() + " has less levels than the XP allows. Should have " + getMaxLevel()
+          + " levels");
+    }
+
+    return errors;
+  }
+
   public Map<String, Object> write() {
     return write(new HashMap<>());
   }

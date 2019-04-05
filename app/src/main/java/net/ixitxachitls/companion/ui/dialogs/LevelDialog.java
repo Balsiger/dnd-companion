@@ -185,7 +185,9 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
   }
 
   private void editFeat(List<String> featName) {
-    feat = Optional.of(new Feat(featName.get(0), "Level " + characterLevel));
+    if (!feat.isPresent() || !feat.get().getName().equals(featName.get(0))) {
+      feat = Optional.of(new Feat(featName.get(0), "Level " + characterLevel));
+    }
     this.featView.text(feat.get().getTitle());
 
     editQualifier(feat, this::editFeatQualifier);

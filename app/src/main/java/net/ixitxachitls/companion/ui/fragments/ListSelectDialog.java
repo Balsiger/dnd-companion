@@ -27,13 +27,13 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 
 import java.util.ArrayList;
@@ -57,6 +57,7 @@ public class ListSelectDialog extends Dialog {
   protected List<String> selected = new ArrayList<>();
   private List<Entry> values;
   private boolean multiple = false;
+  private SelectionArrayAdapter<String> itemAdapter;
 
   public ListSelectDialog() {
     // Required empty public constructor
@@ -97,7 +98,7 @@ public class ListSelectDialog extends Dialog {
   @Override
   public void createContent(View view) {
     ListView list = view.findViewById(R.id.listSelectView);
-    SelectionArrayAdapter<String> itemAdapter =
+    itemAdapter =
         new SelectionArrayAdapter<>(view.getContext(), R.layout.list_item_select,
             R.color.character,
             values.stream().map(m -> m.name).collect(Collectors.toList()), selected);
@@ -106,6 +107,10 @@ public class ListSelectDialog extends Dialog {
         (parent, view1, position, id) -> edited(values.get(position), position));
     if (multiple) {
       list.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+    }
+
+    if (!selected.isEmpty()) {
+      list.setSelection(indexOfValue(selected.get(0)) - 3);
     }
   }
 
@@ -118,14 +123,26 @@ public class ListSelectDialog extends Dialog {
     }
 
     if (selectAction.isPresent()) {
-      if (selected.size() >= selectionsRequired) {
+      if (selectedValues >= selectionsRequired) {
         save();
         selectAction.get().select(selected);
+      } else {
+        itemAdapter.updateSelected(selected);
       }
     } else {
       save();
-      Log.wtf("select", "listener not set");
+      Status.error("Expected listener not set for list select dialog.");
     }
+  }
+
+  private int indexOfValue(String id) {
+    for (int i = 0; i < values.size(); i++) {
+      if (values.get(i).id.equals(id)) {
+        return i;
+      }
+    }
+
+    return -1;
   }
 
   protected static Bundle arguments(int layoutId, int titleId, int color, List<String> selected,
@@ -200,16 +217,16 @@ public class ListSelectDialog extends Dialog {
   }
 
   private class SelectionArrayAdapter<T> extends ArrayAdapter<T> {
-    private final List<Integer> selected;
     private final int selectedColor;
+    private final List<T> entries;
+    private List<Integer> selected;
 
     public SelectionArrayAdapter(Context context, @LayoutRes int layout,
                                  @ColorRes int selectedColor, List<T> entries, List<T> selected) {
       super(context, layout, entries);
       this.selectedColor = selectedColor;
-      this.selected = selected.stream()
-          .map(s -> entries.indexOf(s))
-          .collect(Collectors.toList());
+      this.entries = entries;
+      updateSelected(selected);
     }
 
     @Override
@@ -223,6 +240,13 @@ public class ListSelectDialog extends Dialog {
       }
 
       return view;
+    }
+
+    public void updateSelected(List<T> selected) {
+      this.selected = selected.stream()
+          .map(s -> entries.indexOf(s))
+          .collect(Collectors.toList());
+      notifyDataSetChanged();
     }
   }
 }

@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.data.values.Values;
+import net.ixitxachitls.companion.rules.Levels;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
@@ -166,6 +167,52 @@ public class Level extends NestedDocument {
   @Override
   public String toString() {
     return template.getName();
+  }
+
+  public List<String> validate(Character character, int number) {
+    List<String> errors = new ArrayList<>();
+
+    // Check hit points.
+    if (hp == 0) {
+      errors.add("No hit points for level " + number);
+    } else if (hp > getMaxHp()) {
+      errors.add("More than max hit points for level " + number);
+    }
+
+    // Check ability increases.
+    if (abilityIncrease.isPresent() && !Levels.allowsAbilityIncrease(number)) {
+      errors.add("There is an ability increase selected for level " + number
+          + ", but that level does give one.");
+    } else if (!abilityIncrease.isPresent() && Levels.allowsAbilityIncrease(number)) {
+      errors.add("There is no ability increase selected for level " + number
+          + ", but that level gives one.");
+    }
+
+    // Check number of feats, bonus feats and racial feats.
+    if (feat.isPresent() && !Levels.allowsFeat(number)) {
+      errors.add("There is a feat selected for level " + number + ", but that level gives none.");
+    } else if (!feat.isPresent() && Levels.allowsFeat(number)) {
+      errors.add("There is not feat selected for level " + number);
+    }
+
+    if (racialFeat.isPresent()
+        && (!character.getRace().isPresent()
+            || !character.getRace().get().hasBonusFeat(number))) {
+      errors.add("There is a racial bonus feat selected at level " + number
+          + ", but there should be none.");
+    } else if (!racialFeat.isPresent()
+        && character.getRace().isPresent()
+        && character.getRace().get().hasBonusFeat(number)) {
+      errors.add("There is no racial feat selected for level " + number);
+    }
+
+    if (classFeat.isPresent() && !template.hasBonusFeat(number)) {
+      errors.add("There is a class bonus feat selected at level " + number + ", but there should be none");
+    } else if (!classFeat.isPresent() && template.hasBonusFeat(number)) {
+      errors.add("There is no class bonus feat selected for level " + number);
+    }
+
+    return errors;
   }
 
   @Override

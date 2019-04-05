@@ -37,6 +37,9 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Strings;
+
+import java.util.List;
 
 /**
  * A view with a line and label.
@@ -46,7 +49,7 @@ public class LabelledView<T extends LabelledView, S extends View> extends Linear
   // UI elements.
   protected Wrapper<View> line;
   protected TextWrapper<TextView> label;
-  private ViewGroup container;
+  private Wrapper<ViewGroup> container;
   private S view;
   private @ColorInt int lineColor;
   private @ColorInt int labelColor;
@@ -106,8 +109,24 @@ public class LabelledView<T extends LabelledView, S extends View> extends Linear
     return (T) this;
   }
 
+  public T error(List<String> errors) {
+    if (errors.isEmpty()) {
+      line.backgroundColorValue(lineColor);
+      label.textColorValue(labelColor);
+      container.clearClick();
+      label.clearClick();
+    } else {
+      line.backgroundColor(R.color.error);
+      label.textColor(R.color.error);
+      container.onClick(() -> showErrors(errors));
+      label.onClick(() -> showErrors(errors));
+    }
+
+    return (T) this;
+  }
+
   public T gone() {
-    container.setVisibility(GONE);
+    container.gone();
 
     return (T) this;
   }
@@ -120,30 +139,35 @@ public class LabelledView<T extends LabelledView, S extends View> extends Linear
 
   public T view(S view) {
     this.view = view;
-    container.addView(view, 0);
+    container.get().addView(view, 0);
 
     return (T) this;
   }
 
   private void setup(String labelText, String description, @ColorInt int labelColor,
                      @ColorInt int lineColor, @Nullable AttributeSet attributes) {
-    container = (ViewGroup)
-        LayoutInflater.from(getContext()).inflate(R.layout.view_labelled, null, false);
-    container.setLayoutParams(new LinearLayout.LayoutParams(
+    container = Wrapper.wrap((ViewGroup)
+        LayoutInflater.from(getContext()).inflate(R.layout.view_labelled, null, false));
+    container.get().setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
         LinearLayout.LayoutParams.WRAP_CONTENT));
 
     this.lineColor = lineColor;
-    line = Wrapper.wrap(container, R.id.line).backgroundColorValue(lineColor);
+    line = Wrapper.wrap(container.get(), R.id.line).backgroundColorValue(lineColor);
     this.labelColor = labelColor;
-    label = TextWrapper.wrap(container, R.id.label).text(labelText).textColorValue(labelColor);
+    label = TextWrapper.wrap(container.get(), R.id.label).text(labelText).textColorValue(labelColor);
 
     description(labelText, description);
 
-    addView(container);
+    addView(container.get());
   }
 
   private void showDescription(String name, String description) {
     new MessageDialog(getContext()).title(name).message(description).show();
+  }
+
+  private void showErrors(List<String> errors) {
+    MessageDialog.create(getContext()).title("Invalid Data")
+        .message(Strings.NEWLINE_JOINER.join(errors)).show();
   }
 }

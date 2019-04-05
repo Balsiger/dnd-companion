@@ -117,8 +117,8 @@ public class Feat extends NestedDocument {
     if (other == null || getClass() != other.getClass()) return false;
 
     Feat feat = (Feat) other;
-    return template.getName().equals(feat.template)
-        && qualifiers.equals(feat.qualifiers);
+    return template.getName().equals(feat.template.getName())
+        && equalQualifiers(qualifiers, feat.qualifiers);
   }
 
   @Override
@@ -139,6 +139,20 @@ public class Feat extends NestedDocument {
     }
 
     return data;
+  }
+
+  private static boolean equalQualifiers(List<String> first, List<String> second) {
+    if (first.size() != second.size()) {
+      return false;
+    }
+
+    for (String value : first) {
+      if (second.indexOf(value) < 0) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   private static Optional<String> fromEmpty(String value) {
