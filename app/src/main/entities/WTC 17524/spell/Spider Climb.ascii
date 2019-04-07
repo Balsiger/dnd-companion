@@ -1,0 +1,49 @@
+template {
+  name: "Spider Climb"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 283
+      high: 283
+    }
+  }
+  world: "Generic"
+  description: "The subject can climb and travel on vertical surfaces or even traverse\n  ceilings as well as a spider does. The affected creature must have its hands\n  free to climb in this manner. The subject gains a climb speed of 20 feet;\n  furthermore, it need not make Climb checks to traverse a vertical or\n  horizontal surface (even upside down). A spider climbing creature retains its\n  Dexterity bonus to Armor Class (if any) while climbing, and opponents get no\n  special bonus to their attacks against it. It cannot, however, use the run\n  action while climbing.  Material Component: A drop of bitumen and a live\n  spider, both of which must be eaten by the subject."
+}
+school: TRANSMUTATION
+summary: "touch, [[10 * $level]] min, Climb 20 ft, no checks necessary"
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

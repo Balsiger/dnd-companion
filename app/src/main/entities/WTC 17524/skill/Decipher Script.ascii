@@ -1,0 +1,17 @@
+template {
+  name: "Decipher Script"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 71
+      high: 71
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to piece together the meaning of ancient runes carved into\n  the wall of an abandoned temple, to get the gist of an intercepted letter\n  written in the Infernal language, to follow the directions on a treasure map\n  written in a forgotten alphabet, or to interpret the mysterious glyphs\n  painted on a cave wall."
+}
+ability: INTELLIGENCE
+action: "Deciphering the equivalent of a single page of script                     takes 1 minute (ten consecutive full-round actions).  Try                     Again: No."
+special: "A character with the Diligent feat gets a +2 bonus on                     Decipher Script checks."
+restriction_text: "$undefined$"
+restriction: TRAINED_ONLY

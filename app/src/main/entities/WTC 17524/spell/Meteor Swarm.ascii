@@ -1,0 +1,44 @@
+template {
+  name: "Meteor Swarm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 253
+      high: 253
+    }
+  }
+  world: "Generic"
+  description: "Meteor swarm is a very powerful and spectacular spell that is similar to\n  fireball in many aspects. When you cast it, four 2foot-diameter spheres\n  spring from your outstretched hand and streak in straight lines to the spots\n  you select. The meteor spheres leave a fiery trail of sparks.  If you aim a\n  sphere at a specific creature, you may make a ranged touch attack to strike\n  the target with the meteor. Any creature struck by one of these spheres takes\n  2d6 points of bludgeoning damage (no save) and receives no saving throw\n  against the sphere\'s fire damage (see below). If a targeted sphere misses its\n  target, it simply explodes at the nearest corner of the target\'s space. You\n  may aim more than one meteor at the same target.  Once a sphere reaches its\n  destination, it explodes in a 40-foot-radius spread, dealing 6d6 points of\n  fire damage to each creature in the area. If a creature is within the area of\n  more than one sphere, it must save separately against each. (Fire resistance\n  applies to each sphere\'s damage individually.)"
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: FIRE
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Four 40-ft-radius spreads; see text"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

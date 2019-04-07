@@ -1,0 +1,39 @@
+template {
+  name: "Shades"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 276
+      high: 276
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like shadow conjuration, except that it mimics sorcerer\n  and wizard conjuration spells of 8th level or lower.  The illusory\n  conjurations created deal fourfifths (80%) damage to nonbelievers, and\n  nondamaging effects are 80% likely to work against nonbelievers."
+}
+school: ILLUSION
+subschool: SHADOW
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

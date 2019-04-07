@@ -1,0 +1,42 @@
+template {
+  name: "Ray of Frost"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 269
+      high: 269
+    }
+  }
+  world: "Generic"
+  description: "A ray of freezing air and ice projects from your pointing finger. You must\n  succeed on a ranged touch attack with the ray to deal damage to a target. The\n  ray deals 1d3 points of cold damage."
+}
+school: EVOACATION
+summary: "Ray of freezing air and ice to [[25 + (5 * ($level/2))]] ft dealing 1d3 cold damage."
+descriptor: COLD
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Ray effect"
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

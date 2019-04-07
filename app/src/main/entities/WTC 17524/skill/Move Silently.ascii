@@ -1,0 +1,16 @@
+template {
+  name: "Move Silently"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 79
+      high: 79
+    }
+  }
+  world: "Generic"
+  description: "You can use this skill to sneak up behind an enemy or to slink away without\n  being noticed."
+}
+ability: DEXTERITY
+action: "None. A Move Silently check is included in your move-                     ment or other activity, so it is part of another action."
+special: "The master of a cat familiar (see the Familiars sidebar,                     page 52) gains a +3 bonus on Move Silently checks.  A                     halfling has a +2 racial bonus on Move Silently checks                     because halflings are nimble.  If you have the Stealthy                     feat, you get a +2 bonus on Move Silently checks."
+restriction: ARMOR_CHECK_PENALTY

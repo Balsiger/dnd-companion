@@ -1,0 +1,46 @@
+template {
+  name: "Scintillating Pattern"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 274
+      high: 274
+    }
+  }
+  world: "Generic"
+  description: "A twisting pattern of discordant, coruscating colors weaves through the air,\n  affecting creatures within it. The spell affects a total number of Hit Dice\n  of creatures equal to your caster level (maximum 20). Creatures with the\n  fewest HD are affected first; and, among creatures with equal HD, those who\n  are closest to the spell\'s point of origin are affected first. Hit Dice that\n  are not sufficient to affect a creature are wasted. The spell affects each\n  subject according to its Hit Dice.  6 or less: Unconscious for 1d4 rounds,\n  then stunned for 1d4 rounds, and then confused for 1d4 rounds. (Treat an\n  unconscious result as stunned for nonliving creatures.)  7 to 12: Stunned for\n  1d4 rounds, then confused for 1d4 rounds.  13 or more: Confused for 1d4\n  rounds.  Sightless creatures are not affected by scintillating pattern.\n  Material Component: A small crystal prism."
+}
+school: ILLUSION
+subschool: PATTERN
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Colorful lights in a 20-ft-radius spread"
+}
+duration {
+  duration_description: "Concentration +  2 rounds"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,51 @@
+template {
+  name: "Displacement"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 223
+      high: 223
+    }
+  }
+  world: "Generic"
+  description: "Emulating the natural ability of the displacer beast (see the Monster\n  Manual), the subject of this spell appears to be about 2 feet away from its\n  true location. The creature benefits from a 50% miss chance as if it had\n  total concealment. However, unlike actual total concealment, displacement\n  does not prevent enemies from targeting the creature normally. True seeing\n  reveals its true location.  Material Component: A small strip of leather made\n  from displacer beast hide, twisted into a loop."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "$level rounds (D), touched subjects gains total concealment (50% miss chance) as a displacer beast."
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

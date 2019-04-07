@@ -1,0 +1,40 @@
+template {
+  name: "Create Food and Water"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 214
+      high: 215
+    }
+  }
+  world: "Generic"
+  description: "The food that this spell creates is simple fare of your choice\342\200\232\303\204\303\256highly\n  nourishing, if rather bland. Food so created decays and becomes inedible\n  within 24 hours, although it can be kept fresh for another 24 hours by\n  casting a purify food and water spell on it. The water created by this spell\n  is just like clean rain water, and it doesn\342\200\232\303\204\303\264t go bad as the food does."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "casting time 10 minutes, sustain [[$level * 3]] humans or $level horses for 24 hours"
+level {
+  spell_class: CLERIC
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Food and water to sustain three humans or one horse/level for 24 hours"
+}
+duration {
+  duration {
+    hours: 24
+  }
+  additional_duration {
+  }
+}

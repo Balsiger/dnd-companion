@@ -1,0 +1,47 @@
+template {
+  name: "Mind Blank"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 253
+      high: 253
+    }
+  }
+  world: "Generic"
+  description: "The subject is protected from all devices and spells that detect, influence,\n  or read emotions or thoughts. This spell protects against all mind-affecting\n  spells and effects as well as information gathering by divination spells or\n  effects. Mind blank even foils limited wish, miracle, and wish spells when\n  they are used in such a way as to affect the subject\'s mind or to gain\n  information about it. In the case of scrying that scans an area the creature\n  is in, such as arcane eye, the spell works but the creature simply isn\'t\n  detected. Scrying attempts that are targeted specifically at the subject do\n  not work at all."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: PROTECTION
+  level: 8
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration {
+    hours: 24
+  }
+  additional_duration {
+  }
+}

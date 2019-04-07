@@ -1,0 +1,44 @@
+template {
+  name: "Discern Lies"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 221
+      high: 222
+    }
+  }
+  world: "Generic"
+  description: "Each round, you concentrate on one subject, who must be within range. You\n  know if the subject deliberately and knowingly speaks a lie by discerning\n  disturbances in its aura caused by lying. The spell does not reveal the\n  truth, uncover unintentional inaccuracies, or necessarily reveal evasions.\n  Each round, you may concentrate on a different subject."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: PALADIN
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature/level, no two of which can be more than 30 ft apart"
+duration {
+  duration_description: "Concentration"
+  duration {
+  }
+  additional_duration {
+  }
+}

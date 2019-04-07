@@ -1,0 +1,18 @@
+template {
+  name: "Intimidate"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 76
+      high: 77
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to get a bully to back down, to frighten an opponent, or to\n  make a prisoner give you the information you want. Intimi- dation includes\n  verbal threats and body language."
+}
+ability: CHARISMA
+action: "Varies. Changing another\342\200\232\303\204\303\264s behavior requires 1 minute of                     interaction. Intimidating an opponent in combat is a                     standard action."
+special: "You gain a +4 bonus on your Intimidate check for every                     size category that you are larger than your                     target. Conversely, you take a \342\200\232\303\204\303\2544 penalty on your                     Intimidate check for every size category that you are                     smaller than your target.  A character immune to fear                     (such as a paladin of 3rd level or higher) can\342\200\232\303\204\303\264t be                     intimidated, nor can nonintelligent creatures.  If you                     have the Persuasive feat, you get a +2 bonus on Intimidate                     checks."
+synergy {
+  name: "bluff"
+}

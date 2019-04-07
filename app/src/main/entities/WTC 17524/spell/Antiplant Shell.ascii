@@ -1,0 +1,43 @@
+template {
+  name: "Antiplant Shell"
+  synonym: "Shell, Antiplant"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 200
+      high: 200
+    }
+  }
+  world: "Generic"
+  description: "The \\Spell{antiplant shell} spell creates an invisible, mobile barrier that\n  keeps all creatures within the shell protected from attacks by plant\n  creatures or animated plants. As with many abjuration spells, forcing the\n  barrier against creatures that the spell keeps at bay strains and collapses\n  the field (see Abjuration, page 172 of the \\Product{Player\'s Handook})."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "10-ft.-radius emanation, centered on you"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

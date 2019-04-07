@@ -1,0 +1,35 @@
+template {
+  name: "True Resurrection"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 296
+      high: 296
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like raise dead, except that you can resurrect a\n  creature that has been dead for as long as 10 years per caster level. This\n  spell can even bring back creatures whose bodies have been destroyed,\n  provided that you unambiguously identify the deceased in some fashion\n  (reciting the deceased\'s time and place of birth or death is the most common\n  method).  Upon completion of the spell, the creature is immediately restored\n  to full hit points, vigor, and health, with no loss of level (or Constitution\n  points) or prepared spells.  You can revive someone killed by a death effect\n  or someone who has been turned into an undead creature and then\n  destroyed. This spell can also resurrect elementals or outsiders, but it\n  can\'t resurrect constructs or undead creatures.  Even true resurrection can\'t\n  restore to life a creature who has died of old age.  Material Component: A\n  sprinkle of holy water and diamonds worth a total of at least 25,000 gp."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 9
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

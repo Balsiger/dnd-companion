@@ -1,0 +1,55 @@
+template {
+  name: "Repulsion"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 271
+      high: 272
+    }
+  }
+  world: "Generic"
+  description: "An invisible, mobile field surrounds you and prevents creatures from\n  approaching you. You decide how big the field is at the time of casting (to\n  the limit your level allows). Any creature within or entering the field must\n  attempt a save. If it fails, it becomes unable to move toward you for the\n  duration of the spell. Repelled creatures\' actions are not otherwise\n  restricted.  They can fight other creatures and can cast spells and attack\n  you with ranged weapons.  If you move closer to an affected creature, nothing\n  happens. (The creature is not forced back.) The creature is free to make\n  melee attacks against you if you come within reach. If a repelled creature\n  moves away from you and then tries to turn back toward you, it cannot move\n  any closer if it is still within the spell\'s area.  Arcane Focus: A pair of\n  small iron bars attached to two small canine statuettes, one black and one\n  white, the whole array worth 50 gp."
+}
+school: ABJURATION
+summary: "For $level rounds (D) create up to a [[$level * 10]] radius mobile field required Will DC [[10 + $ability + switch($class, Sorcerer: 6, Wizard: 6, default: 7]] to approach."
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: PROTECTION
+  level: 7
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS_DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: UP_TO_TEN_FEET_PER_LEVEL
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Up to 10-ft-radius/level emanation centered on you"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

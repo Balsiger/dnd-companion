@@ -1,0 +1,49 @@
+template {
+  name: "Detect Magic"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 219
+      high: 219
+    }
+  }
+  world: "Generic"
+  description: "You detect magical auras. The amount of information revealed depends on how\n  long you study a particular area or subject.  1st Round: Presence or absence\n  of magical auras.  2nd Round: Number of different magical auras and the power\n  of the most potent aura.  3rd Round: The strength and location of each\n  aura. If the items or creatures bearing the auras are in line of sight, you\n  can make Spellcraft skill checks to determine the school of magic involved in\n  each. (Make one check per aura; DC 15 + spell level, or 15 + half caster\n  level for a nonspell effect.)  Magical areas, multiple types of magic, or\n  strong local magical emanations may distort or conceal weaker auras.  Aura\n  Strength: An aura\342\200\232\303\204\303\264s power depends on a spell\342\200\232\303\204\303\264s functioning spell level or an\n  item\342\200\232\303\204\303\264s caster level. If an aura falls into more than one category, detect\n  magic indicates the stronger of the two.  Lingering Aura: A magical aura\n  lingers after its original source dissipates (in the case of a spell) or is\n  destroyed (in the case of a magic item). If detect magic is cast and directed\n  at such a location, the spell indicates an aura strength of dim (even weaker\n  than a faint aura). How long the aura lingers at this dim level depends on\n  its original power: Duration of Original Strength Lingering Aura Faint 1d6\n  rounds Moderate 1d6 minutes Strong 1d6\342\210\232\303\26310 minutes Overwhelming 1d6 days\n  Outsiders and elementals are not magical in themselves, but if they are\n  summoned, the conjuration spell registers.  Each round, you can turn to\n  detect magic in a new area. The spell can penetrate barriers, but 1 foot of\n  stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or\n  dirt blocks it.  Detect magic can be made permanent with a permanency\n  spell."
+}
+school: DIVINATION
+summary: "detect magical, 60 ft cone, 1st round: presence of magical auras, 2nd round: number, most potent, 3rd round: strength, location of each auro; \\Skill{Spellcraft} DC 15 + spell level to determine school"
+level {
+  spell_class: BARD
+}
+level {
+  spell_class: CLERIC
+}
+level {
+  spell_class: DRUID
+}
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped emanation"
+duration {
+  duration_description: "Concentration"
+  duration {
+  }
+  additional_duration {
+  }
+}

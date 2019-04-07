@@ -1,0 +1,43 @@
+template {
+  name: "Bigby\342\200\232\303\204\303\264s Forceful Hand"
+  synonym: "Forceful Hand, Bigby\'s"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 204
+      high: 204
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like Bigby\342\200\232\303\204\303\264s interposing hand, except that the forceful\n  hand pursues and pushes away the opponent that you designate. Treat this\n  attack as a bull rush with a +14 bonus on the Strength check (+8 for Strength\n  27, +4 for being Large, and a +2 bonus for charging, which it always\n  gets). The hand always moves with the opponent to push that target back the\n  full distance allowed, and it has no speed limit.  Directing the spell to a\n  new target is a move action.  A very strong creature could not push the hand\n  out of its way because the latter would instantly reposition itself between\n  the creature and you, but an opponent could push the hand up against you by\n  successfully bull rushing it.  Focus: A sturdy glove made of leather or heavy\n  cloth."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,50 @@
+template {
+  name: "Glitterdust"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 236
+      high: 236
+    }
+  }
+  world: "Generic"
+  description: "A cloud of golden particles covers everyone and everything in the area,\n  causing creatures to become blinded and visibly outlining invisible things\n  for the duration of the spell. All within the area are covered by the dust,\n  which cannot be removed and continues to sparkle until it fades.  Any\n  creature covered by the dust takes a \342\200\232\303\204\303\25440 penalty on Hide checks.  Material\n  Component: Ground mica."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "For $level round cover everyone and everything in a 10 ft spread within [[50 + (5 * $level)]] ft with golden particles (-40 to Hide), Will DC $dc or blinded."
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Creatures and objects within 10-ftradius spread"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

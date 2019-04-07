@@ -1,0 +1,46 @@
+template {
+  name: "Align Weapon"
+  synonym: "Weapon, Align"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 197
+      high: 197
+    }
+  }
+  world: "Generic"
+  description: "Align weapon makes a weapon good, evil, lawful, or chaotic, as you choose. A\n  weapon that is aligned can bypass the damage reduction of certain creatures,\n  usually outsiders of the opposite alignment. This spell has no effect on a\n  weapon that already has an alignment, such as a holy sword.  You can\342\200\232\303\204\303\264t cast\n  this spell on a natural weapon, such as an unarmed strike.  When you make a\n  weapon good, evil, lawful, or chaotic, align weapon is a good, evil, lawful,\n  or chaotic spell, respectively."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+descriptor: GOOD
+descriptor: EVIL
+descriptor: LAWFUL
+descriptor: CHAOTIC
+level {
+  spell_class: CLERIC
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Weapon touched or fifty projectiles (all of which must be in contact with each other at the time of casting)"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

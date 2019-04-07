@@ -1,0 +1,49 @@
+template {
+  name: "Silent Image"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 279
+      high: 279
+    }
+  }
+  world: "Generic"
+  description: "This spell creates the visual illusion of an object, creature, or force, as\n  visualized by you. The illusion does not create sound, smell, texture, or\n  temperature. You can move the image within the limits of the size of the\n  effect.  Focus: A bit of fleece."
+}
+school: ILLUSION
+subschool: FIGMENT
+summary: "Create a visual illusion of [[$level + 4]] 10-ft cubes (S) (no sound, smell, texture, temperature) while concentrating."
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+  description: "Visual figment that cannot extend beyond four 10-ft cubes + one 10-ft cube/level (S)"
+}
+duration {
+  duration_description: "Concentration"
+  duration {
+  }
+  additional_duration {
+  }
+}

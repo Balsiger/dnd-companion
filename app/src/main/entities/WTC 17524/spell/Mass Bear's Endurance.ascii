@@ -1,0 +1,50 @@
+template {
+  name: "Mass Bear\'s Endurance"
+  synonym: "Bear\'s Endurance, Mass"
+  synonym: "Endurance, Bear\'s, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 203
+      high: 203
+    }
+  }
+  world: "Generic"
+  description: "\\Spell{Mass bear\342\200\232\303\204\303\264s endurance} works like \\Spell{bear\342\200\232\303\204\303\264s endurance}, except\n  that it affects multiple creatures."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: DRUID
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature/level, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

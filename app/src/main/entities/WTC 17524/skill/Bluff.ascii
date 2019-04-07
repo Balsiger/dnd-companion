@@ -1,0 +1,15 @@
+template {
+  name: "Bluff"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 69
+      high: 69
+    }
+  }
+  world: "Generic"
+  description: "You can make the outrageous or the untrue seem plausible, or use doublespeak\n  or innuendo to deliver a secret message to another character. The skill\n  encompasses acting, conning, fast talking, misdirection, prevarication, and\n  misleading body language. Use a bluff to sow temporary confusion, get someone\n  to turn and look where you point, or simply look innocuous."
+}
+ability: CHARISMA
+action: "Varies. A Bluff check made as part of general interaction                     always takes at least 1 round (and is at least a                     full-round action), but it can take much longer if you try                     something elaborate. A Bluff check made to feint in combat                     or create a diversion to hide is a standard action. A                     Bluff check made to deliver a secret message doesn\342\200\232\303\204\303\264t take                     an action; it is part of normal communication.  However,                     the DM may limit the amount of information you can convey                     in a single round."
+special: "A ranger gains a bonus on Bluff checks when using this                     skill against a favored enemy (see page 47).  The master                     of a snake familiar (see the Familiars sidebar, page 52)                     gains a +3 bonus on Bluff checks.  If you have the                     Persuasive feat, you get a +2 bonus on Bluff checks."

@@ -1,0 +1,45 @@
+template {
+  name: "Tenser\'s Transformation"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 294
+      high: 294
+    }
+  }
+  world: "Generic"
+  description: "You become a virtual fighting machine\342\200\232\303\204\303\256 stronger, tougher, faster, and more\n  skilled in combat. Your mind-set changes so that you relish combat and you\n  can\'t cast spells, even from magic items.  You gain a +4 enhancement bonus to\n  Strength, Dexterity, and Constitution, a +4 natural armor bonus to AC, a +5\n  competence bonus on Fortitude saves, and proficiency with all simple and\n  martial weapons. Your base attack bonus equals your character level (which\n  may give you multiple attacks).  You lose your spellcasting ability,\n  including your ability to use spell activation or spell completion magic\n  items, just as if the spells were no longer on your class list.  Material\n  Component: A potion of bull\'s strength, which you drink (and whose effects\n  are subsumed by the spell effects)."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

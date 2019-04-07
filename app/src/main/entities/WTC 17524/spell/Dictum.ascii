@@ -1,0 +1,43 @@
+template {
+  name: "Dictum"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 220
+      high: 221
+    }
+  }
+  world: "Generic"
+  description: "Any nonlawful creature within the area of a dictum spell suffers the\n  following ill effects.  HD Effect Equal to caster level Deafened Up to caster\n  level \342\200\232\303\204\303\2541 Slowed, deafened Up to caster level \342\200\232\303\204\303\2545 Paralyzed, slowed, deafened\n  Up to caster level \342\200\232\303\204\303\25410 Killed, paralyzed, slowed, deafened The effects are\n  cumulative and concurrent.  No saving throw is allowed against these effects.\n  Deafened: The creature is deafened for 1d4 rounds.  Slowed: The creature is\n  slowed, as by the slow spell, for 2d4 rounds.  Paralyzed: The creature is\n  paralyzed and helpless for 1d10 minutes.  Killed: Living creatures\n  die. Undead creatures are destroyed.  Furthermore, if you are on your home\n  plane when you cast this spell, nonlawful extraplanar creatures within the\n  area are instantly banished back to their home planes. Creatures so banished\n  cannot return for at least 24 hours. This effect takes place regardless of\n  whether the creatures hear the dictum. The banishment effect allows a Will\n  save (at a \342\200\232\303\204\303\2544 penalty) to negate.  Creatures whose HD exceed your caster\n  level are unaffected by dictum."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: LAWFUL
+descriptor: SONIC
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: LAW
+  level: 7
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Nonlawful creatures in a 40-ftradius spread centered on you"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

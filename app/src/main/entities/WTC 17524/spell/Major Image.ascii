@@ -1,0 +1,44 @@
+template {
+  name: "Major Image"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 252
+      high: 252
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like silent image, except that sound, smell, and\n  thermal illusions are included in the spell effect. While concentrating, you\n  can move the image within the range.  The image disappears when struck by an\n  opponent unless you cause the illusion to react appropriately."
+}
+school: ILLUSION
+subschool: FIGMENT
+summary: "For concentration +3 rounds you can create an illusory image with sound, smell and thermal effects; Will disbelief if interacted DC $dc"
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration_description: "Concentration +  3 rounds"
+  duration {
+  }
+  additional_duration {
+  }
+}

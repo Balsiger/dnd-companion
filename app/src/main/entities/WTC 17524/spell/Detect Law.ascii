@@ -1,0 +1,34 @@
+template {
+  name: "Detect Law"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 219
+      high: 219
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like detect evil, except that it detects the auras of\n  lawful creatures, clerics of lawful deities, lawful spells, and lawful magic\n  items, and you are vulnerable to an overwhelming lawful aura if you are\n  chaotic."
+}
+school: DIVINATION
+summary: "60 ft, concentration (D), detect the auras of lawful creatures."
+level {
+  spell_class: CLERIC
+  level: 1
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

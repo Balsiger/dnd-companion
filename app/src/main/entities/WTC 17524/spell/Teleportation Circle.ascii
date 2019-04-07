@@ -1,0 +1,39 @@
+template {
+  name: "Teleportation Circle"
+  world: "Generic"
+  description: "You create a circle on the floor or other horizontal surface that teleports,\n  as greater teleport, any creature who stands on it to a designated spot. Once\n  you designate the destination for the circle, you can\'t change it. The spell\n  fails if you attempt to set the circle to teleport creatures into a solid\n  object, to a place with which you are not familiar and have no clear\n  description, or to another plane.  The circle itself is subtle and nearly\n  impossible to notice. If you intend to keep creatures from activating it\n  accidentally, you need to mark the circle in some way, such as by placing it\n  on a raised platform.  Teleportation circle can be made permanent with a\n  permanency spell. A permanent teleportation circle that is disabled becomes\n  inactive for 10 minutes, then can be triggered again as normal.  Note: Magic\n  traps such as teleportation circle are hard to detect and disable. A rogue\n  (only) can use the Search skill to find the circle and Disable Device to\n  thwart it. The DC in each case is 25 + spell level, or 34 in the case of\n  teleportation circle.  Material Component: Amber dust to cover the area of\n  the circle (cost 1,000 gp)."
+}
+school: CONJURATION
+subschool: TELEPORTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+components: VERBOSE
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "5-ft-radius circle that teleports those who activate it"
+}
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

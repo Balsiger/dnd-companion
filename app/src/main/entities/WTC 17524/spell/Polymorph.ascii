@@ -1,0 +1,47 @@
+template {
+  name: "Polymorph"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 263
+      high: 263
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like alter self, except that you change the willing\n  subject into another form of living creature. The new form may be of the same\n  type as the subject or any of the following types: aberration, animal,\n  dragon, fey, giant, humanoid, magical beast, monstrous humanoid, ooze, plant,\n  or vermin. The assumed form can\'t have more Hit Dice than your caster level\n  (or the subject\'s HD, whichever is lower), to a maximum of 15 HD at 15th\n  level. You can\'t cause a subject to assume a form smaller than Fine, nor can\n  you cause a subject to assume an incorporeal or gaseous form. The subject\'s\n  creature type and subtype (if any) change to match the new form (see the\n  Monster Manual for more information).  Upon changing, the subject regains\n  lost hit points as if it had rested for a night (though this healing does not\n  restore temporary ability damage and provide other benefits of resting; and\n  changing back does not heal the subject further). If slain, the subject\n  reverts to its original form, though it remains dead.  The subject gains the\n  Strength, Dexterity, and Constitution scores of the new form but retains its\n  own Intelligence, Wisdom, and Charisma scores. It also gains all\n  extraordinary special attacks possessed by the form (such as constrict,\n  improved grab, and poison) but does not gain the extraordinary special\n  qualities possessed by the new form (such as blindsense, fast healing,\n  regeneration, and scent) or any supernatural or spell-like abilities.\n  Incorporeal or gaseous creatures are immune to being polymorphed, and a\n  creature with the shapechanger subtype (such as a lycanthrope or a\n  doppelganger) can revert to its natural form as a standard action.  Material\n  Component: An empty cocoon."
+}
+school: TRANSMUTATION
+summary: "Change willing creature touched into another form for $level minutes (D)."
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Willing living creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,45 @@
+template {
+  name: "Destruction"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 218
+      high: 218
+    }
+  }
+  world: "Generic"
+  description: "This spell instantly slays the subject and consumes its remains (but not its\n  equipment and possessions) utterly. If the target\342\200\232\303\204\303\264s Fortitude saving throw\n  succeeds, it instead takes 10d6 points of damage. The only way to restore\n  life to a character who has failed to save against this spell is to use true\n  resurrection, a carefully worded wish spell followed by resurrection, or\n  miracle.  Focus: A special holy (or unholy) symbol of silver marked with\n  verses of anathema (cost 500 gp)."
+}
+school: NECROMANCY
+summary: "One creature within [[25 + (($level / 2) * 5)]] ft For [[10 + $ability + 7]] for 10d6 damage or instantly slain and consumed utterly."
+descriptor: DEATH
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: DEATH
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

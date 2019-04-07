@@ -1,0 +1,49 @@
+template {
+  name: "Mass Charm Monster"
+  synonym: "Charm Monster, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 209
+      high: 209
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like charm monster, except that mass charm monster\n  affects a number of creatures whose combined HD do not exceed twice your\n  level, or at least one creature regardless of HD. If there are more potential\n  targets than you can affect, you choose them one at a time until you choose a\n  creature with too many HD."
+}
+school: ENCHANTMENT
+subschool: CHARM
+summary: "Choose up to [[2 * $level]] HD of creatures (or a single one of any HD) within [[25 + (5 * ($level / 2 ))]] ft for Will DC $dc or regard you as trusted friend and ally (+5 to save if currently threatened by you or ally)."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One or more creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

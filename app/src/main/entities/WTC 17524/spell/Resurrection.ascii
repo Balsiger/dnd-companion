@@ -1,0 +1,35 @@
+template {
+  name: "Resurrection"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 272
+      high: 273
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like raise dead, except that you are able to restore\n  life and complete strength to any deceased creature.  The condition of the\n  remains is not a factor. So long as some small portion of the creature\'s body\n  still exists, it can be resurrected, but the portion receiving the spell must\n  have been part of the creature\'s body at the time of death. (The remains of a\n  creature hit by a disintegrate spell count as a small portion of its body.)\n  The creature can have been dead no longer than 10 years per caster level.\n  Upon completion of the spell, the creature is immediately restored to full\n  hit points, vigor, and health, with no loss of prepared spells. However, the\n  subject loses one level, or 2 points of Constitution if the subject was 1st\n  level. (If this reduction would bring its Con to 0 or lower, it can\'t be\n  resurrected). This level loss or Constitution loss cannot be repaired by any\n  means.  You can resurrect someone killed by a death effect or someone who has\n  been turned into an undead creature and then destroyed. You cannot resurrect\n  someone who has died of old age. Constructs, elementals, outsiders, and\n  undead creatures can\'t be resurrected.  Material Component: A sprinkle of\n  holy water and diamonds worth a total of at least 10,000 gp."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

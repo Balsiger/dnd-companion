@@ -1,0 +1,42 @@
+template {
+  name: "Good Hope"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 237
+      high: 237
+    }
+  }
+  world: "Generic"
+  description: "This spell instills powerful hope in the subjects. Each affected creature\n  gains a +2 morale bonus on saving throws, attack rolls, ability checks, skill\n  checks, and weapon damage rolls.  Good hope counters and dispels crushing\n  despair."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature/level, no two of which may be more than 30 ft apart"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

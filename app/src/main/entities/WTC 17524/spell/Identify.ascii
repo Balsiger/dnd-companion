@@ -1,0 +1,52 @@
+template {
+  name: "Identify"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 243
+      high: 243
+    }
+  }
+  world: "Generic"
+  description: "The spell determines all magic properties of a single magic item, including\n  how to activate those functions (if appropriate), and how many charges are\n  left (if any).  Identify does not function when used on an artifact (see the\n  Dungeon Master\'s Guide for details on artifacts).  Arcane Material Component:\n  A pearl of at least 100 gp value, crushed and stirred into wine with an owl\n  feather; the infusion must be drunk prior to spellcasting."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: MAGIC
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One touched object"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

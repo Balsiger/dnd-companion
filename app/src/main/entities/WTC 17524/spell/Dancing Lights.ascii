@@ -1,0 +1,47 @@
+template {
+  name: "Dancing Lights"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 216
+      high: 216
+    }
+  }
+  world: "Generic"
+  description: "Depending on the version selected, you create up to four lights that\n  resemble lanterns or torches (and cast that amount of light), or up to four\n  glowing spheres of light (which look like will-o\342\200\232\303\204\303\264-wisps), or one faintly\n  glowing, vaguely humanoid shape.  The dancing lights must stay within a\n  10 foot-radius area in relation to each other but otherwise move as you desire\n  (no concentration required): forward or back, up or down, straight or turning\n  corners, or the like. The lights can move up to 100 feet per round. A light\n  winks out if the distance between you and it exceeds the spell\342\200\232\303\204\303\264s range.\n  Dancing lights can be made permanent with a permanency spell."
+}
+school: EVOACATION
+summary: "[[100 + ($level * 10)]] ft, $level min (D), create up to 4 lights lantern or torch-like lights, 4 glowing spheres or one faintly glowing humanoid shape."
+descriptor: LIGHT
+level {
+  spell_class: BARD
+}
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Up to four lights all within a 10ft-radius area"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

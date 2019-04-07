@@ -1,0 +1,48 @@
+template {
+  name: "Power Word Blind"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 263
+      high: 263
+    }
+  }
+  world: "Generic"
+  description: "You utter a single word of power that causes one creature of your choice to\n  become blinded, whether the creature can hear the word or not. The duration\n  of the spell depends on the target\'s current hit point total. Any creature\n  that currently has 201 or more hit points is unaffected by power word blind.\n  Hit Points Duration 50 or less Permanent 51\342\200\232\303\204\303\254100 1d4+1 minutes 101\342\200\232\303\204\303\254200 1d4+1\n  rounds"
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+level {
+  spell_class: WAR
+  level: 7
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature with 200 hp or less"
+duration {
+  duration_description: "See Text"
+  duration {
+  }
+  additional_duration {
+  }
+}

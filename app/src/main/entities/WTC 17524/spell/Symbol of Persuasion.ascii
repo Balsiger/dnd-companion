@@ -1,0 +1,44 @@
+template {
+  name: "Symbol of Persuasion"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 290
+      high: 291
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like symbol of death, except that all creatures within\n  the radius of a symbol of persuasion instead become charmed by the caster (as\n  the charm monster spell) for 1 hour per caster level.  Unlike symbol of\n  death, symbol of persuasion has no hit point limit; once triggered, a symbol\n  of persuasion simply remains active for 10 minutes per caster level.  Note:\n  Magic traps such as symbol of persuasion are hard to detect and disable. A\n  rogue (only) can use the Search skill to find a symbol of persuasion and\n  Disable Device to thwart it. The DC in each case is 25 + spell level, or 31\n  for symbol of persuasion.  Material Component: Mercury and phosphorus, plus\n  powdered diamond and opal with a total value of at least 5,000 gp."
+}
+school: ENCHANTMENT
+subschool: CHARM
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

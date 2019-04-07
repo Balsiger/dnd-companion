@@ -1,0 +1,54 @@
+template {
+  name: "Obscure Object"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 258
+      high: 258
+    }
+  }
+  world: "Generic"
+  description: "This spell hides an object from location by divination (scrying) effects,\n  such as the scrying spell or a crystal ball. Such an attempt automatically\n  fails (if the divination is targeted on the object) or fails to perceive the\n  object (if the divination is targeted on a nearby location, object, or\n  person).  Arcane Material Component: A piece of chameleon skin."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One object touched of up to 100 lb./level"
+duration {
+  duration {
+    hours: 8
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

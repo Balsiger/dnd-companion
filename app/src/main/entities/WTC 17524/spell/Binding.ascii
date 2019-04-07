@@ -1,0 +1,48 @@
+template {
+  name: "Binding"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 204
+      high: 205
+    }
+  }
+  world: "Generic"
+  description: "A binding spell creates a magical restraint to hold a creature. The target\n  gets an initial saving throw only if its Hit Dice equal at least one-half\n  your caster level.  You may have as many as six assistants help you with the\n  spell. For each assistant who casts suggestion, your caster level for this\n  casting of binding increases by 1. For each assistant who casts dominate\n  animal, dominate person, or dominate monster, your caster level for this\n  casting of binding increases by a number equal to one-third of that\n  assistant\342\200\232\303\204\303\264s level, provided that the spell\342\200\232\303\204\303\264s target is appropriate for a\n  binding spell. Since the assistants\342\200\232\303\204\303\264 spells are cast simply to improve your\n  caster level for the purpose of the binding spell, saving throws and spell\n  resistance against the assistants\342\200\232\303\204\303\264 spells are irrelevant. Your caster level\n  determines whether the target gets an initial Will saving throw and how long\n  the binding lasts. All binding spells are dismissible.  Regardless of the\n  version of binding you cast, you can specify triggering conditions that end\n  the spell and release the creature whenever they occur. These triggers can be\n  as simple or elaborate as you desire, but the DM must agree that the\n  condition is reasonable and has a likelihood of coming to pass. The\n  conditions can be based on a creature\342\200\232\303\204\303\264s name, identity, or alignment but\n  otherwise must be based on observable actions or qualities. Intangibles such\n  as level, class, Hit Dice, or hit points don\342\200\232\303\204\303\264t qualify. For example, a bound\n  creature can be released when a lawful good creature approaches, but not when\n  a paladin approaches. Once the spell is cast, its triggering conditions\n  cannot be changed.  Setting a release condition increases the save DC\n  (assuming a saving throw is allowed) by 2.  If you are casting any of the\n  first three versions of binding (those with limited durations), you may cast\n  additional binding spells to prolong the effect, since the durations\n  overlap. If you do so, the target gets a saving throw at the end of the first\n  spell\342\200\232\303\204\303\264s duration, even if your caster level was high enough to disallow an\n  initial saving throw. If the creature succeeds on this save, all the binding\n  spells it has received are broken.  The binding spell has six versions.\n  Choose one of the following versions when you cast the spell.  Chaining: The\n  subject is confined by restraints that generate an antipathy spell affecting\n  all creatures who approach the subject, except you. The duration is one year\n  per caster level. The subject of this form of binding is confined to the spot\n  it occupied when it received the spell.  Slumber: This version causes the\n  subject to become comatose for as long as one year per caster level. The\n  subject does not need to eat or drink while slumbering, nor does it age. This\n  form of binding is more difficult to cast than chaining, making it slightly\n  easier to resist. Reduce the spell\342\200\232\303\204\303\264s save DC by 1.  Bound Slumber: This\n  combination of chaining and slumber lasts for as long as one month per caster\n  level. Reduce the save DC by 2.  Hedged Prison: The subject is transported to\n  or otherwise brought within a confined area (such as a labyrinth) from which\n  it cannot wander by any means. The effect is permanent. Reduce the save DC by\n  3.  Metamorphosis: The subject assumes gaseous form, except for its head or\n  face. It is held harmless in a jar or other container, which may be\n  transparent if you so choose.  The creature remains aware of its surroundings\n  and can speak, but it cannot leave the container, attack, or use any of its\n  powers or abilities. The binding is permanent. The subject does not need to\n  breathe, eat, or drink while metamorphosed, nor does it age. Reduce the save\n  DC by 4.  Minimus Containment: The subject is shrunk to a height of 1 inch or\n  even less and held within some gem, jar, or similar object. The binding is\n  permanent. The subject does not need to breathe, eat, or drink while\n  contained, nor does it age.  Reduce the save DC by 4.  You can\342\200\232\303\204\303\264t dispel a\n  binding spell with dispel magic or a similar effect, though an antimagic\n  field or Mordenkainen\342\200\232\303\204\303\264s disjunction affects it normally. A bound extraplanar\n  creature cannot be sent back to its home plane due to dismissal, banishment,\n  or a similar effect.  components The components for a; binding spell vary\n  according to the version of the spell, but they always include a continuous\n  chanting utterance read from the scroll or spellbook page containing the\n  spell, somatic gestures, and materials appropriate to the form of binding\n  used.  These components can include such items as miniature chains of special\n  metals (silver for lycanthropes, cold iron for demons, and so forth),\n  soporific herbs of the rarest sort (for slumber bindings), a bell jar of the\n  finest crystal, and the like.  In addition to the specially made props suited\n  to the specific type of binding (cost 500 gp), the spell requires opals worth\n  at least 500 gp for each HD of the target and a vellum depiction or carved\n  statuette of the subject to be captured."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration_description: "See Text"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

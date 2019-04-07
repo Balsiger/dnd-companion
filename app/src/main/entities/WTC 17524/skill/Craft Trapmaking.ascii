@@ -1,0 +1,4 @@
+template {
+  name: "Craft Trapmaking"
+  base: "craft"
+}

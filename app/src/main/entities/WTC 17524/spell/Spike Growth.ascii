@@ -1,0 +1,47 @@
+template {
+  name: "Spike Growth"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 283
+      high: 283
+    }
+  }
+  world: "Generic"
+  description: "Any ground-covering vegetation in the spell\'s area becomes very hard and\n  sharply pointed without changing its appearance.  In areas of bare earth,\n  roots and rootlets act in the same way. Typically, spike growth can be cast\n  in any outdoor setting except open water, ice, heavy snow, sandy desert, or\n  bare stone. Any creature moving on foot into or through the spell\'s area\n  takes 1d4 points of piercing damage for each 5 feet of movement through the\n  spiked area.  Any creature that takes damage from this spell must also\n  succeed on a Reflex save or suffer injuries to its feet and legs that slow\n  its land speed by one-half. This speed penalty lasts for 24 hours or until\n  the injured creature receives a cure spell (which also restores lost hit\n  points). Another character can remove the penalty by taking 10 minutes to\n  dress the injuries and succeeding on a Heal check against the spell\'s save\n  DC.  Spike growth can\'t be disabled with the Disable Device skill.  Note:\n  Magic traps such as spike growth are hard to detect. A rogue (only) can use\n  the Search skill to find a spike growth. The DC is 25 + spell level, or DC 28\n  for spike growth (or DC 27 for spike growth cast by a ranger)."
+}
+school: TRANSMUTATION
+summary: "For $level hours (D) ground-covering vegetation becomes sharply pointed, moving into give 1d4 damage per 5 ft moved (Ref DC $dc or move half speed for 24 hours or until cure spell)."
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "One 20-ft square/level"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

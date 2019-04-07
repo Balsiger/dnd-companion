@@ -1,0 +1,58 @@
+template {
+  name: "Neutralize Poison"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 257
+      high: 257
+    }
+  }
+  world: "Generic"
+  description: "You detoxify any sort of venom in the creature or object touched. A poisoned\n  creature suffers no additional effects from the poison, and any temporary\n  effects are ended, but the spell does not reverse instantaneous effects, such\n  as hit point damage, temporary ability damage, or effects that don\'t go away\n  on their own. For example, if a poison has dealt 3 points of Constitution\n  damage to a character and threatens to deal more damage later, this spell\n  prevents the future damage but does not repair the damage already done.  The\n  creature is immune to any poison it is exposed to during the duration of the\n  spell. Unlike with delay poison, such effects aren\'t postponed until after\n  the duration \342\200\232\303\204\303\256the creature need not make any saves against poison effects\n  applied to it during the length of the spell.  This spell can instead\n  neutralize the poison in a poisonous creature or object for the duration of\n  the spell, at the caster\'s option.  Arcane Material Component: A bit of\n  charcoal."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: PALADIN
+  level: 4
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature or object of up to 1 cu. ft/level touched"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

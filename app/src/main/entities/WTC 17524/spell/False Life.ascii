@@ -1,0 +1,44 @@
+template {
+  name: "False Life"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 229
+      high: 229
+    }
+  }
+  world: "Generic"
+  description: "You harness the power of unlife to grant yourself a limited ability to avoid\n  death.  While this spell is in effect, you gain temporary hit points equal to\n  1d10 +1 per caster level (maximum +10).  Material Component: A small amount\n  of alcohol or distilled spirits, which you use to trace certain sigils on\n  your body during casting. These sigils cannot be seen once the alcohol or\n  spirits evaporate."
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration_description: "One hour/level or until discharged"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,43 @@
+template {
+  name: "Harm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 239
+      high: 239
+    }
+  }
+  world: "Generic"
+  description: "Harm charges a subject with negative energy that deals 10 points of damage\n  per caster level (to a maximum of 150 points at 15th level). If the creature\n  successfully saves, harm deals half this amount, but it cannot reduce the\n  target\342\200\232\303\204\303\264s hit points to less than 1.  If used on an undead creature, harm acts\n  like heal."
+}
+school: NECROMANCY
+summary: "Creature touched suffers negative energy damage [[min(150, $level * 10)]] damage (Will [[10 + 6 + $ability]] for half, not below 1)."
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: DESTRUCTION
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

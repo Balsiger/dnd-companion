@@ -1,0 +1,44 @@
+template {
+  name: "Ghoul Touch"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 235
+      high: 235
+    }
+  }
+  world: "Generic"
+  description: "Imbuing you with negative energy, this spell allows you to paralyze a single\n  living humanoid for the duration of the spell with a successful melee touch\n  attack.  Additionally, the paralyzed subject exudes a carrion stench that\n  causes all living creatures (except you) in a 10-foot-radius spread to become\n  sickened (Fortitude negates). A neutralize poison spell removes the effect\n  from a sickened creature, and creatures immune to poison are unaffected by\n  the stench.  Material Component: A small scrap of cloth taken from clothing\n  worn by a ghoul, or a pinch of earth from a ghoul\342\200\232\303\204\303\264s lair."
+}
+school: NECROMANCY
+summary: "Touch, 1d6 +2 rounds, Fort DC $dc or be paralyzed and exude carrion stench that causes sickened in 10 ft (Fort DC $dc negates)."
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living humanoid touched"
+duration {
+  duration_description: "1d6 + 2 rounds"
+  duration {
+  }
+  additional_duration {
+  }
+}

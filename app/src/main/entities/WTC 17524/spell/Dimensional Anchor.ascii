@@ -1,0 +1,48 @@
+template {
+  name: "Dimensional Anchor"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 221
+      high: 221
+    }
+  }
+  world: "Generic"
+  description: "A green ray springs from your outstretched hand. You must make a ranged\ntouch attack to hit the target. Any creature or object struck by the ray is\ncovered with a shimmering emerald field that completely blocks\nextradimensional travel.  Forms of movement barred by a dimensional anchor\ninclude astral projection, blink, dimension door, ethereal jaunt,\netherealness, gate, maze, plane shift, shadow walk, teleport, and similar\nspell-like or psionic abilities.  The spell also prevents the use of a gate\nor teleportation circle for the duration of the spell.  A dimensional anchor\ndoes not interfere with the movement of creatures already in ethereal or\nastral form when the spell is cast, nor does it block extradimensional\nperception or attack forms, such as a basilisk\'s gaze. Also, dimensional\nanchor does not prevent summoned creatures from disappearing at the end of a\nsummoning spell."
+}
+school: ABJURATION
+summary: "A green ray hitting with a ranged touch attack prevents target from extradimensional travel for $level minutes."
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Ray effect"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

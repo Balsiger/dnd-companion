@@ -1,0 +1,45 @@
+template {
+  name: "Detect Animals or Plants"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 218
+      high: 218
+    }
+  }
+  world: "Generic"
+  description: "You can detect a particular kind of animal or plant in a cone emanating out\n  from you in whatever direction you face. You must think of a kind of animal\n  or plant when using the spell, but you can change the animal or plant kind\n  each round. The amount of information revealed depends on how long you search\n  a particular area or focus on a specific kind of animal or plant.  1st Round:\n  Presence or absence of that kind of animal or plant in the area.  2nd Round:\n  Number of individuals of the specified kind in the area, and the condition of\n  the healthiest specimen.  3rd Round: The condition (see below) and location\n  of each individual present. If an animal or plant is outside your line of\n  sight, then you discern its direction but not its exact location.\n  Conditions: For purposes of this spell, the categories of condition are as\n  follows: Normal: Has at least 90% of full normal hit points, free of disease.\n  Fair: 30% to 90% of full normal hit points remaining.  Poor: Less than 30% of\n  full normal hit points remaining, afflicted with a disease, or suffering from\n  a debilitating injury.  Weak: 0 or fewer hit points remaining, afflicted with\n  a disease in the terminal stage, or crippled.  If a creature falls into more\n  than one category, the spell indicates the weaker of the two.  Each round you\n  can turn to detect a kind of animal or plant in a new area. The spell can\n  penetrate barriers, but 1 foot of stone, 1 inch of common metal, a thin sheet\n  of lead, or 3 feet of wood or dirt blocks it.  The DM decides if a specific\n  kind of animal or plant is present."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped emanation"
+duration {
+  duration_description: "Concentration up to 10 min/level"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

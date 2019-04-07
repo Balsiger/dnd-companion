@@ -1,0 +1,41 @@
+template {
+  name: "Shield of Faith"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 278
+      high: 278
+    }
+  }
+  world: "Generic"
+  description: "This spell creates a shimmering, magical field around the touched creature\n  that averts attacks. The spell grants the subject a +2 deflection bonus to\n  AC, with an additional +1 to the bonus for every six levels you have (maximum\n  +5 deflection bonus at 18th level).  Material Component: A small parchment\n  with a bit of holy text written upon it."
+}
+school: ABJURATION
+summary: "Touch, $level min, +[[min(5, 2 + ($level / 6))]] deflection bonus to AC."
+level {
+  spell_class: CLERIC
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

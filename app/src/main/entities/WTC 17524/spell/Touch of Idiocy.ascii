@@ -1,0 +1,46 @@
+template {
+  name: "Touch of Idiocy"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 294
+      high: 294
+    }
+  }
+  world: "Generic"
+  description: "With a touch, you reduce the target\'s mental faculties. Your successful\n  melee touch attack applies a 1d6 penalty to the target\'s Intelligence,\n  Wisdom, and Charisma scores. This penalty can\'t reduce any of these scores\n  below 1.  This spell\'s effect may make it impossible for the target to cast\n  some or all of its spells, if the requisite ability score drops below the\n  minimum required to cast spells of that level."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living creature touched"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

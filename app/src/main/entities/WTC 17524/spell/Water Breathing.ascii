@@ -1,0 +1,57 @@
+template {
+  name: "Water Breathing"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 300
+      high: 300
+    }
+  }
+  world: "Generic"
+  description: "The transmuted creatures can breathe water freely. Divide the duration\n  evenly among all the creatures you touch.  The spell does not make creatures\n  unable to breathe air.  Arcane Material Component: A short reed or piece of\n  straw."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+level {
+  spell_class: WAR
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living creatures touched"
+duration {
+  duration {
+    hours: 2
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,57 @@
+template {
+  name: "Locate Object"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "You sense the direction of a well-known or clearly visualized object. The\n  spell locates such objects as apparel, jewelry, furniture, tools, weapons, or\n  even a ladder. You can search for general items such as a stairway, a sword,\n  or a jewel, in which case you locate the nearest one of its kind if more than\n  one is within range. Attempting to find a certain item, such as a particular\n  piece of jewelry, requires a specific and accurate mental image; if the image\n  is not close enough to the actual object, the spell fails. You cannot specify\n  a unique item (such as \342\200\232\303\204\303\272Baron Vulden\'s signet ring\342\200\232\303\204\303\271) unless you have observed\n  that particular item firsthand (not through divination).  The spell is\n  blocked by even a thin sheet of lead. Creatures cannot be found by this\n  spell. Polymorph any object fools it.  Arcane Focus: A forked twig."
+}
+school: DIVINATION
+summary: "$level min, sense direction of well-known object within [[400 + (40 * $level)]] ft"
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+level {
+  spell_class: TRAVEL
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS_DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Circle, centered on you, with a radius of 400 ft + 40 ft/level"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

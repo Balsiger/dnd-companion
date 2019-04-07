@@ -1,0 +1,50 @@
+template {
+  name: "Dispel Evil"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 222
+      high: 222
+    }
+  }
+  world: "Generic"
+  description: "Shimmering, white, holy energy surrounds you. This power has three effects.\n  First, you gain a +4 deflection bonus to AC against attacks by evil\n  creatures.  Second, on making a successful melee touch attack against an evil\n  creature from another plane, you can choose to drive that creature back to\n  its home plane. The creature can negate the effects with a successful Will\n  save (spell resistance applies).  This use discharges and ends the spell.\n  Third, with a touch you can automatically dispel any one enchantment spell\n  cast by an evil creature or any one evil spell. Exception: Spells that can\342\200\232\303\204\303\264t\n  be dispelled by dispel magic also can\342\200\232\303\204\303\264t be dispelled by dispel evil. Saving\n  throws and spell resistance do not apply to this effect. This use discharges\n  and ends the spell."
+}
+school: ABJURATION
+summary: "$undefined$"
+descriptor: GOOD
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: GOOD
+  level: 5
+}
+level {
+  spell_class: PALADIN
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You and a touched evil creature from another plane; or you and an enchantment or evil spell on a touched creature or object"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

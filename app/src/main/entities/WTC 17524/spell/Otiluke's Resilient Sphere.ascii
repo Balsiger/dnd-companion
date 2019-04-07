@@ -1,0 +1,48 @@
+template {
+  name: "Otiluke\'s Resilient Sphere"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 258
+      high: 258
+    }
+  }
+  world: "Generic"
+  description: "A globe of shimmering force encloses a creature, provided the creature is\n  small enough to fit within the diameter of the sphere. The sphere contains\n  its subject for the spell\'s duration. The sphere is not subject to damage of\n  any sort except from a rod of cancellation, a rod of negation, a disintegrate\n  spell, or a targeted dispel magic spell. These effects destroy the sphere\n  without harm to the subject. Nothing can pass through the sphere, inside or\n  out, though the subject can breathe normally.  The subject may struggle, but\n  the sphere cannot be physically moved either by people outside it or by the\n  struggles of those within.  Material Component: A hemispherical piece of\n  clear crystal and a matching hemispherical piece of gum arabic."
+}
+school: EVOACATION
+summary: "A glob of shimmering force encloses a creature within [[25 + (5 * ($level / 2))]] ft negating any harm and preventing anything from going in or coming out."
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "1-ft-diameter/level sphere centered around a creature"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

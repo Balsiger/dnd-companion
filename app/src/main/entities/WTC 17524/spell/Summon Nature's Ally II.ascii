@@ -1,0 +1,40 @@
+template {
+  name: "Summon Nature\'s Ally II"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 288
+      high: 288
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like summon nature\'s ally I, except that you can summon\n  one 2nd-level creature or 1d3 1st-level creatures of the same kind."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: RANGER
+  level: 2
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or more creatures no two of which can be more than 30 ft apart"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

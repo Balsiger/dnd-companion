@@ -1,0 +1,45 @@
+template {
+  name: "Mass Fox\'s Cunning"
+  synonym: "Fox\'s Cunning, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 233
+      high: 233
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like fox\342\200\232\303\204\303\264s cunning, except that it affects multiple\n  creatures."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature/level, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

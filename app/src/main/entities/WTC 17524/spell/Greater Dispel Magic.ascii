@@ -1,0 +1,51 @@
+template {
+  name: "Greater Dispel Magic"
+  synonym: "Dispel Magic, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 223
+      high: 223
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like dispel magic, except that the maximum caster level\n  on your dispel check is +20 instead of +10.  Additionally, greater dispel\n  magic has a chance to dispel any effect that remove curse can remove, even if\n  dispel magic can\342\200\232\303\204\303\264t dispel that effect."
+}
+school: ABJURATION
+summary: "one spellcaster, creature, object, [[100 + (10 * $level)]] ft, 20-ft burst, cancel magical spells and effects (caster level check, max +20)"
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: DRUID
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

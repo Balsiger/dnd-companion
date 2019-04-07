@@ -1,0 +1,44 @@
+template {
+  name: "Mass Cure Moderate Wounds"
+  synonym: "Cure Moderate Wounds, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 216
+      high: 216
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like mass cure light wounds, except that it cures 2d8\n  points of damage +1 point per caster level (maximum +30)."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: DRUID
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

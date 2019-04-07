@@ -1,0 +1,46 @@
+template {
+  name: "Daze Monster"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 217
+      high: 217
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like daze, but daze monster can affect any one living\n  creature of any type. Creatures of 7 or more HD are not affected."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature of 6 HD or less"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

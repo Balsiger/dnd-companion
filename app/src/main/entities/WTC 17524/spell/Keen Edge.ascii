@@ -1,0 +1,44 @@
+template {
+  name: "Keen Edge"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 246
+      high: 246
+    }
+  }
+  world: "Generic"
+  description: "This spell makes a weapon magically keen, improving its ability to deal\n  telling blows.  This transmutation doubles the threat range of the weapon. A\n  threat range of 20 becomes 19\342\200\232\303\204\303\25420, a threat range of 19\342\200\232\303\204\303\25420 becomes 17\342\200\232\303\204\303\25420, and\n  a threat range of 18\342\200\232\303\204\303\254 20 becomes 15\342\200\232\303\204\303\25420. The spell can be cast only on\n  piercing or slashing weapons. If cast on arrows or crossbow bolts, the keen\n  edge on a particular projectile ends after one use, whether or not the\n  missile strikes its intended target. (Treat shuriken as arrows, rather than\n  as thrown weapons, for the purpose of this spell.)  Multiple effects that\n  increase a weapon\'s threat range (such as the keen edge spell and the\n  Improved Critical feat) don\'t stack. You can\'t cast this spell on a natural\n  weapon, such as a claw."
+}
+school: TRANSMUTATION
+summary: "For [[10 * $level]] min makes a weapon keen, doubling the thread range of piercing or slashing weapon."
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One weapon or fifty projectiles, all of which must be in contact with each other at the time of casting"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,44 @@
+template {
+  name: "Fabricate"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 229
+      high: 229
+    }
+  }
+  world: "Generic"
+  description: "You convert material of one sort into a product that is of the same\n  material. Thus, you can fabricate a wooden bridge from a clump of tress, a\n  rope from a patch of hemp, clothes from flax or wool, and so forth. Creatures\n  or magic items cannot be created or transmuted by the fabricate spell.  The\n  quality of items made by this spell is commensurate with the quality of\n  material used as the basis for the new fabrication. If you work with a\n  mineral, the target is reduced to 1 cubic foot per level instead of 10 cubic\n  feet.  You must make an appropriate Craft check to fabricate articles\n  requiring a high degree of craftsmanship (jewelry, swords, glass, crystal,\n  and the like).  Casting requires 1 round per 10 cubic feet (or 1 cubic foot)\n  of material to be affected by the spell.  Material Component: The original\n  material, which costs the same amount as the raw materials required to craft\n  the item to be created."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to 10 cu. ft/level; see text"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

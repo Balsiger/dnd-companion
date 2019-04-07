@@ -1,0 +1,43 @@
+template {
+  name: "Word of Chaos"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 303
+      high: 303
+    }
+  }
+  world: "Generic"
+  description: "Any nonchaotic creature within the area who hears the word of chaos suffers\nthe following ill effects.  The effects are cumulative and concurrent. No\nsaving throw is allowed against these effects.  Deafened: The creature is\ndeafened for 1d4 rounds.  Stunned: The creature is stunned for 1 round.\nConfused: The creature is confused, as by the confusion spell, for 1d10\nminutes. This is a mind-affecting enchantment effect.  Killed: Living\ncreatures die. Undead creatures are destroyed.  HD Effect Equal to caster\nlevel Deafened Up to caster level - 1 Stunned, deafened Up to caster level 5\nConfused, stunned, deafened Up to caster level -10 Killed, confused, stunned,\ndeafened Furthermore, if you are on your home plane when you cast this spell,\nnonchaotic extraplanar creatures within the area are instantly banished back\nto their home planes. Creatures so banished cannot return for at least 24\nhours. This effect takes place regardless of whether the creatures hear the\nword of chaos. The banishment effect allows a Will save (at a -4 penalty) to\nnegate.  Creatures whose HD exceed your caster level are unaffected by word\nof chaos."
+}
+school: EVOACATION
+summary: "Any nonchaotic creatures 40 ft hearing the word of chaos is deafend for 1d4 rounds (up to $level HD), stunned for 1 round (up to level [[$level - 1]]), confused (\\Reference{spell}{Confusion}) for 1d10 min (up to [[$level - 5]] HD),  killed or destroyed (up to [[$level - 10]] HD). Nonchaotic extraplanar creatures are banished (Will [[10 + 7 + $ability]] cannot return for 24 hours)"
+descriptor: CHAOTIC
+descriptor: SONIC
+level {
+  spell_class: CHAOS
+  level: 7
+}
+level {
+  spell_class: CLERIC
+  level: 7
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Nonchaotic creatures in a 40-ftradius spread centered on you"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

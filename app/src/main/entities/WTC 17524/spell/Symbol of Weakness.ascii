@@ -1,0 +1,42 @@
+template {
+  name: "Symbol of Weakness"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 291
+      high: 291
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like symbol of death, except that every creature within\n  60 feet of a symbol of weakness instead suffers crippling weakness that deals\n  3d6 points of Strength damage.  Unlike symbol of death, symbol of weakness\n  has no hit point limit; once triggered, a symbol of weakness simply remains\n  active for 10 minutes per caster level.  Note: Magic traps such as symbol of\n  weakness are hard to detect and disable. A rogue (only) can use the Search\n  skill to find a symbol of weakness and Disable Device to thwart it. The DC in\n  each case is 25 + spell level, or 32 for symbol of weakness.  Material\n  Component: Mercury and phosphorus, plus powdered diamond and opal with a\n  total value of at least 5,000 gp.  Sympathetic"
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

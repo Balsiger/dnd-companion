@@ -1,0 +1,41 @@
+template {
+  name: "Teleport Object"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 293
+      high: 293
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like teleport, except that it teleports an object, not\n  you. Creatures and magical forces (such as a delayed blast fireball bead)\n  cannot be teleported.  If desired, the target object can be sent to a distant\n  location on the Ethereal Plane.  In this case, the point from which the\n  object was teleported remains faintly magical until the item is retrieved. A\n  successful targeted dispel magic spell cast on that point brings the vanished\n  item back from the Ethereal Plane."
+}
+school: CONJURATION
+subschool: TELEPORTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One touched object of up to 50 lb./level and 3 cu. ft/level"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

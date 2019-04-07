@@ -1,0 +1,47 @@
+template {
+  name: "Pass without Trace"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 259
+      high: 259
+    }
+  }
+  world: "Generic"
+  description: "The subject or subjects can move through any type of terrain\342\200\232\303\204\303\256mud, snow,\n  dust, or the like\342\200\232\303\204\303\256and leave neither footprints nor scent. Tracking the\n  subjects is impossible by nonmagical means."
+}
+school: TRANSMUTATION
+summary: "For $level hours (D) $level creature(s) touched cannot be tracked."
+level {
+  spell_class: DRUID
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature/level touched"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

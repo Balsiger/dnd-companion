@@ -1,0 +1,51 @@
+template {
+  name: "Shadow Walk"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 277
+      high: 277
+    }
+  }
+  world: "Generic"
+  description: "To use the shadow walk spell, you must be in an area of shadowy\n  illumination. You and any creature you touch are then transported along a\n  coiling path of shadowstuff to the edge of the Material Plane where it\n  borders the Plane of Shadow. The effect is largely illusory, but the path is\n  quasi-real.  You can take more than one creature along with you (subject to\n  your level limit), but all must be touching each other.  In the region of\n  shadow, you move at a rate of 50 miles per hour, moving normally on the\n  borders of the Plane of Shadow but much more rapidly relative to the Material\n  Plane. Thus, you can use this spell to travel rapidly by stepping onto the\n  Plane of Shadow, moving the desired distance, and then stepping back onto the\n  Material Plane.  Because of the blurring of reality between the Plane of\n  Shadow and the Material Plane, you can\'t make out details of the terrain or\n  areas you pass over during transit, nor can you predict perfectly where your\n  travel will end. It\'s impossible to judge distances accurately, making the\n  spell virtually useless for scouting or spying. Furthermore, when the spell\n  effect ends, you are shunted 1d10\342\210\232\303\263100 feet in a random horizontal direction\n  from your desired endpoint. If this would place you within a solid object,\n  you are shunted 1d10\342\210\232\303\2631,000 feet in the same direction. If this would still\n  place you within a solid object, you (and any creatures with you) are shunted\n  to the nearest empty space available, but the strain of this activity renders\n  each creature fatigued (no save).  Shadow walk can also be used to travel to\n  other planes that border on the Plane of Shadow, but this usage requires the\n  transit of the Plane of Shadow to arrive at a border with another plane of\n  reality. The transit of the Plane of Shadow requires 1d4 hours.  Any\n  creatures touched by you when shadow walk is cast also make the transition to\n  the borders of the Plane of Shadow.  They may opt to follow you, wander off\n  through the plane, or stumble back into the Material Plane (50% chance for\n  either of the latter results if they are lost or abandoned by you). Creatures\n  unwilling to accompany you into the Plane of Shadow receive a Will saving\n  throw, negating the effect if successful."
+}
+school: ILLUSION
+subschool: SHADOW
+summary: "You and up to $level creatures touched rapidly move 50 miles per hour in the border of the Plane of shadow for $level hours (D)."
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to one touched creature/level"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,57 @@
+template {
+  name: "Find the Path"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 230
+      high: 230
+    }
+  }
+  world: "Generic"
+  description: "The recipient of this spell can find the shortest, most direct physical\n  route to a specified destination, be it the way into or out of a locale. The\n  locale can be outdoors, underground, or even inside a maze spell.  Find the\n  path works with respect to locations, not objects or creatures at a locale.\n  Thus, the subject could not find the way to \342\200\232\303\204\303\272a forest where a green dragon\n  lives\342\200\232\303\204\303\271 or \342\200\232\303\204\303\272a hoard of platinum pieces,\342\200\232\303\204\303\271 but it could find the exit to a\n  labyrinth. The location must be on the same plane as you are at the time of\n  casting.  The spell enables the subject to sense the correct direction that\n  will eventually lead it to its destination, indicating at appropriate times\n  the exact path to follow or physical actions to take. For example, the spell\n  enables the subject to sense trip wires or the proper word to bypass a glyph\n  of warding. The spell ends when the destination is reached or the duration\n  expires, whichever comes first. Find the path can be used to remove the\n  subject and its companions from the effect of a maze spell in a single round.\n  This divination is keyed to the recipient, not its companions, and its effect\n  does not predict or allow for the actions of creatures (including guardians).\n  Focus: A set of divination counters of the sort you favor\342\200\232\303\204\303\256bones, ivory\n  counters, sticks, carved runes, or the like."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: DRUID
+  level: 6
+}
+level {
+  spell_class: KNOWLEDGE
+  level: 6
+}
+level {
+  spell_class: TRAVEL
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL_OR_TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You or creature touched"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

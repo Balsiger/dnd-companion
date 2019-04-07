@@ -1,0 +1,56 @@
+template {
+  name: "Stoneskin"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 284
+      high: 284
+    }
+  }
+  world: "Generic"
+  description: "The warded creature gains resistance to blows, cuts, stabs, and slashes. The\n  subject gains damage reduction 10/adamantine. (It ignores the first 10 points\n  of damage each time it takes damage from a weapon, though an adamantine\n  weapon bypasses the reduction.) Once the spell has prevented a total of 10\n  points of damage per caster level (maximum 150 points), it is discharged.\n  Material Component: Granite and 250 gp worth of diamond dust sprinkled on the\n  target\'s skin."
+}
+school: ABJURATION
+summary: "touch, [[$level * 10]] min or after preventing [[min(10 * $level, 150)]], gain DR 10/adamantine"
+level {
+  spell_class: DRUID
+  level: 5
+}
+level {
+  spell_class: EARTH
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+level {
+  spell_class: STRENGTH_SPELL_CLASS
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "10 min/level or until discharged"
+  duration {
+  }
+  additional_duration {
+  }
+}

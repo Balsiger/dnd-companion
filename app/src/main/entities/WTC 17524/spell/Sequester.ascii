@@ -1,0 +1,47 @@
+template {
+  name: "Sequester"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 276
+      high: 276
+    }
+  }
+  world: "Generic"
+  description: "When cast, this spell not only prevents divination spells from working to\n  detect or locate the creature or object affected by sequester, it also\n  renders the affected creature or object invisible to any form of sight or\n  seeing (as the invisibility spell). Thus, sequester can mask a secret door, a\n  treasure vault, or anything similar. The spell does not prevent the subject\n  from being discovered through tactile means or through the use of devices\n  (such as a robe of eyes or a gem of seeing). Creatures affected by sequester\n  become comatose and are effectively in a state of suspended animation until\n  the spell wears off or is dispelled.  Note: The Will save prevents an\n  attended or magical object from being sequestered.  There is no save to see\n  the sequestered creature or object or to detect it with a divination spell.\n  Material Component: A basilisk eyelash, gum arabic, and a dram of\n  whitewash."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One willing creature or object (up to a 2-ft cube/level) touched)"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

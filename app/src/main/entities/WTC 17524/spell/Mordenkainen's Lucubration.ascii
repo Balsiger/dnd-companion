@@ -1,0 +1,39 @@
+template {
+  name: "Mordenkainen\'s Lucubration"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 256
+      high: 256
+    }
+  }
+  world: "Generic"
+  description: "You instantly recall any one spell of 5th level or lower that you have used\n  during the past 24 hours. The spell must have been actually cast during that\n  period. The recalled spell is stored in your mind as through prepared in the\n  normal fashion. If the recalled spell requires material components, you must\n  provide them. The recovered spell is not usable until the material components\n  are available.  Mordenkainen\'s Magnificent"
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,49 @@
+template {
+  name: "Animate Objects"
+  synonym: "Objects, Animate"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 199
+      high: 199
+    }
+  }
+  world: "Generic"
+  description: "You imbue inanimate objects with mobility and a semblance of life. Each such\n  animated object then immediately attacks whomever or whatever you initially\n  designate. An animated object can be of any nonmagical material\342\200\232\303\204\303\256wood, metal,\n  stone, fabric, leather, ceramic, glass, or the like..  You may animate one\n  Small or smaller object (such as a chair) or an equivalent number of larger\n  objects per caster level. A Medium object (such as a coat rack) counts as two\n  Small or smaller objects, a Large object (such as a table) as four, a Huge\n  object as eight, a Gargantuan object as sixteen, and a Colossal object as\n  thirty-two.  You can change the designated target or targets as a move\n  action, as if directing an active spell.  The \\Product{Monster Manual} has\n  game statistics for animated objects.  This spell cannot animate objects\n  carried or worn by a creature.  \\Spell{Animate objects} can be made permanent\n  with a \\Spell{permanency} spell."
+}
+school: TRANSMUTATION
+summary: "For $level rounds imbue $level inanimate objects (medium/coat rack counts as 2, large/table 4, huge 8, gargantuan 16 and colossal 32) with life, will attack who initially designated (change as move action); see MM 13 for stats."
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: CHAOS
+  level: 6
+}
+level {
+  spell_class: CLERIC
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One Small object per caster level; see text"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

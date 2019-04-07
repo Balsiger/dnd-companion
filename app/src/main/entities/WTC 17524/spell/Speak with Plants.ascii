@@ -1,0 +1,48 @@
+template {
+  name: "Speak with Plants"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 282
+      high: 282
+    }
+  }
+  world: "Generic"
+  description: "You can comprehend and communicate with plants, including both normal plants\n  and plant creatures. You are able to ask questions of and receive answers\n  from plants. A regular plant\'s sense of its surroundings is limited, so it\n  won\'t be able to give (or recognize) detailed descriptions of creatures or\n  answer questions about events outside its immediate vicinity.  The spell\n  doesn\'t make plant creatures any more friendly or cooperative than\n  normal. Furthermore, wary and cunning plant creatures are likely to be terse\n  and evasive, while the more stupid ones may make inane comments. If a plant\n  creature is friendly toward you, it may do some favor or service for you (as\n  determined by the DM)."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

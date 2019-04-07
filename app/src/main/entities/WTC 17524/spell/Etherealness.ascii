@@ -1,0 +1,48 @@
+template {
+  name: "Etherealness"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 228
+      high: 228
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like ethereal jaunt, except that you and other willing\n  creatures joined by linked hands (along with their equipment) become\n  ethereal. Besides yourself, you can bring one creature per three caster\n  levels to the Ethereal Plane.  Once ethereal, the subjects need not stay\n  together.  When the spell expires, all affected creatures on the Ethereal\n  Plane return to material existence."
+}
+school: TRANSMUTATION
+summary: "For $level minutes you and [[$level/3]] touched creature become ethereal."
+level {
+  spell_class: CLERIC
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You and one other touched creature per three levels"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,42 @@
+template {
+  name: "Mass Hold Monster"
+  synonym: "Hold Monster, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 241
+      high: 241
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like hold person, except that it affects multiple\n  creatures and holds any living creature that fails its Will save."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One or more creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

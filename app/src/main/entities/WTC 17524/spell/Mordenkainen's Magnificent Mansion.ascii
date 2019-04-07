@@ -1,0 +1,41 @@
+template {
+  name: "Mordenkainen\'s Magnificent Mansion"
+  world: "Generic"
+  description: "You conjure up an extradimensional dwelling that has a single entrance on\n  the plane from which the spell was cast. The entry point looks like a faint\n  shimmering in the air that is 4 feet wide and 8 feet high.  Only those you\n  designate may enter the mansion, and the portal is shut and made invisible\n  behind you when you enter. You may open it again from your own side at\n  will. Once observers have passed beyond the entrance, they are in a\n  magnificent foyer with numerous chambers beyond.  The atmosphere is clean,\n  fresh, and warm.  You can create any floor plan you desire to the limit of\n  the spell\'s effect. The place is furnished and contains sufficient foodstuffs\n  to serve a nine-course banquet to a dozen people per caster level. A staff of\n  near-transparent servants (as many as two per caster level), liveried and\n  obedient, wait upon all who enter. The servants function as unseen servant\n  spells except that they are visible and can go anywhere in the mansion.\n  Since the place can be entered only through its special portal, outside\n  conditions do not affect the mansion, nor do conditions inside it pass to the\n  plane beyond.  Focus: A miniature portal carved from ivory, a small piece of\n  polished marble, and a tiny silver spoon (each item worth 5 gp)."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Extradimensional mansion up to three 10-ft cubes/level (S)"
+}
+duration {
+  duration {
+    hours: 2
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

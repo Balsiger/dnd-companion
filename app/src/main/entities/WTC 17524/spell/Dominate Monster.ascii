@@ -1,0 +1,41 @@
+template {
+  name: "Dominate Monster"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 224
+      high: 224
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like dominate person, except that the spell is not\n  restricted by creature type."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "Casting time 1 round,  [[25 + (5 * ($level / 2))]] ft, $level days, Will DC $dc or controlled telepahtically."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,28 @@
+template {
+  name: "Appraise"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 67
+      high: 67
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to tell an antique from old junk, a sword that\342\200\232\303\204\303\264s old and\n  fancy from an elven heirloom, and high-quality jewelry from cheap stuff made\n  to look good."
+}
+ability: INTELLIGENCE
+action: "Appraising an item takes 1 minute (ten consecutive                     full-round actions)."
+special: "A dwarf gets a +2 racial bonus on Appraise checks that                     are related to stone or metal items because dwarves are                     familiar with valuable items of all kinds (especially                     those made of stone or metal).  The master of a raven                     familiar (see the Familiars sidebar, page 52) gains a +3                     bonus on Appraise checks.  A character with the Diligent                     feat gets a +2 bonus on Appraise checks."
+untrained: "For common items, failure on an untrained check                     means no estimate. For rare items, success means an                     estimate of 50% to 150% (2d6+3 times 10%)."
+synergy {
+  name: "craft"
+  condition: "crafted item"
+}
+synergy {
+  name: "craft alchemy"
+  condition: "alchemy item"
+}
+synergy {
+  name: "craft trapmaking"
+  condition: "trap"
+}

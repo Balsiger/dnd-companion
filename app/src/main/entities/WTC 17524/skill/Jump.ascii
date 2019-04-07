@@ -1,0 +1,19 @@
+template {
+  name: "Jump"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 77
+      high: 77
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to leap over pits, vault low fences, or reach a tree\342\200\232\303\204\303\264s lowest\n  branches."
+}
+ability: STRENGTH
+action: "None. A Jump check is included in your movement, so it is                     part of a move action. If you run out of movement                     mid-jump, your next action (either on this turn or, if                     necessary, on your next turn) must be a move action to                     complete the jump."
+special: "Effects that increase your movement also increase your                     jumping distance, since your check is modified by your                     speed.  If you have the Run feat, you get a +4 bonus on                     Jump checks for any jumps made after a running start.  A                     halfling has a +2 racial bonus on Jump checks because                     halflings are agile and athletic.  If you have the                     Acrobatic feat, you get a +2 bonus on Jump checks."
+restriction: ARMOR_CHECK_PENALTY
+synergy {
+  name: "tumble"
+}

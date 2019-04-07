@@ -1,0 +1,48 @@
+template {
+  name: "Web"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 301
+      high: 301
+    }
+  }
+  world: "Generic"
+  description: "Web creates a many-layered mass of strong, sticky strands. These strands\n  trap those caught in them. The strands are similar to spider webs but far\n  larger and tougher.  These masses must be anchored to two or more solid and\n  diametrically opposed points\342\200\232\303\204\303\256floor and ceiling, opposite walls, or the\n  like\342\200\232\303\204\303\256or else the web collapses upon itself and disappears. Creatures caught\n  within a web become entangled among the gluey fibers. Attacking a creature in\n  a web won\'t cause you to become entangled.  Anyone in the effect\'s area when\n  the spell is cast must make a Reflex save. If this save succeeds, the\n  creature is entangled, but not prevented from moving, though moving is more\n  difficult than normal for being entangled (see below). If the save fails, the\n  creature is entangled and can\'t move from its space, but can break loose by\n  spending 1 round and making a DC 20 Strength check or a DC 25 Escape Artist\n  check. Once loose (either by making the initial Reflex save or a later\n  Strength check or Escape Artist check), a creature remains entangled, but may\n  move through the web very slowly. Each round devoted to moving allows the\n  creature to make a new Strength check or Escape Artist check. The creature\n  moves 5 feet for each full 5 points by which the check result exceeds 10.  If\n  you have at least 5 feet of web between you and an opponent, it provides\n  cover. If you have at least 20 feet of web between you, it provides total\n  cover (see Cover, page 150).  The strands of a web spell are flammable.  A\n  magic flaming sword can slash them away as easily as a hand brushes away\n  cobwebs.  Any fire\342\200\232\303\204\303\256a torch, burning oil, a flaming sword, and so forth\342\200\232\303\204\303\256can\n  set the webs alight and burn away 5 square feet in 1 round. All creatures\n  within flaming webs take 2d4 points of fire damage from the flames.  Web can\n  be made permanent with a permanency spell. A permanent web that is damaged\n  (but not destroyed) regrows in 10 minutes.  Material Component: A bit of\n  spider web."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "[[100 + (10 * $level)]] ft, [[10 * $level]] min (D), fills 20-ft spread with web (Ref negates), stuck (DC 20 Str or DC 25 Escape Artist for entangled), entangled (move 5 feet per 5 points Str/Escape Artist above 10)"
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Webs in a 20-ft-radius spread"
+}
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

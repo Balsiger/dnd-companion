@@ -1,0 +1,40 @@
+template {
+  name: "Greater Shadow Conjuration"
+  synonym: "Shadow Conjuration, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 276
+      high: 277
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like shadow conjuration, except that it can duplicate\n  any sorcerer or wizard conjuration (summoning) or conjuration (creation)\n  spell of 6th level or lower. The illusory conjurations created deal\n  three-fifths (60%) damage to nonbelievers, and nondamaging effects are 60%\n  likely to work against nonbelievers."
+}
+school: ILLUSION
+subschool: SHADOW
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

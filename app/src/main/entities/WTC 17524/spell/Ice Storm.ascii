@@ -1,0 +1,53 @@
+template {
+  name: "Ice Storm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 243
+      high: 243
+    }
+  }
+  world: "Generic"
+  description: "Great magical hailstones pound down for 1 full round, dealing 3d6 points of\n  bludgeoning damage and 2d6 points of cold damage to every creature in the\n  area. A \342\200\232\303\204\303\2544 penalty applies to each Listen check made within the ice storm\'s\n  effect, and all land movement within its area is at half speed.  At the end\n  of the duration, the hail disappears, leaving no aftereffects (other than the\n  damage dealt).  Arcane Material Component: A pinch of dust and a few drops of\n  water."
+}
+school: EVOACATION
+summary: "[[400 + (40 * $level)]] ft, 1 round, 3d6 bludgeoning, 2d6 cold damage to all creatures in 20-ft Cylinder"
+descriptor: COLD
+level {
+  spell_class: DRUID
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+level {
+  spell_class: WAR
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cylinder (20-ft radius, 40 ft high)"
+duration {
+  duration {
+    rounds: 1
+  }
+  additional_duration {
+  }
+}

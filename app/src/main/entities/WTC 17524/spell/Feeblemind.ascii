@@ -1,0 +1,46 @@
+template {
+  name: "Feeblemind"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 229
+      high: 230
+    }
+  }
+  world: "Generic"
+  description: "If the target creature fails a Will saving throw, its Intelligence and\n  Charisma scores each drop to 1, giving it roughly the intellect of a\n  lizard. The affected creature is unable to use Intelligence- or Charismabased\n  skills, cast spells, understand language, or communicate coherently.  Still,\n  it knows who its friends are and can follow them and even protect them. The\n  subject remains in this state until a heal, limited wish, miracle, or wish\n  spell is used to cancel the effect of the feeblemind. A creature that can\n  cast arcane spells, such as a sorcerer or a wizard, takes a \342\200\232\303\204\303\2544 penalty on its\n  saving throw.  Material Component: A handful of clay, crystal, glass, or\n  mineral spheres."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "Target creature within [[50 + ($level * 5)]] ft Will DC $dc (+4 if can cast arcane spells) or Int and Chr drop to 1 (cannot use Intelligence or Charisma based skills, cast spells, understand language, communicagte)."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

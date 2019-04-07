@@ -1,0 +1,46 @@
+template {
+  name: "Time Stop"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 294
+      high: 294
+    }
+  }
+  world: "Generic"
+  description: "This spell seems to make time cease to flow for everyone but you. In fact,\n  you speed up so greatly that all other creatures seem frozen, though they are\n  actually still moving at their normal speeds. You are free to act for 1d4+1\n  rounds of apparent time. Normal and magical fire, cold, gas, and the like can\n  still harm you. While the time stop is in effect, other creatures are\n  invulnerable to your attacks and spells; you cannot target such creatures\n  with any attack or spell. A spell that affects an area and has a duration\n  longer than the remaining duration of the time stop (such as cloudkill) have\n  their normal effects on other creatures once the time stop ends.  Most\n  spellcasters use the additional time to improve their defenses, summon\n  allies, or flee from combat.  You cannot move or harm items held, carried, or\n  worn by a creature stuck in normal time, but you can affect any item that is\n  not in another creature\'s possession.  You are undetectable while time stop\n  lasts. You cannot enter an area protected by an antimagic field while under\n  the effect of time stop."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+level {
+  spell_class: TRICKERY
+  level: 9
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration_description: "1d4 + 1 rounds (apparent time)"
+  duration {
+  }
+  additional_duration {
+  }
+}

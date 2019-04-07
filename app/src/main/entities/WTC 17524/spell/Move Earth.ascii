@@ -1,0 +1,49 @@
+template {
+  name: "Move Earth"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 257
+      high: 257
+    }
+  }
+  world: "Generic"
+  description: "Move earth moves dirt (clay, loam, sand), possibly collapsing embankments,\n  moving hillocks, shifting dunes, and so forth.  However, in no event can rock\n  formations be collapsed or moved. The area to be affected determines the\n  casting time. For every 150-foot square (up to 10 feet deep), casting takes\n  10 minutes. The maximum area, 750 feet by 750 feet, takes 4 hours and 10\n  minutes to move.  This spell does not violently break the surface of the\n  ground. Instead, it creates wavelike crests and troughs, with the earth\n  reacting with glacierlike fluidity until the desired result is\n  achieved. Trees, structures, rock formations, and such are mostly unaffected\n  except for changes in elevation and relative topography.  The spell cannot be\n  used for tunneling and is generally too slow to trap or bury creatures. Its\n  primary use is for digging or filling moats or for adjusting terrain contours\n  before a battle.  This spell has no effect on earth creatures.  Material\n  Component: A mixture of soils (clay, loam, and sand) in a small bag, and an\n  iron blade."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+descriptor: EARTH
+level {
+  spell_class: DRUID
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Dirt in an area up to 750 ft square and up to 10 ft deep (S)"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

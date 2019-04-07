@@ -1,0 +1,44 @@
+template {
+  name: "Minor Image"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 254
+      high: 254
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like silent image, except that minor image includes\n  some minor sounds but not understandable speech."
+}
+school: ILLUSION
+subschool: FIGMENT
+summary: "Concentration +2 rounds, create illusion up to [[1 + $level]] 10-ft cubes (S) with minor sounds (not understandable speech)."
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration_description: "Concentration +  2 rounds"
+  duration {
+  }
+  additional_duration {
+  }
+}

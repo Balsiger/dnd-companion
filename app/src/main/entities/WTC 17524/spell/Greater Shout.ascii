@@ -1,0 +1,47 @@
+template {
+  name: "Greater Shout"
+  synonym: "Shout, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 279
+      high: 279
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like shout, except that the cone deals 10d6 points of\n  sonic damage (or 1d6 points of sonic damage per caster level, maximum 20d6,\n  against exposed brittle or crystalline objects or crystalline creatures). It\n  also causes creatures to be stunned for 1 round and deafened for 4d6\n  rounds. A creature in the area of the cone can negate the stunning and halve\n  both the damage and the duration of the deafness with a successful Fortitude\n  save.  A creature holding vulnerable objects can attempt a Reflex save to\n  negate the damage to those objects.  Arcane Focus: A small metal or ivory\n  horn."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: SONIC
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

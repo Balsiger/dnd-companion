@@ -1,0 +1,48 @@
+template {
+  name: "Mass Suggestion"
+  synonym: "Suggestion, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 285
+      high: 285
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like suggestion, except that it can affect more\n  creatures. The same suggestion applies to all these creatures."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$level creatures, no more than 30 ft apart within [[50 + ($level * 5))]] ft Will DC $dc target of a reasonable suggestion (sentence or two) lasting up to $level hours."
+descriptor: LANGUAGE_DEPENDENT
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature/level, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

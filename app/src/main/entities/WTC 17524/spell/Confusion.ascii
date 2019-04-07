@@ -1,0 +1,55 @@
+template {
+  name: "Confusion"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 212
+      high: 212
+    }
+  }
+  world: "Generic"
+  description: "This spell causes the targets to become confused, making them unable to\n  independently determine what they will do.  Roll on the following table at\n  the beginning of each subject\342\200\232\303\204\303\264s turn each round to see what the subject does\n  in that round.  d% Behavior 01\342\200\232\303\204\303\25410 Attack caster with melee or ranged weapons\n  (or close with caster if attack is not possible).  11\342\200\232\303\204\303\25420 Act normally.  21\342\200\232\303\204\303\25450\n  Do nothing but babble incoherently.  51\342\200\232\303\204\303\25470 Flee away from caster at top\n  possible speed.  71\342\200\232\303\204\303\254100 Attack nearest creature (for this purpose, a familiar\n  counts as part of the subject\342\200\232\303\204\303\264s self).  A confused character who can\342\200\232\303\204\303\264t carry\n  out the indicated action does nothing but babble incoherently. Attackers are\n  not at any special advantage when attacking a confused character. Any\n  confused character who is attacked automatically attacks its attackers on its\n  next turn, as long as it is still confused when its turn comes. Note that a\n  confused character will not make attacks of opportunity against any creature\n  that it is not already devoted to attacking (either because of its most\n  recent action or because it has just been attacked).  Arcane Material\n  Component: A set of three nut shells."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "For $level rounds, Will DC $dc or all creatures in 15 ft burst within [[100 + (10 * $level)]] ft or do 01-10 attack caster, 11-20 act normally, 21-50 do nothing, 51 - 70 flee, 71-100 attack nearest."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+level {
+  spell_class: TRICKERY
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "All creatures in a 15-ft radius burst"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

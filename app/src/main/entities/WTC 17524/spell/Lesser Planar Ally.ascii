@@ -1,0 +1,43 @@
+template {
+  name: "Lesser Planar Ally"
+  synonym: "Planar Ally, Lesser"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 261
+      high: 261
+    }
+  }
+  world: "Generic"
+  description: "By casting this spell, you request your deity to send you an elemental or\n  outsider (of 6 HD or less) of the deity\'s choice. If you serve no particular\n  deity, the spell is a general plea answered by a creature sharing your\n  philosophical alignment. If you know an individual creature\'s name, you may\n  request that individual by speaking the name during the spell (though you\n  might get a different creature anyway).  You may ask the creature to perform\n  one task in exchange for a payment from you. Tasks might range from the\n  simple (fly us across the chasm, help us fight a battle) to the complex (spy\n  on our enemies, protect us on our foray into the dungeon).  You must be able\n  to communicate with the creature called in order to bargain for its services.\n  The creature called requires a payment for its services. This payment can\n  take a variety of forms, from donating gold or magic items to an allied\n  temple, to a gift given directly to the creature, to some other action on\n  your part that matches the creature\'s alignment and goals. Regardless, this\n  payment must be made before the creature agrees to perform any services.  The\n  bargaining takes at least 1 round, so any actions by the creature begin in\n  the round after it arrives.  A task taking up to 1 minute per caster level\n  requires a payment of 100 gp per HD of the creature called. For a task taking\n  up to 1 hour per caster level, the creature requires a payment of 500 gp per\n  HD. A long-term task, one requiring up to one day per caster level, requires\n  a payment of 1,000 gp per HD.  A nonhazardous task requires only half the\n  indicated payment, while an especially hazardous task might require a greater\n  gift  Few if any creatures will accept a task that seems suicidal (remember,\n  a called creature actually dies when it is killed, unlike a summoned\n  creature). However, if the task is strongly aligned with the creature\'s\n  ethos, the DM may halve or even waive the payment. For instance, a celestial\n  creature called to battle demons might require a gift of only half the normal\n  value.  At the end of its task, or when the duration bargained for expires,\n  the creature returns to its home plane (after reporting back to you, if\n  appropriate and possible).  Note: When you use a calling spell that calls an\n  air, chaotic, earth, evil, fire, good, lawful, or water creature, it is a\n  spell of that type. For example, a lesser planar ally is a fire spell when it\n  calls a fire elemental.  XP Cost: 100 XP."
+}
+school: CONJURATION
+subschool: CALLING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+components: EXPERIENCE_POINTS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "One called elemental or outsider of 6 HD or less"
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

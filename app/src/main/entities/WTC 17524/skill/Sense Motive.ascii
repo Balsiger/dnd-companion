@@ -1,0 +1,15 @@
+template {
+  name: "Sense Motive"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 81
+      high: 81
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to tell when someone is bluffing you, to discern hidden\n  messages in conversations, or to sense when someone is being magically\n  influenced. This skill represents sensitivity to the body language, speech\n  habits, and mannerisms of others."
+}
+ability: WISDOM
+action: "Trying to gain information with Sense Motive generally                     takes at least 1 minute, and you could spend a whole                     evening trying to get a sense of the people around you."
+special: "A ranger gains a bonus on Sense Motive checks when using                     this skill against a favored enemy (see page 47).  If you                     have the Negotiator feat, you get a +2 bonus on Sense                     Motive checks."

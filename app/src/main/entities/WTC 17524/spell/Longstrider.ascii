@@ -1,0 +1,51 @@
+template {
+  name: "Longstrider"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "This spell increases your base land speed by 10 feet. (This adjustment\n  counts as an enhancement bonus.) It has no effect on other modes of movement,\n  such as burrow, climb, fly, or swim.  Material Component: A pinch of dirt."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+level {
+  spell_class: TRAVEL
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

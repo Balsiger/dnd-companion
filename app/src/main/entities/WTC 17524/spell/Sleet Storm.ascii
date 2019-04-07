@@ -1,0 +1,51 @@
+template {
+  name: "Sleet Storm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 280
+      high: 280
+    }
+  }
+  world: "Generic"
+  description: "Driving sleet blocks all sight (even darkvision) within it and causes the\n  ground in the area to be icy. A creature can walk within or through the area\n  of sleet at half normal speed with a DC 10 Balance check.  Failure means it\n  can\'t move in that round, while failure by 5 or more means it falls (see the\n  Balance skill for details).  The sleet extinguishes torches and small fires.\n  Arcane Material Component: A pinch of dust and a few drops of water."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "$undefined$"
+descriptor: COLD
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cylinder (40-ft radius, 20 ft high)"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

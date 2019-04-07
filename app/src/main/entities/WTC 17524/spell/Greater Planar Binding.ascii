@@ -1,0 +1,43 @@
+template {
+  name: "Greater Planar Binding"
+  synonym: "Planar Binding, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 261
+      high: 261
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like lesser planar binding, except that you may call a\n  single creature of 18 HD or less, or up to three creatures of the same kind\n  whose Hit Dice total no more than 18. Each creature gets a saving throw,\n  makes independent attempts to escape, and must be persuaded to aid you\n  individually."
+}
+school: CONJURATION
+subschool: CALLING
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to three elementals or outsiders, totaling no more than 18 HD, no two of which can be more than 30 ft apart when they appear."
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

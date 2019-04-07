@@ -1,0 +1,48 @@
+template {
+  name: "Power Word Stun"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 263
+      high: 264
+    }
+  }
+  world: "Generic"
+  description: "You utter a single word of power that instantly causes one creature of your\n  choice to become stunned, whether the creature can hear the word or not. The\n  duration of the spell depends on the target\'s current hit point total. Any\n  creature that currently has 151 or more hit points is unaffected by power\n  word stun.  Hit Points Duration 50 or less 4d4 rounds 51\342\200\232\303\204\303\254100 2d4 rounds\n  101\342\200\232\303\204\303\254150 1d4 rounds"
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "One creature with 150 hp or less within [[25 + (($level / 2) * 5)]] ft is stunned for 4d4 rounds if 50 hp or less, 2d4 rounds if 51-100 hp and 1d4 rounds up to 150 hp. (SR but not save)"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+level {
+  spell_class: WAR
+  level: 8
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature with 150 hp or less"
+duration {
+  duration_description: "See Text"
+  duration {
+  }
+  additional_duration {
+  }
+}

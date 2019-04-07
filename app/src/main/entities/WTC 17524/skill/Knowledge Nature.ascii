@@ -1,0 +1,7 @@
+template {
+  name: "Knowledge Nature"
+  base: "Knowledge"
+}
+synergy {
+  name: "survival"
+}

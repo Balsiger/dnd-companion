@@ -1,0 +1,46 @@
+template {
+  name: "Insect Plague"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 244
+      high: 245
+    }
+  }
+  world: "Generic"
+  description: "You summon a number of swarms of locusts (one per three levels, to a maximum\n  of six swarms at 18th level). The swarms must be summoned so that each one is\n  adjacent to at least one other swarm (that is, the swarms must fill one\n  contiguous area). You may summon the locust swarms so that they share the\n  area of other creatures. Each swarm attacks any creatures occupying its\n  area. The swarms are stationary after being summoned, and won\'t pursue\n  creatures that flee.  See the Monster Manual for details on locust swarms."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "For $level min [[min(6, ($level / 3))]] swarm of stationary locusts are summoned, attacking creatures."
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: DRUID
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+  description: "One swarm of locusts per three levels each of which must be adjacent to at least one other swarm"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

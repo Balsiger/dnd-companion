@@ -1,0 +1,45 @@
+template {
+  name: "Insanity"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 244
+      high: 244
+    }
+  }
+  world: "Generic"
+  description: "The affected creature suffers from a continuous confusion effect, as the\n  spell.  Remove curse does not remove insanity.  Greater restoration, heal,\n  limited wish, miracle, or wish can restore the creature."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "Out to [[100 + (10 * $level)]] ft Will DC $dc or suffer from continuous (01-10 attack caster, 11-20 act normally, 21-50 do nothing, 51 - 70 flee, 71-100 attack nearest) effect."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

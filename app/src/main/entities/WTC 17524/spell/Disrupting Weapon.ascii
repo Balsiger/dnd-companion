@@ -1,0 +1,40 @@
+template {
+  name: "Disrupting Weapon"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 223
+      high: 224
+    }
+  }
+  world: "Generic"
+  description: "This spell makes a melee weapon deadly to undead. Any undead creature with\n  HD equal to or less than your caster level must succeed on a Will save or be\n  destroyed utterly if struck in combat with this weapon. Spell resistance does\n  not apply against the destruction effect."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One melee weapon"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

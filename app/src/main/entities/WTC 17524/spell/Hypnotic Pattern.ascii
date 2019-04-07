@@ -1,0 +1,50 @@
+template {
+  name: "Hypnotic Pattern"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 242
+      high: 242
+    }
+  }
+  world: "Generic"
+  description: "A twisting pattern of subtle, shifting colors weaves through the air,\n  fascinating creatures within it. Roll 2d4 and add your caster level (maximum\n  10) to determine the total number of Hit Dice of creatures\n  affected. Creatures with the fewest HD are affected first; and, among\n  creatures with equal HD, those who are closest to the spell\'s point of origin\n  are affected first. Hit Dice that are not sufficient to affect a creature are\n  wasted. Affected creatures become fascinated by the pattern of colors.\n  Sightless creatures are not affected.  A wizard or sorcerer need not utter a\n  sound to cast this spell, but a bard must sing, play music, or recite a rhyme\n  as a verbal component.  Material Component: A glowing stick of incense or a\n  crystal rod filled with phosphorescent material."
+}
+school: ILLUSION
+subschool: PATTERN
+summary: "Twisting pattern of shifting colors fascinates (sit quiertly, -4 to skill checks) 2d4+[[$level]] HD creatures (lowest, closest first) for Concentration +2 rounds."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Colorful lights in a 10-ft-radius spread"
+}
+duration {
+  duration_description: "Concentration +  2 rounds"
+  duration {
+  }
+  additional_duration {
+  }
+}

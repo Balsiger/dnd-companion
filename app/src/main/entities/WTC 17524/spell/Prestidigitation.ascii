@@ -1,0 +1,43 @@
+template {
+  name: "Prestidigitation"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 264
+      high: 264
+    }
+  }
+  world: "Generic"
+  description: "Prestidigitations are minor tricks that novice spellcasters use for\n  practice. Once cast, a prestidigitation spell enables you to perform simple\n  magical effects for 1 hour.  The effects are minor and have severe\n  limitations. A prestidigitation can slowly lift 1 pound of material. It can\n  color, clean, or soil items in a 1-foot cube each round. It can chill, warm,\n  or flavor 1 pound of nonliving material. It cannot deal damage or affect the\n  concentration of spellcasters.  Prestidigitation can create small objects,\n  but they look crude and artificial. The materials created by a\n  prestidigitation spell are extremely fragile, and they cannot be used as\n  tools, weapons, or spell components. Finally, a prestidigitation lacks the\n  power to duplicate any other spell effects.  Any actual change to an object\n  (beyond just moving, cleaning, or soiling it) persists only 1 hour.\n  Characters typically use prestidigitation spells to impress common folk,\n  amuse children, and brighten dreary lives. Common tricks with\n  prestidigitations include producing tinklings of ethereal music, brightening\n  faded flowers, creating glowing balls that float over your hand, generating\n  puffs of wind to flicker candles, spicing up aromas and flavors of bland\n  food, and making little whirlwinds to sweep dust under rugs."
+}
+school: UNIVERSAL
+summary: "Do small magical tricks for 1 hour."
+level {
+  spell_class: BARD
+}
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "See text"
+duration {
+  duration {
+    hours: 1
+  }
+  additional_duration {
+  }
+}

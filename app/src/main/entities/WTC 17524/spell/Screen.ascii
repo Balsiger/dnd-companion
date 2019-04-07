@@ -1,0 +1,48 @@
+template {
+  name: "Screen"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 274
+      high: 274
+    }
+  }
+  world: "Generic"
+  description: "This spell combines several elements to create a powerful protection from\n  scrying and direct observation. When casting the spell, you dictate what will\n  and will not be observed in the spell\'s area. The illusion created must be\n  stated in general terms.  Thus, you could specify the illusion of yourself\n  and another character playing chess for the duration of the spell, but you\n  could not have the illusory chess players take a break, make dinner, and then\n  resume their game. You could have a crossroads appear quiet and empty even\n  while an army is actually passing through the area. You could specify that no\n  one be seen (including passing strangers), that your troops be undetected, or\n  even that every fifth person or unit should be visible.  Once the conditions\n  are set, they cannot be changed.  Attempts to scry the area automatically\n  detect the image stated by you with no save allowed. Sight and sound are\n  appropriate to the illusion created. A band of people standing in a meadow\n  could be concealed as an empty meadow with birds chirping, for instance.\n  Direct observation may allow a save (as per a normal illusion), if there is\n  cause to disbelieve what is seen. Certainly onlookers in the area would\n  become suspicious if a marching army disappeared at one point to reappear at\n  another. Even entering the area does not cancel the illusion or necessarily\n  allow a save, assuming that hidden beings take care to stay out of the way of\n  those affected by the illusion."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+level {
+  spell_class: TRICKERY
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "30-ft cube/level (S)"
+duration {
+  duration {
+    hours: 24
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,44 @@
+template {
+  name: "Miracle"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 254
+      high: 254
+    }
+  }
+  world: "Generic"
+  description: "You don\'t so much cast a miracle as request one. You state what you would\n  like to have happen and request that your deity (or the power you pray to for\n  spells) intercede.  The DM then determines the particular effect of the\n  miracle.  A miracle can do any of the following things.  Duplicate any cleric\n  spell of 8th level or lower (including spells to which you have access\n  because of your domains).  Duplicate any other spell of 7th level or lower.\n  Undo the harmful effects of certain spells, such as feeblemind or insanity.\n  Have any effect whose power level is in line with the above effects.  If the\n  miracle has any of the above effects, casting it has no experience point\n  cost.  Alternatively, a cleric can make a very powerful request. Casting such\n  a miracle costs the cleric 5,000 XP because of the powerful divine energies\n  involved. Examples of especially powerful miracles of this sort could include\n  the following.  Swinging the tide of a battle in your favor by raising fallen\n  allies to continue fighting.  Moving you and your allies, with all your and\n  their gear, from one plane to another through planar barriers to a specific\n  locale with no chance of error.  Protecting a city from an earthquake,\n  volcanic eruption, flood, or other major natural disaster.  In any event, a\n  request that is out of line with the deity\'s (or alignment\'s) nature is\n  refused.  A duplicated spell allows saving throws and spell resistance as\n  normal, but the save DCs are as for a 9th-level spell. When a miracle\n  duplicates a spell that has an XP cost, you must pay that cost. When a\n  miracle spell duplicates a spell with a material component that costs more\n  than 100 gp, you must provide that component.  XP Cost: 5,000 XP (for some\n  uses of the miracle spell; see above)."
+}
+school: EVOACATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 9
+}
+level {
+  spell_class: LUCK
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+components: EXPERIENCE_POINTS
+focus {
+}
+casting_time {
+}
+special_range: SEE_TEXT_RANGE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "See text"
+duration {
+  duration_description: "See Text"
+  duration {
+  }
+  additional_duration {
+  }
+}

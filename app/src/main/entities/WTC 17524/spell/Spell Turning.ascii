@@ -1,0 +1,52 @@
+template {
+  name: "Spell Turning"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 282
+      high: 283
+    }
+  }
+  world: "Generic"
+  description: "Spells and spell-like effects targeted on you are turned back upon the\n  original caster.  The abjuration turns only spells that have you as a\n  target. Effect and area spells are not affected. Spell turning also fails to\n  stop touch range spells. Thus, a charm person spell cast at you could be\n  turned back upon the caster and possibly enable you to use the charm effect\n  on that individual, but a fireball could not be turned back, and neither\n  could inflict critical wounds.  From seven to ten (1d4+6) spell levels are\n  affected by the turning. The DM secretly rolls the exact number. When a spell\n  is turned, the DM subtracts its level from the amount of spell turning left\n  When you are targeted by a spell of higher level than the amount of spell\n  turning you have left, that spell is partially turned. The subtract the\n  amount of spell turning left from the spell level of the incoming spell, then\n  divide the result by the spell level of the incoming spell to see what\n  fraction of the effect gets through.  For damaging spells, you and the caster\n  each take a fraction of the damage. For nondamaging spells, each of you has a\n  proportional chance to be affected.  For example, if you had three levels of\n  spell turning left and were targeted by a magic missile spell heightened to\n  4th level, you would turn three-fourths of the spell back at the caster. You\n  would take oneforth of the damage, while the caster takes three-fourths of\n  the damage. If you were targeted by a wizard\'s fear spell (also a 4thlevel\n  spell) in the same situation, you would have a one in four (25%) chance to be\n  affected by the spell, while the caster would have a three in four (75%)\n  chance to be affected.  If you and a spellcasting attacker are both warded by\n  spell turning effects in operation, a resonating field is created.  Roll\n  randomly to determine the result.  d% Effect 01\342\200\232\303\204\303\25470 Spell drains away without\n  effect.  71\342\200\232\303\204\303\25480 Spell affects both of you equally at full effect.  81\342\200\232\303\204\303\25497 Both\n  turning effects are rendered nonfunctional for 1d4 minutes.  98\342\200\232\303\204\303\254100 Both of\n  you go through a rift into another plane.  Arcane Material Component: A small\n  silver mirror."
+}
+school: ABJURATION
+summary: "Spells and spell-like effects targeted on you are turned back for [[$level * 10]] min up to 1d4+6 spell levels (partial turning possible, area effect and ranged touch spells unaffected)."
+level {
+  spell_class: LUCK
+  level: 7
+}
+level {
+  spell_class: MAGIC
+  level: 7
+}
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration_description: "Until expended or 10 min/level"
+  duration {
+  }
+  additional_duration {
+  }
+}

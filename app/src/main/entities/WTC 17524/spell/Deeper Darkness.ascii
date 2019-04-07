@@ -1,0 +1,39 @@
+template {
+  name: "Deeper Darkness"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 217
+      high: 217
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like darkness, except that the object radiates shadowy\n  illumination in a 60-foot radius and the darkness lasts longer.  Daylight\n  brought into an area of deeper darkness (or vice versa) is temporarily\n  negated, so that the otherwise prevailing light conditions exist in the\n  overlapping areas of effect.  Deeper darkness counters and dispels any light\n  spell of equal or lower level, including daylight and light."
+}
+school: EVOACATION
+summary: "For $level days (D) the object radiates shadowy illumination in a 60 ft radius; negates daylight."
+descriptor: DARKNESS
+level {
+  spell_class: CLERIC
+  level: 3
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

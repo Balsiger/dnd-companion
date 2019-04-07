@@ -1,0 +1,18 @@
+template {
+  name: "Gather Information"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 74
+      high: 74
+    }
+  }
+  world: "Generic"
+  description: "Use this skill for making contacts in an area, finding out local gossip,\n  rumormongering, and collecting general information."
+}
+ability: CHARISMA
+action: "A typical Gather Information check takes 1d4+1 hours."
+special: "A half-elf has a +2 racial bonus on Gather Information                     checks, thanks to her ability to relate well to others.                     If you have the Investigator feat, you get a +2 bonus on                     Gather Information checks."
+synergy {
+  name: "knowledge local"
+}

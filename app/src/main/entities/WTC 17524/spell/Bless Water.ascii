@@ -1,0 +1,45 @@
+template {
+  name: "Bless Water"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 205
+      high: 205
+    }
+  }
+  world: "Generic"
+  description: "This transmutation imbues a flask (1 pint) of water with positive energy,\n  turning it into holy water (page 128).  Material Component: 5 pounds of\n  powdered silver (worth 25 gp)."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+descriptor: GOOD
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: PALADIN
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Flask of water touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

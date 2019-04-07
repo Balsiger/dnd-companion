@@ -1,0 +1,64 @@
+template {
+  name: "Protection from Energy"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 266
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "Protection from energy grants temporary immunity to the type of energy you\n  specify when you cast it (acid, cold, electricity, fire, or sonic). When the\n  spell absorbs 12 points per caster level of energy damage (to a maximum of\n  120 points at 10th level), it is discharged.  Note: Protection from energy\n  overlaps (and does not stack with) resist energy. If a character is warded by\n  protection from energy and resist energy, the protection spell absorbs damage\n  until its power is exhausted."
+}
+school: ABJURATION
+summary: "For [[$level * 10]] min absort up to [[min(120, (12 * $level))]] points of one kind of energy damage."
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: LUCK
+  level: 3
+}
+level {
+  spell_class: PROTECTION
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "10 min/level or until discharged"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,42 @@
+template {
+  name: "Lullaby"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "Any creature within the area that fails a Will save becomes drowsy and\n  inattentive, taking a \342\200\232\303\204\303\2545 penalty on Listen and Spot checks and a \342\200\232\303\204\303\2542 penalty\n  on Will saves against sleep effects while the lullaby is in effect. Lullaby\n  lasts for as long as the caster concentrates, plus up to 1 round per caster\n  level thereafter."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Living creatures within a 10-ftradius burst"
+duration {
+  duration_description: "Concentration +  1 round/level"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

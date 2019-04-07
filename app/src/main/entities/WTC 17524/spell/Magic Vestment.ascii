@@ -1,0 +1,49 @@
+template {
+  name: "Magic Vestment"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 251
+      high: 251
+    }
+  }
+  world: "Generic"
+  description: "You imbue a suit of armor or a shield with an enhancement bonus of +1 per\n  four caster levels (maximum +5 at 20th level).  An outfit of regular clothing\n  counts as armor that grants no AC bonus for the purpose of this spell."
+}
+school: TRANSMUTATION
+summary: "Touch, $level hours, [[min(5, $level/4)]] enhancement bonus to AC."
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: STRENGTH_SPELL_CLASS
+  level: 3
+}
+level {
+  spell_class: WAR
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Armor or shield touched"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

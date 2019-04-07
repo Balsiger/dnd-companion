@@ -1,0 +1,47 @@
+template {
+  name: "Arcane Sight"
+  synonym: "Sight, Arcane"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 201
+      high: 201
+    }
+  }
+  world: "Generic"
+  description: "This spell makes your eyes glow blue and allows you to see magical auras\n  within 120 feet of you. The effect is similar to that of a detect magic\n  spell, but arcane sight does not require concentration and discerns aura\n  location and power more quickly.  You know the location and power of all\n  magical auras within your sight. An aura\342\200\232\303\204\303\264s power depends on a spell\342\200\232\303\204\303\264s\n  functioning level or an item\342\200\232\303\204\303\264s caster level, as noted in the description of\n  the \\Spell{detect magic} spell. If the items or creatures bearing the auras\n  are in line of sight, you can make \\Skill{Spellcraft} skill checks to\n  determine the school of magic involved in each.  (Make one check per aura; DC\n  15 + spell level, or 15 + one-half caster level for a nonspell effect.)  If\n  you concentrate on a specific creature within 120 feet of you as a standard\n  action, you can determine whether it has any spellcasting or spell-like\n  abilities, whether these are arcane or divine (spell-like abilities register\n  as arcane), and the strength of the most powerful spell or spell-like ability\n  the creature currently has available for use. In some cases, \\Spell{arcane\n  sight} may give a deceptively low reading\342\200\232\303\204\303\256for example, when you use it on a\n  spellcaster who has used up most of his or her daily spell allotment.\n  \\Spell{Arcane sight} can be made permanent with a \\Spell{permanency} spell."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,46 @@
+template {
+  name: "Storm of Vengeance"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 285
+      high: 285
+    }
+  }
+  world: "Generic"
+  description: "This spell creates an enormous black storm cloud. Lightning and crashing\n  claps of thunder appear within the storm. Each creature beneath the cloud\n  must succeed on a Fortitude save or be deafened for 1d4\342\210\232\303\26310 minutes.  If you\n  do not maintain concentration on the spell after casting it, the spell\n  ends. If you continue to concentrate, the spell generates additional effects\n  in each following round, as noted below. Each effect occurs during your turn.\n  2nd Round: Acid rains down in the area, dealing 1d6 points of acid damage (no\n  save).  3rd Round: You call six bolts of lightning down from the cloud. You\n  decide where the bolts strike. No two bolts may be directed at the same\n  target. Each bolt deals 10d6 points of electricity damage. A creature struck\n  can attempt a Reflex save for half damage.  4th Round: Hailstones rain down\n  in the area, dealing 5d6 points of bludgeoning damage (no save).  5th through\n  10th Rounds: Violent rain and wind gusts reduce visibility. The rain obscures\n  all sight, including darkvision, beyond 5 feet. A creature 5 feet away has\n  concealment (attacks have a 20% miss chance). Creatures farther away have\n  total concealment (50% miss chance, and the attacker cannot use sight to\n  locate the target). Speed is reduced by three-quarters.  Ranged attacks\n  within the area of the storm are impossible. Spells cast within the area are\n  disrupted unless the caster succeeds on a Concentration check against a DC\n  equal to the storm of vengeance\'s save DC + the level of the spell the caster\n  is trying to cast."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 9
+}
+level {
+  spell_class: CLERIC
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+  description: "360-ft-radius storm cloud"
+}
+duration {
+  duration_description: "Concentration (maximum 10 rounds)"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

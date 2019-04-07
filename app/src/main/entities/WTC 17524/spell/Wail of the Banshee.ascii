@@ -1,0 +1,48 @@
+template {
+  name: "Wail of the Banshee"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 298
+      high: 298
+    }
+  }
+  world: "Generic"
+  description: "You emit a terrible scream that kills creatures that hear it (except for\n  yourself).  Creatures closest to the point of origin are affected first."
+}
+school: NECROMANCY
+summary: "$undefined$"
+descriptor: DEATH
+descriptor: SONIC
+level {
+  spell_class: DEATH
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "One living creature/level within a 40-ft-radius spread"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,39 @@
+template {
+  name: "Dispel Law"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 223
+      high: 223
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like dispel evil, except that you are surrounded by\n  flickering, yellow, chaotic energy, and the spell affects lawful creatures\n  and spells rather than evil ones."
+}
+school: ABJURATION
+summary: "$undefined$"
+descriptor: CHAOTIC
+level {
+  spell_class: CHAOS
+  level: 5
+}
+level {
+  spell_class: CLERIC
+  level: 5
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

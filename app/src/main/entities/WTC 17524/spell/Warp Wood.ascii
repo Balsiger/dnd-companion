@@ -1,0 +1,39 @@
+template {
+  name: "Warp Wood"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 300
+      high: 300
+    }
+  }
+  world: "Generic"
+  description: "You cause wood to bend and warp, permanently destroying its straightness,\n  form, and strength. A warped door springs open (or becomes stuck, requiring a\n  Strength check to open, at your option). A boat or ship springs a\n  leak. Warped ranged weapons are useless. A warped melee weapon causes a \342\200\232\303\204\303\2544\n  penalty on attack rolls.  You may warp one Small or smaller object (such as a\n  wagon wheel or a human\'s crossbow) or its equivalent per caster level.  A\n  Medium object (such as an oar or a human\'s spear) counts as two Small\n  objects, a Large object (such as a rowboat or a hill giant\'s greatclub) as\n  four, a Huge object (such as a wagon or a cloud giant\'s morningstar) as\n  eight, a Gargantuan object (such as a keelboat) as sixteen, and a Colossal\n  object (such as a sailing ship) as thirty-two.  Alternatively, you can unwarp\n  wood (effectively warping it back to normal) with this spell, straightening\n  wood that has been warped by this spell or by other means. Make whole, on the\n  other hand, does no good in repairing a warped item.  You can combine\n  multiple consecutive warp wood spells to warp (or unwarp) an object that is\n  too large for you to warp with a single spell.  Until the object is\n  completely warped, it suffers no ill effects."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "1 Small wooden object/level, all within a 20-ft radius"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

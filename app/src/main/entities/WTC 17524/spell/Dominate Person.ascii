@@ -1,0 +1,50 @@
+template {
+  name: "Dominate Person"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 224
+      high: 225
+    }
+  }
+  world: "Generic"
+  description: "You can control the actions of any humanoid creature through a telepathic\nlink that you establish with the subject\'s mind.  If you and the subject have\na common language, you can generally force the subject to perform as you\ndesire, within the limits of its abilities. If no common language exists, you\ncan communicate only basic commands, such as \'Come here,\' \'Go there,\'\n\'Fight,\' and \'Stand still.\' You know what the subject is experiencing, but\nyou do not receive direct sensory input from it, nor can it communicate with\nyou telepathically.  Once you have given a dominated creature a command, it\ncontinues to attempt to carry out that command to the exclusion of all other\nactivities except those necessary for day-to-day survival (such as sleeping,\neating, and so forth). Because of this limited range of activity, a Sense\nMotive check against DC 15 (rather than DC 25) can determine that the\nsubject\'s behavior is being influenced by an enchantment effect (see the\nSense Motive skill description, page 81).  Changing your instructions or\ngiving a dominated creature a new command is the equivalent of redirecting a\nspell, so it is a move action.  By concentrating fully on the spell (a\nstandard action), you can receive full sensory input as interpreted by the\nmind of the subject, though it still can\'t communicate with you. You can\'t\nactually see through the subject\'s eyes, so it\'s not as good as being there\nyourself, but you still get a good idea of what\'s going on (the subject is\nwalking through a smelly courtyard, the subject is talking to a guard, the\nguard looks suspicious, and so forth).  Subjects resist this control, and any\nsubject forced to take actions against its nature receives a new saving throw\nwith a +2 bonus. Obviously self-destructive orders are not carried out. Once\ncontrol is established, the range at which it can be exercised is unlimited,\nas long as you and the subject are on the same plane. You need not see the\nsubject to control it.  If you don\'t spend at least 1 round concentrating on\nthe spell each day, the subject receives a new saving throw to throw off the\ndomination.  Protection from evil or a similar spell can prevent you from\nexercising control or using the telepathic link while the subject is so\nwarded, but such an effect neither prevents the establishment of domination\nnor dispels it."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "Casting time 1 round, [[25 + (5 * ($level / 2))]] ft, $level days, Will DC [[10 + $ability + switch($class, Bard: 4, default: 5)]] or controlled telepahtically."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One humanoid"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

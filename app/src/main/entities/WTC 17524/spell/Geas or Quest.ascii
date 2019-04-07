@@ -1,0 +1,51 @@
+template {
+  name: "Geas or Quest"
+  synonym: "Geas/Quest"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 234
+      high: 235
+    }
+  }
+  world: "Generic"
+  description: "This spell functions similarly to lesser geas, except that it affects a\n  creature of any HD and allows no saving throw.  Instead of taking penalties\n  to ability scores (as with lesser geas), the subject takes 3d6 points of\n  damage each day it does not attempt to follow the geas/quest. Additionally,\n  each day it must make a Fortitude saving throw or become sickened. These\n  effects end 24 hours after the creature attempts to resume the geas/ quest.\n  A remove curse spell ends a geas/quest spell only if its caster level is at\n  least two higher than your caster level. Break enchantment does not end a\n  geas/quest, but limited wish, miracle, and wish do.  Bards, sorcerers, and\n  wizards usually refer to this spell as geas, while clerics call the same\n  spell quest."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: LANGUAGE_DEPENDENT
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

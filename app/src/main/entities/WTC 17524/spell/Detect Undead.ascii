@@ -1,0 +1,53 @@
+template {
+  name: "Detect Undead"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 220
+      high: 220
+    }
+  }
+  world: "Generic"
+  description: "You can detect the aura that surrounds undead creatures. The amount of\n  information revealed depends on how long you study a particular area.  1st\n  Round: Presence or absence of undead auras.  2nd Round: Number of undead\n  auras in the area and the strength of the strongest undead aura present. If\n  you are of good alignment, and the strongest undead aura\342\200\232\303\204\303\264s strength is\n  overwhelming (see below), and the creature has HD of at least twice your\n  character level, you are stunned for 1 round and the spell ends.  3rd Round:\n  The strength and location of each undead aura. If an aura is outside your\n  line of sight, then you discern its direction but not its exact location.\n  Aura Strength: The strength of an undead aura is determined by the HD of the\n  undead creature, as given on the following table: HD Strength 1 or lower\n  Faint 2\342\200\232\303\204\303\2544 Moderate 5\342\200\232\303\204\303\25410 Strong 11 or higher Overwhelming Lingering Aura: An\n  undead aura lingers after its original source is destroyed. If detect undead\n  is cast and directed at such a location, the spell indicates an aura strength\n  of dim (even weaker than a faint aura). How long the aura lingers at this dim\n  level depends on its original power: Duration of Original Strength Lingering\n  Aura Faint 1d6 rounds Moderate 1d6 minutes Strong 1d6\342\210\232\303\26310 minutes Overwhelming\n  1d6 days Each round, you can turn to detect undead in a new area. The spell\n  can penetrate barriers, but 1 foot of stone, 1 inch of common metal, a thin\n  sheet of lead, or 3 feet of wood or dirt blocks it.  Arcane Material\n  Component: A bit of earth from a grave."
+}
+school: DIVINATION
+summary: "Within a 60 ft cone you detect the aura of undead creatures while concentrating (D) (1st round: presence, 2nd round: number and strength of stronges, 3rd round: strength and location of each undaed)."
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: PALADIN
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped emanation"
+duration {
+  duration_description: "Concentration"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,48 @@
+template {
+  name: "Contingency"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 213
+      high: 213
+    }
+  }
+  world: "Generic"
+  description: "You can place another spell upon your person so that it comes into effect\n  under some condition you dictate when casting contingency. The contingency\n  spell and the companion spell are cast at the same time.  The 10-minute\n  casting time is the minimum total for both castings; if the companion spell\n  has a casting time longer than 10 minutes, use that instead.  The spell to be\n  brought into effect by the contingency must be one that affects your person\n  (feather fall, levitate, fly, teleport, and so forth) and be of a spell level\n  no higher than one-third your caster level (rounded down, maximum 6th level).\n  The conditions needed to bring the spell into effect must be clear, although\n  they can be general. For example, a contingency cast with water breathing\n  might prescribe that any time you are plunged into or otherwise engulfed in\n  water or similar liquid, the water breathing spell instantly comes into\n  effect. Or a contingency could bring a feather fall spell into effect any\n  time you fall more than 4 feet. In all cases, the contingency immediately\n  brings into effect the companion spell, the latter being \342\200\232\303\204\303\272cast\342\200\232\303\204\303\271\n  instantaneously when the prescribed circumstances occur. If complicated or\n  convoluted conditions are prescribed, the whole spell combination\n  (contingency and the companion magic) may fail when called on. The companion\n  spell occurs based solely on the stated conditions, regardless of whether you\n  want it to.  You can use only one contingency spell at a time; if a second is\n  cast, the first one (if still active) is dispelled.  Material Component: That\n  of the companion spell, plus quicksilver and an eyelash of an ogre mage,\n  rakshasa, or similar spell-using creature.  Focus: A statuette of you carved\n  from elephant ivory and decorated with gems (worth at least 1,500 gp). You\n  must carry the focus for the contingency to work."
+}
+school: EVOACATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

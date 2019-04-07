@@ -1,0 +1,40 @@
+template {
+  name: "Deathwatch"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 217
+      high: 217
+    }
+  }
+  world: "Generic"
+  description: "Using the foul sight granted by the powers of unlife, you can determine the\n  condition of creatures near death within the spell\342\200\232\303\204\303\264s range. You instantly\n  know whether each creature within the area is dead, fragile (alive and\n  wounded, with 3 or fewer hit points left), fighting off death (alive with 4\n  or more hit points), undead, or neither alive nor dead (such as a construct).\n  Deathwatch sees through any spell or ability that allows creatures to feign\n  death."
+}
+school: NECROMANCY
+summary: "30 ft cone emantation for [[10 * $level]] min reveals new death subjects (sees through feign death spells)."
+descriptor: EVIL
+level {
+  spell_class: CLERIC
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped emanation"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

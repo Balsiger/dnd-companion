@@ -1,0 +1,60 @@
+template {
+  name: "Alarm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 197
+      high: 197
+    }
+  }
+  world: "Generic"
+  description: "Alarm sounds a mental or audible alarm each time a creature of Tiny or\n  larger size enters the warded area or touches it. A creature that speaks the\n  password (determined by you at the time of casting) does not set off the\n  alarm. You decide at the time of casting whether the alarm will be mental or\n  audible.  \\emph{Mental Alarm:} A mental alarm alerts you (and only you) so\n  long as you remain within 1 mile of the warded area. You note a single mental\n  \342\200\232\303\204\303\272ping\342\200\232\303\204\303\271 that awakens you from normal sleep but does not otherwise disturb\n  concentration. A silence spell has no effect on a mental alarm.\n  \\emph{Audible Alarm:} An audible alarm produces the sound of a hand bell, and\n  anyone within 60 feet of the warded area can hear it clearly. Reduce the\n  distance by 10 feet for each interposing closed door and by 20 feet for each\n  substantial interposing wall.  In quiet conditions, the ringing can be heard\n  faintly as far as 180 feet away. The sound lasts for 1 round. Creatures\n  within a silence spell cannot hear the ringing.  Ethereal or astral creatures\n  do not trigger the alarm.  \\Spell{Alarm} can be made permanent with a\n  \\Spell{permanency} spell."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS_DIVINE_FOCUS
+material {
+  use: "focus"
+  component: "tiny bell"
+  component: "very fine silver wire"
+}
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "20-ft.-radius emanation centered on a point in space"
+duration {
+  duration {
+    hours: 2
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

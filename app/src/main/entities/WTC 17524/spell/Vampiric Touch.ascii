@@ -1,0 +1,43 @@
+template {
+  name: "Vampiric Touch"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 298
+      high: 298
+    }
+  }
+  world: "Generic"
+  description: "You must succeed on a melee touch attack.  Your touch deals 1d6 points of\n  damage per two caster levels (maximum 10d6). You gain temporary hit points\n  equal to the damage you deal. However, you can\'t gain more than the subject\'s\n  current hit points +10, which is enough to kill the subject.  The temporary\n  hit points disappear 1 hour later."
+}
+school: NECROMANCY
+summary: "Touch, [[min(10, $level / 2)]]d6 damage, gained as temporary hp, disappear after 1 hour."
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living creature touched"
+duration {
+  duration_description: "Instantaneous/1 hour"
+  duration {
+  }
+  additional_duration {
+  }
+}

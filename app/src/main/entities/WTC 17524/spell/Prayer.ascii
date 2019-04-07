@@ -1,0 +1,46 @@
+template {
+  name: "Prayer"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 264
+      high: 264
+    }
+  }
+  world: "Generic"
+  description: "You bring special favor upon yourself and your allies while bringing\n  disfavor to your enemies. You and your each of your allies gain a +1 luck\n  bonus on attack rolls, weapon damage rolls, saves, and skill checks, while\n  each of your foes takes a \342\200\232\303\204\303\2541 penalty on such rolls."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "For $level rounds all allies within 40-ft radius up to 40 ft away gain a +1 lock bonus to attack, damage, saves, skill checks, while foes take a -1 penalty."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: PALADIN
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "All allies and foes within a 40-ft radius burst centered on you"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

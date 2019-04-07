@@ -1,0 +1,48 @@
+template {
+  name: "Wall of Force"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 298
+      high: 299
+    }
+  }
+  world: "Generic"
+  description: "A wall of force spell creates an invisible wall of force. The wall cannot\n  move, it is immune to damage of all kinds, and it is unaffected by most\n  spells, including dispel magic. However, disintegrate immediately destroys\n  it, as does a rod of cancellation, a sphere of annihilation, or a\n  Mordenkainen\'s disjunction spell. Breath weapons and spells cannot pass\n  through the wall in either direction, although dimension door, teleport, and\n  similar effects can bypass the barrier.  It blocks ethereal creatures as well\n  as material ones (though ethereal creatures can usually get around the wall\n  by floating under or over it through material floors and ceilings). Gaze\n  attacks can operate through a wall of force.  The caster can form the wall\n  into a flat, vertical plane whose area is up to one 10foot square per\n  level. The wall must be continuous and unbroken when formed. If its surface\n  is broken by any object or creature, the spell fails.  Wall of force can be\n  made permanent with a permanency spell.  Material Component: A pinch of\n  powder made from a clear gem."
+}
+school: EVOACATION
+summary: "Create an invisible wall of force of $level 10-ft squares within [[25 + (5 * ($level / 2))]] ft for $level rounds (D)."
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Wall whose area is up to one 10-ft square/level"
+}
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

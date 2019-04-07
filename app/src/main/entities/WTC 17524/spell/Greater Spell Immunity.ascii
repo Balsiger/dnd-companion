@@ -1,0 +1,35 @@
+template {
+  name: "Greater Spell Immunity"
+  synonym: "Spell Immunity, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 282
+      high: 282
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like spell immunity, except the immunity applies to\n  spells of 8th level or lower.  A creature can have only one spell immunity or\n  greater spell immunity spell in effect on it at a time."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 8
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

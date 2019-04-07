@@ -1,0 +1,49 @@
+template {
+  name: "Spell Resistance"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 282
+      high: 282
+    }
+  }
+  world: "Generic"
+  description: "The creature gains spell resistance equal to 12 + your caster level."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: MAGIC
+  level: 5
+}
+level {
+  spell_class: PROTECTION
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

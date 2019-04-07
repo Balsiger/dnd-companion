@@ -1,0 +1,60 @@
+template {
+  name: "Elemental Swarm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 226
+      high: 226
+    }
+  }
+  world: "Generic"
+  description: "This spell opens a portal to an Elemental Plane and summons elementals from\n  it. A druid can choose the plane (Air, Earth, Fire, or Water); a cleric opens\n  a portal to the plane matching his domain.  When the spell is complete, 2d4\n  Large elementals appear. Ten minutes later, 1d4 Huge elementals appear. Ten\n  minutes after that, one greater elemental appears. Each elemental has maximum\n  hit points per HD. Once these creatures appear, they serve you for the\n  duration of the spell.  The elementals obey you explicitly and never attack\n  you, even if someone else manages to gain control over them. You do not need\n  to concentrate to maintain control over the elementals. You can dismiss them\n  singly or in groups at any time.  When you use a summoning spell to summon an\n  air, earth, fire, or water creature, it is a spell of that type. For example,\n  elemental swarm is a fire spell when you cast it to summon fire elementals\n  and a water spell when you use it to summon water elementals."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+descriptor: SEE_TEXT
+level {
+  spell_class: AIR
+  level: 9
+}
+level {
+  spell_class: DRUID
+  level: 9
+}
+level {
+  spell_class: EARTH
+  level: 9
+}
+level {
+  spell_class: FIRE
+  level: 9
+}
+level {
+  spell_class: WAR
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Two or more summoned creatures no two of which can be more than 30 ft apart"
+}
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,58 @@
+template {
+  name: "Freedom of Movement"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 233
+      high: 233
+    }
+  }
+  world: "Generic"
+  description: "This spell enables you or a creature you touch to move and attack normally\n  for the duration of the spell, even under the influence of magic that usually\n  impedes movement, such as paralysis, solid fog, slow, and web. The subject\n  automatically succeeds on any grapple check made to resist a grapple attempt,\n  as well as on grapple checks or Escape Artist checks made to escape a grapple\n  or a pin.  The spell also allows the subject to move and attack normally\n  while underwater, even with slashing weapons such as axes and swords or with\n  bludgeoning weapons such as flails, hammers, and maces, provided that the\n  weapon is wielded in the hand rather than hurled. The freedom of movement\n  spell does not, however, allow water breathing.  Material Component: A\n  leather thong, bound around the arm or a similar appendage."
+}
+school: ABJURATION
+summary: "Touch, [[10 * $level]] min, move and attack normally (combats paralysis, solid fog, slow, web, resist grapples, escape pin, underwater)."
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: DRUID
+  level: 4
+}
+level {
+  spell_class: LUCK
+  level: 4
+}
+level {
+  spell_class: RANGER
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL_OR_TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You or creature touched"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,53 @@
+template {
+  name: "Comprehend Languages"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 212
+      high: 212
+    }
+  }
+  world: "Generic"
+  description: "You can understand the spoken words of creatures or read otherwise\n  incomprehensible written messages. In either case, you must touch the\n  creature or the writing.  The ability to read does not necessarily impart\n  insight into the material, merely its literal meaning. The spell enables you\n  to understand or read an unknown language, not speak or write it.  Written\n  material can be read at the rate of one page (250 words) per minute.  Magical\n  writing cannot be read, though the spell reveals that it is magical, but\n  comprehend languages is often useful when deciphering treasure maps. This\n  spell can be foiled by certain warding magic (such as the secret page and\n  illusory script spells). It does not decipher codes or reveal messages\n  concealed in otherwise normal text.  Comprehend languages can be made\n  permanent with a permanency spell.  Arcane Material Component: A pinch of\n  soot and a few grains of salt."
+}
+school: DIVINATION
+summary: "You understand spoken and written languages for [[$level * 10] minutes."
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,50 @@
+template {
+  name: "Seeming"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 275
+      high: 275
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like disguise self, except that you can change the\n  appearance of other people as well. Affected creatures resume their normal\n  appearances if slain.  Unwilling targets can negate the spell\'s effect on\n  them by making Will saves or with spell resistance."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature per two levels, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+    hours: 12
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

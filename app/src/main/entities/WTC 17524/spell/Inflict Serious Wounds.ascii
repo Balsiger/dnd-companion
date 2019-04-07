@@ -1,0 +1,34 @@
+template {
+  name: "Inflict Serious Wounds"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 244
+      high: 244
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like inflict light wounds, except that you deal 3d8\n  points of damage +1 point per caster level (maximum +15)."
+}
+school: NECROMANCY
+summary: "Deal 3d8 + [[min(15, $level)]] damage with a successful touch attack (or heal undead)."
+level {
+  spell_class: CLERIC
+  level: 3
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

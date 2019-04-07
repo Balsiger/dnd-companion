@@ -1,0 +1,44 @@
+template {
+  name: "Shocking Grasp"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 279
+      high: 279
+    }
+  }
+  world: "Generic"
+  description: "Your successful melee touch attack deals 1d6 points of electricity damage\n  per caster level (maximum 5d6). When delivering the jolt, you gain a +3 bonus\n  on attack rolls if the opponent is wearing metal armor (or made out of metal,\n  carrying a lot of metal, or the like)."
+}
+school: EVOACATION
+summary: "Touch, [[min(5, $level)]]d6 electricity damage, +3 to attack if opponent wears metal armor."
+descriptor: ELECTRICITY
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature or object touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

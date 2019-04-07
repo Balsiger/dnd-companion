@@ -1,0 +1,42 @@
+template {
+  name: "Vision"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 298
+      high: 298
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like legend lore, except that it works more quickly but\n  produces some strain on you. You pose a question about some person, place, or\n  object, then cast the spell. If the person or object is at hand or if you are\n  in the place in question, you receive a vision about it by succeeding on a\n  caster level check (1d20 +1 per caster level; maximum +25) against DC 20. If\n  only detailed information on the person, place, or object is known, the DC is\n  25, and the information gained is incomplete. If only rumors are known, the\n  DC is 30, and the information gained is vague.  XP Cost: 100 XP."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+components: EXPERIENCE_POINTS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,44 @@
+template {
+  name: "Symbol of Fear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 290
+      high: 290
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like symbol of death, except that all creatures within\n  60 feet of the symbol of fear instead become panicked for 1 round per caster\n  level.  Note: Magic traps such as symbol of fear are hard to detect and\n  disable. A rogue (only) can use the Search skill to find a symbol of fear and\n  Disable Device to thwart it. The DC in each case is 25 + spell level, or 31\n  for symbol of fear.  Material Component: Mercury and phosphorus, plus\n  powdered diamond and opal with a total value of at least 1,000 gp."
+}
+school: NECROMANCY
+summary: "$undefined$"
+descriptor: FEAR
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

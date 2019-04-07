@@ -1,0 +1,40 @@
+template {
+  name: "Greater Shadow Evocation"
+  synonym: "Shadow Evocation, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 277
+      high: 277
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like shadow evocation, except that it enables you to\n  create partially real, illusory versions of sorcerer or wizard evocation\n  spells of 7th level or lower. If recognized as a greater shadow evocation, a\n  damaging spell deals only threefifths (60%) damage."
+}
+school: ILLUSION
+subschool: SHADOW
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,42 @@
+template {
+  name: "Restoration"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 272
+      high: 272
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like lesser restoration, except that it also dispels\n  negative levels and restores one experience level to a creature who has had a\n  level drained. The drained level is restored only if the time since the\n  creature lost the level is equal to or less than one day per caster\n  level. Thus, if a 10th-level character has been struck by a wight and drained\n  to 9th level, restoration brings the character up to exactly the minimum\n  number of experience points necessary to restore him to 10th level (45,000\n  XP), gaining him an additional Hit Die and level functions accordingly.\n  Restoration cures all temporary ability damage, and it restores all points\n  permanently drained from a single ability score (your choice if more than one\n  is drained).  It also eliminates any fatigue or exhaustion suffered by the\n  target.  Restoration does not restore levels or Constitution points lost due\n  to death.  Material Component: Diamond dust worth 100 gp that is sprinkled\n  over the target."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: PALADIN
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,50 @@
+template {
+  name: "Continual Flame"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 213
+      high: 213
+    }
+  }
+  world: "Generic"
+  description: "A flame, equivalent in brightness to a torch, springs forth from an object\n  that you touch. The effect looks like a regular flame, but it creates no heat\n  and doesn\342\200\232\303\204\303\264t use oxygen. A continual flame can be covered and hidden but not\n  smothered or quenched.  Light spells counter and dispel darkness spells of an\n  equal or lower level.  Material Component: You sprinkle ruby dust (worth 50\n  gp) on the item that is to carry the flame."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: LIGHT
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+  description: "Magical heatless flame"
+}
+target: "Object touched"
+duration {
+  duration_description: "Permanent"
+  duration {
+  }
+  additional_duration {
+  }
+}

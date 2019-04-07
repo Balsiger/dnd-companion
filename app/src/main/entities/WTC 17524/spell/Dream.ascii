@@ -1,0 +1,49 @@
+template {
+  name: "Dream"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 225
+      high: 225
+    }
+  }
+  world: "Generic"
+  description: "You, or a messenger touched by you, sends a phantasmal message to others in\n  the form of a dream. At the beginning of the spell, you must name the\n  recipient or identify him or her by some title that leaves no doubt as to\n  identity. The messenger then enters a trance, appears in the intended\n  recipient\342\200\232\303\204\303\264s dream, and delivers the message. The message can be of any\n  length, and the recipient remembers it perfectly upon waking. The\n  communication is one-way. The recipient cannot ask questions or offer\n  information, nor can the messenger gain any information by observing the\n  dreams of the recipient.  Once the message is delivered, the messenger\342\200\232\303\204\303\264s mind\n  returns instantly to its body.  The duration of the spell is the time\n  required for the messenger to enter the recipient\342\200\232\303\204\303\264s dream and deliver the\n  message.  If the recipient is awake when the spell begins, the messenger can\n  choose to wake up (ending the spell) or remain in the trance. The messenger\n  can remain in the trance until the recipient goes to sleep, then enter the\n  recipient\342\200\232\303\204\303\264s dream and deliver the message as normal. A messenger that is\n  disturbed during the trance comes awake, ending the spell.  Creatures who\n  don\342\200\232\303\204\303\264t sleep (such as elves, but not half-elves) or don\342\200\232\303\204\303\264t dream cannot be\n  contacted by this spell.  The messenger is unaware of its own surroundings or\n  of the activities around it while in the trance. It is defenseless both\n  physically and mentally (always fails any saving throw) while in the\n  trance."
+}
+school: ILLUSION
+subschool: PHANTASM
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: UNLIMITED
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature touched"
+duration {
+  duration_description: "See Text"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,40 @@
+template {
+  name: "Mass Cure Serious Wounds Mass"
+  synonym: "Cure Serious Wounds, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 216
+      high: 216
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like mass cure light wounds, except that it cures 3d8\n  points of damage +1 point per caster level (maximum +35)."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: DRUID
+  level: 8
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

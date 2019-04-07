@@ -1,0 +1,19 @@
+template {
+  name: "Use Rope"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 86
+      high: 86
+    }
+  }
+  world: "Generic"
+  description: "With this skill, you can make firm knots, undo tricky knots, and bind\n  prisoners with ropes."
+}
+ability: DEXTERITY
+action: "Varies. Throwing a grappling hook is a standard action                     that provokes an attack of opportunity. Tying a knot,                     tying a special knot, or tying a rope around yourself                     one-handed is a full-round action that provokes an attack                     of opportunity. Splicing two ropes together takes 5                     minutes. Binding a character takes 1 minute."
+special: "A silk rope (page 127) gives you a +2 cir- cumstance                     bonus on Use Rope checks. If you cast an animate rope                     spell on a rope, you get a +2 circumstance bonus on any                     Use Rope checks you make when using that rope. These                     bonuses stack.  If you have the Deft Hands feat, you get a                     +2 bonus on Use Rope checks."
+synergy {
+  name: "escape artist"
+  condition: "binding someone"
+}

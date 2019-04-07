@@ -1,0 +1,45 @@
+template {
+  name: "Unhallow"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 297
+      high: 297
+    }
+  }
+  world: "Generic"
+  description: "Unhallow makes a particular site, building, or structure an unholy\n  site. This has three major effects.  First, the site or structure is guarded\n  by a magic circle against good effect.  Second, all turning checks made to\n  turn undead take a \342\200\232\303\204\303\2544 penalty, and turning checks to rebuke undead gain a +4\n  profane bonus. Spell resistance does not apply to this effect. (This\n  provision does not apply to the druid version of the spell.)  Finally, you\n  may choose to fix a single spell effect to the unhallowed site. The spell\n  effect lasts for one year and functions throughout the entire site,\n  regardless of its normal duration and area or effect. You may designate\n  whether the effect applies to all creatures, creatures that share your faith\n  or alignment, or creatures that adhere to another faith or alignment. For\n  example, you may create a bless effect that aids all creatures of like\n  alignment or faith in the area, or a bane effect that hinders creatures of\n  the opposite alignment or an enemy faith. At the end of the year, the chosen\n  effect lapses, but it can be renewed or replaced simply by casting unhallow\n  again.  Spell effects that may be tied to an unhallowed site include aid,\n  bane, bless, cause fear, darkness, daylight, death ward, deeper darkness,\n  detect magic, detect good, dimensional anchor, discern lies, dispel magic,\n  endure elements, freedom of movement, invisibility purge, protection from\n  energy, remove fear, resist energy, silence, tongues, and zone of truth.\n  Saving throws and spell resistance might apply to these spells\' effects. (See\n  the individual spell descriptions for details.)  An area can receive only one\n  unhallow spell (and its associated spell effect) at a time.  Unhallow\n  counters but does not dispel hallow.  Material Component: Herbs, oils, and\n  incense worth at least 1,000 gp, plus 1,000 gp per level of the spell to be\n  tied to the unhallowed area."
+}
+school: EVOACATION
+summary: "After casting for 24 hour, within 40 ft from the touched point, guard by magic circle against good, -4 to turning, +4 to rebuke, associate az spell with the area for one year."
+descriptor: EVIL
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: DRUID
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "40-ft radius emanating from the touched point"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

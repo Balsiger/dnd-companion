@@ -1,0 +1,20 @@
+template {
+  name: "Climb"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 69
+      high: 69
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to scale a cliff, to get to the window on the second story of\n  a wizard\342\200\232\303\204\303\264s tower, or to climb out of a pit after falling through a\n  trapdoor."
+}
+ability: STRENGTH
+action: "Climbing is part of movement, so it\342\200\232\303\204\303\264s generally part of a                     move action (and may be combined with other types of                     movement in a move action). Each move action that includes                     any climbing requires a separate Climb check. Catching                     yourself or another falling character doesn\342\200\232\303\204\303\264t take an                     action."
+special: "You can use a rope to haul a character upward (or lower a                     character) through sheer strength. You can lift double                     your maximum load in this manner.  A halfling has a +2                     racial bonus on Climb checks because half- lings are agile                     and surefooted.  The master of a lizard familiar (see the                     Familiars sidebar, page 52) gains a +3 bonus on Climb                     checks.  If you have the Athletic feat, you get a +2 bonus                     on Climb checks.  A creature with a climb speed (such as a                     monstrous spider, or a character under the effect of a                     spider climb spell) has a +8 racial bonus on all Climb                     checks. The creature must make a Climb check to climb any                     wall or slope with a DC higher than 0, but it always can                     choose to take 10 (see Checks without Rolls, page 65),                     even if rushed or threatened while climbing. If a creature                     with a climb speed chooses an accelerated climb (see                     above), it moves at double its climb speed (or at its land                     speed, whichever is slower) and makes a single Climb check                     at a \342\200\232\303\204\303\2545 penalty. Such a creature retains its Dexterity                     bonus to Armor Class (if any) while climbing, and                     opponents get no special bonus to their attacks against                     it. It cannot, however, use the run action while                     climbing."
+restriction: ARMOR_CHECK_PENALTY
+synergy {
+  name: "use rope"
+  condition: "climbing a rope"
+}

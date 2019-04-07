@@ -1,0 +1,47 @@
+template {
+  name: "Permanent Image"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 260
+      high: 260
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like silent image, except that the figment includes\n  visual, auditory, olfactory, and thermal elements, and the spell is\n  permanent. By concentrating, you can move the image within the limits of the\n  range, but it is static while you are not concentrating.  Material Component:\n  A bit of fleece plus powdered jade worth 100 gp."
+}
+school: ILLUSION
+subschool: FIGMENT
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "Figment that cannot extend beyond a 20-ft cube + one 10-ft cube/level (S)"
+}
+duration {
+  duration_description: "Permanent"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

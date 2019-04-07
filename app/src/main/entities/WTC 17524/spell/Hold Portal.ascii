@@ -1,0 +1,45 @@
+template {
+  name: "Hold Portal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 241
+      high: 241
+    }
+  }
+  world: "Generic"
+  description: "This spell magically holds shut a door, gate, window, or shutter of wood,\n  metal, or stone. The magic affects the portal just as if it were securely\n  closed and normally locked. A knock spell or a successful dispel magic spell\n  can negate a hold portal spell.  For a portal affected by this spell, add 5\n  to the normal DC for forcing open the portal."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One portal, up to 20 sq. ft/level"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

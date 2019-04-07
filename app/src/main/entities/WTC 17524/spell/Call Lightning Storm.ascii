@@ -1,0 +1,36 @@
+template {
+  name: "Call Lightning Storm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 207
+      high: 207
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like call lightning, except that each bolt deals 5d6\n  points of electricity damage (or 5d10 if created outdoors in a stormy area),\n  and you may call a maximum of 15 bolts."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: ELECTRICITY
+level {
+  spell_class: DRUID
+  level: 5
+}
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

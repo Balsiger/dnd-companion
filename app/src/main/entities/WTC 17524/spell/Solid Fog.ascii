@@ -1,0 +1,44 @@
+template {
+  name: "Solid Fog"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 281
+      high: 281
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like fog cloud, but in addition to obscuring sight, the\n  solid fog is so thick that any creature attempting to move through it\n  progresses at a speed of 5 feet, regardless of its normal speed, and it takes\n  a \342\200\232\303\204\303\2542 penalty on all melee attack and melee damage rolls. The vapors prevent\n  effective ranged weapon attacks (except for magic rays and the like). A\n  creature or object that falls into solid fog is slowed, so that each 10 feet\n  of vapor that it passes through reduces falling damage by 1d6. A creature\n  can\'t take a 5-foot step while in solid fog.  However, unlike normal fog,\n  only a severe wind (31+ mph) disperses these vapors, and it does so in 1\n  round.  Solid fog can be made permanent with a permanency spell. A permanent\n  solid fog dispersed by wind reforms in 10 minutes.  Material Component: A\n  pinch of dried, powdered peas combined with powdered animal hoof."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "For $level min create fog in 20 ft spread up to [[50 + ($level * 5)]] ft away that obsucres after 5 ft (concealment before that) and reduces speed to 5 ft, -2 on melee attack and damage, prevent ranged attack (except rays and the like), no 5 ft steps."
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

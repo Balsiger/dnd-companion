@@ -1,0 +1,48 @@
+template {
+  name: "Remove Disease"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 271
+      high: 271
+    }
+  }
+  world: "Generic"
+  description: "Remove disease cures all diseases that the subject is suffering from. The\n  spell also kills parasites, including green slime and others. Certain special\n  diseases may not be countered by this spell or may be countered only by a\n  caster of a certain level or higher.  Note: Since the spell\'s duration is\n  instantaneous, it does not prevent reinfection after a new exposure to the\n  same disease at a later date."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

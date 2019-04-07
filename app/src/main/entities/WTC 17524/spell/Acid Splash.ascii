@@ -1,0 +1,44 @@
+template {
+  name: "Acid Splash"
+  synonym: "Splash, Acid"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 196
+      high: 196
+    }
+  }
+  world: "Generic"
+  description: "You fire a small orb of acid at the target.  You must succeed on a ranged\n  touch attack to hit your target. The orb deals 1d3 points of acid damage."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "$undefined$"
+descriptor: ACID
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "One missile of acid"
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

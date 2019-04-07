@@ -1,0 +1,50 @@
+template {
+  name: "Blur"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 206
+      high: 206
+    }
+  }
+  world: "Generic"
+  description: "The subject\342\200\232\303\204\303\264s outline appears blurred, shifting and wavering. This\n  distortion grants the subject concealment (20% miss chance).  A see\n  invisibility spell does not counteract the blur effect, but a true seeing\n  spell does.  Opponents that cannot see the subject ignore the spell\342\200\232\303\204\303\264s effect\n  (though fighting an unseen opponent carries penalties of its own; see page\n  151).  The subject of a blur spell."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "$level min (D), creature touched gets blurry, givin concealment (20% miss chance)."
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

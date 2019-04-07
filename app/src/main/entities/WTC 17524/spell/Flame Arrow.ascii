@@ -1,0 +1,46 @@
+template {
+  name: "Flame Arrow"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 231
+      high: 231
+    }
+  }
+  world: "Generic"
+  description: "You turn ammunition (such as arrows, bolts, shuriken, and stones) into fiery\n  projectiles. Each piece of ammunition deals an extra 1d6 points of fire\n  damage to any target it hits. A flaming projectile can easily ignite a\n  flammable object or structure, but it won\342\200\232\303\204\303\264t ignite a creature it strikes.\n  Material Component: A drop of oil and a small piece of flint."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+descriptor: FIRE
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Fifty projectiles, all of which must be in contact with each other at the time of casting"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,4 @@
+template {
+  name: "Knowledge The Planes"
+  base: "knowledge"
+}

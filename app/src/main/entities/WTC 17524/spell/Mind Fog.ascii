@@ -1,0 +1,49 @@
+template {
+  name: "Mind Fog"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 253
+      high: 253
+    }
+  }
+  world: "Generic"
+  description: "Mind fog produces a bank of thin mist that weakens the mental resistance of\n  those caught in it. Creatures in the mind fog take a \342\200\232\303\204\303\25410 competence penalty\n  on Wisdom checks and Will saves. (A creature that successfully saves against\n  the fog is not affected and need not make further saves even if it remains in\n  the fog.) Affected creatures take the penalty as long as they remain in the\n  fog and for 2d6 rounds thereafter. The fog is stationary and lasts for 30\n  minutes (or until dispersed by wind).  A moderate wind (11+ mph) disperses\n  the fog in four rounds; a strong wind (21+ mph) disperses the fog in 1 round.\n  The fog is thin and does not significantly hamper vision."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "Within [[50 + ($level * 5)]] ft fog spreads in 20-ft cube for 30 min and 2d6 rounds; creatures within Will DC $dc or -10 competence penalty on Wisdom checks and Will saves."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Fog spreads in 20-ft radius 20 ft high"
+}
+duration {
+  duration_description: "30 minutes and 2d6 rounds"
+  duration {
+  }
+  additional_duration {
+  }
+}

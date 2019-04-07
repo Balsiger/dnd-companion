@@ -1,0 +1,51 @@
+template {
+  name: "Blade Barrier"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 205
+      high: 205
+    }
+  }
+  world: "Generic"
+  description: "An immobile, vertical curtain of whirling blades shaped of pure force\n  springs into existence. Any creature passing through the wall takes 1d6\n  points of damage per caster level (maximum 15d6), with a Reflex save for half\n  damage.  If you evoke the barrier so that it appears where creatures are,\n  each creature takes damage as if passing through the wall. Each such creature\n  can avoid the wall (ending up on the side of its choice) and thus take no\n  damage by making a successful Reflex save.  A blade barrier provides cover\n  (+4 bonus to AC, +2 bonus on Reflex saves) against attacks made through it."
+}
+school: EVOACATION
+summary: "Create an immobile wall ([[20 * $level]] ft long) or ring ([[5 * $level]] ft radius) of barriars doing [[min(15, $level)]]d6 damage (Ref DC $dc for half for passing or none for caught)."
+descriptor: FORCE
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: GOOD
+  level: 6
+}
+level {
+  spell_class: WAR
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Wall of whirling blades up to 20 ft long/level or a ringed wall of whirling blades with a radius of up to 5 ft per two levels with either form 20 ft high"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

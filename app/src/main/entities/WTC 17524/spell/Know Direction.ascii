@@ -1,0 +1,41 @@
+template {
+  name: "Know Direction"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 246
+      high: 246
+    }
+  }
+  world: "Generic"
+  description: "You instantly know the direction of north from your current position. The\n  spell is effective in any environment in which \342\200\232\303\204\303\272north\342\200\232\303\204\303\271 exists, but it may not\n  work in extraplanar settings. Your knowledge of north is correct at the\n  moment of casting, but you can get lost again within moments if you don\'t\n  find some external reference point to help you keep track of direction."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+}
+level {
+  spell_class: DRUID
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

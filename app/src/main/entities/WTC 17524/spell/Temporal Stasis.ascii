@@ -1,0 +1,44 @@
+template {
+  name: "Temporal Stasis"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 293
+      high: 293
+    }
+  }
+  world: "Generic"
+  description: "You must succeed on a melee touch attack.  You place the subject into a\n  state of suspended animation. For the creature, time ceases to flow and its\n  condition becomes fixed. The creature does not grow older. Its body functions\n  virtually cease, and no force or effect can harm it. This state persists\n  until the magic is removed (such as by a successful dispel magic spell or a\n  freedom spell).  Material Component: A powder composed of diamond, emerald,\n  ruby, and sapphire dust with a total value of at least 5,000 gp.  Teleport On\n  Off Similar Familiarity Target Target Area Mishap Very familiar 01\342\200\232\303\204\303\25497 98\342\200\232\303\204\303\25499\n  100 \342\200\232\303\204\303\256 Studied carefully 01\342\200\232\303\204\303\25494 95\342\200\232\303\204\303\25497 98\342\200\232\303\204\303\25499 100 Seen casually 01\342\200\232\303\204\303\25488 89\342\200\232\303\204\303\25494 95\342\200\232\303\204\303\25498\n  99\342\200\232\303\204\303\254100 Viewed once 01\342\200\232\303\204\303\25476 77\342\200\232\303\204\303\25488 89\342\200\232\303\204\303\25496 97\342\200\232\303\204\303\254100 False destination (1d20+80) \342\200\232\303\204\303\256 \342\200\232\303\204\303\256\n  81\342\200\232\303\204\303\25492 93\342\200\232\303\204\303\254100"
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "Permanent"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,46 @@
+template {
+  name: "Mordenkainen\'s Private Sanctum"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 256
+      high: 256
+    }
+  }
+  world: "Generic"
+  description: "This spell ensures privacy. Anyone looking into the area from outside sees\n  only a dark, foggy mass. Darkvision cannot penetrate it.  No sounds, no\n  matter how loud, can escape the area, so nobody can eavesdrop from\n  outside. Those inside can see out normally. Divination (scrying) spells\n  cannot perceive anything within the area, and those; within are immune to\n  detect thoughts. The ward prevents speech between those inside and those\n  outside (because it blocks sound), but it does not prevent other\n  communication, such as a sending or message spell, or telepathic\n  communication, such as that between a wizard and her familiar.  The spell\n  does not prevent creatures or objects from moving into and out of the area.\n  Mordenkainen\'s private sanctum can be made permanent with a permanency spell.\n  Material Component: A thin sheet of lead, a piece of opaque glass, a wad of\n  cotton or cloth, and powdered chrysolite."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "30-ft cube/level (S)"
+duration {
+  duration {
+    hours: 24
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

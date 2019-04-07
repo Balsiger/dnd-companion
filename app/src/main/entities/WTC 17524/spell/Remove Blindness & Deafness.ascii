@@ -1,0 +1,45 @@
+template {
+  name: "Remove Blindness & Deafness"
+  synonym: "Remove Blindness/Deafness"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 270
+      high: 270
+    }
+  }
+  world: "Generic"
+  description: "Remove blindness/deafness cures blindness or deafness (your choice), whether\n  the effect is normal or magical in nature. The spell does not restore ears or\n  eyes that have been lost, but it repairs them if they are damaged.  Remove\n  blindness/deafness counters and dispels blindness/deafness."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: PALADIN
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

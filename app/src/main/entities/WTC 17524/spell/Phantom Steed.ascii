@@ -1,0 +1,50 @@
+template {
+  name: "Phantom Steed"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 260
+      high: 261
+    }
+  }
+  world: "Generic"
+  description: "You conjure a Large, quasi-real, horselike creature. The steed can be ridden\n  only by you or by the one person for whom you specifically created the\n  mount. A phantom steed has a black head and body, gray mane and tail, and\n  smoke-colored, insubstantial hooves that make no sound. It has what seems to\n  be a saddle, bit, and bridle. It does not fight, but animals shun it and\n  refuse to attack it.  The mount has an AC of 18 (\342\200\232\303\204\303\2541 size, +4 natural armor,\n  +5 Dex) and 7 hit points +1 hit point per caster level. If it loses all its\n  hit points, the phantom steed disappears. A phantom steed has a speed of 20\n  feet per caster level, to a maximum of 240 feet. It can bear its rider\'s\n  weight plus up to 10 pounds per caster level.  These mounts gain certain\n  powers according to caster level. A mount\'s abilities include those of mounts\n  of lower caster levels. Thus, a mount created by a 12thlevel caster has the\n  8th, 10th, and 12th caster level abilities.  8th level The mount can ride\n  over; sandy, muddy, or even swampy ground without difficulty or decrease in\n  speed.  10th level The mount can use water walk; at will (as the spell, no\n  action required to activate this ability).  12th level The mount can use air\n  walk at; will (as the spell, no action required to activate this ability) for\n  up to 1 round at a time, after which it falls to the ground.  14th level The\n  mount can fly at its speed; (average maneuverability)."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One quasi-real horselike creature"
+}
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

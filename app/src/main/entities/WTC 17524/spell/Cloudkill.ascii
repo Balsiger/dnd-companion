@@ -1,0 +1,45 @@
+template {
+  name: "Cloudkill"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 210
+      high: 210
+    }
+  }
+  world: "Generic"
+  description: "This spell generates a bank of fog, similar to a fog cloud, except that its\n  vapors are yellowish green and poisonous. These vapors automatically kill any\n  living creature with 3 or fewer HD (no save). A living creature with 4 to 6\n  HD is slain unless it succeeds on a Fortitude save (in which case it takes\n  1d4 points of Constitution damage on your turn each round while in the\n  cloud). A living creature with 6 or more HD takes 1d4 points of Constitution\n  damage on your turn each round while in the cloud (a successful Fortitude\n  save halves this damage). Holding one\342\200\232\303\204\303\264s breath doesn\342\200\232\303\204\303\264t help, but creatures\n  immune to poison are unaffected by the spell.  Unlike a fog cloud, the\n  cloudkill moves away from you at 10 feet per round, rolling along the surface\n  of the ground. Figure out the cloud\342\200\232\303\204\303\264s new spread each round based on its new\n  point of origin, which is 10 feet farther away from the point of origin where\n  you cast the spell.  Because the vapors are heavier than air, they sink to\n  the lowest level of the land, even pouring down den or sinkhole openings;\n  thus, the spell is ideal for slaying hives of giant ants, for example. It\n  cannot penetrate liquids, nor can it be cast underwater."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "In a 20 ft radius up to [[100 + (10 * level)]] ft away a bank of fog is created for $level minutes; creatures -3 HD killed (no save), 4 - 6 HD For DC $dc for 1d4 Con damage per round or killed, 6+ HD 1d4 Con damage per round or For DC $dc for half. Holding breath does not help, but poison immunity does. Cloud moves 10 ft away from you each round."
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Cloud spreads in 20-ft radius 20 ft high"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,40 @@
+template {
+  name: "Heal Mount"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 239
+      high: 239
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like heal, but it affects only the paladin\342\200\232\303\204\303\264s special\n  mount (typically a warhorse)."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: PALADIN
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Your mount touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

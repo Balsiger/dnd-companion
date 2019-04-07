@@ -1,0 +1,57 @@
+template {
+  name: "Cat\'s Grace"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 208
+      high: 208
+    }
+  }
+  world: "Generic"
+  description: "The transmuted creature becomes more graceful, agile, and coordinated. The\n  spell grants a +4 enhancement bonus to Dexterity, adding the usual benefits\n  to AC, Reflex saves, and other uses of the Dexterity modifier.  Material\n  Component: A pinch of cat fur."
+}
+school: TRANSMUTATION
+summary: "touched, $level min, DEX +4 enhancement."
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: RANGER
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

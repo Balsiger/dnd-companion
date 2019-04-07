@@ -1,0 +1,45 @@
+template {
+  name: "Sound Burst"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 281
+      high: 281
+    }
+  }
+  world: "Generic"
+  description: "You blast an area with a tremendous cacophony. Every creature in the area\n  takes 1d8 points of sonic damage and must succeed on a Fortitude save to\n  avoid being stunned for 1 round.\n\n  Creatures that cannot hear are not stunned but are still damaged.\n\n  Arcane Focus: A musical instrument."
+}
+school: EVOACATION
+summary: "[[25 + (5 * ($level/2))]] ft, 10-ft spread, 1d8 sonic dmage and Fort DC [[10 + 2 + $ability]] or be stunned for 1 round."
+descriptor: SONIC
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: CLERIC
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS_DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "10-ft-radius spread"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

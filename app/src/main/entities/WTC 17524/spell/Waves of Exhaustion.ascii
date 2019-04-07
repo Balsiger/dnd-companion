@@ -1,0 +1,42 @@
+template {
+  name: "Waves of Exhaustion"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 301
+      high: 301
+    }
+  }
+  world: "Generic"
+  description: "Waves of negative energy cause all living creatures in the spell\'s area to\n  become exhausted. This spell has no effect on a creature that is already\n  exhausted."
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped burst"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

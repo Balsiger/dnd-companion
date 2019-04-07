@@ -1,0 +1,50 @@
+template {
+  name: "Crushing Despair"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 215
+      high: 215
+    }
+  }
+  world: "Generic"
+  description: "An invisible cone of despair causes great sadness in the subjects. Each\n  affected creature takes a \342\200\232\303\204\303\2542 penalty on attack rolls, saving throws, ability\n  checks, skill checks, and weapon damage rolls.  Crushing despair counters and\n  dispels good hope.  Material Component: A vial of tears."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped burst"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

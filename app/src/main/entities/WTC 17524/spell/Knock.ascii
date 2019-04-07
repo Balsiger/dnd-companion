@@ -1,0 +1,42 @@
+template {
+  name: "Knock"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 246
+      high: 246
+    }
+  }
+  world: "Generic"
+  description: "The knock spell opens stuck, barred, locked, held, or arcane locked\n  doors. It opens secret doors, as well as locked or trickopening boxes or\n  chests. It also loosens welds, shackles, or chains (provided they serve to\n  hold closures shut). If used to open a arcane locked door, the spell does not\n  remove the arcane lock but simply suspends its functioning for 10 minutes. In\n  all other cases, the door does not relock itself or become stuck again on its\n  own. Knock does not raise barred gates or similar impediments (such as a\n  portcullis), nor does it affect ropes, vines, and the like. The effect is\n  limited by the area. A 3rd-level caster can cast a knock spell on a door of\n  30 square feet or less (for example, a standard 4-foot-by-7foot door). Each\n  spell can undo as many as two means of preventing egress. Thus if a door is\n  locked, barred, and held, or quadruple locked, opening it requires two knock\n  spells."
+}
+school: TRANSMUTATION
+summary: "Open stuck, barred, locked, held, or arcane locked door of up to [[10 * $level]] sq ft."
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One door, box, or chest with an area of up to 10 sq. ft/level"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,44 @@
+template {
+  name: "Scorching Ray"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 274
+      high: 274
+    }
+  }
+  world: "Generic"
+  description: "You blast your enemies with fiery rays. You may fire one ray, plus one\n  additional ray for every four levels beyond 3rd (to a maximum of three rays\n  at 11th level). Each ray requires a ranged touch attack to hit and deals 4d6\n  points of fire damage. The rays may be fired at the same or different\n  targets, but all bolts must be aimed at targets within 30 feet of each other\n  and fired simultaneously."
+}
+school: EVOACATION
+summary: "With a ranged touch attack up to [[25 + (5 * ($level))]] ft fire [[min(3, 1 + (($level - 3)/ 4))]] rays for 4d6 fire damage each."
+descriptor: FIRE
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or more rays"
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

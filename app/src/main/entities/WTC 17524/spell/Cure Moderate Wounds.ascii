@@ -1,0 +1,55 @@
+template {
+  name: "Cure Moderate Wounds"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 216
+      high: 216
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like cure light wounds, except that it cures 2d8 points\n  of damage +1 point per caster level (maximum +10)."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "Touched creature heals 2d8 +[[min(10, $level)]] hp."
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: CLERIC
+  level: 2
+}
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: HEALING
+  level: 2
+}
+level {
+  spell_class: PALADIN
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

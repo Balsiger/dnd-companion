@@ -1,0 +1,34 @@
+template {
+  name: "Inflict Moderate Wounds"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 244
+      high: 244
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like inflict light wounds, except that you deal 2d8\n  points of damage +1 point per caster level (maximum +10)."
+}
+school: NECROMANCY
+summary: "Touch attack deals 2d8 +[[min(10, $level)]] damage unless Will DC $dc."
+level {
+  spell_class: CLERIC
+  level: 2
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

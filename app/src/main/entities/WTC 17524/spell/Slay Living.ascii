@@ -1,0 +1,44 @@
+template {
+  name: "Slay Living"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 280
+      high: 280
+    }
+  }
+  world: "Generic"
+  description: "You can slay any one living creature. You must succeed on a melee touch\n  attack to touch the subject, and it can avoid death with a successful\n  Fortitude save. If it succeeds, it instead takes 3d6 points of damage +1\n  point per caster level. (Of course, the subject might die from damage even if\n  it succeeds on its save.)"
+}
+school: NECROMANCY
+summary: "Touch, subject killed unless Fort DC [[10 + 5 + $ability] for 3d6 +$level damage."
+descriptor: DEATH
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: DEATH
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living creature touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

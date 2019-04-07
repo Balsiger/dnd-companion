@@ -1,0 +1,60 @@
+template {
+  name: "Read Magic"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 269
+      high: 269
+    }
+  }
+  world: "Generic"
+  description: "By means of read magic, you can decipher magical inscriptions on\n  objects\342\200\232\303\204\303\256books, scrolls, weapons, and the like\342\200\232\303\204\303\256that would otherwise be\n  unintelligible. This deciphering does not normally invoke the magic contained\n  in the writing, although it may do so in the case of a cursed scroll.\n  Furthermore, once the spell is cast and you have read the magical\n  inscription, you are thereafter able to read that particular writing without\n  recourse to the use of read magic. You can read at the rate of one page (250\n  words) per minute. The spell allows you to identify a glyph of warding with a\n  DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft\n  check, or any symbol spell with a Spellcraft check (DC 10 + spell level).\n  Read magic can be made permanent with a permanency spell.  Focus: A clear\n  crystal or mineral prism."
+}
+school: DIVINATION
+summary: "[[10 * $level]] min, read scrolls and spellbooks."
+level {
+  spell_class: BARD
+}
+level {
+  spell_class: CLERIC
+}
+level {
+  spell_class: DRUID
+}
+level {
+  spell_class: PALADIN
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

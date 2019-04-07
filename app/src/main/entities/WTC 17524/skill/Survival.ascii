@@ -1,0 +1,36 @@
+template {
+  name: "Survival"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 83
+      high: 84
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to follow tracks, hunt wild game, guide a party safely\n  through frozen wastelands, identify signs that owlbears live nearby, predict\n  the weather, or avoid quicksand and other natural hazards."
+}
+ability: WISDOM
+action: "Varies. A single Survival check may represent activity                     over the course of hours or a full day. A Survival check                     made to find tracks is at least a full-round action, and                     it may take even longer at the DM\342\200\232\303\204\303\264s discretion.  Try                     Again: Varies. For getting along in the wild or for                     gaining the Fortitude save bonus noted in the table above,                     you make a Survival check once every 24 hours. The result                     of that check applies until the next check is made. To                     avoid getting lost or avoid natural hazards, you make a                     Survival check whenever the situation calls for one.                     Retries to avoid getting lost in a specific situation or                     to avoid a specific natural hazard are not allowed. For                     finding tracks, you can retry a failed check after 1 hour                     (outdoors) or 10 minutes(indoors) of searching."
+special: "If you have 5 or more ranks in Survival, you can                     automatically determine where true north lies in relation                     to yourself.  A ranger gains a bonus on Survival checks                     when using this skill to find or follow the tracks of a                     favored enemy (see page 47).  If you have the                     Self-Sufficient feat, you get a +2 bonus on Survival                     checks."
+restriction_text: "While anyone can use Survival to find tracks (regardless                     of the DC), or to follow tracks when the DC for the task                     is 10 or lower, only a ranger (or a character with the                     Track feat; see page 101) can use Survival to follow                     tracks when the task has a higher DC."
+synergy {
+  name: "knowledge dungeoneering"
+  condition: "underground"
+}
+synergy {
+  name: "knowledge nature"
+  condition: "aboveground in nature"
+}
+synergy {
+  name: "knowledge geography"
+  condition: "avoiding natural hazards or getting lost"
+}
+synergy {
+  name: "knowledge the planes"
+  condition: "on another plane"
+}
+synergy {
+  name: "search"
+  condition: "tracking"
+}

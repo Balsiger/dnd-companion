@@ -1,0 +1,47 @@
+template {
+  name: "Protection from Law"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 266
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like protection from evil, except that the deflection\n  and resistance bonuses apply to attacks from lawful creatures, and lawful\n  summoned creatures cannot touch the subject."
+}
+school: ABJURATION
+summary: "$undefined$"
+descriptor: CHAOTIC
+level {
+  spell_class: CHAOS
+  level: 1
+}
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

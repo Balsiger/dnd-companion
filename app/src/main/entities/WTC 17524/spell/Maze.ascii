@@ -1,0 +1,44 @@
+template {
+  name: "Maze"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 252
+      high: 252
+    }
+  }
+  world: "Generic"
+  description: "You banish the subject into an extradimensional labyrinth of force\n  planes. Each round on its turn, it may attempt a DC 20 Intelligence check to\n  escape the labyrinth as a full-round action. If the subject doesn\'t escape,\n  the maze disappears after 10 minutes, forcing the subject to leave.  On\n  escaping or leaving the maze, the subject reappears where it had been when\n  the maze spell was cast. If this location is filled with a solid object, the\n  subject appears in the nearest open space.  Spells and abilities that move a\n  creature within a plane, such as teleport and dimension door, do not help a\n  creature escape a maze spell, although a plane shift spell allows it to exit\n  to whatever plane is designated in that spell. Minotaurs are not affected by\n  this spell."
+}
+school: CONJURATION
+subschool: TELEPORTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration_description: "See Text"
+  duration {
+  }
+  additional_duration {
+  }
+}

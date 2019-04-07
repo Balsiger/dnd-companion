@@ -1,0 +1,40 @@
+template {
+  name: "Mass Enlarge Person"
+  synonym: "Enlarge Person, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 227
+      high: 227
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like enlarge person, except that it affects multiple\n  creatures."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One humanoid creature/level, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

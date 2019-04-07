@@ -1,0 +1,43 @@
+template {
+  name: "Touch of Fatigue"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 294
+      high: 294
+    }
+  }
+  world: "Generic"
+  description: "You channel negative energy through your touch, fatiguing the target. You\n  must succeed on a touch attack to strike a target.  The subject is\n  immediately fatigued for the spell\'s duration.  This spell has no effect on a\n  creature that is already fatigued. Unlike with normal fatigue, the effect\n  ends as soon as the spell\'s duration expires.  Material Component: A drop of\n  sweat."
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,52 @@
+template {
+  name: "Grease"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 237
+      high: 237
+    }
+  }
+  world: "Generic"
+  description: "A grease spell covers a solid surface with a layer of slippery grease. Any\n  creature in the area when the spell is cast must make a successful Reflex\n  save or fall. This save is repeated on your turn each round that the creature\n  remains within the area. A creature can walk within or through the area of\n  grease at half normal speed with a DC 10 Balance check. Failure means it\n  can\342\200\232\303\204\303\264t move that round (and must then make a Reflex save or fall), while\n  failure by 5 or more means it falls (see the Balance skill for details).  The\n  DM should adjust saving throws by circumstance. For example, a creature\n  charging down an incline that is suddenly greased has little chance to avoid\n  the effect, but its ability to exit the affected area is almost assured\n  (whether it wants to or not).  The spell can also be used to create a greasy\n  coating on an item\342\200\232\303\204\303\256a rope, ladder rungs, or a weapon handle, for instance.\n  Material objects not in use are always affected by this spell, while an\n  object wielded or employed by a creature receives a Reflex saving throw to\n  avoid the effect. If the initial saving throw fails, the creature immediately\n  drops the item. A saving throw must be made in each round that the creature\n  attempts to pick up or use the greased item. A creature wearing greased armor\n  or clothing gains a +10 circumstance bonus on Escape Artist checks and on\n  grapple checks made to resist or escape a grapple or to escape a pin.\n  Material Component: A bit of pork rind or butter.  Greater (Spell Name) Any\n  spell whose name begins with greater is alphabetized in this chapter\n  according to the second word of the spell name. Thus, the description of a\n  greater spell appears near the description of the spell on which it is\n  based. Spell chains that have greater spells in them include those based on\n  the spells arcane sight, command, dispel magic, glyph of warding,\n  invisibility, magic fang, magic weapon, planar ally, planar binding, prying\n  eyes, restoration, scrying, shadow conjuration, shadow evocation, shout, and\n  teleport."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "Cover one object or 10-ft square within [[25 + ($level / 2)* 5)]] ft with slippery grease; forces Ref $dc or fall, move half speed with Balance 10."
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "One object or a 10-ft square"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

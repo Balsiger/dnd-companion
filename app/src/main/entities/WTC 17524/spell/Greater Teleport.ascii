@@ -1,0 +1,44 @@
+template {
+  name: "Greater Teleport"
+  synonym: "Teleport, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 293
+      high: 293
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like teleport, except that there is no range limit and\n  there is no chance you arrive off target. In addition, you need not have seen\n  the destination, but in that case you must have at least a reliable\n  description of the place to which you are teleporting (such as a detailed\n  description from someone else or a particularly precise map). If you attempt\n  to teleport with insufficient information (or with misleading information),\n  you disappear and simply reappear in your original location. Interplanar\n  travel is not possible."
+}
+school: CONJURATION
+subschool: TELEPORTATION
+summary: "Touch, teleport to another location, no range limit, not chance of failure."
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+level {
+  spell_class: TRAVEL
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

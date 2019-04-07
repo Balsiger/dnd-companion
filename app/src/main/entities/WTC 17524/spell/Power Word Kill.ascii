@@ -1,0 +1,49 @@
+template {
+  name: "Power Word Kill"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 263
+      high: 263
+    }
+  }
+  world: "Generic"
+  description: "You utter a single word of power that instantly kills one creature of your\n  choice, whether the creature can hear the word or not. Any creature that\n  currently has 101 or more hit points is unaffected by power word kill."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: DEATH
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+level {
+  spell_class: WAR
+  level: 9
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature with 100 hp or less"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,46 @@
+template {
+  name: "Phase Door"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 261
+      high: 261
+    }
+  }
+  world: "Generic"
+  description: "This spell creates an ethereal passage through wooden, plaster, or stone\n  walls, but not other materials. The phase door is invisible and inaccessible\n  to all creatures except you, and only you can use the passage. You disappear\n  when you enter the phase door and appear when you exit. If you desire, you\n  can take one other creature (Medium or smaller) through the door.  This\n  counts as two uses of the door. The door does not allow light, sound, or\n  spell effects through it, nor can you see through it without using it. Thus,\n  the spell can provide an escape route, though certain creatures, such as\n  phase spiders, can follow with ease. A gem of true seeing or similar magic\n  reveals the presence of a phase door but does not allow its use.  A phase\n  door is subject to dispel magic. If anyone is within the passage when it is\n  dispelled, he is harmlessly ejected just as if he were inside a passwall\n  effect.  You can allow other creatures to use the phase door by setting some\n  triggering condition for the door. Such conditions can be as simple or\n  elaborate as you desire. They can be based on a creature\'s name, identity, or\n  alignment, but otherwise must be based on observable actions or\n  qualities. Intangibles such as level, class, Hit Dice, and hit points don\'t\n  qualify.  Phase door can be made permanent with a permanency spell."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+level {
+  spell_class: TRAVEL
+  level: 8
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "Ethereal 5 ft by 8 ft opening 10 ft deep + 5 ft deep per three levels"
+}
+duration {
+  duration_description: "One Usage per two levels"
+  duration {
+  }
+  additional_duration {
+  }
+}

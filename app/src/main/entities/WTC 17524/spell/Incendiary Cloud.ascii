@@ -1,0 +1,50 @@
+template {
+  name: "Incendiary Cloud"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 244
+      high: 244
+    }
+  }
+  world: "Generic"
+  description: "An incendiary cloud spell creates a cloud of roiling smoke shot through with\n  white-hot embers. The smoke obscures all sight as a fog cloud does. In\n  addition, the white-hot embers within the cloud deal 4d6 points of fire\n  damage to everything within the cloud on your turn each round. All targets\n  can make Reflex saves each round to take half damage.  As with a cloudkill\n  spell, the smoke moves away from you at 10 feet per round.  Figure out the\n  smoke\'s new spread each round based on its new point of origin, which is 10\n  feet farther away from where you were when you cast the spell. By\n  concentrating, you can make the cloud (actually its point of origin) move as\n  much as 60 feet each round. Any portion of the cloud that would extend beyond\n  your maximum range dissipates harmlessly, reducing the remainder\'s spread\n  thereafter.  As with fog cloud, wind disperses the smoke, and the spell can\'t\n  be cast underwater."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "For $level rounds create a 20 ft radius cloud within [[50 + (5 * (level / 2))]] ft that gives 4d6 fire damage every round, moving 10 feet away from you per round (or move by 60 ft by concentrating)."
+descriptor: FIRE
+level {
+  spell_class: FIRE
+  level: 8
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Cloud spreads in 20-ft radius 20 ft high"
+}
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

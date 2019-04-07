@@ -1,0 +1,52 @@
+template {
+  name: "Calm Emotions"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 207
+      high: 208
+    }
+  }
+  world: "Generic"
+  description: "This spell calms agitated creatures. You have no control over the affected\n  creatures, but calm emotions can stop raging creatures from fighting or\n  joyous ones from reveling. Creatures so affected cannot take violent actions\n  (although they can defend themselves) or do anything destructive.  Any\n  aggressive action against or damage dealt to a calmed creature immediately\n  breaks the spell on all calmed creatures.  This spell automatically\n  suppresses (but does not dispel) any morale bonuses granted by spells such as\n  bless, good hope, and rage, as well as negating a bard\342\200\232\303\204\303\264s ability to inspire\n  courage or a barbarian\342\200\232\303\204\303\264s rage ability. It also suppresses any fear effects\n  and removes the confused condition from all targets. While the spell lasts, a\n  suppressed spell or effect has no effect. When the calm emotions spell ends,\n  the original spell or effect takes hold of the creature again, provided that\n  its duration has not expired in the meantime."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "Creatures in a 20 ft spread are calmed (cannot take violent or destructive actions, rage, bless, good hope suppressed) for Concentration up to $rounds (D) or until target takes any damage or is targeted by aggressive action."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: CLERIC
+  level: 2
+}
+level {
+  spell_class: LAW
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Creatures in a 20-ft-radius spread"
+duration {
+  duration_description: "Concentration up to 1 round/level"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

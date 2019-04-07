@@ -1,0 +1,18 @@
+template {
+  name: "Handle Animal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 74
+      high: 75
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to drive a team of horses pulling a wagon over rough terrain,\n  to teach a dog to guard, or to teach a tyrannosaur to \342\200\232\303\204\303\272speak\342\200\232\303\204\303\271 on your\n  command."
+}
+ability: CHARISMA
+action: "Varies. Handling an animal is a move action, while                     pushing an animal is a full-round action. (A druid or                     ranger can handle her animal companion as a free action or                     push it as a move action.) For tasks with specific time                     frames noted above, you must spend half this time (at the                     rate of 3 hours per day per animal being handled) working                     toward completion of the task before you attempt the                     Handle Animal check. If the check fails, your attempt to                     teach, rear, or train the animal fails and you need not                     complete the teaching, rearing, or training time. If the                     check succeeds, you must invest the remainder of the time                     to complete the teaching, rearing, or training. If the                     time is interrupted or the task is not followed through to                     completion, the attempt to teach, rear, or train the                     animal automatically fails."
+special: "You can use this skill on a creature with an Intelligence                     score of 1 or 2 that is not an animal, but the DC of any                     such check increases by 5. Such creatures have the same                     limit on tricks known as animals do. The Monster Manual                     provides information on teaching or training other kinds                     of creatures as appropriate.  A druid or ranger gains a +4                     circumstance bonus on Handle Animal checks involving her                     animal companion. In addition, a druid\342\200\232\303\204\303\264s or ranger\342\200\232\303\204\303\264s                     animal companion knows one or more bonus tricks, which                     don\342\200\232\303\204\303\264t count against the normal limit on tricks known and                     don\342\200\232\303\204\303\264t require any training time or Handle Animal checks to                     teach.  If you have the Animal Affinity feat, you get a +2                     bonus on Handle Animal checks."
+restriction_text: "$undefined$"
+untrained: "If you have no ranks in Handle Animal, you can use a                     Charisma check to handle and push domestic animals, but                     you can\342\200\232\303\204\303\264t teach, rear, or train animals. A druid or ranger                     with no ranks in Handle Animal can use a Charisma check to                     handle and push her animal companion, but she can\342\200\232\303\204\303\264t teach,                     rear, or train other nondomestic animals."
+restriction: TRAINED_ONLY

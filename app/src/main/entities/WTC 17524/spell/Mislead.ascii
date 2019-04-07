@@ -1,0 +1,58 @@
+template {
+  name: "Mislead"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 255
+      high: 255
+    }
+  }
+  world: "Generic"
+  description: "You become invisible (as improved invisibility, a glamer), and at the same\n  time, an illusory double of you (as major image, a figment) appears. You are\n  then free to go elsewhere while your double moves away.  The double appears\n  within range but thereafter moves as you direct it (which requires\n  concentration beginning on the first round after the casting). You can make\n  the figment appear superimposed perfectly over your own body so that\n  observers don\'t notice an image appearing and you turning invisible. You and\n  the figment can then move in different directions. The double moves at your\n  speed and can talk and gesture as if it were real, but it cannot attack or\n  cast spells, though it can pretend to do so.  The illusory double lasts as\n  long as you concentrate upon it, plus 3 additional rounds. After you cease\n  concentration, the illusory double continues to carry out the same activity\n  (for instance, fleeing down a hallway) until the duration expires. The\n  improved invisibility lasts for 1 round per level, regardless of\n  concentration."
+}
+school: ILLUSION
+subschool: FIGMENT
+subschool: GLAMER
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: LUCK
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+level {
+  spell_class: TRICKERY
+  level: 6
+}
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "You/one illusory double"
+}
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level (D) and concentration"
+  additional_duration {
+    rounds: 3
+  }
+}

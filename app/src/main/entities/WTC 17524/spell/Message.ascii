@@ -1,0 +1,47 @@
+template {
+  name: "Message"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 253
+      high: 253
+    }
+  }
+  world: "Generic"
+  description: "You can whisper messages and receive whispered replies with little chance of\n  being overheard. You point your finger at each creature you want to receive\n  the message. When you whisper, the whispered message is audible to all\n  targeted creatures within range. Magical silence, 1 foot of stone, 1 inch of\n  common metal (or a thin sheet of lead), or 3 feet of wood or dirt blocks the\n  spell. The message does not have to travel in a straight line. It can\n  circumvent a barrier if there is an open path between you and the subject,\n  and the path\'s entire length lies within the spell\'s range. The creatures\n  that receive the message can whisper a reply that you hear. The spell\n  transmits sound, not meaning. It doesn\'t transcend language barriers.  Note:\n  To speak a message, you must mouth the words and whisper, possibly allowing\n  observers the opportunity to read your lips.  Focus: A short piece of copper\n  wire."
+}
+school: TRANSMUTATION
+summary: "For [[$level * 10]] min you can whisper and get replies to $level creatures  within [[50 + (5 * $level)]] ft as long as there is an open path."
+descriptor: LANGUAGE_DEPENDENT
+level {
+  spell_class: BARD
+}
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature/level"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

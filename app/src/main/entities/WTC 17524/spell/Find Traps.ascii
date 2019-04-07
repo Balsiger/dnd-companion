@@ -1,0 +1,40 @@
+template {
+  name: "Find Traps"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 230
+      high: 230
+    }
+  }
+  world: "Generic"
+  description: "You gain intuitive insight into the workings of traps. You can use the\n  Search skill to detect traps just as a rogue can. In addition, you gain an\n  insight bonus equal to one-half your caster level (maximum +10) on Search\n  checks made to find traps while the spell is in effect.  Note that find traps\n  grants no ability to disable the traps that you may find."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

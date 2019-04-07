@@ -1,0 +1,43 @@
+template {
+  name: "Remove Fear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 271
+      high: 271
+    }
+  }
+  world: "Generic"
+  description: "You instill courage in the subject, granting it a +4 morale bonus against\n  fear effects for 10 minutes. If the subject is under the influence of a fear\n  effect when receiving the spell, that effect is suppressed for the duration\n  of the spell.  Remove fear counters and dispels cause fear."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: CLERIC
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature plus one additional creature per four levels, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+    minutes: 10
+  }
+  additional_duration {
+  }
+}

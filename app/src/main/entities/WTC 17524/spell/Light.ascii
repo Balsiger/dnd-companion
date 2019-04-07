@@ -1,0 +1,54 @@
+template {
+  name: "Light"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 248
+      high: 248
+    }
+  }
+  world: "Generic"
+  description: "This spell causes an object to glow like a torch, shedding bright light in a\n  20-footradius (and dim light for an additional 20 feet) from the point you\n  touch. The effect is immobile, but it can be cast on a movable object. Light\n  taken into an area of magical darkness does not function.  A light spell (one\n  with the light descriptor) counters and dispels a darkness spell (one with\n  the darkness descriptor) of an equal or lower level.  Arcane Material\n  Component: A firefly or a piece of phosphorescent moss."
+}
+school: EVOACATION
+summary: "touch, [[$level * 10]] min (D), object glows like torch (20 ft, 20 ft shadowy); counters darkness spell of equal or lower level."
+descriptor: LIGHT
+level {
+  spell_class: BARD
+}
+level {
+  spell_class: CLERIC
+}
+level {
+  spell_class: DRUID
+}
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Object touched"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

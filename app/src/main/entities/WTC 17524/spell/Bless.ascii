@@ -1,0 +1,46 @@
+template {
+  name: "Bless"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 205
+      high: 205
+    }
+  }
+  world: "Generic"
+  description: "Bless fills your allies with courage. Each ally gains a +1 morale bonus on\n  attack rolls and on saving throws against fear effects.  Bless counters and\n  dispels bane."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "For $level min, all allies within 50 ft burst get a +1 morale bonus to attack and saves against fear."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: PALADIN
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "The caster and all allies within a 50ft burst, centered on the caster"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

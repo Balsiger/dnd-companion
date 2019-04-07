@@ -1,0 +1,39 @@
+template {
+  name: "Greater Restoration"
+  synonym: "Restoration, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 272
+      high: 272
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like lesser restoration, except that it dispels all\n  negative levels afflicting the healed creature. This effect also reverses\n  level drains by a force or creature, restoring the creature to the highest\n  level it had previously attained.  The drained levels are restored only if\n  the time since the creature lost the level is no more than one week per\n  caster level.  Greater restoration also dispels all magical effects\n  penalizing the creature\'s abilities, cures all temporary ability damage, and\n  restores all points permanently drained from all ability scores. It also\n  eliminates fatigue and exhaustion, and removes all forms of insanity,\n  confusion, and similar mental effects. Greater restoration does not restore\n  levels or Constitution points lost due to death.  XP Cost: 500 XP."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: EXPERIENCE_POINTS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

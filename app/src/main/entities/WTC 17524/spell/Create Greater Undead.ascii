@@ -1,0 +1,40 @@
+template {
+  name: "Create Greater Undead"
+  world: "Generic"
+  description: "This spell functions like create undead, except that you can create more\n  powerful and intelligent sorts of undead: shadows, wraiths, spectres, and\n  devourers (see the Monster Manual for more information on all types of\n  undead). The type or types of undead you can create is based on your caster\n  level, as shown on the table below.  Caster Level Undead Created 15th or\n  lower Shadow 16th\342\200\232\303\204\303\25417th Wraith 18th\342\200\232\303\204\303\25419th Spectre 20th or higher Devourer"
+}
+school: NECROMANCY
+summary: "$undefined$"
+descriptor: EVIL
+level {
+  spell_class: CLERIC
+  level: 8
+}
+level {
+  spell_class: DEATH
+  level: 8
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

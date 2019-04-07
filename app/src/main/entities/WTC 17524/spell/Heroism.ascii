@@ -1,0 +1,50 @@
+template {
+  name: "Heroism"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 240
+      high: 240
+    }
+  }
+  world: "Generic"
+  description: "This spell imbues a single creature with great bravery and morale in\n  battle. The target gains a +2 morale bonus on attack rolls, saves, and skill\n  checks."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "For [[10 * $level]] min gain +2 morale bonus to attack, saves, skills."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

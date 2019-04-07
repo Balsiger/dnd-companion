@@ -1,0 +1,43 @@
+template {
+  name: "Enervation"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 226
+      high: 226
+    }
+  }
+  world: "Generic"
+  description: "You point your finger and utter the incantation, releasing a black ray of\n  crackling negative energy that suppresses the life force of any living\n  creature it strikes. You must make a ranged touch attack to hit. If the\n  attack succeeds, the subject gains 1d4 negative levels.  If the subject has\n  at least as many negative levels as HD, it dies. Each negative level gives a\n  creature a \342\200\232\303\204\303\2541 penalty on attack rolls, saving throws, skill checks, ability\n  checks, and effective level (for determining the power, duration, DC, and\n  other details of spells or special abilities).  Additionally, a spellcaster\n  loses one spell or spell slot from his or her highest available\n  level. Negative levels stack.  Assuming the subject survives, it regains lost\n  levels after a number of hours equal to your caster level (maximum 15\n  hours). Usually, negative levels have a chance of permanently draining the\n  victim\342\200\232\303\204\303\264s levels, but the negative levels from enervation don\342\200\232\303\204\303\264t last long\n  enough to do so.  An undead creature struck by the ray gains 1d4\342\210\232\303\2635 temporary\n  hit points for 1 hour."
+}
+school: NECROMANCY
+summary: "[[25 + (5 * ($level / 2))]] ft ray, target gets 1d4 negative levels (dies if more negative levels than HD, -1 to attack, saves, skill chekcs, ability checks, effective level per negative level, lose one spell slot of highest available level"
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Ray of negative energy"
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

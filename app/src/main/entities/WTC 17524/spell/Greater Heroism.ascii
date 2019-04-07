@@ -1,0 +1,47 @@
+template {
+  name: "Greater Heroism"
+  synonym: "Heroism, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 240
+      high: 240
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like heroism, except the creature gains a +4 morale\n  bonus on attack rolls, saves, and skill checks, immunity to fear effects, and\n  temporary hit points equal to your caster level (maximum 20).  Jozan casts\n  holy smite against a succubus."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

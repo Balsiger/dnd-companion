@@ -1,0 +1,40 @@
+template {
+  name: "Purify Food and Drink"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 267
+      high: 267
+    }
+  }
+  world: "Generic"
+  description: "This spell makes spoiled, rotten, poisonous, or otherwise contaminated food\n  and water pure and suitable for eating and drinking. This spell does not\n  prevent subsequent natural decay or spoilage. Unholy water and similar food\n  and drink of significance is spoiled by purify food and drink, but the spell\n  has no effect on creatures of any type nor upon magic potions.  Note: Water\n  weighs about 8 pounds per gallon. One cubic foot of water contains roughly 8\n  gallons and weighs about 60 pounds."
+}
+school: TRANSMUTATION
+summary: "Make $level cu. ft of contaminated or poisonous food pure or eating."
+level {
+  spell_class: CLERIC
+}
+level {
+  spell_class: DRUID
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "1 cu. ft/level of contaminated food and water"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

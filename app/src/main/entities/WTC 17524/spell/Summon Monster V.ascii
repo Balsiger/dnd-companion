@@ -1,0 +1,48 @@
+template {
+  name: "Summon Monster V"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 286
+      high: 286
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like summon monster I, except that you can summon one\n  creature from the 5th-level list, 1d3 creatures of the same kind from the\n  4th-level list, or 1d4+1 creatures of the same kind from a lowerlevel list.\n  Mialee summons a couatl."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or more summoned creatures no two of which can be more than 30 ft apart"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

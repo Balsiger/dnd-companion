@@ -1,0 +1,47 @@
+template {
+  name: "Locate Creature"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like locate object, except this spell locates a known\n  or familiar creature.  You slowly turn and sense when you are facing in the\n  direction of the creature to be located, provided it is within range. You\n  also know in which direction the creature is moving, if any.  The spell can\n  locate a creature of a specific kind (such as a human or a unicorn) or a\n  specific creature known to you. It cannot find a creature of a certain type\n  (such as humanoid or animal). To find a kind of creature, you must have seen\n  such a creature up close (within 30 feet) at least once.  Running water\n  blocks the spell. It cannot detect objects. It can be fooled by mislead,\n  nondetection, and polymorph spells.  Material Component: A bit of fur from a\n  bloodhound."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,48 @@
+template {
+  name: "Summon Monster IV"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 286
+      high: 286
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like summon monster I, except that you can summon one\n  creature from the 4th-level list, 1d3 creatures of the same kind from the\n  3rd-level list, or 1d4+1 creatures of the same kind from a lowerlevel list."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "Casting time 1 round, summon 1 of Lantern Archon (LG), Celestial Giant Owl (LG), Celestial Giant Eagle (CG), Celestial Lion (CG), Mephit N, Fiendish Dire Wolf (LE), Fiendish Giant Wasp (LE), Fiendish Giant Praying Mantis (NE), Large Fiendish Shark (NE), Yeth Hound (NE), Large Fiendish Monstrous Spider (CE), Huge Fiendish Viper (CE), Howler (CE) or 1d3 from the 3rd level list or 1d4 +1 from a lower list."
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or more summoned creatures no two of which can be more than 30 ft apart"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

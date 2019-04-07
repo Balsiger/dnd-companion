@@ -1,0 +1,44 @@
+template {
+  name: "Overland Flight"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 259
+      high: 259
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like a fly spell, except you can fly at a speed of 40\n  feet (30 feet if wearing medium or heavy armor, or if carrying a medium or\n  heavy load) with average maneuverability. When using this spell for\n  long-distance movement, you can hustle without taking nonlethal damage (a\n  forced march still requires Constitution checks). This means you can cover 64\n  miles in an eight-hour period of flight (or 48 miles at a speed of 30\n  feet). See page 164 for more on overland movement."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

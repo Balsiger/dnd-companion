@@ -1,0 +1,47 @@
+template {
+  name: "Melf\'s Acid Arrow"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 253
+      high: 253
+    }
+  }
+  world: "Generic"
+  description: "A magical arrow of acid springs from your hand and speeds to its target. You\n  must succeed on a ranged touch attack to hit your target. The arrow deals 2d4\n  points of acid damage with no splash damage. For every three caster levels\n  (to a maximum of 18th), the acid, unless somehow neutralized, lasts for\n  another round, dealing another 2d4 points of damage in that round.  Material\n  Component: Powdered rhubarb leaf and an adder\'s stomach.  Focus: A dart."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "[[400 + ($level*40)]]ft, 2d4 acid damage per round for [[1 + ($level / 3)]] rounds"
+descriptor: ACID
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+  description: "One arrow of acid"
+}
+duration {
+  duration_description: "One round +  1 round per three levels"
+  duration {
+  }
+  additional_duration {
+  }
+}

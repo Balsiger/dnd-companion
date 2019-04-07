@@ -1,0 +1,53 @@
+template {
+  name: "Banishment"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 203
+      high: 203
+    }
+  }
+  world: "Generic"
+  description: "A \\Spell{banishment} spell is a more powerful version of the\n\\Spell{dismissal} spell. It enables you to force extraplanar creatures out of\nyour home plane. As many as 2 Hit Dice of creatures per caster level can be\nbanished.  You can improve the spell\'s chance of success by presenting at\nleast one object or substance that the target hates, fears, or otherwise\nopposes. For each such object or substance, you gain a +1 bonus on your\ncaster level check to overcome the target\'s spell resistance (if any), the\nsaving throw DC increases by 2. For example, if this spell were cast on a\ndemon that hated light and was vulnerable to holy water and cold iron\nweapons, you might use iron, holy water, and a torch in the spell. The three\nitems would give you a +3 bonus on your check to overcome the demon\'s spell\nresistance and add 6 to the spell\'s save DC.  At the DM\'s option, certain\nrare items might work twice as well as a normal item for the purpose of the\nbonuses (each providing a +2 bonus on the caster level check against spell\nresistance and increasing the save DC by 4)."
+}
+school: ABJURATION
+summary: "Force [[$level * 2]] HD of creatures up to [[25 + (5 * ($level / 2))]] ft away can be bansihed to their home plane if they fail Will DC [[10 + $ability + switch($class, Cleric: 6, default: 7)]]."
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+material {
+  use: "arcane focus"
+  component: "Any item that is distasteful to the subject (optional"
+  component: "see description)."
+}
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One or more extraplanar creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

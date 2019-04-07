@@ -1,0 +1,57 @@
+template {
+  name: "Magic Weapon"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 251
+      high: 251
+    }
+  }
+  world: "Generic"
+  description: "Magic weapon gives a weapon a +1 enhancement bonus on attack and damage\n  rolls. (An enhancement bonus does not stack with a masterwork weapon\'s +1\n  bonus on attack rolls.)  You can\'t cast this spell on a natural weapon, such\n  as an unarmed strike (instead, see magic fang). A monk\'s unarmed strike is\n  considered a weapon, and thus it can be enhanced by this spell."
+}
+school: TRANSMUTATION
+summary: "weapon touched, $level min, weapons gains +1 bonus."
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: PALADIN
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+level {
+  spell_class: WAR
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Weapon touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

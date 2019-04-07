@@ -1,0 +1,24 @@
+template {
+  name: "Use Magic Device"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 85
+      high: 86
+    }
+  }
+  world: "Generic"
+  description: "Use this skill to activate magic devices, including scrolls and wands, that\n  you could not otherwise activate."
+}
+ability: CHARISMA
+action: "None. The Use Magic Device check is made as part of the                     action (if any) required to activate the magic item. (See                     Activate Magic Item, page 142, and the Dungeon Master\342\200\232\303\204\303\264s                     Guide for discussions of how magic items are normally                     activated.)"
+special: "You cannot take 10 with this skill.  You can\342\200\232\303\204\303\264t aid                     another on Use Magic Device checks. Only the user of the                     item may attempt such a check.  If you have the Magical                     Aptitude feat, you get a +2 bonus on Use Magic Device                     checks."
+restriction: TRAINED_ONLY
+synergy {
+  name: "spellcraft"
+  condition: "related to scrolls"
+}
+synergy {
+  name: "decipher script"
+  condition: "related to scrolls"
+}

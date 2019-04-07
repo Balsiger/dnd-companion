@@ -1,0 +1,46 @@
+template {
+  name: "Mordenkainen\'s Disjunction"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 255
+      high: 255
+    }
+  }
+  world: "Generic"
+  description: "All magical effects and magic items within the radius of the spell, except\n  for those that you carry or touch, are disjoined. That is, spells and\n  spell-like effects are separated into their individual components (ending the\n  effect as a dispel magic spell does), and each permanent magic item must make\n  a successful Will save or be turned into a normal item. An item in a\n  creature\'s possession uses its own Will save bonus or its possessor\'s Will\n  save bonus, whichever is higher.  You also have a 1% chance per caster level\n  of destroying an antimagic field. If the antimagic field survives the\n  disjunction, no items within it are disjoined.  Even artifacts are subject to\n  disjunction, though there is only a 1% chance per caster level of actually\n  affecting such powerful items. Additionally, if an artifact is destroyed, you\n  must make a DC 25 Will save or permanently lose all spellcasting\n  abilities. (These abilities cannot be recovered by mortal magic, not even\n  miracle or wish.)  Note: Destroying artifacts is a dangerous business, and it\n  is 95% likely to attract the attention of some powerful being who has an\n  interest in or connection with the device."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: MAGIC
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "All magical effects and magic items within a 40-ft-radius burst"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

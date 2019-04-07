@@ -1,0 +1,53 @@
+template {
+  name: "Sympathy"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 292
+      high: 292
+    }
+  }
+  world: "Generic"
+  description: "You cause an object or location to emanate magical vibrations that attract\n  either a specific kind of intelligent creature or creatures of a particular\n  alignment, as defined by you. The particular kind of creature to be affected\n  must be named specifically\342\200\232\303\204\303\256 for example, red dragons, hill giants, wererats,\n  lammasus, or vampires. A creature subtype (such as goblinoid) is not specific\n  enough. Likewise, the specific alignment must be named\342\200\232\303\204\303\256for example, chaotic\n  evil, chaotic good, lawful neutral, or neutral.  Creatures of the specified\n  kind or alignment feel elated and pleased to be in the area or desire to\n  touch or to possess the object. The compulsion to stay in the area or touch\n  the object is overpowering. If the save is successful, the creature is\n  released from the enchantment, but a subsequent save must be made 1d6\342\210\232\303\26310\n  minutes later. If this save fails, the affected creature attempts to return\n  to the area or object.  Sympathy counters and dispels antipathy.  Material\n  Component: 1,500 gp worth of crushed pearls and a drop of honey."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: DRUID
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One location (up to a 10-ft cube/level) or one object"
+duration {
+  duration {
+    hours: 2
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,48 @@
+template {
+  name: "Summon Nature\'s Ally I"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 288
+      high: 288
+    }
+  }
+  world: "Generic"
+  description: "This spell summons a natural creature. It appears where you designate and\n  acts immediately, on your turn. It attacks your opponents to the best of its\n  ability. If you can communicate with the creature, you can direct it not to\n  attack, to attack particular enemies, or to perform other actions.  A\n  summoned monster cannot summon or otherwise conjure another creature, nor can\n  it use any teleportation or planar travel abilities. Creatures cannot be\n  summoned into an environment that cannot support them. For instance, a\n  porpoise may only be summoned in an aquatic environment.  The spell conjures\n  one of the creatures from the 1st-level list on the accompanying Summon\n  Nature\'s Ally table. You choose which kind of creature to summon, and you can\n  change that choice each time you cast the spell. All the creatures on the\n  table are neutral unless otherwise noted."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "One summoned creature"
+}
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

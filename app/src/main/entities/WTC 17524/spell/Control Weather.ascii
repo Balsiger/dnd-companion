@@ -1,0 +1,54 @@
+template {
+  name: "Control Weather"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 214
+      high: 214
+    }
+  }
+  world: "Generic"
+  description: "You change the weather in the local area. It takes 10 minutes to cast the\n  spell and an additional 10 minutes for the effects to manifest. The current,\n  natural weather conditions are determined by the DM. You can call forth\n  weather appropriate to the climate and season of the area you are in.  Season\n  Possible Weather Spring Tornado, thunderstorm, sleet storm, or hot weather\n  Summer Torrential rain, heat wave, or hailstorm Autumn Hot or cold weather,\n  fog, or sleet Winter Frigid cold, blizzard, or thaw Late winter\n  Hurricane-force winds or early spring (coastal area) You control the general\n  tendencies of the weather, such as the direction and intensity of the\n  wind. You cannot control specific applications of the weather\342\200\232\303\204\303\256where lightning\n  strikes, for example, or the exact path of a tornado. When you select a\n  certain weather condition to occur, the weather assumes that condition 10\n  minutes later (changing gradually, not abruptly). The weather continues as\n  you left it for the duration, or until you use a standard action to designate\n  a new kind of weather (which fully manifests itself 10 minutes\n  later). Contradictory conditions are not possible simultaneously\342\200\232\303\204\303\256fog and\n  strong wind, for example.  Control weather can do away with atmospheric\n  phenomena (naturally occurring or otherwise) as well as create them.  A druid\n  casting this spell doubles the duration and affects a circle with a 3-mile\n  radius."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: AIR
+  level: 7
+}
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: DRUID
+  level: 7
+}
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "2-mile-radius circle, centered on you"
+duration {
+  duration_description: "4d12 hours"
+  duration {
+  }
+  additional_duration {
+  }
+}

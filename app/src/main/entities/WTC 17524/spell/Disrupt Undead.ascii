@@ -1,0 +1,41 @@
+template {
+  name: "Disrupt Undead"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 223
+      high: 223
+    }
+  }
+  world: "Generic"
+  description: "You direct a ray of positive energy. You must make a ranged touch attack to\n  hit, and if the ray hits an undead creature, it deals 1d6 points of damage to\n  it."
+}
+school: NECROMANCY
+summary: "ranged touched [[25 + (5 * ($level/2))] ft, 1d6 damage to undead."
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Ray effect"
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

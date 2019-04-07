@@ -1,0 +1,45 @@
+template {
+  name: "Diminish Plants"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 221
+      high: 221
+    }
+  }
+  world: "Generic"
+  description: "This spell has two versions.  Prune Growth: This version causes normal\n  vegetation (grasses, briars, bushes, creepers, hedges, thistles, trees,\n  vines, and so forth) within long range (400 feet + 40 feet per level) to\n  shrink to about one-third of their normal size, becoming untangled and less\n  bushy. The affected vegetation appears to have been carefully pruned and\n  trimmed.  At your option, the area can be a 100foot-radius circle, a\n  150-foot-radius semicircle, or a 200-foot-radius quarter-circle.  You may\n  also designate portions of the area that are not affected.  Stunt Growth:\n  This version targets normal plants within a range of 1/2 mile, reducing their\n  potential productivity over the course of the following year to onethird\n  below normal.  Diminish plants counters plant growth.  This spell has no\n  effect on plant creatures."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: SEE_TEXT_RANGE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "See text"
+area: "See text"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

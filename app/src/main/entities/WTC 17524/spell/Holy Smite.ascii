@@ -1,0 +1,40 @@
+template {
+  name: "Holy Smite"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 241
+      high: 242
+    }
+  }
+  world: "Generic"
+  description: "You draw down holy power to smite your enemies. Only evil and neutral\n  creatures are harmed by the spell; good creatures are unaffected.  The spell\n  deals 1d8 points of damage per two caster levels (maximum 5d8) to each evil\n  creature in the area (or 1d6 points of damage per caster level, maximum 10d6,\n  to an evil outsider) and causes it to become blinded for 1 round. A\n  successful Will saving throw reduces damage to half and negates the blinded\n  effect.  The spell deals only half damage to creatures who are neither good\n  nor evil, and they are not blinded. Such a creature can reduce that damage by\n  half (down to one-quarter of the roll) with a successful Will save."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: GOOD
+level {
+  spell_class: GOOD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "20-ft-radius burst"
+duration {
+  duration_description: "Instantaneous (1 round)"
+  duration {
+  }
+  additional_duration {
+  }
+}

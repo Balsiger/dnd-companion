@@ -1,0 +1,42 @@
+template {
+  name: "Invisibility Purge"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 245
+      high: 245
+    }
+  }
+  world: "Generic"
+  description: "You surround yourself with a sphere of power with a radius of 5 feet per\n  caster level that negates all forms of invisibility.  Anything invisible\n  becomes visible while in the area."
+}
+school: EVOACATION
+summary: "$level min (D),[[5 * $level]] ft sphere negating all forms of invisibility."
+level {
+  spell_class: CLERIC
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

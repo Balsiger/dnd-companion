@@ -1,0 +1,55 @@
+template {
+  name: "Disguise Self"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 222
+      high: 222
+    }
+  }
+  world: "Generic"
+  description: "You make yourself\342\200\232\303\204\303\256including clothing, armor, weapons, and equipment\342\200\232\303\204\303\256look\n  different. You can seem 1 foot shorter or taller, thin, fat, or in\n  between. You cannot change your body type. For example, a human caster could\n  look human, humanoid, or like any other human-shaped bipedal\n  creature. Otherwise, the extent of the apparent change is up to you. You\n  could add or obscure a minor feature or look like an entirely different\n  person.  The spell does not provide the abilities or mannerisms of the chosen\n  form, nor does it alter the perceived tactile (touch) or audible (sound)\n  properties of you or your equipment. A battleaxe made to look like a dagger\n  still functions as a battleaxe.  If you use this spell to create a disguise,\n  you get a +10 bonus on the Disguise check.  A creature that interacts with\n  the glamer gets a Will save to recognize it as an illusion. For example, a\n  creature that touched you and realized that the tactile sensation did not\n  match the visual one would be entitled to such a save."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "For [[$level * 10]] min (D) make youself look different (1 foot shorter or taller, thin, fat, same body type), give +10 on Disguise checks; creature interacting (e.g. touch) gets a Will save to realize the illusion."
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+level {
+  spell_class: TRICKERY
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,48 @@
+template {
+  name: "Bigby\342\200\232\303\204\303\264s Crushing Hand"
+  synonym: "Crushing Hand, Bigby\'s"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 204
+      high: 204
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like Bigby\342\200\232\303\204\303\264s interposing hand, except that the hand can\n  interpose itself, push, or crush one opponent that you select.  The crushing\n  hand can grapple an opponent like Bigby\342\200\232\303\204\303\264s grasping hand does. Its grapple\n  bonus equals your caster level + your Intelligence, Wisdom, or Charisma\n  modifier (for a wizard, cleric, or sorcerer, respectively), +12 for the\n  hand\342\200\232\303\204\303\264s Strength score (35), +4 for being Large. The hand deals 2d6+12 points\n  of damage (lethal, not nonlethal) on each successful grapple check against an\n  opponent.  The crushing hand can also interpose itself as Bigby\342\200\232\303\204\303\264s interposing\n  hand does, or it can bull rush an opponent as Bigby\342\200\232\303\204\303\264s forceful hand does, but\n  at a +18 bonus.  Directing the spell to a new target is a move action.\n  Clerics who cast this spell name it for their deities\342\200\232\303\204\303\256St. Cuthbert\342\200\232\303\204\303\264s crushing\n  hand, for example.  Arcane Material Component: The shell of an egg.  Arcane\n  Focus: A glove of snakeskin."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+level {
+  spell_class: STRENGTH_SPELL_CLASS
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+components: FOCUS_DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

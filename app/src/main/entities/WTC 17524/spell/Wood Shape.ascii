@@ -1,0 +1,40 @@
+template {
+  name: "Wood Shape"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 303
+      high: 303
+    }
+  }
+  world: "Generic"
+  description: "Wood shape enables you to form one existing piece of wood into any shape\n  that suits your purpose. For example, you can make a wooden weapon, fashion a\n  special trapdoor, or sculpt a crude idol. This spell also permits you to\n  reshape a wood door to make an exit where one didn\'t exist or to seal a door\n  shut. While it is possible to make crude coffers, doors, and so forth, fine\n  detail isn\'t possible. There is a 30% chance that any shape that includes\n  moving parts simply doesn\'t work."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One touched piece of wood no larger than 10 cu. ft + 1 cu ft/level"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

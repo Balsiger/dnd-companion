@@ -1,0 +1,45 @@
+template {
+  name: "Wall of Iron"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 299
+      high: 299
+    }
+  }
+  world: "Generic"
+  description: "You cause a flat, vertical iron wall to spring into being. This wall can be\n  used to seal off a passage or close a breach, for the wall inserts itself\n  into any surrounding nonliving material if its area is sufficient to do\n  so. The wall cannot be conjured so that it occupies the same space as a\n  creature or another object. It must always be a flat plane, though you can\n  shape its edges to fit the available space.  A wall of iron is 1 inch thick\n  per four caster levels. You can double the wall\'s area by halving its\n  thickness. Each 5-foot square of the wall has 30 hit points per inch of\n  thickness and hardness 10. A section of wall whose hit points drop to 0 is\n  breached. If a creature tries to break through the wall with a single attack,\n  the DC for the Strength check is 25 + 2 per inch of thickness.  If you\n  desire, the wall can be created vertically resting on a flat surface but not\n  attached to the surface, so that it can be tipped over to fall on and crush\n  creatures beneath it. The wall is 50% likely to tip in either direction if\n  left unpushed. Creatures can push the wall in one direction rather than\n  letting it fall randomly. A creature must make a DC 40 Strength check to push\n  the wall over. Creatures with room to flee the falling wall may do so by\n  making successful Reflex saves. Any Large or smaller creature that fails\n  takes 10d6 points of damage. The wall cannot crush Huge and larger creatures.\n  Like any iron wall, this wall is subject to rust, perforation, and other\n  natural phenomena.  Material Component: A small piece of sheet iron plus gold\n  dust worth 50 gp (1 pound of gold dust)."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "Create 1 inch iron wall of $level 5 ft squares with 30 hp per inch and hardness 10"
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Iron wall whose area is up to one 5-ft square/level"
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

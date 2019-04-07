@@ -1,0 +1,41 @@
+template {
+  name: "Summon Instrument"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 285
+      high: 285
+    }
+  }
+  world: "Generic"
+  description: "This spell summons one handheld musical instrument of your choice. This\n  instrument appears in your hands or at your feet (your choice). The\n  instrument is typical for its type. Only one instrument appears per casting,\n  and it will play only for you. You can\'t summon an instrument too large to be\n  held in two hands (such as a harp, piano, harpsichord, alphorn, or pipe\n  organ)."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+level {
+  spell_class: BARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One summoned handheld musical instrument"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

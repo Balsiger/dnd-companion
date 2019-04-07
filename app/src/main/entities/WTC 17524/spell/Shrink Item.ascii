@@ -1,0 +1,44 @@
+template {
+  name: "Shrink Item"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 279
+      high: 279
+    }
+  }
+  world: "Generic"
+  description: "You are able to shrink one nonmagical item (if it is within the size limit)\n  to 1/16 of its normal size in each dimension (to about 1/4,000 the original\n  volume and mass). This change effectively reduces the object\'s size by four\n  categories (for instance, from Large to Diminutive). Optionally, you can also\n  change its nowshrunken composition to a clothlike one.  Objects changed by a\n  shrink item spell can be returned to normal composition and size merely by\n  tossing them onto any solid surface or by a word of command from the original\n  caster. Even a burning fire and its fuel can be shrunk by this\n  spell. Restoring the shrunken object to its normal size and composition ends\n  the spell.  Shrink item can be made permanent with a permanency spell, in\n  which case the affected object can be shrunk and expanded an indefinite\n  number of times, but only by the original caster."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One touched object of up to 2 cu. ft/level"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

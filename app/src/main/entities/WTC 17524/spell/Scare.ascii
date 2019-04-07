@@ -1,0 +1,50 @@
+template {
+  name: "Scare"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 274
+      high: 274
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like cause fear, except that it causes all targeted\n  creatures of less than 6 HD to become frightened.  Material Component: A bit\n  of bone from an undead skeleton, zombie, ghoul, ghast, or mummy."
+}
+school: NECROMANCY
+summary: "For [[$level]] rounds [[$level / 3]] creatures with less than 6 HD become frigthened  ft, Will $dc or frightened (flee, attack, saves, skills, ability checks -2), Will DC $dc for shaken (attack, saves, skills, ability checks -2) for 1 round."
+descriptor: FEAR
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature per three levels, no two of which can be more than 30 ft apart"
+duration {
+  duration_description: "1 round/level or 1 round"
+  duration {
+  }
+  additional_duration {
+  }
+}

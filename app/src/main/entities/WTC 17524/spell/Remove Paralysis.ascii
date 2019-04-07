@@ -1,0 +1,44 @@
+template {
+  name: "Remove Paralysis"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 271
+      high: 271
+    }
+  }
+  world: "Generic"
+  description: "You can free one or more creatures from the effects of any temporary\n  paralysis or related magic, including a ghoul\'s touch or a slow spell. If the\n  spell is cast on one creature, the paralysis is negated. If cast on two\n  creatures, each receives another save with a +4 resistance bonus against the\n  effect that afflicts it. If cast on three or four creatures, each receives\n  another save with a +2 resistance bonus.  The spell does not restore ability\n  scores reduced by penalties, damage, or drain."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 2
+}
+level {
+  spell_class: PALADIN
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to four creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

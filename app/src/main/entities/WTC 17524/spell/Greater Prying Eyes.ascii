@@ -1,0 +1,39 @@
+template {
+  name: "Greater Prying Eyes"
+  synonym: "Prying Eyes, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 267
+      high: 267
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like prying eyes, except that the eyes can see all\n  things as they actually are, just as if they had true seeing with a range of\n  120 feet. Thus, they can navigate darkened areas at full normal speed. Also,\n  a greater prying eye\'s maximum Spot modifier is +25 instead of +15."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,56 @@
+template {
+  name: "Animal Messenger"
+  synonym: "Messenger, Animal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 198
+      high: 198
+    }
+  }
+  world: "Generic"
+  description: "You compel a Tiny animal to go to a spot you designate. The most common use\n  for this spell is to get an animal to carry a message to your allies. The\n  animal cannot be one tamed or trained by someone else, including such\n  creatures as familiars and animal companions.  Using some type of food\n  desirable to the animal as a lure, you call the animal to you.It advances and\n  awaits your bidding. You can mentally impress on the animal a certain place\n  well known to you or an obvious landmark (such as the peak of a distant\n  mountain). The directions must be simple, because the animal depends on your\n  knowledge and can\342\200\232\303\204\303\264t find a destination on its own. You can attach some small\n  item or note to the messenger. The animal then goes to the designated\n  location and waits there until the duration of the spell expires, whereupon\n  it resumes its normal activities.  During this period of waiting, the\n  messenger allows others to approach it and remove any scroll or token it\n  carries. Unless the intended recipient of a message is expecting a messenger\n  in the form of a bird or other small animal, the carrier may be ignored. The\n  intended recipient gains no special ability to communicate with the animal or\n  read any attached message (if it\342\200\232\303\204\303\264s written in a language he or she doesn\342\200\232\303\204\303\264t\n  know, for example)."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+material {
+  use: "use"
+  component: "a morsel of food the animal likes"
+}
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One Tiny animal"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

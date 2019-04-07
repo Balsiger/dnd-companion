@@ -1,0 +1,47 @@
+template {
+  name: "Hold Animal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 241
+      high: 241
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like hold person, except that it affects an animal\n  instead of a humanoid."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: ANIMAL
+  level: 2
+}
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: RANGER
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One animal"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

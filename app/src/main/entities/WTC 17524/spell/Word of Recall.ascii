@@ -1,0 +1,43 @@
+template {
+  name: "Word of Recall"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 303
+      high: 303
+    }
+  }
+  world: "Generic"
+  description: "Word of recall teleports you instantly back to your sanctuary when\n  the word is uttered. You must designate the sanctuary when you prepare the\n  spell, and it must be a very familiar place. The actual point of arrival is a\n  designated area no larger than 10 feet by 10 feet. You can be transported any\n  distance within a plane but cannot travel between planes. You can transport,\n  in addition to yourself, any objects you carry, as long as their weight\n  doesn\'t exceed your maximum load. You may also bring one additional willing\n  Medium or smaller creature (carrying gear or objects up to its maximum load)\n  or its equivalent per three caster levels. A Large creature counts as two\n  Medium creatures, a Huge creature counts as two Large creatures, and so\n  forth. All creatures to be transported must be in contact with one another,\n  and at least one of those creatures must be in contact with you. Exceeding\n  this limit causes the spell to fail.  An unwilling creature can\'t be\n  teleported by word of recall. Likewise, a creature\'s Will save (or spell\n  resistance) prevents items in its possession from being\n  teleported. Unattended, nonmagical objects receive no saving throw."
+}
+school: CONJURATION
+subschool: TELEPORTATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: DRUID
+  level: 8
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: UNLIMITED
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You and touched objects or other willing creatures"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

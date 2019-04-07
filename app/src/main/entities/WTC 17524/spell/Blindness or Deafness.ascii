@@ -1,0 +1,53 @@
+template {
+  name: "Blindness or Deafness"
+  synonym: "Blindness/Deafness"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 206
+      high: 206
+    }
+  }
+  world: "Generic"
+  description: "You call upon the powers of unlife to render the subject blinded or\n  deafened, as you choose."
+}
+school: NECROMANCY
+summary: "Living creature within [[100 + (10 * $level)]] ft For DC [[10 + $ability + switch($class, Cleric: 3, default: 2)]] or be blinded or deafened (your choice)."
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration_description: "Permanent"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

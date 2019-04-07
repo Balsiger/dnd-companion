@@ -1,0 +1,52 @@
+template {
+  name: "Project Image"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 265
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "You tap energy from the Plane of Shadow to create a quasi-real, illusory\n  version of yourself. The projected image looks, sounds, and smells like you\n  but is intangible. The projected image mimics your actions (including speech)\n  unless you direct it to act differently (which is a move action).\n\n  You can see through its eyes and hear through its ears as if you were\n  standing where it is, and during your turn you can switch from using its\n  senses to using your own, or back again, as a free action. While you are\n  using its senses, your body is considered blinded and deafened.  If you\n  desire, any spell you cast whose range is touch or greater can originate from\n  the projected image instead of from you. The projected image can\'t cast any\n  spells on itself except for illusion spells.  The spells affect other targets\n  normally, despite originating from the projected image.  Objects are affected\n  by the projected image as if they had succeeded on their Will save.  You must\n  maintain line of effect to the projected image at all times. If your line of\n  effect is obstructed, the spell ends. If you use dimension door, teleport,\n  plane shift, or a similar spell that breaks your line of effect, even\n  momentarily, the spell ends.  Material Component: A small replica of you (a\n  doll), which costs 5 gp to create."
+}
+school: ILLUSION
+subschool: SHADOW
+summary: "For $level rounds (D) create a projected image of yourself through which you can see and deliver touch spells through."
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "One shadow duplicate"
+}
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

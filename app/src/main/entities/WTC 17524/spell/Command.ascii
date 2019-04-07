@@ -1,0 +1,41 @@
+template {
+  name: "Command"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 211
+      high: 211
+    }
+  }
+  world: "Generic"
+  description: "You give the subject a single command, which it obeys to the best of its\n  ability at its earliest opportunity. You may select from the following\n  options.  Approach: On its turn, the subject moves toward you as quickly and\n  directly as possible for 1 round. The creature may do nothing but move during\n  its turn, and it provokes attacks of opportunity for this movement as normal.\n  Drop: On its turn, the subject drops whatever it is holding. It can\342\200\232\303\204\303\264t pick up\n  any dropped item until its next turn.  Fall: On its turn, the subject falls\n  to the ground and remains prone for 1 round. It may act normally while prone\n  but takes any appropriate penalties.  Flee: On its turn, the subject moves\n  away from you as quickly as possible for 1 round.  It may do nothing but move\n  during its turn, and it provokes attacks of opportunity for this movement as\n  normal.  Halt: The subject stands in place for 1 round. It may not take any\n  actions but is not considered helpless.  If the subject can\342\200\232\303\204\303\264t carry out your\n  command on its next turn, the spell automatically fails."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "One living creature within [[25 + (5 * ($level / 2))]] ft Will DC [[11 + $ability]] or follow command approach, drop, fall, flee, or halt."
+descriptor: LANGUAGE_DEPENDENT
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 1
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration {
+    rounds: 1
+  }
+  additional_duration {
+  }
+}

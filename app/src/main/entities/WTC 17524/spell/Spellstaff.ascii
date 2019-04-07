@@ -1,0 +1,42 @@
+template {
+  name: "Spellstaff"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 282
+      high: 282
+    }
+  }
+  world: "Generic"
+  description: "You store one spell that you can normally cast in a wooden\n  quarterstaff. Only one such spell can be stored in a staff at a given time,\n  and you cannot have more than one spellstaff at any given time. You can cast\n  a spell stored within a staff just as though it were among those you had\n  prepared, but it does not count against your normal allotment for a given\n  day. You use up any applicable material components required to cast the spell\n  when you store it in the spellstaff.  Focus: The staff that stores the\n  spell."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Wooden quarterstaff touched"
+duration {
+  duration_description: "Permanent until Discharged"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

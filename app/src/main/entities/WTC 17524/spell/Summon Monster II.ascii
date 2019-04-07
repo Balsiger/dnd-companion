@@ -1,0 +1,48 @@
+template {
+  name: "Summon Monster II"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 286
+      high: 286
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like summon monster I, except that you can summon one\n  creature from the 2nd-level list or 1d3 creatures of the same kind from the\n  1st-level list."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: CLERIC
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or more summoned creatures no two of which can be more than 30 ft apart"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

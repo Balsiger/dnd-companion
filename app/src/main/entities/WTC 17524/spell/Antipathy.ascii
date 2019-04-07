@@ -1,0 +1,57 @@
+template {
+  name: "Antipathy"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 200
+      high: 200
+    }
+  }
+  world: "Generic"
+  description: "You cause an object or location to emanate magical vibrations that repel\n  either a specific kind of intelligent creature or creatures of a particular\n  alignment, as defined by you. The kind of creature to be affected must be\n  named specifically\342\200\232\303\204\303\256for example, red dragons, hill giants, wererats, lammasus,\n  cloakers, or vampires. A creature subtype (such as goblinoid) is not specific\n  enough. Likewise, the specific alignment to be repelled must be named\342\200\232\303\204\303\256 for\n  example, chaotic evil, chaotic good, lawful neutral, or neutral.  Creatures\n  of the designated kind or alignment feel an overpowering urge to leave the\n  area or to avoid the affected item.  A compulsion forces them to abandon the\n  area or item, shunning it and never willingly returning to it while the spell\n  is in effect. A creature that makes a successful saving throw can stay in the\n  area or touch the item but feels uncomfortable doing so.  This distracting\n  discomfort reduces the creature\342\200\232\303\204\303\264s Dexterity score by 4 points.\n  \\Spell{Antipathy} counters and dispels \\Spell{sympathy}."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: DRUID
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+material {
+  use: "use"
+  component: "a lump of alum soaked in vinegar"
+}
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One location (up to a 10-ft. cube/level) or one object"
+duration {
+  duration {
+    hours: 2
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

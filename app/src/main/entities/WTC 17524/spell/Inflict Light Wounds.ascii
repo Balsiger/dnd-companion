@@ -1,0 +1,43 @@
+template {
+  name: "Inflict Light Wounds"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 244
+      high: 244
+    }
+  }
+  world: "Generic"
+  description: "When laying your hand upon a creature, you channel negative energy that\n  deals 1d8 points of damage +1 point per caster level (maximum +5).  Since\n  undead are powered by negative energy, this spell cures such a creature of a\n  like amount of damage, rather than harming it."
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: DESTRUCTION
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

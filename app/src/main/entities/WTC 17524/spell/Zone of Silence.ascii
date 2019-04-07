@@ -1,0 +1,43 @@
+template {
+  name: "Zone of Silence"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 303
+      high: 303
+    }
+  }
+  world: "Generic"
+  description: "By casting zone of silence, you manipulate sound waves in your immediate\n  vicinity so that you and those within the spell\'s area can converse normally,\n  yet no one outside can hear your voices or any other noises from within,\n  including languagedependent or sonic spell effects (such as command or\n  shout). This effect is centered on you and moves with you. Anyone who enters\n  the zone immediately becomes subject to its effects, but those who leave are\n  no longer affected. Note, however, that a successful Spot check to read lips\n  can still reveal what\'s said inside a zone of silence."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "5-ft-radius emanation centered on you"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

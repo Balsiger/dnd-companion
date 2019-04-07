@@ -1,0 +1,51 @@
+template {
+  name: "Sleep"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 217
+      high: 217
+    }
+  }
+  world: "Generic"
+  description: "A sleep spell causes a magical slumber to come upon 4 Hit Dice of\n  creatures. Creatures with the fewest HD are affected first.  Among creatures\n  with equal HD, those who are closest to the spell\342\200\232\303\204\303\264s point of origin are\n  affected first. Hit Dice that are not sufficient to affect a creature are\n  wasted.  For example, Mialee casts sleep at one rat (1/4 HD), one kobold (1\n  HD), two gnolls (2 HD), and an ogre (4 HD). The rat, the kobold, and one\n  gnoll are affected (1/4 + 1 + 2 = 3-1/4 HD). The remaining 3/4 HD is not\n  enough to affect the last gnoll or the ogre. Mialee can\342\200\232\303\204\303\264t choose to have\n  sleep affect the ogre or the two gnolls.  Sleeping creatures are\n  helpless. Slapping or wounding awakens an affected creature, but normal noise\n  does not.  Awakening a creature is a standard action (an application of the\n  aid another action).  Sleep does not target unconscious creatures,\n  constructs, or undead creatures.  Material Component: A pinch of fine sand,\n  rose petals, or a live cricket."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "casting time 1 round, [[100 + ($level * 10)]]ft, $level min, 10-ft burst, 4 HD affected, weakest first"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "One or more living creatures within a 10-ft-radius burst"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

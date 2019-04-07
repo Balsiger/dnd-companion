@@ -1,0 +1,48 @@
+template {
+  name: "Dimensional Lock"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 221
+      high: 221
+    }
+  }
+  world: "Generic"
+  description: "You create a shimmering emerald barrier that completely blocks\n  extradimensional travel. Forms of movement barred include astral projection,\n  blink, dimension door, ethereal jaunt, etherealness, gate, maze, plane shift,\n  shadow walk, teleport, and similar spelllike or psionic abilities. Once\n  dimensional lock is in place, extradimensional travel into or out of the area\n  is not possible.  A dimensional lock does not interfere with the movement of\n  creatures already in ethereal or astral form when the spell is cast, nor does\n  it block extradimensional perception or attack forms, such as a basilisk\342\200\232\303\204\303\264s\n  gaze. Also, the spell does not prevent summoned creatures from disappearing\n  at the end of a summoning spell."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 8
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "20-ft-radius emanation centered on a point in space"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

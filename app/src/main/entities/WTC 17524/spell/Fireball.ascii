@@ -1,0 +1,45 @@
+template {
+  name: "Fireball"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 217
+      high: 217
+    }
+  }
+  world: "Generic"
+  description: "A fireball spell is an explosion of flame that detonates with a low roar and\n  deals 1d6 points of fire damage per caster level (maximum 10d6) to every\n  creature within the area. Unattended objects also take this damage. The\n  explosion creates almost no pressure.  You point your finger and determine\n  the range (distance and height) at which the fireball is to burst. A glowing,\n  pea-sized bead streaks from the pointing digit and, unless it impacts upon a\n  material body or solid barrier prior to attaining the prescribed range,\n  blossoms into the fireball at that point. (An early impact results in an\n  early detonation.) If you attempt to send the bead through a narrow passage,\n  such as through an arrow slit, you must \342\200\232\303\204\303\272hit\342\200\232\303\204\303\271 the opening with a ranged touch\n  attack, or else the bead strikes the barrier and detonates prematurely.  The\n  fireball sets fire to combustibles and damages objects in the area. It can\n  melt metals with low melting points, such as lead, gold, copper, silver, and\n  bronze. If the damage caused to an interposing barrier shatters or breaks\n  through it, the fireball may continue beyond the barrier if the area permits;\n  otherwise it stops at the barrier just as any other spell effect does.\n  Material Component: A tiny ball of bat guano and sulfur."
+}
+school: EVOACATION
+summary: "[[400 + (40 * $level)]] ft, 20 ft spread, [[min(10, $level)]]d6 fire damage"
+descriptor: FIRE
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "20-ft-radius spread"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

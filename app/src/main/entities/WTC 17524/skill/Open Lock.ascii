@@ -1,0 +1,17 @@
+template {
+  name: "Open Lock"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 79
+      high: 79
+    }
+  }
+  world: "Generic"
+  description: "You can pick padlocks, finesse combination locks, and solve puzzle\n  locks. The effort requires at least a simple tool of the appropriate sort (a\n  pick, pry bar, blank key, wire, or the like). Attempting an Open Lock check\n  without a set of thieves\342\200\232\303\204\303\264 tools (page 130) imposes a \342\200\232\303\204\303\2542 circumstance penalty\n  on the check, even if a simple tool is employed. If you use masterwork\n  thieves\342\200\232\303\204\303\264 tools, you gain a +2 circumstance bonus on the check."
+}
+ability: DEXTERITY
+action: "Opening a lock is a full-round action."
+special: "If you have the Nimble Fingers feat, you get a +2 bonus                     on Open Lock checks."
+untrained: "You cannot pick locks untrained, but you might                     successfully force them open (see Smashing an Object, page                     165)."
+restriction: TRAINED_ONLY

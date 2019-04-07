@@ -1,0 +1,48 @@
+template {
+  name: "Heal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 239
+      high: 239
+    }
+  }
+  world: "Generic"
+  description: "Heal enables you to channel positive energy into a creature to wipe away\n  injury and afflictions. It immediately ends any and all of the following\n  adverse conditions affecting the targets ability damage, blinded, confused,\n  dazed, dazzled, deafened, diseased, exhausted, fatigued, feebleminded,\n  insanity, nauseated, sickened, stunned, and poisoned. It also cures 10 hit\n  points of damage per level of the caster, to a maximum of 150 points at 15th\n  level.  Heal does not remove negative levels, restore permanently drained\n  levels, or restore permanently drained ability score points.  If used against\n  an undead creature, heal instead acts like harm."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "Touch, ends ability damage, blindness, confusion, dazedness, dazzledness, deafness, disease, exhaustion, fatigue, feeblemind, insanity, nausea, sickness, stunning, poison, cures [[10 * min(15, $level)]] hp."
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: DRUID
+  level: 7
+}
+level {
+  spell_class: HEALING
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

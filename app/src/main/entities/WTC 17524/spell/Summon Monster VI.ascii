@@ -1,0 +1,48 @@
+template {
+  name: "Summon Monster VI"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 287
+      high: 287
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like summon monster I, except you can summon one\n  creature from the 6th-level list, 1d3 creatures of the same kind from the\n  5th-level list, or 1d4+1 creatures of the same kind from a lower-level list.\n  Summon Monster 1st Level Celestial dog LG Celestial owl LG Celestial giant\n  fire beetle NG Celestial porpoise1 NG Celestial badger CG Celestial monkey CG\n  Fiendish dire rat LE Fiendish raven LE Fiendish monstrous centipede, NE\n  Medium Fiendish monstrous scorpion, NE Small Fiendish hawk CE Fiendish\n  monstrous spider, Small CE Fiendish octopus1 CE Fiendish snake, Small viper\n  CE 2nd Level Celestial giant bee LG Celestial giant bombardier beetle NG\n  Celestial riding dog NG Celestial eagle CG Lemure (devil) LE Fiendish squid1\n  LE Fiendish wolf LE Fiendish monstrous centipede, NE Large Fiendish monstrous\n  scorpion, NE Medium Fiendish shark, Medium1 NE Fiendish monstrous spider, CE\n  Medium Fiendish snake, Medium viper CE 3rd Level Celestial black bear LG\n  Celestial bison NG Celestial dire badger CG Celestial hippogriff CG\n  Elemental, Small (any) N Fiendish ape LE Fiendish dire weasel LE Hell hound\n  LE Fiendish snake, constrictor LE Fiendish boar NE Fiendish dire bat NE\n  Fiendish monstrous centipede, NE Huge Fiendish crocodile CE Dretch (demon)\n  CE"
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "Summon a Celestial Polar Bear, Celestial Orca Whale, Bralani (eladrin), Celestial dire lion, Large Elemental, Janni, Chaos Beast, Chain Devil, Xill, Gargantuan Fiendish Monstrous Centipede, Fiendish Rhonoceros, Fiendish Elasmosaurus, up to [[25 + (5 * ($level / 2))]]ft away for $level rounds (D)."
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or more summoned creatures no two of which can be more than 30 ft apart"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

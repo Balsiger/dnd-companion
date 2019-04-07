@@ -1,0 +1,47 @@
+template {
+  name: "Levitate"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 248
+      high: 248
+    }
+  }
+  world: "Generic"
+  description: "Levitate allows you to move yourself, another creature, or an object up and\n  down as you wish. A creature must be willing to be levitated, and an object\n  must be unattended or possessed by a willing creature. You can mentally\n  direct the recipient to move up or down as much as 20 feet each round; doing\n  so is a move action. You cannot move the recipient horizontally, but the\n  recipient could clamber along the face of a cliff, for example, or push\n  against a ceiling to move laterally (generally at half its base land speed).\n  A levitating creature that attacks with a melee or ranged weapon finds itself\n  increasingly unstable; the first attack has a \342\200\232\303\204\303\2541 penalty on attack rolls, the\n  second \342\200\232\303\204\303\2542, and so on, to a maximum penalty of \342\200\232\303\204\303\2545. A full round spent\n  stabilizing allows the creature to begin again at \342\200\232\303\204\303\2541.  Focus: Either a small\n  leather loop or a piece of golden wire bent into a cup shape with a long\n  shank on one end."
+}
+school: TRANSMUTATION
+summary: "[[25 + (($level/2)*5)]] ft, $level min (D), move up and down at your direction, must be willing or unattended."
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL_OR_CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You or one willing creature or one object (total weight up to 100 lb./level)"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

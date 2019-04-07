@@ -1,0 +1,47 @@
+template {
+  name: "Blight"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 206
+      high: 206
+    }
+  }
+  world: "Generic"
+  description: "This spell withers a single plant of any size.  An affected plant creature\n  takes 1d6 points of damage per level (maximum 15d6) and may attempt a\n  Fortitude saving throw for half damage. A plant that isn\342\200\232\303\204\303\264t a creature (such\n  as a tree or shrub) doesn\342\200\232\303\204\303\264t receive a save and immediately withers and dies.\n  This spell has no effect on the soil or surrounding plant life."
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

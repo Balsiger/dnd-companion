@@ -1,0 +1,49 @@
+template {
+  name: "Fear"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 229
+      high: 229
+    }
+  }
+  world: "Generic"
+  description: "An invisible cone of terror causes each living creature in the area to\n  become panicked unless it succeeds on a Will save. If cornered, a panicked\n  creature begins cowering. (See the Dungeon Master\342\200\232\303\204\303\264s Guide for more\n  information on fear-panicked creatures.) If the Will save succeeds, the\n  creature is shaken for 1 round.  Material Component: Either the heart of a\n  hen or a white feather."
+}
+school: NECROMANCY
+summary: "30 ft cone, $level rounds, become panicked (shaken plus run away as far as possible) unless Will DC [[10 + $ability + switch($class, Bard: 3, default: 4)]], otherwise shaken (-2 attack, saves, skill and ability checks)"
+descriptor: FEAR
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped burst"
+duration {
+  duration_description: "One round/level or One round"
+  duration {
+  }
+  additional_duration {
+  }
+}

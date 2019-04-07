@@ -1,0 +1,47 @@
+template {
+  name: "Invisibility Sphere"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 245
+      high: 245
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like invisibility, except that this spell confers\n  invisibility upon all creatures within 10 feet of the recipient.  The center\n  of the effect is mobile with the recipient.  Those affected by this spell can\n  see each other and themselves as if unaffected by the spell. Any affected\n  creature moving out of the area becomes visible, but creatures moving into\n  the area after the spell is cast do not become invisible. Affected creatures\n  (other than the recipient) who attack negate the invisibility only for\n  themselves.  If the spell recipient attacks, the invisibility sphere ends."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "10-ft-radius emanation around thecreature or object touched"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

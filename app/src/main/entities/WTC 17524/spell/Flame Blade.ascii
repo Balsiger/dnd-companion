@@ -1,0 +1,43 @@
+template {
+  name: "Flame Blade"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 231
+      high: 231
+    }
+  }
+  world: "Generic"
+  description: "A 3-foot-long, blazing beam of red-hot fire springs forth from your\n  hand. You wield this bladelike beam as if it were a scimitar.  Attacks with\n  the flame blade are melee touch attacks. The blade deals 1d8 points of fire\n  damage +1 point per two caster levels (maximum +10). Since the blade is\n  immaterial, your Strength modifier does not apply to the damage. A flame\n  blade can ignite combustible materials such as parchment, straw, dry sticks,\n  and cloth.  The spell does not function underwater."
+}
+school: EVOACATION
+summary: "Create flaming blade for $level min (D), for melee touch attacks (no Str bonus) dealing 1d8 +[[min(10, ($level / 2))]] fire damage."
+descriptor: FIRE
+level {
+  spell_class: DRUID
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "Sword-like beam"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

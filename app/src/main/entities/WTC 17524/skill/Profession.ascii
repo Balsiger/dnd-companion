@@ -1,0 +1,16 @@
+template {
+  name: "Profession"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 80
+      high: 80
+    }
+  }
+  world: "Generic"
+  description: "You are trained in a livelihood or a professional role, such as apothecary,\n  boater, bookkeeper, brewer, cook, driver, farmer, fisher, guide, herbalist,\n  herder, hunter, innkeeper, lumberjack, miller, miner, porter, rancher,\n  sailor, scribe, siege engineer, stablehand, tanner, teamster, woodcutter, or\n  the like.  Like Craft, Knowledge, and Perform, Profession is actually a\n  number of separate skills. For instance, you could have the skill Profession\n  (cook). Your ranks in that skill don\342\200\232\303\204\303\264t affect any Profession (miller) or\n  Profession (miner) checks you might make. You could have several Profession\n  skills, each with its own ranks, each purchased as a separate skill.  While a\n  Craft skill represents ability in creating or making an item, a Profession\n  skill represents an aptitude in a vocation requiring a broader range of less\n  specific knowledge. To draw a modern analogy, if an occupation is a service\n  industry, it\342\200\232\303\204\303\264s probably a Pro- fession skill. If it\342\200\232\303\204\303\264s in the manufacturing\n  sector, it\342\200\232\303\204\303\264s probably a Craft skill"
+}
+ability: WISDOM
+action: "Not applicable. A single check generally represents a                     week of work."
+untrained: "Untrained laborers and assistants (that is, characters                     without any ranks in Profession) earn an average of 1                     silver piece per day."
+restriction: TRAINED_ONLY

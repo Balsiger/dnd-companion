@@ -1,0 +1,50 @@
+template {
+  name: "Unseen Servant"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 297
+      high: 298
+    }
+  }
+  world: "Generic"
+  description: "An unseen servant is an invisible, mindless, shapeless force that performs\n  simple tasks at your command. It can run and fetch things, open unstuck\n  doors, and hold chairs, as well as clean and mend. The servant can perform\n  only one activity at a time, but it repeats the same activity over and over\n  again if told to do so, thus allowing you to command it to clean the floor\n  and then turn your attention elsewhere as long as you remain within range. It\n  can open only normal doors, drawers, lids, and the like. It has an effective\n  Strength score of 2 (so it can lift 20 pounds or drag 100 pounds). It can\n  trigger traps and such, but it can exert only 20 pounds of force, which is\n  not enough to activate certain pressure plates and other devices. It can\'t\n  perform any task that requires a skill check with a DC higher than 10 or that\n  requires a check using a skill that can\'t be used untrained. Its speed is 15\n  feet.  The servant cannot attack in any way; it is never allowed an attack\n  roll. It cannot be killed, but it dissipates if it takes 6 points of damage\n  from area attacks. (It gets no saves against attacks.) If you attempt to send\n  it beyond the spell\'s range (measured from your current position), the\n  servant ceases to exist.  Material Component: A piece of string and a bit of\n  wood."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "Create an invisible, mindless force that performs simple tasks for $level hours."
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "One invisible mindless shapeless servant"
+}
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

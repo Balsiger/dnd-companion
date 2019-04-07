@@ -1,0 +1,34 @@
+template {
+  name: "Detect Chaos"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 218
+      high: 218
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like detect evil, except that it detects the auras of\n  chaotic creatures, clerics of chaotic deities, chaotic spells, and chaotic\n  magic items, and you are vulnerable to an overwhelming chaotic aura if you\n  are lawful."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 1
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

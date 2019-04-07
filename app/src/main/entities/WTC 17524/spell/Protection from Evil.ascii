@@ -1,0 +1,60 @@
+template {
+  name: "Protection from Evil"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 266
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "This spell wards a creature from attacks by evil creatures, from mental\n  control, and from summoned creatures. It creates a magical barrier around the\n  subject at a distance of 1 foot. The barrier moves with the subject and has\n  three major effects.  First, the subject gains a +2 deflection bonus to AC\n  and a +2 resistance bonus on saves. Both these bonuses apply against attacks\n  made or effects created by evil creatures.  Second, the barrier blocks any\n  attempt to possess the warded creature (by a magic jar attack, for example)\n  or to exercise mental control over the creature (includeing enchantment\n  (charm) effects and enchantment (compulsion) effects that grant the caster\n  ongoing control over the subject, such as dominate person). The protection\n  does not prevent such effects from targeting the protected creature, but it\n  suppresses the effect for the duration of the protection from evil effect. If\n  the protection from evil effect ends before the effect granting mental\n  control does, the wouldbe controller would then be able to mentally command\n  the controlled creature.  Likewise, the barrier keeps out a possessing life\n  force but does not expel one if it is in place before the spell is cast. This\n  second effect works regardless of alignment.  Third, the spell prevents\n  bodily contact by summoned creatures. This causes the natural weapon attacks\n  of such creatures to fail and the creatures to recoil if such attacks require\n  touching the warded creature. Good summoned creatures are immune to this\n  effect. The protection against contact by summoned creatures ends if the\n  warded creature makes an attack against or tries to force the barrier against\n  the blocked creature. Spell resistance can allow a creature to overcome this\n  protection and touch the warded creature.  Arcane Material Component: A\n  little powdered silver with which you trace a 3-foot diameter circle on the\n  floor (or ground) around the creature to be warded."
+}
+school: ABJURATION
+summary: "$undefined$"
+descriptor: GOOD
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: GOOD
+  level: 1
+}
+level {
+  spell_class: PALADIN
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

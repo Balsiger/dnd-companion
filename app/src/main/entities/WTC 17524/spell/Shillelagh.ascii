@@ -1,0 +1,41 @@
+template {
+  name: "Shillelagh"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 278
+      high: 278
+    }
+  }
+  world: "Generic"
+  description: "Your own nonmagical club or quarterstaff becomes a weapon with a +1\n  enhancement bonus on attack and damage rolls. (A quarterstaff gains this\n  enhancement for both ends of the weapon.) It deals damage as if it were two\n  size categories larger (a Small club or quarterstaff so transmuted deals 1d8\n  points of damage, a Medium 2d6, and a Large 3d6), +1 for its enhancement\n  bonus. These effects only occur when the weapon is wielded by you. If you do\n  not wield it, the weapon behaves as if unaffected by this spell."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One touched nonmagical oak club or quarterstaff"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

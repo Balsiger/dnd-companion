@@ -1,0 +1,45 @@
+template {
+  name: "Control Undead"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 214
+      high: 214
+    }
+  }
+  world: "Generic"
+  description: "This spell enables you to command undead creatures for a short period of\n  time. You command them by voice and they understand you, no matter what\n  language you speak. Even if vocal communication is impossible (in the area of\n  a silence spell, for instance), the controlled undead do not attack you. At\n  the end of the spell, the subjects revert to their normal behavior.\n  Intelligent undead creatures remember that you controlled them.  Material\n  Component: A small piece of bone and a small piece of raw meat."
+}
+school: NECROMANCY
+summary: "Command [[2 * $level]] HD of undead creature no more than 30 ft apart by voice."
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to 2 HD/level of undead creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

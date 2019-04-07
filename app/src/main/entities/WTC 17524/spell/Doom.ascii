@@ -1,0 +1,43 @@
+template {
+  name: "Doom"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 225
+      high: 225
+    }
+  }
+  world: "Generic"
+  description: "This spell fills a single subject with a feeling of horrible dread that\n  causes it to become shaken."
+}
+school: NECROMANCY
+summary: "Living creature, $level min, -2 on attack, damage, saves and checks unless Will DC [[10 + $ability + 1]]."
+descriptor: FEAR
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

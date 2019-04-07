@@ -1,0 +1,42 @@
+template {
+  name: "Mass Hold Person"
+  synonym: "Hold Person, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 241
+      high: 241
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like hold person, except as noted above."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One or more humanoid creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

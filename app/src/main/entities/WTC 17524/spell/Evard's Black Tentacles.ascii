@@ -1,0 +1,48 @@
+template {
+  name: "Evard\'s Black Tentacles"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 228
+      high: 228
+    }
+  }
+  world: "Generic"
+  description: "This spell conjures a field of rubbery black tentacles, each 10 feet\n  long. These waving members seem to spring forth from the earth, floor, or\n  whatever surface is underfoot\342\200\232\303\204\303\256including water. They grasp and entwine around\n  creatures that enter the area, holding them fast and crushing them with great\n  strength.  Every creature within the area of the spell must make a grapple\n  check, opposed by the grapple check of the tentacles. Treat the tentacles\n  attacking a particular target as a Large creature with a base attack bonus\n  equal to your caster level and a Strength score of 19. Thus, its grapple\n  check modifier is equal to your caster level +8. The tentacles are immune to\n  all types of damage.  Once the tentacles grapple an opponent, they may make a\n  grapple check each round on your turn to deal 1d6+4 points of bludgeoning\n  damage. The tentacles continue to crush the opponent until the spell ends or\n  the opponent escapes.  Any creature that enters the area of the spell is\n  immediately attacked by the tentacles. Even creatures who aren\342\200\232\303\204\303\264t grappling\n  with the tentacles may move through the area at only half normal speed.\n  Material Component: A piece of tentacle from a giant octopus or a giant\n  squid."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "[[100 + (10 * $level)]], $level rounds (D), 20 ft spread, tentacles grapple everybody in the area, attack by caster level +8, deal 1d6 +4 damage with subsequent successfull grapple checks."
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "20-ft-radius spread"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,35 @@
+template {
+  name: "Greater Glyph of Warding"
+  synonym: "Glyph of Warding, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 237
+      high: 237
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like glyph of warding, except that a greater blast\n  glyph deals up to 10d8 points of damage, and a greater spell glyph can store\n  a spell of 6th level or lower.  Material Component: You trace the glyph with\n  incense, which must first be sprinkled with powdered diamond worth at least\n  400 gp."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

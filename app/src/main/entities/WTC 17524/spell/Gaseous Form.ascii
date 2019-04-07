@@ -1,0 +1,54 @@
+template {
+  name: "Gaseous Form"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 234
+      high: 234
+    }
+  }
+  world: "Generic"
+  description: "The subject and all its gear become insubstantial, misty, and\n  translucent. Its material armor (including natural armor) becomes worthless,\n  though its size, Dexterity, deflection bonuses, and armor bonuses from force\n  effects (for example, from the mage armor spell) still apply. The subject\n  gains damage reduction 10/magic and becomes immune to poison and critical\n  hits. It can\342\200\232\303\204\303\264t attack or cast spells with verbal, somatic, material, or focus\n  components while in gaseous form. (This does not rule out the use of certain\n  spells that the subject may have prepared using the feats Silent Spell, Still\n  Spell, and Eschew Materials.) The subject also loses supernatural abilities\n  while in gaseous form. If it has a touch spell ready to use, that spell is\n  discharged harmlessly when the gaseous form spell takes effect.  A gaseous\n  creature can\342\200\232\303\204\303\264t run, but it can fly at a speed of 10 feet (maneuverability\n  perfect). It can pass through small holes or narrow openings, even mere\n  cracks, with all it was wearing or holding in its hands, as long as the spell\n  persists. The creature is subject to the effects of wind, and it can\342\200\232\303\204\303\264t enter\n  water or other liquid. It also can\342\200\232\303\204\303\264t manipulate objects or activate items,\n  even those carried along with its gaseous form.  Continuously active items\n  remain active, though in some cases their effects may be moot (such as those\n  that supply armor or natural armor bonuses).  Arcane Material Component: A\n  bit of gauze and a wisp of smoke."
+}
+school: TRANSMUTATION
+summary: "willing touched, [[2 * $level]] min (D), insubstantial, DR 10/magic, Fly 10 ft)"
+level {
+  spell_class: AIR
+  level: 3
+}
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Willing corporeal creature touched"
+duration {
+  duration {
+    minutes: 2
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

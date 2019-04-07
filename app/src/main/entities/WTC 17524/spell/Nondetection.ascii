@@ -1,0 +1,53 @@
+template {
+  name: "Nondetection"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 257
+      high: 257
+    }
+  }
+  world: "Generic"
+  description: "The warded creature or object becomes difficult to detect by divination\n  spells such as clairaudience/clairvoyance, locate object, and detect\n  spells. Nondetection also prevents location by such magic items as crystal\n  balls.  If a divination is attempted against the warded creature or item, the\n  caster of the divination must succeed on a caster level check (1d20 + caster\n  level) against a DC of 11 + the caster level of the spellcaster who cast\n  nondetection. If you cast nondetection on yourself or on an item currently in\n  your possession, the DC is 15 + your caster level.  If cast on a creature,\n  nondetection wards the creature\'s gear as well as the creature itself.\n  Material Component: A pinch of diamond dust worth 50 gp."
+}
+school: ABJURATION
+summary: "For $level hours difficult to detect by divination (requires caster level check vs. 11 + caster of this spell)."
+level {
+  spell_class: RANGER
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+level {
+  spell_class: TRICKERY
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature or object touched"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

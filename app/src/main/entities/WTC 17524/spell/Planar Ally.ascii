@@ -1,0 +1,36 @@
+template {
+  name: "Planar Ally"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 261
+      high: 261
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like lesser planar ally, except you may call a single\n  creature of 12 HD or less, or two creatures of the same kind whose Hit Dice\n  total no more than 12. The creatures agree to help you and request your\n  return payment together.  XP Cost: 250 XP."
+}
+school: CONJURATION
+subschool: CALLING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or two called elementals or outsiders totaling no more than 12 HD which cannot be more than 30 ft apart when they appear"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

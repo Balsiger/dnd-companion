@@ -1,0 +1,48 @@
+template {
+  name: "Dismissal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 222
+      high: 222
+    }
+  }
+  world: "Generic"
+  description: "This spell forces an extraplanar creature back to its proper plane if it\n  fails a special Will save (DC = spell\342\200\232\303\204\303\264s save DC \342\200\232\303\204\303\254 creature\342\200\232\303\204\303\264s HD + your caster\n  level). If the spell is successful, the creature is instantly whisked away,\n  but there is a 20% chance of actually sending the subject to a plane other\n  than its own."
+}
+school: ABJURATION
+summary: "Extraplanar creature has to make Will DC $dc - creature\'s HD + your caster level or forced back to its proper plane."
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One extraplanar creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

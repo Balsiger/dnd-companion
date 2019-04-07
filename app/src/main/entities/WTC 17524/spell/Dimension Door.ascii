@@ -1,0 +1,51 @@
+template {
+  name: "Dimension Door"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 221
+      high: 221
+    }
+  }
+  world: "Generic"
+  description: "You instantly transfer yourself from your current location to any other spot\n  within range. You always arrive at exactly the spot desired\342\200\232\303\204\303\256whether by simply\n  visualizing the area or by stating direction, such as \342\200\232\303\204\303\272900 feet straight\n  downward,\342\200\232\303\204\303\271 or \342\200\232\303\204\303\272upward to the northwest, 45-degree angle, 1,200 feet.\342\200\232\303\204\303\271 After\n  using this spell, you can\342\200\232\303\204\303\264t take any other actions until your next turn. You\n  can bring along objects as long as their weight doesn\342\200\232\303\204\303\264t exceed your maximum\n  load. You may also bring one additional willing Medium or smaller creature\n  (carrying gear or objects up to its maximum load) or its equivalent per three\n  caster levels. A Large creature counts as two Medium creatures, a Huge\n  creature counts as two Large creatures, and so forth.  All creatures to be\n  transported must be in contact with one another, and at least one of those\n  creatures must be in contact with you.  If you arrive in a place that is\n  already occupied by a solid body, you and each creature traveling with you\n  take 1d6 points of damage and are shunted to a random open space on a\n  suitable surface within 100 feet of the intended location. If there is no\n  free space within 100 feet, you and each creature traveling with you take an\n  additional 2d6 points of damage and are shunted to a free space within 1,000\n  feet. If there is no free space within 1,000 feet, you and each creature\n  travelling with you take an additional 4d6 points of damage and the spell\n  simply fails."
+}
+school: CONJURATION
+subschool: TELEPORTATION
+summary: "[[400 + (40 * $level)]] ft, you and touched, teleport a short distance."
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+level {
+  spell_class: TRAVEL
+  level: 4
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You and touched objects or other touched willing creatures"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

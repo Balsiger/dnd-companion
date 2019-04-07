@@ -1,0 +1,42 @@
+template {
+  name: "Darkvision"
+  world: "Generic"
+  description: "The subject gains the ability to see 60 feet even in total\n  darkness. Darkvision is black and white only but otherwise like normal\n  sight. Darkvision does not grant one the ability to see in magical darkness.\n  Darkvision can be made permanent with a permanency spell.  Material\n  Component: Either a pinch of dried carrot or an agate."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: RANGER
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

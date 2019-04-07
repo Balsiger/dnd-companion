@@ -1,0 +1,50 @@
+template {
+  name: "Veil"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 298
+      high: 298
+    }
+  }
+  world: "Generic"
+  description: "You instantly change the appearance of the subjects and then maintain that\n  appearance for the spell\'s duration. You can make the subjects appear to be\n  anything you wish. A party might be made to resemble a mixed band of sprites\n  led by a treant. The subjects look, feel, and smell just like the creatures\n  the spell makes them resemble.  Affected creatures resume their normal\n  appearances if slain. You must succeed on a Disguise check to duplicate the\n  appearance of a specific individual. This spell gives you a +10 bonus on the\n  check.  Unwilling targets can negate the spell\'s effect on them by making\n  Will saves or with spell resistance. Those who interact with the subjects can\n  attempt Will disbelief saves to see through the glamer, but spell resistance\n  doesn\'t help."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "For Concenteration +$level hours (D) change one ore more creatures appearance (+10 disguise), Will DC $dc to negate if unwilling."
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One or more creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration_description: "Concentration +  1 hour/level"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

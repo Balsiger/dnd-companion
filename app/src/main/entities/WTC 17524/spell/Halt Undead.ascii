@@ -1,0 +1,45 @@
+template {
+  name: "Halt Undead"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 238
+      high: 238
+    }
+  }
+  world: "Generic"
+  description: "This spell renders as many as three undead creatures immobile. A\n  nonintelligent undead creature (such as a skeleton or zombie) gets no saving\n  throw; an intelligent undead creature does. If the spell is successful, it\n  renders the undead creature immobile for the duration of the spell (similar\n  to the effect of hold person on a living creature). The effect is broken if\n  the halted creatures are attacked or take damage.  Material Component: A\n  pinch of sulfur and powdered garlic."
+}
+school: NECROMANCY
+summary: "For $level rounds render up to three undead creatures immobile (no save for nonintelligent, Will DC $dc negates otherwise); broken if halted creature attacked or damaged."
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to three undead creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

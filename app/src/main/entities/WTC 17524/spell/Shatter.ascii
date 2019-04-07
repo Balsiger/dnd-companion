@@ -1,0 +1,61 @@
+template {
+  name: "Shatter"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 278
+      high: 278
+    }
+  }
+  world: "Generic"
+  description: "Shatter creates a loud, ringing noise that breaks brittle, nonmagical\n  objects; sunders a single solid, nonmagical object; or damages a crystalline\n  creature.  Used as an area attack, shatter destroys nonmagical objects of\n  crystal, glass, ceramic, or porcelain, such as vials, bottles, flasks, jugs,\n  windows, mirrors, and so forth.  All such objects within a 5-foot radius of\n  the point of origin are smashed into dozens of pieces by the spell. Objects\n  weighing more than 1 pound per your level are not affected, but all other\n  objects of the appropriate composition are shattered.  Alternatively, you can\n  target shatter against a single solid object, regardless of composition,\n  weighing up to 10 pounds per caster level.  Targeted against a crystalline\n  creature (of any weight), shatter deals 1d6 points of sonic damage per caster\n  level (maximum 10d6), with a Fortitude save for half damage.  Arcane Material\n  Component: A chip of mica."
+}
+school: EVOACATION
+summary: "Will DC $dc or 1 pound objects within 5-ft spread smashed or smash single 10 pounds object or deal [[min(10, $level)]]d6 sonic damage against crystalline creature (For DC $dc for half)."
+descriptor: SONIC
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: CHAOS
+  level: 2
+}
+level {
+  spell_class: CLERIC
+  level: 2
+}
+level {
+  spell_class: DESTRUCTION
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "5-ft-radius spread; or one solid object or one crystalline creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

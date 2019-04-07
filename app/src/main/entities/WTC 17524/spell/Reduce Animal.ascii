@@ -1,0 +1,39 @@
+template {
+  name: "Reduce Animal"
+  world: "Generic"
+  description: "This spell functions like reduce person, except that it affects a single\n  willing animal (not one with which you are engaged in combat, for\n  instance). This decrease in size allows the animal to fit better into tight\n  spaces, such as the typical dungeon room or subterranean passage. Reduce the\n  damage dealt by the animal\'s natural attacks as shown on Table 2\342\200\232\303\204\303\2543 in the\n  Dungeon Master\'s Guide."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One willing animal of Small, Medium, Large, or Huge size"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

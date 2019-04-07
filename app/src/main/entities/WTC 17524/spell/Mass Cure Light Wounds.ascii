@@ -1,0 +1,53 @@
+template {
+  name: "Mass Cure Light Wounds"
+  synonym: "Cure Light Wounds, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 216
+      high: 216
+    }
+  }
+  world: "Generic"
+  description: "You channel positive energy to cure 1d8 points of damage +1 point per caster\n  level (maximum +25) in each selected creature.  Like other cure spells, mass\n  cure light wounds deals damage to undead in its area rather than curing\n  them. Each affected undead may attempt a Will save for half damage."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: DRUID
+  level: 6
+}
+level {
+  spell_class: HEALING
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature/level, no two of which can be more than 30 ft apart"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

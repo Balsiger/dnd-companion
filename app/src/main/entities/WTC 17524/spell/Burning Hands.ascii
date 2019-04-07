@@ -1,0 +1,47 @@
+template {
+  name: "Burning Hands"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 207
+      high: 207
+    }
+  }
+  world: "Generic"
+  description: "A cone of searing flame shoots from your fingertips. Any creature in the\n  area of the flames takes 1d4 points of fire damage per caster level (maximum\n  5d4). Flammable materials, such as cloth, paper, parchment, and thin wood\n  burn if the flames touch them. A character can extinguish burning items as a\n  full-round action."
+}
+school: EVOACATION
+summary: "[[min($level, 5)]]d4 fire damage in 15 ft cone, Ref $dc for half"
+descriptor: FIRE
+level {
+  spell_class: FIRE
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped burst"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

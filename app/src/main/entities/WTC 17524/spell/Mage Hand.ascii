@@ -1,0 +1,44 @@
+template {
+  name: "Mage Hand"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "You point your finger at an object and can lift it and move it at will from\n  a distance.  As a move action, you can propel the object as far as 15 feet in\n  any direction, though the spell ends if the distance between you and the\n  object ever exceeds the spell\'s range."
+}
+school: TRANSMUTATION
+summary: "While concentrating move objects up to 5 lb within 15 ft as move actions."
+level {
+  spell_class: BARD
+}
+level {
+  spell_class: SORCERER
+}
+level {
+  spell_class: WIZARD
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One nonmagical, unattended object weighing up to 5 lb."
+duration {
+  duration_description: "Concentration"
+  duration {
+  }
+  additional_duration {
+  }
+}

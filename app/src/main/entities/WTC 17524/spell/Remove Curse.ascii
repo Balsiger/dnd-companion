@@ -1,0 +1,55 @@
+template {
+  name: "Remove Curse"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 270
+      high: 271
+    }
+  }
+  world: "Generic"
+  description: "Remove curse instantaneously removes all curses on an object or a\n  creature. Remove curse does not remove the curse from a cursed shield,\n  weapon, or suit of armor, although the spell typically enables the creature\n  afflicted with any such cursed item to remove and get rid of it. Certain\n  special curses may not be countered by this spell or may be countered only by\n  a caster of a certain level or higher.  Remove curse counters and dispels\n  bestow curse."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: PALADIN
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature or item touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

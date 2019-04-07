@@ -1,0 +1,48 @@
+template {
+  name: "Cone of Cold"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 212
+      high: 212
+    }
+  }
+  world: "Generic"
+  description: "Cone of cold creates an area of extreme cold, originating at your hand and\n  extending outward in a cone. It drains heat, dealing 1d6 points of cold\n  damage per caster level (maximum 15d6).  Arcane Material Component: A very\n  small crystal or glass cone."
+}
+school: EVOACATION
+summary: "60 ft cone for [[min(15,$level)]]d6 cold damage, Ref DC [[10 + $ability + switch($class, Water: 6, default: 5)]] for half."
+descriptor: COLD
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+level {
+  spell_class: WAR
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped burst"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

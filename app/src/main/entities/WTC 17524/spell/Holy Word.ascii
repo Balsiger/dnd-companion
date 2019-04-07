@@ -1,0 +1,43 @@
+template {
+  name: "Holy Word"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 242
+      high: 242
+    }
+  }
+  world: "Generic"
+  description: "Any nongood creature within the area that hears the holy word suffers the\n  following ill effects.  HD Effect Equal to caster level Deafened Up to caster\n  level \342\200\232\303\204\303\2541 Blinded, deafened Up to caster level \342\200\232\303\204\303\2545 Paralyzed, blinded, deafened\n  Up to caster level \342\200\232\303\204\303\25410 Killed, paralyzed, blinded, deafened The effects are\n  cumulative and concurrent.  No saving throw is allowed against these effects.\n  Deafened: The creature is deafened for 1d4 rounds.  Blinded: The creature is\n  blinded for 2d4 rounds.  Paralyzed: The creature is paralyzed and helpless\n  for 1d10 minutes.  Killed: Living creatures die. Undead creatures are\n  destroyed.  Furthermore, if you are on your home plane when you cast this\n  spell, nongood extraplanar creatures within the area are instantly banished\n  back to their home planes. Creatures so banished cannot return for at least\n  24 hours. This effect takes place regardless of whether the creatures hear\n  the holy word. The banishment effect allows a Will save (at a \342\200\232\303\204\303\2544 penalty) to\n  negate.  Creatures whose HD exceed your caster level are unaffected by holy\n  word."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: GOOD
+descriptor: SONIC
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: GOOD
+  level: 7
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Nongood creatures in a 40-ft-radius spread centered on you"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

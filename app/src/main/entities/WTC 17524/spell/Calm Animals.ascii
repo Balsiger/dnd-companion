@@ -1,0 +1,50 @@
+template {
+  name: "Calm Animals"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 207
+      high: 207
+    }
+  }
+  world: "Generic"
+  description: "This spell soothes and quiets animals, rendering them docile and\n  harmless. Only ordinary animals (those with Intelligence scores of 1 or 2)\n  can be affected by this spell. All the subjects must be of the same kind, and\n  no two may be more than 30 feet apart. The maximum number of Hit Dice of\n  animals you can affect is equal to 2d4 + caster level. A dire animal or an\n  animal trained to attack or guard is allowed a saving throw; other animals\n  are not. (A druid could calm a normal bear or wolf with little trouble, but\n  it\342\200\232\303\204\303\264s more difficult to affect a trained guard dog.)  The affected creatures\n  remain where they are and do not attack or flee. They are not helpless and\n  defend themselves normally if attacked. Any threat (such as fire, a hungry\n  predator, or an imminent attack) breaks the spell on the threatened\n  creatures."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: ANIMAL
+  level: 1
+}
+level {
+  spell_class: DRUID
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Animals within 30 ft of each other"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

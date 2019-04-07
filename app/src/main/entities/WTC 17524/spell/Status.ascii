@@ -1,0 +1,40 @@
+template {
+  name: "Status"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 284
+      high: 284
+    }
+  }
+  world: "Generic"
+  description: "When you need to keep track of comrades who may get separated, status allows\n  you to mentally monitor their relative positions and general condition. You\n  are aware of direction and distance to the creatures and any conditions\n  affecting them: unharmed, wounded, disabled, staggered, unconscious, dying,\n  nauseated, panicked, stunned, poisoned, diseased, confused, or the like. Once\n  the spell has been cast upon the subjects, the distance between them and the\n  caster does not affect the spell as long as they are on the same plane of\n  existence. If a subject leaves the plane, or if it dies, the spell ceases to\n  function for it."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature touched per three levels"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

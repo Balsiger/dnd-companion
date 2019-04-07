@@ -1,0 +1,43 @@
+template {
+  name: "Freedom"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 233
+      high: 233
+    }
+  }
+  world: "Generic"
+  description: "The subject is freed from spells and effects that restrict its movement,\n  including binding, entangle, grappling, imprisonment, maze, paralysis,\n  petrification, pinning, sleep, slow, stunning, temporal stasis, and web. To\n  free a creature from imprisonment or maze, you must know its name and\n  background, and you must cast this spell at the spot where it was entombed or\n  banished into the maze."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

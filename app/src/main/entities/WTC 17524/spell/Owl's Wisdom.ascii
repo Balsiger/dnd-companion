@@ -1,0 +1,61 @@
+template {
+  name: "Owl\'s Wisdom"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 259
+      high: 259
+    }
+  }
+  world: "Generic"
+  description: "The transmuted creature becomes wiser.  The spell grants a +4 enhancement\n  bonus to Wisdom, adding the usual benefit to Wisdom-related skills. Clerics,\n  druids, paladins, and rangers (and other Wisdombased spellcasters) who\n  receive owl\'s wisdom do not gain any additional bonus spells for the\n  increased Wisdom, but the save DCs for their spells increase.  Arcane\n  Material Component: A few feathers, or a pinch of droppings, from an owl."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 2
+}
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: PALADIN
+  level: 2
+}
+level {
+  spell_class: RANGER
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

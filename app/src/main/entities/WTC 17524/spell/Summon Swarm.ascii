@@ -1,0 +1,53 @@
+template {
+  name: "Summon Swarm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 289
+      high: 289
+    }
+  }
+  world: "Generic"
+  description: "You summon a swarm of bats, rats, or spiders (your choice), which attacks\n  all other creatures within its area. (You may summon the swarm so that it\n  shares the area of other creatures.) If no living creatures are within its\n  area, the swarm attacks or pursues the nearest creature as best it can. The\n  caster has no control over its target or direction of travel.  See the\n  Monster Manual for details of bat, rat, and spider swarms.  Arcane Material\n  Component: A square of red cloth."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "[[25 + (5 * ($level/2))]] ft, concentration +2 rounds, summon swarm of bats, rats, spiders to attack all within its area or nearest creature."
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "One swarm of bats rats or spiders"
+}
+duration {
+  duration_description: "Concentration +  2 rounds"
+  duration {
+  }
+  additional_duration {
+  }
+}

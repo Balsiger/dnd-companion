@@ -1,0 +1,53 @@
+template {
+  name: "Animal Growth"
+  synonym: "Growth, Animal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 198
+      high: 198
+    }
+  }
+  world: "Generic"
+  description: "A number of animals grow to twice their normal size and eight times their\n  normal weight. This alteration changes each animal\342\200\232\303\204\303\264s size category to the\n  next largest (from Large to Huge, for example), grants it a +8 size bonus to\n  Strength and a +4 size bonus to Constitution (and thus an extra 2 hit points\n  per HD), and imposes a \342\200\232\303\204\303\2542 size penalty to Dexterity. The creature\342\200\232\303\204\303\264s existing\n  natural armor bonus increases by 2. The size change also affects the animal\342\200\232\303\204\303\264s\n  modifier to AC and attack rolls and its base damage, as detailed on Table 2\342\200\232\303\204\303\2542\n  in the Dungeon Master\342\200\232\303\204\303\264s Guide. The animal\342\200\232\303\204\303\264s space and reach change as\n  indicated on Table 8\342\200\232\303\204\303\254 4: Creature Size and Scale (page 149), but its speed\n  does not change.  The spell also grants each subject damage reduction\n  10/magic and a +4 resistance bonus on saving throws.  If insufficient room is\n  available for the desired growth, the creature attains the maximum possible\n  size and may make a Strength check (using its increased Strength) to burst\n  any enclosures in the process. If it fails, it is constrained without harm by\n  the materials enclosing it\342\200\232\303\204\303\256the spell cannot be used to crush a creature by\n  increasing its size.  All equipment worn or carried by an animal is similarly\n  enlarged by the spell, though this change has no effect on the magical\n  properties of any such equipment.  Any enlarged item that leaves the enlarged\n  creature\342\200\232\303\204\303\264s possession instantly returns to its normal size.  The spell gives\n  no means of command or influence over the enlarged animals.  Multiple magical\n  effects that increase size do not stack, which means (among other things)\n  that you can\342\200\232\303\204\303\264t use a second casting of this spell to further increase the\n  size of an animal that\342\200\232\303\204\303\264s still under the effect of the first casting."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 5
+}
+level {
+  spell_class: RANGER
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to one animal (Gargantuan or smaller) per two levels, no two of which can be more than 30 ft. apart"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,18 @@
+template {
+  name: "Ride"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 80
+      high: 80
+    }
+  }
+  world: "Generic"
+  description: "You can ride a mount, be it a horse, riding dog, griffon, dragon, or some\n  other kind of creature suited for riding. If you attempt to ride a creature\n  that is ill suited as a mount (such as most bipedal creatures), you take a \342\200\232\303\204\303\2545\n  penalty on your Ride checks."
+}
+ability: DEXTERITY
+action: "Varies. Mounting or dismounting normally is a move                     action. Other checks are a move action, a free action, or                     no action at all, as noted above."
+special: "If you are riding bareback, you take a \342\200\232\303\204\303\2545 penalty on Ride                     checks.  If your mount has a military saddle (page 132),                     you get a +2 cir- cumstance bonus on Ride checks related                     to staying in the saddle.  The Ride skill is a                     prerequisite for the feats Mounted Archery, Mounted                     Combat, Ride-By Attack, Spirited Charge, Trample. See the                     appropriate feat descriptions in Chapter 5: Feats for                     details.  If you have the Animal Affinity feat, you get a                     +2 bonus on Ride checks."
+synergy {
+  name: "handle animal"
+}

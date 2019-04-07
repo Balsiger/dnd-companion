@@ -1,0 +1,47 @@
+template {
+  name: "Erase"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 227
+      high: 227
+    }
+  }
+  world: "Generic"
+  description: "Erase removes writings of either magical or mundane nature from a scroll or\n  from one or two pages of paper, parchment, or similar surfaces. With this\n  spell, you can remove explosive runes, a glyph of warding, a sepia snake\n  sigil, or an arcane mark, but not illusory script or a symbol\n  spell. Nonmagical writing is automatically erased if you touch it and no one\n  else is holding it. Otherwise, the chance of erasing nonmagical writing is\n  90%.  Magic writing must be touched to be erased, and you also must succeed\n  on a caster level check (1d20 + caster level) against DC 15. (A natural 1 or\n  2 is always a failure on this check.) If you fail to erase explosive runes, a\n  glyph of warding, or a sepia snake sigil, you accidentally activate that\n  writing instead."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One scroll or two pages"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

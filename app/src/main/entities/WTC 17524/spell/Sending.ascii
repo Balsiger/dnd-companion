@@ -1,0 +1,48 @@
+template {
+  name: "Sending"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 275
+      high: 276
+    }
+  }
+  world: "Generic"
+  description: "You contact a particular creature with which you are familiar and send a\n  short message of twenty-five words or less to the subject. The subject\n  recognizes you if it knows you. It can answer in like manner immediately. A\n  creature with an Intelligence score as low as 1 can understand the sending,\n  though the subject\'s ability to react is limited as normal by its\n  Intelligence score. Even if the sending is received, the subject is not\n  obligated to act upon it in any manner.  If the creature in question is not\n  on the same plane of existence as you are, there is a 5% chance that the\n  sending does not arrive. (Local conditions on other planes may worsen this\n  chance considerably, at the option of the DM.)  Arcane Material Component: A\n  short piece of fine copper wire."
+}
+school: EVOACATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: SEE_TEXT_RANGE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration {
+    rounds: 1
+  }
+  additional_duration {
+  }
+}

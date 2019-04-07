@@ -1,0 +1,49 @@
+template {
+  name: "Mirage Arcana"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 254
+      high: 254
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like hallucinatory terrain, except that it enables you\n  to make any area appear to be something other than it is. The illusion\n  includes audible, visual, tactile, and olfactory elements. Unlike\n  hallucinatory terrain, the spell can alter the appearance of structures (or\n  add them where none are present). Still, it can\'t disguise, conceal, or add\n  creatures (though creatures within the area might hide themselves within the\n  illusion just as they can hide themselves within a real location)."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "For Concentration + $level hours (D) create hallucinatyro terrain (with structures)."
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "One 20-ft cube/level (S)"
+duration {
+  duration_description: "Concentration +  1 hour/level"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

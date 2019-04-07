@@ -1,0 +1,48 @@
+template {
+  name: "Fire Storm"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 231
+      high: 231
+    }
+  }
+  world: "Generic"
+  description: "When a fire storm spell is cast, the whole area is shot through with sheets\n  of roaring flame. The raging flames do not harm natural vegetation, ground\n  cover, and any plant creatures in the area that you wish to exclude from\n  damage. Any other creature within the area takes 1d6 points of fire damage\n  per caster level (maximum 20d6)."
+}
+school: EVOACATION
+summary: "Within [[$level * 2]] 10 ft cubes up to [[100 + (10 * $level)]] ft away shot through with sheets of flame for [[min(20, $level)]]d6 fire damage."
+descriptor: FIRE
+level {
+  spell_class: CLERIC
+  level: 8
+}
+level {
+  spell_class: DRUID
+  level: 7
+}
+level {
+  spell_class: FIRE
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Two 10-ft cubes per level (S)"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

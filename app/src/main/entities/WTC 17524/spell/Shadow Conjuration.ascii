@@ -1,0 +1,48 @@
+template {
+  name: "Shadow Conjuration"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 276
+      high: 276
+    }
+  }
+  world: "Generic"
+  description: "You use material from the Plane of Shadow to shape quasi-real illusions of\n  one or more creatures, objects, or forces. Shadow conjuration can mimic any\n  sorcerer or wizard conjuration (summoning) or conjuration (creation) spell of\n  3rd level or lower.  Shadow conjurations are actually one-fifth (20%) as\n  strong as the real things, though creatures who believe the shadow\n  conjurations to be real are affected by them at full strength.  Any creature\n  that interacts with the conjured object, force, or creature can make a Will\n  save to recognize its true nature.  Spells that deal damage, such as Melf\'s\n  acid arrow, have normal effects unless the affected creature succeeds on a\n  Will save.  Each disbelieving creature takes only onefifth (20%) damage from\n  the attack. If the disbelieved attack has a special effect other than damage,\n  that effect is only 20% likely to occur. Regardless of the result of the save\n  to disbelieve, an affected creature is also allowed any save that the spell\n  being simulated allows, but the save DC is set according to shadow\n  conjuration\'s level (5th) rather than the spell\'s normal level. In addition,\n  any effect created by shadow conjuration allows spell resistance, even if the\n  spell it is simulating does not.  Shadow objects or substances, such as\n  obscuring mist, have normal effects except against those who disbelieve\n  them. Against disbelievers, they are 20% likely to work.  A shadow creature\n  has one-fifth the hit points of a normal creature of its kind (regardless of\n  whether it\'s recognized as shadowy). It deals normal damage and has all\n  normal abilities and weaknesses.  Against a creature that recognizes it as a\n  shadow creature, however, the shadow creature\'s damage is one-fifth (20%)\n  normal, and all special abilities that do not deal lethal damage are only 20%\n  likely to work. (Roll for each use and each affected character separately.)\n  Furthermore, the shadow creature\'s AC bonuses are one-fifth as large (so a +7\n  bonus resulting in AC 17 would change to a +1 total bonus for a new AC of\n  11).  A creature that succeeds on its save sees the shadow conjurations as\n  transparent images superimposed on vague, shadowy forms.  Objects\n  automatically succeed on their Will saves against this spell."
+}
+school: ILLUSION
+subschool: SHADOW
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: SEE_TEXT_RANGE
+range {
+}
+effect {
+  distance {
+  }
+  description: "See text"
+}
+duration {
+  duration_description: "See Text"
+  duration {
+  }
+  additional_duration {
+  }
+}

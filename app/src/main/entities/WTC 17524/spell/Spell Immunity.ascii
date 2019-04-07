@@ -1,0 +1,49 @@
+template {
+  name: "Spell Immunity"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 282
+      high: 282
+    }
+  }
+  world: "Generic"
+  description: "The warded creature is immune to the effects of one specified spell for\n  every four levels you have. The spells must be of 4th level or lower. The\n  warded creature effectively has unbeatable spell resistance regarding the\n  specified spell or spells. Naturally, that immunity doesn\'t protect a\n  creature from spells for which spell resistance doesn\'t apply. Spell immunity\n  protects against spells, spell-like effects of magic items, and innate\n  spell-like abilities of creatures. It does not protect against supernatural\n  or extraordinary abilities, such as breath weapons or gaze attacks.  Only a\n  particular spell can be protected against, not a certain domain or school of\n  spells or a group of spells that are similar in effect. Thus, a creature\n  given immunity to lightning bolt is still vulnerable to shocking grasp or\n  chain lightning.  A creature can have only one spell immunity or greater\n  spell immunity spell in effect on it at a time."
+}
+school: ABJURATION
+summary: "Touched creture is immune to one 4th level or lower spell for [[10 * $level]] min."
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: PROTECTION
+  level: 4
+}
+level {
+  spell_class: STRENGTH_SPELL_CLASS
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

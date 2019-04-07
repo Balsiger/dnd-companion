@@ -1,0 +1,48 @@
+template {
+  name: "Soul Bind"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 281
+      high: 281
+    }
+  }
+  world: "Generic"
+  description: "You draw the soul from a newly dead body and imprison it in a black sapphire\n  gem.  The subject must have been dead no more than 1 round per caster\n  level. The soul, once trapped in the gem, cannot be returned through clone,\n  raise dead, reincarnation, resurrection, true resurrection, or even a miracle\n  or a wish. Only by destroying the gem or dispelling the spell on the gem can\n  one free the soul (which is then still dead).  Focus: A black sapphire of at\n  least 1,000 gp value for every Hit Die possessed by the creature whose soul\n  is to be bound. If the gem is not valuable enough, it shatters when the\n  binding is attempted. (While creatures have no concept of level or Hit Dice\n  as such, the value of the gem needed to trap an individual can be researched.\n  Remember that this value can change over time as creatures gain more Hit\n  Dice.)"
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Corpse"
+duration {
+  duration_description: "Permanent"
+  duration {
+  }
+  additional_duration {
+  }
+}

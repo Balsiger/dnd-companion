@@ -1,0 +1,41 @@
+template {
+  name: "Holy Sword"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 242
+      high: 242
+    }
+  }
+  world: "Generic"
+  description: "This spell allows you to channel holy power into your sword, or any other\n  melee weapon you choose. The weapon acts as a +5 holy weapon (+5 enhancement\n  bonus on attack and damage rolls, extra 2d6 damage against evil\n  opponents). It also emits a magic circle against evil effect (as the spell).\n  If the magic circle ends, the sword creates a new one on your turn as a free\n  action. The spell is automatically canceled 1 round after the weapon leaves\n  your hand. You cannot have more than one holy sword at a time.  If this spell\n  is cast on a magic weapon, the powers of the spell supersede any that the\n  weapon normally has, rendering the normal enhancement bonus and powers of the\n  weapon inoperative for the duration of the spell. This spell is not\n  cumulative with bless weapon or any other spell that might modify the weapon\n  in any way.  This spell does not work on artifacts.  Note: A masterwork\n  weapon\'s bonus to attack does not stack with an enhancement bonus to\n  attack."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: GOOD
+level {
+  spell_class: PALADIN
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Melee weapon touched"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

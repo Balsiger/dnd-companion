@@ -1,0 +1,4 @@
+template {
+  name: "Knowledge Arcana"
+  base: "knowledge"
+}

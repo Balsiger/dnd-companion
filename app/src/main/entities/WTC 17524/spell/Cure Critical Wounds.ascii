@@ -1,0 +1,47 @@
+template {
+  name: "Cure Critical Wounds"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 215
+      high: 215
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like cure light wounds, except that it cures 4d8 points\n  of damage +1 point per caster level (maximum +20)."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "Touch, cure 4d8 +[[min(20, $level)]] hit points."
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: DRUID
+  level: 5
+}
+level {
+  spell_class: HEALING
+  level: 4
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,47 @@
+template {
+  name: "Undetectable Alignment"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 297
+      high: 297
+    }
+  }
+  world: "Generic"
+  description: "An undetectable alignment spell conceals the alignment of an object or a\n  creature from all forms of divination."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: CLERIC
+  level: 2
+}
+level {
+  spell_class: PALADIN
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature or object"
+duration {
+  duration {
+    hours: 24
+  }
+  additional_duration {
+  }
+}

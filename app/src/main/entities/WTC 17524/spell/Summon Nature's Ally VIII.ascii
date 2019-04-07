@@ -1,0 +1,40 @@
+template {
+  name: "Summon Nature\'s Ally VIII"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 289
+      high: 289
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like summon nature\'s ally I, except that you can summon\n  one 8th-level creature, 1d3 7th-level creatures of the same kind, or 1d4+1\n  lower-level creatures of the same kind.  When you use a summoning spell to\n  summon an air, chaotic, earth, evil, fire, good, lawful, or water creature,\n  it is a spell of that type."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "For $level rounds summon an elder Arrowhawk, dire Tiger, greater Elemental, Djinni (genie), Invisible stalker, Pixie, giant Squid, Triceratops, Tyrannosaurus, cachalot Whale or elder Xorn within [[25 + (($level / 2) * 5)]] ft after casting for 1 round."
+level {
+  spell_class: ANIMAL
+  level: 8
+}
+level {
+  spell_class: DRUID
+  level: 8
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or more creatures no two of which can be more than 30 ft apart"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

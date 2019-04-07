@@ -1,0 +1,47 @@
+template {
+  name: "Animal Trance"
+  synonym: "Trance, Animal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 198
+      high: 198
+    }
+  }
+  world: "Generic"
+  description: "Your swaying motions and music (or singing, or chanting) compel animals and\n  magical beasts to do nothing but watch you. Only a creature with an\n  Intelligence score of 1 or 2 can be fascinated by this spell. Roll 2d6 to\n  determine the total number of HD worth of creatures that you fascinate. The\n  closest targets are selected first until no more targets within range can be\n  affected. For example, if Vadania affects 7 HD worth of animals and there are\n  several 2 HD wolves within close range, only the three closest wolves are\n  affected.  A magical beast, a dire animal, or an animal trained to attack or\n  guard is allowed a saving throw; an animal not trained to attack or guard is\n  not."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+descriptor: SONIC
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: DRUID
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Animals or magical beasts with Intelligence 1 or 2"
+duration {
+  duration_description: "Concentration"
+  duration {
+  }
+  additional_duration {
+  }
+}

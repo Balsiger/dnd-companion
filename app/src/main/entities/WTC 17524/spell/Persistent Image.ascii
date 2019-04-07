@@ -1,0 +1,47 @@
+template {
+  name: "Persistent Image"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 260
+      high: 260
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like silent image, except that the figment includes\n  visual, auditory, olfactory, and thermal components, and the figment follows\n  a script determined by you. The figment follows that script without your\n  having to concentrate on it.  The illusion can include intelligible speech if\n  you wish. For instance, you could create the illusion of several orcs playing\n  cards and arguing, culminating in a fistfight.  Material Component: A bit of\n  fleece and several grains of sand."
+}
+school: ILLUSION
+subschool: FIGMENT
+summary: "For $level min (D) you can create a figment with visual, auditory, olfactory, and thermal components, following a script and can contain intelligible speech."
+level {
+  spell_class: BARD
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

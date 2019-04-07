@@ -1,0 +1,48 @@
+template {
+  name: "Prismatic Sphere"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 264
+      high: 264
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like prismatic wall, except you conjure up an immobile,\n  opaque globe of shimmering, multicolored light that surrounds you and\n  protects you from all forms of attack. The sphere flashes in all colors of\n  the visible spectrum.  The sphere\'s blindness effect on creatures with less\n  than 8 HD lasts 2d4\342\210\232\303\26310 minutes.  You can pass into and out of the prismatic\n  sphere and remain near it without harm. However, when you\'re inside it, the\n  sphere blocks any attempt to project something through the sphere (including\n  spells). Other creatures that attempt to attack you or pass through suffer\n  the effects of each color, one at a time.  Typically, only the upper\n  hemisphere of the globe will exist, since you are at the center of the\n  sphere, so the lower half is usually excluded by the floor surface you are\n  standing on.  The colors of the sphere have the same effects as the colors of\n  a prismatic wall.  Prismatic sphere can be made permanent with a permanency\n  spell."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: PROTECTION
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+level {
+  spell_class: SUN
+  level: 9
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "10-ft-radius sphere centered on you"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

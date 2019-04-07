@@ -1,0 +1,53 @@
+template {
+  name: "Foresight"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 233
+      high: 233
+    }
+  }
+  world: "Generic"
+  description: "This spell grants you a powerful sixth sense in relation to yourself or\n  another.  Once foresight is cast, you receive instantaneous warnings of\n  impending danger or harm to the subject of the spell. Thus, if you are the\n  subject of the spell, you would be warned in advance if a rogue were about to\n  attempt a sneak attack on you, or if a creature were about to leap out from a\n  hiding place, or if an attacker were specifically targeting you with a spell\n  or ranged weapon. You are never surprised or flat-footed. In addition, the\n  spell gives you a general idea of what action you might take to best protect\n  yourself\342\200\232\303\204\303\256duck, jump right, close your eyes, and so on\342\200\232\303\204\303\256and gives you a +2\n  insight bonus to AC and Reflex saves. This insight bonus is lost whenever you\n  would lose a Dexterity bonus to AC.  When another creature is the subject of\n  the spell, you receive warnings about that creature. You must communicate\n  what you learn to the other creature for the warning to be useful, and the\n  creature can be caught unprepared in the absence of such a warning. Shouting\n  a warning, yanking a person back, and even telepathically communicating (via\n  an appropriate spell) can all be accomplished before some danger befalls the\n  subject, provided you act on the warning without delay. The subject, however,\n  does not gain the insight bonus to AC and Reflex saves.  Arcane Material\n  Component: A hummingbird\342\200\232\303\204\303\264s feather."
+}
+school: DIVINATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 9
+}
+level {
+  spell_class: KNOWLEDGE
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL_OR_TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "See text"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

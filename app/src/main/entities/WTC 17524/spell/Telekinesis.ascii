@@ -1,0 +1,43 @@
+template {
+  name: "Telekinesis"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 292
+      high: 292
+    }
+  }
+  world: "Generic"
+  description: "You move objects or creatures by concentrating on them. Depending on the\n  version selected, the spell can provide a gentle, sustained force, perform a\n  variety of combat maneuvers, or exert a single short, violent thrust.\n  Sustained Force: A sustained force moves an object weighing no more than 25\n  pounds per caster level (maximum 375 pounds at 15th level) up to 20 feet per\n  round. A creature can negate the effect on an object it possesses with a\n  successful Will save or with spell resistance.  This version of the spell can\n  last 1 round per caster level, but it ends if you cease concentration. The\n  weight can be moved vertically, horizontally, or in both directions. An\n  object cannot be moved beyond your range. The spell ends if the object is\n  forced beyond the range. If you cease concentration for any reason, the\n  object falls or stops.  An object can be telekinetically manipulated as if\n  with one hand. For example, a lever or rope can be pulled, a key can be\n  turned, an object rotated, and so on, if the force required is within the\n  weight limitation. You might even be able to untie simple knots, though\n  delicate activities such as these require Intelligence checks against a DC\n  set by the DM.  Combat Maneuver: Alternatively, once per round, you can use\n  telekinesis to perform a bull rush, disarm, grapple (including pin), or\n  trip. Resolve these attempts as normal, except that they don\'t provoke\n  attacks of opportunity, you use your caster level in place of your base\n  attack bonus (for disarm and grapple), you use your Intelligence modifier (if\n  a wizard) or Charisma modifier (if a sorcerer) in place of your Strength or\n  Dexterity modifier, and a failed attempt doesn\'t allow a reactive attempt by\n  the target (such as for disarm or trip). No save is allowed against these\n  attempts, but spell resistance applies normally. This version of the spell\n  can last 1 round per caster level, but it ends if you cease concentration.\n  Violent Thrust: Alternatively, the spell energy can be spent in a single\n  round. You can hurl one object or creature per caster level (maximum 15) that\n  are within range and all within 10 feet of each other toward any target\n  within 10 feet per level of all the objects. You can hurl up to a total\n  weight of 25 pounds per caster level (maximum 375 pounds at 15th level).  You\n  must succeed on attack rolls (one per creature or object thrown) to hit the\n  target with the items, using your base attack bonus + your Intelligence\n  modifier (if a wizard) or Charisma modifier (if a sorcerer). Weapons cause\n  standard damage (with no Strength bonus; note that arrows or bolts deal\n  damage as daggers of their size when used in this manner). Other objects\n  cause damage ranging from 1 point per 25 pounds (for less dangerous objects\n  such as a barrel) to 1d6 points of damage per 25 pounds (for hard, dense\n  objects such as a boulder).  Creatures who fall within the weight capacity of\n  the spell can be hurled, but they are allowed Will saves (and spell\n  resistance) to negate the effect, as are those whose held possessions are\n  targeted by the spell. If a telekinesed creature is hurled against a solid\n  surface, it takes damage as if it had fallen 10 feet (1d6 points)."
+}
+school: TRANSMUTATION
+summary: "For [[$level]] round (Concentration) move object up to [[min(375, 25 * $level)]] lbs up to 20 ft per round (resist with Will DC $dc or spell resistance); For [[$level] rounds (Concentration), once per round perform bull rush, disarm, grapple (including pin), or trip (no attack of opportunity, use level or INT/CHA modifier instead of STR); Hurl up to [[min(15, $level)]] objects within 10 ft of each other towards target within 10 ft up to [[min(375, 25 * $level)]] for normal attack with BAB + INT/CHA for normal weapon damage or 1 point per 25 pounds (less dangerous) to 1d6 per 25 pounds (dense)."
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "See text"
+duration {
+  duration_description: "Concentration (up to 1 round/level) or instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

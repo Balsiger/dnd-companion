@@ -1,0 +1,46 @@
+template {
+  name: "Stinking Cloud"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 284
+      high: 284
+    }
+  }
+  world: "Generic"
+  description: "Stinking cloud creates a bank of fog like that created by fog cloud, except\n  that the vapors are nauseating. Living creatures in the cloud become\n  nauseated. This condition lasts as long as the creature is in the cloud and\n  for 1d4+1 rounds after it leaves. (Roll separately for each nauseated\n  character.)  Any creature that succeeds on its save but remains in the cloud\n  must continue to save each round on your turn.  Stinking cloud can be made\n  permanent with a permanency spell. A permanent stinking cloud dispersed by\n  wind reforms in 10 minutes.  Material Component: A rotten egg or several\n  skunk cabbage leaves."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "[[100 + (10 * $level)]] ft, $level rounds, nauseating (only single move action and free actions) fog, lasts 1d4 +1 rounds after leaving, save each round."
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Cloud spreads in 20-ft radius 20 ft high"
+}
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

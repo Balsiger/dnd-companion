@@ -1,0 +1,44 @@
+template {
+  name: "Symbol of Stunning"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 291
+      high: 291
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like symbol of death, except that all creatures within\n  60 feet of a symbol of stunning instead become stunned for 1d6 rounds.  Note:\n  Magic traps such as symbol of stunning are hard to detect and disable. A\n  rogue (only) can use the Search skill to find a symbol of stunning and\n  Disable Device to thwart it. The DC in each case is 25 + spell level, or 32\n  for symbol of stunning.  Material Component: Mercury and phosphorus, plus\n  powdered diamond and opal with a total value of at least 5,000 gp."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

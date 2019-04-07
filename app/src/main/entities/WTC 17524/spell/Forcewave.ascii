@@ -1,0 +1,45 @@
+template {
+  name: "Forcewave"
+  category: "force"
+  category: "wave"
+  category: "bull rush"
+  world: "Forgotten Realms"
+  description: "You cause a wave of visible resembling a crashing ocean wave to appear and immediately impact a single target. If the target fails its saving throw, it takes 1d4 + 1 hit points damage and must make an opposed Strength check to avoid a bull rush. The wave of force has a Strength of 18, is Medium-size, and is considered charging for the purpose of this check, and always moves the target the maximum distance possible. If the wave of force fails the opposed Strength check, the target is not moved. If the target makes its saving throw, it takes 1 point of damage and avoids the bull rush attempt. \n"
+}
+school: EVOACATION
+subschool: CALLING
+summary: "Cause a wave resembling a crashing ocean wave, target within [[100 + 10 * $level]] ft save For $dc or take 1d4 + 1 damage and must make an opposed Str check (18 Str, medium-size, charging) or be moved maximum distance; target takes 1 damage on a successful save."
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+  use: "Focus"
+  component: "a small piece of string"
+  component: "a drop of water"
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,48 @@
+template {
+  name: "Mount"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 256
+      high: 256
+    }
+  }
+  world: "Generic"
+  description: "You summon a light horse or a pony (your choice) to serve you as a\n  mount. The steed serves willingly and well. The mount comes with a bit and\n  bridle and a riding saddle.  Material Component: A bit of horse hair."
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "One mount"
+}
+duration {
+  duration {
+    hours: 2
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

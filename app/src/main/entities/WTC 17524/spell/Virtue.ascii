@@ -1,0 +1,46 @@
+template {
+  name: "Virtue"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 298
+      high: 298
+    }
+  }
+  world: "Generic"
+  description: "The subject gains 1 temporary hit point."
+}
+school: TRANSMUTATION
+summary: "Touched, 1 min, gain 1 temporary hit point."
+level {
+  spell_class: CLERIC
+}
+level {
+  spell_class: DRUID
+}
+level {
+  spell_class: PALADIN
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  additional_duration {
+  }
+}

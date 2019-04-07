@@ -1,0 +1,48 @@
+template {
+  name: "Otto\'s Irresistible Dance"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 259
+      high: 259
+    }
+  }
+  world: "Generic"
+  description: "The subject feels an undeniable urge to dance and begins doing so, complete\n  with foot shuffling and tapping. The spell effect makes it impossible for the\n  subject to do anything other than caper and prance in place. The effect\n  imposes a \342\200\232\303\204\303\2544 penalty to Armor Class and a \342\200\232\303\204\303\25410 penalty on Reflex saves, and it\n  negates any AC bonus granted by a shield the target holds. The dancing\n  subject provokes attacks of opportunity each round on its turn."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living creature touched"
+duration {
+  duration_description: "1d4 + 1 rounds"
+  duration {
+  }
+  additional_duration {
+  }
+}

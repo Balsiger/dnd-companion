@@ -1,0 +1,52 @@
+template {
+  name: "Hold Monster"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 241
+      high: 241
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like hold person, except that it affects any living\n  creature that fails its Will save.  Arcane Material Component: One hard metal\n  bar or rod, which can be as small as a three-penny nail."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "[[100 + (10 * $level)]] ft, $level rounds (D), paralyze any living creature unless Will DC $dc."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: LAW
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,56 @@
+template {
+  name: "Greater Scrying"
+  synonym: "Scrying, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 275
+      high: 275
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like scrying, except as noted above. Additionally, all\n  of the following spells function reliably through the sensor: detect chaos,\n  detect evil, detect good, detect law, detect magic, message, read magic, and\n  tongues."
+}
+school: DIVINATION
+subschool: SCRYING
+summary: "Will DC [[10 + $ability + switch($class, Bard: 6, default: 7)]] or subject can be seen or heard for $level hours (modifiers to save +5 for another plane, no knowledge +10, secondhand +5, familiar -5, picture -2, possession -4, body part -10); spells may operate through the sensor (detect chaos, detect evil, detect good, detect law, detect magic, message, read magic and tongues work reliably)."
+level {
+  spell_class: BARD
+  level: 6
+}
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: DRUID
+  level: 7
+}
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,50 @@
+template {
+  name: "Expeditious Retreat"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 228
+      high: 228
+    }
+  }
+  world: "Generic"
+  description: "This spell increases your base land speed by 30 feet. (This adjustment is\n  treated as an enhancement bonus.) There is no effect on other modes of\n  movement, such as burrow, climb, fly, or swim. As with any effect that\n  increases your speed, this spell affects your jumping distance (see the Jump\n  skill, page 77).  This spell need not be used as part of a retreat; the name\n  of the spell merely hints at the typical wizard\342\200\232\303\204\303\264s attitude towards combat."
+}
+school: TRANSMUTATION
+summary: "personal, $level min (D), Speed +30 ft"
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

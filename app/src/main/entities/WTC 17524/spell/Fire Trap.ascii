@@ -1,0 +1,51 @@
+template {
+  name: "Fire Trap"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 231
+      high: 231
+    }
+  }
+  world: "Generic"
+  description: "Fire trap creates a fiery explosion when an intruder opens the item that the\n  trap protects. A fire trap can ward any object that can be opened and closed\n  (book, box, bottle, chest, coffer, coffin, door, drawer, and so forth).  When\n  casting fire trap, you select a point on the object as the spell\342\200\232\303\204\303\264s\n  center. When someone other than you opens the object, a fiery explosion fills\n  the area within a 5foot radius around the spell\342\200\232\303\204\303\264s center. The flames deal 1d4\n  points of fire damage +1 point per caster level (maximum +20). The item\n  protected by the trap is not harmed by this explosion.  A fire trapped item\n  cannot have a second closure or warding spell placed on it.  A knock spell\n  does not bypass a fire trap.  An unsuccessful dispel magic spell does not\n  detonate the spell.  Underwater, this ward deals half damage and creates a\n  large cloud of steam.  You can use the fire trapped object without\n  discharging it, as can any individual to whom the object was specifically\n  attuned when cast. Attuning a fire trapped object to an individual usually\n  involves setting a password that you can share with friends.  Note: Magic\n  traps such as fire trap are hard to detect and disable. A rogue (only) can\n  use the Search skill to find a fire trap and Disable Device to thwart it. The\n  DC in each case is 25 + spell level (DC 27 for a druid\342\200\232\303\204\303\264s fire trap or DC 29\n  for the arcane version).  Material Component: A half-pound of gold dust (cost\n  25 gp) sprinkled on the warded object."
+}
+school: ABJURATION
+summary: "$undefined$"
+descriptor: FIRE
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Object touched"
+duration {
+  duration_description: "Permanent until Discharged"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

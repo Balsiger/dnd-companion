@@ -1,0 +1,42 @@
+template {
+  name: "Prismatic Spray"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 264
+      high: 264
+    }
+  }
+  world: "Generic"
+  description: "This spell causes seven shimmering, intertwined, multicolored beams of light\n  to spray from your hand. Each beam has a different power. Creatures in the\n  area of the spell with 8 HD or less are automatically blinded for 2d4\n  rounds. Every creature in the area is randomly struck by one or more beams,\n  which have additional effects.  Color 1d8 of Beam Effect 1 Red 20 points fire\n  damage (Reflex half) 2 Orange 40 points acid damage (Reflex half) 3 Yellow 80\n  points electricity damage (Reflex half) 4 Green Poison (Kills; Fortitude\n  partial, take 1d6 points of Con damage instead) 5 Blue Turned to stone\n  (Fortitude negates) 6 Indigo Insane, as insanity spell (Will negates) 7\n  Violet Sent to another plane (Will negates) 8 Struck by two rays; roll twice\n  more, ignoring any \342\200\232\303\204\303\2728\342\200\232\303\204\303\271 results."
+}
+school: EVOACATION
+summary: "Create a 60 ft cone of multicolored beams of light; Creatures with 8 HD or less blinded for 2d4 rounds, each 1d8, 1 for 20 fire damage (Ref DC $dc for half), 2 for 40 acid damage (Ref DC $dc for half), 3 for 80 electricity damage (Ref DC $dc for half), 4 Poison (For DC $dc for 1d6 Con or killed), 5 (For DC $dc or turned to stone), 6 Will DC $dc or \\SpellRef{Insanity}, 7 Will DC $dc or sent to another plane, 8 struck by two rays."
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "Cone-shaped burst"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

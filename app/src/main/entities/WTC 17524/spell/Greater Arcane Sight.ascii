@@ -1,0 +1,32 @@
+template {
+  name: "Greater Arcane Sight"
+  synonym: "Arcane Sight, Greater"
+  synonym: "Sight, Arcane, Greater"
+  world: "Generic"
+  description: "This spell functions like \\Spell{arcane sight}, except that you\n  automatically know which spells or magical effects are active upon any\n  individual or object you see.  \\Spell{Greater arcane sight} doesn\342\200\232\303\204\303\264t let you\n  identify magic items.  Unlike \\Spell{arcane sight}, this spell cannot be made\n  permanent with a permanency spell."
+}
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

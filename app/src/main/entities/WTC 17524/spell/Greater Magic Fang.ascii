@@ -1,0 +1,43 @@
+template {
+  name: "Greater Magic Fang"
+  synonym: "Magic Fang, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 250
+      high: 250
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like magic fang, except that the enhancement bonus on\n  attack and damage rolls is +1 per four caster levels (maximum +5).\n  Alternatively, you may imbue all of the creature\'s natural weapons with a +1\n  enhancement bonus (regardless of your caster level).  Greater magic fang can\n  be made permanent with a permanency spell."
+}
+school: TRANSMUTATION
+summary: "For $level hours creature within [[25 * (5 * ($level / 2))]] gets +[[min(5, ($level / 4))]] enhancement bonus to attack and damage or +1 for all attacks."
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

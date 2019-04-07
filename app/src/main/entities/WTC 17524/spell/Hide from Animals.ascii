@@ -1,0 +1,46 @@
+template {
+  name: "Hide from Animals"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 241
+      high: 241
+    }
+  }
+  world: "Generic"
+  description: "Animals cannot see, hear, or smell the warded creatures. Even extraordinary\n  or supernatural sensory capabilities, such as blindsense, blindsight, scent,\n  and tremorsense, cannot detect or locate warded creatures. Animals simply act\n  as though the warded creatures are not there. Warded creatures could stand\n  before the hungriest of lions and not be molested or even noticed. If a\n  warded character touches an animal or attacks any creature, even with a\n  spell, the spell ends for all recipients."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 1
+}
+level {
+  spell_class: RANGER
+  level: 1
+}
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature touched/level"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

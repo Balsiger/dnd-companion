@@ -1,0 +1,51 @@
+template {
+  name: "Antilife Shell"
+  synonym: "Shell, Antilife"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 199
+      high: 200
+    }
+  }
+  world: "Generic"
+  description: "You bring into being a mobile, hemispherical energy field that prevents the\n  entrance of most types of living creatures.  The effect hedges out animals,\n  aberrations, dragons, fey, giants, humanoids, magical beasts, monstrous\n  humanoids, oozes, plants, and vermin, but not constructs, elementals,\n  outsiders, or undead. See the \\Product{Monster Manual} for more about\n  creature types.  This spell may be used only defensively, not\n  aggressively. Forcing an abjuration barrier against creatures that the spell\n  keeps at bay collapses the barrier (see Abjuration, page 172 of the\n  \\Product{Player\'s Handbook})."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: ANIMAL
+  level: 6
+}
+level {
+  spell_class: CLERIC
+  level: 6
+}
+level {
+  spell_class: DRUID
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "10-ft-radius emanation, centered on you"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

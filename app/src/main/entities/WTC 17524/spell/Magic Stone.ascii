@@ -1,0 +1,48 @@
+template {
+  name: "Magic Stone"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 251
+      high: 251
+    }
+  }
+  world: "Generic"
+  description: "You transmute as many as three pebbles, which can be no larger than sling\n  bullets, so that they strike with great force when thrown or slung. If\n  hurled, they have a range increment of 20 feet. If slung, treat them as sling\n  bullets (range increment 50 feet). The spell gives them a +1 enhancement\n  bonus on attack and damage rolls.  The user of the stones makes a normal\n  ranged attack. Each stone that hits deals 1d6+1 points of damage (including\n  the spell\'s enhancement bonus), or 2d6+2 points against undead."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: DRUID
+  level: 1
+}
+level {
+  spell_class: EARTH
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to three pebbles touched"
+duration {
+  duration_description: "30 minutes or until discharged"
+  duration {
+  }
+  additional_duration {
+  }
+}

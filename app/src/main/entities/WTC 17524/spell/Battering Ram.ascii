@@ -1,0 +1,44 @@
+template {
+  name: "Battering Ram"
+  category: "batter"
+  category: "ram"
+  synonym: "Ram, Battering"
+  world: "Forgotten Realms"
+  description: "You create a ramlike force that can strike with considerable power. Similar to a \\Item{ring of the ram}, the force can target a creature or an object. The force deals 1d6 hit points of damage to the target. If the target is a creature, this attack initiates a bull rush. (The force is considered a Large creature with Strength 25 for this purpose.) If the target is a movable object such as a door, the caster can make a Strength check (using the Strength of the \\Spell{battering ram}) to attempt to open the door."
+}
+school: EVOACATION
+subschool: CALLING
+summary: "Create a ramlike force within [[25 + (5 * ($level/2))]] that deals 1d6 damage and initiates a bull rush on a creature (Large, Str 25, Str check to open door)."
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+  use: "Focus"
+  component: "piece of carved ram\'s horn"
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One Object or Creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

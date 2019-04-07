@@ -1,0 +1,40 @@
+template {
+  name: "Transmute Metal to Wood"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 294
+      high: 295
+    }
+  }
+  world: "Generic"
+  description: "This spell enables you to change all metal objects within its area to\n  wood. Weapons, armor, and other metal objects carried by creatures are\n  affected as well. A magic object made of metal effectively has spell\n  resistance equal to 20 + its caster level against this spell. Artifacts\n  cannot be transmuted. Weapons converted from metal to wood take a \342\200\232\303\204\303\2542 penalty\n  on attack and damage rolls. The armor bonus of any armor converted from metal\n  to wood is reduced by 2. Weapons changed by this spell splinter and break on\n  any natural attack roll of 1 or 2, and armor changed by this spell loses an\n  additional point of armor bonus every time it is struck with a natural attack\n  roll of 19 or 20.  Only limited wish, miracle, wish, or similar magic can\n  restore a transmuted object to its metallic state. Otherwise, for example, a\n  metal door changed to wood is forevermore a wooden door."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "All metal objects within a 40-ftradius burst"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

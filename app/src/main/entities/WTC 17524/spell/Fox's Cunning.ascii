@@ -1,0 +1,49 @@
+template {
+  name: "Fox\'s Cunning"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 233
+      high: 233
+    }
+  }
+  world: "Generic"
+  description: "The transmuted creature becomes smarter.  The spell grants a +4 enhancement\n  bonus to Intelligence, adding the usual benefits to Intelligence-based skill\n  checks and other uses of the Intelligence modifier.  Wizards (and other\n  spellcasters who rely on Intelligence) affected by this spell do not gain any\n  additional bonus spells for the increased Intelligence, but the save DCs for\n  spells they cast while under this spell\342\200\232\303\204\303\264s effect do increase. This spell\n  doesn\342\200\232\303\204\303\264t grant extra skill points.  Arcane Material Component: A few hairs, or\n  a pinch of dung, from a fox."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

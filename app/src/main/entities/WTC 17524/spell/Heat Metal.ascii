@@ -1,0 +1,45 @@
+template {
+  name: "Heat Metal"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 239
+      high: 239
+    }
+  }
+  world: "Generic"
+  description: "Heat metal makes metal extremely warm.  Unattended, nonmagical metal gets no\n  saving throw. Magical metal is allowed a saving throw against the\n  spell. (Magic item\342\200\232\303\204\303\264s saving throws are covered in the Dungeon Master\342\200\232\303\204\303\264s\n  Guide.) An item in a creature\342\200\232\303\204\303\264s possession uses the creature\342\200\232\303\204\303\264s saving throw\n  bonus unless its own is higher.  A creature takes fire damage if its\n  equipment is heated. It takes full damage if its armor is affected or if it\n  is holding, touching, wearing, or carrying metal weighing one-fifth of its\n  weight. The creature takes minimum damage (1 point or 2 points; see the\n  table) if it\342\200\232\303\204\303\264s not wearing metal armor and the metal that it\342\200\232\303\204\303\264s carrying\n  weighs less than one-fifth of its weight.  On the first round of the spell,\n  the metal becomes warm and uncomfortable to touch but deals no damage. The\n  same effect also occurs on the last round of the spell\342\200\232\303\204\303\264s duration. During the\n  second (and also the next-to-last) round, intense heat causes pain and\n  damage. In the third, fourth, and fifth rounds, the metal is searing hot,\n  causing more damage, as shown on the table below.  Metal Round Temperature\n  Damage 1 Warm None 2 Hot 1d4 points 3\342\200\232\303\204\303\2545 Searing 2d4 points 6 Hot 1d4 points 7\n  Warm None Any cold intense enough to damage the creature negates fire damage\n  from the spell (and vice versa) on a point-for-point basis.  For example, if\n  the damage roll from a heat metal spell indicates 2 points of fire damage and\n  the subject is hit by a ray of frost in the same round and takes 3 points of\n  cold damage, it winds up taking no fire damage and only 1 point of cold\n  damage. If cast underwater, heat metal deals half damage and boils the\n  surrounding water.  Heat metal counters and dispels chill metal."
+}
+school: TRANSMUTATION
+summary: "Heat the metal of [[$level / 2]] creatures [[25 + (($level / 2) * 5)]] ft away, 1 warm, 2 hot 1d4, 3-5 searing 2d4, 6 hot 1d4 7 warm (full damage for armor worn)."
+descriptor: FIRE
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: SUN
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Metal equipment of one creature per two levels, no two of which can be more than 30 ft apart; or 25 lb. of metal/level, all of which must be within a 30-ft circle"
+duration {
+  duration {
+    rounds: 7
+  }
+  additional_duration {
+  }
+}

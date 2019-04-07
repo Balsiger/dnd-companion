@@ -1,0 +1,50 @@
+template {
+  name: "Charm Person"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 209
+      high: 209
+    }
+  }
+  world: "Generic"
+  description: "This charm makes a humanoid creature regard you as its trusted friend and\n  ally (treat the target\342\200\232\303\204\303\264s attitude as friendly; see Influencing NPC Attitudes,\n  page 72). If the creature is currently being threatened or attacked by you or\n  your allies, however, it receives a +5 bonus on its saving throw.  The spell\n  does not enable you to control the charmed person as if it were an automaton,\n  but it perceives your words and actions in the most favorable way. You can\n  try to give the subject orders, but you must win an opposed Charisma check to\n  convince it to do anything it wouldn\342\200\232\303\204\303\264t ordinarily do. (Retries are not\n  allowed.) An affected creature never obeys suicidal or obviously harmful\n  orders, but a charmed fighter, for example, might believe you if you assured\n  him that the only chance to save your life is for him to hold back an\n  onrushing red dragon for \342\200\232\303\204\303\272just a few seconds.\342\200\232\303\204\303\271 Any act by you or your\n  apparent allies that threatens the charmed person breaks the spell. You must\n  speak the person\342\200\232\303\204\303\264s language to communicate your commands, or else be good at\n  pantomiming."
+}
+school: ENCHANTMENT
+subschool: CHARM
+summary: "Will DC $dc (-5 if currently threatened or attack by allies) or target regards you as its trusted friend and ally for $level hours."
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 1
+}
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One humanoid creature"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

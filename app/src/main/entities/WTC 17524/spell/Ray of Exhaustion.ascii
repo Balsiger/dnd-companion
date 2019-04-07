@@ -1,0 +1,45 @@
+template {
+  name: "Ray of Exhaustion"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 269
+      high: 269
+    }
+  }
+  world: "Generic"
+  description: "A black ray projects from your pointing finger. You must succeed on a ranged\n  touch attack with the ray to strike a target.  The subject is immediately\n  exhausted for the spell\'s duration. A successful Fortitude save means the\n  creature is only fatigued. A character that is already fatigued instead\n  becomes exhausted.  This spell has no effect on a creature that is already\n  exhausted. Unlike normal exhaustion or fatigue, the effect ends as soon as\n  the spell\'s duration expires.  Material Component: A drop of sweat."
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Ray effect"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

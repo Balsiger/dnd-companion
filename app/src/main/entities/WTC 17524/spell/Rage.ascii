@@ -1,0 +1,51 @@
+template {
+  name: "Rage"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 268
+      high: 268
+    }
+  }
+  world: "Generic"
+  description: "Each affected creature gains a +2 morale bonus to Strength and Constitution,\n  a +1 morale bonus on Will saves, and a \342\200\232\303\204\303\2542 penalty to AC. The effect is\n  otherwise identical with a barbarian\'s rage (see page 25), except that the\n  subjects aren\'t fatigued at the end of the rage."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One willing living creature per three levels, no two of which may be more than 30 ft apart"
+duration {
+  duration_description: "Concentration +  1 round/level"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

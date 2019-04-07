@@ -1,0 +1,45 @@
+template {
+  name: "Control Plants"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 213
+      high: 213
+    }
+  }
+  world: "Generic"
+  description: "This spell enables you to control the actions of one or more plant creatures\n  for a short period of time. You command the creatures by voice and they\n  understand you, no matter what language you speak.  Even if vocal\n  communication is impossible (in the area of a silence spell, for instance),\n  the controlled plants do not attack you. At the end of the spell, the\n  subjects revert to their normal behavior.  Suicidal or self-destructive\n  commands are simply ignored.  Contact Other Plane Avoid Int/Cha True Don\342\200\232\303\204\303\264t\n  Random Plane Contacted Decrease Answer Know Lie Answer Elemental Plane DC 7/1\n  week 01\342\200\232\303\204\303\25434 35\342\200\232\303\204\303\25462 63\342\200\232\303\204\303\25483 84\342\200\232\303\204\303\254100 (appropriate) (DC 7/1 week) (01\342\200\232\303\204\303\25468) (69\342\200\232\303\204\303\25475)\n  (76\342\200\232\303\204\303\25498) (99\342\200\232\303\204\303\254100) Positive/Negative Energy Plane DC 8/1 week 01\342\200\232\303\204\303\25439 40\342\200\232\303\204\303\25465 66\342\200\232\303\204\303\25486\n  87\342\200\232\303\204\303\254100 Astral Plane DC 9/1 week 01\342\200\232\303\204\303\25444 45\342\200\232\303\204\303\25467 68\342\200\232\303\204\303\25488 89\342\200\232\303\204\303\254100 Outer Plane,\n  demideity DC 10/2 weeks 01\342\200\232\303\204\303\25449 50\342\200\232\303\204\303\25470 71\342\200\232\303\204\303\25491 92\342\200\232\303\204\303\254100 Outer Plane, lesser deity DC\n  12/3 weeks 01\342\200\232\303\204\303\25460 61\342\200\232\303\204\303\25475 76\342\200\232\303\204\303\25495 96\342\200\232\303\204\303\254100 Outer Plane, intermediate deity DC 14/4\n  weeks 01\342\200\232\303\204\303\25473 74\342\200\232\303\204\303\25481 82\342\200\232\303\204\303\25498 99\342\200\232\303\204\303\254100 Outer Plane, greater deity DC 16/5 weeks 01\342\200\232\303\204\303\25488\n  89\342\200\232\303\204\303\25490 91\342\200\232\303\204\303\25499 100 Avoid Int/Cha Decrease: You must succeed on an Intelligence\n  check against this DC to avoid a decrease in Intelligence and Charisma. If\n  the check fails, your Intelligence and Charisma scores each fall to 8 for the\n  stated duration, and you become unable to cast arcane spells. If you lose\n  Intelligence and Charisma, the effect strikes as soon as the first question\n  is asked, and no answer is received.  (The entries in parentheses are for\n  questions that pertain to the appropriate Elemental Plane.)  Results of a\n  Successful Contact: d% is rolled for the result shown on the table: True\n  Answer: You get a true, one-word answer. Questions that cannot be answered in\n  this way are answered randomly.  Don\342\200\232\303\204\303\264t Know: The entity tells you that it\n  doesn\342\200\232\303\204\303\264t know.  Lie: The entity intentionally lies to you.  Random Answer: The\n  entity tries to lie but doesn\342\200\232\303\204\303\264t know the answer, so it makes one up."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 8
+}
+level {
+  spell_class: PLANT
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to 2 HD/level of plant creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

@@ -1,0 +1,56 @@
+template {
+  name: "Clairaudience or Clairvoyance"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 209
+      high: 210
+    }
+  }
+  world: "Generic"
+  description: "Clairaudience/clairvoyance creates an invisible magical sensor at a specific\n  location that enables you to hear or see (your choice) almost as if you were\n  there. You don\342\200\232\303\204\303\264t need line of sight or line of effect, but the locale must be\n  known\342\200\232\303\204\303\256a place familiar to you or an obvious one, such as behind a door,\n  around a corner, or in a grove of trees. Once you have selected the locale,\n  the sensor doesn\342\200\232\303\204\303\264t move, but you can rotate it in all directions to view the\n  area as desired. Unlike other scrying spells, this spell does not allow\n  magically or supernaturally enhanced senses to work through it. If the chosen\n  locale is magically dark, you see nothing. If it is naturally pitch black,\n  you can see in a 10- foot radius around the center of the spell\342\200\232\303\204\303\264s effect.\n  Clairaudience/clairvoyance functions only on the plane of existence you are\n  currently occupying.  Arcane Focus: A small horn (for hearing) or a glass eye\n  (for seeing)."
+}
+school: DIVINATION
+subschool: SCRYING
+summary: "casting time 10 min, for $level min (D) you can hear or see a point at a distance."
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: KNOWLEDGE
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS_DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+  description: "Magical sensor"
+}
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

@@ -1,0 +1,48 @@
+template {
+  name: "Baleful Polymorph"
+  synonym: "Polymorph, Baleful"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 202
+      high: 203
+    }
+  }
+  world: "Generic"
+  description: "As \\Spell{polymorph}, except that you change the subject into a Small or\n  smaller animal of no more than 1 HD (such as a \\Monster{dog},\n  \\Monster{lizard}, \\Monster{monkey}, or \\Monster{toad}). If the new form would\n  prove fatal to the creature (for example, if you polymorphed a landbound\n  target into a fish, or a flying target into a toad) the subject gets a +4\n  bonus on the save.  If the spell succeeds, the subject must also make a Will\n  save. If this second save fails, the creature loses its extraordinary,\n  supernatural, and spell-like abilities, loses its ability to cast spells (if\n  it had the ability), and gains the alignment, special abilities, and\n  Intelligence, Wisdom, and Charisma scores of its new form in place of its\n  own.  It still retains its class and level (or HD), as well as all benefits\n  deriving therefrom (such as base attack bonus, base save bonuses, and hit\n  points). It retains any class features (other than spellcasting) that aren\342\200\232\303\204\303\264t\n  extraordinary, supernatural, or spelllike abilities.  Incorporeal or gaseous\n  creatures are immune to being polymorphed, and a creature with the\n  shapechanger subtype (such as a lycanthrope or a doppelganger) can revert to\n  its natural form as a standard action."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 5
+}
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature"
+duration {
+  duration_description: "Permanent"
+  duration {
+  }
+  additional_duration {
+  }
+}

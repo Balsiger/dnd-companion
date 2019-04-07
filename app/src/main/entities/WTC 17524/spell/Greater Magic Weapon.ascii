@@ -1,0 +1,54 @@
+template {
+  name: "Greater Magic Weapon"
+  synonym: "Magic Weapon, Greater"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 251
+      high: 252
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like magic weapon, except that it gives a weapon an\n  enhancement bonus on attack and damage rolls of +1 per four caster levels\n  (maximum +5).  Alternatively, you can affect as many as fifty arrows, bolts,\n  or bullets. The projectiles must be of the same kind, and they have to be\n  together (in the same quiver or other container). Projectiles, but not thrown\n  weapons, lose their transmutation when used. (Treat shuriken as projectiles,\n  rather than as thrown weapons, for the purpose of this spell.)  Arcane\n  Material Component: Powdered lime and carbon."
+}
+school: TRANSMUTATION
+summary: "For [[$level]] hours create one weapon or fifty projectiles with a +[[min(5, $level / 4)]] bonus."
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: PALADIN
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One weapon or fifty projectiles (all of which must be in contact with each other at the time of casting)"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

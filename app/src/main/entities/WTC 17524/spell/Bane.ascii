@@ -1,0 +1,43 @@
+template {
+  name: "Bane"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 203
+      high: 203
+    }
+  }
+  world: "Generic"
+  description: "\\Spell{Bane} fills your enemies with fear and doubt. Each affected creature\n  takes a \342\200\232\303\204\303\2541 penalty on attack rolls and a \342\200\232\303\204\303\2541 penalty on saving throws against\n  fear effects.  \\Spell{Bane} counters and dispels \\Spell{bless}."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$level min, all enemies within 50 ft take a -1 to attacks ans saves; counters and dispels \\Spell{bless}."
+descriptor: FEAR
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "All enemies within 50 ft"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

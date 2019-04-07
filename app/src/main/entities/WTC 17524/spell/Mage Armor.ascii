@@ -1,0 +1,49 @@
+template {
+  name: "Mage Armor"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "An invisible but tangible field of force surrounds the subject of a mage\n  armor spell, providing a +4 armor bonus to AC. Unlike mundane armor, mage\n  armor entails no armor check penalty, arcane spell failure chance, or speed\n  reduction. Since mage armor is made of force, incorporeal creatures can\'t\n  bypass it the way they do normal armor.  Focus: A piece of cured leather."
+}
+school: CONJURATION
+subschool: CREATION
+summary: "$level hours (D), AC +4 armor"
+descriptor: FORCE
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

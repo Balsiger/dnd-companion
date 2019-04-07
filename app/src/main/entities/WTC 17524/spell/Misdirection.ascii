@@ -1,0 +1,49 @@
+template {
+  name: "Misdirection"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 254
+      high: 255
+    }
+  }
+  world: "Generic"
+  description: "By means of this spell, you misdirect the information from divination spells\n  that reveal auras (detect evil, detect magic, discern lies, and the like). On\n  casting the spell, you choose another object within range. For the duration\n  of the spell, the subject of misdirection is detected as if it were the other\n  object. (Neither the subject nor the other object gets a saving throw against\n  this effect.) Detection spells provide information based on the second object\n  rather than on the actual target of the detection unless the caster of the\n  detection succeeds on a Will save. For instance, you could make yourself\n  detect as a tree if one were within range at casting: not evil, not lying,\n  not magical, neutral in alignment, and so forth. This spell does not affect\n  other types of divination magic (augury, detect thoughts,\n  clairaudience/clairvoyance, and the like)."
+}
+school: ILLUSION
+subschool: GLAMER
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 2
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One creature or object, up to a 10ft cube in size"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

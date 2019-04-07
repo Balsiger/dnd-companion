@@ -1,0 +1,45 @@
+template {
+  name: "Divine Power"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 224
+      high: 224
+    }
+  }
+  world: "Generic"
+  description: "Calling upon the divine power of your patron, you imbue yourself with\n  strength and skill in combat. Your base attack bonus becomes equal to your\n  character level (which may give you additional attacks), you gain a +6\n  enhancement bonus to Strength, and you gain 1 temporary hit point per caster\n  level."
+}
+school: EVOACATION
+summary: "$level rounds, gain base attack bonus of $level, +6 enhancement bonus to Strengh, $level temporary hit points."
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: WAR
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

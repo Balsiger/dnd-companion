@@ -1,0 +1,42 @@
+template {
+  name: "Mass Heal"
+  synonym: "Heal, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 239
+      high: 239
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like heal, except as noted above. The maximum number of\n  hit points restored to each creature is 250."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 9
+}
+level {
+  spell_class: HEALING
+  level: 9
+}
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One or more creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

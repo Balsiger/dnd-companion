@@ -1,0 +1,42 @@
+template {
+  name: "Weird"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 301
+      high: 301
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like phantasmal killer, except it can affect more than\n  one creature.  Only the affected creatures see the phantasmal creatures\n  attacking them, though you see the attackers as shadowy shapes.  If a\n  subject\'s Fortitude save succeeds, it still takes 3d6 points of damage and is\n  stunned for 1 round. The subject also takes 1d4 points of temporary Strength\n  damage."
+}
+school: ILLUSION
+subschool: PHANTASM
+summary: "$undefined$"
+descriptor: FEAR
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Any number of creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

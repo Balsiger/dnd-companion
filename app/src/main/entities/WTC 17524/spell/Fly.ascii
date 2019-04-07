@@ -1,0 +1,49 @@
+template {
+  name: "Fly"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 232
+      high: 232
+    }
+  }
+  world: "Generic"
+  description: "The subject can fly at a speed of 60 feet (or 40 feet if it wears medium or\n  heavy armor, or if it carries a medium or heavy load). It can ascend at half\n  speed and descend at double speed, and its maneuverability is good. Using a\n  fly spell requires only as much concentration as walking, so the subject can\n  attack or cast spells normally.  The subject of a fly spell can charge but\n  not run, and it cannot carry aloft more weight than its maximum load, plus\n  any armor it wears.  Should the spell duration expire while the subject is\n  still aloft, the magic fails slowly. The subject floats downward 60 feet per\n  round for 1d6 rounds. If it reaches the ground in that amount of time, it\n  lands safely. If not, it falls the rest of the distance, taking 1d6 points of\n  damage per 10 feet of fall. Since dispelling a spell effectively ends it, the\n  subject also descends in this way if the fly spell is dispelled, but not if\n  it is negated by an antimagic field.  Arcane Focus: A wing feather from any\n  bird."
+}
+school: TRANSMUTATION
+summary: "touch, $level min, gain Fly 60 ft"
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+level {
+  spell_class: TRAVEL
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS_DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

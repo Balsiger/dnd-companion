@@ -1,0 +1,41 @@
+template {
+  name: "Guidance"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 238
+      high: 238
+    }
+  }
+  world: "Generic"
+  description: "This spell imbues the subject with a touch of divine guidance. The creature\n  gets a +1 competence bonus on a single attack roll, saving throw, or skill\n  check. It must choose to use the bonus before making the roll to which it\n  applies."
+}
+school: DIVINATION
+summary: "Creature touched gets divine guidance for one minute for a +1 to a single attack, save or skill check (chosen before roll)."
+level {
+  spell_class: CLERIC
+}
+level {
+  spell_class: DRUID
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "One minute or until discharged"
+  duration {
+  }
+  additional_duration {
+  }
+}

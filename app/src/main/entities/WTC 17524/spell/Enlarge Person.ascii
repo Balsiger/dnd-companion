@@ -1,0 +1,51 @@
+template {
+  name: "Enlarge Person"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 226
+      high: 227
+    }
+  }
+  world: "Generic"
+  description: "This spell causes instant growth of a humanoid creature, doubling its height\n  and multiplying its weight by 8. This increase changes the creature\342\200\232\303\204\303\264s size\n  category to the next larger one. The target gains a +2 size bonus to\n  Strength, a \342\200\232\303\204\303\2542 size penalty to Dexterity (to a minimum of 1), and a \342\200\232\303\204\303\2541\n  penalty on attack rolls and AC due to its increased size.  A humanoid\n  creature whose size increases to Large has a space of 10 feet and a natural\n  reach of 10 feet. This spell does not change the target\342\200\232\303\204\303\264s speed.  If\n  insufficient room is available for the desired growth, the creature attains\n  the maximum possible size and may make a Strength check (using its increased\n  Strength) to burst any enclosures in the process. If it fails, it is\n  constrained without harm by the materials enclosing it\342\200\232\303\204\303\256the spell cannot be\n  used to crush a creature by increasing its size.  All equipment worn or\n  carried by a creature is similarly enlarged by the spell.  Melee and\n  projectile weapons affected by this spell deal more damage (see Table 2\342\200\232\303\204\303\2542 in\n  the Dungeon Master\342\200\232\303\204\303\264s Guide). Other magical properties are not affected by\n  this spell. Any enlarged item that leaves an enlarged creature\342\200\232\303\204\303\264s possession\n  (including a projectile or thrown weapon) instantly returns to its normal\n  size. This means that thrown weapons deal their normal damage, and\n  projectiles deal damage based on the size of the weapon that fired them.\n  Magical properties of enlarged items are not increased by this spell\342\200\232\303\204\303\256an\n  enlarged +1 sword still has only a +1 enhancement bonus, a staff-sized wand\n  is still only capable of its normal functions, a giantsized potion merely\n  requires a greater fluid intake to make its magical effects operate, and so\n  on.  Multiple magical effects that increase size do not stack, which means\n  (among other things) that you can\342\200\232\303\204\303\264t use a second casting of this spell to\n  further increase the size of a humanoid that\342\200\232\303\204\303\264s still under the effect of the\n  first casting.  Enlarge person counters and dispels reduce person.  Enlarge\n  person can be made permanent with a permanency spell.  Material Component: A\n  pinch of powdered iron."
+}
+school: TRANSMUTATION
+summary: "$level min (D), creature doubles in size (+2 size Str, -2 size Dex, -1 attack, -1 AC, reach +5, weapons deal more damage"
+level {
+  spell_class: SORCERER
+  level: 1
+}
+level {
+  spell_class: WIZARD
+  level: 1
+}
+level {
+  spell_class: STRENGTH_SPELL_CLASS
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One humanoid creature"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

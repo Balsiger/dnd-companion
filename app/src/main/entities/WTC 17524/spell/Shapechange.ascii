@@ -1,0 +1,55 @@
+template {
+  name: "Shapechange"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 277
+      high: 278
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like polymorph, except that it enables you to assume\n  the form of any single nonunique creature (of any type) from Fine to Colossal\n  size. The assumed form cannot have more than your caster level in Hit Dice\n  (to a maximum of 25 HD). Unlike polymorph, this spell allows incorporeal or\n  gaseous forms to be assumed.  You gain all extraordinary and supernatural\n  abilities (both attacks and qualities) of the assumed form, but you lose your\n  own supernatural abilities. You also gain the type of the new form (for\n  example, dragon or magical beast) in place of your own. The new form does not\n  disorient you.  Parts of your body or pieces of equipment that are separated\n  from you do not revert to their original forms.  You can become just about\n  anything you are familiar with. You can change form once each round as a free\n  action. The change takes place either immediately before your regular action\n  or immediately after it, but not during the action. For example, you are in\n  combat and assume the form of a will-o\'-wisp. When this form is no longer\n  useful, you change into a stone golem and walk away. When pursued, you change\n  into a flea, which hides on a horse until it can hop off. From there, you can\n  become a dragon, an orc, or just about anything else you are familiar with.\n  If you use this spell to create a disguise, you get a +10 bonus on your\n  Disguise check.  Focus: A jade circlet worth no less than 1,500 gp, which you\n  must place on your head when casting the spell. (The focus melds into your\n  new form when you change shape.)"
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: ANIMAL
+  level: 9
+}
+level {
+  spell_class: DRUID
+  level: 9
+}
+level {
+  spell_class: SORCERER
+  level: 9
+}
+level {
+  spell_class: WIZARD
+  level: 9
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

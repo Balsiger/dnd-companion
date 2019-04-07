@@ -1,0 +1,20 @@
+template {
+  name: "Tumble"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 85
+      high: 85
+    }
+  }
+  world: "Generic"
+  description: "You can dive, roll, somersault, flip, and so on. You can\342\200\232\303\204\303\264t use this skill if\n  your speed has been reduced by armor, excess equipment, or loot (see Table\n  9\342\200\232\303\204\303\2542: Carrying Loads, page 162)."
+}
+ability: DEXTERITY
+action: "Not applicable. Tumbling is part of movement, so a Tumble                     check is part of a move action."
+special: "If you have 5 or more ranks in Tumble, you gain a +3                     dodge bonus to AC when fighting defensively instead of the                     usual +2 dodge bonus to AC (see Fighting Defensively, page                     140).  If you have 5 or more ranks in Tumble, you gain a                     +6 dodge bonus to AC when executing the total defense                     standard action instead of the usual +4 dodge bonus to AC                     (see Total Defense, page 142).  If you have the Acrobatic                     feat, you get a +2 bonus on Tumble checks."
+restriction: TRAINED_ONLY
+restriction: ARMOR_CHECK_PENALTY
+synergy {
+  name: "jump"
+}

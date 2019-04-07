@@ -1,0 +1,49 @@
+template {
+  name: "Regenerate"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 270
+      high: 270
+    }
+  }
+  world: "Generic"
+  description: "The subject\'s severed body members (fingers, toes, hands, feet, arms, legs,\n  tails, or even heads of multiheaded creatures), broken bones, and ruined\n  organs grow back.  After the spell is cast, the physical regeneration is\n  complete in 1 round if the severed members are present and touching the\n  creature. It takes 2d10 rounds otherwise.  Regenerate also cures 4d8 points\n  of damage +1 point per caster level (maximum +35), rids the subject of\n  exhaustion and/or fatigue, and eliminates all nonlethal damage the subject\n  has taken. It has no effect on nonliving creatures (including undead)."
+}
+school: CONJURATION
+subschool: HEALING
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 7
+}
+level {
+  spell_class: DRUID
+  level: 9
+}
+level {
+  spell_class: HEALING
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living creature touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

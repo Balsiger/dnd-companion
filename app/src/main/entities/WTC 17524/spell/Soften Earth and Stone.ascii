@@ -1,0 +1,45 @@
+template {
+  name: "Soften Earth and Stone"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 280
+      high: 281
+    }
+  }
+  world: "Generic"
+  description: "When this spell is cast, all natural, undressed earth or stone in the\n  spell\'s area is softened. Wet earth becomes thick mud, dry earth becomes\n  loose sand or dirt, and stone becomes soft clay that is easily molded or\n  chopped. You affect a 10-footsquare area to a depth of 1 to 4 feet, depending\n  on the toughness or resilience of the ground at that spot (DM\'s option).\n  Magical, enchanted, dressed, or worked stone cannot be affected. Earth or\n  stone creatures are not affected.  A creature in mud must succeed on a Reflex\n  save or be caught for 1d2 rounds and unable to move, attack, or cast\n  spells. A creature that succeeds on its save can move through the mud at half\n  speed, and it can\'t run or charge.  Loose dirt is not as troublesome as mud,\n  but all creatures in the area can move at only half their normal speed and\n  can\'t run or charge over the surface.  Stone softened into clay does not\n  hinder movement, but it does allow characters to cut, shape, or excavate\n  areas they may not have been able to affect before. For example, a party of\n  adventurers trying to break out of a cavern might use this spell to soften a\n  wall. While soften earth and stone does not affect dressed or worked stone,\n  cavern ceilings or vertical surfaces such as cliff faces can be\n  affected. Usually, this causes a moderate collapse or landslide as the\n  loosened material peels away from the face of the wall or roof and falls.  A\n  moderate amount of structural damage can be dealt to a manufactured structure\n  (such as a wall or a tower) by softening the ground beneath it, causing it to\n  settle.  However, most well-built structures will only be damaged by this\n  spell, not destroyed."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+descriptor: EARTH
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: EARTH
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "10-ft square/level; see text"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

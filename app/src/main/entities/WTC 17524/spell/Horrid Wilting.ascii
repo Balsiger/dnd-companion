@@ -1,0 +1,48 @@
+template {
+  name: "Horrid Wilting"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 242
+      high: 242
+    }
+  }
+  world: "Generic"
+  description: "This spell evaporates moisture from the body of each subject living\n  creature, dealing 1d6 points of damage per caster level (maximum 20d6). This\n  spell is especially devastating to water elementals and plant creatures,\n  which instead take 1d8 points of damage per caster level (maximum 20d8).\n  Arcane Material Component: A bit of sponge."
+}
+school: NECROMANCY
+summary: "Living creatures no more than 60 ft apart within [[100 + ($level * 10)]] ft have their mositure evaporated for [[min(20, $level)]]d6 damage ([[min(20, $level)]]d8 for water elementals and plant creatures; For $dc for half."
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+level {
+  spell_class: WAR
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: LONG
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living creatures, no two of which can be more than 60 ft apart"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

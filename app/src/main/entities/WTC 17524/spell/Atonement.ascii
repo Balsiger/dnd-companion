@@ -1,0 +1,62 @@
+template {
+  name: "Atonement"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 201
+      high: 202
+    }
+  }
+  world: "Generic"
+  description: "This spell removes the burden of evil acts or misdeeds from the subject. The\n  creature seeking atonement must be truly repentant and desirous of setting\n  right its misdeeds. If the atoning creature committed the evil act\n  unwittingly or under some form of compulsion, atonement operates normally at\n  no cost to you. However, in the case of a creature atoning for deliberate\n  misdeeds and acts of a knowing and willful nature, you must intercede with\n  your deity (requiring you to expend 500 XP) in order to expunge the subject\342\200\232\303\204\303\264s\n  burden. Many casters first assign a subject of this sort a quest (see\n  geas/quest) or similar penance to determine whether the creature is truly\n  contrite before casting the atonement spell on its behalf.  \\Spell{Atonement}\n  may be cast for one of several purposes, depending on the version selected.\n  \\emph{Reverse Magical Alignment Change:} If a creature has had its alignment\n  magically changed, atonement returns its alignment to its original status at\n  no cost in experience points.  \\emph{Restore Class:} A paladin who has lost\n  her class features due to committing an evil act may have her paladinhood\n  restored to her by this spell.  \\emph{Restore Cleric or Druid Spell Powers:}\n  A cleric or druid who has lost the ability to cast spells by incurring the\n  anger of his or her deity may regain that ability by seeking atonement from\n  another cleric of the same deity or another druid. If the transgression was\n  intentional, the casting cleric loses 500 XP for his intercession. If the\n  transgression was unintentional, he does not lose XP.  \\emph{Redemption or\n  Temptation:} You may cast this spell upon a creature of an opposing alignment\n  in order to offer it a chance to change its alignment to match yours. The\n  prospective subject must be present for the entire casting process. Upon\n  completion of the spell, the subject freely chooses whether it retains its\n  original alignment or acquiesces to your offer and changes to your\n  alignment. No duress, compulsion, or magical influence can force the subject\n  to take advantage of the opportunity offered if it is unwilling to abandon\n  its old alignment. This use of the spell does not work on outsiders or any\n  creature incapable of changing its alignment naturally.  Though the spell\n  description refers to evil acts, \\Spell{atonement} can also be used on any\n  creature that has performed acts against its alignment, whether those acts\n  are evil, good, chaotic, or lawful.  \\emph{Note:} Normally, changing\n  alignment is up to the player (for PCs) or the DM (for NPCs). This use of\n  atonement simply offers a believable way for a character to change his or her\n  alignment drastically, suddenly, and definitively."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: DRUID
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+components: FOCUS
+components: DIVINE_FOCUS
+components: EXPERIENCE_POINTS
+material {
+  use: "burn"
+  component: "incense"
+}
+material {
+  use: "focus"
+  component: "In addition to your holy symbol or normal divine focus"
+  component: "you need a set of prayer beads (or other prayer device"
+  component: "such as a prayer wheel or prayer book) worth at least 500 gp."
+}
+material {
+  use: "xp"
+  component: "When cast for the benefit of a creature whose guilt was the result of deliberate acts"
+  component: "the cost to you is 500 XP per casting (see description)."
+}
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Living creature touched"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

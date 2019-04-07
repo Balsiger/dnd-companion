@@ -1,0 +1,51 @@
+template {
+  name: "Magic Circle against Chaos"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 249
+      high: 249
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like magic circle against evil, except that it is\n  similar to protection from chaos instead of protection from evil, and it can\n  imprison a nonlawful called creature."
+}
+school: ABJURATION
+summary: "$undefined$"
+descriptor: LAWFUL
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: LAW
+  level: 3
+}
+level {
+  spell_class: PALADIN
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 3
+}
+level {
+  spell_class: WIZARD
+  level: 3
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

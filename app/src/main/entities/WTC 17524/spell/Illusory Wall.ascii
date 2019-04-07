@@ -1,0 +1,44 @@
+template {
+  name: "Illusory Wall"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 243
+      high: 243
+    }
+  }
+  world: "Generic"
+  description: "This spell creates the illusion of a wall, floor, ceiling, or similar\n  surface. It appears absolutely real when viewed, but physical objects can\n  pass through it without difficulty. When the spell is used to hide pits,\n  traps, or normal doors, any detection abilities that do not require sight\n  work normally. Touch or a probing search reveals the true nature of the\n  surface, though such measures do not cause the illusion to disappear."
+}
+school: ILLUSION
+subschool: FIGMENT
+summary: "Create illusion of a wall, floork, ceiling or similar, Will dc $dc if interacted."
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Image 1 ft by 10 ft by 10 ft"
+}
+duration {
+  duration_description: "Permanent"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,53 @@
+template {
+  name: "Rainbow Pattern"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 268
+      high: 268
+    }
+  }
+  world: "Generic"
+  description: "A glowing, rainbow-hued pattern of interweaving colors fascinates those\n  within it. Rainbow pattern fascinates a maximum of 24 Hit Dice of\n  creatures. Creatures with the fewest HD are affected first. Among creatures\n  with equal HD, those who are closest to the spell\'s point of origin are\n  affected first. An affected creature that fails its saves is fascinated by\n  the pattern.  With a simple gesture (a free action), you can make the rainbow\n  pattern move up to 30 feet per round (moving its effecttive point of\n  origin). All fascinated creatures follow the moving rainbow of light, trying\n  to get or remain within the effect.  Fascinated creatures who are restrained\n  and removed from the pattern still try to follow it. If the pattern leads its\n  subjects into a dangerous area (through flame, off a cliff, or the like),\n  each fascinated creature gets a second save. If the view of the lights is\n  completely blocked (by an obscuring mist spell, for instance), creatures who\n  can\'t see them are no longer affected.  The spell does not affect sightless\n  creatures.  Verbal Component: A wizard or sorcerer need not utter a sound to\n  cast this spell, but a bard must sing, play music, or recite a rhyme as a\n  verbal component.  Material Component: A piece of phosphor.  Focus: A crystal\n  prism."
+}
+school: ILLUSION
+subschool: PATTERN
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+  description: "Colorful lights with a 20-ftradius spread"
+}
+duration {
+  duration_description: "Concentration +  1 round/level"
+  duration {
+  }
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

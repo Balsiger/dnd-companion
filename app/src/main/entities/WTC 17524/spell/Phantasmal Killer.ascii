@@ -1,0 +1,46 @@
+template {
+  name: "Phantasmal Killer"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 260
+      high: 260
+    }
+  }
+  world: "Generic"
+  description: "You create a phantasmal image of the most fearsome creature imaginable to\n  the subject simply by forming the fears of the subject\'s subconscious mind\n  into something that its conscious mind can visualize: this most horrible\n  beast. Only the spell\'s subject can see the phantasmal killer. You see only a\n  vague shape. The target first gets a Will save to recognize the image as\n  unreal. If that save fails, the phantasm touches the subject, and the subject\n  must succeed on a Fortitude save or die from fear. Even if the Fortitude save\n  is successful, the subject takes 3d6 points of damage.  If the subject of a\n  phantasmal killer attack succeeds in disbelieving and is wearing a helm of\n  telepathy, the beast can be turned upon you. You must then disbelieve it or\n  become subject to its deadly fear attack."
+}
+school: ILLUSION
+subschool: PHANTASM
+summary: "A living creature alone can the see most fearsome creature imaginable, Will DC [[14 + $ability]] to recognize as unreal or phantom touches creature and forces a For DC [[14 + $ability]] for 3d6 damage or killed."
+descriptor: FEAR
+descriptor: MIND_AFFECTING
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: MEDIUM
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,41 @@
+template {
+  name: "Goodberry"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 237
+      high: 237
+    }
+  }
+  world: "Generic"
+  description: "Casting goodberry upon a handful of freshly picked berries makes 2d4 of them\n  magical.  You (as well as any other druid of 3rd or higher level) can\n  immediately discern which berries are affected. Each transmuted berry\n  provides nourishment as if it were a normal meal for a Medium creature.  The\n  berry also cures 1 point of damage when eaten, subject to a maximum of 8\n  points of such curing in any 24-hour period."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "2d4 fresh berries touched"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

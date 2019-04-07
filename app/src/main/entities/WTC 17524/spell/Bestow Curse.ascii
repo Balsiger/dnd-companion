@@ -1,0 +1,47 @@
+template {
+  name: "Bestow Curse"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 203
+      high: 203
+    }
+  }
+  world: "Generic"
+  description: "You place a curse on the subject. Choose one of the following three effects.\n\\list {-6 decrease to an ability score (minimum 1).}  {-4 penalty on attack\nrolls, saves, ability checks, and skill checks.}  {Each turn, the target has\na 50% chance to act normally; otherwise, it takes no action.}  You may also\ninvent your own curse, but it should be no more powerful than those described\nabove, and the DM has final say on the curse\'s effect.  The \\Spell{curse}\nbestowed by this spell cannot be dispelled, but it can be removed with a\n\\Spell{break enchantment}, \\Spell{limited wish}, \\Spell{miracle},\n\\Spell{remove curse}, or \\Spell{wish} spell.  \\Spell{Bestow curse} counters\n\\Spell{remove curse}."
+}
+school: NECROMANCY
+summary: "Touch, curse subject unless Will DC [[10 + $ability + switch($class, Cleric: 3, default: 4)]] (permanently -6 on ability; -4 attack, saves, checks; or 50% chance of losing each action).\n"
+level {
+  spell_class: CLERIC
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 4
+}
+level {
+  spell_class: WIZARD
+  level: 4
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "Permanent"
+  duration {
+  }
+  additional_duration {
+  }
+}

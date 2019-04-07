@@ -1,0 +1,42 @@
+template {
+  name: "Ironwood"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 246
+      high: 246
+    }
+  }
+  world: "Generic"
+  description: "Ironwood is a magical substance created by druids from normal wood. While\n  remaining natural wood in almost every way, ironwood is as strong, heavy, and\n  resistant to fire as steel. Spells that affect metal or iron (such as heat\n  metal) do not function on ironwood. Spells that affect wood (such as wood\n  shape) do affect ironwood, although ironwood does not burn. Using this spell\n  with wood shape or a wood-related Craft check, you can fashion wooden items\n  that function as steel items. Thus, wooden plate armor and wooden swords can\n  be created that are as durable as their normal steel counterparts. These\n  items are freely usable by druids.  Further, if you make only half as much\n  ironwood as the spell would normally allow, any weapon, shield, or suit of\n  armor so created is treated as a magic item with a +1 enhancement bonus.\n  Material Component: Wood shaped into the form of the intended ironwood\n  object."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "An ironwood object weighing up to 5 lb/level"
+}
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

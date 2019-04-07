@@ -1,0 +1,45 @@
+template {
+  name: "Lesser Planar Binding"
+  synonym: "Planar Binding, Lesser"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 262
+      high: 263
+    }
+  }
+  world: "Generic"
+  description: "Casting this spell attempts a dangerous act: to lure a creature from another\n  plane to a specifically prepared trap, which must lie within the spell\'s\n  range. The called creature is held in the trap until it agrees to perform one\n  service in return for its freedom.  To create the trap, you must use a magic\n  circle spell, focused inward. The kind of creature to be bound must be known\n  and stated. If you wish to call a specific individual, you must use that\n  individual\'s proper name in casting the spell.  The target creature is\n  allowed a Will saving throw. If the saving throw succeeds, the creature\n  resists the spell. If the saving throw fails, the creature is immediately\n  drawn to the trap (spell resistance does not keep it from being called). The\n  creature can escape from the trap with by successfully pitting its spell\n  resistance against your caster level check, by dimensional travel, or with a\n  successful Charisma check (DC 15 + 1/2 your caster level + your Cha\n  modifier). It can try each method once per day. If it breaks loose, it can\n  flee or attack you. A dimensional anchor cast on the creature prevents its\n  escape via dimensional travel. You can also employ a calling diagram (see\n  magic circle against evil, page 246) to make the trap more secure.  If the\n  creature does not break free of the trap, you can keep it bound for as long\n  as you dare. You can attempt to compel the creature to perform a service by\n  describing the service and perhaps offering some sort of reward. You make a\n  Charisma check opposed by the creature\'s Charisma check.  The DM assigns your\n  check a bonus of +0 to +6 based on the nature of the service and the\n  reward. If the creature wins the opposed check, it refuses service. New\n  offers, bribes, and the like can be made or the old ones reoffered every 24\n  hours. This process can be repeated until the creature promises to serve,\n  until it breaks free, or until you decide to get rid of it by means of some\n  other spell. Impossible demands or unreasonable commands are never agreed\n  to. If you roll a 1 on the Charisma check, the creature breaks free of the\n  binding and can escape or attack you.  Once the requested service is\n  completed, the creature need only so inform you to be instantly sent back\n  whence it came. The creature might later seek revenge. If you assign some\n  open-ended task that the creature cannot complete though its own actions\n  (such as \342\200\232\303\204\303\272Wait here\342\200\232\303\204\303\271 or \342\200\232\303\204\303\272Defend this area against attack\342\200\232\303\204\303\271), the spell remains\n  in effect for a maximum of one day per caster level, and the creature gains\n  an immediate chance to break free. Note that a clever recipient can subvert\n  some instructions.  When you use a calling spell to call an air, chaotic,\n  earth, evil, fire, good, lawful, or water creature, it is a spell of that\n  type. For example, lesser planar binding is a water spell when you cast it to\n  call a water elemental."
+}
+school: CONJURATION
+subschool: CALLING
+summary: "$undefined$"
+level {
+  spell_class: SORCERER
+  level: 5
+}
+level {
+  spell_class: WIZARD
+  level: 5
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One elemental or outsider with 6 HD or less"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

@@ -1,0 +1,47 @@
+template {
+  name: "Tree Shape"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 296
+      high: 296
+    }
+  }
+  world: "Generic"
+  description: "By means of this spell, you are able to assume the form of a Large living\n  tree or shrub or a Large dead tree trunk with a small number of limbs. The\n  closest inspection cannot reveal that the tree in question is actually a\n  magically concealed creature. To all normal tests you are, in fact, a tree or\n  shrub, although a detect magic spell reveals a faint transmutation on the\n  tree. While in tree form, you can observe all that transpires around you just\n  as if you were in your normal form, and your hit points and save bonuses\n  remain unaffected. You gain a +10 natural armor bonus to AC but have an\n  effective Dexterity score of 0 and a speed of 0 feet. You are immune to\n  critical hits while in tree form.  All clothing and gear carried or worn\n  changes with you.  You can dismiss tree shape as a free action (instead of as\n  a standard action)."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 2
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    hours: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

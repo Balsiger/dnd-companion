@@ -1,0 +1,43 @@
+template {
+  name: "Dispel Chaos"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 222
+      high: 222
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like dispel evil, except that you are surrounded by\n  constant, blue, lawful energy, and the spell affects chaotic creatures and\n  spells rather than evil ones."
+}
+school: ABJURATION
+summary: "Surrounds you wiht constant, blue, lawful energy add give you a +4 deflection bonus to AC vs. chaotic creature; can banish chaotic creature from another plane with successful touch attack (Will DC $dc negates), ending the spell; you can also dispell any one enchantment spell cast by a chaotic creature or a chaotic spell, also ending the spell."
+descriptor: LAWFUL
+level {
+  spell_class: CLERIC
+  level: 5
+}
+level {
+  spell_class: LAW
+  level: 5
+}
+level {
+  spell_class: PALADIN
+  level: 4
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

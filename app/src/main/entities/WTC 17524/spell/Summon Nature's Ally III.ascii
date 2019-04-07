@@ -1,0 +1,40 @@
+template {
+  name: "Summon Nature\'s Ally III"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 288
+      high: 288
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like summon nature\'s ally I, except that you can summon\n  one 3rd-level creature, 1d3 2nd-level creatures of the same kind, or 1d4+1\n  1st-level creatures of the same kind.  When you use a summoning spell to\n  summon an air, chaotic, earth, evil, fire, good, lawful, or water creature,\n  it is a spell of that type. For example, summon nature\'s ally III is an evil\n  and fire spell when you cast it to summon a salamander.  Summon Nature\'s Ally\n  1st Level Dire rat Eagle (animal) Monkey (animal) Octopus1 (animal) Owl\n  (animal) Porpoise1 (animal) Snake, Small viper (animal) Wolf (animal) 2nd\n  Level Bear, black (animal) Crocodile (animal) Dire badger Dire bat Elemental,\n  Small (any) Hippogriff Shark, Medium1 (animal) Snake, Medium viper (animal)\n  Squid1 (animal) Wolverine (animal) 3rd Level Ape (animal) Dire weasel Dire\n  wolf Eagle, giant [NG] Lion Owl, giant [NG] Satyr [CN; without pipes] Shark,\n  Large1 (animal) Snake, constrictor (animal) Snake, Large viper (animal)\n  Thoqqua 4th Level Arrowhawk, juvenile Bear, brown (animal) Crocodile, giant\n  (animal) Deinonychus (dinosaur) Dire ape Dire boar Dire wolverine Elemental,\n  Medium (any) Salamander, flamebrother [NE] Sea cat1 Shark, Huge1 (animal)\n  Snake, Huge viper (animal) Tiger (animal) Tojanida, juvenile1 Unicorn [CG]\n  Xorn, minor"
+}
+school: CONJURATION
+subschool: SUMMONING
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 3
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+  description: "One or more creatures no two of which can be more than 30 ft apart"
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

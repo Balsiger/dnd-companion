@@ -1,0 +1,47 @@
+template {
+  name: "Command Plants"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 211
+      high: 211
+    }
+  }
+  world: "Generic"
+  description: "This spell allows you some degree of control over one or more plant\n  creatures.  Affected plant creatures can understand you, and they perceive\n  your words and actions in the most favorable way (treat their attitude as\n  friendly). They will not attack you while the spell lasts. You can try to\n  give a subject orders, but you must win an opposed Charisma check to convince\n  it to do anything it wouldn\342\200\232\303\204\303\264t ordinarily do.  (Retries are not allowed.) A\n  commanded plant never obeys suicidal or obviously harmful orders, but it\n  might be convinced that something very dangerous is worth doing (see charm\n  person).  You can affect a number of plant creatures whose combined level or\n  HD do not exceed twice your level."
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 4
+}
+level {
+  spell_class: PLANT
+  level: 4
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Up to 2 HD/level of plant creatures, no two of which can be more than 30 ft apart"
+duration {
+  duration {
+    days: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

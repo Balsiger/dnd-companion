@@ -1,0 +1,45 @@
+template {
+  name: "Sanctuary"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 274
+      high: 274
+    }
+  }
+  world: "Generic"
+  description: "Any opponent attempting to strike or otherwise directly attack the warded\n  creature, even with a targeted spell, must attempt a Will save. If the save\n  succeeds, the opponent can attack normally and is unaffected by that casting\n  of the spell. If the save fails, the opponent can\'t follow through with the\n  attack, that part of its action is lost, and it can\'t directly attack the\n  warded creature for the duration of the spell. Those not attempting to attack\n  the subject remain unaffected. This spell does not prevent the warded\n  creature from being attacked or affected by area or effect spells. The\n  subject cannot attack without breaking the spell but may use nonattack spells\n  or otherwise act. This allows a warded cleric to heal wounds, for example, or\n  to cast a bless spell, perform an augury, summon creatures, and so on."
+}
+school: ABJURATION
+summary: "Touch, $level rounds or until attacking, unless Will DC $dc enemies cannot attack (attack wasted)."
+level {
+  spell_class: CLERIC
+  level: 1
+}
+level {
+  spell_class: PROTECTION
+  level: 1
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

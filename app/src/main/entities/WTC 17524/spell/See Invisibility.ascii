@@ -1,0 +1,51 @@
+template {
+  name: "See Invisibility"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 275
+      high: 275
+    }
+  }
+  world: "Generic"
+  description: "You can see any objects or beings that are invisible within your range of\n  vision, as well as any that are ethereal, as if they were normally\n  visible. Such creatures are visible to you as translucent shapes, allowing\n  you easily to discern the difference between visible, invisible, and ethereal\n  creatures.  The spell does not reveal the method used to obtain\n  invisibility. It does not reveal illusions or enable you to see through\n  opaque objects. It does not reveal creatures who are simply hiding,\n  concealed, or otherwise hard to see.  See invisibility can be made permanent\n  with a permanency spell.  Material Component: A pinch of talc and a small\n  sprinkling of powdered silver."
+}
+school: DIVINATION
+summary: "peronal, [[10 * $level]] min (D), reveals invisible creatures or objects"
+level {
+  spell_class: BARD
+  level: 3
+}
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL
+focus {
+}
+casting_time {
+}
+special_range: PERSONAL
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "You"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

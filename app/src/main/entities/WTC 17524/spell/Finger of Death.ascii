@@ -1,0 +1,48 @@
+template {
+  name: "Finger of Death"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 230
+      high: 230
+    }
+  }
+  world: "Generic"
+  description: "You can slay any one living creature within range. The target is entitled to\n  a Fortitude saving throw to survive the attack. If the save is successful,\n  the creature instead takes 3d6 points of damage +1 point per caster level\n  (maximum +25). The subject might die from damage even if it succeeds on its\n  saving throw."
+}
+school: NECROMANCY
+summary: "One living creature within [[25 + (($level / 2) * 5)]] ft For DC $dc for 3d6 + [[min(25, $level)]] or dies."
+descriptor: DEATH
+level {
+  spell_class: DRUID
+  level: 8
+}
+level {
+  spell_class: SORCERER
+  level: 7
+}
+level {
+  spell_class: WIZARD
+  level: 7
+}
+components: VERBOSE
+components: SOMATIC
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One living creature"
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

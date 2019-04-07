@@ -1,0 +1,45 @@
+template {
+  name: "Animate Plants"
+  synonym: "Plants, Animate"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 199
+      high: 199
+    }
+  }
+  world: "Generic"
+  description: "You imbue inanimate plants with mobility and a semblance of life. Each\n  animated plant then immediately attacks whomever or whatever you initially\n  designate as though it were an animated object of the appropriate size\n  category. You may animate one Large or smaller plant (such as a tree), or an\n  equivalent number of larger plants, per three caster levels. A Huge plant\n  counts as two Large or smaller plants, a Gargantuan plant as four, and a\n  Colossal plant as eight. You can change the designated target or targets as a\n  move action, as if directing an active spell.  Use the statistics for\n  animated objects found in the Monster Manual, except that plants smaller than\n  Large don\342\200\232\303\204\303\264t have hardness unless the DM rules otherwise for a given case.\n  \\Spell{Animate plants} cannot affect plant creatures (such as\n  \\Monster{treants}), nor does it affect nonliving vegetable material (such as\n  a \\Item{cotton tunic} or \\Item{hempen rope}).  \\emph{Entangle:}\n  Alternatively, you may imbue all plants within range with a degree of\n  mobility, which allows them to entwine around creatures in the area. This\n  usage of the spell duplicates the effect of an \\Spell{entangle} spell. Spell\n  resistance does not keep creatures from being entangled. This effect lasts 1\n  hour per caster level."
+  incomplete: "duration is 1 hour/level for entangling"
+}
+school: TRANSMUTATION
+summary: "$undefined$"
+level {
+  spell_class: DRUID
+  level: 7
+}
+level {
+  spell_class: PLANT
+  level: 7
+}
+components: VERBOSE
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "One Large plant per three caster levels or all plants within range; see text"
+duration {
+  duration {
+    rounds: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

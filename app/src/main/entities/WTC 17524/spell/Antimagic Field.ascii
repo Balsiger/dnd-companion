@@ -1,0 +1,63 @@
+template {
+  name: "Antimagic Field"
+  synonym: "Field, Antimagic"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 200
+      high: 200
+    }
+  }
+  world: "Generic"
+  description: "An invisible barrier surrounds you and moves with you. The space within this\n  barrier is impervious to most magical effects, including spells, spell-like\n  abilities, and supernatural abilities. Likewise, it prevents the functioning\n  of any magic items or spells within its confines.  An \\Spell{antimagic field}\n  suppresses any spell or magical effect used within, brought into, or cast\n  into the area, but does not dispel it.  A hasted creature, for example, is\n  not hasted while inside the field, but the spell resumes functioning when the\n  creature leaves the field. Time spent within an antimagic field counts\n  against the suppressed spell\342\200\232\303\204\303\264s duration.  Summoned creatures of any type and\n  incorporeal undead wink out if they enter an antimagic field. They reappear\n  in the same spot once the field goes away. Time spent winked out counts\n  normally against the duration of the conjuration that is maintaining the\n  creature. If you cast antimagic field in an area occupied by a summoned\n  creature that has spell resistance, you must make a caster level check (1d20\n  + caster level) against the creature\342\200\232\303\204\303\264s spell resistance to make it wink\n  out. (The effects of instantaneous conjurations, such as create water, are\n  not affected by an antimagic field because the conjuration itself is no\n  longer in effect, only its result.)  A normal creature (a normally\n  encountered griffon rather than a conjured one, for instance) can enter the\n  area, as can normal missiles. Furthermore, while a magic sword does not\n  function magically within the area, it is still a sword (and a masterwork\n  sword at that). The spell has no effect on golems and other constructs that\n  are imbued with magic during their creation process and are thereafter\n  selfsupporting (unless they have been summoned, in which case they are\n  treated like any other summoned creatures). Elementals, corporeal undead, and\n  outsiders are likewise unaffected unless summoned.  These creatures\342\200\232\303\204\303\264\n  spell-like or supernatural abilities, however, may be temporarily nullified\n  by the field.  \\Spell{Dispel magic} does not remove the field.  Two or more\n  antimagic fields sharing any of the same space have no effect on each\n  other. Certain spells, such as wall of force, prismatic sphere, and prismatic\n  wall, remain unaffected by antimagic field (see the individual spell\n  descriptions). Artifacts and deities are unaffected by mortal magic such as\n  this. (See the Dungeon Master\342\200\232\303\204\303\264s Guide for more about artifacts.)  Should a\n  creature be larger than the area enclosed by the barrier, any part of it that\n  lies outside the barrier is unaffected by the field."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 8
+}
+level {
+  spell_class: MAGIC
+  level: 6
+}
+level {
+  spell_class: PROTECTION
+  level: 6
+}
+level {
+  spell_class: SORCERER
+  level: 6
+}
+level {
+  spell_class: WIZARD
+  level: 6
+}
+components: VERBOSE
+components: SOMATIC
+components: MATERIAL_DEVINE_FOCUS
+material {
+  use: "use"
+  component: "a pinch of powdered iron or iron filings"
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "10-ft-radius emanation, centered on you"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

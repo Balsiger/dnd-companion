@@ -1,0 +1,35 @@
+template {
+  name: "Mass Inflict Moderate Wounds"
+  synonym: "Inflict Moderate Wounds, Mass"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 244
+      high: 244
+    }
+  }
+  world: "Generic"
+  description: "This spell functions like mass inflict light wounds, except that it deals\n  2d8 points of damage +1 point per caster level (maximum +30)."
+}
+school: NECROMANCY
+summary: "$undefined$"
+level {
+  spell_class: CLERIC
+  level: 6
+}
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+duration {
+  duration {
+  }
+  additional_duration {
+  }
+}

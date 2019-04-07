@@ -1,0 +1,45 @@
+template {
+  name: "Polar Ray"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 262
+      high: 263
+    }
+  }
+  world: "Generic"
+  description: "A blue-white ray of freezing air and ice springs from your hand. You must\n  succeed on a ranged touch attack with the ray to deal damage to a target. The\n  ray deals 1d6 points of cold damage per caster level (maximum 25d6).  Focus:\n  A small, white ceramic cone or prism."
+}
+school: EVOACATION
+summary: "$undefined$"
+descriptor: COLD
+level {
+  spell_class: SORCERER
+  level: 8
+}
+level {
+  spell_class: WIZARD
+  level: 8
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+  description: "Ray effect"
+}
+duration {
+  duration_description: "Instantaneous"
+  duration {
+  }
+  additional_duration {
+  }
+}

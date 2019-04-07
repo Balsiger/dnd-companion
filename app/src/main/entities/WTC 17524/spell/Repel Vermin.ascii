@@ -1,0 +1,54 @@
+template {
+  name: "Repel Vermin"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 271
+      high: 271
+    }
+  }
+  world: "Generic"
+  description: "An invisible barrier holds back vermin. A vermin with Hit Dice of less than\n  onethird your level cannot penetrate the barrier. A vermin with Hit Dice of\n  one-third your level or more can penetrate the barrier if it succeeds on a\n  Will save. Even so, crossing the barrier deals the vermin 2d6 points of\n  damage, and pressing against the barrier causes pain, which deters most\n  vermin."
+}
+school: ABJURATION
+summary: "$undefined$"
+level {
+  spell_class: BARD
+  level: 4
+}
+level {
+  spell_class: CLERIC
+  level: 4
+}
+level {
+  spell_class: DRUID
+  level: 4
+}
+level {
+  spell_class: RANGER
+  level: 3
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "10-ft-radius emanation centered on you"
+duration {
+  duration {
+    minutes: 10
+  }
+  levels: "level"
+  additional_duration {
+  }
+  flags: "(D)"
+  description: "(D)"
+}

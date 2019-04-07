@@ -1,0 +1,44 @@
+template {
+  name: "Protection from Arrows"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 266
+      high: 266
+    }
+  }
+  world: "Generic"
+  description: "The warded creature gains resistance to ranged weapons. The subject gains\n  damage reduction 10/magic against ranged weapons. (This spell doesn\'t grant\n  you the ability to damage creatures with similar damage reduction.) Once the\n  spell has prevented a total of 10 points of damage per caster level (maximum\n  100 points), it is discharged.  Focus: A piece of shell from a tortoise or a\n  turtle."
+}
+school: ABJURATION
+summary: "For $level hours (or until dischared) the touched creature gains damage reduction 10/magic against ranged weapons, preventing up to [[min(100, 10 * $level)]] damage."
+level {
+  spell_class: SORCERER
+  level: 2
+}
+level {
+  spell_class: WIZARD
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: FOCUS
+focus {
+}
+casting_time {
+}
+special_range: TOUCH
+range {
+}
+effect {
+  distance {
+  }
+}
+target: "Creature touched"
+duration {
+  duration_description: "One hour/level or until discharged"
+  duration {
+  }
+  additional_duration {
+  }
+}
