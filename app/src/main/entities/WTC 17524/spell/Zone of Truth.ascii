@@ -1,0 +1,47 @@
+template {
+  name: "Zone of Truth"
+  reference {
+    name: "WTC 17524"
+    pages {
+      low: 303
+      high: 303
+    }
+  }
+  world: "Generic"
+  description: "Creatures within the emanation area (or those who enter it) can\'t speak any\n  deliberate and intentional lies. Each potentially affected creature is\n  allowed a save to avoid the effects when the spell is cast or when the\n  creature first enters the emanation area. Affected creatures are aware of\n  this enchantment. Therefore, they may avoid answering questions to which they\n  would normally respond with a lie, or they may be evasive as long as they\n  remain within the boundaries of the truth. Creatures who leave the area are\n  free to speak as they choose."
+}
+school: ENCHANTMENT
+subschool: COMPULSION
+summary: "$undefined$"
+descriptor: MIND_AFFECTING
+level {
+  spell_class: CLERIC
+  level: 2
+}
+level {
+  spell_class: PALADIN
+  level: 2
+}
+components: VERBOSE
+components: SOMATIC
+components: DIVINE_FOCUS
+focus {
+}
+casting_time {
+}
+special_range: CLOSE
+range {
+}
+effect {
+  distance {
+  }
+}
+area: "20-ft-radius emanation"
+duration {
+  duration {
+    minutes: 1
+  }
+  levels: "level"
+  additional_duration {
+  }
+}

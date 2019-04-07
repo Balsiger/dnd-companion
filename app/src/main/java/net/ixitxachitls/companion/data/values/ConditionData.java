@@ -43,7 +43,7 @@ import java.util.stream.Collectors;
 /**
  * A condition a creature can have.
  */
-public class ConditionData {
+public class ConditionData implements Comparable<ConditionData> {
 
   private static final String FIELD_NAME = "name";
   private static final String FIELD_DESCRIPTION = "description";
@@ -128,6 +128,11 @@ public class ConditionData {
 
   public boolean isPredefined() {
     return predefined;
+  }
+
+  @Override
+  public int compareTo(ConditionData other) {
+    return name.compareTo(other.name);
   }
 
   public boolean dmOnly() {

@@ -296,6 +296,10 @@ public class Character extends Creature<Character> implements Comparable<Charact
       }
     }
 
+    for (CreatureCondition condition : getConditions()) {
+
+    }
+
     return value;
   }
 

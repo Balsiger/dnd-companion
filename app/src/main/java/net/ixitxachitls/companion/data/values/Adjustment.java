@@ -37,7 +37,7 @@ import java.util.Optional;
  */
 public abstract class Adjustment {
 
-  public enum Type { generic, ability, abilityCheck }
+  public enum Type { generic, ability, abilityCheck, initiative }
 
   private static final String FIELD_TYPE = "type";
   private final Type type;
@@ -75,7 +75,13 @@ public abstract class Adjustment {
     if (parsed.isPresent()) {
       return parsed.get();
     }
+
     parsed = AbilityAdjustment.parseAbility(text, source);
+    if (parsed.isPresent()) {
+      return parsed.get();
+    }
+
+    parsed = InitiativeAdjustment.parseAbility(text, source);
     if (parsed.isPresent()) {
       return parsed.get();
     }
@@ -94,6 +100,9 @@ public abstract class Adjustment {
 
       case abilityCheck:
         return AbilityCheckAdjustment.readAbility(data);
+
+      case initiative:
+        return InitiativeAdjustment.readInitiative(data);
     }
   }
 }

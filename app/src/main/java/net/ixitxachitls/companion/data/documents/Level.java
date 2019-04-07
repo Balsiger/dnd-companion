@@ -223,13 +223,13 @@ public class Level extends NestedDocument {
     if (abilityIncrease.isPresent()) {
       data.put(FIELD_ABILITY_INCREASE, abilityIncrease.get().getName());
     }
-    if (feat.isPresent()) {
+    if (feat.isPresent() && !feat.get().getName().isEmpty()) {
       data.put(FIELD_FEAT, feat.get().write());
     }
-    if (racialFeat.isPresent()) {
+    if (racialFeat.isPresent() && !racialFeat.get().getName().isEmpty()) {
       data.put(FIELD_RACIAL_FEAT, racialFeat.get().write());
     }
-    if (classFeat.isPresent()) {
+    if (classFeat.isPresent() && !classFeat.get().getName().isEmpty()) {
       data.put(FIELD_CLASS_FEAT, classFeat.get().write());
     }
 
@@ -256,10 +256,10 @@ public class Level extends NestedDocument {
         Optional.of(Feat.read(Values.get(data, FIELD_FEAT), "Level " + number))
         : Optional.empty();
     Optional<Feat> racialFeat = Values.has(data, FIELD_RACIAL_FEAT) ?
-        Optional.of(Feat.read(Values.get(data, FIELD_RACIAL_FEAT), "Level " + number))
+        Optional.of(Feat.read(Values.get(data, FIELD_RACIAL_FEAT), "Level " + number + " (racial)"))
         : Optional.empty();
     Optional<Feat> classFeat = Values.has(data, FIELD_CLASS_FEAT) ?
-        Optional.of(Feat.read(Values.get(data, FIELD_CLASS_FEAT), "Level " + number))
+        Optional.of(Feat.read(Values.get(data, FIELD_CLASS_FEAT), "Level " + number + " (class)"))
         : Optional.empty();
     return new Level(template, hp, abilityIncrease, feat, racialFeat, classFeat);
   }

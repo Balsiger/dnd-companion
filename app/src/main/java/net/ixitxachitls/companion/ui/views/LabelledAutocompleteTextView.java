@@ -25,7 +25,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.MultiAutoCompleteTextView;
 
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
@@ -52,7 +51,7 @@ public class LabelledAutocompleteTextView
 
   @Override
   protected V createTextView() {
-    text = EditTextWrapper.<V>wrap((V) new MultiAutoCompleteTextView(getContext()));
+    text = EditTextWrapper.<V>wrap((V) new AutoCompleteTextView(getContext()));
     text.get().setBackground(null);
     text.padding(AbstractWrapper.Padding.BOTTOM, 0);
     text.padding(AbstractWrapper.Padding.TOP, 0);

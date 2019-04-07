@@ -145,7 +145,8 @@ public class Encounter {
   }
 
   public boolean amCurrentPlayer() {
-    return currentCreatureIndex >= 0
+    return inBattle()
+        && currentCreatureIndex >= 0
         && creatures.size() > currentCreatureIndex
         && creatures.get(currentCreatureIndex).amPlayer();
   }

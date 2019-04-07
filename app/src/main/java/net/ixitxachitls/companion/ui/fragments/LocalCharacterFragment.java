@@ -81,7 +81,7 @@ public class LocalCharacterFragment extends CharacterFragment {
     title.setAction(this::editBase);
     title.setImageAction(this::editImage);
     edit.show().onClick(this::editBase);
-    timed.hide().onClick(this::timed);
+    timed.show().onClick(this::timed);
     move.show().onClick(this::move);
     message.show().onClick(this::sendMessage);
 
