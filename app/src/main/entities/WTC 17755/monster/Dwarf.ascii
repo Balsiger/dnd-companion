@@ -62,7 +62,7 @@ reach {
 }
 feat {
   name: "Weapon Focus"
-  weapon: "Dwarven Waraxe"
+  qualifier: "Dwarven Waraxe"
 }
 climate: TEMPERATE
 terrain: MOUNTAIN

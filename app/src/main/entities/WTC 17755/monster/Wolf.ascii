@@ -87,7 +87,7 @@ feat {
 }
 feat {
   name: "Weapon Focus"
-  weapon: "Bite"
+  qualifier: "Bite"
 }
 climate: TEMPERATE
 terrain: FOREST

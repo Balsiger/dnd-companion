@@ -62,7 +62,7 @@ reach {
 }
 feat {
   name: "Weapon Focus"
-  weapon: "Longsword"
+  qualifier: "Longsword"
 }
 climate: WARM
 terrain: PLAINS
