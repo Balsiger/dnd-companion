@@ -166,7 +166,7 @@ dependencies {
 
 def convertToBinaryProto(inputFile, outputFile, proto) {
   // Make sure the output directory exists.
-  def dir = file(outputFile.replaceFirst(/[^\/]*$/, ""))
+  def dir = file(outputFile.replaceFirst(/[^\\\/]*$/, ""))
   if (!dir.exists()) {
     println("creating direcoty $dir")
     dir.mkdirs()
@@ -196,7 +196,7 @@ def convertToBinaryProtos(input, type, proto) {
   }
 
   filtered.files.each { f ->
-    convertToBinaryProto(f, f.path.replaceFirst(/[^\/]*\/([^\/]*\/${type}\/.*)\.ascii$/, {
+    convertToBinaryProto(f, f.path.replaceFirst(/[^\/\\]*[\/\\]([^\\\/]*[\/\\]${type}[\\\/].*)\.ascii$/, {
       all, path -> "assets/entities/" + path + ".pb"
     }), proto)
   }
