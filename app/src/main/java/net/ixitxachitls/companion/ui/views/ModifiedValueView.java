@@ -35,6 +35,8 @@ import net.ixitxachitls.companion.ui.MessageDialog;
  */
 public class ModifiedValueView extends AppCompatTextView {
 
+  private boolean showRange = false;
+
   public ModifiedValueView(Context context) {
     super(context);
 
@@ -53,9 +55,15 @@ public class ModifiedValueView extends AppCompatTextView {
     init();
   }
 
+  public ModifiedValueView ranged() {
+    showRange = true;
+
+    return this;
+  }
+
   public ModifiedValueView set(ModifiedValue value) {
-    setText(value.totalFormatted());
-    setOnLongClickListener((v) -> this.showDescription(value));
+    setText(showRange ? value.totalRangeFormatted() : value.totalFormatted());
+    setOnLongClickListener(v -> this.showDescription(value));
 
     return this;
   }

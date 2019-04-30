@@ -23,12 +23,15 @@ package net.ixitxachitls.companion.data.documents;
 
 import android.support.annotation.CallSuper;
 
+import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Multiset;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.data.values.AbilityAdjustment;
 import net.ixitxachitls.companion.data.values.Adjustment;
 import net.ixitxachitls.companion.data.values.CampaignDate;
@@ -153,6 +156,110 @@ public class Character extends Creature<Character> implements Comparable<Charact
   }
 
   @Override
+  public Set<Feat> collectFeats() {
+    Set<Feat> feats = new HashSet<>();
+
+    // Feats set in levels.
+    for (Level level : levels) {
+      if (level.getFeat().isPresent()) {
+        feats.add(level.getFeat().get());
+      }
+      if (level.getClassFeat().isPresent()) {
+        feats.add(level.getClassFeat().get());
+      }
+      if (level.getRacialFeat().isPresent()) {
+        feats.add(level.getRacialFeat().get());
+      }
+
+      // Automatic feats by class.
+      feats.addAll(level.getAutomaticFeats());
+    }
+
+    // Automatic feats by race.
+    if (getRace().isPresent()) {
+      feats.addAll(getRace().get().getAutomaticFeats());
+    }
+
+    return feats;
+  }
+
+  @Override
+  public Set<Quality> collectQualities() {
+    Set<Quality> qualities = super.collectQualities();
+
+    // Qualities from levels.
+    Multiset<String> names = HashMultiset.create();
+    for (Level level : levels) {
+      names.add(level.getTemplate().getName());
+      qualities.addAll(level.getQualities(names.count(level.getTemplate().getName())));
+    }
+
+    // TODO(merlin): Add qualities by items.
+
+    return qualities;
+  }
+
+  @Override
+  public ModifiedValue fortitude() {
+    ModifiedValue value = super.fortitude();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getFortitudeModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    return value;
+  }
+
+  @Override
+  public ModifiedValue initiative() {
+    ModifiedValue value = super.initiative();
+
+    for (Level level : levels) {
+      if (level.getFeat().isPresent()) {
+        value.add(level.getFeat().get().getInitiativeAdjustment());
+      }
+    }
+
+    return value;
+  }
+
+  @Override
+  public ModifiedValue reflex() {
+    ModifiedValue value = super.reflex();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getReflexModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    return value;
+  }
+
+  @Override
+  public ModifiedValue will() {
+    ModifiedValue value = super.will();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getWillModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    return value;
+  }
+
+  @Override
+  protected boolean hasLevels() {
+    return !levels.isEmpty();
+  }
+
+  @Override
   @CallSuper
   protected void read() {
     super.read();
@@ -223,33 +330,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
     xp += number;
   }
 
-  public Set<Feat> collectFeats() {
-    Set<Feat> feats = new HashSet<>();
-
-    // Feats set in levels.
-    for (Level level: levels) {
-      if (level.getFeat().isPresent()) {
-        feats.add(level.getFeat().get());
-      }
-      if (level.getClassFeat().isPresent()) {
-        feats.add(level.getClassFeat().get());
-      }
-      if (level.getRacialFeat().isPresent()) {
-        feats.add(level.getRacialFeat().get());
-      }
-
-      // Automatic feats by class.
-      feats.addAll(level.getAutomaticFeats());
-    }
-
-    // Automatic feats by race.
-    if (getRace().isPresent()) {
-      feats.addAll(getRace().get().getAutomaticFeats());
-    }
-
-    return feats;
-  }
-
   @Override
   public int compareTo(Character that) {
     int name = this.getName().compareTo(that.getName());
@@ -283,24 +363,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return Optional.empty();
-  }
-
-  public ModifiedValue initiativeModifier() {
-    ModifiedValue value = new ModifiedValue("Initiative", 0, true);
-    value.add(new Modifier(Ability.modifier(getDexterity().total()), Modifier.Type.ABILITY,
-        "Dexterity"));
-
-    for (Level level : levels) {
-      if (level.getFeat().isPresent()) {
-        value.add(level.getFeat().get().getInitiativeAdjustment());
-      }
-    }
-
-    for (CreatureCondition condition : getConditions()) {
-
-    }
-
-    return value;
   }
 
   public void setLevel(int number, Level level) {
@@ -360,7 +422,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private ModifiedValue adjustAbility(ModifiedValue value, Ability ability) {
     adjustAbilityForLevels(value, ability);
     adjustAbilityForConditions(value, ability);
-    adjustAbilityForRace(value, ability);
+    adjustAbilityForQualities(value, ability);
     return value;
   }
 
@@ -410,15 +472,12 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return value;
   }
 
-  private ModifiedValue adjustAbilityForRace(ModifiedValue value, Ability ability) {
+  private void adjustAbilityForQualities(ModifiedValue value, Ability ability) {
     if (getRace().isPresent()) {
-      int modifier = getRace().get().getAbilityAdjustment(ability);
-      if (modifier != 0) {
-        value.add(new Modifier(modifier, Modifier.Type.RACIAL, getRace().get().getName()));
+      for (Quality quality : getRace().get().getQualities()) {
+        value.add(quality.getTemplate().getAbilityModifiers(Ability.DEXTERITY));
       }
     }
-
-    return value;
   }
 
   protected static Character create(CompanionContext context, String campaignId) {

@@ -23,13 +23,7 @@ hit_dice {
 }
 speed {
   mode: RUN
-  distance {
-    imperial {
-      feet {
-        leader: 20
-      }
-    }
-  }
+  squares: 4
 }
 base_attack: 1
 abilities {
@@ -39,8 +33,6 @@ abilities {
   wisdom: 9
   intelligence: 10
   charisma: 8
-  racial_constitution_modifier: 2
-  racial_strength_modifier: -2
 }
 saves {
   fortitude: 4

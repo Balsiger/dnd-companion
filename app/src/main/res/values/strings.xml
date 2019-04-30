@@ -126,5 +126,6 @@
   <string name="feat_qualifier_school">Feat Qualifier (School)</string>
   <string name="feat_qualifier_skill">Feat Qualifier (Skill)</string>
   <string name="feat_qualifier_spells">Feat Qualifier (Multiple Spells)</string>
+  <string name="character_select_quality">Select Quality</string>
 
 </resources>

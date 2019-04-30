@@ -26,6 +26,7 @@ import android.support.annotation.ColorRes;
 import android.support.annotation.LayoutRes;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.common.collect.Lists;
 
@@ -76,6 +77,7 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
   private LabelledTextView featView;
   private LabelledTextView racialFeatView;
   private LabelledTextView classFeatView;
+  private LinearLayout qualities;
 
   @Override
   protected Level getValue() {
@@ -83,11 +85,18 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
       return new Level();
     }
 
+    List<String> qualityNames = new ArrayList<>();
+    for (int i = 0; i < qualities.getChildCount(); i++) {
+      if (qualities.getChildAt(i) instanceof LabelledTextView) {
+        qualityNames.add(((LabelledTextView) qualities.getChildAt(i)).getText());
+      }
+    }
+
     return new Level(Templates.get().getOrCreateLevel(className.getText()),
         Integer.parseInt(hp.getText()),
         abilityIncrease.getText().isEmpty()
             ? Optional.empty() : Optional.of(Ability.fromName(abilityIncrease.getText())),
-        feat, racialFeat, classFeat);
+        feat, racialFeat, classFeat, qualityNames);
   }
 
   @Override
@@ -143,6 +152,8 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     featView.text(feat.isPresent() ? feat.get().getTitle() : "");
     racialFeatView.text(racialFeat.isPresent() ? racialFeat.get().getTitle(): "");
     classFeatView.text(classFeat.isPresent() ? classFeat.get().getTitle() : "");
+
+    qualities = view.findViewById(R.id.qualities);
 
     refresh();
   }
@@ -233,13 +244,17 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
 
       case spells:
         ListSelectDialog.newStringInstance(R.string.feat_qualifier_spells,
-            new ArrayList<>(feat.get().getQualifiers()), 3,
+            new ArrayList<>(feat.get().getQualifiers()), character.getIntelligenceModifier(),
             Templates.get().getSpellTemplates().getNames(),
             R.color.character)
             .setSelectListener(action)
             .display();
         break;
     }
+  }
+
+  private void editQuality(LabelledTextView text, List<String> qualities, String previous) {
+    text.text(qualities.get(0));
   }
 
   private void editRacialFeat(List<String> featName) {
@@ -261,12 +276,24 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
       classLevel++;
     }
 
-    Optional<LevelTemplate> level = Templates.get().getLevelTemplates().get(className.getText());
-    if (level.isPresent() && level.get().hasBonusFeat(classLevel)) {
+    Optional<LevelTemplate> levelTemplate =
+        Templates.get().getLevelTemplates().get(className.getText());
+    if (levelTemplate.isPresent() && levelTemplate.get().hasBonusFeat(classLevel)) {
       classFeatView.enabled();
       classFeatView.onClick(this::selectClassFeat);
     } else {
       classFeatView.disabled();
+    }
+
+    // Qualities.
+    if (levelTemplate.isPresent()) {
+      for (Level.QualitySelection selection : level.collectQualitySelections(classLevel)) {
+        LabelledTextView text = new LabelledTextView(getContext(), null);
+        text.text(selection.getSelected()).lineColor(R.color.character).label("Quality")
+            .labelColor(R.color.character);
+        text.onClick(() -> selectQuality(text, selection.getSelected(), selection.getOptions()));
+        qualities.addView(text);
+      }
     }
   }
 
@@ -310,6 +337,16 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
             .map(FeatTemplate::getName)
             .collect(Collectors.toList()), R.color.character)
         .setSelectListener(this::editFeat)
+        .display();
+  }
+
+  private void selectQuality(LabelledTextView text, String selected, List<String> options) {
+    if (options.isEmpty()) {
+      options = Lists.newArrayList("");
+    }
+    ListSelectDialog.newStringInstance(R.string.character_select_quality,
+        Lists.newArrayList(selected), options, R.color.character)
+        .setSelectListener(qualities -> editQuality(text, qualities, selected))
         .display();
   }
 

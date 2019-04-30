@@ -19,7 +19,7 @@ template {
   modifier {
     modifier {
       value: 2
-      type: GENERAL
+      type: RACIAL
     }
   }
 }
@@ -28,7 +28,7 @@ ability_modifier {
   modifier {
     modifier {
       value: -2
-      type: GENERAL
+      type: RACIAL
     }
   }
 }

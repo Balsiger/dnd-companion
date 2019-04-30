@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018 Peter Balsiger
+ * Copyright (c) 2017-2019 Peter Balsiger
  * All rights reserved
  *
  * This file is part of the Tabletop Companion.
@@ -21,32 +21,29 @@
 
 package net.ixitxachitls.companion.data.templates;
 
+import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
-import net.ixitxachitls.companion.rules.Products;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
- * A template for feats.
+ * A template for a quality.
  */
-public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
+public class QualityTemplate extends StoredTemplate<Template .QualityTemplateProto> {
 
-  public enum Qualifier {none, weapon, school, skill, spells}
+  public static final String TYPE = "quality";
 
-  public static final String TYPE = "feat";
-  private final Template.FeatTemplateProto proto;
-  ;
+  private final Template.QualityTemplateProto proto;
 
-  public FeatTemplate(Template.FeatTemplateProto proto, String name) {
+  public QualityTemplate(Template.QualityTemplateProto proto, String name) {
     super(name);
     this.proto = proto;
   }
 
-  public String getDescription () {
+  public String getDescription() {
     return proto.getTemplate().getDescription();
   }
 
@@ -59,12 +56,6 @@ public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
     return modifiers;
   }
 
-  public List<Modifier> getInitiativeAdjustment () {
-    return proto.getInitiativeModifier().getModifierList().stream()
-        .map(p -> Modifier.fromProto(p, name))
-        .collect(Collectors.toList());
-  }
-
   public List<Modifier> getReflexModifiers() {
     List<Modifier> modifiers = new ArrayList<>();
     for (Value.ModifierProto.Modifier modifier : proto.getReflexModifier().getModifierList()) {
@@ -72,28 +63,6 @@ public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
     }
 
     return modifiers;
-  }
-
-  public Qualifier getRequiredQualifier () {
-    switch (proto.getRequiresQualifier()) {
-      default:
-      case UNRECOGNIZED:
-      case UNKNOWN:
-      case NONE:
-        return Qualifier.none;
-      case WEAPON:
-        return Qualifier.weapon;
-      case SKILL:
-        return Qualifier.skill;
-      case SPELLS:
-        return Qualifier.spells;
-      case SCHOOL:
-        return Qualifier.school;
-    }
-  }
-
-  public Value.FeatType getType () {
-    return proto.getType();
   }
 
   public List<Modifier> getWillModifiers() {
@@ -105,21 +74,28 @@ public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
     return modifiers;
   }
 
-  public boolean isFromPHB () {
-    return Products.isFromPHB(proto.getTemplate());
+  public List<Modifier> getAbilityModifiers(Ability ability) {
+    List<Modifier> modifiers = new ArrayList<>();
+
+    for (Template.QualityTemplateProto.AbilityModifier abilityModifier
+        : proto.getAbilityModifierList()) {
+      if (Ability.fromProto(abilityModifier.getAbility()) == ability) {
+        for (Value.ModifierProto.Modifier modifier
+            : abilityModifier.getModifier().getModifierList()) {
+          modifiers.add(Modifier.fromProto(modifier, getName()));
+        }
+      }
+    }
+
+    return modifiers;
   }
 
-  public boolean requiresQualifier () {
-    return proto.getRequiresQualifier() != Template.FeatTemplateProto.Qualifier.UNKNOWN
-        && proto.getRequiresQualifier() != Template.FeatTemplateProto.Qualifier.NONE;
+  public static Template.QualityTemplateProto defaultProto () {
+    return Template.QualityTemplateProto.getDefaultInstance();
   }
 
-  public static Template.FeatTemplateProto defaultProto () {
-    return Template.FeatTemplateProto.getDefaultInstance();
-  }
-
-  public static FeatTemplate fromProto (Template.FeatTemplateProto proto){
-    FeatTemplate feat = new FeatTemplate(proto, proto.getTemplate().getName());
-    return feat;
+  public static QualityTemplate fromProto (Template.QualityTemplateProto proto){
+    QualityTemplate quality = new QualityTemplate(proto, proto.getTemplate().getName());
+    return quality;
   }
 }

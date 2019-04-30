@@ -48,7 +48,7 @@ message SpeedProto
     RUN = 5;
   }
   Mode mode = 1;
-  DistanceProto distance = 2;
+  int32 squares = 2;
 
   enum Maneuverability
   {

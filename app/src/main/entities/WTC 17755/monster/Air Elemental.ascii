@@ -16,13 +16,7 @@ type: ELEMENTAL
 subtype: AIR
 speed {
   mode: FLY
-  distance {
-    imperial {
-      feet {
-        leader: 100
-      }
-    }
-  }
+  squares: 20
 }
 climate: ANY
 terrain: ELEMENTAL_PLANE_OF_AIR

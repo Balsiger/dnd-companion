@@ -33,7 +33,6 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
-import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -62,6 +61,7 @@ public class AbilityView extends LinearLayout {
 
   public void setAction(Wrapper.Action action) {
     setOnClickListener(v -> action.execute());
+    value.onClick(action);
   }
 
   public AbilityView update(Ability ability, ModifiedValue value, ModifiedValue check) {
@@ -71,7 +71,7 @@ public class AbilityView extends LinearLayout {
 
     int modifier = Ability.modifier(value.total());
     this.value.get().set(value);
-    this.modifier.text(String.valueOf(modifier));
+    this.modifier.text(formatSigned(modifier));
     this.check.get().set(check);
     this.checkContainer.setVisibility(modifier == check.total() ? GONE : VISIBLE);
 
@@ -95,26 +95,6 @@ public class AbilityView extends LinearLayout {
     checkContainer = view.findViewById(R.id.check_container);
     checkContainer.setVisibility(GONE);
 
-    //setOnLongClickListener(this::showDescription);
-
     addView(view);
-  }
-
-  private boolean showDescription(View view) {
-    if (modifiedValue.isPresent()) {
-      String check = "";
-      if (modifiedCheck.isPresent()
-          && modifiedCheck.get().total() != Ability.modifier(modifiedValue.get().total())) {
-        check = "\n\n" + ability.getName() + " checks:\n" + modifiedCheck.get().describeModifiers();
-      }
-
-      MessageDialog.create(getContext())
-          .title(ability.getName())
-          .message(modifiedValue.get().describeModifiers() + check)
-          .show();
-      return true;
-    }
-
-    return false;
   }
 }

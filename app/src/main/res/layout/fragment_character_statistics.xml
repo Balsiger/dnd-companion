@@ -20,7 +20,7 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<ScrollView
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_character_statistics"
@@ -223,7 +223,7 @@
           android:layout_weight="0"
           android:elevation="14dp"
           android:padding="10dp"
-          android:text="(next level at 1000)"
+          android:text="(next 1000)"
           android:theme="@style/SmallText"/>
     </LinearLayout>
 
@@ -244,7 +244,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="0"
-          android:text="HEALTH &amp; MOVEMENT"
+          android:text="HEALTH"
           android:textSize="10sp"
           android:theme="@style/TinyText"/>
 
@@ -329,11 +329,125 @@
           android:layout_gravity="center_vertical"
           app:srcCompat="@drawable/plus_minus_box"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_weight="0"
+          android:background="@color/cell"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="SAVING THROWS"
+          android:textSize="10sp"
+          android:theme="@style/TinyText"/>
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@color/cell"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <net.ixitxachitls.companion.ui.views.LabelledView
+          android:id="@+id/fortitude"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="20dp"
+          android:layout_weight="1"
+          app:defaultText=""
+          app:descriptionText="The characters fortitude save."
+          app:labelColor="@color/characterDark"
+          app:labelText="Fortitude"
+          app:lineColor="@color/characterDark"
+          app:textColor="@color/characterText"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledView
+          android:id="@+id/will"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="20dp"
+          android:layout_weight="1"
+          app:defaultText=""
+          app:descriptionText="The characters will save."
+          app:labelColor="@color/characterDark"
+          app:labelText="Will"
+          app:lineColor="@color/characterDark"
+          app:textColor="@color/characterText"/>
+
+      <net.ixitxachitls.companion.ui.views.LabelledView
+          android:id="@+id/reflex"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="20dp"
+          android:layout_weight="1"
+          app:defaultText=""
+          app:descriptionText="The characters reflex save."
+          app:labelColor="@color/characterDark"
+          app:labelText="Reflex"
+          app:lineColor="@color/characterDark"
+          app:textColor="@color/characterText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_weight="0"
+          android:background="@color/cell"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="MOVEMENT"
+          android:textSize="10sp"
+          android:theme="@style/TinyText"/>
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@color/cell"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
       <net.ixitxachitls.companion.ui.views.LabelledView
           android:id="@+id/initiative"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginStart="20dp"
           android:layout_marginEnd="20dp"
           android:layout_weight="1"
           app:defaultText=""
@@ -343,19 +457,49 @@
           app:lineColor="@color/characterDark"
           app:textColor="@color/characterText"/>
 
-      <net.ixitxachitls.companion.ui.views.LabelledTextView
+      <net.ixitxachitls.companion.ui.views.LabelledView
           android:id="@+id/speed"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_marginStart="20dp"
-          android:layout_marginEnd="20dp"
           android:layout_weight="1"
           app:defaultText=""
           app:descriptionText="The characters speed."
           app:labelColor="@color/characterDark"
           app:labelText="Speed"
           app:lineColor="@color/characterDark"
-          app:textColor="@color/characterText"/>
+          app:textColor="@color/characterText">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+          <TextView
+              android:id="@+id/speed_feet"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="feet"
+              android:theme="@style/LargeText"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text=" ("
+              android:theme="@style/LargeText"/>
+
+          <net.ixitxachitls.companion.ui.views.ModifiedValueView
+              android:id="@+id/speed_squares"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:theme="@style/LargeText"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text=" squares)"
+              android:theme="@style/LargeText"/>
+        </LinearLayout>
+      </net.ixitxachitls.companion.ui.views.LabelledView>
 
     </LinearLayout>
 
@@ -399,6 +543,46 @@
 
     </com.google.android.flexbox.FlexboxLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="10dp"
+          android:layout_weight="0"
+          android:background="@color/cell"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:text="QUALITIES"
+          android:textSize="10sp"
+          android:theme="@style/TinyText"/>
+
+      <View
+          android:layout_width="40dp"
+          android:layout_height="1dp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1"
+          android:background="@color/cell"/>
+
+    </LinearLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/qualities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:flexWrap="wrap">
+
+    </com.google.android.flexbox.FlexboxLayout>
+
   </LinearLayout>
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>
 

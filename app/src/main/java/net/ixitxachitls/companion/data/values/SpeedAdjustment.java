@@ -29,23 +29,22 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * An adjustment to initiative.
+ * An adjustment to a creatures speed.
  */
-public class InitiativeAdjustment extends Adjustment {
+public class SpeedAdjustment extends Adjustment {
+  private static final Pattern PARSE_PATTERN = Pattern.compile("(?i:\\s*(half)\\s+speed\\s*)");
+  private static final String FIELD_HALF = "half";
 
-  protected static final Pattern PARSE_PATTERN =
-      Pattern.compile("(?i:\\s*(?:init|initiative)\\s+((?:\\+|-)\\d+))");
-  private static final String FIELD_ADJUSTMENT = "adjustment";
-  private final int adjustment;
+  private boolean half;
 
-  public InitiativeAdjustment(int adjustment) {
-    super(Type.initiative);
+  public SpeedAdjustment(boolean half) {
+    super(Type.speed);
 
-    this.adjustment = adjustment;
+    this.half = half;
   }
 
-  public int getAdjustment() {
-    return adjustment;
+  public boolean isHalf() {
+    return half;
   }
 
   @Override
@@ -56,28 +55,36 @@ public class InitiativeAdjustment extends Adjustment {
   @Override
   public Map<String, Object> write() {
     Map<String, Object> data = super.write();
-    data.put(FIELD_ADJUSTMENT, adjustment);
+    data.put(FIELD_HALF, half);
 
     return data;
   }
 
   @Override
   public String toString() {
-    return "Initiative " + (adjustment >= 0 ? "+" : "") + adjustment;
+    if (half) {
+      return "half speed";
+    }
+
+    return "(unknown speed adjustment)";
   }
 
-  public static Optional<InitiativeAdjustment> parseInitiative(String text, String source) {
+  public static SpeedAdjustment half() {
+    return new SpeedAdjustment(true);
+  }
+
+  public static Optional<SpeedAdjustment> parseSpeed(String text, String source) {
     Matcher matcher = PARSE_PATTERN.matcher(text);
     if (matcher.matches()) {
-      return Optional.of(new InitiativeAdjustment(Integer.valueOf(matcher.group(1))));
+      return Optional.of(new SpeedAdjustment(true));
     }
 
     return Optional.empty();
   }
 
-  public static InitiativeAdjustment readInitiative(Map<String, Object> data) {
-    int adjustment = (int) Values.get(data, FIELD_ADJUSTMENT, 0);
+  public static SpeedAdjustment readSpeed(Map<String, Object> data) {
+    boolean half = Values.get(data, FIELD_HALF, false);
 
-    return new InitiativeAdjustment(adjustment);
+    return new SpeedAdjustment(half);
   }
 }

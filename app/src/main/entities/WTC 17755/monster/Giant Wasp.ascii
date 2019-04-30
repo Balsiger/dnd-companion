@@ -27,23 +27,11 @@ hit_dice {
 }
 speed {
   mode: RUN
-  distance {
-    imperial {
-      feet {
-        leader: 20
-      }
-    }
-  }
+  squares: 4
 }
 speed {
   mode: FLY
-  distance {
-    imperial {
-      feet {
-        leader: 60
-      }
-    }
-  }
+  squares: 12
 }
 natural_armor {
   modifier {

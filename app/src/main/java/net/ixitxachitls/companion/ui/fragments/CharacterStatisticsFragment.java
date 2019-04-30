@@ -36,7 +36,9 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.documents.Level;
+import net.ixitxachitls.companion.data.documents.Quality;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.values.Distance;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
@@ -77,9 +79,15 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   protected LabelledEditTextView damageNonlethal;
   protected Wrapper<ImageView> hpNonlethalAdjust;
   protected TextWrapper<TextView> levelUp;
+  protected LabelledView<LabelledView, ModifiedValueView> fortitude;
+  protected LabelledView<LabelledView, ModifiedValueView> will;
+  protected LabelledView<LabelledView, ModifiedValueView> reflex;
   protected LabelledView<LabelledView, ModifiedValueView> initiative;
-  protected LabelledTextView speed;
+  protected LabelledView<LabelledView, LinearLayout> speed;
+  protected TextWrapper<TextView> speedFeet;
+  protected ModifiedValueView speedSquares;
   protected FlexboxLayout feats;
+  protected FlexboxLayout qualities;
 
   public CharacterStatisticsFragment() {
   }
@@ -118,12 +126,26 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
     damageNonlethal.enabled(false);
     hpNonlethalAdjust = Wrapper.<ImageView>wrap(view, R.id.nonlethal_adjust).gone();
+
+    fortitude = view.findViewById(R.id.fortitude);
+    fortitude.view(new ModifiedValueView(getContext()).ranged());
+    fortitude.getView().style(R.style.LargeText);
+    will = view.findViewById(R.id.will);
+    will.view(new ModifiedValueView(getContext()).ranged());
+    will.getView().style(R.style.LargeText);
+    reflex = view.findViewById(R.id.reflex);
+    reflex.view(new ModifiedValueView(getContext()).ranged());
+    reflex.getView().style(R.style.LargeText);
+
     initiative = view.findViewById(R.id.initiative);
     initiative.view(new ModifiedValueView(getContext()));
     initiative.getView().style(R.style.LargeText);
     speed = view.findViewById(R.id.speed);
+    speedFeet = TextWrapper.wrap(speed, R.id.speed_feet);
+    speedSquares = speed.findViewById(R.id.speed_squares);
 
     feats = view.findViewById(R.id.feats);
+    qualities = view.findViewById(R.id.qualities);
 
     // TODO(merlin): This might be unnecessary?
     if (character.isPresent()) {
@@ -157,8 +179,14 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     hpMax.text(String.valueOf(character.getMaxHp()));
     damageNonlethal.text(String.valueOf(character.getNonlethalDamage()));
     conditions.update(character);
-    initiative.getView().set(character.initiativeModifier());
-    speed.text(character.getSpeed().toString());
+
+    fortitude.getView().set(character.fortitude());
+    will.getView().set(character.will());
+    reflex.getView().set(character.reflex());
+
+    initiative.getView().set(character.initiative());
+    speedFeet.text(Distance.fromSquares(character.speed().total()).toString());
+    speedSquares.set(character.speed());
 
     // We sometimes call update before actually having a context.
     if (getContext() != null) {
@@ -174,6 +202,19 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
         feats.addView(text.get());
       }
+
+      qualities.removeAllViews();
+      Set<Quality> collectedQualities = character.collectQualities();
+      i = 1;
+      for (Quality quality : collectedQualities) {
+        boolean last = i++ == collectedQualities.size();
+        TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()))
+            .noWrap();
+        text.text(quality.getName() + (last ? "" : ", ")).textStyle(R.style.SmallText)
+            .onClick(() -> showQuality(quality));
+
+        qualities.addView(text.get());
+      }
     }
 
     redraw();
@@ -182,7 +223,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   protected void redraw() {
     if (character.isPresent()) {
       int level = character.get().getLevel();
-      xpNext.text("(next level " + XP.xpForLevel(level <= 1 ? 2 : level +1) + ")");
+      xpNext.text("(next " + XP.xpForLevel(level <= 1 ? 2 : level +1) + ")");
       hp.text(String.valueOf(character.get().getHp()));
       levels.text(Level.summarized(character.get().getLevels()))
           .error(character.get().validateLevels());
@@ -194,6 +235,11 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   private void showFeat(Feat feat) {
     String message = feat.getSource() + "\n\n" + feat.getTemplate().getDescription();
     MessageDialog.create(getContext()).title(feat.getTitle()).message(message).show();
+  }
+
+  private void showQuality(Quality quality) {
+    String message = quality.getEntity() + "\n\n" + quality.getTemplate().getDescription();
+    MessageDialog.create(getContext()).title(quality.getName()).message(message).show();
   }
 
   private void update(Documents.Update update) {

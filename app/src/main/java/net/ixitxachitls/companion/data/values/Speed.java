@@ -31,12 +31,12 @@ public class Speed {
   public enum Mode { unknown, burrow, climb, fly, swim, run };
   public enum Maneuverability { unknown, perfect, good, average, poor, clumsy, none };
 
-  private final Distance distance;
+  private final int squares;
   private final Mode mode;
   private final Maneuverability maneuverability;
 
-  protected Speed(Distance distance, Mode mode, Maneuverability maneuverability) {
-    this.distance = distance;
+  protected Speed(int squares, Mode mode, Maneuverability maneuverability) {
+    this.squares = squares;
     this.mode = mode;
     this.maneuverability = maneuverability;
   }
@@ -93,7 +93,7 @@ public class Speed {
   }
 
   public static Speed fromProto(Value.SpeedProto proto) {
-    return new Speed(Distance.fromProto(proto.getDistance()), convert(proto.getMode()),
+    return new Speed(proto.getSquares(), convert(proto.getMode()),
         convert(proto.getManeuverability()));
   }
 }

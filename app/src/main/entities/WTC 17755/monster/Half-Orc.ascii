@@ -15,10 +15,5 @@ size {
   size: MEDIUM
   modifier: TALL
 }
-abilities {
-  racial_strength_modifier: 2
-  racial_intelligence_modifier: 2
-  racial_charisma_modifier: -2
-}
 type: HUMANOID
 main_race: true

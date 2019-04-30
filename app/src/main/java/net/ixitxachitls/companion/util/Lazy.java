@@ -21,29 +21,30 @@
 
 package net.ixitxachitls.companion.util;
 
-import android.support.annotation.Nullable;
+import java.util.Optional;
 
 /**
  * A container for handling a lazy object.
  */
 
 public class Lazy<T> {
-  private @Nullable  T object = null;
   private final Data<T> loader;
+  private Optional<T> data = Optional.empty();
+
+  public Lazy(Data<T> loader) {
+    this.loader = loader;
+  }
 
   @FunctionalInterface
   public interface Data<T> {
     T load();
   }
 
-  public Lazy(Data<T> loader) {
-    this.loader = loader;
-  }
-
   public T get() {
-    if (object == null)
-      object = loader.load();
+    if (!data.isPresent()) {
+      data = Optional.of(loader.load());
+    }
 
-    return object;
+    return data.get();
   }
 }

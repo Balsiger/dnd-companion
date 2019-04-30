@@ -35,11 +35,10 @@ import java.util.regex.Pattern;
  */
 public class Rational {
 
-  public static Rational ZERO = new Rational(0, 0, 0, false);
-  public static Rational ONE = new Rational(1, 0, 0, false);
   private final static Pattern PATTERN =
       Pattern.compile("\\s*(-)?\\s*(?:(\\d+)\\s*)?(?:(\\d+)\\s*/\\s*(\\d+))?\\s*");
-
+  public static Rational ZERO = new Rational(0, 0, 0, false);
+  public static Rational ONE = new Rational(1, 0, 0, false);
   private final int leader;
   private final int nominator;
   private final int denominator;
@@ -61,58 +60,15 @@ public class Rational {
         || (leader == 0 && nominator == denominator);
   }
 
-  public static Optional<Rational> parse(String value) {
-    Matcher matcher = PATTERN.matcher(value);
-    if (matcher.matches() &&
-        (!Strings.isNullOrEmpty(matcher.group(2)) ||
-            (!Strings.isNullOrEmpty(matcher.group(3)) &&
-                !Strings.isNullOrEmpty(matcher.group(4))))) {
-      return Optional.of(new Rational(intOrZero(matcher.group(2)), intOrZero(matcher.group(3)),
-          intOrZero(matcher.group(4)), matcher.group(1) != null && !matcher.group(1).isEmpty()));
-    } else {
-      return Optional.empty();
-    }
-  }
-
-  public static Rational fromProto(Value.RationalProto proto) {
-    return new Rational(proto.getLeader(), proto.getNominator(), proto.getDenominator(),
-        proto.getNegative());
-  }
-
-  public Value.RationalProto toProto() {
-    return Value.RationalProto.newBuilder()
-        .setLeader(leader)
-        .setNominator(nominator)
-        .setDenominator(denominator)
-        .setNegative(negative)
-        .build();
-  }
-
-  private static int intOrZero(String value) {
-    if (value == null || value.isEmpty()) {
-      return 0;
-    }
-
-    return Integer.parseInt(value);
-  }
-
-  private int normalizedNominator() {
-    if (nominator == 0 || denominator == 0) {
-      return (negative ? -1 : 1) * leader;
-    }
-
-    return (negative ? -1 : 1) * (leader * denominator + nominator);
-  }
-
-  private int normalizedDenominator() {
-    return denominator == 0 ? 1 : denominator;
-  }
-
   public Rational add(Rational other) {
     int newNominator = normalizedNominator() * other.normalizedDenominator() +
         other.normalizedNominator() * normalizedDenominator();
     int newDenominator = normalizedDenominator() * other.normalizedDenominator();
     return new Rational(0, Math.abs(newNominator), newDenominator, newNominator < 0).simplify();
+  }
+
+  public double asDouble() {
+    return leader + ((double) nominator) / denominator;
   }
 
   public Rational multiply(int factor) {
@@ -138,8 +94,13 @@ public class Rational {
     return new Rational(newLeader, newNominator, newDenominator, negative);
   }
 
-  public double asDouble() {
-    return leader + ((double) nominator) / denominator;
+  public Value.RationalProto toProto() {
+    return Value.RationalProto.newBuilder()
+        .setLeader(leader)
+        .setNominator(nominator)
+        .setDenominator(denominator)
+        .setNegative(negative)
+        .build();
   }
 
   @Override
@@ -224,5 +185,47 @@ public class Rational {
     }
 
     return nominator + "/" + denominator;
+  }
+
+  private int normalizedDenominator() {
+    return denominator == 0 ? 1 : denominator;
+  }
+
+  private int normalizedNominator() {
+    if (nominator == 0 || denominator == 0) {
+      return (negative ? -1 : 1) * leader;
+    }
+
+    return (negative ? -1 : 1) * (leader * denominator + nominator);
+  }
+
+  public static Rational fromNumber(int number) {
+    return new Rational(number, 0, 0, false);
+  }
+
+  public static Rational fromProto(Value.RationalProto proto) {
+    return new Rational(proto.getLeader(), proto.getNominator(), proto.getDenominator(),
+        proto.getNegative());
+  }
+
+  private static int intOrZero(String value) {
+    if (value == null || value.isEmpty()) {
+      return 0;
+    }
+
+    return Integer.parseInt(value);
+  }
+
+  public static Optional<Rational> parse(String value) {
+    Matcher matcher = PATTERN.matcher(value);
+    if (matcher.matches() &&
+        (!Strings.isNullOrEmpty(matcher.group(2)) ||
+            (!Strings.isNullOrEmpty(matcher.group(3)) &&
+                !Strings.isNullOrEmpty(matcher.group(4))))) {
+      return Optional.of(new Rational(intOrZero(matcher.group(2)), intOrZero(matcher.group(3)),
+          intOrZero(matcher.group(4)), matcher.group(1) != null && !matcher.group(1).isEmpty()));
+    } else {
+      return Optional.empty();
+    }
   }
 }

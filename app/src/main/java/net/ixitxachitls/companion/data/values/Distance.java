@@ -77,4 +77,8 @@ public class Distance {
         Rational.fromProto(proto.getImperial().getFeet()),
         Rational.fromProto(proto.getImperial().getInches()));
   }
+
+  public static Distance fromSquares(int squares) {
+    return new Distance(Rational.ZERO, Rational.fromNumber(squares * 5), Rational.ZERO);
+  }
 }

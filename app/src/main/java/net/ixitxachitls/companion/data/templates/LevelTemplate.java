@@ -21,10 +21,16 @@
 
 package net.ixitxachitls.companion.data.templates;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.data.documents.Quality;
 import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.rules.Levels;
 import net.ixitxachitls.companion.rules.Products;
+import net.ixitxachitls.companion.util.Lazy;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -41,6 +47,7 @@ public class LevelTemplate extends StoredTemplate<Template.LevelTemplateProto> {
 
   private final net.ixitxachitls.companion.proto.Template.LevelTemplateProto proto;
   private final int maxHp;
+  private final Lazy<Multimap<Integer, Quality>> qualities = new Lazy<>(this::collectQualities);
 
   public LevelTemplate() {
     this(defaultProto(), "", 0);
@@ -95,6 +102,32 @@ public class LevelTemplate extends StoredTemplate<Template.LevelTemplateProto> {
     }
 
     return Collections.emptyList();
+  }
+
+  public Multimap<Integer, Quality> collectQualities() {
+    Multimap<Integer, Quality> qualities = ArrayListMultimap.create();
+
+    for (Template.LeveledTemplateProto quality : proto.getQualityList()) {
+      qualities.put(quality.getLevel(), new Quality(quality.getTemplate(), getName()));
+    }
+
+    return qualities;
+  }
+
+  public int getFortitudeModifier(int level) {
+    return Levels.saveModifier(level, proto.getGoodFortitudeSave());
+  }
+
+  public Collection<Quality> getQualities(int level) {
+    return qualities.get().get(level);
+  }
+
+  public int getReflexModifier(int level) {
+    return Levels.saveModifier(level, proto.getGoodReflexSave());
+  }
+
+  public int getWillModifier(int level) {
+    return Levels.saveModifier(level, proto.getGoodWillSave());
   }
 
   public boolean hasBonusFeat(int level) {

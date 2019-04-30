@@ -30,7 +30,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -41,6 +43,7 @@ import java.util.TreeMap;
 public class TemplatesStore<T extends Entry<? extends MessageLite>> {
 
   protected final SortedMap<String, T> byName = new TreeMap<>();
+  protected final Map<String, T> byNormalizedName = new HashMap<>();
   private final Class<T> entryClass;
 
   protected TemplatesStore(Class<T> entryClass) {
@@ -56,7 +59,7 @@ public class TemplatesStore<T extends Entry<? extends MessageLite>> {
   }
 
   public Optional<T> get(String name) {
-    return Optional.ofNullable(byName.get(name));
+    return Optional.ofNullable(byNormalizedName.get(name.toLowerCase()));
   }
 
   public void loaded() {
@@ -85,5 +88,6 @@ public class TemplatesStore<T extends Entry<? extends MessageLite>> {
     }
 
     byName.put(entry.getName(), entry);
+    byNormalizedName.put(entry.getName().toLowerCase(), entry);
   }
 }

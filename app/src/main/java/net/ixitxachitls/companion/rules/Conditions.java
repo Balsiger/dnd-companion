@@ -30,9 +30,10 @@ import net.ixitxachitls.companion.data.values.AbilityAdjustment;
 import net.ixitxachitls.companion.data.values.AbilityCheckAdjustment;
 import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.Duration;
-import net.ixitxachitls.companion.data.values.GenericAdjustment;
 import net.ixitxachitls.companion.data.values.InitiativeAdjustment;
 import net.ixitxachitls.companion.data.values.Modifier;
+import net.ixitxachitls.companion.data.values.SavesAdjustment;
+import net.ixitxachitls.companion.data.values.SpeedAdjustment;
 
 import java.util.List;
 import java.util.Optional;
@@ -83,7 +84,7 @@ public class Conditions {
       .adjustment("cannot see")
       .adjustment("-2 AC")
       .adjustment("no Dexterity bonus to AC")
-      .adjustment("half speed")
+      .adjustment(SpeedAdjustment.half())
       .adjustment("-4 on Search checks")
       .adjustment(new AbilityCheckAdjustment(Ability.STRENGTH,
           new Modifier(-4, Modifier.Type.GENERAL, "Blinded")))
@@ -310,6 +311,7 @@ public class Conditions {
           + "naturally, she is no longer in danger of losing hit points (even if her current "
           + "hit points are negative).")
       .adjustment("Single move or standard action (might cause damage) each round.")
+      .adjustment(SpeedAdjustment.half())
       .predefined()
       .icon(R.drawable.icons8_wheelchair_48)
       .build();
@@ -338,7 +340,7 @@ public class Conditions {
           + "level castable. Apply this condition once per level lost.")
       .adjustment("1 negative levels")
       .adjustment("-1 Attack")
-      .adjustment("-1 Saves")
+      .adjustment(new SavesAdjustment(-1))
       .adjustment("-1 Skills")
       .adjustment("-1 Ability")
       .adjustment("-5 hp")
@@ -355,7 +357,7 @@ public class Conditions {
           + "Dexterity. An entangled character who attempts to cast a spell must make a "
           + "Concentration check (DC 15 + the spell’s level) or lose the spell.")
       .adjustment("movement impeded")
-      .adjustment("half speed")
+      .adjustment(SpeedAdjustment.half())
       .adjustment("-2 Attack")
       .adjustment(new AbilityAdjustment(Ability.DEXTERITY,
           new Modifier(-4, Modifier.Type.GENERAL, "Entangled")))
@@ -368,7 +370,7 @@ public class Conditions {
           + "Strength and Dexterity. After 1 hour of complete rest, an exhausted character "
           + "becomes fatigued. A fatigued character becomes exhausted by doing something else"
           + " that would normally cause fatigue.")
-      .adjustment(new GenericAdjustment("half speed"))
+      .adjustment(SpeedAdjustment.half())
       .adjustment(new AbilityAdjustment(Ability.STRENGTH,
           new Modifier(-6, Modifier.Type.GENERAL, "exhausted")))
       .adjustment(new AbilityAdjustment(Ability.DEXTERITY,
@@ -430,7 +432,7 @@ public class Conditions {
           + "extreme state of fear.")
       .adjustment("Flee from source")
       .adjustment("-2 Attack")
-      .adjustment("-2 Saves")
+      .adjustment(new SavesAdjustment(-2))
       .adjustment("-2 Skills")
       .adjustment("-2 Ability checks")
       .predefined()
@@ -510,7 +512,7 @@ public class Conditions {
               + "moderate hypothermia to mild hypothermia.")
           .adjustment("Cannot run")
           .adjustment("Cannot charge")
-          .adjustment("half speed")
+          .adjustment(SpeedAdjustment.half())
           .adjustment(new AbilityAdjustment(Ability.STRENGTH, new Modifier(-6,
               Modifier.Type.GENERAL, "Mild Hypothermia")))
           .adjustment(new AbilityAdjustment(Ability.DEXTERITY, new Modifier(-6,
@@ -526,7 +528,7 @@ public class Conditions {
           .adjustment("Single move or standard action")
           .adjustment("Cannot run")
           .adjustment("Cannot charge")
-          .adjustment("half speed")
+          .adjustment(SpeedAdjustment.half())
           .adjustment(new AbilityAdjustment(Ability.STRENGTH, new Modifier(-6,
               Modifier.Type.GENERAL, "Mild Hypothermia")))
           .adjustment(new AbilityAdjustment(Ability.DEXTERITY, new Modifier(-6,
@@ -592,7 +594,7 @@ public class Conditions {
           + "way to escape.\n"
           + "Panicked is a more extreme state of fear than shaken or frightened.")
       .adjustment("Drop anything and flee at top speed")
-      .adjustment("-2 on saves")
+      .adjustment(new SavesAdjustment(-2))
       .adjustment("-2 on skills")
       .adjustment("-2 on abilith checks")
       .predefined()
@@ -665,7 +667,7 @@ public class Conditions {
           + "skill checks, and ability checks. Shaken is a less severe state of fear than "
           + "frightened or panicked.")
       .adjustment("-2 Attack")
-      .adjustment("-2 saves")
+      .adjustment(new SavesAdjustment(-2))
       .adjustment("-2 skills")
       .adjustment("-2 ability checks")
       .predefined()
@@ -676,7 +678,7 @@ public class Conditions {
           + "rolls, saving throws, skill checks, and ability checks.")
       .adjustment("-2 attack")
       .adjustment("-2 damage")
-      .adjustment("-2 saves")
+      .adjustment(new SavesAdjustment(-2))
       .adjustment("-2 skills")
       .adjustment("-2 ability checks")
       .predefined()
@@ -690,7 +692,7 @@ public class Conditions {
           + "hit opponents.")
       .adjustment("-2 AC")
       .adjustment("No Dex to AC")
-      .adjustment("Half speed")
+      .adjustment(SpeedAdjustment.half())
       .adjustment("-4 Dex skills")
       .adjustment("-4 Search")
       .adjustment("-4 Spot")
@@ -768,7 +770,7 @@ public class Conditions {
           + "and only have a visibility of 5 ft.")
       .adjustment("-2 AC")
       .adjustment("No Dex to AC")
-      .adjustment("Half speed")
+      .adjustment(SpeedAdjustment.half())
       .adjustment("-4 on Dex checks")
       .adjustment("-4 Search")
       .adjustment("-4 Spot")

@@ -101,13 +101,6 @@ message MonsterTemplateProto {
     int32 wisdom = 4;
     int32 intelligence = 5;
     int32 charisma = 6;
-
-    int32 racial_strength_modifier = 7;
-    int32 racial_dexterity_modifier = 8;
-    int32 racial_constitution_modifier = 9;
-    int32 racial_intelligence_modifier = 10;
-    int32 racial_wisdom_modifier = 11;
-    int32 racial_charisma_modifier = 12;
   }
   Abilities abilities = 9;
 
@@ -444,9 +437,9 @@ message LevelTemplateProto {
   repeated ArmorType armor_proficiency = 19;
   repeated LeveledTemplateProto quality = 20;
   repeated int32 base_attack = 21;
-  repeated int32 fortitude_save = 22;
-  repeated int32 reflex_save = 23;
-  repeated int32 will_save = 24;
+  bool good_fortitude_save = 22;
+  bool good_will_save = 23;
+  bool good_reflex_save = 24;
   repeated LeveledTemplateProto bonus_feat = 25;
   Ability spell_ability = 26;
 

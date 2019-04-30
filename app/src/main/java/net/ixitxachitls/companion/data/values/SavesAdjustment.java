@@ -29,23 +29,22 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * An adjustment to initiative.
+ * An conditional adjustment for saving throws.
  */
-public class InitiativeAdjustment extends Adjustment {
+public class SavesAdjustment extends Adjustment {
+  private static final Pattern PARSE_PATTERN = Pattern.compile("(?i:\\s*(\\d+)\\s+saves\\s*)");
+  private static final String FIELD_SAVES = "saves";
 
-  protected static final Pattern PARSE_PATTERN =
-      Pattern.compile("(?i:\\s*(?:init|initiative)\\s+((?:\\+|-)\\d+))");
-  private static final String FIELD_ADJUSTMENT = "adjustment";
-  private final int adjustment;
+  private int saves;
 
-  public InitiativeAdjustment(int adjustment) {
-    super(Type.initiative);
+  public SavesAdjustment(int saves) {
+    super(Type.saves);
 
-    this.adjustment = adjustment;
+    this.saves = saves;
   }
 
-  public int getAdjustment() {
-    return adjustment;
+  public int getSaves() {
+    return saves;
   }
 
   @Override
@@ -56,28 +55,32 @@ public class InitiativeAdjustment extends Adjustment {
   @Override
   public Map<String, Object> write() {
     Map<String, Object> data = super.write();
-    data.put(FIELD_ADJUSTMENT, adjustment);
+    data.put(FIELD_SAVES, saves);
 
     return data;
   }
 
   @Override
   public String toString() {
-    return "Initiative " + (adjustment >= 0 ? "+" : "") + adjustment;
+    if (saves >= 0) {
+      return "+" + saves + " saves";
+    }
+
+    return saves + " saves";
   }
 
-  public static Optional<InitiativeAdjustment> parseInitiative(String text, String source) {
+  public static Optional<SavesAdjustment> parseSaves(String text, String source) {
     Matcher matcher = PARSE_PATTERN.matcher(text);
     if (matcher.matches()) {
-      return Optional.of(new InitiativeAdjustment(Integer.valueOf(matcher.group(1))));
+      return Optional.of(new SavesAdjustment(Integer.parseInt(matcher.group(1))));
     }
 
     return Optional.empty();
   }
 
-  public static InitiativeAdjustment readInitiative(Map<String, Object> data) {
-    int adjustment = (int) Values.get(data, FIELD_ADJUSTMENT, 0);
+  public static SavesAdjustment readSaves(Map<String, Object> data) {
+    int saves = (int) Values.get(data, FIELD_SAVES, 0);
 
-    return new InitiativeAdjustment(adjustment);
+    return new SavesAdjustment(saves);
   }
 }

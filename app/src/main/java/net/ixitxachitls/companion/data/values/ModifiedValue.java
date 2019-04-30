@@ -24,7 +24,13 @@ package net.ixitxachitls.companion.data.values;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * A base D&D value with potential stackingModifiers.
@@ -35,8 +41,7 @@ public class ModifiedValue {
   private final int base;
   private final int min;
   private final boolean signed;
-  private final List<Modifier> stackingModifiers = new ArrayList<>();
-  private final List<Modifier> unstackingModifiers = new ArrayList<>();
+  private final Map<Modifier.Type, List<Modifier>> modifiersByType = new HashMap<>();
 
   public ModifiedValue(String name, int base, boolean signed) {
     this(name, base, Integer.MIN_VALUE, signed);
@@ -66,43 +71,42 @@ public class ModifiedValue {
   }
 
   public ModifiedValue add(Modifier modifier) {
-    for (Modifier existing : stackingModifiers) {
-      if (!Modifier.stacks(existing, modifier)) {
-        if (Modifier.precedence(existing, modifier) == modifier) {
-          // The new modifier does not stack with an existing modifier and takes precedence.
-          stackingModifiers.remove(existing);
-          stackingModifiers.add(modifier);
-          unstackingModifiers.add(existing);
-        } else {
-          // The new modifier does not stack with an existing modifier and does not take precedence.
-          unstackingModifiers.add(modifier);
-        }
-
-        return this;
-      }
+    List<Modifier> modifiers = modifiersByType.get(modifier.getType());
+    if (modifiers == null) {
+      modifiers = new ArrayList<>();
+      modifiersByType.put(modifier.getType(), modifiers);
     }
 
-    stackingModifiers.add(modifier);
+    addSorted(modifiers, modifier);
     return this;
   }
 
   public String describeModifiers() {
-    List<String> lines = new ArrayList<>();
-    lines.add("Base value " + base);
-    for (Modifier modifier : stackingModifiers) {
-      lines.add(modifier.toString());
-    }
-    for (Modifier modifier : unstackingModifiers) {
-      lines.add(modifier.toString() + " [does not stack]");
+    List<String> stackingLines = new ArrayList<>();
+    List<String> nonStackingLines = new ArrayList<>();
+
+    for (Modifier.Type type : modifiersByType.keySet()) {
+      List<Modifier> stacking = stacking(type, modifiersByType.get(type), true);
+      stackingLines.addAll(stacking.stream().map(Modifier::toString).collect(Collectors.toList()));
+      nonStackingLines.addAll(modifiersByType.get(type).stream()
+          .filter(m -> !stacking.contains(m))
+          .map(m -> m.toString() + " [not stacking]")
+          .collect(Collectors.toList()));
     }
 
-    return Strings.NEWLINE_JOINER.join(lines);
+    return ("Base value " + base + "\n"
+        + Strings.NEWLINE_JOINER.join(stackingLines) + "\n"
+        + Strings.NEWLINE_JOINER.join(nonStackingLines)).trim();
   }
 
-  public int total() {
+  public int max() {
+    return total(true);
+  }
+
+  public int total(boolean withConditions) {
     int total = base;
-    for (Modifier modifier : stackingModifiers) {
-      total += modifier.getValue();
+    for (Modifier.Type type : modifiersByType.keySet()) {
+      total += sum(stacking(type, modifiersByType.get(type), withConditions));
     }
 
     if (total < min) {
@@ -112,12 +116,76 @@ public class ModifiedValue {
     }
   }
 
+  public int total() {
+    return total(false);
+  }
+
   public String totalFormatted() {
-    int total = total();
-    if (signed) {
-      return (total < 0 ? "" : "+") + total;
+    return format(total());
+  }
+
+  public String totalRangeFormatted() {
+    int min = total(false);
+    int max = total(true);
+
+    if (max == min) {
+      return format(min);
     }
 
-    return String.valueOf(total);
+    return format(min) + " - " + format(max);
+  }
+
+  private String format(int value) {
+    if (signed) {
+      return (value < 0 ? "" : "+") + value;
+    }
+
+    return String.valueOf(value);
+  }
+
+  private List<Modifier> stacking(Modifier.Type type, List<Modifier> modifiers,
+                                  boolean withConditions) {
+    // Remove modifiers with conditions.
+    if (!withConditions) {
+      modifiers = modifiers.stream().filter(m -> !m.hasCondition()).collect(Collectors.toList());
+    }
+
+    // Remove modifiers with the same source.
+    Set<String> sources = new HashSet<>();
+    for (Iterator<Modifier> i = modifiers.iterator(); i.hasNext(); ) {
+      Modifier modifier = i.next();
+      if (sources.contains(modifier.getSource())) {
+        i.remove();
+      } else {
+        sources.add(modifier.getSource());
+      }
+    }
+
+    if (Modifier.stacks(type)) {
+      return modifiers;
+    }
+
+    for (int i = 0; i < modifiers.size(); i++) {
+      if (!modifiers.get(i).hasCondition()) {
+        return modifiers.subList(0, i + 1);
+      }
+    }
+
+    return modifiers;
+  }
+
+  private int sum(List<Modifier> modifiers) {
+    return modifiers.stream().mapToInt(Modifier::getValue).sum();
+  }
+
+  private static void addSorted(List<Modifier> modifiers, Modifier modifier) {
+    for (int i = 0; i < modifiers.size(); i++) {
+      if (Modifier.before(modifier, modifiers.get(i))) {
+        modifiers.add(i, modifier);
+        return;
+      }
+    }
+
+    modifiers.add(modifier);
   }
 }

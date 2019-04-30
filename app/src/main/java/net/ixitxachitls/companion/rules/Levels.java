@@ -25,13 +25,21 @@ package net.ixitxachitls.companion.rules;
  * Rule information about levels.
  */
 public class Levels {
-  public static boolean allowsAbilityIncrease(int levelNumber) {
+  public static boolean allowsAbilityIncrease(int level) {
     // An ability increase happens every 4 levels.
-    return (levelNumber % 4) == 0;
+    return (level % 4) == 0;
   }
 
-  public static boolean allowsFeat(int levelNumber) {
+  public static boolean allowsFeat(int level) {
     // You get a feat at first and every third level.
-    return levelNumber == 1 || levelNumber % 3 == 0;
+    return level == 1 || level % 3 == 0;
+  }
+
+  public static int saveModifier(int level, boolean good) {
+    if (good) {
+      return (level / 2) + 2;
+    } else {
+      return level / 3;
+    }
   }
 }

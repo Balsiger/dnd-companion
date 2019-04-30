@@ -25,23 +25,11 @@ hit_dice {
 }
 speed {
   mode: RUN
-  distance {
-    imperial {
-      feet {
-        leader: 15
-      }
-    }
-  }
+  squares: 3
 }
 speed {
   mode: CLIMB
-  distance {
-    imperial {
-      feet {
-        leader: 15
-      }
-    }
-  }
+  squares: 3
 }
 base_attack: 3
 abilities {

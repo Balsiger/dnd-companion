@@ -28,19 +28,25 @@ import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.templates.MonsterTemplate;
-import net.ixitxachitls.companion.data.values.Distance;
+import net.ixitxachitls.companion.data.values.Adjustment;
+import net.ixitxachitls.companion.data.values.InitiativeAdjustment;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
+import net.ixitxachitls.companion.data.values.Modifier;
+import net.ixitxachitls.companion.data.values.SavesAdjustment;
+import net.ixitxachitls.companion.data.values.SpeedAdjustment;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.rules.Conditions;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -169,6 +175,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return new ModifiedValue("Dexterity Check", Ability.modifier(getDexterity().total()), true);
   }
 
+  public int getDexterityModifier() {
+    return Ability.modifier(getDexterity().total());
+  }
+
   public int getEncounterInitiative() {
     return encounterInitiative;
   }
@@ -200,6 +210,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   public ModifiedValue getIntelligenceCheck() {
     return
         new ModifiedValue("Intelligence Check", Ability.modifier(getIntelligence().total()), true);
+  }
+
+  public int getIntelligenceModifier() {
+    return Ability.modifier(getIntelligence().total());
   }
 
   public List<Item> getItems() {
@@ -234,16 +248,12 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return race;
   }
 
-  public void setRace(String race) {
-    this.race = Templates.get().getMonsterTemplates().get(race);
+  public void setRace(MonsterTemplate race) {
+    this.race = Optional.of(race);
   }
 
-  public Distance getSpeed() {
-    if (race.isPresent()) {
-      return race.get().getWalkingSpeed();
-    }
-
-    return Distance.ZERO;
+  public void setRace(String race) {
+    this.race = Templates.get().getMonsterTemplates().get(race);
   }
 
   public ModifiedValue getStrength() {
@@ -260,6 +270,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public ModifiedValue getWisdomCheck() {
     return new ModifiedValue("Wisdom Check", Ability.modifier(getWisdom().total()), true);
+  }
+
+  public int getWisdomModifier() {
+    return Ability.modifier(getWisdom().total());
   }
 
   public void setBaseCharisma(int charisma) {
@@ -284,10 +298,6 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public void setBaseWisdom(int wisdom) {
     this.wisdom = wisdom;
-  }
-
-  public void setRace(MonsterTemplate race) {
-    this.race = Optional.of(race);
   }
 
   public void add(Item item) {
@@ -327,12 +337,58 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return false;
   }
 
+  public Set<Feat> collectFeats() {
+    if (race.isPresent()) {
+      return new HashSet<>(race.get().getFeats());
+    }
+
+    return Collections.emptySet();
+  }
+
+  public Set<Quality> collectQualities() {
+    if (race.isPresent()) {
+      return new HashSet<>(race.get().getQualities());
+    }
+
+    return Collections.emptySet();
+  }
+
   public void combine(Item item, Item other) {
     removeItem(other);
     if (item.similar(other)) {
       item.setMultiple(item.getMultiple() + other.getMultiple());
       store();
     }
+  }
+
+  public ModifiedValue fortitude() {
+    ModifiedValue value = new ModifiedValue("Fortitude Save", 0, true);
+
+    // Modifiers from race.
+    if (!hasLevels() && race.isPresent()) {
+      value.add(new Modifier(race.get().getFortitudeSave(), Modifier.Type.GENERAL,
+          race.get().getName()));
+    }
+
+    // Modifiers from abilities.
+    value.add(new Modifier(getConstitutionModifier(), Modifier.Type.GENERAL, "Constitution"));
+
+    // Modifiers from feats.
+    for (Feat feat : collectFeats()) {
+      value.add(feat.getTemplate().getFortitudeModifiers());
+    }
+
+    // Modifiers from conditions.
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof SavesAdjustment) {
+          value.add(new Modifier(((SavesAdjustment)adjustment).getSaves(), Modifier.Type.GENERAL,
+              condition.getCondition().getName()));
+        }
+      }
+    }
+
+    return value;
   }
 
   public Optional<Integer> getEncounterInitiative(int encounterNumber) {
@@ -374,6 +430,23 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     return false;
+  }
+
+  public ModifiedValue initiative() {
+    ModifiedValue value = new ModifiedValue("Initiative", 0, true);
+    value.add(new Modifier(Ability.modifier(getDexterity().total()), Modifier.Type.ABILITY,
+        "Dexterity"));
+
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof InitiativeAdjustment) {
+          value.add(new Modifier(((InitiativeAdjustment) adjustment).getAdjustment(),
+              Modifier.Type.GENERAL, condition.getCondition().getCondition().getName()));
+        }
+      }
+    }
+
+    return value;
   }
 
   public int itemIndex(String id) {
@@ -445,6 +518,36 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
   }
 
+  public ModifiedValue reflex() {
+    ModifiedValue value = new ModifiedValue("Reflex Save", 0, true);
+
+    // Modifiers from race.
+    if (!hasLevels() && race.isPresent()) {
+      value.add(new Modifier(race.get().getReflexSave(), Modifier.Type.GENERAL,
+          race.get().getName()));
+    }
+
+    // Modifiers from abilities.
+    value.add(new Modifier(getDexterityModifier(), Modifier.Type.GENERAL, "Dexterity"));
+
+    // Modifiers from feats.
+    for (Feat feat : collectFeats()) {
+      value.add(feat.getTemplate().getReflexModifiers());
+    }
+
+    // Modifiers from conditions.
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof SavesAdjustment) {
+          value.add(new Modifier(((SavesAdjustment)adjustment).getSaves(), Modifier.Type.GENERAL,
+              condition.getCondition().getName()));
+        }
+      }
+    }
+
+    return value;
+  }
+
   public boolean removeItem(Item item) {
     if (amPlayer()) {
       if (!items.remove(item)) {
@@ -477,8 +580,71 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     store();
   }
 
+  public ModifiedValue speed() {
+    int squares = 0;
+    if (race.isPresent()) {
+      squares = race.get().getWalkingSpeed();
+    }
+
+    ModifiedValue value = new ModifiedValue("Speed (squares)", squares, 0, false);
+
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof SpeedAdjustment) {
+          if (((SpeedAdjustment)adjustment).isHalf()) {
+            value.add(new Modifier(-squares / 2, Modifier.Type.GENERAL,
+                condition.getCondition().getName()));
+          }
+        }
+      }
+    }
+
+    return value;
+  }
+
   public void updated(Item item) {
     store();
+  }
+
+  public ModifiedValue will() {
+    ModifiedValue value = new ModifiedValue("Will Save", 0, true);
+
+    // Modifiers from race.
+    if (!hasLevels() && race.isPresent()) {
+      value.add(new Modifier(race.get().getWillSave(), Modifier.Type.GENERAL,
+          race.get().getName()));
+    }
+
+    // Modifiers from abilities.
+    value.add(new Modifier(getWisdomModifier(), Modifier.Type.GENERAL, "Wisdom"));
+
+    // Modifiers from feats.
+    for (Feat feat : collectFeats()) {
+      value.add(feat.getTemplate().getWillModifiers());
+    }
+
+    // Modifiers from conditions.
+    for (CreatureCondition condition : getConditions()) {
+      for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
+        if (adjustment instanceof SavesAdjustment) {
+          value.add(new Modifier(((SavesAdjustment)adjustment).getSaves(), Modifier.Type.GENERAL,
+              condition.getCondition().getName()));
+        }
+      }
+    }
+
+    // Modifiers from qualities.
+    if (race.isPresent()) {
+      for (Quality quality : race.get().getQualities()) {
+        value.add(quality.getTemplate().getWillModifiers());
+      }
+    }
+
+    return value;
+  }
+
+  protected boolean hasLevels() {
+    return false;
   }
 
   @Override

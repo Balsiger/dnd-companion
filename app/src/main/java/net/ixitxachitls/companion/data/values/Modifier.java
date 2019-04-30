@@ -22,10 +22,12 @@
 package net.ixitxachitls.companion.data.values;
 
 import net.ixitxachitls.companion.proto.Value;
+import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * A D&D value for another value. These are usually a modification number (+ or -) and
@@ -46,18 +48,41 @@ public class Modifier {
   private static final String FIELD_VALUE = "value";
   private static final String FIELD_TYPE = "type";
   private static final String FIELD_SOURCE = "source";
+  private static final String FIELD_CONDITION = "condition";
   private final int value;
   private final Type type;
   private final String source;
+  private final Optional<String> condition;
 
   public Modifier(int value, Type type, String source) {
+    this(value, type, source, Optional.empty());
+  }
+
+  public Modifier(int value, Type type, String source, String condition) {
+    this(value, type, source, Optional.of(condition));
+  }
+
+  private Modifier(int value, Type type, String source, Optional<String> condition) {
     this.value = value;
     this.type = type;
     this.source = source;
+    this.condition = condition;
+  }
+
+  public String getSource() {
+    return source;
+  }
+
+  public Type getType() {
+    return type;
   }
 
   public int getValue() {
     return value;
+  }
+
+  public boolean hasCondition() {
+    return condition.isPresent();
   }
 
   public String toShortString() {
@@ -69,6 +94,10 @@ public class Modifier {
 
     if (type != Type.GENERAL) {
       result.append(" " + name());
+    }
+
+    if (condition.isPresent()) {
+      result.append(" if " + condition.get());
     }
 
     return result.toString();
@@ -88,6 +117,9 @@ public class Modifier {
     data.put(FIELD_VALUE, value);
     data.put(FIELD_TYPE, type.name());
     data.put(FIELD_SOURCE, source);
+    if (condition.isPresent()) {
+      data.put(FIELD_CONDITION, condition.get());
+    }
 
     return data;
   }
@@ -96,7 +128,43 @@ public class Modifier {
     return type.name().toLowerCase().replace("_", " ");
   }
 
-  private static Type convert(Value.ModifierProto.Type type) {
+  public static boolean before(Modifier first, Modifier second) {
+    if (first.getType() != second.getType()) {
+      throw new IllegalArgumentException("must have modifiers of the same type");
+    }
+
+    // The most negative value comes first.
+    if (first.value < 0 && first.value < second.value) {
+      return true;
+    }
+
+    if (second.value < 0 && second.value < first.value) {
+      return false;
+    }
+
+    // The most postive values next.
+    if (first.value > 0 && first.value > second.value) {
+      return true;
+    }
+
+    if (second.value > 0 && second.value > first.value) {
+      return false;
+    }
+
+    // The values are the same, now look at conditions.
+    if (!first.hasCondition() && second.hasCondition()) {
+      return true;
+    }
+
+    if (!second.hasCondition() && first.hasCondition()) {
+      return false;
+    }
+
+    // The values are the same and both either have a condition or both have none.
+    return first.source.compareTo(second.source) < 0;
+  }
+
+  public static Type convert(Value.ModifierProto.Type type) {
     switch (type) {
       default:
       case UNRECOGNIZED:
@@ -151,11 +219,12 @@ public class Modifier {
   }
 
   public static Modifier fromProto(Value.ModifierProto.Modifier proto, String source) {
-    return new Modifier(proto.getValue(), convert(proto.getType()), source);
+    return new Modifier(proto.getValue(), convert(proto.getType()), source,
+        Strings.optionalIfEmpty(proto.getCondition()));
   }
 
   public static Modifier precedence(Modifier first, Modifier second) {
-    if (stacks(first, second)) {
+    if (!stacks(first, second)) {
       throw new IllegalArgumentException("The modifiers don't stack!");
     }
 
@@ -164,6 +233,14 @@ public class Modifier {
     }
 
     if (second.value < 0 && second.value < first.value) {
+      return second;
+    }
+
+    if (!first.condition.isPresent() && second.condition.isPresent()) {
+      return first;
+    }
+
+    if (first.condition.isPresent() && !second.condition.isPresent()) {
       return second;
     }
 
@@ -178,6 +255,7 @@ public class Modifier {
     int value = (int) Values.get(data, FIELD_VALUE, 0);
     Type type = Values.get(data, FIELD_TYPE, Type.GENERAL);
     String source = Values.get(data, FIELD_SOURCE, "");
+    Optional<String> condition = Strings.optionalIfEmpty(Values.get(data, FIELD_CONDITION, ""));
 
     return new Modifier(value, type, source);
   }
@@ -197,6 +275,22 @@ public class Modifier {
       return false;
     }
 
+    // Modifiers with conditions don't stack.
+    if (first.condition.isPresent() && second.condition.isPresent()) {
+      return false;
+    }
+
+    // Modifiers with conditions only stack with modifiers without conditions if the one without
+    // condition has a higher modifier.
+    if ((first.condition.isPresent() && first.value > second.value)
+      || second.condition.isPresent() && second.value > first.value) {
+      return false;
+    }
+
     return true;
+  }
+
+  public static boolean stacks(Type type) {
+    return type == Type.DODGE || type == Type.GENERAL || type == Type.CIRCUMSTANCE;
   }
 }

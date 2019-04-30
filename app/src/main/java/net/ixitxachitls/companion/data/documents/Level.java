@@ -32,6 +32,8 @@ import net.ixitxachitls.companion.rules.Levels;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,6 +51,7 @@ public class Level extends NestedDocument {
   private static final String FIELD_FEAT = "feat";
   private static final String FIELD_RACIAL_FEAT = "racial_feat";
   private static final String FIELD_CLASS_FEAT = "class_feat";
+  private static final String FIELD_QUALITIES = "qualities";
 
   private LevelTemplate template;
   private int hp;
@@ -56,14 +59,15 @@ public class Level extends NestedDocument {
   private Optional<Feat> feat = Optional.empty();
   private Optional<Feat> racialFeat = Optional.empty();
   private Optional<Feat> classFeat = Optional.empty();
+  private List<String> qualities = new ArrayList<>();
 
   public Level() {
     this(new LevelTemplate(), 0, Optional.empty(), Optional.empty(), Optional.empty(),
-        Optional.empty());
+        Optional.empty(), Collections.emptyList());
   }
 
   public Level(String templateName, int number, int hp, String abilityName, String featName,
-               String racialFeatName, String classFeatName) {
+               String racialFeatName, String classFeatName, List<String> qualities) {
     this.template = Templates.get().getOrCreateLevel(templateName);
     this.hp = hp;
     this.abilityIncrease = abilityName.isEmpty()
@@ -76,17 +80,19 @@ public class Level extends NestedDocument {
     this.classFeat =
         classFeatName.isEmpty() ? Optional.empty() : Optional.of(new Feat(classFeatName,
             "Special class feat from level " + number));
+    this.qualities = qualities;
   }
 
   public Level(LevelTemplate template, int hp, Optional<Ability> abilityIncrease,
                Optional<Feat> feat, Optional<Feat> racialFeat,
-               Optional<Feat> classFeat) {
+               Optional<Feat> classFeat, List<String> qualities) {
     this.template = template;
     this.hp = hp;
     this.abilityIncrease = abilityIncrease;
     this.feat = feat;
     this.racialFeat = racialFeat;
     this.classFeat = classFeat;
+    this.qualities = qualities;
   }
 
   public List<Feat> getAutomaticFeats() {
@@ -133,6 +139,35 @@ public class Level extends NestedDocument {
 
   public void setTemplate(String name) {
     this.template = readTemplate(name);
+  }
+
+  public List<QualitySelection> collectQualitySelections(int level) {
+    List<QualitySelection> selections = new ArrayList<>();
+
+    for (Quality quality : template.getQualities(level)) {
+      if (quality.getName().contains("|")) {
+        List<String> options = Arrays.asList(quality.getName().split("\\|"));
+        selections.add(new QualitySelection(selectedQuality(options), options));
+      }
+    }
+
+    return selections;
+  }
+
+  public List<Quality> getQualities(int level) {
+    List<Quality> qualities = new ArrayList<>();
+
+    // The qualities that are predefined.
+    qualities.addAll(template.getQualities(level).stream()
+        .filter(q -> !q.getName().contains("|"))
+        .collect(Collectors.toList()));
+
+    // The qualities that have been selected in this level.
+    for (String name : this.qualities) {
+      qualities.add(new Quality(name, template.getName() +  " " + level));
+    }
+
+    return qualities;
   }
 
   public boolean hasAbilityIncrease() {
@@ -232,14 +267,27 @@ public class Level extends NestedDocument {
     if (classFeat.isPresent() && !classFeat.get().getName().isEmpty()) {
       data.put(FIELD_CLASS_FEAT, classFeat.get().write());
     }
+    if (!qualities.isEmpty()) {
+      data.put(FIELD_QUALITIES, qualities);
+    }
 
     return data;
   }
 
-  private static Multiset<String> countedNames(List<Level> levels) {
-    Multiset<String> names = HashMultiset.create();
+  private String selectedQuality(List<String> names) {
+    for (String name : qualities) {
+      if (names.contains(name)) {
+        return name;
+      }
+    }
+
+    return "";
+  }
+
+  public static Multiset<LevelTemplate> countedNames(List<Level> levels) {
+    Multiset<LevelTemplate> names = HashMultiset.create();
     for (Level level : levels) {
-      names.add(level.getTemplate().getName());
+      names.add(level.getTemplate());
     }
 
     return names;
@@ -261,7 +309,8 @@ public class Level extends NestedDocument {
     Optional<Feat> classFeat = Values.has(data, FIELD_CLASS_FEAT) ?
         Optional.of(Feat.read(Values.get(data, FIELD_CLASS_FEAT), "Level " + number + " (class)"))
         : Optional.empty();
-    return new Level(template, hp, abilityIncrease, feat, racialFeat, classFeat);
+    List<String> qualities = Values.get(data, FIELD_QUALITIES, Collections.emptyList());
+    return new Level(template, hp, abilityIncrease, feat, racialFeat, classFeat, qualities);
   }
 
   private static LevelTemplate readTemplate(String name) {
@@ -274,12 +323,30 @@ public class Level extends NestedDocument {
   }
 
   public static String summarized(List<Level> levels) {
-    Multiset<String> summarized = Level.countedNames(levels);
+    Multiset<LevelTemplate> summarized = Level.countedNames(levels);
     List<String> names = new ArrayList<>();
-    for (String name : summarized.elementSet()) {
-      names.add(name + " " + summarized.count(name));
+    for (LevelTemplate level : summarized.elementSet()) {
+      names.add(level.getName() + " " + summarized.count(level));
     }
 
     return Strings.COMMA_JOINER.join(names);
+  }
+
+  public class QualitySelection {
+    private final String selected;
+    private final List<String> options;
+
+    private QualitySelection(String selected, List<String> options) {
+      this.selected = selected;
+      this.options = new ArrayList<>(options);
+    }
+
+    public List<String> getOptions() {
+      return options;
+    }
+
+    public String getSelected() {
+      return selected;
+    }
   }
 }

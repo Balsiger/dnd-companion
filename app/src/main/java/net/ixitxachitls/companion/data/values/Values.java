@@ -63,7 +63,7 @@ public class Values {
   }
 
   public static <E extends Enum<E>> E get(Map<String, Object> data, String field, E defaultValue) {
-    if (data.containsKey(field) && data.get(field) instanceof Enum) {
+    if (data.containsKey(field) && data.get(field) instanceof String) {
       return (E) Enum.valueOf(defaultValue.getClass(), (String) data.get(field));
     }
 

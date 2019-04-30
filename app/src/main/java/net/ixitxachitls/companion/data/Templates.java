@@ -31,6 +31,7 @@ import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 import net.ixitxachitls.companion.data.templates.MonsterTemplate;
+import net.ixitxachitls.companion.data.templates.QualityTemplate;
 import net.ixitxachitls.companion.data.templates.SkillTemplate;
 import net.ixitxachitls.companion.data.templates.SpellTemplate;
 import net.ixitxachitls.companion.data.templates.WorldTemplate;
@@ -55,6 +56,8 @@ public class Templates {
   private final ItemTemplates items = new ItemTemplates();
   private final TemplatesStore<LevelTemplate> levels = new TemplatesStore<>(LevelTemplate.class);
   private final TemplatesStore<FeatTemplate> feats = new TemplatesStore<>(FeatTemplate.class);
+  private final TemplatesStore<QualityTemplate> qualities =
+      new TemplatesStore<>(QualityTemplate.class);
   private final MiniatureTemplates miniatures = new MiniatureTemplates();
   private final TemplatesStore<SkillTemplate> skills = new TemplatesStore<>(SkillTemplate.class);
   private final TemplatesStore<SpellTemplate> spells = new TemplatesStore<>(SpellTemplate.class);
@@ -83,6 +86,10 @@ public class Templates {
 
   public MonsterTemplates getMonsterTemplates() {
     return monsterTemplates;
+  }
+
+  public TemplatesStore<QualityTemplate> getQualityTemplates() {
+    return qualities;
   }
 
   public TemplatesStore<SkillTemplate> getSkillTemplates() {
@@ -138,6 +145,9 @@ public class Templates {
               case SpellTemplate.TYPE:
                 spells.read(name, assetAccessor.open(name));
                 break;
+              case QualityTemplate.TYPE:
+                qualities.read(name, assetAccessor.open(name));
+                break;
               default:
                 Status.error("Unsupported type " + type + " found!");
                 break;
@@ -151,6 +161,7 @@ public class Templates {
       items.loaded();
       levels.loaded();
       feats.loaded();
+      qualities.loaded();
       miniatures.loaded();
       skills.loaded();
       spells.loaded();

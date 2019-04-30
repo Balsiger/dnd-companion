@@ -124,3 +124,6 @@ bonus_feat {
     }
   }
 }
+good_fortitude_save: true
+good_reflex_save: true
+good_will_save: true

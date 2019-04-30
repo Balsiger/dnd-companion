@@ -131,10 +131,36 @@ public class LabelledView<T extends LabelledView, S extends View> extends Linear
     return (T) this;
   }
 
+  public T label(String label) {
+    this.label.text(label);
+
+    return (T) this;
+  }
+
+  public T labelColor(@ColorRes int color) {
+    label.textColor(color);
+
+    return (T) this;
+  }
+
   public T lineColor(@ColorRes int color) {
     line.backgroundColor(color);
 
     return (T) this;
+  }
+
+  @Override
+  public void onAttachedToWindow() {
+    super.onAttachedToWindow();
+
+    while (getChildCount() > 0) {
+      // The view has children from xml, move them into the container.
+      View child = getChildAt(getChildCount() - 1);
+      removeViewAt(getChildCount() - 1);
+      container.get().addView(child, 0);
+    }
+
+    addView(container.get());
   }
 
   public T view(S view) {
@@ -158,8 +184,6 @@ public class LabelledView<T extends LabelledView, S extends View> extends Linear
     label = TextWrapper.wrap(container.get(), R.id.label).text(labelText).textColorValue(labelColor);
 
     description(labelText, description);
-
-    addView(container.get());
   }
 
   private void showDescription(String name, String description) {

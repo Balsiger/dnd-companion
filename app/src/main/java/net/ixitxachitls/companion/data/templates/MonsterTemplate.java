@@ -22,8 +22,7 @@
 package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.data.documents.Feat;
-import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.data.values.Distance;
+import net.ixitxachitls.companion.data.documents.Quality;
 import net.ixitxachitls.companion.data.values.Speed;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
@@ -64,8 +63,28 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getAbilities().getDexterity();
   }
 
+  public Collection<Feat> getFeats() {
+    return proto.getFeatList().stream()
+        .map(f -> new Feat(f, getName()))
+        .collect(Collectors.toList());
+  }
+
+  public int getFortitudeSave() {
+    return proto.getSaves().getFortitude();
+  }
+
   public int getIntelligenecAdjustment() {
     return proto.getAbilities().getIntelligence();
+  }
+
+  public Collection<Quality> getQualities() {
+    return proto.getQualityList().stream()
+        .map(f -> new Quality(f, getName()))
+        .collect(Collectors.toList());
+  }
+
+  public int getReflexSave() {
+    return proto.getSaves().getReflex();
   }
 
   public List<Speed> getSpeeds() {
@@ -76,14 +95,18 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getAbilities().getStrength();
   }
 
-  public Distance getWalkingSpeed() {
+  public int getWalkingSpeed() {
     for (Value.SpeedProto speed: proto.getSpeedList()) {
       if (speed.getMode() == Value.SpeedProto.Mode.RUN) {
-        return Distance.fromProto(speed.getDistance());
+        return speed.getSquares();
       }
     }
 
-    return Distance.ZERO;
+    return 0;
+  }
+
+  public int getWillSave() {
+    return proto.getSaves().getWill();
   }
 
   public int getWisdomAdjustment() {
@@ -92,33 +115,6 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
 
   public boolean isPrimaryRace() {
     return proto.getMainRace();
-  }
-
-  public int getAbilityAdjustment(Ability ability) {
-    switch (ability) {
-      default:
-      case UNKNOWN:
-      case NONE:
-        return 0;
-
-      case STRENGTH:
-        return proto.getAbilities().getRacialStrengthModifier();
-
-      case DEXTERITY:
-        return proto.getAbilities().getRacialDexterityModifier();
-
-      case CONSTITUTION:
-        return proto.getAbilities().getRacialConstitutionModifier();
-
-      case INTELLIGENCE:
-        return proto.getAbilities().getRacialIntelligenceModifier();
-
-      case WISDOM:
-        return proto.getAbilities().getRacialWisdomModifier();
-
-      case CHARISMA:
-        return proto.getAbilities().getRacialCharismaModifier();
-    }
   }
 
   public boolean hasBonusFeat(int level) {

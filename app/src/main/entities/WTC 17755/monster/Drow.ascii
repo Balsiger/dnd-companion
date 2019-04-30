@@ -20,13 +20,7 @@ type: HUMANOID
 subtype: ELF
 speed {
   mode: RUN
-  distance {
-    imperial {
-      feet {
-        leader: 30
-      }
-    }
-  }
+  squares: 6
 }
 base_attack: 1
 abilities {
