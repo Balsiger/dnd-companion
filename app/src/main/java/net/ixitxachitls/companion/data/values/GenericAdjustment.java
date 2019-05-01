@@ -21,6 +21,8 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.data.documents.Data;
+
 import java.util.Map;
 
 /**
@@ -50,7 +52,7 @@ public class GenericAdjustment extends Adjustment {
     return data;
   }
 
-  public static GenericAdjustment readGeneric(Map<String, Object> data) {
-    return new GenericAdjustment(Values.get(data, FIELD_TEXT, ""));
+  public static GenericAdjustment readGeneric(Data data) {
+    return new GenericAdjustment(data.get(FIELD_TEXT, ""));
   }
 }

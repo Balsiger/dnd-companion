@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.documents;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.data.values.Modifier;
-import net.ixitxachitls.companion.data.values.Values;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
@@ -163,8 +162,8 @@ public class Feat extends NestedDocument {
     return Optional.of(value);
   }
 
-  public static Feat read(Map<String, Object> data, String source) {
-    return new Feat(Values.get(data, FIELD_NAME, ""),
-        Values.get(data, FIELD_QUALIFIERS, Collections.emptyList()), source);
+  public static Feat read(Data data, String source) {
+    return new Feat(data.get(FIELD_NAME, ""),
+        data.getList(FIELD_QUALIFIERS, Collections.emptyList()), source);
   }
 }

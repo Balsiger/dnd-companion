@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.values;
 
 import android.text.Spanned;
 
+import net.ixitxachitls.companion.data.documents.Data;
+
 import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -82,9 +84,7 @@ public class SpeedAdjustment extends Adjustment {
     return Optional.empty();
   }
 
-  public static SpeedAdjustment readSpeed(Map<String, Object> data) {
-    boolean half = Values.get(data, FIELD_HALF, false);
-
-    return new SpeedAdjustment(half);
+  public static SpeedAdjustment readSpeed(Data data) {
+    return new SpeedAdjustment(data.get(FIELD_HALF, false));
   }
 }

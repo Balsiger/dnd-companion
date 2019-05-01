@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.Status;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -35,8 +36,18 @@ import java.util.stream.Collectors;
  */
 public abstract class Data {
 
-  public String get(String field, String defaultValue) {
+  @FunctionalInterface
+  public interface Factory<T> {
+    T create(Data values);
+  }
+
+  public <T> T get(String field, T defaultValue) {
     return getRaw(field, defaultValue);
+  }
+
+  public <E extends Enum<E>> E get(String field, E defaultValue) {
+    String raw = getRaw(field, defaultValue.toString());
+    return (E) Enum.valueOf(defaultValue.getClass(), raw);
   }
 
   public int get(String field, int defaultValue) {
@@ -62,7 +73,21 @@ public abstract class Data {
         .collect(Collectors.toList());
   }
 
+  public abstract boolean has(String field);
+
+  public <T> Optional<T> read(String field, Factory<T> factory) {
+    if (has(field)) {
+      return Optional.of(factory.create(getNested(field)));
+    }
+
+    return Optional.empty();
+  }
+
   protected abstract <T> T getRaw(String field, T defaultValue);
+
+  protected static Data empty() {
+    return new MapData(Collections.emptyMap());
+  }
 
   protected static Data fromMap(Map<String, Object> data) {
     return new MapData(data);
@@ -78,6 +103,11 @@ public abstract class Data {
 
     private SnapshotData(DocumentSnapshot snapshot) {
       this.snapshot = snapshot;
+    }
+
+    @Override
+    public boolean has(String field) {
+      return snapshot.get(field) != null;
     }
 
     @Override
@@ -101,6 +131,11 @@ public abstract class Data {
 
     private MapData(Map<String, Object> data) {
       this.data = data;
+    }
+
+    @Override
+    public boolean has(String field) {
+      return data.get(field) != null;
     }
 
     @Override

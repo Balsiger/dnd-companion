@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.values;
 
 import android.text.Spanned;
 
+import net.ixitxachitls.companion.data.documents.Data;
+
 import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -78,9 +80,7 @@ public class SavesAdjustment extends Adjustment {
     return Optional.empty();
   }
 
-  public static SavesAdjustment readSaves(Map<String, Object> data) {
-    int saves = (int) Values.get(data, FIELD_SAVES, 0);
-
-    return new SavesAdjustment(saves);
+  public static SavesAdjustment readSaves(Data data) {
+    return new SavesAdjustment(data.get(FIELD_SAVES, 0));
   }
 }

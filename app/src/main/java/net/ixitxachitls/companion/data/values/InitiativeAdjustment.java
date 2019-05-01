@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.values;
 
 import android.text.Spanned;
 
+import net.ixitxachitls.companion.data.documents.Data;
+
 import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -75,9 +77,7 @@ public class InitiativeAdjustment extends Adjustment {
     return Optional.empty();
   }
 
-  public static InitiativeAdjustment readInitiative(Map<String, Object> data) {
-    int adjustment = (int) Values.get(data, FIELD_ADJUSTMENT, 0);
-
-    return new InitiativeAdjustment(adjustment);
+  public static InitiativeAdjustment readInitiative(Data data) {
+    return new InitiativeAdjustment(data.get(FIELD_ADJUSTMENT, 0));
   }
 }

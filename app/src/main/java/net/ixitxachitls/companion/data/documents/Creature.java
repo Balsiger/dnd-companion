@@ -59,7 +59,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_GENDER = "gender";
   private static final String FIELD_RACE = "race";
   private static final String DEFAULT_RACE = "Human";
-  private static final long DEFAULT_ATTRIBUTE = 0;
+  private static final int DEFAULT_ATTRIBUTE = 0;
   private static final String FIELD_STRENGTH = "strength";
   private static final String FIELD_DEXTERITY = "dexterity";
   private static final String FIELD_CONSTITUTION = "constitution";
@@ -651,26 +651,24 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   @CallSuper
   protected void read() {
     super.read();
-    name = get(FIELD_NAME, "");
-    gender = get(FIELD_GENDER, Gender.UNKNOWN);
-    race = Templates.get().getMonsterTemplates().get(get(FIELD_RACE, DEFAULT_RACE));
-    campaignId = get(FIELD_CAMPAIGN, DEFAULT_CAMPAIGN);
-    strength = (int) get(FIELD_STRENGTH, DEFAULT_ATTRIBUTE);
-    dexterity= (int) get(FIELD_DEXTERITY, DEFAULT_ATTRIBUTE);
-    constitution = (int) get(FIELD_CONSTITUTION, DEFAULT_ATTRIBUTE);
-    intelligence = (int) get(FIELD_INTELLIGENCE, DEFAULT_ATTRIBUTE);
-    wisdom = (int) get(FIELD_WISDOM, DEFAULT_ATTRIBUTE);
-    charisma = (int) get(FIELD_CHARISMA, DEFAULT_ATTRIBUTE);
-    hp = (int) get(FIELD_HP, 0);
-    maxHp = (int) get(FIELD_MAX_HP, 0);
-    nonlethalDamage = (int) get(FIELD_NONLETHAL, 0);
-    encounterInitiative = (int) get(FIELD_INITIATIVE, 0);
-    encounterNumber = (int) get(FIELD_ENCOUNTER_NUMBER, 0);
-    items = new ArrayList<>();
-    for (Map<String, Object> item
-        : get(FIELD_ITEMS, Collections.<Map<String, Object>>emptyList())) {
-      items.add(Item.read(item));
-    }
+    name = data.get(FIELD_NAME, "");
+    gender = data.get(FIELD_GENDER, Gender.UNKNOWN);
+    race = Templates.get().getMonsterTemplates().get(data.get(FIELD_RACE, DEFAULT_RACE));
+    campaignId = data.get(FIELD_CAMPAIGN, DEFAULT_CAMPAIGN);
+    strength = data.get(FIELD_STRENGTH, DEFAULT_ATTRIBUTE);
+    dexterity= data.get(FIELD_DEXTERITY, DEFAULT_ATTRIBUTE);
+    constitution = data.get(FIELD_CONSTITUTION, DEFAULT_ATTRIBUTE);
+    intelligence = data.get(FIELD_INTELLIGENCE, DEFAULT_ATTRIBUTE);
+    wisdom = data.get(FIELD_WISDOM, DEFAULT_ATTRIBUTE);
+    charisma = data.get(FIELD_CHARISMA, DEFAULT_ATTRIBUTE);
+    hp = data.get(FIELD_HP, 0);
+    maxHp = data.get(FIELD_MAX_HP, 0);
+    nonlethalDamage = data.get(FIELD_NONLETHAL, 0);
+    encounterInitiative = data.get(FIELD_INITIATIVE, 0);
+    encounterNumber = data.get(FIELD_ENCOUNTER_NUMBER, 0);
+    items = data.getNestedList(FIELD_ITEMS).stream()
+        .map(Item::read)
+        .collect(Collectors.toList());
   }
 
   @Override

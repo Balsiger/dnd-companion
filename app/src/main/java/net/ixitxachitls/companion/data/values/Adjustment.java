@@ -28,6 +28,8 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 
+import net.ixitxachitls.companion.data.documents.Data;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -37,7 +39,7 @@ import java.util.Optional;
  */
 public abstract class Adjustment {
 
-  public enum Type { generic, ability, abilityCheck, speed, saves, initiative }
+  public enum Type {generic, ability, abilityCheck, speed, saves, initiative}
 
   private static final String FIELD_TYPE = "type";
   private final Type type;
@@ -99,8 +101,8 @@ public abstract class Adjustment {
     return new GenericAdjustment(text);
   }
 
-  public static Adjustment read(Map<String, Object> data) {
-    switch (Values.get(data, FIELD_TYPE, Type.generic)) {
+  public static Adjustment read(Data data) {
+    switch (data.get(FIELD_TYPE, Type.generic)) {
       default:
       case generic:
         return GenericAdjustment.readGeneric(data);

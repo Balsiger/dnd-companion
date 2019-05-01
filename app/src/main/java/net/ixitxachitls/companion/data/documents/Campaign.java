@@ -204,12 +204,12 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   @CallSuper
   protected void read() {
     super.read();
-    name = get(FIELD_NAME, name);
-    worldTemplate = world(get(FIELD_WORLD, GENERIC_NAME));
-    date = CampaignDate.read(get(FIELD_DATE));
-    encounter.read(get(FIELD_ENCOUNTER));
-    invites = get(FIELD_INVITES, invites);
-    adventureId = get(FIELD_ADVENTURE, "");
+    name = data.get(FIELD_NAME, name);
+    worldTemplate = world(data.get(FIELD_WORLD, GENERIC_NAME));
+    date = CampaignDate.read(data.getNested(FIELD_DATE));
+    encounter.read(data.getNested(FIELD_ENCOUNTER));
+    invites = data.get(FIELD_INVITES, invites);
+    adventureId = data.get(FIELD_ADVENTURE, "");
   }
 
   @Override

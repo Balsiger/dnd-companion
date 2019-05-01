@@ -44,6 +44,39 @@ public class CreatureCondition extends Document<CreatureCondition> {
   private TimedCondition condition;
   private String creatureId;
 
+  public TimedCondition getCondition() {
+    return condition;
+  }
+
+  public String getCreatureId() {
+    return creatureId;
+  }
+
+  @Override
+  public String toString() {
+    return creatureId + ": " + condition;
+  }
+
+  @Override
+  @CallSuper
+  protected void read() {
+    super.read();
+
+    creatureId = data.get(FIELD_CREATURE, "");
+    if (data.has(FIELD_CONDITION)) {
+      condition = TimedCondition.read(data.getNested(FIELD_CONDITION));
+    }
+  }
+
+  @Override
+  @CallSuper
+  protected Map<String, Object> write(Map<String, Object> data) {
+    data.put(FIELD_CREATURE, creatureId);
+    data.put(FIELD_CONDITION, condition.write());
+
+    return data;
+  }
+
   public static CreatureCondition create(CompanionContext context, String creatureId,
                                          TimedCondition timedCondition) {
     CreatureCondition condition =
@@ -58,38 +91,5 @@ public class CreatureCondition extends Document<CreatureCondition> {
     CreatureCondition condition = Document.fromData(FACTORY, context, snapshot);
 
     return condition;
-  }
-
-  public String getCreatureId() {
-    return creatureId;
-  }
-
-  public TimedCondition getCondition() {
-    return condition;
-  }
-
-  @Override
-  @CallSuper
-  protected void read() {
-    super.read();
-
-    creatureId = get(FIELD_CREATURE, "");
-    if (has(FIELD_CONDITION)) {
-      condition = TimedCondition.read(get(FIELD_CONDITION));
-    }
-  }
-
-  @Override
-  @CallSuper
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_CREATURE, creatureId);
-    data.put(FIELD_CONDITION, condition.write());
-
-    return data;
-  }
-
-  @Override
-  public String toString() {
-    return creatureId + ": " + condition;
   }
 }

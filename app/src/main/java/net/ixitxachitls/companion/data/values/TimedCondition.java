@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.values;
 
 import android.support.annotation.Nullable;
 
+import net.ixitxachitls.companion.data.documents.Data;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -163,18 +165,18 @@ public class TimedCondition {
     return data;
   }
 
-  public static TimedCondition read(@Nullable Map<String, Object> data) {
+  public static TimedCondition read(@Nullable Data data) {
     if (data == null) {
       throw new IllegalArgumentException("Data cannot be null");
     }
 
-    ConditionData condition = ConditionData.read(Values.get(data, FIELD_CONDITION));
-    String source = Values.get(data, FIELD_SOURCE, "");
-    if (Values.has(data, FIELD_END_DATE)) {
-      CampaignDate endDate = CampaignDate.read(Values.get(data, FIELD_END_DATE));
+    ConditionData condition = ConditionData.read(data.getNested(FIELD_CONDITION));
+    String source = data.get(FIELD_SOURCE, "");
+    if (data.has(FIELD_END_DATE)) {
+      CampaignDate endDate = CampaignDate.read(data.getNested(FIELD_END_DATE));
       return new TimedCondition(condition, source, endDate);
     } else {
-      int endRound = (int) Values.get(data, FIELD_END_ROUND, 0);
+      int endRound = data.get(FIELD_END_ROUND, 0);
       return new TimedCondition(condition, source, endRound);
     }
 

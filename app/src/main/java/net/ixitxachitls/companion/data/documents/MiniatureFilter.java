@@ -26,7 +26,6 @@ import android.support.annotation.NonNull;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
-import net.ixitxachitls.companion.data.values.Values;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
@@ -238,18 +237,5 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
         data.getList(FIELD_SIZES, Collections.emptyList()),
         data.getList(FIELD_OWNED, Collections.emptyList()),
         data.getList(FIELD_LOCATIONS, Collections.emptyList()));
-  }
-
-  public static MiniatureFilter read(Map<String, Object> data) {
-    String name = Values.get(data, FIELD_NAME, "");
-    List<String> races = Values.get(data, FIELD_RACES, Collections.emptyList());
-    List<String> sets = Values.get(data, FIELD_SETS, Collections.emptyList());
-    List<String> types = Values.get(data, FIELD_TYPES, Collections.emptyList());
-    List<String> classes = Values.get(data, FIELD_CLASSES, Collections.emptyList());
-    List<String> sizes = Values.get(data, FIELD_SIZES, Collections.emptyList());
-    List<String> owned = Values.get(data, FIELD_OWNED, Collections.emptyList());
-    List<String> locations = Values.get(data, FIELD_LOCATIONS, Collections.emptyList());
-
-    return new MiniatureFilter(name, races, sets, types, classes, sizes, owned, locations);
   }
 }

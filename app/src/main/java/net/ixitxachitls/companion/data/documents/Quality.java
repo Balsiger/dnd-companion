@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.data.documents;
 
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.QualityTemplate;
-import net.ixitxachitls.companion.data.values.Values;
 import net.ixitxachitls.companion.proto.Template;
 
 import java.util.HashMap;
@@ -86,8 +85,8 @@ public class Quality extends NestedDocument {
     return data;
   }
 
-  public static Quality read(Map<String, Object> data, String entity) {
-    return new Quality(Values.get(data, FIELD_NAME, ""), entity);
+  public static Quality read(Data data, String entity) {
+    return new Quality(data.get(FIELD_NAME, ""), entity);
   }
 
   private static QualityTemplate template(String name) {

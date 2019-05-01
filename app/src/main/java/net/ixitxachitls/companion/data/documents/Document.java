@@ -33,7 +33,6 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -56,6 +55,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   protected CollectionReference collection;
   protected Optional<DocumentReference> reference = Optional.empty();
   protected Optional<DocumentSnapshot> snapshot = Optional.empty();
+  protected Data data = Data.empty();
   private boolean failed = false;
 
   @FunctionalInterface
@@ -89,21 +89,10 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   }
 
   @SuppressWarnings("unchecked")
-  public <E extends Enum<E>> E get(String field, E defaultValue) {
-    if (snapshot.isPresent()) {
-      String value = snapshot.get().getString(field);
-      if (value != null && !value.isEmpty()) {
-        return Enum.valueOf((Class<E>) defaultValue.getClass(), (String) value);
-      }
-    }
-
-    return defaultValue;
-  }
-
-  @SuppressWarnings("unchecked")
   public void onUpdate(DocumentSnapshot snapshot, FirebaseFirestoreException e) {
     if (snapshot != null || e == null) {
       this.snapshot = Optional.of(snapshot);
+      this.data = Data.fromSnapshot(snapshot);
       temporary = false;
       read();
       execute(whenReady);
@@ -160,76 +149,6 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     }
   }
 
-  @SuppressWarnings("unchecked")
-  protected Map<String, Object> get(String field) {
-    if (snapshot.isPresent()) {
-      return (Map<String, Object>) snapshot.get().get(field);
-    }
-
-    return Collections.emptyMap();
-  }
-
-  protected String get(String field, String defaultValue) {
-    if (snapshot.isPresent()) {
-      String value = snapshot.get().getString(field);
-      if (value != null && !value.isEmpty()) {
-        return value;
-      }
-    }
-
-    return defaultValue;
-  }
-
-  protected long get(String field, long defaultValue) {
-    if (snapshot.isPresent()) {
-      Long value = snapshot.get().getLong(field);
-      if (value != null) {
-        return value;
-      }
-    }
-
-    return defaultValue;
-  }
-
-  protected boolean get(String field, boolean defaultValue) {
-    if (snapshot.isPresent()) {
-      Boolean value = snapshot.get().getBoolean(field);
-      if (value != null) {
-        return value;
-      }
-    }
-
-    return defaultValue;
-  }
-
-  @SuppressWarnings("unchecked")
-  protected <T> T get(String field, T defaultValue) {
-    if (snapshot.isPresent()) {
-      T value = (T) snapshot.get().get(field);
-      if (value != null) {
-        return value;
-      }
-    }
-
-    return defaultValue;
-  }
-
-  @SuppressWarnings("unchecked")
-  protected <T> List<T> get(String field, List<T> defaultValue) {
-    if (snapshot.isPresent()) {
-      List<T> value = (List<T>) snapshot.get().get(field);
-      if (value != null) {
-        return value;
-      }
-    }
-
-    return defaultValue;
-  }
-
-  protected boolean has(String field) {
-    return snapshot.isPresent() && snapshot.get().get(field) != null;
-  }
-
   @CallSuper
   protected void read() {
     if (snapshot.isPresent()) {
@@ -252,8 +171,11 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     } else {
       this.snapshot = Optional.ofNullable(snapshot);
       if (this.snapshot.isPresent() && this.snapshot.get().exists()) {
+        data = Data.fromSnapshot(snapshot);
         read();
         updated((D) this);
+      } else {
+        data = Data.empty();
       }
     }
   }
@@ -301,6 +223,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     document.collection = snapshot.getReference().getParent();
     document.reference = Optional.of(snapshot.getReference());
     document.snapshot = Optional.ofNullable(snapshot);
+    document.data = snapshot == null ? Data.empty() : Data.fromSnapshot(snapshot);
     document.temporary = false;
 
     document.read();

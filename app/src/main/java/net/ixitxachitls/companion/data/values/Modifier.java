@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -251,13 +252,13 @@ public class Modifier {
     return second;
   }
 
-  public static Modifier read(Map<String, Object> data) {
-    int value = (int) Values.get(data, FIELD_VALUE, 0);
-    Type type = Values.get(data, FIELD_TYPE, Type.GENERAL);
-    String source = Values.get(data, FIELD_SOURCE, "");
-    Optional<String> condition = Strings.optionalIfEmpty(Values.get(data, FIELD_CONDITION, ""));
+  public static Modifier read(Data data) {
+    int value = (int) data.get(FIELD_VALUE, 0);
+    Type type = data.get(FIELD_TYPE, Type.GENERAL);
+    String source = data.get(FIELD_SOURCE, "");
+    Optional<String> condition = Strings.optionalIfEmpty(data.get(FIELD_CONDITION, ""));
 
-    return new Modifier(value, type, source);
+    return new Modifier(value, type, source, condition);
   }
 
   public static boolean stacks(Modifier first, Modifier second) {

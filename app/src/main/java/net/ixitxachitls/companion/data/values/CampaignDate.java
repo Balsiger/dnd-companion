@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -60,14 +61,6 @@ public class CampaignDate {
     this.minute = minute;
   }
 
-  public int getYear() {
-    return year;
-  }
-
-  public int getMonth() {
-    return month;
-  }
-
   public int getDay() {
     return day;
   }
@@ -80,8 +73,20 @@ public class CampaignDate {
     return minute;
   }
 
+  public int getMonth() {
+    return month;
+  }
+
+  public int getYear() {
+    return year;
+  }
+
   public boolean isEmpty() {
     return year == 1 && month == 1 && day == 1 && hour == 0 && minute == 0;
+  }
+
+  public boolean after(CampaignDate date) {
+    return !equals(date) && !before(date);
   }
 
   public boolean before(CampaignDate date) {
@@ -92,46 +97,12 @@ public class CampaignDate {
         || minute < date.minute;
   }
 
-  public boolean after(CampaignDate date) {
-    return !equals(date) && !before(date);
-  }
-
   public boolean equals(CampaignDate date) {
     return year == date.year
         && month == date.month
         && day == date.day
         && hour == date.hour
         && minute == date.minute;
-  }
-
-  public static CampaignDate read(Map<String, Object> data) {
-    int year = (int) Values.get(data, FIELD_YEAR, 2010);
-    int month = (int) Values.get(data, FIELD_MONTH, 3);
-    int day = (int) Values.get(data, FIELD_DAY, 3);
-    int hour = (int) Values.get(data, FIELD_HOUR, 21);
-    int minute = (int) Values.get(data, FIELD_MINUTE, 42);
-
-    return new CampaignDate(year, month, day, hour, minute);
-  }
-
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_YEAR, year);
-    data.put(FIELD_MONTH, month);
-    data.put(FIELD_DAY, day);
-    data.put(FIELD_HOUR, hour);
-    data.put(FIELD_MINUTE, minute);
-
-    return data;
-  }
-
-  @Override
-  public String toString() {
-    return year + "-"
-        + Strings.pad(month, 2, true) + "-"
-        + Strings.pad(day, 2, true) + " "
-        + Strings.pad(hour, 2, true) + ":"
-        + Strings.pad(minute, 2, true);
   }
 
   public Value.DateProto toProto() {
@@ -146,8 +117,38 @@ public class CampaignDate {
     return proto.build();
   }
 
+  @Override
+  public String toString() {
+    return year + "-"
+        + Strings.pad(month, 2, true) + "-"
+        + Strings.pad(day, 2, true) + " "
+        + Strings.pad(hour, 2, true) + ":"
+        + Strings.pad(minute, 2, true);
+  }
+
+  public Map<String, Object> write() {
+    Map<String, Object> data = new HashMap<>();
+    data.put(FIELD_YEAR, year);
+    data.put(FIELD_MONTH, month);
+    data.put(FIELD_DAY, day);
+    data.put(FIELD_HOUR, hour);
+    data.put(FIELD_MINUTE, minute);
+
+    return data;
+  }
+
   public static CampaignDate fromProto(Value.DateProto proto) {
     return new CampaignDate(proto.getYear(), proto.getMonth(), proto.getDay(),
         proto.getHour(), proto.getMinute());
+  }
+
+  public static CampaignDate read(Data data) {
+    int year = data.get(FIELD_YEAR, 2010);
+    int month = data.get(FIELD_MONTH, 3);
+    int day = data.get(FIELD_DAY, 3);
+    int hour = data.get(FIELD_HOUR, 21);
+    int minute = data.get(FIELD_MINUTE, 42);
+
+    return new CampaignDate(year, month, day, hour, minute);
   }
 }

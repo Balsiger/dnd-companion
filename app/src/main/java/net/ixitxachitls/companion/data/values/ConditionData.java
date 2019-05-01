@@ -28,6 +28,7 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -201,25 +202,25 @@ public class ConditionData implements Comparable<ConditionData> {
     return new Builder(name, condition);
   }
 
-  public static ConditionData read(@Nullable Map<String, Object> data) {
+  public static ConditionData read(@Nullable Data data) {
     if (data == null) {
       throw new IllegalArgumentException("Data cannot be null");
     }
 
-    String name = Values.get(data, FIELD_NAME, "...");
-    String description = Values.get(data, FIELD_DESCRIPTION, "");
-    List<Adjustment> adjustments = Values.getRawList(data, FIELD_ADJUSTMENTS).stream()
+    String name = data.get(FIELD_NAME, "...");
+    String description = data.get(FIELD_DESCRIPTION, "");
+    List<Adjustment> adjustments = data.getNestedList(FIELD_ADJUSTMENTS).stream()
         .map(Adjustment::read)
         .collect(Collectors.toList());
     @SuppressWarnings("unchecked")
-    Duration duration = Duration.read((Map<String, Object>) data.get(FIELD_DURATION));
-    boolean predefined = Values.get(data, FIELD_PREDEFINED, false);
-    boolean endBeforeTurn = Values.get(data, FIELD_ENDS_BEFORE_TURN, false);
-    boolean dmOnly = Values.get(data, FIELD_DM_ONLY, false);
-    boolean noShow = Values.get(data, FIELD_NO_SHOW, false);
-    boolean dismissable = Values.get(data, FIELD_DISMISSIBLE, true);
-    @DrawableRes int icon = (int) Values.get(data, FIELD_ICON, 0);
-    @ColorRes int color = (int) Values.get(data, FIELD_COLOR, 0);
+    Duration duration = Duration.read(data.getNested(FIELD_DURATION));
+    boolean predefined = data.get(FIELD_PREDEFINED, false);
+    boolean endBeforeTurn = data.get(FIELD_ENDS_BEFORE_TURN, false);
+    boolean dmOnly = data.get(FIELD_DM_ONLY, false);
+    boolean noShow = data.get(FIELD_NO_SHOW, false);
+    boolean dismissable = data.get(FIELD_DISMISSIBLE, true);
+    @DrawableRes int icon = data.get(FIELD_ICON, 0);
+    @ColorRes int color = data.get(FIELD_COLOR, 0);
 
     return new ConditionData(name, description, adjustments, duration, predefined,
         endBeforeTurn, dmOnly, noShow, dismissable, icon, color);

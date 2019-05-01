@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -42,8 +43,6 @@ public class Money {
   private static final String FIELD_COPPER = "copper";
   private static final String FIELD_ARMOR = "armor";
   private static final String FIELD_WEAPON = "weapon";
-
-  public static Money ZERO = new Money(0, 0, 0, 0, 0, 0);
   private static final ValueParser PARSER = new IntegerValueParser(
       new ValueParser.Unit("pp", "pp", "platinum", "platinums"),
       new ValueParser.Unit("gp", "gp", "gold", "golds"),
@@ -51,7 +50,7 @@ public class Money {
       new ValueParser.Unit("cp", "cp", "copper", "coppers"),
       new ValueParser.Unit("armor", "armors", "magic armor", "magic armors"),
       new ValueParser.Unit("weapon", "weapons", "magic weapon", "magic weapons"));
-
+  public static Money ZERO = new Money(0, 0, 0, 0, 0, 0);
   private final int platinum;
   private final int gold;
   private final int silver;
@@ -68,6 +67,22 @@ public class Money {
     this.weapon = weapon;
   }
 
+  public int getCopper() {
+    return copper;
+  }
+
+  public int getGold() {
+    return gold;
+  }
+
+  public int getPlatinum() {
+    return platinum;
+  }
+
+  public int getSilver() {
+    return silver;
+  }
+
   public boolean isZero() {
     return platinum == 0 && gold == 0 && silver == 0 && copper == 0 && armor == 0 && weapon == 0;
   }
@@ -77,79 +92,9 @@ public class Money {
         copper + other.copper, armor + other.armor, weapon + other.weapon);
   }
 
-  public Money multiply(int factor) {
-    if (factor == 1) {
-      return this;
-    }
-    if (factor == 0) {
-      return ZERO;
-    }
-
-    if (armor != 0 || weapon != 0) {
-      throw new IllegalStateException("Cannot multiply value with armor or weapon bonuses!");
-    }
-
-    return new Money(platinum * factor, gold * factor, silver * factor, copper * factor, 0, 0)
-        .simplify();
-  }
-
-  public static boolean validate(String text) {
-    return parse(text).isPresent();
-  }
-
-  public static Optional<Money> parse(String text) {
-    try {
-      List<Integer> values = PARSER.parse(text);
-      return Optional.of(new Money(
-          values.get(0), values.get(1), values.get(2), values.get(3), values.get(4), values.get(5)));
-    } catch (IllegalArgumentException e) {
-      return Optional.empty();
-    }
-  }
-
-  public static Money platinum(int amount) {
-    return new Money(amount, 0, 0, 0, 0, 0);
-  }
-
-  public static Money gold(int amount) {
-    return new Money(0, amount, 0, 0, 0, 0);
-  }
-
-  public static Money silver(int amount) {
-    return new Money(0, 0, amount, 0, 0, 0);
-  }
-
-  public static Money copper(int amount) {
-    return new Money(0, 0, 0, amount, 0, 0);
-  }
-
-  public static Money armor(int amount) {
-    return new Money(0, 0, 0, 0, amount, 0);
-  }
-
-  public static Money weapon(int amount) {
-    return new Money(0, 0, 0, 0, 0, amount);
-  }
-
   public double asGold() {
     return platinum * 10 + gold + silver / 10.0 + copper / 100.0
         + armor * armor * 1000 + weapon * weapon * 2000;
-  }
-
-  public int getPlatinum() {
-    return platinum;
-  }
-
-  public int getGold() {
-    return gold;
-  }
-
-  public int getSilver() {
-    return silver;
-  }
-
-  public int getCopper() {
-    return copper;
   }
 
   public Money half() {
@@ -178,47 +123,22 @@ public class Money {
     return new Money(platinum, gold, silver, copper, 0, 0);
   }
 
-  public Money simplify() {
-    int newCopper = copper;
-    int newSilver = silver;
-    int newGold = gold;
-
-    if (newCopper > 10) {
-      newSilver = newCopper / 10;
-      newCopper = newCopper % 10;
-    }
-    if (newSilver > 10) {
-      newGold = newSilver / 10;
-      newSilver = newSilver % 10;
-    }
-    // We don't simplify platinums, as they are not widely used.
-
-    if (copper == newCopper && silver == newSilver && gold == newGold) {
-      return this;
-    }
-
-    return new Money(platinum, newGold, newSilver, newCopper, armor, weapon);
+  @Override
+  public int hashCode() {
+    return Objects.hash(platinum, gold, silver, copper, armor, weapon);
   }
 
-  public Money resolveMagic() {
-    return new Money(platinum, gold + armor * armor * 1000 + weapon * weapon * 2000, silver, copper,
-        0, 0);
-  }
-
-  public static Money fromProto(Value.MoneyProto proto) {
-    return new Money(proto.getPlatinum(), proto.getGold(), proto.getSilver(), proto.getCopper(),
-        proto.getMagicArmor(), proto.getMagicWeapon());
-  }
-
-  public Value.MoneyProto toProto() {
-    return Value.MoneyProto.newBuilder()
-        .setPlatinum(platinum)
-        .setGold(gold)
-        .setSilver(silver)
-        .setCopper(copper)
-        .setMagicArmor(armor)
-        .setMagicWeapon(weapon)
-        .build();
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Money money = (Money) o;
+    return platinum == money.platinum &&
+        gold == money.gold &&
+        silver == money.silver &&
+        copper == money.copper &&
+        armor == money.armor &&
+        weapon == money.weapon;
   }
 
   @Override
@@ -251,33 +171,58 @@ public class Money {
     return Strings.SPACE_JOINER.join(parts);
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    Money money = (Money) o;
-    return platinum == money.platinum &&
-        gold == money.gold &&
-        silver == money.silver &&
-        copper == money.copper &&
-        armor == money.armor &&
-        weapon == money.weapon;
+  public Money multiply(int factor) {
+    if (factor == 1) {
+      return this;
+    }
+    if (factor == 0) {
+      return ZERO;
+    }
+
+    if (armor != 0 || weapon != 0) {
+      throw new IllegalStateException("Cannot multiply value with armor or weapon bonuses!");
+    }
+
+    return new Money(platinum * factor, gold * factor, silver * factor, copper * factor, 0, 0)
+        .simplify();
   }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(platinum, gold, silver, copper, armor, weapon);
+  public Money resolveMagic() {
+    return new Money(platinum, gold + armor * armor * 1000 + weapon * weapon * 2000, silver, copper,
+        0, 0);
   }
 
-  public static Money read(Map<String, Object> data) {
-    int platinum = (int) Values.get(data, FIELD_PLATINUM, 0);
-    int gold = (int) Values.get(data, FIELD_GOLD, 0);
-    int silver = (int) Values.get(data, FIELD_SILVER, 0);
-    int copper = (int) Values.get(data, FIELD_COPPER, 0);
-    int armor = (int) Values.get(data, FIELD_ARMOR, 0);
-    int weapon = (int) Values.get(data, FIELD_WEAPON, 0);
+  public Money simplify() {
+    int newCopper = copper;
+    int newSilver = silver;
+    int newGold = gold;
 
-    return new Money(platinum, gold, silver, copper, armor, weapon);
+    if (newCopper > 10) {
+      newSilver = newCopper / 10;
+      newCopper = newCopper % 10;
+    }
+    if (newSilver > 10) {
+      newGold = newSilver / 10;
+      newSilver = newSilver % 10;
+    }
+    // We don't simplify platinums, as they are not widely used.
+
+    if (copper == newCopper && silver == newSilver && gold == newGold) {
+      return this;
+    }
+
+    return new Money(platinum, newGold, newSilver, newCopper, armor, weapon);
+  }
+
+  public Value.MoneyProto toProto() {
+    return Value.MoneyProto.newBuilder()
+        .setPlatinum(platinum)
+        .setGold(gold)
+        .setSilver(silver)
+        .setCopper(copper)
+        .setMagicArmor(armor)
+        .setMagicWeapon(weapon)
+        .build();
   }
 
   public Map<String, Object> write() {
@@ -290,5 +235,59 @@ public class Money {
     data.put(FIELD_WEAPON, weapon);
 
     return data;
+  }
+
+  public static Money armor(int amount) {
+    return new Money(0, 0, 0, 0, amount, 0);
+  }
+
+  public static Money copper(int amount) {
+    return new Money(0, 0, 0, amount, 0, 0);
+  }
+
+  public static Money fromProto(Value.MoneyProto proto) {
+    return new Money(proto.getPlatinum(), proto.getGold(), proto.getSilver(), proto.getCopper(),
+        proto.getMagicArmor(), proto.getMagicWeapon());
+  }
+
+  public static Money gold(int amount) {
+    return new Money(0, amount, 0, 0, 0, 0);
+  }
+
+  public static Optional<Money> parse(String text) {
+    try {
+      List<Integer> values = PARSER.parse(text);
+      return Optional.of(new Money(
+          values.get(0), values.get(1), values.get(2), values.get(3), values.get(4), values.get(5)));
+    } catch (IllegalArgumentException e) {
+      return Optional.empty();
+    }
+  }
+
+  public static Money platinum(int amount) {
+    return new Money(amount, 0, 0, 0, 0, 0);
+  }
+
+  public static Money read(Data data) {
+    int platinum = data.get(FIELD_PLATINUM, 0);
+    int gold = data.get(FIELD_GOLD, 0);
+    int silver = data.get(FIELD_SILVER, 0);
+    int copper = data.get(FIELD_COPPER, 0);
+    int armor = data.get(FIELD_ARMOR, 0);
+    int weapon = data.get(FIELD_WEAPON, 0);
+
+    return new Money(platinum, gold, silver, copper, armor, weapon);
+  }
+
+  public static Money silver(int amount) {
+    return new Money(0, 0, amount, 0, 0, 0);
+  }
+
+  public static boolean validate(String text) {
+    return parse(text).isPresent();
+  }
+
+  public static Money weapon(int amount) {
+    return new Money(0, 0, 0, 0, 0, amount);
   }
 }

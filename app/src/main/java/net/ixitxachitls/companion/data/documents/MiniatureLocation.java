@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.data.documents;
 
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
-import net.ixitxachitls.companion.data.values.Values;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -117,15 +116,5 @@ public class MiniatureLocation extends NestedDocument
             .map(MiniatureFilter::read)
             .collect(Collectors.toList()),
         data.get(FIELD_COLOR, 0));
-  }
-
-  public static MiniatureLocation read(Map<String, Object> data) {
-    String name = Values.get(data, FIELD_NAME, "");
-    List<MiniatureFilter> filters =
-        Values.getRawList(data, FIELD_FILTERS).stream()
-            .map(MiniatureFilter::read).collect(Collectors.toList());
-    int color = (int) Values.get(data, FIELD_COLOR, 0);
-
-    return new MiniatureLocation(name, filters, color);
   }
 }

@@ -264,9 +264,9 @@ public class User extends Document<User> {
   @CallSuper
   protected void read() {
     super.read();
-    nickname = get(FIELD_NICKNAME, DEFAULT_NICKNAME);
-    photoUrl = get(FIELD_PHOTO_URL, "");
-    features = get(FIELD_FEATURES, new ArrayList<>());
+    nickname = data.get(FIELD_NICKNAME, DEFAULT_NICKNAME);
+    photoUrl = data.get(FIELD_PHOTO_URL, "");
+    features = data.getList(FIELD_FEATURES, new ArrayList<>());
   }
 
   @Override

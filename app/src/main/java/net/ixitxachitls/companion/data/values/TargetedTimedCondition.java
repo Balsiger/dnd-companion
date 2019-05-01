@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.values;
 
 import android.support.annotation.Nullable;
 
+import net.ixitxachitls.companion.data.documents.Data;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -93,13 +95,13 @@ public class TargetedTimedCondition {
     return data;
   }
 
-  public static TargetedTimedCondition read(@Nullable Map<String, Object> data) {
+  public static TargetedTimedCondition read(@Nullable Data data) {
     if (data == null) {
       throw new IllegalArgumentException("Data cannot be null");
     }
 
-    List<String> targetIds = Values.get(data, FIELD_TARGET_IDS, Collections.emptyList());
-    TimedCondition condition = TimedCondition.read((Map<String, Object>) data.get(FIELD_CONDITION));
+    List<String> targetIds = data.getList(FIELD_TARGET_IDS, Collections.emptyList());
+    TimedCondition condition = TimedCondition.read(data.getNested(FIELD_CONDITION));
 
     return new TargetedTimedCondition(condition, targetIds);
   }

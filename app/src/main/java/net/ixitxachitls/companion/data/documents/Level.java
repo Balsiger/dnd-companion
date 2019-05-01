@@ -27,7 +27,6 @@ import com.google.common.collect.Multiset;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
-import net.ixitxachitls.companion.data.values.Values;
 import net.ixitxachitls.companion.rules.Levels;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -55,11 +54,11 @@ public class Level extends NestedDocument {
 
   private LevelTemplate template;
   private int hp;
-  private Optional<Ability> abilityIncrease = Optional.empty();
-  private Optional<Feat> feat = Optional.empty();
-  private Optional<Feat> racialFeat = Optional.empty();
-  private Optional<Feat> classFeat = Optional.empty();
-  private List<String> qualities = new ArrayList<>();
+  private Optional<Ability> abilityIncrease;
+  private Optional<Feat> feat;
+  private Optional<Feat> racialFeat;
+  private Optional<Feat> classFeat;
+  private List<String> qualities;
 
   public Level() {
     this(new LevelTemplate(), 0, Optional.empty(), Optional.empty(), Optional.empty(),
@@ -293,23 +292,17 @@ public class Level extends NestedDocument {
     return names;
   }
 
-  public static Level read(Map<String, Object> data, int number) {
-    LevelTemplate template = Templates.get().getOrCreateLevel(Values.get(data, FIELD_TEMPLATE, ""));
-    int hp = (int) Values.get(data, FIELD_HP, 0);
+  public static Level read(Data data, int number) {
+    LevelTemplate template = Templates.get().getOrCreateLevel(data.get(FIELD_TEMPLATE, ""));
+    int hp = (int) data.get(FIELD_HP, 0);
 
-    Optional<Ability> abilityIncrease = Values.get(data, FIELD_ABILITY_INCREASE, "").isEmpty()
+    Optional<Ability> abilityIncrease = data.get(FIELD_ABILITY_INCREASE, "").isEmpty()
         ? Optional.empty()
-        : Optional.of(Ability.fromName(Values.get(data, FIELD_ABILITY_INCREASE, "")));
-    Optional<Feat> feat = Values.has(data, FIELD_FEAT) ?
-        Optional.of(Feat.read(Values.get(data, FIELD_FEAT), "Level " + number))
-        : Optional.empty();
-    Optional<Feat> racialFeat = Values.has(data, FIELD_RACIAL_FEAT) ?
-        Optional.of(Feat.read(Values.get(data, FIELD_RACIAL_FEAT), "Level " + number + " (racial)"))
-        : Optional.empty();
-    Optional<Feat> classFeat = Values.has(data, FIELD_CLASS_FEAT) ?
-        Optional.of(Feat.read(Values.get(data, FIELD_CLASS_FEAT), "Level " + number + " (class)"))
-        : Optional.empty();
-    List<String> qualities = Values.get(data, FIELD_QUALITIES, Collections.emptyList());
+        : Optional.of(Ability.fromName(data.get(FIELD_ABILITY_INCREASE, "")));
+    Optional<Feat> feat = data.read(FIELD_FEAT, d -> Feat.read(d, "Level " + number));
+    Optional<Feat> racialFeat = data.read(FIELD_RACIAL_FEAT, d -> Feat.read(d, "Level " + number));
+    Optional<Feat> classFeat = data.read(FIELD_CLASS_FEAT, d -> Feat.read(d, "Level " + number));
+    List<String> qualities = data.getList(FIELD_QUALITIES, Collections.emptyList());
     return new Level(template, hp, abilityIncrease, feat, racialFeat, classFeat, qualities);
   }
 

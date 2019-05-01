@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.values;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.documents.NestedDocument;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.util.Strings;
@@ -395,11 +396,11 @@ public class Item extends NestedDocument {
         .collect(Collectors.toList()));
   }
 
-  public static Item read(Map<String, Object> data) {
-    String id = Values.get(data, FIELD_ID, "(no id)");
-    String name = Values.get(data, FIELD_NAME, "(no name)");
+  public static Item read(Data data) {
+    String id = data.get(FIELD_ID, "(no id)");
+    String name = data.get(FIELD_NAME, "(no name)");
     List<ItemTemplate> templates = new ArrayList<>();
-    for (String templateName : Values.get(data, FIELD_TEMPLATES, Collections.emptyList())) {
+    for (String templateName : data.getList(FIELD_TEMPLATES, Collections.<String>emptyList())) {
       Optional<ItemTemplate> template = Templates.get().getItemTemplates().get(templateName);
       if (template.isPresent()) {
         templates.add(template.get());
@@ -407,20 +408,19 @@ public class Item extends NestedDocument {
         Status.error("Cannot find item template " + templateName);
       }
     }
-    int hp = (int) Values.get(data, FIELD_HP, 0);
-    Money value = Money.read(Values.get(data, FIELD_VALUE));
-    String appearance = Values.get(data, FIELD_APPEARANCE, "");
-    String playerName = Values.get(data, FIELD_PLAYER_NAME, "");
-    String playerNotes = Values.get(data, FIELD_PLAYER_NOTES, "");
-    String dmNotes = Values.get(data, FIELD_DM_NOTES, "");
-    int multiple = (int) Values.get(data, FIELD_MULTIPLE, 0);
-    int multiuse = (int) Values.get(data, FIELD_MULTIUSE, 0);
-    Duration timeLeft = Duration.read(Values.get(data, FIELD_TIME_LEFT));
-    boolean identified = Values.get(data, FIELD_IDENTIFIED, false);
-    List<Item> contents = new ArrayList<>();
-    for (Map<String, Object> item : Values.getRawList(data, FIELD_CONTENTS)) {
-      contents.add(Item.read(item));
-    }
+    int hp = data.get(FIELD_HP, 0);
+    Money value = Money.read(data.getNested(FIELD_VALUE));
+    String appearance = data.get(FIELD_APPEARANCE, "");
+    String playerName = data.get(FIELD_PLAYER_NAME, "");
+    String playerNotes = data.get(FIELD_PLAYER_NOTES, "");
+    String dmNotes = data.get(FIELD_DM_NOTES, "");
+    int multiple = data.get(FIELD_MULTIPLE, 0);
+    int multiuse = data.get(FIELD_MULTIUSE, 0);
+    Duration timeLeft = Duration.read(data.getNested(FIELD_TIME_LEFT));
+    boolean identified = data.get(FIELD_IDENTIFIED, false);
+    List<Item> contents = data.getNestedList(FIELD_CONTENTS).stream()
+        .map(Item::read)
+        .collect(Collectors.toList());
 
     return new Item(id, name, templates, hp, value, appearance, playerName, playerNotes, dmNotes,
         multiple, multiuse, timeLeft, identified, contents);

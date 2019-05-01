@@ -40,17 +40,6 @@ public class Adventure extends Document<Adventure> {
 
   private String name;
 
-  public static Adventure create(CompanionContext context, String campaignId, String name) {
-    Adventure adventure = Document.create(FACTORY, context, campaignId + "/" + Adventures.PATH);
-    adventure.name = name;
-
-    return adventure;
-  }
-
-  protected static Adventure fromData(CompanionContext context, DocumentSnapshot snapshot) {
-    return Document.fromData(FACTORY, context, snapshot);
-  }
-
   public String getName() {
     return name;
   }
@@ -64,7 +53,7 @@ public class Adventure extends Document<Adventure> {
   protected void read() {
     super.read();
 
-    name = get(FIELD_NAME, "");
+    name = data.get(FIELD_NAME, "");
   }
 
   @Override
@@ -72,5 +61,16 @@ public class Adventure extends Document<Adventure> {
     data.put(FIELD_NAME, name);
 
     return data;
+  }
+
+  public static Adventure create(CompanionContext context, String campaignId, String name) {
+    Adventure adventure = Document.create(FACTORY, context, campaignId + "/" + Adventures.PATH);
+    adventure.name = name;
+
+    return adventure;
+  }
+
+  protected static Adventure fromData(CompanionContext context, DocumentSnapshot snapshot) {
+    return Document.fromData(FACTORY, context, snapshot);
   }
 }

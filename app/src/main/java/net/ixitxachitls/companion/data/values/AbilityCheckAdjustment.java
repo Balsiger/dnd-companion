@@ -21,9 +21,9 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.enums.Ability;
 
-import java.util.Map;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -58,9 +58,9 @@ public class AbilityCheckAdjustment extends AbilityAdjustment {
     return Optional.empty();
   }
 
-  public static AbilityCheckAdjustment readAbility(Map<String, Object> data) {
-    Ability ability = Values.get(data, FIELD_ABILITY, Ability.UNKNOWN);
-    Modifier modifier = Modifier.read(Values.get(data, FIELD_MODIFIER));
+  public static AbilityCheckAdjustment readAbility(Data data) {
+    Ability ability = data.get(FIELD_ABILITY, Ability.UNKNOWN);
+    Modifier modifier = Modifier.read(data.getNested(FIELD_MODIFIER));
 
     return new AbilityCheckAdjustment(ability, modifier);
   }

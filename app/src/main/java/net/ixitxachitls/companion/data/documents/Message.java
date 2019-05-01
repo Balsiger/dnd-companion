@@ -107,15 +107,15 @@ public class Message extends Document<Message> {
   protected void read() {
     super.read();
 
-    targetId = get(FIELD_TARGET, "");
-    sourceId = get(FIELD_SOURCE, "");
-    recipientIds = get(FIELD_RECIPIENTS, new ArrayList<>());
-    type = get(FIELD_TYPE, Type.unknown);
-    xp = (int) get(FIELD_XP, 0);
-    if (has(FIELD_ITEM)) {
-      item = Optional.of(Item.read(get(FIELD_ITEM)));
+    targetId = data.get(FIELD_TARGET, "");
+    sourceId = data.get(FIELD_SOURCE, "");
+    recipientIds = data.get(FIELD_RECIPIENTS, new ArrayList<>());
+    type = data.get(FIELD_TYPE, Type.unknown);
+    xp = data.get(FIELD_XP, 0);
+    if (data.has(FIELD_ITEM)) {
+      item = Optional.of(Item.read(data.getNested(FIELD_ITEM)));
     }
-    text = get(FIELD_TEXT, "");
+    text = data.get(FIELD_TEXT, "");
   }
 
   @Override

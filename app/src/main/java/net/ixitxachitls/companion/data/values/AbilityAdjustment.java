@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.values;
 
 import android.text.Spanned;
 
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.enums.Ability;
 
 import java.util.Map;
@@ -94,9 +95,9 @@ public class AbilityAdjustment extends Adjustment {
     return Optional.empty();
   }
 
-  public static AbilityAdjustment readAbility(Map<String, Object> data) {
-    Ability ability = Values.get(data, FIELD_ABILITY, Ability.UNKNOWN);
-    Modifier modifier = Modifier.read(Values.get(data, FIELD_MODIFIER));
+  public static AbilityAdjustment readAbility(Data data) {
+    Ability ability = data.get(FIELD_ABILITY, Ability.UNKNOWN);
+    Modifier modifier = Modifier.read(data.getNested(FIELD_MODIFIER));
 
     return new AbilityAdjustment(ability, modifier);
   }

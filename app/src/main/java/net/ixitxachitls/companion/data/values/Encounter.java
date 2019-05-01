@@ -30,6 +30,7 @@ import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.CreatureCondition;
 import net.ixitxachitls.companion.data.documents.CreatureConditions;
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.enums.EncounterStatus;
@@ -238,12 +239,12 @@ public class Encounter {
     return lastMonsterName.get();
   }
 
-  public void read(Map<String, Object> data) {
-    number = (int) Values.get(data, FIELD_NUMBER, 0);
-    turn = (int) Values.get(data, FIELD_TURN, 0);
-    status = Values.get(data, FIELD_STATUS, EncounterStatus.ENDED);
-    creatureIds = Values.get(data, FIELD_CREATURES, Collections.emptyList());
-    currentCreatureIndex = (int) Values.get(data, FIELD_CURRENT, 0);
+  public void read(Data data) {
+    number = data.get(FIELD_NUMBER, 0);
+    turn = data.get(FIELD_TURN, 0);
+    status = data.get(FIELD_STATUS, EncounterStatus.ENDED);
+    creatureIds = data.get(FIELD_CREATURES, Collections.emptyList());
+    currentCreatureIndex = data.get(FIELD_CURRENT, 0);
 
     syncCreaturesWithIds(status == EncounterStatus.ENDED || status == EncounterStatus.STARTING);
   }
@@ -468,7 +469,7 @@ public class Encounter {
     }
   }
 
-  public static Encounter read(Campaign campaign, @Nullable Map<String, Object> data) {
+  public static Encounter read(Campaign campaign, @Nullable Data data) {
     Encounter encounter = new Encounter(campaign);
     if (data != null) {
       encounter.read(data);

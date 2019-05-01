@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -40,16 +41,14 @@ import javax.annotation.Nullable;
  */
 public class Duration {
 
+  public static final Duration PERMANENT = new Duration(-1, -1, -1, -1, -1);
+  public static final Duration NULL = new Duration(0, 0, 0, 0, 0);
+  public static final Duration ZERO = NULL;
   private static final String FIELD_ROUNDS = "rounds";
   private static final String FIELD_MINUTES = "minutes";
   private static final String FIELD_HOURS = "hours";
   private static final String FIELD_DAYS = "days";
   private static final String FIELD_YEARS = "years";
-
-  public static final Duration PERMANENT = new Duration(-1, -1, -1, -1, -1);
-  public static final Duration NULL = new Duration(0, 0, 0, 0, 0);
-  public static final Duration ZERO = NULL;
-
   private static final Pattern ROUNDS_ONLLY = Pattern.compile("\\s*(\\d+)\\s*");
   private static final ValueParser PARSER = new IntegerValueParser(
       new ValueParser.Unit("round", "rounds", "r"),
@@ -72,54 +71,6 @@ public class Duration {
     this.years = years;
   }
 
-  public static Duration rounds(int rounds) {
-    return new Duration(rounds, 0, 0, 0, 0);
-  }
-
-  public static Duration time(int years, int days, int hours, int minutes) {
-    return new Duration(0, minutes, hours, days, years);
-  }
-
-  public static Optional<Duration> parse(String input) {
-    Matcher matcher = ROUNDS_ONLLY.matcher(input);
-    if (matcher.matches()) {
-      return Optional.of(Duration.rounds(Integer.parseInt(matcher.group(1))));
-    } else {
-      try {
-        List<Integer> values = PARSER.parse(input);
-        return Optional.of(new Duration(values.get(0), values.get(1), values.get(2), values.get(3),
-            values.get(4)));
-      } catch (IllegalArgumentException e) {
-        return Optional.empty();
-      }
-    }
-  }
-
-  public boolean isNone() {
-    return rounds == 0 && minutes == 0 && hours == 0 && days == 0 && years == 0;
-  }
-
-  public boolean isPermanent() {
-    return rounds == -1 && minutes == -1 && hours == -1 && days == -1 && years == -1;
-  }
-
-  public boolean isRounds() {
-    return rounds != 0 && minutes == 0;
-  }
-
-  public boolean isNegative() {
-    if (isPermanent()) {
-      return false;
-    }
-
-    if (isRounds()) {
-      return rounds < 0;
-    }
-
-    // NOTE(merlin): We assume that either all values are positive or all values are negative.
-    return minutes < 0 || hours < 0 || days < 0 || years < 0;
-  }
-
   public int getDays() {
     return days;
   }
@@ -140,9 +91,68 @@ public class Duration {
     return years;
   }
 
-  public static Duration fromProto(Value.DurationProto proto) {
-    return new Duration(proto.getRounds(), proto.getMinutes(), proto.getHours(),
-        proto.getDays(), proto.getYears());
+  public boolean isNegative() {
+    if (isPermanent()) {
+      return false;
+    }
+
+    if (isRounds()) {
+      return rounds < 0;
+    }
+
+    // NOTE(merlin): We assume that either all values are positive or all values are negative.
+    return minutes < 0 || hours < 0 || days < 0 || years < 0;
+  }
+
+  public boolean isNone() {
+    return rounds == 0 && minutes == 0 && hours == 0 && days == 0 && years == 0;
+  }
+
+  public boolean isPermanent() {
+    return rounds == -1 && minutes == -1 && hours == -1 && days == -1 && years == -1;
+  }
+
+  public boolean isRounds() {
+    return rounds != 0 && minutes == 0;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(rounds, minutes, hours, days, years);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+
+    Duration other = (Duration) o;
+    return rounds == other.rounds
+        && minutes == other.minutes
+        && hours == other.hours
+        && days == other.days
+        && years == other.years;
+  }
+
+  @Override
+  public String toString() {
+    if (isNone()) {
+      return "ending";
+    }
+
+    if (isPermanent()) {
+      return "permanent";
+    }
+
+    if (isNegative()) {
+      return formatUnsigned() + " ago";
+    }
+
+    return formatUnsigned();
   }
 
   public Value.DurationProto toProto() {
@@ -153,24 +163,6 @@ public class Duration {
         .setDays(days)
         .setYears(years)
         .build();
-  }
-
-  public static Duration read(@Nullable Map<String, Object> data) {
-    if (data == null) {
-      return ZERO;
-    }
-
-    int rounds = (int) Values.get(data, FIELD_ROUNDS, 0);
-    int minutes = (int) Values.get(data, FIELD_MINUTES, 0);
-    int hours = (int) Values.get(data, FIELD_HOURS, 0);
-    int days = (int) Values.get(data, FIELD_DAYS, 0);
-    int years = (int) Values.get(data, FIELD_YEARS, 0);
-
-    if (rounds > 0) {
-      return rounds(rounds);
-    }
-
-    return time(years, days, hours, minutes);
   }
 
   public Map<String, Object> write() {
@@ -194,23 +186,6 @@ public class Duration {
     return data;
   }
 
-  @Override
-  public String toString() {
-    if (isNone()) {
-      return "ending";
-    }
-
-    if (isPermanent()) {
-      return "permanent";
-    }
-
-    if (isNegative()) {
-      return formatUnsigned() + " ago";
-    }
-
-    return formatUnsigned();
-  }
-
   private String formatUnsigned() {
     List<String> output = new ArrayList<String>();
     output.add(formatUnsigned(years, "year", "years"));
@@ -230,25 +205,49 @@ public class Duration {
     return Math.abs(value) + " " + (Math.abs(value) == 1 ? unit : pluralUnit);
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-
-    Duration other = (Duration) o;
-    return rounds == other.rounds
-        && minutes == other.minutes
-        && hours == other.hours
-        && days == other.days
-        && years == other.years;
+  public static Duration fromProto(Value.DurationProto proto) {
+    return new Duration(proto.getRounds(), proto.getMinutes(), proto.getHours(),
+        proto.getDays(), proto.getYears());
   }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(rounds, minutes, hours, days, years);
+  public static Optional<Duration> parse(String input) {
+    Matcher matcher = ROUNDS_ONLLY.matcher(input);
+    if (matcher.matches()) {
+      return Optional.of(Duration.rounds(Integer.parseInt(matcher.group(1))));
+    } else {
+      try {
+        List<Integer> values = PARSER.parse(input);
+        return Optional.of(new Duration(values.get(0), values.get(1), values.get(2), values.get(3),
+            values.get(4)));
+      } catch (IllegalArgumentException e) {
+        return Optional.empty();
+      }
+    }
+  }
+
+  public static Duration read(@Nullable Data data) {
+    if (data == null) {
+      return ZERO;
+    }
+
+    int rounds = data.get(FIELD_ROUNDS, 0);
+    int minutes = data.get(FIELD_MINUTES, 0);
+    int hours = data.get(FIELD_HOURS, 0);
+    int days = data.get(FIELD_DAYS, 0);
+    int years = data.get(FIELD_YEARS, 0);
+
+    if (rounds > 0) {
+      return rounds(rounds);
+    }
+
+    return time(years, days, hours, minutes);
+  }
+
+  public static Duration rounds(int rounds) {
+    return new Duration(rounds, 0, 0, 0, 0);
+  }
+
+  public static Duration time(int years, int days, int hours, int minutes) {
+    return new Duration(0, minutes, hours, days, years);
   }
 }

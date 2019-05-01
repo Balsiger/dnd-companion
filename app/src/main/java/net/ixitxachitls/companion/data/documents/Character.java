@@ -41,7 +41,6 @@ import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.rules.XP;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -263,13 +262,12 @@ public class Character extends Creature<Character> implements Comparable<Charact
   @CallSuper
   protected void read() {
     super.read();
-    xp = (int) get(FIELD_XP, 0);
-    level = (int) get(FIELD_LEVEL, DEFAULT_LEVEL);
+    xp = data.get(FIELD_XP, 0);
+    level = data.get(FIELD_LEVEL, DEFAULT_LEVEL);
     levels = new ArrayList<>();
     int i = 1;
-    for (Map<String, Object> level
-        : get(FIELD_LEVELS, Collections.<Map<String, Object>>emptyList())) {
-      levels.add(Level.read(level, i++));
+    for (Data levelData : data.getNestedList(FIELD_LEVELS)) {
+      levels.add(Level.read(levelData, i++));
     }
   }
 
