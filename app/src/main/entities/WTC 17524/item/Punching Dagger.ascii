@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This dagger puts more force from your punch behind it, making it capable of\n  deadly strikes."
+  description: "This dagger puts more force from your punch behind it, making it capable of deadly strikes."
 }
 value {
   gold: 2

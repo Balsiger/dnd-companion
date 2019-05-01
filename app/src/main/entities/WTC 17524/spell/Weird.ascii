@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like phantasmal killer, except it can affect more than\n  one creature.  Only the affected creatures see the phantasmal creatures\n  attacking them, though you see the attackers as shadowy shapes.  If a\n  subject\'s Fortitude save succeeds, it still takes 3d6 points of damage and is\n  stunned for 1 round. The subject also takes 1d4 points of temporary Strength\n  damage."
+  description: "This spell functions like phantasmal killer, except it can affect more than one creature.  Only the affected creatures see the phantasmal creatures attacking them, though you see the attackers as shadowy shapes.  If a subject\'s Fortitude save succeeds, it still takes 3d6 points of damage and is stunned for 1 round. The subject also takes 1d4 points of temporary Strength damage."
 }
 school: ILLUSION
 subschool: PHANTASM

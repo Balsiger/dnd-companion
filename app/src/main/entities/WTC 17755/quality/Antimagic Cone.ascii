@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A beholder\342\200\232\303\204\303\264s central eye continually produces a 150-foot cone of\n  antimagic. This functions just like antimagic field (caster level 13th). All\n  magical and supernatural powers and effects within the cone are\n  suppressed\342\200\232\303\204\303\256even the beholder\342\200\232\303\204\303\264s own eye rays. Once each round, during its\n  turn, the beholder decides whether the antimagic cone is active or not (the\n  beholder deactivates the cone by shutting its central eye)."
+  description: "A beholder\342\200\232\303\204\303\264s central eye continually produces a 150-foot cone of antimagic. This functions just like antimagic field (caster level 13th). All magical and supernatural powers and effects within the cone are suppressed\342\200\232\303\204\303\256even the beholder\342\200\232\303\204\303\264s own eye rays. Once each round, during its turn, the beholder decides whether the antimagic cone is active or not (the beholder deactivates the cone by shutting its central eye)."
 }
 type: SUPERNATURAL

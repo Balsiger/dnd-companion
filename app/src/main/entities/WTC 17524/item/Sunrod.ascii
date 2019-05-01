@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This 1-foot-long, gold-tipped, iron rod glows brightly when struck. It\n  clearly illuminates a 30-foot radius and provides shadowy illumination in a\n  60-foot radius. It glows for 6 hours, after which the gold tip is burned out\n  and worthless. See pages 164 for more rules on illumination."
+  description: "This 1-foot-long, gold-tipped, iron rod glows brightly when struck. It clearly illuminates a 30-foot radius and provides shadowy illumination in a 60-foot radius. It glows for 6 hours, after which the gold tip is burned out and worthless. See pages 164 for more rules on illumination."
 }
 value {
   gold: 2

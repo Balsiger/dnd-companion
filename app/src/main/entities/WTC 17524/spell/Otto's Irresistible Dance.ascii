@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The subject feels an undeniable urge to dance and begins doing so, complete\n  with foot shuffling and tapping. The spell effect makes it impossible for the\n  subject to do anything other than caper and prance in place. The effect\n  imposes a \342\200\232\303\204\303\2544 penalty to Armor Class and a \342\200\232\303\204\303\25410 penalty on Reflex saves, and it\n  negates any AC bonus granted by a shield the target holds. The dancing\n  subject provokes attacks of opportunity each round on its turn."
+  description: "The subject feels an undeniable urge to dance and begins doing so, complete with foot shuffling and tapping. The spell effect makes it impossible for the subject to do anything other than caper and prance in place. The effect imposes a \342\200\232\303\204\303\2544 penalty to Armor Class and a \342\200\232\303\204\303\25410 penalty on Reflex saves, and it negates any AC bonus granted by a shield the target holds. The dancing subject provokes attacks of opportunity each round on its turn."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

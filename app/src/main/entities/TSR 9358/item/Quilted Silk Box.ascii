@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "For mementos, love letters, jewelry, potpourri---whatever you desire---we\n  offer various styles of imported boxes. This is one is made from quilted silk\n  lined with satin from \\Place{Shou Lung}."
+  description: "For mementos, love letters, jewelry, potpourri---whatever you desire---we offer various styles of imported boxes. This is one is made from quilted silk lined with satin from \\Place{Shou Lung}."
   short_description: "A quilted silk box."
 }
 value {

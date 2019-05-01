@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The breastplate and shoulder protectors of this armor are made of leather\n  that has been stiffened by boiling in oil. The rest of the armor is made of\n  softer and more flexible leather."
+  description: "The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by boiling in oil. The rest of the armor is made of softer and more flexible leather."
 }
 value {
   gold: 10

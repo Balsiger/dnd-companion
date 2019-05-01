@@ -19,7 +19,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A crossbow bolt used as a melee weapon is treated as a light improvised\n  weapon (-4 penalty on attack rolls) and deals damage as a dagger of\n  its size (crit x2). Bolts come in a wooden case that holds 10 bolts (or 5,\n  for a repeating crossbow). A bolt that hits its target is destroyed; one that\n  misses has a 50% chance of being destroyed or lost."
+  description: "A crossbow bolt used as a melee weapon is treated as a light improvised weapon (-4 penalty on attack rolls) and deals damage as a dagger of its size (crit x2). Bolts come in a wooden case that holds 10 bolts (or 5, for a repeating crossbow). A bolt that hits its target is destroyed; one that misses has a 50% chance of being destroyed or lost."
 }
 value {
   gold: 1

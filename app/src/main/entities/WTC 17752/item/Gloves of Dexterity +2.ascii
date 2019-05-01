@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These thin leather gloves are very flexible and allow for delicate\n  manipulation. They add to the wearer\'s Dexterity score in the form of an\n  enhancement bonus of +2. Both gloves must be worn for the magic to be\n  effective. "
+  description: "These thin leather gloves are very flexible and allow for delicate manipulation. They add to the wearer\'s Dexterity score in the form of an enhancement bonus of +2. Both gloves must be worn for the magic to be effective. "
   short_description: "Wearing gives +2 enhancement bonus to Dexterity."
 }
 value {

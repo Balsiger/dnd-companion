@@ -16,7 +16,7 @@ template {
       high: 110
     }
   }
-  description: "This iron bar is made for levering closed items open. A crowbar is the\n  perfect tool for prying open doors or chests, shattering chains, and the\n  like, and it grants a +2 circumstance bonus on Strength checks made for such\n  purposes. If used in combat, treat a crowbar as a one-handed improvised\n  weapon (see page 113 of the \\Product[WTC 17524]{Player\'s Handbook}) that\n  deals bludgeoning damage equal to that of a club of its size."
+  description: "This iron bar is made for levering closed items open. A crowbar is the perfect tool for prying open doors or chests, shattering chains, and the like, and it grants a +2 circumstance bonus on Strength checks made for such purposes. If used in combat, treat a crowbar as a one-handed improvised weapon (see page 113 of the \\Product[WTC 17524]{Player\'s Handbook}) that deals bludgeoning damage equal to that of a club of its size."
 }
 value {
   gold: 2

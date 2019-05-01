@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The value given in this column is the total number of \'bonus\' tricks that\n  the animal knows in addition to any that the druid might choose to teach it\n  (see the Handle Animal skill, page 74). These bonus tricks don\342\200\232\303\204\303\264t require any\n  training time or Handle Animal checks, and they don\342\200\232\303\204\303\264t count against the\n  normal limit of tricks known by the animal. The druid selects these bonus\n  tricks, and once selected, they can\342\200\232\303\204\303\264t be changed."
+  description: "The value given in this column is the total number of \'bonus\' tricks that the animal knows in addition to any that the druid might choose to teach it (see the Handle Animal skill, page 74). These bonus tricks don\342\200\232\303\204\303\264t require any training time or Handle Animal checks, and they don\342\200\232\303\204\303\264t count against the normal limit of tricks known by the animal. The druid selects these bonus tricks, and once selected, they can\342\200\232\303\204\303\264t be changed."
 }
 type: EXTRAORDINARY

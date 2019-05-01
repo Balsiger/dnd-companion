@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Each signet ring has a distinctive design carved into it. When you press\n  this ring into warm sealing wax, you leave an identifying mark."
+  description: "Each signet ring has a distinctive design carved into it. When you press this ring into warm sealing wax, you leave an identifying mark."
 }
 value {
   gold: 5

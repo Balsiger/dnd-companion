@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "If you drink antitoxin, you get a +5 alchemical bonus on Fortitude saving\n  throws against poison for 1 hour."
+  description: "If you drink antitoxin, you get a +5 alchemical bonus on Fortitude saving throws against poison for 1 hour."
 }
 value {
   gold: 50

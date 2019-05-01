@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This masterwork lyre (+2 circumstance bonus on Perform [lyre] checks)\n  bestows one negative level on any character who does not have at least 10\n  ranks in Perform (lyre). A character with 10 ranks in Perform (lyre) can use\n  the instrument to cast \\SpellRef{Break Enchantment}, \\SpellRef{Dimension\n  Door}, and \\SpellRef{Shout} once per day. It gives a +5 competence bonus on a\n  bard\'s bardic music checks for countersong, \\Spell{fascinate}, and\n  \\Spell{suggestion}."
+  description: "This masterwork lyre (+2 circumstance bonus on Perform [lyre] checks) bestows one negative level on any character who does not have at least 10 ranks in Perform (lyre). A character with 10 ranks in Perform (lyre) can use the instrument to cast \\SpellRef{Break Enchantment}, \\SpellRef{Dimension Door}, and \\SpellRef{Shout} once per day. It gives a +5 competence bonus on a bard\'s bardic music checks for countersong, \\Spell{fascinate}, and \\Spell{suggestion}."
   short_description: "+2 circumstance bonus on Perform [lyre], +5 to bardi music counterson, fascinate, suggession, 1/day \\SpellRef{Break Enchantment}, \\SpellRef{Dimension Door}, and \\SpellRef{Shout}"
 }
 value {

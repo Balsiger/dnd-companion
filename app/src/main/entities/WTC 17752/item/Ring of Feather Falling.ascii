@@ -14,7 +14,7 @@ template {
       high: 232
     }
   }
-  description: "This ring is crafted with a feather pattern all around its edge. It acts\n  exactly like a feather fallspell, activated im- mediately if the wearer falls\n  more than 5 feet."
+  description: "This ring is crafted with a feather pattern all around its edge. It acts exactly like a feather fallspell, activated im- mediately if the wearer falls more than 5 feet."
 }
 value {
   gold: 2200

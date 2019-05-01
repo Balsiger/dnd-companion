@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This seemingly normal pearl of average size and luster is a potent aid to\n  all spellcasters who prepare spells (clerics, druids, rangers, paladins, and\n  wizards). Once per day on command, a pearl of power enables the possessor to\n  recall any one spell that she had prepared and then cast. The spell is then\n  prepared again, just as if it had not been cast."
+  description: "This seemingly normal pearl of average size and luster is a potent aid to all spellcasters who prepare spells (clerics, druids, rangers, paladins, and wizards). Once per day on command, a pearl of power enables the possessor to recall any one spell that she had prepared and then cast. The spell is then prepared again, just as if it had not been cast."
   short_description: "Restores a spell cast once per day."
 }
 weight {

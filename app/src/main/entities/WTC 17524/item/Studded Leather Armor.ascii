@@ -19,7 +19,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This armor is made from tough but flexible leather (not hardened leather as\n  with normal leather armor) reinforced with close-set metal rivets."
+  description: "This armor is made from tough but flexible leather (not hardened leather as with normal leather armor) reinforced with close-set metal rivets."
 }
 value {
   gold: 25

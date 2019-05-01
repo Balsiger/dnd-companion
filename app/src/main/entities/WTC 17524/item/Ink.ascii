@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This is black ink. You can buy ink in other colors, but it costs twice as\n  much."
+  description: "This is black ink. You can buy ink in other colors, but it costs twice as much."
 }
 value {
   gold: 7

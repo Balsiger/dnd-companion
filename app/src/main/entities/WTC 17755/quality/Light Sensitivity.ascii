@@ -11,6 +11,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The creature is dazzled (-1 to attack, \\Skill{Spot} and \\Skill{Search} in\n  bright sunlight or within the radius of a \\Spell{daylight} spell."
+  description: "The creature is dazzled (-1 to attack, \\Skill{Spot} and \\Skill{Search} in bright sunlight or within the radius of a \\Spell{daylight} spell."
 }
 type: EXTRAORDINARY

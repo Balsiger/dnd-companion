@@ -93,4 +93,4 @@ advancement {
 language {
   name: NONE
 }
-combat: "Giant wasps attack when hungry or threatened, stinging\n                    their prey to death. They take dead or incapacitated\n                    opponents back to their lairs as food for their unhatched\n                    young"
+combat: "Giant wasps attack when hungry or threatened, stinging their prey to death. They take dead or incapacitated opponents back to their lairs as food for their unhatched young"

@@ -1,6 +1,6 @@
 template {
   name: "Good Hiding"
   world: "Generic"
-  description: "The creature has a special racial bonus on any \\Skill{hide} check, which\n  improves in areas of coral, rock, or heavy kelp."
+  description: "The creature has a special racial bonus on any \\Skill{hide} check, which improves in areas of coral, rock, or heavy kelp."
 }
 type: EXTRAORDINARY

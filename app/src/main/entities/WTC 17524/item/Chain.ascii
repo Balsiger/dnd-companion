@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Chain has hardness 10 and 5 hit points. It can be burst with a DC 26\n  Strength check."
+  description: "Chain has hardness 10 and 5 hit points. It can be burst with a DC 26 Strength check."
 }
 value {
   gold: 30

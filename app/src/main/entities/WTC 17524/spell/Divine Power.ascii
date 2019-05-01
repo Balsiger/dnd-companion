@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Calling upon the divine power of your patron, you imbue yourself with\n  strength and skill in combat. Your base attack bonus becomes equal to your\n  character level (which may give you additional attacks), you gain a +6\n  enhancement bonus to Strength, and you gain 1 temporary hit point per caster\n  level."
+  description: "Calling upon the divine power of your patron, you imbue yourself with strength and skill in combat. Your base attack bonus becomes equal to your character level (which may give you additional attacks), you gain a +6 enhancement bonus to Strength, and you gain 1 temporary hit point per caster level."
 }
 school: EVOACATION
 summary: "$level rounds, gain base attack bonus of $level, +6 enhancement bonus to Strengh, $level temporary hit points."

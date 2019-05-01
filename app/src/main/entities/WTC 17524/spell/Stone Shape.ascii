@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can form an existing piece of stone into any shape that suits your\n  purpose. For example, you can make a stone weapon, a special trapdoor, or a\n  crude idol. Stone shape also permits you to reshape a stone door to make an\n  exit where one didn\'t exist or to seal a door shut. While it\'s possible to\n  make crude coffers, doors, and so forth with stone shape, fine detail isn\'t\n  possible.  There is a 30% chance that any shape including moving parts simply\n  doesn\'t work.  Arcane Material Component: Soft clay, which must be worked\n  into roughly the desired shape of the stone object and then touched to the\n  stone while the verbal component is uttered."
+  description: "You can form an existing piece of stone into any shape that suits your purpose. For example, you can make a stone weapon, a special trapdoor, or a crude idol. Stone shape also permits you to reshape a stone door to make an exit where one didn\'t exist or to seal a door shut. While it\'s possible to make crude coffers, doors, and so forth with stone shape, fine detail isn\'t possible.  There is a 30% chance that any shape including moving parts simply doesn\'t work.  Arcane Material Component: Soft clay, which must be worked into roughly the desired shape of the stone object and then touched to the stone while the verbal component is uttered."
 }
 school: TRANSMUTATION
 summary: "Touch stone or stone object of [[10 + $level]] cu. ft is reshaped as desired."

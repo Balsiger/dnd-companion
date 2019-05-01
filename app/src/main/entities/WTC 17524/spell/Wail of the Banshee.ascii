@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You emit a terrible scream that kills creatures that hear it (except for\n  yourself).  Creatures closest to the point of origin are affected first."
+  description: "You emit a terrible scream that kills creatures that hear it (except for yourself).  Creatures closest to the point of origin are affected first."
 }
 school: NECROMANCY
 summary: "$undefined$"

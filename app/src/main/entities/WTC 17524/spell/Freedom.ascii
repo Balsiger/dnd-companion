@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The subject is freed from spells and effects that restrict its movement,\n  including binding, entangle, grappling, imprisonment, maze, paralysis,\n  petrification, pinning, sleep, slow, stunning, temporal stasis, and web. To\n  free a creature from imprisonment or maze, you must know its name and\n  background, and you must cast this spell at the spot where it was entombed or\n  banished into the maze."
+  description: "The subject is freed from spells and effects that restrict its movement, including binding, entangle, grappling, imprisonment, maze, paralysis, petrification, pinning, sleep, slow, stunning, temporal stasis, and web. To free a creature from imprisonment or maze, you must know its name and background, and you must cast this spell at the spot where it was entombed or banished into the maze."
 }
 school: ABJURATION
 summary: "$undefined$"

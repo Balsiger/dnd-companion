@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can keep your balance while walking on a tightrope, a narrow\n  beam, a slippery ledge, or an uneven floor."
+  description: "You can keep your balance while walking on a tightrope, a narrow beam, a slippery ledge, or an uneven floor."
 }
 ability: DEXTERITY
 action: "None. A Balance check doesn\342\200\232\303\204\303\264t require an action; it is                     made as part of another action or as a reaction to a                     situation."

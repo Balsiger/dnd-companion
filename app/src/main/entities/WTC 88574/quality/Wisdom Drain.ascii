@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "If an abyssal ghoul successfully pins a living opponent, it can drain 1d6\n  points of Wisdom with its smoky tongue on the same action. Each round\n  thereafter that the pin is maintained, it automatically drains an additional\n  1d6 points of Wisdom. A creature reduced to 0 Wisdom by an abyssal ghoul\n  becomes unconscious until at least 1 point of Wisdom is restored."
+  description: "If an abyssal ghoul successfully pins a living opponent, it can drain 1d6 points of Wisdom with its smoky tongue on the same action. Each round thereafter that the pin is maintained, it automatically drains an additional 1d6 points of Wisdom. A creature reduced to 0 Wisdom by an abyssal ghoul becomes unconscious until at least 1 point of Wisdom is restored."
 }
 type: SUPERNATURAL

@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You draw a heavy crossbow back by turning a small winch. Loading a heavy\n  crossbow is a full-round action that provokes attacks of opportunity.\n  Normally, operating a heavy crossbow requires two hands.  However, you can\n  shoot, but not load, a heavy crossbow with one hand at a -4 penalty on attack\n  rolls. You can shoot a heavy crossbow with each hand, but you take a penalty\n  on attack rolls as if attacking with two one-handed weapons (see Table 8-10:\n  Two-Weapon Fighting Penalties, page 160 in \\Product[WTC 17524]{Player\'s\n  Handbook}). This penalty is cumulative with the penalty for one-handed\n  firing."
+  description: "You draw a heavy crossbow back by turning a small winch. Loading a heavy crossbow is a full-round action that provokes attacks of opportunity. Normally, operating a heavy crossbow requires two hands.  However, you can shoot, but not load, a heavy crossbow with one hand at a -4 penalty on attack rolls. You can shoot a heavy crossbow with each hand, but you take a penalty on attack rolls as if attacking with two one-handed weapons (see Table 8-10: Two-Weapon Fighting Penalties, page 160 in \\Product[WTC 17524]{Player\'s Handbook}). This penalty is cumulative with the penalty for one-handed firing."
 }
 value {
   gold: 50

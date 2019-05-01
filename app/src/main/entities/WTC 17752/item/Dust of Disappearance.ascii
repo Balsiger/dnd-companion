@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This dust looks just like dust of appearance and is typically stored in the\n  same manner. A creature or object touched by it becomes invisible (as greater\n  invisibility).  Normal vision can\342\200\232\303\204\303\264t see dusted creatures or objects, nor can\n  they be detected by magical means, including see invisibility or invisibility\n  purge. Dust of appearance, however, does reveal people and objects made\n  invisible by dust of disappearance. Other factors, such as sound and smell,\n  also allow possible detection.  The greater invisibility bestowed by the dust\n  lasts for 2d6 rounds.\n\n  The invisible creature doesn\342\200\232\303\204\303\264t know when the duration will end."
+  description: "This dust looks just like dust of appearance and is typically stored in the same manner. A creature or object touched by it becomes invisible (as greater invisibility).  Normal vision can\342\200\232\303\204\303\264t see dusted creatures or objects, nor can they be detected by magical means, including see invisibility or invisibility purge. Dust of appearance, however, does reveal people and objects made invisible by dust of disappearance. Other factors, such as sound and smell, also allow possible detection.  The greater invisibility bestowed by the dust lasts for 2d6 rounds. \n\nThe invisible creature doesn\342\200\232\303\204\303\264t know when the duration will end."
   short_description: "Greater Invisibility for 2d6 rounds, cannot be seen with \\Spell{see invisiblity} or \\Spell{invisibility purge}."
 }
 value {

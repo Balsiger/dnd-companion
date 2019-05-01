@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The kama is a special monk weapon. This designation gives a \\Class{monk}\n  wielding a kama special options.\n\n  Because of a kama\'s shape, you can use it to make trip attacks. If you are\n  tripped during your own trip attempt, you can drop the kama to avoid being\n  tripped."
+  description: "The kama is a special monk weapon. This designation gives a \\Class{monk} wielding a kama special options. \n\nBecause of a kama\'s shape, you can use it to make trip attacks. If you are tripped during your own trip attempt, you can drop the kama to avoid being tripped."
 }
 value {
   gold: 2

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell increases your base land speed by 10 feet. (This adjustment\n  counts as an enhancement bonus.) It has no effect on other modes of movement,\n  such as burrow, climb, fly, or swim.  Material Component: A pinch of dirt."
+  description: "This spell increases your base land speed by 10 feet. (This adjustment counts as an enhancement bonus.) It has no effect on other modes of movement, such as burrow, climb, fly, or swim.  Material Component: A pinch of dirt."
 }
 school: TRANSMUTATION
 summary: "$undefined$"

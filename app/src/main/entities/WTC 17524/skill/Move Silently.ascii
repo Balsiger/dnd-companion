@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can use this skill to sneak up behind an enemy or to slink away without\n  being noticed."
+  description: "You can use this skill to sneak up behind an enemy or to slink away without being noticed."
 }
 ability: DEXTERITY
 action: "None. A Move Silently check is included in your move-                     ment or other activity, so it is part of another action."

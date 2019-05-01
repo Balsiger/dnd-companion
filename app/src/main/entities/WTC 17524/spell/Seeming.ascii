@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like disguise self, except that you can change the\n  appearance of other people as well. Affected creatures resume their normal\n  appearances if slain.  Unwilling targets can negate the spell\'s effect on\n  them by making Will saves or with spell resistance."
+  description: "This spell functions like disguise self, except that you can change the appearance of other people as well. Affected creatures resume their normal appearances if slain.  Unwilling targets can negate the spell\'s effect on them by making Will saves or with spell resistance."
 }
 school: ILLUSION
 subschool: GLAMER

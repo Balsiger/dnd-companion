@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "The creature is immune to mind-affecting effects, poison, sleep, paralysis,\n  stunning, disease, death effects, necromantic effects, and any effect that\n  requires a Fortitude save unless it also works on objects. It is not subject\n  to critical hits, subdual damage, ability damage, ability drain, energy\n  drain, or death from massive damage. A wraith spider cannot be raised, and\n  resurrection works only if it is willing."
+  description: "The creature is immune to mind-affecting effects, poison, sleep, paralysis, stunning, disease, death effects, necromantic effects, and any effect that requires a Fortitude save unless it also works on objects. It is not subject to critical hits, subdual damage, ability damage, ability drain, energy drain, or death from massive damage. A wraith spider cannot be raised, and resurrection works only if it is willing."
 }
 type: EXTRAORDINARY

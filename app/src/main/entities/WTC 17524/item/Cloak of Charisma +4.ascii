@@ -2,7 +2,7 @@ template {
   name: "Cloak of Charisma +4"
   base: "cloak of charisma +2"
   synonym: "Charisma +4, Cloak"
-  description: "This lightweight and fashionable cloak has a highly decorative silver\n  trim. When in a character\'s possession, it adds a +4 enhancement bonus to her\n  Charisma score."
+  description: "This lightweight and fashionable cloak has a highly decorative silver trim. When in a character\'s possession, it adds a +4 enhancement bonus to her Charisma score."
   short_description: "Gives a +4 enhancement bonus to Charisma."
 }
 value {

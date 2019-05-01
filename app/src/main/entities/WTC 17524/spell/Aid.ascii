@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Aid grants the target a +1 morale bonus on attack rolls and saves against\n  fear effects, plus temporary hit points equal to 1d8 + caster level (to a\n  maximum of 1d8+10 tem-porary hit points at caster level 10th)."
+  description: "Aid grants the target a +1 morale bonus on attack rolls and saves against fear effects, plus temporary hit points equal to 1d8 + caster level (to a maximum of 1d8+10 tem-porary hit points at caster level 10th)."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The nunchaku is a special monk weapon. This designation gives a monk\n  wielding a nunchaku special options. With a nunchaku, you get a +2 bonus on\n  opposed attack rolls made to disarm an enemy (including the roll to avoid\n  being disarmed if such an attempt fails)."
+  description: "The nunchaku is a special monk weapon. This designation gives a monk wielding a nunchaku special options. With a nunchaku, you get a +2 bonus on opposed attack rolls made to disarm an enemy (including the roll to avoid being disarmed if such an attempt fails)."
 }
 value {
   gold: 2

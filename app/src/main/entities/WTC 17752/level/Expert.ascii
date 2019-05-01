@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Experts operate as craftsfolk and professionals in the world. They normally do not have the inclination or training to be adventurers,\nbut they are capable in their own field. The skilled blacksmith, the astute barrister, the canny merchant, the educated sage, and the master shipwright are all experts.\n\nThe expert could make a PC-worthy class choice, but only for those players willing to create a character focused on something other than a traditional adventuring career. Experts have a vast range of skills. Most towns and communities have at least a few experts in various fields. DMs should use the expert class for NPCs such as elite craftsfolk, experienced merchants, seasoned guides, and other highly skilled professionals."
+  description: "Experts operate as craftsfolk and professionals in the world. They normally do not have the inclination or training to be adventurers, but they are capable in their own field. The skilled blacksmith, the astute barrister, the canny merchant, the educated sage, and the master shipwright are all experts.\n\nThe expert could make a PC-worthy class choice, but only for those players willing to create a character focused on something other than a traditional adventuring career. Experts have a vast range of skills. Most towns and communities have at least a few experts in various fields. DMs should use the expert class for NPCs such as elite craftsfolk, experienced merchants, seasoned guides, and other highly skilled professionals."
   short_description: "Experts operate as craftsfolk and professionals in the world."
 }
 abbreviation: "Exp"

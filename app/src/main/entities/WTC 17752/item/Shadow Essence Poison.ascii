@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Injury, Fortitude save DC 17; initial damage 1 point of Strength drain,\n   secondary damage 2d6 points of Strength damage."
+  description: "Injury, Fortitude save DC 17; initial damage 1 point of Strength drain, secondary damage 2d6 points of Strength damage."
   short_description: "Injury For DC 17, Str 1 drain/2d6 Str damage"
 }
 value {

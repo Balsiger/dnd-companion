@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like shadow conjuration, except that it can duplicate\n  any sorcerer or wizard conjuration (summoning) or conjuration (creation)\n  spell of 6th level or lower. The illusory conjurations created deal\n  three-fifths (60%) damage to nonbelievers, and nondamaging effects are 60%\n  likely to work against nonbelievers."
+  description: "This spell functions like shadow conjuration, except that it can duplicate any sorcerer or wizard conjuration (summoning) or conjuration (creation) spell of 6th level or lower. The illusory conjurations created deal three-fifths (60%) damage to nonbelievers, and nondamaging effects are 60% likely to work against nonbelievers."
 }
 school: ILLUSION
 subschool: SHADOW

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A pale glow surrounds and outlines the subjects. Outlined subjects shed\n  light as candles. Outlined creatures do not benefit from the concealment\n  normally provided by darkness (though a 2nd-level or higher magical darkness\n  effect functions normally), blur, displacement, invisibility, or similar\n  effects. The light is too dim to have any special effect on undead or\n  darkdwelling creatures vulnerable to light. The faerie fire can be blue,\n  green, or violet, according to your choice at the time of casting. The faerie\n  fire does not cause any harm to the objects or creatures thus outlined."
+  description: "A pale glow surrounds and outlines the subjects. Outlined subjects shed light as candles. Outlined creatures do not benefit from the concealment normally provided by darkness (though a 2nd-level or higher magical darkness effect functions normally), blur, displacement, invisibility, or similar effects. The light is too dim to have any special effect on undead or darkdwelling creatures vulnerable to light. The faerie fire can be blue, green, or violet, according to your choice at the time of casting. The faerie fire does not cause any harm to the objects or creatures thus outlined."
 }
 school: EVOACATION
 summary: "[[400 + ($level * 40)]] ft, $level min (D), outline creature or subject with light, canceling concealment, blur, displacement, invisibility, or similar."

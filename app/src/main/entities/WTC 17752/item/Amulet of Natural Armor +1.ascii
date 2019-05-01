@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This amulet, usually crafted from bone or beast scales, toughens the\n  wearer\'s body and flesh, giving him an enhancement bonus to his natural armor\n  bonus of +1."
+  description: "This amulet, usually crafted from bone or beast scales, toughens the wearer\'s body and flesh, giving him an enhancement bonus to his natural armor bonus of +1."
   short_description: "Gives a +1 enhancement bonus to natural armor."
 }
 value {

@@ -18,6 +18,6 @@ template {
     }
   }
   world: "Generic"
-  description: "An earth elemental can start a bull rush maneuver without provoking an\n  attack of opportunity. The combat modifiers given in Earth Mastery, above,\n  also apply to the elemental\342\200\232\303\204\303\264s opposed Strength checks."
+  description: "An earth elemental can start a bull rush maneuver without provoking an attack of opportunity. The combat modifiers given in Earth Mastery, above, also apply to the elemental\342\200\232\303\204\303\264s opposed Strength checks."
 }
 type: EXTRAORDINARY

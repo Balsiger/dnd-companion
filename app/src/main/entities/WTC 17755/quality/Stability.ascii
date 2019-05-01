@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The creature is exceptionally stable on its feet. It has a +4 bonus on ability checks made to resist being bull rushed or tripped when standing on the ground (but not\nwhen climbing, flying, riding, or otherwise not standing firmly on the ground)."
+  description: "The creature is exceptionally stable on its feet. It has a +4 bonus on ability checks made to resist being bull rushed or tripped when standing on the ground (but not when climbing, flying, riding, or otherwise not standing firmly on the ground)."
   short_description: "+4 on ability checks to resist bull rush or trip."
 }
  ability_modifier {

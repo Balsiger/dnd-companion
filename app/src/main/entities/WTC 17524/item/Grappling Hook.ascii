@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "When tied to the end of a \\Item{rope}, a \\Item{grappling hook} can secure\n  the \\Item{rope} to a battlement, window ledge, tree limb, or other\n  protrusion. Throwing a grappling hook successfully requires a \\Skill{Use\n  Rope} check (DC 10, +2 per 10 feet of distance thrown)."
+  description: "When tied to the end of a \\Item{rope}, a \\Item{grappling hook} can secure the \\Item{rope} to a battlement, window ledge, tree limb, or other protrusion. Throwing a grappling hook successfully requires a \\Skill{Use Rope} check (DC 10, +2 per 10 feet of distance thrown)."
 }
 value {
   gold: 1

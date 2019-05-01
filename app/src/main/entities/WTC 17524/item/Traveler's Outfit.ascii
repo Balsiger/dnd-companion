@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This set of clothes consists of boots, a wool skirt or breeches, a sturdy\n  belt, a shirt (perhaps with a vest or jacket), and an ample cloak with a\n  hood."
+  description: "This set of clothes consists of boots, a wool skirt or breeches, a sturdy belt, a shirt (perhaps with a vest or jacket), and an ample cloak with a hood."
 }
 value {
   gold: 1

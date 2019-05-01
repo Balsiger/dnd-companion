@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Each rothe has a mind of such determination that it gains a +4 racial saving\n  throw bonus against Enchantment spells and effects."
+  description: "Each rothe has a mind of such determination that it gains a +4 racial saving throw bonus against Enchantment spells and effects."
 }
 type: EXTRAORDINARY

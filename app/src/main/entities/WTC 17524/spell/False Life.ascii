@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You harness the power of unlife to grant yourself a limited ability to avoid\n  death.  While this spell is in effect, you gain temporary hit points equal to\n  1d10 +1 per caster level (maximum +10).  Material Component: A small amount\n  of alcohol or distilled spirits, which you use to trace certain sigils on\n  your body during casting. These sigils cannot be seen once the alcohol or\n  spirits evaporate."
+  description: "You harness the power of unlife to grant yourself a limited ability to avoid death.  While this spell is in effect, you gain temporary hit points equal to 1d10 +1 per caster level (maximum +10).  Material Component: A small amount of alcohol or distilled spirits, which you use to trace certain sigils on your body during casting. These sigils cannot be seen once the alcohol or spirits evaporate."
 }
 school: NECROMANCY
 summary: "$undefined$"

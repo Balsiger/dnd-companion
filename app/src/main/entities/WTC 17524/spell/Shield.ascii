@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Shield creates an invisible, tower shieldsized mobile disk of force that\n  hovers in front of you. It negates magic missile attacks directed at you. The\n  disk also provides a +4 shield bonus to AC. This bonus applies against\n  incorporeal touch attacks, since it is a force effect. The shield has no\n  armor check penalty or arcane spell failure chance. Unlike with a normal\n  tower shield, you can\'t use the shield spell for cover."
+  description: "Shield creates an invisible, tower shieldsized mobile disk of force that hovers in front of you. It negates magic missile attacks directed at you. The disk also provides a +4 shield bonus to AC. This bonus applies against incorporeal touch attacks, since it is a force effect. The shield has no armor check penalty or arcane spell failure chance. Unlike with a normal tower shield, you can\'t use the shield spell for cover."
 }
 school: ABJURATION
 summary: "personal, $level min (D), AC +4 shield, blocks \\Spell{Magic Missile}"

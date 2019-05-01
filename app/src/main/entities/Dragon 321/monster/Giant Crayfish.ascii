@@ -94,8 +94,8 @@ advancement {
 language {
   name: NONE
 }
-encounter: "This massive creature rises from the waters, its large\n                    pincers clacking excitedly as it moves toward you. A\n                    six-limbed, lowbodied crustacean, it holds its large,\n                    narrow claws in front of its body as it moves."
-combat: "Giant crayfish line in wait by heavily trafficked areas,\n                    covering themselves with muck from the lake bottom. They\n                    erupt from the water to ambush prey. While somewhat\n                    ungainly on land, they are capable of great speed in\n                    water. Some crayfish attempt to kill prey on land, but few\n                    ever engage in protracted combat out of the water. Upon\n                    meeting any significant resistance, the giant crayfish\n                    attempts to grapple a single target and drag it under\n                    water, where the environment greatly favors the predator."
+encounter: "This massive creature rises from the waters, its large pincers clacking excitedly as it moves toward you. A six-limbed, lowbodied crustacean, it holds its large, narrow claws in front of its body as it moves."
+combat: "Giant crayfish line in wait by heavily trafficked areas, covering themselves with muck from the lake bottom. They erupt from the water to ambush prey. While somewhat ungainly on land, they are capable of great speed in water. Some crayfish attempt to kill prey on land, but few ever engage in protracted combat out of the water. Upon meeting any significant resistance, the giant crayfish attempts to grapple a single target and drag it under water, where the environment greatly favors the predator."
 skill {
   name: "Swim"
 }

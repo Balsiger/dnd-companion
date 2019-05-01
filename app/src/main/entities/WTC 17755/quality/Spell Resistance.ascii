@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A creature with spell resistance can avoid the effects of spells and spell-like abilities that directly affect it. To determine if a spell or spell-like ability works against a creature with spell resistance, the caster\nmust make a caster level check (1d20 + caster level). If the result equals or exceeds the creature\'s spell resistance of $value, the spell works normally, although the creature is still allowed a saving throw."
+  description: "A creature with spell resistance can avoid the effects of spells and spell-like abilities that directly affect it. To determine if a spell or spell-like ability works against a creature with spell resistance, the caster must make a caster level check (1d20 + caster level). If the result equals or exceeds the creature\'s spell resistance of $value, the spell works normally, although the creature is still allowed a saving throw."
   short_description: "Spells and spell-like abilities require a caster level check of $value to work."
 }
 type: EXTRAORDINARY

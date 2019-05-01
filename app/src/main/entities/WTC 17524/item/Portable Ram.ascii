@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This iron-shod wooden beam is the perfect tool for battering down a\n  door. Not only does it gives you a +2 circumstance bonus on Strength checks\n  made to break open a door and it allows a second person to help you without\n  having to roll, increasing your bonus by 2 (see Breaking Items, page 167 in\n  the \\Product[WTC 17524]{Player\'s Handbook})."
+  description: "This iron-shod wooden beam is the perfect tool for battering down a door. Not only does it gives you a +2 circumstance bonus on Strength checks made to break open a door and it allows a second person to help you without having to roll, increasing your bonus by 2 (see Breaking Items, page 167 in the \\Product[WTC 17524]{Player\'s Handbook})."
 }
 value {
   gold: 10

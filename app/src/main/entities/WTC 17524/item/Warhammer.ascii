@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This weapon, favored by \\Monster[dwarf]{dwarves}, is a one-handed sledge or\n  maul with a large, heavy head."
+  description: "This weapon, favored by \\Monster[dwarf]{dwarves}, is a one-handed sledge or maul with a large, heavy head."
 }
 value {
   gold: 12

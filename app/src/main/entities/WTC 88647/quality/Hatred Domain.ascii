@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Choose one opponent. Against that opponent you gain a +2 profane bonus on\n  attack rolls, saving throws, and Armor Class for 1 minute. This supernatural\n  ability is usable once per day as a free action."
+  description: "Choose one opponent. Against that opponent you gain a +2 profane bonus on attack rolls, saving throws, and Armor Class for 1 minute. This supernatural ability is usable once per day as a free action."
 }
 type: SUPERNATURAL

@@ -10,7 +10,7 @@ template {
       high: 127
     }
   }
-  description: "This \\Item{Javelin} becomes a 5d6 \\SpellRef{Lightning Bolt} when thrown\n  (Reflex DC 14 half). It is consumed in the attack."
+  description: "This \\Item{Javelin} becomes a 5d6 \\SpellRef{Lightning Bolt} when thrown (Reflex DC 14 half). It is consumed in the attack."
   short_description: "A javelin that turns into a \\SpellRef[Wiz 5]{lightning bolt} when thrown."
 }
 value {

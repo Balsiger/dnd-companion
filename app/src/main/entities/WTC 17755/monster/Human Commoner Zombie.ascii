@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Zombies are not pleasant to look upon. Drawn from their graves, half decayed\n  and partially consumed by worms, they wear the tattered remains of their\n  burial clothes. A rank odor of death hangs heavy in the air around them."
+  description: "Zombies are not pleasant to look upon. Drawn from their graves, half decayed and partially consumed by worms, they wear the tattered remains of their burial clothes. A rank odor of death hangs heavy in the air around them."
   short_description: "A human zombie."
 }
 size {
@@ -85,5 +85,5 @@ alignment_status: ALWAYS
 language {
   name: NONE
 }
-combat: "Because of their utter lack of intelligence, the\n                    instructions given to a newly created zombie must be very\n                    simple, such as \'Kill anyone who enters this room\'."
-character: "Zombies are corpses reanimated through dark and sinister\n                    magic. These mindless automatons shamble about, doing their\n                    creator\'s bidding without fear or hesitation."
+combat: "Because of their utter lack of intelligence, the instructions given to a newly created zombie must be very simple, such as \'Kill anyone who enters this room\'."
+character: "Zombies are corpses reanimated through dark and sinister magic. These mindless automatons shamble about, doing their creator\'s bidding without fear or hesitation."

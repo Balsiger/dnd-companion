@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The medusa is a hateful, repulsive creature that petrifies living beings with its gaze. It prizes art objects, fine jewelry, and wealth. Its activities often revolve around obtaining these\nitems.\n\nA medusa is indistinguishable from a normal human at distances greater than 30 feet (or closer, if its face is concealed). The creature often wears garments that enhance its body while hiding its face behind a hood or veil.\n\nMedusas are found in nearly every climate. Some dwell in large cities, becoming active in the criminal underworld to gain their desires. A few medusas have formed robbery rings or organized smuggling cabals.\n\nA typical medusa is 5 to 6 feet tall and about the same weight as a human.\n\nMedusas speak Common."
+  description: "The medusa is a hateful, repulsive creature that petrifies living beings with its gaze. It prizes art objects, fine jewelry, and wealth. Its activities often revolve around obtaining these items.\n\nA medusa is indistinguishable from a normal human at distances greater than 30 feet (or closer, if its face is concealed). The creature often wears garments that enhance its body while hiding its face behind a hood or veil.\n\nMedusas are found in nearly every climate. Some dwell in large cities, becoming active in the criminal underworld to gain their desires. A few medusas have formed robbery rings or organized smuggling cabals.\n\nA typical medusa is 5 to 6 feet tall and about the same weight as a human.\n\nMedusas speak Common."
   short_description: "A hateful, repulsive creature that petrifies living beings with its gaze."
 }
 size {
@@ -109,7 +109,7 @@ language {
   modifier: AUTOMATIC
   name: COMMON
 }
-encounter: "Though at first glance this creature appeared to be a well-proportioned human, a closer look reveals a hideous face crowned with a mass of writhing, hissing snakes instead of hair, eyes glowing a deep, feral red, and scaly, earth-colored\nskin."
+encounter: "Though at first glance this creature appeared to be a well-proportioned human, a closer look reveals a hideous face crowned with a mass of writhing, hissing snakes instead of hair, eyes glowing a deep, feral red, and scaly, earth-colored skin."
 combat: "A medusa tries to disguise its true nature until the intended victim is within range of its petrifying gaze, using subterfuge and bluffing games to convince the target that there is no danger. It uses normal weapons to attack those who avert their eyes or survive its gaze, while its poisonous snakes strike at adjacent opponents."
 skill {
   name: "Bluff"

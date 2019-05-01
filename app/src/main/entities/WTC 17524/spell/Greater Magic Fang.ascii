@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like magic fang, except that the enhancement bonus on\n  attack and damage rolls is +1 per four caster levels (maximum +5).\n  Alternatively, you may imbue all of the creature\'s natural weapons with a +1\n  enhancement bonus (regardless of your caster level).  Greater magic fang can\n  be made permanent with a permanency spell."
+  description: "This spell functions like magic fang, except that the enhancement bonus on attack and damage rolls is +1 per four caster levels (maximum +5). Alternatively, you may imbue all of the creature\'s natural weapons with a +1 enhancement bonus (regardless of your caster level).  Greater magic fang can be made permanent with a permanency spell."
 }
 school: TRANSMUTATION
 summary: "For $level hours creature within [[25 * (5 * ($level / 2))]] gets +[[min(5, ($level / 4))]] enhancement bonus to attack and damage or +1 for all attacks."

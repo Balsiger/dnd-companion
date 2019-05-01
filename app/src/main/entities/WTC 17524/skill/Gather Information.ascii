@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill for making contacts in an area, finding out local gossip,\n  rumormongering, and collecting general information."
+  description: "Use this skill for making contacts in an area, finding out local gossip, rumormongering, and collecting general information."
 }
 ability: CHARISMA
 action: "A typical Gather Information check takes 1d4+1 hours."

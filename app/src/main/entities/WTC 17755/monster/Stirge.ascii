@@ -68,8 +68,8 @@ alignment_status: ALWAYS
 language {
   name: NONE
 }
-encounter: "This nasty-looking creature seems to be a cross between a\n                    bat and a giant mosquito. It has membranous bat wings, a\n                    short furry body, eight jointed legs that end in sharp\n                    pincers, and a needlelike proboscis."
-combat: "A stirge attacks by landing on a victim, finding a\n                    vulnerable spot, and plunging its proboscis into the\n                    flesh. This is a touch attack and can target only Small or\n                    larger creatures."
+encounter: "This nasty-looking creature seems to be a cross between a bat and a giant mosquito. It has membranous bat wings, a short furry body, eight jointed legs that end in sharp pincers, and a needlelike proboscis."
+combat: "A stirge attacks by landing on a victim, finding a vulnerable spot, and plunging its proboscis into the flesh. This is a touch attack and can target only Small or larger creatures."
 skill {
   name: "Hide"
 }

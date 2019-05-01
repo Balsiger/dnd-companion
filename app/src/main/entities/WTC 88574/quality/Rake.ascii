@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "On any round that a nycaloth has a hold on an opponent (see Improved Grab),\n  it can make two rake attacks (+15 melee) with its hind legs for 1d6+5 points\n  of damage each."
+  description: "On any round that a nycaloth has a hold on an opponent (see Improved Grab), it can make two rake attacks (+15 melee) with its hind legs for 1d6+5 points of damage each."
 }
 type: EXTRAORDINARY

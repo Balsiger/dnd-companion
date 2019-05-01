@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This is a small sledge light enough to throw. It is favored by\n  \\Monster{dwarves}."
+  description: "This is a small sledge light enough to throw. It is favored by \\Monster{dwarves}."
 }
 value {
   gold: 1

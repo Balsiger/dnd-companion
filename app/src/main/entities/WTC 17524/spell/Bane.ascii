@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "\\Spell{Bane} fills your enemies with fear and doubt. Each affected creature\n  takes a \342\200\232\303\204\303\2541 penalty on attack rolls and a \342\200\232\303\204\303\2541 penalty on saving throws against\n  fear effects.  \\Spell{Bane} counters and dispels \\Spell{bless}."
+  description: "\\Spell{Bane} fills your enemies with fear and doubt. Each affected creature takes a \342\200\232\303\204\303\2541 penalty on attack rolls and a \342\200\232\303\204\303\2541 penalty on saving throws against fear effects.  \\Spell{Bane} counters and dispels \\Spell{bless}."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

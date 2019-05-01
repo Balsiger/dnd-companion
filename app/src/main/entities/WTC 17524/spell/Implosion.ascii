@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You create a destructive resonance in a corporeal creature\'s body. For each\n  round you concentrate, you cause one creature to collapse in on itself,\n  killing it. (This effect, being instantaneous, cannot be dispelled.)  You can\n  target a particular creature only once with each casting of the spell.\n  Implosion has no effect on creatures in gaseous form or on incorporeal\n  creatures."
+  description: "You create a destructive resonance in a corporeal creature\'s body. For each round you concentrate, you cause one creature to collapse in on itself, killing it. (This effect, being instantaneous, cannot be dispelled.)  You can target a particular creature only once with each casting of the spell. Implosion has no effect on creatures in gaseous form or on incorporeal creatures."
 }
 school: EVOACATION
 summary: "One corporeal creature per round within [[25 + (($level / 2) * 5)]] ft Fort [[19 + $ability]] or collapse on itself and killed."

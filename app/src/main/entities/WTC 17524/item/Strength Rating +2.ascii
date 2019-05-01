@@ -2,7 +2,7 @@ template {
   name: "Strength Rating +2"
   base: "strength rating +1"
   synonym: "Strength Rating"
-  description: "A composite longbow can be made with a high strength rating (representing an\n  especially heavy pull) to take advantage of an above-average Strength score;\n  this feature allows you to add your Strength up to +2 as bonus to damage."
+  description: "A composite longbow can be made with a high strength rating (representing an especially heavy pull) to take advantage of an above-average Strength score; this feature allows you to add your Strength up to +2 as bonus to damage."
   short_description: "Allows up to +2 Str bonus to damage."
 }
 value {

@@ -11,6 +11,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A creature who merely passes within 5 feet of a secret or concealed door is\n  entitled to a \\Skill{Search} check to notice it as if he or she were actively\n  looking for the door."
+  description: "A creature who merely passes within 5 feet of a secret or concealed door is entitled to a \\Skill{Search} check to notice it as if he or she were actively looking for the door."
 }
 type: EXTRAORDINARY

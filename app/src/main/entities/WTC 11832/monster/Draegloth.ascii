@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Formed in the unholy union between a newly ordained \\Monster{drow} high priestess and a poweful \\Monster{demon}, a \\Monster{draegloth} is a \\Monster{half-fiend} terror that stalks the \\Place{Underdark}.\nWhile \\Monster{half-fiends} of all varieties are not as rare as one might hope, \\Monster{draegloths} are perhaps the only variety regularly, intentionally, even ritually created by a mortal race. They look like 8-foot-tall \\Monster{drow} \\Monster{elves}, with inky black skin and a knotted mane of yellowish-white hair. Their hides are thick and covered with a fine coat of white hair, and their bodies are powerfully muscled. Two of their four arms end in powerful claws; the other two, much smaller, end in normal that some of these creatures can use for spellcasting. Their faces have a bestial cast, slightly elongated to resemble a dog\'s muzzle, and their mouths are full of vicious, sharp teeth.\nDreagloth have darkvision with a range of 60 feet. They speak Abyssal and Undercommon."
+  description: "Formed in the unholy union between a newly ordained \\Monster{drow} high priestess and a poweful \\Monster{demon}, a \\Monster{draegloth} is a \\Monster{half-fiend} terror that stalks the \\Place{Underdark}. While \\Monster{half-fiends} of all varieties are not as rare as one might hope, \\Monster{draegloths} are perhaps the only variety regularly, intentionally, even ritually created by a mortal race. They look like 8-foot-tall \\Monster{drow} \\Monster{elves}, with inky black skin and a knotted mane of yellowish-white hair. Their hides are thick and covered with a fine coat of white hair, and their bodies are powerfully muscled. Two of their four arms end in powerful claws; the other two, much smaller, end in normal that some of these creatures can use for spellcasting. Their faces have a bestial cast, slightly elongated to resemble a dog\'s muzzle, and their mouths are full of vicious, sharp teeth. Dreagloth have darkvision with a range of 60 feet. They speak Abyssal and Undercommon."
   short_description: "A half-fiend between \\Monster{drow} and \\Monster{demon}."
 }
 size {
@@ -120,7 +120,7 @@ language {
   modifier: AUTOMATIC
   name: UNDERCOMMON
 }
-encounter: "Draegloths look like 8-foot-tall \\Monster{drow} \\Monster{elves}, with inky black skin and a knotted mane of yellowish-white hair. Their hides are thick and covered with a fine coat of white hair, and their bodies are powerfully muscled. Two of their four arms end in powerful claws; the other two, much smaller, end in normal that some of these creatures can use for spellcasting. Their faces have a bestial cast, slightly elongated to resemble a dog\'s muzzle, and their mouths are full of vicious, sharp teeth.\n"
+encounter: "Draegloths look like 8-foot-tall \\Monster{drow} \\Monster{elves}, with inky black skin and a knotted mane of yellowish-white hair. Their hides are thick and covered with a fine coat of white hair, and their bodies are powerfully muscled. Two of their four arms end in powerful claws; the other two, much smaller, end in normal that some of these creatures can use for spellcasting. Their faces have a bestial cast, slightly elongated to resemble a dog\'s muzzle, and their mouths are full of vicious, sharp teeth. "
 skill {
   name: "Hide"
 }

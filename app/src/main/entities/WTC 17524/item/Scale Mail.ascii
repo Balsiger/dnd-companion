@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This armor consists of a coat and leggings (and perhaps a separate skirt) of\n  leather covered with overlapping pieces of metal, much like the scales of a\n  fish. The suit includes gauntlets."
+  description: "This armor consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets."
 }
 value {
   gold: 50

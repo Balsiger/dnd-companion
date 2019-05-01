@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "At death, all remaining electrical force remaining in the death kiss\' body\n  shoots out of its corpse. All beings withing a 5- to 50-foot radious spread\n  (1d10 x 5) must make a Reflex save or suffer 2d10 points of electrical\n  damage."
+  description: "At death, all remaining electrical force remaining in the death kiss\' body shoots out of its corpse. All beings withing a 5- to 50-foot radious spread (1d10 x 5) must make a Reflex save or suffer 2d10 points of electrical damage."
 }
 type: EXTRAORDINARY

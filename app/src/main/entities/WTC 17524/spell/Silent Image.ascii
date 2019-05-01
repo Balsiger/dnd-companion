@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell creates the visual illusion of an object, creature, or force, as\n  visualized by you. The illusion does not create sound, smell, texture, or\n  temperature. You can move the image within the limits of the size of the\n  effect.  Focus: A bit of fleece."
+  description: "This spell creates the visual illusion of an object, creature, or force, as visualized by you. The illusion does not create sound, smell, texture, or temperature. You can move the image within the limits of the size of the effect.  Focus: A bit of fleece."
 }
 school: ILLUSION
 subschool: FIGMENT

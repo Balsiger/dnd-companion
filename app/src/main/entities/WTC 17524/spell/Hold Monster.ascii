@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like hold person, except that it affects any living\n  creature that fails its Will save.  Arcane Material Component: One hard metal\n  bar or rod, which can be as small as a three-penny nail."
+  description: "This spell functions like hold person, except that it affects any living creature that fails its Will save.  Arcane Material Component: One hard metal bar or rod, which can be as small as a three-penny nail."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

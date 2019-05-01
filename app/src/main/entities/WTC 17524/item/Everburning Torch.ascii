@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This otherwise normal torch has a continual flame spell cast upon it. An\n  everburning torch clearly illuminates a 20-foot radius and provides shadowy\n  illumination out to a 40-foot radius. See page 164 in the \\Product[WTC\n  17524]{Player\'s Handbook} for more rules on illumination."
+  description: "This otherwise normal torch has a continual flame spell cast upon it. An everburning torch clearly illuminates a 20-foot radius and provides shadowy illumination out to a 40-foot radius. See page 164 in the \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination."
 }
 value {
   gold: 110

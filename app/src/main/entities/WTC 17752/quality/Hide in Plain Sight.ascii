@@ -11,6 +11,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A shadowdancer can use the Hide skill even while being observed. As long as\n  she is within 10 feet of some sort of shadow, a shadowdancer can hide herself\n  from view in the open without anything to actually hide behind. She cannot,\n  however, hide in her own shadow."
+  description: "A shadowdancer can use the Hide skill even while being observed. As long as she is within 10 feet of some sort of shadow, a shadowdancer can hide herself from view in the open without anything to actually hide behind. She cannot, however, hide in her own shadow."
 }
 type: SUPERNATURAL

@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like heal, except as noted above. The maximum number of\n  hit points restored to each creature is 250."
+  description: "This spell functions like heal, except as noted above. The maximum number of hit points restored to each creature is 250."
 }
 school: CONJURATION
 subschool: HEALING

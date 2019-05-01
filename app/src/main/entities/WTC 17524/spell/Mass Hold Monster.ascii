@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like hold person, except that it affects multiple\n  creatures and holds any living creature that fails its Will save."
+  description: "This spell functions like hold person, except that it affects multiple creatures and holds any living creature that fails its Will save."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

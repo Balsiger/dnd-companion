@@ -17,6 +17,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A druid gains a +4 bonus on saving throws against the spell-like abilities\n  of fey (such as dryads, pixies, and sprites)."
+  description: "A druid gains a +4 bonus on saving throws against the spell-like abilities of fey (such as dryads, pixies, and sprites)."
 }
 type: EXTRAORDINARY

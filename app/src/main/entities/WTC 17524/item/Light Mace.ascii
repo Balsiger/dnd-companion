@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A mace is made of metal, even the haft, which makes it quite heavy and very\n  hard to break."
+  description: "A mace is made of metal, even the haft, which makes it quite heavy and very hard to break."
 }
 value {
   gold: 5

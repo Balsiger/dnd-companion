@@ -3,7 +3,7 @@ template {
   base: "bracers of armor +1"
   synonym: "Armor, Bracers of +6"
   synonym: "+6 Bracers of Armor"
-  description: "These items appear to be wrist or arm guards. They surround the wearer with\n  an invisible but tangible field of force, granting him an armor bonus of +6,\n  just as though he were wearing armor. Both bracers must be worn for the magic\n  to be effective."
+  description: "These items appear to be wrist or arm guards. They surround the wearer with an invisible but tangible field of force, granting him an armor bonus of +6, just as though he were wearing armor. Both bracers must be worn for the magic to be effective."
   short_description: "Bracers providing +6 armor."
 }
 value {

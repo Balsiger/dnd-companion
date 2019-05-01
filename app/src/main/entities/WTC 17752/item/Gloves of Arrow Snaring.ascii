@@ -11,7 +11,7 @@ template {
       high: 257
     }
   }
-  description: "Once snugly worn, these gloves seem to meld with the hands, becoming almost\n  invisible. Twice per day, the wearer can act as if he had the Snatch Arrows\n  feat, even if he does not meet the prerequisites for it. Both gloves must be\n  worn for the magic to be effective. At least one hand must be free to take\n  advantage of the magic."
+  description: "Once snugly worn, these gloves seem to meld with the hands, becoming almost invisible. Twice per day, the wearer can act as if he had the Snatch Arrows feat, even if he does not meet the prerequisites for it. Both gloves must be worn for the magic to be effective. At least one hand must be free to take advantage of the magic."
   short_description: "Twice per day can snatch arrows as the Snatch Arrows feat (once per round while not flat footed catch arrow or range weapon, range weapon can immediately be thrown back)."
 }
 value {

@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "When the creature manifests, it becomes visible but is still incorporeal. It\n  can use its $name against material opponents."
+  description: "When the creature manifests, it becomes visible but is still incorporeal. It can use its $name against material opponents."
 }
 type: SUPERNATURAL

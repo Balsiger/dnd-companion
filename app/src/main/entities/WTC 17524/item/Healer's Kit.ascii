@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This kit is full of herbs, salves, bandages and other useful materials. It\n  is the perfect tool for healing."
+  description: "This kit is full of herbs, salves, bandages and other useful materials. It is the perfect tool for healing."
 }
 value {
   gold: 5

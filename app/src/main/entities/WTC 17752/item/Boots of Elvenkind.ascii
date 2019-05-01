@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These soft boots enable the wearer to move quietly in virtually any\n  surroundings, granting a +5 competence bonus on Move Silently checks."
+  description: "These soft boots enable the wearer to move quietly in virtually any surroundings, granting a +5 competence bonus on Move Silently checks."
   short_description: "Move Silently +5 competence"
 }
 value {

@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "This ability affects only the bebilith. It is otherwise similar to the spell\n   (caster level 12th)."
+  description: "This ability affects only the bebilith. It is otherwise similar to the spell (caster level 12th)."
 }
 type: SUPERNATURAL

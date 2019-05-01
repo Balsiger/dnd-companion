@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A magical arrow of acid springs from your hand and speeds to its target. You\n  must succeed on a ranged touch attack to hit your target. The arrow deals 2d4\n  points of acid damage with no splash damage. For every three caster levels\n  (to a maximum of 18th), the acid, unless somehow neutralized, lasts for\n  another round, dealing another 2d4 points of damage in that round.  Material\n  Component: Powdered rhubarb leaf and an adder\'s stomach.  Focus: A dart."
+  description: "A magical arrow of acid springs from your hand and speeds to its target. You must succeed on a ranged touch attack to hit your target. The arrow deals 2d4 points of acid damage with no splash damage. For every three caster levels (to a maximum of 18th), the acid, unless somehow neutralized, lasts for another round, dealing another 2d4 points of damage in that round.  Material Component: Powdered rhubarb leaf and an adder\'s stomach.  Focus: A dart."
 }
 school: CONJURATION
 subschool: CREATION

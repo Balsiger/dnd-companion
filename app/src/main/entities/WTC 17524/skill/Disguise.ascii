@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to change your appearance or someone else\342\200\232\303\204\303\264s. The effort\n  requires at least a few props, some makeup, and some time.  The use of a\n  disguise kit (page 130) provides a +2 circumstance bonus to a Disguise\n  check. A disguise can include an apparent change of height or weight of no\n  more than one-tenth the original.  You can also use Disguise to impersonate\n  people, either indi- viduals or types. For example, you might, with little or\n  no actual disguise, make yourself seem like a traveller even if you\342\200\232\303\204\303\264re a\n  local."
+  description: "Use this skill to change your appearance or someone else\342\200\232\303\204\303\264s. The effort requires at least a few props, some makeup, and some time.  The use of a disguise kit (page 130) provides a +2 circumstance bonus to a Disguise check. A disguise can include an apparent change of height or weight of no more than one-tenth the original.  You can also use Disguise to impersonate people, either indi- viduals or types. For example, you might, with little or no actual disguise, make yourself seem like a traveller even if you\342\200\232\303\204\303\264re a local."
 }
 ability: CHARISMA
 action: "Creating a disguise requires 1d3\342\210\232\303\26310 minutes of work.  Try                     Again: Yes. You may try to redo a failed disguise, but                     once others know that a disguise was attempted, they\342\200\232\303\204\303\264ll be                     more suspicious."

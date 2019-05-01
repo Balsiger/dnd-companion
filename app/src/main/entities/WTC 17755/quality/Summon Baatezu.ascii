@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Once per day a horned devil can attempt to summon $name. This\n  ability is the equivalent of a $levelth-level spell."
+  description: "Once per day a horned devil can attempt to summon $name. This ability is the equivalent of a $levelth-level spell."
 }
 type: SPELL_LIKE

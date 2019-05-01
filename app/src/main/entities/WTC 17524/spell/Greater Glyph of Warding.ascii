@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like glyph of warding, except that a greater blast\n  glyph deals up to 10d8 points of damage, and a greater spell glyph can store\n  a spell of 6th level or lower.  Material Component: You trace the glyph with\n  incense, which must first be sprinkled with powdered diamond worth at least\n  400 gp."
+  description: "This spell functions like glyph of warding, except that a greater blast glyph deals up to 10d8 points of damage, and a greater spell glyph can store a spell of 6th level or lower.  Material Component: You trace the glyph with incense, which must first be sprinkled with powdered diamond worth at least 400 gp."
 }
 school: ABJURATION
 summary: "$undefined$"

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like protection from evil, except that the deflection\n  and resistance bonuses apply to attacks from lawful creatures, and lawful\n  summoned creatures cannot touch the subject."
+  description: "This spell functions like protection from evil, except that the deflection and resistance bonuses apply to attacks from lawful creatures, and lawful summoned creatures cannot touch the subject."
 }
 school: ABJURATION
 summary: "$undefined$"

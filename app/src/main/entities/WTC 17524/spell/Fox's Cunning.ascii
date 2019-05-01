@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The transmuted creature becomes smarter.  The spell grants a +4 enhancement\n  bonus to Intelligence, adding the usual benefits to Intelligence-based skill\n  checks and other uses of the Intelligence modifier.  Wizards (and other\n  spellcasters who rely on Intelligence) affected by this spell do not gain any\n  additional bonus spells for the increased Intelligence, but the save DCs for\n  spells they cast while under this spell\342\200\232\303\204\303\264s effect do increase. This spell\n  doesn\342\200\232\303\204\303\264t grant extra skill points.  Arcane Material Component: A few hairs, or\n  a pinch of dung, from a fox."
+  description: "The transmuted creature becomes smarter.  The spell grants a +4 enhancement bonus to Intelligence, adding the usual benefits to Intelligence-based skill checks and other uses of the Intelligence modifier.  Wizards (and other spellcasters who rely on Intelligence) affected by this spell do not gain any additional bonus spells for the increased Intelligence, but the save DCs for spells they cast while under this spell\342\200\232\303\204\303\264s effect do increase. This spell doesn\342\200\232\303\204\303\264t grant extra skill points.  Arcane Material Component: A few hairs, or a pinch of dung, from a fox."
 }
 school: TRANSMUTATION
 summary: "$undefined$"

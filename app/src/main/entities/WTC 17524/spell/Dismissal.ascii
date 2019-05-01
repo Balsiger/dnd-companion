@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell forces an extraplanar creature back to its proper plane if it\n  fails a special Will save (DC = spell\342\200\232\303\204\303\264s save DC \342\200\232\303\204\303\254 creature\342\200\232\303\204\303\264s HD + your caster\n  level). If the spell is successful, the creature is instantly whisked away,\n  but there is a 20% chance of actually sending the subject to a plane other\n  than its own."
+  description: "This spell forces an extraplanar creature back to its proper plane if it fails a special Will save (DC = spell\342\200\232\303\204\303\264s save DC \342\200\232\303\204\303\254 creature\342\200\232\303\204\303\264s HD + your caster level). If the spell is successful, the creature is instantly whisked away, but there is a 20% chance of actually sending the subject to a plane other than its own."
 }
 school: ABJURATION
 summary: "Extraplanar creature has to make Will DC $dc - creature\'s HD + your caster level or forced back to its proper plane."

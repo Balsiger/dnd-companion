@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A creature protected by endure elements suffers no harm from being in a hot\n  or cold environment. It can exist comfortably in conditions between \342\200\232\303\204\303\25450 and\n  140 degrees Fahrenheit without having to make Fortitude saves (as described\n  in the Dungeon Master\342\200\232\303\204\303\264s Guide). The creature\342\200\232\303\204\303\264s equipment is likewise\n  protected.  Endure elements doesn\342\200\232\303\204\303\264t provide any protection from fire or cold\n  damage, nor does it protect against other environmental hazards such as\n  smoke, lack of air, and so forth."
+  description: "A creature protected by endure elements suffers no harm from being in a hot or cold environment. It can exist comfortably in conditions between \342\200\232\303\204\303\25450 and 140 degrees Fahrenheit without having to make Fortitude saves (as described in the Dungeon Master\342\200\232\303\204\303\264s Guide). The creature\342\200\232\303\204\303\264s equipment is likewise protected.  Endure elements doesn\342\200\232\303\204\303\264t provide any protection from fire or cold damage, nor does it protect against other environmental hazards such as smoke, lack of air, and so forth."
 }
 school: ABJURATION
 summary: "For 24 hours the creature touched is proteced from hot or cold environments (-50 to 140 Fahrenheit)."

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell imbues a flask (1 pint) of water with negative energy, turning it\n  into unholy water. Unholy water damages good outsiders the way holy water\n  damages undead and evil outsiders.  Material Component: 5 pounds of powdered\n  silver (worth 25 gp)."
+  description: "This spell imbues a flask (1 pint) of water with negative energy, turning it into unholy water. Unholy water damages good outsiders the way holy water damages undead and evil outsiders.  Material Component: 5 pounds of powdered silver (worth 25 gp)."
 }
 school: NECROMANCY
 summary: "$undefined$"

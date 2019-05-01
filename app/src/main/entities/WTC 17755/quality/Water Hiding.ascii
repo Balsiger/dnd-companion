@@ -1,6 +1,6 @@
 template {
   name: "Water Hiding"
   world: "Generic"
-  description: "The creature has a special racial bonus on \\Skill{hide} checks under\n  water."
+  description: "The creature has a special racial bonus on \\Skill{hide} checks under water."
 }
 type: EXTRAORDINARY

@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These garments offer magic protection in the form of a +1 to resistance\n   bonus on all saving throws (Fortitude, Reflex, and Will)."
+  description: "These garments offer magic protection in the form of a +1 to resistance bonus on all saving throws (Fortitude, Reflex, and Will)."
   short_description: "+1 resistance to Fort, Ref, Will"
 }
 value {

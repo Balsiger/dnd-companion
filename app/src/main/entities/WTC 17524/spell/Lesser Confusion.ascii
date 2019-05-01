@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell causes a single creature to become confused for 1 round. See the\n  confusion spell, above, to determine the exact effect on the subject."
+  description: "This spell causes a single creature to become confused for 1 round. See the confusion spell, above, to determine the exact effect on the subject."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Bebiliths are enormous, predatory, arachnid demons that hunt other demons. While they favor preying upon other demons, they aren?t picky?they will stalk and attack any type of creature.\nA bebilith has a body the size of a plow horse, with legs spanning more than 14 feet. It weighs more than two tons.\nBebiliths understand but do not speak Abyssal. Their telepathy allows them to communicate silently with one another."
+  description: "Bebiliths are enormous, predatory, arachnid demons that hunt other demons. While they favor preying upon other demons, they aren?t picky?they will stalk and attack any type of creature. A bebilith has a body the size of a plow horse, with legs spanning more than 14 feet. It weighs more than two tons. Bebiliths understand but do not speak Abyssal. Their telepathy allows them to communicate silently with one another."
 }
 size {
   size: HUGE
@@ -146,7 +146,7 @@ language {
   name: ABYSSAL
 }
 encounter: "An enormous, misshapen spider stalks out of the darkness. Its forelegs end in wicked barbs, and globs of foul goo drip from its fanged mouth."
-combat: "A bebilith attacks any creature it sees. It usually picks one target and concentrates its attacks on that opponent, using its webs to isolate the target from its comrades. Should the bebilith become overwhelmed by tougher opponents, it often attempts to bite one or more of its victims and retreats, allowing its poison to do its work.\nA bebilith?s natural weapons, as well as any weapons it wields, are treated as chaotic-aligned and evil-aligned for the purpose of overcoming damage reduction."
+combat: "A bebilith attacks any creature it sees. It usually picks one target and concentrates its attacks on that opponent, using its webs to isolate the target from its comrades. Should the bebilith become overwhelmed by tougher opponents, it often attempts to bite one or more of its victims and retreats, allowing its poison to do its work. A bebilith?s natural weapons, as well as any weapons it wields, are treated as chaotic-aligned and evil-aligned for the purpose of overcoming damage reduction."
 skill {
   name: "Climb"
 }

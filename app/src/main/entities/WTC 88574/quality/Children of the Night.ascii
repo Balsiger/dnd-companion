@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Once per day, a vampire can summon 4d8 dire rats, 10d10 bats, or 3d6 wolves\n  as a standard action. These creatures arrive in 2d6 rounds and serve the\n  vampire for up to 1 hour."
+  description: "Once per day, a vampire can summon 4d8 dire rats, 10d10 bats, or 3d6 wolves as a standard action. These creatures arrive in 2d6 rounds and serve the vampire for up to 1 hour."
 }
 type: SUPERNATURAL

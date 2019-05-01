@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Oozes have the following traits:\n   \\list\n   {\\bold{Mindless}: No Intelligence score, and immunity to all mind-\n    affecting effects (charms, compulsions, phantasms, patterns, and\n    morale effects).}\n   {\\bold{Blind} (but have the blindsight special quality), with immunity to\n    gaze attacks, visual effects, illusions, and other attack forms\n    that rely on sight.}\n   {Immunity to poison, sleep effects, paralysis, polymorph, and\n    stunning.}\n  {Not subject to critical hits or flanking.}"
+  description: "Oozes have the following traits: \\list {\\bold{Mindless}: No Intelligence score, and immunity to all mind- affecting effects (charms, compulsions, phantasms, patterns, and morale effects).} {\\bold{Blind} (but have the blindsight special quality), with immunity to gaze attacks, visual effects, illusions, and other attack forms that rely on sight.} {Immunity to poison, sleep effects, paralysis, polymorph, and stunning.} {Not subject to critical hits or flanking.}"
 }
 type: EXTRAORDINARY

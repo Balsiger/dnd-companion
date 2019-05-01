@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This simple rope belt, when wrapped around a character\342\210\232\302\242\302\254\303\204\302\254\303\264s waist, confers\n  great ability in unarmed combat. The wearer\342\210\232\302\242\302\254\303\204\302\254\303\264s AC and unarmed damage is\n  treated as a monk of five levels higher. If donned by a character with the\n  Stunning Fist feat, the belt lets her make one additional stunning attack per\n  day. If the character is not a monk, she gains the AC and unarmed damage of a\n  5th-level monk. This AC bonus functions just like the monk\342\210\232\302\242\302\254\303\204\302\254\303\264s AC bonus."
+  description: "This simple rope belt, when wrapped around a character\342\210\232\302\242\302\254\303\204\302\254\303\264s waist, confers great ability in unarmed combat. The wearer\342\210\232\302\242\302\254\303\204\302\254\303\264s AC and unarmed damage is treated as a monk of five levels higher. If donned by a character with the Stunning Fist feat, the belt lets her make one additional stunning attack per day. If the character is not a monk, she gains the AC and unarmed damage of a 5th-level monk. This AC bonus functions just like the monk\342\210\232\302\242\302\254\303\204\302\254\303\264s AC bonus."
   short_description: "Gain AC and unarmed damage of a monk 5 levels higher."
 }
 value {

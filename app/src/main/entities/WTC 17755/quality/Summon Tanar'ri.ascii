@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Once per day a vrock can attempt to summon $random \\Monster{$name} or\n  another vrock with a $chance chance of success. This ability is the\n  equivalent of a 3rd-level spell."
+  description: "Once per day a vrock can attempt to summon $random \\Monster{$name} or another vrock with a $chance chance of success. This ability is the equivalent of a 3rd-level spell."
 }
 type: SPELL_LIKE

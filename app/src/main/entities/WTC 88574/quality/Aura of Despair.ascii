@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Zedarr radiates a malign aura that causes every enemy within 10 feet of him\nto suffer a \342\200\232\303\204\303\2542 morale penalty on all saving throws."
+  description: "Zedarr radiates a malign aura that causes every enemy within 10 feet of him to suffer a \342\200\232\303\204\303\2542 morale penalty on all saving throws."
 }
 type: SUPERNATURAL

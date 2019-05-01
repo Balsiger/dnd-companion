@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You are skilled at making well-placed shots with ranged weapons at close\nrange."
+  description: "You are skilled at making well-placed shots with ranged weapons at close range."
   short_description: "+1 bonus on ranged attack and damage within 30 ft."
 }
 type: FIGHTER

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like dispel evil, except that you are surrounded by\n  dark, wavering, unholy energy, and the spell affects good creatures and\n  spells rather than evil ones."
+  description: "This spell functions like dispel evil, except that you are surrounded by dark, wavering, unholy energy, and the spell affects good creatures and spells rather than evil ones."
 }
 school: ABJURATION
 summary: "Surrounds you with dark, wavering, unholy energy add give you a +4 deflection bonus to AC vs. chaotic creature; can banish good creatures from another plane with successful touch attack (Will DC $dc negates), ending the spell; you can also dispell any one enchantment spell cast by a good creature or a good spell, also ending the spell."

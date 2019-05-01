@@ -10,7 +10,7 @@ template {
       high: 224
     }
   }
-  description: "A bane weapon excels at attacking one type or subtype of creature. Against\n  its designated foe, its effective enhancement bonus is +2 better than its\n  normal enhancement bonus (so a +1 longsword is a +3 longsword against its\n  foe). It deals an extra 2d6 points of damage against the foe. Bows,\n  crossbows, and slings so crafted bestow the bane quality upon their\n  ammunition."
+  description: "A bane weapon excels at attacking one type or subtype of creature. Against its designated foe, its effective enhancement bonus is +2 better than its normal enhancement bonus (so a +1 longsword is a +3 longsword against its foe). It deals an extra 2d6 points of damage against the foe. Bows, crossbows, and slings so crafted bestow the bane quality upon their ammunition."
   short_description: "+2 to attack and +2d6 damage to specific foes."
 }
 probability: COMMON

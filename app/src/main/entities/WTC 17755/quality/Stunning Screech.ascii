@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Once per hour a vrock can emit a piercing screech. All creatures except for\n  demons within a 30-foot radius must succeed on a DC 22 Fortitude save or be\n  stunned for 1 round. The save DC is Constitution-based. "
+  description: "Once per hour a vrock can emit a piercing screech. All creatures except for demons within a 30-foot radius must succeed on a DC 22 Fortitude save or be stunned for 1 round. The save DC is Constitution-based. "
 }
 type: SUPERNATURAL

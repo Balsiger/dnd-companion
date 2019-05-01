@@ -9,7 +9,7 @@ template {
       high: 122
     }
   }
-  description: "A masterwork weapon is a finely crafted version of a normal weapon. Wielding\n   it provides a +1 enhancement bonus on attack rolls.\n\n  You can\'t add the masterwork quality to a weapon after it is created; it must\n  be crafted as a masterwork weapon (see the Craft skill, page 70).\n\n  All magic weapons are automatically considered to be of masterwork\n  quality. The enhancement bonus granted by the masterwork quality doesn\'t\n  stack with the enhancement bonus provided by the weapon\'s magic."
+  description: "A masterwork weapon is a finely crafted version of a normal weapon. Wielding it provides a +1 enhancement bonus on attack rolls. \n\nYou can\'t add the masterwork quality to a weapon after it is created; it must be crafted as a masterwork weapon (see the Craft skill, page 70). \n\nAll magic weapons are automatically considered to be of masterwork quality. The enhancement bonus granted by the masterwork quality doesn\'t stack with the enhancement bonus provided by the weapon\'s magic."
   short_description: "A masterwork version."
 }
 value {

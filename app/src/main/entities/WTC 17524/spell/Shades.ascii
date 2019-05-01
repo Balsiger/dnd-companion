@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like shadow conjuration, except that it mimics sorcerer\n  and wizard conjuration spells of 8th level or lower.  The illusory\n  conjurations created deal fourfifths (80%) damage to nonbelievers, and\n  nondamaging effects are 80% likely to work against nonbelievers."
+  description: "This spell functions like shadow conjuration, except that it mimics sorcerer and wizard conjuration spells of 8th level or lower.  The illusory conjurations created deal fourfifths (80%) damage to nonbelievers, and nondamaging effects are 80% likely to work against nonbelievers."
 }
 school: ILLUSION
 subschool: SHADOW

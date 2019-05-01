@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to tell an antique from old junk, a sword that\342\200\232\303\204\303\264s old and\n  fancy from an elven heirloom, and high-quality jewelry from cheap stuff made\n  to look good."
+  description: "Use this skill to tell an antique from old junk, a sword that\342\200\232\303\204\303\264s old and fancy from an elven heirloom, and high-quality jewelry from cheap stuff made to look good."
 }
 ability: INTELLIGENCE
 action: "Appraising an item takes 1 minute (ten consecutive                     full-round actions)."

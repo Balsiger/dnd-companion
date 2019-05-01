@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "One of the simplest weapons in existence, the spear is favored by druids and\n  sorcerers. It can be thrown. If you use a ready action to set a spear against\n  a charge, you deal double damage on a successful hit against a charging\n  character."
+  description: "One of the simplest weapons in existence, the spear is favored by druids and sorcerers. It can be thrown. If you use a ready action to set a spear against a charge, you deal double damage on a successful hit against a charging character."
 }
 value {
   gold: 2

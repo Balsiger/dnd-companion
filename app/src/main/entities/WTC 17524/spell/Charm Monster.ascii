@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like charm person, except that the effect is not\n  restricted by creature type or size."
+  description: "This spell functions like charm person, except that the effect is not restricted by creature type or size."
 }
 school: ENCHANTMENT
 subschool: CHARM

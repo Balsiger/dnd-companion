@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The creature can paralyze with it\'s $name. A touched opponent must succeed on a DC $dc Fortitude save or become paralyzed for $duration. \nThe save DC is Charisma-based.\n\n\\Reference{spell}{Remove paralysis} or any spell that can remove a curse can free the victim, but the effect cannot be dispelled. Anyone paralyzed this way seems dead, though a successful Spot check (DC 20) or Heal check (DC 15) reveals that the victim is still alive. "
+  description: "The creature can paralyze with it\'s $name. A touched opponent must succeed on a DC $dc Fortitude save or become paralyzed for $duration. The save DC is Charisma-based.\n\n\\Reference{spell}{Remove paralysis} or any spell that can remove a curse can free the victim, but the effect cannot be dispelled. Anyone paralyzed this way seems dead, though a successful Spot check (DC 20) or Heal check (DC 15) reveals that the victim is still alive. "
 }
 type: SUPERNATURAL

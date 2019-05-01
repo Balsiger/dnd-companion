@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Negative energy spreads out in all directions from the point of origin,\n  dealing 1d8 points of damage +1 point per caster level (maximum +25) to\n  nearby living enemies.  Like other inflict spells, mass inflict light wounds\n  cures undead in its area rather than damaging them. A cleric capable of\n  spontaneously casting inflict spells can also spontaneously cast mass inflict\n  spells."
+  description: "Negative energy spreads out in all directions from the point of origin, dealing 1d8 points of damage +1 point per caster level (maximum +25) to nearby living enemies.  Like other inflict spells, mass inflict light wounds cures undead in its area rather than damaging them. A cleric capable of spontaneously casting inflict spells can also spontaneously cast mass inflict spells."
 }
 school: NECROMANCY
 summary: "$level creatures within [[25 + (5 * ($level / 2))]] ft, no two more than 30 ft apart, take 1d8 +[[min(25, $level)]] damage, Will DC [[10 + $ability + 5]] for half."

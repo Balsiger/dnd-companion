@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This two-handed, iron-headed hammer is good for smashing open treasure\n  chests."
+  description: "This two-handed, iron-headed hammer is good for smashing open treasure chests."
 }
 value {
   gold: 1

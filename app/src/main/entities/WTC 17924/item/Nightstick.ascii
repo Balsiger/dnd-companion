@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This black rod carved of darkly stained wood is inset with religious symbols\n  of various deities. Anyone who possesses the rod and is able to turn or\n  rebuke undead gains four more uses of the ability per day."
+  description: "This black rod carved of darkly stained wood is inset with religious symbols of various deities. Anyone who possesses the rod and is able to turn or rebuke undead gains four more uses of the ability per day."
   short_description: "Gain 4 more uses of turn or rebuke undead per day."
 }
 value {

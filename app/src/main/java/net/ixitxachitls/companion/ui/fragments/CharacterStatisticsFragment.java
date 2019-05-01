@@ -239,7 +239,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
   private void showQuality(Quality quality) {
     String message = quality.getEntity() + "\n\n" + quality.getTemplate().getDescription();
-    MessageDialog.create(getContext()).title(quality.getName()).message(message).show();
+    MessageDialog.create(getContext()).title(quality.getName()).formatted(message).show();
   }
 
   private void update(Documents.Update update) {

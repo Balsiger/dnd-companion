@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like teleport, except that there is no range limit and\n  there is no chance you arrive off target. In addition, you need not have seen\n  the destination, but in that case you must have at least a reliable\n  description of the place to which you are teleporting (such as a detailed\n  description from someone else or a particularly precise map). If you attempt\n  to teleport with insufficient information (or with misleading information),\n  you disappear and simply reappear in your original location. Interplanar\n  travel is not possible."
+  description: "This spell functions like teleport, except that there is no range limit and there is no chance you arrive off target. In addition, you need not have seen the destination, but in that case you must have at least a reliable description of the place to which you are teleporting (such as a detailed description from someone else or a particularly precise map). If you attempt to teleport with insufficient information (or with misleading information), you disappear and simply reappear in your original location. Interplanar travel is not possible."
 }
 school: CONJURATION
 subschool: TELEPORTATION

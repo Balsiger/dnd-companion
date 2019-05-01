@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A throwing axe is lighter than a handaxe and balanced for throwing. Gnome\n  fighters often use throwing axes for both melee and ranged attacks."
+  description: "A throwing axe is lighter than a handaxe and balanced for throwing. Gnome fighters often use throwing axes for both melee and ranged attacks."
 }
 value {
   gold: 8

@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "An ochre jelly secretes a digestive acid that dissolves only flesh. Any\n   melee hit or constrict attack deals acid damage."
+  description: "An ochre jelly secretes a digestive acid that dissolves only flesh. Any melee hit or constrict attack deals acid damage."
 }
 type: EXTRAORDINARY

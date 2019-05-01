@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A 60-foot-long \\Item{rope of climbing} is not thicker than a wand, but it is\n  strong enough to support 3\'000 pounds. Upon command, the rope snakes forward,\n  upward, downward, or in any other direction at 10 feet per round, attaching\n  itself securely wherever its owner desires. It can unfasten itself and return\n  in the same manner.\n\n  A \\Item{rope of climbing} can be commanded to know or unknow itself. This\n  causes large knots to appear at 1-foot intervals along the rope. Knotting\n  shortens the rope to a 50-foot length until the knots are untied but lowers\n  the DC of \\Skill{Climb} checks while using it by 10. A creatures must hold\n  one hend of the rope when its magic is invoced."
+  description: "A 60-foot-long \\Item{rope of climbing} is not thicker than a wand, but it is strong enough to support 3\'000 pounds. Upon command, the rope snakes forward, upward, downward, or in any other direction at 10 feet per round, attaching itself securely wherever its owner desires. It can unfasten itself and return in the same manner. \n\nA \\Item{rope of climbing} can be commanded to know or unknow itself. This causes large knots to appear at 1-foot intervals along the rope. Knotting shortens the rope to a 50-foot length until the knots are untied but lowers the DC of \\Skill{Climb} checks while using it by 10. A creatures must hold one hend of the rope when its magic is invoced."
   short_description: "A rope that attaches itself to wherever desired."
 }
 value {

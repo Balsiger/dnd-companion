@@ -11,7 +11,7 @@ template {
       high: 220
     }
   }
-  description: "This extremely light chainmail is made of very fine mithral links. Speed\n  while wearing elven chain is 30 feet for Medium creatures, or 20 feet for\n  Small. The armor has an arcane spell failure chance of 20%, a maximum\n  Dexterity bonus of +4, and an armor check penalty of -2. It is considered\n  light armor and weighs 20 pounds."
+  description: "This extremely light chainmail is made of very fine mithral links. Speed while wearing elven chain is 30 feet for Medium creatures, or 20 feet for Small. The armor has an arcane spell failure chance of 20%, a maximum Dexterity bonus of +4, and an armor check penalty of -2. It is considered light armor and weighs 20 pounds."
   short_description: "A extremly well made, very light chainmail."
 }
 value {

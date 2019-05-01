@@ -17,6 +17,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A druid leaves no trail in natural surroundings and cannot be tracked. She\n  may choose to leave a trail if so desired."
+  description: "A druid leaves no trail in natural surroundings and cannot be tracked. She may choose to leave a trail if so desired."
 }
 type: EXTRAORDINARY

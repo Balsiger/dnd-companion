@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Add this value to the DC for saving throws and caster level checks to\n  overcome spell resistance checks for spells the shadow adept casts from the\n  schools of Enchanment, Illusion, and Necromancy, and spells with the darkness\n  descriptor. This stacks with other spell power effects that affect the\n  specified spells."
+  description: "Add this value to the DC for saving throws and caster level checks to overcome spell resistance checks for spells the shadow adept casts from the schools of Enchanment, Illusion, and Necromancy, and spells with the darkness descriptor. This stacks with other spell power effects that affect the specified spells."
 }
 type: SUPERNATURAL

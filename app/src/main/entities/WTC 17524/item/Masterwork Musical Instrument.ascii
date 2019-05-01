@@ -16,7 +16,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Popular instruments include the fife, recorder, lute, mandolin, and shawm. A\nmasterwork instrument grants a +2 circumstance bonus on Perform checks involving its use. "
+  description: "Popular instruments include the fife, recorder, lute, mandolin, and shawm. A masterwork instrument grants a +2 circumstance bonus on Perform checks involving its use. "
   short_description: "A masterwork instrument (+2 circumstance to Perform)."
 }
 value {

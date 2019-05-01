@@ -2,6 +2,6 @@ template {
   name: "Constrict"
   category: "action"
   world: "Generic"
-  description: "A creature with this special attack can crush an opponent, dealing $damage\n  damage, after making a successful grapple check. If the creature\n  also has the \\Quality{improved grab} ability, it deals constriction damage in\n  addition to damage dealt by the weapon used to grab.\n\n  $notes"
+  description: "A creature with this special attack can crush an opponent, dealing $damage damage, after making a successful grapple check. If the creature also has the \\Quality{improved grab} ability, it deals constriction damage in addition to damage dealt by the weapon used to grab. \n\n$notes"
 }
 type: EXTRAORDINARY

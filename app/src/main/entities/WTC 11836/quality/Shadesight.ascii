@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "A shade has 60-foot darkvision. It can see normally through any darkness\n  effects, but not through fog, invisibility, obscurement, and so forth."
+  description: "A shade has 60-foot darkvision. It can see normally through any darkness effects, but not through fog, invisibility, obscurement, and so forth."
 }
 type: SUPERNATURAL

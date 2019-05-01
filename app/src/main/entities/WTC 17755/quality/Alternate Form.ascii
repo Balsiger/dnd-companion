@@ -3,6 +3,6 @@ template {
   category: "action"
   synonym: "Form, Alternate"
   world: "Forgotten Realms"
-  description: "A vampire can assume the shape of a bat, dire bat, wolf, or dire wolf as a\n  standard action. This ability is similar to a \\Spell{polymorph self} spell\n  (caster level 12th), except that the vampire can assume only one of the forms\n  noted here. It can remain in that form until it assumes another or until the\n  next sunrise."
+  description: "A vampire can assume the shape of a bat, dire bat, wolf, or dire wolf as a standard action. This ability is similar to a \\Spell{polymorph self} spell (caster level 12th), except that the vampire can assume only one of the forms noted here. It can remain in that form until it assumes another or until the next sunrise."
 }
 type: SUPERNATURAL

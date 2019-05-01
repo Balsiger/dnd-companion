@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A \\Monster{roper}\342\200\232\303\204\303\264s strands can sap an opponent\342\200\232\303\204\303\264s strength. Anyone grabbed\n   by a strand must succeed on a DC 18 Fortitude save or take 2d8 points of\n   Strength damage. The save DC is Constitution-based."
+  description: "A \\Monster{roper}\342\200\232\303\204\303\264s strands can sap an opponent\342\200\232\303\204\303\264s strength. Anyone grabbed by a strand must succeed on a DC 18 Fortitude save or take 2d8 points of Strength damage. The save DC is Constitution-based."
 }
 type: EXTRAORDINARY

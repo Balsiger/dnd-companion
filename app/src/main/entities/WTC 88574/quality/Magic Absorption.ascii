@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A silveraith can ready an action to absorb spells targeted at it as if it\n  were a rod of absorption.  When it absorbs spell energy, it creates a\n  backlash of negative energy that deals 1d6 points of damage per absorbed\n  spell level to the caster of the spell (Will save for half). A negative\n  energy protection spell negates this damage, and undead spellcasters are\n  actually healed by this effect."
+  description: "A silveraith can ready an action to absorb spells targeted at it as if it were a rod of absorption.  When it absorbs spell energy, it creates a backlash of negative energy that deals 1d6 points of damage per absorbed spell level to the caster of the spell (Will save for half). A negative energy protection spell negates this damage, and undead spellcasters are actually healed by this effect."
 }
 type: SUPERNATURAL

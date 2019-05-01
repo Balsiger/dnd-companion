@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Two or more kuo-toa whips operating together can generate a stroke of\n  lightning every 1d4 rounds. The whips must join hands to launch the bolt but\n  need merely remain within 30 feet of one another while it builds. The\n  lightning bolt deals 1d6 points of damage per whip (Reflex DC 13 + number of\n  whips for half)."
+  description: "Two or more kuo-toa whips operating together can generate a stroke of lightning every 1d4 rounds. The whips must join hands to launch the bolt but need merely remain within 30 feet of one another while it builds. The lightning bolt deals 1d6 points of damage per whip (Reflex DC 13 + number of whips for half)."
 }
 type: SUPERNATURAL

@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A lock is worded with a large, bulky key. The DC to open a lock with the\n  \\Skill{Open Lock} skill depends on the lock\'s quality: simple (DC 20),\n  average (DC 25), good (DC 30), or amazing (DC 40)."
+  description: "A lock is worded with a large, bulky key. The DC to open a lock with the \\Skill{Open Lock} skill depends on the lock\'s quality: simple (DC 20), average (DC 25), good (DC 30), or amazing (DC 40)."
 }
 value {
   gold: 80

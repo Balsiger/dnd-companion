@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "At will---\\Spell{hypnotic pattern} (DC 15), \\Spell{illusory wall} (DC 17),\n  \\Spell{mirage arcana} (DC 18), \\Spell{persistent image} (DC 18),\n  \\Spell{programmed image} (DC 19), \\Spell{project image} (DC 20), \\Spell{veil}\n  (DC 19). Effective caster level 16th. The save DCs are Charisma-based."
+  description: "At will---\\Spell{hypnotic pattern} (DC 15), \\Spell{illusory wall} (DC 17), \\Spell{mirage arcana} (DC 18), \\Spell{persistent image} (DC 18), \\Spell{programmed image} (DC 19), \\Spell{project image} (DC 20), \\Spell{veil} (DC 19). Effective caster level 16th. The save DCs are Charisma-based."
 }
 type: SPELL_LIKE

@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A monk of 3rd level or higher gains a +2 bonus on saving throws against\n  spells and effects from the school of enchantment, since her meditation and\n  training improve her resistance to mind-affecting attacks."
+  description: "A monk of 3rd level or higher gains a +2 bonus on saving throws against spells and effects from the school of enchantment, since her meditation and training improve her resistance to mind-affecting attacks."
 }
 type: EXTRAORDINARY

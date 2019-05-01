@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like silent image, except that the figment includes\n  visual, auditory, olfactory, and thermal components, and the figment follows\n  a script determined by you. The figment follows that script without your\n  having to concentrate on it.  The illusion can include intelligible speech if\n  you wish. For instance, you could create the illusion of several orcs playing\n  cards and arguing, culminating in a fistfight.  Material Component: A bit of\n  fleece and several grains of sand."
+  description: "This spell functions like silent image, except that the figment includes visual, auditory, olfactory, and thermal components, and the figment follows a script determined by you. The figment follows that script without your having to concentrate on it.  The illusion can include intelligible speech if you wish. For instance, you could create the illusion of several orcs playing cards and arguing, culminating in a fistfight.  Material Component: A bit of fleece and several grains of sand."
 }
 school: ILLUSION
 subschool: FIGMENT

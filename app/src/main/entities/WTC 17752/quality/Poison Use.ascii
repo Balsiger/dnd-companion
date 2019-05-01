@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The character is trained in the use of poison and never risks accidentally\n  poisoning themselves when applying poison to a blade."
+  description: "The character is trained in the use of poison and never risks accidentally poisoning themselves when applying poison to a blade."
 }
 type: EXTRAORDINARY

@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Once every 1d4 rounds, as a standard action, a quth-maren can spit a glob of\n  its acidic blood as a grenadelike weapon attack. The quth-maren must make a\n  successful ranged touch attack to hit its target. This attack has a range\n  increment of 10 feet, with a maximum range of 5 range increments. The glob\n  deals 2d6 points of acid damage on a direct hit, and 2 points of splash\n  damage 5 feet of where it lands."
+  description: "Once every 1d4 rounds, as a standard action, a quth-maren can spit a glob of its acidic blood as a grenadelike weapon attack. The quth-maren must make a successful ranged touch attack to hit its target. This attack has a range increment of 10 feet, with a maximum range of 5 range increments. The glob deals 2d6 points of acid damage on a direct hit, and 2 points of splash damage 5 feet of where it lands."
 }
 type: EXTRAORDINARY

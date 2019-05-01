@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This device is a light cord with a small gem set so that it rests upon the\n  forehead of the wearer. The head- band adds to the wearer\'s Intelligence\n  score in the form of an enhancement bonus of +4. This enhancement bonus does\n  not earn the wearer extra skill points when a new level is attained; use the\n  unenhanced Intelligence bonus to determine skill points. "
+  description: "This device is a light cord with a small gem set so that it rests upon the forehead of the wearer. The head- band adds to the wearer\'s Intelligence score in the form of an enhancement bonus of +4. This enhancement bonus does not earn the wearer extra skill points when a new level is attained; use the unenhanced Intelligence bonus to determine skill points. "
   short_description: "Gives an +4 enhancement bonus to Intelligence."
 }
 value {

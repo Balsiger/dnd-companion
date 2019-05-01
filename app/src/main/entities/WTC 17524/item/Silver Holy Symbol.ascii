@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A holy symbol focuses positive energy. A cleric or paladin uses it as the focus for his spells and as a tool for turning undead. Each religion has its own holy symbol,\nand a sun symbol is the default holy symbol for clerics not associated\nwith any particular religion.\n\nA silver holy symbol works no better than a wooden one, but it\nserves as a mark of status for the wielder.\n\nUnholy Symbols: An unholy symbol is like a holy symbol except\nthat it focuses negative energy and is used by evil clerics (or by\nneutral clerics who want to cast evil spells or command undead). A\nskull is the default unholy symbol for clerics not associated with any\nparticular religion. "
+  description: "A holy symbol focuses positive energy. A cleric or paladin uses it as the focus for his spells and as a tool for turning undead. Each religion has its own holy symbol, and a sun symbol is the default holy symbol for clerics not associated with any particular religion.\n\nA silver holy symbol works no better than a wooden one, but it serves as a mark of status for the wielder.\n\nUnholy Symbols: An unholy symbol is like a holy symbol except that it focuses negative energy and is used by evil clerics (or by neutral clerics who want to cast evil spells or command undead). A skull is the default unholy symbol for clerics not associated with any particular religion. "
   short_description: "A holy symbol made of silver."
 }
 value {

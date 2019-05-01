@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell imbues a single creature with great bravery and morale in\n  battle. The target gains a +2 morale bonus on attack rolls, saves, and skill\n  checks."
+  description: "This spell imbues a single creature with great bravery and morale in battle. The target gains a +2 morale bonus on attack rolls, saves, and skill checks."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

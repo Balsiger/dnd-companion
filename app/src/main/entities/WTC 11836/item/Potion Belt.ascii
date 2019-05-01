@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This sturdy leather belt similar to a \\Item{bandoleer} has pockets shaped to\n  hold potion vials and is fitted with ties or flaps to keep the potions from\n  falling out. It holds six potions. Retrieving a potion from a potion belt is\n  a free action once per round."
+  description: "This sturdy leather belt similar to a \\Item{bandoleer} has pockets shaped to hold potion vials and is fitted with ties or flaps to keep the potions from falling out. It holds six potions. Retrieving a potion from a potion belt is a free action once per round."
   short_description: "Store six potions for fast access (free action)."
 }
 value {

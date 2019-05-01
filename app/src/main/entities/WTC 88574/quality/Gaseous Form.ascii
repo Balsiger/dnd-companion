@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "At will, a vampire can assume gaseous form as the spell (caster level 6th),\n  but it can remain gaseous indefinitely and has a fly speed of 20 feet with\n  perfect maneuverability Using this ability is a standard action."
+  description: "At will, a vampire can assume gaseous form as the spell (caster level 6th), but it can remain gaseous indefinitely and has a fly speed of 20 feet with perfect maneuverability Using this ability is a standard action."
 }
 type: SUPERNATURAL

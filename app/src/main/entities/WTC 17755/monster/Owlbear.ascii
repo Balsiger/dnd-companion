@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An owlbear\'s coat ranges in color from brown-black to yellowish brown; its\n  beak is a dull ivory color. A full-grown male can stand as tall as 8 feet and\n  weight up to 1\'500 pounds. Adventurers who have survived encounters with the\n  creature often speak of the bestial madness they glimpsed in its red-trimmed\n  eyes.\n\n  Owlbears inhabit wilderness areas, making their lairs within tangled forests\n  or in shallow underground caverns. They can be active during they day or\n  night, depending on the habits of available prey. Adults live in mated pairs\n  and hunt in packs, leaving their young in the lair. A lair usually has 1d6\n  young, fetching a price of 3\'000 gp each in many civilized areas. While\n  owlbears cannot be domesticated, they can still be placed in strategically\n  important areas as free-roaming guardians. Professional trainers charge 2\'000\n  gp to rear or train an owlbear (DC 23 for a young creature, DC 30 for an\n  adult)."
+  description: "An owlbear\'s coat ranges in color from brown-black to yellowish brown; its beak is a dull ivory color. A full-grown male can stand as tall as 8 feet and weight up to 1\'500 pounds. Adventurers who have survived encounters with the creature often speak of the bestial madness they glimpsed in its red-trimmed eyes. \n\nOwlbears inhabit wilderness areas, making their lairs within tangled forests or in shallow underground caverns. They can be active during they day or night, depending on the habits of available prey. Adults live in mated pairs and hunt in packs, leaving their young in the lair. A lair usually has 1d6 young, fetching a price of 3\'000 gp each in many civilized areas. While owlbears cannot be domesticated, they can still be placed in strategically important areas as free-roaming guardians. Professional trainers charge 2\'000 gp to rear or train an owlbear (DC 23 for a young creature, DC 30 for an adult)."
   short_description: "A cross between an bear and an owl."
 }
 size {
@@ -108,11 +108,11 @@ advancement {
 language {
   name: NONE
 }
-encounter: "This creature has a thick, shaggy coat of feathers and\n                    fur. Its body is like a bear\'s but it has an avian head\n                    with big, round eyes and a hooked beak."
-combat: "Owlbears attach prey---any creature bigger than a\n                    mouse---on sight, always fighting to the death."
-tactics: "They slash with claws and beak, trying to grab their prey\n                    and rip it apart."
-character: "Owlbears are extraordinarily vicious predators with a\n                    reputation for ferocity, aggression, and sheer ill\n                    temper. The tend to attack nearly anything that moves\n                    without provocation."
-reproduction: "Scholars have long debated the origins of the owlbear. The\n                    most common theory is that a demented wizard created the\n                    first specimen by crossing a giant owl with a bear."
+encounter: "This creature has a thick, shaggy coat of feathers and fur. Its body is like a bear\'s but it has an avian head with big, round eyes and a hooked beak."
+combat: "Owlbears attach prey---any creature bigger than a mouse---on sight, always fighting to the death."
+tactics: "They slash with claws and beak, trying to grab their prey and rip it apart."
+character: "Owlbears are extraordinarily vicious predators with a reputation for ferocity, aggression, and sheer ill temper. The tend to attack nearly anything that moves without provocation."
+reproduction: "Scholars have long debated the origins of the owlbear. The most common theory is that a demented wizard created the first specimen by crossing a giant owl with a bear."
 skill {
   name: "Listen"
 }

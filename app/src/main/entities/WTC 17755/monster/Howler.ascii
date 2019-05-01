@@ -132,7 +132,7 @@ language {
   name: ABYSSAL
 }
 encounter: "This creature looks like some gaunt, bestial hound or feline, with a mane of bristling quills."
-combat: "Howlers attack in groups, for they are cowardly and cruel. They prefer to charge into combat, race out, and then charge in again. A howler\342\200\231s natural weapons, as well as any weapons it wields, are treated as chaotic-aligned and evil-aligned for the purpose of over-\ncoming damage reduction."
+combat: "Howlers attack in groups, for they are cowardly and cruel. They prefer to charge into combat, race out, and then charge in again. A howler\342\200\231s natural weapons, as well as any weapons it wields, are treated as chaotic-aligned and evil-aligned for the purpose of over- coming damage reduction."
 skill {
   name: "Climb"
 }

@@ -21,7 +21,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This basic ceramic jug is fitted with a stopper and holds 1 gallon of\n  liquid."
+  description: "This basic ceramic jug is fitted with a stopper and holds 1 gallon of liquid."
 }
 value {
   copper: 3

@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Add this value (+1 at 2nd level, +2 at 4th level) to the divine champion\'s\nsaving throws against divine spells, as well as spell-like and supernatural\nabilities of outsider."
+  description: "Add this value (+1 at 2nd level, +2 at 4th level) to the divine champion\'s saving throws against divine spells, as well as spell-like and supernatural abilities of outsider."
 }
 type: SUPERNATURAL

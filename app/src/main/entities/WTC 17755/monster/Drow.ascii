@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Also known as dark elves, drow are a depraved and evil subterranean offshoot.\nWhite is the most common hair color among drow, but almost any pale shade is possible. Drow tend to be smaller and thinner than other sorts of elves, and their eyes are often a vivid red. Their society is matriarchal and rigidly controlled by the priesthood.\nThe drow\'s patron deity is the spider goddess Lolth. Female drow favor the cleric class rather than wizard and have access to two of the following domains: Chaos, Destruction, Evil, or Trickery.\nDrow usually coat their arrowswith a potent venom."
+  description: "Also known as dark elves, drow are a depraved and evil subterranean offshoot. White is the most common hair color among drow, but almost any pale shade is possible. Drow tend to be smaller and thinner than other sorts of elves, and their eyes are often a vivid red. Their society is matriarchal and rigidly controlled by the priesthood. The drow\'s patron deity is the spider goddess Lolth. Female drow favor the cleric class rather than wizard and have access to two of the following domains: Chaos, Destruction, Evil, or Trickery. Drow usually coat their arrowswith a potent venom."
 }
 size {
   size: MEDIUM

@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You never know where you\'re going to sleep, and a bedroll helps you get\n  better sleep in a hayloft or on the cold ground. A bedroll consists of\n  bedding and a blanket thin enough to be rolled up and tied. In an emergency,\n  it can double as a stretcher."
+  description: "You never know where you\'re going to sleep, and a bedroll helps you get better sleep in a hayloft or on the cold ground. A bedroll consists of bedding and a blanket thin enough to be rolled up and tied. In an emergency, it can double as a stretcher."
 }
 value {
   silver: 1

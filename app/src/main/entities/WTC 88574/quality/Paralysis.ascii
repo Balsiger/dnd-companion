@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Any creature hit by an attack must succeed at a Fortitude save or be\n  paralyzed. The save DC is Charisma-based."
+  description: "Any creature hit by an attack must succeed at a Fortitude save or be paralyzed. The save DC is Charisma-based."
 }
 type: EXTRAORDINARY

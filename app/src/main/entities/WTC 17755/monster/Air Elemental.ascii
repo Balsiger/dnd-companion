@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Air elementals are among the swiftest and most agile creatures in existence. They seldom leave their home plane except when summoned elsewhere by a spell.\nAir elementals speak Auran, though they rarely choose to do so. The voice of an air elemental sounds like the high-pitched screech of a tornado or the low moan of a midnight storm."
+  description: "Air elementals are among the swiftest and most agile creatures in existence. They seldom leave their home plane except when summoned elsewhere by a spell. Air elementals speak Auran, though they rarely choose to do so. The voice of an air elemental sounds like the high-pitched screech of a tornado or the low moan of a midnight storm."
 }
 type: ELEMENTAL
 subtype: AIR

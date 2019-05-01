@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like heroism, except the creature gains a +4 morale\n  bonus on attack rolls, saves, and skill checks, immunity to fear effects, and\n  temporary hit points equal to your caster level (maximum 20).  Jozan casts\n  holy smite against a succubus."
+  description: "This spell functions like heroism, except the creature gains a +4 morale bonus on attack rolls, saves, and skill checks, immunity to fear effects, and temporary hit points equal to your caster level (maximum 20).  Jozan casts holy smite against a succubus."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

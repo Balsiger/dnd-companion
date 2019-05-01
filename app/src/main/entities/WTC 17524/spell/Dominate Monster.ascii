@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like dominate person, except that the spell is not\n  restricted by creature type."
+  description: "This spell functions like dominate person, except that the spell is not restricted by creature type."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

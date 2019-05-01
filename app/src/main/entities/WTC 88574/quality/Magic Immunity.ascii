@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "A mighty iron golem is immune to all spells, spell-like abilities, and\n  supernatural effects, except as follows. An electricity effect slows it (as\n  the \\SpellRef{slow} spell) for 3 rounds, with no saving throw. A fire effect\n  breaks any slow effect on the golem and cures 1 point of damage for each 3\n  points of damage it would otherwise deal. "
+  description: "A mighty iron golem is immune to all spells, spell-like abilities, and supernatural effects, except as follows. An electricity effect slows it (as the \\SpellRef{slow} spell) for 3 rounds, with no saving throw. A fire effect breaks any slow effect on the golem and cures 1 point of damage for each 3 points of damage it would otherwise deal. "
 }
 type: EXTRAORDINARY

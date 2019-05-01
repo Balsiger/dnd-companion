@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Undead cannot see, hear, or smell the warded creatures. Even extraordinary\n  or supernatural sensory capabilities, such as blindsense, blindsight, scent,\n  and tremorsense, cannot detect or locate warded creatures. Nonintelligent\n  undead creatures are automatically affected and act as though the warded\n  creatures are not there.  An intelligent undead creature gets a single Will\n  saving throw. If it fails, the subject can\'t see any of the warded\n  creatures. However, if it has reason to believe unseen opponents are present,\n  it can attempt to find or strike them.  If a warded creature attempts to turn\n  or command undead, touches an undead creature, or attacks any creature (even\n  with a spell), the spell ends for all recipients."
+  description: "Undead cannot see, hear, or smell the warded creatures. Even extraordinary or supernatural sensory capabilities, such as blindsense, blindsight, scent, and tremorsense, cannot detect or locate warded creatures. Nonintelligent undead creatures are automatically affected and act as though the warded creatures are not there.  An intelligent undead creature gets a single Will saving throw. If it fails, the subject can\'t see any of the warded creatures. However, if it has reason to believe unseen opponents are present, it can attempt to find or strike them.  If a warded creature attempts to turn or command undead, touches an undead creature, or attacks any creature (even with a spell), the spell ends for all recipients."
 }
 school: ABJURATION
 summary: "$undefined$"

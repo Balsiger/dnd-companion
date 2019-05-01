@@ -19,7 +19,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An orc double axe is a double weapon. You can fight with it as if fighting\n  with two weapons, but if you do, you incur all the normal attack penalties\n  associated with fighting with two weapons, just as if you were using a\n  one-handed weapon and a light weapon (see \\Feat{Two-Weapon Fighting}). As its\n  name suggests, it is often found in the hands of powerful \\Monster{orc}\n  fighters. A creature wielding an orc double axe in one hand can\'t\n  use it as a double weapon--only one end of the weapon can be used in\n  any given round."
+  description: "An orc double axe is a double weapon. You can fight with it as if fighting with two weapons, but if you do, you incur all the normal attack penalties associated with fighting with two weapons, just as if you were using a one-handed weapon and a light weapon (see \\Feat{Two-Weapon Fighting}). As its name suggests, it is often found in the hands of powerful \\Monster{orc} fighters. A creature wielding an orc double axe in one hand can\'t use it as a double weapon--only one end of the weapon can be used in any given round."
 }
 value {
   gold: 60

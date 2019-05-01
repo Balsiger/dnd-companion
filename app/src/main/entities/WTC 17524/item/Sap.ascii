@@ -16,7 +16,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A sap comes in handy when you want to knock an opponent out instead of\n  killing it."
+  description: "A sap comes in handy when you want to knock an opponent out instead of killing it."
 }
 value {
   gold: 1

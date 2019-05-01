@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Although exceptions exist that are crafted from glass or bone, the vast\n   majority of rings are forged from metal---usually precious metals such as\n   gold, silver, and platinum."
+  description: "Although exceptions exist that are crafted from glass or bone, the vast majority of rings are forged from metal---usually precious metals such as gold, silver, and platinum."
   short_description: "A ring."
 }
 weight {

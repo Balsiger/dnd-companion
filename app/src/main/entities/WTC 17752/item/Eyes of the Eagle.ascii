@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These items are made of special crystal and fit over the eyes of the\n  wearer. These lenses grant a +5 competence bonus on Spot checks. Wearing only\n  one of the pair causes a char- acter to become dizzy and, in effect, stunned\n  for 1 round. There- after, the wearer can use the single lens without being\n  stunned so long as she covers her other eye. Of course, she can remove the\n  single lens and see normally at any time, or wear both lenses to end or avoid\n  the dizziness."
+  description: "These items are made of special crystal and fit over the eyes of the wearer. These lenses grant a +5 competence bonus on Spot checks. Wearing only one of the pair causes a char- acter to become dizzy and, in effect, stunned for 1 round. There- after, the wearer can use the single lens without being stunned so long as she covers her other eye. Of course, she can remove the single lens and see normally at any time, or wear both lenses to end or avoid the dizziness."
   short_description: "A pair of eye lenses for +5 competence to Spot."
 }
 value {

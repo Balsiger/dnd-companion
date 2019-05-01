@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "\\Spell{Acid fog} creates a billowing mass of misty vapors similar to that\n  produced by a \\Spell{solid fog} spell. In addition to slowing creatures down\n  and obscuring sight, this spell\'s vapors are highly acidic. Each round on\n  your turn, starting when you cast the spell, the fog deals 2d6 points of acid\n  damage to each creature and object within it."
+  description: "\\Spell{Acid fog} creates a billowing mass of misty vapors similar to that produced by a \\Spell{solid fog} spell. In addition to slowing creatures down and obscuring sight, this spell\'s vapors are highly acidic. Each round on your turn, starting when you cast the spell, the fog deals 2d6 points of acid damage to each creature and object within it."
 }
 school: CONJURATION
 subschool: CREATION

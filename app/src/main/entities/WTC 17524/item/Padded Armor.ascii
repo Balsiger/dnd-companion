@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Padded armor features quilted layers of cloth and batting.  It gets hot\n  quickly and can become foul with sweat, grime, lice, and fleas."
+  description: "Padded armor features quilted layers of cloth and batting.  It gets hot quickly and can become foul with sweat, grime, lice, and fleas."
 }
 value {
   gold: 5

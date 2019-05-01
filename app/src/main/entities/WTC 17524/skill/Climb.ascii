@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to scale a cliff, to get to the window on the second story of\n  a wizard\342\200\232\303\204\303\264s tower, or to climb out of a pit after falling through a\n  trapdoor."
+  description: "Use this skill to scale a cliff, to get to the window on the second story of a wizard\342\200\232\303\204\303\264s tower, or to climb out of a pit after falling through a trapdoor."
 }
 ability: STRENGTH
 action: "Climbing is part of movement, so it\342\200\232\303\204\303\264s generally part of a                     move action (and may be combined with other types of                     movement in a move action). Each move action that includes                     any climbing requires a separate Climb check. Catching                     yourself or another falling character doesn\342\200\232\303\204\303\264t take an                     action."

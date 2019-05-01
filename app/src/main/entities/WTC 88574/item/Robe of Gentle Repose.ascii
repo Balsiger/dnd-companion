@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This simple garment is favored by intelligent corporeal undead, particularly liches. It surrounds the wearer with a constant \\Reference{spell}{Gentle Repose} effect, preventing all decay of his or her corporeal form.\nCaster Level: 3rd; Prerequisites: Craft Wondrous Item,\n"
+  description: "This simple garment is favored by intelligent corporeal undead, particularly liches. It surrounds the wearer with a constant \\Reference{spell}{Gentle Repose} effect, preventing all decay of his or her corporeal form. Caster Level: 3rd; Prerequisites: Craft Wondrous Item, "
   short_description: "Surrounds wearer with constant \\Reference{spell}{Gentle Repose}, preventing all decay."
 }
 weight {

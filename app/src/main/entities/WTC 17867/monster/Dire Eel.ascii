@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The dire eel is a moraylike animal of unusual size. It can reach lengths of\n  20 feet or more and weigh up to 500 pounds. It resembles its smaller\n  relations in other respects."
+  description: "The dire eel is a moraylike animal of unusual size. It can reach lengths of 20 feet or more and weigh up to 500 pounds. It resembles its smaller relations in other respects."
   short_description: "A large version of a normal eel."
 }
 size {

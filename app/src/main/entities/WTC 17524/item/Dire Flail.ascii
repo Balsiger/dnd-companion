@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A dire flail is a double weapon. You can fight with it as if fighting with\n  two weapons, but if you do, you incur all the normal attack penalties\n  associated with fighting with two weapons, just as if you were using a\n  one-handed weapon and a light weapon (see \\Feat{Two-Weapon Fighting}). A\n  creature wielding a dire flail in one hand can\'t use it as a double\n  weapon--only one end of the weapon can be used in any given round.\n\n  When using a dire flail, you get a +2 bonus on opposed attack rolls made to\n  disarm an enemy (including the opposed attack roll to avoid being disarmed if\n  such an attempt fails).\n\n  You can also use this weapon to make trip attacks. If you are tripped during\n  your own trip attempt, you can drop the dire flail to avoid being tripped."
+  description: "A dire flail is a double weapon. You can fight with it as if fighting with two weapons, but if you do, you incur all the normal attack penalties associated with fighting with two weapons, just as if you were using a one-handed weapon and a light weapon (see \\Feat{Two-Weapon Fighting}). A creature wielding a dire flail in one hand can\'t use it as a double weapon--only one end of the weapon can be used in any given round. \n\nWhen using a dire flail, you get a +2 bonus on opposed attack rolls made to disarm an enemy (including the opposed attack roll to avoid being disarmed if such an attempt fails). \n\nYou can also use this weapon to make trip attacks. If you are tripped during your own trip attempt, you can drop the dire flail to avoid being tripped."
   short_description: "A double weapon with two flail heads."
 }
 value {

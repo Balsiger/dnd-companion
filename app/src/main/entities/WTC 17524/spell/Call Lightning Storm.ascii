@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like call lightning, except that each bolt deals 5d6\n  points of electricity damage (or 5d10 if created outdoors in a stormy area),\n  and you may call a maximum of 15 bolts."
+  description: "This spell functions like call lightning, except that each bolt deals 5d6 points of electricity damage (or 5d10 if created outdoors in a stormy area), and you may call a maximum of 15 bolts."
 }
 school: EVOACATION
 summary: "$undefined$"

@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A skeleton is seldom garbed in anything more than the rotting remnants of\n  any clothing or armor it was wearing when slain."
+  description: "A skeleton is seldom garbed in anything more than the rotting remnants of any clothing or armor it was wearing when slain."
   short_description: "A human skeleton."
 }
 size {
@@ -87,6 +87,6 @@ alignment_status: ALWAYS
 language {
   name: NONE
 }
-encounter: "This creature appears to be nothing but a set of animated\n                    bones. Pinpoints of red light smolder in its empty eye\n                    sockets."
-combat: "A skeleton does only what it is ordered to do. It can draw\n                    no conclusions of its own and takes no initiative. Because\n                    of this limitation, its instructions must always be simple,\n                    such as \'Kill anyone who enters this chamber.\' A skeleton\n                    attacks until destroyed, for that is what it was created to\n                    do. The thread posed by a group of skeletons depends\n                    primarily on its size."
-character: "Skeletons are the animated bones of the dead, mindless\n                    automatons that obey the orders of their evil masters."
+encounter: "This creature appears to be nothing but a set of animated bones. Pinpoints of red light smolder in its empty eye sockets."
+combat: "A skeleton does only what it is ordered to do. It can draw no conclusions of its own and takes no initiative. Because of this limitation, its instructions must always be simple, such as \'Kill anyone who enters this chamber.\' A skeleton attacks until destroyed, for that is what it was created to do. The thread posed by a group of skeletons depends primarily on its size."
+character: "Skeletons are the animated bones of the dead, mindless automatons that obey the orders of their evil masters."

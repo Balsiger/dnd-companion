@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This golem has a humanoid body made from iron.\n\n  An iron golem can be fashioned in any manner, just like a \\Monster{stone\n  golem}, although it almost always displays armor of some sort. Its features\n  are much smoother than those of a \\Monster{stone golem}. \\Monster[iron\n  golem]{Iron golems} sometimes carry a short sword in one hand.\n\n  An iron golem is 12 feet tall and weighs about 5,000 pounds.\n\n  An iron golem cannot speak or make any vocal noise, nor does it have any\n  distinguishable odor. It moves with a ponderous but smooth gait. Each step\n  causes the floor to tremble unless it is on a thick, solid foundation."
+  description: "This golem has a humanoid body made from iron. \n\nAn iron golem can be fashioned in any manner, just like a \\Monster{stone golem}, although it almost always displays armor of some sort. Its features are much smoother than those of a \\Monster{stone golem}. \\Monster[iron golem]{Iron golems} sometimes carry a short sword in one hand. \n\nAn iron golem is 12 feet tall and weighs about 5,000 pounds. \n\nAn iron golem cannot speak or make any vocal noise, nor does it have any distinguishable odor. It moves with a ponderous but smooth gait. Each step causes the floor to tremble unless it is on a thick, solid foundation."
   short_description: "A humanoid automaton made from iron."
 }
 size {

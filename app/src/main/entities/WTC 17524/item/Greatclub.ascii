@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A greatclub is a two-handed version of a regular \\Item{club}.  It is often\n  studded with nails or spikes or ringed by bands of iron."
+  description: "A greatclub is a two-handed version of a regular \\Item{club}.  It is often studded with nails or spikes or ringed by bands of iron."
 }
 value {
   gold: 5

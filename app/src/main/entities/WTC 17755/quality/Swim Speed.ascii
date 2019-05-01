@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "These creatures always have swim speeds and thus can move in water without\n  making Swim checks"
+  description: "These creatures always have swim speeds and thus can move in water without making Swim checks"
 }
 type: EXTRAORDINARY

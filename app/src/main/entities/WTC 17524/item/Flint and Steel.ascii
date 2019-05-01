@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Striking steel and flint together creates sparks. By knocking sparks into\n  tinder, you can create a small flame. Lighting a \\Item{torch} with\n  \\Item{flint and steel} is a full-round action, and lighting any other fire\n  with them takes at least that long."
+  description: "Striking steel and flint together creates sparks. By knocking sparks into tinder, you can create a small flame. Lighting a \\Item{torch} with \\Item{flint and steel} is a full-round action, and lighting any other fire with them takes at least that long."
 }
 value {
   gold: 1

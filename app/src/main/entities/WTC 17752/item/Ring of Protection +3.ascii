@@ -11,7 +11,7 @@ template {
       high: 232
     }
   }
-  description: "This ring offers continual magical protection in the form of a deflection\n  bonus of +3 AC."
+  description: "This ring offers continual magical protection in the form of a deflection bonus of +3 AC."
   short_description: "AC +3 deflection bonus"
 }
 value {

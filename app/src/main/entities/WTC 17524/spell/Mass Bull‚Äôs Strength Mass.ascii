@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like bull\342\200\232\303\204\303\264s strength, except that it affects multiple\n  creatures."
+  description: "This spell functions like bull\342\200\232\303\204\303\264s strength, except that it affects multiple creatures."
 }
 school: TRANSMUTATION
 summary: "$undefined$"

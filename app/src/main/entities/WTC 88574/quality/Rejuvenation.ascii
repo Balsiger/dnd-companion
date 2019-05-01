@@ -18,6 +18,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "If destroyed, Alisannara restores herself in 2d4 days if she makes a\n  successful level check (DC 16)."
+  description: "If destroyed, Alisannara restores herself in 2d4 days if she makes a successful level check (DC 16)."
 }
 type: SUPERNATURAL

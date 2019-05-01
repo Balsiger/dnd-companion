@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A pack saddle holds gear and supplies, but not a rider. It holds as much\n  gear as the mount can carry. (The Monster Manual has notes on how much mounts\n  can carry.)"
+  description: "A pack saddle holds gear and supplies, but not a rider. It holds as much gear as the mount can carry. (The Monster Manual has notes on how much mounts can carry.)"
 }
 value {
   gold: 5

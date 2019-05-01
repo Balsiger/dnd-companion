@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The subject or subjects can move through any type of terrain\342\200\232\303\204\303\256mud, snow,\n  dust, or the like\342\200\232\303\204\303\256and leave neither footprints nor scent. Tracking the\n  subjects is impossible by nonmagical means."
+  description: "The subject or subjects can move through any type of terrain\342\200\232\303\204\303\256mud, snow, dust, or the like\342\200\232\303\204\303\256and leave neither footprints nor scent. Tracking the subjects is impossible by nonmagical means."
 }
 school: TRANSMUTATION
 summary: "For $level hours (D) $level creature(s) touched cannot be tracked."

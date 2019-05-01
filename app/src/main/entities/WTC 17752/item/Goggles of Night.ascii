@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The lenses of this item are made of dark crystal. Even though the lenses are\n  opaque, when placed over the eyes of the wearer they enable him to see\n  normally and also grant him 60-foot darkvision. Both lenses must be worn for\n  the magic to be effective."
+  description: "The lenses of this item are made of dark crystal. Even though the lenses are opaque, when placed over the eyes of the wearer they enable him to see normally and also grant him 60-foot darkvision. Both lenses must be worn for the magic to be effective."
   short_description: "Provides 60 ft darkvision."
 }
 value {

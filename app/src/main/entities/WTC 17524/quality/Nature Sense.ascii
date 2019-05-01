@@ -17,6 +17,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A druid gains a +2 bonus on Knowledge (nature) and Survival checks. She can\n  identify plants and animals (their species and special traits) with perfect\n  accuracy. She can determine whether water is safe to drink or dangerous."
+  description: "A druid gains a +2 bonus on Knowledge (nature) and Survival checks. She can identify plants and animals (their species and special traits) with perfect accuracy. She can determine whether water is safe to drink or dangerous."
 }
 type: EXTRAORDINARY

@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Crafted by the \\Monster{shield dwarves} of the \\Place{North}, a\n  \\Item{Foesplitter Axe} is a \\emph{+1 keen battleaxe} with a steel haft."
+  description: "Crafted by the \\Monster{shield dwarves} of the \\Place{North}, a \\Item{Foesplitter Axe} is a \\emph{+1 keen battleaxe} with a steel haft."
   short_description: "A +1 keen battleaxe"
 }
 value {

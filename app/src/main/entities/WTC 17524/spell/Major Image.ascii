@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like silent image, except that sound, smell, and\n  thermal illusions are included in the spell effect. While concentrating, you\n  can move the image within the range.  The image disappears when struck by an\n  opponent unless you cause the illusion to react appropriately."
+  description: "This spell functions like silent image, except that sound, smell, and thermal illusions are included in the spell effect. While concentrating, you can move the image within the range.  The image disappears when struck by an opponent unless you cause the illusion to react appropriately."
 }
 school: ILLUSION
 subschool: FIGMENT

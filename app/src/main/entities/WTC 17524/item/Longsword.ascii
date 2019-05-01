@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This classic, straight blade is the weapon of knighthood and valor. It is a\n  favorite weapon of many \\Class{paladins}."
+  description: "This classic, straight blade is the weapon of knighthood and valor. It is a favorite weapon of many \\Class{paladins}."
 }
 value {
   gold: 15

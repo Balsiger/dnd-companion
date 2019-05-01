@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You make natural terrain look, sound, and smell like some other sort of\n  natural terrain. Thus, open fields or a road can be made to resemble a swamp,\n  hill, crevasse, or some other difficult or impassable terrain. A pond can be\n  made to seem like a grassy meadow, a precipice like a gentle slope, or a\n  rock-strewn gully like a wide and smooth road. Structures, equipment, and\n  creatures within the area are not hidden or changed in appearance.  Material\n  Component: A stone, a twig, and a bit of green plant."
+  description: "You make natural terrain look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Structures, equipment, and creatures within the area are not hidden or changed in appearance.  Material Component: A stone, a twig, and a bit of green plant."
 }
 school: ILLUSION
 subschool: GLAMER

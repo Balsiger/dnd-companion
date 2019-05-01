@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This black +1 daggerhas a serrated edge. It allows the wielder to use a\n  \\SpellRef[sor 10][14]{poison} effect (as the spell, save DC 14) upon a\n  creature struck by the blade once per day. The wielder can decide to use the\n  power after he has struck. Doing so is a free action, but the poison effect\n  must be invoked in the same round that the dagger strikes."
+  description: "This black +1 daggerhas a serrated edge. It allows the wielder to use a \\SpellRef[sor 10][14]{poison} effect (as the spell, save DC 14) upon a creature struck by the blade once per day. The wielder can decide to use the power after he has struck. Doing so is a free action, but the poison effect must be invoked in the same round that the dagger strikes."
   short_description: "Once per day when hitting also deliver \\SpellRef[sor 10][14]{poison}."
 }
 value {

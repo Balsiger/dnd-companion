@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can slay any one living creature within range. The target is entitled to\n  a Fortitude saving throw to survive the attack. If the save is successful,\n  the creature instead takes 3d6 points of damage +1 point per caster level\n  (maximum +25). The subject might die from damage even if it succeeds on its\n  saving throw."
+  description: "You can slay any one living creature within range. The target is entitled to a Fortitude saving throw to survive the attack. If the save is successful, the creature instead takes 3d6 points of damage +1 point per caster level (maximum +25). The subject might die from damage even if it succeeds on its saving throw."
 }
 school: NECROMANCY
 summary: "One living creature within [[25 + (($level / 2) * 5)]] ft For DC $dc for 3d6 + [[min(25, $level)]] or dies."

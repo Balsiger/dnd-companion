@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These crystalline stones always float in the air and must be within 3 feet\n  of their owner to be of any use. When a character first acquires a stone, she\n  must hold it and then release it, whereupon it takes up a circling orbit 1d3\n  feet from her head.  Thereafter, a stone must be grasped or netted to\n  separate it from its owner. The owner may voluntarily seize and stow a stone\n  (to keep it safe while she is sleeping, for example), but she loses the bene-\n  fits of the stone during that time. Ioun stones have AC 24, 10 hit points, and\n  hardness 5."
+  description: "These crystalline stones always float in the air and must be within 3 feet of their owner to be of any use. When a character first acquires a stone, she must hold it and then release it, whereupon it takes up a circling orbit 1d3 feet from her head.  Thereafter, a stone must be grasped or netted to separate it from its owner. The owner may voluntarily seize and stow a stone (to keep it safe while she is sleeping, for example), but she loses the bene- fits of the stone during that time. Ioun stones have AC 24, 10 hit points, and hardness 5."
 }
 value {
   gold: 8000

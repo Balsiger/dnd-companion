@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like summon nature\'s ally I, except that you can summon\n  one 2nd-level creature or 1d3 1st-level creatures of the same kind."
+  description: "This spell functions like summon nature\'s ally I, except that you can summon one 2nd-level creature or 1d3 1st-level creatures of the same kind."
 }
 school: CONJURATION
 subschool: SUMMONING

@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A cloaker can try to wrap a Medium or smaller creature in its body as a\n  standard action. The cloaker attempts a grapple that does not provoke an\n  attack of opportunity. If it wins the grapple check, it establishes a hold\n  and bites the engulfed victim with a +4 bonus on its attack roll. It can\n  still use its whiplike tail to strike at other targets.  Attacks that hit an\n  engulfing cloaker deal half their damage to the monster and half to the\n  trapped victim."
+  description: "A cloaker can try to wrap a Medium or smaller creature in its body as a standard action. The cloaker attempts a grapple that does not provoke an attack of opportunity. If it wins the grapple check, it establishes a hold and bites the engulfed victim with a +4 bonus on its attack roll. It can still use its whiplike tail to strike at other targets.  Attacks that hit an engulfing cloaker deal half their damage to the monster and half to the trapped victim."
 }
 type: EXTRAORDINARY

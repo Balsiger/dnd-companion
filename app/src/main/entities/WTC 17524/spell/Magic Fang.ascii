@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Magic fang gives one natural weapon of the subject a +1 enhancement bonus on\n  attack and damage rolls. The spell can affect a slam attack, fist, bite, or\n  other natural weapon. (The spell does not change an unarmed strike\'s damage\n  from nonlethal damage to lethal damage.)  Magic fang can be made permanent\n  with a permanency spell."
+  description: "Magic fang gives one natural weapon of the subject a +1 enhancement bonus on attack and damage rolls. The spell can affect a slam attack, fist, bite, or other natural weapon. (The spell does not change an unarmed strike\'s damage from nonlethal damage to lethal damage.)  Magic fang can be made permanent with a permanency spell."
 }
 school: TRANSMUTATION
 summary: "For $level min touched creature gains +1 enhancement to attack and damage for one natural weapon."

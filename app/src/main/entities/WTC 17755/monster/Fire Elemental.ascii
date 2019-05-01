@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Fire elementals are fast and agile. The merest touch from their fiery bodies is sufficient to set many materials aflame.\nA fire elemental cannot enter water or any other nonflammable liquid. A body of water is an impassible barrier unless the fire elemental can step or jump over it.\nFire elementals speak Ignan, though they rarely choose to do so. When one speaks, its voice sounds like the crackle and hiss of a great fire."
+  description: "Fire elementals are fast and agile. The merest touch from their fiery bodies is sufficient to set many materials aflame. A fire elemental cannot enter water or any other nonflammable liquid. A body of water is an impassible barrier unless the fire elemental can step or jump over it. Fire elementals speak Ignan, though they rarely choose to do so. When one speaks, its voice sounds like the crackle and hiss of a great fire."
 }
 type: ELEMENTAL
 subtype: FIRE
@@ -27,4 +27,4 @@ language {
   name: IGNAN
 }
 encounter: "A mass of ambulatory flame races across the ground, seeming to flicker and spark from a central, humanoid-shaped conflagration. Like a living inferno, the fire-creature\'s burning dance of heat and flame brings it ever closer."
-combat: "A fire elemental is a fierce opponent that attacks its enemies directly and savagely. It takes joy in burning the creatures and objects of the Material Plane to\nashes."
+combat: "A fire elemental is a fierce opponent that attacks its enemies directly and savagely. It takes joy in burning the creatures and objects of the Material Plane to ashes."

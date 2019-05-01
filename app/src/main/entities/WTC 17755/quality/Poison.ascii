@@ -2,6 +2,6 @@ template {
   name: "Poison"
   category: "option"
   world: "Generic"
-  description: "$type, DC $dc, initial damage $initial, secondary damage $secondary. The\n  save DC is Constitution based."
+  description: "$type, DC $dc, initial damage $initial, secondary damage $secondary. The save DC is Constitution based."
 }
 type: EXTRAORDINARY

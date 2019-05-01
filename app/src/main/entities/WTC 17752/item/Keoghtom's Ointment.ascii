@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A jar of this unguent is 3 inches in diameter and 1 inch deep and contains\n  five applications. Placed upon a poisoned wound or swallowed, the ointment\n  detoxifies any poison (as \\Spell{neutralize poison}). Applied to a diseased\n  area, it removes disease (as \\Spell{remove disease}). Rubbed on a wound, the\n  ointment cures 1d8+5 points of damage (as \\Spell{cure light wounds})."
+  description: "A jar of this unguent is 3 inches in diameter and 1 inch deep and contains five applications. Placed upon a poisoned wound or swallowed, the ointment detoxifies any poison (as \\Spell{neutralize poison}). Applied to a diseased area, it removes disease (as \\Spell{remove disease}). Rubbed on a wound, the ointment cures 1d8+5 points of damage (as \\Spell{cure light wounds})."
   short_description: "A detoxifying, disease freeing or healing salve."
 }
 value {

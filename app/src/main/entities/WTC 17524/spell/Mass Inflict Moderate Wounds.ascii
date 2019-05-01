@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like mass inflict light wounds, except that it deals\n  2d8 points of damage +1 point per caster level (maximum +30)."
+  description: "This spell functions like mass inflict light wounds, except that it deals 2d8 points of damage +1 point per caster level (maximum +30)."
 }
 school: NECROMANCY
 summary: "$undefined$"

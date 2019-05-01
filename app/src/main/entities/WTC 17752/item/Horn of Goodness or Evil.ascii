@@ -16,7 +16,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This trumpet adapts itself to its owner, so it produces either a good or an\n  evil effect depending on the owner\342\210\232\302\242\302\254\303\204\302\254\303\264s alignment. If the owner is neither good\n  nor evil, the horn has no power whatsoever. If he is good, then blowing the\n  horn has the effect of a magic circle against evil. If he is evil, then\n  blowing the horn has the effect of a magic circle against good. In either\n  case, this ward lasts for 1 hour. The horn can be blown once per day."
+  description: "This trumpet adapts itself to its owner, so it produces either a good or an evil effect depending on the owner\342\210\232\302\242\302\254\303\204\302\254\303\264s alignment. If the owner is neither good nor evil, the horn has no power whatsoever. If he is good, then blowing the horn has the effect of a magic circle against evil. If he is evil, then blowing the horn has the effect of a magic circle against good. In either case, this ward lasts for 1 hour. The horn can be blown once per day."
   short_description: "Once a day, create a magic circle against good/evail (depending on user\'s alignment) for 1 hour."
 }
 value {

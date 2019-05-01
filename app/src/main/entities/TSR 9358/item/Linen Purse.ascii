@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "All of our purses are durable and roomy.\n\n   Hidden pouches (5 gp) are optional, as is a wire mesh inner layer (7 gp) to\n   deter thieves. As a bonus, we will embroider (linen) or tool (leather) one\n   initial on your new purse at no extra charge. Additional letters, 1 sp\n   each.\n\n   The next time a cutpurse cuts your purse, think about one of our purses.\n   Any purse with wire mesh layer prevents successful purse cutting by thieves,\n   although a hand can still get inside one."
+  description: "All of our purses are durable and roomy. \n\nHidden pouches (5 gp) are optional, as is a wire mesh inner layer (7 gp) to deter thieves. As a bonus, we will embroider (linen) or tool (leather) one initial on your new purse at no extra charge. Additional letters, 1 sp each. \n\nThe next time a cutpurse cuts your purse, think about one of our purses. Any purse with wire mesh layer prevents successful purse cutting by thieves, although a hand can still get inside one."
   short_description: "A linen purse."
 }
 value {

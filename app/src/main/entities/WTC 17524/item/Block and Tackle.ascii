@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This block and tackle can be used to haul your goods to its desired\n  destination."
+  description: "This block and tackle can be used to haul your goods to its desired destination."
 }
 value {
   gold: 5

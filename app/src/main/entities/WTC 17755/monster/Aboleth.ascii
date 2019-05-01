@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The \\Monster{aboleth} is a revolting fishlike amphibian found primarily in\n  subterranean lakes and rivers. It despises all nonaquatic creatures and\n  attempts to destroy them on sigh.\n\n  An \\Monster{aboleth} has a pink belly. Four pulsating blue black orifices\n  line the bottom of its body and secrete a gray slime that smells like rancid\n  grease. It uses its tail for propulsion in the water and drags itself along\n  with its tentacles on land. An \\Monster{aboleth} weighs about 6,500 pounds."
+  description: "The \\Monster{aboleth} is a revolting fishlike amphibian found primarily in subterranean lakes and rivers. It despises all nonaquatic creatures and attempts to destroy them on sigh. \n\nAn \\Monster{aboleth} has a pink belly. Four pulsating blue black orifices line the bottom of its body and secrete a gray slime that smells like rancid grease. It uses its tail for propulsion in the water and drags itself along with its tentacles on land. An \\Monster{aboleth} weighs about 6,500 pounds."
   short_description: "A revolting, fishlike amphibian found primarily in subterranean rivers and lakes."
 }
 size {
@@ -105,11 +105,11 @@ language {
 language {
   name: AQUAN
 }
-encounter: "The cool, refreshing water suddenly erupts in a storm of\n                     reaching, grasping tentacles. The tentacles connect to a\n                     primeval fish, 20 feet in length from its bulbous head to\n                     its crescent-shaped tail. Three slit-shaped eyes,\n                     protected by bony ridges, are set one atop the other in\n                     the front of its head, which remains just beneath the\n                     surface as it attacks."
-combat: "An \\Monster{aboleth} attacks by flailing with its long,\n                      slimy tentacles, though it prefers to fight from a\n                      distance using its illusion powers."
-tactics: "\\Monster[aboleth]{Aboleths} are smart enough to refrain\n                     from immediately attacking land dwellers who draw near.\n                     Instead they hang back, hoping their prey will enter the\n                     water, which they often make appear cool, clear, and\n                     refreshing with their powers of illusion.\n                     \\Monster[aboleth]{Aboleths} also use their psionic\n                     abilities to enslave individuals for use against their own\n                     companions."
-character: "\\Monster[aboleth]{Aboleths} are cruel and highly\n                     intelligent, making the dangerous predators. They know\n                     many ancient and terrible secrets, for they inherit their\n                     parent\'s knowledge at birth and assimilate the memories\n                     of all they consume."
-reproduction: "\\Monster[aboleth]{Aboleths} have both male and female\n                     reproductive organs. They breed in solitude, laying 1d3\n                     eggs every five years. These eggs grow for another five\n                     years before hatching into full-grown\n                     \\Monster[aboleth]{aboleths}. Although the young are\n                     physically mature, they remain with their parent for some\n                     ten years, obeying the older creature utterly."
+encounter: "The cool, refreshing water suddenly erupts in a storm of reaching, grasping tentacles. The tentacles connect to a primeval fish, 20 feet in length from its bulbous head to its crescent-shaped tail. Three slit-shaped eyes, protected by bony ridges, are set one atop the other in the front of its head, which remains just beneath the surface as it attacks."
+combat: "An \\Monster{aboleth} attacks by flailing with its long, slimy tentacles, though it prefers to fight from a distance using its illusion powers."
+tactics: "\\Monster[aboleth]{Aboleths} are smart enough to refrain from immediately attacking land dwellers who draw near. Instead they hang back, hoping their prey will enter the water, which they often make appear cool, clear, and refreshing with their powers of illusion. \\Monster[aboleth]{Aboleths} also use their psionic abilities to enslave individuals for use against their own companions."
+character: "\\Monster[aboleth]{Aboleths} are cruel and highly intelligent, making the dangerous predators. They know many ancient and terrible secrets, for they inherit their parent\'s knowledge at birth and assimilate the memories of all they consume."
+reproduction: "\\Monster[aboleth]{Aboleths} have both male and female reproductive organs. They breed in solitude, laying 1d3 eggs every five years. These eggs grow for another five years before hatching into full-grown \\Monster[aboleth]{aboleths}. Although the young are physically mature, they remain with their parent for some ten years, obeying the older creature utterly."
 skill {
   name: "Concentration"
 }

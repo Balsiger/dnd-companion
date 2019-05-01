@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "The creature can jet backward once per round as a double move action, at\n  a speed of $range."
+  description: "The creature can jet backward once per round as a double move action, at a speed of $range."
 }
 type: EXTRAORDINARY

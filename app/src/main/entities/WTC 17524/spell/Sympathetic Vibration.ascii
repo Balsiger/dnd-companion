@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "By attuning yourself to a freestanding structure such as a building, bridge,\n  or dam, you can create a damaging vibration within it. Once it begins, the\n  vibration deals 2d10 points of damage per round to the target\n  structure. (Hardness has no effect on the spell\'s damage.) You can choose at\n  the time of casting to limit the duration of the spell; otherwise it lasts\n  for 1 round/ level. If the spell is cast upon a target that is not\n  freestanding the surrounding stone dissipates the effect and no damage\n  occurs.  Sympathetic vibration cannot affect creatures (including\n  constructs). Since a structure is an unattended object, it gets no saving\n  throw to resist the effect.  Focus: A tuning fork.  Jozan casts symbol of\n  pain."
+  description: "By attuning yourself to a freestanding structure such as a building, bridge, or dam, you can create a damaging vibration within it. Once it begins, the vibration deals 2d10 points of damage per round to the target structure. (Hardness has no effect on the spell\'s damage.) You can choose at the time of casting to limit the duration of the spell; otherwise it lasts for 1 round/ level. If the spell is cast upon a target that is not freestanding the surrounding stone dissipates the effect and no damage occurs.  Sympathetic vibration cannot affect creatures (including constructs). Since a structure is an unattended object, it gets no saving throw to resist the effect.  Focus: A tuning fork.  Jozan casts symbol of pain."
 }
 school: EVOACATION
 summary: "$undefined$"

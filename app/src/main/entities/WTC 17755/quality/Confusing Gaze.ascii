@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Confusion as the spell, 30 feet, caster level 8th, Will DC 15 negates. The\n  save DC is Charisma-based."
+  description: "Confusion as the spell, 30 feet, caster level 8th, Will DC 15 negates. The save DC is Charisma-based."
 }
 type: SUPERNATURAL

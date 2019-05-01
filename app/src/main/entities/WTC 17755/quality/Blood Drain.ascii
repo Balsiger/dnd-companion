@@ -17,6 +17,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The creature drains blood, dealing Constitution damage in any round by\n  $name. $notes"
+  description: "The creature drains blood, dealing Constitution damage in any round by $name. $notes"
 }
 type: EXTRAORDINARY

@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This lightweight and fashionable cloak has a highly decorative silver\n  trim. When in a character\'s possession, it adds a +2 enhancement bonus to her\n  Charisma score."
+  description: "This lightweight and fashionable cloak has a highly decorative silver trim. When in a character\'s possession, it adds a +2 enhancement bonus to her Charisma score."
   short_description: "Gives a +2 enhancement bonus to Charisma."
 }
 value {

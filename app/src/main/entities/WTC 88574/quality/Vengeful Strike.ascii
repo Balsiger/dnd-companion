@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Any melee attack the revenant makes against its killer inflicts an\n  additional +1d10 points of damage. "
+  description: "Any melee attack the revenant makes against its killer inflicts an additional +1d10 points of damage. "
 }
 type: EXTRAORDINARY

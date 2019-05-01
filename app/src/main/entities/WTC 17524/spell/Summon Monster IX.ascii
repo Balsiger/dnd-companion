@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like summon monster I, except that you can summon one\n  creature from the 9th-level list, 1d3 creatures of the same kind from the\n  8th-level list, or 1d4+1 creatures of the same kind from a lowerlevel list."
+  description: "This spell functions like summon monster I, except that you can summon one creature from the 9th-level list, 1d3 creatures of the same kind from the 8th-level list, or 1d4+1 creatures of the same kind from a lowerlevel list."
 }
 school: CONJURATION
 subschool: SUMMONING

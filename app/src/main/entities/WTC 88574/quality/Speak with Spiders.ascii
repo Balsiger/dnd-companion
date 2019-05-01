@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Rhuallith can freely communicate with any spiderkind creature (see\n\'Spiderkind\' in City of the Spider Queen)."
+  description: "Rhuallith can freely communicate with any spiderkind creature (see \'Spiderkind\' in City of the Spider Queen)."
 }
 type: EXTRAORDINARY

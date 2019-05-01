@@ -12,6 +12,6 @@ template {
   short_description: "Take a standard action during a move."
 }
 type: GENERAL
-benefit: "When flying, the creature can take a move action\n                    (including a dive) and another standard action at any point\n                    during the move. The creature cannot take a second move\n                    action during a round when it makes a flyby attack."
-normal: "Without this feat, the creature takes a standard action\n                    either before or after its move."
+benefit: "When flying, the creature can take a move action (including a dive) and another standard action at any point during the move. The creature cannot take a second move action during a round when it makes a flyby attack."
+normal: "Without this feat, the creature takes a standard action either before or after its move."
 prerequisites: "Fly speed"

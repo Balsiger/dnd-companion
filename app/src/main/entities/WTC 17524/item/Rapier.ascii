@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can use the \\Feat{Weapon Finesse} feat (page 102) to apply your\nDexterity modifier instead of your Strength modifier to attack rolls with a\nrapier sized for you, even though it isn\'t a light weapon for\nyou. You can\'t wield a rapier in two hands in order to apply 1-1/2\ntimes your Strength bonus to damage."
+  description: "You can use the \\Feat{Weapon Finesse} feat (page 102) to apply your Dexterity modifier instead of your Strength modifier to attack rolls with a rapier sized for you, even though it isn\'t a light weapon for you. You can\'t wield a rapier in two hands in order to apply 1-1/2 times your Strength bonus to damage."
   short_description: "Can be used with \\Feat{Weapon Finesse}, cannot be used two handed."
 }
 value {

@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This cloak of neutral gray cloth is indistinguishable from an ordinary cloak\nof the same color. However, when worn with the hood drawn up around the head,\nit gives the wearer a +5 competence bonus on Hide checks."
+  description: "This cloak of neutral gray cloth is indistinguishable from an ordinary cloak of the same color. However, when worn with the hood drawn up around the head, it gives the wearer a +5 competence bonus on Hide checks."
   short_description: "Hide +5 competence bonus"
 }
 value {

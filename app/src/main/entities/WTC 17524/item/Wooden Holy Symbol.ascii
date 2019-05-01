@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A holy symbol focuses positive energy. A \\Class{cleric} or \\Class{paladin}\n  uses it as the focus for his spells and as a tool for turning undead. Each\n  religion has its own holy symbol, and a sun symbol is the default holy symbol\n  for clerics not associated with any particular religion.\n\n  A silver holy symbol works no better than a wooden one, but it serves as a\n  mark of status for the wielder."
+  description: "A holy symbol focuses positive energy. A \\Class{cleric} or \\Class{paladin} uses it as the focus for his spells and as a tool for turning undead. Each religion has its own holy symbol, and a sun symbol is the default holy symbol for clerics not associated with any particular religion. \n\nA silver holy symbol works no better than a wooden one, but it serves as a mark of status for the wielder."
 }
 value {
   gold: 1

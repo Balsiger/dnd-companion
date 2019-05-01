@@ -10,7 +10,7 @@ template {
       high: 225
     }
   }
-  description: "The magic weapon serves as a channel for the wielder\'s ki, allowing her to\n  use her special ki attacks through the weapon as if they were unarmed\n  attacks. These attacks include the monk\'s stunning attack, kistrike, and\n  quivering palm, as well as the Stunning Fist feat. Only melee weapons can\n  have the kifocus ability."
+  description: "The magic weapon serves as a channel for the wielder\'s ki, allowing her to use her special ki attacks through the weapon as if they were unarmed attacks. These attacks include the monk\'s stunning attack, kistrike, and quivering palm, as well as the Stunning Fist feat. Only melee weapons can have the kifocus ability."
   short_description: "Allows special ky attacks through the weapon."
 }
 probability: COMMON

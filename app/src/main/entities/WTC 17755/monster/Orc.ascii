@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An orc\'s hair usually is black. It has lupine ears and reddish eyes. Orcs\n  prefer wearing vivid colors that many humans would consider unpleasant, such\n  as blood red, mustard yellow, yellow-green, and deep purple. Their equipment\n  is dirty and unkempt. Ad adult male orc is little over 6 feet tall and weighs\n  about 210 pounds. Females are slightly smaller.\n\n  The language an orc speaks varies slightly from tribe to tribe, but any orc\n  is understandable by someone else who speaks Orc. Some orcs know Goblin or\n  Giant as well.\n\n  Most encountered away from their home are warriors; the information in the\n  statistics block is for one of 1st level."
+  description: "An orc\'s hair usually is black. It has lupine ears and reddish eyes. Orcs prefer wearing vivid colors that many humans would consider unpleasant, such as blood red, mustard yellow, yellow-green, and deep purple. Their equipment is dirty and unkempt. Ad adult male orc is little over 6 feet tall and weighs about 210 pounds. Females are slightly smaller. \n\nThe language an orc speaks varies slightly from tribe to tribe, but any orc is understandable by someone else who speaks Orc. Some orcs know Goblin or Giant as well. \n\nMost encountered away from their home are warriors; the information in the statistics block is for one of 1st level."
   short_description: "The typical orc"
 }
 size {
@@ -91,10 +91,10 @@ language {
   modifier: SOME
   name: GIANT
 }
-encounter: "This creature looks like a primitive human with gray skin\n                    and coarse hair. It has a stooped posture, low forehead,\n                    and a piglike face with prominent lower canines that\n                    resemble a boar\'s tusks."
-combat: "Orcs are proficient with all simple weapons, preferring\n                    those that cause the most damage in the least time. Many\n                    orcs who take up the \\Class{warrior} or \\Class{fighter}\n                    class also gain proficiency with the falchion or the\n                    greataxe as a martial weapon. "
-tactics: "They enjoy attacking from\n                    conealment and setting ambushes, and they obey the rules of\n                    war (such as honoring a truce) only as long as it is\n                    convenient for them."
-character: "Orcs are aggressive humanoids that raid, pillage, and\n                    battle other creatures. They have a hatred for\n                    \\Monster[elf]{elves} and \\Monster[dwarf]{dwarves} that\n                    began generations ago, and often kill such creatures on\n                    sight.\n\n                    When not actually fighting other creatures, orcs are\n                    usually planning raids or practicing their fighting\n                    skill."
+encounter: "This creature looks like a primitive human with gray skin and coarse hair. It has a stooped posture, low forehead, and a piglike face with prominent lower canines that resemble a boar\'s tusks."
+combat: "Orcs are proficient with all simple weapons, preferring those that cause the most damage in the least time. Many orcs who take up the \\Class{warrior} or \\Class{fighter} class also gain proficiency with the falchion or the greataxe as a martial weapon. "
+tactics: "They enjoy attacking from conealment and setting ambushes, and they obey the rules of war (such as honoring a truce) only as long as it is convenient for them."
+character: "Orcs are aggressive humanoids that raid, pillage, and battle other creatures. They have a hatred for \\Monster[elf]{elves} and \\Monster[dwarf]{dwarves} that began generations ago, and often kill such creatures on sight. \n\nWhen not actually fighting other creatures, orcs are usually planning raids or practicing their fighting skill."
 skill {
   name: "Listen"
 }

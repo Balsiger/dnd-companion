@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A breastplate covers your front and your back. It comes with a helmet and\n  greaves (plates to cover your lower legs). A light suit or skirt of studded\n  leather beneath the breastplate protects your limbs without restricting\n  movement much."
+  description: "A breastplate covers your front and your back. It comes with a helmet and greaves (plates to cover your lower legs). A light suit or skirt of studded leather beneath the breastplate protects your limbs without restricting movement much."
 }
 value {
   gold: 200

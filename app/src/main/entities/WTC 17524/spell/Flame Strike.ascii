@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A flame strike produces a vertical column of divine fire roaring\n  downward. The spell deals 1d6 points of damage per caster level (maximum\n  15d6). Half the damage is fire damage, but the other half results directly\n  from divine power and is therefore not subject to being reduced by resistance\n  to fire-based attacks, such as that granted by protection from energy (fire),\n  fire shield (chill shield), and similar magic."
+  description: "A flame strike produces a vertical column of divine fire roaring downward. The spell deals 1d6 points of damage per caster level (maximum 15d6). Half the damage is fire damage, but the other half results directly from divine power and is therefore not subject to being reduced by resistance to fire-based attacks, such as that granted by protection from energy (fire), fire shield (chill shield), and similar magic."
 }
 school: EVOACATION
 summary: "[[100 + (10 * $level)]] ft, 10 ft cylinder (40 ft high), strike with divine fire, [[min(15, $level)]]d6 damage, half fire, half divine."

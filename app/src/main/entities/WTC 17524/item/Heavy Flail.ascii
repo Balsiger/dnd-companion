@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "With a flail, you get a +2 bonus on opposed attack rolls made to disarm an\n  enemy (including the roll to avoid being disarmed if such an attempt fails).\n  You can also use this weapon to make trip attacks. If you are tripped during\n  your own trip attempt, you can drop the flail to avoid being tripped."
+  description: "With a flail, you get a +2 bonus on opposed attack rolls made to disarm an enemy (including the roll to avoid being disarmed if such an attempt fails). You can also use this weapon to make trip attacks. If you are tripped during your own trip attempt, you can drop the flail to avoid being tripped."
 }
 value {
   gold: 15

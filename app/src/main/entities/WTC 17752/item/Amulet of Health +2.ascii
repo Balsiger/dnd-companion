@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This amulet is a golden disk on a chain. It usually bears the image of a\n  lion or other powerful animal. The amulet grants the wearer an enhancement\n  bonus to Constitution of +2."
+  description: "This amulet is a golden disk on a chain. It usually bears the image of a lion or other powerful animal. The amulet grants the wearer an enhancement bonus to Constitution of +2."
   short_description: "Grants +2 enhancement bonus to Constitution."
 }
 value {

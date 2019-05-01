@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A typical torch is a wooden rod capped with a twisted flax soaked in\n  tallow. A torch burns for 1 hour, clearly illuminating a 20- foot radius and\n  providing shadowy illumination out to a 40- foot radius. See page 164 in the\n  \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination. If a\n  torch is used in combat, treat it as a one-handed improvised weapon (see page\n  113) that deals bludgeoning damage equal to that of a gauntlet of its size,\n  plus 1 point of fire damage."
+  description: "A typical torch is a wooden rod capped with a twisted flax soaked in tallow. A torch burns for 1 hour, clearly illuminating a 20- foot radius and providing shadowy illumination out to a 40- foot radius. See page 164 in the \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination. If a torch is used in combat, treat it as a one-handed improvised weapon (see page 113) that deals bludgeoning damage equal to that of a gauntlet of its size, plus 1 point of fire damage."
 }
 value {
   gold: 1

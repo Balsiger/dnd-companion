@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can ride a mount, be it a horse, riding dog, griffon, dragon, or some\n  other kind of creature suited for riding. If you attempt to ride a creature\n  that is ill suited as a mount (such as most bipedal creatures), you take a \342\200\232\303\204\303\2545\n  penalty on your Ride checks."
+  description: "You can ride a mount, be it a horse, riding dog, griffon, dragon, or some other kind of creature suited for riding. If you attempt to ride a creature that is ill suited as a mount (such as most bipedal creatures), you take a \342\200\232\303\204\303\2545 penalty on your Ride checks."
 }
 ability: DEXTERITY
 action: "Varies. Mounting or dismounting normally is a move                     action. Other checks are a move action, a free action, or                     no action at all, as noted above."

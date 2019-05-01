@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You need at least two hands to use a bow, regardless of its size. You can\n  use a shortbow while mounted. If you have a penalty for low Strength, apply\n  it to damage rolls when you use a shortbow. If you have a bonus for high\n  Strength, you can apply it to damage rolls when you use a \\Item{composite\n  shortbow} but not a regular shortbow."
+  description: "You need at least two hands to use a bow, regardless of its size. You can use a shortbow while mounted. If you have a penalty for low Strength, apply it to damage rolls when you use a shortbow. If you have a bonus for high Strength, you can apply it to damage rolls when you use a \\Item{composite shortbow} but not a regular shortbow."
 }
 value {
   gold: 30

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like dispel evil, except that you are surrounded by\n  flickering, yellow, chaotic energy, and the spell affects lawful creatures\n  and spells rather than evil ones."
+  description: "This spell functions like dispel evil, except that you are surrounded by flickering, yellow, chaotic energy, and the spell affects lawful creatures and spells rather than evil ones."
 }
 school: ABJURATION
 summary: "$undefined$"

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Each affected creature gains a +2 morale bonus to Strength and Constitution,\n  a +1 morale bonus on Will saves, and a \342\200\232\303\204\303\2542 penalty to AC. The effect is\n  otherwise identical with a barbarian\'s rage (see page 25), except that the\n  subjects aren\'t fatigued at the end of the rage."
+  description: "Each affected creature gains a +2 morale bonus to Strength and Constitution, a +1 morale bonus on Will saves, and a \342\200\232\303\204\303\2542 penalty to AC. The effect is otherwise identical with a barbarian\'s rage (see page 25), except that the subjects aren\'t fatigued at the end of the rage."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

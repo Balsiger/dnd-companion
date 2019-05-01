@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This armor is a combination of chainmail with metal plates (breastplate,\n  epaulettes, elbow guards, gauntlets, tasses, and greaves) covering vital\n  areas. Buckles and straps hold the whole suit together and distribute the\n  weight, but the armor still hangs more loosely than full plate. The suit\n  includes gauntlets."
+  description: "This armor is a combination of chainmail with metal plates (breastplate, epaulettes, elbow guards, gauntlets, tasses, and greaves) covering vital areas. Buckles and straps hold the whole suit together and distribute the weight, but the armor still hangs more loosely than full plate. The suit includes gauntlets."
 }
 value {
   gold: 600

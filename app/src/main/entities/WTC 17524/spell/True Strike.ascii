@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You gain temporary, intuitive insight into the immediate future during your\n  next attack. Your next single attack roll (if it is made before the end of\n  the next round) gains a +20 insight bonus. Additionally, you are not affected\n  by the miss chance that applies to attackers trying to strike a concealed\n  target.  Focus: A small wooden replica of an archery target."
+  description: "You gain temporary, intuitive insight into the immediate future during your next attack. Your next single attack roll (if it is made before the end of the next round) gains a +20 insight bonus. Additionally, you are not affected by the miss chance that applies to attackers trying to strike a concealed target.  Focus: A small wooden replica of an archery target."
 }
 school: DIVINATION
 summary: "personal, Attack +20 insight to next attack roll, no miss chance for concealment"

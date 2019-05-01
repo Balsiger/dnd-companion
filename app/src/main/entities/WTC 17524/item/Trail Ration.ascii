@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Trail rations are compact, dry, high-energy foods suitable for travel, such\n  as jerky, dried fruit, hardtack, and nuts."
+  description: "Trail rations are compact, dry, high-energy foods suitable for travel, such as jerky, dried fruit, hardtack, and nuts."
 }
 value {
   silver: 5

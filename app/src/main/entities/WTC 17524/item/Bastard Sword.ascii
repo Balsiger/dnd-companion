@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Bastard swords are also known as hand-and-ahalf swords. A bastard sword is\n  too large to use in one hand without special training; thus, it is an exotic\n  weapon. A character can use a bastard sword two-handed as a martial weapon."
+  description: "Bastard swords are also known as hand-and-ahalf swords. A bastard sword is too large to use in one hand without special training; thus, it is an exotic weapon. A character can use a bastard sword two-handed as a martial weapon."
 }
 value {
   gold: 35

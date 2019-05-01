@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You direct a ray of positive energy. You must make a ranged touch attack to\n  hit, and if the ray hits an undead creature, it deals 1d6 points of damage to\n  it."
+  description: "You direct a ray of positive energy. You must make a ranged touch attack to hit, and if the ray hits an undead creature, it deals 1d6 points of damage to it."
 }
 school: NECROMANCY
 summary: "ranged touched [[25 + (5 * ($level/2))] ft, 1d6 damage to undead."

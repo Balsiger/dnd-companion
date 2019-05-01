@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Twisted, devious, and untrustworthy, tieflings more often than not follow their inherent tendencies and heed the call to evil. A few defy their nature, but still must fight against popular opinion (if their nature is known) or the feeling of otherworldly \342\200\234wrongness\342\200\235 that seems to follow them wherever they go.\n\nAside from a demeanor that many find disturbing, many tieflings are indistinguishable from humans. Others have small horns, pointed teeth, red eyes, a whiff of brimstone about them, or even cloven feet. No two tieflings are the same.\n\nIn most human societies, tieflings maintain a low profile, operating as thieves, assassins, or spies. Occasionally one rises to a position of power, but when its nature is revealed it quickly becomes\nan outcast."
+  description: "Twisted, devious, and untrustworthy, tieflings more often than not follow their inherent tendencies and heed the call to evil. A few defy their nature, but still must fight against popular opinion (if their nature is known) or the feeling of otherworldly \342\200\234wrongness\342\200\235 that seems to follow them wherever they go.\n\nAside from a demeanor that many find disturbing, many tieflings are indistinguishable from humans. Others have small horns, pointed teeth, red eyes, a whiff of brimstone about them, or even cloven feet. No two tieflings are the same.\n\nIn most human societies, tieflings maintain a low profile, operating as thieves, assassins, or spies. Occasionally one rises to a position of power, but when its nature is revealed it quickly becomes an outcast."
   short_description: "Often twisted, devious, and untrustworthy offspring of devils."
 }
 size {

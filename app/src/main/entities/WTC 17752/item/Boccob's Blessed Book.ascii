@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This well-made tome is always of small size, typically no more than 12\n  inches tall, 8 inches wide, and 1 inch thick. All such books are durable,\n  waterproof, bound with iron overlaid with silver, and locked.  A wizard can\n  fill the 1,000 pages of a Boccob\'s blessed book with spells without paying\n  the 25 gp per page material cost. This book is never found as randomly\n  generated treasure with spells already inscribed in it."
+  description: "This well-made tome is always of small size, typically no more than 12 inches tall, 8 inches wide, and 1 inch thick. All such books are durable, waterproof, bound with iron overlaid with silver, and locked.  A wizard can fill the 1,000 pages of a Boccob\'s blessed book with spells without paying the 25 gp per page material cost. This book is never found as randomly generated treasure with spells already inscribed in it."
   short_description: "A book with 1000 pages to record spells."
 }
 value {

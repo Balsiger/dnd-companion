@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "All baatezu can see perfectly in darkness of any kind, even that created by\n  a deeper darkness spell."
+  description: "All baatezu can see perfectly in darkness of any kind, even that created by a deeper darkness spell."
 }
 type: SUPERNATURAL

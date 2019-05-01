@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Normally, you strike with a halberd\'s axe head, but the spike on\n  the end is useful against charging opponents. If you use a ready action to\n  set a halberd against a charge, you deal double damage on a successful hit\n  against a charging character.\n\n  You can use the hook on the back of a halberd to make trip attacks. If you\n  are tripped during your own trip attempt, you can drop the halberd to avoid\n  being tripped."
+  description: "Normally, you strike with a halberd\'s axe head, but the spike on the end is useful against charging opponents. If you use a ready action to set a halberd against a charge, you deal double damage on a successful hit against a charging character. \n\nYou can use the hook on the back of a halberd to make trip attacks. If you are tripped during your own trip attempt, you can drop the halberd to avoid being tripped."
 }
 value {
   gold: 10

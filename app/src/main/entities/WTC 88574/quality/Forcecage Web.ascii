@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Eight times per day, a jade spider can cast a magical web of glowing green\n  energy as a standard action.  This effect functions like a forcecagespell,\n  except that it affects only one target and allows a Reflex save (DC 17) to\n  avoid the effect. A target that fails its saving throw is imprisoned within a\n  barred cage of force. After using its forcecage web, a jade spider must wait\n  2d4 rounds before doing so again."
+  description: "Eight times per day, a jade spider can cast a magical web of glowing green energy as a standard action.  This effect functions like a forcecagespell, except that it affects only one target and allows a Reflex save (DC 17) to avoid the effect. A target that fails its saving throw is imprisoned within a barred cage of force. After using its forcecage web, a jade spider must wait 2d4 rounds before doing so again."
 }
 type: SUPERNATURAL

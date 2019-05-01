@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Your opponent cannot use a disarm action to disarm you of \\Item[Spiked\n  Gauntlet]{spiked gauntlets}. The cost and weight given are for a single\n  gauntlet. An attack with a \\Item{spiked gauntlet} is considered an armed\n  attack."
+  description: "Your opponent cannot use a disarm action to disarm you of \\Item[Spiked Gauntlet]{spiked gauntlets}. The cost and weight given are for a single gauntlet. An attack with a \\Item{spiked gauntlet} is considered an armed attack."
 }
 value {
   gold: 5

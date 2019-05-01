@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A blackguard applies his Charisma modifier (if positive) as a bonus on all\n  saving throws."
+  description: "A blackguard applies his Charisma modifier (if positive) as a bonus on all saving throws."
 }
 type: SUPERNATURAL

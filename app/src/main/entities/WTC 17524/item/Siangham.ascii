@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The siangham is a special monk weapon. This designation gives a \\Class{monk}\n  wielding a siangham special options."
+  description: "The siangham is a special monk weapon. This designation gives a \\Class{monk} wielding a siangham special options."
 }
 value {
   gold: 3

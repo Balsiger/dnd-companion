@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This black garment, embroidered with a weblike pattern in silk, gives the\n  wearer the ability to climb as if a spider climb spell had been placed upon\n  her. In addition, the cloak grants her immunity to entrapment by webspells or\n  webs of any sort --- she can actually move in webs at half her normal speed.\n  Once per day, the wearer of this cloak can cast web. She also gains a +2 luck\n  bonus on all Fortitude saves against poison from spiders."
+  description: "This black garment, embroidered with a weblike pattern in silk, gives the wearer the ability to climb as if a spider climb spell had been placed upon her. In addition, the cloak grants her immunity to entrapment by webspells or webs of any sort --- she can actually move in webs at half her normal speed. Once per day, the wearer of this cloak can cast web. She also gains a +2 luck bonus on all Fortitude saves against poison from spiders."
   short_description: "Gain \\Spell{Spider Climb}, climb on webs, +2 luck bonus on Fort save vs. spider poison."
 }
 value {

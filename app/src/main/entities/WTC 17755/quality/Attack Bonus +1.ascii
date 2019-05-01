@@ -7,7 +7,7 @@ template {
       high: 92
     }
   }
-  description: "The creatures gets +1 racial bonus on attack rolls against $name.\n"
+  description: "The creatures gets +1 racial bonus on attack rolls against $name. "
   short_description: "+1 racial attack bonus against $name."
 }
  attack_modifier {

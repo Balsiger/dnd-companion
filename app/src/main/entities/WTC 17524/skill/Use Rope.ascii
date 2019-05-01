@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "With this skill, you can make firm knots, undo tricky knots, and bind\n  prisoners with ropes."
+  description: "With this skill, you can make firm knots, undo tricky knots, and bind prisoners with ropes."
 }
 ability: DEXTERITY
 action: "Varies. Throwing a grappling hook is a standard action                     that provokes an attack of opportunity. Tying a knot,                     tying a special knot, or tying a rope around yourself                     one-handed is a full-round action that provokes an attack                     of opportunity. Splicing two ropes together takes 5                     minutes. Binding a character takes 1 minute."

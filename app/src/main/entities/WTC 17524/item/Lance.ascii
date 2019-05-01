@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A lance deals double damage when used from the back of a charging mount. It\n  has reach, so you can strike opponents 10 feet away with it, but you\n  can\'t use it against an adjacent foe.\n\n  While mounted, you can wield a lance with one hand."
+  description: "A lance deals double damage when used from the back of a charging mount. It has reach, so you can strike opponents 10 feet away with it, but you can\'t use it against an adjacent foe. \n\nWhile mounted, you can wield a lance with one hand."
 }
 value {
   gold: 10

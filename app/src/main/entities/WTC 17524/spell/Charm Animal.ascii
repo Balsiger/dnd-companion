@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like charm person, except that it affects a creature of\n  the animal type. See the Monster Manual for more information on creature\n  types."
+  description: "This spell functions like charm person, except that it affects a creature of the animal type. See the Monster Manual for more information on creature types."
 }
 school: ENCHANTMENT
 subschool: CHARM

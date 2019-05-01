@@ -21,7 +21,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This item is made of burlap or a similar material and has a drawstring so it\n  can be closed."
+  description: "This item is made of burlap or a similar material and has a drawstring so it can be closed."
 }
 value {
   silver: 1

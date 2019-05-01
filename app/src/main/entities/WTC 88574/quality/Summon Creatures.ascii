@@ -11,6 +11,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This ability functions like a summon monster spell of the appropriate level,\n  except that it has only a limited chance of success. Once per day a maurezhi\n  can attempt to summon 1d4 ghouls with a 100% chance of success, or 2d4\n  dretches with a 60% chance of success."
+  description: "This ability functions like a summon monster spell of the appropriate level, except that it has only a limited chance of success. Once per day a maurezhi can attempt to summon 1d4 ghouls with a 100% chance of success, or 2d4 dretches with a 60% chance of success."
 }
 type: SPELL_LIKE

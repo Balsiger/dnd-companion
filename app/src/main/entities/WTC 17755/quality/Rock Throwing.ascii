@@ -9,6 +9,6 @@ template {
       high: 124
     }
   }
-  description: "The range increment is $range for a stone giant\342\200\232\303\204\303\264s thrown rocks. It uses\n  both hands when throwing a rock."
+  description: "The range increment is $range for a stone giant\342\200\232\303\204\303\264s thrown rocks. It uses both hands when throwing a rock."
 }
 type: EXTRAORDINARY

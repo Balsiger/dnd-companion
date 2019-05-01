@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A dart is the size of a large arrow and has a weighted head.  Essentially,\n  it is a small javelin."
+  description: "A dart is the size of a large arrow and has a weighted head.  Essentially, it is a small javelin."
 }
 value {
   silver: 5

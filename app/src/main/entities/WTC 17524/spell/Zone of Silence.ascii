@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "By casting zone of silence, you manipulate sound waves in your immediate\n  vicinity so that you and those within the spell\'s area can converse normally,\n  yet no one outside can hear your voices or any other noises from within,\n  including languagedependent or sonic spell effects (such as command or\n  shout). This effect is centered on you and moves with you. Anyone who enters\n  the zone immediately becomes subject to its effects, but those who leave are\n  no longer affected. Note, however, that a successful Spot check to read lips\n  can still reveal what\'s said inside a zone of silence."
+  description: "By casting zone of silence, you manipulate sound waves in your immediate vicinity so that you and those within the spell\'s area can converse normally, yet no one outside can hear your voices or any other noises from within, including languagedependent or sonic spell effects (such as command or shout). This effect is centered on you and moves with you. Anyone who enters the zone immediately becomes subject to its effects, but those who leave are no longer affected. Note, however, that a successful Spot check to read lips can still reveal what\'s said inside a zone of silence."
 }
 school: ILLUSION
 subschool: GLAMER

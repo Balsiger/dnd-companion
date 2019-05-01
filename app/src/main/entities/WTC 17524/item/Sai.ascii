@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A sai\'s pronglike extrusions are designed to help catch and disarm\n  opponent\'s weapons. With a sai, you get a +4 bonus on opposed\n  attack rolls made to disarm an enemy (including the roll to avoid being\n  disarmed if such an attempt fails).\n\n  The sai is a special monk weapon. This designation gives a \\Class{monk}\n  wielding a sai special options."
+  description: "A sai\'s pronglike extrusions are designed to help catch and disarm opponent\'s weapons. With a sai, you get a +4 bonus on opposed attack rolls made to disarm an enemy (including the roll to avoid being disarmed if such an attempt fails). \n\nThe sai is a special monk weapon. This designation gives a \\Class{monk} wielding a sai special options."
 }
 value {
   gold: 1

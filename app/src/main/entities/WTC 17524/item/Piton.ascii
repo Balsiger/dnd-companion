@@ -16,7 +16,7 @@ template {
     }
   }
   world: "Generic"
-  description: "When a wall doesn\'t offer handholds and footholds, you can make your own. A\n  piton is a steel spike with an eye through which you can loop a rope. (See\n  the Climb skill, page 69 of the \\Product[WTC 17524]{Player\'s Handbook})."
+  description: "When a wall doesn\'t offer handholds and footholds, you can make your own. A piton is a steel spike with an eye through which you can loop a rope. (See the Climb skill, page 69 of the \\Product[WTC 17524]{Player\'s Handbook})."
 }
 value {
   silver: 1

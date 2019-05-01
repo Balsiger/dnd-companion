@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You imbue the subject with magical energy that protects it from harm,\n  granting it a +1 resistance bonus on saves.  Resistance can be made permanent\n  with a permanency spell.  Arcane Material Component: A miniature cloak."
+  description: "You imbue the subject with magical energy that protects it from harm, granting it a +1 resistance bonus on saves.  Resistance can be made permanent with a permanency spell.  Arcane Material Component: A miniature cloak."
 }
 school: ABJURATION
 summary: "touched, 1 min, gain +1 resitance to saves"

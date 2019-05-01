@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A hooded lantern has shuttered or hinged sides. It clearly illuminates a\n  30-foot radius and provides shadowy illumination in a 60-foot radius. It\n  burns for 6 hours on a pint of oil.  You can carry a hooded lantern in one\n  hand. See page 164 in the \\Product[WTC 17524]{Player\'s Handbook} for more\n  rules on illumination."
+  description: "A hooded lantern has shuttered or hinged sides. It clearly illuminates a 30-foot radius and provides shadowy illumination in a 60-foot radius. It burns for 6 hours on a pint of oil.  You can carry a hooded lantern in one hand. See page 164 in the \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination."
 }
 value {
   gold: 7

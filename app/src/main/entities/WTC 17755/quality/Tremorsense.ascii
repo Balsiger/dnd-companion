@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The creature can detect and pinpoints any creature or object\n  within 60 feet $notesin contact with the ground$notes."
+  description: "The creature can detect and pinpoints any creature or object within 60 feet $notesin contact with the ground$notes."
 }
 type: EXTRAORDINARY

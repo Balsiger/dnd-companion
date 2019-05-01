@@ -21,7 +21,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This leather pouch straps to your belt. It\'s good for holding\n  small items."
+  description: "This leather pouch straps to your belt. It\'s good for holding small items."
 }
 value {
   gold: 1

@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These ecclesiastical clothes are for performing priestly functions, not for\n  adventuring."
+  description: "These ecclesiastical clothes are for performing priestly functions, not for adventuring."
   short_description: "Clothes for performing priestly functions."
 }
 value {

@@ -12,5 +12,5 @@ template {
   short_description: "For 10 ft of movement, turn up to 180 degrees as a free action."
 }
 type: GENERAL
-benefit: "A flying creature with this feat can change direction quickly once\n  each round as a free action. This feat allows it to turn up to 180 degrees\n  regardless of its maneuverability, in addition to any other turns it is\n  normally allowed. A creature cannot gain altitude during a round when it\n  executes a wingover, but it can dive.  The change of direction consumes 10\n  feet of flying movement."
+benefit: "A flying creature with this feat can change direction quickly once each round as a free action. This feat allows it to turn up to 180 degrees regardless of its maneuverability, in addition to any other turns it is normally allowed. A creature cannot gain altitude during a round when it executes a wingover, but it can dive.  The change of direction consumes 10 feet of flying movement."
 prerequisites: "Fly speed."

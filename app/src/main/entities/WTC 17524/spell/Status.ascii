@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "When you need to keep track of comrades who may get separated, status allows\n  you to mentally monitor their relative positions and general condition. You\n  are aware of direction and distance to the creatures and any conditions\n  affecting them: unharmed, wounded, disabled, staggered, unconscious, dying,\n  nauseated, panicked, stunned, poisoned, diseased, confused, or the like. Once\n  the spell has been cast upon the subjects, the distance between them and the\n  caster does not affect the spell as long as they are on the same plane of\n  existence. If a subject leaves the plane, or if it dies, the spell ceases to\n  function for it."
+  description: "When you need to keep track of comrades who may get separated, status allows you to mentally monitor their relative positions and general condition. You are aware of direction and distance to the creatures and any conditions affecting them: unharmed, wounded, disabled, staggered, unconscious, dying, nauseated, panicked, stunned, poisoned, diseased, confused, or the like. Once the spell has been cast upon the subjects, the distance between them and the caster does not affect the spell as long as they are on the same plane of existence. If a subject leaves the plane, or if it dies, the spell ceases to function for it."
 }
 school: DIVINATION
 summary: "$undefined$"

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The \\Monster{Pegasus} is a magnificent winged horse that sometimes serves\n  the cause of good.\n\n  Typical \\Monster{pegasus} stands 6 feet hight at the shoulder, weights 1\'500\n  pounds, and has a wingspan of 20 feet. Rumors tell of some specimens that are\n  brown or black instead of white.\n\n  \\Monster[Pegasus]{Pegasi} cannot speak, but they understand common."
+  description: "The \\Monster{Pegasus} is a magnificent winged horse that sometimes serves the cause of good. \n\nTypical \\Monster{pegasus} stands 6 feet hight at the shoulder, weights 1\'500 pounds, and has a wingspan of 20 feet. Rumors tell of some specimens that are brown or black instead of white. \n\n\\Monster[Pegasus]{Pegasi} cannot speak, but they understand common."
 }
 size {
   size: LARGE
@@ -104,10 +104,10 @@ language {
   modifier: UNDERSTAND
   name: COMMON
 }
-encounter: "This creature looks like a horse but has two large,\n                    feathered wings. Its coat and wings are pure white"
-combat: "\\Monster[Pegasus]{Pegasi} attack with their sharp hooves\n                    and powerful bite. Mate pairs and herds attack as a team,\n                    fighting to the death to defend their eggs and young."
-character: "Though highly prized as aerial steeds, pegasi are wild\n                    and shy creatures not easily tamed."
-reproduction: "Pegasi mate for life, building their nests in high,\n                    remove locations. A mated pair have either 1-2 eggs or 1-2\n                    young in their nest."
+encounter: "This creature looks like a horse but has two large, feathered wings. Its coat and wings are pure white"
+combat: "\\Monster[Pegasus]{Pegasi} attack with their sharp hooves and powerful bite. Mate pairs and herds attack as a team, fighting to the death to defend their eggs and young."
+character: "Though highly prized as aerial steeds, pegasi are wild and shy creatures not easily tamed."
+reproduction: "Pegasi mate for life, building their nests in high, remove locations. A mated pair have either 1-2 eggs or 1-2 young in their nest."
 skill {
   name: "Listen"
 }

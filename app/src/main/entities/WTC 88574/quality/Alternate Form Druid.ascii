@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "With a successful Control Shape check, Thelossa can assume the form of a\n  dire bat as a full-round action.  Upon assuming her dire bat form, she\n  regains hit points as if she had rested for a day. If slain, she reverts to\n  her drow form, though she remains dead. However, any part of her body that is\n  separated from the whole retains its animal form."
+  description: "With a successful Control Shape check, Thelossa can assume the form of a dire bat as a full-round action.  Upon assuming her dire bat form, she regains hit points as if she had rested for a day. If slain, she reverts to her drow form, though she remains dead. However, any part of her body that is separated from the whole retains its animal form."
 }
 type: SUPERNATURAL

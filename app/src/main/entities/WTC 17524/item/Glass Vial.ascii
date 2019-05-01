@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This glass vial is fitted with a tight stopper and holds 1 ounce of\n  liquid. The stoppered container usually is no more than 1 inch wide and 3\n  inches high."
+  description: "This glass vial is fitted with a tight stopper and holds 1 ounce of liquid. The stoppered container usually is no more than 1 inch wide and 3 inches high."
 }
 value {
   gold: 1

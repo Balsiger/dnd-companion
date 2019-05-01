@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The dagger is a common secondary weapon. You get a +2 bonus on Sleight of\n  Hand checks made to conceal a dagger on your body (see the Sleight of Hand\n  skill, page 81)."
+  description: "The dagger is a common secondary weapon. You get a +2 bonus on Sleight of Hand checks made to conceal a dagger on your body (see the Sleight of Hand skill, page 81)."
   short_description: "A dagger, a common secondary weapon."
 }
 value {

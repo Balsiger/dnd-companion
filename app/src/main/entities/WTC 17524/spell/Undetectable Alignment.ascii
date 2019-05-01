@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An undetectable alignment spell conceals the alignment of an object or a\n  creature from all forms of divination."
+  description: "An undetectable alignment spell conceals the alignment of an object or a creature from all forms of divination."
 }
 school: ABJURATION
 summary: "$undefined$"

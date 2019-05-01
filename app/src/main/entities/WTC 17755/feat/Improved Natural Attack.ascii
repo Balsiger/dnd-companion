@@ -8,9 +8,9 @@ template {
     }
   }
   world: "Generic"
-  description: "The creature\342\200\232\303\204\303\264s natural attacks are more dangerous than its size and\n  type would otherwise dictate."
+  description: "The creature\342\200\232\303\204\303\264s natural attacks are more dangerous than its size and type would otherwise dictate."
   short_description: "Natural attacks do more damage."
 }
 type: GENERAL
-benefit: "Choose one of the creature\342\200\232\303\204\303\264s natural attack forms. The\n  damage for this natural weapon increases by one step, as if the\n  creature\342\200\232\303\204\303\264s size had increased by one category: 1d2, 1d3, 1d4, 1d6,\n  1d8, 2d6, 3d6, 4d6, 6d6, 8d6, 12d6. A weapon or attack that deals\n  1d10 points of damage increases as follows: 1d10, 2d8, 3d8, 4d8,\n  6d8, 8d8, 12d8."
+benefit: "Choose one of the creature\342\200\232\303\204\303\264s natural attack forms. The damage for this natural weapon increases by one step, as if the creature\342\200\232\303\204\303\264s size had increased by one category: 1d2, 1d3, 1d4, 1d6, 1d8, 2d6, 3d6, 4d6, 6d6, 8d6, 12d6. A weapon or attack that deals 1d10 points of damage increases as follows: 1d10, 2d8, 3d8, 4d8, 6d8, 8d8, 12d8."
 prerequisites: "Natural weapon, base attack bonus +4."

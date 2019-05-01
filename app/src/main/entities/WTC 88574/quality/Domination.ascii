@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "A vampire can  make a gaze attack against one creature within 30  feet as a\n  standard action.  The target must make a successful Will save (DC as noted in\n  individual  statistics  block)  or  be  affected  as  though  by  a  dominate\n  person spell (caster level  12th)."
+  description: "A vampire can  make a gaze attack against one creature within 30  feet as a standard action.  The target must make a successful Will save (DC as noted in individual  statistics  block)  or  be  affected  as  though  by  a  dominate person spell (caster level  12th)."
 }
 type: EXTRAORDINARY

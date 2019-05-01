@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This sword, which is essentially a two-handed \\Item{scimitar}, has a curve\n  that gives it the effect of a keener edge."
+  description: "This sword, which is essentially a two-handed \\Item{scimitar}, has a curve that gives it the effect of a keener edge."
 }
 value {
   gold: 75

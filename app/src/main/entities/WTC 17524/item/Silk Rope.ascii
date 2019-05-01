@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This rope has 4 hit points and can be burst with a DC 24 Strength check. It\n  is so supple that it provides a +2 circumstance bonus on Use Rope checks."
+  description: "This rope has 4 hit points and can be burst with a DC 24 Strength check. It is so supple that it provides a +2 circumstance bonus on Use Rope checks."
 }
 value {
   gold: 10

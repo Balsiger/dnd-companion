@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This nonmagical oil reduces the friction that impedes movement in metallic\n  armor. Once application of armor lubricant reduces the armor check penalty by\n  1 (to a minimum of 0). Each application takes 1 minute to apply and lasts 1d4\n  hours. It is not possible to apply armor lubricant to armor currently being\n  worn. Armor lubricant provides no benefit to shields or to armor no made\n  primarily of metal.\n\n  Creating one application of armor lubricant requires a successful\n  \\Skill{Alchemy} check (DC 15) and follows the rules outlines in the\n  discussion of Crafti skills in the \\Product{Player\'s Handbook}."
+  description: "This nonmagical oil reduces the friction that impedes movement in metallic armor. Once application of armor lubricant reduces the armor check penalty by 1 (to a minimum of 0). Each application takes 1 minute to apply and lasts 1d4 hours. It is not possible to apply armor lubricant to armor currently being worn. Armor lubricant provides no benefit to shields or to armor no made primarily of metal. \n\nCreating one application of armor lubricant requires a successful \\Skill{Alchemy} check (DC 15) and follows the rules outlines in the discussion of Crafti skills in the \\Product{Player\'s Handbook}."
   short_description: "Reduces armor check penalty by 1 for 1d4 hours."
 }
 value {

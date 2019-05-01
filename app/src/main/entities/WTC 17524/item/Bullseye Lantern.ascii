@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A bullseye lantern has only a single shutter. Its other sides are highly\n  polished inside to reflect the light in a single direction. A bullseye\n  lantern provides clear illumination in a 60-foot cone and shadowy\n  illumination in a 120-foot cone. It burns for 6 hours on a pint of oil. You\n  can carry a bullseye lantern in one hand. See page 164 in the \\Product[WTC\n  17524]{Player\'s Handbook} for more rules on illumination."
+  description: "A bullseye lantern has only a single shutter. Its other sides are highly polished inside to reflect the light in a single direction. A bullseye lantern provides clear illumination in a 60-foot cone and shadowy illumination in a 120-foot cone. It burns for 6 hours on a pint of oil. You can carry a bullseye lantern in one hand. See page 164 in the \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination."
 }
 value {
   gold: 12

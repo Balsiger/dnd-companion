@@ -1,6 +1,6 @@
 template {
   name: "Good Bluff"
   world: "Generic"
-  description: "The creature has a special racial bonus on \\Skill{Survival} checks made to\n  orient itself."
+  description: "The creature has a special racial bonus on \\Skill{Survival} checks made to orient itself."
 }
 type: EXTRAORDINARY

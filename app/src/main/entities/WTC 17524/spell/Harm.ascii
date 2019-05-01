@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Harm charges a subject with negative energy that deals 10 points of damage\n  per caster level (to a maximum of 150 points at 15th level). If the creature\n  successfully saves, harm deals half this amount, but it cannot reduce the\n  target\342\200\232\303\204\303\264s hit points to less than 1.  If used on an undead creature, harm acts\n  like heal."
+  description: "Harm charges a subject with negative energy that deals 10 points of damage per caster level (to a maximum of 150 points at 15th level). If the creature successfully saves, harm deals half this amount, but it cannot reduce the target\342\200\232\303\204\303\264s hit points to less than 1.  If used on an undead creature, harm acts like heal."
 }
 school: NECROMANCY
 summary: "Creature touched suffers negative energy damage [[min(150, $level * 10)]] damage (Will [[10 + 6 + $ability]] for half, not below 1)."

@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Lesser restoration dispels any magical effects reducing one of the subject\'s\n  ability scores (such as ray of enfeeblement) or cures 1d4 points of temporary\n  ability damage to one of the subject\'s ability scores (such as from a\n  shadow\'s touch or from poison). It also eliminates any fatigue suffered by\n  the character, and improves an exhausted condition to fatigued. It does not\n  restore permanent ability drain."
+  description: "Lesser restoration dispels any magical effects reducing one of the subject\'s ability scores (such as ray of enfeeblement) or cures 1d4 points of temporary ability damage to one of the subject\'s ability scores (such as from a shadow\'s touch or from poison). It also eliminates any fatigue suffered by the character, and improves an exhausted condition to fatigued. It does not restore permanent ability drain."
 }
 school: CONJURATION
 subschool: HEALING

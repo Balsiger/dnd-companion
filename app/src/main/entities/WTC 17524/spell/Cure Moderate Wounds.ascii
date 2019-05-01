@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like cure light wounds, except that it cures 2d8 points\n  of damage +1 point per caster level (maximum +10)."
+  description: "This spell functions like cure light wounds, except that it cures 2d8 points of damage +1 point per caster level (maximum +10)."
 }
 school: CONJURATION
 subschool: HEALING

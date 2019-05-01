@@ -19,6 +19,6 @@ template {
     }
   }
   world: "Generic"
-  description: "During any conditions other than full daylight, Glouroth can disappear into\n  the shadows, giving him nine-tenths concealment. Artificial illumination,\n  even a light or continual flamespell, does not negate this ability, but a\n  daylight spell does."
+  description: "During any conditions other than full daylight, Glouroth can disappear into the shadows, giving him nine-tenths concealment. Artificial illumination, even a light or continual flamespell, does not negate this ability, but a daylight spell does."
 }
 type: SUPERNATURAL

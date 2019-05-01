@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "When killed, a balor explodes in a blinding flash of light that deals 100\n  points of damage to anything within 100 feet (Reflex DC 30 half ). This\n  explosion automatically destroys any weapons the balor is holding. The save\n  DC is Constitution-based."
+  description: "When killed, a balor explodes in a blinding flash of light that deals 100 points of damage to anything within 100 feet (Reflex DC 30 half ). This explosion automatically destroys any weapons the balor is holding. The save DC is Constitution-based."
 }
 type: EXTRAORDINARY

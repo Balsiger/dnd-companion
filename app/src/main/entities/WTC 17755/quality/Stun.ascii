@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Whenever a horned devil hits with a spiked chain attack, the opponent must\n  succeed on a DC 27 Fortitude save or be stunned for 1d4 rounds. The save DC\n  is Strength-based. This ability is a function of the horned devil, not of\n  the spiked chain."
+  description: "Whenever a horned devil hits with a spiked chain attack, the opponent must succeed on a DC 27 Fortitude save or be stunned for 1d4 rounds. The save DC is Strength-based. This ability is a function of the horned devil, not of the spiked chain."
 }
 type: SUPERNATURAL

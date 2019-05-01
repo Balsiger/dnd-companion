@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to get a bully to back down, to frighten an opponent, or to\n  make a prisoner give you the information you want. Intimi- dation includes\n  verbal threats and body language."
+  description: "Use this skill to get a bully to back down, to frighten an opponent, or to make a prisoner give you the information you want. Intimi- dation includes verbal threats and body language."
 }
 ability: CHARISMA
 action: "Varies. Changing another\342\200\232\303\204\303\264s behavior requires 1 minute of                     interaction. Intimidating an opponent in combat is a                     standard action."

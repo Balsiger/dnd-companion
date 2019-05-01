@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like ethereal jaunt, except that you and other willing\n  creatures joined by linked hands (along with their equipment) become\n  ethereal. Besides yourself, you can bring one creature per three caster\n  levels to the Ethereal Plane.  Once ethereal, the subjects need not stay\n  together.  When the spell expires, all affected creatures on the Ethereal\n  Plane return to material existence."
+  description: "This spell functions like ethereal jaunt, except that you and other willing creatures joined by linked hands (along with their equipment) become ethereal. Besides yourself, you can bring one creature per three caster levels to the Ethereal Plane.  Once ethereal, the subjects need not stay together.  When the spell expires, all affected creatures on the Ethereal Plane return to material existence."
 }
 school: TRANSMUTATION
 summary: "For $level minutes you and [[$level/3]] touched creature become ethereal."

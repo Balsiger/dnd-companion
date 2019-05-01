@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A backpack is a leather pack carried on the back, typically with straps to\n  secure it."
+  description: "A backpack is a leather pack carried on the back, typically with straps to secure it."
 }
 value {
   gold: 2

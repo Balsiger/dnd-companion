@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You become a virtual fighting machine\342\200\232\303\204\303\256 stronger, tougher, faster, and more\n  skilled in combat. Your mind-set changes so that you relish combat and you\n  can\'t cast spells, even from magic items.  You gain a +4 enhancement bonus to\n  Strength, Dexterity, and Constitution, a +4 natural armor bonus to AC, a +5\n  competence bonus on Fortitude saves, and proficiency with all simple and\n  martial weapons. Your base attack bonus equals your character level (which\n  may give you multiple attacks).  You lose your spellcasting ability,\n  including your ability to use spell activation or spell completion magic\n  items, just as if the spells were no longer on your class list.  Material\n  Component: A potion of bull\'s strength, which you drink (and whose effects\n  are subsumed by the spell effects)."
+  description: "You become a virtual fighting machine\342\200\232\303\204\303\256 stronger, tougher, faster, and more skilled in combat. Your mind-set changes so that you relish combat and you can\'t cast spells, even from magic items.  You gain a +4 enhancement bonus to Strength, Dexterity, and Constitution, a +4 natural armor bonus to AC, a +5 competence bonus on Fortitude saves, and proficiency with all simple and martial weapons. Your base attack bonus equals your character level (which may give you multiple attacks).  You lose your spellcasting ability, including your ability to use spell activation or spell completion magic items, just as if the spells were no longer on your class list.  Material Component: A potion of bull\'s strength, which you drink (and whose effects are subsumed by the spell effects)."
 }
 school: TRANSMUTATION
 summary: "$undefined$"

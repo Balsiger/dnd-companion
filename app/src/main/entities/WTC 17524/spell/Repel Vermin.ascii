@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An invisible barrier holds back vermin. A vermin with Hit Dice of less than\n  onethird your level cannot penetrate the barrier. A vermin with Hit Dice of\n  one-third your level or more can penetrate the barrier if it succeeds on a\n  Will save. Even so, crossing the barrier deals the vermin 2d6 points of\n  damage, and pressing against the barrier causes pain, which deters most\n  vermin."
+  description: "An invisible barrier holds back vermin. A vermin with Hit Dice of less than onethird your level cannot penetrate the barrier. A vermin with Hit Dice of one-third your level or more can penetrate the barrier if it succeeds on a Will save. Even so, crossing the barrier deals the vermin 2d6 points of damage, and pressing against the barrier causes pain, which deters most vermin."
 }
 school: ABJURATION
 summary: "$undefined$"

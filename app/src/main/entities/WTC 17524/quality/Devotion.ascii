@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "An animal companion\342\200\232\303\204\303\264s devotion to its master is so complete that it gains a\n  +4 morale bonus on Will saves against enchantment spells and effects."
+  description: "An animal companion\342\200\232\303\204\303\264s devotion to its master is so complete that it gains a +4 morale bonus on Will saves against enchantment spells and effects."
 }
 type: EXTRAORDINARY

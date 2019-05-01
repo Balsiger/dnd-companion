@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like sleep, except that it affects 10 HD of\n  creatures."
+  description: "This spell functions like sleep, except that it affects 10 HD of creatures."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

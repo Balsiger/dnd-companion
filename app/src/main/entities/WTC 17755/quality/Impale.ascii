@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A barbed devil deals 3d8+9 points of piercing damage to a grabbed opponent\n  with a successful grapple check."
+  description: "A barbed devil deals 3d8+9 points of piercing damage to a grabbed opponent with a successful grapple check."
 }
 type: EXTRAORDINARY

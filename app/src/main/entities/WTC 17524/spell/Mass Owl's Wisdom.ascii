@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like owl\'s wisdom, except that it affects multiple\n  creatures."
+  description: "This spell functions like owl\'s wisdom, except that it affects multiple creatures."
 }
 school: TRANSMUTATION
 summary: "$undefined$"

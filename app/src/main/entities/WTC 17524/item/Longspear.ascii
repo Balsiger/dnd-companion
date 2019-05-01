@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A longspear has reach. You can strike opponents 10 feet away with it, but\n  you can\'t use it against an adjacent foe. If you use a ready action\n  to set a longspear against a charge, you deal double damage on a successful\n  hit against a charging character."
+  description: "A longspear has reach. You can strike opponents 10 feet away with it, but you can\'t use it against an adjacent foe. If you use a ready action to set a longspear against a charge, you deal double damage on a successful hit against a charging character."
 }
 value {
   gold: 5

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like inflict light wounds, except that you deal 3d8\n  points of damage +1 point per caster level (maximum +15)."
+  description: "This spell functions like inflict light wounds, except that you deal 3d8 points of damage +1 point per caster level (maximum +15)."
 }
 school: NECROMANCY
 summary: "Deal 3d8 + [[min(15, $level)]] damage with a successful touch attack (or heal undead)."

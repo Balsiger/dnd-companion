@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This ointment has two uses. If an ounce of it is applied to the flesh of a\n  petrified creature, it returns the creature to flesh as the stone to\n  fleshspell. If an ounce of it is applied to the flesh of a nonpetrified\n  creature, it protects the creature as a \\SpellRef{stoneskin} spell."
+  description: "This ointment has two uses. If an ounce of it is applied to the flesh of a petrified creature, it returns the creature to flesh as the stone to fleshspell. If an ounce of it is applied to the flesh of a nonpetrified creature, it protects the creature as a \\SpellRef{stoneskin} spell."
   short_description: "Returns petrified creature or acts as \\SpellRef{Stoneskin}."
 }
 value {

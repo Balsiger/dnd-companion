@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Rhuallith uses her total character level when determining level-based\n  factors (range, duration, and so forth) of her arachnemancer spells."
+  description: "Rhuallith uses her total character level when determining level-based factors (range, duration, and so forth) of her arachnemancer spells."
 }
 type: SUPERNATURAL

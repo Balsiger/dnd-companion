@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The affected creature becomes frightened.  If the subject succeeds on a Will\n  save, it is shaken for 1 round. Creatures with 6 or more Hit Dice are immune\n  to this effect.  Cause fear counters and dispels remove fear."
+  description: "The affected creature becomes frightened.  If the subject succeeds on a Will save, it is shaken for 1 round. Creatures with 6 or more Hit Dice are immune to this effect.  Cause fear counters and dispels remove fear."
 }
 school: NECROMANCY
 summary: "[[25 + (5 * ($level / 2))]] ft, Will [[10 + $ability + 1]] or frightened (flee, attack, saves, skills, ability checks -2), save for shaken (attack, saves, skills, ability checks -2), immune with 6 HD or more"

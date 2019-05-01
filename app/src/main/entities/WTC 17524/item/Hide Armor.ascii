@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This armor is prepared from multiple layers of leather and animal hides. It\n  is stiff and hard to move in. Druids, who wear only nonmetallic armor, favor\n  hide."
+  description: "This armor is prepared from multiple layers of leather and animal hides. It is stiff and hard to move in. Druids, who wear only nonmetallic armor, favor hide."
 }
 value {
   gold: 15

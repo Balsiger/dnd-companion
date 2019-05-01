@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like magic circle against evil, except that it is\n  similar to protection from law instead of protection from evil, and it can\n  imprison a nonchaotic called creature."
+  description: "This spell functions like magic circle against evil, except that it is similar to protection from law instead of protection from evil, and it can imprison a nonchaotic called creature."
 }
 school: ABJURATION
 summary: "For [[$level * 10]] min in 10 ft emanation from creature touched, gain +2 deflection to AC, +2 resistance to save by lawful creatures, block possession and mental control, prevents natural weapon attacks by summoned creatures."

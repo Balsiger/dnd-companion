@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You blast an area with a tremendous cacophony. Every creature in the area\n  takes 1d8 points of sonic damage and must succeed on a Fortitude save to\n  avoid being stunned for 1 round.\n\n  Creatures that cannot hear are not stunned but are still damaged.\n\n  Arcane Focus: A musical instrument."
+  description: "You blast an area with a tremendous cacophony. Every creature in the area takes 1d8 points of sonic damage and must succeed on a Fortitude save to avoid being stunned for 1 round. \n\nCreatures that cannot hear are not stunned but are still damaged. \n\nArcane Focus: A musical instrument."
 }
 school: EVOACATION
 summary: "[[25 + (5 * ($level/2))]] ft, 10-ft spread, 1d8 sonic dmage and Fort DC [[10 + 2 + $ability]] or be stunned for 1 round."

@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A stone giant gains a +4 racial bonus on its Reflex save when attempting to\n  catch a thrown rock."
+  description: "A stone giant gains a +4 racial bonus on its Reflex save when attempting to catch a thrown rock."
 }
 type: EXTRAORDINARY

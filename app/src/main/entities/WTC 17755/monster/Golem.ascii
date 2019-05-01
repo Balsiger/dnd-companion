@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Golems are magically created automatons of great power. Constructing one\n  involves the employment of mighty magic and elemental forces.\n\n  The animating force for a golem is a spirit from the Elemental Plane of\n  Earth. The process of creating the golem binds the unwilling spirit to the\n  artificial body and subjects it to the will of the golem\342\200\232\303\204\303\264s creator."
+  description: "Golems are magically created automatons of great power. Constructing one involves the employment of mighty magic and elemental forces. \n\nThe animating force for a golem is a spirit from the Elemental Plane of Earth. The process of creating the golem binds the unwilling spirit to the artificial body and subjects it to the will of the golem\342\200\232\303\204\303\264s creator."
   short_description: "A magically created automaton."
 }
 type: HUMANOID

@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This three-tined piercing weapon can be thrown just as a shortspear or spear\n  can be, but its range increment is shorter because it\'s not as aerodynamic as\n  those other weapons. If you use a ready action to set a trident against a\n  charge, you deal double damage on a successful hit against a charging\n  character."
+  description: "This three-tined piercing weapon can be thrown just as a shortspear or spear can be, but its range increment is shorter because it\'s not as aerodynamic as those other weapons. If you use a ready action to set a trident against a charge, you deal double damage on a successful hit against a charging character."
 }
 value {
   gold: 15

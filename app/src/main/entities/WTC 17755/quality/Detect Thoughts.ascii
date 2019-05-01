@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The creature can continuously use \\Spell{detect thoughts} as the spell\n  (caster level 18th, Will DC 13 negates). It can suppress or resume this\n  ability as a free action. The save DC is Charisma-based."
+  description: "The creature can continuously use \\Spell{detect thoughts} as the spell (caster level 18th, Will DC 13 negates). It can suppress or resume this ability as a free action. The save DC is Charisma-based."
 }
 type: SUPERNATURAL

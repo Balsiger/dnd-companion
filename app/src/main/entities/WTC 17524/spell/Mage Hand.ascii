@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You point your finger at an object and can lift it and move it at will from\n  a distance.  As a move action, you can propel the object as far as 15 feet in\n  any direction, though the spell ends if the distance between you and the\n  object ever exceeds the spell\'s range."
+  description: "You point your finger at an object and can lift it and move it at will from a distance.  As a move action, you can propel the object as far as 15 feet in any direction, though the spell ends if the distance between you and the object ever exceeds the spell\'s range."
 }
 school: TRANSMUTATION
 summary: "While concentrating move objects up to 5 lb within 15 ft as move actions."

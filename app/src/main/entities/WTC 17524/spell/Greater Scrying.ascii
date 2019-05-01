@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like scrying, except as noted above. Additionally, all\n  of the following spells function reliably through the sensor: detect chaos,\n  detect evil, detect good, detect law, detect magic, message, read magic, and\n  tongues."
+  description: "This spell functions like scrying, except as noted above. Additionally, all of the following spells function reliably through the sensor: detect chaos, detect evil, detect good, detect law, detect magic, message, read magic, and tongues."
 }
 school: DIVINATION
 subschool: SCRYING

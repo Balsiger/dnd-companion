@@ -1,5 +1,5 @@
 template {
   name: "Daylight Powerlessness"
-  description: "\\Monster{Wraiths} are utterly powerless in natural sunlight (not merely a daylights pell) and flee from it.\n"
+  description: "\\Monster{Wraiths} are utterly powerless in natural sunlight (not merely a daylights pell) and flee from it. "
 }
 type: EXTRAORDINARY

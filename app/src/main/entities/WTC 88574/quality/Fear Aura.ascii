@@ -20,6 +20,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "A keening spirit is shrouded in a dreadful aura of death and evil. Any\ncreature within a 60-foot radius that looks at it must succeed at a Will\nsave (DC 10 + 1/2 keening spirit\'s HD + keening spirit\'s Charisma modifier)\nor be affected as though by a fearspell cast by a sorcerer of the keening\nspirit\'s character level."
+  description: "A keening spirit is shrouded in a dreadful aura of death and evil. Any creature within a 60-foot radius that looks at it must succeed at a Will save (DC 10 + 1/2 keening spirit\'s HD + keening spirit\'s Charisma modifier) or be affected as though by a fearspell cast by a sorcerer of the keening spirit\'s character level."
 }
 type: SUPERNATURAL

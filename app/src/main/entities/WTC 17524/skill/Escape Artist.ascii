@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to slip out of bonds or manacles, wriggle through tight\n  spaces, or escape the grip of a monster that grapples you."
+  description: "Use this skill to slip out of bonds or manacles, wriggle through tight spaces, or escape the grip of a monster that grapples you."
 }
 ability: DEXTERITY
 action: "Making an Escape Artist check to escape from rope                     bindings, manacles, or other restraints (except a                     grappler) requires 1 minute of work. Escaping from a net                     or an animate rope, command plants, control plants, or                     entangle spell is a full-round action. Escaping from a                     grapple or pin is a standard action. Squeezing through a                     tight space takes at least 1 minute, maybe longer,                     depending on how long the space is."

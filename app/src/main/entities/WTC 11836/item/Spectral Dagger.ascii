@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Fashioned from a bone of a creature that died violently, this appears to be just a dagger hilt made of bone. When a creature grasps the hilt, a dagger \'blade\' of light appears. (Treat the weapon as a dagger for proficiency, feats, and so on). The blade \'winks out\' when the hilt leaves the wielder\'s hand.\n\n  The blade has no attack bonus and deals no damage, but any target struck is affected as by a \\SpellRef{Chill Touch} spell (DC 11). Striking with the \\Item{spectral dagger} is considered a touch attack. Creatures with multiple attacks may use the spectral blade in a full attack option to strike more than one per round just as if they wielded a normal dagger."
+  description: "Fashioned from a bone of a creature that died violently, this appears to be just a dagger hilt made of bone. When a creature grasps the hilt, a dagger \'blade\' of light appears. (Treat the weapon as a dagger for proficiency, feats, and so on). The blade \'winks out\' when the hilt leaves the wielder\'s hand. \n\nThe blade has no attack bonus and deals no damage, but any target struck is affected as by a \\SpellRef{Chill Touch} spell (DC 11). Striking with the \\Item{spectral dagger} is considered a touch attack. Creatures with multiple attacks may use the spectral blade in a full attack option to strike more than one per round just as if they wielded a normal dagger."
   short_description: "Deals no damage but \\SpellRef{chill touch} (dc 11) with a touch attack."
 }
 value {

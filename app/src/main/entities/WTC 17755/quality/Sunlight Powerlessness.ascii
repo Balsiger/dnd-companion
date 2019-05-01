@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Spectres are powerless in natural sunlight (not merely a daylightspell) and\n  flee from it. A spectre caught in sunlight cannot attack and can take only a\n  single move or attack action in a round.  "
+  description: "Spectres are powerless in natural sunlight (not merely a daylightspell) and flee from it. A spectre caught in sunlight cannot attack and can take only a single move or attack action in a round.  "
 }
 type: EXTRAORDINARY

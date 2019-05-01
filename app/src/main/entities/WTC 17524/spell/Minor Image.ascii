@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like silent image, except that minor image includes\n  some minor sounds but not understandable speech."
+  description: "This spell functions like silent image, except that minor image includes some minor sounds but not understandable speech."
 }
 school: ILLUSION
 subschool: FIGMENT

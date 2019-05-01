@@ -10,7 +10,7 @@ template {
       high: 225
     }
   }
-  description: "This ability can only be placed on a melee weapon. A melee weapon crafted\n  with this ability gains a range increment of 10 feet and can be thrown by a\n  wielder proficient in its normal use."
+  description: "This ability can only be placed on a melee weapon. A melee weapon crafted with this ability gains a range increment of 10 feet and can be thrown by a wielder proficient in its normal use."
   short_description: "Give weapon a 10 ft range increment"
 }
 probability: COMMON

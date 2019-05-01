@@ -16,7 +16,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A waterskin is a leather pouch with a narrow neck that is used for holding\n  water."
+  description: "A waterskin is a leather pouch with a narrow neck that is used for holding water."
 }
 value {
   gold: 1

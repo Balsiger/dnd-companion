@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This reddish iron ring continually protects the wearer from damage from fire. Each time the wearer would normally take such damage, subtract the resistance value of 20 from the damage dealt.\n"
+  description: "This reddish iron ring continually protects the wearer from damage from fire. Each time the wearer would normally take such damage, subtract the resistance value of 20 from the damage dealt. "
   short_description: "Ignores 20 fire damage."
 }
 value {

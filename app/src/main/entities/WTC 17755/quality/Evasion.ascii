@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "At 2nd level and higher, a rogue can avoid even magical and unusual attacks\n  with great agility. If she makes a successful Reflex saving throw against an\n  attack that normally deals half damage on a successful save (such as a\n  \\Monster{red dragon}\'s fiery breath or a \\Spell{fireball}), she instead takes\n  no damage. Evasion can be used only if the rogue is wearing light armor or no\n  armor. A helpless rogue (such as one who is unconscious or paralysed) does\n  not gain the benefit of evasion."
+  description: "At 2nd level and higher, a rogue can avoid even magical and unusual attacks with great agility. If she makes a successful Reflex saving throw against an attack that normally deals half damage on a successful save (such as a \\Monster{red dragon}\'s fiery breath or a \\Spell{fireball}), she instead takes no damage. Evasion can be used only if the rogue is wearing light armor or no armor. A helpless rogue (such as one who is unconscious or paralysed) does not gain the benefit of evasion."
 }
 type: EXTRAORDINARY

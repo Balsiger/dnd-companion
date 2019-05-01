@@ -19,7 +19,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This large, leatherbound book serves as a wizard\'s reference. A spellbook\n  has 100 pages of parchment, and each spell takes up one page per spell level\n  (one page each for 0-level spells). See Space in the Spellbook, page 179 of\n  the \\Product{Player\'s Handbook}."
+  description: "This large, leatherbound book serves as a wizard\'s reference. A spellbook has 100 pages of parchment, and each spell takes up one page per spell level (one page each for 0-level spells). See Space in the Spellbook, page 179 of the \\Product{Player\'s Handbook}."
 }
 value {
   gold: 15

@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This weapon is a light, flexible spear intended for throwing. You can use it\n  in melee, but not well. Since it is not designed for melee, you are treated\n  as nonproficient with it and take a -4 penalty on attack rolls if you\n  use a javelin as a melee weapon."
+  description: "This weapon is a light, flexible spear intended for throwing. You can use it in melee, but not well. Since it is not designed for melee, you are treated as nonproficient with it and take a -4 penalty on attack rolls if you use a javelin as a melee weapon."
 }
 value {
   gold: 1

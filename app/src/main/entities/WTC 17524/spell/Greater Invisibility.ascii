@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like invisibility, except that it doesn\'t end if the\n  subject attacks."
+  description: "This spell functions like invisibility, except that it doesn\'t end if the subject attacks."
 }
 school: ILLUSION
 subschool: GLAMER

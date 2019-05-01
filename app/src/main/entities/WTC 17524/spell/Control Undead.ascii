@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell enables you to command undead creatures for a short period of\n  time. You command them by voice and they understand you, no matter what\n  language you speak. Even if vocal communication is impossible (in the area of\n  a silence spell, for instance), the controlled undead do not attack you. At\n  the end of the spell, the subjects revert to their normal behavior.\n  Intelligent undead creatures remember that you controlled them.  Material\n  Component: A small piece of bone and a small piece of raw meat."
+  description: "This spell enables you to command undead creatures for a short period of time. You command them by voice and they understand you, no matter what language you speak. Even if vocal communication is impossible (in the area of a silence spell, for instance), the controlled undead do not attack you. At the end of the spell, the subjects revert to their normal behavior. Intelligent undead creatures remember that you controlled them.  Material Component: A small piece of bone and a small piece of raw meat."
 }
 school: NECROMANCY
 summary: "Command [[2 * $level]] HD of undead creature no more than 30 ft apart by voice."

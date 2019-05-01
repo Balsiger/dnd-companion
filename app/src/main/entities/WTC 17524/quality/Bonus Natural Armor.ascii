@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "The number noted here is an improvement to the animal companion\342\200\232\303\204\303\264s existing\n  natural armor bonus."
+  description: "The number noted here is an improvement to the animal companion\342\200\232\303\204\303\264s existing natural armor bonus."
 }
 type: EXTRAORDINARY

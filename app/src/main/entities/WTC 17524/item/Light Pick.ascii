@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A pick is designed to concentrate the force of its blow on a small area. A\n  light or heavy pick resembles a \\Item{miner\'s pick} but is specifically\n  designed for war."
+  description: "A pick is designed to concentrate the force of its blow on a small area. A light or heavy pick resembles a \\Item{miner\'s pick} but is specifically designed for war."
 }
 value {
   gold: 4

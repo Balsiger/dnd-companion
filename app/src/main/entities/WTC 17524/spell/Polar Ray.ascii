@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A blue-white ray of freezing air and ice springs from your hand. You must\n  succeed on a ranged touch attack with the ray to deal damage to a target. The\n  ray deals 1d6 points of cold damage per caster level (maximum 25d6).  Focus:\n  A small, white ceramic cone or prism."
+  description: "A blue-white ray of freezing air and ice springs from your hand. You must succeed on a ranged touch attack with the ray to deal damage to a target. The ray deals 1d6 points of cold damage per caster level (maximum 25d6).  Focus: A small, white ceramic cone or prism."
 }
 school: EVOACATION
 summary: "$undefined$"

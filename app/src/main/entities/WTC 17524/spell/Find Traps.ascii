@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You gain intuitive insight into the workings of traps. You can use the\n  Search skill to detect traps just as a rogue can. In addition, you gain an\n  insight bonus equal to one-half your caster level (maximum +10) on Search\n  checks made to find traps while the spell is in effect.  Note that find traps\n  grants no ability to disable the traps that you may find."
+  description: "You gain intuitive insight into the workings of traps. You can use the Search skill to detect traps just as a rogue can. In addition, you gain an insight bonus equal to one-half your caster level (maximum +10) on Search checks made to find traps while the spell is in effect.  Note that find traps grants no ability to disable the traps that you may find."
 }
 school: DIVINATION
 summary: "$undefined$"

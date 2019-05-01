@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "As a defender of the faith, a divine champion may lay on hands to heal\n  herself or another creature following the same patron deity as himself. The\n  ability works like a paladin\'s ability to lay on hands, except the divine\n  champion may heal 1 point of damage per divine champion level times her\n  Charisma bonus. If the divine champion is a paladin, she can combine this\n  healing with a paladin class\' lay on hands ability."
+  description: "As a defender of the faith, a divine champion may lay on hands to heal herself or another creature following the same patron deity as himself. The ability works like a paladin\'s ability to lay on hands, except the divine champion may heal 1 point of damage per divine champion level times her Charisma bonus. If the divine champion is a paladin, she can combine this healing with a paladin class\' lay on hands ability."
 }
 type: SPELL_LIKE

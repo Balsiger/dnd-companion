@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You draw forth the ebbing life force of a creature and use it to fuel your\n  own power.  Upon casting this spell, you touch a living creature that has \342\200\232\303\204\303\2541\n  or fewer hit points. If the subject fails its saving throw, it dies, and you\n  gain 1d8 temporary hit points and a +2 bonus to Strength. Additionally, your\n  effective caster level goes up by +1, improving spell effects dependent on\n  caster level. (This increase in effective caster level does not grant you\n  access to more spells.) These effects last for 10 minutes per HD of the\n  subject creature."
+  description: "You draw forth the ebbing life force of a creature and use it to fuel your own power.  Upon casting this spell, you touch a living creature that has \342\200\232\303\204\303\2541 or fewer hit points. If the subject fails its saving throw, it dies, and you gain 1d8 temporary hit points and a +2 bonus to Strength. Additionally, your effective caster level goes up by +1, improving spell effects dependent on caster level. (This increase in effective caster level does not grant you access to more spells.) These effects last for 10 minutes per HD of the subject creature."
 }
 school: NECROMANCY
 summary: "Living creature touched with -1 or less hp is killed, you gain 1d8 temporary hp, +2 to Str, +1 caster level for 10 min per HD of the creature killed."

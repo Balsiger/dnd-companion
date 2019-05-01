@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This armor is made of overlapping strips of metal sewn to a backing of\n  leather and chainmail. The strips cover vulnerable areas, while the chain and\n  leather protect the joints and provide freedom of movement. Straps and\n  buckles distribute the weight evenly. The suit includes gauntlets."
+  description: "This armor is made of overlapping strips of metal sewn to a backing of leather and chainmail. The strips cover vulnerable areas, while the chain and leather protect the joints and provide freedom of movement. Straps and buckles distribute the weight evenly. The suit includes gauntlets."
 }
 value {
   gold: 250

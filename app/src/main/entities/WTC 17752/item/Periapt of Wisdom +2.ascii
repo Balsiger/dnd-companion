@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Although it appears to be a normal pearl on a light chain, a periapt of\n  wisdom actually increases the possessor\'s Wisdom score in the form of an\n  enhancement bonus of +2.  "
+  description: "Although it appears to be a normal pearl on a light chain, a periapt of wisdom actually increases the possessor\'s Wisdom score in the form of an enhancement bonus of +2.  "
   short_description: "Wisdom +2 enhancement."
 }
 value {

@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Adventurers recognize the greatsword as one of the best melee weapons\n  available. It\'s reliable and powerful."
+  description: "Adventurers recognize the greatsword as one of the best melee weapons available. It\'s reliable and powerful."
   short_description: "A reliable and powerful, great sword."
 }
 value {

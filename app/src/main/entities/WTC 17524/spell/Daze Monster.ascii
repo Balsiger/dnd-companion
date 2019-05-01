@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like daze, but daze monster can affect any one living\n  creature of any type. Creatures of 7 or more HD are not affected."
+  description: "This spell functions like daze, but daze monster can affect any one living creature of any type. Creatures of 7 or more HD are not affected."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

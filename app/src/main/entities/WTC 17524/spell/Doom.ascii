@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell fills a single subject with a feeling of horrible dread that\n  causes it to become shaken."
+  description: "This spell fills a single subject with a feeling of horrible dread that causes it to become shaken."
 }
 school: NECROMANCY
 summary: "Living creature, $level min, -2 on attack, damage, saves and checks unless Will DC [[10 + $ability + 1]]."

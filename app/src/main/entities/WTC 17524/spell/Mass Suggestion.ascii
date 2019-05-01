@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like suggestion, except that it can affect more\n  creatures. The same suggestion applies to all these creatures."
+  description: "This spell functions like suggestion, except that it can affect more creatures. The same suggestion applies to all these creatures."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

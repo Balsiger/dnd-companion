@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These boots appear to be ordinary footgear. On command, the boots sprout\n  wings at the heel and let the wearer fly, without having to maintain\n  concentration, as if affected by a \\SpellRef{fly} spell. He can fly three\n  times day for up to 5 minutes per flight."
+  description: "These boots appear to be ordinary footgear. On command, the boots sprout wings at the heel and let the wearer fly, without having to maintain concentration, as if affected by a \\SpellRef{fly} spell. He can fly three times day for up to 5 minutes per flight."
   short_description: "Boots that sprout wings and let the wearer fly."
 }
 value {

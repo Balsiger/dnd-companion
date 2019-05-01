@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You call upon the powers of unlife to render the subject blinded or\n  deafened, as you choose."
+  description: "You call upon the powers of unlife to render the subject blinded or deafened, as you choose."
 }
 school: NECROMANCY
 summary: "Living creature within [[100 + (10 * $level)]] ft For DC [[10 + $ability + switch($class, Cleric: 3, default: 2)]] or be blinded or deafened (your choice)."

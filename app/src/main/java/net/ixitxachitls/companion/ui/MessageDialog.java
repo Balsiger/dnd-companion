@@ -24,8 +24,10 @@ package net.ixitxachitls.companion.ui;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.support.annotation.LayoutRes;
+import android.text.Spanned;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.util.Texts;
 
 /**
  * A dialog to show a simple message.
@@ -37,8 +39,25 @@ public class MessageDialog {
     this.dialog = new AlertDialog.Builder(context, R.style.ThemeOverlay_AppCompat_Dialog);
   }
 
-  public static MessageDialog create(Context context) {
-    return new MessageDialog(context);
+  public MessageDialog formatted(String message) {
+    Spanned spanned = Texts.toSpanned(dialog.getContext(), message);
+    dialog.setMessage(spanned);
+
+    return this;
+  }
+
+  public MessageDialog layout(@LayoutRes int layout) {
+    dialog.setView(layout);
+    return this;
+  }
+
+  public MessageDialog message(String message) {
+    dialog.setMessage(message);
+    return this;
+  }
+
+  public void show() {
+    this.dialog.show();
   }
 
   public MessageDialog title(String title) {
@@ -49,17 +68,7 @@ public class MessageDialog {
     return this;
   }
 
-  public MessageDialog message(String message) {
-    dialog.setMessage(message);
-    return this;
-  }
-
-  public MessageDialog layout(@LayoutRes int layout) {
-    dialog.setView(layout);
-    return this;
-  }
-
-  public void show() {
-    this.dialog.show();
+  public static MessageDialog create(Context context) {
+    return new MessageDialog(context);
   }
 }

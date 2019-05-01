@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This bag contains cosmetics, hair dye, and small physical props. The kit is\n  the perfect tool for disguise and provides a +2 circumstance bonus on\n  \\Skill{Disguise} checks. A disguise kit is exhausted after ten uses."
+  description: "This bag contains cosmetics, hair dye, and small physical props. The kit is the perfect tool for disguise and provides a +2 circumstance bonus on \\Skill{Disguise} checks. A disguise kit is exhausted after ten uses."
 }
 value {
   gold: 5

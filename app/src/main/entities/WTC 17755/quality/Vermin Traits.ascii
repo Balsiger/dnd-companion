@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Mindless (no Intelligence score and immunity to all mindaffecting effects\n  (charms, compulsions, phantasms, patterns, and morale effects)."
+  description: "Mindless (no Intelligence score and immunity to all mindaffecting effects (charms, compulsions, phantasms, patterns, and morale effects)."
 }
 type: EXTRAORDINARY

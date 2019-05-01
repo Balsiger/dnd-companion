@@ -13,7 +13,7 @@ template {
       high: 230
     }
   }
-  description: "This ring might seem to be a ring of spell storing upon first\n  examination. However, while it allows a single spell of 1st through 6th level\n  to be cast into it, that spell cannot be cast out of the ring again. Instead,\n  should that spell ever be cast upon the wearer, the spell is immediately\n  countered, as a counterspell action, requiring no action (or even knowledge)\n  on the wearer\'s part. Once so used, the spell cast within the ring is\n  gone. A new spell (or the same one as before) may be placed in it again."
+  description: "This ring might seem to be a ring of spell storing upon first examination. However, while it allows a single spell of 1st through 6th level to be cast into it, that spell cannot be cast out of the ring again. Instead, should that spell ever be cast upon the wearer, the spell is immediately countered, as a counterspell action, requiring no action (or even knowledge) on the wearer\'s part. Once so used, the spell cast within the ring is gone. A new spell (or the same one as before) may be placed in it again."
   short_description: "The spell stored in this ring is automatically countered when cast upon the wearer, with no action required."
 }
 value {

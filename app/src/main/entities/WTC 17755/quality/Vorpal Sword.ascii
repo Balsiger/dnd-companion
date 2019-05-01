@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Generic"
-  description: "Every balor carries a +1 vorpal longsword that looks like a flame or a bolt\n  of lightning."
+  description: "Every balor carries a +1 vorpal longsword that looks like a flame or a bolt of lightning."
 }
 type: SUPERNATURAL

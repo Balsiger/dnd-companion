@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This ability functions like the \\SpellRef{deathwatch} spell, except that it\n  is always active and the abyssal ghoul always knows how near death all\n  creatures within 90 feet of it are. Because of this knowledge, it often\n  pauses to kill fragile creatures (those with 3 or fewer hit points remaining)\n  before moving on to attack healthier foes."
+  description: "This ability functions like the \\SpellRef{deathwatch} spell, except that it is always active and the abyssal ghoul always knows how near death all creatures within 90 feet of it are. Because of this knowledge, it often pauses to kill fragile creatures (those with 3 or fewer hit points remaining) before moving on to attack healthier foes."
 }
 type: SPELL_LIKE

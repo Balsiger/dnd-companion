@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A typical wand is 6 inches to 12 inches long and about 1/4 inch thick, and\n  often weighs no more than 1 ounce. Most wands are wood, but some are bone. A\n  rare few are metal, glass, or even ceramic, but these are quite\n  exotic. Occasionally, a wand has a gem or some device at its tip, and most\n  are decorated with carvings or runes. A typical wand has AC 7, 5 hit points,\n  hardness 5, and a break DC 16."
+  description: "A typical wand is 6 inches to 12 inches long and about 1/4 inch thick, and often weighs no more than 1 ounce. Most wands are wood, but some are bone. A rare few are metal, glass, or even ceramic, but these are quite exotic. Occasionally, a wand has a gem or some device at its tip, and most are decorated with carvings or runes. A typical wand has AC 7, 5 hit points, hardness 5, and a break DC 16."
 }
 weight {
   imperial {

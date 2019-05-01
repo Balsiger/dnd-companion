@@ -12,7 +12,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Upon command, a corrosive weapon becomes slick with a layer of acidic fluid\n  (the wielder takes no damage from this effect). Corrosive weapons deal +1d6\n  points of acid damage on a successful hit. Bows, crossbows and slings with\n  this ability bestow the acid energy upon their ammunition."
+  description: "Upon command, a corrosive weapon becomes slick with a layer of acidic fluid (the wielder takes no damage from this effect). Corrosive weapons deal +1d6 points of acid damage on a successful hit. Bows, crossbows and slings with this ability bestow the acid energy upon their ammunition."
 }
 probability: VERY_RARE
  weapon {

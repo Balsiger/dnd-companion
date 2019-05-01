@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The affected creature suffers from a continuous confusion effect, as the\n  spell.  Remove curse does not remove insanity.  Greater restoration, heal,\n  limited wish, miracle, or wish can restore the creature."
+  description: "The affected creature suffers from a continuous confusion effect, as the spell.  Remove curse does not remove insanity.  Greater restoration, heal, limited wish, miracle, or wish can restore the creature."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

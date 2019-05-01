@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to disarm a trap, jam a lock (in either the open or closed\n  position), or rig a wagon wheel to fall off. You can examine a fairly simple\n  or fairly small mechanical device and disable it. The effort requires at\n  least a simple tool of the appropriate sort (a pick, pry bar, saw, file,\n  etc.). Attempting a Disable Device check without a set of thieves\342\200\232\303\204\303\264 tools\n  (page 130) carries a \342\200\232\303\204\303\2542 circumstance penalty, even if a simple tool is\n  employed. The use of masterwork thieves\342\200\232\303\204\303\264 tools enables you to make the check\n  with a +2 circumstance bonus."
+  description: "Use this skill to disarm a trap, jam a lock (in either the open or closed position), or rig a wagon wheel to fall off. You can examine a fairly simple or fairly small mechanical device and disable it. The effort requires at least a simple tool of the appropriate sort (a pick, pry bar, saw, file, etc.). Attempting a Disable Device check without a set of thieves\342\200\232\303\204\303\264 tools (page 130) carries a \342\200\232\303\204\303\2542 circumstance penalty, even if a simple tool is employed. The use of masterwork thieves\342\200\232\303\204\303\264 tools enables you to make the check with a +2 circumstance bonus."
 }
 ability: INTELLIGENCE
 action: "The amount of time needed to make a Disable Device check                     depends on the task, as noted above. Disabling a simple                     device takes 1 round and is a full-round action. An                     intricate or complex device requires 1d4 or 2d4 rounds."

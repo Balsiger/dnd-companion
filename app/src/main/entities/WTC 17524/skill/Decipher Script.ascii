@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to piece together the meaning of ancient runes carved into\n  the wall of an abandoned temple, to get the gist of an intercepted letter\n  written in the Infernal language, to follow the directions on a treasure map\n  written in a forgotten alphabet, or to interpret the mysterious glyphs\n  painted on a cave wall."
+  description: "Use this skill to piece together the meaning of ancient runes carved into the wall of an abandoned temple, to get the gist of an intercepted letter written in the Infernal language, to follow the directions on a treasure map written in a forgotten alphabet, or to interpret the mysterious glyphs painted on a cave wall."
 }
 ability: INTELLIGENCE
 action: "Deciphering the equivalent of a single page of script                     takes 1 minute (ten consecutive full-round actions).  Try                     Again: No."

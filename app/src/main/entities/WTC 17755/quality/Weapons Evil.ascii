@@ -1,6 +1,6 @@
 template {
   name: "Weapons Evil"
   world: "Generic"
-  description: "The creature\'s natural and all its wielded weapons are treated as\n  evil-aligned for overcoming damage reduction."
+  description: "The creature\'s natural and all its wielded weapons are treated as evil-aligned for overcoming damage reduction."
 }
 type: EXTRAORDINARY

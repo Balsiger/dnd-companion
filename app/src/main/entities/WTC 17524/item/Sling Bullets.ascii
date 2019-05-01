@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Bullets are lead spheres, much heavier than stones of the same size. They\n  come in a leather pouch that holds 10 bullets. A bullet that hits its target\n  is destroyed; one that misses has a 50% chance of being destroyed or lost."
+  description: "Bullets are lead spheres, much heavier than stones of the same size. They come in a leather pouch that holds 10 bullets. A bullet that hits its target is destroyed; one that misses has a 50% chance of being destroyed or lost."
 }
 value {
   copper: 1

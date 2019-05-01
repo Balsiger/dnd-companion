@@ -111,4 +111,8 @@ public class Strings {
     else
       return inText + SPACES.substring(0, inLength - inText.length());
   }
+
+  public static String spaces(int length) {
+    return SPACES.substring(0, length);
+  }
 }

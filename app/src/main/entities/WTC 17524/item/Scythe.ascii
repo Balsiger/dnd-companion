@@ -16,7 +16,7 @@ template {
     }
   }
   world: "Generic"
-  description: "While it resembles the standard farm implement of the same name, this scythe\n  is balanced and strengthened for war. The design of the scythe focuses\n  tremendous force on the sharp point, as well as allowing devastating slashes\n  with the blade edge.\n\n  Because of a scythe\'s shape, you can use it to make trip attacks. If you are\n  tripped during your own trip attempt, you can drop the scythe to avoid being\n  tripped."
+  description: "While it resembles the standard farm implement of the same name, this scythe is balanced and strengthened for war. The design of the scythe focuses tremendous force on the sharp point, as well as allowing devastating slashes with the blade edge. \n\nBecause of a scythe\'s shape, you can use it to make trip attacks. If you are tripped during your own trip attempt, you can drop the scythe to avoid being tripped."
 }
 value {
   gold: 18

@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can cut or lift a purse and hide it on your person, palm an unattended\n  object, hide a light weapon in your clothing, or perform some feat of\n  legerdemain with an object no larger than a hat or a loaf of bread."
+  description: "You can cut or lift a purse and hide it on your person, palm an unattended object, hide a light weapon in your clothing, or perform some feat of legerdemain with an object no larger than a hat or a loaf of bread."
 }
 ability: DEXTERITY
 action: "Any Sleight of Hand check normally is a standard action.                     However, you may perform a Sleight of Hand check as a free                     action by taking a \342\200\232\303\204\303\25420 penalty on the check."

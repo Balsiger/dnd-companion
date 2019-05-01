@@ -84,7 +84,7 @@ language {
   modifier: BONUS
   name: ORC
 }
-encounter: "This humanoid stands a little more than half as high as a human. It has\na compact build, dark tan skin, fair hair, and large eyes."
+encounter: "This humanoid stands a little more than half as high as a human. It has a compact build, dark tan skin, fair hair, and large eyes."
 quality {
   name: "gnome traits"
   }

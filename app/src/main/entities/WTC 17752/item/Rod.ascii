@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Rods are scepterlike devices that have unique magical powers and do not\n  usually have charges. Anyone can use a rod."
+  description: "Rods are scepterlike devices that have unique magical powers and do not usually have charges. Anyone can use a rod."
 }
 value {
   copper: 1

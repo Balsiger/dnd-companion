@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like magic circle against evil, except that it is\n  similar to protection from chaos instead of protection from evil, and it can\n  imprison a nonlawful called creature."
+  description: "This spell functions like magic circle against evil, except that it is similar to protection from chaos instead of protection from evil, and it can imprison a nonlawful called creature."
 }
 school: ABJURATION
 summary: "$undefined$"

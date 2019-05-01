@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You can slay any one living creature. You must succeed on a melee touch\n  attack to touch the subject, and it can avoid death with a successful\n  Fortitude save. If it succeeds, it instead takes 3d6 points of damage +1\n  point per caster level. (Of course, the subject might die from damage even if\n  it succeeds on its save.)"
+  description: "You can slay any one living creature. You must succeed on a melee touch attack to touch the subject, and it can avoid death with a successful Fortitude save. If it succeeds, it instead takes 3d6 points of damage +1 point per caster level. (Of course, the subject might die from damage even if it succeeds on its save.)"
 }
 school: NECROMANCY
 summary: "Touch, subject killed unless Fort DC [[10 + 5 + $ability] for 3d6 +$level damage."

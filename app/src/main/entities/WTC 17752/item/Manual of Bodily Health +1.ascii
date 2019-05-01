@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This thick tome contains tips on health and fitness, but entwined within the\n  words is a powerful magical effect. If anyone reads this book, which takes a\n  total of 48 hours over a minimum of six days, he gains an inherent bonus of\n  from +1 to his Constitution score. Once the book is read, the magic\n  disappears from the pages and it becomes a normal book."
+  description: "This thick tome contains tips on health and fitness, but entwined within the words is a powerful magical effect. If anyone reads this book, which takes a total of 48 hours over a minimum of six days, he gains an inherent bonus of from +1 to his Constitution score. Once the book is read, the magic disappears from the pages and it becomes a normal book."
   short_description: "After reading 48 hours within 6 days gain +1 Con."
 }
 value {

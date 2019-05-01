@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "An arrow used as a melee weapon is treated as a light improvised weapon\n  (-4 penalty on attack rolls) and deals damage as a dagger of its size\n  (critical multiplier x2). Arrows come in a leather quiver that holds 20\n  arrows. An arrow that hits its target is destroyed; one that misses has a 50%\n  chance of being destroyed or lost."
+  description: "An arrow used as a melee weapon is treated as a light improvised weapon (-4 penalty on attack rolls) and deals damage as a dagger of its size (critical multiplier x2). Arrows come in a leather quiver that holds 20 arrows. An arrow that hits its target is destroyed; one that misses has a 50% chance of being destroyed or lost."
   short_description: "Ammunition for a bow."
 }
 value {

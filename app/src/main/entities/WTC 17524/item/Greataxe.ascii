@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This big, heavy axe is a favorite of \\Class{barbarians} and anybody else who\n  wants the capability to deal out incredible damage."
+  description: "This big, heavy axe is a favorite of \\Class{barbarians} and anybody else who wants the capability to deal out incredible damage."
 }
 value {
   gold: 20

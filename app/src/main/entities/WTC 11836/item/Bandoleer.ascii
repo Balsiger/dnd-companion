@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This leather belt has loops or pouches for carrying small items (up to\n   dagger size). It is usually worn across the chest. It holds eight items."
+  description: "This leather belt has loops or pouches for carrying small items (up to dagger size). It is usually worn across the chest. It holds eight items."
 }
 value {
   silver: 5

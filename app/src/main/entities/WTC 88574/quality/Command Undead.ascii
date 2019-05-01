@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Because the quth-maren was an evil cleric in life, it can command undead as\n  a 5th-level evil cleric. It cannot rebuke undead, but it can dispel turning\n  or bol- ster other undead."
+  description: "Because the quth-maren was an evil cleric in life, it can command undead as a 5th-level evil cleric. It cannot rebuke undead, but it can dispel turning or bol- ster other undead."
 }
 type: SUPERNATURAL

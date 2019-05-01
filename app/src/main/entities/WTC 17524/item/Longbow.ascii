@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You need at least two hands to use a bow, regardless of its size. A longbow\n  is too unwieldy to use while you are mounted. If you have a penalty for low\n  Strength, apply it to damage rolls when you use a longbow. If you have a\n  bonus for high Strength, you can apply it to damage rolls when you use a\n  \\Item{composite longbow} but not a regular longbow."
+  description: "You need at least two hands to use a bow, regardless of its size. A longbow is too unwieldy to use while you are mounted. If you have a penalty for low Strength, apply it to damage rolls when you use a longbow. If you have a bonus for high Strength, you can apply it to damage rolls when you use a \\Item{composite longbow} but not a regular longbow."
 }
 value {
   gold: 75

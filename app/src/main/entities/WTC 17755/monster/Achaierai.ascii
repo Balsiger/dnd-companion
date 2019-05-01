@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Achaierais are massive, 15-foot-tall flightless birds that inhabit the plane\n  of \\Place{Acheraon} and are only occasionally encountered elsewhere.\n\n  They weigh about 750 pounds."
+  description: "Achaierais are massive, 15-foot-tall flightless birds that inhabit the plane of \\Place{Acheraon} and are only occasionally encountered elsewhere. \n\nThey weigh about 750 pounds."
   short_description: "A massive, 15-foot-tall flightless bird."
 }
 size {
@@ -108,10 +108,10 @@ advancement {
 language {
   name: INFERNAL
 }
-encounter: "A large creature stands on four stiltlike legs. It has a\n                    birdlike body, round and plump, about the size of a small\n                    pony, balanced atop its legs. Feathers that range in color\n                    from brown to red cover its body, and its terrible claws\n                    and beak glint like burnished metal."
-combat: "In close combat, an achaierai lashes out with two of its\n                    four legs and snaps with its powerful beak.\n                    An \\\\Monster{achaierai}\'s natural weapons, as well as any\n                    weapons it wields, are treated as evil-aligned and\n                    lawful aligned for the purpose of overcoming damage\n                    reduction."
-tactics: "It makes frequent use of its \\Feat{Spring Attack} feat\n                    to strike quickly and then retreat out of range before an\n                    enemy can counterattack."
-character: "They are evil, clever, and predatory, with a distinct\n                    taste for torture."
+encounter: "A large creature stands on four stiltlike legs. It has a birdlike body, round and plump, about the size of a small pony, balanced atop its legs. Feathers that range in color from brown to red cover its body, and its terrible claws and beak glint like burnished metal."
+combat: "In close combat, an achaierai lashes out with two of its four legs and snaps with its powerful beak. An \\\\Monster{achaierai}\'s natural weapons, as well as any weapons it wields, are treated as evil-aligned and lawful aligned for the purpose of overcoming damage reduction."
+tactics: "It makes frequent use of its \\Feat{Spring Attack} feat to strike quickly and then retreat out of range before an enemy can counterattack."
+character: "They are evil, clever, and predatory, with a distinct taste for torture."
 skill {
   name: "Balance"
 }

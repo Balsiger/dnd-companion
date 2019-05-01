@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "A displacer beast gains a +2 resistance bonus on saves against any ranged\n  spell or ranged magical attack that specifically targets it, except for\n  ranged touch attacks."
+  description: "A displacer beast gains a +2 resistance bonus on saves against any ranged spell or ranged magical attack that specifically targets it, except for ranged touch attacks."
 }
 type: SUPERNATURAL

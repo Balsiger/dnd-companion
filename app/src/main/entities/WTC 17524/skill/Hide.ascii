@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Use this skill to sink back into the shadows and proceed unseen, to approach\n  a wizard\342\200\232\303\204\303\264s tower under cover of brush, or to tail someone through a busy\n  street without being noticed."
+  description: "Use this skill to sink back into the shadows and proceed unseen, to approach a wizard\342\200\232\303\204\303\264s tower under cover of brush, or to tail someone through a busy street without being noticed."
 }
 ability: DEXTERITY
 action: "Usually none. Normally, you make a Hide check as part of                     movement, so it doesn\342\200\232\303\204\303\264t take a separate action. However,                     hiding immediately after a ranged attack (see Sniping,                     above) is a move action."

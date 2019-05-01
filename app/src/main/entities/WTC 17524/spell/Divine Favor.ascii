@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Calling upon the strength and wisdom of a deity, you gain a +1 luck bonus on\n  attack and weapon damage rolls for every three caster levels you have (at\n  least +1, maximum +6). The bonus doesn\342\200\232\303\204\303\264t apply to spell damage."
+  description: "Calling upon the strength and wisdom of a deity, you gain a +1 luck bonus on attack and weapon damage rolls for every three caster levels you have (at least +1, maximum +6). The bonus doesn\342\200\232\303\204\303\264t apply to spell damage."
 }
 school: EVOACATION
 summary: "You gain +[[min(6, $level / 3)]] luck bonus on attack and damge."

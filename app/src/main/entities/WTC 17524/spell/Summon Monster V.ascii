@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like summon monster I, except that you can summon one\n  creature from the 5th-level list, 1d3 creatures of the same kind from the\n  4th-level list, or 1d4+1 creatures of the same kind from a lowerlevel list.\n  Mialee summons a couatl."
+  description: "This spell functions like summon monster I, except that you can summon one creature from the 5th-level list, 1d3 creatures of the same kind from the 4th-level list, or 1d4+1 creatures of the same kind from a lowerlevel list. Mialee summons a couatl."
 }
 school: CONJURATION
 subschool: SUMMONING

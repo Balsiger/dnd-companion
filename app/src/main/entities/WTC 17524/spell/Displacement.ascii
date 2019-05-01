@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Emulating the natural ability of the displacer beast (see the Monster\n  Manual), the subject of this spell appears to be about 2 feet away from its\n  true location. The creature benefits from a 50% miss chance as if it had\n  total concealment. However, unlike actual total concealment, displacement\n  does not prevent enemies from targeting the creature normally. True seeing\n  reveals its true location.  Material Component: A small strip of leather made\n  from displacer beast hide, twisted into a loop."
+  description: "Emulating the natural ability of the displacer beast (see the Monster Manual), the subject of this spell appears to be about 2 feet away from its true location. The creature benefits from a 50% miss chance as if it had total concealment. However, unlike actual total concealment, displacement does not prevent enemies from targeting the creature normally. True seeing reveals its true location.  Material Component: A small strip of leather made from displacer beast hide, twisted into a loop."
 }
 school: ILLUSION
 subschool: GLAMER

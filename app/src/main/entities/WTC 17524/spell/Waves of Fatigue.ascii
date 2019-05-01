@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Waves of negative energy render all living creatures in the spell\'s area\n  fatigued. This spell has no effect on a creature that is already fatigued."
+  description: "Waves of negative energy render all living creatures in the spell\'s area fatigued. This spell has no effect on a creature that is already fatigued."
 }
 school: NECROMANCY
 summary: "$undefined$"

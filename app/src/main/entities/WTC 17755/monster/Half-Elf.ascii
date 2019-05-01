@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Half-elves are not truly an elf subrace, but they are often mistaken for \\Monster[elf]{elves}. They may be outcasts from their parents\342\200\231 societies or welcomed into the elven or human community, depending on the attitudes the two groups have for each other. half-elves usually inherit a good blend of their parents\342\200\231 physical characteristics, so a half-aquatic elf has greenish skin, a half-drow has dusky skin and\nlight hair, and so on."
+  description: "Half-elves are not truly an elf subrace, but they are often mistaken for \\Monster[elf]{elves}. They may be outcasts from their parents\342\200\231 societies or welcomed into the elven or human community, depending on the attitudes the two groups have for each other. half-elves usually inherit a good blend of their parents\342\200\231 physical characteristics, so a half-aquatic elf has greenish skin, a half-drow has dusky skin and light hair, and so on."
   short_description: "A mixture between human and elf."
   incomplete: "any bonus language (except secret, like druidic); elven blood, treated as elf for most purposes considering magic"
 }

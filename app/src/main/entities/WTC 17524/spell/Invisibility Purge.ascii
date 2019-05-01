@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You surround yourself with a sphere of power with a radius of 5 feet per\n  caster level that negates all forms of invisibility.  Anything invisible\n  becomes visible while in the area."
+  description: "You surround yourself with a sphere of power with a radius of 5 feet per caster level that negates all forms of invisibility.  Anything invisible becomes visible while in the area."
 }
 school: EVOACATION
 summary: "$level min (D),[[5 * $level]] ft sphere negating all forms of invisibility."

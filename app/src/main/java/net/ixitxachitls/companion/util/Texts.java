@@ -23,15 +23,21 @@ package net.ixitxachitls.companion.util;
 
 import android.content.Context;
 import android.support.annotation.VisibleForTesting;
-import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
-import android.text.style.ForegroundColorSpan;
 
-import net.ixitxachitls.companion.R;
+import com.google.common.collect.ImmutableMap;
+
+import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.util.commands.BoldCommand;
+import net.ixitxachitls.companion.util.commands.ClassCommand;
+import net.ixitxachitls.companion.util.commands.ParCommand;
+import net.ixitxachitls.companion.util.commands.TableCommand;
+import net.ixitxachitls.companion.util.commands.TextCommand;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -53,13 +59,70 @@ public class Texts {
   private static final char MARKER_ESCAPE_START = '\005';
   private static final char MARKER_ESCAPE_END = '\006';
   private static final String SPECIAL = "<>=!~*#$%@?+|";
+  private static Map<String, TextCommand> COMMANDS = ImmutableMap.<String, TextCommand>builder()
+      .put("Class", new ClassCommand())
+      .put("par", new ParCommand())
+      .put("bold", new BoldCommand())
+      .put("table", new TableCommand())
+      .build();
 
-  public static Spanned toSpanned(Context context, String text) {
-    return processCommands(context, processWhitespace(text));
+  protected static String clean(String text)
+  {
+    return text.replaceAll(MARKER_START + "<\\d+>", "" + START)
+        .replaceAll(MARKER_END + "<\\d+>", "" + END)
+        .replaceAll(MARKER_OPTIONAL_START + "<\\d+>", "" + OPTIONAL_START)
+        .replaceAll(MARKER_OPTONAL_END + "<\\d+>", "" + OPTIONAL_END);
   }
 
-  public static String processWhitespace(String text) {
-    return text.replaceAll("\n", "").replaceAll(" +", " ");
+  @VisibleForTesting
+  protected static String markBrackets(String text, char escape,
+                                     char start, char end,
+                                     char markerStart, char markerEnd)
+  {
+    // Remove all escaped markers.
+    text = text.replaceAll("\\" + escape + "\\" + start, "" + MARKER_ESCAPE_START);
+    text = text.replaceAll("\\" + escape + "\\" + end, "" + MARKER_ESCAPE_END);
+
+    // We mark all bracket markers for easier replacement.
+    Pattern pattern = Pattern.compile("\\" + start + "([^\\" + start + "\\" + end + "]*?)\\" + end,
+        Pattern.DOTALL);
+
+    int i = 0;
+    for(Matcher matcher = pattern.matcher(text); matcher.find(0); matcher = pattern.matcher(text)) {
+      // Replace the nested brackets.
+      text = matcher.replaceAll(markerStart + "<#" + i + "#>$1" + markerEnd + "<#" + i++ + "#>");
+    }
+
+    // 'Invert' the number to make sure that really the nesting level starts
+    // at 0 on the outside not on the inside
+    // with the above, {{}} is {<1>{<0>}<0>}<1> instead of {<0>{<1>}<1>}<0>
+    pattern = Pattern.compile(markerStart + "<#(\\d+)#>(.*?)" + markerEnd + "<#\\1#>", Pattern.DOTALL);
+
+    i = 0;
+    for(Matcher matcher = pattern.matcher(text); matcher.find(0); matcher = pattern.matcher(text)) {
+      // Replace the nested brackets.
+      text = matcher.replaceAll(markerStart + "<" + i + ">$2" + markerEnd + "<" + i++ + ">");
+    }
+
+    // Replace all non 0 markers (we can't leave nested markers or parsing
+    // of multiple arguments may fail
+    text = text.replaceAll(markerStart + "<[1-9]\\d*>", "" + start);
+    text = text.replaceAll(markerEnd   + "<[1-9]\\d*>", "" + end);
+
+    // Replace removed escaped markers.
+    text = text.replaceAll("" + MARKER_ESCAPE_START, "\\" + escape + start);
+    text = text.replaceAll("" + MARKER_ESCAPE_END, "\\" + escape+ end);
+
+    return text;
+  }
+
+  private static String markBrackets(String text) {
+    return markBrackets(text, ESCAPE, START, END, MARKER_START, MARKER_END);
+  }
+
+  private static String markOptionalBrackets(String text) {
+    return markBrackets(text, ESCAPE, OPTIONAL_START, OPTIONAL_END, MARKER_OPTIONAL_START,
+        MARKER_OPTONAL_END);
   }
 
   public static SpannableStringBuilder processCommands(Context context, String text) {
@@ -187,18 +250,8 @@ public class Texts {
     return builder;
   }
 
-  private static Spanned render(Context context, String command, List<SpannableStringBuilder> optionals,
-                                List<SpannableStringBuilder> arguments) {
-    switch (command) {
-      case "Class":
-        arguments.get(0).setSpan(new ForegroundColorSpan(
-            context.getResources().getColor(R.color.className, null)),
-            0, arguments.get(0).length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        return arguments.get(0);
-
-      default:
-        return rebuildCommand(command, optionals, arguments);
-    }
+  public static String processWhitespace(String text) {
+    return text.replaceAll("\n\n", "\\\\par ").replaceAll("\n", "").replaceAll(" +", " ");
   }
 
   private static SpannableStringBuilder rebuildCommand(String command,
@@ -219,63 +272,18 @@ public class Texts {
     return builder;
   }
 
-  private static String markBrackets(String text) {
-    return markBrackets(text, ESCAPE, START, END, MARKER_START, MARKER_END);
-  }
-
-  private static String markOptionalBrackets(String text) {
-    return markBrackets(text, ESCAPE, OPTIONAL_START, OPTIONAL_END, MARKER_OPTIONAL_START,
-        MARKER_OPTONAL_END);
-  }
-
-  @VisibleForTesting
-  protected static String markBrackets(String text, char escape,
-                                     char start, char end,
-                                     char markerStart, char markerEnd)
-  {
-    // Remove all escaped markers.
-    text = text.replaceAll("\\" + escape + "\\" + start, "" + MARKER_ESCAPE_START);
-    text = text.replaceAll("\\" + escape + "\\" + end, "" + MARKER_ESCAPE_END);
-
-    // We mark all bracket markers for easier replacement.
-    Pattern pattern = Pattern.compile("\\" + start + "([^\\" + start + "\\" + end + "]*?)\\" + end,
-        Pattern.DOTALL);
-
-    int i = 0;
-    for(Matcher matcher = pattern.matcher(text); matcher.find(0); matcher = pattern.matcher(text)) {
-      // Replace the nested brackets.
-      text = matcher.replaceAll(markerStart + "<#" + i + "#>$1" + markerEnd + "<#" + i++ + "#>");
+  private static Spanned render(Context context, String command, List<SpannableStringBuilder> optionals,
+                                List<SpannableStringBuilder> arguments) {
+    if (COMMANDS.containsKey(command)) {
+      return COMMANDS.get(command).render(context, optionals, arguments);
     }
 
-    // 'Invert' the number to make sure that really the nesting level starts
-    // at 0 on the outside not on the inside
-    // with the above, {{}} is {<1>{<0>}<0>}<1> instead of {<0>{<1>}<1>}<0>
-    pattern = Pattern.compile(markerStart + "<#(\\d+)#>(.*?)" + markerEnd + "<#\\1#>", Pattern.DOTALL);
-
-    i = 0;
-    for(Matcher matcher = pattern.matcher(text); matcher.find(0); matcher = pattern.matcher(text)) {
-      // Replace the nested brackets.
-      text = matcher.replaceAll(markerStart + "<" + i + ">$2" + markerEnd + "<" + i++ + ">");
-    }
-
-    // Replace all non 0 markers (we can't leave nested markers or parsing
-    // of multiple arguments may fail
-    text = text.replaceAll(markerStart + "<[1-9]\\d*>", "" + start);
-    text = text.replaceAll(markerEnd   + "<[1-9]\\d*>", "" + end);
-
-    // Replace removed escaped markers.
-    text = text.replaceAll("" + MARKER_ESCAPE_START, "\\" + escape + start);
-    text = text.replaceAll("" + MARKER_ESCAPE_END, "\\" + escape+ end);
-
-    return text;
+    Status.error("Command '" + command + "' not supported, yet!");
+    return rebuildCommand(command, optionals, arguments);
   }
 
-  protected static String clean(String text)
-  {
-    return text.replaceAll(MARKER_START + "<\\d+>", "" + START)
-        .replaceAll(MARKER_END + "<\\d+>", "" + END)
-        .replaceAll(MARKER_OPTIONAL_START + "<\\d+>", "" + OPTIONAL_START)
-        .replaceAll(MARKER_OPTONAL_END + "<\\d+>", "" + OPTIONAL_END);
+  public static Spanned toSpanned(Context context, String text) {
+    return processCommands(context, processWhitespace(text));
   }
 
 }

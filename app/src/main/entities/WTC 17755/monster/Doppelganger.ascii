@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Doppelgangers are strange beings that are able to take on the shapes of\n  those they encounter. In its natural form, the creature looks more or less\n  humanoid, but slender and frail, with gangly limbs and half-formed\n  features. The flesh is pale and hairless. Its large, bulging eyes are yellow\n  with slitted pupils.\n\n  A doppelganger\'s appearance is deceiving even when it\'s in its true form. A\n  doppelganger is hardy, with a natural agility not in keeping with its frail\n  appearance.\n\n  In its natural form a doppelganger is about 5\\frac{1}{2} feet tall and\n  weights about 150 pounds."
+  description: "Doppelgangers are strange beings that are able to take on the shapes of those they encounter. In its natural form, the creature looks more or less humanoid, but slender and frail, with gangly limbs and half-formed features. The flesh is pale and hairless. Its large, bulging eyes are yellow with slitted pupils. \n\nA doppelganger\'s appearance is deceiving even when it\'s in its true form. A doppelganger is hardy, with a natural agility not in keeping with its frail appearance. \n\nIn its natural form a doppelganger is about 5\\frac{1}{2} feet tall and weights about 150 pounds."
 }
 size {
   size: MEDIUM
@@ -78,9 +78,9 @@ alignment_status: USUALLY
 language {
   name: NONE
 }
-encounter: "This gaunt, gray-skinned humanoid has long, gangly limbs\n                    and a bulbous head with large, octopoid eyes. Its face is\n                    otherwise blank and featureless."
-combat: "When in its natural form, a doppelganger strikes with its\n                    powerful fists. In the shape of a warrior or some other\n                    armed person, it attacks with whatever weapon is\n                    appropriate. In such cases, it uses its detect thoughs\n                    ability to employ the same tactics and strategies as the\n                    person it is impersonating."
-character: "Because they can take the shape of any humanoid between 4\n                    and 8 feet tall, doppelgangers are natural spies and\n                    assassins. They can sneak past sentries, slip into secured\n                    places, and fool even lovers or close friends. They are\n                    cunning and patient, willing to wait until an opportunity\n                    presents itself instead of attacking rashly.\n\n                    Doppelgangers make excellent use of their natural mimicry\n                    to stage ambushes, bait traps, and infiltrate humanoid\n                    society. Although not usually evil, they are interested\n                    only in themselves and regard all others as playthings to\n                    be manipulated and deceived."
+encounter: "This gaunt, gray-skinned humanoid has long, gangly limbs and a bulbous head with large, octopoid eyes. Its face is otherwise blank and featureless."
+combat: "When in its natural form, a doppelganger strikes with its powerful fists. In the shape of a warrior or some other armed person, it attacks with whatever weapon is appropriate. In such cases, it uses its detect thoughs ability to employ the same tactics and strategies as the person it is impersonating."
+character: "Because they can take the shape of any humanoid between 4 and 8 feet tall, doppelgangers are natural spies and assassins. They can sneak past sentries, slip into secured places, and fool even lovers or close friends. They are cunning and patient, willing to wait until an opportunity presents itself instead of attacking rashly. \n\nDoppelgangers make excellent use of their natural mimicry to stage ambushes, bait traps, and infiltrate humanoid society. Although not usually evil, they are interested only in themselves and regard all others as playthings to be manipulated and deceived."
 skill {
   name: "Bluff"
 }

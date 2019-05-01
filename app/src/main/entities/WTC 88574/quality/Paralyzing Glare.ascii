@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "The first time a revenant confronts its killer, the latter must make a Will\n  save (DC 10 + 1/2 the revenant\342\200\232\303\204\303\264s Hit Dice and/or levels + the revenant\342\200\232\303\204\303\264s\n  Charisma modifier) or be paralyzed for 2d4 rounds."
+  description: "The first time a revenant confronts its killer, the latter must make a Will save (DC 10 + 1/2 the revenant\342\200\232\303\204\303\264s Hit Dice and/or levels + the revenant\342\200\232\303\204\303\264s Charisma modifier) or be paralyzed for 2d4 rounds."
 }
 type: EXTRAORDINARY

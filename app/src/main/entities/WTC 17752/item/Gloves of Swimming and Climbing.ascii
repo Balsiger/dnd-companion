@@ -15,7 +15,7 @@ template {
     }
   }
   world: "Generic"
-  description: "These apparently normal lightweight gloves grant a +5 competence bonus on\n  Swim checks and Climb checks. Both gloves must be worn for the magic to be\n  effective."
+  description: "These apparently normal lightweight gloves grant a +5 competence bonus on Swim checks and Climb checks. Both gloves must be worn for the magic to be effective."
   short_description: "+5 competence to Swim and Climb."
 }
 value {

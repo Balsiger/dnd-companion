@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Generic"
-  description: "A bulette can jump into the air during combat. This allows it to make four\n  claw attacks instead of two, each with a +15 attack bonus, but it cannot\n  bite."
+  description: "A bulette can jump into the air during combat. This allows it to make four claw attacks instead of two, each with a +15 attack bonus, but it cannot bite."
 }
 type: EXTRAORDINARY

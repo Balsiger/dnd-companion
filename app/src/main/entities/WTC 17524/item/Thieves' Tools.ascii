@@ -19,7 +19,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This kit contains the tools you need to use the \\Skill{Disable Device} and\n  \\Skill{Open Lock} skills. The kit includes one or more skeleton keys, long\n  metal picks and pries, a long-nosed clamp, a small hand saw, and a small\n  wedge and hammer. Without these tools, you must improvise tools, and you take\n  a -2 circumstance penalty on \\Skill{Disable Device} and \\Skill{Open Locks}\n  checks"
+  description: "This kit contains the tools you need to use the \\Skill{Disable Device} and \\Skill{Open Lock} skills. The kit includes one or more skeleton keys, long metal picks and pries, a long-nosed clamp, a small hand saw, and a small wedge and hammer. Without these tools, you must improvise tools, and you take a -2 circumstance penalty on \\Skill{Disable Device} and \\Skill{Open Locks} checks"
 }
 value {
   gold: 30

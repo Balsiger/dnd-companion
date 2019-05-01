@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "You instantly know the direction of north from your current position. The\n  spell is effective in any environment in which \342\200\232\303\204\303\272north\342\200\232\303\204\303\271 exists, but it may not\n  work in extraplanar settings. Your knowledge of north is correct at the\n  moment of casting, but you can get lost again within moments if you don\'t\n  find some external reference point to help you keep track of direction."
+  description: "You instantly know the direction of north from your current position. The spell is effective in any environment in which \342\200\232\303\204\303\272north\342\200\232\303\204\303\271 exists, but it may not work in extraplanar settings. Your knowledge of north is correct at the moment of casting, but you can get lost again within moments if you don\'t find some external reference point to help you keep track of direction."
 }
 school: DIVINATION
 summary: "$undefined$"

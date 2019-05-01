@@ -11,7 +11,7 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "This +1 \\Item{longspear} is\nbathed in an aura of negative energy that deals an additional\n1d6 points of negative energy damage on a successful attack.\nIn addition, the spear can be used to deliver an \\Reference{spell}{energy drain} \neffect on a successful hit. A death spear has 10 charges when\ncreated, and each use of a spell effect uses one charge. When\ndrained of charges, the spear retains its aura of negative\nenergy and its enhancement bonus.\n\n"
+  description: "This +1 \\Item{longspear} is bathed in an aura of negative energy that deals an additional 1d6 points of negative energy damage on a successful attack. In addition, the spear can be used to deliver an \\Reference{spell}{energy drain} effect on a successful hit. A death spear has 10 charges when created, and each use of a spell effect uses one charge. When drained of charges, the spear retains its aura of negative energy and its enhancement bonus.\n\n"
   short_description: "A longspear that deals negative energy and can deliver an \\Reference{spell}{energy drain} with a successful hit."
 }
 value {

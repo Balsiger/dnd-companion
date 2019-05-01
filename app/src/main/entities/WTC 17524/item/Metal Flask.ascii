@@ -10,7 +10,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This metal container is fitted with a tight stopper and holds 1 pint of\n  liquid."
+  description: "This metal container is fitted with a tight stopper and holds 1 pint of liquid."
 }
 value {
   copper: 3

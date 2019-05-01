@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell evaporates moisture from the body of each subject living\n  creature, dealing 1d6 points of damage per caster level (maximum 20d6). This\n  spell is especially devastating to water elementals and plant creatures,\n  which instead take 1d8 points of damage per caster level (maximum 20d8).\n  Arcane Material Component: A bit of sponge."
+  description: "This spell evaporates moisture from the body of each subject living creature, dealing 1d6 points of damage per caster level (maximum 20d6). This spell is especially devastating to water elementals and plant creatures, which instead take 1d8 points of damage per caster level (maximum 20d8). Arcane Material Component: A bit of sponge."
 }
 school: NECROMANCY
 summary: "Living creatures no more than 60 ft apart within [[100 + ($level * 10)]] ft have their mositure evaporated for [[min(20, $level)]]d6 damage ([[min(20, $level)]]d8 for water elementals and plant creatures; For $dc for half."

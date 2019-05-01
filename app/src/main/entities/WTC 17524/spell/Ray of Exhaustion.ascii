@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A black ray projects from your pointing finger. You must succeed on a ranged\n  touch attack with the ray to strike a target.  The subject is immediately\n  exhausted for the spell\'s duration. A successful Fortitude save means the\n  creature is only fatigued. A character that is already fatigued instead\n  becomes exhausted.  This spell has no effect on a creature that is already\n  exhausted. Unlike normal exhaustion or fatigue, the effect ends as soon as\n  the spell\'s duration expires.  Material Component: A drop of sweat."
+  description: "A black ray projects from your pointing finger. You must succeed on a ranged touch attack with the ray to strike a target.  The subject is immediately exhausted for the spell\'s duration. A successful Fortitude save means the creature is only fatigued. A character that is already fatigued instead becomes exhausted.  This spell has no effect on a creature that is already exhausted. Unlike normal exhaustion or fatigue, the effect ends as soon as the spell\'s duration expires.  Material Component: A drop of sweat."
 }
 school: NECROMANCY
 summary: "$undefined$"

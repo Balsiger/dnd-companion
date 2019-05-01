@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A lamp clearly illuminates a 15-foot radius, provides shadowy illumination\n  out to a 30-foot radius, and burns for 6 hours on a pint of oil. It burns\n  with a more even flame than a torch, but, unlike a lantern, it uses an open\n  flame and it can spill easily, a fact that makes it too dangerous for most\n  adventuring. You can carry a lamp in one hand. See page 164 in the\n  \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination."
+  description: "A lamp clearly illuminates a 15-foot radius, provides shadowy illumination out to a 30-foot radius, and burns for 6 hours on a pint of oil. It burns with a more even flame than a torch, but, unlike a lantern, it uses an open flame and it can spill easily, a fact that makes it too dangerous for most adventuring. You can carry a lamp in one hand. See page 164 in the \\Product[WTC 17524]{Player\'s Handbook} for more rules on illumination."
 }
 value {
   silver: 1

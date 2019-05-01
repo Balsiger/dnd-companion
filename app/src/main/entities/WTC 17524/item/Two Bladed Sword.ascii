@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A two-bladed sword is a double weapon.  You can fight with it as if fighting\n  with two weapons, but if you do, you incur all the normal attack penalties\n  associated with fighting with two weapons, just as if you were using a\n  one-handed weapon and a light weapon (see \\Feat{Two-Weapon Fighting}). A\n  creature wielding a two-bladed sword in one hand can\'t use it as a double\n  weapon--only one end of the weapon can be used in any given round."
+  description: "A two-bladed sword is a double weapon.  You can fight with it as if fighting with two weapons, but if you do, you incur all the normal attack penalties associated with fighting with two weapons, just as if you were using a one-handed weapon and a light weapon (see \\Feat{Two-Weapon Fighting}). A creature wielding a two-bladed sword in one hand can\'t use it as a double weapon--only one end of the weapon can be used in any given round."
 }
 value {
   gold: 100

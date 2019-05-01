@@ -13,7 +13,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This wicked-looking, curved +2 daggerpro- vides a +1 bonus to the DC of a\n  Fortitude save forced by the death attack of an assassin."
+  description: "This wicked-looking, curved +2 daggerpro- vides a +1 bonus to the DC of a Fortitude save forced by the death attack of an assassin."
   short_description: "+2 Dagger with +1 for assassin\'s death attack For DC."
 }
 value {

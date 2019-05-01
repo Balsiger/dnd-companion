@@ -10,6 +10,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Duneth can use touch spells on targets up to 30 feet away. If the spell\n  requires a touch attck, he must make a ranged touch attack."
+  description: "Duneth can use touch spells on targets up to 30 feet away. If the spell requires a touch attck, he must make a ranged touch attack."
 }
 type: SUPERNATURAL

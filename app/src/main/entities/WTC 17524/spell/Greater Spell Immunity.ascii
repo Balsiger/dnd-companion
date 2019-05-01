@@ -9,7 +9,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like spell immunity, except the immunity applies to\n  spells of 8th level or lower.  A creature can have only one spell immunity or\n  greater spell immunity spell in effect on it at a time."
+  description: "This spell functions like spell immunity, except the immunity applies to spells of 8th level or lower.  A creature can have only one spell immunity or greater spell immunity spell in effect on it at a time."
 }
 school: ABJURATION
 summary: "$undefined$"

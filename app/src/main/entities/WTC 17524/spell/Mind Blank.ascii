@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "The subject is protected from all devices and spells that detect, influence,\n  or read emotions or thoughts. This spell protects against all mind-affecting\n  spells and effects as well as information gathering by divination spells or\n  effects. Mind blank even foils limited wish, miracle, and wish spells when\n  they are used in such a way as to affect the subject\'s mind or to gain\n  information about it. In the case of scrying that scans an area the creature\n  is in, such as arcane eye, the spell works but the creature simply isn\'t\n  detected. Scrying attempts that are targeted specifically at the subject do\n  not work at all."
+  description: "The subject is protected from all devices and spells that detect, influence, or read emotions or thoughts. This spell protects against all mind-affecting spells and effects as well as information gathering by divination spells or effects. Mind blank even foils limited wish, miracle, and wish spells when they are used in such a way as to affect the subject\'s mind or to gain information about it. In the case of scrying that scans an area the creature is in, such as arcane eye, the spell works but the creature simply isn\'t detected. Scrying attempts that are targeted specifically at the subject do not work at all."
 }
 school: ABJURATION
 summary: "$undefined$"

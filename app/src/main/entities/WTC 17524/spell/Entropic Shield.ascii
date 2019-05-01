@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A magical field appears around you, glowing with a chaotic blast of\n  multicolored hues. This field deflects incoming arrows, rays, and other\n  ranged attacks. Each ranged attack directed at you for which the attacker\n  must make an attack roll (including arrows, magic arrows, Melf\342\200\232\303\204\303\264s acid arrow,\n  ray of enfeeblement, and so forth) has a 20% miss chance (similar to the\n  effects of concealment). Other attacks that simply work at a distance, such\n  as a dragon\342\200\232\303\204\303\264s breath weapon, are not affected."
+  description: "A magical field appears around you, glowing with a chaotic blast of multicolored hues. This field deflects incoming arrows, rays, and other ranged attacks. Each ranged attack directed at you for which the attacker must make an attack roll (including arrows, magic arrows, Melf\342\200\232\303\204\303\264s acid arrow, ray of enfeeblement, and so forth) has a 20% miss chance (similar to the effects of concealment). Other attacks that simply work at a distance, such as a dragon\342\200\232\303\204\303\264s breath weapon, are not affected."
 }
 school: ABJURATION
 summary: "$level (D), 20% miss chance for range attacks."

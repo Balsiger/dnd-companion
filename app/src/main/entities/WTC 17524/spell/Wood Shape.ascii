@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "Wood shape enables you to form one existing piece of wood into any shape\n  that suits your purpose. For example, you can make a wooden weapon, fashion a\n  special trapdoor, or sculpt a crude idol. This spell also permits you to\n  reshape a wood door to make an exit where one didn\'t exist or to seal a door\n  shut. While it is possible to make crude coffers, doors, and so forth, fine\n  detail isn\'t possible. There is a 30% chance that any shape that includes\n  moving parts simply doesn\'t work."
+  description: "Wood shape enables you to form one existing piece of wood into any shape that suits your purpose. For example, you can make a wooden weapon, fashion a special trapdoor, or sculpt a crude idol. This spell also permits you to reshape a wood door to make an exit where one didn\'t exist or to seal a door shut. While it is possible to make crude coffers, doors, and so forth, fine detail isn\'t possible. There is a 30% chance that any shape that includes moving parts simply doesn\'t work."
 }
 school: TRANSMUTATION
 summary: "$undefined$"

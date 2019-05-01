@@ -62,7 +62,7 @@ organization {
     modifier: 1
   }
   plus {
-    text: "number: 1\ndice: 3\nmodifier: 1\nvampires, number: 1\ndice: 4\nmodifier: 4\nvampire spawn"
+    text: "number: 1 dice: 3 modifier: 1 vampires, number: 1 dice: 4 modifier: 4 vampire spawn"
   }
 }
 challenge_rating {

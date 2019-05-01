@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This enchantment clouds the mind of a humanoid creature with 4 or fewer Hit\n  Dice so that it takes no actions. Humanoids of 5 or more HD are not\n  affected. A dazed subject is not stunned, so attackers get no special\n  advantage against it.  Material Component: A pinch of wool or similar\n  substance."
+  description: "This enchantment clouds the mind of a humanoid creature with 4 or fewer Hit Dice so that it takes no actions. Humanoids of 5 or more HD are not affected. A dazed subject is not stunned, so attackers get no special advantage against it.  Material Component: A pinch of wool or similar substance."
 }
 school: ENCHANTMENT
 subschool: COMPULSION

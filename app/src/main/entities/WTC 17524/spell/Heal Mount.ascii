@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like heal, but it affects only the paladin\342\200\232\303\204\303\264s special\n  mount (typically a warhorse)."
+  description: "This spell functions like heal, but it affects only the paladin\342\200\232\303\204\303\264s special mount (typically a warhorse)."
 }
 school: CONJURATION
 subschool: HEALING

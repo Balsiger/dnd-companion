@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like detect evil, except that it detects the auras of\n  good creatures, clerics or paladins of good deities, good spells, and good\n  magic items, and you are vulnerable to an overwhelming good aura if you are\n  evil. Healing potions, antidotes, and similar beneficial items are not\n  good."
+  description: "This spell functions like detect evil, except that it detects the auras of good creatures, clerics or paladins of good deities, good spells, and good magic items, and you are vulnerable to an overwhelming good aura if you are evil. Healing potions, antidotes, and similar beneficial items are not good."
 }
 school: DIVINATION
 summary: "As long as concentrated reveals the presenece of good in a 60 ft cone (1st round presence or absence of good, 2nd number of good auras, power of most potent good aura present, 3rd power and location of each aura."

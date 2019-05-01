@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like cause fear, except that it causes all targeted\n  creatures of less than 6 HD to become frightened.  Material Component: A bit\n  of bone from an undead skeleton, zombie, ghoul, ghast, or mummy."
+  description: "This spell functions like cause fear, except that it causes all targeted creatures of less than 6 HD to become frightened.  Material Component: A bit of bone from an undead skeleton, zombie, ghoul, ghast, or mummy."
 }
 school: NECROMANCY
 summary: "For [[$level]] rounds [[$level / 3]] creatures with less than 6 HD become frigthened  ft, Will $dc or frightened (flee, attack, saves, skills, ability checks -2), Will DC $dc for shaken (attack, saves, skills, ability checks -2) for 1 round."

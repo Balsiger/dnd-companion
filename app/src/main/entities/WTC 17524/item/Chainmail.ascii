@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This armor is made of interlocking metal rings. It includes a layer of\n  quilted fabric worn underneath to prevent chafing and to cushion the impact\n  of blows. Several layers of mail are hung over vital areas. Most of the\n  armor\'s weight hangs from the shoulders, making chainmail uncomfortable to\n  wear for long periods of time. The suit includes gauntlets."
+  description: "This armor is made of interlocking metal rings. It includes a layer of quilted fabric worn underneath to prevent chafing and to cushion the impact of blows. Several layers of mail are hung over vital areas. Most of the armor\'s weight hangs from the shoulders, making chainmail uncomfortable to wear for long periods of time. The suit includes gauntlets."
 }
 value {
   gold: 150

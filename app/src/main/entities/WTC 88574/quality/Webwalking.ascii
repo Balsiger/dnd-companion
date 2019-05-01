@@ -9,6 +9,6 @@ template {
     }
   }
   world: "Forgotten Realms"
-  description: "Rhuallith can ignore web spells and spiderkind webbing as if affected by a\n  freedom of movement spell.  She can walk along webs as if on solid ground (no\n  Balance skill check required)."
+  description: "Rhuallith can ignore web spells and spiderkind webbing as if affected by a freedom of movement spell.  She can walk along webs as if on solid ground (no Balance skill check required)."
 }
 type: SUPERNATURAL

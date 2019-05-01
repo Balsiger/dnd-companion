@@ -10,7 +10,7 @@ template {
       high: 224
     }
   }
-  description: "A weapon of disruption is the bane of all undead.  Any undead creature\n  struck in combat must succeed on a DC 14 Will save or be destroyed. A weapon\n  of disruption must be a bludgeoning weapon. (If you roll this property\n  randomly for a piercing or slashing weapon, reroll.)"
+  description: "A weapon of disruption is the bane of all undead.  Any undead creature struck in combat must succeed on a DC 14 Will save or be destroyed. A weapon of disruption must be a bludgeoning weapon. (If you roll this property randomly for a piercing or slashing weapon, reroll.)"
   short_description: "Undead Will DC 14 or be destroyed."
 }
 probability: COMMON

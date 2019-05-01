@@ -17,7 +17,7 @@ template {
     }
   }
   world: "Generic"
-  description: "A guisarme has reach. You can strike opponents 10 feet away with it, but you\n  can\'t use it against an adjacent foe."
+  description: "A guisarme has reach. You can strike opponents 10 feet away with it, but you can\'t use it against an adjacent foe."
 }
 value {
   gold: 50

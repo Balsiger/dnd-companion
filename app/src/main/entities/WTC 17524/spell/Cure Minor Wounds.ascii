@@ -8,7 +8,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This spell functions like cure light wounds, except that it cures only 1\n  point of damage."
+  description: "This spell functions like cure light wounds, except that it cures only 1 point of damage."
 }
 school: CONJURATION
 subschool: HEALING

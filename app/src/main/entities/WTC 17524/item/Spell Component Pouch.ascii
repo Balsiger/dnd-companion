@@ -14,7 +14,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This small, watertight leather belt pouch has many compartments. A\n  spellcaster with a spell component pouch is assumed to have all the material\n  components and focuses needed for spellcasting, except for those components\n  that have a specific cost, divine focuses, and focuses that\n  wouldn\'t fit in a pouch (such as the natural pool that a druid\n  needs to look into to cast scrying)."
+  description: "This small, watertight leather belt pouch has many compartments. A spellcaster with a spell component pouch is assumed to have all the material components and focuses needed for spellcasting, except for those components that have a specific cost, divine focuses, and focuses that wouldn\'t fit in a pouch (such as the natural pool that a druid needs to look into to cast scrying)."
 }
 value {
   gold: 5
