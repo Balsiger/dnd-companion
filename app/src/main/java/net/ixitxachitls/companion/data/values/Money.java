@@ -26,6 +26,7 @@ import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -283,8 +284,12 @@ public class Money {
     return new Money(0, 0, amount, 0, 0, 0);
   }
 
-  public static boolean validate(String text) {
-    return parse(text).isPresent();
+  public static List<String> validate(String text) {
+    if (parse(text).isPresent()) {
+      return Collections.emptyList();
+    } else {
+      return Collections.singletonList("Cannot parse text");
+    }
   }
 
   public static Money weapon(int amount) {

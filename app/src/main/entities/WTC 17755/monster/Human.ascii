@@ -110,3 +110,4 @@ skill {
 }
 main_race: true
 bonus_feat: true
+skill_point_bonus: 4

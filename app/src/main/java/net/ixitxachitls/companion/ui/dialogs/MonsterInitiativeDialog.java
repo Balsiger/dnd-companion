@@ -60,21 +60,6 @@ public class MonsterInitiativeDialog extends Dialog {
 
   public MonsterInitiativeDialog() {}
 
-  public static MonsterInitiativeDialog newInstance(String campaignId, int monsterId) {
-    MonsterInitiativeDialog dialog = new MonsterInitiativeDialog();
-    dialog.setArguments(arguments(R.layout.dialog_monster_initiative,
-        R.string.title_monster_initiative, R.color.monster, campaignId, monsterId));
-    return dialog;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
-                                    @ColorRes int colorId, String campaignId, int monsterId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_CAMPAIGN_ID, campaignId);
-    arguments.putInt(ARG_MONSTER_ID, monsterId);
-    return arguments;
-  }
-
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -122,5 +107,20 @@ public class MonsterInitiativeDialog extends Dialog {
     }
 
     return campaign.get().getEncounter().numberedMonsterName();
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
+                                    @ColorRes int colorId, String campaignId, int monsterId) {
+    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+    arguments.putString(ARG_CAMPAIGN_ID, campaignId);
+    arguments.putInt(ARG_MONSTER_ID, monsterId);
+    return arguments;
+  }
+
+  public static MonsterInitiativeDialog newInstance(String campaignId, int monsterId) {
+    MonsterInitiativeDialog dialog = new MonsterInitiativeDialog();
+    dialog.setArguments(arguments(R.layout.dialog_monster_initiative,
+        R.string.title_monster_initiative, R.color.monster, campaignId, monsterId));
+    return dialog;
   }
 }

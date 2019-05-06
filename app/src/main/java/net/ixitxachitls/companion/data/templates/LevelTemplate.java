@@ -37,6 +37,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -74,8 +75,16 @@ public class LevelTemplate extends StoredTemplate<Template.LevelTemplateProto> {
     return feats;
   }
 
+  public Set<String> getClassSkills() {
+    return proto.getClassSkillList().stream().map(String::toLowerCase).collect(Collectors.toSet());
+  }
+
   public int getMaxHp() {
     return maxHp;
+  }
+
+  public int getSkillPoints() {
+    return proto.getSkillPoints();
   }
 
   public boolean isFromPHB() {

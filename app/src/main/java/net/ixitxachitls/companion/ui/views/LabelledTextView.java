@@ -31,7 +31,12 @@ import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Validator;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * A text view with a label and description.
@@ -40,6 +45,7 @@ public class LabelledTextView<T extends LabelledTextView, S extends TextView>
     extends LabelledView<T, S> {
 
   private TextWrapper<? extends TextView> text;
+  private Optional<Validator> validator = Optional.empty();
 
   public LabelledTextView(Context context, AttributeSet attributes) {
     super(context, attributes);
@@ -77,14 +83,17 @@ public class LabelledTextView<T extends LabelledTextView, S extends TextView>
     return text.getText();
   }
 
+  @Override
   public T disabled() {
     return enabled(false);
   }
 
+  @Override
   public T enabled() {
     return enabled(true);
   }
 
+  @Override
   public T enabled(boolean enabled) {
     text.enabled(enabled);
     return super.enabled(enabled);
@@ -98,12 +107,14 @@ public class LabelledTextView<T extends LabelledTextView, S extends TextView>
 
   public T text(String text) {
     this.text.text(text);
+    doValidate(text);
 
     return (T) this;
   }
 
   public T text(Spanned text) {
     this.text.text(text);
+    doValidate(text.toString());
 
     return (T) this;
   }
@@ -120,7 +131,23 @@ public class LabelledTextView<T extends LabelledTextView, S extends TextView>
     return (T) this;
   }
 
+  public T validate(Validator validator) {
+    this.validator = Optional.of(validator);
+
+    return (T) this;
+  }
+
   protected S createTextView() {
     return (S) new TextView(getContext());
+  }
+
+  protected List<String> doValidate(String value) {
+    if (this.validator.isPresent()) {
+      List<String> errors = this.validator.get().validate(value);
+      error(errors);
+      return errors;
+    }
+
+    return Collections.emptyList();
   }
 }

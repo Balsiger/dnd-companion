@@ -49,11 +49,6 @@ public final class EditTextWrapper<V extends EditText>
     super(view);
   }
 
-  @FunctionalInterface
-  public interface Validator {
-    public boolean validate(String value);
-  }
-
   public EditTextWrapper<V> clearError() {
     return lineColorValue(lineColorValue);
   }
@@ -97,7 +92,7 @@ public final class EditTextWrapper<V extends EditText>
 
   private void validate() {
     if (validator.isPresent()) {
-      if (getText().isEmpty() || validator.get().validate(getText())) {
+      if (getText().isEmpty() || validator.get().validate(getText()).isEmpty()) {
         clearError();
       } else {
         error();
@@ -111,26 +106,5 @@ public final class EditTextWrapper<V extends EditText>
 
   public static <V extends EditText> EditTextWrapper<V> wrap(V view) {
     return new EditTextWrapper<V>(view);
-  }
-
-  public static class RangeValidator implements Validator {
-
-    private final int min;
-    private final int max;
-
-    public RangeValidator(int min, int max) {
-      this.min = min;
-      this.max = max;
-    }
-
-    @Override
-    public boolean validate(String input) {
-      try {
-        int value = Integer.parseInt(input);
-        return value >= min && value <= max;
-      } catch (NumberFormatException e) {
-        return false;
-      }
-    }
   }
 }

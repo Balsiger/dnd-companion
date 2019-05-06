@@ -87,6 +87,10 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getSaves().getReflex();
   }
 
+  public int getSkillPointBonus() {
+    return proto.getSkillPointBonus();
+  }
+
   public List<Speed> getSpeeds() {
     return proto.getSpeedList().stream().map(Speed::fromProto).collect(Collectors.toList());
   }

@@ -32,7 +32,7 @@
       android:id="@+id/class_name"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      app:descriptionText="The selected class for that level."
+      app:descriptionText="The selected class for this level."
       app:labelColor="@color/characterDark"
       app:labelText="Class"
       app:lineColor="@color/characterDark"
@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        app:descriptionText="The selected feat for that level."
+        app:descriptionText="The selected feat for this level."
         app:labelColor="@color/characterDark"
         app:labelText="Feat"
         app:lineColor="@color/characterDark"
@@ -114,6 +114,17 @@
       android:layout_height="wrap_content"
       android:orientation="vertical">
   </LinearLayout>
+
+  <net.ixitxachitls.companion.ui.views.LabelledTextView
+      android:id="@+id/skills"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      app:descriptionText="The skill ranks for this level."
+      app:labelColor="@color/characterDark"
+      app:labelText="Skills"
+      app:lineColor="@color/characterDark"
+      app:textColor="@color/characterText"/>
 
   <Button
       android:id="@+id/save"

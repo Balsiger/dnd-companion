@@ -51,6 +51,22 @@ public class Views {
     V create(T value);
   }
 
+  @FunctionalInterface
+  public interface Extractor<T extends View> {
+    void extract(T view);
+  }
+
+  public static <T extends View> void extractDataFromChildren(ViewGroup group,
+                                                              Extractor<T> extractor) {
+    for (int i = 0; i < group.getChildCount(); i++) {
+      try {
+        extractor.extract((T) group.getChildAt(i));
+      } catch (ClassCastException e) {
+        // Ignore other views.
+      }
+    }
+  }
+
   public static <V extends View> void updateChildren(ViewGroup group, Update<V> update) {
     for (int i = 0; i < group.getChildCount(); i++) {
       update.update((V) group.getChildAt(i));
@@ -63,5 +79,4 @@ public class Views {
                                                                 UpdateValue<V, T> update,
                                                                 Factory<V, T> factory) {
   }
-
 }

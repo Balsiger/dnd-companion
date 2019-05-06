@@ -95,6 +95,10 @@ public class XP {
   };
 
   public static int maxLevelForXp(int xp) {
+    if (xp <= 0) {
+      return 1;
+    }
+
     for (int i = 1; i <= 20; i++) {
       if (xpForLevel(i) >= xp) {
         return i - 1;

@@ -19,44 +19,43 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.rules;
+package net.ixitxachitls.companion.ui.views.wrappers;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
- * Rule information about levels.
+ * A validator for displayed values
  */
-public class Levels {
-  public static boolean allowsAbilityIncrease(int level) {
-    // An ability increase happens every 4 levels.
-    return (level % 4) == 0;
-  }
+@FunctionalInterface
+public interface Validator {
+  public List<String> validate(String value);
 
-  public static boolean allowsFeat(int level) {
-    // You get a feat at first and every third level.
-    return level == 1 || level % 3 == 0;
-  }
+  public static class RangeValidator implements Validator {
 
-  public static int saveModifier(int level, boolean good) {
-    if (good) {
-      return (level / 2) + 2;
-    } else {
-      return level / 3;
-    }
-  }
+    private final int min;
+    private final int max;
 
-  public static int skillPoints(int skillPoints, int intelligenceModifier, boolean firstLevel,
-                                int racialBonus) {
-    int points = skillPoints + intelligenceModifier;
-
-    if (firstLevel) {
-      points *= 4;
+    public RangeValidator(int min, int max) {
+      this.min = min;
+      this.max = max;
     }
 
-    points += racialBonus;
+    @Override
+    public List<String> validate(String input) {
+      try {
+        int value = Integer.parseInt(input);
+        if (value < min) {
+          return Collections.singletonList("Value too small");
+        }
+        if (value > max) {
+          return Collections.singletonList("Value to high");
+        }
 
-    if (firstLevel) {
-      return Math.max(4, points);
+        return Collections.emptyList();
+      } catch (NumberFormatException e) {
+        return Collections.emptyList();
+      }
     }
-
-    return points;
   }
 }

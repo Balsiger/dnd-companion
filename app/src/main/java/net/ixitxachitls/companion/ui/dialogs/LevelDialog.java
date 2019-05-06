@@ -44,12 +44,15 @@ import net.ixitxachitls.companion.rules.Spells;
 import net.ixitxachitls.companion.ui.fragments.ListSelectDialog;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Validator;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -69,6 +72,7 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
   private Optional<Feat> feat = Optional.empty();
   private Optional<Feat> racialFeat = Optional.empty();
   private Optional<Feat> classFeat = Optional.empty();
+  private Map<String, Integer> skills = new HashMap<>();
 
   // UI.
   private LabelledTextView className;
@@ -78,6 +82,7 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
   private LabelledTextView racialFeatView;
   private LabelledTextView classFeatView;
   private LinearLayout qualities;
+  private LabelledTextView skillsView;
 
   @Override
   protected Level getValue() {
@@ -96,7 +101,7 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
         Integer.parseInt(hp.getText()),
         abilityIncrease.getText().isEmpty()
             ? Optional.empty() : Optional.of(Ability.fromName(abilityIncrease.getText())),
-        feat, racialFeat, classFeat, qualityNames);
+        feat, racialFeat, classFeat, qualityNames, skills);
   }
 
   @Override
@@ -120,7 +125,7 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     className = view.findViewById(R.id.class_name);
     className.onClick(this::selectClass);
     hp = view.findViewById(R.id.hp);
-    hp.validate(new EditTextWrapper.RangeValidator(1, level.getMaxHp()));
+    hp.validate(new Validator.RangeValidator(1, level.getMaxHp()));
     abilityIncrease = view.findViewById(R.id.ability_increase);
     if (Levels.allowsAbilityIncrease(characterLevel) || level.hasAbilityIncrease()) {
       abilityIncrease.onClick(this::selectAbility);
@@ -150,10 +155,16 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     abilityIncrease.text(level.getIncreasedAbility().isPresent()
         ? level.getIncreasedAbility().get().getName() : "");
     featView.text(feat.isPresent() ? feat.get().getTitle() : "");
-    racialFeatView.text(racialFeat.isPresent() ? racialFeat.get().getTitle(): "");
+    racialFeatView.text(racialFeat.isPresent() ? racialFeat.get().getTitle() : "");
     classFeatView.text(classFeat.isPresent() ? classFeat.get().getTitle() : "");
 
     qualities = view.findViewById(R.id.qualities);
+
+    skills = level.getSkills();
+    skillsView = view.findViewById(R.id.skills);
+    skillsView.text(formatSkills()).onClick(this::selectSkills)
+        .validate((v) -> level.validateSkills(character.getIntelligenceModifier(), characterLevel,
+            character.getRace()));
 
     refresh();
   }
@@ -269,6 +280,15 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     this.racialFeatView.text(racialFeat.get().getTitle());
   }
 
+  private String formatSkills() {
+    List<String> parts = new ArrayList<>();
+    for (String skill : skills.keySet()) {
+      parts.add(skill + " +" + skills.get(skill));
+    }
+
+    return Strings.COMMA_JOINER.join(parts);
+  }
+
   private void refresh() {
     classLevel = character.getClassLevel(className.getText(), characterLevel);
     // If we change the class in this level, then the class level is actually one level higher.
@@ -289,12 +309,21 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     if (levelTemplate.isPresent()) {
       for (Level.QualitySelection selection : level.collectQualitySelections(classLevel)) {
         LabelledTextView text = new LabelledTextView(getContext(), null);
-        text.text(selection.getSelected()).lineColor(R.color.character).label("Quality")
-            .labelColor(R.color.character);
+        text.text(selection.getSelected()).lineColor(R.color.characterDark).label("Quality")
+            .labelColor(R.color.characterDark);
         text.onClick(() -> selectQuality(text, selection.getSelected(), selection.getOptions()));
         qualities.addView(text);
       }
     }
+
+    skillsView.text(Strings.COMMA_JOINER.join(skills.entrySet().stream()
+        .map(e -> e.getKey() + " +" + e.getValue())
+        .collect(Collectors.toList())));
+  }
+
+  private void saveSkills(Map<String, Integer> skills) {
+    this.skills = skills;
+    refresh();
   }
 
   private void selectAbility() {
@@ -361,6 +390,12 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
             .collect(Collectors.toList()), R.color.character)
         .setSelectListener(this::editRacialFeat)
         .display();
+  }
+
+  private void selectSkills() {
+    LevelSkillsDialog.newInstance(level.availableSkillPoints(character.getIntelligenceModifier(),
+        characterLevel, character.getRace()), 3 + characterLevel, level.getTemplate().getClassSkills(),
+        skills).onSaved(this::saveSkills).display();
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, String title,

@@ -27,6 +27,7 @@ import com.google.common.collect.Multiset;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
+import net.ixitxachitls.companion.data.templates.MonsterTemplate;
 import net.ixitxachitls.companion.rules.Levels;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -37,6 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 /**
@@ -51,6 +53,7 @@ public class Level extends NestedDocument {
   private static final String FIELD_RACIAL_FEAT = "racial_feat";
   private static final String FIELD_CLASS_FEAT = "class_feat";
   private static final String FIELD_QUALITIES = "qualities";
+  private static final String FIELD_SKILLS = "skills";
 
   private LevelTemplate template;
   private int hp;
@@ -59,14 +62,16 @@ public class Level extends NestedDocument {
   private Optional<Feat> racialFeat;
   private Optional<Feat> classFeat;
   private List<String> qualities;
+  private Map<String, Integer> skills;
 
   public Level() {
     this(new LevelTemplate(), 0, Optional.empty(), Optional.empty(), Optional.empty(),
-        Optional.empty(), Collections.emptyList());
+        Optional.empty(), Collections.emptyList(), Collections.emptyMap());
   }
 
   public Level(String templateName, int number, int hp, String abilityName, String featName,
-               String racialFeatName, String classFeatName, List<String> qualities) {
+               String racialFeatName, String classFeatName, List<String> qualities,
+               Map<String, Integer> skills) {
     this.template = Templates.get().getOrCreateLevel(templateName);
     this.hp = hp;
     this.abilityIncrease = abilityName.isEmpty()
@@ -79,12 +84,13 @@ public class Level extends NestedDocument {
     this.classFeat =
         classFeatName.isEmpty() ? Optional.empty() : Optional.of(new Feat(classFeatName,
             "Special class feat from level " + number));
-    this.qualities = qualities;
+    this.qualities = new ArrayList<>(qualities);
+    this.skills = new HashMap<>(skills);
   }
 
   public Level(LevelTemplate template, int hp, Optional<Ability> abilityIncrease,
                Optional<Feat> feat, Optional<Feat> racialFeat,
-               Optional<Feat> classFeat, List<String> qualities) {
+               Optional<Feat> classFeat, List<String> qualities, Map<String, Integer> skills) {
     this.template = template;
     this.hp = hp;
     this.abilityIncrease = abilityIncrease;
@@ -92,6 +98,7 @@ public class Level extends NestedDocument {
     this.racialFeat = racialFeat;
     this.classFeat = classFeat;
     this.qualities = qualities;
+    this.skills = skills;
   }
 
   public List<Feat> getAutomaticFeats() {
@@ -132,12 +139,23 @@ public class Level extends NestedDocument {
     return racialFeat;
   }
 
+  public Map<String, Integer> getSkills() {
+    return new TreeMap<>(skills);
+  }
+
   public LevelTemplate getTemplate() {
     return template;
   }
 
   public void setTemplate(String name) {
     this.template = readTemplate(name);
+  }
+
+  public int availableSkillPoints(int intelligenceModifier, int characterLevel,
+                                   Optional<MonsterTemplate> race) {
+    return Levels.skillPoints(getTemplate().getSkillPoints(),
+        intelligenceModifier, characterLevel == 1,
+        race.isPresent() ? race.get().getSkillPointBonus() : 0);
   }
 
   public List<QualitySelection> collectQualitySelections(int level) {
@@ -246,7 +264,36 @@ public class Level extends NestedDocument {
       errors.add("There is no class bonus feat selected for level " + number);
     }
 
+    for (Quality quality : getTemplate().getQualities(number)) {
+      List<String> parts = Arrays.asList(quality.getName().split("\\|"));
+      if (parts.size() > 1) {
+        if (selectedQuality(parts).isEmpty()) {
+          errors.add("No quality selected from " + Strings.COMMA_JOINER.join(parts) + " at level "
+              + number);
+        }
+      }
+    }
+
+    errors.addAll(
+        validateSkills(character.getIntelligenceModifier(), number, character.getRace()).stream()
+            .map((v) -> v + " at level " + number)
+            .collect(Collectors.toList()));
+
     return errors;
+  }
+
+  public List<String> validateSkills(int intelligenceModifier, int characterLevel,
+                                     Optional<MonsterTemplate> race) {
+    int used = usedSkillPoints();
+    int available = availableSkillPoints(intelligenceModifier, characterLevel, race);
+    if (used > available) {
+      return Collections.singletonList("Used too many skill points.");
+    }
+    if (used < available) {
+      return Collections.singletonList("Did not use all skill points.");
+    }
+
+    return Collections.emptyList();
   }
 
   @Override
@@ -269,6 +316,9 @@ public class Level extends NestedDocument {
     if (!qualities.isEmpty()) {
       data.put(FIELD_QUALITIES, qualities);
     }
+    if (!skills.isEmpty()) {
+      data.put(FIELD_SKILLS, skills);
+    }
 
     return data;
   }
@@ -281,6 +331,19 @@ public class Level extends NestedDocument {
     }
 
     return "";
+  }
+
+  private int usedSkillPoints() {
+    int used = 0;
+    for (Map.Entry<String, Integer> entry : skills.entrySet()) {
+      if (getTemplate().getClassSkills().contains(entry.getKey())) {
+        used += 2;
+      } else {
+        used++;
+      }
+    }
+
+    return used;
   }
 
   public static Multiset<LevelTemplate> countedNames(List<Level> levels) {
@@ -303,7 +366,11 @@ public class Level extends NestedDocument {
     Optional<Feat> racialFeat = data.read(FIELD_RACIAL_FEAT, d -> Feat.read(d, "Level " + number));
     Optional<Feat> classFeat = data.read(FIELD_CLASS_FEAT, d -> Feat.read(d, "Level " + number));
     List<String> qualities = data.getList(FIELD_QUALITIES, Collections.emptyList());
-    return new Level(template, hp, abilityIncrease, feat, racialFeat, classFeat, qualities);
+    // Firebase will always read longs, even if we want ints...
+    Map<String, Integer> skills =
+        data.getMap(FIELD_SKILLS, 0L).entrySet().stream()
+            .collect(Collectors.toMap(Map.Entry::getKey, (e) -> (e.getValue().intValue())));
+    return new Level(template, hp, abilityIncrease, feat, racialFeat, classFeat, qualities, skills);
   }
 
   private static LevelTemplate readTemplate(String name) {

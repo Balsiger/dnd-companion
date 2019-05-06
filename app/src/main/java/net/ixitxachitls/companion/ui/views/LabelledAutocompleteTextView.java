@@ -28,6 +28,7 @@ import android.widget.AutoCompleteTextView;
 
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Validator;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -47,6 +48,13 @@ public class LabelledAutocompleteTextView
   @Override
   public String getText() {
     return text.getText();
+  }
+
+  @Override
+  public T validate(Validator validator) {
+    text.validate(validator);
+
+    return (T) this;
   }
 
   @Override
@@ -106,12 +114,6 @@ public class LabelledAutocompleteTextView
 
   public T threshold(int threshold) {
     text.get().setThreshold(threshold);
-
-    return (T) this;
-  }
-
-  public T validate(EditTextWrapper.Validator validator) {
-    text.validate(validator);
 
     return (T) this;
   }

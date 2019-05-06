@@ -27,6 +27,7 @@ import android.widget.EditText;
 
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Validator;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 /**
@@ -45,6 +46,7 @@ public class LabelledEditTextView extends LabelledTextView<LabelledEditTextView,
     return text.isEmpty();
   }
 
+  @Override
   public LabelledEditTextView label(String label) {
     this.label.text(label);
 
@@ -68,8 +70,11 @@ public class LabelledEditTextView extends LabelledTextView<LabelledEditTextView,
     return this;
   }
 
-  public LabelledEditTextView validate(EditTextWrapper.Validator validator) {
-    text.validate(validator);
+  @Override
+  public LabelledEditTextView validate(Validator validator) {
+    super.validate(validator);
+    text.validate(this::doValidate);
+
     return this;
   }
 

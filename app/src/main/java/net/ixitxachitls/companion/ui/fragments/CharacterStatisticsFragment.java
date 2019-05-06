@@ -47,8 +47,8 @@ import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.LabelledView;
 import net.ixitxachitls.companion.ui.views.ModifiedValueView;
-import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Validator;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
@@ -175,7 +175,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
     xp.text(String.valueOf(character.getXp()));
     hp.text(String.valueOf(character.getHp()))
-        .validate(new EditTextWrapper.RangeValidator(-20, character.getMaxHp()));
+        .validate(new Validator.RangeValidator(-20, character.getMaxHp()));
     hpMax.text(String.valueOf(character.getMaxHp()));
     damageNonlethal.text(String.valueOf(character.getNonlethalDamage()));
     conditions.update(character);

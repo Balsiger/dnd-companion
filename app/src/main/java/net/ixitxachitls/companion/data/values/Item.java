@@ -80,7 +80,7 @@ public class Item extends NestedDocument {
               List<Item> contents) {
     this.id = id;
     this.name = name;
-    this.templates = new ArrayList(templates);
+    this.templates = new ArrayList<>(templates);
     this.hp = hp;
     this.value = value;
     this.appearance = appearance;
@@ -92,7 +92,7 @@ public class Item extends NestedDocument {
     this.multiuse = multiuse;
     this.timeLeft = timeLeft;
     this.identified = identified;
-    this.contents = new ArrayList(contents);
+    this.contents = new ArrayList<>(contents);
   }
 
   public String getAppearance() {
