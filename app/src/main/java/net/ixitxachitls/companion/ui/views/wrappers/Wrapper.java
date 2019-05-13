@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.support.annotation.IdRes;
+import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -29,14 +30,6 @@ import android.view.View;
  * A wrapper for view for easier building and setup.
  */
 public final class Wrapper<V extends View> extends AbstractWrapper<V, Wrapper<V>> {
-
-  public static <V extends View> Wrapper<V> wrap(View parent, @IdRes int id) {
-    return new Wrapper<>(parent, id);
-  }
-
-  public static <V extends View> Wrapper<V> wrap(V view) {
-    return new Wrapper<>(view);
-  }
 
   private Wrapper(View parent, @IdRes int id) {
     super(parent, id);
@@ -54,5 +47,18 @@ public final class Wrapper<V extends View> extends AbstractWrapper<V, Wrapper<V>
   @FunctionalInterface
   public interface TouchAction {
     boolean execute(MotionEvent event);
+  }
+
+  @FunctionalInterface
+  public interface DragAction {
+    boolean execute(DragEvent event);
+  }
+
+  public static <V extends View> Wrapper<V> wrap(View parent, @IdRes int id) {
+    return new Wrapper<>(parent, id);
+  }
+
+  public static <V extends View> Wrapper<V> wrap(V view) {
+    return new Wrapper<>(view);
   }
 }

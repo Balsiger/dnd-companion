@@ -37,10 +37,13 @@ import net.ixitxachitls.companion.data.values.SavesAdjustment;
 import net.ixitxachitls.companion.data.values.SpeedAdjustment;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 import net.ixitxachitls.companion.rules.Conditions;
+import net.ixitxachitls.companion.rules.Items;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -72,12 +75,15 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_INITIATIVE = "initiative";
   private static final String FIELD_ENCOUNTER_NUMBER = "encounter_number";
   private static final String FIELD_ITEMS = "items";
-  protected int dexterity;
+  private static final String FIELD_SLOTS = "item_slots";
+  private static final String FIELD_ITEMS_PER_SLOT = "items_per_slot";
+
   private String campaignId = "";
   private String name;
   private Optional<MonsterTemplate> race = Optional.empty();
   private Gender gender = Gender.UNKNOWN;
   private int strength;
+  private int dexterity;
   private int constitution;
   private int intelligence;
   private int wisdom;
@@ -86,6 +92,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private int maxHp;
   private int nonlethalDamage;
   private List<Item> items = new ArrayList<>();
+  private Carrying carrying = new Carrying("default");
   private int encounterInitiative = 0;
   private int encounterNumber = 0;
 
@@ -160,7 +167,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public ModifiedValue getConstitutionCheck() {
-    return new ModifiedValue("Constitution Check", Ability.modifier(getConstitution().total()), true);
+    return new ModifiedValue("Constitution Check", Ability.modifier(getConstitution().total()),
+        true);
   }
 
   public int getConstitutionModifier() {
@@ -300,6 +308,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.wisdom = wisdom;
   }
 
+  public boolean isCarrying(Item item) {
+    return carrying.isCarrying(item);
+  }
+
   public void add(Item item) {
     if (amPlayer()) {
       int index = itemIndex(item.getId());
@@ -335,6 +347,14 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public boolean canEdit() {
     return false;
+  }
+
+  public void carry(Items.Slot slot, Item item) {
+    carrying.carry(slot, item);
+  }
+
+  public List<String> carrying(Items.Slot slot) {
+    return carrying.carrying(slot);
   }
 
   public Set<Feat> collectFeats() {
@@ -382,7 +402,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     for (CreatureCondition condition : getConditions()) {
       for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
         if (adjustment instanceof SavesAdjustment) {
-          value.add(new Modifier(((SavesAdjustment)adjustment).getSaves(), Modifier.Type.GENERAL,
+          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
               condition.getCondition().getName()));
         }
       }
@@ -460,7 +480,9 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public boolean moveItemAfter(Item item, Item move) {
-    if (removeItem(move)) {
+    if (isCarrying(item)) {
+      carrying.moveItemAfter(item, move);
+    } else if (removeItem(move)) {
       if (items.contains(item)) {
         items.add(items.indexOf(item) + 1, move);
         store();
@@ -479,7 +501,9 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public boolean moveItemBefore(Item item, Item move) {
-    if (removeItem(move)) {
+    if (isCarrying(item)) {
+      carrying.moveItemBefore(item, move);
+    } else if (removeItem(move)) {
       if (items.contains(item)) {
         items.add(items.indexOf(item), move);
         store();
@@ -518,6 +542,18 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
   }
 
+  public Carrying readCarrying(Data data) {
+    Map<String, List<String>> raw = data.getMap(FIELD_ITEMS_PER_SLOT, Collections.emptyList());
+    EnumMap<Items.Slot, List<String>> carrying = new EnumMap<>(Items.Slot.class);
+    for (Map.Entry<String, List<String>> entry : raw.entrySet()) {
+      carrying.put(Items.Slot.valueOf(entry.getKey()), entry.getValue());
+    }
+
+    return new Carrying(
+        data.get(FIELD_NAME, "default"),
+        carrying);
+  }
+
   public ModifiedValue reflex() {
     ModifiedValue value = new ModifiedValue("Reflex Save", 0, true);
 
@@ -539,7 +575,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     for (CreatureCondition condition : getConditions()) {
       for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
         if (adjustment instanceof SavesAdjustment) {
-          value.add(new Modifier(((SavesAdjustment)adjustment).getSaves(), Modifier.Type.GENERAL,
+          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
               condition.getCondition().getName()));
         }
       }
@@ -553,6 +589,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       if (!items.remove(item)) {
         return removeItem(item.getId());
       }
+
+      carrying.remove(item);
       store();
       return true;
     }
@@ -591,7 +629,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     for (CreatureCondition condition : getConditions()) {
       for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
         if (adjustment instanceof SpeedAdjustment) {
-          if (((SpeedAdjustment)adjustment).isHalf()) {
+          if (((SpeedAdjustment) adjustment).isHalf()) {
             value.add(new Modifier(-squares / 2, Modifier.Type.GENERAL,
                 condition.getCondition().getName()));
           }
@@ -627,7 +665,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     for (CreatureCondition condition : getConditions()) {
       for (Adjustment adjustment : condition.getCondition().getCondition().getAdjustments()) {
         if (adjustment instanceof SavesAdjustment) {
-          value.add(new Modifier(((SavesAdjustment)adjustment).getSaves(), Modifier.Type.GENERAL,
+          value.add(new Modifier(((SavesAdjustment) adjustment).getSaves(), Modifier.Type.GENERAL,
               condition.getCondition().getName()));
         }
       }
@@ -656,7 +694,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     race = Templates.get().getMonsterTemplates().get(data.get(FIELD_RACE, DEFAULT_RACE));
     campaignId = data.get(FIELD_CAMPAIGN, DEFAULT_CAMPAIGN);
     strength = data.get(FIELD_STRENGTH, DEFAULT_ATTRIBUTE);
-    dexterity= data.get(FIELD_DEXTERITY, DEFAULT_ATTRIBUTE);
+    dexterity = data.get(FIELD_DEXTERITY, DEFAULT_ATTRIBUTE);
     constitution = data.get(FIELD_CONSTITUTION, DEFAULT_ATTRIBUTE);
     intelligence = data.get(FIELD_INTELLIGENCE, DEFAULT_ATTRIBUTE);
     wisdom = data.get(FIELD_WISDOM, DEFAULT_ATTRIBUTE);
@@ -669,6 +707,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     items = data.getNestedList(FIELD_ITEMS).stream()
         .map(Item::read)
         .collect(Collectors.toList());
+    carrying = readCarrying(data.getNested(FIELD_SLOTS));
   }
 
   @Override
@@ -692,6 +731,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     data.put(FIELD_INITIATIVE, encounterInitiative);
     data.put(FIELD_ENCOUNTER_NUMBER, encounterNumber);
     data.put(FIELD_ITEMS, items.stream().map(Item::write).collect(Collectors.toList()));
+    data.put(FIELD_SLOTS, carrying.write());
 
     return data;
   }
@@ -732,6 +772,105 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       }
 
       return first.getId().compareTo(second.getId());
+    }
+  }
+
+  public class Carrying {
+    private static final String FIELD_NAME = "name";
+
+    private final String name;
+    private final EnumMap<Items.Slot, List<String>> itemsPerSlot;
+
+    public Carrying(String name) {
+      this.name = name;
+
+      this.itemsPerSlot = new EnumMap<Items.Slot, List<String>>(Items.Slot.class);
+      for (Items.Slot slot : Items.Slot.values()) {
+        itemsPerSlot.put(slot, new ArrayList<>());
+      }
+    }
+
+    private Carrying(String name, EnumMap<Items.Slot, List<String>> itemsPerSlot) {
+      this.name = name;
+      this.itemsPerSlot = itemsPerSlot;
+
+      for (Items.Slot slot : Items.Slot.values()) {
+        if (!itemsPerSlot.containsKey(slot)) {
+          itemsPerSlot.put(slot, new ArrayList<>());
+        }
+      }
+    }
+
+    public boolean isCarrying(Item item) {
+      for (List<String> ids : itemsPerSlot.values()) {
+        if (ids.contains(item.getId())) {
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    public void carry(Items.Slot slot, Item item) {
+      remove(item);
+      add(slot, item);
+
+      Creature.this.store();
+    }
+
+    public List<String> carrying(Items.Slot slot) {
+      return itemsPerSlot.get(slot);
+    }
+
+    public Optional<Items.Slot> getSlot(Item item) {
+      for (Map.Entry<Items.Slot, List<String>> slot : itemsPerSlot.entrySet()) {
+        if (slot.getValue().contains(item.getId())) {
+          return Optional.of(slot.getKey());
+        }
+      }
+
+      return Optional.empty();
+    }
+
+    public void moveItemAfter(Item item, Item move) {
+      remove(move);
+
+      Optional<Items.Slot> slot = getSlot(item);
+      if (slot.isPresent()) {
+        itemsPerSlot.get(slot.get())
+            .add(itemsPerSlot.get(slot.get()).indexOf(item.getId()) + 1, move.getId());
+        store();
+      }
+    }
+
+    public void moveItemBefore(Item item, Item move) {
+      remove(move);
+
+      Optional<Items.Slot> slot = getSlot(item);
+      if (slot.isPresent()) {
+        itemsPerSlot.get(slot.get())
+            .add(itemsPerSlot.get(slot.get()).indexOf(item.getId()), move.getId());
+        store();
+      }
+    }
+
+    public Map<String, Object> write() {
+      Map<String, Object> data = new HashMap<>();
+      data.put(FIELD_NAME, name);
+      data.put(FIELD_ITEMS_PER_SLOT, itemsPerSlot.entrySet().stream()
+          .collect(Collectors.toMap((e) -> e.getKey().toString(), Map.Entry::getValue)));
+
+      return data;
+    }
+
+    private void add(Items.Slot slot, Item item) {
+      itemsPerSlot.get(slot).add(item.getId());
+    }
+
+    private void remove(Item item) {
+      for (List<String> ids : itemsPerSlot.values()) {
+        ids.remove(item.getId());
+      }
     }
   }
 }

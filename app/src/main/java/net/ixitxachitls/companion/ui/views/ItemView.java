@@ -94,62 +94,12 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     setOnDragListener(this);
   }
 
-  public void toggleDetails() {
-    expanded = !expanded;
-    details.visible(expanded);
-  }
-
-  public boolean isExpanded() {
-    return expanded;
-  }
-
   public Item getItem() {
     return item;
   }
 
-  private String buildItemName() {
-    String prefix = item.getMultiple() > 1 ? item.getMultiple() + "x " : "";
-    String postfix = item.getMultiuse() > 1 ? " (" + item.getMultiuse() + " uses)" : "";
-
-    if (creature.amPlayer()) {
-      return prefix + item.getPlayerName() + postfix;
-    } else {
-      return prefix + item.getName() + postfix;
-    }
-  }
-
-  public void update() {
-    name.text(buildItemName());
-    summary.text(item.summary());
-    appearance.text(item.getAppearance());
-    description.text(Texts.toSpanned(getContext(), item.getDescription()));
-
-    Map<Item, ItemView> views = collectItemViews();
-    contents.get().removeAllViews();
-    for (Item content : item.getContents()) {
-      ItemView view = views.get(content);
-      if (view == null) {
-        view = new ItemView(getContext(), creature, content);
-      } else {
-        view.update();
-      }
-
-      contents.get().addView(view);
-    }
-  }
-
-  private Map<Item, ItemView> collectItemViews() {
-    Map<Item, ItemView> views = new HashMap<>();
-    for (int i = 0; i < contents.get().getChildCount(); i++) {
-      ItemView view = (ItemView) contents.get().getChildAt(i);
-      views.put(view.getItem(), view);
-    }
-
-    return views;
-  }
-
-  private void edit() {
-    EditItemDialog.newInstance(creature.getId(), item.getId()).display();
+  public boolean isExpanded() {
+    return expanded;
   }
 
   @Override
@@ -197,33 +147,56 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     }
   }
 
-  private void showTopInsert() {
-    if (showTopMargin) {
-      return;
-    }
-
-    showBottomMargin = false;
-    showTopMargin = true;
-    title.margin(AbstractWrapper.Margin.TOP, 10);
-    title.backgroundColor(R.color.item);
+  public void toggleDetails() {
+    expanded = !expanded;
+    details.visible(expanded);
   }
 
-  private void showBottomInsert() {
-    if (showBottomMargin) {
-      return;
-    }
+  public void update() {
+    name.text(buildItemName());
+    summary.text(item.summary());
+    appearance.text(item.getAppearance());
+    description.text(Texts.toSpanned(getContext(), item.getDescription()));
 
-    showTopMargin = false;
-    showBottomMargin = true;
-    title.margin(AbstractWrapper.Margin.BOTTOM, 10);
-    title.backgroundColor(R.color.item);
+    Map<Item, ItemView> views = collectItemViews();
+    contents.get().removeAllViews();
+    for (Item content : item.getContents()) {
+      if (!creature.isCarrying(content)) {
+        ItemView view = views.get(content);
+        if (view == null) {
+          view = new ItemView(getContext(), creature, content);
+        } else {
+          view.update();
+        }
+
+        contents.get().addView(view);
+      }
+    }
   }
 
-  private void showNoInsert() {
-    showBottomMargin = false;
-    showTopMargin = false;
-    title.margin(AbstractWrapper.Margin.TOP, 0);
-    title.backgroundColor(R.color.item);
+  private String buildItemName() {
+    String prefix = item.getMultiple() > 1 ? item.getMultiple() + "x " : "";
+    String postfix = item.getMultiuse() > 1 ? " (" + item.getMultiuse() + " uses)" : "";
+
+    if (creature.amPlayer()) {
+      return prefix + item.getPlayerName() + postfix;
+    } else {
+      return prefix + item.getName() + postfix;
+    }
+  }
+
+  private Map<Item, ItemView> collectItemViews() {
+    Map<Item, ItemView> views = new HashMap<>();
+    for (int i = 0; i < contents.get().getChildCount(); i++) {
+      ItemView view = (ItemView) contents.get().getChildAt(i);
+      views.put(view.getItem(), view);
+    }
+
+    return views;
+  }
+
+  private void edit() {
+    EditItemDialog.newInstance(creature.getId(), item.getId()).display();
   }
 
   private boolean handleTouch(MotionEvent event) {
@@ -250,6 +223,35 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
       default:
         return false;
     }
+  }
+
+  private void showBottomInsert() {
+    if (showBottomMargin) {
+      return;
+    }
+
+    showTopMargin = false;
+    showBottomMargin = true;
+    title.margin(AbstractWrapper.Margin.BOTTOM, 10);
+    title.backgroundColor(R.color.item);
+  }
+
+  private void showNoInsert() {
+    showBottomMargin = false;
+    showTopMargin = false;
+    title.margin(AbstractWrapper.Margin.TOP, 0);
+    title.backgroundColor(R.color.item);
+  }
+
+  private void showTopInsert() {
+    if (showTopMargin) {
+      return;
+    }
+
+    showBottomMargin = false;
+    showTopMargin = true;
+    title.margin(AbstractWrapper.Margin.TOP, 10);
+    title.backgroundColor(R.color.item);
   }
 
 

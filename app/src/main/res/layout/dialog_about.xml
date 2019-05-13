@@ -340,6 +340,13 @@
             android:layout_marginTop="10dp"
             android:text="Cold by Landan Lloyd from the Noun Project"
             android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Man by Jennifer Morrow from the Noun Project"
+            android:theme="@style/LargeText"/>
       </LinearLayout>
     </ScrollView>
 

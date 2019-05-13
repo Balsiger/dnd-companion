@@ -27,138 +27,446 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingEnd="20dp"
     android:paddingStart="20dp"
-    android:paddingTop="20dp">
+    android:paddingTop="20dp"
+    android:paddingEnd="20dp">
 
-  <ScrollView
-      android:id="@+id/scrollView"
+  <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_weight="1">
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
         android:orientation="vertical">
 
-      <LinearLayout
+      <FrameLayout
+          android:layout_width="wrap_content"
+          android:layout_height="500dp">
+
+        <ImageView
+            android:id="@+id/figure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754"/>
+
+        <ImageView
+            android:id="@+id/figure_head"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_head"/>
+
+        <ImageView
+            android:id="@+id/figure_eyes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_eyes"/>
+
+        <ImageView
+            android:id="@+id/figure_neck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_neck"/>
+
+        <ImageView
+            android:id="@+id/figure_shoulders"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_shoulders"/>
+
+        <ImageView
+            android:id="@+id/figure_torso"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_torso"/>
+
+        <ImageView
+            android:id="@+id/figure_body"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_body"/>
+
+        <ImageView
+            android:id="@+id/figure_wrists"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_wrists"/>
+
+        <ImageView
+            android:id="@+id/figure_hands"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_hands"/>
+
+        <ImageView
+            android:id="@+id/figure_fingers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_fingers"/>
+
+        <ImageView
+            android:id="@+id/figure_feet"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/noun_man_51754_feet"/>
+
+      </FrameLayout>
+
+      <ScrollView
+          android:id="@+id/scrollView"
           android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:layout_weight="1"
-          android:orientation="horizontal">
+          android:layout_height="wrap_content"
+          android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
           <LinearLayout
               android:layout_width="match_parent"
-              android:layout_height="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
               android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total wealth:"
-                android:textStyle="bold"
-                android:theme="@style/LargeText"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/wealth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="5dp"
-                android:text="0 gp"
-                android:theme="@style/LargeText"/>
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
 
-          </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total wealth:"
+                    android:textStyle="bold"
+                    android:theme="@style/LargeText"/>
 
-          <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/wealth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:text="0 gp"
+                    android:theme="@style/LargeText"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total weight:"
-                android:textStyle="bold"
-                android:theme="@style/LargeText"/>
+              </LinearLayout>
 
-            <TextView
-                android:id="@+id/weight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="5dp"
-                android:text="0 lb"
-                android:theme="@style/LargeText"/>
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total weight:"
+                    android:textStyle="bold"
+                    android:theme="@style/LargeText"/>
+
+                <TextView
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:text="0 lb"
+                    android:theme="@style/LargeText"/>
+
+              </LinearLayout>
+
+            </LinearLayout>
 
           </LinearLayout>
 
         </LinearLayout>
+      </ScrollView>
+    </LinearLayout>
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/item_add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:tint="@color/white"
-            app:backgroundTint="@color/item"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView"
-            app:srcCompat="@drawable/ic_add_black_24dp"/>
-
-      </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_weight="1">
 
       <LinearLayout
-          android:id="@+id/items"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="10dp"
-          android:orientation="vertical"/>
+          android:orientation="vertical">
 
-    </LinearLayout>
-  </ScrollView>
+        <TextView
+            android:id="@+id/title_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Head"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
 
-  <HorizontalScrollView
+        <LinearLayout
+            android:id="@+id/items_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_eyes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Eyes"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_eyes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_neck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Neck"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_neck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_shoulders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Shoulders"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_shoulders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_torso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Torso"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_torso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Body"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_wrists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Wrists"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_wrists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_hands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Hands"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_hands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_fingers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Fingers"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_fingers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_feet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/characterDark"
+            android:padding="5dp"
+            android:text="Feet"
+            android:textAlignment="center"
+            android:textAppearance="@style/LargeText"/>
+
+        <LinearLayout
+            android:id="@+id/items_feet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"/>
+
+        <LinearLayout
+            android:id="@+id/items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"/>
+      </LinearLayout>
+    </ScrollView>
+
+  </LinearLayout>
+
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_weight="0">
-ia
-    <LinearLayout
-        android:id="@+id/targets"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+      android:orientation="horizontal">
 
-      <net.ixitxachitls.companion.ui.views.ImageDropTarget
-          android:id="@+id/item_remove"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          app:image="@drawable/noun_drop_970982"
-          app:text="Drop"/>
-
-      <net.ixitxachitls.companion.ui.views.ImageDropTarget
-          android:id="@+id/item_sell"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          app:image="@drawable/noun_coins_845722"
-          app:text="Sell"/>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
       <LinearLayout
-          android:id="@+id/targets_characters"
+          android:id="@+id/targets"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:layout_height="match_parent"
           android:orientation="horizontal">
+
+        <net.ixitxachitls.companion.ui.views.ImageDropTarget
+            android:id="@+id/item_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:image="@drawable/noun_drop_970982"
+            app:text="Drop"/>
+
+        <net.ixitxachitls.companion.ui.views.ImageDropTarget
+            android:id="@+id/item_sell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:image="@drawable/noun_coins_845722"
+            app:text="Sell"/>
+
+        <LinearLayout
+            android:id="@+id/targets_characters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+
       </LinearLayout>
+    </HorizontalScrollView>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/item_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:backgroundTint="@color/item"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:srcCompat="@drawable/ic_add_black_24dp"/>
 
-    </LinearLayout>
-  </HorizontalScrollView>
+  </LinearLayout>
 
 </LinearLayout>

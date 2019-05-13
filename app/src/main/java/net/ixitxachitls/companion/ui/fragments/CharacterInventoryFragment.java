@@ -24,11 +24,13 @@ package net.ixitxachitls.companion.ui.fragments;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -41,12 +43,14 @@ import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Weight;
+import net.ixitxachitls.companion.rules.Items;
 import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.views.ImageDropTarget;
 import net.ixitxachitls.companion.ui.views.ItemView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -64,10 +68,13 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   private ViewGroup items;
   private ViewGroup view;
   private Wrapper<Button> addItem;
-  private LinearLayout targets;
   private LinearLayout targetsCharacters;
   private Wrapper<ImageDropTarget> removeItem;
   private Wrapper<ImageDropTarget> sellItem;
+  private EnumMap<Items.Slot, Wrapper<ImageView>> slotFigures = new EnumMap<>(Items.Slot.class);
+  private EnumMap<Items.Slot, Wrapper<TextView>> slotTitles = new EnumMap<>(Items.Slot.class);
+  private EnumMap<Items.Slot, LinearLayout> slotItems = new EnumMap<>(Items.Slot.class);
+  private Optional<Items.Slot> lastOpenedSlot = Optional.empty();
 
   public CharacterInventoryFragment() {
     characters().observe(this, this::refresh);
@@ -88,7 +95,6 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
         .description("Add Item", "Add an item to the characters inventory.")
         .visible(character.isPresent() &&
             (character.get().amPlayer() || character.get().amDM()));
-    targets = view.findViewById(R.id.targets);
     targetsCharacters = view.findViewById(R.id.targets_characters);
     removeItem = Wrapper.<ImageDropTarget>wrap(view, R.id.item_remove)
         .description("Remove Item", "Drag an item over the trash to remove it");
@@ -101,6 +107,18 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     sellItem.get().setSupport(i -> i instanceof Item);
     sellItem.get().setDropExecutor(this::sellItem);
     sellItem.visible(character.isPresent() && character.get().amPlayer());
+
+    setupSlot(Items.Slot.head, R.id.figure_head, R.id.title_head, R.id.items_head);
+    setupSlot(Items.Slot.eyes, R.id.figure_eyes, R.id.title_eyes, R.id.items_eyes);
+    setupSlot(Items.Slot.neck, R.id.figure_neck, R.id.title_neck, R.id.items_neck);
+    setupSlot(Items.Slot.shoulders, R.id.figure_shoulders, R.id.title_shoulders,
+        R.id.items_shoulders);
+    setupSlot(Items.Slot.torso, R.id.figure_torso, R.id.title_torso, R.id.items_torso);
+    setupSlot(Items.Slot.body, R.id.figure_body, R.id.title_body, R.id.items_body);
+    setupSlot(Items.Slot.wrists, R.id.figure_wrists, R.id.title_wrists, R.id.items_wrists);
+    setupSlot(Items.Slot.hands, R.id.figure_hands, R.id.title_hands, R.id.items_hands);
+    setupSlot(Items.Slot.fingers, R.id.figure_fingers, R.id.title_fingers, R.id.items_fingers);
+    setupSlot(Items.Slot.feet, R.id.figure_feet, R.id.title_feet, R.id.items_feet);
 
     if (character.isPresent()) {
       update(character.get());
@@ -121,16 +139,23 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       Map<Item, ItemView> views = collectItemViews();
       items.removeAllViews();
       for (Item item : character.getItems()) {
-        ItemView view = views.get(item);
-        if (view == null) {
-          view = createLine(item);
-        } else {
-          view.update();
+        if (!character.isCarrying(item)) {
+          ItemView view = views.get(item);
+          if (view == null) {
+            view = createLine(item);
+          } else {
+            view.update();
+          }
+          items.addView(view);
         }
-        items.addView(view);
+
+        // TODO(merlin): Move this into character!
         totalValue = totalValue.add(item.getValue());
         totalWeight = totalWeight.add(item.getWeight());
       }
+
+      refreshSlots();
+
       this.wealth.text(totalValue.simplify().toString());
       this.weight.text(totalWeight.toString());
       view.setOnDragListener((v, e) -> onItemDrag(v, e));
@@ -162,6 +187,45 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     return new ItemView(getContext(), character.get(), item);
   }
 
+  private boolean dragSlot(Items.Slot slot, DragEvent event) {
+    switch (event.getAction()) {
+      case DragEvent.ACTION_DRAG_STARTED:
+        lastOpenedSlot = Optional.empty();
+        return true;
+
+      case DragEvent.ACTION_DRAG_ENTERED:
+        if (slotItems.get(slot).getVisibility() == View.GONE) {
+          lastOpenedSlot = Optional.of(slot);
+          toggleSlot(slot);
+        }
+        return true;
+
+      case DragEvent.ACTION_DRAG_EXITED:
+        if (lastOpenedSlot.isPresent()) {
+          toggleSlot(lastOpenedSlot.get());
+          lastOpenedSlot = Optional.empty();
+        }
+        return true;
+
+      case DragEvent.ACTION_DRAG_LOCATION:
+        // We need to handle this because the default handling in the text view will throw an
+        // exception.
+        return true;
+
+      case DragEvent.ACTION_DROP:
+        if (character.isPresent()) {
+          character.get().carry(slot, (Item) event.getLocalState());
+
+          return true;
+        } else {
+          return false;
+        }
+
+      default:
+        return false;
+    }
+  }
+
   private boolean moveItem(Object state, Character target) {
     if (character.isPresent() && state instanceof Item) {
       character.get().removeItem((Item) state);
@@ -179,8 +243,8 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
 
       case DragEvent.ACTION_DRAG_LOCATION:
         int[] locations = new int[2];
-        items.getLocationInWindow(locations);
-        moveFirst = event.getY() < locations[1];
+        moveFirst = event.getY() < items.getTop();
+        Status.log(event.getY() + " : " + items.getTop());
         return true;
 
       case DragEvent.ACTION_DRAG_ENDED:
@@ -194,10 +258,10 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       case DragEvent.ACTION_DROP:
         if (character.isPresent() && character.get().amPlayer()) {
           Item item = (Item) event.getLocalState();
-          if (moveFirst) {
-            character.get().moveItemFirst(item);
+           if (moveFirst) {
+            //character.get().moveItemFirst(item);
           } else {
-            character.get().moveItemLast(item);
+            //character.get().moveItemLast(item);
           }
         }
         return true;
@@ -207,7 +271,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     }
   }
 
-  private void refresh(Documents .Update update) {
+  private void refresh(Documents.Update update) {
     refreshDropTargets();
   }
 
@@ -226,6 +290,24 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
           target.setSupport(i -> i instanceof Item);
           target.setDropExecutor((i) -> moveItem(i, other));
           targetsCharacters.addView(target);
+        }
+      }
+    }
+  }
+
+  private void refreshSlots() {
+    for (Items.Slot slot : Items.Slot.values()) {
+      slotItems.get(slot).removeAllViews();
+      slotTitles.get(slot).backgroundColor(R.color.characterDark);
+      if (character.isPresent()) {
+        for (String id : character.get().carrying(slot)) {
+          Optional<Item> item = character.get().getItem(id);
+          if (item.isPresent()) {
+            slotItems.get(slot).addView(createLine(item.get()));
+            slotTitles.get(slot).backgroundColor(R.color.character);
+          } else {
+            Status.error("Cannot find item " + id + " for slot " + slot);
+          }
         }
       }
     }
@@ -257,5 +339,28 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     }
 
     return false;
+  }
+
+  private void setupSlot(Items.Slot slot, @IdRes int figureId, @IdRes int titleId,
+                         @IdRes int itemsId) {
+    slotFigures.put(slot, Wrapper.<ImageView>wrap(view, figureId).gone());
+    slotTitles.put(slot, Wrapper.<TextView>wrap(view, titleId).onClick(() -> toggleSlot(slot)));
+    slotItems.put(slot, view.findViewById(itemsId));
+    view.findViewById(itemsId).setVisibility(View.GONE);
+
+    slotTitles.get(slot).onDrag((e) -> dragSlot(slot, e));
+  }
+
+  private void toggleSlot(Items.Slot slot) {
+    if (slotItems.get(slot).getVisibility() == View.GONE) {
+      slotTitles.get(slot).backgroundColor(R.color.slot_selected);
+      slotItems.get(slot).setVisibility(View.VISIBLE);
+      slotFigures.get(slot).visible();
+    } else {
+      slotTitles.get(slot).backgroundColor(
+          slotItems.get(slot).getChildCount() > 0 ? R.color.character : R.color.characterDark);
+      slotItems.get(slot).setVisibility(View.GONE);
+      slotFigures.get(slot).gone();
+    }
   }
 }

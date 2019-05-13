@@ -212,6 +212,12 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return (W) this;
   }
 
+  public W onDrag(Wrapper.DragAction action) {
+    view.setOnDragListener((v, e) -> action.execute(e));
+
+    return (W) this;
+  }
+
   public W onFocusLost(Wrapper.Action action) {
     view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
       @Override

@@ -18,7 +18,7 @@ template {
     }
   }
   world: "Generic"
-  description: "This is a simple bottle, as it is used for wine."
+  description: "This is a simple bottle, commonly used for wine."
 }
 value {
   gold: 2

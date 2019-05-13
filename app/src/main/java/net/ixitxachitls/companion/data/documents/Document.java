@@ -28,7 +28,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
@@ -106,6 +105,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     execute(whenCompleted);
   }
 
+  @SuppressWarnings("unchecked")
   public void store() {
     if (temporary) {
       throw new IllegalStateException("This temporary document cannot be stored.");
@@ -113,6 +113,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
 
     if (reference.isPresent()) {
       reference.get().set(write(new HashMap<>()));
+      updated((D) this);
     } else {
       collection.add(write(new HashMap<>())).addOnCompleteListener(task -> {
         if (task.isSuccessful()) {
@@ -157,10 +158,12 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   }
 
   protected void startListening() {
+    /*
     if (reference.isPresent()) {
       reference.get().addSnapshotListener(CompanionApplication.get().getCurrentActivity(),
           this::updated);
     }
+    */
   }
 
   @SuppressWarnings("unchecked")
@@ -222,6 +225,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     document.path = snapshot.getReference().getParent().getPath();
     document.collection = snapshot.getReference().getParent();
     document.reference = Optional.of(snapshot.getReference());
+    document.reference.get().addSnapshotListener(document::onUpdate);
     document.snapshot = Optional.ofNullable(snapshot);
     document.data = snapshot == null ? Data.empty() : Data.fromSnapshot(snapshot);
     document.temporary = false;

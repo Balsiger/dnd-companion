@@ -51,24 +51,12 @@ public class ImageDropTarget extends LinearLayout implements View.OnDragListener
   // UI elements.
   private Wrapper<ImageView> image;
   private TextWrapper<TextView> text;
-
-  @FunctionalInterface
-  public interface Support {
-    boolean supports(Object state);
-  }
-
-  @FunctionalInterface
-  public interface Executor {
-    boolean execute(Object state);
-  }
-
   private Optional<Support> support = Optional.empty();
   private Optional<Executor> dropExecutor = Optional.empty();
 
   public ImageDropTarget(Context context) {
     this(context, null);
   }
-
   public ImageDropTarget(Context context, AttributeSet attributes) {
     super(context, attributes);
     this.round = false;
@@ -86,36 +74,28 @@ public class ImageDropTarget extends LinearLayout implements View.OnDragListener
     init(icon, text);
   }
 
-  private void init(Drawable icon, String text) {
-    View view = LayoutInflater.from(getContext()).inflate(
-        round ? R.layout.view_image_drop_target_round : R.layout.view_image_drop_target, this,
-        false);
-    this.image = Wrapper.<ImageView>wrap(view, R.id.icon);
-    this.image.get().setImageDrawable(icon);
-    this.text = TextWrapper.wrap(view, R.id.text).text(text).noWrap();
-    addView(view);
-
-    if (image.get().getBackgroundTintList() == null) {
-      tint = ColorStateList.valueOf(getResources().getColor(R.color.black, null));
-    } else {
-      tint = image.get().getBackgroundTintList();
-    }
-    setOnDragListener(this);
+  @FunctionalInterface
+  public interface Support {
+    boolean supports(Object state);
   }
 
-  public void setSupport(Support support) {
-    this.support = Optional.of(support);
+  @FunctionalInterface
+  public interface Executor {
+    boolean execute(Object state);
   }
 
   public void setDropExecutor(Executor executor) {
     this.dropExecutor = Optional.of(executor);
   }
 
+  public void setSupport(Support support) {
+    this.support = Optional.of(support);
+  }
+
   @Override
   public boolean onDrag(View view, DragEvent event) {
     switch (event.getAction()) {
       case DragEvent.ACTION_DRAG_STARTED:
-        if (true) return true;
         if (support.isPresent()) {
           return support.get().supports(event.getLocalState());
         } else {
@@ -144,5 +124,22 @@ public class ImageDropTarget extends LinearLayout implements View.OnDragListener
       default:
         return false;
     }
+  }
+
+  private void init(Drawable icon, String text) {
+    View view = LayoutInflater.from(getContext()).inflate(
+        round ? R.layout.view_image_drop_target_round : R.layout.view_image_drop_target, this,
+        false);
+    this.image = Wrapper.<ImageView>wrap(view, R.id.icon);
+    this.image.get().setImageDrawable(icon);
+    this.text = TextWrapper.wrap(view, R.id.text).text(text).noWrap();
+    addView(view);
+
+    if (image.get().getBackgroundTintList() == null) {
+      tint = ColorStateList.valueOf(getResources().getColor(R.color.black, null));
+    } else {
+      tint = image.get().getBackgroundTintList();
+    }
+    setOnDragListener(this);
   }
 }

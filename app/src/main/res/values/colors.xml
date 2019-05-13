@@ -89,6 +89,7 @@
   <color name="extreme">#b90900</color>
   <color name="modified_value">#f5bd2e</color>
   <color name="filtered">#ff2929</color>
+  <color name="slot_selected">#ff7d00</color>
 
   <!-- location colors -->
   <color name="location_blue">#44f</color>
