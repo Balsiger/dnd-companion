@@ -33,9 +33,12 @@ import net.ixitxachitls.companion.data.values.InitiativeAdjustment;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.Modifier;
+import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.SavesAdjustment;
 import net.ixitxachitls.companion.data.values.SpeedAdjustment;
 import net.ixitxachitls.companion.data.values.TimedCondition;
+import net.ixitxachitls.companion.data.values.Weight;
+import net.ixitxachitls.companion.rules.Armor;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.rules.Items;
 
@@ -77,6 +80,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_ITEMS = "items";
   private static final String FIELD_SLOTS = "item_slots";
   private static final String FIELD_ITEMS_PER_SLOT = "items_per_slot";
+  private static final String DEFAULT_DISTRIBUTION = "Default";
 
   private String campaignId = "";
   private String name;
@@ -92,7 +96,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private int maxHp;
   private int nonlethalDamage;
   private List<Item> items = new ArrayList<>();
-  private Carrying carrying = new Carrying("default");
+  private Carrying carrying = new Carrying(DEFAULT_DISTRIBUTION);
   private int encounterInitiative = 0;
   private int encounterNumber = 0;
 
@@ -148,6 +152,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public void setCampaignId(String campaignId) {
     this.campaignId = campaignId;
+  }
+
+  public String getCarryingName() {
+    return carrying.name;
   }
 
   public ModifiedValue getCharisma() {
@@ -284,6 +292,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return Ability.modifier(getWisdom().total());
   }
 
+  public boolean isCarryingDefault() {
+    return carrying.name.equals(DEFAULT_DISTRIBUTION);
+  }
+
   public void setBaseCharisma(int charisma) {
     this.charisma = charisma;
   }
@@ -379,6 +391,31 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       item.setMultiple(item.getMultiple() + other.getMultiple());
       store();
     }
+  }
+
+  public ModifiedValue flatFootedArmorClass() {
+    ModifiedValue value = new ModifiedValue("AC", 10, false);
+
+    // Bonuses from armor and shields.
+    value.add(armorACs());
+
+    // Natural armor.
+    if (race.isPresent() && race.get().hasNaturalArmor()) {
+      value.add(race.get().getNaturalArmor());
+    }
+
+    // Size.
+    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
+      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
+          "Size"));
+    }
+
+    // Qualities.
+    for (Quality quality : collectQualities()) {
+      value.add(quality.getTemplate().getAcModifiers());
+    }
+
+    return value;
   }
 
   public ModifiedValue fortitude() {
@@ -542,6 +579,37 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
   }
 
+  public ModifiedValue normalArmorClass() {
+    ModifiedValue value = new ModifiedValue("AC", 10, false);
+
+    // Bonuses from armor and shields.
+    value.add(armorACs());
+
+    // Natural armor.
+    if (race.isPresent() && race.get().hasNaturalArmor()) {
+      value.add(race.get().getNaturalArmor());
+    }
+
+    // Dexterity.
+    int dexterityModifier = getDexterityModifier();
+    if (dexterityModifier != 0) {
+      value.add(new Modifier(dexterityModifier, Modifier.Type.ABILITY, "Dexterity"));
+    }
+
+    // Size.
+    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
+      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
+          "Size"));
+    }
+
+    // Qualities.
+    for (Quality quality : collectQualities()) {
+      value.add(quality.getTemplate().getAcModifiers());
+    }
+
+    return value;
+  }
+
   public Carrying readCarrying(Data data) {
     Map<String, List<String>> raw = data.getMap(FIELD_ITEMS_PER_SLOT, Collections.emptyList());
     EnumMap<Items.Slot, List<String>> carrying = new EnumMap<>(Items.Slot.class);
@@ -640,6 +708,49 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return value;
   }
 
+  public Money totalValue() {
+    Money total = Money.ZERO;
+    for (Item item : items) {
+      total = total.add(item.getValue());
+    }
+
+    return total;
+  }
+
+  public Weight totalWeight() {
+    Weight total= Weight.ZERO;
+    for (Item item : items) {
+      total = total.add(item.getWeight());
+    }
+
+    return total;
+  }
+
+  public ModifiedValue touchArmorClass() {
+    ModifiedValue value = new ModifiedValue("AC", 10, false);
+
+    // Dexterity.
+    int dexterityModifier = getDexterityModifier();
+    if (dexterityModifier != 0) {
+      value.add(new Modifier(dexterityModifier, Modifier.Type.ABILITY, "Dexterity"));
+    }
+
+    // Size.
+    if (race.isPresent() && Armor.sizeModifier(race.get().getSize()) != 0) {
+      value.add(new Modifier(Armor.sizeModifier(race.get().getSize()), Modifier.Type.GENERAL,
+          "Size"));
+    }
+
+    // Qualities.
+    for (Quality quality : collectQualities()) {
+      value.add(quality.getTemplate().getAcModifiers().stream()
+          .filter(m -> m.getType() == Modifier.Type.DEFLECTION)
+          .collect(Collectors.toList()));
+    }
+
+    return value;
+  }
+
   public void updated(Item item) {
     store();
   }
@@ -679,6 +790,23 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     return value;
+  }
+
+  private List<Item> armor() {
+    return items.stream()
+        .filter(Item::isArmor)
+        .filter(this::isCarrying)
+        .collect(Collectors.toList());
+  }
+
+  private List<Modifier> armorACs() {
+    List<Modifier> modifiers = new ArrayList<>();
+
+    for (Item armor : armor()) {
+      modifiers.addAll(armor.getArmorModifiers());
+    }
+
+    return modifiers;
   }
 
   protected boolean hasLevels() {

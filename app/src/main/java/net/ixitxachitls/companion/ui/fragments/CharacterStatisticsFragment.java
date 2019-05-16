@@ -79,6 +79,9 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   protected LabelledEditTextView damageNonlethal;
   protected Wrapper<ImageView> hpNonlethalAdjust;
   protected TextWrapper<TextView> levelUp;
+  protected ModifiedValueView ac;
+  protected ModifiedValueView acTouch;
+  protected ModifiedValueView acFlat;
   protected LabelledView<LabelledView, ModifiedValueView> fortitude;
   protected LabelledView<LabelledView, ModifiedValueView> will;
   protected LabelledView<LabelledView, ModifiedValueView> reflex;
@@ -126,6 +129,10 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
     damageNonlethal.enabled(false);
     hpNonlethalAdjust = Wrapper.<ImageView>wrap(view, R.id.nonlethal_adjust).gone();
+
+    ac = view.findViewById(R.id.ac);
+    acTouch = view.findViewById(R.id.ac_touch);
+    acFlat = view.findViewById(R.id.ac_flat_footed);
 
     fortitude = view.findViewById(R.id.fortitude);
     fortitude.view(new ModifiedValueView(getContext()).ranged());
@@ -179,6 +186,10 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     hpMax.text(String.valueOf(character.getMaxHp()));
     damageNonlethal.text(String.valueOf(character.getNonlethalDamage()));
     conditions.update(character);
+
+    ac.set(character.normalArmorClass());
+    acTouch.set(character.touchArmorClass());
+    acFlat.set(character.flatFootedArmorClass());
 
     fortitude.getView().set(character.fortitude());
     will.getView().set(character.will());

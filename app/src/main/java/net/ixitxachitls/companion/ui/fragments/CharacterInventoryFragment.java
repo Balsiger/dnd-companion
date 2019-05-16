@@ -41,12 +41,12 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.values.Item;
-import net.ixitxachitls.companion.data.values.Money;
-import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.rules.Items;
 import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.views.ImageDropTarget;
 import net.ixitxachitls.companion.ui.views.ItemView;
+import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
+import net.ixitxachitls.companion.ui.views.ModifiedValueView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -65,6 +65,9 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
 
   private TextWrapper<TextView> wealth;
   private TextWrapper<TextView> weight;
+  private ModifiedValueView ac;
+  private ModifiedValueView acTouch;
+  private ModifiedValueView acFlat;
   private ViewGroup items;
   private ViewGroup view;
   private Wrapper<Button> addItem;
@@ -75,6 +78,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   private EnumMap<Items.Slot, Wrapper<TextView>> slotTitles = new EnumMap<>(Items.Slot.class);
   private EnumMap<Items.Slot, LinearLayout> slotItems = new EnumMap<>(Items.Slot.class);
   private Optional<Items.Slot> lastOpenedSlot = Optional.empty();
+  private LabelledEditTextView distributionName;
 
   public CharacterInventoryFragment() {
     characters().observe(this, this::refresh);
@@ -89,6 +93,9 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
 
     wealth = TextWrapper.wrap(view, R.id.wealth);
     weight = TextWrapper.wrap(view, R.id.weight);
+    ac = view.findViewById(R.id.ac);
+    acTouch = view.findViewById(R.id.ac_touch);
+    acFlat = view.findViewById(R.id.ac_flat_footed);
     items = view.findViewById(R.id.items);
     addItem = Wrapper.<Button>wrap(view, R.id.item_add)
         .onClick(this::addItem)
@@ -107,6 +114,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     sellItem.get().setSupport(i -> i instanceof Item);
     sellItem.get().setDropExecutor(this::sellItem);
     sellItem.visible(character.isPresent() && character.get().amPlayer());
+    distributionName = view.findViewById(R.id.name);
 
     setupSlot(Items.Slot.head, R.id.figure_head, R.id.title_head, R.id.items_head);
     setupSlot(Items.Slot.eyes, R.id.figure_eyes, R.id.title_eyes, R.id.items_eyes);
@@ -133,9 +141,6 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     characters().addPlayers(character.getCampaign());
 
     if (this.items != null && getContext() != null) {
-      Money totalValue = Money.ZERO;
-      Weight totalWeight = Weight.ZERO;
-
       Map<Item, ItemView> views = collectItemViews();
       items.removeAllViews();
       for (Item item : character.getItems()) {
@@ -148,16 +153,15 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
           }
           items.addView(view);
         }
-
-        // TODO(merlin): Move this into character!
-        totalValue = totalValue.add(item.getValue());
-        totalWeight = totalWeight.add(item.getWeight());
       }
 
       refreshSlots();
 
-      this.wealth.text(totalValue.simplify().toString());
-      this.weight.text(totalWeight.toString());
+      wealth.text(character.totalValue().simplify().toString());
+      weight.text(character.totalWeight().toString());
+      ac.set(character.normalArmorClass());
+      acTouch.set(character.touchArmorClass());
+      acFlat.set(character.flatFootedArmorClass());
       view.setOnDragListener((v, e) -> onItemDrag(v, e));
       addItem.visible(character.amPlayer() || character.amDM());
 
@@ -258,10 +262,10 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       case DragEvent.ACTION_DROP:
         if (character.isPresent() && character.get().amPlayer()) {
           Item item = (Item) event.getLocalState();
-           if (moveFirst) {
-            //character.get().moveItemFirst(item);
+          if (moveFirst) {
+            character.get().moveItemFirst(item);
           } else {
-            //character.get().moveItemLast(item);
+            character.get().moveItemLast(item);
           }
         }
         return true;
@@ -279,7 +283,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     if (character.isPresent()) {
       targetsCharacters.removeAllViews();
       for (Character other : characters().getCampaignCharacters(character.get().getCampaignId())) {
-        if (!other.equals(character)) {
+        if (!other.equals(character.get())) {
           Drawable image;
           if (images().get(other.getId(), 1).isPresent()) {
             image = new BitmapDrawable(getResources(), images().get(other.getId(), 1).get());
@@ -296,10 +300,17 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private void refreshSlots() {
-    for (Items.Slot slot : Items.Slot.values()) {
-      slotItems.get(slot).removeAllViews();
-      slotTitles.get(slot).backgroundColor(R.color.characterDark);
-      if (character.isPresent()) {
+    if (character.isPresent()) {
+      distributionName.text(character.get().getCarryingName());
+      if (character.get().isCarryingDefault()) {
+        distributionName.disabled();
+      } else {
+        distributionName.enabled();
+      }
+
+      for (Items.Slot slot : Items.Slot.values()) {
+        slotItems.get(slot).removeAllViews();
+        slotTitles.get(slot).backgroundColor(R.color.characterDark);
         for (String id : character.get().carrying(slot)) {
           Optional<Item> item = character.get().getItem(id);
           if (item.isPresent()) {

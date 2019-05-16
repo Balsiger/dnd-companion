@@ -103,6 +103,16 @@ public class Item extends NestedDocument {
     this.appearance = appearance;
   }
 
+  public List<Modifier> getArmorModifiers() {
+    List<Modifier> modifiers = new ArrayList<>();
+
+    for (ItemTemplate template : templates) {
+      modifiers.addAll(template.getArmorModifiers());
+    }
+
+    return modifiers;
+  }
+
   public Optional<ItemTemplate> getBaseTemplate() {
     if (templates.isEmpty()) {
       return Optional.empty();
@@ -221,6 +231,10 @@ public class Item extends NestedDocument {
     }
 
     return weight;
+  }
+
+  public boolean isArmor() {
+    return templates.stream().anyMatch(ItemTemplate::isArmor);
   }
 
   public boolean isContainer() {

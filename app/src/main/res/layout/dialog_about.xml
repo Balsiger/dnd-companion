@@ -347,6 +347,34 @@
             android:layout_marginTop="10dp"
             android:text="Man by Jennifer Morrow from the Noun Project"
             android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="premium by ProSymbols from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Weights by Sam Horner from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="armor by Eucalyp from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="crossed swords by Matt Caisley from the Noun Project"
+            android:theme="@style/LargeText"/>
       </LinearLayout>
     </ScrollView>
 

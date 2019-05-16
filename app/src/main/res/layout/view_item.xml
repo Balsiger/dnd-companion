@@ -34,10 +34,10 @@
       android:layout_height="wrap_content"
       android:background="@color/item"
       android:orientation="horizontal"
-      android:paddingBottom="5dp"
-      android:paddingEnd="10dp"
       android:paddingStart="10dp"
-      android:paddingTop="5dp">
+      android:paddingTop="5dp"
+      android:paddingEnd="10dp"
+      android:paddingBottom="5dp">
 
     <TextView
         android:id="@+id/name"
@@ -52,10 +52,11 @@
         android:id="@+id/summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_weight="0"
         android:text="10gp / 5lb"
         android:textColor="@color/itemText"
-        android:theme="@style/LargeText"/>
+        android:theme="@style/SmallText"/>
 
     <ImageView
         android:id="@+id/edit"

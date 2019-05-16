@@ -23,6 +23,7 @@ package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.values.Container;
+import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Substance;
 import net.ixitxachitls.companion.data.values.Weight;
@@ -30,6 +31,7 @@ import net.ixitxachitls.companion.proto.Template;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A basic item.
@@ -71,6 +73,12 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     this.proto = proto;
   }
 
+  public List<Modifier> getArmorModifiers() {
+    return proto.getArmor().getAcBonus().getModifierList().stream()
+        .map(p -> Modifier.fromProto(p, getName()))
+        .collect(Collectors.toList());
+  }
+
   public String getDescription() {
     return description;
   }
@@ -94,6 +102,10 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
 
   public Weight getWeight() {
     return weight;
+  }
+
+  public boolean isArmor() {
+    return proto.hasArmor();
   }
 
   public boolean isContainer() {

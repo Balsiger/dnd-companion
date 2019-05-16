@@ -33,19 +33,20 @@
 
   <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:orientation="horizontal">
+      android:layout_height="match_parent"
+      android:layout_weight="0"
+      android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:layout_weight="0"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
       <FrameLayout
           android:layout_width="wrap_content"
-          android:layout_height="500dp">
+          android:layout_height="150dp">
 
         <ImageView
             android:id="@+id/figure"
@@ -126,346 +127,457 @@
 
       </FrameLayout>
 
-      <ScrollView
-          android:id="@+id/scrollView"
+      <LinearLayout
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_weight="1">
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+          <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+              android:id="@+id/name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:theme="@style/LargeText"
+              app:descriptionText="The name of this item distribution."
+              app:labelColor="@color/characterDark"
+              app:labelText="Item Distribution"
+              app:lineColor="@color/characterDark"
+              app:textColor="@color/characterText">
+
+          </net.ixitxachitls.companion.ui.views.LabelledEditTextView>
+
+          <CheckBox
+              android:id="@+id/active"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:buttonTint="@color/characterDark"
+              android:checked="true"
+              android:text="active"
+              android:textColor="@color/characterDark"
+              android:textColorHighlight="@color/character"
+              android:textColorHint="@color/character"
+              android:textColorLink="@color/character"/>
+
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp">
+
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="0"
+                android:paddingEnd="5dp"
+                app:srcCompat="@drawable/noun_premium_2390072"/>
+
+            <TextView
+                android:id="@+id/wealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_vertical"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:text="0 gp"
+                android:theme="@style/SmallText"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="0"
+                android:paddingEnd="5dp"
+                app:srcCompat="@drawable/noun_weights_416229"/>
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_vertical"
+                android:layout_weight="1"
+                android:text="0 lb"
+                android:theme="@style/SmallText"/>
+          </TableRow>
+
+          <TableRow
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingEnd="5dp"
+                app:srcCompat="@drawable/noun_armor_1943931"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+              <net.ixitxachitls.companion.ui.views.ModifiedValueView
+                  android:id="@+id/ac"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom|center_vertical"
+                  android:text="10"
+                  android:theme="@style/SmallText"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom|center_vertical"
+                  android:paddingStart="5dp"
+                  android:paddingEnd="5dp"
+                  android:text="(touch"
+                  android:theme="@style/SmallText"/>
+
+              <net.ixitxachitls.companion.ui.views.ModifiedValueView
+                  android:id="@+id/ac_touch"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom|center_vertical"
+                  android:text="10"
+                  android:theme="@style/SmallText"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom|center_vertical"
+                  android:paddingEnd="5dp"
+                  android:text=", flat-footed"
+                  android:theme="@style/SmallText"/>
+
+              <net.ixitxachitls.companion.ui.views.ModifiedValueView
+                  android:id="@+id/ac_flat_footed"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom|center_vertical"
+                  android:text="10"
+                  android:theme="@style/SmallText"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="bottom|center_vertical"
+                  android:text=")"
+                  android:theme="@style/SmallText"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingEnd="5dp"
+                app:srcCompat="@drawable/noun_crossed_swords_152699"/>
+
+            <TextView
+                android:id="@+id/attack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_vertical"
+                android:layout_weight="1"
+                android:text=""
+                android:theme="@style/SmallText"/>
+          </TableRow>
+
+        </TableLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+      <android.support.v4.widget.NestedScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-          <LinearLayout
+          <TextView
+              android:id="@+id/title_head"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_weight="1"
-              android:orientation="horizontal">
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Head"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-              <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total wealth:"
-                    android:textStyle="bold"
-                    android:theme="@style/LargeText"/>
-
-                <TextView
-                    android:id="@+id/wealth"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="0 gp"
-                    android:theme="@style/LargeText"/>
-
-              </LinearLayout>
-
-              <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total weight:"
-                    android:textStyle="bold"
-                    android:theme="@style/LargeText"/>
-
-                <TextView
-                    android:id="@+id/weight"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingStart="5dp"
-                    android:text="0 lb"
-                    android:theme="@style/LargeText"/>
-
-              </LinearLayout>
-
-            </LinearLayout>
-
+          <LinearLayout
+              android:id="@+id/items_head"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
           </LinearLayout>
 
+          <TextView
+              android:id="@+id/title_eyes"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Eyes"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_eyes"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/title_neck"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Neck"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_neck"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/title_shoulders"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Shoulders"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_shoulders"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/title_torso"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Torso"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_torso"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/title_body"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Body"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_body"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/title_wrists"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Wrists"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_wrists"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/title_hands"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Hands"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_hands"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/title_fingers"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Fingers"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_fingers"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp">
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/title_feet"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="1dp"
+              android:background="@color/characterDark"
+              android:padding="2dp"
+              android:text="Feet"
+              android:textAlignment="center"
+              android:textAppearance="@style/SmallText"/>
+
+          <LinearLayout
+              android:id="@+id/items_feet"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="5dp"/>
+
         </LinearLayout>
-      </ScrollView>
-    </LinearLayout>
+      </android.support.v4.widget.NestedScrollView>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="40dp"
-        android:layout_weight="1">
-
-      <LinearLayout
+      <android.support.v4.widget.NestedScrollView
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/title_head"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Head"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_head"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_eyes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Eyes"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_eyes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_neck"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Neck"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_neck"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_shoulders"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Shoulders"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_shoulders"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_torso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Torso"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_torso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_body"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Body"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_body"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_wrists"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Wrists"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_wrists"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_hands"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Hands"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_hands"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_fingers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Fingers"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_fingers"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp">
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/title_feet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dp"
-            android:background="@color/characterDark"
-            android:padding="5dp"
-            android:text="Feet"
-            android:textAlignment="center"
-            android:textAppearance="@style/LargeText"/>
-
-        <LinearLayout
-            android:id="@+id/items_feet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="5dp"/>
+          android:layout_height="match_parent"
+          android:layout_marginStart="10dp"
+          android:layout_weight="1">
 
         <LinearLayout
             android:id="@+id/items"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:orientation="vertical"
-            android:paddingTop="20dp"/>
-      </LinearLayout>
-    </ScrollView>
+            />
+      </android.support.v4.widget.NestedScrollView>
 
-  </LinearLayout>
+    </LinearLayout>
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal">
-
-    <HorizontalScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0"
+        android:orientation="horizontal">
 
-      <LinearLayout
-          android:id="@+id/targets"
-          android:layout_width="wrap_content"
-          android:layout_height="match_parent"
-          android:orientation="horizontal">
-
-        <net.ixitxachitls.companion.ui.views.ImageDropTarget
-            android:id="@+id/item_remove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:image="@drawable/noun_drop_970982"
-            app:text="Drop"/>
-
-        <net.ixitxachitls.companion.ui.views.ImageDropTarget
-            android:id="@+id/item_sell"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:image="@drawable/noun_coins_845722"
-            app:text="Sell"/>
+      <HorizontalScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1">
 
         <LinearLayout
-            android:id="@+id/targets_characters"
+            android:id="@+id/targets"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+          <net.ixitxachitls.companion.ui.views.ImageDropTarget
+              android:id="@+id/item_remove"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:image="@drawable/noun_drop_970982"
+              app:text="Drop"/>
+
+          <net.ixitxachitls.companion.ui.views.ImageDropTarget
+              android:id="@+id/item_sell"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:image="@drawable/noun_coins_845722"
+              app:text="Sell"/>
+
+          <LinearLayout
+              android:id="@+id/targets_characters"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+          </LinearLayout>
+
+
         </LinearLayout>
+      </HorizontalScrollView>
 
+      <android.support.design.widget.FloatingActionButton
+          android:id="@+id/item_add"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:clickable="true"
+          android:focusable="true"
+          android:tint="@color/white"
+          app:backgroundTint="@color/item"
+          app:srcCompat="@drawable/ic_add_black_24dp"/>
 
-      </LinearLayout>
-    </HorizontalScrollView>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/item_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="10dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:tint="@color/white"
-        app:backgroundTint="@color/item"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView"
-        app:srcCompat="@drawable/ic_add_black_24dp"/>
+    </LinearLayout>
 
   </LinearLayout>
 

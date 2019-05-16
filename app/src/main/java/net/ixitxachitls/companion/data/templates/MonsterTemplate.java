@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.documents.Quality;
+import net.ixitxachitls.companion.data.enums.Size;
+import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.data.values.Speed;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
@@ -77,6 +79,12 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getAbilities().getIntelligence();
   }
 
+  public List<Modifier> getNaturalArmor() {
+    return proto.getNaturalArmor().getModifierList().stream()
+        .map(p -> Modifier.fromProto(p, getName()))
+        .collect(Collectors.toList());
+  }
+
   public Collection<Quality> getQualities() {
     return proto.getQualityList().stream()
         .map(f -> new Quality(f, getName()))
@@ -85,6 +93,10 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
 
   public int getReflexSave() {
     return proto.getSaves().getReflex();
+  }
+
+  public Size getSize() {
+    return Size.fromProto(proto.getSize().getSize());
   }
 
   public int getSkillPointBonus() {
@@ -123,6 +135,10 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
 
   public boolean hasBonusFeat(int level) {
     return level == 1 && proto.getBonusFeat();
+  }
+
+  public boolean hasNaturalArmor() {
+    return proto.hasNaturalArmor();
   }
 
   @Override

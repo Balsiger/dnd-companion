@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.proto.Value;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * A template for a quality.
@@ -41,6 +42,12 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
   public QualityTemplate(Template.QualityTemplateProto proto, String name) {
     super(name);
     this.proto = proto;
+  }
+
+  public List<Modifier> getAcModifiers() {
+    return proto.getAcModifier().getModifierList().stream()
+        .map(p -> Modifier.fromProto(p, getName()))
+        .collect(Collectors.toList());
   }
 
   public String getDescription() {
