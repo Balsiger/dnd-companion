@@ -669,8 +669,8 @@ message ArmorTemplateProto
   int32 max_dexterity = 3;
   int32 check_penalty = 4;
   int32 arcane_failure = 5;
-  DistanceProto speed_fast = 6;
-  DistanceProto speed_slow = 7;
+  int32 speed_fast = 6;
+  int32 speed_slow = 7;
 }
 
 message LightTemplateProto {

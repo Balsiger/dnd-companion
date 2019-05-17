@@ -155,6 +155,13 @@ public class Item extends NestedDocument {
     this.id = id;
   }
 
+  public int getMaxDexterityModifier() {
+    return templates.stream()
+        .mapToInt(t -> t.getMaxDexterityModifier())
+        .min()
+        .orElse(Integer.MAX_VALUE);
+  }
+
   public int getMultiple() {
     return multiple;
   }
@@ -283,6 +290,13 @@ public class Item extends NestedDocument {
     }
 
     return false;
+  }
+
+  public int getMaxSpeedSquares(boolean isFast) {
+    return templates.stream()
+        .mapToInt(t -> t.getMaxSpeedSquares(isFast))
+        .min()
+        .orElse(Integer.MAX_VALUE);
   }
 
   public Optional<Item> getNestedItem(String itemId) {

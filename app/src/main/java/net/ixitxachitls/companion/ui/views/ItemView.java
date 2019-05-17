@@ -161,7 +161,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     Map<Item, ItemView> views = collectItemViews();
     contents.get().removeAllViews();
     for (Item content : item.getContents()) {
-      if (!creature.isCarrying(content)) {
+      if (!creature.isWearing(content)) {
         ItemView view = views.get(content);
         if (view == null) {
           view = new ItemView(getContext(), creature, content);

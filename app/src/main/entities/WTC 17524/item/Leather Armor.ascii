@@ -48,11 +48,4 @@ appearance {
   type: LIGHT
   max_dexterity: 6
   arcane_failure: 10
-  speed_fast {
-    imperial {
-      feet {
-        leader: 20
-      }
-    }
-  }
 }

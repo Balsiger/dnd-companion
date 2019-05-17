@@ -41,6 +41,7 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.values.Item;
+import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.rules.Items;
 import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.views.ImageDropTarget;
@@ -144,7 +145,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       Map<Item, ItemView> views = collectItemViews();
       items.removeAllViews();
       for (Item item : character.getItems()) {
-        if (!character.isCarrying(item)) {
+        if (!character.isWearing(item)) {
           ItemView view = views.get(item);
           if (view == null) {
             view = createLine(item);
@@ -158,7 +159,9 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       refreshSlots();
 
       wealth.text(character.totalValue().simplify().toString());
-      weight.text(character.totalWeight().toString());
+      Weight totalWeight = character.totalWeight();
+      weight.text(totalWeight.toString() + " (" + Items.encumbrance((int) totalWeight.asPounds(),
+          character.getStrength().total()) + ")");
       ac.set(character.normalArmorClass());
       acTouch.set(character.touchArmorClass());
       acFlat.set(character.flatFootedArmorClass());
@@ -301,8 +304,8 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
 
   private void refreshSlots() {
     if (character.isPresent()) {
-      distributionName.text(character.get().getCarryingName());
-      if (character.get().isCarryingDefault()) {
+      distributionName.text(character.get().getWearingName());
+      if (character.get().isWearingDefault()) {
         distributionName.disabled();
       } else {
         distributionName.enabled();
@@ -311,7 +314,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       for (Items.Slot slot : Items.Slot.values()) {
         slotItems.get(slot).removeAllViews();
         slotTitles.get(slot).backgroundColor(R.color.characterDark);
-        for (String id : character.get().carrying(slot)) {
+        for (String id : character.get().wearing(slot)) {
           Optional<Item> item = character.get().getItem(id);
           if (item.isPresent()) {
             slotItems.get(slot).addView(createLine(item.get()));

@@ -80,8 +80,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_ITEMS = "items";
   private static final String FIELD_SLOTS = "item_slots";
   private static final String FIELD_ITEMS_PER_SLOT = "items_per_slot";
-  private static final String DEFAULT_DISTRIBUTION = "Default";
-
+  private static final String DEFAULT_DISTRIBUTION = "Default";;
   private String campaignId = "";
   private String name;
   private Optional<MonsterTemplate> race = Optional.empty();
@@ -96,7 +95,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private int maxHp;
   private int nonlethalDamage;
   private List<Item> items = new ArrayList<>();
-  private Carrying carrying = new Carrying(DEFAULT_DISTRIBUTION);
+  private Wearing wearing = new Wearing(DEFAULT_DISTRIBUTION);
   private int encounterInitiative = 0;
   private int encounterNumber = 0;
 
@@ -154,10 +153,6 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.campaignId = campaignId;
   }
 
-  public String getCarryingName() {
-    return carrying.name;
-  }
-
   public ModifiedValue getCharisma() {
     return new ModifiedValue("Charisma", charisma, 0, false);
   }
@@ -192,7 +187,12 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public int getDexterityModifier() {
-    return Ability.modifier(getDexterity().total());
+    int normal = Ability.modifier(getDexterity().total());
+
+    int maxDexterityFromItems = maxDexerityModifierFromItems();
+    int maxDexterityFromEncumbrance = maxDexterityFromEncumbrance();
+
+    return Math.min(normal, Math.min(maxDexterityFromItems, maxDexterityFromEncumbrance));
   }
 
   public int getEncounterInitiative() {
@@ -280,6 +280,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return new ModifiedValue("Strength Check", Ability.modifier(getStrength().total()), true);
   }
 
+  public String getWearingName() {
+    return wearing.name;
+  }
+
   public ModifiedValue getWisdom() {
     return new ModifiedValue("Wisdom", wisdom, 0, false);
   }
@@ -292,8 +296,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return Ability.modifier(getWisdom().total());
   }
 
-  public boolean isCarryingDefault() {
-    return carrying.name.equals(DEFAULT_DISTRIBUTION);
+  public boolean isWearingDefault() {
+    return wearing.name.equals(DEFAULT_DISTRIBUTION);
   }
 
   public void setBaseCharisma(int charisma) {
@@ -320,8 +324,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.wisdom = wisdom;
   }
 
-  public boolean isCarrying(Item item) {
-    return carrying.isCarrying(item);
+  public boolean isWearing(Item item) {
+    return wearing.isWearing(item);
   }
 
   public void add(Item item) {
@@ -362,11 +366,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public void carry(Items.Slot slot, Item item) {
-    carrying.carry(slot, item);
-  }
-
-  public List<String> carrying(Items.Slot slot) {
-    return carrying.carrying(slot);
+    wearing.carry(slot, item);
   }
 
   public Set<Feat> collectFeats() {
@@ -516,9 +516,58 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return -1;
   }
 
+  public int maxDexerityModifierFromItems() {
+    return items.stream()
+        .filter(this::isWearing)
+        .mapToInt(i -> i.getMaxDexterityModifier())
+        .min()
+        .orElse(Integer.MAX_VALUE);
+  }
+
+  public int maxDexterityFromEncumbrance() {
+    switch (Items.encumbrance((int) totalWeight().asPounds(), getStrength().total())) {
+      default:
+      case light:
+        return Integer.MAX_VALUE;
+
+      case medium:
+        return 3;
+
+      case heavy:
+        return 1;
+
+      case overloaded:
+        return 0;
+    }
+  }
+
+  public int maxSpeedSquares() {
+    final boolean fast =
+        !race.isPresent() || race.get().getWalkingSpeed() >= 6;
+
+    int encumbranceSquares = Integer.MAX_VALUE;
+    switch (Items.encumbrance((int) totalWeight().asPounds(), getStrength().total())) {
+      case light:
+        encumbranceSquares = Integer.MAX_VALUE;
+
+      case medium:
+      case heavy:
+        encumbranceSquares = fast ? 4 : 3;
+
+      case overloaded:
+        return 0;
+    }
+
+    return Math.min(encumbranceSquares, items.stream()
+        .filter(this::isWearing)
+        .mapToInt(i -> i.getMaxSpeedSquares(fast))
+        .min()
+        .orElse(Integer.MAX_VALUE));
+  }
+
   public boolean moveItemAfter(Item item, Item move) {
-    if (isCarrying(item)) {
-      carrying.moveItemAfter(item, move);
+    if (isWearing(item)) {
+      wearing.moveItemAfter(item, move);
     } else if (removeItem(move)) {
       if (items.contains(item)) {
         items.add(items.indexOf(item) + 1, move);
@@ -538,8 +587,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public boolean moveItemBefore(Item item, Item move) {
-    if (isCarrying(item)) {
-      carrying.moveItemBefore(item, move);
+    if (isWearing(item)) {
+      wearing.moveItemBefore(item, move);
     } else if (removeItem(move)) {
       if (items.contains(item)) {
         items.add(items.indexOf(item), move);
@@ -593,6 +642,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     // Dexterity.
     int dexterityModifier = getDexterityModifier();
     if (dexterityModifier != 0) {
+      dexterityModifier = Math.min(dexterityModifier, maxDexerityModifierFromItems());
       value.add(new Modifier(dexterityModifier, Modifier.Type.ABILITY, "Dexterity"));
     }
 
@@ -610,16 +660,16 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return value;
   }
 
-  public Carrying readCarrying(Data data) {
+  public Wearing readCWearing(Data data) {
     Map<String, List<String>> raw = data.getMap(FIELD_ITEMS_PER_SLOT, Collections.emptyList());
-    EnumMap<Items.Slot, List<String>> carrying = new EnumMap<>(Items.Slot.class);
+    EnumMap<Items.Slot, List<String>> wearing = new EnumMap<>(Items.Slot.class);
     for (Map.Entry<String, List<String>> entry : raw.entrySet()) {
-      carrying.put(Items.Slot.valueOf(entry.getKey()), entry.getValue());
+      wearing.put(Items.Slot.valueOf(entry.getKey()), entry.getValue());
     }
 
-    return new Carrying(
+    return new Wearing(
         data.get(FIELD_NAME, "default"),
-        carrying);
+        wearing);
   }
 
   public ModifiedValue reflex() {
@@ -658,7 +708,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
         return removeItem(item.getId());
       }
 
-      carrying.remove(item);
+      wearing.remove(item);
       store();
       return true;
     }
@@ -691,6 +741,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     if (race.isPresent()) {
       squares = race.get().getWalkingSpeed();
     }
+
+    squares = Math.min(squares, maxSpeedSquares());
 
     ModifiedValue value = new ModifiedValue("Speed (squares)", squares, 0, false);
 
@@ -732,6 +784,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     // Dexterity.
     int dexterityModifier = getDexterityModifier();
     if (dexterityModifier != 0) {
+      dexterityModifier = Math.min(dexterityModifier, maxDexerityModifierFromItems());
       value.add(new Modifier(dexterityModifier, Modifier.Type.ABILITY, "Dexterity"));
     }
 
@@ -753,6 +806,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public void updated(Item item) {
     store();
+  }
+
+  public List<String> wearing(Items.Slot slot) {
+    return wearing.wearing(slot);
   }
 
   public ModifiedValue will() {
@@ -795,7 +852,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private List<Item> armor() {
     return items.stream()
         .filter(Item::isArmor)
-        .filter(this::isCarrying)
+        .filter(this::isWearing)
         .collect(Collectors.toList());
   }
 
@@ -835,7 +892,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     items = data.getNestedList(FIELD_ITEMS).stream()
         .map(Item::read)
         .collect(Collectors.toList());
-    carrying = readCarrying(data.getNested(FIELD_SLOTS));
+    wearing = readCWearing(data.getNested(FIELD_SLOTS));
   }
 
   @Override
@@ -859,7 +916,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     data.put(FIELD_INITIATIVE, encounterInitiative);
     data.put(FIELD_ENCOUNTER_NUMBER, encounterNumber);
     data.put(FIELD_ITEMS, items.stream().map(Item::write).collect(Collectors.toList()));
-    data.put(FIELD_SLOTS, carrying.write());
+    data.put(FIELD_SLOTS, wearing.write());
 
     return data;
   }
@@ -903,13 +960,13 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
   }
 
-  public class Carrying {
+  public class Wearing {
     private static final String FIELD_NAME = "name";
 
     private final String name;
     private final EnumMap<Items.Slot, List<String>> itemsPerSlot;
 
-    public Carrying(String name) {
+    public Wearing(String name) {
       this.name = name;
 
       this.itemsPerSlot = new EnumMap<Items.Slot, List<String>>(Items.Slot.class);
@@ -918,7 +975,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       }
     }
 
-    private Carrying(String name, EnumMap<Items.Slot, List<String>> itemsPerSlot) {
+    private Wearing(String name, EnumMap<Items.Slot, List<String>> itemsPerSlot) {
       this.name = name;
       this.itemsPerSlot = itemsPerSlot;
 
@@ -929,7 +986,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       }
     }
 
-    public boolean isCarrying(Item item) {
+    public boolean isWearing(Item item) {
       for (List<String> ids : itemsPerSlot.values()) {
         if (ids.contains(item.getId())) {
           return true;
@@ -944,10 +1001,6 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       add(slot, item);
 
       Creature.this.store();
-    }
-
-    public List<String> carrying(Items.Slot slot) {
-      return itemsPerSlot.get(slot);
     }
 
     public Optional<Items.Slot> getSlot(Item item) {
@@ -980,6 +1033,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
             .add(itemsPerSlot.get(slot.get()).indexOf(item.getId()), move.getId());
         store();
       }
+    }
+
+    public List<String> wearing(Items.Slot slot) {
+      return itemsPerSlot.get(slot);
     }
 
     public Map<String, Object> write() {

@@ -83,6 +83,14 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     return description;
   }
 
+  public int getMaxDexterityModifier() {
+    if (proto.hasArmor() && proto.getArmor().getMaxDexterity() > 0) {
+      return proto.getArmor().getMaxDexterity();
+    }
+
+    return Integer.MAX_VALUE;
+  }
+
   public String getNamePart() {
     // TODO(merlind): Handle this whole things better somehow...
     if (synonyms.isEmpty() || isReal()) {
@@ -138,6 +146,18 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     }
 
     return substance.computeHp();
+  }
+
+  public int getMaxSpeedSquares(boolean isFast) {
+    if (proto.hasArmor()) {
+      if (isFast && proto.getArmor().getSpeedFast() > 0) {
+        return proto.getArmor().getSpeedFast();
+      } else if (!isFast && proto.getArmor().getSpeedSlow() > 0) {
+        return proto.getArmor().getSpeedSlow();
+      }
+    }
+
+    return Integer.MAX_VALUE;
   }
 
   @Override

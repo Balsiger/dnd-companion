@@ -49,11 +49,6 @@ appearance {
   max_dexterity: 3
   check_penalty: -4
   arcane_failure: 25
-  speed_fast {
-    imperial {
-      feet {
-        leader: 15
-      }
-    }
-  }
+  speed_fast: 4
+  speed_slow: 3
 }
