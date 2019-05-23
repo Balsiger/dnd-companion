@@ -19,48 +19,29 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.rules;
+package net.ixitxachitls.companion.util.commands;
 
-import net.ixitxachitls.companion.data.enums.Size;
+import android.content.Context;
+import android.graphics.Typeface;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.StyleSpan;
+
+import java.util.List;
 
 /**
- * Rule definitions around armor.
+ * Command to show a text in italics.
  */
-public class Armor {
+public class ItalicsCommand extends TextCommand {
 
-  public static int sizeModifier(Size size) {
-    switch (size) {
-      default:
-      case UNRECOGNIZED:
-      case UNKNOWN:
-        return 0;
+  @Override
+  public Spanned render(Context context, List<SpannableStringBuilder> optionals,
+                        List<SpannableStringBuilder> arguments) {
 
-      case FINE:
-        return +8;
-
-      case DIMINUTIVE:
-        return +4;
-
-      case TINY:
-        return +2;
-
-      case SMALL:
-        return +1;
-
-      case MEDIUM:
-        return 0;
-
-      case LARGE:
-        return -1;
-
-      case HUGE:
-        return -2;
-
-      case GARGANTUAN:
-        return -4;
-
-      case COLOSSAL:
-        return -8;
-    }
+    arguments.get(0).setSpan(new StyleSpan(Typeface.ITALIC),
+        0, arguments.get(0).length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+    return arguments.get(0);
   }
+
 }

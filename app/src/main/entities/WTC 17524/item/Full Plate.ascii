@@ -52,9 +52,9 @@ appearance {
   check_penalty: -6
   arcane_failure: 35
   speed_fast: 4
-  speed_slot: 3
+  speed_slow: 3
 }
- random {
+random {
   type: MUNDANE
   item: ""
 }

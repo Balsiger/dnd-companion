@@ -50,6 +50,16 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
         .collect(Collectors.toList());
   }
 
+  public List<Modifier> getAttackModifiers() {
+    return proto.getAttackModifier().getModifierList().stream()
+        .map(p -> Modifier.fromProto(p, getName()))
+        .collect(Collectors.toList());
+  }
+
+  public List<Modifier> getDamageModifiers() {
+    return Modifier.fromProto(proto.getDamageModifier(), getName());
+  }
+
   public String getDescription() {
     return proto.getTemplate().getDescription();
   }

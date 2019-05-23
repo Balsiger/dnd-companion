@@ -43,14 +43,14 @@ public class ModifiedValueView extends AppCompatTextView {
     init();
   }
 
-  public ModifiedValueView(Context context, AttributeSet attrs) {
-    super(context, attrs);
+  public ModifiedValueView(Context context, AttributeSet attributes) {
+    super(context, attributes);
 
     init();
   }
 
-  public ModifiedValueView(Context context, AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr);
+  public ModifiedValueView(Context context, AttributeSet attributes, int defStyleAttribute) {
+    super(context, attributes, defStyleAttribute);
 
     init();
   }

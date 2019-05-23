@@ -19,32 +19,23 @@ value {
 probability: UNCOMMON
 hardness: 2
 hit_points: 2
- weapon {
-  damage {
-    damage {
-      base {
-        modifier: 2
-      }
-    }
-  }
- }
- magic {
+magic {
   modifier {
-    modifier {
-      modifier {
-        value: 2
-        type: ENHANCEMENT
-      }
-    }
     type: ATTACK
-  }
-  modifier {
     modifier {
       modifier {
         value: 2
         type: ENHANCEMENT
       }
     }
+  }
+  modifier {
     type: DAMAGE
+    modifier {
+      modifier {
+        value: 2
+        type: ENHANCEMENT
+      }
+    }
   }
 }

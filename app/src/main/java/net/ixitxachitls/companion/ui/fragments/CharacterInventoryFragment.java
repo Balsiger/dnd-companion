@@ -44,6 +44,7 @@ import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.rules.Items;
 import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
+import net.ixitxachitls.companion.ui.views.AttackDetailsView;
 import net.ixitxachitls.companion.ui.views.ImageDropTarget;
 import net.ixitxachitls.companion.ui.views.ItemView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
@@ -69,6 +70,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   private ModifiedValueView ac;
   private ModifiedValueView acTouch;
   private ModifiedValueView acFlat;
+  private LinearLayout attacks;
   private ViewGroup items;
   private ViewGroup view;
   private Wrapper<Button> addItem;
@@ -97,6 +99,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     ac = view.findViewById(R.id.ac);
     acTouch = view.findViewById(R.id.ac_touch);
     acFlat = view.findViewById(R.id.ac_flat_footed);
+    attacks = view.findViewById(R.id.attacks);
     items = view.findViewById(R.id.items);
     addItem = Wrapper.<Button>wrap(view, R.id.item_add)
         .onClick(this::addItem)
@@ -167,6 +170,18 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       acFlat.set(character.flatFootedArmorClass());
       view.setOnDragListener((v, e) -> onItemDrag(v, e));
       addItem.visible(character.amPlayer() || character.amDM());
+
+      // Update attacks.
+      attacks.removeAllViews();
+      for (Item item : character.getItems()) {
+        if (item.isWeapon() && character.isWearing(item)) {
+          if (character.isWearing(item, Items.Slot.hands)) {
+            attacks.addView(new AttackDetailsView(getContext(), character, item), 0);
+          } else {
+            attacks.addView(new AttackDetailsView(getContext(), character, item));
+          }
+        }
+      }
 
       refreshDropTargets();
     }

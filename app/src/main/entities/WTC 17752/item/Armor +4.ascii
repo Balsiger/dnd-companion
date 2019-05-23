@@ -16,3 +16,14 @@ template {
 probability: UNCOMMON
 hardness: 5
 hit_points: 40
+magic {
+  modifier {
+    type: ARMOR_CLASS
+    modifier {
+      modifier {
+        value: 4
+        type: ENHANCEMENT
+      }
+    }
+  }
+}

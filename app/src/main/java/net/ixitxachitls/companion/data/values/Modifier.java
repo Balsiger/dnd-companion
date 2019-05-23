@@ -27,8 +27,10 @@ import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * A D&D value for another value. These are usually a modification number (+ or -) and
@@ -222,6 +224,12 @@ public class Modifier {
   public static Modifier fromProto(Value.ModifierProto.Modifier proto, String source) {
     return new Modifier(proto.getValue(), convert(proto.getType()), source,
         Strings.optionalIfEmpty(proto.getCondition()));
+  }
+
+  public static List<Modifier> fromProto(Value.ModifierProto proto, String source) {
+    return proto.getModifierList().stream()
+        .map(m -> fromProto(m, source))
+        .collect(Collectors.toList());
   }
 
   public static Modifier precedence(Modifier first, Modifier second) {

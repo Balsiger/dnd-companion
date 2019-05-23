@@ -123,6 +123,15 @@ public class LevelTemplate extends StoredTemplate<Template.LevelTemplateProto> {
     return qualities;
   }
 
+  public int getBaseAttack(int level) {
+    if (level >= 0 && level < proto.getBaseAttackCount()) {
+      return proto.getBaseAttack(level);
+    }
+
+    // TODO(merlin): Support base attack above level 20.
+    return 0;
+  }
+
   public int getFortitudeModifier(int level) {
     return Levels.saveModifier(level, proto.getGoodFortitudeSave());
   }

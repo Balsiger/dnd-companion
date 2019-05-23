@@ -26,9 +26,11 @@ import android.support.annotation.CallSuper;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.enums.DamageType;
 import net.ixitxachitls.companion.data.enums.Gender;
 import net.ixitxachitls.companion.data.templates.MonsterTemplate;
 import net.ixitxachitls.companion.data.values.Adjustment;
+import net.ixitxachitls.companion.data.values.Damage;
 import net.ixitxachitls.companion.data.values.InitiativeAdjustment;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
@@ -80,7 +82,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_ITEMS = "items";
   private static final String FIELD_SLOTS = "item_slots";
   private static final String FIELD_ITEMS_PER_SLOT = "items_per_slot";
-  private static final String DEFAULT_DISTRIBUTION = "Default";;
+  private static final String DEFAULT_DISTRIBUTION = "Default";
+  ;
   private String campaignId = "";
   private String name;
   private Optional<MonsterTemplate> race = Optional.empty();
@@ -139,6 +142,14 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     return conditions;
+  }
+
+  public int getBaseAttackBonus() {
+    if (race.isPresent()) {
+      return race.get().getBaseAttack();
+    }
+
+    return 0;
   }
 
   public Optional<Campaign> getCampaign() {
@@ -280,6 +291,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return new ModifiedValue("Strength Check", Ability.modifier(getStrength().total()), true);
   }
 
+  public int getStrengthModifier() {
+    return Ability.modifier(getStrength().total());
+  }
+
   public String getWearingName() {
     return wearing.name;
   }
@@ -328,6 +343,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return wearing.isWearing(item);
   }
 
+  public boolean isWearing(Item item, Items.Slot slot) {
+    return wearing.isWearing(item, slot);
+  }
+
   public void add(Item item) {
     if (amPlayer()) {
       int index = itemIndex(item.getId());
@@ -361,6 +380,63 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return false;
   }
 
+  public ModifiedValue attackBonus(Item item) {
+    ModifiedValue attack = new ModifiedValue(item.getName() + " Attack", getBaseAttackBonus(),
+        true);
+
+    switch (item.getWeaponStyle()) {
+      default:
+      case UNKNOWN_STYLE:
+      case UNRECOGNIZED:
+        break;
+
+      case TWOHANDED_MELEE:
+      case ONEHANDED_MELEE:
+      case LIGHT_MELEE:
+      case TOUCH:
+      case UNARMED: {
+        int strength = getStrength().total();
+        if (strength != 0) {
+          attack.add(new Modifier(strength, Modifier.Type.GENERAL, "Strength"));
+        }
+        break;
+      }
+
+      case RANGED_TOUCH:
+      case RANGED:
+      case THROWN_TOUCH:
+      case THROWN:
+      case THROWN_TWO_HANDED: {
+        int dexterity = getDexterityModifier();
+        if (dexterity != 0) {
+          attack.add(new Modifier(dexterity, Modifier.Type.GENERAL, "Dexterity"));
+        }
+        break;
+      }
+    }
+
+    if (getRace().isPresent()) {
+      int size = Armor.sizeModifier(getRace().get().getSize());
+      if (size != 0) {
+        attack.add(new Modifier(size, Modifier.Type.GENERAL, "Size"));
+      }
+    }
+
+    for (Feat feat : collectFeats()) {
+      if (feat.getQualifiers().isEmpty() || feat.getQualifiers().contains(item.getName())) {
+        attack.add(feat.getAttackModifiers());
+      }
+    }
+
+    for (Quality quality : collectQualities()) {
+      attack.add(quality.getTemplate().getAttackModifiers());
+    }
+
+    attack.add(item.getMagicAttackModifiers());
+
+    return attack;
+  }
+
   public boolean canEdit() {
     return false;
   }
@@ -391,6 +467,58 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       item.setMultiple(item.getMultiple() + other.getMultiple());
       store();
     }
+  }
+
+  public Damage damage(Item item) {
+    if (!item.isWeapon()) {
+      return new Damage();
+    }
+
+    Damage damage = item.getDamage();
+
+    // Strength or dexterity
+    switch (item.getWeaponStyle()) {
+      case UNRECOGNIZED:
+      case UNKNOWN_STYLE:
+      case TOUCH:
+      case RANGED_TOUCH:
+      case THROWN_TOUCH:
+        break;
+
+      case ONEHANDED_MELEE:
+      case LIGHT_MELEE:
+      case UNARMED:
+        damage.add(0, 0, getStrengthModifier(), DamageType.NONE, Optional.empty(),
+            "Strength");
+        break;
+
+      case TWOHANDED_MELEE:
+        damage.add(0, 0, (int) 1.5 * getStrengthModifier(), DamageType.NONE, Optional.empty(),
+            "Strength");
+
+      case RANGED:
+      case THROWN:
+      case THROWN_TWO_HANDED:
+        damage.add(0, 0, getDexterityModifier(), DamageType.NONE, Optional.empty(),
+            "Dexterity");
+        break;
+    }
+
+    // Feats.
+    for (Feat feat : collectFeats()) {
+      for (Modifier modifier : feat.getDamageModifiers()) {
+        damage.add(modifier);
+      }
+    }
+
+    // Qualities.
+    for (Quality quality : collectQualities()) {
+      for (Modifier modifier : quality.getTemplate().getDamageModifiers()) {
+        damage.add(modifier);
+      }
+    }
+
+    return damage;
   }
 
   public ModifiedValue flatFootedArmorClass() {
@@ -660,7 +788,11 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return value;
   }
 
-  public Wearing readCWearing(Data data) {
+  public int numberOfAttacks(Item item) {
+    return Math.min((getBaseAttackBonus() / 6) + 1, item.getMaxAttacks());
+  }
+
+  public Wearing readWearing(Data data) {
     Map<String, List<String>> raw = data.getMap(FIELD_ITEMS_PER_SLOT, Collections.emptyList());
     EnumMap<Items.Slot, List<String>> wearing = new EnumMap<>(Items.Slot.class);
     for (Map.Entry<String, List<String>> entry : raw.entrySet()) {
@@ -770,7 +902,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public Weight totalWeight() {
-    Weight total= Weight.ZERO;
+    Weight total = Weight.ZERO;
     for (Item item : items) {
       total = total.add(item.getWeight());
     }
@@ -892,7 +1024,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     items = data.getNestedList(FIELD_ITEMS).stream()
         .map(Item::read)
         .collect(Collectors.toList());
-    wearing = readCWearing(data.getNested(FIELD_SLOTS));
+    wearing = readWearing(data.getNested(FIELD_SLOTS));
   }
 
   @Override
@@ -987,13 +1119,17 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     public boolean isWearing(Item item) {
-      for (List<String> ids : itemsPerSlot.values()) {
-        if (ids.contains(item.getId())) {
+      for (Items.Slot slot : itemsPerSlot.keySet()) {
+        if (isWearing(item, slot)) {
           return true;
         }
       }
 
       return false;
+    }
+
+    public boolean isWearing(Item item, Items.Slot slot) {
+      return itemsPerSlot.get(slot).contains(item.getId());
     }
 
     public void carry(Items.Slot slot, Item item) {

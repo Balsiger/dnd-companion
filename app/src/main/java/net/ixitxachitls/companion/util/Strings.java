@@ -112,6 +112,14 @@ public class Strings {
       return inText + SPACES.substring(0, inLength - inText.length());
   }
 
+  public static String signed(int number) {
+    if (number < 0) {
+      return String.valueOf(number);
+    }
+
+    return "+" + number;
+  }
+
   public static String spaces(int length) {
     return SPACES.substring(0, length);
   }

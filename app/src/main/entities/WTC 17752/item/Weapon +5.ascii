@@ -19,18 +19,22 @@ value {
 probability: UNCOMMON
 hardness: 5
 hit_points: 5
- weapon {
-  damage {
-    damage {
-      base {
-        modifier: 5
+magic {
+  modifier {
+    type: ATTACK
+    modifier {
+      modifier {
+        value: 5
+        type: ENHANCEMENT
       }
     }
   }
-   reach {
-    imperial {
-      feet {
-        leader: 5
+  modifier {
+    type: DAMAGE
+    modifier {
+      modifier {
+        value: 5
+        type: ENHANCEMENT
       }
     }
   }

@@ -31,6 +31,7 @@ import com.google.common.collect.ImmutableMap;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.util.commands.BoldCommand;
 import net.ixitxachitls.companion.util.commands.ClassCommand;
+import net.ixitxachitls.companion.util.commands.ItalicsCommand;
 import net.ixitxachitls.companion.util.commands.ParCommand;
 import net.ixitxachitls.companion.util.commands.TableCommand;
 import net.ixitxachitls.companion.util.commands.TextCommand;
@@ -63,6 +64,7 @@ public class Texts {
       .put("Class", new ClassCommand())
       .put("par", new ParCommand())
       .put("bold", new BoldCommand())
+      .put("emph", new ItalicsCommand())
       .put("table", new TableCommand())
       .build();
 

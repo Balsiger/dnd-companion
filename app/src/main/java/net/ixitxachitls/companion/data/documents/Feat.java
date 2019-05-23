@@ -77,6 +77,14 @@ public class Feat extends NestedDocument {
     this.source = source;
   }
 
+  public List<Modifier> getAttackModifiers() {
+    return template.getAttackModifiers();
+  }
+
+  public List<Modifier> getDamageModifiers() {
+    return template.getDamageModifiers();
+  }
+
   public List<Modifier> getInitiativeAdjustment() {
     return template.getInitiativeAdjustment();
   }

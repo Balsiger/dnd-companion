@@ -69,6 +69,18 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private List<Level> levels = new ArrayList<>();
 
   @Override
+  public int getBaseAttackBonus() {
+    int attack = 0;
+    Multiset<String> names = HashMultiset.create();
+    for (Level level : levels) {
+      names.add(level.getTemplate().getName());
+      attack += level.getBaseAttack(names.count(level.getTemplate().getName()));
+    }
+
+    return attack;
+  }
+
+  @Override
   public ModifiedValue getCharisma() {
     return adjustAbility(super.getCharisma(), Ability.CHARISMA);
   }

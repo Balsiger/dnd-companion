@@ -53,6 +53,10 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
         .collect(Collectors.toList());
   }
 
+  public int getBaseAttack() {
+    return proto.getBaseAttack();
+  }
+
   public int getCharismaAdjustment() {
     return proto.getAbilities().getCharisma();
   }

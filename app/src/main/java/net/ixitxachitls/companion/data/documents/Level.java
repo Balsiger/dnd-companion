@@ -171,6 +171,10 @@ public class Level extends NestedDocument {
     return selections;
   }
 
+  public int getBaseAttack(int level) {
+    return template.getBaseAttack(level);
+  }
+
   public List<Quality> getQualities(int level) {
     List<Quality> qualities = new ArrayList<>();
 

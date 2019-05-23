@@ -46,6 +46,18 @@ public class FeatTemplate extends StoredTemplate<Template.FeatTemplateProto> {
     this.proto = proto;
   }
 
+  public List<Modifier> getAttackModifiers() {
+    return proto.getAttackModifier().getModifierList().stream()
+        .map(p -> Modifier.fromProto(p, getName()))
+        .collect(Collectors.toList());
+  }
+
+  public List<Modifier> getDamageModifiers() {
+    return proto.getDamageModifier().getModifierList().stream()
+        .map(p -> Modifier.fromProto(p, getName()))
+        .collect(Collectors.toList());
+  }
+
   public String getDescription () {
     return proto.getTemplate().getDescription();
   }

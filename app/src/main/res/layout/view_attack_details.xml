@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017-2019 Peter Balsiger
+  ~ All rights reserved
+  ~
+  ~ This file is part of the Tabletop Companion.
+  ~
+  ~ The Tabletop Companion is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ The Tabletop Companion is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with the Player Companion; if not, write to the Free Software
+  ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    >
+
+  <TextView
+      android:id="@+id/weapon"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text="Weapon:"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/type"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text="melee"/>
+
+  <net.ixitxachitls.companion.ui.views.ModifiedValueView
+      android:id="@+id/attack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="5dp"
+      android:layout_weight="0"
+      android:text="+4"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:id="@+id/multiple_attacks"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text="/+1"
+      android:textStyle="bold"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text=" ("/>
+
+  <net.ixitxachitls.companion.ui.views.ModifiedValueView
+      android:id="@+id/damage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text="1d3 + 5 fire"/>
+
+  <TextView
+      android:id="@+id/critical_delimiter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text=" / "/>
+
+  <TextView
+      android:id="@+id/critical"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text="18-20 x3"/>
+
+  <TextView
+      android:id="@+id/textView6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text=") "/>
+
+  <TextView
+      android:id="@+id/notes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0"
+      android:text="reach 10 ft"/>
+</LinearLayout>

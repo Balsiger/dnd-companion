@@ -122,7 +122,7 @@ message NameAndModifierProto {
 message DamageProto {
   message Damage {
     enum Type {
-      UNKNOWN = 0;
+      NONE = 0;
       FIRE = 1;
       ELECTRICAL = 2;
       SONIC = 3;
@@ -138,6 +138,7 @@ message DamageProto {
       INT = 13;
       WIS = 14;
       CHA = 15;
+      UNKNOWN = 16;
     }
 
     DiceProto base = 1;

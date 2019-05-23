@@ -27,6 +27,8 @@ import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.documents.NestedDocument;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
+import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
@@ -108,6 +110,7 @@ public class Item extends NestedDocument {
 
     for (ItemTemplate template : templates) {
       modifiers.addAll(template.getArmorModifiers());
+      modifiers.addAll(template.getMagicModifiers(Template.MagicTemplateProto.Type.ARMOR_CLASS));
     }
 
     return modifiers;
@@ -133,6 +136,12 @@ public class Item extends NestedDocument {
     dmNotes = notes;
   }
 
+  public Damage getDamage() {
+    return Damage.from(templates.stream()
+        .map(ItemTemplate::getDamage)
+        .collect(Collectors.toList()));
+  }
+
   public String getDescription() {
     return description(templates);
   }
@@ -153,6 +162,22 @@ public class Item extends NestedDocument {
   @Deprecated
   public void setId(String id) {
     this.id = id;
+  }
+
+  public List<Modifier> getMagicAttackModifiers() {
+    List<Modifier> modifiers = new ArrayList<>();
+    for (ItemTemplate template : templates) {
+      modifiers.addAll(template.getMagicAttackModifiers());
+    }
+
+    return modifiers;
+  }
+
+  public int getMaxAttacks() {
+    return templates.stream()
+        .filter(t -> t.isWeapon())
+        .mapToInt(t -> t.getMaxAttacks())
+        .min().orElse(Integer.MAX_VALUE);
   }
 
   public int getMaxDexterityModifier() {
@@ -231,6 +256,13 @@ public class Item extends NestedDocument {
     this.value = value;
   }
 
+  public Value.WeaponStyle getWeaponStyle() {
+    return templates.stream()
+        .map(t -> t.getWeaponStyle())
+        .filter(s -> s != Value.WeaponStyle.UNRECOGNIZED && s != Value.WeaponStyle.UNKNOWN_STYLE)
+        .findFirst().orElse(Value.WeaponStyle.UNRECOGNIZED);
+  }
+
   public Weight getWeight() {
     Weight weight = weight(templates).multiply(multiple);
     for (Item content : contents) {
@@ -256,6 +288,10 @@ public class Item extends NestedDocument {
 
   public boolean isMonetary() {
     return templates.stream().filter(t -> t.isMonetary()).findAny().isPresent();
+  }
+
+  public boolean isWeapon() {
+    return templates.stream().filter(t -> t.isWeapon()).findAny().isPresent();
   }
 
   public void add(Item item) {
@@ -433,7 +469,7 @@ public class Item extends NestedDocument {
       if (template.isPresent()) {
         templates.add(template.get());
       } else {
-        Status.error("Cannot find item template " + templateName);
+        Status.error("Cannot find item template '" + templateName + "'");
       }
     }
     int hp = data.get(FIELD_HP, 0);

@@ -29,11 +29,12 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * A base D&D value with potential stackingModifiers.
+ * A base D&D value with potential stacking modifiers.
  */
 public class ModifiedValue {
 
@@ -65,6 +66,14 @@ public class ModifiedValue {
   public ModifiedValue add(List<Modifier> modifiers) {
     for (Modifier modifier : modifiers) {
       add(modifier);
+    }
+
+    return this;
+  }
+
+  public ModifiedValue add(Optional<Modifier> modifier) {
+    if (modifier.isPresent()) {
+      return add(modifier.get());
     }
 
     return this;

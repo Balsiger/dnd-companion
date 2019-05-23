@@ -23,11 +23,13 @@ package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.values.Container;
+import net.ixitxachitls.companion.data.values.Damage;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Substance;
 import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.proto.Value;
 
 import java.util.Collections;
 import java.util.List;
@@ -79,8 +81,32 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
         .collect(Collectors.toList());
   }
 
+  public Damage getDamage() {
+    if (!isWeapon()) {
+      return new Damage();
+    }
+
+    Damage damage = Damage.from(proto.getWeapon().getDamage(), getName());
+    for (Template.MagicTemplateProto.Modifier modifier : proto.getMagic().getModifierList()) {
+      if (modifier.getType() == Template.MagicTemplateProto.Type.DAMAGE) {
+        damage.addModifiers(Modifier.fromProto(modifier.getModifier(), getName()));
+      }
+    }
+
+    return damage;
+  }
+
   public String getDescription() {
     return description;
+  }
+
+  public List<Modifier> getMagicAttackModifiers() {
+    return getMagicModifiers(Template.MagicTemplateProto.Type.ATTACK);
+  }
+
+  public int getMaxAttacks() {
+    return proto.getWeapon().getMaxAttacks() > 0 ?
+        proto.getWeapon().getMaxAttacks() : Integer.MAX_VALUE;
   }
 
   public int getMaxDexterityModifier() {
@@ -106,6 +132,10 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
 
   public Money getValue() {
     return value;
+  }
+
+  public Value.WeaponStyle getWeaponStyle() {
+    return proto.getWeapon().getStyle();
   }
 
   public Weight getWeight() {
@@ -146,6 +176,15 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     }
 
     return substance.computeHp();
+  }
+
+  public List<Modifier> getMagicModifiers(Template.MagicTemplateProto.Type type) {
+    return proto.getMagic().getModifierList().stream()
+        .filter(m -> m.getType() == type)
+        .map(m -> m.getModifier().getModifierList())
+        .flatMap(List::stream)
+        .map(m -> Modifier.fromProto(m, getName()))
+        .collect(Collectors.toList());
   }
 
   public int getMaxSpeedSquares(boolean isFast) {
