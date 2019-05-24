@@ -20,7 +20,7 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<android.support.v4.widget.NestedScrollView
+<net.ixitxachitls.companion.ui.views.StrictVerticalNestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_character_statistics"
@@ -682,5 +682,5 @@
     </com.google.android.flexbox.FlexboxLayout>
 
   </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+</net.ixitxachitls.companion.ui.views.StrictVerticalNestedScrollView>
 

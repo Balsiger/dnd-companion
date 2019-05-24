@@ -26,6 +26,7 @@ import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * A physical distance in the game
@@ -43,6 +44,15 @@ public class Distance {
     this.miles = miles;
     this.feet = feet;
     this.inches = inches;
+  }
+
+  public boolean isZero() {
+    return miles.isNull() && feet.isNull() && inches.isNull();
+  }
+
+  public double asFeet() {
+    return miles.asDouble() * 5280 + feet.asDouble()
+        + (inches.isNull() ? 0 : inches.asDouble() / 12);
   }
 
   public Value.DistanceProto toProto() {
@@ -80,5 +90,21 @@ public class Distance {
 
   public static Distance fromSquares(int squares) {
     return new Distance(Rational.ZERO, Rational.fromNumber(squares * 5), Rational.ZERO);
+  }
+
+  public static Optional<Distance> larger(Optional<Distance> first, Optional<Distance> second) {
+    if (!first.isPresent()) {
+      return second;
+    }
+
+    if (!second.isPresent()) {
+      return first;
+    }
+
+    return Optional.of(larger(first.get(), second.get()));
+  }
+
+  public static Distance larger(Distance first, Distance second) {
+    return first.asFeet() >= second.asFeet() ? first : second;
   }
 }

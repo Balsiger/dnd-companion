@@ -31,12 +31,17 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.values.Damage;
+import net.ixitxachitls.companion.data.values.Distance;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.util.Strings;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by balsiger on 2019-05-20.
@@ -110,6 +115,29 @@ public class AttackDetailsView extends LinearLayout {
         .title("Damage " + item.getPlayerName())
         .message(Strings.NEWLINE_JOINER.join(damageValue.details()))
         .show());
+
+    int criticalLow = item.weaponCriticalLow();
+    int criticalMultiplier = item.weaponCriticalMultiplier();
+    if (criticalLow == 20 && criticalMultiplier == 2) {
+      criticalDelimiter.gone();
+      critical.gone();
+    } else {
+      criticalDelimiter.visible();
+      critical.visible();
+      critical.text(criticalLow + "-20/x" + criticalMultiplier);
+    }
+
+    List<String> notesParts = new ArrayList<>();
+    Optional<Distance> range = item.range();
+    Optional<Distance> reach = item.reach();
+
+    if (range.isPresent() && !range.get().isZero()) {
+      notesParts.add("range " + range.get());
+    }
+    if (reach.isPresent() && !range.get().isZero() && (int) reach.get().asFeet() != 5) {
+      notesParts.add("reach " + reach.get());
+    }
+    notes.text(Strings.COMMA_JOINER.join(notesParts));
   }
 
   private String convert(Value.WeaponStyle style) {

@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.templates;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.values.Container;
 import net.ixitxachitls.companion.data.values.Damage;
+import net.ixitxachitls.companion.data.values.Distance;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Substance;
@@ -33,6 +34,7 @@ import net.ixitxachitls.companion.proto.Value;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -130,8 +132,34 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     return synonyms.get(0);
   }
 
+  public Optional<Distance> getRange() {
+    if (!isWeapon() && proto.getWeapon().hasRange()) {
+      return Optional.empty();
+    }
+
+    return Optional.of(Distance.fromProto(proto.getWeapon().getRange()));
+  }
+
+  public Optional<Distance> getReach() {
+    if (!isWeapon() && proto.getWeapon().hasReach()) {
+      return Optional.empty();
+    }
+
+    return Optional.of(Distance.fromProto(proto.getWeapon().getReach()));
+  }
+
   public Money getValue() {
     return value;
+  }
+
+  public int getWeaponCriticalLow() {
+    int low = (int) proto.getWeapon().getCritical().getThreat().getLow();
+    return low > 0 ? low : 20;
+  }
+
+  public int getWeaponCriticalMultiplier() {
+    int multiplier = proto.getWeapon().getCritical().getMultiplier();
+    return multiplier == 0 ? 2 : multiplier;
   }
 
   public Value.WeaponStyle getWeaponStyle() {

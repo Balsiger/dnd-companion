@@ -350,6 +350,26 @@ public class Item extends NestedDocument {
     return Optional.empty();
   }
 
+  public Optional<Distance> range() {
+    Optional<Distance> result = Optional.empty();
+    for (ItemTemplate template : templates) {
+      Optional<Distance> reach = template.getRange();
+      result = Distance.larger(result, reach);
+    }
+
+    return result;
+  }
+
+  public Optional<Distance> reach() {
+    Optional<Distance> result = Optional.empty();
+    for (ItemTemplate template : templates) {
+      Optional<Distance> reach = template.getReach();
+      result = Distance.larger(result, reach);
+    }
+
+    return result;
+  }
+
   public boolean remove(Item item) {
     if (contents.remove(item)) {
       return true;
@@ -386,6 +406,14 @@ public class Item extends NestedDocument {
   @Override
   public String toString() {
     return name + " (" + value + ")";
+  }
+
+  public int weaponCriticalLow() {
+    return templates.stream().mapToInt(ItemTemplate::getWeaponCriticalLow).min().orElse(20);
+  }
+
+  public int weaponCriticalMultiplier() {
+    return templates.stream().mapToInt(ItemTemplate::getWeaponCriticalMultiplier).min().orElse(2);
   }
 
   @Override
@@ -431,7 +459,7 @@ public class Item extends NestedDocument {
         .collect(Collectors.toList()));
   }
 
-  public static Item create(CompanionContext context, String ... names) {
+  public static Item create(CompanionContext context, String... names) {
     List<ItemTemplate> templates =
         Arrays.asList(names).stream().map(Item::template).collect(Collectors.toList());
     String name = name(templates);
