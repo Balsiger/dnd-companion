@@ -65,6 +65,9 @@ public abstract class CompanionFragment extends Fragment {
 
   @Override
   public void onResume() {
+    ((MainActivity) getActivity()).setScreenName(getClass().getSimpleName());
+
+
     super.onResume();
 
     Status.log("resumed fragment " + getClass().getSimpleName());

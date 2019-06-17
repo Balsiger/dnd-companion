@@ -44,6 +44,7 @@ import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
+import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 import java.util.Optional;
 
@@ -104,6 +105,7 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
 
   @Override
   public void onStart() {
+    ((MainActivity) getActivity()).logDialogEvent(getClass().getSimpleName());
     super.onStart();
 
     if (content != null && content.getLayoutParams().width == ViewGroup.LayoutParams.MATCH_PARENT) {

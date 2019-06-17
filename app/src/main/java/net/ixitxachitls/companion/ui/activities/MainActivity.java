@@ -78,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
   public MainActivity() {
   }
 
+  public void setScreenName(String name) {
+    if (analytics != null) {
+      analytics.setCurrentScreen(this, name, name);
+    }
+  }
+
   public ActionBarView.Action addAction(@DrawableRes int drawable, String title,
                                         String description) {
     return actions.addAction(drawable, title, description);
@@ -94,6 +100,15 @@ public class MainActivity extends AppCompatActivity {
 
   public void finishLoading(String text) {
     actions.finishLoading(text);
+  }
+
+  public void logDialogEvent(String name) {
+    if (analytics != null) {
+      Bundle bundle = new Bundle();
+      bundle.putString(FirebaseAnalytics.Param.ITEM_ID, name);
+      bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, name);
+      analytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+    }
   }
 
   public void logEvent(String id, String name, String type) {
