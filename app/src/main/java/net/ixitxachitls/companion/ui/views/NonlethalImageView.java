@@ -35,10 +35,11 @@ import javax.annotation.Nullable;
  */
 public class NonlethalImageView extends PartialImageView {
 
-  private int nonlethalDamage;
-  private int hp;
+  private static final int SIZE_PX = 50;
 
   private final Drawable icon;
+  private int nonlethalDamage;
+  private int hp;
 
   public NonlethalImageView(Context context) {
     this(context, null);
@@ -54,6 +55,8 @@ public class NonlethalImageView extends PartialImageView {
     setBackground(context.getDrawable(R.drawable.icons8_punch_filled_50).mutate());
     setBackgroundTintList(ColorStateList.valueOf(getContext().getColor(R.color.characterDark)));
     setAdjustViewBounds(true);
+    setMaxHeight(SIZE_PX);
+    setMaxWidth(SIZE_PX);
 
     update();
   }

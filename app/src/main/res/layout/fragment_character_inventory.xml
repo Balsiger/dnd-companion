@@ -44,8 +44,8 @@
         android:orientation="horizontal">
 
       <FrameLayout
-          android:layout_width="wrap_content"
-          android:layout_height="200dp">
+          android:layout_width="60dp"
+          android:layout_height="120dp">
 
         <ImageView
             android:id="@+id/figure"
@@ -128,7 +128,7 @@
 
       <LinearLayout
           android:layout_width="match_parent"
-          android:layout_height="match_parent"
+          android:layout_height="wrap_content"
           android:layout_weight="1"
           android:orientation="vertical">
 
@@ -186,36 +186,38 @@
                   android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="bottom"
                     android:layout_weight="0"
                     android:paddingEnd="5dp"
+                    android:tint="@color/character"
                     app:srcCompat="@drawable/noun_premium_2390072"/>
 
                 <TextView
                     android:id="@+id/wealth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_vertical"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:text="0 gp"
                     android:theme="@style/SmallText"/>
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="bottom"
                     android:layout_weight="0"
                     android:paddingEnd="5dp"
+                    android:tint="@color/character"
                     app:srcCompat="@drawable/noun_weights_416229"/>
 
                 <TextView
                     android:id="@+id/weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_vertical"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:text="0 lb"
                     android:theme="@style/SmallText"/>
@@ -226,9 +228,10 @@
                   android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:paddingEnd="5dp"
+                    android:tint="@color/character"
                     app:srcCompat="@drawable/noun_armor_1943931"/>
 
                 <LinearLayout
@@ -242,6 +245,7 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_gravity="bottom|center_vertical"
+                      android:gravity="center_vertical"
                       android:text="10"
                       android:theme="@style/SmallText"/>
 
@@ -249,6 +253,7 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_gravity="bottom|center_vertical"
+                      android:gravity="center_vertical"
                       android:paddingStart="5dp"
                       android:paddingEnd="5dp"
                       android:text="(touch"
@@ -259,13 +264,15 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_gravity="bottom|center_vertical"
+                      android:gravity="center_vertical"
                       android:text="10"
                       android:theme="@style/SmallText"/>
 
                   <TextView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:layout_gravity="bottom|center_vertical"
+                      android:layout_gravity="center_vertical"
+                      android:gravity="center_vertical"
                       android:paddingEnd="5dp"
                       android:text=", flat-footed"
                       android:theme="@style/SmallText"/>
@@ -275,6 +282,7 @@
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:layout_gravity="bottom|center_vertical"
+                      android:gravity="center_vertical"
                       android:text="10"
                       android:theme="@style/SmallText"/>
 
@@ -290,12 +298,14 @@
 
               <TableRow
                   android:layout_width="match_parent"
-                  android:layout_height="match_parent">
+                  android:layout_height="match_parent"
+                  android:layout_gravity="center_vertical">
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:paddingEnd="5dp"
+                    android:tint="@color/character"
                     app:srcCompat="@drawable/noun_crossed_swords_152699"/>
 
                 <LinearLayout
@@ -303,6 +313,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_vertical"
+                    android:layout_span="3"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:text=""

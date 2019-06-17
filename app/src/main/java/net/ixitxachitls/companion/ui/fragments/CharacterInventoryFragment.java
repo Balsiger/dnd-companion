@@ -176,9 +176,9 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       for (Item item : character.getItems()) {
         if (item.isWeapon() && character.isWearing(item)) {
           if (character.isWearing(item, Items.Slot.hands)) {
-            attacks.addView(new AttackDetailsView(getContext(), character, item), 0);
+            attacks.addView(new AttackDetailsView(getContext(), character, item, false), 0);
           } else {
-            attacks.addView(new AttackDetailsView(getContext(), character, item));
+            attacks.addView(new AttackDetailsView(getContext(), character, item, false));
           }
         }
       }
@@ -266,7 +266,6 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
       case DragEvent.ACTION_DRAG_LOCATION:
         int[] locations = new int[2];
         moveFirst = event.getY() < items.getTop();
-        Status.log(event.getY() + " : " + items.getTop());
         return true;
 
       case DragEvent.ACTION_DRAG_ENDED:

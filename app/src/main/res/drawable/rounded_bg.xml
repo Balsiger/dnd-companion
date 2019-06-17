@@ -25,5 +25,4 @@
   <solid android:color="@color/white"/>
   <stroke android:width="3dp" android:color="@color/red" />
   <corners android:radius="10dp"/>
-  <!--<padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp" />-->
 </shape>

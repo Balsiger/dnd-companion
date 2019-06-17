@@ -68,7 +68,7 @@ public class Rational {
   }
 
   public double asDouble() {
-    return leader + ((double) nominator) / denominator;
+    return denominator == 0 ? leader : leader + ((double) nominator) / denominator;
   }
 
   public Rational multiply(int factor) {

@@ -493,11 +493,13 @@ public class Item extends NestedDocument {
     String name = data.get(FIELD_NAME, "(no name)");
     List<ItemTemplate> templates = new ArrayList<>();
     for (String templateName : data.getList(FIELD_TEMPLATES, Collections.<String>emptyList())) {
-      Optional<ItemTemplate> template = Templates.get().getItemTemplates().get(templateName);
-      if (template.isPresent()) {
-        templates.add(template.get());
-      } else {
-        Status.error("Cannot find item template '" + templateName + "'");
+      if (!templateName.isEmpty()) {
+        Optional<ItemTemplate> template = Templates.get().getItemTemplates().get(templateName);
+        if (template.isPresent()) {
+          templates.add(template.get());
+        } else {
+          Status.error("Cannot find item template '" + templateName + "'");
+        }
       }
     }
     int hp = data.get(FIELD_HP, 0);

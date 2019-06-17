@@ -32,22 +32,15 @@
       </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/refresh"
+    <FrameLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-
-      <FrameLayout
-          android:id="@+id/content"
-          android:layout_width="match_parent"
-          android:layout_height="0dp"
-          android:layout_gravity="fill_vertical"
-          android:background="@color/primaryBack"
-          tools:layout_anchor="@id/status">
-      </FrameLayout>
-
-    </android.support.v4.widget.SwipeRefreshLayout>
+        android:layout_gravity="fill_vertical"
+        android:layout_weight="1"
+        android:background="@color/primaryBack"
+        tools:layout_anchor="@id/status">
+    </FrameLayout>
 
     <view
         android:id="@+id/actions"

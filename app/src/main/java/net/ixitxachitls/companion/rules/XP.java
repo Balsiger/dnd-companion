@@ -108,6 +108,10 @@ public class XP {
     return 20;
   }
 
+  public static int next(int xp) {
+    return xpForLevel(maxLevelForXp(xp) + 1);
+  }
+
   public static int xpAward(int encounterLevel, int characterLevel, int partySize) {
     if (partySize <= 0 || encounterLevel <= 0 || characterLevel <= 0 || characterLevel > 20) {
       return 0;

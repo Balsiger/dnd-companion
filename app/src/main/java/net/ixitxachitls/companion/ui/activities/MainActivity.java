@@ -25,7 +25,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -74,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
   // UI elements.
   private StatusView status;
   private ActionBarView actions;
-  private SwipeRefreshLayout refresh;
   private Optional<DriveStorage> drive = Optional.empty();
 
   public MainActivity() {
@@ -155,9 +153,6 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     setTitle(getString(R.string.app_name));
-
-    refresh = findViewById(R.id.refresh);
-    refresh.setOnRefreshListener(this::refresh);
 
     View container = findViewById(R.id.activity_main);
     // Setup the status first, in case any fragment wants to log something.
@@ -297,7 +292,5 @@ public class MainActivity extends AppCompatActivity {
     if (fragment.isPresent()) {
       fragment.get().refresh();
     }
-
-    refresh.setRefreshing(false);
   }
 }

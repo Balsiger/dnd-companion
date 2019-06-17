@@ -60,9 +60,7 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
     super.update(character);
 
     CompanionApplication.get().conditions().readConditions(character.getId());
-    setAction(() -> {
-      CompanionFragments.get().showCharacter(character, Optional.of(this));
-    });
+    setAction(() -> CompanionFragments.get().showCharacter(character, Optional.of(this)));
 
     updateIcons();
   }
@@ -97,6 +95,7 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
     return messages;
   }
 
+  @Override
   protected MessageView createMessageIcon(Message message) {
     return new CharacterMessageView(getContext(), creature.get(), message);
   }

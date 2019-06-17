@@ -19,34 +19,37 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data.templates;
+package net.ixitxachitls.companion.ui.views;
 
-import net.ixitxachitls.companion.data.enums.Ability;
-import net.ixitxachitls.companion.proto.Template;
+import android.content.Context;
+import android.support.v4.view.ViewPager;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
 
 /**
- * A template for a skill.
+ * A view pager that should not be intercepatable (this does not seem to work though).
  */
-public class SkillTemplate extends StoredTemplate<Template.SkillTemplateProto> {
-  public static final String TYPE = "skill";
+public class UninterceptableViewPager extends ViewPager {
 
-  private final Template.SkillTemplateProto proto;
-
-  public SkillTemplate(Template.SkillTemplateProto proto, String name) {
-    super(name);
-    this.proto = proto;
+  public UninterceptableViewPager(Context context, AttributeSet attrs) {
+    super(context, attrs);
   }
 
-  public Ability getAbility() {
-    return Ability.fromProto(proto.getAbility());
+  @Override
+  public boolean onInterceptTouchEvent(MotionEvent ev) {
+    boolean ret = super.onInterceptTouchEvent(ev);
+    if (ret) {
+      getParent().requestDisallowInterceptTouchEvent(true);
+    }
+    return ret;
   }
 
-  public static Template.SkillTemplateProto defaultProto() {
-    return Template.SkillTemplateProto.getDefaultInstance();
-  }
-
-  public static SkillTemplate fromProto(Template.SkillTemplateProto proto) {
-    SkillTemplate skill = new SkillTemplate(proto, proto.getTemplate().getName());
-    return skill;
+  @Override
+  public boolean onTouchEvent(MotionEvent ev) {
+    boolean ret = super.onTouchEvent(ev);
+    if (ret) {
+      getParent().requestDisallowInterceptTouchEvent(true);
+    }
+    return ret;
   }
 }

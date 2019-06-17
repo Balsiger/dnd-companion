@@ -20,11 +20,12 @@
   -->
 
 <resources>
-  <dimen name="iconSize">24dp</dimen>
-  <dimen name="iconSizeSmall">18dp</dimen>
+  <dimen name="iconSize">14dp</dimen>
+  <dimen name="iconSizeSmall">14dp</dimen>
   <dimen name="design_fab_size_normal">36dp</dimen>
   <dimen name="fab_margin">10dp</dimen>
   <dimen name="fab_margin_negative">-18dp</dimen>
+  <dimen name="dropTarget">25dp</dimen>
 
   <!-- Default screen margins, per the Android Design guidelines. -->
   <dimen name="activity_horizontal_margin">16dp</dimen>

@@ -38,7 +38,6 @@ import net.ixitxachitls.companion.ui.dialogs.EditItemDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.AbstractWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
-import net.ixitxachitls.companion.util.Misc;
 import net.ixitxachitls.companion.util.Texts;
 
 import java.util.HashMap;
@@ -54,7 +53,8 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   private final Creature<?> creature;
   private final Item item;
   private final TextWrapper<TextView> name;
-  private final TextWrapper<TextView> summary;
+  private final TextWrapper<TextView> value;
+  private final TextWrapper<TextView> weight;
   private final Wrapper<LinearLayout> title;
   private final Wrapper<LinearLayout> details;
   private final TextWrapper<TextView> appearance;
@@ -75,7 +75,8 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_item, this, false);
     title = Wrapper.<LinearLayout>wrap(view, R.id.title).onTouch(this::handleTouch);
     name = TextWrapper.wrap(view, R.id.name);
-    summary = TextWrapper.wrap(view, R.id.summary);
+    value = TextWrapper.wrap(view, R.id.value);
+    weight = TextWrapper.wrap(view, R.id.weight);
     TextWrapper<TextView> edit = TextWrapper.wrap(view, R.id.edit);
     if (creature.amPlayer() || creature.amDM()) {
       edit.onClick(this::edit);
@@ -84,7 +85,6 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     }
 
     details = Wrapper.<LinearLayout>wrap(view, R.id.details).gone();
-    TextWrapper.wrap(view, R.id.id).text(item.getId()).visible(Misc.onEmulator());
     appearance = TextWrapper.wrap(view, R.id.appearance);
     description = TextWrapper.wrap(view, R.id.description);
     contents = Wrapper.<LinearLayout>wrap(view, R.id.contents);
@@ -154,7 +154,8 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
   public void update() {
     name.text(buildItemName());
-    summary.text(item.summary());
+    value.text(item.getValue().toString());
+    weight.text(item.getWeight().toString());
     appearance.text(item.getAppearance());
     description.text(Texts.toSpanned(getContext(), item.getDescription()));
 

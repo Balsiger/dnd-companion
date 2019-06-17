@@ -40,8 +40,9 @@ import javax.annotation.Nullable;
  */
 public class HPImageView extends PartialImageView {
 
-  private int hp;
-  private int maxHp;
+  private enum State { alive, dying, stable, dead }
+
+  private static final int SIZE_PX = 50;
 
   private final Drawable alive;
   private final Drawable aliveBackground;
@@ -49,9 +50,9 @@ public class HPImageView extends PartialImageView {
   private final Drawable stableBackground;
   private final Drawable dying;
   private final Drawable dyingBackground;
+  private int hp;
+  private int maxHp;
   private Optional<NumberAdjustDialog.Action> adjustAction = Optional.empty();
-
-  private enum State { alive, dying, stable, dead }
 
   public HPImageView(Context context) {
     this(context, null);
@@ -73,6 +74,8 @@ public class HPImageView extends PartialImageView {
     this.dyingBackground = context.getDrawable(R.drawable.ic_heart_pulse_black_24dp).mutate();
     this.dyingBackground.setTint(context.getColor(R.color.characterDark));
     setAdjustViewBounds(true);
+    setMaxHeight(SIZE_PX);
+    setMaxWidth(SIZE_PX);
 
     setOnClickListener(this::clicked);
 
@@ -89,6 +92,47 @@ public class HPImageView extends PartialImageView {
     this.maxHp = maxHp;
 
     update();
+  }
+
+  protected boolean clicked(View view) {
+    if (adjustAction.isPresent()) {
+      NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
+          "HP Adjustment", "Adjust the current HP value.")
+          .setAdjustAction(adjustAction.get())
+          .display();
+
+      return true;
+    }
+
+    return false;
+  }
+
+  @Override
+  protected boolean longClicked(View view) {
+    switch(state()) {
+      case alive:
+        showDescription("Alive, all is well", "No worries, you are still alive... for now...");
+        break;
+
+      case dying:
+        showDescription(Conditions.DYING);
+        break;
+
+      case stable:
+        showDescription("Stable", "You are dying, but stable. You currently don't get worse.");
+        break;
+
+      case dead:
+        showDescription(Conditions.DEAD);
+        break;
+    }
+
+    return true;
+  }
+
+  private void showDescription(ConditionData condition) {
+    showDescription(condition.getName(),
+        condition.getSummary() + "\n\n" + condition.getDescription());
   }
 
   private State state() {
@@ -134,46 +178,5 @@ public class HPImageView extends PartialImageView {
         setVisibility(GONE);
         break;
     }
-  }
-
-  protected boolean clicked(View view) {
-    if (adjustAction.isPresent()) {
-      NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
-          "HP Adjustment", "Adjust the current HP value.")
-          .setAdjustAction(adjustAction.get())
-          .display();
-
-      return true;
-    }
-
-    return false;
-  }
-
-  @Override
-  protected boolean longClicked(View view) {
-    switch(state()) {
-      case alive:
-        showDescription("Alive, all is well", "No worries, you are still alive... for now...");
-        break;
-
-      case dying:
-        showDescription(Conditions.DYING);
-        break;
-
-      case stable:
-        showDescription("Stable", "You are dying, but stable. You currently don't get worse.");
-        break;
-
-      case dead:
-        showDescription(Conditions.DEAD);
-        break;
-    }
-
-    return true;
-  }
-
-  private void showDescription(ConditionData condition) {
-    showDescription(condition.getName(),
-        condition.getSummary() + "\n\n" + condition.getDescription());
   }
 }

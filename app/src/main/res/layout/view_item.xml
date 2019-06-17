@@ -44,63 +44,90 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:text="... name ..."
+        android:textAlignment="viewStart"
         android:textColor="@color/itemText"
         android:textStyle="bold"
-        android:theme="@style/LargeText"/>
-
-    <TextView
-        android:id="@+id/summary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_weight="0"
-        android:text="10gp / 5lb"
-        android:textColor="@color/itemText"
         android:theme="@style/SmallText"/>
 
-    <ImageView
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_weight="0"
-        android:tint="@color/white"
-        app:srcCompat="@drawable/ic_mode_edit_black_24dp"/>
   </LinearLayout>
 
   <LinearLayout
       android:id="@+id/details"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="@color/itemDark"
+      android:layout_marginStart="5dp"
+      android:layout_marginEnd="5dp"
+      android:background="@color/itemLight"
       android:orientation="vertical"
-      android:padding="20dp"
+      android:paddingStart="20dp"
+      android:paddingTop="10dp"
+      android:paddingEnd="20dp"
+      android:paddingBottom="10dp"
       android:visibility="visible">
 
-    <TextView
-        android:id="@+id/id"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="TextView"
-        android:textColor="@color/itemText"/>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+      <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:tint="@color/itemDark"
+          app:srcCompat="@drawable/icons8_coins_24"/>
+
+      <TextView
+          android:id="@+id/value"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="5dp"
+          android:layout_weight="1"
+          android:text="...5 gp..."
+          android:textColor="@color/itemText"/>
+
+      <ImageView
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:tint="@color/itemDark"
+          app:srcCompat="@drawable/noun_weights_416229"/>
+
+      <TextView
+          android:id="@+id/weight"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="5dp"
+          android:layout_weight="1"
+          android:text="...10 lb..."
+          android:textColor="@color/itemText"/>
+
+      <ImageView
+          android:id="@+id/edit"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
+          android:layout_marginStart="10dp"
+          android:layout_weight="0"
+          android:tint="@color/white"
+          app:srcCompat="@drawable/ic_mode_edit_black_24dp"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/appearance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="This is ghe general appearance of the item"
         android:textColor="@color/itemText"
-        android:theme="@style/LargeText"/>
+        android:theme="@style/SmallText"/>
 
     <TextView
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="TextView"
+        android:text="This is the description of the item."
         android:textColor="@color/itemText"
-        android:theme="@style/SmallText"/>
+        android:theme="@style/TinyText"/>
 
     <LinearLayout
         android:id="@+id/contents"

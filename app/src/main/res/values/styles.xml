@@ -1,15 +1,15 @@
 <resources>
 
   <style name="LargeText" parent="">
-    <item name="android:textSize">15sp</item>
-  </style>
-
-  <style name="SmallText" parent="">
     <item name="android:textSize">12sp</item>
   </style>
 
-  <style name="TinyText" parent="">
+  <style name="SmallText" parent="">
     <item name="android:textSize">10sp</item>
+  </style>
+
+  <style name="TinyText" parent="">
+    <item name="android:textSize">8sp</item>
   </style>
 
   <style name="IconSize" parent="">

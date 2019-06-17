@@ -110,5 +110,6 @@
   <color name="location_selected_bright">#000</color>
   <color name="labelled_line_disabled">#ccc</color>
   <color name="labelled_label_disabled">#ccc</color>
+  <color name="long_press">#40FCEFB9</color>
 
 </resources>

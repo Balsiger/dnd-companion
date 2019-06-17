@@ -30,8 +30,10 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
+import net.ixitxachitls.companion.data.templates.SkillTemplate;
 import net.ixitxachitls.companion.data.values.AbilityAdjustment;
 import net.ixitxachitls.companion.data.values.Adjustment;
 import net.ixitxachitls.companion.data.values.CampaignDate;
@@ -47,6 +49,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 /**
@@ -340,6 +344,23 @@ public class Character extends Creature<Character> implements Comparable<Charact
     xp += number;
   }
 
+  // Skills not returned have a total modifier of +0.
+  public SortedMap<String, ModifiedValue> collectSkills() {
+    Map<String, ModifiedValue> skillRanks = collectSkillRanks();
+    SortedMap<String, ModifiedValue> skills = new TreeMap<>();
+    for (SkillTemplate skill : Templates.get().getSkillTemplates().getValues()) {
+      ModifiedValue ranks =
+          skillRanks.getOrDefault(skill.getName(), new ModifiedValue(skill.getName(), 0, true))
+              .add(new Modifier(getAbilityModifier(skill.getAbility()), Modifier.Type.GENERAL,
+                  skill.getAbility().getName()));
+      if (ranks.total() != 0) {
+        skills.put(skill.getName(), ranks);
+      }
+    }
+
+    return skills;
+  }
+
   @Override
   public int compareTo(Character that) {
     int name = this.getName().compareTo(that.getName());
@@ -488,6 +509,24 @@ public class Character extends Creature<Character> implements Comparable<Charact
         value.add(quality.getTemplate().getAbilityModifiers(Ability.DEXTERITY));
       }
     }
+  }
+
+  private Map<String, ModifiedValue> collectSkillRanks() {
+    Map<String, ModifiedValue> ranks = new HashMap<>();
+
+    Multiset<String> levelNames = HashMultiset.create();
+    for (Level level : levels) {
+      levelNames.add(level.getTemplate().getName());
+      for (Map.Entry<String, Integer> skillRank : level.getSkills().entrySet()) {
+        ranks.put(skillRank.getKey(),
+            ranks.getOrDefault(skillRank.getKey(), new ModifiedValue(skillRank.getKey(), 0, true))
+                .add(new Modifier(skillRank.getValue(), Modifier.Type.GENERAL,
+                    level.getTemplate().getName()
+                        + levelNames.count(level.getTemplate().getName()))));
+      }
+    }
+
+    return ranks;
   }
 
   protected static Character create(CompanionContext context, String campaignId) {

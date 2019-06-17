@@ -252,7 +252,8 @@ public class PartyFragment extends NestedCompanionFragment {
     // Add all new chips.
     for (Character character : campaignCharacters) {
       if (!chipsById.containsKey(character.getId())) {
-        CharacterChipView chip = new CharacterChipView(getContext(), character, 4);
+        CharacterChipView chip = new CharacterChipView(getContext(), character,
+            getResources().getInteger(R.integer.chipsPerLine));
         chipsById.put(character.getId(), chip);
         character.observe(this, chip::update);
       }

@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -36,6 +37,7 @@ import android.widget.Toast;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
@@ -69,6 +71,7 @@ public class CharacterFragment extends CompanionFragment {
   protected ViewPager pager;
   protected @Nullable CharacterStatisticsFragment statisticsFragment;
   protected @Nullable CharacterInventoryFragment inventoryFragment;
+  private Optional<Handler> updateHandler = Optional.empty();
 
   public CharacterFragment() {
     super(Type.character);
@@ -89,6 +92,15 @@ public class CharacterFragment extends CompanionFragment {
       CompanionFragments.get().show(Type.campaigns, Optional.empty());
     }
     return true;
+  }
+
+  @Override
+  public void onResume() {
+    super.onResume();
+
+    if (character.isPresent()) {
+      observe(character.get());
+    }
   }
 
   @Override
@@ -125,15 +137,6 @@ public class CharacterFragment extends CompanionFragment {
             + "player is active on your WiFi, the character most likely will immediately "
             + "reappear, though.").onClick(this::delete);
 
-    if (character.isPresent()) {
-      update(character.get());
-    }
-
-    images().observe(this, title::refresh);
-    characters().observe(this, this::refresh);
-    messages().observe(this, this::refresh);
-    conditions().observe(this, this::refresh);
-
     return view;
   }
 
@@ -150,21 +153,19 @@ public class CharacterFragment extends CompanionFragment {
   public void onPause() {
     super.onPause();
 
+    unobserve();
     if (storeOnPause && character.isPresent()) {
       character.get().store();
     }
   }
 
   public void showCharacter(Character character) {
-    if (this.character.isPresent()) {
-      this.character.get().unobserve(this);
-    }
+    unobserve();
 
     this.character = Optional.of(character);
-    character.observe(this, this::update);
     this.campaign = campaigns().get(character.getCampaignId());
 
-    update(character);
+    observe(character);
   }
 
   private void delete() {
@@ -188,24 +189,44 @@ public class CharacterFragment extends CompanionFragment {
     }
   }
 
+  private void observe(Character character) {
+    images().observe(this, title::refresh);
+    characters().observe(this, this::refresh);
+    messages().observe(this, this::refresh);
+    conditions().observe(this, this::refresh);
+
+    character.observe(this, this::update);
+  }
+
   private void refresh(Documents.Update update) {
-    // Characters & conditions.
     if (character.isPresent()) {
       update(character.get());
     }
-
-    // Messages.
     title.refresh(update);
   }
 
+  private void unobserve() {
+    images().unobserve(this);
+    characters().unobserve(this);
+    messages().unobserve(this);
+    conditions().unobserve(this);
+
+    if (this.character.isPresent()) {
+      this.character.get().unobserve(this);
+    }
+  }
+
   private void update(Character character) {
+    Status.log("update character");
     this.character = Optional.of(character);
+
+    // We did not create the view yet, thus there is no point in updating.
+    if (getView() == null) {
+      return;
+    }
+
     if (statisticsFragment != null) {
       statisticsFragment.update(character);
-    }
-    if (!campaign.isPresent()) {
-      this.campaign = Optional.empty();
-      return;
     }
 
     if (inventoryFragment != null) {

@@ -57,8 +57,19 @@ public class AttackDetailsView extends LinearLayout {
   private final TextWrapper<TextView> critical;
   private final TextWrapper<TextView> notes;
 
-  public AttackDetailsView(Context context, Character character, Item item) {
+  public AttackDetailsView(Context context, Character character, Item item, boolean large) {
     this(context);
+
+    if (large) {
+      weapon.textStyle(R.style.LargeText);
+      type.textStyle(R.style.LargeText);
+      attack.setTextAppearance(R.style.LargeText);
+      multipleAttacks.textStyle(R.style.LargeText);
+      damage.textStyle(R.style.LargeText);
+      criticalDelimiter.textStyle(R.style.LargeText);
+      critical.textStyle(R.style.LargeText);
+      notes.textStyle(R.style.LargeText);
+    }
 
     set(character, item);
   }
@@ -134,7 +145,7 @@ public class AttackDetailsView extends LinearLayout {
     if (range.isPresent() && !range.get().isZero()) {
       notesParts.add("range " + range.get());
     }
-    if (reach.isPresent() && !range.get().isZero() && (int) reach.get().asFeet() != 5) {
+    if (reach.isPresent() && !reach.get().isZero() && (int) reach.get().asFeet() != 5) {
       notesParts.add("reach " + reach.get());
     }
     notes.text(Strings.COMMA_JOINER.join(notesParts));

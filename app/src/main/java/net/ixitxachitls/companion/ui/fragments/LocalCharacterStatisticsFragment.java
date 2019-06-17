@@ -47,7 +47,6 @@ public class LocalCharacterStatisticsFragment extends CharacterStatisticsFragmen
     charisma.setAction(this::editAbilities);
 
     levels.onClick(this::editLevels);
-    levelUp.onClick(this::editLevels);
 
     xp.onBlur(this::changeXp).enabled(true);
     xpAdjust.visible().onClick(this::adjustXp);

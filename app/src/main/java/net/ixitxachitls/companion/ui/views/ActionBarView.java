@@ -198,7 +198,6 @@ public class ActionBarView extends LinearLayout {
       button.get().setScaleType(ImageView.ScaleType.FIT_CENTER);
       button.get().setAdjustViewBounds(true);
       button.onClick(this::clicked);
-
       return button;
     }
   }

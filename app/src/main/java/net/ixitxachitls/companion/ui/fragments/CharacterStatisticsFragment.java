@@ -32,6 +32,7 @@ import android.widget.TextView;
 import com.google.android.flexbox.FlexboxLayout;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Feat;
@@ -39,20 +40,29 @@ import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.documents.Quality;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.Distance;
+import net.ixitxachitls.companion.data.values.Item;
+import net.ixitxachitls.companion.data.values.ModifiedValue;
+import net.ixitxachitls.companion.rules.Items;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
+import net.ixitxachitls.companion.ui.views.AttackDetailsView;
 import net.ixitxachitls.companion.ui.views.ConditionIconsView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
-import net.ixitxachitls.companion.ui.views.LabelledView;
 import net.ixitxachitls.companion.ui.views.ModifiedValueView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Validator;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+import net.ixitxachitls.companion.util.Strings;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.SortedMap;
+import java.util.stream.Collectors;
 
 /**
  * Fragment for a character's base statistics
@@ -63,33 +73,45 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
   // UI elements.
   protected ConditionIconsView conditions;
+  protected Wrapper<ImageView> abilitiesGroup;
   protected AbilityView strength;
   protected AbilityView dexterity;
   protected AbilityView constitution;
   protected AbilityView intelligence;
   protected AbilityView wisdom;
   protected AbilityView charisma;
+
+  protected Wrapper<ImageView> levelGroup;
+  protected LabelledTextView levels;
   protected LabelledEditTextView xp;
   protected Wrapper<ImageView> xpAdjust;
-  protected TextWrapper<TextView> xpNext;
-  protected LabelledTextView levels;
+
+  protected Wrapper<ImageView> healthGroup;
   protected LabelledEditTextView hp;
   protected Wrapper<ImageView> hpAdjust;
-  protected LabelledTextView hpMax;
+  protected TextWrapper<TextView> hpMax;
   protected LabelledEditTextView damageNonlethal;
   protected Wrapper<ImageView> hpNonlethalAdjust;
-  protected TextWrapper<TextView> levelUp;
+
+  protected Wrapper<ImageView> battleGroup;
   protected ModifiedValueView ac;
   protected ModifiedValueView acTouch;
   protected ModifiedValueView acFlat;
-  protected LabelledView<LabelledView, ModifiedValueView> fortitude;
-  protected LabelledView<LabelledView, ModifiedValueView> will;
-  protected LabelledView<LabelledView, ModifiedValueView> reflex;
-  protected LabelledView<LabelledView, ModifiedValueView> initiative;
-  protected LabelledView<LabelledView, LinearLayout> speed;
+  protected LinearLayout attacks;
+  protected ModifiedValueView initiative;
   protected TextWrapper<TextView> speedFeet;
   protected ModifiedValueView speedSquares;
+  protected ModifiedValueView fortitude;
+  protected ModifiedValueView will;
+  protected ModifiedValueView reflex;
+
+  protected Wrapper<ImageView> featsGroup;
   protected FlexboxLayout feats;
+
+  protected Wrapper<ImageView> skillsGroup;
+  protected FlexboxLayout skills;
+
+  protected Wrapper<ImageView> qualitiesGroup;
   protected FlexboxLayout qualities;
 
   public CharacterStatisticsFragment() {
@@ -107,6 +129,9 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
         R.color.character, R.color.characterDark);
     conditionsContainer.addView(conditions);
 
+    abilitiesGroup = Wrapper.<ImageView>wrap(view, R.id.group_abilities)
+        .onClick(() -> showSimpleMessage("Abilities", "All your ability values and modifiers.\n"
+            + "Long press on any modifier to get a detailed look at how it was computed."));
     strength = view.findViewById(R.id.strength);
     dexterity = view.findViewById(R.id.dexterity);
     constitution = view.findViewById(R.id.constitution);
@@ -114,60 +139,87 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     wisdom = view.findViewById(R.id.wisdom);
     charisma = view.findViewById(R.id.charisma);
 
+    levelGroup = Wrapper.<ImageView>wrap(view, R.id.group_levels).onClick(this::showLevelSummary);
+    levels = view.findViewById(R.id.levels);
     xp = view.findViewById(R.id.xp);
     xp.disabled().onBlur(this::redraw);
     xpAdjust = Wrapper.<ImageView>wrap(view, R.id.xp_adjust).gone();
-    xpNext = TextWrapper.wrap(view, R.id.xp_next);
-    levels = view.findViewById(R.id.levels);
-    levelUp = TextWrapper.wrap(view, R.id.level_up);
 
+    healthGroup = Wrapper.<ImageView>wrap(view, R.id.group_health).onClick(this::showHealthSummary);
     hp = view.findViewById(R.id.hp);
     hp.enabled(false);
     hpAdjust = Wrapper.<ImageView>wrap(view, R.id.hp_adjust).gone();
-    hpMax = view.findViewById(R.id.hp_max);
-    hpMax.enabled(false);
+    hpMax = TextWrapper.wrap(view, R.id.hp_max);
     damageNonlethal = view.findViewById(R.id.hp_nonlethal);
     damageNonlethal.enabled(false);
     hpNonlethalAdjust = Wrapper.<ImageView>wrap(view, R.id.nonlethal_adjust).gone();
 
+    battleGroup = Wrapper.<ImageView>wrap(view, R.id.group_battle)
+        .onClick(() -> showSimpleMessage("Battle", "All your battle statistics.\n"
+            + "Long press on any value to get an overview how it was computed."));
+    Wrapper.wrap(view, R.id.icon_ac)
+        .onClick(() -> showSimpleMessage("Armor Class",
+            "The current armor class from all your worn items.\n"
+                + "Long press on a value to see how it was computed."));
     ac = view.findViewById(R.id.ac);
     acTouch = view.findViewById(R.id.ac_touch);
     acFlat = view.findViewById(R.id.ac_flat_footed);
-
-    fortitude = view.findViewById(R.id.fortitude);
-    fortitude.view(new ModifiedValueView(getContext()).ranged());
-    fortitude.getView().style(R.style.LargeText);
-    will = view.findViewById(R.id.will);
-    will.view(new ModifiedValueView(getContext()).ranged());
-    will.getView().style(R.style.LargeText);
-    reflex = view.findViewById(R.id.reflex);
-    reflex.view(new ModifiedValueView(getContext()).ranged());
-    reflex.getView().style(R.style.LargeText);
-
+    Wrapper.wrap(view, R.id.icon_attack)
+        .onClick(() -> showSimpleMessage("Attacks",
+            "All the attacks you could possibly do with worn weapons.\n"
+                + "Long press on a value to see details on how it was computed."));
+    attacks = view.findViewById(R.id.attacks);
+    Wrapper.wrap(view, R.id.icon_initiative)
+        .onClick(() -> showSimpleMessage("Initiative",
+            "Your initiative modifier.\n"
+                + "Long press on the value to see details on how it was computed."));
     initiative = view.findViewById(R.id.initiative);
-    initiative.view(new ModifiedValueView(getContext()));
-    initiative.getView().style(R.style.LargeText);
-    speed = view.findViewById(R.id.speed);
-    speedFeet = TextWrapper.wrap(speed, R.id.speed_feet);
-    speedSquares = speed.findViewById(R.id.speed_squares);
+    Wrapper.wrap(view, R.id.icon_speed)
+        .onClick(() -> showSimpleMessage("Speed",
+            "The speed of your character in feet and squares.\n"
+                + "Long press on on the squares value to see details on how it was computed."));
+    speedFeet = TextWrapper.wrap(view, R.id.speed_feet);
+    speedSquares = view.findViewById(R.id.speed_squares);
+    fortitude = view.findViewById(R.id.fortitude);
+    fortitude.ranged().style(R.style.LargeText);
+    will = view.findViewById(R.id.will);
+    will.ranged().style(R.style.LargeText);
+    reflex = view.findViewById(R.id.reflex);
+    reflex.ranged().style(R.style.LargeText);
 
+
+    featsGroup = Wrapper.<ImageView>wrap(view, R.id.group_feats)
+        .onClick(() -> showSimpleMessage("Feats", "All your current feats.\n"
+            + "Press on a feat to get more details."));
     feats = view.findViewById(R.id.feats);
+
+    skillsGroup = Wrapper.<ImageView>wrap(view, R.id.group_skills)
+        .onClick(() -> showSimpleMessage("Skills", "All your skills with a non-zero modifier.\n"
+            + "Press on a skill rank to see how the skill ranks were computed."));
+    skills = view.findViewById(R.id.skills);
+
+    qualitiesGroup = Wrapper.<ImageView>wrap(view, R.id.group_qualities)
+        .onClick(() -> showSimpleMessage("Qualities",
+            "All the qualities your character has from race and class levels.\n"
+                + "Press on a quality to get more information about it."));
     qualities = view.findViewById(R.id.qualities);
 
-    // TODO(merlin): This might be unnecessary?
+    return view;
+  }
+
+  @Override
+  public void onResume() {
+    super.onResume();
+
     if (character.isPresent()) {
       update(character.get());
     }
-
-    characters().observe(this, this::update);
-
-    return view;
   }
 
   public void update(Character character) {
     this.character = Optional.of(character);
 
-    if (strength == null) {
+    if (getView() == null) {
       return;
     }
 
@@ -190,12 +242,24 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     ac.set(character.normalArmorClass());
     acTouch.set(character.touchArmorClass());
     acFlat.set(character.flatFootedArmorClass());
+    // Update attacks.
+    attacks.removeAllViews();
+    for (Item item : character.getItems()) {
+      if (item.isWeapon() && character.isWearing(item)) {
+        if (character.isWearing(item, Items.Slot.hands)) {
+          attacks.addView(new AttackDetailsView(getContext(), character, item, true), 0);
+        } else {
+          attacks.addView(new AttackDetailsView(getContext(), character, item, true));
+        }
+      }
+    }
 
-    fortitude.getView().set(character.fortitude());
-    will.getView().set(character.will());
-    reflex.getView().set(character.reflex());
 
-    initiative.getView().set(character.initiative());
+    fortitude.set(character.fortitude());
+    will.set(character.will());
+    reflex.set(character.reflex());
+
+    initiative.set(character.initiative());
     speedFeet.text(Distance.fromSquares(character.speed().total()).toString());
     speedSquares.set(character.speed());
 
@@ -214,6 +278,21 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
         feats.addView(text.get());
       }
 
+      skills.removeAllViews();
+      SortedMap<String, ModifiedValue> collectedSkills = character.collectSkills();
+      i = 1;
+      for (Map.Entry<String, ModifiedValue> skillRank : collectedSkills.entrySet()) {
+        boolean last = i++ == collectedSkills.size();
+        TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()))
+            .noWrap();
+        text.text(skillRank.getKey() + " " + skillRank.getValue().totalFormatted()
+            + (last ? "" : ", ")).textStyle(R.style.SmallText)
+            .onClick(() -> showSkill(skillRank.getKey(), skillRank.getValue()));
+
+        skills.addView(text.get());
+      }
+
+
       qualities.removeAllViews();
       Set<Quality> collectedQualities = character.collectQualities();
       i = 1;
@@ -231,15 +310,30 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     redraw();
   }
 
+  private boolean hasLevelUp() {
+    return character.isPresent() && character.get().getMaxLevel() > character.get().getLevel();
+  }
+
   protected void redraw() {
+    Status.log("redraw character stats");
     if (character.isPresent()) {
       int level = character.get().getLevel();
-      xpNext.text("(next " + XP.xpForLevel(level <= 1 ? 2 : level +1) + ")");
       hp.text(String.valueOf(character.get().getHp()));
       levels.text(Level.summarized(character.get().getLevels()))
           .error(character.get().validateLevels());
-      levelUp.visible(character.get().getMaxLevel() > character.get().getLevel()
-          || (character.get().getXp() == 0 && character.get().getLevel() == 0));
+
+      if (hasLevelUp() || !character.get().validateLevels().isEmpty()) {
+        levelGroup.tint(R.color.error);
+        Status.log("level error");
+      } else {
+        levelGroup.tint(R.color.characterDark);
+      }
+
+      if (!validateHealth().isEmpty()) {
+        healthGroup.tint(R.color.error);
+      } else {
+        healthGroup.tint(R.color.characterDark);
+      }
     }
   }
 
@@ -248,14 +342,68 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     MessageDialog.create(getContext()).title(feat.getTitle()).message(message).show();
   }
 
+  private void showHealthSummary() {
+    List<String> messages = new ArrayList<>();
+    List<String> conditions = new ArrayList<>();
+
+    if (character.isPresent()) {
+      messages.addAll(validateHealth());
+      conditions.addAll(character.get().getAdjustedConditions().stream()
+          .map(c -> c.getCondition().getCondition().getName())
+          .collect(Collectors.toList()));
+    }
+
+    if (conditions.isEmpty()) {
+      messages.add("No conditions.");
+    } else {
+      messages.add("Conditions:");
+      messages.addAll(conditions);
+    }
+
+    MessageDialog.create(getContext())
+        .title("Health Summary")
+        .message(Strings.NEWLINE_JOINER.join(messages))
+        .show();
+  }
+
+  private void showLevelSummary() {
+    List<String> messages = new ArrayList<>();
+    if (hasLevelUp()) {
+      messages.add("Level Up!");
+    }
+
+    if (character.isPresent()) {
+      messages.add("Next level at " + XP.next(character.get().getXp()));
+      messages.addAll(character.get().validateLevels());
+    }
+
+
+    MessageDialog.create(getContext())
+        .title("Level Summary")
+        .message(Strings.NEWLINE_JOINER.join(messages))
+        .show();
+  }
+
   private void showQuality(Quality quality) {
     String message = quality.getEntity() + "\n\n" + quality.getTemplate().getDescription();
     MessageDialog.create(getContext()).title(quality.getName()).formatted(message).show();
+  }
+
+  private void showSimpleMessage(String title, String message) {
+    MessageDialog.create(getContext()).title(title).message(message).show();
+  }
+
+  private void showSkill(String name, ModifiedValue ranks) {
+    MessageDialog.create(getContext()).title(name).message(ranks.describeModifiers()).show();
   }
 
   private void update(Documents.Update update) {
     if (character.isPresent()) {
       update(character.get());
     }
+  }
+
+  private List<String> validateHealth() {
+    return new Validator.RangeValidator(-20, character.get().getMaxHp()).validate(hp.getText());
   }
 }

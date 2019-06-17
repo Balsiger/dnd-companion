@@ -185,7 +185,9 @@ public class Level extends NestedDocument {
 
     // The qualities that have been selected in this level.
     for (String name : this.qualities) {
-      qualities.add(new Quality(name, template.getName() +  " " + level));
+      if (!name.isEmpty()) {
+        qualities.add(new Quality(name, template.getName() + " " + level));
+      }
     }
 
     return qualities;

@@ -44,7 +44,7 @@ public class Money {
   private static final String FIELD_COPPER = "copper";
   private static final String FIELD_ARMOR = "armor";
   private static final String FIELD_WEAPON = "weapon";
-  private static final ValueParser PARSER = new IntegerValueParser(
+  private static final ValueParser<Integer> PARSER = new IntegerValueParser(
       new ValueParser.Unit("pp", "pp", "platinum", "platinums"),
       new ValueParser.Unit("gp", "gp", "gold", "golds"),
       new ValueParser.Unit("sp", "sp", "silver", "silvers"),

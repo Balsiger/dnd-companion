@@ -29,6 +29,8 @@ import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 
+import net.ixitxachitls.companion.Status;
+
 /**
  * A nested scroll view that does not intercept touch events that are mostly horizontal.
  * This improves interaction with view pagers.
@@ -53,14 +55,15 @@ public class StrictVerticalNestedScrollView extends NestedScrollView {
   }
 
   @Override
-  public boolean onInterceptTouchEvent(MotionEvent ev) {
-    return super.onInterceptTouchEvent(ev) && gestureDetector.onTouchEvent(ev);
+  public boolean onInterceptTouchEvent(MotionEvent event) {
+    return gestureDetector.onTouchEvent(event) && super.onInterceptTouchEvent(event);
   }
 
   // Return false if we're scrolling in the x direction
   class YScrollDetector extends GestureDetector.SimpleOnGestureListener {
     @Override
     public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+      Status.error("result: " + (Math.abs(distanceY) > Math.abs(distanceX)));
       return Math.abs(distanceY) > Math.abs(distanceX);
     }
   }

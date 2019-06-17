@@ -25,6 +25,7 @@ import android.content.Context;
 import android.support.annotation.StyleRes;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
+import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
@@ -75,7 +76,9 @@ public class ModifiedValueView extends AppCompatTextView {
   }
 
   private void init() {
-    setBackground(getContext().getDrawable(R.drawable.dashed_rectangle));
+    setBackgroundColor(getResources().getColor(R.color.long_press, null));
+    setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+        LinearLayout.LayoutParams.WRAP_CONTENT));
   }
 
   private boolean showDescription(ModifiedValue value) {

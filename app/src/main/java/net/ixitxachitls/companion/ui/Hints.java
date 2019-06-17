@@ -32,7 +32,6 @@ public class Hints {
   private static final Random RANDOM = new Random();
   private static final ImmutableList<String> hints =
       new ImmutableList.Builder<String>()
-          .add("Abilities currently don't include any modifiers for levels, items or feats.")
           .add("You can move characters from one campaign to another.")
           .add("Red lines below a value signal an invalid value. Most of such values can still be "
               + "used, but might not be according to the rules.")
@@ -56,6 +55,15 @@ public class Hints {
               + "reading it (they will not be removed).")
           .add("You can double tap an image to reload it. Images will automatically reload from "
               + "time to time, but that might be too slow sometimes.")
+          .add("If you have decent artistic skills and want to help make the app more beautiful, "
+              + "every help is welcome. Inquire at companion@ixitxachitls.net")
+          .add("If you have good coding skills and would like to contribute some work to make the "
+              + "app more useful, let me know at companion@ixitxachitls.net.")
+          .add("If you find computations that are wrong or values that are missing, "
+              + "let me know at companion@ixitxachitls.net")
+          .add("If you find that some things are missing, like races, classes, qualities options "
+              + "or items, let me know at companion@ixitxachitls.net. "
+              + "Maybe I find some time to add them, maybe I ask for your help.")
       .build();
 
   public static String nextHint() {

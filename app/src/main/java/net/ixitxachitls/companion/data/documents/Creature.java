@@ -172,6 +172,10 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return new ModifiedValue("Charisma Check", Ability.modifier(getCharisma().total()), true);
   }
 
+  public int getCharismaModifier() {
+    return Ability.modifier(getCharisma().total());
+  }
+
   public List<CreatureCondition> getConditions() {
     return CompanionApplication.get().conditions().getCreatureConditions(getId());
   }
@@ -574,6 +578,23 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     return value;
+  }
+
+  public int getAbilityModifier(Ability ability) {
+    switch (ability) {
+      case STRENGTH: return getStrengthModifier();
+      case DEXTERITY: return getDexterityModifier();
+      case CONSTITUTION: return getConstitutionModifier();
+      case INTELLIGENCE: return getIntelligenceModifier();
+      case WISDOM: return getWisdomModifier();
+      case CHARISMA: return getCharismaModifier();
+
+      case NONE:
+      case UNKNOWN:
+      default:
+        return 0;
+
+    }
   }
 
   public Optional<Integer> getEncounterInitiative(int encounterNumber) {

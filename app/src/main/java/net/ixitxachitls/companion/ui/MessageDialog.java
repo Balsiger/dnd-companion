@@ -25,18 +25,27 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.text.Spanned;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.util.Texts;
+
+import java.util.Optional;
 
 /**
  * A dialog to show a simple message.
  */
 public class MessageDialog {
   private final AlertDialog.Builder dialog;
+  private Optional<View> view;
 
   public MessageDialog(Context context) {
     this.dialog = new AlertDialog.Builder(context, R.style.ThemeOverlay_AppCompat_Dialog);
+    this.view =
+        Optional.of(LayoutInflater.from(context).inflate(R.layout.view_scroll_text, null, false));
+    this.dialog.setView(view.get());
   }
 
   public MessageDialog formatted(String message) {
@@ -48,11 +57,21 @@ public class MessageDialog {
 
   public MessageDialog layout(@LayoutRes int layout) {
     dialog.setView(layout);
+    view = Optional.empty();
     return this;
   }
 
   public MessageDialog message(String message) {
-    dialog.setMessage(message);
+    if (view.isPresent()) {
+      TextView text = view.get().findViewById(R.id.text);
+      if (text != null) {
+        text.setText(message);
+      } else {
+        dialog.setMessage(message);
+      }
+    } else {
+      dialog.setMessage(message);
+    }
     return this;
   }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Copyright (c) 2017-2018 Peter Balsiger
+  ~ Copyright (c) 2017-2019 Peter Balsiger
   ~ All rights reserved
   ~
   ~ This file is part of the Tabletop Companion.
@@ -20,33 +20,16 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/dropTarget"
-    android:layout_height="@dimen/dropTarget"
-    android:layout_centerHorizontal="true"
-    android:layout_margin="5dp"
-    android:orientation="vertical"
-    android:textAlignment="center">
-
-
-  <ImageView
-      android:id="@+id/icon"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_weight="1"
-      app:srcCompat="@drawable/fui_idp_button_background_email"/>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
 
   <TextView
       android:id="@+id/text"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:layout_weight="0"
-      android:text="... target ..."
-      android:textAlignment="center"
-      android:theme="@style/TinyText"
-      tools:layout_width="match_parent"/>
-</LinearLayout>
+      android:theme="@style/LargeText"/>
+
+</ScrollView>
