@@ -207,6 +207,8 @@ public class CampaignFragment extends CompanionFragment {
     characters().addPlayers(campaign);
     monsters().addCampaign(campaign.getId());
 
+    campaign.observe(this, this::update);
+
     refresh(Documents.FULL_UPDATE);
   }
 
@@ -344,5 +346,9 @@ public class CampaignFragment extends CompanionFragment {
 
       campaign.get().getEncounter().setup();
     }
+  }
+
+  private void update(Campaign campaign) {
+    refresh();
   }
 }
