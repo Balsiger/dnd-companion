@@ -45,7 +45,6 @@ import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.CharacterChipView;
 import net.ixitxachitls.companion.ui.views.ChipView;
 import net.ixitxachitls.companion.ui.views.CreatureChipView;
-import net.ixitxachitls.companion.ui.views.LabelledTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -72,7 +71,7 @@ public class PartyFragment extends NestedCompanionFragment {
   private FlexboxLayout party;
   private TextWrapper<TextView> title;
   private Wrapper<FloatingActionButton> addCharacter;
-  private LabelledTextView adventure;
+  private TextWrapper<TextView> adventure;
   private Transition transition = new AutoTransition();
 
   // State.
@@ -101,7 +100,7 @@ public class PartyFragment extends NestedCompanionFragment {
     title = TextWrapper.wrap(view, R.id.title);
     party = view.findViewById(R.id.party);
     scroll = Wrapper.wrap(view, R.id.scroll);
-    adventure = view.findViewById(R.id.adventure);
+    adventure = TextWrapper.wrap(view, R.id.adventure);
 
     adventures().observe(this, this::refresh);
 

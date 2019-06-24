@@ -64,7 +64,12 @@ public abstract class Data {
   }
 
   public Data getNested(String field) {
-    return new MapData(getRaw(field, Collections.emptyMap()));
+    try {
+      return new MapData(getRaw(field, Collections.emptyMap()));
+    } catch (ClassCastException e) {
+      Status.error("Error converting data for " + field);
+      return empty();
+    }
   }
 
   public List<Data> getNestedList(String field) {

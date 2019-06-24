@@ -315,15 +315,13 @@ public class CampaignFragment extends CompanionFragment {
 
       TransitionManager.beginDelayedTransition((ViewGroup) getView());
       if (campaign.get().getEncounter().inBattle()) {
-        party.hide();
-        encounter.show();
+        encounter.showAndHide(party);
         encounter.refresh(update);
         encounterGroup.expand();
         addConditionAction.show(campaign.get().amDM()
             || campaign.get().getEncounter().amCurrentPlayer());
       } else {
-        party.show();
-        encounter.hide();
+        party.showAndHide(encounter);
         encounterGroup.shrink();
         addConditionAction.show();
       }

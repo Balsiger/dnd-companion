@@ -416,6 +416,23 @@ message ItemTemplateProto {
   Material material = 29;
 }
 
+message ItemProto {
+  string id = 1;
+  string name = 2;
+  repeated string templates = 3;
+  int32 hp = 4;
+  MoneyProto value = 5;
+  string appearance = 6;
+  string player_name = 7;
+  string player_notes = 8;
+  string dm_notes = 9;
+  int32 multiple = 10;
+  int32 multiuse = 11;
+  DurationProto time_left = 12;
+  bool identified = 13;
+  ItemProto content = 14;
+}
+
 message LevelTemplateProto {
   TemplateProto template = 1;
   string abbreviation = 2;
@@ -939,4 +956,84 @@ message SpellTemplateProto {
   Duration duration = 16;
   string saving_throw = 17;
   string spell_resistance = 18;
+}
+
+message AdventureTemplateProto {
+  TemplateProto template = 1;
+  message Level {
+    int32 min = 1;
+    int32 max = 2;
+  }
+  Level recommended_level = 4;
+
+  message Encounter {
+    string name = 1;
+    string short_name = 2;
+    string description = 3;
+    string short_description = 4;
+    repeated string location = 5;
+
+    message ReadAloud {
+      string condition = 1;
+      string text = 2;
+    }
+    repeated ReadAloud read_aloud = 6;
+
+    message Environment {
+      message Spot {
+        string name = 1;
+        string description = 2;
+
+        message Check {
+          string name = 1;
+          int32 dc = 2;
+          int32 modifier = 3;
+          repeated string condition = 4;
+        }
+        repeated Check check = 3;
+      }
+      repeated Spot floor = 1;
+
+      message Ceiling {
+        string name = 1;
+        string description = 2;
+        int32 height_feet = 3;
+        int32 min_height_feet = 4;
+        int32 max_height_feet = 5;
+      }
+      repeated Ceiling ceiling = 2;
+
+      repeated Spot walls = 3;
+      repeated string door = 4;
+      repeated Spot terrain = 5;
+      repeated Spot trap = 6;
+    }
+    Environment environment = 7;
+
+    message Senses {
+      repeated string light = 1;
+      repeated string sound = 2;
+      repeated string smell = 3;
+      repeated string taste = 4;
+      repeated string feel = 5;
+    }
+    Senses senses = 8;
+
+    message Creature {
+      string name = 1;
+      string reason = 2;
+      repeated string tactics = 3;
+    }
+    repeated Creature creature = 9;
+
+    repeated string development = 10;
+
+    message Treasure {
+      string name = 1;
+      string description = 2;
+      repeated ItemProto item = 3;
+    }
+    repeated Treasure treasure = 11;
+  }
+  repeated Encounter encounter = 5;
 }

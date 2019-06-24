@@ -84,7 +84,7 @@ android {
 
 protobuf {
   protoc {
-    artifact = 'com.google.protobuf:protoc:3.7.1'
+    artifact = 'com.google.protobuf:protoc:3.8.0'
   }
   plugins {
     lite {
@@ -221,6 +221,8 @@ task convertProtoData {
       'net.ixitxachitls.companion.proto.SpellTemplateProto')
   convertToBinaryProtos('./src/main/entities', 'quality',
       'net.ixitxachitls.companion.proto.QualityTemplateProto')
+  convertToBinaryProtos('./src/main/entities', 'adventure',
+      'net.ixitxachitls.companion.proto.AdventureTemplateProto')
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -94,9 +94,17 @@ public class NestedCompanionFragment extends Fragment {
   }
 
   public void show() {
-    FragmentManager manager = getChildFragmentManager();
+    FragmentManager manager = getFragmentManager();
     manager.beginTransaction()
         .show(this)
+        .commit();
+  }
+
+  public void showAndHide(NestedCompanionFragment toHide) {
+    FragmentManager manager = getFragmentManager();
+    manager.beginTransaction()
+        .show(this)
+        .hide(toHide)
         .commit();
   }
 }

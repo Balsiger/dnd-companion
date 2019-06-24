@@ -1,0 +1,233 @@
+template {
+  id: "WTC 9556972"
+  name: "Shadowdale - The Scouring of the Land"
+  category: "adventure"
+  synonym: "Shadowdale"
+  synonym: "The Souring of the Land"
+  reference {
+    name: "WTC 9556972"
+  }
+  world: "Forgotten Realms"
+  description: "\\\\Group{Zhentish} soldiers, \\\\Place{Maerimydran} \\\\Monster{drow}, and \\\\God{Sharran} cultists have forged a dark alliance to subjugate the peaceful land of \\\\Place{Shadowdale}. \\\\NPC{Elminter}'s tower lies in ruins, \\\\NPC{Lord Amcathra} governs at the sufferance of the \\\\Place{dale}'s conquerors, and the very Weave of magic in this embattled lands seems to fray with each passing day. The \\\\Group{Zhentish} yoke lies heavy over \\\\Place{Shadowdale} --- but the \\\\Group{Dalesfolk} are ready to fight for their freedom, if only they can find true heroes to lead the way!\\\\par This \\\\Place{Forgotten Realms} campaign adventure is designed for characters of levels 9-13. It can be played as a stand-alone adventure or as the second adventure in a three-part series. Each encounter contains tactical information for the Dungeon Master and expanded map features for ease of play."
+  short_description: "\\\\Place{Shadodale} Lies Conquered! Who Can Free This Oppressed Land?"
+}
+recommended_level {
+  min: 9
+  max: 13
+}
+
+encounter {
+  name: "Swordthrust Crevice"
+  short_name: "F1"
+  description: "The \\\\Place{Swordthrust Crevice} links the \\\\Place{Skull Subterranes} with the rest of the \\Place{Shadowdark} by way of the \\Place{Grinding Gulf} (see page 54)."
+  short_description: "Links \\Place{Skull Subterranes} with the rest of the \\Place{Shadowdark}."
+  location: "Skull Subterranes"
+  location: "Shadowdark"
+  read_aloud {
+    condition: "If the characters approach this area from the \\Place{Grinding Gulf} (see page 54), read:"
+    text: "The well-traveled tunnel you have been following leads into a low, circular cavern before continuing on into the depths. In the center of the chamber, a hole in the ceiling opens onto a wide, flat ledge scattered with bones and other debris. The ledge forms the natural bottom of a narrow crevice that gradually widens as it leads up into the darkness."
+  }
+  read_aloud {
+    condition: "If the characters approach from the \\Place{Skull Subterranes}, read:"
+    text: "Before you yawns a deep crevice that narrows as it drops far into the depths. Two taut ropes, one just above the floor of the adjacent surface and one several feet in the air, cross the chasm, affixed to iron spikes embedded in the floor and walls."
+  }
+  read_aloud {
+    condition: "When the shadow spider emerges from the shadows, read:"
+    text: "The creature is a huge, shadowy arachnid with a jade-hued body. It has a 15-foot-diameter body and stands roughly 10 feet tall."
+  }
+
+  environment {
+    walls {
+      name: "Cavern Walls"
+      description: "Cavern walls in the \\Place{Skull Subterranes} are uneven and rarely flat. They are smooth to the touch but filled with tiny holes, hidden alcoves, and ledges at various heights. They’re also usually wet or at least damp.\\par It takes a successful DC 15 Climb check to move along an unworked stone wall."
+      check {
+        name: "climb"
+        dc: 15
+      }
+    }
+    floor {
+      name: "Uneven Floor"
+      description: "The floor of most passable tunnels and chambers of the \\Place{Skull Subterranes} consists of semipacked gravel, with occasional sharp protuberances or loose rocks, and is considered hewn stone with light rubble.\\par A successful DC 12 Balance check is required to run or charge across such a floor. Failure means the character can still act, but can’t run or charge in this round.\\par The DC of Tumble checks increases by 2."
+      check {
+        name: "balance"
+        dc: 12
+        condition: "run"
+        condition: "charge"
+      }
+      check {
+        name: "tumble"
+        modifier: 2
+      }
+    }
+    ceiling {
+      name: "Cavern Ceiling"
+      description: "Ceilings are generally 15 feet high, but heights vary significantly (from as low as 5 feet to as high as 25 feet)."
+      height_feet: 15
+      min_height_feet: 5
+      max_height_feet: 25
+    }
+    terrain {
+      name: "Crevice"
+      description: "The crevice is 150 feet deep. It is roughly 15 feet across at the top, narrowing to a hole 6 feet in diameter at the bottom where it opens onto the shelf below. Halfway down the crevice, a side niche serves as the lair of the creature. Climbin the rough walls of the crevice requires a DC 25 Climb check."
+      check {
+        name: "climb"
+        dc: 25
+      }
+    }
+    terrain {
+      name: "Chasm"
+      description: "Crossing the chasm on the crude rope bridge requires walking across the lower rope when clinging to the upper rope. A successful DC 5 Balance check is required to safely cross the chasm. A character attempting to do so without holding the upper rope must make a successful DC 20 Balance check."
+      check {
+        name: "balance"
+        dc: 5
+      }
+      check {
+        name: "balance"
+        dc: 20
+        condition: "without holding upper rope"
+      }
+    }
+    trap {
+      name: "Silent Alarm"
+      description: "The top of the crevice is warded with a silent \\Spell{alarm} spell set by the sorcerer (CL 6th) in area 2A."
+    }
+  }
+  creature {
+    name: "shadow spider"
+    reason: "The crevice is the lair of a \\Monster{shadow spider}, selected as a guardian by the \\Group{Matron Sisters} in case of treachery by the \\Group{shades} (such as a shade trying to infiltrate by way of the \\Place{Plane of Shadow})."
+    tactics: "The shadow spider lurks in the shadows of its lair until the characters attempt the perilous ascent or descent. It attacks the first creature to pass by its niche with its four claws. If successful in establishing a grapple, it attempts to carry the victim to its larder by using \\Spell{shadow walk}, paralyzes it there, and then returns to seize another victim. It only returns to its larder to begin eating if there are no more targets or if it is in danger of dying."
+  }
+  development: "The guards in area 2A come to investigate activity in this area if they make a successful opposed Listen check, with a –12 circumstance penalty, or if the alarm is triggered. They do not intervene if they spy the shadow spider in combat, but they do wait to see if it prevails or leaves any interlopers alive."
+  treasure {
+    name: "Chasm Floor"
+    description: "The floor of the chasm is littered with bones, adventuring gear, and a handful of coins, collectively worth 30 gp and all fairly new. Although the PCs might suspect these are the bones of adventurers who fell to their death unaided, in truth they are interlopers who escaped the shadow spider’s clutches but not death."
+    item {
+      id: "Copper Coin"
+      multiple: 7
+    }
+    item {
+      id: "Silver Coin"
+      multiple: 3
+    }
+    item {
+      id: "Backpack"
+    }
+    item {
+      id: "Winter Blanket"
+    }
+    item {
+      id: "Candle"
+    }
+    item {
+      id: "Grappling Hook"
+    }
+    item {
+      id: "Flint and Steel"
+    }
+    item {
+      id: "Inkpen"
+    }
+    item {
+      id: "Common Lamp"
+    }
+    item {
+      id: "Iron Pot"
+    }
+    item {
+      id: "Belt Pouch"
+      content {
+        id: "Sealing Wax"
+      }
+    }
+    item {
+      id: "Soap"
+    }
+    item {
+      id: "Waterskin"
+    }
+    item {
+      id: "Waterskin"
+    }
+    item {
+      id: "Torch"
+    }
+    item {
+      id: "Torch"
+    }
+    item {
+      id: "Torch"
+    }
+    item {
+      id: "Whetstone"
+    }
+    item {
+      id: "Shovel"
+    }
+    item {
+      id: "Small Steel Mirror"
+    }
+    item {
+      id: "Oil"
+    }
+    item {
+      id: "Oil"
+    }
+    item {
+      id: "Miner's Pick"
+    }
+    item {
+      id: "Piton"
+    }
+    item {
+      id: "Piton"
+    }
+    item {
+      id: "Piton"
+    }
+  }
+  treasure {
+    name: "Shadow Spider's Larder"
+    description: "The shadow spider’s larder on the \\Place{Plane of Shadow} (coterminous with the spider’s niche) contains a random assortment of coins, weapons, and armor (none of it magic or masterwork) worth 437 gp."
+    item {
+      id: "Gold Coin"
+      multiple: 37
+    }
+    item {
+      id: "Studded Leather"
+    }
+    item {
+      id: "Scale Mail"
+    }
+    item {
+      id: "Light Wooden Shield"
+    }
+    item {
+      id: "Halberd"
+    }
+    item {
+      id: "Shot Sword"
+    }
+    item {
+      id: "Longsword"
+    }
+    item {
+      id: "Club"
+    }
+    item {
+      id: "Dagger"
+    }
+    item {
+      id: "Dagger"
+    }
+    item {
+      id: "Dagger"
+    }
+    item {
+      id: "Morningstar"
+    }
+    item {
+      id: "Rapier"
+    }
+  }
+}
+

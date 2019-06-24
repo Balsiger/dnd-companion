@@ -26,6 +26,7 @@ import android.support.annotation.Nullable;
 import com.google.inject.Singleton;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.templates.AdventureTemplate;
 import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
@@ -61,11 +62,17 @@ public class Templates {
   private final MiniatureTemplates miniatures = new MiniatureTemplates();
   private final TemplatesStore<SkillTemplate> skills = new TemplatesStore<>(SkillTemplate.class);
   private final TemplatesStore<SpellTemplate> spells = new TemplatesStore<>(SpellTemplate.class);
+  private final TemplatesStore<AdventureTemplate> adventures =
+      new TemplatesStore<>(AdventureTemplate.class);
 
   private final AssetAccessor assetAccessor;
 
   public Templates(AssetAccessor assetAccessor) {
     this.assetAccessor = assetAccessor;
+  }
+
+  public TemplatesStore<AdventureTemplate> getAdventureTemplates() {
+    return adventures;
   }
 
   public TemplatesStore<FeatTemplate> getFeatTemplates() {
@@ -147,6 +154,9 @@ public class Templates {
                 break;
               case QualityTemplate.TYPE:
                 qualities.read(name, assetAccessor.open(name));
+                break;
+              case AdventureTemplate.TYPE:
+                adventures.read(name, assetAccessor.open(name));
                 break;
               default:
                 Status.error("Unsupported type " + type + " found!");
