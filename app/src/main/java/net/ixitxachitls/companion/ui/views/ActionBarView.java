@@ -193,7 +193,7 @@ public class ActionBarView extends LinearLayout {
       button.get().setImageDrawable(getContext().getDrawable(icon));
       button.description(title, description).padding(AbstractWrapper.Padding.ALL, 10);
       button.get().setBackgroundColor(getContext().getColor(R.color.black));
-      button.get().setBackground(getContext().getDrawable(R.drawable.ripple));
+      button.get().setForeground(getContext().getDrawable(R.drawable.ripple_dark));
       button.tint(R.color.action);
       button.get().setScaleType(ImageView.ScaleType.FIT_CENTER);
       button.get().setAdjustViewBounds(true);

@@ -306,6 +306,9 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   protected void refresh(Documents.Update update) {
+    Status.log("refresh: " + update);
+
+
     // Campaigns.
     if (campaign.isPresent()) {
       title.update(campaign.get());
