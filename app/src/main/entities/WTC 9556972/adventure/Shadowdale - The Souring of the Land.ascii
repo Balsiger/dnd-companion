@@ -19,8 +19,9 @@ recommended_level {
 encounter {
   name: "Swordthrust Crevice"
   short_name: "F1"
-  description: "The \\\\Place{Swordthrust Crevice} links the \\\\Place{Skull Subterranes} with the rest of the \\Place{Shadowdark} by way of the \\Place{Grinding Gulf} (see page 54)."
+  description: "The \\Place{Swordthrust Crevice} links the \\Place{Skull Subterranes} with the rest of the \\Place{Shadowdark} by way of the \\Place{Grinding Gulf} (see page 54)."
   short_description: "Links \\Place{Skull Subterranes} with the rest of the \\Place{Shadowdark}."
+  encounter_level: 12
   location: "Skull Subterranes"
   location: "Shadowdark"
   read_aloud {
@@ -39,7 +40,7 @@ encounter {
   environment {
     walls {
       name: "Cavern Walls"
-      description: "Cavern walls in the \\Place{Skull Subterranes} are uneven and rarely flat. They are smooth to the touch but filled with tiny holes, hidden alcoves, and ledges at various heights. They’re also usually wet or at least damp.\\par It takes a successful DC 15 Climb check to move along an unworked stone wall."
+      description: "Cavern walls in the \\Place{Skull Subterranes} are uneven and rarely flat. They are smooth to the touch but filled with tiny holes, hidden alcoves, and ledges at various heights. They’re also usually wet or at least damp.\n It takes a successful DC 15 Climb check to move along an unworked stone wall."
       check {
         name: "climb"
         dc: 15
@@ -47,7 +48,7 @@ encounter {
     }
     floor {
       name: "Uneven Floor"
-      description: "The floor of most passable tunnels and chambers of the \\Place{Skull Subterranes} consists of semipacked gravel, with occasional sharp protuberances or loose rocks, and is considered hewn stone with light rubble.\\par A successful DC 12 Balance check is required to run or charge across such a floor. Failure means the character can still act, but can’t run or charge in this round.\\par The DC of Tumble checks increases by 2."
+      description: "The floor of most passable tunnels and chambers of the \\Place{Skull Subterranes} consists of semipacked gravel, with occasional sharp protuberances or loose rocks, and is considered hewn stone with light rubble.\nA successful DC 12 Balance check is required to run or charge across such a floor. Failure means the character can still act, but can’t run or charge in this round.\nThe DC of Tumble checks increases by 2."
       check {
         name: "balance"
         dc: 12

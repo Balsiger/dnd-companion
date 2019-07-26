@@ -149,7 +149,7 @@ public class ListSelectDialog extends Dialog {
                                     int required, Collection<Entry> values) {
     Bundle arguments = Dialog.arguments(layoutId, titleId, color);
     arguments.putStringArrayList(ARG_SELECTED, new ArrayList<>(selected));
-    arguments.putParcelableArrayList(ARG_VALUES, new ArrayList<Entry>(values));
+    arguments.putParcelableArrayList(ARG_VALUES, new ArrayList<>(values));
     arguments.putInt(ARG_REQUIRED, required);
     return arguments;
   }

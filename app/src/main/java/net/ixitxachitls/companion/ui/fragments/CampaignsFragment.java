@@ -29,6 +29,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
@@ -125,6 +126,7 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void refreshCampaigns(Documents.Update update) {
+    Status.log("CampaignsFragment refreshing campaigns: " + update);
     this.campaigns.ensureOnly(campaigns().getIds(), id -> new CampaignTitleView(getContext()));
     this.campaigns.update(campaigns().getIds(),
         (id, view) -> {
@@ -144,6 +146,7 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void refreshCharacters(Documents.Update update) {
+    Status.log("CampaignsFragment refreshing characters: " + update);
     List<String> characterIds = characters().getAll().stream()
         .filter(Character::amPlayer)
         .map(Character::getId)
@@ -167,6 +170,7 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void refreshDisplay(Documents.Update update) {
+    Status.log("CampaignsFragment refreshing display: " + update);
     campaigns.simpleUpdate(v -> v.refresh(update));
     characters.simpleUpdate(v -> v.refresh(update));
 
@@ -174,6 +178,7 @@ public class CampaignsFragment extends CompanionFragment {
   }
 
   private void refreshUser(Documents.Update update) {
+    Status.log("CampaignsFragment refreshing user: " + update);
     user.setTitle(me().getNickname());
     user.setSubtitle(subtitle());
     user.loadImageUrl(me().getPhotoUrl());

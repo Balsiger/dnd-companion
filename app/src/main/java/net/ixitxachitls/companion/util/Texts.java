@@ -28,9 +28,10 @@ import android.text.Spanned;
 
 import com.google.common.collect.ImmutableMap;
 
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.util.commands.BoldCommand;
-import net.ixitxachitls.companion.util.commands.ClassCommand;
+import net.ixitxachitls.companion.util.commands.ColorCommand;
 import net.ixitxachitls.companion.util.commands.ItalicsCommand;
 import net.ixitxachitls.companion.util.commands.ParCommand;
 import net.ixitxachitls.companion.util.commands.TableCommand;
@@ -61,7 +62,8 @@ public class Texts {
   private static final char MARKER_ESCAPE_END = '\006';
   private static final String SPECIAL = "<>=!~*#$%@?+|";
   private static Map<String, TextCommand> COMMANDS = ImmutableMap.<String, TextCommand>builder()
-      .put("Class", new ClassCommand())
+      .put("Class", new ColorCommand(R.color.className))
+      .put("Place", new ColorCommand(R.color.campaign))
       .put("par", new ParCommand())
       .put("bold", new BoldCommand())
       .put("emph", new ItalicsCommand())

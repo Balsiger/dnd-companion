@@ -971,13 +971,14 @@ message AdventureTemplateProto {
     string short_name = 2;
     string description = 3;
     string short_description = 4;
-    repeated string location = 5;
+    int32 encounter_level = 5;
+    repeated string location = 6;
 
     message ReadAloud {
       string condition = 1;
       string text = 2;
     }
-    repeated ReadAloud read_aloud = 6;
+    repeated ReadAloud read_aloud = 7;
 
     message Environment {
       message Spot {
@@ -1008,7 +1009,7 @@ message AdventureTemplateProto {
       repeated Spot terrain = 5;
       repeated Spot trap = 6;
     }
-    Environment environment = 7;
+    Environment environment = 8;
 
     message Senses {
       repeated string light = 1;
@@ -1017,23 +1018,23 @@ message AdventureTemplateProto {
       repeated string taste = 4;
       repeated string feel = 5;
     }
-    Senses senses = 8;
+    Senses senses = 9;
 
     message Creature {
       string name = 1;
       string reason = 2;
       repeated string tactics = 3;
     }
-    repeated Creature creature = 9;
+    repeated Creature creature = 10;
 
-    repeated string development = 10;
+    repeated string development = 11;
 
     message Treasure {
       string name = 1;
       string description = 2;
       repeated ItemProto item = 3;
     }
-    repeated Treasure treasure = 11;
+    repeated Treasure treasure = 12;
   }
   repeated Encounter encounter = 5;
 }

@@ -77,11 +77,13 @@ public class AdventuresDialog extends Dialog {
   private void refresh(Documents.Update update) {
     adventures.removeAllViews();
     if (campaign.isPresent()) {
+      /*
       for (Adventure adventure : adventures().getForCampaign(campaign.get().getId())) {
         adventures.addView(new LineView(getContext(), adventure,
             campaign.get().getAdventure().isPresent()
                 && campaign.get().getAdventure().get().getId().equals(adventure.getId())));
       }
+      */
     }
   }
 
@@ -126,7 +128,7 @@ public class AdventuresDialog extends Dialog {
 
     private void select() {
       if (campaign.isPresent()) {
-        campaign.get().setAdventure(adventure);
+        //campaign.get().setAdventure(adventure);
       }
     }
   }

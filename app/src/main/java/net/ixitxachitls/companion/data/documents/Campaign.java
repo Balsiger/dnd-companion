@@ -51,6 +51,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private static final String FIELD_ENCOUNTER = "encounter";
   private static final String FIELD_INVITES = "invites";
   private static final String FIELD_ADVENTURE = "adventure";
+  private static final String FIELD_ENCOUNTER_ID = "encounter-id";
 
   private static final String GENERIC_NAME = "Generic";
   private static WorldTemplate GENERIC;
@@ -63,13 +64,25 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private Encounter encounter = new Encounter(this);
   private List<String> invites = new ArrayList<>();
   private String adventureId = "";
+  private String encounterId = "";
 
+  /*
   public Optional<Adventure> getAdventure() {
     return context.adventures().get(adventureId);
   }
 
   public void setAdventure(Adventure adventure) {
     this.adventureId = adventure.getId();
+    store();
+  }
+  */
+
+  public String getAdventureId() {
+    return adventureId;
+  }
+
+  public void setAdventureId(String adventureId) {
+    this.adventureId = adventureId;
     store();
   }
 
@@ -96,6 +109,15 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
   public Encounter getEncounter() {
     return encounter;
+  }
+
+  public String getEncounterId() {
+    return encounterId;
+  }
+
+  public void setEncounterId(String encounterId) {
+    this.encounterId = encounterId;
+    store();
   }
 
   public List<String> getInvites() {
@@ -210,6 +232,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     encounter.read(data.getNested(FIELD_ENCOUNTER));
     invites = data.get(FIELD_INVITES, invites);
     adventureId = data.get(FIELD_ADVENTURE, "");
+    encounterId = data.get(FIELD_ENCOUNTER_ID, "");
   }
 
   @Override
@@ -220,6 +243,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     data.put(FIELD_ENCOUNTER, encounter.write());
     data.put(FIELD_INVITES, invites);
     data.put(FIELD_ADVENTURE, adventureId);
+    data.put(FIELD_ENCOUNTER_ID, encounterId);
 
     return data;
   }

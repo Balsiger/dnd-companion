@@ -127,5 +127,7 @@
   <string name="feat_qualifier_skill">Feat Qualifier (Skill)</string>
   <string name="feat_qualifier_spells">Feat Qualifier (Multiple Spells)</string>
   <string name="character_select_quality">Select Quality</string>
+  <string name="select_adventure">Select Adventure</string>
+  <string name="select_encounter">Select Encounter</string>
 
 </resources>

@@ -79,6 +79,68 @@ public class TitleView extends LinearLayout {
     init(attributes);
   }
 
+  public void setAction(Wrapper.Action action) {
+    container.setOnClickListener(v -> action.execute());
+  }
+
+  public void setDefaultImage(@DrawableRes int drawable) {
+    image.setImageDrawable(getContext().getDrawable(drawable));
+  }
+
+  public void setImageAction(Wrapper.Action action) {
+    image.setOnClickListener(v -> action.execute());
+  }
+
+  public void setImageBitmap(Bitmap bitmap) {
+    image.setImageBitmap(bitmap);
+  }
+
+  public void setSubtitle(String text) {
+    subtitle.text(text);
+  }
+
+  public void setTitle(String text) {
+    title.text(text);
+  }
+
+  public void clearImage(@DrawableRes int defaultDrawable) {
+    image.clearImage(defaultDrawable);
+  }
+
+  public void loadImageUrl(String url) {
+    image.loadImageUrl(url);
+  }
+
+  public void removeAction() {
+    setOnClickListener(null);
+  }
+
+  public void removeImageAction() {
+    image.setOnClickListener(null);
+  }
+
+  public void updateIcons() {
+    icons.ensureOnly(iconDrawableResources(), this::createIcon);
+  }
+
+  protected ImageView createIcon(@DrawableRes int id) {
+    ImageView icon = new ImageView(getContext());
+    icon.setImageDrawable(getContext().getDrawable(id));
+    icon.setMaxWidth(50);
+    icon.setMaxHeight(50);
+    icon.setAdjustViewBounds(true);
+
+    return icon;
+  }
+
+  protected @Nullable MessageView createMessageIcon(Message message) {
+    return null;
+  }
+
+  protected List<Integer> iconDrawableResources() {
+    return new ArrayList<>();
+  }
+
   @CallSuper
   protected View init(AttributeSet attributes) {
     TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.TitleView);
@@ -108,73 +170,11 @@ public class TitleView extends LinearLayout {
     return view;
   }
 
-  public void setTitle(String text) {
-    title.text(text);
-  }
-
-  public void setSubtitle(String text) {
-    subtitle.text(text);
-  }
-
-  public void loadImageUrl(String url) {
-    image.loadImageUrl(url);
-  }
-
-  public void setDefaultImage(@DrawableRes int drawable) {
-    image.setImageDrawable(getContext().getDrawable(drawable));
-  }
-
-  public void setImageBitmap(Bitmap bitmap) {
-    image.setImageBitmap(bitmap);
-  }
-
-  public void clearImage(@DrawableRes int defaultDrawable) {
-    image.clearImage(defaultDrawable);
-  }
-
-  public void setAction(Wrapper.Action action) {
-    setOnClickListener(v -> action.execute());
-  }
-
-  public void removeAction() {
-    setOnClickListener(null);
-  }
-
-  public void setImageAction(Wrapper.Action action) {
-    image.setOnClickListener(v -> action.execute());
-  }
-
-  public void removeImageAction() {
-    image.setOnClickListener(null);
-  }
-
-  protected List<Integer> iconDrawableResources() {
-    return new ArrayList<>();
-  }
-
-  public void updateIcons() {
-    icons.ensureOnly(iconDrawableResources(), this::createIcon);
-  }
-
-  protected ImageView createIcon(@DrawableRes int id) {
-    ImageView icon = new ImageView(getContext());
-    icon.setImageDrawable(getContext().getDrawable(id));
-    icon.setMaxWidth(50);
-    icon.setMaxHeight(50);
-    icon.setAdjustViewBounds(true);
-
-    return icon;
-  }
-
   protected List<Message> messageIcons() {
     return new ArrayList<>();
   }
 
   protected void updateMessages() {
     messages.ensureOnly(messageIcons(), this::createMessageIcon);
-  }
-
-  protected @Nullable MessageView createMessageIcon(Message message) {
-    return null;
   }
 }

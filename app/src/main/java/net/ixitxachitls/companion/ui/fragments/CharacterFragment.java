@@ -238,7 +238,7 @@ public class CharacterFragment extends CompanionFragment {
 
     delete.show(character.amPlayer() || character.amDM());
 
-    campaignTitle.text(campaign.get().getName());
+    campaignTitle.text(campaign.isPresent() ? campaign.get().getName() : "");
     title.update(character);
     title.update(images());
     title.refresh(new Documents.Update(character.getId()));

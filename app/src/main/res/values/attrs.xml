@@ -78,4 +78,9 @@
     <attr name="text" format="string"/>
   </declare-styleable>
 
+  <declare-styleable name="TooltipImageView">
+    <attr name="tooltip_title" format="string"/>
+    <attr name="tooltip_message" format="string"/>
+  </declare-styleable>
+
 </resources>

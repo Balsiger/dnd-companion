@@ -1,0 +1,16 @@
+template {
+  id: "TEST-1"
+  name: "A Test Adventure"
+  category: "adventure"
+  synonym: "Test 1"
+  reference {
+    name: "WTC 9556972"
+  }
+  world: "Forgotten Realms"
+  description: "This is just a test"
+  short_description: "Just a test"
+}
+recommended_level {
+  min: 1
+  max: 20
+}

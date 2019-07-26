@@ -127,7 +127,9 @@ public class CharacterDialog extends Dialog {
   protected void save() {
     if (character.isPresent()) {
       character.get().setName(name.getText());
-      character.get().setGender(Gender.fromName(gender.getText()));
+      if (gender.getTouchables().isEmpty()) {
+        character.get().setGender(Gender.fromName(gender.getText()));
+      }
       character.get().setRace(race.getText());
       character.get().store();
 

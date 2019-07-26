@@ -108,7 +108,7 @@ public class CompanionFragments {
 
   public CompanionFragment show(CompanionFragment.Type fragment, Optional<View> sharedElement) {
     CompanionApplication.get().logEvent(fragment.toString(), fragment.name(), "view");
-    switch(fragment) {
+    switch (fragment) {
       case settings:
         if (!settingsFragment.isPresent()) {
           settingsFragment = Optional.of(new UserFragment());
@@ -149,8 +149,6 @@ public class CompanionFragments {
   }
 
   public void showCampaign(Campaign campaign, Optional<View> shared) {
-    // TODO(merlin): Do we still need this?
-    //context.campaigns().changeCurrent(campaign.getId());
     show(CompanionFragment.Type.campaign, shared);
     if (campaignFragment.isPresent()) {
       campaignFragment.get().showCampaign(campaign);

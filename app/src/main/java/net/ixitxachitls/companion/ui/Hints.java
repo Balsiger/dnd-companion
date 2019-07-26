@@ -64,6 +64,10 @@ public class Hints {
           .add("If you find that some things are missing, like races, classes, qualities options "
               + "or items, let me know at companion@ixitxachitls.net. "
               + "Maybe I find some time to add them, maybe I ask for your help.")
+          .add("If you are good at design and want to help out making this better, "
+              + "contact me at companion@ixitxachitls.net")
+          .add("If you want to contribute additional items, monsters or adventures, let me "
+              + "know at companion@ixitxachitls.net.")
       .build();
 
   public static String nextHint() {

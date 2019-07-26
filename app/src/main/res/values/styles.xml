@@ -45,4 +45,13 @@
     <item name="windowNoTitle">true</item>
     <item name="android:windowBackground">@drawable/splash</item>
   </style>
+
+  <style name="RippleThemeHighlight">
+    <item name="colorControlHighlight">@color/black</item>
+  </style>
+
+  <style name="RippleTheme" >
+    <item name="android:theme">@style/RippleThemeHighlight</item>
+  </style>
+
 </resources>

@@ -438,6 +438,27 @@
             android:layout_marginTop="10dp"
             android:text="street sign by Pondok Multimedia from the Noun Project"
             android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="speak by Achmmad Fauzi from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Floor by Arthur Shlain from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="top by Lloyd Humphreys from the Noun Project"
+            android:theme="@style/LargeText"/>
       </LinearLayout>
     </ScrollView>
 

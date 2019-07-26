@@ -29,7 +29,7 @@
     android:padding="20dp">
 
   <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-      android:id="@+id/location"
+      android:id="@+id/locations"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       app:labelColor="@color/miniature"

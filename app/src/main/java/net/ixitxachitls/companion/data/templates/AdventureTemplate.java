@@ -21,7 +21,16 @@
 
 package net.ixitxachitls.companion.data.templates;
 
+import com.google.common.collect.ImmutableList;
+
 import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.util.Strings;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * A template for a complete Adventure
@@ -31,11 +40,44 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
   public static final String TYPE = "adventure";
 
   private final Template.AdventureTemplateProto proto;
+  private final List<EncounterTemplate> encounters = new ArrayList<>();
 
-  public AdventureTemplate(String name, Template.AdventureTemplateProto proto) {
-    super(name);
+  public AdventureTemplate(Template.AdventureTemplateProto proto) {
+    super(proto.getTemplate().getId());
 
     this.proto = proto;
+  }
+
+  public List<EncounterTemplate> getEncounters() {
+    ensureEncounters();
+    return Collections.unmodifiableList(this.encounters);
+  }
+
+  public String getId() {
+    return proto.getTemplate().getId();
+  }
+
+  public String getTitle() {
+    return proto.getTemplate().getName();
+  }
+
+  public Optional<EncounterTemplate> getEncounter(String encounterId) {
+    ensureEncounters();
+    for (EncounterTemplate encounter : encounters) {
+      if (encounter.getId().equals(encounterId)) {
+        return Optional.of(encounter);
+      }
+    }
+
+    return Optional.empty();
+  }
+
+  private void ensureEncounters() {
+    if (encounters.isEmpty()) {
+      encounters.addAll(proto.getEncounterList().stream()
+          .map(proto -> new EncounterTemplate(proto))
+          .collect(Collectors.toList()));
+    }
   }
 
   public static Template.AdventureTemplateProto defaultProto() {
@@ -43,6 +85,169 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
   }
 
   public static AdventureTemplate fromProto(Template.AdventureTemplateProto proto) {
-    return new AdventureTemplate(proto.getTemplate().getName(), proto);
+    return new AdventureTemplate(proto);
+  }
+
+  public class EncounterTemplate {
+    private final Template.AdventureTemplateProto.Encounter proto;
+
+    public EncounterTemplate(Template.AdventureTemplateProto.Encounter proto) {
+      this.proto = proto;
+    }
+
+    public List<Ceiling> getCeilings() {
+      return proto.getEnvironment().getCeilingList().stream()
+          .map(f -> new Ceiling(f.getName(), f.getDescription(), f.getHeightFeet(),
+              f.getMinHeightFeet(), f.getMaxHeightFeet()))
+          .collect(Collectors.toList());
+    }
+
+    public String getDescription() {
+      return proto.getDescription();
+    }
+
+    public int getEncounterLevel() {
+      return proto.getEncounterLevel();
+    }
+
+    public List<Spot> getFloors() {
+      return proto.getEnvironment().getFloorList().stream()
+          .map(f -> new Spot(f.getName(), f.getDescription(), f.getCheckList().stream()
+              .map(c -> new Check(c.getName(), c.getDc(), c.getModifier(), c.getConditionList()))
+              .collect(Collectors.toList())))
+          .collect(Collectors.toList());
+    }
+
+    public String getId() {
+      return proto.getShortName();
+    }
+
+    public List<String> getLocations() {
+      return proto.getLocationList();
+    }
+
+    public String getName() {
+      return proto.getName();
+    }
+
+    public List<ReadAloud> getReadAlouds() {
+      return proto.getReadAloudList().stream()
+          .map(r -> new ReadAloud(r.getCondition(), r.getText()))
+          .collect(Collectors.toList());
+    }
+
+    public String getShortDescription() {
+      return proto.getShortDescription();
+    }
+
+    public class Check {
+      private final String name;
+      private final int dc;
+      private final int modifier;
+      private final ImmutableList<String> conditions;
+
+      public Check(String name, int dc, int modifier, List<String> conditions) {
+        this.name = name;
+        this.dc = dc;
+        this.modifier = modifier;
+        this.conditions = ImmutableList.copyOf(conditions);
+      }
+
+      public ImmutableList<String> getConditions() {
+        return conditions;
+      }
+
+      public int getDc() {
+        return dc;
+      }
+
+      public int getModifier() {
+        return modifier;
+      }
+
+      public String getName() {
+        return name;
+      }
+
+      public String format() {
+        return name + " DC " + dc + ", " + modifier + " if " + Strings.AND_JOINER.join(conditions);
+      }
+    }
+
+    public class Spot {
+      private final String name;
+      private final String description;
+      private final ImmutableList<Check> checks;
+
+      public Spot(String name, String description, List<Check> checks) {
+        this.name = name;
+        this.description = description;
+        this.checks = ImmutableList.copyOf(checks);
+      }
+
+      public ImmutableList<Check> getChecks() {
+        return checks;
+      }
+
+      public String getDescription() {
+        return description;
+      }
+
+      public String getName() {
+        return name;
+      }
+
+      public String format() {
+        return "\\bold{" + name + "}: " + description + ";" + Strings.COMMA_JOINER.join(
+            checks.stream().map(Check::format).collect(Collectors.toList()));
+      }
+    }
+
+    public class Ceiling {
+      private final String name;
+      private final String description;
+      private final int heightFeet;
+      private final int heightMinFeet;
+      private final int heightMaxFeet;
+
+      public Ceiling(String name, String description, int heightFeet, int heightMinFeet,
+                     int heightMaxFeet) {
+        this.name = name;
+        this.description = description;
+        this.heightFeet = heightFeet;
+        this.heightMinFeet = heightMinFeet;
+        this.heightMaxFeet = heightMaxFeet;
+      }
+
+      public String format() {
+        return "\\bold{" + name + "}: " + formatHeight() + "\n" + description;
+      }
+
+      private String formatHeight() {
+        if (heightMinFeet == heightMaxFeet) {
+          return heightFeet + " ft";
+        }
+
+        return heightFeet + " ft (" + heightMinFeet + "-" + heightMaxFeet + ")";
+      }
+    }
+
+    public class ReadAloud {
+      private final String condition;
+      private final String text;
+
+      public ReadAloud(String condition, String text) {
+        this.condition = condition;
+        this.text = text;
+      }
+
+      public String getCondition() {
+        return condition;
+      }
+
+      public String getText() {
+        return text;
+      }
+    }
   }
 }

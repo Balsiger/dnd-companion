@@ -71,18 +71,17 @@
         <ImageView
             android:layout_width="@dimen/dropTarget"
             android:layout_height="@dimen/dropTarget"
+            android:layout_gravity="top"
             android:layout_marginEnd="20dp"
+            android:alpha=".2"
             android:tint="@color/campaignDark"
             app:srcCompat="@drawable/noun_street_sign_2256165"/>
 
-        <TextView
+        <net.ixitxachitls.companion.ui.fragments.AdventureView
             android:id="@+id/adventure"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="... adventure ..."
-            android:textColor="@color/campaignText"
-            android:theme="@style/LargeText"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </net.ixitxachitls.companion.ui.fragments.AdventureView>
 
       </LinearLayout>
 

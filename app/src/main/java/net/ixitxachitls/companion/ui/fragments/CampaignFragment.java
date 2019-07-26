@@ -93,6 +93,7 @@ public class CampaignFragment extends CompanionFragment {
 
   @Override
   public void refresh() {
+    Status.log("CampaignF refresh");
     refresh(Documents.FULL_UPDATE);
     title.refresh(Documents.FULL_UPDATE);
 
@@ -173,10 +174,6 @@ public class CampaignFragment extends CompanionFragment {
             + "characters.")
         .onClick(this::deleteCampaign).hide();
 
-    campaigns().observe(this, this::refresh);
-    images().observe(this, title::refresh);
-    messages().observe(this, title::refresh);
-
     return view;
   }
 
@@ -207,9 +204,12 @@ public class CampaignFragment extends CompanionFragment {
     characters().addPlayers(campaign);
     monsters().addCampaign(campaign.getId());
 
+    images().observe(this, title::refresh);
+    messages().observe(this, title::refresh);
     campaign.observe(this, this::update);
 
-    refresh(Documents.FULL_UPDATE);
+    // The following should be included in the campaign observation above....
+    //refresh(Documents.FULL_UPDATE);
   }
 
   public boolean shows(String campaignId) {
@@ -306,8 +306,7 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   protected void refresh(Documents.Update update) {
-    Status.log("refresh: " + update);
-
+    Status.log("CampaignF refresh: " + update);
 
     // Campaigns.
     if (campaign.isPresent()) {
@@ -350,6 +349,7 @@ public class CampaignFragment extends CompanionFragment {
   }
 
   private void update(Campaign campaign) {
+    Status.log("CampaignF update: " + campaign.getId());
     refresh();
   }
 }

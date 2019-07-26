@@ -35,12 +35,10 @@ import android.widget.TextView;
 import com.google.android.flexbox.FlexboxLayout;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.documents.Adventure;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.values.Encounter;
-import net.ixitxachitls.companion.ui.dialogs.AdventuresDialog;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.CharacterChipView;
 import net.ixitxachitls.companion.ui.views.ChipView;
@@ -69,9 +67,9 @@ public class PartyFragment extends NestedCompanionFragment {
   // UI.
   private Wrapper<View> scroll;
   private FlexboxLayout party;
+  private AdventureView adventure;
   private TextWrapper<TextView> title;
   private Wrapper<FloatingActionButton> addCharacter;
-  private TextWrapper<TextView> adventure;
   private Transition transition = new AutoTransition();
 
   // State.
@@ -99,10 +97,8 @@ public class PartyFragment extends NestedCompanionFragment {
 
     title = TextWrapper.wrap(view, R.id.title);
     party = view.findViewById(R.id.party);
+    adventure = view.findViewById(R.id.adventure);
     scroll = Wrapper.wrap(view, R.id.scroll);
-    adventure = TextWrapper.wrap(view, R.id.adventure);
-
-    adventures().observe(this, this::refresh);
 
     addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)
         .onClick(this::createCharacter)
@@ -127,30 +123,7 @@ public class PartyFragment extends NestedCompanionFragment {
     this.campaign = Optional.of(campaign);
     this.encounter = Optional.empty();
 
-    adventures().readAdventures(campaign.getId());
     refresh();
-  }
-
-  private void addAdventure() {
-    if (!adventure.getText().isEmpty()
-        && campaign.isPresent()
-        && !adventureExists(adventure.getText())) {
-      Adventure.create(context(), campaign.get().getId(), adventure.getText()).store();
-    }
-  }
-
-  private boolean adventureExists(String name) {
-    if (campaign.isPresent()) {
-      return adventures().exists(campaign.get().getId(), name);
-    }
-
-    return false;
-  }
-
-  private void changeAdventure() {
-    if (campaign.isPresent()) {
-      AdventuresDialog.newInstance(campaign.get().getId()).display();
-    }
   }
 
   private void createCharacter() {
@@ -175,14 +148,10 @@ public class PartyFragment extends NestedCompanionFragment {
     if (campaign.isPresent()) {
       // Adventures.
       if (campaign.get().amDM()) {
-        adventure.onClick(this::changeAdventure);
-        if (campaign.get().getAdventure().isPresent()) {
-          adventure.text(campaign.get().getAdventure().get().getName());
-        } else {
-          adventure.text("");
-        }
+        adventure.setVisibility(View.VISIBLE);
+        adventure.updateCampaign(campaign.get());
       } else {
-        adventure.gone();
+        adventure.setVisibility(View.GONE);
       }
 
       // Characters.
