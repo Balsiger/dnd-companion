@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.values;
 
-import android.support.annotation.Nullable;
-
 import net.ixitxachitls.companion.data.documents.Data;
 
 import java.util.ArrayList;
@@ -30,6 +28,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.annotation.Nullable;
 
 /**
  * A timed condition targeted at a specific character (from a specific source).

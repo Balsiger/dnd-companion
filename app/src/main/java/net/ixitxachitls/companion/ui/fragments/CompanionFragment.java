@@ -22,8 +22,6 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.AsyncTask;
-import android.support.annotation.DrawableRes;
-import android.support.v4.app.Fragment;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
@@ -42,6 +40,9 @@ import net.ixitxachitls.companion.ui.views.ActionBarView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
+
+import androidx.annotation.DrawableRes;
+import androidx.fragment.app.Fragment;
 
 /**
  * Base fragment for all our non-dialog fragments

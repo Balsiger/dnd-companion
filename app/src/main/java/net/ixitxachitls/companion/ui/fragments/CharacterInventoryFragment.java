@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.ui.fragments;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,6 +55,8 @@ import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+
+import androidx.annotation.IdRes;
 
 /**
  * Child fragment for a characters inventory.

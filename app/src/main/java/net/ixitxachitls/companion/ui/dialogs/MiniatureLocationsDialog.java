@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +36,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.SortedSet;
+
+import androidx.cardview.widget.CardView;
 
 /**
  * Dialog for editing miniature locations.

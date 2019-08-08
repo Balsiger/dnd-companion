@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.CallSuper;
-
 import com.google.firebase.firestore.DocumentReference;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -44,6 +42,8 @@ import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
+
+import androidx.annotation.CallSuper;
 
 /**
  * The data for a single user.

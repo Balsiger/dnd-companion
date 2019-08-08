@@ -23,11 +23,6 @@ package net.ixitxachitls.companion.ui.dialogs;
 
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.annotation.CallSuper;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StringRes;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +42,12 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 import java.util.Optional;
+
+import androidx.annotation.CallSuper;
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.DialogFragment;
 
 /**
  * Base for all the editAction fragments for the companion.

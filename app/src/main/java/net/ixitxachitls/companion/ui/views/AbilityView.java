@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +36,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
+
+import androidx.annotation.Nullable;
 
 /**
  * View to show a single ability.

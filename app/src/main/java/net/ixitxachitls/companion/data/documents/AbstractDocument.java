@@ -21,32 +21,31 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Observer;
-
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 
 /**
  * Abstract base for all documents.
  */
 public abstract class AbstractDocument<D extends AbstractDocument<D>> {
 
+  protected final FirebaseFirestore db = FirebaseFirestore.getInstance();
+  private final MutableLiveData<D> live = new MutableLiveData<>();
   @FunctionalInterface
   public interface Action {
     void execute();
   }
 
-  protected final FirebaseFirestore db = FirebaseFirestore.getInstance();
-  private final MutableLiveData<D> live = new MutableLiveData<>();
-
-  public void observeForever(Observer<D> observer) {
-    live.observeForever(observer);
-  }
-
   public void observe(LifecycleOwner owner, Observer<D> observer) {
     unobserve(owner);
     live.observe(owner, observer);
+  }
+
+  public void observeForever(Observer<D> observer) {
+    live.observeForever(observer);
   }
 
   public void unobserve(LifecycleOwner owner) {

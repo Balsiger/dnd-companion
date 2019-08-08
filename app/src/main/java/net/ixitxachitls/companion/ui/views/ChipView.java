@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,18 +33,20 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+
 /**
  * A small chip representing a character in the game.
  */
 public class ChipView extends LinearLayout {
 
-  private final String dataId;
-  private final int chipColor;
-  private final int backgroundColor;
-
   protected final Wrapper<RoundImageView> image;
   protected final TextWrapper<TextView> name;
   protected final LinearLayout icons;
+  private final String dataId;
+  private final int chipColor;
+  private final int backgroundColor;
 
   public ChipView(Context context, String dataId, String name, String subtitle,
                   @ColorRes int chipColor, @ColorRes int backgroundColor,
@@ -74,13 +74,8 @@ public class ChipView extends LinearLayout {
     addView(container);
   }
 
-  public void addTo(ViewGroup group) {
-    ViewGroup parent = (ViewGroup) getParent();
-    if (parent != null) {
-      parent.removeView(this);
-    }
-
-    group.addView(this);
+  public String getDataId() {
+    return dataId;
   }
 
   public void setBackground(@ColorRes int color) {
@@ -90,6 +85,15 @@ public class ChipView extends LinearLayout {
 
   @Deprecated
   protected void setSubtitle(String text) {
+  }
+
+  public void addTo(ViewGroup group) {
+    ViewGroup parent = (ViewGroup) getParent();
+    if (parent != null) {
+      parent.removeView(this);
+    }
+
+    group.addView(this);
   }
 
   @Deprecated
@@ -109,10 +113,6 @@ public class ChipView extends LinearLayout {
   @Deprecated
   public void unselect() {
     name.backgroundColor(chipColor);
-  }
-
-  public String getDataId() {
-    return dataId;
   }
 
   public void update() {}

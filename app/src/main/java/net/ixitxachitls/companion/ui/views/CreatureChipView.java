@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
@@ -32,6 +30,9 @@ import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.Monster;
 
 import java.util.Optional;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
 
 /**
  * Chip view for a creature (monster).

@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.CallSuper;
-
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
@@ -37,6 +35,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
+import androidx.annotation.CallSuper;
 
 /**
  * A campaign in the game.

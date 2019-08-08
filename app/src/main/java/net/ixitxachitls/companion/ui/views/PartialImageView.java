@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.IntRange;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -33,10 +32,13 @@ import net.ixitxachitls.companion.ui.MessageDialog;
 
 import javax.annotation.Nullable;
 
+import androidx.annotation.IntRange;
+import androidx.appcompat.widget.AppCompatImageView;
+
 /**
  * View for a partially visible image.
  */
-public class PartialImageView extends android.support.v7.widget.AppCompatImageView {
+public class PartialImageView extends AppCompatImageView {
 
   private ClipDrawable clipped;
 

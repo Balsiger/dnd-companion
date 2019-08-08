@@ -22,9 +22,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
 
@@ -40,11 +37,14 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
 
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
+
 /**
  * A dialog to sell an item.
  */
 public class SellItemDialog extends Dialog {
-
   private static final String ARG_MESSAGE_ID = "message_id";
 
   private static final String ITEM_PP = "Platinum Piece";

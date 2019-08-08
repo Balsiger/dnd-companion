@@ -23,9 +23,6 @@ package net.ixitxachitls.companion.ui.dialogs;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StringRes;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.view.View;
@@ -48,6 +45,10 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 
 /**
  * Fragment for editing a campaign date.

@@ -23,10 +23,6 @@ package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +40,11 @@ import net.ixitxachitls.companion.ui.dialogs.MiniatureLocationsDialog;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
 
 import java.util.Optional;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * A fragment to display the miniatures.
@@ -187,7 +188,6 @@ public class MiniaturesFragment extends CompanionFragment {
       // saving a view for a miniature makes no sense.
       return POSITION_NONE;
     }
-
 
     @Override
     public CharSequence getPageTitle(int position) {

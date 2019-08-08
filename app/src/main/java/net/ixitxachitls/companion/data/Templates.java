@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data;
 
-import android.support.annotation.Nullable;
-
 import com.google.inject.Singleton;
 
 import net.ixitxachitls.companion.Status;
@@ -41,6 +39,8 @@ import net.ixitxachitls.companion.storage.AssetAccessor;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Optional;
+
+import androidx.annotation.Nullable;
 
 /**
  * Storage place for all templates.

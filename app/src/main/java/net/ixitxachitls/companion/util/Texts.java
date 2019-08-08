@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.util;
 
 import android.content.Context;
-import android.support.annotation.VisibleForTesting;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 
@@ -42,6 +41,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import androidx.annotation.VisibleForTesting;
 
 /**
  * Utility methods dealing with texts (strings including commands).

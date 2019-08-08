@@ -21,7 +21,6 @@
 
 package net.ixitxachitls.companion.ui.views;
 
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -29,15 +28,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.Nullable;
+
 /**
  * A view group whose children can be updated without recreation.
  */
 public class UpdatableViewGroup<G extends ViewGroup, V extends View, I> {
-  @FunctionalInterface
-  public interface Factory<V extends View, I> {
-    @Nullable V create(I id);
+  private final G view;
+  private Map<I, V> childrenById = new HashMap<>();
+
+  public UpdatableViewGroup(G view) {
+    this.view = view;
   }
 
+  @FunctionalInterface
+  public interface Factory<V extends View, I> {
+    @Nullable
+    V create(I id);
+  }
   @FunctionalInterface
   public interface Updater<V extends View, I> {
     void update(I id, V view);
@@ -46,13 +54,6 @@ public class UpdatableViewGroup<G extends ViewGroup, V extends View, I> {
   @FunctionalInterface
   public interface SimpleUpdator<V extends View> {
     void update(V view);
-  }
-
-  private final G view;
-  private Map<I, V> childrenById = new HashMap<>();
-
-  public UpdatableViewGroup(G view) {
-    this.view = view;
   }
 
   public G getView() {
@@ -74,15 +75,15 @@ public class UpdatableViewGroup<G extends ViewGroup, V extends View, I> {
     }
   }
 
-  public void update(List<I> ids, Updater<V, I> updater) {
-    for (I id : ids) {
-      updater.update(id, childrenById.get(id));
-    }
-  }
-
   public void simpleUpdate(SimpleUpdator<V> updater) {
     for (V view : childrenById.values()) {
       updater.update(view);
+    }
+  }
+
+  public void update(List<I> ids, Updater<V, I> updater) {
+    for (I id : ids) {
+      updater.update(id, childrenById.get(id));
     }
   }
 

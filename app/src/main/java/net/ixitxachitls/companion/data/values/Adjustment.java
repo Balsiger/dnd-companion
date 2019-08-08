@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.data.values;
 
 import android.graphics.Color;
-import android.support.annotation.CallSuper;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
@@ -33,6 +32,8 @@ import net.ixitxachitls.companion.data.documents.Data;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+
+import androidx.annotation.CallSuper;
 
 /**
  * A modifier with a description of the target value that is to be modified.

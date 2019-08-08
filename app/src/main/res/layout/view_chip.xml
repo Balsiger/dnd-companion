@@ -54,7 +54,7 @@
 
   </LinearLayout>
 
-  <android.support.v4.widget.NestedScrollView
+  <androidx.core.widget.NestedScrollView
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
       android:layout_marginStart="1dp"
@@ -68,7 +68,7 @@
         android:padding="1dp">
     </LinearLayout>
 
-  </android.support.v4.widget.NestedScrollView>
+  </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
 

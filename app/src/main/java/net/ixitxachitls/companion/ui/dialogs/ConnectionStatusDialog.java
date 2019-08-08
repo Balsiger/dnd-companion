@@ -22,8 +22,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,6 +29,9 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
 
 /**
  * Dialog for showing the connection status.
@@ -40,20 +41,6 @@ public class ConnectionStatusDialog extends Dialog {
   private static final String ARG_MESSAGES = "messages";
 
   private String messages;
-
-  public static ConnectionStatusDialog newInstance(String title, String messages) {
-    ConnectionStatusDialog dialog = new ConnectionStatusDialog();
-    dialog.setArguments(arguments(R.layout.dialog_connection_status,
-        title, R.color.cell, messages));
-    return dialog;
-  }
-
-  protected static Bundle arguments(@LayoutRes int layoutId, String title,
-                                    @ColorRes int colorId, String messages) {
-    Bundle arguments = Dialog.arguments(layoutId, title, colorId);
-    arguments.putString(ARG_MESSAGES, messages);
-    return arguments;
-  }
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -67,5 +54,19 @@ public class ConnectionStatusDialog extends Dialog {
     Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
     TextWrapper<TextView> text = TextWrapper.wrap(view, R.id.messages);
     text.text(messages);
+  }
+
+  protected static Bundle arguments(@LayoutRes int layoutId, String title,
+                                    @ColorRes int colorId, String messages) {
+    Bundle arguments = Dialog.arguments(layoutId, title, colorId);
+    arguments.putString(ARG_MESSAGES, messages);
+    return arguments;
+  }
+
+  public static ConnectionStatusDialog newInstance(String title, String messages) {
+    ConnectionStatusDialog dialog = new ConnectionStatusDialog();
+    dialog.setArguments(arguments(R.layout.dialog_connection_status,
+        title, R.color.cell, messages));
+    return dialog;
   }
 }

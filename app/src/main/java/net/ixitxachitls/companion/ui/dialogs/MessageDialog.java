@@ -22,9 +22,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -45,6 +42,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 
 /**
  * A view to allow to select one ore multiple characters as a target.

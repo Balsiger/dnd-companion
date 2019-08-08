@@ -25,8 +25,9 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import net.ixitxachitls.companion.R;
 
@@ -50,14 +51,6 @@ public class ActionButton extends FloatingActionButton {
     super(context, attributes, defStyleAttr);
 
     init(attributes);
-  }
-
-  private void init(AttributeSet attributes) {
-    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.ActionButton);
-
-    pulseBrightColor = array.getColor(R.styleable.ActionButton_pulse_bright, 0);
-    pulseDarkColor = array.getColor(R.styleable.ActionButton_pulse_dark, 0);
-    pulseDuration = array.getInteger(R.styleable.ActionButton_pulse_duration, 1000);
   }
 
   public void pulse(boolean start) {
@@ -105,5 +98,13 @@ public class ActionButton extends FloatingActionButton {
       }
     }
     */
+  }
+
+  private void init(AttributeSet attributes) {
+    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.ActionButton);
+
+    pulseBrightColor = array.getColor(R.styleable.ActionButton_pulse_bright, 0);
+    pulseDarkColor = array.getColor(R.styleable.ActionButton_pulse_dark, 0);
+    pulseDuration = array.getInteger(R.styleable.ActionButton_pulse_duration, 1000);
   }
 }

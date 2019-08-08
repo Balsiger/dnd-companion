@@ -22,13 +22,14 @@
 package net.ixitxachitls.companion.util.commands;
 
 import android.content.Context;
-import android.support.annotation.ColorRes;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 
 import java.util.List;
+
+import androidx.annotation.ColorRes;
 
 /**
  * A command to display the text colored.

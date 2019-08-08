@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.CallSuper;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -36,6 +35,8 @@ import net.ixitxachitls.companion.data.documents.User;
 
 import java.util.List;
 import java.util.Optional;
+
+import androidx.annotation.CallSuper;
 
 /**
  * View for a campaign title.
@@ -86,13 +87,8 @@ public class CampaignTitleView extends TitleView {
   }
 
   @Override
-  @CallSuper
-  protected View init(AttributeSet attributes) {
-    View view = super.init(attributes);
-
-    container.setBackgroundColor(getContext().getColor(R.color.campaign));
-    setDefaultImage(R.drawable.image_filter_hdr);
-    return view;
+  protected MessageView createMessageIcon(Message message) {
+    return new CampaignMessageView(getContext(), campaign.get(), message);
   }
 
   @Override
@@ -106,6 +102,16 @@ public class CampaignTitleView extends TitleView {
   }
 
   @Override
+  @CallSuper
+  protected View init(AttributeSet attributes) {
+    View view = super.init(attributes);
+
+    container.setBackgroundColor(getContext().getColor(R.color.campaign));
+    setDefaultImage(R.drawable.image_filter_hdr);
+    return view;
+  }
+
+  @Override
   protected List<Message> messageIcons() {
     List<Message> messages = super.messageIcons();
     if (campaign.isPresent() && campaign.get().amDM()) {
@@ -113,10 +119,5 @@ public class CampaignTitleView extends TitleView {
     }
 
     return messages;
-  }
-
-  @Override
-  protected MessageView createMessageIcon(Message message) {
-    return new CampaignMessageView(getContext(), campaign.get(), message);
   }
 }

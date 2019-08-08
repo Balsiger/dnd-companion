@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.ui;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.support.annotation.LayoutRes;
 import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +32,8 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.util.Texts;
 
 import java.util.Optional;
+
+import androidx.annotation.LayoutRes;
 
 /**
  * A dialog to show a simple message.

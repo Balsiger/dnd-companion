@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.NonNull;
-
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
@@ -33,6 +31,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.annotation.NonNull;
 
 /**
  * A filter for miniatures.

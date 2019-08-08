@@ -25,8 +25,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -41,6 +39,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
 
 /**
  * Simple dialog to select an item from a list.

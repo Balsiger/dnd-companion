@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.CallSuper;
-
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
@@ -56,6 +54,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import androidx.annotation.CallSuper;
 
 /**
  * The base for all monsters or characters in the game.

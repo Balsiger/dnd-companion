@@ -24,8 +24,6 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorRes;
-import android.support.annotation.Nullable;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
@@ -39,10 +37,14 @@ import net.ixitxachitls.companion.ui.MessageDialog;
 
 import java.util.Optional;
 
+import androidx.annotation.ColorRes;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
+
 /**
  * An icon for a condition.
  */
-public class ConditionIconView extends android.support.v7.widget.AppCompatImageView {
+public class ConditionIconView extends AppCompatImageView {
 
   private static final int SIZE_PX = 50;
 

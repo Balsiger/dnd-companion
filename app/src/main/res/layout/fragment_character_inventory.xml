@@ -132,7 +132,7 @@
           android:layout_weight="1"
           android:orientation="vertical">
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
@@ -323,7 +323,7 @@
             </TableLayout>
 
           </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
       </LinearLayout>
 
@@ -335,7 +335,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-      <android.support.v4.widget.NestedScrollView
+      <androidx.core.widget.NestedScrollView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:layout_weight="1"
@@ -536,9 +536,9 @@
               android:padding="5dp"/>
 
         </LinearLayout>
-      </android.support.v4.widget.NestedScrollView>
+      </androidx.core.widget.NestedScrollView>
 
-      <android.support.v4.widget.NestedScrollView
+      <androidx.core.widget.NestedScrollView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:layout_marginStart="10dp"
@@ -550,7 +550,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             />
-      </android.support.v4.widget.NestedScrollView>
+      </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 
@@ -597,7 +597,7 @@
         </LinearLayout>
       </HorizontalScrollView>
 
-      <android.support.design.widget.FloatingActionButton
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
           android:id="@+id/item_add"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"

@@ -29,58 +29,58 @@
               android:keepScreenOn="true"
               android:orientation="horizontal">
 
-  <android.support.design.widget.FloatingActionButton
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/add"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="8dp"
       android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"
       android:layout_weight="1"
       android:clickable="true"
       app:backgroundTint="@color/monster"
       app:srcCompat="@drawable/ic_add_black_24dp"/>
 
-  <android.support.design.widget.FloatingActionButton
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/delay"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="8dp"
       android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"
       android:layout_weight="1"
       android:clickable="true"
       android:tint="@color/white"
       app:backgroundTint="@color/battle"
       app:srcCompat="@drawable/ic_access_time_black_24dp"/>
 
-  <android.support.design.widget.FloatingActionButton
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/timed"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="8dp"
       android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"
       android:layout_weight="1"
       android:clickable="true"
       app:backgroundTint="@color/battle"
       app:srcCompat="@drawable/ic_hourglass_full_white_24dp"/>
 
-  <android.support.design.widget.FloatingActionButton
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/next"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="8dp"
       android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"
       android:layout_weight="1"
       android:clickable="true"
       android:tint="@color/white"
       app:backgroundTint="@color/battle"
       app:srcCompat="@drawable/ic_navigate_next_black_24dp"/>
 
-  <android.support.design.widget.FloatingActionButton
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/stop"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="8dp"
       android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"
       android:layout_weight="1"
       android:clickable="true"
       android:tint="@color/white"

@@ -22,9 +22,6 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
 import android.transition.TransitionManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -46,6 +43,10 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 
 /**
  * View for actionsView (and progress).

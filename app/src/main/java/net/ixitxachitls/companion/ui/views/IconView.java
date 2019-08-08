@@ -25,8 +25,6 @@ import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
@@ -35,10 +33,14 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
+
 /**
  * A view to display an icon.
  */
-public class IconView extends android.support.v7.widget.AppCompatImageView {
+public class IconView extends AppCompatImageView {
   private int bleepBrightColor;
   private int bleepDarkColor;
   private int bleepDuration;
@@ -49,14 +51,6 @@ public class IconView extends android.support.v7.widget.AppCompatImageView {
     init(attributes);
   }
 
-  private void init(AttributeSet attributes) {
-    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.IconView);
-
-    bleepBrightColor = array.getColor(R.styleable.IconView_bleep_bright, 0);
-    bleepDarkColor = array.getColor(R.styleable.IconView_bleep_dark, 0);
-    bleepDuration = array.getInteger(R.styleable.IconView_bleep_duration, 250);
-  }
-
   public void setAction(Wrapper.Action action) {
     setOnClickListener(new OnClickListener() {
       @Override
@@ -64,16 +58,6 @@ public class IconView extends android.support.v7.widget.AppCompatImageView {
         action.execute();
       }
     });
-  }
-
-  public void setDescription(String title, String text) {
-    setOnLongClickListener(v -> { MessageDialog.create(getContext())
-        .message(text).title(title).show(); return true; });
-  }
-
-  public void setDescription(String title, @LayoutRes int layout) {
-    setOnLongClickListener(v -> { MessageDialog.create(getContext())
-        .layout(layout).title(title).show(); return true; });
   }
 
   public void bleep() {
@@ -96,5 +80,23 @@ public class IconView extends android.support.v7.widget.AppCompatImageView {
       }
     });
     animator.start();
+  }
+
+  public void setDescription(String title, @LayoutRes int layout) {
+    setOnLongClickListener(v -> { MessageDialog.create(getContext())
+        .layout(layout).title(title).show(); return true; });
+  }
+
+  public void setDescription(String title, String text) {
+    setOnLongClickListener(v -> { MessageDialog.create(getContext())
+        .message(text).title(title).show(); return true; });
+  }
+
+  private void init(AttributeSet attributes) {
+    TypedArray array = getContext().obtainStyledAttributes(attributes, R.styleable.IconView);
+
+    bleepBrightColor = array.getColor(R.styleable.IconView_bleep_bright, 0);
+    bleepDarkColor = array.getColor(R.styleable.IconView_bleep_dark, 0);
+    bleepDuration = array.getInteger(R.styleable.IconView_bleep_duration, 250);
   }
 }

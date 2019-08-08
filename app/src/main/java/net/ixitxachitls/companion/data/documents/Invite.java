@@ -21,13 +21,13 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.CallSuper;
-
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.Map;
+
+import androidx.annotation.CallSuper;
 
 /**
  * An inviteAction from one user to another to participate in a campaign.

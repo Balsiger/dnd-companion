@@ -22,16 +22,17 @@
 package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.content.res.ColorStateList;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IdRes;
-import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.EditText;
 
 import net.ixitxachitls.companion.R;
 
 import java.util.Optional;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.StringRes;
 
 /**
  * Wrapper for editAction texts.

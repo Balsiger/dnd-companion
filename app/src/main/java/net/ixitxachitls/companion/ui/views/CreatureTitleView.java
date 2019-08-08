@@ -23,10 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.CallSuper;
-import android.support.annotation.ColorRes;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -36,6 +32,11 @@ import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.Images;
 
 import java.util.Optional;
+
+import androidx.annotation.CallSuper;
+import androidx.annotation.ColorRes;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
 
 /**
  * Base title view for creature (characters or monsters).

@@ -22,8 +22,6 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.support.annotation.ColorRes;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.data.documents.Creature;
@@ -33,6 +31,9 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import androidx.annotation.ColorRes;
+import androidx.appcompat.widget.LinearLayoutCompat;
 
 /**
  * View for all condition icons.

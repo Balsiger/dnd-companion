@@ -22,8 +22,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -55,6 +53,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
 
 
 /**

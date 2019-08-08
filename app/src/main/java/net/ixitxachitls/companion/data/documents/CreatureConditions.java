@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.CallSuper;
-
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
@@ -37,6 +35,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import androidx.annotation.CallSuper;
 
 /**
  * Managing of conditions on creatures.

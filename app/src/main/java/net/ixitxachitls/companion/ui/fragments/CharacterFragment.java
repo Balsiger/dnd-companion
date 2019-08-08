@@ -23,17 +23,14 @@ package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.tabs.TabLayout;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
@@ -50,6 +47,12 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import java.util.Optional;
 
 import javax.annotation.Nullable;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 
 /**
  * Fragment for displaying character information.

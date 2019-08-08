@@ -26,7 +26,6 @@ import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.multidex.MultiDexApplication;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
@@ -44,6 +43,8 @@ import net.ixitxachitls.companion.data.values.Encounters;
 import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
+
+import androidx.multidex.MultiDexApplication;
 
 /**
  * The main application for the companion.

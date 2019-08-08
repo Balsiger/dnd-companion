@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.ColorRes;
 import android.text.InputType;
 import android.text.Spanned;
 import android.util.AttributeSet;
@@ -37,6 +36,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+
+import androidx.annotation.ColorRes;
 
 /**
  * A text view with a label and description.

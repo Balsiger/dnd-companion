@@ -21,13 +21,13 @@
 
 package net.ixitxachitls.companion.data.values;
 
-import android.support.annotation.Nullable;
-
 import net.ixitxachitls.companion.data.documents.Data;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+
+import androidx.annotation.Nullable;
 
 /**
  * A condition affecting a character for a specific amount of time.

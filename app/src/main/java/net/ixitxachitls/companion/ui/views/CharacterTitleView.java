@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -35,6 +34,8 @@ import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
 import java.util.List;
 import java.util.Optional;
+
+import androidx.annotation.Nullable;
 
 /**
  * A tile view for characters.
@@ -66,6 +67,11 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
   }
 
   @Override
+  protected MessageView createMessageIcon(Message message) {
+    return new CharacterMessageView(getContext(), creature.get(), message);
+  }
+
+  @Override
   protected List<Integer> iconDrawableResources() {
     List<Integer> resources = super.iconDrawableResources();
 
@@ -93,10 +99,5 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
     }
 
     return messages;
-  }
-
-  @Override
-  protected MessageView createMessageIcon(Message message) {
-    return new CharacterMessageView(getContext(), creature.get(), message);
   }
 }

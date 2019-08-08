@@ -22,14 +22,15 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.support.annotation.StyleRes;
-import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.ui.MessageDialog;
+
+import androidx.annotation.StyleRes;
+import androidx.appcompat.widget.AppCompatTextView;
 
 /**
  * A view showing a modified value.

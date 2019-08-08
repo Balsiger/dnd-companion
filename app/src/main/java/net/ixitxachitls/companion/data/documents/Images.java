@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.documents;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.annotation.Nullable;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
@@ -41,6 +40,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
+
+import androidx.annotation.Nullable;
 
 /**
  * Storage for all dynamic images of entries.

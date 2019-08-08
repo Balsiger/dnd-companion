@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
@@ -38,6 +37,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+
+import androidx.annotation.Nullable;
 
 /**
  * View to display status messages.

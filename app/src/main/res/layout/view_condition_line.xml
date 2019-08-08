@@ -67,7 +67,7 @@
       android:textAlignment="viewEnd"
       android:theme="@style/SmallText"/>
 
-  <android.support.design.widget.FloatingActionButton
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
       android:id="@+id/delete_condition"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"

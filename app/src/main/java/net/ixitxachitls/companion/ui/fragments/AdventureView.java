@@ -22,8 +22,6 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.content.Context;
-import android.support.annotation.CallSuper;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +42,9 @@ import net.ixitxachitls.companion.util.Texts;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import androidx.annotation.CallSuper;
+import androidx.annotation.Nullable;
 
 /**
  * A view for displaying adventure and encounter information.

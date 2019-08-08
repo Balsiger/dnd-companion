@@ -23,9 +23,6 @@ package net.ixitxachitls.companion.ui.dialogs;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StringRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +45,10 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 
 
 /**

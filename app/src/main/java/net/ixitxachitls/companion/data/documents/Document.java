@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.CallSuper;
-
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -38,6 +36,8 @@ import java.util.Map;
 import java.util.Optional;
 
 import javax.annotation.Nullable;
+
+import androidx.annotation.CallSuper;
 
 /**
  * The base document for all documents stored in firestore.

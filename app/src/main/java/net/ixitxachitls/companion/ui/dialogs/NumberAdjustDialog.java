@@ -22,9 +22,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StringRes;
 import android.text.InputType;
 import android.view.View;
 import android.widget.ImageView;
@@ -33,6 +30,10 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 
 /**
  * A dialog to adjust a number.

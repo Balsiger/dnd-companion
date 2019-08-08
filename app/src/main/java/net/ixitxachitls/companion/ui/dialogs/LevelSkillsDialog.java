@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.ui.dialogs;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +41,9 @@ import java.util.Map;
 import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
 
 /**
  * A dialog to select the skills for a level.

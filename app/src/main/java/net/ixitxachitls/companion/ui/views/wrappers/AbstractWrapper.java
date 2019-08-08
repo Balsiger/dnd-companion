@@ -22,10 +22,6 @@
 package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.content.res.ColorStateList;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IdRes;
-import android.support.annotation.LayoutRes;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
@@ -38,6 +34,11 @@ import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.util.TouchListener;
 
 import java.util.Optional;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.LayoutRes;
 
 /**
  * Abstact base wrapper.

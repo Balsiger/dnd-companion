@@ -21,14 +21,14 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.CallSuper;
-
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 
 import java.util.Map;
+
+import androidx.annotation.CallSuper;
 
 /**
  * A condition on a creature.

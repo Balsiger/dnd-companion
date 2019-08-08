@@ -89,7 +89,7 @@
 
   </ScrollView>
 
-  <android.support.constraint.ConstraintLayout
+  <androidx.constraintlayout.widget.ConstraintLayout
       android:id="@+id/linearLayout"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/miniatures"/>
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/campaign_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_add_black_24dp"/>
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/character_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -137,6 +137,6 @@
         app:layout_constraintEnd_toStartOf="@+id/campaign_add"
         app:srcCompat="@drawable/ic_add_black_24dp"/>
 
-  </android.support.constraint.ConstraintLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

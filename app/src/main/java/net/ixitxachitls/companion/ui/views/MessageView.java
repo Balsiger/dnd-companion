@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -39,6 +37,9 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import androidx.annotation.ColorInt;
+import androidx.appcompat.widget.AppCompatImageView;
 
 /**
  * A view to show an icon for a outstanding message and allow to interact with it.
@@ -60,7 +61,8 @@ public abstract class MessageView extends AppCompatImageView {
     setOnClickListener(this::onClick);
   }
 
-  public @ColorInt int iconColor() {
+  public @ColorInt
+  int iconColor() {
     switch (message.getType()) {
       case xp:
         return getContext().getColor(R.color.characterDark);

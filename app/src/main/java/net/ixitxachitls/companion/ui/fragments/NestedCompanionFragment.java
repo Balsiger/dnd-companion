@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.ViewGroup;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -35,6 +33,9 @@ import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 /**
  * A base fragment for all nested fragments.

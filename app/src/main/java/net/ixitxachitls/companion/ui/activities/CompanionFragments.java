@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.ui.activities;
 
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
 import android.view.View;
@@ -43,6 +41,9 @@ import net.ixitxachitls.companion.ui.fragments.MiniaturesFragment;
 import net.ixitxachitls.companion.ui.fragments.UserFragment;
 
 import java.util.Optional;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 /**
  * Manager for companion fragments.

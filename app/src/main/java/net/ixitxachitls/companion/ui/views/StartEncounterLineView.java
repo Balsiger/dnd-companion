@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.support.annotation.ColorRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
@@ -32,6 +31,8 @@ import android.widget.LinearLayout;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import androidx.annotation.ColorRes;
 
 /**
  * View representing a line in the start battle dialog.
@@ -75,12 +76,12 @@ public class StartEncounterLineView extends LinearLayout {
     return included.get().isChecked();
   }
 
-  public boolean isSurprised() {
-    return surprised.get().isChecked();
-  }
-
   public void setIncluded(boolean checked) {
     included.get().setChecked(checked);
+  }
+
+  public boolean isSurprised() {
+    return surprised.get().isChecked();
   }
 
   public void setSurprised(boolean checked) {

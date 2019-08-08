@@ -23,7 +23,6 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +35,8 @@ import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
+
+import androidx.annotation.Nullable;
 
 /**
  * Widget for editing a single ability
@@ -53,6 +54,18 @@ public class EditAbility extends LinearLayout {
     super(context, attributes);
 
     init(attributes);
+  }
+
+  public int getValue() {
+    if (edit.getText().isEmpty()) {
+      return 0;
+    }
+
+    return Integer.parseInt(edit.getText());
+  }
+
+  public void setValue(int value) {
+    edit.text(String.valueOf(value));
   }
 
   public void setOnChange(Wrapper.Action action) {
@@ -76,26 +89,14 @@ public class EditAbility extends LinearLayout {
     modifier = TextWrapper.wrap(view, R.id.modifier);
   }
 
-  private void plus() {
-    edit.text(String.valueOf(getValue() + 1));
-    update();
-  }
-
   private void minus() {
     edit.text(String.valueOf(getValue() - 1));
     update();
   }
 
-  public int getValue() {
-    if (edit.getText().isEmpty()) {
-      return 0;
-    }
-
-    return Integer.parseInt(edit.getText());
-  }
-
-  public void setValue(int value) {
-    edit.text(String.valueOf(value));
+  private void plus() {
+    edit.text(String.valueOf(getValue() + 1));
+    update();
   }
 
   private void update() {

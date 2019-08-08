@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.ui.views;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +40,8 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Random;
+
+import androidx.annotation.Nullable;
 
 /**
  * A view to select a dice result or roll randomly.

@@ -22,11 +22,12 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
+
+import androidx.annotation.Nullable;
 
 /**
  * Icon showing the network status of an entry.

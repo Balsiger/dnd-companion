@@ -22,11 +22,6 @@
 package net.ixitxachitls.companion.ui.views.wrappers;
 
 import android.graphics.Typeface;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
-import android.support.annotation.IdRes;
-import android.support.annotation.StringRes;
-import android.support.annotation.StyleRes;
 import android.text.Editable;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -34,6 +29,12 @@ import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
+import androidx.annotation.IdRes;
+import androidx.annotation.StringRes;
+import androidx.annotation.StyleRes;
 
 /**
  * Abstrat wrapper for text views.
@@ -51,28 +52,16 @@ public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapp
     super(view);
   }
 
+  public CharSequence getCharSequence() {
+    return view.getText();
+  }
+
+  public String getText() {
+    return view.getText().toString();
+  }
+
   public boolean isEmpty() {
     return view.getText().length() == 0;
-  }
-
-  @SuppressWarnings("unchecked")
-  public W noWrap() {
-    view.setMaxLines(1);
-    view.setEllipsize(TextUtils.TruncateAt.END);
-
-    return (W) this;
-  }
-
-  @SuppressWarnings("unchecked")
-  public W text(@StringRes int text) {
-    return text(view.getContext().getString(text));
-  }
-
-  @SuppressWarnings("unchecked")
-  public W ems(int ems) {
-    view.setEms(ems);
-
-    return (W) this;
   }
 
   @SuppressWarnings("unchecked")
@@ -95,10 +84,61 @@ public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapp
   }
 
   @SuppressWarnings("unchecked")
+  public W append(String text) {
+    view.append(text);
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W append(Spanned text) {
+    view.append(text);
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
   public W bold() {
     view.setTypeface(Typeface.DEFAULT_BOLD);
 
     return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W ems(int ems) {
+    view.setEms(ems);
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W noWrap() {
+    view.setMaxLines(1);
+    view.setEllipsize(TextUtils.TruncateAt.END);
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W onChange(Wrapper.Action action) {
+    view.addTextChangedListener(new TextChangeWatcher(action));
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W onEdit(Wrapper.Action action) {
+    view.setOnEditorActionListener((v, actionId, event) -> {
+      action.execute();
+      return false;
+    });
+
+    return (W) this;
+  }
+
+  @SuppressWarnings("unchecked")
+  public W text(@StringRes int text) {
+    return text(view.getContext().getString(text));
   }
 
   @SuppressWarnings("unchecked")
@@ -111,20 +151,6 @@ public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapp
   @SuppressWarnings("unchecked")
   public W text(Spanned text) {
     view.setText(text);
-
-    return (W) this;
-  }
-
-  @SuppressWarnings("unchecked")
-  public W append(String text) {
-    view.append(text);
-
-    return (W) this;
-  }
-
-  @SuppressWarnings("unchecked")
-  public W append(Spanned text) {
-    view.append(text);
 
     return (W) this;
   }
@@ -146,31 +172,6 @@ public class AbstractTextWrapper<V extends TextView, W extends AbstractTextWrapp
     view.setTextAppearance(style);
 
     return (W) this;
-  }
-
-  @SuppressWarnings("unchecked")
-  public W onEdit(Wrapper.Action action) {
-    view.setOnEditorActionListener((v, actionId, event) -> {
-      action.execute();
-      return false;
-    });
-
-    return (W) this;
-  }
-
-  @SuppressWarnings("unchecked")
-  public W onChange(Wrapper.Action action) {
-    view.addTextChangedListener(new TextChangeWatcher(action));
-
-    return (W) this;
-  }
-
-  public String getText() {
-    return view.getText().toString();
-  }
-
-  public CharSequence getCharSequence() {
-    return view.getText();
   }
 
   private static class TextChangeWatcher implements TextWatcher {

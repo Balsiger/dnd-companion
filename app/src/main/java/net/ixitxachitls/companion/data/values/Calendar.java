@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.values;
 
-import android.support.annotation.VisibleForTesting;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
@@ -31,6 +29,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+
+import androidx.annotation.VisibleForTesting;
 
 /**
  * A calendarAction representation of a world.
@@ -298,6 +298,17 @@ public class Calendar {
     return proto.build();
   }
 
+@Override
+  public String toString()
+  {
+    return years + "; "
+        + months + "; "
+        + daysPerWeek + " days per week; "
+        + hoursPerDay + " hours per day; "
+        + minutesPerHour + " minutes per hour; "
+        + secondsPerMinute + " seconds per minute";
+  }
+
   private int dailyMinutes(int hour, int minute) {
     return hour * getMinutesPerHour() + minute;
   }
@@ -352,7 +363,7 @@ public class Calendar {
         proto.getSecondsPerMinute());
   }
 
-  public static class Year implements Comparable<Year> {
+    public static class Year implements Comparable<Year> {
     private final int number;
     private final String name;
 
@@ -386,8 +397,7 @@ public class Calendar {
       return number + " " + name;
     }
   }
-
-  public static class Month
+public static class Month
   {
     private final String name;
     private final int days;
@@ -430,15 +440,6 @@ public class Calendar {
           + (leapYears == 0 ? "" : " every " + leapYears + " years")
           + ")";
     }
-  }  @Override
-  public String toString()
-  {
-    return years + "; "
-        + months + "; "
-        + daysPerWeek + " days per week; "
-        + hoursPerDay + " hours per day; "
-        + minutesPerHour + " minutes per hour; "
-        + secondsPerMinute + " seconds per minute";
   }
 
   private class YearMonth {

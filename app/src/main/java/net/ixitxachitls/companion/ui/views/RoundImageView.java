@@ -28,10 +28,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.Nullable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.util.AttributeSet;
 
 import net.ixitxachitls.companion.R;
@@ -41,10 +37,16 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import java.io.IOException;
 import java.net.URL;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+
 /**
  * An image view that shows the image round.
  */
-public class RoundImageView extends android.support.v7.widget.AppCompatImageView {
+public class RoundImageView extends AppCompatImageView {
 
   private final int radius;
   private final int width;
@@ -57,6 +59,10 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     width = array.getInt(R.styleable.RoundImageView_width_px, Images.MAX_PX);
     height = array.getInt(R.styleable.RoundImageView_height_px, Images.MAX_PX);
     radius = array.getInt(R.styleable.RoundImageView_radius_percents, -1);
+  }
+
+  public void setAction(Wrapper.Action action) {
+    setOnClickListener(v -> action.execute());
   }
 
   @Override
@@ -73,8 +79,18 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     super.setImageDrawable(drawable);
   }
 
+  public void clearAction() {
+    setOnClickListener(null);
+  }
+
   public void clearImage(@DrawableRes int defaultDrawable) {
     super.setImageResource(defaultDrawable);
+  }
+
+  public void loadImageUrl(String url) {
+    if (!url.isEmpty()) {
+      new LoadTask().execute(url);
+    }
   }
 
   private Bitmap computeBitmap(Drawable drawable) {
@@ -84,20 +100,6 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
     drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
     drawable.draw(canvas);
     return bitmap;
-  }
-
-  public void setAction(Wrapper.Action action) {
-    setOnClickListener(v -> action.execute());
-  }
-
-  public void clearAction() {
-    setOnClickListener(null);
-  }
-
-  public void loadImageUrl(String url) {
-    if (!url.isEmpty()) {
-      new LoadTask().execute(url);
-    }
   }
 
   private class LoadTask extends AsyncTask<String, Void, Bitmap> {
@@ -111,6 +113,7 @@ public class RoundImageView extends android.support.v7.widget.AppCompatImageView
       }
     }
 
+    @Override
     protected void onPostExecute(Bitmap bitmap) {
       if (bitmap != null) {
         setImageBitmap(bitmap);

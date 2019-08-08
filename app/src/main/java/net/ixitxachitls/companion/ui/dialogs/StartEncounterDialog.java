@@ -23,9 +23,6 @@ package net.ixitxachitls.companion.ui.dialogs;
 
 import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -43,6 +40,10 @@ import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import androidx.annotation.ColorRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.StringRes;
 
 /**
  * Dialog to setup and start a new battle.
@@ -67,6 +68,24 @@ public class StartEncounterDialog extends Dialog {
 
     String id = getArguments().getString(ARG_ID);
     campaign = campaigns().get(id);
+  }
+
+  @Override
+  protected void createContent(View view) {
+    characters = view.findViewById(R.id.characters);
+    monsters = view.findViewById(R.id.monsters);
+    includeAll = Wrapper.<CheckBox>wrap(view, R.id.include_all).onClick(this::toggleIncludeAll);
+    surpriseAll = Wrapper.<CheckBox>wrap(view, R.id.surprise_all).onClick(this::toggleSurpriseAll);
+    addMonster = Wrapper.<ImageView>wrap(view, R.id.add_monster).onClick(this::addMonster);
+    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
+
+    for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
+      characters.addView(new StartEncounterLineView(getContext(), character.getId(),
+          character.getName(), R.color.characterDark, this::update));
+    }
+
+    characters().observe(this, this::refresh);
+    monsters().observe(this, this::refresh);
   }
 
   @Override
@@ -102,24 +121,6 @@ public class StartEncounterDialog extends Dialog {
     if (campaign.isPresent()) {
       campaign.get().getEncounter().starting(includedCreatureIds, surprisedCreatureIds);
     }
-  }
-
-  @Override
-  protected void createContent(View view) {
-    characters = view.findViewById(R.id.characters);
-    monsters = view.findViewById(R.id.monsters);
-    includeAll = Wrapper.<CheckBox>wrap(view, R.id.include_all).onClick(this::toggleIncludeAll);
-    surpriseAll = Wrapper.<CheckBox>wrap(view, R.id.surprise_all).onClick(this::toggleSurpriseAll);
-    addMonster = Wrapper.<ImageView>wrap(view, R.id.add_monster).onClick(this::addMonster);
-    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
-
-    for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
-      characters.addView(new StartEncounterLineView(getContext(), character.getId(),
-          character.getName(), R.color.characterDark, this::update));
-    }
-
-    characters().observe(this, this::refresh);
-    monsters().observe(this, this::refresh);
   }
 
   private void addMonster() {

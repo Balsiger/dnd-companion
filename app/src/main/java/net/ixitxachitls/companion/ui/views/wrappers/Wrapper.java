@@ -21,10 +21,11 @@
 
 package net.ixitxachitls.companion.ui.views.wrappers;
 
-import android.support.annotation.IdRes;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
+
+import androidx.annotation.IdRes;
 
 /**
  * A wrapper for view for easier building and setup.

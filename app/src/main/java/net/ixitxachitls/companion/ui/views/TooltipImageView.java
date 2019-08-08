@@ -23,11 +23,12 @@ package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.ui.MessageDialog;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 /**
  * A simple image view with a tooltip on click.

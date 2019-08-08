@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import android.support.annotation.CallSuper;
-
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
@@ -31,6 +29,8 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import androidx.annotation.CallSuper;
 
 /**
  * Base class for all document collections.

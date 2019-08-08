@@ -21,9 +21,10 @@
 
 package net.ixitxachitls.companion.ui.views.wrappers;
 
-import android.support.annotation.IdRes;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.IdRes;
 
 /**
  * Wrapper for text views.

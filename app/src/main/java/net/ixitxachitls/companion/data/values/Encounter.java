@@ -21,8 +21,6 @@
 
 package net.ixitxachitls.companion.data.values;
 
-import android.support.annotation.Nullable;
-
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
@@ -44,6 +42,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
+import androidx.annotation.Nullable;
 
 /**
  * Representation of an encounter in a campaign.
