@@ -1,0 +1,34 @@
+template {
+  name: "Shadow Spider"
+  synonym: "Spider, Shadow"
+  reference {
+    name: "WTC 88268"
+    pages {
+      low: 183
+      high: 183
+    }
+  }
+  world: "Generic"
+  description: "Shadow spiders are carnivorous ambush predators from the Plane of Shadow that prefer to hunt on the Material Plane. They possess frightening intelligence and cunning. A shadow spider is a huge, shadowy arachnid. It has a 5-foot-diameter body and stands roughly 2 1/2 feet tall.\n\nIts eight eyes are such a deep red color that they appear black.\n\nA shadow spider maintains a larder (actually a pocket in the Plane of Shadow) stacked with the desiccated corpses of its prey. The monster never carries treasure; it simply leaves its victims’ possessions on the corpses. When its larder becomes overfilled, the shadow spider abandons it and finds a new one to fill with food.\n\nShadow spiders speak Common."
+}
+size {
+  size: HUGE
+  modifier: LONG
+}
+type: MAGICAL_BEAST
+hit_dice {
+  number: 13
+  dice: 10
+}
+
+abilities {
+  strength: 26
+  dexterity: 13
+  constitution: 20
+  intelligence: 5
+  wisdom: 13
+  charisma: 8
+}
+
+alignment: TRUE_NEUTRAL
+alignment_status: ALWAYS

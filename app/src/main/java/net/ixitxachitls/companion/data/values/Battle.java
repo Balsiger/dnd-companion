@@ -48,7 +48,7 @@ import androidx.annotation.Nullable;
 /**
  * Representation of an encounter in a campaign.
  */
-public class Encounter {
+public class Battle {
   public static final String DEFAULT_MONSTER_NAME = "Monsters";
 
   private static final String FIELD_NUMBER = "number";
@@ -67,7 +67,7 @@ public class Encounter {
   private List<Creature> creatures = new ArrayList<>();
   private int currentCreatureIndex;
 
-  public Encounter(Campaign campaign) {
+  public Battle(Campaign campaign) {
     this.campaign = campaign;
   }
 
@@ -211,14 +211,14 @@ public class Encounter {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
 
-    Encounter encounter = (Encounter) o;
+    Battle battle = (Battle) o;
 
-    if (number != encounter.number) return false;
-    if (turn != encounter.turn) return false;
-    if (status != encounter.status) return false;
-    if (currentCreatureIndex != encounter.currentCreatureIndex) return false;
-    if (creatureIds.equals(encounter.creatureIds)) return false;
-    return lastMonsterName.equals(encounter.lastMonsterName);
+    if (number != battle.number) return false;
+    if (turn != battle.turn) return false;
+    if (status != battle.status) return false;
+    if (currentCreatureIndex != battle.currentCreatureIndex) return false;
+    if (creatureIds.equals(battle.creatureIds)) return false;
+    return lastMonsterName.equals(battle.lastMonsterName);
   }
 
   public boolean inBattle() {
@@ -406,7 +406,7 @@ public class Encounter {
     }
 
     if (sort) {
-      creatures.sort(new Creature.InitiativeComparator(campaign.getEncounter().getNumber()));
+      creatures.sort(new Creature.InitiativeComparator(campaign.getBattle().getNumber()));
       sortedIds.addAll(creatures.stream().map(Creature::getId).collect(Collectors.toList()));
       creatureIds = sortedIds;
     }
@@ -469,12 +469,12 @@ public class Encounter {
     }
   }
 
-  public static Encounter read(Campaign campaign, @Nullable Data data) {
-    Encounter encounter = new Encounter(campaign);
+  public static Battle read(Campaign campaign, @Nullable Data data) {
+    Battle battle = new Battle(campaign);
     if (data != null) {
-      encounter.read(data);
+      battle.read(data);
     }
 
-    return encounter;
+    return battle;
   }
 }

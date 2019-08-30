@@ -34,61 +34,8 @@ message WorldTemplateProto {
 message MonsterTemplateProto {
   TemplateProto template = 1;
   SizeProto size = 2;
-
-  enum Type {
-    UNKNOWN_TYPE = 0;
-    ABERRATION = 1;
-    ANIMAL = 2;
-    CONSTRUCT = 3;
-    DRAGON = 4;
-    ELEMENTAL = 5;
-    FEY = 6;
-    GIANT = 7;
-    HUMANOID = 8;
-    MAGICAL_BEAST = 9;
-    MONSTROUS_HUMANOID = 10;
-    OOZE = 11;
-    OUTSIDER = 12;
-    PLANT = 13;
-    UNDEAD = 14;
-    VERMIN = 15;
-  }
-  Type type = 3;
-
-  enum Subtype {
-    UNKNOWN_SUBTYPE = 0;
-    NONE_SUBTYPE = 1;
-    AIR = 2;
-    AQUATIC = 3;
-    ARCHON = 4;
-    AUGMENTED = 5;
-    BAATEZU = 6;
-    CHAOTIC = 7;
-    COLD = 8;
-    DWARF = 28;
-    EARTH = 9;
-    ELADRIN = 10;
-    ELF = 11;
-    EVIL = 12;
-    EXTRAPLANAR = 13;
-    FIRE = 14;
-    GOBLINOID = 15;
-    GOOD = 16;
-    GNOME = 27;
-    GNOLL = 29;
-    GUARDINAL = 17;
-    HALFLING = 30;
-    HUMAN = 18;
-    INCORPOREAL = 19;
-    LAWFUL = 20;
-    NATIVE = 21;
-    ORC = 22;
-    REPTILIAN = 23;
-    SHAPECHANGER = 24;
-    SWARM = 25;
-    WATER = 26;
-  }
-  repeated Subtype subtype = 4;
+  MonsterType type = 3;
+  repeated MonsterSubtype subtype = 4;
   DiceProto hit_dice = 5;
   repeated SpeedProto speed = 6;
   ModifierProto natural_armor = 7;
@@ -235,13 +182,6 @@ message MonsterTemplateProto {
   }
   Treasure treasure = 20;
   Alignment alignment = 21;
-
-  enum AlignmentStatus {
-    UNKNOWN_ALIGNMENT_STATU = 0;
-    ALWAYS = 1;
-    USUALLY = 2;
-    OFTEN = 3;
-  }
   AlignmentStatus alignment_status = 22;
 
   message Advancement {
@@ -1005,7 +945,15 @@ message AdventureTemplateProto {
       repeated Ceiling ceiling = 2;
 
       repeated Spot walls = 3;
-      repeated string door = 4;
+
+      message Door {
+        string name = 1;
+        string description = 2;
+        int32 thickness_inches = 3;
+        int32 hardness = 4;
+        int32 hp = 5;
+      }
+      repeated Door door = 4;
       repeated Spot terrain = 5;
       repeated Spot trap = 6;
     }
@@ -1015,7 +963,7 @@ message AdventureTemplateProto {
       repeated string light = 1;
       repeated string sound = 2;
       repeated string smell = 3;
-      repeated string taste = 4;
+      repeated string touch = 4;
       repeated string feel = 5;
     }
     Senses senses = 9;

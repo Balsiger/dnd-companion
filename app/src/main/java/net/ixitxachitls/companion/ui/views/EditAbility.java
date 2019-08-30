@@ -31,6 +31,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
@@ -61,7 +62,12 @@ public class EditAbility extends LinearLayout {
       return 0;
     }
 
-    return Integer.parseInt(edit.getText());
+    try {
+      return Integer.parseInt(edit.getText());
+    } catch (NumberFormatException e) {
+      Status.error("Cannot properly parse '" + edit.getText() + "' as numbrer.");
+      return 0;
+    }
   }
 
   public void setValue(int value) {

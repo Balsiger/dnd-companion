@@ -33,6 +33,7 @@ import java.util.Optional;
 
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
+import androidx.core.widget.NestedScrollView;
 
 /**
  * Chip view for a creature (monster).
@@ -40,6 +41,7 @@ import androidx.annotation.DrawableRes;
 public class CreatureChipView extends ChipView {
 
   private final ConditionIconsView conditions;
+  private final NestedScrollView conditionsScroll;
 
   private int perLine;
 
@@ -54,16 +56,28 @@ public class CreatureChipView extends ChipView {
         chipColor, highlightColor, drawable);
 
     this.conditions = new ConditionIconsView(context, VERTICAL, highlightColor, chipColor);
+    this.conditionsScroll = this.findViewById(R.id.icons_scroll);
+    this.conditions.setBackgroundColor(getContext().getColor(chipColor));
+    this.conditionsScroll.setBackgroundColor(getContext().getColor(chipColor));
     this.perLine = perLine;
 
     icons.addView(conditions);
-    CompanionApplication.get().conditions().readConditions(creature.getId());
+    if (creature.hasId()) {
+      CompanionApplication.get().conditions().readConditions(creature.getId());
+    }
 
     update(creature);
   }
 
   public String getCreatureId() {
     return getDataId();
+  }
+
+  @Override
+  public void setBackground(@ColorRes int color) {
+    super.setBackground(color);
+    conditions.setBackgroundColor(getContext().getColor(color));
+    conditionsScroll.setBackgroundColor(getContext().getColor(color));
   }
 
   @Override
@@ -85,10 +99,18 @@ public class CreatureChipView extends ChipView {
   }
 
   public void update(Creature<?> creature) {
-    Optional<Bitmap> bitmap = CompanionApplication.get().images().get(creature.getId(), 1);
+    Optional<Bitmap> bitmap = Optional.empty();
+
+    if (creature instanceof Monster) {
+      bitmap = CompanionApplication.get().images().get(((Monster) creature).getImagePath(), 1);
+    } else {
+      bitmap = CompanionApplication.get().images().get(creature.getId(), 1);
+    }
+
     if (bitmap.isPresent()) {
       image.get().setImageBitmap(bitmap.get());
     }
+
     conditions.update(creature);
   }
 }

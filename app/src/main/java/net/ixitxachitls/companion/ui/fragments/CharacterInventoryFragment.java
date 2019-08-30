@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -358,12 +358,11 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private boolean sellItem(Object state) {
-    if (character.isPresent() && state instanceof Item && character.get().amPlayer()
-        && character.get().getCampaign().isPresent()) {
+    if (character.isPresent() && state instanceof Item && character.get().amPlayer()) {
       character.get().removeItem((Item) state);
       Message.createForItemSell(
           CompanionApplication.get().context(), character.get().getId(),
-          character.get().getCampaign().get().getId(), (Item) state);
+          character.get().getCampaign().getId(), (Item) state);
       Status.toast("Item has been sold.");
     }
 

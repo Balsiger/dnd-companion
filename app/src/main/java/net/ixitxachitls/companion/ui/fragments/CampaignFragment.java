@@ -218,12 +218,12 @@ public class CampaignFragment extends CompanionFragment {
 
   private void addCondition() {
     if (campaign.isPresent()) {
-      if (campaign.get().getEncounter().amCurrentPlayer()) {
-        TimedConditionDialog.newInstance(campaign.get().getEncounter().getCurrentCreatureId(),
-            campaign.get().getEncounter().getTurn()).display();
+      if (campaign.get().getBattle().amCurrentPlayer()) {
+        TimedConditionDialog.newInstance(campaign.get().getBattle().getCurrentCreatureId(),
+            campaign.get().getBattle().getTurn()).display();
       } else if (campaign.get().amDM()) {
         TimedConditionDialog.newInstance(campaign.get().getId(),
-            campaign.get().getEncounter().getTurn()).display();
+            campaign.get().getBattle().getTurn()).display();
       }
     }
   }
@@ -246,7 +246,7 @@ public class CampaignFragment extends CompanionFragment {
 
   private void delayInEncounter() {
     if (campaign.isPresent()) {
-      campaign.get().getEncounter().creatureWait();
+      campaign.get().getBattle().creatureWait();
     }
   }
 
@@ -289,7 +289,7 @@ public class CampaignFragment extends CompanionFragment {
 
   private void endEncounter() {
     if (campaign.isPresent()) {
-      campaign.get().getEncounter().end();
+      campaign.get().getBattle().end();
     }
   }
 
@@ -301,7 +301,7 @@ public class CampaignFragment extends CompanionFragment {
 
   private void nextInEncounter() {
     if (campaign.isPresent()) {
-      campaign.get().getEncounter().creatureDone();
+      campaign.get().getBattle().creatureDone();
     }
   }
 
@@ -316,12 +316,12 @@ public class CampaignFragment extends CompanionFragment {
       deleteAction.show(canDeleteCampaign());
 
       TransitionManager.beginDelayedTransition((ViewGroup) getView());
-      if (campaign.get().getEncounter().inBattle()) {
+      if (campaign.get().getBattle().inBattle()) {
         encounter.showAndHide(party);
         encounter.refresh(update);
         encounterGroup.expand();
         addConditionAction.show(campaign.get().amDM()
-            || campaign.get().getEncounter().amCurrentPlayer());
+            || campaign.get().getBattle().amCurrentPlayer());
       } else {
         party.showAndHide(encounter);
         encounterGroup.shrink();
@@ -344,7 +344,7 @@ public class CampaignFragment extends CompanionFragment {
         return;
       }
 
-      campaign.get().getEncounter().setup();
+      campaign.get().getBattle().setup();
     }
   }
 

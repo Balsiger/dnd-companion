@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -68,7 +68,7 @@ public class AdventuresDialog extends Dialog {
     name = view.findViewById(R.id.name);
     add = Wrapper.<Button>wrap(view, R.id.add).onClick(this::add);
 
-    campaign = campaigns().get(getArguments().getString(ARG_ID));
+    campaign = campaigns().getOptional(getArguments().getString(ARG_ID));
     refresh(Documents.FULL_UPDATE);
 
     campaigns().observe(this, this::refresh);

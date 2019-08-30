@@ -38,7 +38,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
-import net.ixitxachitls.companion.data.values.Encounter;
+import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.CharacterChipView;
 import net.ixitxachitls.companion.ui.views.ChipView;
@@ -62,7 +62,7 @@ public class PartyFragment extends NestedCompanionFragment {
 
   // External data.
   private Optional<Campaign> campaign = Optional.empty();
-  private Optional<Encounter> encounter;
+  private Optional<Battle> encounter;
 
   // UI.
   private Wrapper<View> scroll;

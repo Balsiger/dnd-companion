@@ -67,7 +67,7 @@ public class StartEncounterDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     String id = getArguments().getString(ARG_ID);
-    campaign = campaigns().get(id);
+    campaign = campaigns().getOptional(id);
   }
 
   @Override
@@ -119,7 +119,7 @@ public class StartEncounterDialog extends Dialog {
     }
 
     if (campaign.isPresent()) {
-      campaign.get().getEncounter().starting(includedCreatureIds, surprisedCreatureIds);
+      campaign.get().getBattle().starting(includedCreatureIds, surprisedCreatureIds);
     }
   }
 

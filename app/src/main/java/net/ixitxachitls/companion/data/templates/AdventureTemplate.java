@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2019 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.templates;
 
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -106,8 +108,19 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
       return proto.getDescription();
     }
 
+    public List<Door> getDoors() {
+      return proto.getEnvironment().getDoorList().stream()
+          .map(f -> new Door(f.getName(), f.getDescription(), f.getThicknessInches(),
+              f.getHardness(), f.getHp()))
+          .collect(Collectors.toList());
+    }
+
     public int getEncounterLevel() {
       return proto.getEncounterLevel();
+    }
+
+    public List<String> getFeels() {
+      return proto.getSenses().getFeelList();
     }
 
     public List<Spot> getFloors() {
@@ -120,6 +133,10 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
 
     public String getId() {
       return proto.getShortName();
+    }
+
+    public List<String> getLights() {
+      return proto.getSenses().getLightList();
     }
 
     public List<String> getLocations() {
@@ -138,6 +155,52 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
 
     public String getShortDescription() {
       return proto.getShortDescription();
+    }
+
+    public List<String> getSmells() {
+      return proto.getSenses().getSmellList();
+    }
+
+    public List<String> getSounds() {
+      return proto.getSenses().getSoundList();
+    }
+
+    public List<Spot> getTerrains() {
+      return proto.getEnvironment().getTerrainList().stream()
+          .map(f -> new Spot(f.getName(), f.getDescription(), f.getCheckList().stream()
+              .map(c -> new Check(c.getName(), c.getDc(), c.getModifier(), c.getConditionList()))
+              .collect(Collectors.toList())))
+          .collect(Collectors.toList());
+    }
+
+    public List<String> getTouchs() {
+      return proto.getSenses().getTouchList();
+    }
+
+    public List<Spot> getTraps() {
+      return proto.getEnvironment().getTrapList().stream()
+          .map(f -> new Spot(f.getName(), f.getDescription(), f.getCheckList().stream()
+              .map(c -> new Check(c.getName(), c.getDc(), c.getModifier(), c.getConditionList()))
+              .collect(Collectors.toList())))
+          .collect(Collectors.toList());
+    }
+
+    public List<Spot> getWalls() {
+      return proto.getEnvironment().getWallsList().stream()
+          .map(f -> new Spot(f.getName(), f.getDescription(), f.getCheckList().stream()
+              .map(c -> new Check(c.getName(), c.getDc(), c.getModifier(), c.getConditionList()))
+              .collect(Collectors.toList())))
+          .collect(Collectors.toList());
+    }
+
+    public List<Monster> getMonsters(String campaignId) {
+      List<Monster> monsters = new ArrayList<>();
+      for (Template.AdventureTemplateProto.Encounter.Creature creature : proto.getCreatureList()) {
+        monsters.add(Monster.create(CompanionApplication.get().context(), campaignId,
+            creature.getName()));
+      }
+
+      return monsters;
     }
 
     public class Check {
@@ -229,6 +292,28 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
         }
 
         return heightFeet + " ft (" + heightMinFeet + "-" + heightMaxFeet + ")";
+      }
+    }
+
+    public class Door {
+      private final String name;
+      private final String description;
+      private final int thicknessInches;
+      private final int hardness;
+      private final int hp;
+
+      public Door(String name, String description, int thicknessInches, int hardness, int hp) {
+        this.name = name;
+        this.description = description;
+        this.thicknessInches = thicknessInches;
+        this.hardness = hardness;
+        this.hp = hp;
+      }
+
+      public String format() {
+        return "\\bold{" + name + "}: (" +
+            thicknessInches + " inches thick, hardness " + hardness + ", " + hp + " hp" + ")\n" +
+            description;
       }
     }
 

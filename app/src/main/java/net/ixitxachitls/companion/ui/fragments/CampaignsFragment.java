@@ -130,7 +130,7 @@ public class CampaignsFragment extends CompanionFragment {
     this.campaigns.ensureOnly(campaigns().getIds(), id -> new CampaignTitleView(getContext()));
     this.campaigns.update(campaigns().getIds(),
         (id, view) -> {
-          Optional<Campaign> campaign = campaigns().get(id);
+          Optional<Campaign> campaign = campaigns().getOptional(id);
           if (campaign.isPresent()) {
             view.update(campaign.get());
             view.setAction(() -> {

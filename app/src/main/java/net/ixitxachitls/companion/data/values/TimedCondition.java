@@ -104,13 +104,13 @@ public class TimedCondition {
     return condition.isPredefined();
   }
 
-  public boolean active(Encounter encounter) {
+  public boolean active(Battle battle) {
     return hasEndDate()
         || getEndRound() == Integer.MAX_VALUE
-        || getEndRound() > encounter.getTurn()
-        || (getEndRound() == encounter.getTurn()
+        || getEndRound() > battle.getTurn()
+        || (getEndRound() == battle.getTurn()
             && (getCondition().endsBeforeTurn()
-                ? !encounter.acting(sourceId) : !encounter.acted(sourceId)));
+                ? !battle.acting(sourceId) : !battle.acted(sourceId)));
   }
 
   public boolean endedAfter(CampaignDate date) {

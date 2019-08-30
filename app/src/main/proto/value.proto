@@ -472,29 +472,29 @@ enum SpellClass {
   RANGER = 6;
   SORCERER = 7;
   WIZARD = 8;
-  AIR = 9;
-  ANIMAL = 10;
+  AIR_SPELL = 9;
+  ANIMAL_SPELL = 10;
   CHAOS = 11;
   DEATH = 12;
   DESTRUCTION = 13;
   DROW = 14;
-  EARTH = 15;
-  EVIL = 16;
-  FIRE = 17;
-  GOOD = 18;
+  EARTH_SPELL = 15;
+  EVIL_SPELL = 16;
+  FIRE_SPELL = 17;
+  GOOD_SPELL = 18;
   HEALING = 19;
   KNOWLEDGE = 20;
   LAW = 21;
   LUCK = 22;
   MAGIC = 23;
-  PLANT = 24;
+  PLANT_SPELL = 24;
   PROTECTION = 25;
   STRENGTH_SPELL_CLASS = 26;
   SUN = 27;
   TRAVEL = 28;
   TRICKERY = 29;
   WAR = 30;
-  WATER = 31;
+  WATER_SPELL = 31;
 }
 
 enum SkillSubtype {
@@ -543,6 +543,13 @@ enum Alignment {
   ANY_ALIGNMENT = 14;
 }
 
+enum AlignmentStatus {
+  UNKNOWN_ALIGNMENT_STATUS = 0;
+  ALWAYS = 1;
+  USUALLY = 2;
+  OFTEN = 3;
+}
+
 enum Gender {
   UNKNOWN_GENDER = 0;
   FEMALE = 1;
@@ -567,6 +574,58 @@ enum FeatType {
   FIGHTER = 6;
 }
 
+enum MonsterType {
+  UNKNOWN_MONSTER_TYPE = 0;
+  ABERRATION = 1;
+  ANIMAL = 2;
+  CONSTRUCT = 3;
+  DRAGON = 4;
+  ELEMENTAL = 5;
+  FEY = 6;
+  GIANT = 7;
+  HUMANOID = 8;
+  MAGICAL_BEAST = 9;
+  MONSTROUS_HUMANOID = 10;
+  OOZE = 11;
+  OUTSIDER = 12;
+  PLANT = 13;
+  UNDEAD = 14;
+  VERMIN = 15;
+}
+
+enum MonsterSubtype {
+  UNKNOWN_MONSTER_SUBTYPE = 0;
+  NONE_SUBTYPE = 1;
+  AIR = 2;
+  AQUATIC = 3;
+  ARCHON = 4;
+  AUGMENTED = 5;
+  BAATEZU = 6;
+  CHAOTIC = 7;
+  COLD = 8;
+  DWARF = 28;
+  EARTH = 9;
+  ELADRIN = 10;
+  ELF = 11;
+  EVIL = 12;
+  EXTRAPLANAR = 13;
+  FIRE = 14;
+  GOBLINOID = 15;
+  GOOD = 16;
+  GNOME = 27;
+  GNOLL = 29;
+  GUARDINAL = 17;
+  HALFLING = 30;
+  HUMAN = 18;
+  INCORPOREAL = 19;
+  LAWFUL = 20;
+  NATIVE = 21;
+  ORC = 22;
+  REPTILIAN = 23;
+  SHAPECHANGER = 24;
+  SWARM = 25;
+  WATER = 26;
+}
 
 
 

@@ -96,24 +96,5 @@ public class ChipView extends LinearLayout {
     group.addView(this);
   }
 
-  @Deprecated
-  public void select(boolean select) {
-    if (select) {
-      select();
-    } else {
-      unselect();
-    }
-  }
-
-  @Deprecated
-  public void select() {
-    name.backgroundColor(backgroundColor);
-  }
-
-  @Deprecated
-  public void unselect() {
-    name.backgroundColor(chipColor);
-  }
-
   public void update() {}
 }

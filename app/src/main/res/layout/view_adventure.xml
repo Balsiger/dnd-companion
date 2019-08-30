@@ -3,14 +3,14 @@
   ~ Copyright (c) 2017-2019 Peter Balsiger
   ~ All rights reserved
   ~
-  ~ This file is part of the Tabletop Companion.
+  ~ This file is part of the Roleplay Companion.
   ~
-  ~ The Tabletop Companion is free software; you can redistribute it and/or
+  ~ The Roleplay Companion is free software; you can redistribute it and/or
   ~ modify it under the terms of the GNU General Public License as published by
   ~ the Free Software Foundation; either version 2 of the License, or
   ~ (at your option) any later version.
   ~
-  ~ The Tabletop Companion is distributed in the hope that it will be useful,
+  ~ The Roleplay Companion is distributed in the hope that it will be useful,
   ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
   ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   ~ GNU General Public License for more details.
@@ -63,8 +63,8 @@
 
     <net.ixitxachitls.companion.ui.views.TooltipImageView
         android:id="@+id/icon_encounter_level"
-        android:layout_width="12dp"
-        android:layout_height="12dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="5dp"
         android:tint="@color/campaignDark"
@@ -80,8 +80,8 @@
 
     <net.ixitxachitls.companion.ui.views.TooltipImageView
         android:id="@+id/icon_location"
-        android:layout_width="12dp"
-        android:layout_height="12dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="5dp"
@@ -98,80 +98,182 @@
         android:text="... location ..."/>
   </LinearLayout>
 
-  <LinearLayout
+  <HorizontalScrollView
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      >
-
-    <net.ixitxachitls.companion.ui.views.TooltipImageView
-        android:id="@+id/icon_read_loud"
-        android:layout_width="12dp"
-        android:layout_height="12dp"
-        android:layout_gravity="top"
-        android:layout_marginEnd="5dp"
-        android:paddingTop="5dp"
-        android:tint="@color/campaignDark"
-        app:srcCompat="@drawable/noun_speak_1953141"
-        app:tooltip_message="Text for the encounter that is supposed to read to the players."
-        app:tooltip_title="Read Aloud Text(s)"/>
+      android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/read_alouds"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:id="@+id/category_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_read_loud"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_speak_1953141"
+          app:tooltip_message="Text for the encounter that is supposed to read to the players."
+          app:tooltip_title="Read Aloud Text(s)"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_floor"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_floor_1141078"
+          app:tooltip_message="Information about the floor at the encounter location."
+          app:tooltip_title="Floor"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_ceiling"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_top_96396"
+          app:tooltip_message="Information about the ceiling at the encounter location."
+          app:tooltip_title="Ceiling"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_walls"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_wall_2355705"
+          app:tooltip_message="Information about the walls at the encounter location."
+          app:tooltip_title="Walls"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_doors"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_antique_2746308"
+          app:tooltip_message="Information about the doors at the encounter location."
+          app:tooltip_title="Doors"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_terrain"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_mountain_1639193"
+          app:tooltip_message="Information about the terrain at the encounter location."
+          app:tooltip_title="Terrain"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_trap"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_bear_trap_729097"
+          app:tooltip_message="Information about the traps at the encounter location."
+          app:tooltip_title="Traps"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_light"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_candle_139265"
+          app:tooltip_message="Information about the light at the encounter location."
+          app:tooltip_title="Light"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_sound"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_sound_735224"
+          app:tooltip_message="Information about the sounds at the encounter location."
+          app:tooltip_title="Sounds"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_smell"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_smell_1512570"
+          app:tooltip_message="Information about the smells at the encounter location."
+          app:tooltip_title="Smells"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_touch"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_touch_1680154"
+          app:tooltip_message="Information about the touching things at the encounter location."
+          app:tooltip_title="Touch"/>
+
+      <net.ixitxachitls.companion.ui.views.TooltipImageView
+          android:id="@+id/icon_feel"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_gravity="top"
+          android:layout_marginEnd="5dp"
+          android:paddingTop="5dp"
+          android:tint="@color/campaignDark"
+          app:srcCompat="@drawable/noun_emotions_2049680"
+          app:tooltip_message="Information about how the counter location feels."
+          app:tooltip_title="Feel"/>
+
     </LinearLayout>
-  </LinearLayout>
+  </HorizontalScrollView>
 
   <LinearLayout
+      android:id="@+id/category_text"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:orientation="horizontal">
-
-    <net.ixitxachitls.companion.ui.views.TooltipImageView
-        android:id="@+id/icon_floor"
-        android:layout_width="9dp"
-        android:layout_height="16dp"
-        android:layout_gravity="top"
-        android:layout_marginEnd="5dp"
-        android:paddingTop="5dp"
-        android:tint="@color/campaignDark"
-        app:srcCompat="@drawable/noun_floor_1141078"
-        app:tooltip_message="Information about the floor at the encounter location."
-        app:tooltip_title="Floor"/>
-
-    <LinearLayout
-        android:id="@+id/floors"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    </LinearLayout>
+      android:orientation="vertical">
   </LinearLayout>
 
-  <LinearLayout
+  <HorizontalScrollView
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal">
-
-    <net.ixitxachitls.companion.ui.views.TooltipImageView
-        android:id="@+id/icon_ceiling"
-        android:layout_width="9dp"
-        android:layout_height="16dp"
-        android:layout_gravity="top"
-        android:layout_marginEnd="5dp"
-        android:paddingTop="5dp"
-        android:tint="@color/campaignDark"
-        app:srcCompat="@drawable/noun_top_96396"
-        app:tooltip_message="Information about the ceiling at the encounter location."
-        app:tooltip_title="Ceiling"/>
+      android:layout_height="match_parent"
+      android:layout_marginTop="10dp">
 
     <LinearLayout
-        android:id="@+id/ceilings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    </LinearLayout>
-  </LinearLayout>
+        android:id="@+id/creatures"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"/>
+  </HorizontalScrollView>
 
 </LinearLayout>

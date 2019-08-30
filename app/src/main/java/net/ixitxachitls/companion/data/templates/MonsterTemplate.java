@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -23,6 +23,10 @@ package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.documents.Quality;
+import net.ixitxachitls.companion.data.enums.Alignment;
+import net.ixitxachitls.companion.data.enums.AlignmentStatus;
+import net.ixitxachitls.companion.data.enums.MonsterSubType;
+import net.ixitxachitls.companion.data.enums.MonsterType;
 import net.ixitxachitls.companion.data.enums.Size;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.data.values.Speed;
@@ -47,6 +51,14 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     this.proto = proto;
   }
 
+  public Alignment getAlignment() {
+    return Alignment.fromProto(proto.getAlignment());
+  }
+
+  public AlignmentStatus getAlignmentStatus() {
+    return AlignmentStatus.fromProto(proto.getAlignmentStatus());
+  }
+
   public Collection<Feat> getAutomaticFeats() {
     return proto.getAutomaticFeatList().stream()
         .map(p -> new Feat(p, "Automatic feat as " + proto.getTemplate().getName()))
@@ -57,15 +69,15 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getBaseAttack();
   }
 
-  public int getCharismaAdjustment() {
+  public int getCharisma() {
     return proto.getAbilities().getCharisma();
   }
 
-  public int getConstitutionAdjustment() {
+  public int getConstitution() {
     return proto.getAbilities().getConstitution();
   }
 
-  public int getDexterityAdjustment() {
+  public int getDexterity() {
     return proto.getAbilities().getDexterity();
   }
 
@@ -79,7 +91,7 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getSaves().getFortitude();
   }
 
-  public int getIntelligenecAdjustment() {
+  public int getIntelligenec() {
     return proto.getAbilities().getIntelligence();
   }
 
@@ -111,12 +123,22 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getSpeedList().stream().map(Speed::fromProto).collect(Collectors.toList());
   }
 
-  public int getStrengthAdjustment() {
+  public int getStrength() {
     return proto.getAbilities().getStrength();
   }
 
+  public List<MonsterSubType> getSubtypes() {
+    return proto.getSubtypeList().stream()
+        .map(MonsterSubType::fromProto)
+        .collect(Collectors.toList());
+  }
+
+  public MonsterType getType() {
+    return MonsterType.fromProto(proto.getType());
+  }
+
   public int getWalkingSpeed() {
-    for (Value.SpeedProto speed: proto.getSpeedList()) {
+    for (Value.SpeedProto speed : proto.getSpeedList()) {
       if (speed.getMode() == Value.SpeedProto.Mode.RUN) {
         return speed.getSquares();
       }
@@ -129,12 +151,20 @@ public class MonsterTemplate extends StoredTemplate<Template.MonsterTemplateProt
     return proto.getSaves().getWill();
   }
 
-  public int getWisdomAdjustment() {
+  public int getWisdom() {
     return proto.getAbilities().getWisdom();
   }
 
   public boolean isPrimaryRace() {
     return proto.getMainRace();
+  }
+
+  public int getHitDice() {
+    return proto.getHitDice().getNumber();
+  }
+
+  public int getHitDie() {
+    return proto.getHitDice().getDice();
   }
 
   public boolean hasBonusFeat(int level) {

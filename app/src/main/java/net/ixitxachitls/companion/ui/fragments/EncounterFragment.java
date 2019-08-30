@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -38,7 +38,7 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Monster;
-import net.ixitxachitls.companion.data.values.Encounter;
+import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.views.DiceView;
 import net.ixitxachitls.companion.ui.views.EncounterCharacterTitleView;
 import net.ixitxachitls.companion.ui.views.EncounterMonsterTitleView;
@@ -53,7 +53,7 @@ import java.util.Optional;
  */
 public class EncounterFragment extends NestedCompanionFragment {
 
-  private Optional<Encounter> encounter = Optional.empty();
+  private Optional<Battle> encounter = Optional.empty();
 
   // UI.
   private DiceView initiative;
@@ -179,7 +179,7 @@ public class EncounterFragment extends NestedCompanionFragment {
   }
 
   public void show(Campaign campaign) {
-    this.encounter = Optional.of(campaign.getEncounter());
+    this.encounter = Optional.of(campaign.getBattle());
 
     refresh();
   }

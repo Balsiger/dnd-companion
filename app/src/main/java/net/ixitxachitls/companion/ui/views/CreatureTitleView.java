@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -63,9 +63,17 @@ public abstract class CreatureTitleView<T extends Creature> extends TitleView {
     return "";
   }
 
+  protected String getImagePath() {
+    if (creature.isPresent()) {
+      return creature.get().getId();
+    }
+
+    return "";
+  }
+
   public void update(Images images) {
     if (creature.isPresent()) {
-      Optional<Bitmap> bitmap = images.get(creature.get().getId(), 1);
+      Optional<Bitmap> bitmap = images.get(getImagePath(), 1);
       if (bitmap.isPresent()) {
         setImageBitmap(bitmap.get());
       } else {
@@ -90,7 +98,7 @@ public abstract class CreatureTitleView<T extends Creature> extends TitleView {
       }
 
       Optional<Campaign> campaign =
-          CompanionApplication.get(getContext()).campaigns().get(creature.get().getCampaignId());
+          CompanionApplication.get(getContext()).campaigns().getOptional(creature.get().getCampaignId());
       if (campaign.isPresent()) {
         subtitle += ", " + campaign.get().getName();
       }

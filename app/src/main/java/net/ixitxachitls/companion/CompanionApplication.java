@@ -39,7 +39,7 @@ import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.documents.Users;
-import net.ixitxachitls.companion.data.values.Encounters;
+import net.ixitxachitls.companion.data.documents.Encounters;
 import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 import net.ixitxachitls.companion.ui.activities.MainActivity;

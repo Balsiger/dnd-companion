@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -24,8 +24,11 @@ package net.ixitxachitls.companion.data.documents;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
+import net.ixitxachitls.companion.data.enums.Alignment;
+import net.ixitxachitls.companion.data.enums.AlignmentStatus;
 import net.ixitxachitls.companion.data.enums.DamageType;
 import net.ixitxachitls.companion.data.enums.Gender;
+import net.ixitxachitls.companion.data.enums.Size;
 import net.ixitxachitls.companion.data.templates.MonsterTemplate;
 import net.ixitxachitls.companion.data.values.Adjustment;
 import net.ixitxachitls.companion.data.values.Damage;
@@ -41,6 +44,7 @@ import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.rules.Armor;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.rules.Items;
+import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -83,7 +87,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   private static final String FIELD_SLOTS = "item_slots";
   private static final String FIELD_ITEMS_PER_SLOT = "items_per_slot";
   private static final String DEFAULT_DISTRIBUTION = "Default";
-  ;
+
   private String campaignId = "";
   private String name;
   private Optional<MonsterTemplate> race = Optional.empty();
@@ -144,6 +148,22 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return conditions;
   }
 
+  public Alignment getAlignment() {
+    if (race.isPresent()) {
+      return race.get().getAlignment();
+    }
+
+    return Alignment.UNKNOWN;
+  }
+
+  public AlignmentStatus getAlignmentStatus() {
+    if (race.isPresent()) {
+      return race.get().getAlignmentStatus();
+    }
+
+    return AlignmentStatus.UNKNOWN;
+  }
+
   public int getBaseAttackBonus() {
     if (race.isPresent()) {
       return race.get().getBaseAttack();
@@ -152,7 +172,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return 0;
   }
 
-  public Optional<Campaign> getCampaign() {
+  public Campaign getCampaign() {
     return context.campaigns().get(campaignId);
   }
 
@@ -287,6 +307,26 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     this.race = Templates.get().getMonsterTemplates().get(race);
   }
 
+  public void initFromRace(String name) {
+    setRace(name);
+    if (race.isPresent()) {
+      strength = race.get().getStrength();
+      dexterity = race.get().getDexterity();
+      constitution = race.get().getConstitution();
+      intelligence = race.get().getIntelligenec();
+      wisdom = race.get().getWisdom();
+      charisma = race.get().getCharisma();
+    }
+  }
+
+  public Size getSize() {
+    if (race.isPresent()) {
+      return race.get().getSize();
+    }
+
+    return Size.UNKNOWN;
+  }
+
   public ModifiedValue getStrength() {
     return new ModifiedValue("Strength", strength, 0, false);
   }
@@ -297,6 +337,21 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public int getStrengthModifier() {
     return Ability.modifier(getStrength().total());
+  }
+
+  public String getType() {
+    if (race.isPresent()) {
+      String type = Strings.toWords(race.get().getType().toString());
+
+      if (!race.get().getSubtypes().isEmpty()) {
+        type += " [" + race.get().getSubtypes().stream()
+            .map(t -> Strings.toWords(t.toString())).collect(Collectors.joining(", ")) + "]";
+      }
+
+      return type;
+    }
+
+    return "Unknown";
   }
 
   public String getWearingName() {
@@ -376,7 +431,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   }
 
   public boolean amDM() {
-    Optional<Campaign> campaign = context.campaigns().get(campaignId);
+    Optional<Campaign> campaign = context.campaigns().getOptional(campaignId);
     return campaign.isPresent() && campaign.get().amDM();
   }
 
@@ -582,12 +637,18 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   public int getAbilityModifier(Ability ability) {
     switch (ability) {
-      case STRENGTH: return getStrengthModifier();
-      case DEXTERITY: return getDexterityModifier();
-      case CONSTITUTION: return getConstitutionModifier();
-      case INTELLIGENCE: return getIntelligenceModifier();
-      case WISDOM: return getWisdomModifier();
-      case CHARISMA: return getCharismaModifier();
+      case STRENGTH:
+        return getStrengthModifier();
+      case DEXTERITY:
+        return getDexterityModifier();
+      case CONSTITUTION:
+        return getConstitutionModifier();
+      case INTELLIGENCE:
+        return getIntelligenceModifier();
+      case WISDOM:
+        return getWisdomModifier();
+      case CHARISMA:
+        return getCharismaModifier();
 
       case NONE:
       case UNKNOWN:
@@ -911,6 +972,22 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     return value;
+  }
+
+  public int getHitDice() {
+    if (race.isPresent()) {
+      return race.get().getHitDice();
+    }
+
+    return 0;
+  }
+
+  public int getHitDie() {
+    if (race.isPresent()) {
+      return race.get().getHitDie();
+    }
+
+    return 0;
   }
 
   public Money totalValue() {

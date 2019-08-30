@@ -70,7 +70,7 @@ public class XPDialog extends Dialog {
     super.onCreate(state);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = campaigns().get(getArguments().getString(ARG_CAMPAIGN_ID));
+    campaign = campaigns().getOptional(getArguments().getString(ARG_CAMPAIGN_ID));
   }
 
   @Override

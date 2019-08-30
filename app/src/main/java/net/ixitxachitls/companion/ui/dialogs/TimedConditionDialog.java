@@ -102,9 +102,9 @@ public class TimedConditionDialog extends Dialog {
     }
     currentRound = getArguments().getInt(ARG_ROUND);
     if (creature.isPresent()) {
-      campaign = campaigns().get(creature.get().getCampaignId());
+      campaign = campaigns().getOptional(creature.get().getCampaignId());
     } else {
-      campaign = campaigns().get(id);
+      campaign = campaigns().getOptional(id);
     }
   }
 
@@ -142,8 +142,8 @@ public class TimedConditionDialog extends Dialog {
     condition.setAdapter(adapter);
 
     if (campaign.isPresent()) {
-      if (campaign.get().getEncounter().inBattle()) {
-        for (Creature creature : campaign.get().getEncounter().getCreatures()) {
+      if (campaign.get().getBattle().inBattle()) {
+        for (Creature creature : campaign.get().getBattle().getCreatures()) {
           addCheckbox(view, creature.getId(), creature.getName());
         }
       } else {

@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -108,7 +108,24 @@ public class Campaigns extends Documents<Campaigns> {
     }
   }
 
-  public Optional<Campaign> get(String id) {
+  public Campaign get(String id) {
+    if (Strings.isNullOrEmpty(id)) {
+      return Campaign.DEFAULT;
+    }
+
+    if (id.startsWith(context.me().getId())) {
+      return Optional.ofNullable(dmCampaignsById.get(id)).orElse(Campaign.DEFAULT);
+    } else {
+      Campaign campaign = playerCampaignsById.get(id);
+      if (campaign == null) {
+        campaign = Campaign.getOrCreate(context, id);
+        playerCampaignsById.put(id, campaign);
+      }
+      return campaign;
+    }
+  }
+
+  public Optional<Campaign> getOptional(String id) {
     if (Strings.isNullOrEmpty(id)) {
       return Optional.empty();
     }
@@ -175,7 +192,7 @@ public class Campaigns extends Documents<Campaigns> {
       // Player campaigns, invitations from other users.
       playerCampaignsById.clear();
       for (String campaignId : me.getCampaigns()) {
-        Optional<Campaign> campaign = get(campaignId);
+        Optional<Campaign> campaign = getOptional(campaignId);
         if (campaign.isPresent()) {
           playerCampaignsById.put(campaignId, campaign.get());
         }

@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -34,6 +34,10 @@ public class Monster extends Creature<Monster> {
   protected static final String PATH = "monsters";
   private static final DocumentFactory<Monster> FACTORY = () -> new Monster();
 
+  public String getImagePath() {
+    return "images/monsters/" + getName().toLowerCase() + ".jpg";
+  }
+
   @Override
   public boolean hasInitiative(int encounterNumber) {
     return true;
@@ -45,11 +49,18 @@ public class Monster extends Creature<Monster> {
   }
 
   public static Monster create(CompanionContext context, String campaignId, String name,
-                                  int initiativeModifier, int encounterNumber) {
+                               int initiativeModifier, int encounterNumber) {
+    Monster monster = create(context, campaignId, name);
+    monster.setEncounterInitiative(encounterNumber, Dice.d20() + initiativeModifier);
+
+    return monster;
+  }
+
+  public static Monster create(CompanionContext context, String campaignId, String name) {
     Monster monster = Document.create(FACTORY, context, campaignId + "/" + PATH);
     monster.setName(name);
     monster.setCampaignId(campaignId);
-    monster.setEncounterInitiative(encounterNumber, Dice.d20() + initiativeModifier);
+    monster.initFromRace(name);
 
     return monster;
   }

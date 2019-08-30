@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -33,7 +33,7 @@ import android.widget.LinearLayout;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Creature;
 import net.ixitxachitls.companion.data.documents.CreatureCondition;
-import net.ixitxachitls.companion.data.values.Encounter;
+import net.ixitxachitls.companion.data.values.Battle;
 
 import java.util.List;
 import java.util.Optional;
@@ -51,7 +51,7 @@ public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView
   private final int selectedColor;
   protected ConditionIconsView conditions;
   private Transition transition = new AutoTransition();
-  private Optional<Encounter> encounter;
+  private Optional<Battle> encounter;
   // UI elements.
   private View view;
 
@@ -111,8 +111,8 @@ public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView
     refresh();
   }
 
-  public void update(Encounter encounter, T creature) {
-    this.encounter = Optional.of(encounter);
+  public void update(Battle battle, T creature) {
+    this.encounter = Optional.of(battle);
     update(creature);
   }
 }

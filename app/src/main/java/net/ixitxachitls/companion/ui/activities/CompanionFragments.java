@@ -31,6 +31,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
+import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.ui.dialogs.Dialog;
 import net.ixitxachitls.companion.ui.fragments.CampaignFragment;
 import net.ixitxachitls.companion.ui.fragments.CampaignsFragment;
@@ -38,6 +39,7 @@ import net.ixitxachitls.companion.ui.fragments.CharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.LocalCharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.MiniaturesFragment;
+import net.ixitxachitls.companion.ui.fragments.MonsterFragment;
 import net.ixitxachitls.companion.ui.fragments.UserFragment;
 
 import java.util.Optional;
@@ -67,6 +69,7 @@ public class CompanionFragments {
   private Optional<CharacterFragment> characterFragment = Optional.empty();
   private Optional<LocalCharacterFragment> localCharacterFragment = Optional.empty();
   private Optional<MiniaturesFragment> miniaturesFragment = Optional.empty();
+  private Optional<MonsterFragment> monsterFragment = Optional.empty();
 
   private CompanionFragments(CompanionContext context, FragmentManager fragmentManager) {
     this.context = context;
@@ -146,6 +149,12 @@ public class CompanionFragments {
           miniaturesFragment = Optional.of(new MiniaturesFragment());
         }
         return show(miniaturesFragment.get(), sharedElement);
+
+      case monster:
+        if (!monsterFragment.isPresent()) {
+          monsterFragment = Optional.of(new MonsterFragment());
+        }
+        return show(monsterFragment.get(), sharedElement);
     }
   }
 
@@ -168,6 +177,11 @@ public class CompanionFragments {
         characterFragment.get().showCharacter(character);
       }
     }
+  }
+
+  public void showMonster(Monster monster, Optional<View> shared) {
+    show(CompanionFragment.Type.monster, shared);
+    monsterFragment.get().showMonster(monster);
   }
 
   private Fade fade(int duration, int delay) {

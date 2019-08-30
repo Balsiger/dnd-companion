@@ -108,6 +108,27 @@
 
     <TableRow
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <TextView
+          android:id="@+id/textView2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="10dp"
+          android:text="UX"
+          android:textStyle="bold"
+          android:theme="@style/LargeText"/>
+
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Nobody (that was not hard to guess...)"
+          android:theme="@style/LargeText"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp">
 
@@ -168,23 +189,7 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp">
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="10dp"
-          android:text="Google+"
-          android:textStyle="bold"
-          android:theme="@style/LargeText"/>
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:autoLink="web"
-          android:text="https://plus.google.com/b/114811571273528989697/"
-          android:theme="@style/LargeText"/>
-    </TableRow>
+        android:layout_marginTop="20dp"/>
 
     <TableRow
         android:layout_width="match_parent"
@@ -458,6 +463,69 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="top by Lloyd Humphreys from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="wall by Icon Lauk from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Antique by Marksu Loritas from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Candle by Clockwise from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Mountain by iconcheese from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="bear trap by Marie-Pierre Bauduin from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Sound by Daniela Baptista from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="smell by corpus delicti from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="touch by Graphic Tigers from the Noun Project"
+            android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="emotions by Nithinan Tatah from the Noun Project"
             android:theme="@style/LargeText"/>
       </LinearLayout>
     </ScrollView>

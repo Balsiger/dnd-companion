@@ -2,14 +2,14 @@
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
- * This file is part of the Tabletop Companion.
+ * This file is part of the Roleplay Companion.
  *
- * The Tabletop Companion is free software; you can redistribute it and/or
+ * The Roleplay Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Tabletop Companion is distributed in the hope that it will be useful,
+ * The Roleplay Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -26,9 +26,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.WorldTemplate;
+import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
-import net.ixitxachitls.companion.data.values.Encounter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,6 +43,8 @@ import androidx.annotation.CallSuper;
  */
 public class Campaign extends Document<Campaign> implements Comparable<Campaign> {
 
+  public static final Campaign DEFAULT = createDefault();
+
   private static final DocumentFactory<Campaign> FACTORY = () -> new Campaign();
 
   private static final String FIELD_NAME = "name";
@@ -50,8 +52,8 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private static final String FIELD_DATE = "date";
   private static final String FIELD_ENCOUNTER = "encounter";
   private static final String FIELD_INVITES = "invites";
-  private static final String FIELD_ADVENTURE = "adventure";
-  private static final String FIELD_ENCOUNTER_ID = "encounter-id";
+  private static final String FIELD_ADVENTURE = "adventure_id";
+  private static final String FIELD_ENCOUNTER_ID = "encounter_id";
 
   private static final String GENERIC_NAME = "Generic";
   private static WorldTemplate GENERIC;
@@ -61,21 +63,10 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private String name;
   private WorldTemplate worldTemplate;
   private CampaignDate date = new CampaignDate();
-  private Encounter encounter = new Encounter(this);
+  private Battle battle = new Battle(this);
   private List<String> invites = new ArrayList<>();
   private String adventureId = "";
   private String encounterId = "";
-
-  /*
-  public Optional<Adventure> getAdventure() {
-    return context.adventures().get(adventureId);
-  }
-
-  public void setAdventure(Adventure adventure) {
-    this.adventureId = adventure.getId();
-    store();
-  }
-  */
 
   public String getAdventureId() {
     return adventureId;
@@ -84,6 +75,8 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   public void setAdventureId(String adventureId) {
     this.adventureId = adventureId;
     store();
+
+    context.encounters().loadEncounters(getId(), adventureId);
   }
 
   public Calendar getCalendar() {
@@ -107,8 +100,8 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     return dm;
   }
 
-  public Encounter getEncounter() {
-    return encounter;
+  public Battle getBattle() {
+    return battle;
   }
 
   public String getEncounterId() {
@@ -142,6 +135,10 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
   public void setWorldTemplate(String worldTemplate) {
     this.worldTemplate = world(worldTemplate);
+  }
+
+  public boolean isDefault() {
+    return this == DEFAULT;
   }
 
   public boolean amDM() {
@@ -229,10 +226,14 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     name = data.get(FIELD_NAME, name);
     worldTemplate = world(data.get(FIELD_WORLD, GENERIC_NAME));
     date = CampaignDate.read(data.getNested(FIELD_DATE));
-    encounter.read(data.getNested(FIELD_ENCOUNTER));
+    battle.read(data.getNested(FIELD_ENCOUNTER));
     invites = data.get(FIELD_INVITES, invites);
     adventureId = data.get(FIELD_ADVENTURE, "");
     encounterId = data.get(FIELD_ENCOUNTER_ID, "");
+
+    if (!adventureId.isEmpty()) {
+      context.encounters().loadEncounters(getId(), adventureId);
+    }
   }
 
   @Override
@@ -240,7 +241,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     data.put(FIELD_NAME, name);
     data.put(FIELD_WORLD, worldTemplate.getName());
     data.put(FIELD_DATE, date.write());
-    data.put(FIELD_ENCOUNTER, encounter.write());
+    data.put(FIELD_ENCOUNTER, battle.write());
     data.put(FIELD_INVITES, invites);
     data.put(FIELD_ADVENTURE, adventureId);
     data.put(FIELD_ENCOUNTER_ID, encounterId);
@@ -266,6 +267,14 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
     campaign.dm = context.users().fromPath(campaign.getPath());
     campaign.worldTemplate = generic();
+    return campaign;
+  }
+
+  private static Campaign createDefault() {
+    Campaign campaign = new Campaign();
+    campaign.name = "NO CAMPAIGN";
+    campaign.temporary = true;
+
     return campaign;
   }
 
@@ -297,5 +306,4 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
     return campaign;
   }
-
 }

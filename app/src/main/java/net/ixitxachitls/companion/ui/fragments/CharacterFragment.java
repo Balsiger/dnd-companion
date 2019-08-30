@@ -166,7 +166,7 @@ public class CharacterFragment extends CompanionFragment {
     unobserve();
 
     this.character = Optional.of(character);
-    this.campaign = campaigns().get(character.getCampaignId());
+    this.campaign = campaigns().getOptional(character.getCampaignId());
 
     observe(character);
   }
@@ -237,7 +237,7 @@ public class CharacterFragment extends CompanionFragment {
     }
 
     campaign = CompanionApplication.get(getContext()).campaigns()
-        .get(character.getCampaignId());
+        .getOptional(character.getCampaignId());
 
     delete.show(character.amPlayer() || character.amDM());
 

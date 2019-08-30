@@ -124,7 +124,7 @@ public class LocalCharacterFragment extends CharacterFragment {
       character.get().setCampaignId(campaignIds.get(0));
     }
 
-    Optional<Campaign> campaign = campaigns().get(campaignIds.get(0));
+    Optional<Campaign> campaign = campaigns().getOptional(campaignIds.get(0));
     if (campaign.isPresent()) {
       CompanionFragments.get().showCampaign(campaign.get(), Optional.empty());
     }

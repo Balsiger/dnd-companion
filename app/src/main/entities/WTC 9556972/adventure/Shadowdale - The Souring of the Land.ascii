@@ -67,6 +67,13 @@ encounter {
       min_height_feet: 5
       max_height_feet: 25
     }
+    door {
+      name: "Stone Door"
+      description: "Most doors in the lair are stone doors. Most open easily."
+      thickness_inches: 4
+      hardness: 8
+      hp: 60
+    }
     terrain {
       name: "Crevice"
       description: "The crevice is 150 feet deep. It is roughly 15 feet across at the top, narrowing to a hole 6 feet in diameter at the bottom where it opens onto the shelf below. Halfway down the crevice, a side niche serves as the lair of the creature. Climbin the rough walls of the crevice requires a DC 25 Climb check."
@@ -93,10 +100,19 @@ encounter {
       description: "The top of the crevice is warded with a silent \\Spell{alarm} spell set by the sorcerer (CL 6th) in area 2A."
     }
   }
+  senses {
+    light: "There is usually no light."
+    light: "There may be some glowing fungi at times."
+  }
   creature {
-    name: "shadow spider"
+    name: "Shadow Spider"
     reason: "The crevice is the lair of a \\Monster{shadow spider}, selected as a guardian by the \\Group{Matron Sisters} in case of treachery by the \\Group{shades} (such as a shade trying to infiltrate by way of the \\Place{Plane of Shadow})."
     tactics: "The shadow spider lurks in the shadows of its lair until the characters attempt the perilous ascent or descent. It attacks the first creature to pass by its niche with its four claws. If successful in establishing a grapple, it attempts to carry the victim to its larder by using \\Spell{shadow walk}, paralyzes it there, and then returns to seize another victim. It only returns to its larder to begin eating if there are no more targets or if it is in danger of dying."
+  }
+  creature {
+    name: "Aboleth"
+    reason: "Just for testing"
+    tactics: "Kill the characters. If that does not work, dominate them!"
   }
   development: "The guards in area 2A come to investigate activity in this area if they make a successful opposed Listen check, with a –12 circumstance penalty, or if the alarm is triggered. They do not intervene if they spy the shadow spider in combat, but they do wait to see if it prevails or leaves any interlopers alive."
   treasure {

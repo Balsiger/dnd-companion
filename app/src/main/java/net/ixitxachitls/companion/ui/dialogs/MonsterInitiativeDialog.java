@@ -33,7 +33,7 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Monster;
-import net.ixitxachitls.companion.data.values.Encounter;
+import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.views.wrappers.EditTextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
@@ -68,7 +68,7 @@ public class MonsterInitiativeDialog extends Dialog {
     super.onCreate(savedInstanceState);
 
     Preconditions.checkNotNull(getArguments(), "Cannot create without arguments.");
-    campaign = campaigns().get(getArguments().getString(ARG_CAMPAIGN_ID));
+    campaign = campaigns().getOptional(getArguments().getString(ARG_CAMPAIGN_ID));
     monsterId = getArguments().getInt(ARG_MONSTER_ID);
   }
 
@@ -99,17 +99,17 @@ public class MonsterInitiativeDialog extends Dialog {
     }
 
     Monster.create(CompanionApplication.get().context(), campaign.get().getId(),
-        name.getText(), modifier.get().getValue() - 20, campaign.get().getEncounter().getNumber());
-    campaign.get().getEncounter().setLastMonsterName(name.getText());
+        name.getText(), modifier.get().getValue() - 20, campaign.get().getBattle().getNumber());
+    campaign.get().getBattle().setLastMonsterName(name.getText());
     save();
   }
 
   private String makeName() {
     if (!campaign.isPresent()) {
-      return Encounter.DEFAULT_MONSTER_NAME;
+      return Battle.DEFAULT_MONSTER_NAME;
     }
 
-    return campaign.get().getEncounter().numberedMonsterName();
+    return campaign.get().getBattle().numberedMonsterName();
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,

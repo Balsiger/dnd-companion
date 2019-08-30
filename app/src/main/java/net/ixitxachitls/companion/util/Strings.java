@@ -23,8 +23,10 @@ package net.ixitxachitls.companion.util;
 
 import com.google.common.base.Joiner;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Utilities for handling strings.
@@ -122,5 +124,16 @@ public class Strings {
 
   public static String spaces(int length) {
     return SPACES.substring(0, length);
+  }
+
+  public static String toWords(String text) {
+    if (text == null || text.isEmpty()) {
+      return text;
+    }
+
+    return Arrays.stream(text.split("[ _]"))
+        .map(word -> word.isEmpty() ? word : Character.toTitleCase(word.charAt(0)) +
+            word.substring(1).toLowerCase())
+        .collect(Collectors.joining(" "));
   }
 }

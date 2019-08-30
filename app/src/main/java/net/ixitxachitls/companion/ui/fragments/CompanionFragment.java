@@ -49,7 +49,7 @@ import androidx.fragment.app.Fragment;
  */
 public abstract class CompanionFragment extends Fragment {
 
-  public enum Type {settings, campaigns, campaign, character, miniatures, localCharacter};
+  public enum Type {settings, campaigns, campaign, character, miniatures, monster, localCharacter};
 
   private final Type type;
 

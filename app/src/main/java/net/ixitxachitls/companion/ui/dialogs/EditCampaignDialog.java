@@ -70,7 +70,7 @@ public class EditCampaignDialog extends Dialog {
       if (Strings.isNullOrEmpty(id)) {
         campaign = Optional.of(application().context().campaigns().create());
       } else {
-        campaign = campaigns().get(id);
+        campaign = campaigns().getOptional(id);
       }
     } else {
       campaign = Optional.of(application().context().campaigns().create());
