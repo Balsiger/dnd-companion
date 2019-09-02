@@ -23,8 +23,6 @@ package net.ixitxachitls.companion.data.templates;
 
 import com.google.common.collect.ImmutableList;
 
-import net.ixitxachitls.companion.CompanionApplication;
-import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -193,14 +191,22 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
           .collect(Collectors.toList());
     }
 
-    public List<Monster> getMonsters(String campaignId) {
-      List<Monster> monsters = new ArrayList<>();
-      for (Template.AdventureTemplateProto.Encounter.Creature creature : proto.getCreatureList()) {
-        monsters.add(Monster.create(CompanionApplication.get().context(), campaignId,
-            creature.getName()));
-      }
+    public List<CreatureInitializer> getCreatures() {
+      return proto.getCreatureList().stream()
+          .map(c -> new CreatureInitializer(c.getName(), c.getReason(), c.getTacticsList()))
+          .collect(Collectors.toList());
+    }
 
-      return monsters;
+    public class CreatureInitializer {
+      private final String name;
+      private final String reason;
+      private final List<String> tactics;
+
+      public CreatureInitializer(String name, String reason, List<String> tactics) {
+        this.name = name;
+        this.reason = reason;
+        this.tactics = tactics;
+      }
     }
 
     public class Check {

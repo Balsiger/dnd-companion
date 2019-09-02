@@ -35,6 +35,7 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Encounter;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
 import net.ixitxachitls.companion.ui.views.MonsterChipView;
@@ -54,12 +55,12 @@ import androidx.annotation.IdRes;
 import androidx.annotation.Nullable;
 
 /**
- * A view for displaying adventure and encounter information.
+ * A view for displaying adventure and encounterView information.
  */
 public class AdventureView extends LinearLayout {
 
   private TextWrapper<TextView> adventure;
-  private TextWrapper<TextView> encounter;
+  private TextWrapper<TextView> encounterView;
   private TextWrapper<TextView> description;
   private TextWrapper<TextView> level;
   private TextWrapper<TextView> locations;
@@ -68,6 +69,7 @@ public class AdventureView extends LinearLayout {
   private LinearLayout creatures;
 
   private Optional<Campaign> campaign = Optional.empty();
+  private Optional<Encounter> encounter = Optional.empty();
   private Optional<AdventureTemplate> adventureTemplate;
   private Optional<AdventureTemplate.EncounterTemplate> encounterTemplate;
 
@@ -87,16 +89,16 @@ public class AdventureView extends LinearLayout {
     this.campaign = Optional.of(campaign);
 
     adventure.onClick(this::selectAdventure);
-    encounter.onClick(this::selectEncounter);
+    encounterView.onClick(this::selectEncounter);
     updateAdventure(Templates.get().getAdventureTemplates().get(campaign.getAdventureId()));
     if (adventureTemplate.isPresent()) {
       encounterTemplate = adventureTemplate.get().getEncounter(campaign.getEncounterId());
-      encounter.text(encounterTemplate.isPresent()
+      encounterView.text(encounterTemplate.isPresent()
           ? encounterTemplate.get().getId() + ":  " + encounterTemplate.get().getName()
           : campaign.getEncounterId());
     } else {
       adventure.text(campaign.getAdventureId());
-      encounter.text("");
+      encounterView.text("");
     }
   }
 
@@ -138,7 +140,7 @@ public class AdventureView extends LinearLayout {
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_adventure, null, false);
 
     adventure = TextWrapper.wrap(view, R.id.adventure);
-    encounter = TextWrapper.wrap(view, R.id.encounter);
+    encounterView = TextWrapper.wrap(view, R.id.encounter);
     description = TextWrapper.wrap(view, R.id.description);
     level = TextWrapper.wrap(view, R.id.encounter_level);
     locations = TextWrapper.wrap(view, R.id.locations);
@@ -214,12 +216,18 @@ public class AdventureView extends LinearLayout {
 
   private void selectedEncounter(List<String> strings) {
     if (strings.size() != 1) {
-      Status.error("Expected a single encounter!");
+      Status.error("Expected a single encounterView!");
     }
 
     if (campaign.isPresent()) {
       campaign.get().setEncounterId(strings.get(0));
-      if ()
+      if (CompanionApplication.get().encounters()
+          .hasLoaded(campaign.get().getId(), campaign.get().getAdventureId())) {
+        encounter = Optional.of(CompanionApplication.get().encounters().getOrInitialize(campaign.get().getId(),
+            campaign.get().getAdventureId(), strings.get(0)));
+      } else {
+        Status.error("Encounters have not yet been loaded for " + campaign.get().getName());
+      }
     }
   }
 
@@ -340,7 +348,7 @@ public class AdventureView extends LinearLayout {
     if (encounterTemplate.isPresent()) {
       description.text(Texts.processCommands(getContext(),
           encounterTemplate.get().getDescription()));
-      encounter.text(encounterTemplate.get().getId() + ":" + encounterTemplate.get().getName());
+      encounterView.text(encounterTemplate.get().getId() + ":" + encounterTemplate.get().getName());
       level.text(String.valueOf(encounterTemplate.get().getEncounterLevel()));
       locations.text(Strings.COMMA_JOINER.join(encounterTemplate.get().getLocations()));
       categoryIcons.get(0).get().callOnClick();
@@ -354,7 +362,7 @@ public class AdventureView extends LinearLayout {
       }
     } else {
       description.text("");
-      encounter.text(campaign.isPresent() ? campaign.get().getEncounterId() : "");
+      encounterView.text(campaign.isPresent() ? campaign.get().getEncounterId() : "");
       level.text("");
       locations.text("");
       categoryText.removeAllViews();

@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
@@ -31,6 +32,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -63,6 +65,11 @@ public class Encounters extends Documents<Encounters> {
     }
   }
 
+  public Optional<Encounter> get(String campaignId, String adventureId, String encounterId) {
+    return encountersByCampaignAndAdventureId.getOrDefault(createKey(campaignId, adventureId),
+        Collections.emptyList()).stream().filter(e -> e.getId().equals(encounterId)).findFirst();
+  }
+
   private void readEncounters(String campaignId, String adventureId,
                               List<DocumentSnapshot> snapshots) {
     encountersByCampaignAndAdventureId.put(createKey(campaignId, adventureId),
@@ -79,5 +86,18 @@ public class Encounters extends Documents<Encounters> {
   public boolean hasEncounter(String campaignId, String adventureId, String encounterId) {
     return encountersByCampaignAndAdventureId.getOrDefault(createKey(campaignId, adventureId),
         Collections.emptyList()).stream().anyMatch(e -> e.getId().equals(encounterId));
+  }
+
+  public boolean hasLoaded(String campaignId, String adventureId) {
+    return encountersByCampaignAndAdventureId.get(createKey(campaignId, adventureId)) != null;
+  }
+
+  public Encounter getOrInitialize(String campaignId, String adventureId, String encounterId) {
+    if (context.encounters().hasEncounter(campaignId, adventureId, encounterId)) {
+      return context.encounters().get(campaignId, adventureId, campaignId).get();
+    } else {
+      // Creating a new encounter and storing it.
+      Encounter.create(campaignId, adventureId, encounterId);
+    }
   }
 }
