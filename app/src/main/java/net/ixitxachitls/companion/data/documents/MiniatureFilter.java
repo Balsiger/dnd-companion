@@ -28,9 +28,7 @@ import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import androidx.annotation.NonNull;
 
@@ -181,18 +179,16 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
   }
 
   @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    write(data, FIELD_NAME, name);
-    write(data, FIELD_RACES, races);
-    write(data, FIELD_SETS, sets);
-    write(data, FIELD_TYPES, types);
-    write(data, FIELD_CLASSES, classes);
-    write(data, FIELD_SIZES, sizes);
-    write(data, FIELD_OWNED, owned);
-    write(data, FIELD_LOCATIONS, locations);
-
-    return data;
+  public Data write() {
+    return Data.empty()
+        .set(FIELD_NAME, name)
+        .set(FIELD_RACES, races)
+        .set(FIELD_SETS, sets)
+        .set(FIELD_TYPES, types)
+        .set(FIELD_CLASSES, classes)
+        .set(FIELD_SIZES, sizes)
+        .set(FIELD_OWNED, owned)
+        .set(FIELD_LOCATIONS, locations);
   }
 
   private boolean matchesClass(MiniatureTemplate miniature, List<String> classes) {

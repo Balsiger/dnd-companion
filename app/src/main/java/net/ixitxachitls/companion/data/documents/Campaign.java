@@ -31,9 +31,7 @@ import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.data.values.CampaignDate;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import androidx.annotation.CallSuper;
@@ -215,10 +213,6 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     store();
   }
 
-  public Map<String, Object> write() {
-    return write(new HashMap<>());
-  }
-
   @Override
   @CallSuper
   protected void read() {
@@ -237,16 +231,14 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   }
 
   @Override
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_NAME, name);
-    data.put(FIELD_WORLD, worldTemplate.getName());
-    data.put(FIELD_DATE, date.write());
-    data.put(FIELD_ENCOUNTER, battle.write());
-    data.put(FIELD_INVITES, invites);
-    data.put(FIELD_ADVENTURE, adventureId);
-    data.put(FIELD_ENCOUNTER_ID, encounterId);
-
-    return data;
+  public Data write() {
+    return Data.empty().set(FIELD_NAME, name)
+        .set(FIELD_WORLD, worldTemplate.getName())
+        .set(FIELD_DATE, date.write())
+        .set(FIELD_ENCOUNTER, battle.write())
+        .set(FIELD_INVITES, invites)
+        .set(FIELD_ADVENTURE, adventureId)
+        .set(FIELD_ENCOUNTER_ID, encounterId);
   }
 
   private void uninviteUser(String email) {

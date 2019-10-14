@@ -407,6 +407,10 @@ message LevelTemplateProto {
   repeated PerLevel spells_per_day = 27;
   repeated PerLevel spells_known = 28;
   repeated string automatic_feat = 29;
+  message Requirement {
+    string description = 1;
+  }
+  repeated Requirement requirement = 30;
 }
 
 message QualityTemplateProto {

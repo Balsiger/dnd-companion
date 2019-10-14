@@ -250,12 +250,11 @@ public class User extends Document<User> {
     return getNickname();
   }
 
-  public Map<String, Object> writeMiniatures() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_MINIATURE_OWNED, miniatures);
-    data.put(FIELD_MINIATURE_LOCATIONS, locations.values().stream()
-        .map(MiniatureLocation::write).collect(Collectors.toList()));
-    data.put(FIELD_MINIATURE_HIDDEN_SETS, new ArrayList<>(hiddenSets));
+  public Data writeMiniatures() {
+    Data.empty()
+        .set(FIELD_MINIATURE_OWNED, miniatures)
+        .setNested(FIELD_MINIATURE_LOCATIONS, locations.values())
+        .set(FIELD_MINIATURE_HIDDEN_SETS, new ArrayList<>(hiddenSets));
 
     return data;
   }
@@ -270,11 +269,11 @@ public class User extends Document<User> {
   }
 
   @Override
-  public Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_NICKNAME, nickname);
-    data.put(FIELD_PHOTO_URL, photoUrl);
-    data.put(FIELD_FEATURES, features);
-    return data;
+  public Data write() {
+    return Data.empty()
+        .set(FIELD_NICKNAME, nickname)
+        .set(FIELD_PHOTO_URL, photoUrl)
+        .set(FIELD_FEATURES, features);
   }
 
   private void readCampaigns() {
@@ -291,7 +290,7 @@ public class User extends Document<User> {
       return;
     }
 
-    miniaturesDocument.get().update(writeMiniatures());
+    miniaturesDocument.get().update(writeMiniatures().asMap());
   }
 
   private void verifyMiniatures() {

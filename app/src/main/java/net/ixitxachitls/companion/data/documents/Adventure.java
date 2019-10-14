@@ -25,8 +25,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 
-import java.util.Map;
-
 import androidx.annotation.CallSuper;
 
 /**
@@ -57,10 +55,8 @@ public class Adventure extends Document<Adventure> {
   }
 
   @Override
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_NAME, name);
-
-    return data;
+  protected Data write() {
+    return Data.empty().set(FIELD_NAME, name);
   }
 
   public static Adventure create(CompanionContext context, String campaignId, String name) {

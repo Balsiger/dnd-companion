@@ -38,6 +38,7 @@ import com.google.firebase.auth.FirebaseUser;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.drive.DriveStorage;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.MessageDialog;
@@ -51,9 +52,7 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -197,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
           getString(R.string.app_name) + " " + DATE_FORMAT.format(new Date()),
           ImmutableMap.<String, String>builder()
               .put("User - " + application.me().getNickname(),
-                  formatData(application.me().write(new HashMap<>())))
+                  formatData(application.me().write()))
               .put("User - Miniatures",
                   formatData(application.me().writeMiniatures()))
               .putAll(application.campaigns().getDMCampaigns().stream()
@@ -217,9 +216,9 @@ public class MainActivity extends AppCompatActivity {
     });
   }
 
-  private String formatData(Map<String, Object> data) {
+  private String formatData(Data data) {
     try {
-      return new JSONObject(data).toString(2);
+      return new JSONObject(data.asMap()).toString(2);
     } catch (JSONException e) {
       return data.toString();
     }

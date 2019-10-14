@@ -303,30 +303,16 @@ public class Level extends NestedDocument {
   }
 
   @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_TEMPLATE, template.getName());
-    data.put(FIELD_HP, hp);
-    if (abilityIncrease.isPresent()) {
-      data.put(FIELD_ABILITY_INCREASE, abilityIncrease.get().getName());
-    }
-    if (feat.isPresent() && !feat.get().getName().isEmpty()) {
-      data.put(FIELD_FEAT, feat.get().write());
-    }
-    if (racialFeat.isPresent() && !racialFeat.get().getName().isEmpty()) {
-      data.put(FIELD_RACIAL_FEAT, racialFeat.get().write());
-    }
-    if (classFeat.isPresent() && !classFeat.get().getName().isEmpty()) {
-      data.put(FIELD_CLASS_FEAT, classFeat.get().write());
-    }
-    if (!qualities.isEmpty()) {
-      data.put(FIELD_QUALITIES, qualities);
-    }
-    if (!skills.isEmpty()) {
-      data.put(FIELD_SKILLS, skills);
-    }
-
-    return data;
+  public Data write() {
+    return Data.empty()
+        .set(FIELD_TEMPLATE, template.getName())
+        .set(FIELD_HP, hp)
+        .set(FIELD_ABILITY_INCREASE, abilityIncrease, Ability::getName)
+        .set(FIELD_FEAT, feat)
+        .set(FIELD_RACIAL_FEAT, racialFeat)
+        .set(FIELD_CLASS_FEAT, classFeat)
+        .set(FIELD_QUALITIES, qualities)
+        .set(FIELD_SKILLS, skills);
   }
 
   private String selectedQuality(List<String> names) {

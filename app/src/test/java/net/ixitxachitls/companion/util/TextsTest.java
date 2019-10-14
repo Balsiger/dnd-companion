@@ -21,7 +21,11 @@
 
 package net.ixitxachitls.companion.util;
 
+import com.google.common.collect.ImmutableMap;
+
 import org.junit.Test;
+
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
@@ -45,5 +49,45 @@ public class TextsTest {
             '\002'));
     assertEquals("incomplete", "{a\001<0>b\002<0>{",
         Texts.markBrackets("{a{b}{", '\\', '{', '}', '\001', '\002'));
+  }
+
+  @Test
+  public void processExpressions() {
+    Map<String, Texts.Value> values = ImmutableMap.<String, Texts.Value>builder()
+        .put("life", new Texts.IntegerValue(42))
+        .build();
+
+    assertEquals("no expression", "just a text",
+        Texts.processExpressions("just a text", values));
+
+    assertEquals("simple number", "just -42 text",
+        Texts.processExpressions("just [[  -42  ]] text", values));
+    assertEquals("simple number", "just 42 text",
+        Texts.processExpressions("just [[  +42  ]] text", values));
+    assertEquals("simple number", "just 42 text",
+        Texts.processExpressions("just [[  42  ]] text", values));
+
+    assertEquals("simple variable", "just 42 text",
+        Texts.processExpressions("just [[  $life ]] text", values));
+    assertEquals("simple variable", "just <$life2> text",
+        Texts.processExpressions("just [[$life2]] text", values));
+
+    assertEquals("simple bracket", "just 42 text",
+        Texts.processExpressions("just [[ (  $life ) ]] text", values));
+    assertEquals("nested bracket", "just 42 text",
+        Texts.processExpressions("just [[ ( ((  $life )  ) ) ]] text", values));
+
+    assertEquals("simple operation", "42", Texts.processExpressions("[[ 6 * 7 ]]", values));
+    assertEquals("simple operation", "252", Texts.processExpressions("[[ 6 * $life ]]", values));
+    assertEquals("simple operation", "84", Texts.processExpressions("[[ 6 * 7 * 2]]", values));
+    assertEquals("simple operation", "21", Texts.processExpressions("[[ 6 * 7 / 2]]", values));
+    assertEquals("simple operation", "18", Texts.processExpressions("[[ 6 * (7 / 2)]]", values));
+
+    assertEquals("simple operation", "11", Texts.processExpressions("[[ 6 + 7 - 2]]", values));
+    assertEquals("simple operation", "11", Texts.processExpressions("[[ 6 + (7 - 2)]]", values));
+    assertEquals("simple operation", "11", Texts.processExpressions("[[ (6 + 7) - 2]]", values));
+
+    assertEquals("simple operation", "20", Texts.processExpressions("[[ 6 + 7 * 2]]", values));
+    assertEquals("simple operation", "26", Texts.processExpressions("[[ (6 + 7) * 2]]", values));
   }
 }

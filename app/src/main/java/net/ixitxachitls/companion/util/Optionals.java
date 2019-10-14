@@ -1,15 +1,15 @@
 /*
- * Copyright (c) 2017-2018 Peter Balsiger
+ * Copyright (c) 2017-2019 Peter Balsiger
  * All rights reserved
  *
  * This file is part of the Roleplay Companion.
  *
- * The Roleplay Companion is free software; you can redistribute it and/or
+ * The Tabletop Companion is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2 of the License, or
  * (at your option) any later version.
  *
- * The Roleplay Companion is distributed in the hope that it will be useful,
+ * The Tabletop Companion is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -19,11 +19,26 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-package net.ixitxachitls.companion.data.documents;
+package net.ixitxachitls.companion.util;
+
+import java.util.Optional;
 
 /**
- * A document that is nested in another document, not separately stored.
+ * Utiility methods for optionals.
  */
-public abstract class NestedDocument {
-  abstract public Data write();
+public class Optionals {
+  private Optionals() {}
+
+  @FunctionalInterface
+  public interface Accessor<S, T> {
+    T access(S value);
+  }
+
+  public static <S, T> Optional<T> ifPresent(Optional<S> value, Accessor<S, T> accessor) {
+    if (value.isPresent()) {
+      return Optional.of(accessor.access(value.get()));
+    }
+
+    return Optional.empty();
+  }
 }

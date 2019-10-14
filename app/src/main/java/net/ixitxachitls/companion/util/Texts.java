@@ -26,6 +26,7 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.firebase.firestore.model.value.IntegerValue;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
@@ -65,11 +66,20 @@ public class Texts {
   private static Map<String, TextCommand> COMMANDS = ImmutableMap.<String, TextCommand>builder()
       .put("Class", new ColorCommand(R.color.className))
       .put("Place", new ColorCommand(R.color.campaign))
+      .put("Spell", new ColorCommand(R.color.spell))
       .put("par", new ParCommand())
       .put("bold", new BoldCommand())
       .put("emph", new ItalicsCommand())
       .put("table", new TableCommand())
       .build();
+
+  // Expressions.
+  private static final Pattern EXPRESSSION_PATTERN = Pattern.compile("\\[\\[(.*?)\\]\\]");
+  private static final Pattern EXPRESSION_BRACKET = Pattern.compile("\\(([^\\(\\)]*)\\)");
+  private static final Pattern EXPRESSION_VARIABLE = Pattern.compile("\\s*\\$(\\w+)\\s*");
+  private static final Pattern EXPRERSSION_NUMBER = Pattern.compile("\\s*([\\+\\-]?\\d+)\\s*");
+  private static final Pattern EXPRESSION_MULTDIV = Pattern.compile("(.*)\\s*([\\*\\/])\\s*(.*?)");
+  private static final Pattern EXPRESSION_ADDSUB = Pattern.compile("(.*)\\s*([\\+\\-])\\s*(.*?)");
 
   protected static String clean(String text)
   {
@@ -80,9 +90,8 @@ public class Texts {
   }
 
   @VisibleForTesting
-  protected static String markBrackets(String text, char escape,
-                                     char start, char end,
-                                     char markerStart, char markerEnd)
+  protected static String markBrackets(String text, char escape, char start, char end,
+                                       char markerStart, char markerEnd)
   {
     // Remove all escaped markers.
     text = text.replaceAll("\\" + escape + "\\" + start, "" + MARKER_ESCAPE_START);
@@ -101,7 +110,8 @@ public class Texts {
     // 'Invert' the number to make sure that really the nesting level starts
     // at 0 on the outside not on the inside
     // with the above, {{}} is {<1>{<0>}<0>}<1> instead of {<0>{<1>}<1>}<0>
-    pattern = Pattern.compile(markerStart + "<#(\\d+)#>(.*?)" + markerEnd + "<#\\1#>", Pattern.DOTALL);
+    pattern = Pattern.compile(markerStart + "<#(\\d+)#>(.*?)" + markerEnd + "<#\\1#>",
+        Pattern.DOTALL);
 
     i = 0;
     for(Matcher matcher = pattern.matcher(text); matcher.find(0); matcher = pattern.matcher(text)) {
@@ -131,12 +141,20 @@ public class Texts {
   }
 
   public static SpannableStringBuilder processCommands(Context context, String text) {
+    return processCommands(context, text, ImmutableMap.of());
+  }
+
+  public static SpannableStringBuilder processCommands(Context context, String text,
+                                                       Map<String, Value> values) {
     if(text.isEmpty()) {
       return new SpannableStringBuilder(text);
     }
 
     // Allow \n\n for paragraphs.
     text = text.replace("\n\n", "\\par ");
+
+    // Process expressions first.
+    text = processExpressions(text, values);
 
     // Do we have any commands at all?
     if(text.indexOf(COMMAND) < 0) {
@@ -209,7 +227,7 @@ public class Texts {
 
         // now we have all the arguments, we need to parse them as well
         for(int i = 0; i < args.length; i++)
-          optionals.add(processCommands(context, args[i]));
+          optionals.add(processCommands(context, args[i], values));
       }
 
       // Extract the arguments (we have to copy the above because we need to
@@ -234,7 +252,7 @@ public class Texts {
 
         // now we have all the arguments, we need to parse them as well
         for(int i = 0; i < args.length; i++) {
-          arguments.add(processCommands(context, args[i]));
+          arguments.add(processCommands(context, args[i], values));
         }
       }
 
@@ -288,7 +306,133 @@ public class Texts {
   }
 
   public static Spanned toSpanned(Context context, String text) {
-    return processCommands(context, processWhitespace(text));
+    return toSpanned(context, text, ImmutableMap.of());
   }
 
+
+  public static Spanned toSpanned(Context context, String text, Map<String, Value> values) {
+    return processCommands(context, processWhitespace(text), values);
+  }
+
+  @VisibleForTesting
+  protected static String processExpressions(String text, Map<String, Value> values) {
+    Matcher matcher = EXPRESSSION_PATTERN.matcher(text);
+    StringBuffer buffer = new StringBuffer();
+    while (matcher.find()) {
+      matcher.appendReplacement(buffer,
+          Matcher.quoteReplacement(evaluateExpression(matcher.group(1), values)));
+    }
+    matcher.appendTail(buffer);
+    return buffer.toString();
+  }
+
+  private static String evaluateExpression(String expression, Map<String, Value> values) {
+    for (StringBuffer buffer = new StringBuffer();
+         evaluateExpressionBrackets(buffer, expression, values);
+         buffer = new StringBuffer()) {
+      expression = buffer.toString();
+    }
+
+    return evaluateExpressionPart(expression, values).toString();
+  }
+
+  private static boolean evaluateExpressionBrackets(StringBuffer buffer, String expression,
+                                                    Map<String, Value> values) {
+    Matcher matcher = EXPRESSION_BRACKET.matcher(expression);
+    boolean found = false;
+    while (matcher.find()) {
+      matcher.appendReplacement(buffer,
+          Matcher.quoteReplacement(evaluateExpressionPart(matcher.group(1), values).toString()));
+      found = true;
+    }
+    matcher.appendTail(buffer);
+    return found;
+  }
+
+  private static Value evaluateExpressionPart(String expression, Map<String, Value> values) {
+    // The given expression will not have any brackets.
+
+    // Number.
+    Matcher matcher = EXPRERSSION_NUMBER.matcher(expression);
+    if (matcher.matches()) {
+      return new IntegerValue(Integer.parseInt(matcher.group(1)));
+    }
+
+    // Variable.
+    matcher = EXPRESSION_VARIABLE.matcher(expression);
+    if (matcher.matches()) {
+      String key = matcher.group(1);
+      if (values.containsKey(key)) {
+        return values.get(key);
+      } else {
+        return new StringValue("<$" + key + ">");
+      }
+    }
+
+    // Operations.
+    matcher = EXPRESSION_ADDSUB.matcher(expression);
+    if (matcher.matches()) {
+      Value left = evaluateExpressionPart(matcher.group(1), values);
+      String operator = matcher.group(2);
+      Value right = evaluateExpressionPart(matcher.group(3), values);
+
+      if (left instanceof IntegerValue && right instanceof IntegerValue) {
+        if (operator.equals("+")) {
+          return new IntegerValue(((IntegerValue) left).value + ((IntegerValue) right).value);
+        } else if (operator.equals("-")) {
+          return new IntegerValue(((IntegerValue) left).value - ((IntegerValue) right).value);
+        }
+      }
+
+      return new StringValue("<" + left + operator + right + ">");
+    }
+
+    matcher = EXPRESSION_MULTDIV.matcher(expression);
+    if (matcher.matches()) {
+      Value left = evaluateExpressionPart(matcher.group(1), values);
+      String operator = matcher.group(2);
+      Value right = evaluateExpressionPart(matcher.group(3), values);
+
+      if (left instanceof IntegerValue && right instanceof IntegerValue) {
+        if (operator.equals("*")) {
+          return new IntegerValue(((IntegerValue) left).value * ((IntegerValue) right).value);
+        } else if (operator.equals("/")) {
+          return new IntegerValue(((IntegerValue) left).value / ((IntegerValue) right).value);
+        }
+      }
+
+      return new StringValue("<" + left + operator + right + ">");
+    }
+
+    return new StringValue("<" + expression + ">");
+  }
+
+  public static class Value {
+  }
+
+  public static class IntegerValue extends Value {
+    final int value;
+
+    public IntegerValue(int value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+  }
+
+  public static class StringValue extends Value {
+    final String value;
+
+    public StringValue(String value) {
+      this.value = value;
+    }
+
+    @Override
+    public String toString() {
+      return value;
+    }
+  }
 }

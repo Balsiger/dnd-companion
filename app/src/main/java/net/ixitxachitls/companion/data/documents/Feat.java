@@ -29,9 +29,7 @@ import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -138,14 +136,10 @@ public class Feat extends NestedDocument {
   }
 
   @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_NAME, template.getName());
-    if (!qualifiers.isEmpty()) {
-      data.put(FIELD_QUALIFIERS, qualifiers);
-    }
-
-    return data;
+  public Data write() {
+    return Data.empty()
+        .set(FIELD_NAME, template.getName())
+        .set(FIELD_QUALIFIERS, qualifiers);
   }
 
   private static boolean equalQualifiers(List<String> first, List<String> second) {

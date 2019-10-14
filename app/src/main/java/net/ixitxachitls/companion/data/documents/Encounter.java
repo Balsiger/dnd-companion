@@ -27,10 +27,11 @@ import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import androidx.annotation.CallSuper;
 
@@ -39,23 +40,25 @@ import androidx.annotation.CallSuper;
  */
 public class Encounter extends Document<Encounter> {
 
+  private static final String FIELD_CAMPAIGN_ID = "campaign_id";
   private static final String FIELD_ADVENTURE_ID = "adventure_id";
   private static final String FIELD_ENCOUNTER_ID = "encounter_id";
   private static final String FIELD_MONSTERS = "monsters";
 
   private static final Document.DocumentFactory<Encounter> FACTORY = () -> new Encounter();
 
+  private String campaignId;
   private String adventureId;
   private String encounterId;
-  private List<Monster> monsters;
+  private List<Monster> monsters = new ArrayList<>();
 
   @Override
-  protected Map<String, Object> write(Map data) {
-    data.put(FIELD_ADVENTURE_ID, adventureId);
-    data.put(FIELD_ENCOUNTER_ID, encounterId);
-    data.put(FIELD_MONSTERS, monsters);
-
-    return data;
+  protected Data write() {
+    return Data.empty()
+        .set(FIELD_CAMPAIGN_ID, campaignId)
+        .set(FIELD_ADVENTURE_ID, adventureId)
+        .set(FIELD_ENCOUNTER_ID, encounterId)
+        .set(FIELD_MONSTERS, monsters.stream().map(Monster::write).collect(Collectors.toList()));
   }
 
   @Override
@@ -63,6 +66,7 @@ public class Encounter extends Document<Encounter> {
   protected void read() {
     super.read();
 
+    campaignId = data.get(FIELD_CAMPAIGN_ID, "");
     adventureId = data.get(FIELD_ADVENTURE_ID, "");
     encounterId = data.get(FIELD_ENCOUNTER_ID, "");
     monsters = data.get(FIELD_MONSTERS, Collections.emptyList());
@@ -80,7 +84,10 @@ public class Encounter extends Document<Encounter> {
   public static Encounter create(CompanionContext context, String campaignId, String adventureId,
                                  String encounterId) {
     Encounter encounter =
-        Document.create(FACTORY, context, createId(campaignId, adventureId, encounterId));
+        Document.createWithId(FACTORY, context, createId(campaignId, adventureId, encounterId));
+    encounter.campaignId = campaignId;
+    encounter.adventureId = adventureId;
+    encounter.encounterId = encounterId;
 
     Optional<AdventureTemplate> adventure =
         Templates.get().getAdventureTemplates().get(adventureId);
@@ -95,11 +102,16 @@ public class Encounter extends Document<Encounter> {
     for (AdventureTemplate.EncounterTemplate.CreatureInitializer creature
         : encounter.getCreatures()) {
       // TODO(Merlin): For now we assume all creatures are monsters.
-
+      monsters.add(Monster.create(context, campaignId, creature.getName()));
     }
   }
 
   private static String createId(String campaignId, String adventureId, String encounterId) {
-    return campaignId + "/" + adventureId + "/" + encounterId;
+    return campaignId + "/" + Encounters.PATH_ADVENTURES + "/" + adventureId + "/"
+        + Encounters.PATH_ENCOUNTERS + "/" + encounterId;
+  }
+
+  public List<Monster> getMonsters() {
+    return monsters;
   }
 }

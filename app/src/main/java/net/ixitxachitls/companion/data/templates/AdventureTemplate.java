@@ -207,6 +207,18 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
         this.reason = reason;
         this.tactics = tactics;
       }
+
+      public String getName() {
+        return name;
+      }
+
+      public String getReason() {
+        return reason;
+      }
+
+      public List<String> getTactics() {
+        return tactics;
+      }
     }
 
     public class Check {

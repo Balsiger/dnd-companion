@@ -21,6 +21,10 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
+
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.enums.Ability;
@@ -44,13 +48,15 @@ import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.rules.Armor;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.rules.Items;
+import net.ixitxachitls.companion.util.Dice;
+import net.ixitxachitls.companion.util.Optionals;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.EnumMap;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -310,12 +316,18 @@ public class Creature<T extends Creature<T>> extends Document<T> {
   public void initFromRace(String name) {
     setRace(name);
     if (race.isPresent()) {
+      // Abilities.
       strength = race.get().getStrength();
       dexterity = race.get().getDexterity();
       constitution = race.get().getConstitution();
       intelligence = race.get().getIntelligenec();
       wisdom = race.get().getWisdom();
       charisma = race.get().getCharisma();
+
+      // Hit points.
+      maxHp = Dice.rollModifierEach(race.get().getHitDie(), race.get().getHitDice(),
+          getDexterityModifier());
+      hp = maxHp;
     }
   }
 
@@ -487,8 +499,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       }
     }
 
-    for (Quality quality : collectQualities()) {
-      attack.add(quality.getTemplate().getAttackModifiers());
+    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
+      attack.add(qualities.iterator().next().getTemplate().getAttackModifiers());
     }
 
     attack.add(item.getMagicAttackModifiers());
@@ -512,12 +524,12 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     return Collections.emptySet();
   }
 
-  public Set<Quality> collectQualities() {
+  public Multimap<String, Quality> collectQualities() {
     if (race.isPresent()) {
-      return new HashSet<>(race.get().getQualities());
+      return Multimaps.index(race.get().getQualities(), Quality::getName);
     }
 
-    return Collections.emptySet();
+    return HashMultimap.create();
   }
 
   public void combine(Item item, Item other) {
@@ -571,8 +583,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     // Qualities.
-    for (Quality quality : collectQualities()) {
-      for (Modifier modifier : quality.getTemplate().getDamageModifiers()) {
+    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
+      for (Modifier modifier : qualities.iterator().next().getTemplate().getDamageModifiers()) {
         damage.add(modifier);
       }
     }
@@ -598,8 +610,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     // Qualities.
-    for (Quality quality : collectQualities()) {
-      value.add(quality.getTemplate().getAcModifiers());
+    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
+      value.add(qualities.iterator().next().getTemplate().getAcModifiers());
     }
 
     return value;
@@ -863,8 +875,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     // Qualities.
-    for (Quality quality : collectQualities()) {
-      value.add(quality.getTemplate().getAcModifiers());
+    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
+      value.add(qualities.iterator().next().getTemplate().getAcModifiers());
     }
 
     return value;
@@ -1025,8 +1037,8 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
 
     // Qualities.
-    for (Quality quality : collectQualities()) {
-      value.add(quality.getTemplate().getAcModifiers().stream()
+    for (Collection<Quality> qualities : collectQualities().asMap().values()) {
+      value.add(qualities.iterator().next().getTemplate().getAcModifiers().stream()
           .filter(m -> m.getType() == Modifier.Type.DEFLECTION)
           .collect(Collectors.toList()));
     }
@@ -1127,28 +1139,25 @@ public class Creature<T extends Creature<T>> extends Document<T> {
 
   @Override
   @CallSuper
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_NAME, name);
-    data.put(FIELD_CAMPAIGN, campaignId);
-    data.put(FIELD_GENDER, gender.toString());
-    if (race.isPresent()) {
-      data.put(FIELD_RACE, race.get().getName());
-    }
-    data.put(FIELD_STRENGTH, strength);
-    data.put(FIELD_DEXTERITY, dexterity);
-    data.put(FIELD_CONSTITUTION, constitution);
-    data.put(FIELD_INTELLIGENCE, intelligence);
-    data.put(FIELD_WISDOM, wisdom);
-    data.put(FIELD_CHARISMA, charisma);
-    data.put(FIELD_HP, hp);
-    data.put(FIELD_MAX_HP, maxHp);
-    data.put(FIELD_NONLETHAL, nonlethalDamage);
-    data.put(FIELD_INITIATIVE, encounterInitiative);
-    data.put(FIELD_ENCOUNTER_NUMBER, encounterNumber);
-    data.put(FIELD_ITEMS, items.stream().map(Item::write).collect(Collectors.toList()));
-    data.put(FIELD_SLOTS, wearing.write());
-
-    return data;
+  protected Data write() {
+    return Data.empty()
+        .set(FIELD_NAME, name)
+        .set(FIELD_CAMPAIGN, campaignId)
+        .set(FIELD_GENDER, gender.toString())
+        .set(FIELD_RACE, Optionals.ifPresent(race, MonsterTemplate::getName))
+        .set(FIELD_STRENGTH, strength)
+        .set(FIELD_DEXTERITY, dexterity)
+        .set(FIELD_CONSTITUTION, constitution)
+        .set(FIELD_INTELLIGENCE, intelligence)
+        .set(FIELD_WISDOM, wisdom)
+        .set(FIELD_CHARISMA, charisma)
+        .set(FIELD_HP, hp)
+        .set(FIELD_MAX_HP, maxHp)
+        .set(FIELD_NONLETHAL, nonlethalDamage)
+        .set(FIELD_INITIATIVE, encounterInitiative)
+        .set(FIELD_ENCOUNTER_NUMBER, encounterNumber)
+        .setNested(FIELD_ITEMS, items)
+        .set(FIELD_SLOTS, wearing);
   }
 
   public static class InitiativeComparator implements Comparator<Creature> {
@@ -1190,7 +1199,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
     }
   }
 
-  public class Wearing {
+  public class Wearing extends NestedDocument {
     private static final String FIELD_NAME = "name";
 
     private final String name;
@@ -1273,13 +1282,12 @@ public class Creature<T extends Creature<T>> extends Document<T> {
       return itemsPerSlot.get(slot);
     }
 
-    public Map<String, Object> write() {
-      Map<String, Object> data = new HashMap<>();
-      data.put(FIELD_NAME, name);
-      data.put(FIELD_ITEMS_PER_SLOT, itemsPerSlot.entrySet().stream()
-          .collect(Collectors.toMap((e) -> e.getKey().toString(), Map.Entry::getValue)));
-
-      return data;
+    @Override
+    public Data write() {
+      return Data.empty()
+          .set(FIELD_NAME, name)
+          .set(FIELD_ITEMS_PER_SLOT, itemsPerSlot.entrySet().stream()
+              .collect(Collectors.toMap((e) -> e.getKey().toString(), Map.Entry::getValue)));
     }
 
     private void add(Items.Slot slot, Item item) {

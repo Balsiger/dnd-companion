@@ -30,9 +30,7 @@ import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import javax.annotation.Nullable;
@@ -116,10 +114,10 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     }
 
     if (reference.isPresent()) {
-      reference.get().set(write(new HashMap<>()));
+      reference.get().set(write().asMap());
       updated((D) this);
     } else {
-      collection.add(write(new HashMap<>())).addOnCompleteListener(task -> {
+      collection.add(write().asMap()).addOnCompleteListener(task -> {
         if (task.isSuccessful()) {
           reference = Optional.of(task.getResult());
           reference.get().addSnapshotListener(this::onUpdate);
@@ -187,7 +185,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     }
   }
 
-  protected abstract Map<String, Object> write(Map<String, Object> data);
+  protected abstract Data write();
 
   /**
    * Create a new document that is not yet saved and will get an automatic id.
@@ -199,6 +197,22 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     document.id = "";
     document.path = path;
     document.collection = document.db.collection(path);
+    document.temporary = false;
+
+    return document;
+  }
+
+  /**
+   * Create a new document that is not yet saved with a given id.
+   */
+  protected static <D extends Document<D>> D createWithId(DocumentFactory<D> factory,
+                                                          CompanionContext context, String id) {
+    D document = factory.create();
+    document.context = context;
+    document.id = id;
+    document.reference = Optional.of(document.db.document(id));
+    document.collection = document.reference.get().getParent();
+    document.path = document.collection.getPath();
     document.temporary = false;
 
     return document;

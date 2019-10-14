@@ -355,9 +355,14 @@ public class AdventureView extends LinearLayout {
 
       creatures.removeAllViews();
       if (campaign.isPresent()) {
-        for (Monster monster : encounterTemplate.get().getMonsters(campaign.get().getId())) {
-          MonsterChipView chip = new MonsterChipView(getContext(), monster);
-          creatures.addView(chip);
+        Optional<Encounter> encounter =
+            CompanionApplication.get().encounters().get(campaign.get().getId(),
+                campaign.get().getAdventureId(), campaign.get().getEncounterId());
+        if (encounter.isPresent()) {
+          for (Monster monster : encounter.get().getMonsters()) {
+            MonsterChipView chip = new MonsterChipView(getContext(), monster);
+            creatures.addView(chip);
+          }
         }
       }
     } else {

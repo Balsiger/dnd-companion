@@ -59,6 +59,120 @@ quality {
     name: "Turn undead"
   }
 }
+quality {
+  level: 2
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 3
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 4
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 5
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 6
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 7
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 8
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 9
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 10
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 11
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 12
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 13
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 14
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 15
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 16
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 17
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 18
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 19
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 20
+  template {
+    name: "Turn undead"
+  }
+}
 base_attack: 0
 base_attack: 1
 base_attack: 1

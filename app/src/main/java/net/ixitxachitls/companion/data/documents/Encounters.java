@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
-import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
@@ -96,8 +95,11 @@ public class Encounters extends Documents<Encounters> {
     if (context.encounters().hasEncounter(campaignId, adventureId, encounterId)) {
       return context.encounters().get(campaignId, adventureId, campaignId).get();
     } else {
-      // Creating a new encounter and storing it.
-      Encounter.create(campaignId, adventureId, encounterId);
+      // Creating a new encounter and store it.
+      Encounter encounter = Encounter.create(context, campaignId, adventureId, encounterId);
+      encounter.store();
+
+      return encounter;
     }
   }
 }

@@ -21,8 +21,11 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 import com.google.common.collect.Multiset;
 import com.google.firebase.firestore.DocumentSnapshot;
 
@@ -49,7 +52,6 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
-import java.util.stream.Collectors;
 
 import androidx.annotation.CallSuper;
 
@@ -199,14 +201,17 @@ public class Character extends Creature<Character> implements Comparable<Charact
   }
 
   @Override
-  public Set<Quality> collectQualities() {
-    Set<Quality> qualities = super.collectQualities();
+  public Multimap<String, Quality> collectQualities() {
+    // Need to copy, as super might return an immutable map.
+    Multimap<String, Quality> qualities = HashMultimap.create(super.collectQualities());
 
     // Qualities from levels.
     Multiset<String> names = HashMultiset.create();
     for (Level level : levels) {
       names.add(level.getTemplate().getName());
-      qualities.addAll(level.getQualities(names.count(level.getTemplate().getName())));
+      qualities.putAll(
+          Multimaps.index(level.getQualities(names.count(level.getTemplate().getName())),
+              Quality::getName));
     }
 
     // TODO(merlin): Add qualities by items.
@@ -289,13 +294,11 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
   @Override
   @CallSuper
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data = super.write(data);
-    data.put(FIELD_XP, xp);
-    data.put(FIELD_LEVEL, level);
-    data.put(FIELD_LEVELS, levels.stream().map(Level::write).collect(Collectors.toList()));
-
-    return data;
+  public Data write() {
+    return super.write()
+        .set(FIELD_XP, xp)
+        .set(FIELD_LEVEL, level)
+        .setNested(FIELD_LEVELS, levels);
   }
 
   public List<ConditionData> getConditionsHistory() {
@@ -446,10 +449,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return errors;
   }
 
-  public Map<String, Object> write() {
-    return write(new HashMap<>());
-  }
-
   private ModifiedValue adjustAbility(ModifiedValue value, Ability ability) {
     adjustAbilityForLevels(value, ability);
     adjustAbilityForConditions(value, ability);
@@ -506,7 +505,7 @@ public class Character extends Creature<Character> implements Comparable<Charact
   private void adjustAbilityForQualities(ModifiedValue value, Ability ability) {
     if (getRace().isPresent()) {
       for (Quality quality : getRace().get().getQualities()) {
-        value.add(quality.getTemplate().getAbilityModifiers(Ability.DEXTERITY));
+        value.add(quality.getTemplate().getAbilityModifiers(ability));
       }
     }
   }

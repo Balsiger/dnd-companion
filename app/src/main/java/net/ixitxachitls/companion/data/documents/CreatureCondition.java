@@ -26,8 +26,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.values.TimedCondition;
 
-import java.util.Map;
-
 import androidx.annotation.CallSuper;
 
 /**
@@ -70,11 +68,10 @@ public class CreatureCondition extends Document<CreatureCondition> {
 
   @Override
   @CallSuper
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_CREATURE, creatureId);
-    data.put(FIELD_CONDITION, condition.write());
-
-    return data;
+  protected Data write() {
+    return Data.empty()
+        .set(FIELD_CREATURE, creatureId)
+        .set(FIELD_CONDITION, condition.write());
   }
 
   public static CreatureCondition create(CompanionContext context, String creatureId,

@@ -132,7 +132,8 @@ public class CampaignFragment extends CompanionFragment {
             + "current date and time of your campaign.");
     party = (PartyFragment) getChildFragmentManager().findFragmentById(R.id.party);
     encounter = (EncounterFragment) getChildFragmentManager().findFragmentById(R.id.encounter);
-    encounter.hide();
+    // Directly hiding the fragment does not work, as it uses the wrong fragment mamnager.
+    getChildFragmentManager().beginTransaction().hide(encounter).commit();
 
     clearActions();
     addAction(R.drawable.ic_arrow_back_black_24dp, "Back", "Go back to main overview.")

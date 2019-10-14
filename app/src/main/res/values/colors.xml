@@ -41,6 +41,11 @@
   <color name="itemDark">#0039cb</color>
   <color name="itemText">#fff</color>
 
+  <color name="spell">#8e24aa</color>
+  <color name="spellLight">#c158dc</color>
+  <color name="spellDark">#5c007a</color>
+  <color name="spellText">#fff</color>
+
   <color name="className">#ffd54f</color>
   <color name="classNameLight">#ffff81</color>
   <color name="classNameDark">#c8a415</color>

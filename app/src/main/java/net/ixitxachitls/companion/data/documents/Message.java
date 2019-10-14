@@ -28,7 +28,6 @@ import net.ixitxachitls.companion.data.values.Item;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import androidx.annotation.CallSuper;
@@ -120,20 +119,15 @@ public class Message extends Document<Message> {
 
   @Override
   @CallSuper
-  protected Map<String, Object> write(Map<String, Object> data) {
-    data.put(FIELD_TARGET, targetId);
-    data.put(FIELD_SOURCE, sourceId);
-    data.put(FIELD_RECIPIENTS, recipientIds);
-    data.put(FIELD_TYPE, type.toString());
-    if (xp != 0) {
-      data.put(FIELD_XP, xp);
-    }
-    if (item.isPresent()) {
-      data.put(FIELD_ITEM, item.get().write());
-    }
-    data.put(FIELD_TEXT, text);
-
-    return data;
+  protected Data write() {
+    return Data.empty()
+        .set(FIELD_TARGET, targetId)
+        .set(FIELD_SOURCE, sourceId)
+        .set(FIELD_RECIPIENTS, recipientIds)
+        .set(FIELD_TYPE, type.toString())
+        .setIf(FIELD_XP, xp, xp -> xp != 0)
+        .set(FIELD_ITEM, item)
+        .set(FIELD_TEXT, text);
   }
 
   private static Message createBase(CompanionContext context, String sourceId, String targetId,

@@ -30,6 +30,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.flexbox.FlexboxLayout;
+import com.google.common.collect.Multimap;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
@@ -294,14 +295,16 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
 
       qualities.removeAllViews();
-      Set<Quality> collectedQualities = character.collectQualities();
+      Multimap<String, Quality> collectedQualities = character.collectQualities();
       i = 1;
-      for (Quality quality : collectedQualities) {
+      for (String key : collectedQualities.keySet()) {
         boolean last = i++ == collectedQualities.size();
         TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()))
             .noWrap();
-        text.text(quality.getName() + (last ? "" : ", ")).textStyle(R.style.SmallText)
-            .onClick(() -> showQuality(quality));
+        int count = collectedQualities.get(key).size();
+        text.text(key + (count > 1 ? " (x" + count + ")" : "")
+            + (last ? "" : ", ")).textStyle(R.style.SmallText)
+            .onClick(() -> showQuality(collectedQualities.get(key).iterator().next()));
 
         qualities.addView(text.get());
       }

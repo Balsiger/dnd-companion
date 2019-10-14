@@ -25,8 +25,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 
-import java.util.Map;
-
 import androidx.annotation.CallSuper;
 
 /**
@@ -47,8 +45,8 @@ public class Invite extends Document<Invite> {
 
   @Override
   @CallSuper
-  protected Map<String, Object> write(Map<String, Object> data) {
-    return data;
+  protected Data write() {
+    return Data.empty();
   }
 
   public static void createAndStore(CompanionContext context, String email, String campaignId) {

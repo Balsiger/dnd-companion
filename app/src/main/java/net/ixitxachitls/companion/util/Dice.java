@@ -34,15 +34,24 @@ public class Dice {
 
   private Dice() {}
 
-  public static int roll(int number, int dice, int modifier){
+  public static int roll(int number, int dice, int modifier) {
     int result = modifier;
     for (int i = 0; i < number; i++) {
-      result = dX(dice);
+      result += dX(dice);
     }
 
     if (result <= 0) {
       // Don't allow negative numbers.
       return 1;
+    }
+
+    return result;
+  }
+
+  public static int rollModifierEach(int number, int dice, int modifier) {
+    int result = 0;
+    for (int i = 0; i < number; i++) {
+      result += roll(dice, modifier);
     }
 
     return result;

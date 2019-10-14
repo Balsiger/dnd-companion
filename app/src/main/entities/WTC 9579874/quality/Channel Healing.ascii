@@ -1,0 +1,16 @@
+template {
+  name: "Channel Healing"
+  category: "healing"
+  synonym: "Healing, Channel"
+  reference: {
+    name: "WTC 9579874"
+    pages {
+      low: 9
+      high: 9
+    }
+  }
+  world: "Generic"
+  description: "By expending one daily use of your ability to turn undead and channeling that energy toward a willing ally, you can cast any \\Spell{cure} spell as a swift action, or you can cast \\Spell{cure} spell on a target up to 30 feet away. You can do both in the same round, bur doing so expends two daily uses of your ability to turn undead."
+}
+type: SUPERNATURAL
+

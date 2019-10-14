@@ -35,9 +35,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -417,25 +415,23 @@ public class Item extends NestedDocument {
   }
 
   @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_ID, id);
-    data.put(FIELD_NAME, name);
-    data.put(FIELD_TEMPLATES,
-        templates.stream().map(ItemTemplate::getName).collect(Collectors.toList()));
-    data.put(FIELD_HP, hp);
-    data.put(FIELD_VALUE, value.write());
-    data.put(FIELD_APPEARANCE, appearance);
-    data.put(FIELD_PLAYER_NAME, playerName);
-    data.put(FIELD_PLAYER_NOTES, playerNotes);
-    data.put(FIELD_DM_NOTES, dmNotes);
-    data.put(FIELD_MULTIPLE, multiple);
-    data.put(FIELD_MULTIUSE, multiuse);
-    data.put(FIELD_TIME_LEFT, timeLeft.write());
-    data.put(FIELD_IDENTIFIED, identified);
-    data.put(FIELD_CONTENTS, contents.stream().map(Item::write).collect(Collectors.toList()));
-
-    return data;
+  public Data write() {
+    return Data.empty()
+        .set(FIELD_ID, id)
+        .set(FIELD_NAME, name)
+        .set(FIELD_TEMPLATES,
+            templates.stream().map(ItemTemplate::getName).collect(Collectors.toList()))
+        .set(FIELD_HP, hp)
+        .set(FIELD_VALUE, value.write())
+        .set(FIELD_APPEARANCE, appearance)
+        .set(FIELD_PLAYER_NAME, playerName)
+        .set(FIELD_PLAYER_NOTES, playerNotes)
+        .set(FIELD_DM_NOTES, dmNotes)
+        .set(FIELD_MULTIPLE, multiple)
+        .set(FIELD_MULTIUSE, multiuse)
+        .set(FIELD_TIME_LEFT, timeLeft.write())
+        .set(FIELD_IDENTIFIED, identified)
+        .setNested(FIELD_CONTENTS, contents);
   }
 
   private boolean similar(List<ItemTemplate> first, List<ItemTemplate> second) {

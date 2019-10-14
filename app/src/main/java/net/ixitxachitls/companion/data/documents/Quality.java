@@ -25,9 +25,6 @@ import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.QualityTemplate;
 import net.ixitxachitls.companion.proto.Template;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * A quality of a creature or item.
  */
@@ -78,11 +75,9 @@ public class Quality extends NestedDocument {
   }
 
   @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_NAME, getName());
-
-    return data;
+  public Data write() {
+    return Data.empty()
+        .set(FIELD_NAME, getName());
   }
 
   public static Quality read(Data data, String entity) {

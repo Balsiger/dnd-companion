@@ -24,9 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -98,15 +96,11 @@ public class MiniatureLocation extends NestedDocument
   }
 
   @Override
-  public Map<String, Object> write() {
-    Map<String, Object> data = new HashMap<>();
-    data.put(FIELD_NAME, name);
-    data.put(FIELD_FILTERS, filters.stream()
-        .map(MiniatureFilter::write)
-        .collect(Collectors.toList()));
-    data.put(FIELD_COLOR, color);
-
-    return data;
+  public Data write() {
+    return Data.empty()
+        .set(FIELD_NAME, name)
+        .setNested(FIELD_FILTERS, filters)
+        .set(FIELD_COLOR, color);
   }
 
   public static MiniatureLocation read(Data data) {

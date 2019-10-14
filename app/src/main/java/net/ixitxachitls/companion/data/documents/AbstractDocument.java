@@ -52,6 +52,7 @@ public abstract class AbstractDocument<D extends AbstractDocument<D>> {
     live.removeObservers(owner);
   }
 
+  @SuppressWarnings("unchecked")
   protected void updated() {
     live.setValue((D) this);
   }

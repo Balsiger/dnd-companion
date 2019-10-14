@@ -8,16 +8,16 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
-    classpath 'com.google.protobuf:protobuf-java:3.4.0'
+    classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.10'
     classpath 'de.mobilej.unmock:UnMockPlugin:0.6.4'
   }
 }
 
-apply plugin: 'com.google.protobuf'
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
 apply plugin: 'io.fabric'
 apply plugin: 'com.google.firebase.firebase-perf'
+
 
 android {
   compileSdkVersion 28
@@ -86,10 +86,11 @@ android {
 
 protobuf {
   protoc {
-    artifact = 'com.google.protobuf:protoc:3.9.0'
+    artifact = 'com.google.protobuf:protoc:3.9.1'
   }
   plugins {
     lite {
+      // Never versions seem to clash with firebase.
       artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
     }
     convertProtoData {
@@ -114,43 +115,43 @@ configurations {
 
 dependencies {
   implementation fileTree(include: ['*.jar'], dir: 'libs')
-  implementation 'androidx.appcompat:appcompat:1.0.2'
+  implementation 'androidx.appcompat:appcompat:1.1.0'
   implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
   implementation 'com.google.android.material:material:1.0.0'
-  implementation 'com.google.guava:guava:22.0'
+  implementation 'com.google.guava:guava:28.0-android'
   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-  implementation 'com.google.inject:guice:4.1.0'
+  implementation 'com.google.inject:guice:4.2.2'
   implementation 'androidx.multidex:multidex:2.0.1'
   implementation 'com.google.android:flexbox:1.0.0'
-  implementation 'com.google.firebase:firebase-core:17.0.1'
-  implementation 'com.google.firebase:firebase-auth:17.0.0'
-  implementation 'com.google.android.gms:play-services-auth:16.0.1'
-  implementation 'com.google.firebase:firebase-firestore:19.0.0'
-  implementation 'com.google.firebase:firebase-storage:17.0.0'
+  implementation 'com.google.firebase:firebase-core:17.2.0'
+  implementation 'com.google.firebase:firebase-auth:19.0.0'
+  implementation 'com.google.android.gms:play-services-auth:17.0.0'
+  implementation 'com.google.firebase:firebase-firestore:21.1.1'
+  implementation 'com.google.firebase:firebase-storage:19.0.1'
+  implementation 'com.google.android.gms:play-services-auth:17.0.0'
   implementation 'com.firebaseui:firebase-ui-auth:4.2.0'
-  implementation 'com.google.firebase:firebase-database:17.0.0'
+  implementation 'com.google.firebase:firebase-database:19.1.0'
   implementation 'androidx.cardview:cardview:1.0.0'
   implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-  implementation 'com.google.firebase:firebase-perf:18.0.1'
-
-  implementation 'com.google.android.gms:play-services-auth:16.0.1'
-  implementation 'com.google.http-client:google-http-client-gson:1.26.0'
-  implementation('com.google.api-client:google-api-client-android:1.26.0') {
+  implementation 'com.google.firebase:firebase-perf:19.0.0'
+  implementation 'com.google.http-client:google-http-client-gson:1.32.0'
+  implementation 'com.google.firebase:firebase-auth:19.0.0'
+  implementation('com.google.api-client:google-api-client-android:1.30.3') {
     exclude group: 'org.apache.httpcomponents'
   }
-  implementation('com.google.apis:google-api-services-drive:v3-rev136-1.25.0') {
+  implementation('com.google.apis:google-api-services-drive:v3-rev99-1.23.0') {
     exclude group: 'org.apache.httpcomponents'
   }
 
   testImplementation 'junit:junit:4.12'
-  testImplementation 'org.mockito:mockito-core:2.19.0'
-  testImplementation 'org.powermock:powermock-api-mockito2:1.7.0RC2'
-  testImplementation 'org.powermock:powermock-module-junit4:1.7.0RC2'
-  testImplementation 'org.hamcrest:hamcrest-library:1.3'
-  testImplementation 'org.robolectric:robolectric:3.8'
-  testImplementation 'org.robolectric:shadows-multidex:3.8'
+  testImplementation 'org.mockito:mockito-core:3.0.0'
+  testImplementation 'org.powermock:powermock-api-mockito2:2.0.2'
+  testImplementation 'org.powermock:powermock-module-junit4:2.0.2'
+  testImplementation 'org.hamcrest:hamcrest-library:2.1'
+  testImplementation 'org.robolectric:robolectric:4.3'
+  testImplementation 'org.robolectric:shadows-multidex:4.3'
   androidTestImplementation 'androidx.test:runner:1.2.0'
-  androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0') {
+  androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0') {
     exclude group: 'com.google.code.findbugs'
   }
   androidTestUtil 'androidx.test:orchestrator:1.2.0'
@@ -158,17 +159,16 @@ dependencies {
       (OperatingSystem.WINDOWS): 'windows-x86_32',
       (OperatingSystem.MAC_OS) : 'osx-x86_32'
   ].withDefault { 'linux-x86_32' }
-  protoc "com.google.protobuf:protoc:3.9.1:${platformMapping.get(OperatingSystem.current())}@exe"
+  protoc "com.google.protobuf:protoc:3.10.0:${platformMapping.get(OperatingSystem.current())}@exe"
   // Architecture components.
-  implementation 'androidx.lifecycle:lifecycle-common-java8:2.0.0'
-  annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.0.0'
-  implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-  testImplementation 'androidx.arch.core:core-testing:2.0.1'
-  androidTestImplementation 'androidx.arch.core:core-testing:2.0.1'
+  implementation 'androidx.lifecycle:lifecycle-common-java8:2.1.0'
+  annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.1.0'
+  implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+  testImplementation 'androidx.arch.core:core-testing:2.1.0'
+  androidTestImplementation 'androidx.arch.core:core-testing:2.1.0'
 }
 
-
-def convertToBinaryProto(inputFile, outputFile, proto) {
+ext.convertToBinaryProto = { inputFile, outputFile, proto ->
   // Make sure the output directory exists.
   def dir = file(outputFile.replaceFirst(/[^\\\/]*$/, ""))
   if (!dir.exists()) {
@@ -187,13 +187,11 @@ def convertToBinaryProto(inputFile, outputFile, proto) {
       standardInput = new FileInputStream(file(inputFile))
       standardOutput = new FileOutputStream(file(outputFile))
       errorOutput = System.err
-      //standardOutput = System.err
-      //println(commandLine)
     }
   }
 }
 
-def convertToBinaryProtos(input, type, proto) {
+ext.convertToBinaryProtos = { input, type, proto ->
   FileTree entities = fileTree(input);
   FileTree filtered = entities.matching {
     include "**/${type}/*.ascii"
@@ -206,29 +204,31 @@ def convertToBinaryProtos(input, type, proto) {
   }
 }
 
-task convertProtoData {
-  convertToBinaryProtos('./src/main/entities', 'monster',
-      'net.ixitxachitls.companion.proto.MonsterTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'level',
-      'net.ixitxachitls.companion.proto.LevelTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'world',
-      'net.ixitxachitls.companion.proto.WorldTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'item',
-      'net.ixitxachitls.companion.proto.ItemTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'feat',
-      'net.ixitxachitls.companion.proto.FeatTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'miniature',
-      'net.ixitxachitls.companion.proto.MiniatureTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'skill',
-      'net.ixitxachitls.companion.proto.SkillTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'spell',
-      'net.ixitxachitls.companion.proto.SpellTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'quality',
-      'net.ixitxachitls.companion.proto.QualityTemplateProto')
-  convertToBinaryProtos('./src/main/entities', 'adventure',
-      'net.ixitxachitls.companion.proto.AdventureTemplateProto')
+task convertProtoData{
+  doLast {
+    convertToBinaryProtos('./src/main/entities', 'monster',
+        'net.ixitxachitls.companion.proto.MonsterTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'level',
+        'net.ixitxachitls.companion.proto.LevelTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'world',
+        'net.ixitxachitls.companion.proto.WorldTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'item',
+        'net.ixitxachitls.companion.proto.ItemTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'feat',
+        'net.ixitxachitls.companion.proto.FeatTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'miniature',
+        'net.ixitxachitls.companion.proto.MiniatureTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'skill',
+        'net.ixitxachitls.companion.proto.SkillTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'spell',
+        'net.ixitxachitls.companion.proto.SpellTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'quality',
+        'net.ixitxachitls.companion.proto.QualityTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'adventure',
+        'net.ixitxachitls.companion.proto.AdventureTemplateProto')
+  }
 }
 
 apply plugin: 'com.google.gms.google-services'
 // For some reason, firebase-auth seems to use play-services-base 15 instead of 16...
-com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
+//com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
