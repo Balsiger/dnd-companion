@@ -25,7 +25,7 @@ important_abilities: "Wisdom determines how powerful a spell a druid can cast, h
 allowed_alignment: NEUTRAL_GOOD
 allowed_alignment: LAWFUL_NEUTRAL
 allowed_alignment: TRUE_NEUTRAL
-allowed_alignment: CHOATIC_NETURAL
+allowed_alignment: CHAOTIC_NEUTRAL
 allowed_alignment: NEUTRAL_EVIL
 hit_dice {
   number: 1

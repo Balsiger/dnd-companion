@@ -1,0 +1,9 @@
+template {
+  name: "Haruman"
+}
+set: "Descent into Avernus"
+number: 39
+race: "Narzugon"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

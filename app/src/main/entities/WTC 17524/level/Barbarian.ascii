@@ -22,7 +22,7 @@ otherClasses: "As people of the wild, barbarians are most com- fortable in the c
 role: "A barbarian?s typical primary role in a group of adventurers is as a front-line combat specialist. No other character can match his sheer toughness. He can also serve as a good scout, thanks to his speed, skill selection, and trap sense."
 important_abilities: "Strength is important for barbarians because of its role in combat, and several barbarian class skills are based on Strength. Dexterity is also useful to barbarians, especially those who wear light armor. Wisdom is also important for several of the barbarian?s class skills. A high Constitution score lets a barbarian rage longer (and live longer, because it gives him more hit points)."
 allowed_alignment: CHAOTIC_EVIL
-allowed_alignment: CHOATIC_NETURAL
+allowed_alignment: CHAOTIC_NEUTRAL
 allowed_alignment: CHAOTIC_GOOD
 allowed_alignment: NEUTRAL_EVIL
 allowed_alignment: TRUE_NEUTRAL

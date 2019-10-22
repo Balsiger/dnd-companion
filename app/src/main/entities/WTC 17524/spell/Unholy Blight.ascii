@@ -14,7 +14,7 @@ school: EVOACATION
 summary: "In a 20 ft spread you spread a cold, colying miasma of greasy darkness, dealing [[min(5, $level / 2)]]d8 damage to good creatures or [[min(10, $level)]]d6 to good outsiders and sickens them for 1d4 rounds, Will DC [[10 + $ability + 4]] for half damage and no sickness; only half damage to neutral characters, with a Will DC [[10 + $ability + 4]] for quarter."
 descriptor: EVIL
 level {
-  spell_class: EVIL
+  spell_class: EVIL_SPELL
   level: 4
 }
 components: VERBOSE

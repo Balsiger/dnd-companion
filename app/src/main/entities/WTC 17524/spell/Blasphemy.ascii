@@ -19,7 +19,7 @@ level {
   level: 7
 }
 level {
-  spell_class: EVIL
+  spell_class: EVIL_SPELL
   level: 7
 }
 components: VERBOSE

@@ -1,0 +1,22 @@
+template {
+  name: "Harper Knowledge"
+  category: "action"
+  synonym: "Knowledge, Harper"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 59
+      high: 59
+    }
+  }
+  world: "Forgotten Realms"
+  description:
+    "The Harper can access knowledge in the same manner as a \\Class{bard} can. This ability "
+    "functions like the \\Quality{bardic knowledge} ability, except that the bonus for the check "
+    "equals [[$count + $intelligence_modifier]]. If the Harper has another such lore ability from "
+    "another source (such as \\Class{bard} or loremaster levels), his Harper agent levels stack "
+    "with levels of all other classes that grant such an ability for the purpose of Harper "
+    "knowledge checks."
+}
+type: EXTRAORDINARY
+

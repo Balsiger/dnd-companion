@@ -18,7 +18,7 @@ level {
   level: 5
 }
 level {
-  spell_class: PLANT
+  spell_class: PLANT_SPELL
   level: 5
 }
 components: VERBOSE

@@ -15,7 +15,7 @@ subschool: CREATION
 summary: "For $level rounds create a 20 ft radius cloud within [[50 + (5 * (level / 2))]] ft that gives 4d6 fire damage every round, moving 10 feet away from you per round (or move by 60 ft by concentrating)."
 descriptor: FIRE
 level {
-  spell_class: FIRE
+  spell_class: FIRE_SPELL
   level: 8
 }
 level {

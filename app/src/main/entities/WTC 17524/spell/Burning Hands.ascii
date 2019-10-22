@@ -14,7 +14,7 @@ school: EVOACATION
 summary: "[[min($level, 5)]]d4 fire damage in 15 ft cone, Ref $dc for half"
 descriptor: FIRE
 level {
-  spell_class: FIRE
+  spell_class: FIRE_SPELL
   level: 1
 }
 level {

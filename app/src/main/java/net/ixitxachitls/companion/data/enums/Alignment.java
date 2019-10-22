@@ -36,7 +36,7 @@ public enum Alignment implements Enums.Named, Enums.Proto<Value.Alignment> {
   CHAOTIC_GOOD("Chaotic Good", "CG", Value.Alignment.CHAOTIC_GOOD),
   LAWFUL_NEUTRAL("Lawful Neutral", "LN", Value.Alignment.LAWFUL_NEUTRAL),
   TRUE_NEUTRAL("Neutral", "N", Value.Alignment.TRUE_NEUTRAL),
-  CHOATIC_NETURAL("Chaotic Neutral", "CN", Value.Alignment.CHOATIC_NETURAL),
+  CHOATIC_NETURAL("Chaotic Neutral", "CN", Value.Alignment.CHAOTIC_NEUTRAL),
   LAWFUL_EVIL("Lawful Evil", "LE", Value.Alignment.LAWFUL_EVIL),
   NEUTRAL_EVIL("Neutral Evil", "NE", Value.Alignment.NEUTRAL_EVIL),
   CHAOTIC_EVIL("Chaotic Evil", "CE", Value.Alignment.CHAOTIC_EVIL),

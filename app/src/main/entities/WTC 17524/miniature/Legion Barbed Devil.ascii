@@ -1,0 +1,9 @@
+template {
+  name: "Legion Barbed Devil"
+}
+set: "Descent into Avernus"
+number: 6
+race: "Hamatula"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

@@ -1,0 +1,13 @@
+template {
+  name: "Babau (DA)"
+}
+set: "Descent into Avernus"
+number: 2
+race: "Babau"
+type: "Fiend"
+subtype: "Demon"
+subtype: "Chaotic"
+subtype: "Evil"
+subtype: "Tana'ri"
+subtype: "Humanoid"
+size: MEDIUM

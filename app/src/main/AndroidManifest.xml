@@ -22,6 +22,22 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity android:name="com.tenmiles.helpstack.activities.HomeActivity"
+        android:theme="@style/AppTheme"></activity>
+    <activity android:name="com.tenmiles.helpstack.activities.ArticleActivity"
+        android:theme="@style/AppTheme"></activity>
+    <activity android:name="com.tenmiles.helpstack.activities.EditAttachmentActivity"
+        android:theme="@style/AppTheme"></activity>
+    <activity android:name="com.tenmiles.helpstack.activities.ImageAttachmentDisplayActivity"
+        android:theme="@style/AppTheme"></activity>
+    <activity android:name="com.tenmiles.helpstack.activities.IssueDetailActivity"
+        android:theme="@style/AppTheme"></activity>
+    <activity android:name="com.tenmiles.helpstack.activities.NewIssueActivity"
+        android:theme="@style/AppTheme"></activity>
+    <activity android:name="com.tenmiles.helpstack.activities.NewUserActivity"
+        android:theme="@style/AppTheme"></activity>
+    <activity android:name="com.tenmiles.helpstack.activities.SectionActivity"
+        android:theme="@style/AppTheme"></activity>
 
   </application>
 

@@ -15,7 +15,7 @@ subschool: COMPULSION
 summary: "$undefined$"
 descriptor: MIND_AFFECTING
 level {
-  spell_class: ANIMAL
+  spell_class: ANIMAL_SPELL
   level: 3
 }
 level {

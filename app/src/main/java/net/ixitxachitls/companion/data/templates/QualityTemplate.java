@@ -50,6 +50,14 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
         .collect(Collectors.toList());
   }
 
+  public String getNameFormat() {
+    if (proto.getNameFormat().isEmpty()) {
+      return name;
+    }
+
+    return proto.getNameFormat();
+  }
+
   public List<Modifier> getAttackModifiers() {
     return proto.getAttackModifier().getModifierList().stream()
         .map(p -> Modifier.fromProto(p, getName()))

@@ -15,7 +15,7 @@ school: TRANSMUTATION
 summary: "Touched ceatures gains the ability to walk on air for [[$level * 10]] min. Climbing is at a 45-degree angle at half speed."
 descriptor: AIR
 level {
-  spell_class: AIR
+  spell_class: AIR_SPELL
   level: 4
 }
 level {

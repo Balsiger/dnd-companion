@@ -13,7 +13,7 @@ template {
 school: TRANSMUTATION
 summary: "willing touched, [[2 * $level]] min (D), insubstantial, DR 10/magic, Fly 10 ft)"
 level {
-  spell_class: AIR
+  spell_class: AIR_SPELL
   level: 3
 }
 level {

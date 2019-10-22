@@ -1,0 +1,9 @@
+template {
+  name: "Olanthius"
+}
+set: "Descent into Avernus"
+number: 38
+race: "Nupperibo"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

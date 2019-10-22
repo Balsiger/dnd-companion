@@ -23,7 +23,7 @@ otherClasses: "A bard works well with companions of other classes. He often serv
 role: "The bard is perhaps the ultimate generalist. In most adventuring groups, he works best in a supporting role. He can\342\200\231t usually match the stealth of the ranger or the rogue, the spellcasting power of the cleric or the wizard, or the combat prowess of the barbarian or the fighter. However, he makes all the other characters better at what they do, and he can often fill in for another character when needed.\n\nFor a typical group of four characters, the bard is perhaps the most useful fifth character to consider adding, and he can make a great team leader."
 important_abilities: "Charisma determines how powerful a spell a bard can cast, how many spells he can cast per day, and how hard those spells are to resist (see Spells, below). Charisma, Dexterity, and Intelligence are important for many of the bard\342\200\231s class skills. "
 allowed_alignment: CHAOTIC_EVIL
-allowed_alignment: CHOATIC_NETURAL
+allowed_alignment: CHAOTIC_NEUTRAL
 allowed_alignment: CHAOTIC_GOOD
 allowed_alignment: NEUTRAL_EVIL
 allowed_alignment: TRUE_NEUTRAL

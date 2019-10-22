@@ -1,0 +1,42 @@
+template {
+  name: "Deneir's Eye"
+  category: "saves"
+  synonym: "Eye, Deneir's"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 59
+      high: 59
+    }
+  }
+  world: "Forgotten Realms"
+  description:
+    "The Harper agent gains +3 sacred bonus on saving throws against glyphs, runes, and symbols."
+}
+reflex_modifier {
+   modifier {
+     value: 3
+     type: SACRED
+     condition: "against glyphs, runes and symbols"
+   }
+}
+will_modifier {
+   modifier {
+     value: 3
+     type: SACRED
+     condition: "against glyphs, runes and symbols"
+   }
+}
+fortitude_modifier {
+   modifier {
+     value: 3
+     type: SACRED
+     condition: "against glyphs, runes and symbols"
+   }
+}
+type: SUPERNATURAL
+
+
+
+
+

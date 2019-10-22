@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import com.google.common.collect.Multiset;
@@ -42,6 +43,7 @@ import net.ixitxachitls.companion.data.values.ConditionData;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.data.values.Modifier;
 import net.ixitxachitls.companion.rules.XP;
+import net.ixitxachitls.companion.util.Texts;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -217,6 +219,17 @@ public class Character extends Creature<Character> implements Comparable<Charact
     // TODO(merlin): Add qualities by items.
 
     return qualities;
+  }
+
+  public Map<String, Texts.Value> collectFormatValues() {
+    return ImmutableMap.<String, Texts.Value>builder()
+        .put("strength_modifier", new Texts.IntegerValue(getStrengthModifier()))
+        .put("dexterity_modifier", new Texts.IntegerValue(getDexterityModifier()))
+        .put("constitution_modifier", new Texts.IntegerValue(getConstitutionModifier()))
+        .put("intelligenve_modifier", new Texts.IntegerValue(getIntelligenceModifier()))
+        .put("widsom_modifier", new Texts.IntegerValue(getWisdomModifier()))
+        .put("charisma_modifier", new Texts.IntegerValue(getCharismaModifier()))
+        .build();
   }
 
   @Override

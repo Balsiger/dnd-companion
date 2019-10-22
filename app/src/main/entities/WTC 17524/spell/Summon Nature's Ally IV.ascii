@@ -14,7 +14,7 @@ school: CONJURATION
 subschool: SUMMONING
 summary: "$undefined$"
 level {
-  spell_class: ANIMAL
+  spell_class: ANIMAL_SPELL
   level: 4
 }
 level {

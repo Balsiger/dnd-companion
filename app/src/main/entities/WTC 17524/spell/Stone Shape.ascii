@@ -22,7 +22,7 @@ level {
   level: 3
 }
 level {
-  spell_class: EARTH
+  spell_class: EARTH_SPELL
   level: 3
 }
 level {

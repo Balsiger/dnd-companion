@@ -1,0 +1,9 @@
+template {
+  name: "Legion Bone Devil"
+}
+set: "Descent into Avernus"
+number: 42
+race: "Bone Devil"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE

@@ -1,0 +1,11 @@
+template {
+  name: "Maw Demon"
+}
+set: "Descent into Avernus"
+number: 20
+race: "Abyssal Maw"
+type: "Fiend"
+subtype: "Chaotic"
+subtype: "Evil"
+subtype: "Extraplanar"
+size: SMALL

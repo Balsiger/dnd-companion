@@ -26,22 +26,24 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 
 import com.google.common.collect.ImmutableMap;
-import com.google.firebase.firestore.model.value.IntegerValue;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.util.commands.BoldCommand;
 import net.ixitxachitls.companion.util.commands.ColorCommand;
 import net.ixitxachitls.companion.util.commands.ItalicsCommand;
+import net.ixitxachitls.companion.util.commands.ListCommand;
 import net.ixitxachitls.companion.util.commands.ParCommand;
 import net.ixitxachitls.companion.util.commands.TableCommand;
 import net.ixitxachitls.companion.util.commands.TextCommand;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import androidx.annotation.VisibleForTesting;
 
@@ -71,18 +73,19 @@ public class Texts {
       .put("bold", new BoldCommand())
       .put("emph", new ItalicsCommand())
       .put("table", new TableCommand())
+      .put("list", new ListCommand())
       .build();
 
   // Expressions.
   private static final Pattern EXPRESSSION_PATTERN = Pattern.compile("\\[\\[(.*?)\\]\\]");
-  private static final Pattern EXPRESSION_BRACKET = Pattern.compile("\\(([^\\(\\)]*)\\)");
+  private static final Pattern EXPRESSION_BRACKET =
+      Pattern.compile("\\s*(\\w+)?\\s*\\(\\s*([^\\(\\)]*)\\s*\\)\\s*");
   private static final Pattern EXPRESSION_VARIABLE = Pattern.compile("\\s*\\$(\\w+)\\s*");
   private static final Pattern EXPRERSSION_NUMBER = Pattern.compile("\\s*([\\+\\-]?\\d+)\\s*");
   private static final Pattern EXPRESSION_MULTDIV = Pattern.compile("(.*)\\s*([\\*\\/])\\s*(.*?)");
   private static final Pattern EXPRESSION_ADDSUB = Pattern.compile("(.*)\\s*([\\+\\-])\\s*(.*?)");
 
-  protected static String clean(String text)
-  {
+  protected static String clean(String text) {
     return text.replaceAll(MARKER_START + "<\\d+>", "" + START)
         .replaceAll(MARKER_END + "<\\d+>", "" + END)
         .replaceAll(MARKER_OPTIONAL_START + "<\\d+>", "" + OPTIONAL_START)
@@ -91,8 +94,7 @@ public class Texts {
 
   @VisibleForTesting
   protected static String markBrackets(String text, char escape, char start, char end,
-                                       char markerStart, char markerEnd)
-  {
+                                       char markerStart, char markerEnd) {
     // Remove all escaped markers.
     text = text.replaceAll("\\" + escape + "\\" + start, "" + MARKER_ESCAPE_START);
     text = text.replaceAll("\\" + escape + "\\" + end, "" + MARKER_ESCAPE_END);
@@ -102,7 +104,8 @@ public class Texts {
         Pattern.DOTALL);
 
     int i = 0;
-    for(Matcher matcher = pattern.matcher(text); matcher.find(0); matcher = pattern.matcher(text)) {
+    for (Matcher matcher = pattern.matcher(text); matcher.find(0); matcher =
+        pattern.matcher(text)) {
       // Replace the nested brackets.
       text = matcher.replaceAll(markerStart + "<#" + i + "#>$1" + markerEnd + "<#" + i++ + "#>");
     }
@@ -114,7 +117,8 @@ public class Texts {
         Pattern.DOTALL);
 
     i = 0;
-    for(Matcher matcher = pattern.matcher(text); matcher.find(0); matcher = pattern.matcher(text)) {
+    for (Matcher matcher = pattern.matcher(text); matcher.find(0); matcher =
+        pattern.matcher(text)) {
       // Replace the nested brackets.
       text = matcher.replaceAll(markerStart + "<" + i + ">$2" + markerEnd + "<" + i++ + ">");
     }
@@ -122,11 +126,11 @@ public class Texts {
     // Replace all non 0 markers (we can't leave nested markers or parsing
     // of multiple arguments may fail
     text = text.replaceAll(markerStart + "<[1-9]\\d*>", "" + start);
-    text = text.replaceAll(markerEnd   + "<[1-9]\\d*>", "" + end);
+    text = text.replaceAll(markerEnd + "<[1-9]\\d*>", "" + end);
 
     // Replace removed escaped markers.
     text = text.replaceAll("" + MARKER_ESCAPE_START, "\\" + escape + start);
-    text = text.replaceAll("" + MARKER_ESCAPE_END, "\\" + escape+ end);
+    text = text.replaceAll("" + MARKER_ESCAPE_END, "\\" + escape + end);
 
     return text;
   }
@@ -146,7 +150,7 @@ public class Texts {
 
   public static SpannableStringBuilder processCommands(Context context, String text,
                                                        Map<String, Value> values) {
-    if(text.isEmpty()) {
+    if (text.isEmpty()) {
       return new SpannableStringBuilder(text);
     }
 
@@ -157,7 +161,7 @@ public class Texts {
     text = processExpressions(text, values);
 
     // Do we have any commands at all?
-    if(text.indexOf(COMMAND) < 0) {
+    if (text.indexOf(COMMAND) < 0) {
       return new SpannableStringBuilder(text);
     }
 
@@ -165,32 +169,32 @@ public class Texts {
     SpannableStringBuilder builder = new SpannableStringBuilder();
     text = markOptionalBrackets(markBrackets(text));
 
-    for(int start = 0; start < text.length(); ) {
+    for (int start = 0; start < text.length(); ) {
       // Search the first command (don't accept escaped commands)
       int pos = -1;
-      for(pos = text.indexOf(COMMAND, start); pos >= 0;
-          pos = text.indexOf(COMMAND, pos + 1))
-        if((pos == 0 || text.charAt(pos - 1) != ESCAPE)
-            && (ESCAPE!= COMMAND || text.charAt(pos + 1) != COMMAND)
+      for (pos = text.indexOf(COMMAND, start); pos >= 0;
+           pos = text.indexOf(COMMAND, pos + 1))
+        if ((pos == 0 || text.charAt(pos - 1) != ESCAPE)
+            && (ESCAPE != COMMAND || text.charAt(pos + 1) != COMMAND)
             && (Character.isLetterOrDigit(text.charAt(pos + 1))
             || SPECIAL.indexOf(text.charAt(pos + 1)) >= 0))
           break;
 
-      if(pos < 0) {
+      if (pos < 0) {
         // No commands any more.
         builder.append(clean(text.substring(start)));
         break;
       }
 
       // Intermediate text.
-      if(pos > 0) {
+      if (pos > 0) {
         builder.append(clean(text.substring(start, pos)));
       }
 
       // Ok, we really have a command now.
       int end = pos + 1;
-      if(Character.isLetterOrDigit(text.charAt(end))) {
-        for( ; end < text.length(); end++) {
+      if (Character.isLetterOrDigit(text.charAt(end))) {
+        for (; end < text.length(); end++) {
           if (!Character.isLetterOrDigit(text.charAt(end))) {
             break;
           }
@@ -216,9 +220,8 @@ public class Texts {
           + "]*?)" + MARKER_OPTONAL_END + "<\\1>");
 
       Matcher matcher = pattern.matcher(text.substring(end));
-      if(matcher.find())
-      {
-        String []args = matcher.group(2).split(MARKER_OPTONAL_END + "<"
+      if (matcher.find()) {
+        String[] args = matcher.group(2).split(MARKER_OPTONAL_END + "<"
             + matcher.group(1) + ">\\s*"
             + MARKER_OPTIONAL_START + "<"
             + matcher.group(1) + ">");
@@ -226,7 +229,7 @@ public class Texts {
         end += matcher.end();
 
         // now we have all the arguments, we need to parse them as well
-        for(int i = 0; i < args.length; i++)
+        for (int i = 0; i < args.length; i++)
           optionals.add(processCommands(context, args[i], values));
       }
 
@@ -242,7 +245,7 @@ public class Texts {
           + MARKER_END + "<\\1>");
 
       matcher = pattern.matcher(text.substring(end));
-      if(matcher.find()) {
+      if (matcher.find()) {
         String[] args = matcher.group(2).split(MARKER_END + "<"
             + matcher.group(1) + ">\\s*"
             + MARKER_START + "<"
@@ -251,7 +254,7 @@ public class Texts {
         end += matcher.end();
 
         // now we have all the arguments, we need to parse them as well
-        for(int i = 0; i < args.length; i++) {
+        for (int i = 0; i < args.length; i++) {
           arguments.add(processCommands(context, args[i], values));
         }
       }
@@ -262,7 +265,7 @@ public class Texts {
 
       // If no arguments were found, then skip the character directly following
       // the command (must be a white space)
-      if(arguments.size() == 0 && optionals.size() == 0
+      if (arguments.size() == 0 && optionals.size() == 0
           && text.length() > end
           && Character.isWhitespace(text.charAt(end)))
         end++;
@@ -295,7 +298,8 @@ public class Texts {
     return builder;
   }
 
-  private static Spanned render(Context context, String command, List<SpannableStringBuilder> optionals,
+  private static Spanned render(Context context, String command,
+                                List<SpannableStringBuilder> optionals,
                                 List<SpannableStringBuilder> arguments) {
     if (COMMANDS.containsKey(command)) {
       return COMMANDS.get(command).render(context, optionals, arguments);
@@ -338,16 +342,52 @@ public class Texts {
 
   private static boolean evaluateExpressionBrackets(StringBuffer buffer, String expression,
                                                     Map<String, Value> values) {
+
+    // Evaluate all brackets.
     Matcher matcher = EXPRESSION_BRACKET.matcher(expression);
     boolean found = false;
     while (matcher.find()) {
-      matcher.appendReplacement(buffer,
-          Matcher.quoteReplacement(evaluateExpressionPart(matcher.group(1), values).toString()));
+      if (matcher.group(1) == null) {
+        matcher.appendReplacement(buffer, Matcher.quoteReplacement(
+            evaluateExpressionPart(matcher.group(2), values).toString()));
+      } else {
+        matcher.appendReplacement(buffer,
+            Matcher.quoteReplacement(evaluateFunction(matcher.group(1),
+                Arrays.asList(matcher.group(2).split("\\s*,\\s*")).stream()
+                    .map(a -> evaluateExpressionPart(a, values))
+                    .collect(Collectors.toList())).toString()));
+      }
       found = true;
     }
     matcher.appendTail(buffer);
     return found;
   }
+
+  private static Value evaluateFunction(String name, List<Value> arguments) {
+    switch (name) {
+      case "identity":
+        return new StringValue(Strings.COMMA_JOINER.join(arguments));
+
+      case "nth":
+        if (arguments.size() == 1 && arguments.get(0) instanceof IntegerValue) {
+          switch (((IntegerValue) arguments.get(0)).value) {
+            case 1:
+              return new StringValue("1st");
+            case 2:
+              return new StringValue("2nd");
+            case 3:
+              return new StringValue("3rd");
+            default:
+              return new StringValue(((IntegerValue) arguments.get(0)).value + "th");
+          }
+        } else {
+          break;
+        }
+    }
+
+    return new StringValue(name + "<" + Strings.COMMA_JOINER.join(arguments) + ">");
+  }
+
 
   private static Value evaluateExpressionPart(String expression, Map<String, Value> values) {
     // The given expression will not have any brackets.
@@ -404,7 +444,7 @@ public class Texts {
       return new StringValue("<" + left + operator + right + ">");
     }
 
-    return new StringValue("<" + expression + ">");
+    return new StringValue(expression);
   }
 
   public static class Value {

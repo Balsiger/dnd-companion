@@ -14,7 +14,7 @@ school: CONJURATION
 subschool: SUMMONING
 summary: "For $level rounds summon an elder Arrowhawk, dire Tiger, greater Elemental, Djinni (genie), Invisible stalker, Pixie, giant Squid, Triceratops, Tyrannosaurus, cachalot Whale or elder Xorn within [[25 + (($level / 2) * 5)]] ft after casting for 1 round."
 level {
-  spell_class: ANIMAL
+  spell_class: ANIMAL_SPELL
   level: 8
 }
 level {

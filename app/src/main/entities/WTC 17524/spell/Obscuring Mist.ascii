@@ -14,7 +14,7 @@ school: CONJURATION
 subschool: CREATION
 summary: "For $level min a cloud spreds 20 ft radius, giving concealment (20% miss) for 5 ft or total concealment (50% miss) farther away."
 level {
-  spell_class: AIR
+  spell_class: AIR_SPELL
   level: 1
 }
 level {

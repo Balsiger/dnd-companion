@@ -302,9 +302,10 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
         TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()))
             .noWrap();
         int count = collectedQualities.get(key).size();
-        text.text(key + (count > 1 ? " (x" + count + ")" : "")
+        Quality quality = collectedQualities.get(key).iterator().next();
+        text.text(quality.formatName(getContext(), count, character)
             + (last ? "" : ", ")).textStyle(R.style.SmallText)
-            .onClick(() -> showQuality(collectedQualities.get(key).iterator().next()));
+            .onClick(() -> showQuality(quality, count));
 
         qualities.addView(text.get());
       }
@@ -387,9 +388,10 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
         .show();
   }
 
-  private void showQuality(Quality quality) {
+  private void showQuality(Quality quality, int count) {
     String message = quality.getEntity() + "\n\n" + quality.getTemplate().getDescription();
-    MessageDialog.create(getContext()).title(quality.getName()).formatted(message).show();
+    MessageDialog.create(getContext()).title(quality.getName())
+        .formatted(message, quality.collectFormatValues(count, character.get())).show();
   }
 
   private void showSimpleMessage(String title, String message) {

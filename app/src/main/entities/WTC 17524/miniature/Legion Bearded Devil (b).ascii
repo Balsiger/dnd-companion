@@ -1,0 +1,9 @@
+template {
+  name: "Legion Bearded Devil (b)"
+}
+set: "Descent into Avernus"
+number: 21
+race: "Bearded Devil"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

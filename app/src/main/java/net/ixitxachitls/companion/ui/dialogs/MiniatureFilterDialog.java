@@ -143,6 +143,7 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     sizes.text("");
     owned.text("");
     locations.text("");
+    sets.text("");
   }
 
   private String formatMulti(List<String> texts) {

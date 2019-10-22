@@ -1,0 +1,10 @@
+template {
+  name: "Narzugon on Nightmare"
+}
+set: "Descent into Avernus"
+number: 44
+race: "Narzugon"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE
+

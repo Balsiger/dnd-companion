@@ -14,7 +14,7 @@ school: EVOACATION
 summary: "$undefined$"
 descriptor: GOOD
 level {
-  spell_class: GOOD
+  spell_class: GOOD_SPELL
   level: 4
 }
 components: VERBOSE

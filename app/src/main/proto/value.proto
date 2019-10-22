@@ -104,6 +104,8 @@ message ModifierProto {
     RAGE = 13;
     COMPETENCE = 14;
     SYNERGY = 15;
+    SACRED = 16;
+    LUCK = 17;
   }
 
   message Modifier {
@@ -532,7 +534,7 @@ enum Alignment {
   CHAOTIC_GOOD = 3;
   LAWFUL_NEUTRAL = 4;
   TRUE_NEUTRAL = 5;
-  CHOATIC_NETURAL = 6;
+  CHAOTIC_NEUTRAL = 6;
   LAWFUL_EVIL = 7;
   NEUTRAL_EVIL = 8;
   CHAOTIC_EVIL = 9;

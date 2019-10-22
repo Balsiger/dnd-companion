@@ -89,5 +89,16 @@ public class TextsTest {
 
     assertEquals("simple operation", "20", Texts.processExpressions("[[ 6 + 7 * 2]]", values));
     assertEquals("simple operation", "26", Texts.processExpressions("[[ (6 + 7) * 2]]", values));
+
+    assertEquals("simple function", "42", Texts.processExpressions("[[ identity (  42 )  ]]", values));
+    assertEquals("simple function", "<42, 23>",
+        Texts.processExpressions("[[ identity (  42,   23 )  ]]", values));
+    assertEquals("nested function", "<42, 23>",
+        Texts.processExpressions("[[ identity (  42,   identity (23) )  ]]", values));
+
+    assertEquals("nested function", "<42, 42th>",
+        Texts.processExpressions("[[ identity (  42,   nth($life) )  ]]", values));
+    assertEquals("nested invalid functiuon", " <numeral<42>> ",
+        Texts.processExpressions(" [[ numeral($life) ]] ", values));
   }
 }

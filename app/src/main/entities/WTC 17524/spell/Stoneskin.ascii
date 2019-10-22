@@ -17,7 +17,7 @@ level {
   level: 5
 }
 level {
-  spell_class: EARTH
+  spell_class: EARTH_SPELL
   level: 6
 }
 level {

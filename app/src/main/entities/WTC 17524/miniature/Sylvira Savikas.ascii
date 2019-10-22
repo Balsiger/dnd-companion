@@ -1,0 +1,9 @@
+template {
+  name: "Sylvira Savikas"
+}
+set: "Descent into Avernus"
+number: 34
+race: "Tiefling"
+type: "Humanoid"
+class: "Wizard"
+size: MEDIUM

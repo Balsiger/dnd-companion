@@ -1,0 +1,170 @@
+template {
+  name: "Harper Agent"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 58
+      high: 59
+    }
+  }
+  world: "Forgotten Realms"
+  description:
+    "The semisecret organization known as the \\Group{Harpers} has members scattered all across "
+    "Faerûn. These individuals are dedicated to battling evil, discovering and preserving "
+    "forgotten lore, and maintaining the balance between nature and civilization. \\Group{Harper} "
+    "agents are the 'field agents' of the \\Group{Harper} organization, acting directly to gather "
+    "intelligence and eliminate threats to the greater good. Equally adept at operating alone or "
+    "in small groups, Harper agents display a versatility that few others can match."
+    "\\par "
+    "\\Class{Bards} are the most common candidates for the \\Class{Harper agent} prestige class, "
+    "but they are by no means the only qualified characters. \\Class{Rangers}, \\Class{rogues}, "
+    "\\Class{sorcerers}, and \\Class{wizards} all possess the diversity of skill and ability "
+    "necessary to become \\Class{Harper agents}. \\Class{Clerics}, especially of \\God{Deneir}, "
+    "\\God{Lliira}, and \\God{Tymora}, are occasionally found in the ranks of this prestige class, "
+    "as are \\Class{druids} and \\Class{monks}. \\Class{Barbarians}, \\Class{fighters}, and "
+    "\\CLass{paladins} rarely become \\Class{Harper agents} because they lack the subtlety for "
+    "the work."
+}
+abbreviation: "HaA"
+adventures: ""
+allowed_alignment: ANY_GOOD
+allowed_alignment: LAWFUL_NEUTRAL
+allowed_alignment: TRUE_NEUTRAL
+allowed_alignment: CHAOTIC_NEUTRAL
+requirement {
+  description: "Diplomacy 8 ranks"
+}
+requirement {
+  description: "Knowledge (local) 4 ranks"
+}
+requirement {
+  description: "Sense Motive 2 ranks"
+}
+requirement {
+  description: "Survival 2 ranks"
+}
+requirement {
+  description: "Negotiator feat"
+}
+requirement {
+  description: "The candidate must be sponsored by a member in good standing of the "
+               "\\Group{Harpers} and win approval from the \\Group{High Harpers.}"
+}
+hit_dice {
+  number: 1
+  dice: 6
+}
+quality {
+  level: 2
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)|Spellcasting (Sorcerer)|Spellcasting (Wizard)"
+  }
+}
+quality {
+  level: 3
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)|Spellcasting (Sorcerer)|Spellcasting (Wizard)"
+  }
+}
+quality {
+  level: 4
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)|Spellcasting (Sorcerer)|Spellcasting (Wizard)"
+  }
+}
+quality {
+  level: 5
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)|Spellcasting (Sorcerer)|Spellcasting (Wizard)"
+  }
+}
+quality {
+  level: 1
+  template {
+    name: "Harper Knowledge"
+  }
+}
+quality {
+  level: 2
+  template {
+    name: "Harper Knowledge"
+  }
+}
+quality {
+  level: 3
+  template {
+    name: "Harper Knowledge"
+  }
+}
+quality {
+  level: 4
+  template {
+    name: "Harper Knowledge"
+  }
+}
+quality {
+  level: 5
+  template {
+    name: "Harper Knowledge"
+  }
+}
+quality {
+  level: 2
+  template {
+    name: "Deneir's Eye"
+  }
+}
+quality {
+  level: 2
+  template {
+    name: "Lliira's Heart"
+  }
+}
+quality {
+  level: 3
+  template {
+    name: "Tymora's Smile"
+  }
+}
+quality {
+  level: 4
+  template {
+    name: "Lurue's Voice"
+  }
+}
+quality {
+  level: 5
+  template {
+    name: "Mystra's Boon"
+  }
+}
+skill_points: 6
+class_skill: "Appraise"
+class_skill: "Bluff"
+class_skill: "Climb"
+class_skill: "Craft"
+class_skill: "Diplomacy"
+class_skill: "Disguise"
+class_skill: "Escape Artist"
+class_skill: "Gather Information"
+class_skill: "Hide"
+class_skill: "Jump"
+class_skill: "Knowledge"
+class_skill: "Listen"
+class_skill: "Move Silently"
+class_skill: "Perform"
+class_skill: "Profession"
+class_skill: "Sense Motive"
+class_skill: "Sleight of Hand"
+class_skill: "Speak Language"
+class_skill: "Survival"
+class_skill: "Swimg"
+class_skill: "Tumble"
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+good_fortitude_save: false
+good_reflex_save: false
+good_will_save: true

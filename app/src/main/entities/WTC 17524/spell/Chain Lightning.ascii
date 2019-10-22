@@ -14,7 +14,7 @@ school: EVOACATION
 summary: "Range [[400 + (40 * $level)]] ft, one primary and [[min(20, $level)]] secondary targets within 30 ft, [[min(20, $level)]]d6 electricity damage to primary, half to secondary, Ref DC [16 + $ability]] for half."
 descriptor: ELECTRICITY
 level {
-  spell_class: AIR
+  spell_class: AIR_SPELL
   level: 6
 }
 level {

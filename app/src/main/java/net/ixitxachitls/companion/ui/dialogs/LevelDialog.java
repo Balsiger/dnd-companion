@@ -340,7 +340,6 @@ public class LevelDialog extends Dialog<LevelDialog, Level> {
     ListSelectDialog.newStringInstance(
         R.string.character_select_class, Lists.newArrayList(className.getText()),
         Templates.get().getLevelTemplates().getValues().stream()
-            .filter(LevelTemplate::isFromPHB)
             .map(LevelTemplate::getName)
             .collect(Collectors.toList()), R.color.character)
         .setSelectListener(this::editClass)

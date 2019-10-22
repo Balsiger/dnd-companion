@@ -39,6 +39,10 @@ public class TableCommand extends TextCommand {
   public Spanned render(Context context, List<SpannableStringBuilder> optionals,
                         List<SpannableStringBuilder> arguments) {
     int columns = optionals.size();
+    if (columns <= 0) {
+      return new SpannableStringBuilder("invalid table: no columns defined");
+    }
+
     int []sizes = sizes(arguments, columns);
 
     SpannableStringBuilder result = new SpannableStringBuilder();

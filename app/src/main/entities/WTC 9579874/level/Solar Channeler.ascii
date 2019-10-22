@@ -8,27 +8,38 @@ template {
     }
   }
   world: "Generic"
-  description: "Holy warriors ready to defend the Material Plane against demonic invasion, \\Class{solar channelers} are effective healers and spellcasters until the situation demands melee combat. Then they become furious angels.\parThe \Class{solar channeler} learns to channel positive energy for emergency healing and to temporarily become a powerful flying creature akin to a \\Monster{solar}. All the following are class features of the \\Class{solar channeler} prestige class."
+  description:
+    "Holy warriors ready to defend the Material Plane against demonic invasion, "
+    "\\Class{solar channelers} are effective healers and spellcasters until the situation "
+    "demands melee combat. Then they become furious angels.\\par The \\Class{solar channeler} "
+    "learns to channel positive energy for emergency healing and to temporarily become a powerful "
+    "flying creature akin to a \\Monster{solar}. All the following are class features of the "
+    "\\Class{solar channeler} prestige class."
   short_description: "Holy warriors versed in healing, spellcasting and melee combat."
 }
 abbreviation: "SCn"
 adventures: ""
 allowed_alignment: ANY_GOOD
 requirement {
-  description: "Good clerics and powerful paladins who have reached Luminary champion status within the \\Group{Luminous Order} should have no difficulty undergoing the \\Event{Ritual of Feathers} required to become a \\Class{solar channeler}."
+  description: "Good clerics and powerful paladins who have reached Luminary champion status "
+               "within the \\Group{Luminous Order} should have no difficulty undergoing the "
+               """\\Event{Ritual of Feathers} required to become a \\Class{solar channeler}."
 }
 requirement {
   description: "Ability to turn undead as a 5th-level cleric."
 }
 requirement {
-  description: "You must have an affiliation score of 9 or higher within the \\Group{Luminous Order} to become a \\Class{solar channeler}. If your affiliation score drops below 9 after you have become a \\Class{solar channeler}, you retain all class features and the ability to advance in the class."
+  description: "You must have an affiliation score of 9 or higher within the "
+               "\\Group{Luminous Order} to become a \\Class{solar channeler}. If your "
+               "affiliation score drops below 9 after you have become a \\Class{solar channeler}, "
+               "you retain all class features and the ability to advance in the class."
 }
 requirement {
   description: "Must participate in the Ritual of Feathers."
 }
 hit_dice {
   number: 1
-  dice:
+  dice: 8
 }
 quality {
   level: 1
@@ -36,199 +47,140 @@ quality {
     name: "Channel Healing"
   }
 }
+quality {
+  level: 1
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 2
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 3
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 4
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 5
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 6
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 7
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 8
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 9
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 10
+  template {
+    name: "Turn undead"
+  }
+}
+quality {
+  level: 2
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)"
+  }
+}
+quality {
+  level: 3
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)"
+  }
+}
+quality {
+  level: 4
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)"
+  }
+}
+quality {
+  level: 5
+  template {
+    name: "Lesser Channel Solar"
+  }
+}
+quality {
+  level: 6
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)"
+  }
+}
+quality {
+  level: 7
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)"
+  }
+}
+quality {
+  level: 8
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)"
+  }
+}
+quality {
+  level: 9
+  template {
+    name: "Spellcasting (Cleric)|Spellcasting (Druid)|Spellcasting (Ranger)|Spellcasting (Paladin)"
+  }
+}
+quality {
+  level: 10
+  template {
+    name: "Greater Channel Solar"
+  }
+}
 skill_points: 2
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-class_skill: ""
-
-CLASS FEATURES
-
-
-Turn Un d ead (Su ): You add your sola r cha n nele r level
-to your effective level for turning undead granted by any
-othe r class to det ermin e yo ur effe ctive level fo r tu rn ing
-undead. For examp le, if you're a zth-lcvcl clcr tc/ tst-level
-paladi n/tst-levelsolar channeler, yOll turn undead as if you
-we re an Sth-lcvel cle ric.
-
-Sp ellcast i ng: At every level except tsr, 5th, and 10th,
-you gain new spells per day and an incr ease in caster level
-(and spells k nown, if appl icable) as if you had also gained a
-level in a divine spel lcasting class to whic h you belo nged ,..
-
-.. before adding th e solar chan neler level. You do not, how-
-ever, gai n any othe r benefit a charac ter of that class wou ld
-
-have gain ed . If yO Ll h ad more th an on e d ivine spellcasting
-class before becoming a sola r cha n neler, yOll mus t decide
-to whi ch class to add each eligi ble solarchannele r level for
-th e purpose of dctcr m inin g spells per day,caster level, and
-spells kn own .
-
-lesser Ch an n el Solar (Su): Beginn ing at 5th level, you
-can expe nd one of you r dail y uses of your abili ty to turn
-undead as an immediate acti on to tran sform into a power ful
-cre atur e tha t looks like a solar (lvfM ( 2). At the beginning of
-eac h of your subseque nt turns, you mus t use a swi ft act ion
-to ex pe nd one addition al daily lise of your abil ity to tu rn
-undead. If you do not or cann ot do so, you return to your
-normal form.
-w hil e you are in solar form, your body and gear are
-repl aced by a body and a magic grearsword like those of a
-
-solar. You becom e a Medium cre ature (if you wer e ofJ dif-
-fere nt size before), and you lose the ability to cast spells and
-
-'..
-
--:
-.' "
-'.'
-/;/
-k S utb r« Calddml
-/
-fakes 1iling ill bel'
-solarform
-
-lRCHt ,,•
->
-,.
-, .
-•
-
-Class Skills (2 + Int modifier per level): Conce nt ratio n, Craft, Diplomacy, Heal, Knowledge (histo ry), Knowledge (the planes),
-Knowledge (religion). Profession, Spellcraft.
-T H E S O LAR CH A N NELER HIT D'E: D8
-Base
-Attack Fo rt Ref Will
-Level Bonus Save Save Save Special Spellc asting
-15t +0 +2 +0 +2 Chan ne l hea ling, tu rn undead
-2nd +1 +3 +0 +3 +1 level of existing divine spellcasting class
-3rd +2 +3 +1 +3 +1 level of existing divine spellcasting class
-4t h +3 +4 +1 +4 +1 level of existing divine spellcasting class
-5th +3 +4 +1 +4 Lesser channe l so lar
-6th +4 +5 +2 +5 +1 level of existing divine spe llcasting class
-7th +5 +5 +2 +5 +1 level of existing divine spellcasting class
-8th +6 +6 +2 +6 +1 level of existing divine spe llcasting class
-9th +6 +6 +3 +6 +1 level of existing divine spellcasting class
-10th +7 +7 +3 +7 Greater channel solar
-
-Title: Benefit s and Duties
-None.
-Ebon Initiate: You are given a ce remonia l
-black robe and is eligible for quests. An
-Ebon initiate can buy mag ic items from the
-wizards of the Ebon Caba l at reduced cost.
-Ebon Factotum: You receive a cloak of the
-Ebon Cobol.
-Ebon Master: You receive one rodofthe
-
-Tower(your choice), along with a diamond-
-studded black mask worth 500 gpoGaining
-
-the title of Ebo n master entitles you to en-
-ter the dark scholar or twisted lord prestige
-
-class .
-9 or more
-5-8
-Affiliation
-Score
-1 or lower
-2-4
-
-Ebon Cabal
-
-Th e Luminous Order isn't the only powerful group work-
-ing beh in d th e scenes in the Valley of Obelisks. 1\ grou p
-
-of ambitious schemers- wizards mostly-exists solely to
-accumulate more power for its members.This faction is th e
-Eben Cabal, based in a fortress called the Blac k Tower.
-
-The Ebe n Cabal isn't an ev il organization, thou gh it prob-
-ably has a few evi l memb ers wi thi n its ranks, It's definitely
-
-"neu tr al ambitious," howeve r, and its members have few
-scr uples abour seeking and taking what they want .
-Over the course of the adve nture, you might encounter
-the Ebon Caba l and become affilia ted wi th th e group . From
-time to time after you become affil iated wi th the group, the
-01\1 mig ht tell you tha t your affilianon score wi thin the
-Ebon Caba l has increased. As your affilia tion score rises,
-you be come en titled.ro the following rewa rds.
-Ritua l of Feathe rs at the Shin ing Citadel. At rh e con clu -
-sion of this prayer-fi lled ceremony, an actua l solar briefly
-appears and wordlessly touches you wi th irs swo rd. From
-
-th at moment forwa rd, you find that th e gates on you r abil-
-ity 10 chan nel posi tive energy have been opened. Taki ng
-
-on th e form of a solar requires further practice and grea ter
-inner strength .
-
-Speed
-fly 90 ft. (good)
-fly 90 ft. (good)
-fly90 ft. (good)
-fly 120 ft. (good)
-fly 120 ft. (good)
-fly 1SO ft. (good)
-
-Greatswo rd Attacks
-+201+1 5/+10 (2d6 +9/19-20)
-+21/ +16/+ 11 (2d6 +10/1 9-20)
-+22/+17/+ 12 (2d6+11/19-20)
-+23/+18/ +13 (2d6 +12/19 -20)
-+24/+19/+14 (2d6+ 13/ 19- 20)
-+25/ +201+15 (2d6+14/19 -20)
-Level
-5th
-6th
-7th
-8th
-9th
-10th
-to use the class featu res ofyour normal form whi le you're in
-
-solar form (except th at you can expend daily uses ofyour abil-
-ity TO tu rn undead in order to maintain the altered form ).
-
-For as long as yOll maintain solar form, you don' t have
-access to item s worn, he ld, or carried by )/our normal form,
-
-althoug h your AC rem ains rhc same. The grea tsword disap-
-pears if it leaves yOtl r grasp, bur you can spend a move act ion
-
-to make it reappea r in your ha nds.Your attack s, damage, and
-speed change as described on the following table.All o ther
-aspects of your character remain the same.
-
-PLAYING A SOLAR CHANNELER
-You deal with cha llenges the way you always have, bu t
-wh e n combat turns for th e worst, you know t hat you've got
-an angel in reserve, The Lu mi nous Order regards irs solar
-chaunelers h igh ly-especially those who have reached 5th
-level or hi gh er. Your abil it)' to turn into a powerfu I angel is
-seen as a sign that the gods favor you.
-Com bat: You can't turn into an angel whenever yOLl
-want, so you have to assess whether a given figh t requires
-the assistance of your solar form. Becoming an angel is a
-do uble-e dged sword, because you wo n't be able ro hea l your
-all ies or cast other spe lls until you ret urn to normal.
-The l um in ous Order often sends solar channelers int o
-th e Slaug hrerscar. Even ifyou can't transform into an angel,
-you're still remarkably effe ctive against the undead,
-Advancement: Those who meet the entry requirement s
-and wis h 10 do so are inv ited to take part in the day long
-
+class_skill: "Concentration"
+class_skill: "Craft"
+class_skill: "Diplomacy"
+class_skill: "Heal"
+class_skill: "Knowledge (history)"
+class_skill: "Knowledge (the planes)"
+class_skill: "Knowledge (religion)"
+class_skill: "Profession"
+class_skill: "Spellcraft"
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+base_attack: 1
+base_attack: 1
+base_attack: 0
+base_attack: 1
+good_fortitude_save: true
+good_reflex_save: false
+good_will_save: true

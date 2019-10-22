@@ -1,0 +1,9 @@
+template {
+  name: "Yagnoloth"
+}
+set: "Descent into Avernus"
+number: 28
+race: "Yagnoloth"
+type: "Fiend"
+subtype: "Yugoloth"
+size: LARGE

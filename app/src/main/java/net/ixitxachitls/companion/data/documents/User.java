@@ -251,12 +251,10 @@ public class User extends Document<User> {
   }
 
   public Data writeMiniatures() {
-    Data.empty()
+    return Data.empty()
         .set(FIELD_MINIATURE_OWNED, miniatures)
         .setNested(FIELD_MINIATURE_LOCATIONS, locations.values())
         .set(FIELD_MINIATURE_HIDDEN_SETS, new ArrayList<>(hiddenSets));
-
-    return data;
   }
 
   @Override
@@ -284,8 +282,6 @@ public class User extends Document<User> {
   }
 
   private void storeMiniatures() {
-    if (true) return;
-
     if (miniaturesLoading || !miniaturesDocument.isPresent()) {
       return;
     }

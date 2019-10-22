@@ -15,7 +15,7 @@ subschool: SUMMONING
 summary: "$undefined$"
 descriptor: SEE_TEXT
 level {
-  spell_class: AIR
+  spell_class: AIR_SPELL
   level: 9
 }
 level {
@@ -23,11 +23,11 @@ level {
   level: 9
 }
 level {
-  spell_class: EARTH
+  spell_class: EARTH_SPELL
   level: 9
 }
 level {
-  spell_class: FIRE
+  spell_class: FIRE_SPELL
   level: 9
 }
 level {

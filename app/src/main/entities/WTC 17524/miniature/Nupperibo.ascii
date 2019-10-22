@@ -1,0 +1,9 @@
+template {
+  name: "Nupperibo"
+}
+set: "Descent into Avernus"
+number: 18
+race: "Nupperibo"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

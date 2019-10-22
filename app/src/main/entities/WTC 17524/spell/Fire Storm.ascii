@@ -22,7 +22,7 @@ level {
   level: 7
 }
 level {
-  spell_class: FIRE
+  spell_class: FIRE_SPELL
   level: 7
 }
 components: VERBOSE

@@ -1,0 +1,11 @@
+template {
+  name: "Infernal War Machine"
+}
+set: "Descent into Avernus"
+number: 46
+race: "Infernal War Machine"
+type: "Vehicle"
+subtype: "Infernal"
+subtype: "Machine"
+size: GARGANTUAN
+

@@ -4,6 +4,12 @@
       tools:context="net.ixitachitls.companion.net.ixitachitls.companion.CampaignSelection">
   <group android:id="@+id/menu_main">
     <item
+        android:id="@+id/action_feedback"
+        android:icon="@drawable/ic_message_alert_white_24dp"
+        android:orderInCategory="100"
+        android:title="Feedback"
+        app:showAsAction="never|ifRoom"/>
+    <item
         android:id="@+id/action_log"
         android:icon="@drawable/ic_bug_outline_white_24dp"
         android:orderInCategory="100"

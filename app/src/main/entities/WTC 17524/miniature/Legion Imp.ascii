@@ -1,0 +1,9 @@
+template {
+  name: "Legion Imp"
+}
+set: "Descent into Avernus"
+number: 11
+race: "Imp"
+type: "Fiend"
+subtype: "Devil"
+size: SMALL

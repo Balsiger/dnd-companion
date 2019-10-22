@@ -1,0 +1,9 @@
+template {
+  name: "Firbolg Druid"
+}
+set: "Descent into Avernus"
+number: 35
+race: "Firbolg"
+type: "Humanoid"
+class: "Druid"
+size: MEDIUM

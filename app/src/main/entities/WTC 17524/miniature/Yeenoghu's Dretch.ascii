@@ -1,0 +1,9 @@
+template {
+  name: "Yeenoghu's Dretch"
+}
+set: "Descent into Avernus"
+number: 12
+race: "Dretch"
+type: "Fiend"
+subtype: "Demon"
+size: SMALL

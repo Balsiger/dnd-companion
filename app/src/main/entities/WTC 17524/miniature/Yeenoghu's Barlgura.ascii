@@ -1,0 +1,9 @@
+template {
+  name: "Yeenoghu's Barlgura"
+}
+set: "Descent into Avernus"
+number: 27
+race: "Bar-Lgura"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

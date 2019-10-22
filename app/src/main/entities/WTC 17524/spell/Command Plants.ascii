@@ -17,7 +17,7 @@ level {
   level: 4
 }
 level {
-  spell_class: PLANT
+  spell_class: PLANT_SPELL
   level: 4
 }
 level {

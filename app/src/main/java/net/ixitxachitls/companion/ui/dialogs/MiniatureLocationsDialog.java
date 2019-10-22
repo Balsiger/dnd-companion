@@ -35,8 +35,6 @@ import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
-import java.util.SortedSet;
-
 import androidx.cardview.widget.CardView;
 
 /**
@@ -65,7 +63,6 @@ public class MiniatureLocationsDialog extends Dialog {
   private void update() {
     locationsContainer.removeAllViews();
 
-    SortedSet<MiniatureLocation> locations = me().getSortedLocations();
     for (MiniatureLocation location : me().getSortedLocations()) {
       locationsContainer.addView(new MiniatureLocationCard(getContext(), locationsContainer,
           location).getCard());
@@ -98,7 +95,7 @@ public class MiniatureLocationsDialog extends Dialog {
           .description("Delete", "Delete the location.")
           .onClick(this::delete);
 
-      locationView = TextWrapper.wrap(card, R.id.location);
+      locationView = TextWrapper.wrap(card, R.id.locations);
       filterContainer = card.findViewById(R.id.filters);
       update();
     }

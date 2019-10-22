@@ -19,7 +19,7 @@ level {
   level: 2
 }
 level {
-  spell_class: GOOD
+  spell_class: GOOD_SPELL
   level: 2
 }
 level {

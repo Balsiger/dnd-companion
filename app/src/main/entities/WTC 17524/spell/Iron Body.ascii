@@ -13,7 +13,7 @@ template {
 school: TRANSMUTATION
 summary: "$undefined$"
 level {
-  spell_class: EARTH
+  spell_class: EARTH_SPELL
   level: 8
 }
 level {

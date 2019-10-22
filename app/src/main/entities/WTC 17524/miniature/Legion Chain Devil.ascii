@@ -1,0 +1,9 @@
+template {
+  name: "Legion Chain Devil"
+}
+set: "Descent into Avernus"
+number: 33
+race: "Chain Devil"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

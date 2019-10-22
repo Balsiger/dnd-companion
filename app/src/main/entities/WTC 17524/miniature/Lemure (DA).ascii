@@ -1,0 +1,9 @@
+template {
+  name: "Lemure (DA)"
+}
+set: "Descent into Avernus"
+number: 4
+race: "Lemure"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

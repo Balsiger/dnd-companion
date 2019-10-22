@@ -21,9 +21,17 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import android.content.Context;
+import android.text.Spannable;
+
+import com.google.common.collect.ImmutableMap;
+
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.QualityTemplate;
 import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.util.Texts;
+
+import java.util.Map;
 
 /**
  * A quality of a creature or item.
@@ -67,6 +75,18 @@ public class Quality extends NestedDocument {
 
   public QualityTemplate getTemplate() {
     return template;
+  }
+
+  public Spannable formatName(Context context, int count, Character character) {
+    return Texts.processCommands(context, template.getNameFormat(),
+        collectFormatValues(count, character));
+  }
+
+  public Map<String, Texts.Value> collectFormatValues(int count, Character character) {
+    return ImmutableMap.<String, Texts.Value>builder()
+        .putAll(character.collectFormatValues())
+        .put("count", new Texts.IntegerValue(count))
+        .build();
   }
 
   @Override

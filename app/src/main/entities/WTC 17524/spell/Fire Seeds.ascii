@@ -19,7 +19,7 @@ level {
   level: 6
 }
 level {
-  spell_class: FIRE
+  spell_class: FIRE_SPELL
   level: 6
 }
 level {

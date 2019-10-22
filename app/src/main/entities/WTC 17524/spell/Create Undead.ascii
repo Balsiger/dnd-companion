@@ -22,7 +22,7 @@ level {
   level: 6
 }
 level {
-  spell_class: EVIL
+  spell_class: EVIL_SPELL
   level: 6
 }
 level {

@@ -1,0 +1,9 @@
+template {
+  name: "Yeenoghu's Hezrou"
+}
+set: "Descent into Avernus"
+number: 26
+race: "Hezrou"
+type: "Fiend"
+subtype: "Demon"
+size: LARGE

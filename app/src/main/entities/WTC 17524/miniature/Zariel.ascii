@@ -1,0 +1,11 @@
+template {
+  name: "Zariel"
+}
+set: "Descent into Avernus"
+number: 43
+race: "Zariel"
+type: "Fiend"
+subtype: "Devil"
+subtype: "Archdevil"
+size: LARGE
+

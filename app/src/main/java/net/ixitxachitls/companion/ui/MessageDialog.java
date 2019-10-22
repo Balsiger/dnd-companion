@@ -31,6 +31,7 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.util.Texts;
 
+import java.util.Map;
 import java.util.Optional;
 
 import androidx.annotation.LayoutRes;
@@ -47,6 +48,13 @@ public class MessageDialog {
     this.view =
         Optional.of(LayoutInflater.from(context).inflate(R.layout.view_scroll_text, null, false));
     this.dialog.setView(view.get());
+  }
+
+  public MessageDialog formatted(String message, Map<String, Texts.Value> values) {
+    Spanned spanned = Texts.toSpanned(dialog.getContext(), message, values);
+    dialog.setMessage(spanned);
+
+    return this;
   }
 
   public MessageDialog formatted(String message) {

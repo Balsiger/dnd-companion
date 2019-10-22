@@ -1,0 +1,9 @@
+template {
+  name: "Amnizu"
+}
+set: "Descent into Avernus"
+number: 36
+race: "Amnizu"
+type: "Fiend"
+subtype: "Devil"
+size: MEDIUM

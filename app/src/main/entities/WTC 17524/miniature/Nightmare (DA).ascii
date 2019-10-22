@@ -1,0 +1,9 @@
+template {
+  name: "Nightmare (DA)"
+}
+set: "Descent into Avernus"
+number: 44
+race: "Nightmare"
+type: "Fiend"
+subtype: "Mount"
+size: LARGE

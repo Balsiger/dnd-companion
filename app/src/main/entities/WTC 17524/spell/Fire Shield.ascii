@@ -14,7 +14,7 @@ school: EVOACATION
 summary: "personal, $level rounds (D), attacker hitting take 1d6 +[[min($level, 15)]] cold/fire damage, protected vs. cold or fire-base attacks."
 descriptor: FIRE_OR_COLD
 level {
-  spell_class: FIRE
+  spell_class: FIRE_SPELL
   level: 5
 }
 level {

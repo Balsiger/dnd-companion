@@ -27,19 +27,22 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import com.tenmiles.helpstack.HSHelpStack;
+import com.tenmiles.helpstack.gears.HSEmailGear;
+
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.CreatureConditions;
+import net.ixitxachitls.companion.data.documents.Encounters;
 import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Invites;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.documents.Users;
-import net.ixitxachitls.companion.data.documents.Encounters;
 import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
@@ -170,6 +173,11 @@ public class CompanionApplication extends MultiDexApplication
 
     context = new ApplicationCompanionContext(this);
     registerActivityLifecycleCallbacks(this);
+
+    HSHelpStack helpStack = HSHelpStack.getInstance(this);
+    HSEmailGear emailGear = new HSEmailGear("companion@ixitxachitls.net",
+        R.xml.faq);
+    helpStack.setGear(emailGear);
   }
 
   public Users users() {

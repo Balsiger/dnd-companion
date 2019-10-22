@@ -21,7 +21,7 @@ level {
   level: 1
 }
 level {
-  spell_class: EARTH
+  spell_class: EARTH_SPELL
   level: 1
 }
 components: VERBOSE

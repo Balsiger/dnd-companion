@@ -1,0 +1,9 @@
+template {
+  name: "Legion Ice Devil"
+}
+set: "Descent into Avernus"
+number: 29
+race: "Ice Devil"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE

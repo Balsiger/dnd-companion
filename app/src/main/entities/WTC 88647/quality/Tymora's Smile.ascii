@@ -1,0 +1,44 @@
+template {
+  name: "Tymora's Smile"
+  category: "saves"
+  synonym: "Smile, Tymora's"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 59
+      high: 59
+    }
+  }
+  world: "Forgotten Realms"
+  description:
+    "The Harper agent gains a +2 luck bonus on any single saving throw of his choice once per day. "
+    "This bonus can be added after the die is rolled and the success or failure of the save has "
+    "been determined."
+}
+reflex_modifier {
+  modifier {
+    value: 2
+    type: LUCK
+    condition: "can be added after the die is rolled and success or failure has been determined"
+  }
+}
+will_modifier {
+  modifier {
+    value: 2
+    type: LUCK
+    condition: "can be added after the die is rolled and success or failure has been determined"
+  }
+}
+fortitude_modifier {
+  modifier {
+    value: 2
+    type: LUCK
+    condition: "can be added after the die is rolled and success or failure has been determined"
+  }
+}
+type: SUPERNATURAL
+
+
+
+
+

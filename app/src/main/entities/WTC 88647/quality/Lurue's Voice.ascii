@@ -1,0 +1,22 @@
+template {
+  name: "Lurue's Voice"
+  category: "saves"
+  synonym: "Voice, Lurue's"
+  reference {
+    name: "WTC 88647"
+    pages {
+      low: 59
+      high: 59
+    }
+  }
+  world: "Forgotten Realms"
+  description:
+    "The Harper agent may use \\Spell{speak with animals} (caster level equals Harper agent level) "
+    "three times per day."
+}
+type: SUPERNATURAL
+
+
+
+
+

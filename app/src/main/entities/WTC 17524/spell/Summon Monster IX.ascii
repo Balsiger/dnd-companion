@@ -22,11 +22,11 @@ level {
   level: 9
 }
 level {
-  spell_class: EVIL
+  spell_class: EVIL_SPELL
   level: 9
 }
 level {
-  spell_class: GOOD
+  spell_class: GOOD_SPELL
   level: 9
 }
 level {

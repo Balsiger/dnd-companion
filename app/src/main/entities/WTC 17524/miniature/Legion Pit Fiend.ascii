@@ -1,0 +1,9 @@
+template {
+  name: "Legion Pit Fiend"
+}
+set: "Descent into Avernus"
+number: 41
+race: "Pit Fiend"
+type: "Fiend"
+subtype: "Devil"
+size: LARGE

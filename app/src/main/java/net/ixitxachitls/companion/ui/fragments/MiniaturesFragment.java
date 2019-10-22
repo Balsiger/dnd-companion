@@ -215,7 +215,7 @@ public class MiniaturesFragment extends CompanionFragment {
     public void restoreState(Parcelable state, ClassLoader loader) {
       try{
         super.restoreState(state, loader);
-      } catch (NullPointerException e){
+      } catch (NullPointerException|IllegalStateException e){
         // This seems to happen when reloading the miniatures frame (cf.
         // https://stackoverflow.com/questions/18642890/fragmentstatepageradapter-with-childfragmentmanager-fragmentmanagerimpl-getfra
       }

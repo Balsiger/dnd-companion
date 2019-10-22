@@ -14,7 +14,7 @@ template {
 school: ABJURATION
 summary: "$undefined$"
 level {
-  spell_class: ANIMAL
+  spell_class: ANIMAL_SPELL
   level: 6
 }
 level {

@@ -14,7 +14,7 @@ school: TRANSMUTATION
 summary: "$undefined$"
 descriptor: AIR
 level {
-  spell_class: AIR
+  spell_class: AIR_SPELL
   level: 5
 }
 level {

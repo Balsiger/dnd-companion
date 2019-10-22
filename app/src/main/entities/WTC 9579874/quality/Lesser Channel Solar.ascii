@@ -1,0 +1,42 @@
+template {
+  name: "Lesser Channel Solar"
+  category: "action"
+  synonym: "Channel Solar, Lesser"
+  reference {
+    name: "WTC 9579874"
+    pages {
+      low: 9
+      high: 10
+    }
+  }
+  world: "Generic"
+  description:
+    "Beginning at 5th level, you can expend one of your daily uses of your ability to turn "
+    "undead as an immediate action to transform into a powerful creature that looks like a "
+    "\\Monster{solar} (MM 12). At the beginning of each of your subsequent turns, you must use "
+    "a swift action to expend one additional daily use of your ability to turn undead. If you do "
+    "not or cannot do so, you return to your normal form."
+    "\\par "
+    "While you are in \\Monster{solar} form, your body and gear are replaced by a body and a "
+    "magic greatsword like those of a \\Monster{solar}. You become a Medium creature (if you were "
+    "of a different size before), and you lose the ability to cast spells and to use the class "
+    "features of your normal form while you're in solar form (except that you can expend daily "
+    "uses of your ability to turn undead in order to maintain the altered form)."
+    "\\par "
+    "For as long as you maintain solar form, you don' t have access to items worn, held, or "
+    "carried by your normal form, although your AC remains the same. The greatsword disappears "
+    "if it leaves your grasp, bur you can spend a move action to make it reappear in your hands. "
+    "Your attacks, damage, and speed change as described on the following table. All other aspects "
+    "of your character remain the same."
+    "\\par "
+    "\\table[l][l][l]"
+      "{\\bold{Level}}{\\bold{Greatsword Attacks}}{\\bold{Speed}}"
+      "{5th}{+20/+15/+10 (2d6+9/19-20)}{fly 90 ft. (good)}"
+      "{6th}{+21/+16/+11 (2d6+10/19-20)}{fly 90 ft. (good)}"
+      "{7th}{+22/+17/+12 (2d6+11/19-20)}{fly 90 ft. (good)}"
+      "{8th}{+23/+18/+13 (2d6+12/19-20)}{fly 120 ft. (good)}"
+      "{9th}{+24/+19/+14 (2d6+13/19-20)}{fly 120 ft. (good)}"
+      "{10th}{+25/+20/+15 (2d6+14/19-20)}{fly 150 ft. (good)}"
+}
+type: SUPERNATURAL
+

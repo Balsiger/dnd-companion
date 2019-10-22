@@ -1,0 +1,18 @@
+template {
+  name: "Greater Channel Solar"
+  category: "action"
+  synonym: "Channel Solar, Greater"
+  reference: {
+    name: "WTC 9579874"
+    pages {
+      low: 10
+      high: 10
+    }
+  }
+  world: "Generic"
+  description:
+    "At 10th level, you can remain in solar form for 1 minute for each daily use of your ability "
+    "to turn undead that you expend."
+}
+type: SUPERNATURAL
+
