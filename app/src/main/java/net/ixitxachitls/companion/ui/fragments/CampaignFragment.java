@@ -27,6 +27,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.transition.TransitionManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -306,6 +307,7 @@ public class CampaignFragment extends CompanionFragment {
     }
   }
 
+
   protected void refresh(Documents.Update update) {
     Status.log("CampaignF refresh: " + update);
 
@@ -318,12 +320,14 @@ public class CampaignFragment extends CompanionFragment {
 
       TransitionManager.beginDelayedTransition((ViewGroup) getView());
       if (campaign.get().getBattle().inBattle()) {
+        Log.d("CampaignF", "show encounter, hide party");
         encounter.showAndHide(party);
         encounter.refresh(update);
         encounterGroup.expand();
         addConditionAction.show(campaign.get().amDM()
             || campaign.get().getBattle().amCurrentPlayer());
       } else {
+        Log.d("CampaignF", "show party, hide encounter");
         party.showAndHide(encounter);
         encounterGroup.shrink();
         addConditionAction.show();

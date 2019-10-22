@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.ui.fragments;
 
+import android.util.Log;
 import android.view.ViewGroup;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -72,7 +73,8 @@ public class NestedCompanionFragment extends Fragment {
   }
 
   public void hide() {
-    FragmentManager manager = getChildFragmentManager();
+    Log.d("Encounter", "hide: " + this);
+    FragmentManager manager = getFragmentManager();
     manager.beginTransaction()
         .hide(this)
         .commit();
@@ -95,6 +97,7 @@ public class NestedCompanionFragment extends Fragment {
   }
 
   public void show() {
+    Log.d("Encounter", "show: " + this);
     FragmentManager manager = getFragmentManager();
     manager.beginTransaction()
         .show(this)
@@ -102,6 +105,7 @@ public class NestedCompanionFragment extends Fragment {
   }
 
   public void showAndHide(NestedCompanionFragment toHide) {
+    Log.d("Encounter", "showAndHide: " + this + "/" + toHide);
     FragmentManager manager = getFragmentManager();
     manager.beginTransaction()
         .show(this)
