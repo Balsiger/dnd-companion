@@ -40,6 +40,8 @@ import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
+import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
 
@@ -127,12 +129,12 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
-    LinearLayout view = (LinearLayout) inflater.inflate(R.layout.fragment_edit, container, false);
-    TextView titleView = view.findViewById(R.id.title);
-    titleView.setText(title);
-    titleView.setBackgroundColor(getResources().getColor(color, null));
+    LinearLayout view = (LinearLayout) inflater.inflate(R.layout.dialog, container, false);
+    Wrapper.wrap(view, R.id.close).onClick(this::close);
+    TextWrapper<TextView> titleView = TextWrapper.wrap(view, R.id.title).text(title);
+    Wrapper.wrap(view, R.id.titlebar).backgroundColor(color);
     if (textColor != 0) {
-      titleView.setTextColor(getResources().getColor(textColor, null));
+      titleView.textColor(textColor);
     }
 
     content = inflater.inflate(layoutId, container, false);

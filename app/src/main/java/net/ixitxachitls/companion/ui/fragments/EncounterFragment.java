@@ -96,6 +96,10 @@ public class EncounterFragment extends NestedCompanionFragment {
   }
 
   public void refresh(Documents.Update update) {
+    if (isHidden()) {
+      return;
+    }
+
     if (encounter.isPresent()) {
       // Campaigns.
       if (encounter.get().isStarting()) {

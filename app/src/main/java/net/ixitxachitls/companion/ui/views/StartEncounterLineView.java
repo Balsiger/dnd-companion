@@ -40,6 +40,7 @@ import androidx.annotation.ColorRes;
 public class StartEncounterLineView extends LinearLayout {
 
   private final String creatureId;
+  private boolean setting = false;
 
   // UI elements.
   private final Wrapper<CheckBox> included;
@@ -77,7 +78,10 @@ public class StartEncounterLineView extends LinearLayout {
   }
 
   public void setIncluded(boolean checked) {
+    boolean old = setting;
+    setting = true;
     included.get().setChecked(checked);
+    setting = old;
   }
 
   public boolean isSurprised() {
@@ -85,15 +89,23 @@ public class StartEncounterLineView extends LinearLayout {
   }
 
   public void setSurprised(boolean checked) {
+    boolean old = setting;
+    setting = true;
     surprised.get().setChecked(checked);
+    setting = old;
   }
 
   private void onIncluded(View view, boolean isChecked) {
     setSurprised(isChecked);
-    changed.execute();
+    surprised.enabled(isChecked);
+    if (!setting) {
+      changed.execute();
+    }
   }
 
   private void onSurprised(View view, boolean isChecked) {
-    changed.execute();
+    if (!setting) {
+      changed.execute();
+    }
   }
 }

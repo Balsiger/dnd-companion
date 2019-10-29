@@ -17,6 +17,7 @@ template {
     }
   }
   world: "Generic"
+  short_description: "The power to affect undead creatures through the power of a faith."
   description:
   "The creature has the power to affect undead creatures (such as skeletons, zombies, ghosts, "
   "and vampires) by channeling the power of his faith through his holy (or unholy) symbol (see "

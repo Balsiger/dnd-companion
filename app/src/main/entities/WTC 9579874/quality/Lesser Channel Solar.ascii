@@ -10,6 +10,7 @@ template {
     }
   }
   world: "Generic"
+  short_description: "You can use turn undead uses to turn yourself into \\Monster{solar} form."
   description:
     "Beginning at 5th level, you can expend one of your daily uses of your ability to turn "
     "undead as an immediate action to transform into a powerful creature that looks like a "

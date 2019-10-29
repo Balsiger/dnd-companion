@@ -58,6 +58,14 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
     return proto.getNameFormat();
   }
 
+  public String getShortDescription() {
+    if (proto.getTemplate().getShortDescription().isEmpty()) {
+      return "(no short description)";
+    }
+
+    return proto.getTemplate().getShortDescription();
+  }
+
   public List<Modifier> getAttackModifiers() {
     return proto.getAttackModifier().getModifierList().stream()
         .map(p -> Modifier.fromProto(p, getName()))
@@ -113,6 +121,21 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
     }
 
     return modifiers;
+  }
+
+  public Template.QualityTemplateProto.Type getType() {
+    return proto.getType();
+  }
+
+  public String getTypeFormatted() {
+    switch(proto.getType()) {
+      case EXTRAORDINARY: return "Extraordinary";
+      case SPELL_LIKE: return "Spell Like";
+      case SUPERNATURAL: return "Supernatural";
+      case UNRECOGNIZED: return "Unrecognized";
+      default:
+      case UNKNOWN: return "Uknown";
+    }
   }
 
   public static Template.QualityTemplateProto defaultProto () {

@@ -22,6 +22,8 @@
 package net.ixitxachitls.companion.data.documents;
 
 import android.content.Context;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.text.Spannable;
 
 import com.google.common.collect.ImmutableMap;
@@ -36,7 +38,7 @@ import java.util.Map;
 /**
  * A quality of a creature or item.
  */
-public class Quality extends NestedDocument {
+public class Quality extends NestedDocument implements Parcelable {
 
   private static final String FIELD_NAME = "name";
 
@@ -77,6 +79,19 @@ public class Quality extends NestedDocument {
     return template;
   }
 
+  @Override
+  public int describeContents() {
+    return 0;
+  }
+
+  @Override
+  public void writeToParcel(Parcel parcel, int flags) {
+    parcel.writeString(template.getName());
+    parcel.writeString(entity);
+
+    // TODO(merlin): Need to write the parametrized template proto here as well!
+  }
+
   public Spannable formatName(Context context, int count, Character character) {
     return Texts.processCommands(context, template.getNameFormat(),
         collectFormatValues(count, character));
@@ -86,6 +101,7 @@ public class Quality extends NestedDocument {
     return ImmutableMap.<String, Texts.Value>builder()
         .putAll(character.collectFormatValues())
         .put("count", new Texts.IntegerValue(count))
+        .put("source", new Texts.StringValue(entity))
         .build();
   }
 

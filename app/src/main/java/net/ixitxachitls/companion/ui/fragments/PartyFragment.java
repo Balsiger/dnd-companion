@@ -25,7 +25,6 @@ import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.Transition;
 import android.transition.TransitionManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -132,10 +131,6 @@ public class PartyFragment extends NestedCompanionFragment {
   }
 
   private void redrawChips() {
-    if (isHidden()) {
-      return;
-    }
-
     TransitionManager.beginDelayedTransition(view, transition);
     party.removeAllViews();
 
@@ -154,7 +149,6 @@ public class PartyFragment extends NestedCompanionFragment {
       return;
     }
 
-    Log.d("Party Fragment", "refresh!!!");
     if (campaign.isPresent()) {
       // Adventures.
       if (campaign.get().amDM()) {

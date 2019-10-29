@@ -46,6 +46,11 @@
   <color name="spellDark">#5c007a</color>
   <color name="spellText">#fff</color>
 
+  <color name="quality">#8d6e63</color>
+  <color name="qualityLight">#be9c91</color>
+  <color name="qualityDark">#5f4339</color>
+  <color name="qualityText">#fff</color>
+
   <color name="className">#ffd54f</color>
   <color name="classNameLight">#ffff81</color>
   <color name="classNameDark">#c8a415</color>

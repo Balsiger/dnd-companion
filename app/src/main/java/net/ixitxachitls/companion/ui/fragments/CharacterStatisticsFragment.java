@@ -46,6 +46,7 @@ import net.ixitxachitls.companion.data.values.ModifiedValue;
 import net.ixitxachitls.companion.rules.Items;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.MessageDialog;
+import net.ixitxachitls.companion.ui.dialogs.QualityDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.AttackDetailsView;
 import net.ixitxachitls.companion.ui.views.ConditionIconsView;
@@ -255,7 +256,6 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       }
     }
 
-
     fortitude.set(character.fortitude());
     will.set(character.will());
     reflex.set(character.reflex());
@@ -296,18 +296,20 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
       qualities.removeAllViews();
       Multimap<String, Quality> collectedQualities = character.collectQualities();
-      i = 1;
+      boolean first = true;
       for (String key : collectedQualities.keySet()) {
-        boolean last = i++ == collectedQualities.size();
         TextWrapper<TextView> text = TextWrapper.wrap(new TextView(getContext()))
             .noWrap();
         int count = collectedQualities.get(key).size();
         Quality quality = collectedQualities.get(key).iterator().next();
-        text.text(quality.formatName(getContext(), count, character)
-            + (last ? "" : ", ")).textStyle(R.style.SmallText)
-            .onClick(() -> showQuality(quality, count));
+        String name = quality.formatName(getContext(), count, character).toString();
+        text.text(first ? "" : ", " + name)
+            .textStyle(R.style.SmallText)
+            .onClick(() -> QualityDialog.newInstance(character, quality, name, count).display());
 
         qualities.addView(text.get());
+
+        first = false;
       }
     }
 

@@ -53,6 +53,8 @@ public class StartEncounterDialog extends Dialog {
   private static final String ARG_ID = "id";
 
   private Optional<Campaign> campaign;
+  private List<String> includedCreatures = new ArrayList<>();
+  private List<String> surprisedCreatures = new ArrayList<>();
 
   // UI elements.
   private Wrapper<CheckBox> includeAll;
@@ -134,15 +136,21 @@ public class StartEncounterDialog extends Dialog {
       // Characters.
       this.characters.removeAllViews();
       for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
-        this.characters.addView(new StartEncounterLineView(getContext(), character.getId(),
-            character.getName(), R.color.characterDark, this::update));
+        StartEncounterLineView line = new StartEncounterLineView(getContext(), character.getId(),
+            character.getName(), R.color.characterDark, this::update);
+        this.characters.addView(line);
+        line.setIncluded(includedCreatures.contains(character.getId()));
+        line.setSurprised(surprisedCreatures.contains(character.getId()));
       }
 
       // Monsters.
       this.monsters.removeAllViews();
       for (Monster monster : monsters().getCampaignMonsters(campaign.get().getId())) {
-        this.monsters.addView(new StartEncounterLineView(getContext(), monster.getId(),
-            monster.getName(), R.color.monsterDark, this::update));
+        StartEncounterLineView line = new StartEncounterLineView(getContext(), monster.getId(),
+            monster.getName(), R.color.monsterDark, this::update);
+        this.monsters.addView(line);
+        line.setIncluded(includedCreatures.contains(monster.getId()));
+        line.setSurprised(surprisedCreatures.contains(monster.getId()));
       }
     }
   }
@@ -188,6 +196,8 @@ public class StartEncounterDialog extends Dialog {
     boolean noneIncluded = true;
     boolean allSurprised = true;
     boolean noneSurprised = true;
+    includedCreatures.clear();
+    surprisedCreatures.clear();
     for (int i = 0; i < characters.getChildCount(); i++) {
       if (characters.getChildAt(i) instanceof StartEncounterLineView) {
         StartEncounterLineView line = (StartEncounterLineView) characters.getChildAt(i);
@@ -196,6 +206,10 @@ public class StartEncounterDialog extends Dialog {
         if (line.isIncluded()) {
           allSurprised &= line.isSurprised();
           noneSurprised &= !line.isSurprised();
+          includedCreatures.add(line.getCreatureId());
+        }
+        if (line.isSurprised()) {
+          surprisedCreatures.add(line.getCreatureId());
         }
       }
     }
@@ -207,6 +221,10 @@ public class StartEncounterDialog extends Dialog {
         if (line.isIncluded()) {
           allSurprised &= line.isSurprised();
           noneSurprised &= !line.isSurprised();
+          includedCreatures.add(line.getCreatureId());
+        }
+        if (line.isSurprised()) {
+          surprisedCreatures.add(line.getCreatureId());
         }
       }
     }

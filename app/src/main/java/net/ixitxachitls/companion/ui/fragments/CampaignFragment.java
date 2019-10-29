@@ -26,7 +26,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -318,7 +317,6 @@ public class CampaignFragment extends CompanionFragment {
       date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
       deleteAction.show(canDeleteCampaign());
 
-      TransitionManager.beginDelayedTransition((ViewGroup) getView());
       if (campaign.get().getBattle().inBattle()) {
         Log.d("CampaignF", "show encounter, hide party");
         encounter.showAndHide(party);
