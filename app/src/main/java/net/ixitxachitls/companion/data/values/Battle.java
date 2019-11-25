@@ -157,16 +157,41 @@ public class Battle {
   }
 
   public void creatureWait() {
-    if (currentCreatureIndex < creatureIds.size() - 1) {
+    int next = nextNonWaitingIndex(currentCreatureIndex);
+    if (next > 0) {
       String id = creatureIds.remove(currentCreatureIndex);
-      creatureIds.add(currentCreatureIndex + 1, id);
+      creatureIds.add(next, id);
 
-      // Remove the flat-footed condition, as the creature is acting now.
+      // Remove the flat-footed and waiting condition, as the creature is acting now.
       campaign.getContext().conditions().deleteAll(Conditions.FLAT_FOOTED.getName(),
           creatureIds.get(currentCreatureIndex));
+      campaign.getContext().conditions().deleteAll(Conditions.WAITING.getName(),
+          creatureIds.get(currentCreatureIndex));
+
+      // Add the waiting condition.
+      Optional<Character> character = campaign.characters().get(id);
+      if (character.isPresent()) {
+        character.get().addCondition(new TimedCondition(Conditions.WAITING, id));
+      }
+
+      campaign.store();
+    }
+  }
+
+  private int nextNonWaitingIndex(int current) {
+    for (int i = current + 1; i < creatureIds.size(); i++) {
+      Optional<Character> character = campaign.characters().get(creatureIds.get(i));
+      if (!character.isPresent() || !character.get().hasCondition(Conditions.WAITING.getName())) {
+        return i;
+      }
     }
 
-    campaign.store();
+    return -1;
+  }
+
+  private boolean isWaiting(String creatureId) {
+    Optional<Character> character = campaign.characters().get(creatureId);
+    return character.isPresent() && character.get().hasCondition(Conditions.WAITING.getName());
   }
 
   public boolean currentIsLast() {
@@ -432,6 +457,10 @@ public class Battle {
 
     // Remove the flat-footed condition, as the creature is acting now.
     campaign.getContext().conditions().deleteAll(Conditions.FLAT_FOOTED.getName(),
+        creatureIds.get(currentCreatureIndex));
+
+    // Removing the waiting conditiojn, as the creature has to act now (or wait again).
+    campaign.getContext().conditions().deleteAll(Conditions.WAITING.getName(),
         creatureIds.get(currentCreatureIndex));
 
     updateConditions();

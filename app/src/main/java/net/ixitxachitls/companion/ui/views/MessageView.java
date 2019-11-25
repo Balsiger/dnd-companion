@@ -65,7 +65,7 @@ public abstract class MessageView extends AppCompatImageView {
   int iconColor() {
     switch (message.getType()) {
       case xp:
-        return getContext().getColor(R.color.characterDark);
+        return getContext().getColor(R.color.character);
       case itemAdd:
       case itemDelete:
       case itemSell:

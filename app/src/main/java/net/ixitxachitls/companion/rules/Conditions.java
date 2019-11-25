@@ -763,6 +763,13 @@ public class Conditions {
   public static final ConditionData UNCONSCIOUS_CHARISMA_0 =
       ConditionData.newBuilder("Unconscious (Cha 0)", UNCONSCIOUS)
           .build();
+  public static final ConditionData WAITING =
+      ConditionData.newBuilder("Waiting")
+          .description("The creature is waiting to daly its action.")
+          .icon(R.drawable.ic_access_time_black_24dp)
+          .predefined()
+          .dmOnly()
+          .build();
   public static final ConditionData WHITEOUT = ConditionData.newBuilder("Whiteout")
       .description("In snowstorms or blizzars with strong or stronger winds, characters get into "
           + "a whiteout. Characters suffer a -2 to AC, no Dexterity to AC, half speed, "

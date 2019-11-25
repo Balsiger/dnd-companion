@@ -81,8 +81,10 @@ public class ConditionIconView extends AppCompatImageView {
           || CompanionApplication.get().me().amPlayer(condition.getCondition().getSourceId())) {
         setOnClickListener(v -> {
           new ConfirmationPrompt(getContext())
-              .title("Dismiss Condition?")
-              .message("Do you really want to dismiss this condition?")
+              .title("Dismiss Condition " + condition.getCondition().getName() + "?")
+              .message("Do you really want to dismiss this condition?\n"
+                  + "(" + condition.getCondition().getSummary() + " for "
+                  + condition.getCondition().getDuration() + ")")
               .yes(() -> dismiss(condition.getId()))
               .show();
         });
