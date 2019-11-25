@@ -119,131 +119,131 @@ encounter {
     name: "Chasm Floor"
     description: "The floor of the chasm is littered with bones, adventuring gear, and a handful of coins, collectively worth 30 gp and all fairly new. Although the PCs might suspect these are the bones of adventurers who fell to their death unaided, in truth they are interlopers who escaped the shadow spider’s clutches but not death."
     item {
-      id: "Copper Coin"
+      name: "Copper Coin"
       multiple: 7
     }
     item {
-      id: "Silver Coin"
+      name: "Silver Coin"
       multiple: 3
     }
     item {
-      id: "Backpack"
+      name: "Backpack"
     }
     item {
-      id: "Winter Blanket"
+      name: "Winter Blanket"
     }
     item {
-      id: "Candle"
+      name: "Candle"
     }
     item {
-      id: "Grappling Hook"
+      name: "Grappling Hook"
     }
     item {
-      id: "Flint and Steel"
+      name: "Flint and Steel"
     }
     item {
-      id: "Inkpen"
+      name: "Inkpen"
     }
     item {
-      id: "Common Lamp"
+      name: "Common Lamp"
     }
     item {
-      id: "Iron Pot"
+      name: "Iron Pot"
     }
     item {
-      id: "Belt Pouch"
+      name: "Belt Pouch"
       content {
-        id: "Sealing Wax"
+        name: "Sealing Wax"
       }
     }
     item {
-      id: "Soap"
+      name: "Soap"
     }
     item {
-      id: "Waterskin"
+      name: "Waterskin"
     }
     item {
-      id: "Waterskin"
+      name: "Waterskin"
     }
     item {
-      id: "Torch"
+      name: "Torch"
     }
     item {
-      id: "Torch"
+      name: "Torch"
     }
     item {
-      id: "Torch"
+      name: "Torch"
     }
     item {
-      id: "Whetstone"
+      name: "Whetstone"
     }
     item {
-      id: "Shovel"
+      name: "Shovel"
     }
     item {
-      id: "Small Steel Mirror"
+      name: "Small Steel Mirror"
     }
     item {
-      id: "Oil"
+      name: "Oil"
     }
     item {
-      id: "Oil"
+      name: "Oil"
     }
     item {
-      id: "Miner's Pick"
+      name: "Miner's Pick"
     }
     item {
-      id: "Piton"
+      name: "Piton"
     }
     item {
-      id: "Piton"
+      name: "Piton"
     }
     item {
-      id: "Piton"
+      name: "Piton"
     }
   }
   treasure {
     name: "Shadow Spider's Larder"
     description: "The shadow spider’s larder on the \\Place{Plane of Shadow} (coterminous with the spider’s niche) contains a random assortment of coins, weapons, and armor (none of it magic or masterwork) worth 437 gp."
     item {
-      id: "Gold Coin"
+      name: "Gold Coin"
       multiple: 37
     }
     item {
-      id: "Studded Leather"
+      name: "Studded Leather"
     }
     item {
-      id: "Scale Mail"
+      name: "Scale Mail"
     }
     item {
-      id: "Light Wooden Shield"
+      name: "Light Wooden Shield"
     }
     item {
-      id: "Halberd"
+      name: "Halberd"
     }
     item {
-      id: "Shot Sword"
+      name: "Shot Sword"
     }
     item {
-      id: "Longsword"
+      name: "Longsword"
     }
     item {
-      id: "Club"
+      name: "Club"
     }
     item {
-      id: "Dagger"
+      name: "Dagger"
     }
     item {
-      id: "Dagger"
+      name: "Dagger"
     }
     item {
-      id: "Dagger"
+      name: "Dagger"
     }
     item {
-      id: "Morningstar"
+      name: "Morningstar"
     }
     item {
-      id: "Rapier"
+      name: "Rapier"
     }
   }
 }

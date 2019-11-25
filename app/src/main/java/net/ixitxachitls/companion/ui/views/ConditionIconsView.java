@@ -54,7 +54,7 @@ public class ConditionIconsView extends LinearLayout {
     super(context);
     this.foregroundColor = foregroundColor;
     this.backgroundColor = backgroundColor;
-    this.updatable = new UpdatableViewGroup(this);
+    this.updatable = new UpdatableViewGroup<>(this);
 
     setOrientation(orientation);
     hp = new HPImageView(getContext());

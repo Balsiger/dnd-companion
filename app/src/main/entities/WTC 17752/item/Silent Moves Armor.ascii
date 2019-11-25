@@ -14,6 +14,7 @@ template {
   }
   description: "This armor is well oiled and magically con- structed so that it not only makes little sound, but it dampens sound around it. It provides a +5 competence bonus on its wearer\'s Move Silently checks. (The armor\'s armor check penalty still applies normally.)"
   short_description: "+5 competence bonus on Move Silently."
+  base_only: true
 }
 value {
   gold: 3750

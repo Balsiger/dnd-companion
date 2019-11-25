@@ -14,6 +14,7 @@ template {
   }
   description: "When you activiate this armor, your appearance becomes distorted and hazy as if you were affected by a \\SpellRef{blur} spell. \n\nThe blurring property functions three times per day, and the effect lasts for 5 rounds."
   short_description: "Gain concealment (20% miss) 3 times a day for 5 rounds."
+  base_only: true
 }
 probability: COMMON
 appearance {

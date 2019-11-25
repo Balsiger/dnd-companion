@@ -30,6 +30,7 @@ import net.ixitxachitls.companion.proto.Template;
 public class WorldTemplate extends StoredTemplate<Template.WorldTemplateProto> {
 
   public static final String TYPE = "world";
+  public static final WorldTemplate DEFAULT = new WorldTemplate("Generic", null);
 
   private final Calendar calendar;
 

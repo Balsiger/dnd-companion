@@ -22,130 +22,48 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.SeekBar;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.MiniatureFilter;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
-import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.MiniatureConfigurationDialog;
 import net.ixitxachitls.companion.ui.dialogs.MiniatureFilterDialog;
 import net.ixitxachitls.companion.ui.dialogs.MiniatureLocationsDialog;
-import net.ixitxachitls.companion.ui.views.ActionBarView;
 
 import java.util.Optional;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 /**
  * A fragment to display the miniatures.
  */
-public class MiniaturesFragment extends CompanionFragment {
+public class MiniaturesFragment extends TemplatesFragment {
 
   private static final String LOADING_MINIATURES = "miniatures";
-
-  private ViewPager pager;
-  private PagerAdapter pagerAdapter;
-  private ActionBarView.Action filterAction;
-  private SeekBar seek;
 
   public MiniaturesFragment() {
     super(Type.miniatures);
   }
 
   @Override
-  public boolean goBack() {
-    CompanionFragments.get().show(Type.campaigns, Optional.empty());
-    return true;
-  }
-
-  @Override
-  public void onResume() {
-    super.onResume();
-  }
-
-  @Override
-  public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                           Bundle savedInstanceState) {
-    LinearLayout view = (LinearLayout)
-        inflater.inflate(R.layout.fragment_miniatures, container, false);
-
-    pager = view.findViewById(R.id.pager);
-    pagerAdapter = new PagerAdapter(getChildFragmentManager());
-    pager.setAdapter(pagerAdapter);
-    pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-      @Override
-      public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-      }
-
-      @Override
-      public void onPageSelected(int position) {
-        seek.setProgress(position);
-      }
-
-      @Override
-      public void onPageScrollStateChanged(int state) {
-      }
-    });
-
-    seek = view.findViewById(R.id.seek);
-    seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber() - 1);
-    seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-      @Override
-      public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        if (fromUser) {
-          pager.setCurrentItem(progress);
-        }
-      }
-
-      @Override
-      public void onStartTrackingTouch(SeekBar seekBar) {}
-
-      @Override
-      public void onStopTrackingTouch(SeekBar seekBar) {}
-    });
-
-    clearActions();
-    addAction(R.drawable.ic_arrow_back_black_24dp, "Back", "Go back to the campaigns overview")
-        .onClick(this::back);
-    filterAction = addAction(R.drawable.ic_filter_variant_black_24dp, "Filter",
-        "Filter the displayed miniatures")
-        .onClick(this::filter);
-    addAction(R.drawable.ic_map_marker_black_24dp, "Locations",
-        "Define or change the locations your miniatures are stored.")
-        .onClick(this::editLocations);
-    addAction(R.drawable.ic_settings_black_24dp, "Configuration",
-        "Configure the miniatures displayed.")
-        .onClick(this::config);
-
+  protected void loadEntities() {
     startLoading(LOADING_MINIATURES);
     me().readMiniatures(this::miniaturesLoaded);
-
-    return view;
   }
 
-  private void back() {
-    CompanionFragments.get().show(Type.campaigns, Optional.empty());
-  }
-
-  private void config() {
+  @Override
+  protected void config() {
     MiniatureConfigurationDialog.newInstance().onSaved(o -> update()).display();
   }
 
-  private void editLocations() {
+  @Override
+  protected void editLocations() {
     MiniatureLocationsDialog.newInstance().display();
   }
 
-  private void filter() {
+  @Override
+  protected void filter() {
     MiniatureFilterDialog.newInstance(Templates.get().getMiniatureTemplates().getFilter(), true)
         .onSaved(this::filtered).display();
   }
@@ -167,58 +85,30 @@ public class MiniaturesFragment extends CompanionFragment {
     update();
   }
 
-  private void update() {
-    pagerAdapter.notifyDataSetChanged();
+  @Override
+  protected String getTitle(int position) {
+    Optional<MiniatureTemplate> miniature = Templates.get().getMiniatureTemplates().get(position);
+    if (miniature.isPresent()) {
+      return miniature.get().getName();
+    } else {
+      return "(not found)";
+    }
   }
 
-  public class PagerAdapter extends FragmentStatePagerAdapter {
-
-    public PagerAdapter(FragmentManager manager) {
-      super(manager);
+  @Override
+  protected Fragment getTemplateFragment(int position) {
+    Fragment fragment = new MiniatureFragment();
+    Optional<MiniatureTemplate> template = Templates.get().getMiniatureTemplates().get(position);
+    Bundle args = new Bundle();
+    if (template.isPresent()) {
+      args.putString(MiniatureFragment.ARG_NAME, template.get().getName());
     }
+    fragment.setArguments(args);
+    return fragment;
+  }
 
-    @Override
-    public int getCount() {
-      return Templates.get().getMiniatureTemplates().getFilteredNumber();
-    }
-
-    @Override
-    public int getItemPosition(Object miniature) {
-      // When the miniatures change, it means that we applied or remove a filterAction. In this case,
-      // saving a view for a miniature makes no sense.
-      return POSITION_NONE;
-    }
-
-    @Override
-    public CharSequence getPageTitle(int position) {
-      Optional<MiniatureTemplate> miniature = Templates.get().getMiniatureTemplates().get(position);
-      if (miniature.isPresent()) {
-        return miniature.get().getName();
-      } else {
-        return "(not found)";
-      }
-    }
-
-    @Override
-    public Fragment getItem(int position) {
-      Fragment fragment = new MiniatureFragment();
-      Optional<MiniatureTemplate> template = Templates.get().getMiniatureTemplates().get(position);
-      Bundle args = new Bundle();
-      if (template.isPresent()) {
-        args.putString(MiniatureFragment.ARG_NAME, template.get().getName());
-      }
-      fragment.setArguments(args);
-      return fragment;
-    }
-
-    @Override
-    public void restoreState(Parcelable state, ClassLoader loader) {
-      try{
-        super.restoreState(state, loader);
-      } catch (NullPointerException|IllegalStateException e){
-        // This seems to happen when reloading the miniatures frame (cf.
-        // https://stackoverflow.com/questions/18642890/fragmentstatepageradapter-with-childfragmentmanager-fragmentmanagerimpl-getfra
-      }
-    }
+  @Override
+  protected int getTemplatesCount() {
+    return Templates.get().getMiniatureTemplates().getFilteredNumber();
   }
 }

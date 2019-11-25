@@ -9,6 +9,7 @@ template {
     }
   }
   description: "A complex process involving metallurgy and alchemy can bond silver to a weapon made of steel so that it bypasses the damage reduction of creatures such as lycanthropes. \n\nOn a successful attack with a silvered weapon, the wielder takes a -1 penalty on the damage roll (with the usual minimum of 1 point of damage). The alchemical silvering process can\'t be applied to nonmetal items, and it doesn\'t work on rare metals such as adamantine, cold iron, and mithral. \n\nAlchemical silver has 10 hit points per inch of thickness and hardness 8."
+  base_only: true
 }
 probability: UNCOMMON
 hardness: 8

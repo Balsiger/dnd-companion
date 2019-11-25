@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.enums.Size;
 import net.ixitxachitls.companion.data.values.Container;
 import net.ixitxachitls.companion.data.values.Damage;
 import net.ixitxachitls.companion.data.values.Distance;
@@ -106,6 +107,34 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     return getMagicModifiers(Template.MagicTemplateProto.Type.ATTACK);
   }
 
+  public boolean isBaseOnly() {
+    return proto.getTemplate().getBaseOnly();
+  }
+
+  public int weightedProbability() {
+    switch (proto.getProbability()) {
+      case UNIQUE:
+        return 1;
+      case VERY_RARE:
+        return 10;
+      case RARE:
+        return 100;
+      case UNCOMMON:
+        return 500;
+      case COMMON:
+        return 1000;
+
+      default:
+      case UNRECOGNIZED:
+      case UNKNOWN:
+        return 0;
+    }
+  }
+
+  public List<String> getCategories() {
+    return proto.getTemplate().getCategoryList();
+  }
+
   public int getMaxAttacks() {
     return proto.getWeapon().getMaxAttacks() > 0 ?
         proto.getWeapon().getMaxAttacks() : Integer.MAX_VALUE;
@@ -166,8 +195,20 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     return proto.getWeapon().getStyle();
   }
 
+  public Size getSize() {
+    return Size.fromProto(proto.getSize().getSize());
+  }
+
+  public Value.SizeProto.Size getSizeProto() {
+    return proto.getSize().getSize();
+  }
+
   public Weight getWeight() {
     return weight;
+  }
+
+  public Template.ItemTemplateProto.Substance.Material getMaterialProto() {
+    return proto.getSubstance().getMaterial();
   }
 
   public boolean isArmor() {
@@ -291,7 +332,8 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     return net.ixitxachitls.companion.proto.Template.ItemTemplateProto.getDefaultInstance();
   }
 
-  public static ItemTemplate fromProto(net.ixitxachitls.companion.proto.Template.ItemTemplateProto proto) {
+  public static ItemTemplate fromProto(
+      net.ixitxachitls.companion.proto.Template.ItemTemplateProto proto) {
     ItemTemplate item = new ItemTemplate(proto.getTemplate().getName(),
         proto.getTemplate().getSynonymList(), proto.getTemplate().getDescription(),
         Money.fromProto(proto.getValue()), Weight.fromProto(proto.getWeight()),

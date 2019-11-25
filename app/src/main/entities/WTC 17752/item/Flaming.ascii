@@ -12,6 +12,7 @@ template {
   world: "Generic"
   description: "Upon command, a flaming weapon is sheathed in fire. The fire does not harm the wielder. The effect remains until another command is given. A flaming weapon deals an extra 1d6 points of fire damage on a successful hit. Bows, crossbows, and slings so crafted bestow the fire energy upon their ammunition."
   short_description: "+1d6 fire damage."
+  base_only: true
 }
 probability: VERY_RARE
  weapon {

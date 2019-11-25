@@ -52,6 +52,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private static final String FIELD_INVITES = "invites";
   private static final String FIELD_ADVENTURE = "adventure_id";
   private static final String FIELD_ENCOUNTER_ID = "encounter_id";
+  private static final String FIELD_HOUSE_RULE_HPT = "house_rule_hp";
 
   private static final String GENERIC_NAME = "Generic";
   private static WorldTemplate GENERIC;
@@ -65,6 +66,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
   private List<String> invites = new ArrayList<>();
   private String adventureId = "";
   private String encounterId = "";
+  private boolean houseRuleHp = false;
 
   public String getAdventureId() {
     return adventureId;
@@ -177,6 +179,14 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     return context.characters().get(id);
   }
 
+  public boolean hasHouseRuleHp() {
+    return houseRuleHp;
+  }
+
+  public void setHouseRuleHp(boolean rule) {
+    this.houseRuleHp = rule;
+  }
+
   public void invite(String email) {
     if (!invites.contains(email)) {
       invites.add(email);
@@ -224,6 +234,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     invites = data.get(FIELD_INVITES, invites);
     adventureId = data.get(FIELD_ADVENTURE, "");
     encounterId = data.get(FIELD_ENCOUNTER_ID, "");
+    houseRuleHp = data.get(FIELD_HOUSE_RULE_HPT, false);
 
     if (!adventureId.isEmpty()) {
       context.encounters().loadEncounters(getId(), adventureId);
@@ -238,7 +249,8 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
         .set(FIELD_ENCOUNTER, battle.write())
         .set(FIELD_INVITES, invites)
         .set(FIELD_ADVENTURE, adventureId)
-        .set(FIELD_ENCOUNTER_ID, encounterId);
+        .set(FIELD_ENCOUNTER_ID, encounterId)
+        .set(FIELD_HOUSE_RULE_HPT, houseRuleHp);
   }
 
   private void uninviteUser(String email) {

@@ -61,6 +61,11 @@
   <color name="miniatureDark">#a0af22</color>
   <color name="miniatureText">#000</color>
 
+  <color name="product">#b0bec5</color>
+  <color name="productLight">#e2f1f8</color>
+  <color name="productDark">#808e95</color>
+  <color name="productText">#000</color>
+
   <!-- colors for character status -->
   <color name="alive">#f00</color>
   <color name="stable">#666</color>

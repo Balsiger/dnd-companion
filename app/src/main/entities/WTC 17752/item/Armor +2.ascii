@@ -12,6 +12,7 @@ template {
   }
   description: "Magical +2 armor."
   short_description: "Armor +2."
+  base_only: true
 }
 probability: UNCOMMON
 hardness: 3

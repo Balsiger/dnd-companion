@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017-2019 Peter Balsiger
+  ~ All rights reserved
+  ~
+  ~ This file is part of the Roleplay Companion.
+  ~
+  ~ The Tabletop Companion is free software; you can redistribute it and/or
+  ~ modify it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation; either version 2 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ The Tabletop Companion is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with the Player Companion; if not, write to the Free Software
+  ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <net.ixitxachitls.companion.ui.views.EntityImageView
+      android:id="@+id/entity_image"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+      <TextView
+          android:id="@+id/subtitle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:text="... subtitle ..."
+          android:textColor="@color/product" />
+
+      <TextView
+          android:id="@+id/description"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:text="... description ..." />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+            android:id="@+id/owned"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number|numberSigned"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Owned" />
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/world"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="World" />
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Date" />
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/pages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Pages" />
+      </LinearLayout>
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/author"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:labelColor="@color/miniatureDark"
+          app:labelText="Author(s)" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/editor"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:labelColor="@color/miniatureDark"
+          app:labelText="Editor(s)" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/cover"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:labelColor="@color/miniatureDark"
+          app:labelText="Cover" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/cartographer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:labelColor="@color/miniatureDark"
+          app:labelText="Cartographer(s)" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/illustrator"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:labelColor="@color/miniatureDark"
+          app:labelText="Illustrators(s)" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/typographer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:labelColor="@color/miniatureDark"
+          app:labelText="Typographer(s)" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/manager"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:labelColor="@color/miniatureDark"
+          app:labelText="Managers(s)" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/isbn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="ISBN" />
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/system"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="System" />
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/audience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Audience" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Type" />
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Style" />
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Layout" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Price" />
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Content" />
+      </LinearLayout>
+
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
+          android:id="@+id/series"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          app:labelColor="@color/miniatureDark"
+          app:labelText="Series" />
+
+    </LinearLayout>
+  </ScrollView>
+
+</LinearLayout>

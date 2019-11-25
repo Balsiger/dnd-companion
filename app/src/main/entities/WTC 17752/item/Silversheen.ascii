@@ -13,6 +13,7 @@ template {
   world: "Generic"
   description: "This substance can be applied to a weapon as a standard action. It will give the weapon the properties of alchemical silver (see page 284) for 1 hour, replacing the properties of any other special material it might have. For example, a +1 holy adamantine longswordbecomes a +1 holy silver longswordfor the duration of the effect. One vial will coat a single melee weapon or 20 units of ammunition."
   short_description: "Cover a weapon with a standard action to make if silver for 1 hour."
+  base_only: true
 }
 value {
   gold: 250

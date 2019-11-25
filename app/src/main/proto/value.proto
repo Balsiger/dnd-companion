@@ -437,6 +437,13 @@ message FeatSelection {
   repeated string qualifier = 2;
 }
 
+message PriceProto
+{
+  string currency = 1;
+  int32 number = 2;
+  int32 precision = 3;
+}
+
 // Shared enums.
 
 enum WeaponStyle {

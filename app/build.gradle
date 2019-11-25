@@ -73,6 +73,7 @@ android {
     pickFirst 'plugin.xml'
     pickFirst 'META-INF/DEPENDENCIES'
     pickFirst 'META-INF/LICENSE'
+    pickFirst 'META-INF/MANIFEST.MF'
     pickFirst 'META-INF/plexus/components.xml'
   }
   testOptions {
@@ -115,28 +116,31 @@ configurations {
 
 dependencies {
   implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+  testImplementation 'com.google.protobuf:protobuf-lite:3.0.1'
+
   implementation 'androidx.appcompat:appcompat:1.1.0'
   implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
   implementation 'com.google.android.material:material:1.0.0'
-  implementation 'com.google.guava:guava:28.0-android'
+  implementation 'com.google.guava:guava:28.1-android'
   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
   implementation 'com.google.inject:guice:4.2.2'
   implementation 'androidx.multidex:multidex:2.0.1'
   implementation 'com.google.android:flexbox:1.0.0'
-  implementation 'com.google.firebase:firebase-core:17.2.0'
-  implementation 'com.google.firebase:firebase-auth:19.0.0'
+  implementation 'com.google.firebase:firebase-core:17.2.1'
+  implementation 'com.google.firebase:firebase-auth:19.1.0'
   implementation 'com.google.android.gms:play-services-auth:17.0.0'
-  implementation 'com.google.firebase:firebase-firestore:21.1.1'
-  implementation 'com.google.firebase:firebase-storage:19.0.1'
+  implementation 'com.google.firebase:firebase-firestore:21.3.0'
+  implementation 'com.google.firebase:firebase-storage:19.1.0'
   implementation 'com.google.android.gms:play-services-auth:17.0.0'
   implementation 'com.firebaseui:firebase-ui-auth:4.2.0'
-  implementation 'com.google.firebase:firebase-database:19.1.0'
+  implementation 'com.google.firebase:firebase-database:19.2.0'
   implementation 'androidx.cardview:cardview:1.0.0'
   implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-  implementation 'com.google.firebase:firebase-perf:19.0.0'
-  implementation 'com.google.http-client:google-http-client-gson:1.32.0'
-  implementation 'com.google.firebase:firebase-auth:19.0.0'
-  implementation('com.google.api-client:google-api-client-android:1.30.3') {
+  implementation 'com.google.firebase:firebase-perf:19.0.2'
+  implementation 'com.google.http-client:google-http-client-gson:1.33.0'
+  implementation 'com.google.firebase:firebase-auth:19.1.0'
+  implementation('com.google.api-client:google-api-client-android:1.30.5') {
     exclude group: 'org.apache.httpcomponents'
   }
   implementation('com.google.apis:google-api-services-drive:v3-rev99-1.23.0') {
@@ -145,12 +149,12 @@ dependencies {
   implementation 'com.tenmiles:helpstack:1.2.0'
 
   testImplementation 'junit:junit:4.12'
-  testImplementation 'org.mockito:mockito-core:3.0.0'
-  testImplementation 'org.powermock:powermock-api-mockito2:2.0.2'
-  testImplementation 'org.powermock:powermock-module-junit4:2.0.2'
-  testImplementation 'org.hamcrest:hamcrest-library:2.1'
-  testImplementation 'org.robolectric:robolectric:4.3'
-  testImplementation 'org.robolectric:shadows-multidex:4.3'
+  testImplementation 'org.mockito:mockito-core:3.1.0'
+  testImplementation 'org.powermock:powermock-api-mockito2:2.0.4'
+  testImplementation 'org.powermock:powermock-module-junit4:2.0.4'
+  testImplementation 'org.hamcrest:hamcrest-library:2.2'
+  testImplementation 'org.robolectric:robolectric:4.3.1'
+  testImplementation 'org.robolectric:shadows-multidex:4.3.1'
   androidTestImplementation 'androidx.test:runner:1.2.0'
   androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0') {
     exclude group: 'com.google.code.findbugs'
@@ -160,7 +164,7 @@ dependencies {
       (OperatingSystem.WINDOWS): 'windows-x86_32',
       (OperatingSystem.MAC_OS) : 'osx-x86_32'
   ].withDefault { 'linux-x86_32' }
-  protoc "com.google.protobuf:protoc:3.10.0:${platformMapping.get(OperatingSystem.current())}@exe"
+  protoc "com.google.protobuf:protoc:3.10.1:${platformMapping.get(OperatingSystem.current())}@exe"
   // Architecture components.
   implementation 'androidx.lifecycle:lifecycle-common-java8:2.1.0'
   annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.1.0'
@@ -227,9 +231,9 @@ task convertProtoData{
         'net.ixitxachitls.companion.proto.QualityTemplateProto')
     convertToBinaryProtos('./src/main/entities', 'adventure',
         'net.ixitxachitls.companion.proto.AdventureTemplateProto')
+    convertToBinaryProtos('./src/main/entities', 'product',
+        'net.ixitxachitls.companion.proto.ProductTemplateProto')
   }
 }
 
 apply plugin: 'com.google.gms.google-services'
-// For some reason, firebase-auth seems to use play-services-base 15 instead of 16...
-//com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

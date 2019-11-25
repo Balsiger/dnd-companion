@@ -11,6 +11,7 @@ template {
   }
   description: "A weapon with a +4 enhancement bonus to attacks."
   short_description: "+4"
+  base_only: true
 }
 value {
   gold: 300

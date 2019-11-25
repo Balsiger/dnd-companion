@@ -84,7 +84,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   protected AbilityView charisma;
 
   protected Wrapper<ImageView> levelGroup;
-  protected LabelledTextView levels;
+  protected LabelledTextView<LabelledTextView, TextView> levels;
   protected LabelledEditTextView xp;
   protected Wrapper<ImageView> xpAdjust;
 
@@ -325,8 +325,8 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     if (character.isPresent()) {
       int level = character.get().getLevel();
       hp.text(String.valueOf(character.get().getHp()));
-      levels.text(Level.summarized(character.get().getLevels()))
-          .error(character.get().validateLevels());
+      levels.text(Level.summarized(character.get().getLevels()));
+      levels.error(character.get().validateLevels());
 
       if (hasLevelUp() || !character.get().validateLevels().isEmpty()) {
         levelGroup.tint(R.color.error);

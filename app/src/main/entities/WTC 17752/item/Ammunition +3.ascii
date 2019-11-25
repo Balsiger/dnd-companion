@@ -11,5 +11,6 @@ template {
   }
   description: "Ammunition with a +3 enhancement bonus to attacks"
   short_description: "+3"
+  base_only: true
 }
 probability: UNCOMMON

@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * A dialog to configure the miniatures.
  */
-public class MiniatureConfigurationDialog extends Dialog {
+public class MiniatureConfigurationDialog extends Dialog<MiniatureConfigurationDialog, Void> {
 
   private LinearLayout container;
 
@@ -46,7 +46,6 @@ public class MiniatureConfigurationDialog extends Dialog {
 
     return checkBox;
   }
-
   @Override
   protected void createContent(View view) {
     container = view.findViewById(R.id.sets);

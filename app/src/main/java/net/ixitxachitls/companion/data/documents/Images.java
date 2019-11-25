@@ -24,9 +24,11 @@ package net.ixitxachitls.companion.data.documents;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
+import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.util.FileCache;
@@ -129,8 +131,8 @@ public class Images extends Observable<Documents.Update> {
     }
   }
 
-  private void load(String id) {
-    storage.getReference(id).getBytes(MAX_SIZE_BYTES).addOnSuccessListener(bytes -> {
+  private void load(String id, String name) {
+    storage.getReference(name).getBytes(MAX_SIZE_BYTES).addOnSuccessListener(bytes -> {
       Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
       imagesById.put(id, bitmap);
       store(id, bytes);
@@ -157,18 +159,30 @@ public class Images extends Observable<Documents.Update> {
     }
 
     pendingById.put(id, createCallbackList(callback));
-    storage.getReference(id).getMetadata()
+    load(id, ImmutableList.of("", ".jpg", ".png"));
+  }
+
+  private void load(String id, ImmutableList<String> extensions) {
+    Log.d("Images", "load: " + id + extensions);
+    if (extensions.isEmpty()) {
+      inexistentById.put(id, id);
+      Status.log("No image for " + id);
+      callback(id, Optional.empty());
+      return;
+    }
+
+    String name = id + extensions.get(0);
+    storage.getReference(name).getMetadata()
         .addOnSuccessListener(metadata -> {
           String hash = metadata.getMd5Hash();
           if (!hash.equals(imageHashesById.get(id))) {
-            load(id);
+            load(id, name);
             imageHashesById.put(id, hash);
           }
         })
         .addOnFailureListener(e -> {
-          inexistentById.put(id, id);
-          Status.log("No image for " + id);
-          callback(id, Optional.empty());
+          Log.d("Images", "load: failed for " + name);
+          load(id, extensions.subList(1, extensions.size()));
         });
   }
 

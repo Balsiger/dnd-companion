@@ -24,12 +24,14 @@ package net.ixitxachitls.companion.data;
 import com.google.inject.Singleton;
 
 import net.ixitxachitls.companion.Status;
+import net.ixitxachitls.companion.data.documents.ProductFilter;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
 import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.data.templates.LevelTemplate;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 import net.ixitxachitls.companion.data.templates.MonsterTemplate;
+import net.ixitxachitls.companion.data.templates.ProductTemplate;
 import net.ixitxachitls.companion.data.templates.QualityTemplate;
 import net.ixitxachitls.companion.data.templates.SkillTemplate;
 import net.ixitxachitls.companion.data.templates.SpellTemplate;
@@ -38,6 +40,8 @@ import net.ixitxachitls.companion.storage.AssetAccessor;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import androidx.annotation.Nullable;
@@ -64,8 +68,12 @@ public class Templates {
   private final TemplatesStore<SpellTemplate> spells = new TemplatesStore<>(SpellTemplate.class);
   private final TemplatesStore<AdventureTemplate> adventures =
       new TemplatesStore<>(AdventureTemplate.class);
+  private final FilteredTemplatesStore<ProductTemplate, ProductFilter> products =
+      new FilteredTemplatesStore<>(ProductTemplate.class, new ProductFilter());
 
   private final AssetAccessor assetAccessor;
+  private boolean loaded = false;
+  private List<Callback> loadedCallbacks = new ArrayList<>();
 
   public Templates(AssetAccessor assetAccessor) {
     this.assetAccessor = assetAccessor;
@@ -89,6 +97,10 @@ public class Templates {
 
   public MiniatureTemplates getMiniatureTemplates() {
     return miniatures;
+  }
+
+  public FilteredTemplatesStore<ProductTemplate, ProductFilter> getProductTemplates() {
+    return products;
   }
 
   public MonsterTemplates getMonsterTemplates() {
@@ -121,6 +133,8 @@ public class Templates {
   }
 
   private void load() {
+    worlds.ensure(WorldTemplate.DEFAULT);
+
     try {
       for (String reference : assetAccessor.list(PATH_ENTITIES)) {
         for (String type : assetAccessor.list(PATH_ENTITIES + "/" + reference)) {
@@ -158,6 +172,9 @@ public class Templates {
               case AdventureTemplate.TYPE:
                 adventures.read(name, assetAccessor.open(name));
                 break;
+              case ProductTemplate.TYPE:
+                products.read(name, assetAccessor.open(name));
+                break;
               default:
                 Status.error("Unsupported type " + type + " found!");
                 break;
@@ -173,8 +190,10 @@ public class Templates {
       feats.loaded();
       qualities.loaded();
       miniatures.loaded();
+      products.loaded();
       skills.loaded();
       spells.loaded();
+      loaded();
     } catch (IOException | NoSuchMethodException | IllegalAccessException
         | InvocationTargetException e) {
       Status.error("Loading of entries from internal storage failed: " + e);
@@ -189,6 +208,26 @@ public class Templates {
     if (singleton == null) {
       singleton = new Templates(assetAccessor);
       singleton.load();
+    }
+  }
+
+  @FunctionalInterface
+  public interface Callback {
+    public void call();
+  }
+
+  private void loaded() {
+    loaded = true;
+    for (Callback callback : loadedCallbacks) {
+      callback.call();
+    }
+  }
+
+  public void executeAfterLoading(Callback callback) {
+    if (loaded) {
+      callback.call();
+    } else {
+      loadedCallbacks.add(callback);
     }
   }
 }

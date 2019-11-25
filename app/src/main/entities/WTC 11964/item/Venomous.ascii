@@ -13,5 +13,6 @@ template {
   }
   description: "Once per day, a venomous weapon can inflict a \\SpellRef{Poison} spell (DC 14) upon a creature struck by the weapon (or projectile) once per day. The wielder can decide to use the power after he has struck. Doing so is a free action, but the \\Spell{poison} spell must be inflicted on the same round that the weapon or projectile strikes."
   short_description: "Once a day deliver a \\SpellRef{poison} DC 14 after struck."
+  base_only: true
 }
 probability: COMMON

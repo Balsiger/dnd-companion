@@ -35,9 +35,8 @@ import androidx.annotation.NonNull;
 /**
  * A filter for miniatures.
  */
-public class MiniatureFilter extends NestedDocument implements Comparable<MiniatureFilter> {
+public class MiniatureFilter extends TemplateFilter implements Comparable<MiniatureFilter> {
 
-  private static final String FIELD_NAME = "name";
   private static final String FIELD_RACES = "races";
   private static final String FIELD_SETS = "sets";
   private static final String FIELD_TYPES = "types";
@@ -46,7 +45,6 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
   private static final String FIELD_OWNED = "owned";
   private static final String FIELD_LOCATIONS = "locations";
 
-  private final String name;
   private final ImmutableList<String> races;
   private final ImmutableList<String> sets;
   private final ImmutableList<String> types;
@@ -56,7 +54,6 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
   private final ImmutableList<String> locations;
 
   public MiniatureFilter() {
-    this.name = "";
     this.races = ImmutableList.of();
     this.sets = ImmutableList.of();
     this.types = ImmutableList.of();
@@ -69,7 +66,8 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
   public MiniatureFilter(String name, List<String> races, List<String> sets,
                          List<String> types, List<String> classes, List<String> sizes,
                          List<String> owned, List<String> locations) {
-    this.name = name;
+    super(name);
+
     this.races = ImmutableList.copyOf(races);
     this.sets = ImmutableList.copyOf(sets);
     this.types = ImmutableList.copyOf(types);
@@ -85,10 +83,6 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
 
   public List<String> getLocations() {
     return locations;
-  }
-
-  public String getName() {
-    return name;
   }
 
   public List<String> getOwned() {
@@ -109,8 +103,9 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
 
   public String getSummary() {
     List<String> parts = new ArrayList<>();
-    if (!name.isEmpty()) {
-      parts.add("name has " + name);
+    String parent = super.getSummary();
+    if (!parent.isEmpty()) {
+      parts.add(parent);
     }
     if (!races.isEmpty()) {
       parts.add("race is " + Strings.PIPE_JOINER.join(races));
@@ -166,7 +161,7 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
   }
 
   public boolean matches(User me, MiniatureTemplate miniature) {
-    return (name.isEmpty() || miniature.getName().toLowerCase().contains(name.toLowerCase()))
+    return super.matches(me, miniature)
         && (races.isEmpty() || races.contains(miniature.getRace()))
         && (sets.isEmpty() || sets.contains(miniature.getSet()))
         && (types.isEmpty() || matchesType(miniature, types))
@@ -180,8 +175,7 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
 
   @Override
   public Data write() {
-    return Data.empty()
-        .set(FIELD_NAME, name)
+    return super.write()
         .set(FIELD_RACES, races)
         .set(FIELD_SETS, sets)
         .set(FIELD_TYPES, types)
@@ -225,7 +219,7 @@ public class MiniatureFilter extends NestedDocument implements Comparable<Miniat
 
   public static MiniatureFilter read(Data data) {
     return new MiniatureFilter(
-        data.get(FIELD_NAME, ""),
+        data.get(TemplateFilter.FIELD_NAME, ""),
         data.getList(FIELD_RACES, Collections.emptyList()),
         data.getList(FIELD_SETS, Collections.emptyList()),
         data.getList(FIELD_TYPES, Collections.emptyList()),

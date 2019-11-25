@@ -14,6 +14,7 @@ message TemplateProto {
   string description = 8;
   string short_description = 9;
   string incomplete = 10;
+  bool base_only = 11;
 }
 
 message WorldTemplateProto {
@@ -356,21 +357,24 @@ message ItemTemplateProto {
   Material material = 29;
 }
 
-message ItemProto {
-  string id = 1;
-  string name = 2;
-  repeated string templates = 3;
-  int32 hp = 4;
-  MoneyProto value = 5;
-  string appearance = 6;
-  string player_name = 7;
-  string player_notes = 8;
-  string dm_notes = 9;
-  int32 multiple = 10;
-  int32 multiuse = 11;
-  DurationProto time_left = 12;
-  bool identified = 13;
-  ItemProto content = 14;
+message ItemLookupProto {
+  string name = 1;
+  repeated string templates = 2;
+  repeated string category_or = 3;
+  MoneyProto value = 4;
+  MoneyProto value_min = 5;
+  MoneyProto value_max = 6;
+  WeightProto weight_min = 7;
+  WeightProto weight_max = 8;
+  repeated SizeProto.Size size_or = 9;
+  repeated ItemTemplateProto.Substance.Material material_or = 10;
+  int32 hp = 11;
+  string appearance = 12;
+  string dm_notes = 13;
+  int32 multiple = 14;
+  int32 multiuse = 15;
+  DurationProto time_left = 16;
+  repeated ItemLookupProto content = 17;
 }
 
 message LevelTemplateProto {
@@ -912,17 +916,18 @@ message AdventureTemplateProto {
 
   message Encounter {
     string name = 1;
-    string short_name = 2;
-    string description = 3;
-    string short_description = 4;
-    int32 encounter_level = 5;
-    repeated string location = 6;
+    repeated string base = 2;
+    string short_name = 3;
+    string description = 4;
+    string short_description = 5;
+    int32 encounter_level = 6;
+    repeated string location = 7;
 
     message ReadAloud {
       string condition = 1;
       string text = 2;
     }
-    repeated ReadAloud read_aloud = 7;
+    repeated ReadAloud read_aloud = 8;
 
     message Environment {
       message Spot {
@@ -961,7 +966,7 @@ message AdventureTemplateProto {
       repeated Spot terrain = 5;
       repeated Spot trap = 6;
     }
-    Environment environment = 8;
+    Environment environment = 9;
 
     message Senses {
       repeated string light = 1;
@@ -970,23 +975,243 @@ message AdventureTemplateProto {
       repeated string touch = 4;
       repeated string feel = 5;
     }
-    Senses senses = 9;
+    Senses senses = 10;
 
     message Creature {
       string name = 1;
       string reason = 2;
       repeated string tactics = 3;
     }
-    repeated Creature creature = 10;
+    repeated Creature creature = 11;
 
-    repeated string development = 11;
+    repeated string development = 12;
 
     message Treasure {
       string name = 1;
       string description = 2;
-      repeated ItemProto item = 3;
+      repeated ItemLookupProto item = 3;
     }
-    repeated Treasure treasure = 12;
+    repeated Treasure treasure = 13;
   }
   repeated Encounter encounter = 5;
+}
+
+message ProductTemplateProto {
+  TemplateProto template = 1;
+  string title = 2;
+  string leader = 3;
+  string subtitle = 4;
+  string notes = 5;
+
+  message Person
+  {
+    string name = 1;
+    string job = 2;
+  }
+  repeated Person author = 6;
+  repeated Person editor = 7;
+  repeated Person cover = 8;
+  repeated Person cartographer = 9;
+  repeated Person illustrator = 10;
+  repeated Person typographer = 11;
+  repeated Person manager = 12;
+
+  message Date
+  {
+    int32 year = 1;
+    int32 month = 2; // January is 1, 0 is no month.
+  }
+  Date date = 13;
+
+  message ISBN
+  {
+    string group = 1;
+    string publisher = 2;
+    string title = 3;
+    int32 check = 4;
+  }
+  ISBN isbn = 14;
+
+  message ISBN13
+  {
+    string group13 = 1;
+    string group = 2;
+    string publisher = 3;
+    string title = 4;
+    int32 check = 5;
+  }
+  ISBN13 isbn13 = 15;
+  int32 pages = 16;
+
+  enum System
+  {
+    UNKNOWN_SYSTEM = 0;
+    NONE = 1;
+    CHAINMAIL = 2;
+    DND_1ST = 3;
+    ADND_1ST = 4;
+    ADND_2ND = 5;
+    ADND_2ND_SAGA = 6;
+    ADND_REVISED = 7;
+    DND_3RD = 8;
+    DND_3_5 = 9;
+    DND_4 = 10;
+    DND_NEXT = 11;
+    D20_MODERN = 12;
+    D20_FUTUTRE = 13;
+    D20 = 14;
+    ALTERNITY = 15;
+    AMAZING_ENGINE = 16;
+    BLOOD_WARS = 17;
+    CHAOSIUM = 18;
+    DARK_HEAVEN = 19;
+    DRAGON_DICE = 20;
+    DRAGON_STRIKE = 21;
+    DUEL_MASTER = 22;
+    ENDLESS_QUEST = 23;
+    FIRST_QUEST = 24;
+    GAMMA_WORLD = 25;
+    GANGBUSTERS = 26;
+    LEGEND_OF_THE_FIVE_RINGS = 27;
+    MAGIC_THE_GATHERING = 28;
+    MARVEL_SUPER_DICE = 29;
+    MLB_SHOWDOWN_2002 = 30;
+    MLB_SHOWDOWN_2003 = 31;
+    MLB_SHOWDOWN = 32;
+    NEOPETS = 33;
+    ONE_ON_ONE = 34;
+    POKEMON = 35;
+    SAGA = 36;
+    SPECIAL = 37;
+    SPELLFIRE = 38;
+    STAR_WARS_TCG = 39;
+    STAR_WARS = 40;
+    SUPER_ENDLESS_QUEST = 41;
+    SWORD_AND_SORCERY = 42;
+    TERROR_TRACKS = 43;
+    TERROR_TRAX = 44;
+    WILD_SPACE = 45;
+    WORLD_WAR_II = 46;
+    XXVC = 47;
+    MARVEL_SUPER_HEROES = 48;
+  }
+  System system = 17;
+
+  enum Audience
+  {
+    DM = 0;
+    PLAYER = 1;
+    ALL = 2;
+    UNKNOWN = 3;
+  }
+  Audience audience = 18;
+
+  enum Type
+  {
+    UNKNOWN_TYPE = 0;
+    ACCESSORY = 1;
+    ADVENTURE = 2;
+    BOARD_GAME = 3;
+    BOOSTER_PACK = 4;
+    CALENDAR = 5;
+    CAMPAIGN_EXPANSION = 6;
+    CAMPAIGN_SETTING = 7;
+    CARD_GAME = 8;
+    CARDS_TYPE = 9;
+    CATALOG = 10;
+    COLLECTION = 11;
+    COMICS = 12;
+    COOKBOOK = 13;
+    DICE = 14;
+    ELECTRONIC_ACCESSORY = 15;
+    GUIDE = 16;
+    MAGAZINE = 17;
+    MINIATURE = 18;
+    MONSTER_COMPENDIUM = 19;
+    NOVEL = 20;
+    PROMOTION = 21;
+    RULEBOOK = 22;
+    RULES_SUPPLEMENT = 23;
+    SOFTWARE = 24;
+    SOURCEBOOK = 25;
+    SPECIAL_BOOK = 26;
+  }
+  Type type = 19;
+
+  enum Style
+  {
+    UNKNOWN_STYLE = 0;
+    BOOKLET = 1;
+    BOX = 2;
+    CARDS_STYLE = 3;
+    FLYER = 4;
+    FOLDER = 5;
+    HARDCOVER = 6;
+    MAP = 7;
+    MEDIUM_BOX = 8;
+    PACK = 9;
+    PAPERBACK = 10;
+    POSTER = 11;
+    SCREEN = 12;
+    SHEETS = 13;
+    SMALL_BOX = 14;
+    SOFT_COVER = 15;
+    STICKER = 16;
+  }
+  Style style = 20;
+  string producer = 21;
+  string volume = 22;
+  string number = 23;
+  repeated string series = 24;
+  PriceProto price = 25;
+
+  message Content
+  {
+    enum Part
+    {
+      UNKNOWN_PART = 0;
+      BOARD = 1;
+      BOOK = 2;
+      BOOKLET = 3;
+      BOX = 4;
+      CARD = 5;
+      CD = 6;
+      COUNTER = 7;
+      COVER = 8;
+      DICE = 9;
+      FLYER = 10;
+      FOLDER = 11;
+      GATEFOLD = 12;
+      MAGNET = 13;
+      MAP = 14;
+      MINIATURE = 15;
+      MISC = 16;
+      OVERLAY = 17;
+      PACK = 18;
+      PAGE = 19;
+      PLAYING_PIECE = 20;
+      POSTER = 21;
+      SCREEN = 22;
+      SHEET = 23;
+      STICKER = 24;
+    }
+    Part part = 1;
+    string description = 2;
+    int32 number = 3;
+  }
+  repeated Content content = 26;
+  repeated string required_requirements = 27;
+  repeated string optional_requirements = 28;
+
+  enum Layout
+  {
+    UNKNOWN_LAYOUT = 0;
+    FULL_COLOR = 1;
+    FOUR_COLOR = 2;
+    TWO_COLOR = 3;
+    COLOR_COVER = 4;
+    BLACK_AND_WHITE = 5;
+    MIXED = 6;
+  }
+  Layout layout = 29;
 }

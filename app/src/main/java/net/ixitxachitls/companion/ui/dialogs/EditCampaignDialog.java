@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.ui.dialogs;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
@@ -58,8 +59,10 @@ public class EditCampaignDialog extends Dialog {
   private LabelledTextView world;
   private String selectedWorld;
   private Wrapper<Button> save;
+  private Wrapper<CheckBox> houseRuleHp;
 
-  public EditCampaignDialog() {}
+  public EditCampaignDialog() {
+  }
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
@@ -87,6 +90,8 @@ public class EditCampaignDialog extends Dialog {
       world.onClick(this::selectWorld);
       world.text(campaign.get().getWorldTemplate().getName());
       selectedWorld = campaign.get().getWorldTemplate().getName();
+      houseRuleHp = Wrapper.<CheckBox>wrap(view, R.id.house_rule_hp);
+      houseRuleHp.get().setChecked(campaign.get().hasHouseRuleHp());
       save = Wrapper.wrap(view, R.id.save);
       save.onClick(this::save);
       update();
@@ -98,6 +103,7 @@ public class EditCampaignDialog extends Dialog {
     if (campaign.isPresent()) {
       campaign.get().setName(name.getText());
       campaign.get().setWorldTemplate(selectedWorld);
+      campaign.get().setHouseRuleHp(houseRuleHp.get().isChecked());
       campaign.get().store();
 
       super.save();
@@ -115,7 +121,8 @@ public class EditCampaignDialog extends Dialog {
   private void selectWorld() {
     if (campaign.isPresent()) {
       ListSelectDialog fragment = ListSelectDialog.newStringInstance(
-          R.string.campaign_select_world, Lists.newArrayList(campaign.get().getWorldTemplate().getName()),
+          R.string.campaign_select_world,
+          Lists.newArrayList(campaign.get().getWorldTemplate().getName()),
           Templates.get().getWorldTemplates().getNames(), R.color.campaign);
       fragment.setSelectListener(this::editWorld);
       fragment.display();

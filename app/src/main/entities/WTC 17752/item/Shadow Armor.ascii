@@ -12,6 +12,7 @@ template {
     }
   }
   description: "This armor is jet black and blurs the wearer whenever she tries to hide, granting a +5 competence bonus on Hide checks.  (The armor\'s armor check penalty still applies normally.)"
+  base_only: true
 }
 value {
   gold: 3750

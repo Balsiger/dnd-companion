@@ -16,5 +16,6 @@ template {
   }
   description: "This suit of armor or shield produces a magical force that protects vital areas of the wearer more effectively. When a critical hit or sneak attack is scored on the wearer, there is a 25% chance that the critical hit or sneak attack is negated and damage is instead rolled normally."
   short_description: "25% change to ignore critital hit or sneak attacks."
+  base_only: true
 }
 probability: COMMON

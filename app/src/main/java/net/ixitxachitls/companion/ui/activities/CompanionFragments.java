@@ -40,6 +40,7 @@ import net.ixitxachitls.companion.ui.fragments.CompanionFragment;
 import net.ixitxachitls.companion.ui.fragments.LocalCharacterFragment;
 import net.ixitxachitls.companion.ui.fragments.MiniaturesFragment;
 import net.ixitxachitls.companion.ui.fragments.MonsterFragment;
+import net.ixitxachitls.companion.ui.fragments.ProductsFragment;
 import net.ixitxachitls.companion.ui.fragments.UserFragment;
 
 import java.util.Optional;
@@ -69,6 +70,7 @@ public class CompanionFragments {
   private Optional<CharacterFragment> characterFragment = Optional.empty();
   private Optional<LocalCharacterFragment> localCharacterFragment = Optional.empty();
   private Optional<MiniaturesFragment> miniaturesFragment = Optional.empty();
+  private Optional<ProductsFragment> productsFragment = Optional.empty();
   private Optional<MonsterFragment> monsterFragment = Optional.empty();
 
   private CompanionFragments(CompanionContext context, FragmentManager fragmentManager) {
@@ -149,6 +151,12 @@ public class CompanionFragments {
           miniaturesFragment = Optional.of(new MiniaturesFragment());
         }
         return show(miniaturesFragment.get(), sharedElement);
+
+      case products:
+        if (!productsFragment.isPresent()) {
+          productsFragment = Optional.of(new ProductsFragment());
+        }
+        return show(productsFragment.get(), sharedElement);
 
       case monster:
         if (!monsterFragment.isPresent()) {

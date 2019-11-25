@@ -115,6 +115,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/miniatures"/>
 
+    <ImageButton
+        android:id="@+id/products"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/miniatures"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/noun_book_1411063" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/campaign_add"
         android:layout_width="wrap_content"

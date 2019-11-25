@@ -4,6 +4,7 @@ template {
   synonym: "Strength Rating"
   description: "A composite longbow can be made with a high strength rating (representing an especially heavy pull) to take advantage of an above-average Strength score; this feature allows you to add your Strength up to +4 as bonus to damage."
   short_description: "Allows up to +4 Str bonus to damage."
+  base_only: true
 }
 value {
   gold: 400

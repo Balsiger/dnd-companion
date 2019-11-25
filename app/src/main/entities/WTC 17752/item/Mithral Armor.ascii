@@ -10,6 +10,7 @@ template {
     }
   }
   description: "Mithral is a very rare silvery, glistening metal that is lighter than iron but just as hard. When worked like steel, it becomes a wonderful material from which to create armor and is occasionally used for other items as well."
+  base_only: true
 }
 probability: RARE
 hardness: 15

@@ -33,9 +33,18 @@ import androidx.lifecycle.Observer;
  */
 public abstract class Observable<D> {
 
-  protected final FirebaseFirestore db = FirebaseFirestore.getInstance();
-  protected final FirebaseStorage storage = FirebaseStorage.getInstance();
+  protected FirebaseFirestore db;
+  protected FirebaseStorage storage;
   private final MutableLiveData<D> live = new MutableLiveData<>();
+
+  public Observable() {
+    init();
+  }
+
+  protected void init() {
+    db = FirebaseFirestore.getInstance();
+    storage = FirebaseStorage.getInstance();
+  }
 
   @FunctionalInterface
   public interface Action {

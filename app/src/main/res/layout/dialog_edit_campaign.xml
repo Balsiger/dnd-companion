@@ -52,7 +52,24 @@
       app:textColor="@color/campaignDark"
       app:labelColor="@color/campaign"
       app:labelText="World"
-      app:descriptionText="THe world the campaign is set in. This will have some impact on what kind of rules will be used for playing in that campaign (eg. what calendar is used to record times and dates)."/>
+      app:descriptionText="THe world the campaign is set in. This will have some impact on what kind of rules will be used for playing in that campaign (eg. what calendar is used to record times and dates).">
+
+  </net.ixitxachitls.companion.ui.views.LabelledTextView>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_weight="1"
+      android:text="House Rules"
+      android:textColor="@color/campaignDark" />
+
+  <CheckBox
+      android:id="@+id/house_rule_hp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="+50% hp for monsters per player above 4"
+      android:textColor="@color/campaign" />
 
   <Button
       android:id="@+id/save"

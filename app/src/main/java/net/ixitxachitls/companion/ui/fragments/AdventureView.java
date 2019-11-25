@@ -28,6 +28,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.tabs.TabLayout;
 import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -39,19 +40,15 @@ import net.ixitxachitls.companion.data.documents.Encounter;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
 import net.ixitxachitls.companion.ui.views.MonsterChipView;
-import net.ixitxachitls.companion.ui.views.TooltipImageView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
-import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Strings;
 import net.ixitxachitls.companion.util.Texts;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import androidx.annotation.CallSuper;
-import androidx.annotation.IdRes;
 import androidx.annotation.Nullable;
 
 /**
@@ -62,10 +59,9 @@ public class AdventureView extends LinearLayout {
   private TextWrapper<TextView> adventure;
   private TextWrapper<TextView> encounterView;
   private TextWrapper<TextView> description;
-  private TextWrapper<TextView> level;
   private TextWrapper<TextView> locations;
-  private List<Wrapper<TooltipImageView>> categoryIcons = new ArrayList<>();
   private LinearLayout categoryText;
+  private TabLayout categoryTabs;
   private LinearLayout creatures;
 
   private Optional<Campaign> campaign = Optional.empty();
@@ -91,15 +87,12 @@ public class AdventureView extends LinearLayout {
     adventure.onClick(this::selectAdventure);
     encounterView.onClick(this::selectEncounter);
     updateAdventure(Templates.get().getAdventureTemplates().get(campaign.getAdventureId()));
-    if (adventureTemplate.isPresent()) {
-      encounterTemplate = adventureTemplate.get().getEncounter(campaign.getEncounterId());
-      encounterView.text(encounterTemplate.isPresent()
-          ? encounterTemplate.get().getId() + ":  " + encounterTemplate.get().getName()
-          : campaign.getEncounterId());
-    } else {
-      adventure.text(campaign.getAdventureId());
-      encounterView.text("");
-    }
+    updateEncounter(adventureTemplate.isPresent()
+        ? adventureTemplate.get().getEncounter(campaign.getEncounterId()) : Optional.empty());
+  }
+
+  private String formatEncounterTitle(AdventureTemplate.EncounterTemplate template) {
+    return template.getId() + ": " + template.getName() + ", EL " + template.getEncounterLevel();
   }
 
   private TextView createCeiling(AdventureTemplate.EncounterTemplate.Ceiling ceiling) {
@@ -142,21 +135,22 @@ public class AdventureView extends LinearLayout {
     adventure = TextWrapper.wrap(view, R.id.adventure);
     encounterView = TextWrapper.wrap(view, R.id.encounter);
     description = TextWrapper.wrap(view, R.id.description);
-    level = TextWrapper.wrap(view, R.id.encounter_level);
     locations = TextWrapper.wrap(view, R.id.locations);
     categoryText = view.findViewById(R.id.category_text);
-    setupCategoryIcon(view, R.id.icon_read_loud, this::showReadAloud);
-    setupCategoryIcon(view, R.id.icon_ceiling, this::showCeilings);
-    setupCategoryIcon(view, R.id.icon_floor, this::showFloors);
-    setupCategoryIcon(view, R.id.icon_walls, this::showWalls);
-    setupCategoryIcon(view, R.id.icon_doors, this::showDoors);
-    setupCategoryIcon(view, R.id.icon_terrain, this::showTerrains);
-    setupCategoryIcon(view, R.id.icon_trap, this::showTraps);
-    setupCategoryIcon(view, R.id.icon_light, this::showLight);
-    setupCategoryIcon(view, R.id.icon_sound, this::showSounds);
-    setupCategoryIcon(view, R.id.icon_smell, this::showSmells);
-    setupCategoryIcon(view, R.id.icon_touch, this::showTouch);
-    setupCategoryIcon(view, R.id.icon_feel, this::showFeels);
+    categoryTabs = view.findViewById(R.id.category_tabs);
+    categoryTabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+      @Override
+      public void onTabSelected(TabLayout.Tab tab) {
+        selectedCategory(tab.getPosition());
+      }
+
+      @Override
+      public void onTabUnselected(TabLayout.Tab tab) {}
+
+      @Override
+      public void onTabReselected(TabLayout.Tab tab) {}
+    });
+
     creatures = view.findViewById(R.id.creatures);
 
     addView(view);
@@ -231,100 +225,143 @@ public class AdventureView extends LinearLayout {
     }
   }
 
-  private void setupCategoryIcon(View view, @IdRes  int id, Wrapper.Action action) {
-    Wrapper<TooltipImageView> icon = Wrapper.wrap(view, id);
-    categoryIcons.add(icon);
-
-    icon.onClick(() -> {
-      action.execute();
-      categoryIcons.stream().forEach(i -> i.tint(R.color.campaignDark));
-      icon.tint(R.color.campaign);
-    });
-  }
-
   private void showCeilings() {
     categoryText.removeAllViews();
-    for (AdventureTemplate.EncounterTemplate.Ceiling ceiling :
-        encounterTemplate.get().getCeilings()) {
-      categoryText.addView(createCeiling(ceiling));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getCeilings().isEmpty()) {
+      for (AdventureTemplate.EncounterTemplate.Ceiling ceiling :
+          encounterTemplate.get().getCeilings()) {
+        categoryText.addView(createCeiling(ceiling));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showDoors() {
     categoryText.removeAllViews();
-    for (AdventureTemplate.EncounterTemplate.Door door : encounterTemplate.get().getDoors()) {
-      categoryText.addView(createDoor(door));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getDoors().isEmpty()) {
+      for (AdventureTemplate.EncounterTemplate.Door door : encounterTemplate.get().getDoors()) {
+        categoryText.addView(createDoor(door));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showFeels() {
     categoryText.removeAllViews();
-    for (String feel : encounterTemplate.get().getFeels()) {
-      categoryText.addView(createText(feel));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getFeels().isEmpty()) {
+      for (String feel : encounterTemplate.get().getFeels()) {
+        categoryText.addView(createText(feel));
+      }
+    } else {
+      showNoData();
     }
+
   }
 
   private void showFloors() {
     categoryText.removeAllViews();
-    for (AdventureTemplate.EncounterTemplate.Spot floor : encounterTemplate.get().getFloors()) {
-      categoryText.addView(createSpot(floor));
+    if (encounterTemplate.isPresent() && encounterTemplate.get().getFloors().isEmpty()) {
+      for (AdventureTemplate.EncounterTemplate.Spot floor : encounterTemplate.get().getFloors()) {
+        categoryText.addView(createSpot(floor));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showLight() {
     categoryText.removeAllViews();
-    for (String light : encounterTemplate.get().getLights()) {
-      categoryText.addView(createText(light));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getLights().isEmpty()) {
+      for (String light : encounterTemplate.get().getLights()) {
+        categoryText.addView(createText(light));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showReadAloud() {
     categoryText.removeAllViews();
-    for (AdventureTemplate.EncounterTemplate.ReadAloud read
-        : encounterTemplate.get().getReadAlouds()) {
-      categoryText.addView(createReadAloudLine(read));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getReadAlouds().isEmpty()) {
+      for (AdventureTemplate.EncounterTemplate.ReadAloud read
+          : encounterTemplate.get().getReadAlouds()) {
+        categoryText.addView(createReadAloudLine(read));
+      }
+    } else {
+      showNoData();
     }
+  }
+
+  private void showNoData() {
+    categoryText.addView(createText("No data available."));
   }
 
   private void showSmells() {
     categoryText.removeAllViews();
-    for (String smell : encounterTemplate.get().getSmells()) {
-      categoryText.addView(createText(smell));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getSmells().isEmpty()) {
+      for (String smell : encounterTemplate.get().getSmells()) {
+        categoryText.addView(createText(smell));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showSounds() {
     categoryText.removeAllViews();
-    for (String sound : encounterTemplate.get().getSounds()) {
-      categoryText.addView(createText(sound));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getSounds().isEmpty()) {
+      for (String sound : encounterTemplate.get().getSounds()) {
+        categoryText.addView(createText(sound));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showTerrains() {
     categoryText.removeAllViews();
-    for (AdventureTemplate.EncounterTemplate.Spot terrain : encounterTemplate.get().getTerrains()) {
-      categoryText.addView(createSpot(terrain));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getTerrains().isEmpty()) {
+      for (AdventureTemplate.EncounterTemplate.Spot terrain :
+          encounterTemplate.get().getTerrains()) {
+        categoryText.addView(createSpot(terrain));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showTouch() {
     categoryText.removeAllViews();
-    for (String touch : encounterTemplate.get().getTouchs()) {
-      categoryText.addView(createText(touch));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getTouchs().isEmpty()) {
+      for (String touch : encounterTemplate.get().getTouchs()) {
+        categoryText.addView(createText(touch));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showTraps() {
     categoryText.removeAllViews();
-    for (AdventureTemplate.EncounterTemplate.Spot trap : encounterTemplate.get().getTraps()) {
-      categoryText.addView(createSpot(trap));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getTraps().isEmpty()) {
+      for (AdventureTemplate.EncounterTemplate.Spot trap : encounterTemplate.get().getTraps()) {
+        categoryText.addView(createSpot(trap));
+      }
+    } else {
+      showNoData();
     }
   }
 
   private void showWalls() {
     categoryText.removeAllViews();
-    for (AdventureTemplate.EncounterTemplate.Spot wall: encounterTemplate.get().getWalls()) {
-      categoryText.addView(createSpot(wall));
+    if (encounterTemplate.isPresent() && !encounterTemplate.get().getWalls().isEmpty()) {
+      for (AdventureTemplate.EncounterTemplate.Spot wall : encounterTemplate.get().getWalls()) {
+        categoryText.addView(createSpot(wall));
+      }
+    } else {
+      showNoData();
     }
   }
 
@@ -348,10 +385,10 @@ public class AdventureView extends LinearLayout {
     if (encounterTemplate.isPresent()) {
       description.text(Texts.processCommands(getContext(),
           encounterTemplate.get().getDescription()));
-      encounterView.text(encounterTemplate.get().getId() + ":" + encounterTemplate.get().getName());
-      level.text(String.valueOf(encounterTemplate.get().getEncounterLevel()));
+      encounterView.text(formatEncounterTitle(encounterTemplate.get()));
       locations.text(Strings.COMMA_JOINER.join(encounterTemplate.get().getLocations()));
-      categoryIcons.get(0).get().callOnClick();
+      categoryTabs.getTabAt(0).select();
+      showReadAloud();
 
       creatures.removeAllViews();
       if (campaign.isPresent()) {
@@ -368,10 +405,26 @@ public class AdventureView extends LinearLayout {
     } else {
       description.text("");
       encounterView.text(campaign.isPresent() ? campaign.get().getEncounterId() : "");
-      level.text("");
       locations.text("");
       categoryText.removeAllViews();
       creatures.removeAllViews();
+    }
+  }
+
+  private void selectedCategory(int position) {
+    switch (position) {
+      case 0: showReadAloud(); break;
+      case 1: showCeilings(); break;
+      case 2: showFloors(); break;
+      case 3: showWalls(); break;
+      case 4: showDoors(); break;
+      case 5: showTerrains(); break;
+      case 6: showTraps(); break;
+      case 7: showLight(); break;
+      case 8: showSounds(); break;
+      case 9: showSmells(); break;
+      case 10: showTouch(); break;
+      case 11: showFeels(); break;
     }
   }
 }

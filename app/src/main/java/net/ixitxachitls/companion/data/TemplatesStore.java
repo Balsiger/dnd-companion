@@ -90,4 +90,11 @@ public class TemplatesStore<T extends Entry<? extends MessageLite>> {
     byName.put(entry.getName(), entry);
     byNormalizedName.put(entry.getName().toLowerCase(), entry);
   }
+
+  protected void ensure(T entry) {
+    if (!byName.containsKey(entry.getName())) {
+      byName.put(entry.getName(), entry);
+      byNormalizedName.put(entry.getName().toLowerCase(), entry);
+    }
+  }
 }

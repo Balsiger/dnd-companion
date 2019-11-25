@@ -13,6 +13,7 @@ template {
   }
   world: "Generic"
   description: "A typical potion or oil consists of 1 ounce of liquid held in a ceramic or glass vial fitted with a tight stopper. The stoppered container usually is no more than 1 wide and 2 inches high. The vial has AC 13, 1 hit point, hardness 1, and a break DC of 12. Vials hold 1 ounce of liquid. "
+  base_only: true
 }
 weight {
   imperial {

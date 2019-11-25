@@ -30,7 +30,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 import java.util.SortedSet;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -38,14 +37,10 @@ import java.util.stream.Collectors;
 /**
  * Store for all the miniature templates.
  */
-public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
-
-  private List<MiniatureTemplate> configured = new ArrayList<>();
-  private List<MiniatureTemplate> filtered = new ArrayList<>();
-  private MiniatureFilter filter = new MiniatureFilter();
+public class MiniatureTemplates extends FilteredTemplatesStore<MiniatureTemplate, MiniatureFilter> {
 
   protected MiniatureTemplates() {
-    super(MiniatureTemplate.class);
+    super(MiniatureTemplate.class, new MiniatureFilter());
   }
 
   public List<String> getAllSets() {
@@ -64,14 +59,6 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     }
 
     return new ArrayList<>(classes);
-  }
-
-  public MiniatureFilter getFilter() {
-    return filter;
-  }
-
-  public int getFilteredNumber() {
-    return filtered.size();
   }
 
   public List<String> getRaces() {
@@ -101,10 +88,6 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     return new ArrayList<>(sizes);
   }
 
-  public int getTotalNumber() {
-    return configured.size();
-  }
-
   public List<String> getTypes() {
     SortedSet<String> types = new TreeSet<>();
     for (MiniatureTemplate template : configured) {
@@ -115,22 +98,9 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     return new ArrayList<>(types);
   }
 
-  public boolean isFiltered() {
-    return filtered.size() != configured.size();
-  }
-
-  public void addDummy(String name) {
-    MiniatureTemplate template =
-        new MiniatureTemplate(name, Template.MiniatureTemplateProto.getDefaultInstance());
-    byName.put(name, template);
-    configured.add(template);
-  }
-
+  @Override
   public void filter(User me, MiniatureFilter filter) {
-    this.filter = filter;
-    filtered = configured.stream()
-        .filter(f -> filter.matches(me, f))
-        .collect(Collectors.toList());
+    super.filter(me, filter);
 
     if (!filter.getSets().isEmpty()) {
       // Sort by number.
@@ -145,29 +115,18 @@ public class MiniatureTemplates extends TemplatesStore<MiniatureTemplate> {
     }
   }
 
-  public Optional<MiniatureTemplate> get(int index) {
-    if (index >= 0 && filtered.size() > index) {
-      return Optional.of(filtered.get(index));
-    }
-
-    return Optional.empty();
-  }
-
-  public int getNumber(MiniatureTemplate miniature) {
-    return filtered.indexOf(miniature) + 1;
-  }
-
-  @Override
-  public void loaded() {
-    configured.addAll(byName.values());
-    filtered.addAll(configured);
-  }
-
   public void updateSets(User me, Collection<String> hidden) {
     configured.clear();
     configured.addAll(byName.values().stream()
         .filter(t -> !hidden.contains(t.getSet()))
         .collect(Collectors.toList()));
     filter(me, filter);
+  }
+
+  public void addDummy(String name) {
+    MiniatureTemplate template =
+        new MiniatureTemplate(name, Template.MiniatureTemplateProto.getDefaultInstance());
+    byName.put(name, template);
+    configured.add(template);
   }
 }

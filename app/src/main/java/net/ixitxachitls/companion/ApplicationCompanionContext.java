@@ -24,17 +24,18 @@ package net.ixitxachitls.companion;
 import android.app.Application;
 
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Adventures;
 import net.ixitxachitls.companion.data.documents.Campaigns;
 import net.ixitxachitls.companion.data.documents.Characters;
 import net.ixitxachitls.companion.data.documents.CreatureConditions;
+import net.ixitxachitls.companion.data.documents.Encounters;
 import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.data.documents.Invites;
 import net.ixitxachitls.companion.data.documents.Messages;
 import net.ixitxachitls.companion.data.documents.Monsters;
 import net.ixitxachitls.companion.data.documents.User;
 import net.ixitxachitls.companion.data.documents.Users;
-import net.ixitxachitls.companion.data.documents.Encounters;
 
 /**
  * The global data for the companion.
@@ -59,6 +60,6 @@ public class ApplicationCompanionContext extends CompanionContext {
   @Override
   public void loggedIn(User me) {
     campaigns.loggedIn(me);
-    characters.processPlayer(me);
+    Templates.get().executeAfterLoading(() -> characters.processPlayer(me));
   }
 }

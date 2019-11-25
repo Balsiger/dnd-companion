@@ -11,6 +11,7 @@ template {
   }
   description: "A masterwork weapon is a finely crafted version of a normal weapon. Wielding it provides a +1 enhancement bonus on attack rolls. \n\nYou can\'t add the masterwork quality to a weapon after it is created; it must be crafted as a masterwork weapon (see the Craft skill, page 70). The masterwork quality adds 300 gp to the cost of a normal weapon. For example, a masterwork bastard sword costs 335 gp. \n\nAll magic weapons are automatically considered to be of masterwork quality. The enhancement bonus granted by the masterwork quality doesn\'t stack with the enhancement bonus provided by the weapon\'s magic. \n\nEven though some types of armor and shields (such as spiked shields) can be used as weapons, you can\'t create a masterwork version of such an item that confers an enhancement bonus on attack rolls. Instead, masterwork armor and shields have lessened armor check penalties (see Masterwork Armor, page 126)."
   short_description: "A masterwork version."
+  base_only: true
 }
 value {
   gold: 300

@@ -10,6 +10,7 @@ template {
   }
   world: "Generic"
   description: "A scroll is a heavy sheet of fine vellum or high-quality paper. An area the size of a piece of modern-day notebook paper (about \\frac[8]{1}{2} inches wide and 11 inches long) is sufficient to hold one spell. The sheet is reinforced at the top and bottom with stripes of leather slightly longer than the sheet is wide. A scroll holding more than one spell has the same width (about \\frac[8]{1}{2} inches) but is an extra foot or so long for each extra spell. Scrolls that hold three or more spells are usually fitted with reinforcing rods at each end rather than simple stirps of leather. A scroll as AC 9, 1 hit point, harness 0, and a break DC of 8. \n\nTo protect it from wrinkling or tearing, a scroll is rolled up from both ends to form a double cylinder. (This also helps the user unroll the scroll quickly.) The scroll is placed in a tube of ivory, jade, leather, metal, or wood. Most scroll cases are inscribed with magic symbols (see \\Spell{Arcane Mark}). The symbols often hide magic traps such as \\Spell{Glyph of Warding} or \\Spell{Fire Trap} spells."
+  base_only: true
 }
 weight {
   imperial {

@@ -25,17 +25,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
-import net.ixitxachitls.companion.ui.views.CloudImageView;
+import net.ixitxachitls.companion.ui.views.EntityImageView;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledTextView;
-import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
-import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Optional;
@@ -45,17 +42,18 @@ import java.util.Optional;
  */
 public class MiniatureFragment extends NestedCompanionFragment {
   public static final String ARG_NAME = "name";
+
   private static final String PATH = "miniatures/";
+
   protected Optional<MiniatureTemplate> miniature = Optional.empty();
-  private Wrapper<CloudImageView> image;
-  private TextWrapper<TextView> name;
+
+  private EntityImageView image;
   private LabelledTextView set;
   private LabelledTextView race;
   private LabelledTextView type;
   private LabelledTextView classes;
   private LabelledEditTextView owned;
   private LabelledTextView location;
-  private TextWrapper<TextView> number;
 
   public MiniatureFragment() {}
 
@@ -67,9 +65,8 @@ public class MiniatureFragment extends NestedCompanionFragment {
 
     loadMiniature(getArguments().getString(ARG_NAME));
 
-    image = Wrapper.<CloudImageView>wrap(view, R.id.image);
-    name = TextWrapper.wrap(view, R.id.name);
-    number = TextWrapper.wrap(view, R.id.number);
+    image = view.findViewById(R.id.entity_image);
+    image.setup(PATH, R.drawable.miniatures);
     set = view.findViewById(R.id.set);
     race = view.findViewById(R.id.race);
     type = view.findViewById(R.id.type);
@@ -137,10 +134,9 @@ public class MiniatureFragment extends NestedCompanionFragment {
     loadMiniature(getArguments().getString(ARG_NAME));
 
     if (miniature.isPresent()) {
-      name.text(miniature.get().getName());
-      number.text(Templates.get().getMiniatureTemplates().getNumber(miniature.get())
-          + " of " + Templates.get().getMiniatureTemplates().getFilteredNumber());
-      image.get().setImage(PATH + miniature.get().getName() + ".jpg", R.drawable.miniatures);
+      image.setName(miniature.get().getName(), miniature.get().getName());
+      image.setNumber(Templates.get().getMiniatureTemplates().getNumber(miniature.get()),
+          Templates.get().getMiniatureTemplates().getFilteredNumber());
       set.text(formatSet());
       race.text(miniature.get().getRace());
       type.text(formatType());
@@ -150,9 +146,8 @@ public class MiniatureFragment extends NestedCompanionFragment {
       owned.text(miniatureCount == 0 ? "" : String.valueOf(miniatureCount));
       location.text(me().locationFor(miniature.get()));
     } else {
-      name.text("(no miniatures found)");
-      number.text("");
-      image.get().setImage(R.drawable.miniatures);
+      image.clearName();
+      image.clearNumber();
       set.text("");
       race.text("");
       type.text("");

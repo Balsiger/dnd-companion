@@ -527,6 +527,13 @@
             android:layout_marginTop="10dp"
             android:text="emotions by Nithinan Tatah from the Noun Project"
             android:theme="@style/LargeText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Book by NOVITA ASTRI from the Noun Project"
+            android:theme="@style/LargeText"/>
       </LinearLayout>
     </ScrollView>
 

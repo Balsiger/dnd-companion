@@ -100,7 +100,10 @@ public class CampaignsFragment extends CompanionFragment {
     hint = TextWrapper.wrap(view, R.id.hint);
     Wrapper.wrap(view, R.id.miniatures)
         .onClick(this::showMiniatures)
-        .description("Miniatures", "Brows and modify your miniatures catalog.");
+        .description("Miniatures", "Browse and modify your miniatures catalog.");
+    Wrapper.wrap(view, R.id.products)
+        .onClick(this::showProducts)
+        .description("Products", "Browse and modify your product catalog.");
 
     startLoading(LOADING_CAMPAIGNS);
     campaigns().observe(this, this::refreshCampaigns);
@@ -188,6 +191,10 @@ public class CampaignsFragment extends CompanionFragment {
 
   private void showMiniatures() {
     CompanionFragments.get().show(Type.miniatures, Optional.empty());
+  }
+
+  private void showProducts() {
+    CompanionFragments.get().show(Type.products, Optional.empty());
   }
 
   private String subtitle() {

@@ -50,7 +50,7 @@ public class Duration {
   private static final String FIELD_DAYS = "days";
   private static final String FIELD_YEARS = "years";
   private static final Pattern ROUNDS_ONLLY = Pattern.compile("\\s*(\\d+)\\s*");
-  private static final ValueParser PARSER = new IntegerValueParser(
+  private static final ValueParser<Integer> PARSER = new IntegerValueParser(
       new ValueParser.Unit("round", "rounds", "r"),
       new ValueParser.Unit("minute", "minutes", "min", "m"),
       new ValueParser.Unit("hour", "hours", "h"),

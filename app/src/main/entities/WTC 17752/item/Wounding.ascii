@@ -10,6 +10,7 @@ template {
   world: "Generic"
   description: "A wounding weapon deals 1 point of Constitution damage from blood loss when it hits a creature. A critical hit does not multiply the Constitution damage. Creatures immune to critical hits (such as plants and constructs) are immune to the Constitution damage dealt by this weapon."
   short_description: "Deals 1 point of Con damage from blood loss when hitting a creature."
+  base_only: true
 }
 probability: COMMON
  weapon {

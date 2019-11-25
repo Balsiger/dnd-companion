@@ -242,7 +242,7 @@ public class Item extends NestedDocument {
   }
 
   public Money getValue() {
-    Money totalValue = value.multiply(multiple);
+    Money totalValue = multiple > 0 ? value.multiply(multiple) : value;
     for (Item content : contents) {
       totalValue = totalValue.add(content.getValue());
     }
@@ -541,5 +541,35 @@ public class Item extends NestedDocument {
     }
 
     return total;
+  }
+
+  public static Item createLookupItem(CompanionContext context, ItemTemplate template,
+                                      Template.ItemLookupProto proto) {
+    List<ItemTemplate> templates = new ArrayList<>();
+    templates.add(template);
+    templates.addAll(proto.getTemplatesList().stream()
+        .map(Item::template)
+        .collect(Collectors.toList()));
+
+    return new Item(generateId(context), name(templates), Collections.emptyList(),
+        proto.getHp() > 0 ? proto.getHp() : hp(templates),
+        proto.hasValue() ? Money.fromProto(proto.getValue()) : value(templates),
+        proto.getAppearance().isEmpty() ? appearance(templates) : proto.getAppearance(),
+        "", "", proto.getDmNotes(), proto.getMultiple(), proto.getMultiuse(),
+        Duration.fromProto(proto.getTimeLeft()), false,
+        Item.createLookupItems(context, proto.getContentList()));
+  }
+
+  public static List<Item> createLookupItems(CompanionContext context,
+                                             List<Template.ItemLookupProto> protos) {
+    List<Item> items = new ArrayList<>();
+    for (Template.ItemLookupProto proto : protos) {
+      Optional<Item> item = Templates.get().getItemTemplates().lookup(context, proto);
+      if (item.isPresent()) {
+        items.add(item.get());
+      }
+    }
+
+    return items;
   }
 }
