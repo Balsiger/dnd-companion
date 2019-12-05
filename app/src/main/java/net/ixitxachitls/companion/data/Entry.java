@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data;
 
 import com.google.protobuf.MessageLite;
 
+import java.util.Set;
+
 /**
  * Base class for all entries.
  */
@@ -41,6 +43,8 @@ public abstract class Entry<P extends MessageLite> {
   public String getName() {
     return name;
   }
+
+  public abstract Set<String> getProductIds();
 
   public void setName(String name) {
     this.name = name;

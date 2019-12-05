@@ -36,6 +36,7 @@ import net.ixitxachitls.companion.proto.Value;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -82,6 +83,11 @@ public class ItemTemplate extends StoredTemplate<Template.ItemTemplateProto> {
     return proto.getArmor().getAcBonus().getModifierList().stream()
         .map(p -> Modifier.fromProto(p, getName()))
         .collect(Collectors.toList());
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return extractProductIds(proto.getTemplate());
   }
 
   public Damage getDamage() {

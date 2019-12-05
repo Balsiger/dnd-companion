@@ -30,12 +30,12 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
 
 import java.util.Optional;
 
+import androidx.annotation.CallSuper;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -86,7 +86,7 @@ public abstract class TemplatesFragment extends CompanionFragment {
     });
 
     seek = view.findViewById(R.id.seek);
-    seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber() - 1);
+    seek.setMax(getTemplatesCount() - 1);
     seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
       @Override
       public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -102,35 +102,43 @@ public abstract class TemplatesFragment extends CompanionFragment {
       public void onStopTrackingTouch(SeekBar seekBar) {}
     });
 
+    setupActions();
+    loadEntities();
+    return view;
+  }
+
+  protected abstract void config();
+  protected abstract void filter();
+  protected abstract String getTitle(int position);
+  protected abstract Fragment getTemplateFragment(int position);
+  protected abstract int getTemplatesCount();
+
+  @CallSuper
+  protected void setupActions() {
     clearActions();
     addAction(R.drawable.ic_arrow_back_black_24dp, "Back", "Go back to the campaigns overview")
         .onClick(this::goBack);
     filterAction = addAction(R.drawable.ic_filter_variant_black_24dp, "Filter",
         "Filter the displayed miniatures")
         .onClick(this::filter);
-    addAction(R.drawable.ic_map_marker_black_24dp, "Locations",
-        "Define or change the locations your miniatures are stored.")
-        .onClick(this::editLocations);
     addAction(R.drawable.ic_settings_black_24dp, "Configuration",
         "Configure the miniatures displayed.")
         .onClick(this::config);
-
-    loadEntities();
-    return view;
   }
 
-  protected abstract void loadEntities();
-  protected abstract void config();
-  protected abstract void editLocations();
-  protected abstract void filter();
-  protected abstract String getTitle(int position);
-  protected abstract Fragment getTemplateFragment(int position);
-  protected abstract int getTemplatesCount();
+  @CallSuper
+  protected void loadEntities() {
+    pager.setVisibility(View.GONE);
+  }
+
+  @CallSuper
+  protected void loadedEntities() {
+    pager.setVisibility(View.VISIBLE);
+  }
 
   protected void update() {
     pagerAdapter.notifyDataSetChanged();
   }
-
 
   public class PagerAdapter extends FragmentStatePagerAdapter {
 

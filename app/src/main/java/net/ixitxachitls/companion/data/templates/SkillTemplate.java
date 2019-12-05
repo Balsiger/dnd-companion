@@ -24,6 +24,8 @@ package net.ixitxachitls.companion.data.templates;
 import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.proto.Template;
 
+import java.util.Set;
+
 /**
  * A template for a skill.
  */
@@ -35,6 +37,11 @@ public class SkillTemplate extends StoredTemplate<Template.SkillTemplateProto> {
   public SkillTemplate(Template.SkillTemplateProto proto, String name) {
     super(name);
     this.proto = proto;
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return extractProductIds(proto.getTemplate());
   }
 
   public Ability getAbility() {

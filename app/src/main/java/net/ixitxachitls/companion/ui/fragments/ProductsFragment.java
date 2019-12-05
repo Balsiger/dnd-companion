@@ -23,8 +23,12 @@ package net.ixitxachitls.companion.ui.fragments;
 
 import android.os.Bundle;
 
+import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.data.documents.ProductFilter;
 import net.ixitxachitls.companion.data.templates.ProductTemplate;
+import net.ixitxachitls.companion.ui.dialogs.ProductConfigurationDialog;
+import net.ixitxachitls.companion.ui.dialogs.ProductFilterDialog;
 
 import java.util.Optional;
 
@@ -35,29 +39,39 @@ import androidx.fragment.app.Fragment;
  */
 public class ProductsFragment extends TemplatesFragment {
 
+  private static final String LOADING_PRODUCTS = "products";
+
   public ProductsFragment() {
     super(Type.products);
   }
 
   @Override
   protected void loadEntities() {
-    // TODO(merlin): Read real product values from users.
-    update();
+    super.loadEntities();
+    startLoading(LOADING_PRODUCTS);
+    me().readProducts(this::loadedEntities);
   }
 
   @Override
   protected void config() {
-
-  }
-
-  @Override
-  protected void editLocations() {
-
+    ProductConfigurationDialog.newInstance().onSaved(o -> update()).display();
   }
 
   @Override
   protected void filter() {
+    ProductFilterDialog.newInstance(Templates.get().getProductTemplates().getFilter())
+        .onSaved(this::filtered).display();
+  }
 
+  private void filtered(ProductFilter filter) {
+    Templates.get().getProductTemplates().filter(me(), filter);
+    if (Templates.get().getProductTemplates().isFiltered()) {
+      filterAction.color(R.color.filtered);
+    } else {
+      filterAction.uncolor();
+    }
+    update();
+    seek.setMax(Templates.get().getProductTemplates().getFilteredNumber() - 1);
   }
 
   @Override
@@ -80,5 +94,12 @@ public class ProductsFragment extends TemplatesFragment {
   @Override
   protected int getTemplatesCount() {
     return Templates.get().getProductTemplates().getFilteredNumber();
+  }
+
+  @Override
+  protected void loadedEntities() {
+    super.loadedEntities();
+    finishLoading(LOADING_PRODUCTS);
+    update();
   }
 }

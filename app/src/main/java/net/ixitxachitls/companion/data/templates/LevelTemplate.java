@@ -60,6 +60,11 @@ public class LevelTemplate extends StoredTemplate<Template.LevelTemplateProto> {
     this.maxHp = maxHp;
   }
 
+  @Override
+  public Set<String> getProductIds() {
+    return extractProductIds(proto.getTemplate());
+  }
+
   public Collection<? extends FeatTemplate> getAutomaticFeats() {
     List<FeatTemplate> feats = new ArrayList<>();
 

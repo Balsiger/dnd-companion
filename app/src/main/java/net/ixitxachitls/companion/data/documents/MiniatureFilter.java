@@ -35,7 +35,8 @@ import androidx.annotation.NonNull;
 /**
  * A filter for miniatures.
  */
-public class MiniatureFilter extends TemplateFilter implements Comparable<MiniatureFilter> {
+public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
+    implements Comparable<MiniatureFilter> {
 
   private static final String FIELD_RACES = "races";
   private static final String FIELD_SETS = "sets";
@@ -160,6 +161,7 @@ public class MiniatureFilter extends TemplateFilter implements Comparable<Miniat
     return Strings.PIPE_JOINER.join(texts);
   }
 
+  @Override
   public boolean matches(User me, MiniatureTemplate miniature) {
     return super.matches(me, miniature)
         && (races.isEmpty() || races.contains(miniature.getRace()))
@@ -168,8 +170,8 @@ public class MiniatureFilter extends TemplateFilter implements Comparable<Miniat
         && (classes.isEmpty() || matchesClass(miniature, classes))
         && (sizes.isEmpty() || sizes.contains(miniature.getSize().getName()))
         && (owned.isEmpty()
-            || owned.contains(String.valueOf(me.getMiniatureCount(miniature.getName())))
-            || owned.contains("> 0") && me.getMiniatureCount(miniature.getName()) > 0)
+        || owned.contains(String.valueOf(me.getMiniatureCount(miniature.getName())))
+        || owned.contains("> 0") && me.getMiniatureCount(miniature.getName()) > 0)
         && (locations.isEmpty() || locations.contains(me.locationFor(miniature)));
   }
 

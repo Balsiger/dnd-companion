@@ -23,6 +23,8 @@ package net.ixitxachitls.companion.data.templates;
 
 import net.ixitxachitls.companion.proto.Template;
 
+import java.util.Set;
+
 /**
  * A template for a spell.
  */
@@ -34,6 +36,11 @@ public class SpellTemplate extends StoredTemplate<Template.SpellTemplateProto> {
   public SpellTemplate(Template.SpellTemplateProto proto, String name) {
     super(name);
     this.proto = proto;
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return extractProductIds(proto.getTemplate());
   }
 
   public static Template.SpellTemplateProto defaultProto() {

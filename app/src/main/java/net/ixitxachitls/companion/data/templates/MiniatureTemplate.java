@@ -24,7 +24,9 @@ package net.ixitxachitls.companion.data.templates;
 import net.ixitxachitls.companion.data.enums.Size;
 import net.ixitxachitls.companion.proto.Template;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 /**
  * A representation of a miniature template that can be used to create actual miniatures for the
@@ -38,6 +40,19 @@ public class MiniatureTemplate extends StoredTemplate<Template .MiniatureTemplat
   public MiniatureTemplate(String name, Template.MiniatureTemplateProto proto) {
     super(name);
     this.proto = proto;
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return Collections.emptySet();
+  }
+
+  private static String extractProductId(Template.TemplateProto template) {
+    if (template.getReferenceCount() > 0) {
+      return template.getReference(0).getName();
+    }
+
+    return "";
   }
 
   public List<String> getClasses() {

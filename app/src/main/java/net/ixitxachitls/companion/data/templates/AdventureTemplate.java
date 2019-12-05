@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -70,6 +71,11 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
     }
 
     return Optional.empty();
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return extractProductIds(proto.getTemplate());
   }
 
   private void ensureEncounters() {

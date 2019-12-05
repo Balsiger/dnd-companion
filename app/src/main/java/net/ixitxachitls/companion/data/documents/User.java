@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.data.documents;
 
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.SetOptions;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
@@ -41,6 +42,7 @@ import java.util.SortedMap;
 import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import androidx.annotation.CallSuper;
@@ -51,7 +53,8 @@ import androidx.annotation.CallSuper;
 public class User extends Document<User> {
 
   protected static final String PATH = "users";
-  private static final String MINIATURE_PATH = "/miniatures/miniatures";
+  private static final String MINIATURE_PATH = "/miniatures";
+  private static final String PRODUCT_PATH = "/products";
   private static final Factory FACTORY = new Factory();
   private static final String FIELD_NICKNAME = "nickname";
   private static final String DEFAULT_NICKNAME = "";
@@ -60,16 +63,30 @@ public class User extends Document<User> {
   private static final String FIELD_MINIATURE_OWNED = "owned";
   private static final String FIELD_MINIATURE_LOCATIONS = "locations";
   private static final String FIELD_MINIATURE_HIDDEN_SETS = "hidden-sets";
+  private static final String FIELD_PRODUCTS = "products";
+  private static final String FIELD_PRODUCTS_HIDDEN_PRODUCERS = "hidden-producers";
+  private static final String FIELD_PRODUCTS_HIDDEN_WORLDS = "hidden-worlds";
+  private static final String FIELD_PRODUCTS_HIDDEN_SYSTEMS = "hidden-systems";
+  private static final String FIELD_PRODUCTS_HIDDEN_TYPES = "hidden-types";
+
+  private enum LoadingStatus { initial, loading, done, };
 
   private String nickname;
   private String photoUrl = "";
   private List<String> campaigns = new ArrayList<>();
   private List<String> features = new ArrayList<>();
   private Map<String, Long> miniatures = new HashMap<>();
-  private Optional<DocumentReference> miniaturesDocument = Optional.empty();
-  private boolean miniaturesLoading = false;
+  private LoadingStatus miniatureStatus = LoadingStatus.initial;
+  private final List<Callback> miniatureCallbacks = new ArrayList<>();
+  private Map<String, Product> products = new HashMap<>();
+  private LoadingStatus productStatus = LoadingStatus.initial;
+  private final List<Callback> productCallbacks = new ArrayList<>();
   private SortedMap<String, MiniatureLocation> locations = new TreeMap<>();
   private Set<String> hiddenSets = new HashSet<>();
+  private Set<String> hiddenProducers = new HashSet<>();
+  private Set<String> hiddenWorlds = new HashSet<>();
+  private Set<String> hiddenSystems = new HashSet<>();
+  private Set<String> hiddenTypes = new HashSet<>();
 
   public List<String> getCampaigns() {
     return campaigns;
@@ -124,6 +141,22 @@ public class User extends Document<User> {
     Templates.get().getMiniatureTemplates().updateSets(this, hiddenSets);
   }
 
+  public void setHiddenProducts(List<String> producers, List<String> worlds, List<String> systems,
+                                List<String> types) {
+    hiddenProducers.clear();
+    hiddenProducers.addAll(producers);
+    hiddenWorlds.clear();
+    hiddenWorlds.addAll(worlds);
+    hiddenSystems.clear();
+    hiddenSystems.addAll(systems);
+    hiddenTypes.clear();
+    hiddenTypes.addAll(types);
+
+    storeProducts();
+    Templates.get().getProductTemplates().updateHidden(this, hiddenProducers, hiddenWorlds,
+        hiddenSystems, hiddenTypes);
+  }
+
   public static boolean isUser(String id) {
     return id.matches(PATH + "/[^/]*/");
   }
@@ -166,6 +199,22 @@ public class User extends Document<User> {
     return hiddenSets.contains(name);
   }
 
+  public boolean hasProducerHidden(String name) {
+    return hiddenProducers.contains(name);
+  }
+
+  public boolean hasWorldHidden(String name) {
+    return hiddenWorlds.contains(name);
+  }
+
+  public boolean hasSystemHidden(String name) {
+    return hiddenSystems.contains(name);
+  }
+
+  public boolean hasTypeHidden(String name) {
+    return hiddenTypes.contains(name);
+  }
+
   public String locationFor(MiniatureTemplate template) {
     SortedMap<MiniatureFilter, String> filteredLocations = new TreeMap<MiniatureFilter, String>();
     for (MiniatureLocation location : locations.values()) {
@@ -187,29 +236,22 @@ public class User extends Document<User> {
   }
 
   public void readMiniatures(Callback callback) {
-    if (miniaturesLoading) {
+    if (miniatureStatus == LoadingStatus.done) {
       callback.done();
       return;
     }
 
-    miniaturesLoading = true;
-    if (!miniaturesDocument.isPresent()) {
-      miniaturesDocument = Optional.of(db.document(getId() + MINIATURE_PATH));
+    miniatureCallbacks.add(callback);
+    if (miniatureStatus == LoadingStatus.loading) {
+      return;
     }
 
-    miniaturesDocument.get().get().addOnCompleteListener(task -> {
-      miniaturesLoading = false;
+    miniatureStatus = LoadingStatus.loading;
+    db.document(getId() + MINIATURE_PATH + MINIATURE_PATH).get().addOnCompleteListener(task -> {
+      miniatureStatus = LoadingStatus.done;
       if (task.isSuccessful() ) {
-        miniaturesDocument = Optional.of(task.getResult().getReference());
         Data data = Data.fromSnapshot(task.getResult());
-        if (miniatures.isEmpty()) {
-          miniatures.putAll(data.getMap(FIELD_MINIATURE_OWNED, 0L));
-        } else {
-          Map<String, Long> existing = new HashMap<>(miniatures);
-          miniatures.putAll(data.getMap(FIELD_MINIATURE_OWNED, 0L));
-          miniatures.putAll(existing);
-          storeMiniatures();
-        }
+        miniatures.putAll(data.getMap(FIELD_MINIATURE_OWNED, 0L));
 
         for (MiniatureLocation location :
             data.getNestedList(FIELD_MINIATURE_LOCATIONS)
@@ -222,8 +264,45 @@ public class User extends Document<User> {
         hiddenSets.addAll(data.getList(FIELD_MINIATURE_HIDDEN_SETS, Collections.emptyList()));
 
         verifyMiniatures();
-        callback.done();
       }
+
+      miniatureCallbacks.forEach(Callback::done);
+    });
+  }
+
+  public void readProducts(Callback callback) {
+    if (productStatus == LoadingStatus.done) {
+      callback.done();
+      return;
+    }
+
+    productCallbacks.add(callback);
+    if (productStatus == LoadingStatus.loading) {
+      return;
+    }
+
+    productStatus = LoadingStatus.loading;
+    DocumentReference document = db.document(getId() + PRODUCT_PATH + PRODUCT_PATH);
+    document.get().addOnCompleteListener(task -> {
+      productStatus = LoadingStatus.done;
+      if (task.isSuccessful() ) {
+        Data data = Data.fromSnapshot(task.getResult());
+        products.putAll(
+            data.getNestedList(FIELD_PRODUCTS).stream()
+                .map(Product::read)
+                .collect(Collectors.toMap(Product::getId, Function.identity(),
+                    (a, b) -> {
+                      Status.error("Duplicate key found, ignored: " + a);
+                      return a;
+                    })));
+        hiddenProducers.addAll(data.getList(FIELD_PRODUCTS_HIDDEN_PRODUCERS,
+            Collections.emptyList()));
+        hiddenWorlds.addAll(data.getList(FIELD_PRODUCTS_HIDDEN_WORLDS, Collections.emptyList()));
+        hiddenSystems.addAll(data.getList(FIELD_PRODUCTS_HIDDEN_SYSTEMS, Collections.emptyList()));
+        hiddenTypes.addAll(data.getList(FIELD_PRODUCTS_HIDDEN_TYPES, Collections.emptyList()));
+      }
+
+      productCallbacks.forEach(Callback::done);
     });
   }
 
@@ -245,6 +324,17 @@ public class User extends Document<User> {
     }
   }
 
+  public void setProduct(String id, boolean owned, Optional<Boolean> used) {
+    Product product = products.get(id);
+    if (product == null && (owned || used.isPresent()) ||
+        (product != null && product.owned != owned &&
+            (!used.isPresent() || product.used != used.get()))) {
+      product = new Product(id, owned, used.isPresent() ? used.get() : true);
+      products.put(id, product);
+      storeProducts();
+    }
+  }
+
   @Override
   public String toString() {
     return getNickname();
@@ -255,6 +345,15 @@ public class User extends Document<User> {
         .set(FIELD_MINIATURE_OWNED, miniatures)
         .setNested(FIELD_MINIATURE_LOCATIONS, locations.values())
         .set(FIELD_MINIATURE_HIDDEN_SETS, new ArrayList<>(hiddenSets));
+  }
+
+  public Data writeProducts() {
+    return Data.empty()
+        .setNested(FIELD_PRODUCTS, products.values())
+        .set(FIELD_PRODUCTS_HIDDEN_PRODUCERS, new ArrayList<>(hiddenProducers))
+        .set(FIELD_PRODUCTS_HIDDEN_WORLDS, new ArrayList<>(hiddenWorlds))
+        .set(FIELD_PRODUCTS_HIDDEN_SYSTEMS, new ArrayList<>(hiddenSystems))
+        .set(FIELD_PRODUCTS_HIDDEN_TYPES, new ArrayList<>(hiddenTypes));
   }
 
   @Override
@@ -282,11 +381,15 @@ public class User extends Document<User> {
   }
 
   private void storeMiniatures() {
-    if (miniaturesLoading || !miniaturesDocument.isPresent()) {
-      return;
-    }
+    db.collection(getId() + MINIATURE_PATH).document(MINIATURE_PATH)
+        .set(writeMiniatures().asMap())
+        .addOnFailureListener(e -> Status.exception("Saving miniature data failed!", e));
+  }
 
-    miniaturesDocument.get().update(writeMiniatures().asMap());
+  private void storeProducts() {
+    db.collection(getId() + PRODUCT_PATH).document(PRODUCT_PATH)
+        .set(writeProducts().asMap(), SetOptions.merge())
+        .addOnFailureListener(e -> Status.exception("Saving products data failed!", e));
   }
 
   private void verifyMiniatures() {
@@ -313,10 +416,63 @@ public class User extends Document<User> {
     return user;
   }
 
+  public boolean ownsProduct(String id) {
+    Product product = products.get(id.toLowerCase());
+    return product == null ? false : product.isOwned();
+  }
+
+  public boolean usesProduct(String id) {
+    Product product = products.get(id);
+    return product == null ? true : product.isUsed();
+  }
+
   private static class Factory implements DocumentFactory<User> {
     @Override
     public User create() {
       return new User();
+    }
+  }
+
+  private static class Product extends NestedDocument {
+
+    private static final String FIELD_ID = "id";
+    private static final String FIELD_OWNED = "owned";
+    private static final String FIELD_USED = "used";
+
+    private final String id;
+    private final boolean owned;
+    private final boolean used;
+
+    public Product(String id, boolean owned, boolean used) {
+      this.id = id;
+      this.owned = owned;
+      this.used = used;
+    }
+
+    public String getId() {
+      return id;
+    }
+
+    public boolean isOwned() {
+      return owned;
+    }
+
+    public boolean isUsed() {
+      return used;
+    }
+
+    @Override
+    public Data write() {
+      return Data.empty()
+          .set(FIELD_ID, id)
+          .set(FIELD_OWNED, owned)
+          .set(FIELD_USED, used);
+    }
+
+    @CallSuper
+    protected static Product read(Data data) {
+      return new Product(data.get(FIELD_ID, ""), data.get(FIELD_OWNED, false),
+          data.get(FIELD_USED, true));
     }
   }
 }

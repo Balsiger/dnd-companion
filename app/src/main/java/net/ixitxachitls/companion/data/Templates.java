@@ -24,7 +24,6 @@ package net.ixitxachitls.companion.data;
 import com.google.inject.Singleton;
 
 import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.documents.ProductFilter;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
 import net.ixitxachitls.companion.data.templates.FeatTemplate;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
@@ -41,8 +40,10 @@ import net.ixitxachitls.companion.storage.AssetAccessor;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import androidx.annotation.Nullable;
 
@@ -68,8 +69,8 @@ public class Templates {
   private final TemplatesStore<SpellTemplate> spells = new TemplatesStore<>(SpellTemplate.class);
   private final TemplatesStore<AdventureTemplate> adventures =
       new TemplatesStore<>(AdventureTemplate.class);
-  private final FilteredTemplatesStore<ProductTemplate, ProductFilter> products =
-      new FilteredTemplatesStore<>(ProductTemplate.class, new ProductFilter());
+  private final ProductTemplates products = new ProductTemplates();
+  private final Set<String> productsWithData = new HashSet<>();
 
   private final AssetAccessor assetAccessor;
   private boolean loaded = false;
@@ -99,7 +100,7 @@ public class Templates {
     return miniatures;
   }
 
-  public FilteredTemplatesStore<ProductTemplate, ProductFilter> getProductTemplates() {
+  public ProductTemplates getProductTemplates() {
     return products;
   }
 
@@ -188,16 +189,31 @@ public class Templates {
       items.loaded();
       levels.loaded();
       feats.loaded();
-      qualities.loaded();
       miniatures.loaded();
-      products.loaded();
       skills.loaded();
       spells.loaded();
+      qualities.loaded();
+      adventures.loaded();
+      products.loaded();
+
+      productsWithData.addAll(monsterTemplates.getProductIds());
+      productsWithData.addAll(items.getProductIds());
+      productsWithData.addAll(levels.getProductIds());
+      productsWithData.addAll(feats.getProductIds());
+      productsWithData.addAll(qualities.getProductIds());
+      productsWithData.addAll(skills.getProductIds());
+      productsWithData.addAll(spells.getProductIds());
+      productsWithData.addAll(adventures.getProductIds());
+
       loaded();
     } catch (IOException | NoSuchMethodException | IllegalAccessException
         | InvocationTargetException e) {
       Status.error("Loading of entries from internal storage failed: " + e);
     }
+  }
+
+  public boolean hasData(String id) {
+    return productsWithData.contains(id);
   }
 
   public static Templates get() {

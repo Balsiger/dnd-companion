@@ -28,6 +28,7 @@ import net.ixitxachitls.companion.proto.Value;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -42,6 +43,11 @@ public class QualityTemplate extends StoredTemplate<Template .QualityTemplatePro
   public QualityTemplate(Template.QualityTemplateProto proto, String name) {
     super(name);
     this.proto = proto;
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return extractProductIds(proto.getTemplate());
   }
 
   public List<Modifier> getAcModifiers() {

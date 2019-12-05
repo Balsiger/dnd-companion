@@ -24,6 +24,11 @@ package net.ixitxachitls.companion.data.templates;
 import com.google.protobuf.MessageLite;
 
 import net.ixitxachitls.companion.data.Entry;
+import net.ixitxachitls.companion.proto.Template;
+import net.ixitxachitls.companion.proto.Value;
+
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * An entry that cannot be changed once created.
@@ -31,5 +36,11 @@ import net.ixitxachitls.companion.data.Entry;
 public abstract class StoredTemplate<P extends MessageLite> extends Entry<P> {
   public StoredTemplate(String name) {
     super(name);
+  }
+
+  protected static Set<String> extractProductIds(Template.TemplateProto template) {
+    return template.getReferenceList().stream()
+        .map(Value.ReferenceProto::getName)
+        .collect(Collectors.toSet());
   }
 }

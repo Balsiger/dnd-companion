@@ -48,8 +48,9 @@ public class MiniaturesFragment extends TemplatesFragment {
 
   @Override
   protected void loadEntities() {
+    super.loadEntities();
     startLoading(LOADING_MINIATURES);
-    me().readMiniatures(this::miniaturesLoaded);
+    me().readMiniatures(this::loadedEntities);
   }
 
   @Override
@@ -58,6 +59,14 @@ public class MiniaturesFragment extends TemplatesFragment {
   }
 
   @Override
+  protected void setupActions() {
+    super.setupActions();
+
+    addAction(R.drawable.ic_map_marker_black_24dp, "Locations",
+        "Define or change the locations your miniatures are stored.")
+        .onClick(this::editLocations);
+  }
+
   protected void editLocations() {
     MiniatureLocationsDialog.newInstance().display();
   }
@@ -79,8 +88,9 @@ public class MiniaturesFragment extends TemplatesFragment {
     seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber() - 1);
   }
 
-
-  private void miniaturesLoaded() {
+  @Override
+  protected void loadedEntities() {
+    super.loadedEntities();
     finishLoading(LOADING_MINIATURES);
     update();
   }

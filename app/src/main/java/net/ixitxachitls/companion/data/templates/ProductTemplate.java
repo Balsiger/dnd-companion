@@ -25,7 +25,9 @@ import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -45,6 +47,11 @@ public class ProductTemplate extends StoredTemplate<Template.ProductTemplateProt
     super(proto.getTemplate().getName());
 
     this.proto = proto;
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return Collections.emptySet();
   }
 
   public String getTitle() {
@@ -81,6 +88,10 @@ public class ProductTemplate extends StoredTemplate<Template.ProductTemplateProt
     }
 
     return MONTH[proto.getDate().getMonth() - 1] + " " + proto.getDate().getYear();
+  }
+
+  public int getYear() {
+    return proto.getDate().getYear();
   }
 
   public int getPages() {
@@ -200,6 +211,14 @@ public class ProductTemplate extends StoredTemplate<Template.ProductTemplateProt
 
   public String formatContent(Template.ProductTemplateProto.Content content) {
     return Strings.toWords(content.getPart().toString());
+  }
+
+  public String getProducer() {
+    return proto.getProducer();
+  }
+
+  public List<String> getWorld() {
+    return proto.getTemplate().getWorldList();
   }
 
   public static Template.ProductTemplateProto defaultProto() {

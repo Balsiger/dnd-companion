@@ -24,6 +24,9 @@ package net.ixitxachitls.companion.data.templates;
 import net.ixitxachitls.companion.data.values.Calendar;
 import net.ixitxachitls.companion.proto.Template;
 
+import java.util.Collections;
+import java.util.Set;
+
 /**
  * Data entity for world information.
  */
@@ -42,6 +45,11 @@ public class WorldTemplate extends StoredTemplate<Template.WorldTemplateProto> {
 
   public Calendar getCalendar() {
     return calendar;
+  }
+
+  @Override
+  public Set<String> getProductIds() {
+    return Collections.emptySet();
   }
 
   @Override

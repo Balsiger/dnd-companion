@@ -46,6 +46,7 @@ public class MiniatureConfigurationDialog extends Dialog<MiniatureConfigurationD
 
     return checkBox;
   }
+
   @Override
   protected void createContent(View view) {
     container = view.findViewById(R.id.sets);
