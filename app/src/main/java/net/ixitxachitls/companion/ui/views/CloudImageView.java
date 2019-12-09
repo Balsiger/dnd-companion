@@ -33,6 +33,7 @@ import android.widget.ProgressBar;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
 
 import java.util.Optional;
@@ -64,7 +65,8 @@ public class CloudImageView extends LinearLayout {
     view.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
         ViewGroup.LayoutParams.MATCH_PARENT));
 
-    image = Wrapper.<ImageView>wrap(view, R.id.image).onDoubleTap(this::reload);
+    image = Wrapper.<ImageView>wrap(view, R.id.image).onDoubleTap(this::reload)
+        .onClick(this::enlarged);
     progressBar = view.findViewById(R.id.progress);
     progressBar.setIndeterminate(true);
 
@@ -102,6 +104,19 @@ public class CloudImageView extends LinearLayout {
   private void reload() {
     if (imageId.isPresent()) {
       setImage(imageId.get(), 0, 0);
+    }
+  }
+
+  private void enlarged() {
+    if (imageId.isPresent()) {
+      CompanionApplication.get().context().images().get(PATH + normalize(imageId.get()), 7 * 24,
+          image -> {
+            if (image.isPresent()) {
+              MessageDialog.create(getContext())
+                  .image(image.get())
+                  .show();
+            }
+          });
     }
   }
 }

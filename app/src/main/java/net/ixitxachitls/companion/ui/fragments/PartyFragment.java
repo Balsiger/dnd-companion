@@ -98,6 +98,7 @@ public class PartyFragment extends NestedCompanionFragment {
     title = TextWrapper.wrap(view, R.id.title);
     party = view.findViewById(R.id.party);
     adventure = view.findViewById(R.id.adventure);
+    adventure.setVisibility(View.GONE);
     scroll = Wrapper.wrap(view, R.id.scroll);
 
     addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)

@@ -39,6 +39,7 @@ import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Encounter;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
+import net.ixitxachitls.companion.ui.views.CloudImageView;
 import net.ixitxachitls.companion.ui.views.MonsterChipView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.util.Strings;
@@ -56,6 +57,7 @@ import androidx.annotation.Nullable;
  */
 public class AdventureView extends LinearLayout {
 
+  private CloudImageView productImage;
   private TextWrapper<TextView> adventure;
   private TextWrapper<TextView> encounterView;
   private TextWrapper<TextView> description;
@@ -84,6 +86,7 @@ public class AdventureView extends LinearLayout {
   public void updateCampaign(Campaign campaign) {
     this.campaign = Optional.of(campaign);
 
+    productImage.setImage("products/" + campaign.getAdventureId(), R.drawable.noun_book_1411063);
     adventure.onClick(this::selectAdventure);
     encounterView.onClick(this::selectEncounter);
     updateAdventure(Templates.get().getAdventureTemplates().get(campaign.getAdventureId()));
@@ -132,6 +135,7 @@ public class AdventureView extends LinearLayout {
   protected void init() {
     View view = LayoutInflater.from(getContext()).inflate(R.layout.view_adventure, null, false);
 
+    productImage = view.findViewById(R.id.product_image);
     adventure = TextWrapper.wrap(view, R.id.adventure);
     encounterView = TextWrapper.wrap(view, R.id.encounter);
     description = TextWrapper.wrap(view, R.id.description);
@@ -206,6 +210,8 @@ public class AdventureView extends LinearLayout {
     if (campaign.isPresent()) {
       campaign.get().setAdventureId(strings.get(0));
     }
+
+    productImage.setImage("products/" + strings.get(0), R.drawable.noun_book_1411063);
   }
 
   private void selectedEncounter(List<String> strings) {

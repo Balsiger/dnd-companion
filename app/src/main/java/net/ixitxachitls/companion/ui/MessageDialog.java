@@ -23,12 +23,17 @@ package net.ixitxachitls.companion.ui;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.documents.Images;
 import net.ixitxachitls.companion.util.Texts;
 
 import java.util.Map;
@@ -67,6 +72,18 @@ public class MessageDialog {
   public MessageDialog layout(@LayoutRes int layout) {
     dialog.setView(layout);
     view = Optional.empty();
+    return this;
+  }
+
+  public MessageDialog image(Bitmap bitmap) {
+    ImageView image = new ImageView(dialog.getContext());
+    dialog.setView(image);
+
+    bitmap = Images.scale(bitmap,
+        (int) (Resources.getSystem().getDisplayMetrics().widthPixels * 0.8),
+        (int) (Resources.getSystem().getDisplayMetrics().heightPixels * 0.8));
+    image.setImageDrawable(new BitmapDrawable(image.getResources(), bitmap));
+    view = Optional.of(image);
     return this;
   }
 

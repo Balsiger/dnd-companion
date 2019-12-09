@@ -196,8 +196,12 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   }
 
   public W onClick(Wrapper.Action action) {
-    if (action != null) {
-      view.setOnClickListener(v -> action.execute());
+    if (touchListener.isPresent()) {
+      touchListener.get().onTap(action);
+    } else {
+      if (action != null) {
+        view.setOnClickListener(v -> action.execute());
+      }
     }
 
     return (W) this;

@@ -1157,7 +1157,7 @@ public class Creature<T extends Creature<T>> extends Document<T> {
         .set(FIELD_INITIATIVE, encounterInitiative)
         .set(FIELD_ENCOUNTER_NUMBER, encounterNumber)
         .setNested(FIELD_ITEMS, items)
-        .set(FIELD_SLOTS, wearing);
+        .setNested(FIELD_SLOTS, wearing);
   }
 
   public static class InitiativeComparator implements Comparator<Creature> {

@@ -308,9 +308,9 @@ public class Level extends NestedDocument {
         .set(FIELD_TEMPLATE, template.getName())
         .set(FIELD_HP, hp)
         .set(FIELD_ABILITY_INCREASE, abilityIncrease, Ability::getName)
-        .set(FIELD_FEAT, feat)
-        .set(FIELD_RACIAL_FEAT, racialFeat)
-        .set(FIELD_CLASS_FEAT, classFeat)
+        .setNested(FIELD_FEAT, feat)
+        .setNested(FIELD_RACIAL_FEAT, racialFeat)
+        .setNested(FIELD_CLASS_FEAT, classFeat)
         .set(FIELD_QUALITIES, qualities)
         .set(FIELD_SKILLS, skills);
   }

@@ -42,6 +42,7 @@ public class TouchListener implements View.OnTouchListener {
   private Optional<Wrapper.Action> onSwipeTop = Optional.empty();
   private Optional<Wrapper.Action> onSwipeBottom = Optional.empty();
   private Optional<Wrapper.Action> onDoubleTap = Optional.empty();
+  private Optional<Wrapper.Action> onTap = Optional.empty();
 
   public TouchListener(Context context) {
     gestureDetector = new GestureDetector(context, new GestureListener());
@@ -49,6 +50,11 @@ public class TouchListener implements View.OnTouchListener {
 
   public TouchListener onDoubleTap(Wrapper.Action action) {
     this.onDoubleTap = Optional.of(action);
+    return this;
+  }
+
+  public TouchListener onTap(Wrapper.Action action) {
+    this.onTap = Optional.of(action);
     return this;
   }
 
@@ -77,36 +83,6 @@ public class TouchListener implements View.OnTouchListener {
     return gestureDetector.onTouchEvent(event);
   }
 
-  private void doOnDoubleTap() {
-    if (onDoubleTap.isPresent()) {
-      onDoubleTap.get().execute();
-    }
-  }
-
-  private void doOnSwipeBottom() {
-    if (onSwipeBottom.isPresent()) {
-      onSwipeBottom.get().execute();
-    }
-  }
-
-  private void doOnSwipeLeft() {
-    if (onSwipeLeft.isPresent()) {
-      onSwipeLeft.get().execute();
-    }
-  }
-
-  private void doOnSwipeRight() {
-    if (onSwipeRight.isPresent()) {
-      onSwipeRight.get().execute();
-    }
-  }
-
-  private void doOnSwipeTop() {
-    if (onSwipeTop.isPresent()) {
-      onSwipeTop.get().execute();
-    }
-  }
-
   private class GestureListener extends GestureDetector.SimpleOnGestureListener {
 
     private static final int SWIPE_THRESHOLD = 100;
@@ -114,47 +90,70 @@ public class TouchListener implements View.OnTouchListener {
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-      boolean result = false;
       try {
         float diffX = e2.getX() - e1.getX();
         float diffY = e2.getY() - e1.getY();
         if (Math.abs(diffX) > Math.abs(diffY)) {
           if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
             if (diffX > 0) {
-              doOnSwipeRight();
+              if (onSwipeRight.isPresent()) {
+                onSwipeRight.get().execute();
+                return true;
+              }
             } else {
-              doOnSwipeLeft();
+              if (onSwipeLeft.isPresent()) {
+                onSwipeLeft.get().execute();
+                return true;
+              }
             }
-            result = true;
           }
         }
         else if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
           if (diffY > 0) {
-            doOnSwipeBottom();
+            if (onSwipeBottom.isPresent()) {
+              onSwipeBottom.get().execute();
+              return true;
+            }
           } else {
-            doOnSwipeTop();
+            if (onSwipeTop.isPresent()) {
+              onSwipeTop.get().execute();
+              return true;
+            }
           }
-          result = true;
         }
       } catch (Exception e) {
         Status.exception("Error in touch listener: ", e);
       }
-      return result;
+      return false;
     }
 
     @Override
-    public boolean onDown(MotionEvent event) {
-      return true;
+    public boolean onSingleTapConfirmed(MotionEvent event) {
+      if (onTap.isPresent()) {
+        onTap.get().execute();
+        return true;
+      }
+
+      return false;
     }
 
     @Override
     public boolean onDoubleTap(MotionEvent event) {
-      doOnDoubleTap();
-      return true;
+      if (onDoubleTap.isPresent()) {
+        onDoubleTap.get().execute();
+        return true;
+      }
+
+      return false;
     }
 
     @Override
     public boolean onDoubleTapEvent(MotionEvent event) {
+      return true;
+    }
+
+    @Override
+    public boolean onDown(MotionEvent event) {
       return true;
     }
   }

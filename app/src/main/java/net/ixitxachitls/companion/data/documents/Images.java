@@ -126,7 +126,6 @@ public class Images extends Observable<Documents.Update> {
     try {
       return Optional.of(BitmapFactory.decodeStream(fileCache.get(id)));
     } catch (IOException e) {
-      Status.exception("Cannot load cached image '" + id + "'", e);
       return Optional.empty();
     }
   }
@@ -208,5 +207,21 @@ public class Images extends Observable<Documents.Update> {
     } else {
       return scaled;
     }
+  }
+
+  public static Bitmap scale(Bitmap bitmap, int maxWidth, int maxHeight) {
+    float factorX = maxWidth / bitmap.getWidth();
+    float factorY = maxHeight / bitmap.getHeight();
+
+    double factor;
+    if (factorX < 1 || factorY < 1) {
+      factor = Math.max(factorX, factorY);
+    } else {
+      factor = Math.min(factorX, factorY);
+    }
+
+    // Scale bitmap to the appropriate size.
+    return Bitmap.createScaledBitmap(bitmap, (int) (bitmap.getWidth() * factor),
+        (int) (bitmap.getHeight() * factor), false);
   }
 }

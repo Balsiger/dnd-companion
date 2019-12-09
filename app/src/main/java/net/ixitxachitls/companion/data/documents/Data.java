@@ -115,9 +115,16 @@ public abstract class Data {
     return this;
   }
 
-  public <T extends NestedDocument> Data set(String field, T value) {
+  public <T extends NestedDocument> Data setNested(String field, T value) {
     if (!field.isEmpty() && !value.toString().isEmpty()) {
       set(field, value.write());
+    }
+    return this;
+  }
+
+  public <T extends NestedDocument> Data setNested(String field, Optional<T> value) {
+    if (value.isPresent()) {
+      setNested(field, value.get());
     }
     return this;
   }

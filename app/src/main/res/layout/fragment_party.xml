@@ -68,15 +68,6 @@
           android:layout_marginTop="5dp"
           android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="@dimen/dropTarget"
-            android:layout_height="@dimen/dropTarget"
-            android:layout_gravity="top"
-            android:layout_marginEnd="20dp"
-            android:alpha=".2"
-            android:tint="@color/campaignDark"
-            app:srcCompat="@drawable/noun_street_sign_2256165"/>
-
         <net.ixitxachitls.companion.ui.fragments.AdventureView
             android:id="@+id/adventure"
             android:layout_width="match_parent"
