@@ -67,8 +67,18 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return backgroundColorValue(view.getContext().getColor(color));
   }
 
+  public W backgroundTintColor(@ColorRes int color) {
+    return backgroundTintColorValue(view.getContext().getColor(color));
+  }
+
   public W backgroundColorValue(@ColorInt int color) {
     view.setBackgroundColor(color);
+
+    return (W) this;
+  }
+
+  public W backgroundTintColorValue(@ColorInt int color) {
+    view.setBackgroundTintList(ColorStateList.valueOf(color));
 
     return (W) this;
   }

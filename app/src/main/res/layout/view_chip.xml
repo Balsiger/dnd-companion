@@ -21,56 +21,57 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:background="@color/hs_darkerGreycolor"
+    android:foreground="@drawable/ripple_dark"
+    android:orientation="vertical">
 
   <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:background="@color/primaryBack"
-      android:foreground="@drawable/ripple_dark"
-      android:orientation="vertical"
-      >
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal">
 
     <net.ixitxachitls.companion.ui.views.RoundImageView
         android:id="@+id/image"
         android:layout_width="250px"
         android:layout_height="250px"
-        app:radius_percents="6"
-        />
+        app:radius_percents="6" />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:padding="3dp"
-        android:text="... text ..."
-        android:textAlignment="center"
-        android:textStyle="normal|bold"
-        android:theme="@style/SmallText"/>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/icons_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_bg">
+
+      <LinearLayout
+          android:id="@+id/icons"
+          android:layout_width="27dp"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="1dp"></LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
   </LinearLayout>
 
-  <androidx.core.widget.NestedScrollView
-      android:id="@+id/icons_scroll"
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:layout_marginStart="1dp"
-      android:background="@color/character">
-
-    <LinearLayout
-        android:id="@+id/icons"
-        android:layout_width="27dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="1dp">
-    </LinearLayout>
-
-  </androidx.core.widget.NestedScrollView>
+  <TextView
+      android:id="@+id/name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="1dp"
+      android:background="@drawable/rounded_bg"
+      android:backgroundTint="@color/character"
+      android:padding="3dp"
+      android:text="... text ..."
+      android:textAlignment="center"
+      android:textStyle="normal|bold"
+      android:theme="@style/SmallText" />
 
 </LinearLayout>
+
 
 
 

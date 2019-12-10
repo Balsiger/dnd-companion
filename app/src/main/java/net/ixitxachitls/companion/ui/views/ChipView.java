@@ -45,27 +45,24 @@ public class ChipView extends LinearLayout {
   protected final TextWrapper<TextView> name;
   protected final LinearLayout icons;
   private final String dataId;
-  private final int chipColor;
   private final int backgroundColor;
 
-  public ChipView(Context context, String dataId, String name, String subtitle,
-                  @ColorRes int chipColor, @ColorRes int backgroundColor,
-                  @DrawableRes int drawableRes) {
+  public ChipView(Context context, String dataId, String name, @ColorRes int chipColor,
+                  @ColorRes int backgroundColor, @DrawableRes int drawableRes) {
     super(context);
 
     this.dataId = dataId;
-    this.chipColor = chipColor;
     this.backgroundColor = backgroundColor;
 
     View container = LayoutInflater.from(getContext()).inflate(R.layout.view_chip, this, false);
 
     this.name = TextWrapper.wrap(container, R.id.name);
-    this.name.text(name).backgroundColor(chipColor).noWrap();
+    this.name.text(name).backgroundTintColor(chipColor).noWrap();
 
     this.icons = container.findViewById(R.id.icons);
 
     this.image = Wrapper.wrap(container, R.id.image);
-    image.backgroundColor(backgroundColor);
+    image.backgroundColor(this.backgroundColor);
 
     Drawable drawable = getResources().getDrawable(drawableRes, null);
     drawable.setTint(getResources().getColor(chipColor, null));

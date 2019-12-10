@@ -22,6 +22,7 @@
 package net.ixitxachitls.companion.ui.views;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -52,13 +53,14 @@ public class CreatureChipView extends ChipView {
 
   protected CreatureChipView(Context context, Creature creature, @ColorRes int chipColor,
                              @ColorRes int highlightColor, @DrawableRes int drawable, int perLine) {
-    super(context, creature.getId(), creature.getName(), "init " + creature.getEncounterInitiative(),
-        chipColor, highlightColor, drawable);
+    super(context, creature.getId(), creature.getName(),
+        chipColor, R.color.hs_darkerGreycolor, drawable);
 
     this.conditions = new ConditionIconsView(context, VERTICAL, highlightColor, chipColor);
     this.conditionsScroll = this.findViewById(R.id.icons_scroll);
     this.conditions.setBackgroundColor(getContext().getColor(chipColor));
-    this.conditionsScroll.setBackgroundColor(getContext().getColor(chipColor));
+    this.conditionsScroll.setBackgroundTintList(
+        ColorStateList.valueOf(getContext().getColor(chipColor)));
     this.perLine = perLine;
 
     icons.addView(conditions);
