@@ -22,23 +22,9 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-  <TextView
-      android:id="@+id/title"
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:background="@color/characterLight"
-      android:gravity="center_vertical"
-      android:paddingStart="10dp"
-      android:paddingTop="5dp"
-      android:paddingEnd="10dp"
-      android:paddingBottom="5dp"
-      android:text="Party"
-      android:textColor="#444"
-      android:textStyle="bold"
-      android:theme="@style/SmallText"/>
 
   <ScrollView
       android:id="@+id/scroll"
@@ -48,10 +34,26 @@
       android:elevation="0dp"
       android:minHeight="50dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/title"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:background="@color/characterLight"
+          android:gravity="center_vertical"
+          android:paddingStart="10dp"
+          android:paddingTop="5dp"
+          android:paddingEnd="10dp"
+          android:paddingBottom="5dp"
+          android:text="Party"
+          android:textColor="#444"
+          android:textStyle="bold"
+          android:theme="@style/SmallText"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
 
       <com.google.android.flexbox.FlexboxLayout
           android:id="@+id/party"
@@ -59,24 +61,39 @@
           android:layout_height="wrap_content"
           android:background="@color/hs_darkerGreycolor"
           android:minWidth="200dp"
-          android:orientation="horizontal"
-          app:flexWrap="wrap"/>
+          app:flexWrap="wrap"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/title" />
 
-      <LinearLayout
+      <net.ixitxachitls.companion.ui.fragments.AdventureView
+          android:id="@+id/adventure"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="5dp"
-          android:orientation="horizontal">
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/party">
 
-        <net.ixitxachitls.companion.ui.fragments.AdventureView
-            android:id="@+id/adventure"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </net.ixitxachitls.companion.ui.fragments.AdventureView>
+      </net.ixitxachitls.companion.ui.fragments.AdventureView>
 
-      </LinearLayout>
+      <ImageView
+          android:id="@+id/full_screen"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="20dp"
+          app:layout_constraintEnd_toEndOf="@id/adventure"
+          app:layout_constraintTop_toTopOf="@id/adventure"
+          app:srcCompat="@drawable/fullscreen" />
 
-    </LinearLayout>
+      <ImageView
+          android:id="@+id/full_screen_exit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="20dp"
+          android:visibility="gone"
+          app:layout_constraintEnd_toEndOf="@id/adventure"
+          app:layout_constraintTop_toTopOf="@id/adventure"
+          app:srcCompat="@drawable/fullscreen_exit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
   </ScrollView>
 

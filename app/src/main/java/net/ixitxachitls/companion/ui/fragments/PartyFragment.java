@@ -28,6 +28,7 @@ import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -71,6 +72,8 @@ public class PartyFragment extends NestedCompanionFragment {
   private TextWrapper<TextView> title;
   private Wrapper<FloatingActionButton> addCharacter;
   private Transition transition = new AutoTransition();
+  private Wrapper<ImageView> fullScreen;
+  private Wrapper<ImageView> fullScreenExit;
 
   // State.
   private Map<String, CreatureChipView> chipsById = new ConcurrentHashMap<>();
@@ -100,6 +103,10 @@ public class PartyFragment extends NestedCompanionFragment {
     adventure = view.findViewById(R.id.adventure);
     adventure.setVisibility(View.GONE);
     scroll = Wrapper.wrap(view, R.id.scroll);
+    fullScreen = Wrapper.wrap(view, R.id.full_screen);
+    fullScreen.onClick(this::fullScreen);
+    fullScreenExit = Wrapper.wrap(view, R.id.full_screen_exit);
+    fullScreenExit.onClick(this::exitFullScreen);
 
     addCharacter = Wrapper.<FloatingActionButton>wrap(view, R.id.add_character)
         .onClick(this::createCharacter)
@@ -125,6 +132,26 @@ public class PartyFragment extends NestedCompanionFragment {
     this.encounter = Optional.empty();
 
     refresh();
+  }
+
+  private void fullScreen() {
+    TransitionManager.beginDelayedTransition(view, transition);
+    party.setVisibility(View.GONE);
+    title.gone();
+    addCharacter.gone();
+    fullScreen.gone();
+    fullScreenExit.visible();
+    adventure.showDetails();
+  }
+
+  private void exitFullScreen() {
+    TransitionManager.beginDelayedTransition(view, transition);
+    party.setVisibility(View.VISIBLE);
+    title.visible();
+    addCharacter.visible();
+    fullScreen.visible();
+    fullScreenExit.gone();
+    adventure.hideDetails();
   }
 
   private void createCharacter() {

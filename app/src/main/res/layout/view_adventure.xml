@@ -39,11 +39,14 @@
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="20dp"
         android:tint="@color/productDark"
-        app:srcCompat="@drawable/noun_book_1411063" />
+        app:srcCompat="@drawable/noun_book_1411063">
+
+    </net.ixitxachitls.companion.ui.views.CloudImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:orientation="vertical">
 
       <TextView
@@ -100,6 +103,7 @@
           android:text="... description ... " />
 
     </LinearLayout>
+
   </LinearLayout>
 
   <com.google.android.material.tabs.TabLayout

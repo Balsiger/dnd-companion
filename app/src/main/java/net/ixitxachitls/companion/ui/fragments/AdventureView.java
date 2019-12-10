@@ -57,6 +57,7 @@ import androidx.annotation.Nullable;
  */
 public class AdventureView extends LinearLayout {
 
+  // UI elements.
   private CloudImageView productImage;
   private TextWrapper<TextView> adventure;
   private TextWrapper<TextView> encounterView;
@@ -156,6 +157,7 @@ public class AdventureView extends LinearLayout {
     });
 
     creatures = view.findViewById(R.id.creatures);
+    hideDetails();
 
     addView(view);
   }
@@ -432,5 +434,17 @@ public class AdventureView extends LinearLayout {
       case 10: showTouch(); break;
       case 11: showFeels(); break;
     }
+  }
+
+  public void showDetails() {
+    categoryTabs.setVisibility(VISIBLE);
+    categoryText.setVisibility(VISIBLE);
+    creatures.setVisibility(VISIBLE);
+  }
+
+  public void hideDetails() {
+    categoryTabs.setVisibility(GONE);
+    categoryText.setVisibility(GONE);
+    creatures.setVisibility(GONE);
   }
 }
