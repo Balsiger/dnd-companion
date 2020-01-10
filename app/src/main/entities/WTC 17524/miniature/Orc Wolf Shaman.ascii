@@ -2,6 +2,7 @@ template {
   name: "Orc Wolf Shaman"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 58
 type: "Humanoid"
 race: "Orc"

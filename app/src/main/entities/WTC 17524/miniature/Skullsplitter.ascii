@@ -2,6 +2,7 @@ template {
   name: "Skullsplitter"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 44
 type: "Humanoid"
 race: "Human"

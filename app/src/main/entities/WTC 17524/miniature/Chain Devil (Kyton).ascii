@@ -2,6 +2,7 @@ template {
   name: "Chain Devil (Kyton)"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 11
 race: "Chain Devil"
 type: "Fiend"

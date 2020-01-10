@@ -2,6 +2,7 @@ template {
   name: "Tentakel C"
 }
 set: "Monster Menagerie 3"
+rarity: UNIQUE
 number: 45
 type: "Monstrosity"
 race: "Kraken"

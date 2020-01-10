@@ -1,7 +1,8 @@
 template {
   name: "Yuan-Ti Malison"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 35
 type: "Humanoid"
 subtype: "Serpent"

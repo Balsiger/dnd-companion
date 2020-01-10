@@ -2,6 +2,7 @@ template {
   name: "Revenant (b)"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 21
 race: "Revenant"
 type: "Undead"

@@ -2,6 +2,7 @@ template {
   name: "Blackspawn Exterminator"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 42
 race: "Dragonspawn"
 type: "Monstrosity"

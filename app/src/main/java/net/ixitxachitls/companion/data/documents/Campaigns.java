@@ -28,6 +28,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.data.Templates;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -144,10 +145,11 @@ public class Campaigns extends Documents<Campaigns> {
 
   public void loggedIn(User me) {
     this.dmCampaigns = db.collection(me.getId() + "/" + PATH);
-    processDMCampaigns();
-
     me.observeForever(u -> processPlayerCampaigns(me));
-    processPlayerCampaigns(me);
+    Templates.get().executeAfterLoading(() -> {
+      processDMCampaigns();
+      processPlayerCampaigns(me);
+    });
   }
 
   private boolean changedCampaigns(User me) {

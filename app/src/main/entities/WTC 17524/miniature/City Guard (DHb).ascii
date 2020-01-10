@@ -2,6 +2,7 @@ template {
   name: "City Guard (DHb)"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 4
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Remorhaz"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 31
 race: "Remorhaz"
 type: "Monstrosity"

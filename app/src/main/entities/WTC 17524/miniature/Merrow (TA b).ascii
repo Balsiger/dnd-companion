@@ -2,6 +2,7 @@ template {
   name: "Merrow (TA b)"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 26
 race: "Merrow"
 type: "Monstrosity"

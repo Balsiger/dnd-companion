@@ -2,6 +2,7 @@ template {
   name: "Falaster Fisk"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 8
 race: "Human"
 type: "Humanoid"

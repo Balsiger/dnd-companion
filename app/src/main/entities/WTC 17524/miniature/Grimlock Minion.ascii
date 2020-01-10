@@ -2,6 +2,7 @@ template {
   name: "Grimlock Minion"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 23
 race: "Grimlock"
 type: "Humanoid"

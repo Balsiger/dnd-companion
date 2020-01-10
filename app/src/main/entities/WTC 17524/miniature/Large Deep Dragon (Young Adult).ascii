@@ -2,6 +2,7 @@ template {
   name: "Large Deep Dragon (Young Adult)"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 52
 race: "Deep Dragon"
 type: "Dragon"

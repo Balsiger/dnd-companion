@@ -1,7 +1,8 @@
 template {
   name: "Devourer (DH)"
 }
-set: "Dragon Eye"
+set: "Dragon Heist"
+rarity: RARE
 number: 41
 race: "Devourer"
 type: "Fiend"

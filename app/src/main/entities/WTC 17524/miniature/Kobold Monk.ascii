@@ -2,6 +2,7 @@ template {
   name: "Kobold Monk"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 37
 type: "Humanoid"
 race: "Kobold"

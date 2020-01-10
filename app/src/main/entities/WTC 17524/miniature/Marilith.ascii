@@ -2,6 +2,7 @@ template {
   name: "Marilith"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 55
 race: "Marilith"
 type: "Fiend"

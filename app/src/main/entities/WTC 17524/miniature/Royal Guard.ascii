@@ -2,6 +2,7 @@ template {
   name: "Royal Guard"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 11
 type: "Humanoid"
 race: "Human"

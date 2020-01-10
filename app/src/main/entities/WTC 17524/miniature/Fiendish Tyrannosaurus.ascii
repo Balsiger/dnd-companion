@@ -2,6 +2,7 @@ template {
   name: "Fiendish Tyrannosaurus"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 68
 race: "Tyrannosaurus"
 type: "Fiend"

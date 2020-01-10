@@ -2,6 +2,7 @@ template {
   name: "Gorgon"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 39
 race: "Gorgon"
 type: "Monstrosity"

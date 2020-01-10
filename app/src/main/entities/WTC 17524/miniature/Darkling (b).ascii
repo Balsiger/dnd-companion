@@ -2,6 +2,7 @@ template {
   name: "Darkling (b)"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 15
 race: "Darkling"
 type: "Fey"

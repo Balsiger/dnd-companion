@@ -2,6 +2,7 @@ template {
   name: "Gibbering Mouther"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 50
 race: "Gibbering Mouther"
 type: "Aberration"

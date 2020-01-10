@@ -2,6 +2,7 @@ template {
   name: "Kobold Slinger"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 27
 type: "Humanoid"
 race: "Kobold"

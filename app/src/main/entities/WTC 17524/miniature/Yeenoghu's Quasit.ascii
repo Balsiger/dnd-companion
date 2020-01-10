@@ -2,6 +2,7 @@ template {
   name: "Yeenoghu's Quasit"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 1
 race: "Quasit"
 type: "Fiend"

@@ -2,6 +2,7 @@ template {
   name: "Redcap"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 1
 race: "Redcap"
 type: "Fey"

@@ -2,6 +2,7 @@ template {
   name: "Tanarukk"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 59
 race: "Tanarukk"
 type: "Fiend"

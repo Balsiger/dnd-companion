@@ -2,6 +2,7 @@ template {
   name: "Zariel"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 43
 race: "Zariel"
 type: "Fiend"

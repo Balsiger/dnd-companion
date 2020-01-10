@@ -2,6 +2,7 @@ template {
   name: "Aasimar Paladin A"
 }
 set: "Monster Menagerie 3"
+rarity: RARE
 number: 39
 type: "Humanoid"
 race: "Aasimar"

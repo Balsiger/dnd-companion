@@ -2,6 +2,7 @@ template {
   name: "Mind Flayer Lich (RD)"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 38
 race: "Lich"
 type: "Undead"

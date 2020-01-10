@@ -2,6 +2,7 @@ template {
   name: "Thunderblast Cyclone"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 9
 race: "Cyclone"
 type: "Elemental"

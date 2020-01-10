@@ -2,6 +2,7 @@ template {
   name: "Regdar, Human Fighter"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 12
 type: "Humanoid"
 race: "Human"

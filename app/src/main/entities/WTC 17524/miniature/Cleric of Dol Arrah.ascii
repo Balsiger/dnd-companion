@@ -2,6 +2,7 @@ template {
   name: "Cleric of Dol Arrah"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 2
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Large Monstrous Spider"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 54
 race: "Monstrous Spider"
 type: "Vermin"

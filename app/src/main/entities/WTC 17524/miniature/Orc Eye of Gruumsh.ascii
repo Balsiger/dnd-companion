@@ -2,6 +2,7 @@ template {
   name: "Orc Eye of Gruumsh"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 31
 type: "Humanoid"
 race: "Orc"

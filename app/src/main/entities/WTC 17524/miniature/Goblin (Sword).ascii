@@ -2,6 +2,7 @@ template {
   name: "Goblin (Sword)"
 }
 set: "Monster Menagerie 2"
+rarity: COMMON
 number: 3
 type: "Humanoid"
 subtype: "Goblinoid"

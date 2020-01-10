@@ -2,6 +2,7 @@ template {
   name: "Halfling Ranger"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 17
 type: "Humanoid"
 race: "Halfling"

@@ -2,6 +2,7 @@ template {
   name: "Shrieking Harpy"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 55
 race: "Harpy"
 type: "Monstrosity"

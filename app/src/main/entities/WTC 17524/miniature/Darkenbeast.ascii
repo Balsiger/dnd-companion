@@ -2,6 +2,7 @@ template {
   name: "Darkenbeast"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 37
 race: "Darkenbeast"
 type: "Monstrosity"

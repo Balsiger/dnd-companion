@@ -23,12 +23,14 @@ package net.ixitxachitls.companion.data.documents;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
+import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
+import net.ixitxachitls.companion.data.values.Item;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -38,19 +40,25 @@ import androidx.annotation.CallSuper;
 /**
  * An encounter in a campaign
  */
-public class Encounter extends Document<Encounter> {
+public class Encounter extends Document<Encounter> implements Item.Owner {
 
   private static final String FIELD_CAMPAIGN_ID = "campaign_id";
   private static final String FIELD_ADVENTURE_ID = "adventure_id";
   private static final String FIELD_ENCOUNTER_ID = "encounter_id";
-  private static final String FIELD_MONSTERS = "monsters";
+  private static final String FIELD_ITEMS_GROUPS= "items-groups";
 
   private static final Document.DocumentFactory<Encounter> FACTORY = () -> new Encounter();
 
   private String campaignId;
   private String adventureId;
   private String encounterId;
+  private List<ItemGroup> itemGroups = new ArrayList<>();
   private List<Monster> monsters = new ArrayList<>();
+  private Optional<ItemGroup> adHocGroup = Optional.empty();
+
+  public String getEncounterId() {
+    return encounterId;
+  }
 
   @Override
   protected Data write() {
@@ -58,7 +66,7 @@ public class Encounter extends Document<Encounter> {
         .set(FIELD_CAMPAIGN_ID, campaignId)
         .set(FIELD_ADVENTURE_ID, adventureId)
         .set(FIELD_ENCOUNTER_ID, encounterId)
-        .set(FIELD_MONSTERS, monsters.stream().map(Monster::write).collect(Collectors.toList()));
+        .setNested(FIELD_ITEMS_GROUPS, itemGroups);
   }
 
   @Override
@@ -69,8 +77,12 @@ public class Encounter extends Document<Encounter> {
     campaignId = data.get(FIELD_CAMPAIGN_ID, "");
     adventureId = data.get(FIELD_ADVENTURE_ID, "");
     encounterId = data.get(FIELD_ENCOUNTER_ID, "");
-    monsters = data.get(FIELD_MONSTERS, Collections.emptyList());
+    itemGroups = data.getNestedList(FIELD_ITEMS_GROUPS).stream()
+        .map(ItemGroup::read)
+        .collect(Collectors.toList());
   }
+
+
 
   @Override
   public String toString() {
@@ -99,6 +111,24 @@ public class Encounter extends Document<Encounter> {
   }
 
   private void initialize(AdventureTemplate.EncounterTemplate encounter) {
+    for (AdventureTemplate.EncounterTemplate.ItemGroupInitializer groupInitializer
+        : encounter.getItemGroups()) {
+      List<Item> items = new ArrayList<>();
+      for (AdventureTemplate.EncounterTemplate.ItemInitializer itemInitializer :
+          groupInitializer.getItems()) {
+        Optional<Item> item =
+            Templates.get().getItemTemplates().lookup(context, itemInitializer.getLookup());
+        if (item.isPresent()) {
+          items.add(item.get());
+        } else {
+          Status.error("Cannot find item matching " + itemInitializer.getLookup());
+        }
+      }
+
+      itemGroups.add(new ItemGroup(groupInitializer.getName(), groupInitializer.getDescription(),
+          items));
+    }
+
     for (AdventureTemplate.EncounterTemplate.CreatureInitializer creature
         : encounter.getCreatures()) {
       // TODO(Merlin): For now we assume all creatures are monsters.
@@ -113,5 +143,119 @@ public class Encounter extends Document<Encounter> {
 
   public List<Monster> getMonsters() {
     return monsters;
+  }
+
+  public List<ItemGroup> getItemGroups() {
+    return itemGroups;
+  }
+
+  public static class ItemGroup extends NestedDocument {
+    private static final String FIELD_TITLE = "title";
+    private static final String FIELD_DESCRIPTION = "description";
+    private static final String FIELD_ITEMS = "items";
+
+    private String title;
+    private String description;
+    private List<Item> items;
+
+    public ItemGroup(String title, String description, List<Item> items) {
+      this.title = title;
+      this.description = description;
+      this.items = items;
+    }
+
+    public String getTitle() {
+      return title;
+    }
+
+    public String getDescription() {
+      return description;
+    }
+
+    public List<Item> getItems() {
+      return items;
+    }
+
+    public void addItem(Item item) {
+      items.add(item);
+    }
+
+    public Optional<Item> getItem(String id) {
+      for (Item item : items) {
+        if (item.getId().equals(id)) {
+          return Optional.of(item);
+        }
+      }
+
+      return Optional.empty();
+    }
+
+    public boolean remove(Item item) {
+      return items.remove(item);
+    }
+
+    @Override
+    public Data write() {
+      return Data.empty()
+          .set(FIELD_TITLE, title)
+          .set(FIELD_DESCRIPTION, description)
+          .setNested(FIELD_ITEMS, items);
+    }
+
+    public static ItemGroup read(Data data) {
+      return new ItemGroup(data.get(FIELD_TITLE, ""), data.get(FIELD_DESCRIPTION, ""),
+          data.getNestedList(FIELD_ITEMS).stream()
+              .map(Item::read)
+              .collect(Collectors.toList()));
+    }
+  }
+
+  public Optional<Item> getItem(String id) {
+    for (ItemGroup group : itemGroups) {
+      Optional<Item> item = group.getItem(id);
+      if (item.isPresent()) {
+        return item;
+      }
+    }
+
+    return Optional.empty();
+  }
+
+  public boolean removeItem(Item item) {
+    for (ItemGroup group : itemGroups) {
+      if (group.remove(item)) {
+        store();
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  @Override
+  public boolean amDM() {
+    return CompanionApplication.get().campaigns().get(campaignId).amDM();
+  }
+
+  @Override
+  public void add(Item item) {
+    if (!adHocGroup.isPresent()) {
+      adHocGroup = Optional.of(new ItemGroup("Ad Hoc Items",
+          "Items dynamically added before or during the encounter", new ArrayList<>()));
+    }
+
+    adHocGroup.get().addItem(item);
+
+    updated(item);
+  }
+
+  @Override
+  public void updated(Item item) {
+    store();
+  }
+
+  @Override
+  public boolean isCharacter() {
+    return false;
   }
 }

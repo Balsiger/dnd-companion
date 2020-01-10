@@ -2,6 +2,7 @@ template {
   name: "Cultist of the Dragon"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 48
 type: "Humanoid"
 race: "Human"

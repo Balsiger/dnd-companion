@@ -2,6 +2,7 @@ template {
   name: "Displacer Serpent"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 43
 race: "Displacer Serpent"
 type: "Monstrosity"

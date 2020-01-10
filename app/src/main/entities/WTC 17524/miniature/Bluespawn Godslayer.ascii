@@ -2,6 +2,7 @@ template {
   name: "Bluespawn Godslayer"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 26
 race: "Bluespawn"
 type: "Monstrosity"

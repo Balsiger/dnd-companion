@@ -1,0 +1,9 @@
+template {
+  name: "Ogre Bolt Launcher"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: UNCOMMON
+number: 32
+type: "Giant"
+race: "Ogre"
+size: LARGE

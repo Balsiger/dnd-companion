@@ -2,6 +2,7 @@ template {
   name: "Cambion Devil"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 13
 race: "Cambion"
 type: "Fiend"

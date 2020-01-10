@@ -2,6 +2,7 @@ template {
   name: "Fire Mephit"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 52
 race: "Fire Mephit"
 type: "Elemental"

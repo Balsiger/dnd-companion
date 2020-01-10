@@ -2,6 +2,7 @@ template {
   name: "Yuan-Ti Pureblood"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 60
 type: "Humanoid"
 subtype: "Serpent"

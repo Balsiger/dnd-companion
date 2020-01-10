@@ -2,6 +2,7 @@ template {
   name: "Air Genasi Swashbuckler"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 13
 race: "Air Genasi"
 type: "Humanoid"

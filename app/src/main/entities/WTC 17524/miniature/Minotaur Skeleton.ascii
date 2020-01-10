@@ -2,6 +2,7 @@ template {
   name: "Minotaur Skeleton"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 55
 race: "Skeleton"
 type: "Undead"

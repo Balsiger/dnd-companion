@@ -2,6 +2,7 @@ template {
   name: "Cleric of Laogzed"
 }
 set: "War of the Dragon Queen"
+rarity: COMMON
 number: 43
 type: "Humanoid"
 subtype: "Reptilian"

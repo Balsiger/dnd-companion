@@ -2,6 +2,7 @@ template {
   name: "Zakya Rakshasa"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 43
 race: "Rakshasa"
 type: "Fiend"

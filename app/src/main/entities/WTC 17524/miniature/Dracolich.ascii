@@ -2,6 +2,7 @@ template {
   name: "Dracolich"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 31
 race: "Dracolich"
 type: "Undead"

@@ -2,6 +2,7 @@ template {
   name: "Wolf Spider"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 8
 race: "Wolf Spider"
 type: "Monstrosity"

@@ -2,6 +2,7 @@ template {
   name: "Ghoul"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 63
 type: "Undead"
 race: "Ghoul"

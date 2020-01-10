@@ -2,6 +2,7 @@ template {
   name: "Storm Silverhand"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 23
 type: "Humanoid"
 race: "Human"

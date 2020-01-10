@@ -2,6 +2,7 @@ template {
   name: "Unicorn (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 27
 race: "Unicorn"
 type: "Celestial"

@@ -2,6 +2,7 @@ template {
   name: "Ochre Jelly (AF)"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 42
 race: "Ochre Jelly"
 type: "Ooze"

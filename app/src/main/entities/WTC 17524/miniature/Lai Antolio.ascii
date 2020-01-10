@@ -1,7 +1,8 @@
 template {
   name: "Lai Antolio"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: RARE
 number: 40
 type: "Humanoid"
 race: "Human"

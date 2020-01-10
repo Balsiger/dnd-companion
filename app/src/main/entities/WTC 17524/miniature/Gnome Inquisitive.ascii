@@ -2,6 +2,7 @@ template {
   name: "Gnome Inquisitive"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: COMMON
 number: 11
 race: "Gnome"
 type: "Humanoid"

@@ -2,6 +2,7 @@ template {
   name: "Warmage"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 7
 type: "Humanoid"
 race: "Human"

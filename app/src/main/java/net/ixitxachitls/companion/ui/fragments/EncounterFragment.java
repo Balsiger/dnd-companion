@@ -49,7 +49,7 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import java.util.Optional;
 
 /**
- * A fragment to show on ongoing startEncounter (battle).
+ * A fragment to show on ongoing encounter (battle).
  */
 public class EncounterFragment extends NestedCompanionFragment {
 

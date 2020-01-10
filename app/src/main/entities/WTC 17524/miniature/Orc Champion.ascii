@@ -2,6 +2,7 @@ template {
   name: "Orc Champion"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 55
 type: "Humanoid"
 race: "Orc"

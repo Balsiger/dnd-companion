@@ -2,6 +2,7 @@ template {
   name: "Feymire Crocodile"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 18
 race: "Crocodile"
 type: "Beast"

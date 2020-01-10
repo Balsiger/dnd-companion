@@ -2,6 +2,7 @@ template {
   name: "Fiendish Giant Praying Mantis"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 49
 race: "Giant Praying Mantis"
 type: "Fiend"

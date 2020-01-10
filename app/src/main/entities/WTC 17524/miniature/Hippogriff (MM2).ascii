@@ -2,6 +2,7 @@ template {
   name: "Hippogriff (MM2)"
 }
 set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 27
 race: "Hippogriff"
 type: "Monstrosity"

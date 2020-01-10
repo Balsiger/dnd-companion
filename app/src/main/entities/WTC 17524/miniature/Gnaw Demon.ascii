@@ -2,6 +2,7 @@ template {
   name: "Gnaw Demon"
 }
 set: "Against the Giants"
+rarity: COMMON
 number: 5
 race: "Gnaw Demon"
 type: "Fiend"

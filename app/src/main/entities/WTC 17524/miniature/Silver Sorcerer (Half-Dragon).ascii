@@ -2,6 +2,7 @@ template {
   name: "Silver Sorcerer (Half-Dragon)"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 24
 race: "Half-Dragon"
 type: "Dragon"

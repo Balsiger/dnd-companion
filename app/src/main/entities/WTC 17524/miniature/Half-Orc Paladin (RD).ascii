@@ -2,6 +2,7 @@ template {
   name: "Half-Orc Paladin (RD)"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 15
 type: "Humanoid"
 race: "Half-Orc"

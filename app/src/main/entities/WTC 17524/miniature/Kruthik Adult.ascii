@@ -2,6 +2,7 @@ template {
   name: "Kruthik Adult"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 55
 race: "Kruthik"
 type: "Beast"

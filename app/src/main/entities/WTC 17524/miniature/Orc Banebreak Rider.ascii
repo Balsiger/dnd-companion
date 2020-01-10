@@ -2,6 +2,7 @@ template {
   name: "Orc Banebreak Rider"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 59
 type: "Humanoid"
 race: "Orc"

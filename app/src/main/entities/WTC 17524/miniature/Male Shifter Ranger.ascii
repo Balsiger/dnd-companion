@@ -2,6 +2,7 @@ template {
   name: "Male Shifter Ranger"
 }
 set: "Player\'s Handbook Heroes 2"
+rarity: UNDEFINED
 number: 13
 type: "Humanoid"
 race: "Shifter"

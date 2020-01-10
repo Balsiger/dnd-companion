@@ -2,6 +2,7 @@ template {
   name: "Gnome Fighter"
 }
 set: "Dragon Eye"
+rarity: COMMON
 number: 3
 type: "Humanoid"
 race: "Gnome"

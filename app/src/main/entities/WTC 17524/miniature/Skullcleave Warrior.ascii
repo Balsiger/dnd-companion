@@ -2,6 +2,7 @@ template {
   name: "Skullcleave Warrior"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 24
 type: "Humanoid"
 race: "Human"

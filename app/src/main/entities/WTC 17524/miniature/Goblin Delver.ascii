@@ -2,6 +2,7 @@ template {
   name: "Goblin Delver"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 21
 type: "Humanoid"
 subtype: "Goblinoid"

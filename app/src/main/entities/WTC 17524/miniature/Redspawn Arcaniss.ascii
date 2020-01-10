@@ -2,6 +2,7 @@ template {
   name: "Redspawn Arcaniss"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 56
 race: "Redspawn"
 type: "Humanoid"

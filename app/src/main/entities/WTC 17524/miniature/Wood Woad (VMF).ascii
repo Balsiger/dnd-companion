@@ -1,0 +1,9 @@
+template {
+  name: "Wood Woad (VMF)"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: COMMON
+number: 9
+race: "Woad"
+type: "Plant"
+size: MEDIUM

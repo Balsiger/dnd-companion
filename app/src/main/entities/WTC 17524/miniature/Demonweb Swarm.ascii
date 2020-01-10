@@ -2,6 +2,7 @@ template {
   name: "Demonweb Swarm"
 }
 set: "Desert of Desolation"
+rarity: COMMON
 number: 41
 race: "Demonweb Swarm"
 type: "Vermin"

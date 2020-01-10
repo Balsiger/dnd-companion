@@ -2,6 +2,7 @@ template {
   name: "Female Eladrin Sorcerer"
 }
 set: "Player\'s Handbook Heroes"
+rarity: UNDEFINED
 number: 11
 type: "Humanoid"
 race: "Eladrin"

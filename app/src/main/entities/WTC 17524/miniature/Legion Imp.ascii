@@ -2,6 +2,7 @@ template {
   name: "Legion Imp"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 11
 race: "Imp"
 type: "Fiend"

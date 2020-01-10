@@ -2,6 +2,7 @@ template {
   name: "Male Human Fighter"
 }
 set: "Player\'s Handbook Heroes"
+rarity: UNDEFINED
 number: 1
 type: "Humanoid"
 race: "Human"

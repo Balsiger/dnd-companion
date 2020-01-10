@@ -2,6 +2,7 @@ template {
   name: "Greenfang Druid"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 19
 type: "Humanoid"
 race: "Human"

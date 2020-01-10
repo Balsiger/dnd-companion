@@ -2,6 +2,7 @@ template {
   name: "Invisible Nameless One"
 }
 set: "Monster Menagerie 3"
+rarity: ULTRA_RARE
 number: 40
 type: "Humanoid"
 class: "Fighter"

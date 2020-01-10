@@ -2,6 +2,7 @@ template {
   name: "Dragonborn Paladin of Bahamut"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 1
 race: "Dragonborn"
 type: "Humanoid"

@@ -2,6 +2,7 @@ template {
   name: "Minotaur Mangler"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 31
 race: "Minotaur"
 type: "Monstrosity"

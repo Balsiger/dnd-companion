@@ -2,6 +2,7 @@ template {
   name: "Faerie Dragon"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 1
 type: "Dragon"
 size: TINY

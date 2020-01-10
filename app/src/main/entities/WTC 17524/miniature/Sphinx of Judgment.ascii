@@ -2,6 +2,7 @@ template {
   name: "Sphinx of Judgment"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 31
 race: "Sphinx"
 type: "Monstrosity"

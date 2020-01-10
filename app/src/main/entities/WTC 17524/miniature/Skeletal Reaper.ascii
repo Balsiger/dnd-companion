@@ -2,6 +2,7 @@ template {
   name: "Skeletal Reaper"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 58
 race: "Skeleton"
 type: "Undead"

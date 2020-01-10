@@ -2,6 +2,7 @@ template {
   name: "Brass Dragon Wyrmling"
 }
 set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 23
 race: "Brass Dragon"
 type: "Dragon"

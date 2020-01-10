@@ -2,6 +2,7 @@ template {
   name: "Voracious Ice Devil"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 2
 race: "Ice Devil"
 type: "Fiend"

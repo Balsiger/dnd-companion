@@ -2,6 +2,7 @@ template {
   name: "Ragnarra, Psychic Warrior"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 21
 race: "Maenad"
 type: "Humanoid"

@@ -2,6 +2,7 @@ template {
   name: "Banshrae Warrior"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 4
 race: "Banshrae"
 type: "Fey"

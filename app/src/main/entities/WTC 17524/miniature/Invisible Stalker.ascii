@@ -2,6 +2,7 @@ template {
   name: "Invisible Stalker"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 33
 race: "Invisible Stalker"
 type: "Elemental"

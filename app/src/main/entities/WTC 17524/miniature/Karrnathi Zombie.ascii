@@ -2,6 +2,7 @@ template {
   name: "Karrnathi Zombie"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 34
 type: "Undead"
 subtype: "Zombie"

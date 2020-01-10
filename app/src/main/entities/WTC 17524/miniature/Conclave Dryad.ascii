@@ -2,6 +2,7 @@ template {
   name: "Conclave Dryad"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 11
 type: "Fey"
 subtype: "Plant"

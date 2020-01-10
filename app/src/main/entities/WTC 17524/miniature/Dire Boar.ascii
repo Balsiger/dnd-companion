@@ -2,6 +2,7 @@ template {
   name: "Dire Boar"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 34
 race: "Dire Boar"
 type: "Beast"

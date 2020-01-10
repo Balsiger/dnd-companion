@@ -2,6 +2,7 @@ template {
   name: "Purple Worm"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 21
 race: "Purple Worm"
 type: "Monstrosity"

@@ -2,6 +2,7 @@ template {
   name: "Grinning Imp"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 5
 race: "Imp"
 type: "Fiend"

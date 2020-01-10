@@ -2,6 +2,7 @@ template {
   name: "Ialdobode, Human Psion"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 19
 type: "Humanoid"
 race: "Human"

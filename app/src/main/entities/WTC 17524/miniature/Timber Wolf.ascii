@@ -2,6 +2,7 @@ template {
   name: "Timber Wolf"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 27
 race: "Wolf"
 type: "Beast"

@@ -2,6 +2,7 @@ template {
   name: "Quadrone"
 }
 set: "Monster Menagerie 3"
+rarity: UNCOMMON
 number: 18
 race: "Quadrone"
 type: "Construct"

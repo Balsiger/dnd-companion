@@ -2,6 +2,7 @@ template {
   name: "Giant Scorpion"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 29
 race: "Giant Scorpion"
 type: "Beast"

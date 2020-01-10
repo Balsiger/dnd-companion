@@ -2,6 +2,7 @@ template {
   name: "Scarecrow Stalker"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 34
 race: "Scarecrow"
 type: "Construct"

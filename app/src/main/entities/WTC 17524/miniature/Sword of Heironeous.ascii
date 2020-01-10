@@ -2,6 +2,7 @@ template {
   name: "Sword of Heironeous"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 12
 type: "Humanoid"
 race: "Human"

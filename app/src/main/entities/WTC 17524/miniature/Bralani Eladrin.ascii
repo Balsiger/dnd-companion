@@ -2,6 +2,7 @@ template {
   name: "Bralani Eladrin"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 14
 race: "Eladrin"
 type: "Humanoid"

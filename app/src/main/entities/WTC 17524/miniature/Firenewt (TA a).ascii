@@ -2,6 +2,7 @@ template {
   name: "Firenewt (TA a)"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 12
 race: "Firenewt"
 type: "Humanoid"

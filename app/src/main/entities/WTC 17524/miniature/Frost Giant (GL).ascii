@@ -2,6 +2,7 @@ template {
   name: "Frost Giant (GL)"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 48
 race: "Frost Giant"
 type: "Giant"

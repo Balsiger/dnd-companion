@@ -2,6 +2,7 @@ template {
   name: "War Troll"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 39
 race: "Troll"
 type: "Giant"

@@ -2,6 +2,7 @@ template {
   name: "Orc Archer"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 72
 type: "Humanoid"
 race: "Orc"

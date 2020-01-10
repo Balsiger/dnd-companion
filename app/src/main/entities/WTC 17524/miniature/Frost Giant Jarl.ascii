@@ -2,6 +2,7 @@ template {
   name: "Frost Giant Jarl"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 52
 race: "Frost Giant"
 type: "Giant"

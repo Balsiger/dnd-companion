@@ -2,6 +2,7 @@ template {
   name: "Hill Giant Chieftain"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 50
 race: "Hill Giant"
 type: "Giant"

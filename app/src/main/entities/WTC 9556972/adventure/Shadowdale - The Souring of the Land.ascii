@@ -119,11 +119,11 @@ encounter {
     name: "Chasm Floor"
     description: "The floor of the chasm is littered with bones, adventuring gear, and a handful of coins, collectively worth 30 gp and all fairly new. Although the PCs might suspect these are the bones of adventurers who fell to their death unaided, in truth they are interlopers who escaped the shadow spider’s clutches but not death."
     item {
-      name: "Copper Coin"
+      name: "Copper Piece"
       multiple: 7
     }
     item {
-      name: "Silver Coin"
+      name: "Silver Piece"
       multiple: 3
     }
     item {
@@ -206,7 +206,7 @@ encounter {
     name: "Shadow Spider's Larder"
     description: "The shadow spider’s larder on the \\Place{Plane of Shadow} (coterminous with the spider’s niche) contains a random assortment of coins, weapons, and armor (none of it magic or masterwork) worth 437 gp."
     item {
-      name: "Gold Coin"
+      name: "Gold Piece"
       multiple: 37
     }
     item {
@@ -222,7 +222,7 @@ encounter {
       name: "Halberd"
     }
     item {
-      name: "Shot Sword"
+      name: "Short Sword"
     }
     item {
       name: "Longsword"

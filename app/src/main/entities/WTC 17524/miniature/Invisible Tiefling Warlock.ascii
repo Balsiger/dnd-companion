@@ -2,6 +2,7 @@ template {
   name: "Invisible Tiefling Warlock"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 35
 type: "Humanoid"
 race: "Tiefling"

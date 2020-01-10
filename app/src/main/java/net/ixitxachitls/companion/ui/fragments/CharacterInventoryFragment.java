@@ -190,7 +190,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
 
   private void addItem() {
     if (character.isPresent()) {
-      EditItemDialog.newInstance(character.get().getId()).display();
+      EditItemDialog.newInstance(character.get().getId(), "").display();
     } else {
       Status.error("No character available!");
     }
@@ -207,7 +207,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private ItemView createLine(Item item) {
-    return new ItemView(getContext(), character.get(), item);
+    return new ItemView(getContext(), character.get().getCampaign(), character.get(), item);
   }
 
   private boolean dragSlot(Items.Slot slot, DragEvent event) {

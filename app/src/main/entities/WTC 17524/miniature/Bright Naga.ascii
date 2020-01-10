@@ -2,6 +2,7 @@ template {
   name: "Bright Naga"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 45
 race: "Bright Naga"
 type: "Aberration"

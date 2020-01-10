@@ -2,6 +2,7 @@ template {
   name: "Silent Wolf Goblin"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 43
 type: "Humanoid"
 subtype: "Goblinoid"

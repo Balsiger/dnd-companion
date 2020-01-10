@@ -2,6 +2,7 @@ template {
   name: "Shuluth, Archvillain (Mind Flayer)"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 38
 race: "Mind Flayer"
 type: "Aberration"

@@ -2,6 +2,7 @@ template {
   name: "Bone Naga"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 34
 race: "Bone Naga"
 type: "Undead"

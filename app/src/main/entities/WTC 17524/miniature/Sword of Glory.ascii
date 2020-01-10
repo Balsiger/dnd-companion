@@ -2,6 +2,7 @@ template {
   name: "Sword of Glory"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 5
 type: "Humanoid"
 race: "Human"

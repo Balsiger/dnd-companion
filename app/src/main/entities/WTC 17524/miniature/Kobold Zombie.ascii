@@ -2,6 +2,7 @@ template {
   name: "Kobold Zombie"
 }
 set: "War of the Dragon Queen"
+rarity: COMMON
 number: 37
 type: "Undead"
 race: "Zombie"

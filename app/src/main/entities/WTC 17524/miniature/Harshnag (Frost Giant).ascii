@@ -1,7 +1,8 @@
 template {
   name: "Harshnag (Frost Giant)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: RARE
 number: 43
 race: "Frost Giant"
 type: "Giant"

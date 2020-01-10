@@ -2,6 +2,7 @@ template {
   name: "Invisible Larethar Gulgrin"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 6
 type: "Humanoid"
 race: "Dwarf"

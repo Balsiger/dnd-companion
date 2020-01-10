@@ -2,6 +2,7 @@ template {
   name: "Quaggoth"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 17
 race: "Quaggoth"
 type: "Humanoid"

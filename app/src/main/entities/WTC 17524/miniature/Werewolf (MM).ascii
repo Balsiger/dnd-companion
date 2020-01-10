@@ -2,6 +2,7 @@ template {
   name: "Werewolf (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 20
 race: "Werewolf"
 type: "Humanoid"

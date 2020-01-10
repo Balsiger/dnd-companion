@@ -2,6 +2,7 @@ template {
   name: "Indentured Spirit"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 4
 race: "Indentured Spirit"
 type: "Undead"

@@ -3,6 +3,7 @@ template {
 }
 race: "Chraal"
 set: "Angelfire"
+rarity: UNDEFINED
 number: 37
 type: "Elemental"
 subtype: "Water"

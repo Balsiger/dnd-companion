@@ -2,6 +2,7 @@ template {
   name: "Huge Fire Elemental"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 20
 race: "Fire Elemental"
 type: "Elemental"

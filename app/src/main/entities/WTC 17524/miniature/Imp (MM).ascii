@@ -2,6 +2,7 @@ template {
   name: "Imp (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 2
 race: "Imp"
 type: "Fiend"

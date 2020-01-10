@@ -2,6 +2,7 @@ template {
   name: "Dragonwrought Kobold"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 32
 type: "Humanoid"
 race: "Kobold"

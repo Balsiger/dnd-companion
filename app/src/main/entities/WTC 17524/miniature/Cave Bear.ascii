@@ -2,6 +2,7 @@ template {
   name: "Cave Bear"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 31
 race: "Cave Bear"
 type: "Beast"

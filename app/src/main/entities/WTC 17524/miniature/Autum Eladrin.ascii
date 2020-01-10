@@ -1,0 +1,9 @@
+template {
+  name: "Autum Eladrin"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: UNCOMMON
+number: 19
+type: "Humanoid"
+race: "Eladrin"
+size: MEDIUM

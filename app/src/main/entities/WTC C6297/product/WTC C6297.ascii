@@ -1,0 +1,298 @@
+template {
+  name: "WTC C6297"
+  world: "Generic"
+  description: "Nestled on the coast of the \\Place{Azure Sea} is \\Place{Saltmarsh}, a sleepy fishing village that sits on the precipice of destruction. Smugglers guide their shipts to hidden coves, willing to slit the throat of anyone fool enough to cross their path. Cruel sahuagin gather beneath the waves, plotting to sweep away coastal cities. Drowned sailors stir to unnatural life, animated by dark magic and sent forht in search of revenge. The cult of a forbidden god extends its reach outward from a decaying port, hungry for fresh victims and willing recruits. While \\Place{Saltmarsh} slumbers, the evils that seek to plunder it grow stronger. Heroes must arise to keep the sea lanes safe for all.\\par This supplement introduces the port town of \\Place{Saltmarsh}, the perfect starting point for a nautical campaign. Seven sea-based adventures, including the class \\Product{The Sinister Secret of Saltmarsh} and its sequels, take characters from 1st to 12th level. Also inside are rules and DM advice for ships and sea travel, as well as deck plans for various vessels. An appendix provides rules for the new and classic monsters in the adventure.\\par Hoist your sails, pull up anchor, and set a course for adventure!"
+  short_description: "A watery adventure for characters of levels 1-12"
+}
+title: "Ghosts of Saltmarsh"
+subtitle: "Adventure on the High Seas"
+date {
+  year: 2019
+  month: 5
+}
+author {
+  name: "Mearls, Mike"
+  job: "lead designer"
+}
+author {
+  name: "Welch, Kate"
+  job: "lead designer"
+}
+author {
+  name: "Baur, Wolfgang"
+  job: "designer"
+}
+author {
+  name: "Introcaso, James"
+  job: "designer"
+}
+author {
+  name: "McCullough, Joseph A."
+  job: "designer"
+}
+author {
+  name: "Sawatsky, Jon"
+  job: "designer"
+}
+author {
+  name: "Winter, Steve"
+  job: "designer"
+}
+author {
+  name: "Ansell, Will"
+  job: "design consultant"
+}
+author {
+  name: "Cole, Myke"
+  job: "design consultant"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "developer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "developer"
+}
+author {
+  name: "Schneider, F. Wesley"
+  job: "developer"
+}
+cover {
+  name: "Rutkowski, Gregorz"
+}
+illustrator {
+  name: "Amundsen, Even"
+}
+illustrator {
+  name: "Barrum, Joachim"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Burley, Sam"
+}
+illustrator {
+  name: "Chauvedi, Sidharth"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gerard, Justin"
+}
+illustrator {
+  name: "Hannigan, Leesha"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Keiser, Sam"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Komarck, Michael"
+}
+illustrator {
+  name: "Maniak, Slawomir"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Moeller, Christopher"
+}
+illustrator {
+  name: "Murphy, Scott"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Rallis, Chris"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Siswanto, Rudy"
+}
+illustrator {
+  name: "Sladek, David"
+}
+illustrator {
+  name: "Tsai, Francis"
+}
+illustrator {
+  name: "Vohwinkel, Franz"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Zug, Mark"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept artist"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "senior art director"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "senior creative art director"
+}
+illustrator {
+  name: "Yee, Kevin"
+  job: "image technician"
+}
+cartographer {
+  name: "Logos, Dyson"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+editor {
+  name: "Moha, Kim"
+  job: "lead editor"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+manager {
+  name: "Benham, Bill"
+  job: "playtest coordinator"
+}
+manager {
+  name: "Lindsay, Christopher"
+  job: "playtest coordinator"
+}
+manager {
+  name: "Petrisor, Ben"
+  job: "playtest analyst"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "producer"
+}
+manager {
+  name: "Behham, Bill"
+  job: "project manager"
+}
+manager {
+  name: "Warren, Matt"
+  job: "project manager"
+}
+manager {
+  name: "Calloway, Cynda"
+  job: "product engineer"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "prepress specialist"
+}
+manager {
+  name: "Steward, Nathan"
+  job: "senior director global brand strategy"
+}
+manager {
+  name: "Schuh, Liz"
+  job: "director licensing & publishing"
+}
+manager {
+  name: "Ross, Hilary"
+  job: "licensing manager"
+}
+manager {
+  name: "Carroll, Bart"
+  job: "digital marketing manager"
+}
+manager {
+  name: "Tito, Greg"
+  job: "senior communications manager"
+}
+manager {
+  name: "Vo, Anna"
+  job: "manager global brand marketing"
+}
+manager {
+  name: "Mazzanoble, Shelly"
+  job: "brand managder"
+}
+manager {
+  name: "Green, Pelhman"
+  job: "associate brand manager"
+}
+manager {
+  name: "Perkins, Chris"
+  job: "principal game designer"
+}
+manager {
+  name: "Lee, Adam"
+  job: "narrative designer"
+}
+manager {
+  name: "Levitch, Ari"
+  job: "narrative designer"
+}
+pages: 256
+system: DND_5E
+audience: DM
+type: ADVENTURE
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

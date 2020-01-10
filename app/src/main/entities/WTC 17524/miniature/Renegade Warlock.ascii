@@ -2,6 +2,7 @@ template {
   name: "Renegade Warlock"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 23
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Reya Mantlemorn"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 7
 race: "Human"
 type: "Humanoid"

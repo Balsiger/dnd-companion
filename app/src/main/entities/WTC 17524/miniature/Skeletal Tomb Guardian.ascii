@@ -2,6 +2,7 @@ template {
   name: "Skeletal Tomb Guardian"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 52
 race: "Skeleton"
 type: "Undead"

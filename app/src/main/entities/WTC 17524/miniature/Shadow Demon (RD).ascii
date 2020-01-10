@@ -2,6 +2,7 @@ template {
   name: "Shadow Demon (RD)"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 20
 race: "Shadow Demon"
 type: "Fiend"

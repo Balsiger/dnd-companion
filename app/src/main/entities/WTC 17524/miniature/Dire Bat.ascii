@@ -2,6 +2,7 @@ template {
   name: "Dire Bat"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 44
 race: "Dire Bat"
 type: "Beast"

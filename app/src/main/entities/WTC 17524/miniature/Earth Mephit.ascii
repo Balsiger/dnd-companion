@@ -2,6 +2,7 @@ template {
   name: "Earth Mephit"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 6
 race: "Eearth Mephit"
 type: "Elemental"

@@ -2,6 +2,7 @@ template {
   name: "Narzugon on Nightmare"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 44
 race: "Narzugon"
 type: "Fiend"

@@ -2,6 +2,7 @@ template {
   name: "Gnome Trickster"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 17
 type: "Humanoid"
 race: "Gnome"

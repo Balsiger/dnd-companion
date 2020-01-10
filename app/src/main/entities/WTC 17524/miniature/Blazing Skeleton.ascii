@@ -2,6 +2,7 @@ template {
   name: "Blazing Skeleton"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 48
 race: "Blazing Skeleton"
 type: "Undead"

@@ -2,6 +2,7 @@ template {
   name: "Mercykiller"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 40
 type: "Humanoid"
 race: "Human"

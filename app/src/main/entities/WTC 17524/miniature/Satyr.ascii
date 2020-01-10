@@ -2,6 +2,7 @@ template {
   name: "Satyr"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 22
 race: "Satyr"
 type: "Fey"

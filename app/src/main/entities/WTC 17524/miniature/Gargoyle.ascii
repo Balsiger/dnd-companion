@@ -2,6 +2,7 @@ template {
   name: "Gargoyle"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 10
 race: "Gargoyle"
 type: "Elemental"

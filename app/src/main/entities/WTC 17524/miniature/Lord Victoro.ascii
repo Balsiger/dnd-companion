@@ -2,6 +2,7 @@ template {
   name: "Lord Victoro"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 39
 type: "Humanoid"
 race: "Human"

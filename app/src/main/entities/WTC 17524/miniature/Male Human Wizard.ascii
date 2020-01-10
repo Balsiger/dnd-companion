@@ -2,6 +2,7 @@ template {
   name: "Male Human Wizard"
 }
 set: "Player\'s Handbook Heroes"
+rarity: UNDEFINED
 number: 12
 type: "Humanoid"
 race: "Human"

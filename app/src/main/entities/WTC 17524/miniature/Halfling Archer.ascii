@@ -2,6 +2,7 @@ template {
   name: "Halfling Archer"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Halfling"

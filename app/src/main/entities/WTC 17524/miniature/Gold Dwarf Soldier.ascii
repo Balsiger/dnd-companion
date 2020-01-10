@@ -2,6 +2,7 @@ template {
   name: "Gold Dwarf Soldier"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 5
 type: "Humanoid"
 race: "Dwarf"

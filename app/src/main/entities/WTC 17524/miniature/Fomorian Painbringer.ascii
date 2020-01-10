@@ -2,6 +2,7 @@ template {
   name: "Fomorian Painbringer"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 19
 race: "Fomorian"
 type: "Giant"

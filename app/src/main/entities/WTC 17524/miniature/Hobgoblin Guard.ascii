@@ -2,6 +2,7 @@ template {
   name: "Hobgoblin Guard"
 }
 set: "Against the Giants"
+rarity: COMMON
 number: 22
 type: "Humanoid"
 subtype: "Goblinoid"

@@ -2,6 +2,7 @@ template {
   name: "Centaur War Hulk"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 15
 race: "Centaur"
 type: "Monstrosity"

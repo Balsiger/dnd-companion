@@ -2,6 +2,7 @@ template {
   name: "Dire Rat"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 30
 race: "Dire Rat"
 type: "Beast"

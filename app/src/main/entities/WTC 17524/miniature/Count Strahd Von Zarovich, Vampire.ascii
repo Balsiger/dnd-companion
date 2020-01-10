@@ -2,6 +2,7 @@ template {
   name: "Count Strahd Von Zarovich, Vampire"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 35
 race: "Vampire"
 type: "Undead"

@@ -2,6 +2,7 @@ template {
   name: "Deathpriest of Orcus"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 3
 type: "Humanoid"
 race: "Human"

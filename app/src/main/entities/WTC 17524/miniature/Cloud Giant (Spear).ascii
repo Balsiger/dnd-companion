@@ -1,7 +1,8 @@
 template {
   name: "Cloud Giant (Spear)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 28
 race: "Cloud Giant"
 type: "Giant"

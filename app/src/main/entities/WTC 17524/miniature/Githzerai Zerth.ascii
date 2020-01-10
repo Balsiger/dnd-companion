@@ -2,6 +2,7 @@ template {
   name: "Githzerai Zerth"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 19
 race: "Githzerai"
 type: "Humanoid"

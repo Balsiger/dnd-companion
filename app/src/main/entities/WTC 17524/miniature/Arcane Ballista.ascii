@@ -2,6 +2,7 @@ template {
   name: "Arcane Ballista"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 1
 type: "Construct"
 size: LARGE

@@ -2,6 +2,7 @@ template {
   name: "Invisible Moon Elf Ranger"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 48
 race: "Elf"
 type: "Humanoid"

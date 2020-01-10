@@ -2,6 +2,7 @@ template {
   name: "Fungus Drudge"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 12
 race: "Fungus"
 type: "Fungus"

@@ -2,6 +2,7 @@ template {
   name: "Sand Giant"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 9
 race: "Sand Giant"
 type: "Giant"

@@ -2,6 +2,7 @@ template {
   name: "Girallon"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 59
 race: "Girallon"
 type: "Monstrosity"

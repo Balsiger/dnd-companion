@@ -2,6 +2,7 @@ template {
   name: "Shadar-Kai Warrior"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 42
 type: "Humanoid"
 race: "Shadar-Kai"

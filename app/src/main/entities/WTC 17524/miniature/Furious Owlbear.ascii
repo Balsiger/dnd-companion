@@ -2,6 +2,7 @@ template {
   name: "Furious Owlbear"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 35
 race: "Owlbear"
 type: "Monstrosity"

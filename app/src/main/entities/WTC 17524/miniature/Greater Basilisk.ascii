@@ -2,6 +2,7 @@ template {
   name: "Greater Basilisk"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 19
 race: "Basilisk"
 type: "Monstrosity"

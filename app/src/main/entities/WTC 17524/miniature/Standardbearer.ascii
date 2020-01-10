@@ -2,6 +2,7 @@ template {
   name: "Standardbearer"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Human"

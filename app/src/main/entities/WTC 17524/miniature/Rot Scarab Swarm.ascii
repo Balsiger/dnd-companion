@@ -2,6 +2,7 @@ template {
   name: "Rot Scarab Swarm"
 }
 set: "Desert of Desolation"
+rarity: COMMON
 number: 32
 race: "Rot Scarab Swarm"
 type: "Vermin"

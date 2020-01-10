@@ -2,6 +2,7 @@ template {
   name: "Zorbo"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 4
 race: "Zorbo"
 type: "Monstrosity"

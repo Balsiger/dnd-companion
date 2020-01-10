@@ -2,6 +2,7 @@ template {
   name: "Halfling Rogue (mm2)"
 }
 set: "Monster Menagerie 2"
+rarity: COMMON
 number: 4
 type: "Humanoid"
 race: "Halfling"

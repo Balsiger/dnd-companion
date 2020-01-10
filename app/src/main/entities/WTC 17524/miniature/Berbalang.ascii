@@ -2,6 +2,7 @@ template {
   name: "Berbalang"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 6
 race: "Berbalang"
 type: "Aberration"

@@ -2,6 +2,7 @@ template {
   name: "Large Ice Elemental"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 29
 race: "Ice Elemental"
 type: "Elemental"

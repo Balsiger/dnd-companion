@@ -2,6 +2,7 @@ template {
   name: "Huge Gold Dragon (Young Adult)"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 61
 race: "Gold Dragon"
 type: "Dragon"

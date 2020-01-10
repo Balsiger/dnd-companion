@@ -2,6 +2,7 @@ template {
   name: "Rimefire Griffon"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 32
 race: "Griffon"
 type: "Monstrosity"

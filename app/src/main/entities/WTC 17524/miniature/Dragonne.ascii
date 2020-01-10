@@ -2,6 +2,7 @@ template {
   name: "Dragonne"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 17
 race: "Dragonne"
 type: "Monstrosity"

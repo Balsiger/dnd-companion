@@ -2,6 +2,7 @@ template {
   name: "Village Priest"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 12
 type: "Humanoid"
 race: "Human"

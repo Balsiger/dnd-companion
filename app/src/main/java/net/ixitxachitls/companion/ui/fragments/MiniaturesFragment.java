@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.ui.fragments;
 import android.os.Bundle;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.FilteredTemplatesStore;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.MiniatureFilter;
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
@@ -79,11 +80,6 @@ public class MiniaturesFragment extends TemplatesFragment {
 
   private void filtered(MiniatureFilter filter) {
     Templates.get().getMiniatureTemplates().filter(me(), filter);
-    if (Templates.get().getMiniatureTemplates().isFiltered()) {
-      filterAction.color(R.color.filtered);
-    } else {
-      filterAction.uncolor();
-    }
     update();
     seek.setMax(Templates.get().getMiniatureTemplates().getFilteredNumber() - 1);
   }
@@ -120,5 +116,10 @@ public class MiniaturesFragment extends TemplatesFragment {
   @Override
   protected int getTemplatesCount() {
     return Templates.get().getMiniatureTemplates().getFilteredNumber();
+  }
+
+  @Override
+  protected FilteredTemplatesStore<MiniatureTemplate, MiniatureFilter> getTemplates() {
+    return Templates.get().getMiniatureTemplates();
   }
 }

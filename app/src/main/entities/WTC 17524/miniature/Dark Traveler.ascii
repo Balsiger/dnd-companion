@@ -2,6 +2,7 @@ template {
   name: "Dark Traveler"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 16
 type: "Humanoid"
 race: "Human"

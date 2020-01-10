@@ -2,6 +2,7 @@ template {
   name: "Baaz Draconian"
 }
 set: "Dragon Eye"
+rarity: COMMON
 number: 28
 race: "Draconian"
 type: "Dragon"

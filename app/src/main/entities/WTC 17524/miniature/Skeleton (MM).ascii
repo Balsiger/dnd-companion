@@ -2,6 +2,7 @@ template {
   name: "Skeleton (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 12
 race: "Skeleton"
 type: "Undead"

@@ -2,6 +2,7 @@ template {
   name: "Hero of Valhalla"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 18
 type: "Humanoid"
 race: "Human"

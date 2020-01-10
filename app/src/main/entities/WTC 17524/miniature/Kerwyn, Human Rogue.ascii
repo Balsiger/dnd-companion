@@ -2,6 +2,7 @@ template {
   name: "Kerwyn, Human Rogue"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 22
 type: "Humanoid"
 race: "Human"

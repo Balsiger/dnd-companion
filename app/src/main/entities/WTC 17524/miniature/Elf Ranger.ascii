@@ -2,6 +2,7 @@ template {
   name: "Elf Ranger"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 23
 type: "Humanoid"
 race: "Elf"

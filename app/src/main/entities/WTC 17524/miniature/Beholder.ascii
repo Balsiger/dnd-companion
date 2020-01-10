@@ -2,6 +2,7 @@ template {
   name: "Beholder"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 32
 race: "Beholder"
 type: "Aberration"

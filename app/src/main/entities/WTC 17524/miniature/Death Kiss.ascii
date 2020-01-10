@@ -1,0 +1,9 @@
+template {
+  name: "Death Kiss"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: RARE
+number: 41
+race: "Death Kiss"
+type: "Aberration"
+size: LARGE

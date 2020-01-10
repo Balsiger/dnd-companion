@@ -2,6 +2,7 @@ template {
   name: "Flame Snake (Lesser)"
 }
 set: "Desert of Desolation"
+rarity: COMMON
 number: 42
 race: "Flame Snake"
 type: "Elemental"

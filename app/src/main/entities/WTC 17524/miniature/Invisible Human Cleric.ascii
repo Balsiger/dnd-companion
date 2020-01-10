@@ -2,6 +2,7 @@ template {
   name: "Invisible Human Cleric"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 9
 type: "Humanoid"
 race: "Human"

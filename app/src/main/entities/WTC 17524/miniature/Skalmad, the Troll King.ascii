@@ -2,6 +2,7 @@ template {
   name: "Skalmad, the Troll King"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 34
 race: "Troll"
 type: "Giant"

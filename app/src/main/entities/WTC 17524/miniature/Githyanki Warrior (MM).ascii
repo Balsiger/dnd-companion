@@ -2,6 +2,7 @@ template {
   name: "Githyanki Warrior (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 16
 race: "Githyanki"
 type: "Humanoid"

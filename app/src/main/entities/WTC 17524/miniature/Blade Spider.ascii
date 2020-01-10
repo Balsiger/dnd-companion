@@ -2,6 +2,7 @@ template {
   name: "Blade Spider"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 38
 race: "Blade Spider"
 type: "Vermin"

@@ -2,6 +2,7 @@ template {
   name: "Clawborn Scorrow"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 49
 race: "Clawborn Scorrow"
 type: "Aberration"

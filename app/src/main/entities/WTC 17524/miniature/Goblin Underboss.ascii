@@ -2,6 +2,7 @@ template {
   name: "Goblin Underboss"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 31
 type: "Humanoid"
 subtype: "Goblinoid"

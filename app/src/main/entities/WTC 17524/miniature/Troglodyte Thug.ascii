@@ -2,6 +2,7 @@ template {
   name: "Troglodyte Thug"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 59
 type: "Humanoid"
 race: "Troglodyte"

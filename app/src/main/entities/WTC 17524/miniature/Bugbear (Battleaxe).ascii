@@ -1,7 +1,8 @@
 template {
   name: "Bugbear (Battleaxe)"
 }
-set: "Monster Menagerie"
+set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 17
 type: "Humanoid"
 subtype: "Goblinoid"

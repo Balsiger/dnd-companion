@@ -2,6 +2,7 @@ template {
   name: "Invisible Gnome Wizard"
 }
 set: "Monster Menagerie 3"
+rarity: ULTRA_RARE
 number: 11
 type: "Humanoid"
 race: "Gnome"

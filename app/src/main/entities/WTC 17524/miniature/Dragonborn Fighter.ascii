@@ -2,6 +2,7 @@ template {
   name: "Dragonborn Fighter"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 4
 race: "Dragonborn"
 type: "Humanoid"

@@ -2,6 +2,7 @@ template {
   name: "Dragonborn Elementalist"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 12
 race: "Dragonborn"
 type: "Humanoid"

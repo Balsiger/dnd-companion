@@ -2,6 +2,7 @@ template {
   name: "Drow Arcane Guard"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 47
 type: "Humanoid"
 race: "Drow"

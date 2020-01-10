@@ -2,6 +2,7 @@ template {
   name: "Owlbear"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 54
 race: "Owlbear"
 type: "Monstrosity"

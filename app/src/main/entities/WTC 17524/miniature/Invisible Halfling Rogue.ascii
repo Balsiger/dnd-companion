@@ -2,6 +2,7 @@ template {
   name: "Invisible Halfling Rogue"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 4
 type: "Humanoid"
 race: "Halfling"

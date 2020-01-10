@@ -2,6 +2,7 @@ template {
   name: "Merfolk"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 17
 type: "Humanoid"
 subtype: "Aquatic"

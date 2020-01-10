@@ -2,6 +2,7 @@ template {
   name: "Fomorian"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 69
 race: "Fomorian"
 type: "Giant"

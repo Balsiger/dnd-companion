@@ -2,6 +2,7 @@ template {
   name: "Ogre Pulverizer"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 30
 type: "Giant"
 race: "Ogre"

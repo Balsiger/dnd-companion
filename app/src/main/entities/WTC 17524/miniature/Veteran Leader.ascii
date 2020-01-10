@@ -2,6 +2,7 @@ template {
   name: "Veteran Leader"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 14
 race: "Human"
 type: "Humanoid"

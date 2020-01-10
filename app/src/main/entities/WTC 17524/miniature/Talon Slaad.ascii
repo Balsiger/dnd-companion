@@ -2,6 +2,7 @@ template {
   name: "Talon Slaad"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 38
 race: "Talon Slaad"
 type: "Aberration"

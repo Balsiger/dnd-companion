@@ -2,6 +2,7 @@ template {
   name: "Bugbear Gang Leader"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 48
 type: "Humanoid"
 subtype: "Goblinoid"

@@ -2,6 +2,7 @@ template {
   name: "Gray Slaad A"
 }
 set: "Monster Menagerie 3"
+rarity: UNCOMMON
 number: 21
 race: "Gray Slaad"
 type: "Aberration"

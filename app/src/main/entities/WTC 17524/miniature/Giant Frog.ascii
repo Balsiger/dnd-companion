@@ -2,6 +2,7 @@ template {
   name: "Giant Frog"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 28
 race: "Giant Frog"
 type: "Beast"

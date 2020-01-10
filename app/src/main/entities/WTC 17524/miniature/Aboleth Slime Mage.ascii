@@ -2,6 +2,7 @@ template {
   name: "Aboleth Slime Mage"
 }
 set: "Dangerous Delves"
+rarity: UNDEFINED
 number: 1
 race: "Aboleth"
 type: "Aberration"

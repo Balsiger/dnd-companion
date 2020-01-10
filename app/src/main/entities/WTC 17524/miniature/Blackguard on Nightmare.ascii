@@ -2,6 +2,7 @@ template {
   name: "Blackguard on Nightmare"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 25
 type: "Humanoid"
 race: "Human"

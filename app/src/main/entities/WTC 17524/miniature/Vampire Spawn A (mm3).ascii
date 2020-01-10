@@ -2,6 +2,7 @@ template {
   name: "Vampire Spawn A (mm3)"
 }
 set: "Monster Menagerie 3"
+rarity: COMMON
 number: 10
 type: "Humanoid"
 subtype: "Undead"

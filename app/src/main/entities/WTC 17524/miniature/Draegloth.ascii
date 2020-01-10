@@ -2,6 +2,7 @@ template {
   name: "Draegloth"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 45
 race: "Draegloth"
 type: "Fiend"

@@ -1,7 +1,8 @@
 template {
   name: "Chief Guh"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNIQUE
 number: 45
 race: "Hill Giant"
 type: "Giant"

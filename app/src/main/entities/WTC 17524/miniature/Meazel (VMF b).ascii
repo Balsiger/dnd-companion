@@ -1,0 +1,9 @@
+template {
+  name: "Meazel (VMF b)"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: UNCOMMON
+number: 17
+race: "Meazel"
+type: "Humanoid"
+size: SMALL

@@ -2,6 +2,7 @@ template {
   name: "Medium Water Elemental"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 36
 race: "Water Elemental"
 type: "Elemental"

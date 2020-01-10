@@ -2,6 +2,7 @@ template {
   name: "Aspect of Nerull"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 31
 type: "Fiend"
 subtype: "Aspect"

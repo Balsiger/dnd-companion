@@ -2,6 +2,7 @@ template {
   name: "Warden of the Wood"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 18
 type: "Humanoid"
 race: "Half-Elf"

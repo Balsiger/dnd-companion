@@ -2,6 +2,7 @@ template {
   name: "Drow Assassin"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 20
 type: "Humanoid"
 race: "Drow"

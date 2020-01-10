@@ -2,6 +2,7 @@ template {
   name: "Invisibile Halaster Blackcloak"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: ULTRA_RARE
 number: 40
 race: "Human"
 type: "Humanoid"

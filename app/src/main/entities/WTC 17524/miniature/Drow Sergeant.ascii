@@ -2,6 +2,7 @@ template {
   name: "Drow Sergeant"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 50
 type: "Humanoid"
 race: "Drow"

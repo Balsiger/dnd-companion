@@ -2,6 +2,7 @@ template {
   name: "Hobgoblin Archer"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 32
 type: "Humanoid"
 subtype: "Goblinoid"

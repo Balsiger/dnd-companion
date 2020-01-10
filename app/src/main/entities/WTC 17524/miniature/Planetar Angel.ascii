@@ -2,6 +2,7 @@ template {
   name: "Planetar Angel"
 }
 set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 29
 race: "Planetar"
 type: "Celestial"

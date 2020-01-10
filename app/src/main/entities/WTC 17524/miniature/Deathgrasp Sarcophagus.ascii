@@ -2,6 +2,7 @@ template {
   name: "Deathgrasp Sarcophagus"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 10
 race: "Deathgrasp Sarcophagus"
 type: "Construct"

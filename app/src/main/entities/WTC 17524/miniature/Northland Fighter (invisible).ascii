@@ -2,6 +2,7 @@ template {
   name: "Northland Fighter (invisible)"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 50
 type: "Humanoid"
 race: "Human"

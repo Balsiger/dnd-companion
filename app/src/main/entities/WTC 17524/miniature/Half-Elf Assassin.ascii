@@ -2,6 +2,7 @@ template {
   name: "Half-Elf Assassin"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 44
 type: "Humanoid"
 race: "Half-Elf"

@@ -2,6 +2,7 @@ template {
   name: "Kobold Fighter"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 5
 type: "Humanoid"
 race: "Kobold"

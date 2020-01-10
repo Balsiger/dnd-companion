@@ -70,10 +70,10 @@ import androidx.annotation.CallSuper;
 /**
  * The base for all monsters or characters in the game.
  */
-public class Creature<T extends Creature<T>> extends Document<T> {
+public class Creature<T extends Creature<T>> extends Document<T> implements Item.Owner {
   private static final String FIELD_CAMPAIGN = "campaign";
   private static final String DEFAULT_CAMPAIGN = "";
-  private static final String FIELD_NAME = "name";
+  protected static final String FIELD_NAME = "name";
   private static final String FIELD_GENDER = "gender";
   private static final String FIELD_RACE = "race";
   private static final String DEFAULT_RACE = "Human";
@@ -1158,6 +1158,11 @@ public class Creature<T extends Creature<T>> extends Document<T> {
         .set(FIELD_ENCOUNTER_NUMBER, encounterNumber)
         .setNested(FIELD_ITEMS, items)
         .setNested(FIELD_SLOTS, wearing);
+  }
+
+  @Override
+  public boolean isCharacter() {
+    return false;
   }
 
   public static class InitiativeComparator implements Comparator<Creature> {

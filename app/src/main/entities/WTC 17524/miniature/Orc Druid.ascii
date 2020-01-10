@@ -2,6 +2,7 @@ template {
   name: "Orc Druid"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 57
 type: "Humanoid"
 race: "Orc"

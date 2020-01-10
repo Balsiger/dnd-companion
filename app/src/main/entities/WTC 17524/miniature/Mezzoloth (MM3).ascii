@@ -2,6 +2,7 @@ template {
   name: "Mezzoloth (MM3)"
 }
 set: "Monster Menagerie 3"
+rarity: COMMON
 number: 13
 race: "Mezzoloth"
 type: "Fiend"

@@ -2,6 +2,7 @@ template {
   name: "Thorn"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 25
 race: "Thorn"
 type: "Fey"

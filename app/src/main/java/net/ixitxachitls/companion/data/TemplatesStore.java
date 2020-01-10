@@ -44,8 +44,8 @@ import java.util.TreeMap;
  */
 public class TemplatesStore<T extends Entry<? extends MessageLite>> {
 
-  protected final SortedMap<String, T> byName = new TreeMap<>();
-  protected final Map<String, T> byNormalizedName = new HashMap<>();
+  public final SortedMap<String, T> byName = new TreeMap<>();
+  public final Map<String, T> byNormalizedName = new HashMap<>();
   private final Class<T> entryClass;
 
   protected TemplatesStore(Class<T> entryClass) {

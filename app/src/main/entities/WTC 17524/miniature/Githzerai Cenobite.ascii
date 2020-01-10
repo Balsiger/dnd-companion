@@ -2,6 +2,7 @@ template {
   name: "Githzerai Cenobite"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 21
 race: "Githzerai"
 type: "Humanoid"

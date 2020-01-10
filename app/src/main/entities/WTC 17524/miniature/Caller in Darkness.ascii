@@ -2,6 +2,7 @@ template {
   name: "Caller in Darkness"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 49
 race: "Caller in Darkness"
 type: "Undead"

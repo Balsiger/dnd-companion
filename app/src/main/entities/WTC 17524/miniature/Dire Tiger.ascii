@@ -2,6 +2,7 @@ template {
   name: "Dire Tiger"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 17
 race: "Dire Tiger"
 type: "Beast"

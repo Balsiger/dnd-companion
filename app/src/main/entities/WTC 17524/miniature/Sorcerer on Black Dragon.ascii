@@ -2,6 +2,7 @@ template {
   name: "Sorcerer on Black Dragon"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 55
 type: "Humanoid"
 race: "Human"

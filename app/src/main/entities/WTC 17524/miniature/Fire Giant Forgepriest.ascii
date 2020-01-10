@@ -2,6 +2,7 @@ template {
   name: "Fire Giant Forgepriest"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 31
 race: "Fire Giant"
 type: "Giant"

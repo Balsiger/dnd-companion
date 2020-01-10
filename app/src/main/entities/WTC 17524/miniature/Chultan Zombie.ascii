@@ -2,6 +2,7 @@ template {
   name: "Chultan Zombie"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 9
 race: "Zombie"
 type: "Undead"

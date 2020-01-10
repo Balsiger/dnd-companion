@@ -2,6 +2,7 @@ template {
   name: "Champion of Baphomet"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 24
 race: "Minotaur"
 type: "Monstrosity"

@@ -1,0 +1,294 @@
+template {
+  name: "WTC C4594"
+  world: "Generic"
+  description: "Why do \\Monster{dawrves} and \\Monster{duergar} hate each other? How did the world come to have som many kinds of \\Monster{elves}? What lies at the heart of the \\Event{Blood War}, the great cosmic struggle between \\Monster{demons} and \\Monster{devils} that threatens to destroy everything if either side were ever to emerge victorious?\\par \\NPC{Mordenkainen} has all those answers and more - and now they can be yours, too.\\par This tome is built on the writings of the renowed wizard from the world of \\Place{Greyhawk}, gathered over a lifetime of research and scholarship. In this travels to other worlds and other planes of existence, he has made many friends, and has risked his life an equal number of times, to amass the knowledge contained herein.\\par The first five chapters present material for a Dungeon Master to add depths to a campaign that involves the characters in one or more of the ongoing conflicts described there. Options for players are provided as well, including new character races.\\par In addition to \\NPC{Mordenkainen, musings on the endless wars of the multiverse, the book contains game statistics for dozen of monsters: new \\Monster{demons} and \\Monster{devils}, several varieties of \\Monster{elves} and \\Monster{duergar}, and a vast array of other creatures from throughout the planes of existence."
+  short_description: "A supplement with the truth about the great conflicts of the multiverse."
+}
+title: "Mordenkainen's Tome of Foes"
+subtitle: "Pages from the Greatest of Mages"
+author {
+  name: "Mearls, Mike"
+  job: "lead designer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "lead designer"
+}
+author {
+  name: "Lee, Adam"
+  job: "designer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "designer"
+}
+author {
+  name: "Schwalb, Robert J."
+  job: "designer"
+}
+author {
+  name: "Sernett, Matt"
+  job: "designer"
+}
+author {
+  name: "Winter, Steve"
+  job: "designer"
+}
+author {
+  name: "Mohan, Kim"
+  job: "additional designer"
+}
+author {
+  name: "Perkins, Christopher"
+  job: "additional designer"
+}
+author {
+  name: "Welch, Kate"
+  job: "additional designer"
+}
+author {
+  name: "Whale, Nolan"
+  job: "guest designer"
+}
+editor {
+  name: "Crawford, Jeremy"
+  job: "managing editor"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Carter, Michele"
+}
+cover {
+  name: "Rainville, Jason"
+}
+cover {
+  name: "Kelly, Vance"
+  job: "laternative cover"
+}
+illustrator {
+  name: "Whitters, Richard"
+  job: "concept artits"
+}
+illustrator {
+  name: "Wood, Shawn"
+  job: "concept artits"
+}
+illustrator {
+  name: "Allsop, Dave"
+}
+illustrator {
+  name: "Babbey, Tom"
+}
+illustrator {
+  name: "Behm, Mark"
+}
+illustrator {
+  name: "Belisle, Eric"
+}
+illustrator {
+  name: "Berube, Michael"
+}
+illustrator {
+  name: "Boros, Zoltan"
+}
+illustrator {
+  name: "Birclot, Aleksi"
+}
+illustrator {
+  name: "Burburan, Filip"
+}
+illustrator {
+  name: "Burdett, Christopher"
+}
+illustrator {
+  name: "Cavotta, Matt"
+}
+illustrator {
+  name: "Chaturvedi, Sidarth"
+}
+illustrator {
+  name: "Chevrier, Jedd"
+}
+illustrator {
+  name: "Cox, Ed"
+}
+illustrator {
+  name: "Drebas, Olga"
+}
+illustrator {
+  name: "England, Wayne"
+}
+illustrator {
+  name: "Gerard, Justin"
+}
+illustrator {
+  name: "Grant-West, Lars"
+}
+illustrator {
+  name: "Hannigan, Leesha"
+}
+illustrator {
+  name: "Hodgson, Jon"
+}
+illustrator {
+  name: "Horsley, Ralph"
+}
+illustrator {
+  name: "Hurwitz, Lake"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Landerman, Daniel"
+}
+illustrator {
+  name: "Lawson, Olly"
+}
+illustrator {
+  name: "Lyon, Howard"
+}
+illustrator {
+  name: "Mahy, Warren"
+}
+illustrator {
+  name: "Metheney, Brynn"
+}
+illustrator {
+  name: "Miller, Aaron"
+}
+illustrator {
+  name: "Murhpy, Scott"
+}
+illustrator {
+  name: "Nelson, Jim"
+}
+illustrator {
+  name: "O'Connor, William"
+}
+illustrator {
+  name: "Palacios, Efrem"
+}
+illustrator {
+  name: "Paquette, Adam"
+}
+illustrator {
+  name: "Pozas, Claudio"
+}
+illustrator {
+  name: "Proce, Vincent"
+}
+illustrator {
+  name: "Rey, Rob"
+}
+illustrator {
+  name: "Sardinha, Richard"
+}
+illustrator {
+  name: "Seaman, Chris"
+}
+illustrator {
+  name: "Shkipin, Ilya"
+}
+illustrator {
+  name: "Spearing, Craig J."
+}
+illustrator {
+  name: "Stella, Zack"
+}
+illustrator {
+  name: "Straub, Philip"
+}
+illustrator {
+  name: "Syme, Bryan"
+}
+illustrator {
+  name: "Trampier, David A."
+}
+illustrator {
+  name: "Trego-Erdner, Cory"
+}
+illustrator {
+  name: "Whitters, Richard"
+}
+illustrator {
+  name: "Waters, Anthony S."
+}
+illustrator {
+  name: "Wood, Shawn"
+}
+illustrator {
+  name: "Wootten, Ben"
+}
+illustrator {
+  name: "Yum, Min"
+}
+illustrator {
+  name: "Zhang, Xi James"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Nazrciso, Shauna"
+  job: "additonal art director"
+}
+manager {
+  name: "Stan!"
+  job: "project manager"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Cheung, Carmen"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Gershman, David"
+  job: "production services"
+}
+date {
+  year: 2018
+  month: 5
+}
+isbn {
+}
+isbn13 {
+  group13: "978"
+  group: "0"
+  publisher: "7869"
+  title: "6624"
+  check: 0
+}
+pages: 256
+system: DND_5E
+audience: DM
+type: RULES_SUPPLEMENT
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

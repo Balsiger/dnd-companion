@@ -2,6 +2,7 @@ template {
   name: "Medium Copper Dragon"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 20
 race: "Copper Dragon"
 type: "Dragon"

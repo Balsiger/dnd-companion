@@ -2,6 +2,7 @@ template {
   name: "Piercer"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 19
 race: "Piercer"
 type: "Aberration"

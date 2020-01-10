@@ -1,0 +1,10 @@
+template {
+  name: "Alhoon"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: RARE
+number: 33
+type: "Undead"
+subtype: "Humanoid"
+race: "Alhoon"
+size: LARGE

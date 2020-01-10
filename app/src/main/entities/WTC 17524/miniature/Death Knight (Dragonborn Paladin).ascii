@@ -2,6 +2,7 @@ template {
   name: "Death Knight (Dragonborn Paladin)"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 10
 race: "Death Knight"
 type: "Undead"

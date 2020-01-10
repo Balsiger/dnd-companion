@@ -2,6 +2,7 @@ template {
   name: "Swarm of Bats"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 25
 race: "Bat"
 type: "Beast"

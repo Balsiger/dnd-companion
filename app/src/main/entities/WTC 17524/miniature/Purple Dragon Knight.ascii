@@ -2,6 +2,7 @@ template {
   name: "Purple Dragon Knight"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 7
 type: "Humanoid"
 race: "Human"

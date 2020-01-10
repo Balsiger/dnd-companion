@@ -2,6 +2,7 @@ template {
   name: "Gnoll (Flail)"
 }
 set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 20
 type: "Humanoid"
 race: "Gnoll"

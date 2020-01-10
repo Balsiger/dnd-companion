@@ -2,6 +2,7 @@ template {
   name: "Torturer"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 45
 type: "Humanoid"
 race: "Human"

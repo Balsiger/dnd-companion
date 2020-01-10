@@ -2,6 +2,7 @@ template {
   name: "Goblin Warrior"
 }
 set: "Dragon Eye"
+rarity: COMMON
 number: 32
 type: "Humanoid"
 subtype: "Goblinoid"

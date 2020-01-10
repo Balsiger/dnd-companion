@@ -2,6 +2,7 @@ template {
   name: "Aspect of Kord"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 13
 type: "Celestial"
 subtype: "Chaotic"

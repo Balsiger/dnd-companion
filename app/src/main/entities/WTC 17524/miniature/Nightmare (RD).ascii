@@ -2,6 +2,7 @@ template {
   name: "Nightmare (RD)"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 31
 race: "Nightmare"
 type: "Fiend"

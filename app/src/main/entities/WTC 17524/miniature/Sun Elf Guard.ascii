@@ -2,6 +2,7 @@ template {
   name: "Sun Elf Guard"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 9
 type: "Humanoid"
 race: "Elf"

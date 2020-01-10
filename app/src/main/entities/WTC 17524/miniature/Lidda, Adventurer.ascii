@@ -2,6 +2,7 @@ template {
   name: "Lidda, Adventurer"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 19
 type: "Humanoid"
 race: "Halfling"

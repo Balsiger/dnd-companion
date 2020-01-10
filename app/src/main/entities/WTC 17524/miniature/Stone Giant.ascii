@@ -2,6 +2,7 @@ template {
   name: "Stone Giant"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 8
 race: "Stone Giant"
 type: "Giant"

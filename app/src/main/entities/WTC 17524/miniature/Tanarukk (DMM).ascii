@@ -2,6 +2,7 @@ template {
   name: "Tanarukk (DMM)"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: RARE
 number: 37
 race: "Tanarukk"
 type: "Fiend"

@@ -2,6 +2,7 @@ template {
   name: "Simic Hybrid"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 10
 type: "Humanoid"
 race: "Human"

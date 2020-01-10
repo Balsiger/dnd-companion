@@ -2,6 +2,7 @@ template {
   name: "Inspiring Marshal "
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 18
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Bloodseeker Drake"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 9
 race: "Bloodseeker Drake"
 type: "Dragon"

@@ -2,6 +2,7 @@ template {
   name: "Goristro (DMM)"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 31
 race: "Goristro"
 type: "Fiend"

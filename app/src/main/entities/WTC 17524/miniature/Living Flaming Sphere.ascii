@@ -2,6 +2,7 @@ template {
   name: "Living Flaming Sphere"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 27
 race: "Living Flaming Sphere"
 type: "Ooze"

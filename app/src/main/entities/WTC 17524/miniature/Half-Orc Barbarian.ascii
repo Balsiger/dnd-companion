@@ -2,6 +2,7 @@ template {
   name: "Half-Orc Barbarian"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 26
 type: "Humanoid"
 race: "Half-Orc"

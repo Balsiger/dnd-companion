@@ -2,6 +2,7 @@ template {
   name: "Nalfeshnee Tyrant"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 32
 race: "Nalfeshnee"
 type: "Fiend"

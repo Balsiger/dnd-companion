@@ -2,6 +2,7 @@ template {
   name: "Tiefling Captain"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 76
 type: "Humanoid"
 race: "Tiefling"

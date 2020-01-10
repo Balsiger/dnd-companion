@@ -2,6 +2,7 @@ template {
   name: "Wolf"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 37
 type: "Beast"
 subtype: "Animal"

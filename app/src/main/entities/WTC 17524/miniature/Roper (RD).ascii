@@ -2,6 +2,7 @@ template {
   name: "Roper (RD)"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 28
 race: "Roper"
 type: "Monstrosity"

@@ -2,6 +2,7 @@ template {
   name: "Beholder Lich"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 31
 race: "Lich"
 type: "Undead"

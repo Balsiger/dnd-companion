@@ -2,6 +2,7 @@ template {
   name: "Hierophant of the Seventh Wind"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 21
 type: "Humanoid"
 race: "Human"

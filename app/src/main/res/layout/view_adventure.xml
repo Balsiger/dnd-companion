@@ -145,7 +145,21 @@
       android:layout_marginStart="20dp"
       android:layout_marginTop="10dp"
       android:layout_marginEnd="20dp"
-      android:orientation="vertical"></LinearLayout>
+      android:orientation="vertical">
+
+  </LinearLayout>
+
+  <net.ixitxachitls.companion.ui.views.ViewViewPager
+      android:id="@+id/items_pager"
+      android:layout_width="match_parent"
+      android:layout_height="0dp">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/itemDark"/>
+
+  </net.ixitxachitls.companion.ui.views.ViewViewPager>
 
   <HorizontalScrollView
       android:layout_width="match_parent"
@@ -156,7 +170,24 @@
         android:id="@+id/creatures"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="horizontal"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
   </HorizontalScrollView>
+
+  <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/characters"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
+  </HorizontalScrollView>
+
 
 </LinearLayout>

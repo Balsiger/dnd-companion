@@ -2,6 +2,7 @@ template {
   name: "Lurking Wraith"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 51
 type: "Undead"
 size: MEDIUM

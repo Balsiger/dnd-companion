@@ -2,6 +2,7 @@ template {
   name: "Brass Dragon (Young)"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 14
 race: "Brass Dragon"
 type: "Dragon"

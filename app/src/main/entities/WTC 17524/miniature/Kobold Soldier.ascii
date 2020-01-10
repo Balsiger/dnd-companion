@@ -2,6 +2,7 @@ template {
   name: "Kobold Soldier"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 44
 type: "Humanoid"
 race: "Kobold"

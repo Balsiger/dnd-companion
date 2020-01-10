@@ -2,6 +2,7 @@ template {
   name: "Merregon"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 13
 race: "Merregon"
 type: "Fiend"

@@ -3,6 +3,7 @@ template {
 }
 race: "Weird"
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 13
 type: "Elemental"
 subtype: "Humanoid"

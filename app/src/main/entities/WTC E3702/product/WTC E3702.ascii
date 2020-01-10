@@ -1,0 +1,108 @@
+template {
+  name: "WTC E3702"
+  world: "Generic"
+  description: "\\large{Embark on a Dungeons & Dragons adventure creature by Mike!}\\nMike Wheeler from Hawkings, Idiana, has created an awesome Dungeons & Dragons adventure... and now you get to play it.\\par Pick you character - will you be Will the Wise or Dusting the Dwarf? - and get your fireballs ready as you investigate the mysterious castle and battle the ferocious \\Monster{Demogoron}.\\par Will you make it yout alive? Will you encounhter a beast with seven heads? Did you pack your wrist rocket? Prepare yourself for anything, because the just got STRANGER."
+  short_description: "A D&D setting and adventure related to Stranger Things."
+}
+title: "Stranger Things - Dungeons & Dragons Starter Set"
+subtitle: "Everything you need to embark on a stranger things adventure."
+author {
+  name: "Stan!"
+  job: "Adventure"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "Adventure"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "Rulebook"
+}
+editor {
+  name: "Perkins, Christopher"
+}
+editor {
+  name: "Sims, Chris"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Fitzgerald Gray, Scott"
+}
+editor {
+  name: "Mohan, Kim"
+}
+editor {
+  name: "Athans, Philip"
+}
+editor {
+  name: "Welch, Kate"
+}
+cartographer {
+  name: "Stan!"
+}
+manager {
+  name: "Crawford, Jeremy"
+  job: "D&D Lead Designer"
+}
+manager {
+  name: "Mearls, Mike"
+  job: "D&D Lead Designer"
+}
+date {
+  year: 2019
+  month: 5
+}
+pages: 68
+system: DND_5E
+audience: DM
+type: CAMPAIGN_SETTING
+style: BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2499
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+  description: "Stranger Things adventure book"
+
+}
+content {
+  part: BOOKLET
+  number: 1
+  description: "Stranger Things adventure book"
+
+}
+content {
+  part: BOOKLET
+  number: 1
+  description: "Rulebook"
+
+}
+content {
+  part: SHEET
+  number: 5
+  description: "Character Sheet"
+
+}
+content {
+  part: DICE
+  number: 6
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Demogorgon"
+
+}
+content {
+  part: MINIATURE
+  number: 1
+  description: "Paintable Demogorgon"
+
+}
+layout: FULL_COLOR

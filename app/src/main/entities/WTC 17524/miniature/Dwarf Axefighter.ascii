@@ -2,6 +2,7 @@ template {
   name: "Dwarf Axefighter"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Dwarf"

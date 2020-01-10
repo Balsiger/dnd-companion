@@ -2,6 +2,7 @@ template {
   name: "Zombie Hulk"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 40
 type: "Undead"
 race: "Zombie"

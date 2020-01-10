@@ -197,10 +197,63 @@ public class AdventureTemplate extends StoredTemplate<Template.AdventureTemplate
           .collect(Collectors.toList());
     }
 
+    @Deprecated
+    public List<ItemInitializer> getItems() {
+      return proto.getTreasureList().stream()
+          .flatMap(c -> c.getItemList().stream())
+          .map(c -> new ItemInitializer(c))
+          .collect(Collectors.toList());
+    }
+
+    public List<ItemGroupInitializer> getItemGroups() {
+      return proto.getTreasureList().stream()
+          .map(c -> new ItemGroupInitializer(c.getName(), c.getDescription(),
+              c.getItemList().stream()
+                  .map(i -> new ItemInitializer(i))
+                  .collect(Collectors.toList())))
+          .collect(Collectors.toList());
+    }
+
     public List<CreatureInitializer> getCreatures() {
       return proto.getCreatureList().stream()
           .map(c -> new CreatureInitializer(c.getName(), c.getReason(), c.getTacticsList()))
           .collect(Collectors.toList());
+    }
+
+    public class ItemGroupInitializer {
+      private final String name;
+      private final String description;
+      private final List<ItemInitializer> items;
+
+      public ItemGroupInitializer(String name, String description, List<ItemInitializer> items) {
+        this.name = name;
+        this.description = description;
+        this.items = items;
+      }
+
+      public String getDescription() {
+        return description;
+      }
+
+      public List<ItemInitializer> getItems() {
+        return items;
+      }
+
+      public String getName() {
+        return name;
+      }
+    }
+
+    public class ItemInitializer {
+      private final Template.ItemLookupProto lookup;
+
+      ItemInitializer(Template.ItemLookupProto lookup) {
+        this.lookup = lookup;
+      }
+
+      public Template.ItemLookupProto getLookup() {
+        return lookup;
+      }
     }
 
     public class CreatureInitializer {

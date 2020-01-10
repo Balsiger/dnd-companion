@@ -2,6 +2,7 @@ template {
   name: "Cursed Spirit"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 49
 race: "Cursed Spirit"
 type: "Undead"

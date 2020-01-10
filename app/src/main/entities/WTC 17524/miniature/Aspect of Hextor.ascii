@@ -2,6 +2,7 @@ template {
   name: "Aspect of Hextor"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 28
 type: "Fiend"
 subtype: "Evil"

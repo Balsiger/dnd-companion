@@ -2,6 +2,7 @@ template {
   name: "Windfiend Fury"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 39
 race: "Windfiend"
 type: "Elemental"

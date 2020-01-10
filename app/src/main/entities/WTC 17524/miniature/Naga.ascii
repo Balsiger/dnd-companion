@@ -2,6 +2,7 @@ template {
   name: "Naga"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 43
 race: "Naga"
 type: "Aberration"

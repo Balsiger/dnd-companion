@@ -2,6 +2,7 @@ template {
   name: "Harpy (DE)"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 53
 race: "Harpy"
 type: "Monstrosity"

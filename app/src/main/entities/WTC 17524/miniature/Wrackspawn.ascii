@@ -2,6 +2,7 @@ template {
   name: "Wrackspawn"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 60
 race: "Wrackspawn"
 type: "Fiend"

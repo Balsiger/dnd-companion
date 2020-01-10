@@ -2,6 +2,7 @@ template {
   name: "Scarlet Brotherhood Monk"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 39
 type: "Humanoid"
 race: "Human"

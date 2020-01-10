@@ -1,7 +1,8 @@
 template {
   name: "Hill Giant (Club)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 31
 race: "Hill Giant"
 type: "Giant"

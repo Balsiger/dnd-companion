@@ -2,6 +2,7 @@ template {
   name: "Undying Soldier"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 24
 type: "Humanoid"
 subtype: "Undead"

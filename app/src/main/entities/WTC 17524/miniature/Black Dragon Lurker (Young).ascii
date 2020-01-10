@@ -2,6 +2,7 @@ template {
   name: "Black Dragon Lurker (Young)"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 24
 type: "Dragon"
 subtype: "Aquatic"

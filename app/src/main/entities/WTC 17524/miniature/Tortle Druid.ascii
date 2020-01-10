@@ -1,0 +1,10 @@
+template {
+  name: "Tortle Druid"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: UNCOMMON
+number: 16
+type: "Humanoid"
+race: "Tortle"
+class: "Druid"
+size: MEDIUM

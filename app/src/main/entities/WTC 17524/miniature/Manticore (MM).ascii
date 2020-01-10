@@ -2,6 +2,7 @@ template {
   name: "Manticore (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 41
 race: "Manticore"
 type: "Monstrosity"

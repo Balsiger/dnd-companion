@@ -2,6 +2,7 @@ template {
   name: "Vlaakith the Lich Queen"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 60
 race: "Lich"
 type: "Undead"

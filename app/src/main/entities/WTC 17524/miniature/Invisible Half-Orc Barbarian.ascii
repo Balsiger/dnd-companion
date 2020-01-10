@@ -2,6 +2,7 @@ template {
   name: "Invisible Half-Orc Barbarian"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 19
 type: "Humanoid"
 race: "Half-Orc"

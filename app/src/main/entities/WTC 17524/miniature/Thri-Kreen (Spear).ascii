@@ -1,7 +1,8 @@
 template {
   name: "Thri-Kreen (Spear)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 16
 race: "Thri-Kreen"
 type: "Humanoid"

@@ -2,6 +2,7 @@ template {
   name: "Hook Horror (RD)"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 45
 race: "Hook Horror"
 type: "Monstrosity"

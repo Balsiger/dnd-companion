@@ -2,6 +2,7 @@ template {
   name: "Yaun-Ti Fangblade "
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 40
 type: "Humanoid"
 subtype: "Reptile"

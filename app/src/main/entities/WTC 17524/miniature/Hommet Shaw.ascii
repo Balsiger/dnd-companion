@@ -2,6 +2,7 @@ template {
   name: "Hommet Shaw"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 22
 type: "Humanoid"
 race: "Human"

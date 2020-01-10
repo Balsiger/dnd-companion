@@ -2,6 +2,7 @@ template {
   name: "Ogre (EE)"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 25
 type: "Giant"
 race: "Ogre"

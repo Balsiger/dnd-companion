@@ -2,6 +2,7 @@ template {
   name: "Large Black Dragon"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 55
 race: "Black Dragon"
 type: "Dragon"

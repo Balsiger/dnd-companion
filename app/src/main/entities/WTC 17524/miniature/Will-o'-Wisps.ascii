@@ -2,6 +2,7 @@ template {
   name: "Will-o\'-Wisps"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 3
 race: "Will-o\'-Wisp"
 type: "Undead"

@@ -2,6 +2,7 @@ template {
   name: "Halfling Outrider"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 21
 type: "Humanoid"
 race: "Halfling"

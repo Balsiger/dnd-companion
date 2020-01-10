@@ -2,6 +2,7 @@ template {
   name: "Kobold (Spiked Club)"
 }
 set: "Monster Menagerie 2"
+rarity: COMMON
 number: 2
 type: "Humanoid"
 subtype: "Reptilian"

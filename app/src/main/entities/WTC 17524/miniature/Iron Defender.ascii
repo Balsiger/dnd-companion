@@ -2,6 +2,7 @@ template {
   name: "Iron Defender"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 36
 race: "Iron Defender"
 type: "Construct"

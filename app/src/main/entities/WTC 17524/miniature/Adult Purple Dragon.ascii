@@ -2,6 +2,7 @@ template {
   name: "Adult Purple Dragon"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 2
 race: "Purple Dragon"
 type: "Dragon"

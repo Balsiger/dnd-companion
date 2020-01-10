@@ -2,6 +2,7 @@ template {
   name: "Mephistopheles, Lord of Cania"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 29
 race: "Mephistopheles"
 type: "Fiend"

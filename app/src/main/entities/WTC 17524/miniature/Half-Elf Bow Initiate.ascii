@@ -2,6 +2,7 @@ template {
   name: "Half-Elf Bow Initiate"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 18
 type: "Humanoid"
 race: "Half-Elf"

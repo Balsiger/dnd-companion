@@ -2,6 +2,7 @@ template {
   name: "Yuan-Ti Malison (SKT)"
 }
 set: "Storm King\'s Thunder"
+rarity: RARE
 number: 36
 type: "Humanoid"
 subtype: "Serpent"

@@ -2,6 +2,7 @@ template {
   name: "Tridrone (Kraken Priest)"
 }
 set: "Monster Menagerie 3"
+rarity: COMMON
 number: 12
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Caravan Guard"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 1
 type: "Humanoid"
 race: "Human"

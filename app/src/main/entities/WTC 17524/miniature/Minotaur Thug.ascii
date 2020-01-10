@@ -2,6 +2,7 @@ template {
   name: "Minotaur Thug"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 29
 race: "Minotaur"
 type: "Monstrosity"

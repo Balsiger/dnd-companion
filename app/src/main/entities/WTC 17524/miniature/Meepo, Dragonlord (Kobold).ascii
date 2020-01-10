@@ -2,6 +2,7 @@ template {
   name: "Meepo, Dragonlord (Kobold)"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 6
 type: "Humanoid"
 race: "Kobold"

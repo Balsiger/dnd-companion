@@ -2,6 +2,7 @@ template {
   name: "Vicious Bearded Devil"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 9
 race: "Bearded Devil"
 type: "Fiend"

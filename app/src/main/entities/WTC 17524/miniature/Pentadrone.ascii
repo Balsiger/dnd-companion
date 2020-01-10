@@ -1,7 +1,8 @@
 template {
   name: "Pentadrone"
 }
-set: "Dragon Eye"
+set: "Dragon Heist"
+rarity: UNCOMMON
 number: 28
 race: "Pentadrone"
 type: "Construct"

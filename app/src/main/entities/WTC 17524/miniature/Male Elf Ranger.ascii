@@ -2,6 +2,7 @@ template {
   name: "Male Elf Ranger"
 }
 set: "Player\'s Handbook Heroes"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Elf"

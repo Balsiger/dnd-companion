@@ -2,6 +2,7 @@ template {
   name: "Trostani Selesnya Guildmaster"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 44
 type: "Humanoid"
 race: "Human"

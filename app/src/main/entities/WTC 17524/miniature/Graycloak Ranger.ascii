@@ -2,6 +2,7 @@ template {
   name: "Graycloak Ranger"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 16
 type: "Humanoid"
 race: "Elf"

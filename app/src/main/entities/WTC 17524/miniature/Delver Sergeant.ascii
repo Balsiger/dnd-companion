@@ -2,6 +2,7 @@ template {
   name: "Delver Sergeant"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 5
 type: "Humanoid"
 race: "Human"

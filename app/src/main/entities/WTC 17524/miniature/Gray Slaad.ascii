@@ -2,6 +2,7 @@ template {
   name: "Gray Slaad"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 18
 race: "Gray Slaad"
 type: "Aberration"

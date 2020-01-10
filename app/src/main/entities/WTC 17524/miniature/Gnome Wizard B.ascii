@@ -2,6 +2,7 @@ template {
   name: "Gnome Wizard B"
 }
 set: "Monster Menagerie 3"
+rarity: COMMON
 number: 11
 type: "Humanoid"
 race: "Gnome"

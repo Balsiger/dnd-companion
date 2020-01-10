@@ -2,6 +2,7 @@ template {
   name: "Karsite Fighter"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 36
 type: "Humanoid"
 race: "Human"

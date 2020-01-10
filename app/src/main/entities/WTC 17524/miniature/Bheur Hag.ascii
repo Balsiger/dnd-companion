@@ -2,6 +2,7 @@ template {
   name: "Bheur Hag"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 22
 race: "Bheur Hag"
 subtype: "Hag"

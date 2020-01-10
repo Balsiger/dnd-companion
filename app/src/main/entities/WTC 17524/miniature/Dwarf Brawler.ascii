@@ -2,6 +2,7 @@ template {
   name: "Dwarf Brawler"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 3
 type: "Humanoid"
 race: "Dwarf"

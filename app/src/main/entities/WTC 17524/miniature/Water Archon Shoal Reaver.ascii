@@ -2,6 +2,7 @@ template {
   name: "Water Archon Shoal Reaver"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 54
 race: "Water Archon"
 type: "Elemental"

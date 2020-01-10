@@ -2,6 +2,7 @@ template {
   name: "Dread Guard"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 31
 race: "Dread Guard"
 type: "Construct"

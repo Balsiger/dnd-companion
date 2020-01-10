@@ -2,6 +2,7 @@ template {
   name: "Thrall of Blackrazor"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 57
 type: "Humanoid"
 race: "Human"

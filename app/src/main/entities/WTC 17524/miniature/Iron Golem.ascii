@@ -2,6 +2,7 @@ template {
   name: "Iron Golem"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 25
 race: "Iron Golem"
 type: "Construct"

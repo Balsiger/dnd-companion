@@ -2,6 +2,7 @@ template {
   name: "Large Water Elemental"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 38
 race: "Water Elemental"
 type: "Elemental"

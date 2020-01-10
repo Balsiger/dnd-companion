@@ -2,6 +2,7 @@ template {
   name: "Doresian, The Ghoul King"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 8
 type: "Undead"
 race: "Ghoul"

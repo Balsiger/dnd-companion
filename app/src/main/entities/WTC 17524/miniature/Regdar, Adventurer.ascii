@@ -2,6 +2,7 @@ template {
   name: "Regdar, Adventurer"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 12
 type: "Humanoid"
 race: "Human"

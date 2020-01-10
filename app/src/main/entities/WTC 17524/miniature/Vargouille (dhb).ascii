@@ -2,6 +2,7 @@ template {
   name: "Vargouille (dhb)"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 14
 type: "Fiend"
 race: "Vargouille"

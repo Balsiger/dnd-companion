@@ -2,6 +2,7 @@ template {
   name: "Gargoyle (DE)"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 52
 race: "Gargoyle"
 type: "Elemental"

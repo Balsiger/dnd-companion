@@ -2,6 +2,7 @@ template {
   name: "Wizened Elder Watcher"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 23
 race: "Elder Watcher"
 type: "Plant"

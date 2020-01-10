@@ -2,6 +2,7 @@ template {
   name: "Uthgardt Barbarian (Bald)"
 }
 set: "Monster Menagerie 2"
+rarity: RARE
 number: 33
 type: "Humanoid"
 race: "Human"

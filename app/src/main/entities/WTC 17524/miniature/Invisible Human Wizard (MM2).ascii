@@ -2,6 +2,7 @@ template {
   name: "Invisible Human Wizard (MM2)"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 21
 type: "Humanoid"
 race: "Human"

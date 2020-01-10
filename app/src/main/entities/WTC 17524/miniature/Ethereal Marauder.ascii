@@ -2,6 +2,7 @@ template {
   name: "Ethereal Marauder"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 49
 race: "Ethereal Marauder"
 type: "Monstrosity"

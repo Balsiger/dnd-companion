@@ -1,7 +1,8 @@
 template {
   name: "Yuan-Ti Pureblood (Bow)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 23
 type: "Humanoid"
 subtype: "Serpent"

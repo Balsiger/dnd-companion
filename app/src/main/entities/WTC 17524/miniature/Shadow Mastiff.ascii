@@ -2,6 +2,7 @@ template {
   name: "Shadow Mastiff"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 36
 race: "Shadow Mastiff"
 type: "Monstrosity"

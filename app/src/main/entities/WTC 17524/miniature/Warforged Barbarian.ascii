@@ -2,6 +2,7 @@ template {
   name: "Warforged Barbarian"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 24
 race: "Warforged"
 type: "Construct"

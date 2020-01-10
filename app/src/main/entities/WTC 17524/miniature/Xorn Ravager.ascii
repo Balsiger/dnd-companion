@@ -2,6 +2,7 @@ template {
   name: "Xorn Ravager"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 30
 race: "Xorn"
 type: "Elemental"

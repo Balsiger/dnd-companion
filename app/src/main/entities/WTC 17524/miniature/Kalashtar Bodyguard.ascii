@@ -2,6 +2,7 @@ template {
   name: "Kalashtar Bodyguard"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 9
 type: "Humanoid"
 race: "Kalashtar"

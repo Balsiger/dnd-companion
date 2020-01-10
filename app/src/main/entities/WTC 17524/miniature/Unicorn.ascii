@@ -2,6 +2,7 @@ template {
   name: "Unicorn"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 36
 race: "Unicorn"
 type: "Celestial"

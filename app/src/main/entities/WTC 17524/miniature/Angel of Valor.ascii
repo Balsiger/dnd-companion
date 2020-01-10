@@ -2,6 +2,7 @@ template {
   name: "Angel of Valor"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 2
 race: "Angel"
 type: "Celestial"

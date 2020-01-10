@@ -2,6 +2,7 @@ template {
   name: "Ancient Silver Dragon"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 type: "Dragon"
 size: HUGE
 subtype: "Metallic"

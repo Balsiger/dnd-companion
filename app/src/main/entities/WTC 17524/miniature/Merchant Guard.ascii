@@ -2,6 +2,7 @@ template {
   name: "Merchant Guard"
 }
 set: "Desert of Desolation"
+rarity: COMMON
 number: 12
 type: "Humanoid"
 race: "Human"

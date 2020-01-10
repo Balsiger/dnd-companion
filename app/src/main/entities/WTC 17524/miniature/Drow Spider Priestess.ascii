@@ -2,6 +2,7 @@ template {
   name: "Drow Spider Priestess"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 47
 type: "Humanoid"
 race: "Drow"

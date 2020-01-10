@@ -2,6 +2,7 @@ template {
   name: "Balor (UD)"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 41
 race: "Balor"
 type: "Fiend"

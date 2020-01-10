@@ -1,0 +1,9 @@
+template {
+  name: "Githzerai Anarch"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: RARE
+number: 34
+race: "Githzerai"
+type: "Humanoid"
+size: MEDIUM

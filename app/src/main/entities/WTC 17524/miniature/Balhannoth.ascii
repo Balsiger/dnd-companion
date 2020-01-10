@@ -2,6 +2,7 @@ template {
   name: "Balhannoth"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 race: "Balhannoth"
 number: 25
 type: "Aberration"

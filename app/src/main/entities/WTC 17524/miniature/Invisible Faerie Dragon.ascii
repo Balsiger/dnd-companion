@@ -2,6 +2,7 @@ template {
   name: "Invisible Faerie Dragon"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 1
 race: "Fearie Dragon"
 type: "Dragon"

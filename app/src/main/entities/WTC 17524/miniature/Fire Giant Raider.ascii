@@ -2,6 +2,7 @@ template {
   name: "Fire Giant Raider"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 19
 race: "Fire Giant"
 type: "Giant"

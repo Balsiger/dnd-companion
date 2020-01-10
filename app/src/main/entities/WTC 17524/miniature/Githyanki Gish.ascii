@@ -2,6 +2,7 @@ template {
   name: "Githyanki Gish"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 14
 race: "Githyanki"
 type: "Humanoid"

@@ -2,6 +2,7 @@ template {
   name: "Mane Demon"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 7
 race: "Mane Demon"
 type: "Fiend"

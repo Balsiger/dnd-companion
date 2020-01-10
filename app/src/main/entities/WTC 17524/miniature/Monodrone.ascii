@@ -2,6 +2,7 @@ template {
   name: "Monodrone"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 10
 race: "Monodrone"
 type: "Construct"

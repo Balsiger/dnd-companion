@@ -2,6 +2,7 @@ template {
   name: "Earth Shugenja"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Human"

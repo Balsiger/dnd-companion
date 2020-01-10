@@ -1,0 +1,9 @@
+template {
+  name: "Venom Troll"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: UNCOMMON
+number: 30
+type: "Giant"
+race: "Troll"
+size: LARGE

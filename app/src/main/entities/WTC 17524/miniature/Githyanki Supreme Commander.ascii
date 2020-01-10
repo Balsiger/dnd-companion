@@ -1,0 +1,9 @@
+template {
+  name: "Githyanki Supreme Commander"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: RARE
+number: 40
+race: "Githyanki"
+type: "Humanoid"
+size: MEDIUM

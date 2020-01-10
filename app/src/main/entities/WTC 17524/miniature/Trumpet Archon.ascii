@@ -2,6 +2,7 @@ template {
   name: "Trumpet Archon"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 10
 race: "Trumpet Archon"
 type: "Celestial"

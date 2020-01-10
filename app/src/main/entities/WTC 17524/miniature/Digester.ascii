@@ -2,6 +2,7 @@ template {
   name: "Digester"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 16
 race: "Digester"
 type: "Monstrosity"

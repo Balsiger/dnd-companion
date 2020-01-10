@@ -1,7 +1,8 @@
 template {
   name: "Invisible Night Hag"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: ULTRA_RARE
 number: 34
 race: "Night Hag"
 type: "Fey"

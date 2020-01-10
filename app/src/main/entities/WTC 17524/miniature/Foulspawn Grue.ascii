@@ -2,6 +2,7 @@ template {
   name: "Foulspawn Grue"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 15
 race: "Foulspawn"
 type: "Aberration"

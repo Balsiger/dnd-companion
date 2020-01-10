@@ -2,6 +2,7 @@ template {
   name: "Harmonium Guard"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 8
 type: "Humanoid"
 race: "Human"

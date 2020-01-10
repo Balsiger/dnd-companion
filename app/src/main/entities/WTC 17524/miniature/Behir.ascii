@@ -2,6 +2,7 @@ template {
   name: "Behir"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 66
 race: "Behir"
 type: "Monstrosity"

@@ -2,6 +2,7 @@ template {
   name: "Gold Dwarf Fighter"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Dwarf"

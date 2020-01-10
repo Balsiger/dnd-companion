@@ -2,6 +2,7 @@ template {
   name: "Spirit Folk Fighter"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 23
 race: "Spirit Folk"
 type: "Humanoid"

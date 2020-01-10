@@ -2,6 +2,7 @@ template {
   name: "Ogre Brute"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 52
 type: "Giant"
 race: "Ogre"

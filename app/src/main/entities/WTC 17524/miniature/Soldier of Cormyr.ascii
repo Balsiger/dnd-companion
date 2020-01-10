@@ -2,6 +2,7 @@ template {
   name: "Soldier of Cormyr"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 8
 type: "Humanoid"
 race: "Human"

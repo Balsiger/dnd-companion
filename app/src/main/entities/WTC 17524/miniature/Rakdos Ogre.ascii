@@ -2,6 +2,7 @@ template {
   name: "Rakdos Ogre"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 28
 race: "Ogre"
 type: "Giant"

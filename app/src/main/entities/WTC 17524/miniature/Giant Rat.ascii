@@ -2,6 +2,7 @@ template {
   name: "Giant Rat"
 }
 set: "Monster Menagerie 2"
+rarity: COMMON
 number: 1
 race: "Giant Rat"
 type: "Beast"

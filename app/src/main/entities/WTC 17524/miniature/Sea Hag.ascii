@@ -2,6 +2,7 @@ template {
   name: "Sea Hag"
 }
 set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 22
 race: "Sea Hag"
 type: "Fey"

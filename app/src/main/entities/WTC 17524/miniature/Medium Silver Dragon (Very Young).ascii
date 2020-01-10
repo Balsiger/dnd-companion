@@ -2,6 +2,7 @@ template {
   name: "Medium Silver Dragon (Very Young)"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 10
 race: "Silver Dragon"
 type: "Dragon"

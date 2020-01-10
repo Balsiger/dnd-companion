@@ -1,7 +1,8 @@
 template {
   name: "Invisible Crag Ungart"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: ULTRA_RARE
 number: 7
 race: "Dwarf"
 type: "Humanoid"

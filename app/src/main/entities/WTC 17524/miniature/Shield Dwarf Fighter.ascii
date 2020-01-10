@@ -2,6 +2,7 @@ template {
   name: "Shield Dwarf Fighter"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 7
 type: "Humanoid"
 race: "Dwarf"

@@ -2,6 +2,7 @@ template {
   name: "Fiendish Girallon"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 47
 race: "Girallon"
 type: "Fiend"

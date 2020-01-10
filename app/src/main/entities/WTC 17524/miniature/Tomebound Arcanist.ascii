@@ -2,6 +2,7 @@ template {
   name: "Tomebound Arcanist"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 47
 type: "Humanoid"
 race: "Human"

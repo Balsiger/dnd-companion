@@ -2,6 +2,7 @@ template {
   name: "Human Marauder"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 21
 type: "Humanoid"
 race: "Human"

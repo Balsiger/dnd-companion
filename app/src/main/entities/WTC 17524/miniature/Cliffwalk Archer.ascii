@@ -2,6 +2,7 @@ template {
   name: "Cliffwalk Archer"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 15
 race: "Shifter"
 type: "Humanoid"

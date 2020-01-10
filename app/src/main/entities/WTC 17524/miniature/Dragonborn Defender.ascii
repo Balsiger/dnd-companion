@@ -2,6 +2,7 @@ template {
   name: "Dragonborn Defender"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 15
 race: "Dragonborn"
 type: "Humanoid"

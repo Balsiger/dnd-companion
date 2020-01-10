@@ -2,6 +2,7 @@ template {
   name: "Medium Fire Elemental"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 54
 race: "Fire Elemental"
 type: "Elemental"

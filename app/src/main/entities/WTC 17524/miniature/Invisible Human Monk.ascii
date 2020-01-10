@@ -2,6 +2,7 @@ template {
   name: "Invisible Human Monk"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 10
 type: "Humanoid"
 race: "Human"

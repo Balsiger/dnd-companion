@@ -2,6 +2,7 @@ template {
   name: "Rakdos Performer"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 41
 type: "Humanoid"
 race: "Human"

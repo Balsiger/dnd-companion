@@ -2,6 +2,7 @@ template {
   name: "Centaur (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 31
 race: "Centaur"
 type: "Monstrosity"

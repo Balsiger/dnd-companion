@@ -2,6 +2,7 @@ template {
   name: "Spectral Magelord"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 46
 race: "Spectral Magelord"
 type: "Undead"

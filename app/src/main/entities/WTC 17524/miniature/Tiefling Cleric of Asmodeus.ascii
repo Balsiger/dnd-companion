@@ -2,6 +2,7 @@ template {
   name: "Tiefling Cleric of Asmodeus"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 8
 type: "Humanoid"
 race: "Tiefling"

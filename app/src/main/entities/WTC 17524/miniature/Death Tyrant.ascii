@@ -2,6 +2,7 @@ template {
   name: "Death Tyrant"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: RARE
 number: 44
 race: "Death Tyrant"
 type: "Undead"

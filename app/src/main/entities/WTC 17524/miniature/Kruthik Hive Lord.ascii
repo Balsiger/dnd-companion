@@ -2,6 +2,7 @@ template {
   name: "Kruthik Hive Lord"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 50
 race: "Kruthik"
 type: "Beast"

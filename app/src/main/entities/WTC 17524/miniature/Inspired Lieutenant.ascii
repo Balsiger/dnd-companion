@@ -2,6 +2,7 @@ template {
   name: "Inspired Lieutenant"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 33
 type: "Humanoid"
 race: "Human"

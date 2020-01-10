@@ -2,6 +2,7 @@ template {
   name: "Skeleton (LM)"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 45
 race: "Skeleton"
 type: "Undead"

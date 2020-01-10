@@ -2,6 +2,7 @@ template {
   name: "Spiderbound Drow Warrior"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 22
 type: "Humanoid"
 race: "Drow"

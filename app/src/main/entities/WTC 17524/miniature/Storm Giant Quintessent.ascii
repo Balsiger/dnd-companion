@@ -2,6 +2,7 @@ template {
   name: "Storm Giant Quintessent"
 }
 set: "Monster Menagerie 3"
+rarity: RARE
 number: 41
 race: "Storm Giant"
 type: "Giant"

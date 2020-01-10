@@ -2,6 +2,7 @@ template {
   name: "Crownwing"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 7
 race: "Crownwing"
 type: "Aberration"

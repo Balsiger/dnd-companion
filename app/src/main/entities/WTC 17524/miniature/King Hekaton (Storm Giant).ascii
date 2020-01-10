@@ -1,7 +1,8 @@
 template {
   name: "King Hekaton (Storm Giant)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: RARE
 number: 41
 type: "Giant"
 race: "Storm Giant"

@@ -1,7 +1,8 @@
 template {
   name: "Sprite (Sword)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: COMMON
 number: 2
 race: "Sprite"
 type: "Fey"

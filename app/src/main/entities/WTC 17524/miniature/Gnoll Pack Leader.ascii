@@ -1,0 +1,9 @@
+template {
+  name: "Gnoll Pack Leader"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: UNCOMMON
+number: 15
+type: "Humanoid"
+race: "Gnoll"
+size: MEDIUM

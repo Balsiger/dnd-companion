@@ -2,6 +2,7 @@ template {
   name: "Cleric of Syreth"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 3
 type: "Humanoid"
 race: "Human"

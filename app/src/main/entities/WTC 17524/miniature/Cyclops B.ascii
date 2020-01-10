@@ -2,6 +2,7 @@ template {
   name: "Cyclops B"
 }
 set: "Monster Menagerie 3"
+rarity: UNCOMMON
 number: 26
 race: "Cyclops"
 type: "Giant"

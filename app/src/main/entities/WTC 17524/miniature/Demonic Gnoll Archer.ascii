@@ -2,6 +2,7 @@ template {
   name: "Demonic Gnoll Archer"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 45
 race: "Gnoll"
 type: "Humanoid"

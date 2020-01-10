@@ -2,6 +2,7 @@ template {
   name: "Giant Centipede"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 56
 race: "Giant Centipede"
 type: "Beast"

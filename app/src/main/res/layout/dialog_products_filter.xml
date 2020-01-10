@@ -20,149 +20,162 @@
   ~ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
   -->
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
   <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="vertical"
-      android:padding="20dp">
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:layout_marginBottom="20dp"
+      android:gravity="center_horizontal"
+      android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:orientation="horizontal">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="20dp"
+        android:text="Clear"
+        android:textAlignment="center" />
 
-      <CheckBox
-          android:id="@+id/owned"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:text="owned"
-          android:textColor="@color/productDark" />
-
-      <CheckBox
-          android:id="@+id/not_owned"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:text="not owned"
-          android:textColor="@color/productDark" />
-    </LinearLayout>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Title"/>
+        android:layout_gravity="center_horizontal"
+        android:text="Filter"
+        android:textAlignment="center" />
 
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Description"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/person"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Person"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/worlds"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Worlds"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/producers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Producers"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/dates"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Dates"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/systems"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="System"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/types"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Types"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/audiences"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Audiences"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/styles"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Styles"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
-        android:id="@+id/layouts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Layouts"/>
-
-    <net.ixitxachitls.companion.ui.views.LabelledEditTextView
-        android:id="@+id/series"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:labelColor="@color/productDark"
-        app:labelText="Series"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-
-      <Button
-          android:id="@+id/clear"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center_horizontal"
-          android:layout_marginEnd="20dp"
-          android:text="Clear"
-          android:textAlignment="center"/>
-
-      <Button
-          android:id="@+id/save"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center_horizontal"
-          android:text="Filter"
-          android:textAlignment="center"/>
-
-    </LinearLayout>
   </LinearLayout>
 
-</ScrollView>
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="0"
+          android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/owned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="owned"
+            android:textColor="@color/productDark" />
+
+        <CheckBox
+            android:id="@+id/not_owned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="not owned"
+            android:textColor="@color/productDark" />
+      </LinearLayout>
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/id"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="ID" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Title" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/description"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Description" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/person"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Person" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/worlds"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Worlds" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/producers"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Producers" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/dates"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Dates" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/systems"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="System" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/types"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Types" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/audiences"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Audiences" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/styles"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Styles" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView
+          android:id="@+id/layouts"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Layouts" />
+
+      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+          android:id="@+id/series"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:labelColor="@color/productDark"
+          app:labelText="Series" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

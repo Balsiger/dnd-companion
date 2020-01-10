@@ -1,0 +1,10 @@
+template {
+  name: "Skull Lord (VMF a)"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: UNCOMMON
+number: 21
+race: "Skull Lord"
+type: "Undead"
+size: MEDIUM
+subtype: "Humanoid"

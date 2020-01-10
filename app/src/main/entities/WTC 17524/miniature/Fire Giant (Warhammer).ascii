@@ -1,7 +1,8 @@
 template {
   name: "Fire Giant (Warhammer)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 32
 race: "Fire Giant"
 type: "Giant"

@@ -2,6 +2,7 @@ template {
   name: "Cyclops Crusher"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 13
 race: "Cyclops"
 type: "Giant"

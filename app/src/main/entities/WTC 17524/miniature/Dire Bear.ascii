@@ -2,6 +2,7 @@ template {
   name: "Dire Bear"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 26
 race: "Dire Bear"
 type: "Beast"

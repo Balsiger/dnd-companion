@@ -2,6 +2,7 @@ template {
   name: "Magmin (EE)"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 1
 race: "Magmin"
 type: "Elemental"

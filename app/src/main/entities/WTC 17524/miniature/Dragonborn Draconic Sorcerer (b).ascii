@@ -2,6 +2,7 @@ template {
   name: "Dragonborn Draconic Sorcerer (b)"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 12
 race: "Dragonborn"
 type: "Humanoid"

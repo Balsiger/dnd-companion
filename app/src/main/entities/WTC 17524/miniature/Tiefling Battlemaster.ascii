@@ -2,6 +2,7 @@ template {
   name: "Tiefling Battlemaster"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: COMMON
 number: 7
 race: "Tiefling"
 type: "Humanoid"

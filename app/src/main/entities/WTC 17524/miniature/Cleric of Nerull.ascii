@@ -2,6 +2,7 @@ template {
   name: "Cleric of Nerull"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 30
 type: "Humanoid"
 race: "Human"

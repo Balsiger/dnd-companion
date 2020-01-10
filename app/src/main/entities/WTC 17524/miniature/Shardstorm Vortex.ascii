@@ -2,6 +2,7 @@ template {
   name: "Shardstorm Vortex"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 32
 race: "Shardstorm Vortekx"
 subtype: "Air"

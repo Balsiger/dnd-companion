@@ -2,6 +2,7 @@ template {
   name: "Sacred Watcher"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 8
 race: "Sacred Watcher"
 type: "Humanoid"

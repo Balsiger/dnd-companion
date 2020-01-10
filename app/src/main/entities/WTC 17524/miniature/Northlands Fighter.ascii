@@ -2,6 +2,7 @@ template {
   name: "Northlands Fighter"
 }
 set: "Starter Set"
+rarity: UNDEFINED
 number: 50
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Elf Arcane Archer"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 60
 type: "Humanoid"
 race: "Elf"

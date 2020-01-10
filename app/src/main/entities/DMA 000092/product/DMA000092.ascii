@@ -1,0 +1,80 @@
+template {
+  name: "DMA 000092"
+  world: "Generic"
+  description: "\\large{Explore the magical worlds of D&D}\\par You hold in your hands an immersive, one-of-a-kind guide to the dungeons and deathtraps from the world's most beloved tabletop role-playing game - Dungeons & Dragons. Featuring amazing new illustrations, and expert insights, \\Product[DMA 000092]{Dungeons & Tombs} shines its torchlight on the dark and foreboding corners of the game's infamous locations - from castles, crypts, and fortressesses to labyrinths and ships - and the creatures that lurk there. If you're eager to create your own D&D adventure, this guidebook provides the perfect starting point to worlds of fantasy and an epic tale all your own."
+  short_description: "A young adventurers guide to D&D dungeons."
+}
+title: "Dungeons & Tombs"
+subtitle: "A Young Adventurer's Guide"
+author {
+  name: "Zub, Jim"
+}
+author {
+  name: "King, Stacy"
+  job: "with"
+}
+author {
+  name: "Wheeler, Andrew"
+  job: "with"
+}
+editor {
+  name: "Bennet, Julie"
+}
+editor {
+  name: "Ogan, Doug"
+  job: "managing editor"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "LLC"
+}
+illustrator {
+  name: "Lukacs, Chuck"
+  job: "Ravenloft Cards"
+}
+illustrator {
+  name: "Stromberg, Betsy"
+  job: "art director"
+}
+illustrator {
+  name: "Stromberg, Betsy"
+  job: "designer"
+}
+manager {
+  name: "Wehner, Aaron"
+  job: "publisher"
+}
+manager {
+  name: "Bieser, Lisa"
+  job: "production designer"
+}
+date {
+  year: 2019
+  month: 11
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "9848"
+  title: "5644"
+  check: 9
+}
+pages: 106
+system: NONE
+audience: ALL
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+series: "Young Adventurer's Guide"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

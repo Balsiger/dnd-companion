@@ -2,6 +2,7 @@ template {
   name: "Abyssal Skulker"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 51
 race: "Abyssal Skulker"
 type: "Fiend"

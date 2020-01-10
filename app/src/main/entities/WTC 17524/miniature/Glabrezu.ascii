@@ -2,6 +2,7 @@ template {
   name: "Glabrezu"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 70
 race: "Glabrezu"
 type: "Fiend"

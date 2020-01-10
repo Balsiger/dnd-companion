@@ -66,6 +66,16 @@
   <color name="productDark">#808e95</color>
   <color name="productText">#000</color>
 
+  <color name="feat">#00897b</color>
+  <color name="featLight">#4ebaaa</color>
+  <color name="featDark">#005b4f</color>
+  <color name="featText">#000</color>
+
+  <color name="skill">#d4e157</color>
+  <color name="skillLight">#ffff89</color>
+  <color name="skillDark">#a0af22</color>
+  <color name="skillText">#000</color>
+
   <!-- colors for character status -->
   <color name="alive">#f00</color>
   <color name="stable">#666</color>

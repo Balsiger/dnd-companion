@@ -2,6 +2,7 @@ template {
   name: "Treant (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 55
 race: "Treant"
 type: "Plant"

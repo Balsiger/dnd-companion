@@ -2,6 +2,7 @@ template {
   name: "Tabaxi Minstrel"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 21
 type: "Humanoid"
 race: "Tabaxi"

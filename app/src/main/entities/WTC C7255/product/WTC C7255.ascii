@@ -1,0 +1,305 @@
+template {
+  name: "WTC C7255"
+  world: "Forgotten Realms"
+  description: "The \\Place{Forgotten Realms} are full of powerful factions vying for control, and for a time, each has had the upper hand. The \\Group{Harpers}. The \\Group{Zhentarim}. The \\Group{Lord's Alliance}. The \\Group{Order of the Gauntlet}. The \\Group{Emerald Enclave}. I might be forgetting one or two. There's a bunch of these things.\\par If none of those organizations can help you, consider \\Group{Acquisitions Incorporated}. Called '\\Place{Faerûn}'s Definitive Adventuring Brand' by ... well, by the company itself, they've been in operation for more than a deacde, and it's mostly been fine. For them. I should emphasize that it's been fine for them specifically. It's not always find for the people who hire them, and it's definitely nto fine for the people they're hired to rob.\\par Truth is, though, when you're just starting out in the adventuring business, it might be nice to have a leg up. It can be a big help to have access to the powerful artifacts, expertise, and jobs that \\Group{Acquisitions Incorporated} has to offer a new franchise. Plus, there are always openings available.\\par Just try not to think about why."
+  short_description: "Information about the \\Group{Acquisitions Incorporated} organization."
+}
+title: "Acquisitions Incorporated"
+subtitle: "Help Wanted"
+date {
+  year: 2019
+  month: 6
+}
+author {
+  name: "Merwin, Shawn"
+  job: "designer"
+}
+author {
+  name: "Abadia, Teos"
+  job: "designer"
+}
+author {
+  name: "Holkins, Jerry"
+  job: "designer"
+}
+author {
+  name: "Gray, Scott Fitzgerald"
+  job: "designer"
+}
+author {
+  name: "Merwin, Shawn"
+  job: "developer"
+}
+author {
+  name: "Abadia, Teos"
+  job: "developer"
+}
+author {
+  name: "Gray, Scott Fitzgerald"
+  job: "designer"
+}
+author {
+  name: "Sims, Chris S."
+  job: "developer"
+}
+author {
+  name: "Petrisor, Ben"
+  job: "developer"
+}
+author {
+  name: "Crawford, Jeremy"
+  job: "developer"
+}
+author {
+  name: "Liddell, Lizzy"
+  job: "indexing"
+}
+author {
+  name: "Lancaster, Luke"
+  job: "additional design"
+}
+author {
+  name: "Naoum, Zac"
+  job: "additional design"
+}
+author {
+  name: "Holkins, Jerry"
+  job: "additional flavor text writers"
+}
+author {
+  name: "Krahulik, Mike"
+  job: "additional flavor text writers"
+}
+author {
+  name: "Rothfuss, Patrick"
+  job: "additional flavor text writers"
+}
+author {
+  name: "Webb, Morgan"
+  job: "additional flavor text writers"
+}
+author {
+  name: "Falcone, Amy T."
+  job: "additional flavor text writers"
+}
+author {
+  name: "Welch, Kate"
+  job: "additional flavor text writers"
+}
+author {
+  name: "Hartman, Ryan"
+  job: "additional flavor text writers"
+}
+author {
+  name: "Straub, Kris"
+  job: "additional flavor text writers"
+}
+author {
+  name: "Lancaster, Luke"
+  job: "additional flavor text writers"
+}
+cover {
+  name: "Krahulik, Mike"
+}
+illustrator {
+  name: "Alan, Dabe"
+}
+illustrator {
+  name: "Ang, Joy"
+}
+illustrator {
+  name: "Calvert, Darren M.A."
+}
+illustrator {
+  name: "Girogi, Michele"
+}
+illustrator {
+  name: "Greco, Gavin"
+}
+illustrator {
+  name: "Hannigan, Leesha"
+}
+illustrator {
+  name: "Jacobson, Tyler"
+}
+illustrator {
+  name: "Kay, Nicholas"
+}
+illustrator {
+  name: "Kok, Julian"
+}
+illustrator {
+  name: "Litterell, Dora"
+}
+illustrator {
+  name: "Normal, Nurse"
+}
+illustrator {
+  name: "Or, Aviv"
+}
+illustrator {
+  name: "Pillon, Klaus"
+}
+illustrator {
+  name: "Sinek, Carmen"
+}
+illustrator {
+  name: "Straub, Kris"
+}
+illustrator {
+  name: "van Deun, Kim"
+}
+illustrator {
+  name: "Villaseñor, Fracnisco"
+}
+illustrator {
+  name: "Walton, Chris"
+}
+illustrator {
+  name: "Krahulik, Mike"
+  job: "art director"
+}
+illustrator {
+  name: "Villaseñor, Francisco"
+  job: "art director"
+}
+illustrator {
+  name: "Narciso, Shauna"
+  job: "art director"
+}
+illustrator {
+  name: "Irwin, Kate"
+  job: "art director"
+}
+illustrator {
+  name: "Holkins, Jerry"
+  job: "additional art director"
+}
+illustrator {
+  name: "Grant, Elyssa"
+  job: "additional art director"
+}
+illustrator {
+  name: "Gray, Scott Fitzgerald"
+  job: "additional art director"
+}
+illustrator {
+  name: "Falcone, Amy T."
+  job: "graphic designer"
+}
+illustrator {
+  name: "Tanji, Emi"
+  job: "graphic designer"
+}
+illustrator {
+  name: "Yochum, Trish"
+  job: "graphic designer"
+}
+cartographer {
+  name: "Blando, Jared"
+}
+cartographer {
+  name: "Engle, Jason"
+}
+cartographer {
+  name: "Lazzaretti, Robert"
+}
+cartographer {
+  name: "Schley, Mike"
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+  job: "lead editor"
+}
+editor {
+  name: "Carter, Michele"
+}
+editor {
+  name: "Sims, Chris S."
+}
+editor {
+  name: "Gray, Scott Fitzgerald"
+}
+editor {
+  name: "Schneider, F. Wesley"
+}
+manager {
+  name: "Holkins, Jerry"
+  job: "creative director"
+}
+manager {
+  name: "Grant, Elyssa"
+  job: "creative director"
+}
+manager {
+  name: "Gray, Scott Fitzgerald"
+  job: "creative director"
+}
+manager {
+  name: "Grant, Elyssa"
+  job: "producer"
+}
+manager {
+  name: "Tovar, Dan"
+  job: "producer"
+}
+manager {
+  name: "Benham, Bill"
+  job: "associate producer"
+}
+manager {
+  name: "Callaway, Cynda"
+  job: "production services"
+}
+manager {
+  name: "Dunlap, Jefferson"
+  job: "production services"
+}
+manager {
+  name: "Gersham, David"
+  job: "production services"
+}
+manager {
+  name: "Hartman, Ryna"
+  job: "brand and marketing"
+}
+manager {
+  name: "Grant, Elyssa"
+  job: "brand and marketing"
+}
+manager {
+  name: "Tito, Greg"
+  job: "brand and marketing"
+}
+manager {
+  name: "Olsen, Cate"
+  job: "brand and marketing"
+}
+manager {
+  name: "Vo, Anna"
+  job: "brand and marketing"
+}
+manager {
+  name: "Stride PR"
+  job: "brand and marketing"
+}
+manager {
+  name: "360 PR"
+  job: "brand and marketing"
+}
+pages: 224
+system: DND_5E
+audience: DM
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 4995
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

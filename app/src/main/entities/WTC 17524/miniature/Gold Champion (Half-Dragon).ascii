@@ -2,6 +2,7 @@ template {
   name: "Gold Champion (Half-Dragon)"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 4
 race: "Half-Dragon"
 type: "Dragon"

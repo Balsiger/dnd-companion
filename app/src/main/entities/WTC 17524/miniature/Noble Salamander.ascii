@@ -2,6 +2,7 @@ template {
   name: "Noble Salamander"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 39
 race: "Noble Salamander"
 type: "Elemental"

@@ -2,6 +2,7 @@ template {
   name: "Renaer Neverember"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 19
 type: "Humanoid"
 race: "Human"

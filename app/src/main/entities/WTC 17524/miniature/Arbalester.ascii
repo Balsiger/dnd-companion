@@ -2,6 +2,7 @@ template {
   name: "Arbalester"
 }
 set: "Dangerous Delves"
+rarity: UNDEFINED
 number: 2
 race: "Homunculus"
 type: "Construct"

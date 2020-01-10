@@ -2,6 +2,7 @@ template {
   name: "Ice Devil"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 35
 race: "Ice Devil"
 type: "Fiend"

@@ -2,6 +2,7 @@ template {
   name: "Merchant (b)"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 type: "Humanoid"
 race: "Human"
 class: "Expert"

@@ -3,6 +3,7 @@ template {
   description: "Part of the Adventurer's Camp Promo"
 }
 set: "Monster Menagerie 2"
+rarity: UNIQUE
 number: 44
 number_affix: "B"
 race: "Horse"

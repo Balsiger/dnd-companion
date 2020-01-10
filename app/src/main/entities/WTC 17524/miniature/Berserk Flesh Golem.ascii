@@ -2,6 +2,7 @@ template {
   name: "Berserk Flesh Golem"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 46
 race: "Flesh Golem"
 type: "Construct"

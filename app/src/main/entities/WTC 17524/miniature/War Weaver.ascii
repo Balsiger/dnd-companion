@@ -2,6 +2,7 @@ template {
   name: "War Weaver"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 9
 type: "Humanoid"
 race: "Human"

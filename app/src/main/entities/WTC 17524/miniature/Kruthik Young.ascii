@@ -2,6 +2,7 @@ template {
   name: "Kruthik Young"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 28
 race: "Kruthik"
 type: "Beast"

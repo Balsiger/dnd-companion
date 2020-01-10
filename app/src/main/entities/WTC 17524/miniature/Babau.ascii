@@ -2,6 +2,7 @@ template {
   name: "Babau"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 45
 race: "Babau"
 type: "Fiend"

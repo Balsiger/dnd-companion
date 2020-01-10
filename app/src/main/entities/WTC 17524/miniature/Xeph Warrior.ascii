@@ -2,6 +2,7 @@ template {
   name: "Xeph Warrior"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 30
 type: "Humanoid"
 race: "Xeph"

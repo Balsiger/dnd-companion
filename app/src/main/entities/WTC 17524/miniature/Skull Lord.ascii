@@ -2,6 +2,7 @@ template {
   name: "Skull Lord"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 27
 race: "Skull Lord"
 type: "Undead"

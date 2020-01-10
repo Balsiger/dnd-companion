@@ -2,6 +2,7 @@ template {
   name: "Soldier of Bytopia"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 11
 type: "Humanoid"
 race: "Gnome"

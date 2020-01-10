@@ -2,6 +2,7 @@ template {
   name: "Aspect of Bane"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 28
 type: "Fiend"
 subtype: "Evil"

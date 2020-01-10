@@ -2,6 +2,7 @@ template {
   name: "Storm Giant (MM3)"
 }
 set: "Monster Menagerie 3"
+rarity: RARE
 number: 44
 race: "Storm Giant"
 subtype: "Aquatic"

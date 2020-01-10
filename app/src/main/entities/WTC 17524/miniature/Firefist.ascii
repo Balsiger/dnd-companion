@@ -2,6 +2,7 @@ template {
   name: "Firefist"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Human"

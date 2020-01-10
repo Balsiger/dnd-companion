@@ -2,6 +2,7 @@ template {
   name: "Yuan-Ti Halfblood"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 60
 type: "Humanoid"
 subtype: "Serpent"

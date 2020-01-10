@@ -2,6 +2,7 @@ template {
   name: "Griffon"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 20
 race: "Griffon"
 type: "Monstrosity"

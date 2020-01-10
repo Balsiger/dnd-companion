@@ -2,6 +2,7 @@ template {
   name: "Ascendant Hellsword"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 21
 race: "Ascendant Hellsword"
 type: "Fiend"

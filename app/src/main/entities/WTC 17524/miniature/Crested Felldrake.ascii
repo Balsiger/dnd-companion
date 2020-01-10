@@ -2,6 +2,7 @@ template {
   name: "Crested Felldrake"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 19
 race: "Crested Felldrake"
 type: "Dragon"

@@ -2,6 +2,7 @@ template {
   name: "Bloodhulk Fighter"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 46
 race: "Bloodhulk"
 type: "Undead"

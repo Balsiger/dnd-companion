@@ -2,6 +2,7 @@ template {
   name: "Vrock (AF)"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 58
 race: "Vrock"
 type: "Fiend"

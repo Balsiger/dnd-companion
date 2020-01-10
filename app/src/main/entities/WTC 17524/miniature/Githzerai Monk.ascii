@@ -2,6 +2,7 @@ template {
   name: "Githzerai Monk"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 4
 race: "Githzerai"
 type: "Humanoid"

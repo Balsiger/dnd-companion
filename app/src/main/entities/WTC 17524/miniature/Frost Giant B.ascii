@@ -2,6 +2,7 @@ template {
   name: "Frost Giant B"
 }
 set: "Monster Menagerie 3"
+rarity: UNCOMMON
 number: 32
 race: "Frost Giant"
 type: "Giant"

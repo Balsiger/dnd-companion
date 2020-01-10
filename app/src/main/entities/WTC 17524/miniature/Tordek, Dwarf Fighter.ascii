@@ -2,6 +2,7 @@ template {
   name: "Tordek, Dwarf Fighter"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 13
 type: "Humanoid"
 race: "Dwarf"

@@ -2,6 +2,7 @@ template {
   name: "Mummy Lord"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 39
 race: "Mummy"
 type: "Undead"

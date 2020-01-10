@@ -2,6 +2,7 @@ template {
   name: "Duergar Champion"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 35
 type: "Humanoid"
 race: "Duergar"

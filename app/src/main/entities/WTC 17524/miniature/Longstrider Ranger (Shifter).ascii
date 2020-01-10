@@ -2,6 +2,7 @@ template {
   name: "Longstrider Ranger (Shifter)"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 22
 type: "Humanoid"
 race: "Shifter"

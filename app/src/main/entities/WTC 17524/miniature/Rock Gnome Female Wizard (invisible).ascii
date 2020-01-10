@@ -2,6 +2,7 @@ template {
   name: "Rock Gnome Female Wizard (invisible)"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 1
 type: "Humanoid"
 race: "Gnome"

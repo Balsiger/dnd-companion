@@ -2,6 +2,7 @@ template {
   name: "Volothamp Geddarm"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 40
 type: "Humanoid"
 race: "Human"

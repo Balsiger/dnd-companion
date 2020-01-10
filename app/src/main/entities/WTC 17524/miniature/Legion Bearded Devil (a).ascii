@@ -2,6 +2,7 @@ template {
   name: "Legion Bearded Devil (a)"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 21
 race: "Bearded Devil"
 type: "Fiend"

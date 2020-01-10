@@ -2,6 +2,7 @@ template {
   name: "Degenerate Cultist of Orcus"
 }
 set: "Against the Giants"
+rarity: COMMON
 number: 4
 type: "Humanoid"
 race: "Human"

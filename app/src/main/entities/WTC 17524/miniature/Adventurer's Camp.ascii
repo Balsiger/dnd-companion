@@ -2,6 +2,7 @@ template {
   name: "Adventurer\'s Camp"
 }
 set: "Monster Menagerie 2"
+rarity: UNIQUE
 number: 44
 type: "Object"
 size: HUGE

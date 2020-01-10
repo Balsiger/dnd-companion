@@ -2,6 +2,7 @@ template {
   name: "Tiefling Necromancer"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 37
 type: "Humanoid"
 race: "Tiefling"

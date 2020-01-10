@@ -2,6 +2,7 @@ template {
   name: "Will-o\'-Wisp"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 55
 race: "Will-o\'-Wisp"
 type: "Undead"

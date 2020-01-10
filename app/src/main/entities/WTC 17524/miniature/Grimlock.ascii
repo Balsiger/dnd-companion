@@ -2,6 +2,7 @@ template {
   name: "Grimlock"
 }
 set: "Dragon Eye"
+rarity: COMMON
 number: 42
 race: "Grimlock"
 type: "Humanoid"

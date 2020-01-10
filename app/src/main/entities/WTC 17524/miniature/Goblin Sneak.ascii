@@ -2,6 +2,7 @@ template {
   name: "Goblin Sneak"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 42
 type: "Humanoid"
 race: "Goblin"

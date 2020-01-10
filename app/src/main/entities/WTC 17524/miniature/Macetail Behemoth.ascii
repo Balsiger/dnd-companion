@@ -2,6 +2,7 @@ template {
   name: "Macetail Behemoth"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 6
 race: "Macetail Behemoth"
 type: "Beast"

@@ -2,6 +2,7 @@ template {
   name: "Succubus (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 37
 race: "Succubus"
 type: "Fiend"

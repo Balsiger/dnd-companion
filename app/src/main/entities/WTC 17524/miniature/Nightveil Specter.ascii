@@ -2,6 +2,7 @@ template {
   name: "Nightveil Specter"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 42
 race: "Nightveil Specter"
 type: "Undead"

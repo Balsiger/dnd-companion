@@ -2,6 +2,7 @@ template {
   name: "Warforged Fighter"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 6
 race: "Warforged"
 type: "Construct"

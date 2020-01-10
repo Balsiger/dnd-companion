@@ -2,6 +2,7 @@ template {
   name: "Invisible Arcturia"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: ULTRA_RARE
 number: 39
 race: "Arcturia"
 type: "Fey"

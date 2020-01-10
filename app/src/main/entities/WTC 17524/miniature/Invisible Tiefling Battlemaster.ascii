@@ -2,6 +2,7 @@ template {
   name: "Invisible Tiefling Battlemaster"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: ULTRA_RARE
 number: 7
 race: "Tiefling"
 type: "Humanoid"

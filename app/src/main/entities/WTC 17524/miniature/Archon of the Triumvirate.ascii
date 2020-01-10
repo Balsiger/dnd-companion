@@ -3,6 +3,7 @@ template {
 }
 race: "Archon"
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 43
 type: "Celestial"
 subtype: "Angel"

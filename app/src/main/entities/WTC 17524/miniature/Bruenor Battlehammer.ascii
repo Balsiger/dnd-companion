@@ -2,6 +2,7 @@ template {
   name: "Bruenor Battlehammer"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 10
 type: "Humanoid"
 race: "Dwarf"

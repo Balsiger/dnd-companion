@@ -2,6 +2,7 @@ template {
   name: "Frontline Medic"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 35
 type: "Humanoid"
 race: "Human"

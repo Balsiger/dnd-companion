@@ -2,6 +2,7 @@ template {
   name: "Blood Golem of Hextor"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 32
 race: "Blood Golem"
 type: "Construct"

@@ -210,10 +210,10 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
   }
 
   private int sortScore() {
-    return locations.size() * 17
-        + sets.size() * 13
-        + sizes.size() * 11
-        + races.size() * 7
+    return locations.size() * 29
+        + sets.size() * 23
+        + sizes.size() * 19
+        + races.size() * 17
         + types.size() * 5
         + classes.size() * 3
         + owned.size() + name.length();

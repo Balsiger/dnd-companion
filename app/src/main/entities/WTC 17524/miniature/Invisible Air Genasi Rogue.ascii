@@ -2,6 +2,7 @@ template {
   name: "Invisible Air Genasi Rogue"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 50
 race: "Air Genasi"
 type: "Humanoid"

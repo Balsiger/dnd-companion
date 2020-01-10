@@ -2,6 +2,7 @@ template {
   name: "Lamia"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 30
 race: "Lamia"
 type: "Monstrosity"

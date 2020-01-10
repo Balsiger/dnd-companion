@@ -2,6 +2,7 @@ template {
   name: "Drow Archer"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 60
 type: "Humanoid"
 race: "Drow"

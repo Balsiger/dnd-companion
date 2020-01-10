@@ -2,6 +2,7 @@ template {
   name: "War Chanter"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 21
 type: "Humanoid"
 race: "Human"

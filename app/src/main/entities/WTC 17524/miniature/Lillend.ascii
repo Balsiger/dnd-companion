@@ -2,6 +2,7 @@ template {
   name: "Lillend"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 19
 race: "Lillend"
 type: "Monstrosity"

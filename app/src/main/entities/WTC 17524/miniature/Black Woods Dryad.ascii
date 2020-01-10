@@ -2,6 +2,7 @@ template {
   name: "Black Woods Dryad"
 }
 set: "Desert of Desolation"
+rarity: COMMON
 number: 14
 race: "Dryad"
 type: "Fey"

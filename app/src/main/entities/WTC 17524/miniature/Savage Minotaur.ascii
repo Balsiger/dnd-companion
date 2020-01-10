@@ -2,6 +2,7 @@ template {
   name: "Savage Minotaur"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 31
 type: "Monstrosity"
 race: "Minotaur"

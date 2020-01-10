@@ -2,6 +2,7 @@ template {
   name: "Half-Orc Executioner"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 36
 type: "Humanoid"
 race: "Half-Orc"

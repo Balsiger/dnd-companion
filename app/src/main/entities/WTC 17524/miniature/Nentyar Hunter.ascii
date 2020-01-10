@@ -2,6 +2,7 @@ template {
   name: "Nentyar Hunter"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 20
 race: "Human"
 type: "Plant"

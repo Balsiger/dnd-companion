@@ -2,6 +2,7 @@ template {
   name: "Dwarven Werebear"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 10
 type: "Humanoid"
 subtype: "Shapechanger"

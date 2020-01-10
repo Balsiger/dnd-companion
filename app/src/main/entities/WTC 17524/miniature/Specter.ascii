@@ -2,6 +2,7 @@ template {
   name: "Specter"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 36
 race: "Specter"
 type: "Undead"

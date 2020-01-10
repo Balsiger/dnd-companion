@@ -2,6 +2,7 @@ template {
   name: "Mind Flayer Lich"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 38
 race: "Lich"
 type: "Undead"

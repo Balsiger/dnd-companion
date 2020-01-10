@@ -1,7 +1,8 @@
 template {
   name: "Intellect Devourer (skt)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: COMMON
 number: 1
 race: "Intellect Devourer"
 type: "Aberration"

@@ -2,6 +2,7 @@ template {
   name: "Invisible Earth Genasi Fighter"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 49
 race: "Earth Genasi"
 type: "Humanoid"

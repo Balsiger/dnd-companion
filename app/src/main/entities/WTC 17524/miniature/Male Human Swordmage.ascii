@@ -2,6 +2,7 @@ template {
   name: "Male Human Swordmage"
 }
 set: "Player\'s Handbook Heroes 2"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Human"

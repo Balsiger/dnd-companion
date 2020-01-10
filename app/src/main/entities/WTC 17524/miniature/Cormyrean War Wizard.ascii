@@ -2,6 +2,7 @@ template {
   name: "Cormyrean War Wizard"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Human"

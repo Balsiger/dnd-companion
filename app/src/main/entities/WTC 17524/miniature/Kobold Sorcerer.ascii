@@ -2,6 +2,7 @@ template {
   name: "Kobold Sorcerer"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 38
 type: "Humanoid"
 race: "Kobold"

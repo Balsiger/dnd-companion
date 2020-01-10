@@ -2,6 +2,7 @@ template {
   name: "Kamadan"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 27
 race: "Kamadan"
 type: "Monstrosity"

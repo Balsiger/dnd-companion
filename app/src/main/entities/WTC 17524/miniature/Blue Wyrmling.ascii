@@ -2,6 +2,7 @@ template {
   name: "Blue Wyrmling"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 29
 race: "Blue Dragon"
 type: "Dragon"

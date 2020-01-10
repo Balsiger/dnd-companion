@@ -2,6 +2,7 @@ template {
   name: "Earth Titan"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 33
 race: "Earth Titan"
 type: "Giant"

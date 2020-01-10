@@ -2,6 +2,7 @@ template {
   name: "Visceral Devourer"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 7
 race: "Devourer"
 type: "Undead"

@@ -2,6 +2,7 @@ template {
   name: "Orc Savage"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 57
 type: "Humanoid"
 race: "Orc"

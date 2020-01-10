@@ -2,6 +2,7 @@ template {
   name: "Bullywug Thug"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 48
 race: "Bullywug"
 type: "Humanoid"

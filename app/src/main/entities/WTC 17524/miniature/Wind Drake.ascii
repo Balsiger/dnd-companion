@@ -2,6 +2,7 @@ template {
   name: "Wind Drake"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 6
 race: "Wind Drake"
 type: "Dragon"

@@ -2,6 +2,7 @@ template {
   name: "Greenspawn Sneak"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 32
 race: "Greenspawn"
 subtype: "Dragonspawn"

@@ -2,6 +2,7 @@ template {
   name: "Hippogriff"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 26
 race: "Hippogriff"
 type: "Monstrosity"

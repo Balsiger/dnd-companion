@@ -2,6 +2,7 @@ template {
   name: "Carrion Tribe Barbarian"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 46
 type: "Humanoid"
 race: "Human"

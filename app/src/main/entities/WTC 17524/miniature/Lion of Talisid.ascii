@@ -2,6 +2,7 @@ template {
   name: "Lion of Talisid"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 20
 type: "Humanoid"
 race: "Elf"

@@ -2,6 +2,7 @@ template {
   name: "Troglodyte"
 }
 set: "Dragon Eye"
+rarity: COMMON
 number: 60
 type: "Humanoid"
 race: "Troglodyte"

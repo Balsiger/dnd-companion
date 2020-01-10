@@ -2,6 +2,7 @@ template {
   name: "Red Wizard"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 37
 type: "Humanoid"
 race: "Human"

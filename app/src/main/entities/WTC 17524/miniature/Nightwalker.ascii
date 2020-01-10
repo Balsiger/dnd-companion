@@ -2,6 +2,7 @@ template {
   name: "Nightwalker"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 26
 race: "Nightwalker"
 type: "Undead"

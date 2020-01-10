@@ -2,6 +2,7 @@ template {
   name: "Darkmantle"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 15
 race: "Darkmantle"
 type: "Monstrosity"

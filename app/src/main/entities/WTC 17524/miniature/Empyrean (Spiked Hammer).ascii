@@ -2,6 +2,7 @@ template {
   name: "Empyrean (Spiked Hammer)"
 }
 set: "Monster Menagerie 3"
+rarity: UNCOMMON
 number: 25
 race: "Empyrian"
 type: "Celestial"

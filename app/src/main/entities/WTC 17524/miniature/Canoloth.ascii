@@ -2,6 +2,7 @@ template {
   name: "Canoloth"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 50
 race: "Canoloth"
 type: "Fiend"

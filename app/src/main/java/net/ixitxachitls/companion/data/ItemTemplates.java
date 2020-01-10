@@ -142,6 +142,10 @@ public class ItemTemplates extends TemplatesStore<ItemTemplate> {
   public Optional<Item> lookup(CompanionContext context, Template.ItemLookupProto proto) {
     List<ItemTemplate> templates = lookupTemplates(proto);
 
+    if (templates.isEmpty()) {
+      return Optional.empty();
+    }
+
     int total = totalWeightedProbability(templates);
     int random = RANDOM.nextInt(total);
 

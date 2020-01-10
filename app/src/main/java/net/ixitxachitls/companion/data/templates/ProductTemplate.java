@@ -54,6 +54,10 @@ public class ProductTemplate extends StoredTemplate<Template.ProductTemplateProt
     return Collections.emptySet();
   }
 
+  public String getId() {
+    return proto.getTemplate().getId();
+  }
+
   public String getTitle() {
     return proto.getTitle();
   }

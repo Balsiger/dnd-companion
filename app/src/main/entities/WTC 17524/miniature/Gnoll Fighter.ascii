@@ -2,6 +2,7 @@ template {
   name: "Gnoll Fighter"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 22
 type: "Humanoid"
 race: "Gnoll"

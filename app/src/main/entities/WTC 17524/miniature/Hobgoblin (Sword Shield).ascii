@@ -2,6 +2,7 @@ template {
   name: "Hobgoblin (Sword Shield)"
 }
 set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 18
 type: "Humanoid"
 subtype: "Goblinoid"

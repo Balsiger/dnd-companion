@@ -2,6 +2,7 @@ template {
   name: "Hunting Hyena"
 }
 set: "War of the Dragon Queen"
+rarity: COMMON
 number: 47
 race: "Hyena"
 type: "Beast"

@@ -2,6 +2,7 @@ template {
   name: "Erinyes"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 33
 race: "Erinyes"
 type: "Fiend"

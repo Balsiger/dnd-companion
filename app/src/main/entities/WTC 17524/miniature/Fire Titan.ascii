@@ -2,6 +2,7 @@ template {
   name: "Fire Titan"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 12
 race: "Fire Titan"
 type: "Elemental"

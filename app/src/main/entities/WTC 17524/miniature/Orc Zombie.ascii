@@ -2,6 +2,7 @@ template {
   name: "Orc Zombie"
 }
 set: "Against the Giants"
+rarity: COMMON
 number: 27
 type: "Undead"
 subtype: "Zombie"

@@ -2,6 +2,7 @@ template {
   name: "Storm Archer"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 16
 type: "Humanoid"
 race: "Elf"

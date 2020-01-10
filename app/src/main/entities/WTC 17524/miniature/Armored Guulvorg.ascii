@@ -2,6 +2,7 @@ template {
   name: "Armored Guulvorg"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 13
 race: "Buulvorg"
 type: "Beast"

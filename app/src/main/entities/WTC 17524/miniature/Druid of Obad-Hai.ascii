@@ -2,6 +2,7 @@ template {
   name: "Druid of Obad-Hai"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 27
 type: "Humanoid"
 race: "Human"

@@ -1,0 +1,9 @@
+template {
+  name: "Korred"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: COMMON
+number: 11
+race: "Korred"
+type: "Fey"
+size: SMALL

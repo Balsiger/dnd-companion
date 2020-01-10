@@ -2,6 +2,7 @@ template {
   name: "Barbed Devil"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 35
 race: "Hamatula"
 type: "Fiend"

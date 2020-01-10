@@ -2,6 +2,7 @@ template {
   name: "Cyclops"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 40
 race: "Cyclops"
 type: "Giant"

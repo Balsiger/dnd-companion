@@ -2,6 +2,7 @@ template {
   name: "Manshoon (dh)"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 37
 race: "Lich"
 type: "Undead"

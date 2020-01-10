@@ -2,6 +2,7 @@ template {
   name: "Tiefling Blademaster"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 58
 type: "Humanoid"
 race: "Tiefling"

@@ -2,6 +2,7 @@ template {
   name: "Chimera (EE)"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 44
 race: "Chimera"
 type: "Monstrosity"

@@ -2,6 +2,7 @@ template {
   name: "Elder White Dragon"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 59
 race: "White Dragon"
 type: "Dragon"

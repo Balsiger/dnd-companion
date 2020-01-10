@@ -2,6 +2,7 @@ template {
   name: "Lifeleech Otyugh"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 44
 race: "Otyugh"
 type: "Aberration"

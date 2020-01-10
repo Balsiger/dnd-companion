@@ -2,6 +2,7 @@ template {
   name: "Xorn (Average)"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 28
 race: "Xorn"
 type: "Elemental"

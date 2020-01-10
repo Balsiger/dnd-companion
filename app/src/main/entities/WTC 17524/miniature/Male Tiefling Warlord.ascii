@@ -2,6 +2,7 @@ template {
   name: "Male Tiefling Warlord"
 }
 set: "Player\'s Handbook Heroes"
+rarity: UNDEFINED
 number: 4
 type: "Humanoid"
 race: "Tiefling"

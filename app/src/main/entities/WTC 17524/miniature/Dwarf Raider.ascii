@@ -2,6 +2,7 @@ template {
   name: "Dwarf Raider"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Dwarf"

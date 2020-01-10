@@ -2,6 +2,7 @@ template {
   name: "Vadania, Half-Elf Druid"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 29
 type: "Humanoid"
 race: "Half-Elf"

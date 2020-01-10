@@ -2,6 +2,7 @@ template {
   name: "Cleric of Corellon Larethian"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 18
 type: "Humanoid"
 race: "Elf"

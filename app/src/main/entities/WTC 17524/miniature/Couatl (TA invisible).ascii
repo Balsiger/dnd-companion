@@ -2,6 +2,7 @@ template {
   name: "Couatl (TA invisible)"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 37
 race: "Couatl"
 type: "Celestial"

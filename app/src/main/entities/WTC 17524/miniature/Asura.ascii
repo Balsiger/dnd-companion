@@ -2,6 +2,7 @@ template {
   name: "Asura"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 13
 race: "Asura"
 type: "Celestial"

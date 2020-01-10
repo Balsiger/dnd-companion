@@ -2,6 +2,7 @@ template {
   name: "Monitor Lizard"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 29
 race: "Monitor Lizard"
 type: "Beast"

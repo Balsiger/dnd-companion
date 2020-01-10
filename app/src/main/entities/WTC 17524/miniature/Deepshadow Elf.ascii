@@ -2,6 +2,7 @@ template {
   name: "Deepshadow Elf"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 14
 race: "Elf"
 type: "Humanoid"

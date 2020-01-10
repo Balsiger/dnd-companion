@@ -2,6 +2,7 @@ template {
   name: "Invisible Dezmyr Shadowdusk"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: ULTRA_RARE
 number: 36
 race: "Human"
 type: "Humanoid"

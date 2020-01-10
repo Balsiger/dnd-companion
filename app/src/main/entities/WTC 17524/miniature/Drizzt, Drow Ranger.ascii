@@ -2,6 +2,7 @@ template {
   name: "Drizzt, Drow Ranger"
 }
 set: "Icons"
+rarity: UNDEFINED
 number: 1
 type: "Humanoid"
 race: "Drow"

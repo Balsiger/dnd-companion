@@ -2,6 +2,7 @@ template {
   name: "Earth Cult Warrior"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 11
 type: "Humanoid"
 race: "Human"

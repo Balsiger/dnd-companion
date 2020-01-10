@@ -2,6 +2,7 @@ template {
   name: "Orc Wardrummer"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 56
 type: "Humanoid"
 race: "Orc"

@@ -1,7 +1,8 @@
 template {
   name: "Helena Nostrum"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: RARE
 number: 38
 type: "Humanoid"
 race: "Human"

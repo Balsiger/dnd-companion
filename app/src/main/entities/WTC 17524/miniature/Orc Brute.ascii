@@ -2,6 +2,7 @@ template {
   name: "Orc Brute"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 56
 type: "Humanoid"
 race: "Orc"

@@ -2,6 +2,7 @@ template {
   name: "Gnome Recruit"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 24
 type: "Humanoid"
 race: "Gnome"

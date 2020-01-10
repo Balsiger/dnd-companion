@@ -2,6 +2,7 @@ template {
   name: "Legion Barbed Devil (b)"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 16
 race: "Hamatula"
 type: "Fiend"

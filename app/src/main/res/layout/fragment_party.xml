@@ -69,6 +69,7 @@
           android:id="@+id/adventure"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toBottomOf="@id/party">
 
@@ -78,18 +79,28 @@
           android:id="@+id/full_screen"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:padding="20dp"
-          app:layout_constraintEnd_toEndOf="@id/adventure"
+          android:padding="10dp"
+          app:layout_constraintEnd_toStartOf="@id/reset_encounter"
           app:layout_constraintTop_toTopOf="@id/adventure"
           app:srcCompat="@drawable/fullscreen" />
+
+      <ImageView
+          android:id="@+id/reset_encounter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="10dp"
+          app:layout_constraintEnd_toEndOf="@id/adventure"
+          app:layout_constraintTop_toTopOf="@id/adventure"
+          app:srcCompat="@drawable/ic_refresh_black_24dp" />
 
       <ImageView
           android:id="@+id/full_screen_exit"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:padding="20dp"
+          android:padding="10dp"
           android:visibility="gone"
           app:layout_constraintEnd_toEndOf="@id/adventure"
+          app:layout_constraintEnd_toStartOf="@id/full_screen"
           app:layout_constraintTop_toTopOf="@id/adventure"
           app:srcCompat="@drawable/fullscreen_exit" />
 

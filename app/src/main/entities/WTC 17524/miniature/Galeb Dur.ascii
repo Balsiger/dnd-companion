@@ -2,6 +2,7 @@ template {
   name: "Galeb Dur"
 }
 set: "Against the Giants"
+rarity: COMMON
 number: 36
 race: "Galeb Duhr"
 type: "Elemental"

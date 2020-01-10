@@ -2,6 +2,7 @@ template {
   name: "Nightmare"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 30
 race: "Nightmare"
 type: "Fiend"

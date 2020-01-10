@@ -2,6 +2,7 @@ template {
   name: "Dwarf Warlord"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 1
 type: "Humanoid"
 race: "Dwarf"

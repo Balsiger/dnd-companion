@@ -1,0 +1,9 @@
+template {
+  name: "Meenlock"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: COMMON
+number: 8
+race: "Meenlock"
+type: "Fey"
+size: SMALL

@@ -50,6 +50,7 @@ public class ProductFilterDialog extends Dialog<ProductFilterDialog, ProductFilt
 
   private Wrapper<CheckBox> owned;
   private Wrapper<CheckBox> notOwned;
+  private LabelledEditTextView id;
   private LabelledEditTextView title;
   private LabelledEditTextView description;
   private LabelledEditTextView person;
@@ -65,8 +66,8 @@ public class ProductFilterDialog extends Dialog<ProductFilterDialog, ProductFilt
 
   @Override
   protected ProductFilter getValue() {
-    return new ProductFilter(title.getText(), owned.get().isChecked(), notOwned.get().isChecked(),
-        description.getText(), person.getText(),
+    return new ProductFilter(id.getText(), title.getText(), owned.get().isChecked(),
+        notOwned.get().isChecked(), description.getText(), person.getText(),
         parseMulti(worlds.getText()), parseMulti(producers.getText()), parseMulti(dates.getText()),
         parseMulti(systems.getText()), parseMulti(types.getText()), parseMulti(audiences.getText()),
         parseMulti(styles.getText()), parseMulti(layouts.getText()), series.getText());
@@ -76,6 +77,7 @@ public class ProductFilterDialog extends Dialog<ProductFilterDialog, ProductFilt
   protected void createContent(View view) {
     owned = Wrapper.wrap(view, R.id.owned);
     notOwned = Wrapper.wrap(view, R.id.not_owned);
+    id = view.findViewById(R.id.id);
     title = view.findViewById(R.id.title);
     description = view.findViewById(R.id.description);
     person = view.findViewById(R.id.person);
@@ -111,7 +113,7 @@ public class ProductFilterDialog extends Dialog<ProductFilterDialog, ProductFilt
         showEmpty(Templates.get().getProductTemplates().getAudiences())));
     styles = view.findViewById(R.id.styles);
     styles.onFocus(styles::showDropDown).threshold(1);
-    worlds.setAdapter(new ArrayAdapter<>(getContext(),
+    styles.setAdapter(new ArrayAdapter<>(getContext(),
         R.layout.list_item_select,
         showEmpty(Templates.get().getProductTemplates().getStyles())));
     layouts = view.findViewById(R.id.layouts);
@@ -140,6 +142,7 @@ public class ProductFilterDialog extends Dialog<ProductFilterDialog, ProductFilt
   private void clear() {
     owned.get().setChecked(false);
     notOwned.get().setChecked(false);
+    id.text("");
     title.text("");
     description.text("");
     person.text("");
@@ -169,6 +172,7 @@ public class ProductFilterDialog extends Dialog<ProductFilterDialog, ProductFilt
   private void setupFilter(ProductFilter filter) {
     owned.get().setChecked(filter.isOwned());
     notOwned.get().setChecked(filter.isNotOwned());
+    id.text(filter.getId());
     title.text(filter.getName());
     description.text(filter.getDescription());
     person.text(filter.getPerson());

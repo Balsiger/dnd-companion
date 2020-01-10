@@ -1,7 +1,8 @@
 template {
   name: "Darkmantle (SKT)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: COMMON
 number: 4
 race: "Darkmantle"
 type: "Monstrosity"

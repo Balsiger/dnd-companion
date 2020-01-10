@@ -30,6 +30,7 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.FilteredTemplatesStore;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
 
@@ -112,6 +113,7 @@ public abstract class TemplatesFragment extends CompanionFragment {
   protected abstract String getTitle(int position);
   protected abstract Fragment getTemplateFragment(int position);
   protected abstract int getTemplatesCount();
+  protected abstract FilteredTemplatesStore<?, ?> getTemplates();
 
   @CallSuper
   protected void setupActions() {
@@ -137,6 +139,12 @@ public abstract class TemplatesFragment extends CompanionFragment {
   }
 
   protected void update() {
+    if (getTemplates().isFiltered()) {
+      filterAction.color(R.color.filtered);
+    } else {
+      filterAction.uncolor();
+    }
+
     pagerAdapter.notifyDataSetChanged();
   }
 

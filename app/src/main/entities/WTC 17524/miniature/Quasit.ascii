@@ -2,6 +2,7 @@ template {
   name: "Quasit"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 57
 race: "Quasit"
 type: "Fiend"

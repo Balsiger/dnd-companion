@@ -2,6 +2,7 @@ template {
   name: "Erinyes (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 34
 race: "Erinyes"
 type: "Fiend"

@@ -2,6 +2,7 @@ template {
   name: "Protectar"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 11
 race: "Protectar"
 type: "Celestial"

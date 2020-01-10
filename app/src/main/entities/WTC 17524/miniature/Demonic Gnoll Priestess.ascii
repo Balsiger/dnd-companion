@@ -2,6 +2,7 @@ template {
   name: "Demonic Gnoll Priestess"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 46
 type: "Humanoid"
 race: "Gnoll"

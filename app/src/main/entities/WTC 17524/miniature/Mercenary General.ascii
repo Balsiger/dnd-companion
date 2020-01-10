@@ -2,6 +2,7 @@ template {
   name: "Mercenary General"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 21
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Mind Flayer Noble"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 30
 race: "Mind Flayer"
 type: "Aberration"

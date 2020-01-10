@@ -2,6 +2,7 @@ template {
   name: "Trained Carrion Crawler"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 42
 race: "Carrion Crawler"
 type: "Monstrosity"

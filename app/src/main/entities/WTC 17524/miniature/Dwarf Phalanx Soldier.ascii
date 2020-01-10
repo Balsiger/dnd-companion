@@ -2,6 +2,7 @@ template {
   name: "Dwarf Phalanx Soldier"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 5
 type: "Humanoid"
 race: "Dwarf"

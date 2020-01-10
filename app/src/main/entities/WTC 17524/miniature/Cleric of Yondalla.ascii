@@ -2,6 +2,7 @@ template {
   name: "Cleric of Yondalla"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 2
 type: "Humanoid"
 race: "Halfling"

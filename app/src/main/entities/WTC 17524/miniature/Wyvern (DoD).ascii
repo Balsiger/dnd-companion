@@ -2,6 +2,7 @@ template {
   name: "Wyvern (DoD)"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 42
 race: "Wyvern"
 type: "Dragon"

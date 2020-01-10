@@ -2,6 +2,7 @@ template {
   name: "Gnoll Sergeant"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 50
 type: "Humanoid"
 race: "Gnoll"

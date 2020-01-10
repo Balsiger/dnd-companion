@@ -2,6 +2,7 @@ template {
   name: "Greenspawn Razorfiend"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 35
 race: "Greenspawn"
 subtype: "Dragonspawn"

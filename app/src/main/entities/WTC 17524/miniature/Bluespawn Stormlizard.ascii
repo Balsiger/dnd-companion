@@ -2,6 +2,7 @@ template {
   name: "Bluespawn Stormlizard"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 30
 race: "Bluespawn"
 type: "Monstrosity"

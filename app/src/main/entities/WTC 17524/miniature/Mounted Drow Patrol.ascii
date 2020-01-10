@@ -2,6 +2,7 @@ template {
   name: "Mounted Drow Patrol"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 54
 type: "Humanoid"
 race: "Drow"

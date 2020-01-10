@@ -2,6 +2,7 @@ template {
   name: "Quickling Runner"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 49
 race: "Quickling"
 type: "Fey"

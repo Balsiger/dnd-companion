@@ -2,6 +2,7 @@ template {
   name: "Drizzt, Drow Ranger (AF)"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 14
 type: "Humanoid"
 race: "Drow"

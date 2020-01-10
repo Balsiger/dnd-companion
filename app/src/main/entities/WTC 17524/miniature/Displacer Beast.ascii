@@ -2,6 +2,7 @@ template {
   name: "Displacer Beast"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 41
 race: "Displacer Beat"
 type: "Monstrosity"

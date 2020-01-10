@@ -2,6 +2,7 @@ template {
   name: "Spined Devil"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 37
 race: "Spined Devil"
 type: "Fiend"

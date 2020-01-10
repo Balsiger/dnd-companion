@@ -2,6 +2,7 @@ template {
   name: "Orzhov Basilica Statue"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 21
 race: "Statue"
 type: "Construct"

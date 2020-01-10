@@ -2,6 +2,7 @@ template {
   name: "Thug Leader"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 15
 race: "Human"
 type: "Humanoid"

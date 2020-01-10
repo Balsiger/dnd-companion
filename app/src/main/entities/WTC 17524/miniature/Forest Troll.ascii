@@ -2,6 +2,7 @@ template {
   name: "Forest Troll"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 55
 race: "Troll"
 type: "Giant"

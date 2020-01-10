@@ -2,6 +2,7 @@ template {
   name: "Elf Stalker"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 15
 type: "Humanoid"
 race: "Elf"

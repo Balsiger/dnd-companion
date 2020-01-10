@@ -2,6 +2,7 @@ template {
   name: "Spellstitched Hobgoblin Zombie"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 43
 race: "Zombie"
 type: "Undead"

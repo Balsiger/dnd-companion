@@ -2,6 +2,7 @@ template {
   name: "Half-Orc Paladin"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 6
 type: "Humanoid"
 race: "Half-Orc"

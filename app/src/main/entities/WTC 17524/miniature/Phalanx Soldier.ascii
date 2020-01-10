@@ -2,6 +2,7 @@ template {
   name: "Phalanx Soldier"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 7
 type: "Humanoid"
 race: "Human"

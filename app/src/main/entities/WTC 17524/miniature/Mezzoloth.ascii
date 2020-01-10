@@ -2,6 +2,7 @@ template {
   name: "Mezzoloth"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 41
 race: "Mezzoloth"
 type: "Fiend"

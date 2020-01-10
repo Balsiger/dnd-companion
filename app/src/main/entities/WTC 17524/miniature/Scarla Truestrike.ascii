@@ -2,6 +2,7 @@ template {
   name: "Scarla Truestrike"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 22
 race: "Halfling"
 type: "Humanoid"

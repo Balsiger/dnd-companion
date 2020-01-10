@@ -2,7 +2,8 @@ template {
   name: "Chitine"
 }
 set: "Dragon Eye"
-number: 47
+rarity: UNCOMMON
+number: 4
 race: "Chitine"
 type: "Monstrosity"
 size: SMALL

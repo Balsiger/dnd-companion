@@ -2,6 +2,7 @@ template {
   name: "Magma Brute"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 19
 race: "Magma Brute"
 type: "Elemental"

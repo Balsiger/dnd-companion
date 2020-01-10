@@ -2,6 +2,7 @@ template {
   name: "Arcane Archer"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 15
 race: "Elf"
 type: "Humanoid"

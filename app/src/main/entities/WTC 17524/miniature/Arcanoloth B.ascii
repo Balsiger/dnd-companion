@@ -2,6 +2,7 @@ template {
   name: "Arcanoloth B"
 }
 set: "Monster Menagerie 3"
+rarity: RARE
 number: 34
 race: "Arcanoloth"
 type: "Fiend"

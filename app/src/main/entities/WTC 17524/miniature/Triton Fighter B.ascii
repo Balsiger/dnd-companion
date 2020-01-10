@@ -2,6 +2,7 @@ template {
   name: "Triton Fighter B"
 }
 set: "Monster Menagerie 3"
+rarity: RARE
 number: 38
 race: "Triton"
 type: "Humanoid"

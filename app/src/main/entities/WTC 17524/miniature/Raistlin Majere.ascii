@@ -2,6 +2,7 @@ template {
   name: "Raistlin Majere"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 14
 type: "Humanoid"
 race: "Human"

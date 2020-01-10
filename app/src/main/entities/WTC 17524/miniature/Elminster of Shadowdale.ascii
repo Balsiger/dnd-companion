@@ -2,6 +2,7 @@ template {
   name: "Elminster of Shadowdale"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 16
 type: "Humanoid"
 race: "Human"

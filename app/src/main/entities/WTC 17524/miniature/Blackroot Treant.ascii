@@ -2,6 +2,7 @@ template {
   name: "Blackroot Treant"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 53
 race: "Treant"
 type: "Undead"

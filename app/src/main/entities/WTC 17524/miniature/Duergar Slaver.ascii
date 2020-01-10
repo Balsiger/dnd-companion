@@ -2,6 +2,7 @@ template {
   name: "Duergar Slaver"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 38
 type: "Humanoid"
 race: "Duergar"

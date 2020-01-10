@@ -2,6 +2,7 @@ template {
   name: "Kapak Draconian"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 34
 race: "Draconian"
 type: "Dragon"

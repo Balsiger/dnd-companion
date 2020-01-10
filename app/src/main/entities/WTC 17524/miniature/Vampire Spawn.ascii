@@ -2,6 +2,7 @@ template {
   name: "Vampire Spawn"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 59
 type: "Humanoid"
 subtype: "Undead"

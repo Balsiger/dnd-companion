@@ -2,6 +2,7 @@ template {
   name: "Snake Swarm"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 35
 race: "Snake Swarm"
 type: "Beast"

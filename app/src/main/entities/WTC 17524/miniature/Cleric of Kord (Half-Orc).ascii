@@ -2,6 +2,7 @@ template {
   name: "Cleric of Kord (Half-Orc)"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 13
 type: "Humanoid"
 race: "Half-Orc"

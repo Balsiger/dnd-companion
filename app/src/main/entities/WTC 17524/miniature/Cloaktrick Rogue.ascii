@@ -2,6 +2,7 @@ template {
   name: "Cloaktrick Rogue"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 43
 type: "Humanoid"
 race: "Human"

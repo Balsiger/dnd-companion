@@ -2,6 +2,7 @@ template {
   name: "Mirt"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 10
 type: "Humanoid"
 race: "Human"

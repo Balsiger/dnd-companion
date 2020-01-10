@@ -2,6 +2,7 @@ template {
   name: "Hobgoblin Warcaster"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 47
 type: "Humanoid"
 subtype: "Goblinoid"

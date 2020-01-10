@@ -2,6 +2,7 @@ template {
   name: "Wolf Skeleton"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 57
 type: "Undead"
 race: "Skeleton"

@@ -2,6 +2,7 @@ template {
   name: "Basilisk (EE)"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 36
 race: "Basilisk"
 type: "Monstrosity"

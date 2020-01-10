@@ -2,6 +2,7 @@ template {
   name: "Whitespawn Hordeling"
 }
 set: "War of the Dragon Queen"
+rarity: COMMON
 number: 59
 race: "Hordeling"
 type: "Monstrosity"

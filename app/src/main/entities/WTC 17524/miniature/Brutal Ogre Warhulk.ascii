@@ -2,6 +2,7 @@ template {
   name: "Brutal Ogre Warhulk"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 39
 type: "Giant"
 race: "Ogre"

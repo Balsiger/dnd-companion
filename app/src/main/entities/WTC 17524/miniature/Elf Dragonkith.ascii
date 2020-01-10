@@ -2,6 +2,7 @@ template {
   name: "Elf Dragonkith"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 4
 type: "Humanoid"
 race: "Elf"

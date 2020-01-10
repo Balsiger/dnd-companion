@@ -2,6 +2,7 @@ template {
   name: "Chuul"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 9
 race: "Chuul"
 type: "Aberration"

@@ -2,6 +2,7 @@ template {
   name: "Angel of Vengeance"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 1
 race: "Angel"
 type: "Celestial"

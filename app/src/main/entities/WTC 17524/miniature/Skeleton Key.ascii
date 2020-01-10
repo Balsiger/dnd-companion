@@ -2,6 +2,7 @@ template {
   name: "Skeleton Key"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 6
 race: "Skeleton"
 type: "Undead"

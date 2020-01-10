@@ -2,6 +2,7 @@ template {
   name: "Scorpion Clan Drow Fighter"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 34
 type: "Humanoid"
 race: "Drow"

@@ -2,6 +2,7 @@ template {
   name: "Golden Wyvern Initiate"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 46
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Mialee, Elf Wizard"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 10
 type: "Humanoid"
 race: "Elf"

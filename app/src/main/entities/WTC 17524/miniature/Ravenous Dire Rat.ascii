@@ -2,6 +2,7 @@ template {
   name: "Ravenous Dire Rat"
 }
 set: "Against the Giants"
+rarity: COMMON
 number: 57
 race: "Dire Rat"
 type: "Beast"

@@ -2,6 +2,7 @@ template {
   name: "Dwarf Sergeant"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 2
 type: "Humanoid"
 race: "Dwarf"

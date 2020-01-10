@@ -2,6 +2,7 @@ template {
   name: "Azer Fighter"
 }
 set: "War of the Dragon Queen"
+rarity: COMMON
 number: 19
 race: "Azer"
 type: "Elemental"

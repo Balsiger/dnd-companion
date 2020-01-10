@@ -2,6 +2,7 @@ template {
   name: "Abyssal Eviscerator"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 44
 race: "Abyssal Eviscerator"
 type: "Monstrosity"

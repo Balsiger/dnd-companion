@@ -2,6 +2,7 @@ template {
   name: "Trebuchet (Loaded)"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 52
 type: "Object"
 size: HUGE

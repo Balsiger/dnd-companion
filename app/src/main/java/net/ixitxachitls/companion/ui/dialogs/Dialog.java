@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -62,6 +63,7 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
   private static final String ARG_COLOR = "color";
   private static final String ARG_TEXT_COLOR = "text-color";
   private static final int WIDTH = 1500;
+
   // The following values are only filled after onCreate().
   protected int layoutId;
   protected String title;
@@ -119,6 +121,12 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
 
       getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
     }
+
+    // Ensure that when the soft keyboard comes up, it will scroll the views instead of simply
+    // moving everything up.
+    getDialog().getWindow()
+        .setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN
+            | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
   }
 
   @Override
@@ -167,7 +175,7 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
     return application().characters();
   }
 
-  private void close() {
+  protected void close() {
     dismiss();
   }
 

@@ -2,6 +2,7 @@ template {
   name: "Captain of the Watch"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 41
 type: "Humanoid"
 race: "Human"

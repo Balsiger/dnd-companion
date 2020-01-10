@@ -2,6 +2,7 @@ template {
   name: "Cackler"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 2
 race: "Cackler"
 type: "Fiend"

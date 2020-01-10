@@ -1,7 +1,8 @@
 template {
   name: "Human Wizard (MM2)"
 }
-set: "Monster Menagerie"
+set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 21
 type: "Humanoid"
 race: "Human"

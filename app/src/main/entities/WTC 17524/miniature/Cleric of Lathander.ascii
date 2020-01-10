@@ -2,6 +2,7 @@ template {
   name: "Cleric of Lathander"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 1
 type: "Humanoid"
 race: "Human"

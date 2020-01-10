@@ -2,6 +2,7 @@ template {
   name: "Phoera"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 21
 race: "Phoera"
 type: "Monstrosity"

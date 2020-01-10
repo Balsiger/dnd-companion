@@ -2,6 +2,7 @@ template {
   name: "Death Titan"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 50
 race: "Death Titan"
 type: "Giant"

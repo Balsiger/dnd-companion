@@ -2,6 +2,7 @@ template {
   name: "Warbound Impaler"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 23
 race: "Warbound Impaler"
 type: "Plant"

@@ -2,6 +2,7 @@ template {
   name: "Warforged Battle Champion"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 45
 race: "Warforged"
 type: "Construct"

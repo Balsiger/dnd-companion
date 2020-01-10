@@ -2,6 +2,7 @@ template {
   name: "Barnabas the Flameskull"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 5
 race: "Flameskull"
 type: "Undead"

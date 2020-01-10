@@ -2,6 +2,7 @@ template {
   name: "Babau (DA)"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 2
 race: "Babau"
 type: "Fiend"

@@ -2,6 +2,7 @@ template {
   name: "Heroslayer Hydra"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 20
 race: "Hydra"
 type: "Monstrosity"

@@ -2,6 +2,7 @@ template {
   name: "Phoelarch"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 23
 race: "Phoelarch"
 type: "Monstrosity"

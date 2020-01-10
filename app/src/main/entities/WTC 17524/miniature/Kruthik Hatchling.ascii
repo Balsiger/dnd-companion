@@ -2,6 +2,7 @@ template {
   name: "Kruthik Hatchling"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 37
 race: "Kruthik"
 type: "Beast"

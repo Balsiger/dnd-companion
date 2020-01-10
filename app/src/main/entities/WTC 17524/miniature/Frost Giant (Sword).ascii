@@ -1,7 +1,8 @@
 template {
   name: "Frost Giant (Sword)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 29
 race: "Frost Giant"
 type: "Giant"

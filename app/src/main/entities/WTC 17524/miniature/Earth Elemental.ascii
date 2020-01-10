@@ -2,6 +2,7 @@ template {
   name: "Earth Elemental"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 19
 race: "Earth Elemental"
 type: "Elemental"

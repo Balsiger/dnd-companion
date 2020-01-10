@@ -2,6 +2,7 @@ template {
   name: "Cleric of Garl Glittergold"
 }
 set: "Aberrations"
+rarity: UNDEFINED
 number: 14
 race: "Gnome"
 type: "Humanoid"

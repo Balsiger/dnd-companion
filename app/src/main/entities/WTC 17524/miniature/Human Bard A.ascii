@@ -2,6 +2,7 @@ template {
   name: "Human Bard A"
 }
 set: "Monster Menagerie 3"
+rarity: UNCOMMON
 number: 19
 type: "Humanoid"
 race: "Human"

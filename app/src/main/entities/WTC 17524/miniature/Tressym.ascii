@@ -2,6 +2,7 @@ template {
   name: "Tressym"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: COMMON
 number: 5
 race: "Tressym"
 type: "Beast"

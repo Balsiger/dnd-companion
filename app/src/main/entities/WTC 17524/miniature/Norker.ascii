@@ -2,6 +2,7 @@ template {
   name: "Norker"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 27
 type: "Humanoid"
 race: "Norker"

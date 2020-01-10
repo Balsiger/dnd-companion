@@ -1,7 +1,8 @@
 template {
   name: "Kenku (Bow)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: COMMON
 number: 11
 race: "Kenku"
 type: "Humanoid"

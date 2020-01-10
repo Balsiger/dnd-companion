@@ -2,6 +2,7 @@ template {
   name: "Howler"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 54
 race: "Howler"
 type: "Monstrosity"

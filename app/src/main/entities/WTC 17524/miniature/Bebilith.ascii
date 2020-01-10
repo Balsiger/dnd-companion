@@ -2,6 +2,7 @@ template {
   name: "Bebilith"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 race: "Bebilith"
 number: 3
 type: "Fiend"

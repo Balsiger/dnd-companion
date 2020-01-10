@@ -2,6 +2,7 @@ template {
   name: "Eye of Gruumsh "
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 51
 type: "Humanoid"
 race: "Orc"

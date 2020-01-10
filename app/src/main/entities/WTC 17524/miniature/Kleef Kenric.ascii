@@ -1,7 +1,8 @@
 template {
   name: "Kleef Kenric"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 20
 type: "Humanoid"
 race: "Human"

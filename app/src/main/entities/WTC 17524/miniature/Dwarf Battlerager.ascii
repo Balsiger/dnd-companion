@@ -2,6 +2,7 @@ template {
   name: "Dwarf Battlerager"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 16
 type: "Humanoid"
 race: "Dwarf"

@@ -2,6 +2,7 @@ template {
   name: "Male Halfling Barbarian"
 }
 set: "Player\'s Handbook Heroes 2"
+rarity: UNDEFINED
 number: 18
 type: "Humanoid"
 race: "Halfling"

@@ -2,6 +2,7 @@ template {
   name: "Invisible Mind Flayer (Claw)"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 34
 race: "Mind Flayer"
 type: "Aberration"

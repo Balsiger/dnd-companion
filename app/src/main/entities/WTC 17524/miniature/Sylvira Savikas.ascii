@@ -2,6 +2,7 @@ template {
   name: "Sylvira Savikas"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 34
 race: "Tiefling"
 type: "Humanoid"

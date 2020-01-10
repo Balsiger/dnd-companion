@@ -2,6 +2,7 @@ template {
   name: "Jarlaxle Baenre"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 38
 type: "Humanoid"
 race: "Drow"

@@ -2,6 +2,7 @@ template {
   name: "Justicator"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 26
 race: "Justicator"
 type: "Celestial"

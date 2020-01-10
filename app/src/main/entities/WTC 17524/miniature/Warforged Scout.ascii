@@ -2,6 +2,7 @@ template {
   name: "Warforged Scout"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 13
 race: "Warforged"
 type: "Construct"

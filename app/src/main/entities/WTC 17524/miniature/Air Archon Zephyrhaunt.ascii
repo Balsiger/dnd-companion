@@ -2,6 +2,7 @@ template {
   name: "Air Archon Zephyrhaunt"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 2
 race: "Air Archon"
 type: "Elemental"

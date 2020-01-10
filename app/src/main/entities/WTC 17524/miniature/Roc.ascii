@@ -2,6 +2,7 @@ template {
   name: "Roc"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 39
 race: "Roc"
 type: "Monstrosity"

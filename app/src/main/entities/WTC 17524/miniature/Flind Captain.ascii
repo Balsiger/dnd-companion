@@ -2,6 +2,7 @@ template {
   name: "Flind Captain"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 54
 type: "Humanoid"
 race: "Gnoll"

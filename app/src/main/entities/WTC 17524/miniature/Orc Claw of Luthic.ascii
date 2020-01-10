@@ -1,0 +1,10 @@
+template {
+  name: "Orc Claw of Luthic"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: COMMON
+number: 5
+type: "Humanoid"
+race: "Orc"
+class: "Barbarian"
+size: MEDIUM

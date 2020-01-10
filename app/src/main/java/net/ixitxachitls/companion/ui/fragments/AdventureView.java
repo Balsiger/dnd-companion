@@ -22,6 +22,8 @@
 package net.ixitxachitls.companion.ui.fragments;
 
 import android.content.Context;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,21 +38,28 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.Campaign;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Encounter;
+import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.templates.AdventureTemplate;
+import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.ui.views.CloudImageView;
+import net.ixitxachitls.companion.ui.views.ImageDropTarget;
 import net.ixitxachitls.companion.ui.views.MonsterChipView;
+import net.ixitxachitls.companion.ui.views.ViewViewPager;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.util.Strings;
 import net.ixitxachitls.companion.util.Texts;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.Nullable;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * A view for displaying adventure and encounterView information.
@@ -65,7 +74,9 @@ public class AdventureView extends LinearLayout {
   private TextWrapper<TextView> locations;
   private LinearLayout categoryText;
   private TabLayout categoryTabs;
+  private ViewPager itemsPager;
   private LinearLayout creatures;
+  private LinearLayout characters;
 
   private Optional<Campaign> campaign = Optional.empty();
   private Optional<Encounter> encounter = Optional.empty();
@@ -93,6 +104,37 @@ public class AdventureView extends LinearLayout {
     updateAdventure(Templates.get().getAdventureTemplates().get(campaign.getAdventureId()));
     updateEncounter(adventureTemplate.isPresent()
         ? adventureTemplate.get().getEncounter(campaign.getEncounterId()) : Optional.empty());
+
+    characters.removeAllViews();
+    for (Character character :
+        CompanionApplication.get().characters().getCampaignCharacters(campaign.getId())) {
+      Drawable image;
+      if (CompanionApplication.get().images().get(character.getId(), 1).isPresent()) {
+        image = new BitmapDrawable(getResources(),
+            CompanionApplication.get().images().get(character.getId(), 1).get());
+      } else {
+        image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
+      }
+      ImageDropTarget target =
+          new ImageDropTarget(getContext(), image, character.getName(), true);
+      target.setSupport(i -> i instanceof Item);
+      target.setDropExecutor((i) -> moveItem(i, character));
+      characters.addView(target);
+    }
+  }
+
+  private boolean moveItem(Object state, Character character) {
+    boolean removed = false;
+    if (state instanceof Item && campaign.isPresent() && encounter.isPresent()) {
+      removed = encounter.get().removeItem((Item) state);
+      if (removed) {
+        Message.createForItemAdd(CompanionApplication.get().context(),
+            campaign.get().getAdventureId() + "#" + campaign.get().getAdventureId(),
+            character.getId(), (Item) state);
+      }
+    }
+
+    return removed;
   }
 
   private String formatEncounterTitle(AdventureTemplate.EncounterTemplate template) {
@@ -156,7 +198,10 @@ public class AdventureView extends LinearLayout {
       public void onTabReselected(TabLayout.Tab tab) {}
     });
 
+    itemsPager = view.findViewById(R.id.items_pager);
     creatures = view.findViewById(R.id.creatures);
+    characters = view.findViewById(R.id.characters);
+
     hideDetails();
 
     addView(view);
@@ -193,7 +238,7 @@ public class AdventureView extends LinearLayout {
 
   private String formatEncounterName(String encounterId, String name) {
     if (campaign.isPresent()) {
-      if (CompanionApplication.get().encounters().hasEncounter(campaign.get().getId(),
+      if (CompanionApplication.get().encounters().has(campaign.get().getId(),
           campaign.get().getAdventureId(), encounterId)) {
         return name;
       } else {
@@ -400,14 +445,21 @@ public class AdventureView extends LinearLayout {
 
       creatures.removeAllViews();
       if (campaign.isPresent()) {
-        Optional<Encounter> encounter =
-            CompanionApplication.get().encounters().get(campaign.get().getId(),
-                campaign.get().getAdventureId(), campaign.get().getEncounterId());
-        if (encounter.isPresent()) {
-          for (Monster monster : encounter.get().getMonsters()) {
-            MonsterChipView chip = new MonsterChipView(getContext(), monster);
-            creatures.addView(chip);
-          }
+        encounter = Optional.of(CompanionApplication.get().encounters().getOrInitialize(
+            campaign.get().getId(), campaign.get().getAdventureId(),
+            campaign.get().getEncounterId()));
+
+        List<ViewViewPager.StaticViewPagerAdapter.Entry> itemGroups = new ArrayList<>();
+        for (Encounter.ItemGroup group : encounter.get().getItemGroups()) {
+          EncounterItemGroupView view = new EncounterItemGroupView(getContext());
+          view.setup(campaign.get(), encounter.get(), group.getDescription(), group.getItems());
+          itemGroups.add(new ViewViewPager.StaticViewPagerAdapter.Entry(group.getTitle(), view));
+        }
+        itemsPager.setAdapter(new ViewViewPager.StaticViewPagerAdapter(itemGroups));
+
+        for (Monster monster : encounter.get().getMonsters()) {
+          MonsterChipView chip = new MonsterChipView(getContext(), monster);
+          creatures.addView(chip);
         }
       }
     } else {
@@ -416,6 +468,14 @@ public class AdventureView extends LinearLayout {
       locations.text("");
       categoryText.removeAllViews();
       creatures.removeAllViews();
+    }
+  }
+
+  public void resetEncounter() {
+    if (campaign.isPresent()) {
+      CompanionApplication.get().encounters().reset(campaign.get().getId(),
+          campaign.get().getAdventureId(), campaign.get().getEncounterId());
+      updateEncounter(adventureTemplate.get().getEncounter(campaign.get().getEncounterId()));
     }
   }
 
@@ -440,11 +500,16 @@ public class AdventureView extends LinearLayout {
     categoryTabs.setVisibility(VISIBLE);
     categoryText.setVisibility(VISIBLE);
     creatures.setVisibility(VISIBLE);
+    itemsPager.setVisibility(VISIBLE);
+    characters.setVisibility(VISIBLE);
   }
 
   public void hideDetails() {
     categoryTabs.setVisibility(GONE);
     categoryText.setVisibility(GONE);
     creatures.setVisibility(GONE);
+    itemsPager.setVisibility(GONE);
+    characters.setVisibility(GONE);
   }
+
 }

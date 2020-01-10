@@ -68,7 +68,7 @@
           app:lineColor="@color/item"
           app:textColor="@color/itemDark"/>
 
-      <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+      <net.ixitxachitls.companion.ui.views.LabelledTextView
           android:id="@+id/dm_name"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
@@ -109,7 +109,7 @@
             app:lineColor="@color/item"
             app:textColor="@color/itemDark"/>
 
-        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
             android:id="@+id/weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -2,6 +2,7 @@ template {
   name: "Griffon Cavalry (dh)"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 42
 type: "Humanoid"
 race: "Human"

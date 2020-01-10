@@ -2,6 +2,7 @@ template {
   name: "Tundra Scout"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 57
 type: "Humanoid"
 subtype: "Giant"

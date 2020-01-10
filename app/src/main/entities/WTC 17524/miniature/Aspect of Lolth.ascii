@@ -3,6 +3,7 @@ template {
 }
 race: "Drider"
 set: "Archfiends"
+rarity: UNDEFINED
 number: 46
 type: "Fiend"
 subtype: "Chaotic"

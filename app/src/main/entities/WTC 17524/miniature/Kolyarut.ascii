@@ -2,6 +2,7 @@ template {
   name: "Kolyarut"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 9
 race: "Kolyarut"
 type: "Construct"

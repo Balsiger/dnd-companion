@@ -325,12 +325,12 @@ public class User extends Document<User> {
   }
 
   public void setProduct(String id, boolean owned, Optional<Boolean> used) {
-    Product product = products.get(id);
+    Product product = products.get(id.toLowerCase());
     if (product == null && (owned || used.isPresent()) ||
-        (product != null && product.owned != owned &&
-            (!used.isPresent() || product.used != used.get()))) {
-      product = new Product(id, owned, used.isPresent() ? used.get() : true);
-      products.put(id, product);
+        (product != null && (product.owned != owned ||
+            (used.isPresent() && product.used != used.get())))) {
+      product = new Product(id.toLowerCase(), owned, used.isPresent() ? used.get() : true);
+      products.put(id.toLowerCase(), product);
       storeProducts();
     }
   }
@@ -422,7 +422,7 @@ public class User extends Document<User> {
   }
 
   public boolean usesProduct(String id) {
-    Product product = products.get(id);
+    Product product = products.get(id.toLowerCase());
     return product == null ? true : product.isUsed();
   }
 

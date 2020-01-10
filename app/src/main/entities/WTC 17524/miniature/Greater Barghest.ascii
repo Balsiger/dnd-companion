@@ -2,6 +2,7 @@ template {
   name: "Greater Barghest"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 31
 race: "Barghest"
 type: "Fiend"

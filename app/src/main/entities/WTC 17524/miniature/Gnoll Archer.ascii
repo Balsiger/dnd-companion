@@ -2,6 +2,7 @@ template {
   name: "Gnoll Archer"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 52
 type: "Humanoid"
 race: "Gnoll"

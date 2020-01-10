@@ -2,6 +2,7 @@ template {
   name: "Legion Spined Devil"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 3
 race: "Spined Devil"
 type: "Fiend"

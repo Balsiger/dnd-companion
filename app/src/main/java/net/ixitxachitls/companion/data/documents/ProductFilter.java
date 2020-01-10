@@ -35,6 +35,7 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
 
   private static final String FIELD_OWNED = "owned";
   private static final String FIELD_NOT_OWNED = "not-owned";
+  private static final String FIELD_ID = "id";
   private static final String FIELD_DESCRIPTION = "description";
   private static final String FIELD_PERSON = "person";
   private static final String FIELD_WORLDS = "worlds";
@@ -49,6 +50,7 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
 
   private final boolean owned;
   private final boolean notOwned;
+  private final String id;
   private final String description;
   private final String person;
   private final List<String> worlds;
@@ -62,18 +64,19 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
   private final String series;
 
   public ProductFilter() {
-    this("", false, false, "", "", Collections.emptyList(), Collections.emptyList(),
+    this("", "", false, false, "", "", Collections.emptyList(), Collections.emptyList(),
       Collections.emptyList(), Collections.emptyList(), Collections.emptyList(),
       Collections.emptyList(), Collections.emptyList(), Collections.emptyList(), "");
   }
 
-  public ProductFilter(String title, boolean owned, boolean notOwned, String description,
+  public ProductFilter(String id, String title, boolean owned, boolean notOwned, String description,
                        String person, List<String> worlds, List<String> producers,
                        List<String> dates, List<String> systems, List<String> types,
                        List<String> audiences, List<String> styles, List<String> layouts,
                        String series) {
     super(title);
 
+    this.id = id;
     this.owned = owned;
     this.notOwned = notOwned;
     this.description = description;
@@ -87,6 +90,10 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
     this.styles = styles;
     this.layouts = layouts;
     this.series = series;
+  }
+
+  public String getId() {
+    return id;
   }
 
   public boolean isOwned() {
@@ -153,6 +160,9 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
     if (notOwned) {
       parts.add("not owned");
     }
+    if (!id.isEmpty()) {
+      parts.add("id contains " + id);
+    }
     if (!description.isEmpty()) {
       parts.add("description contains " + description);
     }
@@ -194,6 +204,7 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
   public boolean matches(User me, ProductTemplate product) {
     return (name.isEmpty()
         || product.getFormattedTitle().toLowerCase().contains(name.toLowerCase()))
+        && (id.isEmpty() || product.getName().toLowerCase().contains(id.toLowerCase()))
         && (!owned || me.ownsProduct(product.getName()))
         && (!notOwned || !me.ownsProduct(product.getName()))
         && (description.isEmpty()
@@ -235,6 +246,8 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
   public Data write() {
     return super.write()
         .set(FIELD_OWNED, owned)
+        .set(FIELD_NOT_OWNED, notOwned)
+        .set(FIELD_ID, id)
         .set(FIELD_DESCRIPTION, description)
         .set(FIELD_PERSON, person)
         .set(FIELD_WORLDS, worlds)
@@ -250,8 +263,11 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
 
 
   public static ProductFilter read(Data data) {
-    return new ProductFilter(data.get(TemplateFilter.FIELD_NAME, ""),
-        data.get(FIELD_OWNED, false), data.get(FIELD_NOT_OWNED, false),
+    return new ProductFilter(
+        data.get(FIELD_ID, ""),
+        data.get(TemplateFilter.FIELD_NAME, ""),
+        data.get(FIELD_OWNED, false),
+        data.get(FIELD_NOT_OWNED, false),
         data.get(FIELD_DESCRIPTION, ""), data.get(FIELD_PERSON, ""),
         data.get(FIELD_WORLDS, Collections.emptyList()),
         data.get(FIELD_PRODUCERS, Collections.emptyList()),
@@ -262,7 +278,5 @@ public class ProductFilter extends TemplateFilter<ProductTemplate> {
         data.get(FIELD_STYLES, Collections.emptyList()),
         data.get(FIELD_LAYOUTS, Collections.emptyList()),
         data.get(FIELD_SERIES, ""));
-
-
   }
 }

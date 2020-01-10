@@ -1,0 +1,50 @@
+template {
+  name: "WTC C6052"
+  world: "Forgotten Realms"
+  description: "This accessory contains resources that Dungeon Masters can use to enhance the experience of running \\Product{Waterdeep: Dungeon of the Mad Mage}, a separately sold Dungeons & Deragons hardcover adventure.\\par Combined within this durable folder are 16 cardstock sheets designed for use with dry-erase markers. Printed on these sheets are the resources to help you run \\Product{Dungeon of the Mad Mage}."
+  short_description: "Maps and miscellany for \\Place{Undermountain}."
+}
+title: "Dungeon of the Mad Mage: Mas and Miscellany"
+subtitle: "Descend into Undermountain"
+date {
+  year: 2019
+  month: 11
+}
+cover {
+  name: "Sheppard, Cynthia"
+}
+cartographer {
+  name: "Hartin, Tim"
+}
+pages: 0
+system: NONE
+audience: DM
+type: ACCESSORY
+style: FOLDER
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: SHEET
+  number: 23
+  description: "maps of Undermountain, each one representing a different level of the dungeon"
+}
+content {
+  part: SHEET
+  number: 3
+  description: "maps of the subterranean town of \\Place{Skullport}"
+}
+content {
+  part: CARD
+  number: 18
+  description: "perforated Secrets cards"
+}
+content {
+  part: CARD
+  number: 9
+  description: "perforated Elder Runes cards"
+}
+layout: FULL_COLOR

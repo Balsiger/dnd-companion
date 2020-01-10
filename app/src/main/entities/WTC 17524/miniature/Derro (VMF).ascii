@@ -1,0 +1,9 @@
+template {
+  name: "Derro (VMF)"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: COMMON
+number: 2
+race: "Derro"
+type: "Humanoid"
+size: SMALL

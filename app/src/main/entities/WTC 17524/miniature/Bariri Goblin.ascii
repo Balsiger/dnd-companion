@@ -2,6 +2,7 @@ template {
   name: "Bariri Goblin"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 2
 type: "Humanoid"
 subtype: "Goblinoid"

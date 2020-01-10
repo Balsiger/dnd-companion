@@ -2,6 +2,7 @@ template {
   name: "Cloudreaver"
 }
 set: "War of the Dragon Queen"
+rarity: COMMON
 number: 44
 type: "Humanoid"
 race: "Human"

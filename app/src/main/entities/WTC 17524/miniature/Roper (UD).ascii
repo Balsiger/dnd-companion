@@ -2,6 +2,7 @@ template {
   name: "Roper (UD)"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 56
 race: "Roper"
 type: "Monstrosity"

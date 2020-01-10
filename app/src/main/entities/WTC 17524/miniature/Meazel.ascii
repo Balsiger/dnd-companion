@@ -1,0 +1,9 @@
+template {
+  name: "Meazel"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: COMMON
+number: 13
+race: "Meazel"
+type: "Humanoid"
+size: SMALL

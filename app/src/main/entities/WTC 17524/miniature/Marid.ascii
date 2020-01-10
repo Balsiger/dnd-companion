@@ -2,6 +2,7 @@ template {
   name: "Marid"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 21
 race: "Marid"
 type: "Elemental"

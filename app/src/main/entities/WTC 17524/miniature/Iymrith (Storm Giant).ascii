@@ -1,7 +1,8 @@
 template {
   name: "Iymrith (Storm Giant)"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: RARE
 number: 44
 race: "Storm Giant"
 type: "Giant"

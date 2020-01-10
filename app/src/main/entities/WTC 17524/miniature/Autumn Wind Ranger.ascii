@@ -2,6 +2,7 @@ template {
   name: "Autumn Wind Ranger"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 37
 race: "Elf"
 type: "Humanoid"

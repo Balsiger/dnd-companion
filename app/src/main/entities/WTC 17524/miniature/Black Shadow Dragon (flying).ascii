@@ -2,6 +2,7 @@ template {
   name: "Black Shadow Dragon (flying)"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 30
 race: "Black Shadow Dragon"
 type: "Dragon"

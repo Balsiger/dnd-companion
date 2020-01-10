@@ -2,6 +2,7 @@ template {
   name: "Island"
 }
 set: "Monster Menagerie 3"
+rarity: UNIQUE
 number: 45
 size: HUGE
 type: "Object"

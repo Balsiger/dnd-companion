@@ -2,6 +2,7 @@ template {
   name: "Orog Orc FIghter"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 14
 type: "Humanoid"
 race: "Orc"

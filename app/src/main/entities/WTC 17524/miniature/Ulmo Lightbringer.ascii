@@ -2,6 +2,7 @@ template {
   name: "Ulmo Lightbringer"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 11
 type: "Humanoid"
 race: "Halfling"

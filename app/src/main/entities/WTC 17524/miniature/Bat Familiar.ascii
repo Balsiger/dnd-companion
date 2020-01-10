@@ -2,6 +2,7 @@ template {
   name: "Bat Familiar"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 30
 race: "Bat"
 type: "Beast"

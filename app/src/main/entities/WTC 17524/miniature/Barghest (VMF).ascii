@@ -1,0 +1,12 @@
+template {
+  name: "Barghest (VMF)"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: UNCOMMON
+number: 26
+race: "Barghest"
+type: "Fiend"
+subtype: "Shapechanger"
+subtype: "Evil"
+subtype: "Lawful"
+size: MEDIUM

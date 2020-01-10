@@ -2,6 +2,7 @@ template {
   name: "Grell"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 35
 race: "Grell"
 type: "Aberration"

@@ -2,6 +2,7 @@ template {
   name: "Troglodyte Captain"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 40
 type: "Humanoid"
 race: "Troglodyte"

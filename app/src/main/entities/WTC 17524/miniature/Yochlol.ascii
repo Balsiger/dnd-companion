@@ -1,7 +1,8 @@
 template {
   name: "Yochlol"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: COMMON
 number: 12
 race: "Yochlol"
 type: "Fiend"

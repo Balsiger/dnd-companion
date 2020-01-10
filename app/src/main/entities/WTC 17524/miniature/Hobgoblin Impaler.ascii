@@ -2,6 +2,7 @@ template {
   name: "Hobgoblin Impaler"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 42
 type: "Humanoid"
 subtype: "Goblinoid"

@@ -2,6 +2,7 @@ template {
   name: "Carrion Crawler"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 41
 race: "Carrion Crawler"
 type: "Monstrosity"

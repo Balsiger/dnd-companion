@@ -2,6 +2,7 @@ template {
   name: "Young Red Dragon"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 9
 race: "Red Dragon"
 type: "Dragon"

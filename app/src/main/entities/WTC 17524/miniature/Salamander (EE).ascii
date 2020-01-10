@@ -2,6 +2,7 @@ template {
   name: "Salamander (EE)"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 35
 type: "Elemental"
 subtype: "Reptile"

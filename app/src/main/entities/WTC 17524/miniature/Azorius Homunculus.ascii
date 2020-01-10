@@ -2,6 +2,7 @@ template {
   name: "Azorius Homunculus"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 14
 race: "Homunculus"
 type: "Humanoid"

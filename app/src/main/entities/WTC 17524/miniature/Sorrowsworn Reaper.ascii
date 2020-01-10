@@ -2,6 +2,7 @@ template {
   name: "Sorrowsworn Reaper"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 35
 race: "Sorrowsworn"
 type: "Fiend"

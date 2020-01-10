@@ -2,6 +2,7 @@ template {
   name: "Doomguard"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 47
 type: "Humanoid"
 race: "Human"

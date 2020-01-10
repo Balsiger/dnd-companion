@@ -2,6 +2,7 @@ template {
   name: "Sun Elf Female Wizard"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 49
 type: "Humanoid"
 race: "Elf"

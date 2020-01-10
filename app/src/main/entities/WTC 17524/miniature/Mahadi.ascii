@@ -2,6 +2,7 @@ template {
   name: "Mahadi"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 24
 race: "Rakshasa"
 type: "Fiend"

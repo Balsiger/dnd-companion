@@ -2,6 +2,7 @@ template {
   name: "Roper"
 }
 set: "Against the Giants"
+rarity: RARE
 number: 58
 race: "Roper"
 type: "Monstrosity"

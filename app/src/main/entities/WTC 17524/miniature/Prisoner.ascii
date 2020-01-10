@@ -2,6 +2,7 @@ template {
   name: "Prisoner"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 40
 type: "Humanoid"
 race: "Human"

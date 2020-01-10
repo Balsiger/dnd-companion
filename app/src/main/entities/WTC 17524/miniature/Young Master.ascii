@@ -2,6 +2,7 @@ template {
   name: "Young Master"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 8
 type: "Humanoid"
 race: "Human"

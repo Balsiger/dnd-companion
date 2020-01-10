@@ -2,6 +2,7 @@ template {
   name: "Dwarf Shieldmaiden"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 33
 type: "Humanoid"
 race: "Dwarf"

@@ -2,6 +2,7 @@ template {
   name: "Kobold"
 }
 set: "Monster Menagerie 3"
+rarity: COMMON
 number: 5
 type: "Humanoid"
 race: "Kobold"

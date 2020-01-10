@@ -2,6 +2,7 @@ template {
   name: "Orc Warchief"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 37
 type: "Humanoid"
 race: "Orc"

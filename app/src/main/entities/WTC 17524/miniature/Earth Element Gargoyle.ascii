@@ -2,6 +2,7 @@ template {
   name: "Earth Element Gargoyle"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 48
 race: "Gargoyle"
 type: "Elemental"

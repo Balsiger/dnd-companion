@@ -2,6 +2,7 @@ template {
   name: "Drider Sorcerer"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 44
 race: "Drider"
 type: "Monstrosity"

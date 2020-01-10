@@ -2,6 +2,7 @@ template {
   name: "Medusa Archer (DuD)"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 29
 race: "Medusa"
 type: "Monstrosity"

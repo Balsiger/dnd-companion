@@ -2,6 +2,7 @@ template {
   name: "Boneshard Skeleton"
 }
 set: "Desert of Desolation"
+rarity: COMMON
 number: 39
 race: "Boneshard Skeleton"
 type: "Undead"

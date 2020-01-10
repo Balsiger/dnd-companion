@@ -2,6 +2,7 @@ template {
   name: "Human Sun Soul Monk"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 11
 type: "Humanoid"
 race: "Human"

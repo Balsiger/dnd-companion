@@ -2,6 +2,7 @@ template {
   name: "Goblin Skullcleaver"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 16
 type: "Humanoid"
 subtype: "Goblinoid"

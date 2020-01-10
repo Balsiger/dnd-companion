@@ -2,6 +2,7 @@ template {
   name: "Zhent Soldier"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 60
 type: "Humanoid"
 race: "Human"

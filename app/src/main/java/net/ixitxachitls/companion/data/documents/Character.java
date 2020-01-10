@@ -557,4 +557,9 @@ public class Character extends Creature<Character> implements Comparable<Charact
 
     return character;
   }
+
+  @Override
+  public boolean isCharacter() {
+    return true;
+  }
 }

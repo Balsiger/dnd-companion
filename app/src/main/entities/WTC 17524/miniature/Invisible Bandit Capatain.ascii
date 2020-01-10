@@ -1,7 +1,8 @@
 template {
   name: "Invisible Bandit Capatain"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: ULTRA_RARE
 number: 14
 type: "Humanoid"
 race: "Human"

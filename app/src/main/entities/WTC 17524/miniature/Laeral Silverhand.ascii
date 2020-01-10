@@ -2,6 +2,7 @@ template {
   name: "Laeral Silverhand"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 35
 type: "Humanoid"
 race: "Human"

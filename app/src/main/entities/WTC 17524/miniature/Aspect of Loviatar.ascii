@@ -2,6 +2,7 @@ template {
   name: "Aspect of Loviatar"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 26
 type: "Fiend"
 subtype: "Evil"

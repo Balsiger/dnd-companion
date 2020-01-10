@@ -2,6 +2,7 @@ template {
   name: "Invisible Drow Elite Warrior"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 6
 type: "Humanoid"
 race: "Drow"

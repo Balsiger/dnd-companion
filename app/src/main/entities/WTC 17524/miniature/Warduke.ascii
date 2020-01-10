@@ -2,6 +2,7 @@ template {
   name: "Warduke"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 60
 type: "Humanoid"
 race: "Human"

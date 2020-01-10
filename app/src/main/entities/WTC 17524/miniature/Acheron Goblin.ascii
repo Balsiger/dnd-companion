@@ -2,6 +2,7 @@ template {
   name: "Acheron Goblin"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 28
 type: "Humanoid"
 race: "Goblin"

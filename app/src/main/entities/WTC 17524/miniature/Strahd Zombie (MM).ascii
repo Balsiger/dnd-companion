@@ -2,6 +2,7 @@ template {
   name: "Strahd Zombie (MM)"
 }
 set: "Monster Menagerie"
+rarity: UNDEFINED
 number: 8
 type: "Undead"
 race: "Zombie"

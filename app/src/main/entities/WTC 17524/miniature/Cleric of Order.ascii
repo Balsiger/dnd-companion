@@ -2,6 +2,7 @@ template {
   name: "Cleric of Order"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 1
 type: "Humanoid"
 race: "Human"

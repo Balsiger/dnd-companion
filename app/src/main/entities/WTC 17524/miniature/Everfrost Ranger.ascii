@@ -2,6 +2,7 @@ template {
   name: "Everfrost Ranger"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 39
 type: "Humanoid"
 race: "Human"

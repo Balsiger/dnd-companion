@@ -2,6 +2,7 @@ template {
   name: "Bonechill Chimera"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 10
 race: "Bonechill Chimera"
 type: "Monstrosity"

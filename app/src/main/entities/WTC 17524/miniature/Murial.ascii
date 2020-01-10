@@ -2,6 +2,7 @@ template {
   name: "Murial"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 30
 race: "Murial"
 type: "Monstrosity"

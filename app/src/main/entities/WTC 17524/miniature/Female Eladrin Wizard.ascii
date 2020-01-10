@@ -2,6 +2,7 @@ template {
   name: "Female Eladrin Wizard"
 }
 set: "Player\'s Handbook Heroes"
+rarity: UNDEFINED
 number: 7
 type: "Humanoid"
 race: "Eladrin"

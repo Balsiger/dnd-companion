@@ -2,6 +2,7 @@ template {
   name: "Ogre Ravager"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 56
 type: "Giant"
 race: "Ogre"

@@ -160,6 +160,10 @@ public class Characters extends Documents<Characters> {
   }
 
   public void processPlayer(User player) {
+    if (player == null) {
+      return;
+    }
+
     if (!userIdsLoading.contains(player.getId())) {
       userIdsLoading.add(player.getId());
       CollectionReference reference = db.collection(player.getId() + "/" + PATH);

@@ -2,6 +2,7 @@ template {
   name: "Cranium Rat Swarm"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 1
 race: "Cranium Rat"
 type: "Beast"

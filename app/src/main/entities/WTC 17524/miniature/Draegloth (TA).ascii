@@ -2,6 +2,7 @@ template {
   name: "Draegloth (TA)"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 42
 race: "Draegloth"
 type: "Fiend"

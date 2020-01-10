@@ -2,6 +2,7 @@ template {
   name: "Ogre Skirmisher"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 51
 type: "Giant"
 race: "Ogre"

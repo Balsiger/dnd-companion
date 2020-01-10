@@ -2,6 +2,7 @@ template {
   name: "Soulrider Devil"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 17
 race: "Soulrider Devil"
 type: "Fiend"

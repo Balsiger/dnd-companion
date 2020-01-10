@@ -2,6 +2,7 @@ template {
   name: "Human Paladin of the Oath of Vengeance"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 23
 race: "Human"
 type: "Humanoid"

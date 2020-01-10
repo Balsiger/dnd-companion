@@ -2,6 +2,7 @@ template {
   name: "Kobold Miner"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 38
 type: "Humanoid"
 race: "Kobold"

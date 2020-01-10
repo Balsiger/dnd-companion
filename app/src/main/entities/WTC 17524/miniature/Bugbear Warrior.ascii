@@ -2,6 +2,7 @@ template {
   name: "Bugbear Warrior"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 33
 type: "Humanoid"
 subtype: "Goblinoid"

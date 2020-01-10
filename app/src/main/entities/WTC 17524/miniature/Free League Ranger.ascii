@@ -2,6 +2,7 @@ template {
   name: "Free League Ranger"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 16
 type: "Humanoid"
 race: "Human"

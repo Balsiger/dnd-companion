@@ -2,6 +2,7 @@ template {
   name: "Redspawn Firebelcher"
 }
 set: "War of the Dragon Queen"
+rarity: RARE
 number: 52
 race: "Redspawn"
 type: "Dragonspawn"

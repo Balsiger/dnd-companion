@@ -2,6 +2,7 @@ template {
   name: "Gynosphinx"
 }
 set: "Monster Menagerie 2"
+rarity: RARE
 number: 41
 race: "Gynosphinx"
 type: "Monstrosity"

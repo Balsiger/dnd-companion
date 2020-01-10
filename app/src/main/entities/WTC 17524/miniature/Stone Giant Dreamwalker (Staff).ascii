@@ -2,6 +2,7 @@ template {
   name: "Stone Giant Dreamwalker (Staff)"
 }
 set: "Monster Menagerie 3"
+rarity: UNCOMMON
 number: 29
 race: "Stone Giant"
 type: "Giant"

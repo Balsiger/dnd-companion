@@ -2,6 +2,7 @@ template {
   name: "Werewolf"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 60
 race: "Werewolf"
 type: "Humanoid"

@@ -2,6 +2,7 @@ template {
   name: "Xanathar"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 44
 type: "Aberration"
 race: "Beholder"

@@ -2,6 +2,7 @@ template {
   name: "Wizard of Turmish"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 27
 type: "Humanoid"
 race: "Human"

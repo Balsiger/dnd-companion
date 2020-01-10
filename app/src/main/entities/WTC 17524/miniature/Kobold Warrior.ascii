@@ -2,6 +2,7 @@ template {
   name: "Kobold Warrior"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 48
 type: "Humanoid"
 race: "Kobold"

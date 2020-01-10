@@ -2,6 +2,7 @@ template {
   name: "Iron Golem (MM2)"
 }
 set: "Monster Menagerie 2"
+rarity: UNCOMMON
 number: 28
 race: "Iron Golem"
 type: "Construct"

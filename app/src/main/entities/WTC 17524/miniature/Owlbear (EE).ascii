@@ -2,6 +2,7 @@ template {
   name: "Owlbear (EE)"
 }
 set: "Elemental Evil"
+rarity: UNDEFINED
 number: 26
 type: "Monstrosity"
 race: "Owlbear"

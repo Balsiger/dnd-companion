@@ -2,6 +2,7 @@ template {
   name: "Cleric of Pelor"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Human"

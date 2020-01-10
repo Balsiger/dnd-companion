@@ -1,0 +1,76 @@
+template {
+  name: "DMA 000093"
+  world: "Generic"
+  description: "\\large{Explore the magical worlds of D&D}\\par You hold in your hands an immersive, one-of-a-kind guide to the brave and bold heroes, along with their weapons, armor, clothing, and equipment, from the world's most beloved tabletop role-playing game - Dungeons & Dragons. Featuring amazing new illustrations and expert insights, \\Product[DMA 000092]{Warriors & Weapons} provides would-be adenturers with all the information you need to start building your own characters and putting together your adventuring party. If you're eager to create your own D&D adventures, this guidebook provides the perfect starting point to worlds of fantasy and an epic tale all you own."
+  short_description: "A young adventurers guide to warriors and weapons."
+}
+title: "Warriors & Weapons"
+subtitle: "A Young Adventurer's Guide"
+author {
+  name: "Zub, Jim"
+}
+author {
+  name: "King, Stacy"
+  job: "with"
+}
+author {
+  name: "Wheeler, Andrew"
+  job: "with"
+}
+editor {
+  name: "Barb, Patrick"
+}
+editor {
+  name: "Bennet, Julie"
+}
+editor {
+  name: "Ogan, Doug"
+  job: "managing editor"
+}
+illustrator {
+  name: "Conceptopolis"
+}
+illustrator {
+  name: "Stromberg, Betsy"
+  job: "art director"
+}
+illustrator {
+  name: "Stromberg, Betsy"
+  job: "designer"
+}
+manager {
+  name: "Wehner, Aaron"
+  job: "publisher"
+}
+manager {
+  name: "Bieser, Lisa"
+  job: "production designer"
+}
+date {
+  year: 2019
+  month: 7
+}
+isbn13 {
+  group13: "978"
+  group: "1"
+  publisher: "9848"
+  title: "5642"
+  check: 5
+}
+pages: 106
+system: NONE
+audience: ALL
+type: ACCESSORY
+style: HARDCOVER
+producer: "WTC"
+series: "Young Adventurer's Guide"
+price {
+  currency: "$"
+  number: 1299
+  precision: 100
+}
+content {
+  part: BOOK
+  number: 1
+}
+layout: FULL_COLOR

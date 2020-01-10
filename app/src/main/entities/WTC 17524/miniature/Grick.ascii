@@ -2,6 +2,7 @@ template {
   name: "Grick"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 45
 race: "Grick"
 type: "Monstrosity"

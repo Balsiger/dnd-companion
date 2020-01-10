@@ -2,6 +2,7 @@ template {
   name: "Horned Devil"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 34
 race: "Horned Devil"
 type: "Fiend"

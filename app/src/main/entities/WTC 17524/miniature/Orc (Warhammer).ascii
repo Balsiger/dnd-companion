@@ -2,6 +2,7 @@ template {
   name: "Orc (Warhammer)"
 }
 set: "Monster Menagerie 2"
+rarity: COMMON
 number: 7
 type: "Humanoid"
 race: "Orc"

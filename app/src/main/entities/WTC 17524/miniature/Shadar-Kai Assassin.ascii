@@ -2,6 +2,7 @@ template {
   name: "Shadar-Kai Assassin"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 35
 type: "Humanoid"
 race: "Shadar-Kai"

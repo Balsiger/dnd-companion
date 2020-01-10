@@ -2,6 +2,7 @@ template {
   name: "Invisible Dragonborne Figher"
 }
 set: "Monster Menagerie 3"
+rarity: ULTRA_RARE
 number: 20
 type: "Humanoid"
 race: "Dragonborn"

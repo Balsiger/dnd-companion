@@ -2,6 +2,7 @@ template {
   name: "Gazer"
 }
 set: "Monster Menagerie 3"
+rarity: COMMON
 number: 4
 race: "Gazer"
 type: "Aberration"

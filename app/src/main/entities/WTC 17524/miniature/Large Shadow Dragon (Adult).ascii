@@ -2,6 +2,7 @@ template {
   name: "Large Shadow Dragon (Adult)"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 57
 race: "Shadow Dragon"
 type: "Dragon"

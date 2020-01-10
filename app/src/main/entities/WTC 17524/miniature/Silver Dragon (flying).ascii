@@ -2,6 +2,7 @@ template {
   name: "Silver Dragon (flying)"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 42
 race: "Silver Dragon"
 type: "Dragon"

@@ -2,6 +2,7 @@ template {
   name: "Rubblebelt Stalker"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 9
 race: "Lizardfolk"
 type: "Humanoid"

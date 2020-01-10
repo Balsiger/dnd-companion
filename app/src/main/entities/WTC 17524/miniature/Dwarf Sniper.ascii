@@ -2,6 +2,7 @@ template {
   name: "Dwarf Sniper"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Dwarf"

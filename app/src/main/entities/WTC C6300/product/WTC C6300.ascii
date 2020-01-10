@@ -1,0 +1,58 @@
+template {
+  name: "WTC C6300"
+  world: "Generic"
+  description: "From the streets of \\Place{Baldur's Gate} to the front lines of the \\Event{Blood War}, the dice you cast might be your last."
+  short_description: "Premium dice for the world's greates roleplaying game."
+}
+title: "Descent into Avernus - Dice & Miscellany"
+subtitle: "Infernal Fortune Finds Form!"
+date {
+  year: 2019
+  month: 9
+}
+illustrator {
+  name: "Dunbar, Max"
+  job: "cards"
+}
+pages: 0
+system: NONE
+audience: ALL
+type: DICE
+style: SMALL_BOX
+producer: "WTC"
+price {
+  currency: "$"
+  number: 2495
+  precision: 100
+}
+content {
+  part: DICE
+  number: 11
+  description: "2xd20, 1xd12, 2xd10, 1xd8, 4xd6, 1xd4"
+}
+content {
+  part: BOX
+  number: 1
+  description: "doubles as dice tray"
+}
+content {
+  part: CARD
+  number: 20
+  description: "double sided cards with encounter tables and story content for the devils and demons of the \\Event{Blood War}"
+}
+content {
+  part: CARD
+  number: 2
+  description: "exclusive content card for \\em{Strange Encounters} and \\em{Trinkes One Finds in \\Place{Avernus}}"
+}
+content {
+  part: MAP
+  number: 1
+  description: "foldout map of \\Place{Avernus} for player use"
+}
+content {
+  part: CARD
+  number: 1
+  description: "sizing chart for \\Event{Blood War} demons and devils"
+}
+layout: FULL_COLOR

@@ -2,6 +2,7 @@ template {
   name: "Human Bandit"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 34
 type: "Humanoid"
 race: "Human"

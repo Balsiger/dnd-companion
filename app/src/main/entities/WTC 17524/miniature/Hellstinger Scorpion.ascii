@@ -2,6 +2,7 @@ template {
   name: "Hellstinger Scorpion"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 25
 race: "Hellstinger Scorpion"
 type: "Fiend"

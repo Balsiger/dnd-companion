@@ -2,6 +2,7 @@ template {
   name: "Dark Naga"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 33
 race: "Dark Naga"
 type: "Aberration"

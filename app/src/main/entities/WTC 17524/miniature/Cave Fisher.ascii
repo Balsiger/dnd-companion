@@ -1,0 +1,9 @@
+template {
+  name: "Cave Fisher"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: COMMON
+number: 10
+race: "Cave Fisher"
+type: "Monstrosity"
+size: MEDIUM

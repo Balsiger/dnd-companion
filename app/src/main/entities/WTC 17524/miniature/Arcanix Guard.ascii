@@ -2,6 +2,7 @@ template {
   name: "Arcanix Guard"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 2
 type: "Humanoid"
 race: "Human"

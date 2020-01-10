@@ -2,6 +2,7 @@ template {
   name: "Werebear (TA b)"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 20
 race: "Wearbear"
 type: "Humanoid"

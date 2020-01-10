@@ -2,6 +2,7 @@ template {
   name: "Deathlock Wight"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 18
 race: "Deathlock Wight"
 type: "Undead"

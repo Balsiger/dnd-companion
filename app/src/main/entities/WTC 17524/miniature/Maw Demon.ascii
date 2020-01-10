@@ -2,6 +2,7 @@ template {
   name: "Maw Demon"
 }
 set: "Descent into Avernus"
+rarity: UNDEFINED
 number: 20
 race: "Abyssal Maw"
 type: "Fiend"

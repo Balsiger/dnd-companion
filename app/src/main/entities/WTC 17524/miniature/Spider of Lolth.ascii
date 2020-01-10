@@ -2,6 +2,7 @@ template {
   name: "Spider of Lolth"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 57
 race: "Spider of Lolth"
 type: "Vermin"

@@ -40,6 +40,7 @@ import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.values.Battle;
+import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
 import net.ixitxachitls.companion.ui.views.CharacterChipView;
 import net.ixitxachitls.companion.ui.views.ChipView;
@@ -72,6 +73,7 @@ public class PartyFragment extends NestedCompanionFragment {
   private TextWrapper<TextView> title;
   private Wrapper<FloatingActionButton> addCharacter;
   private Transition transition = new AutoTransition();
+  private Wrapper<ImageView> resetEncounter;
   private Wrapper<ImageView> fullScreen;
   private Wrapper<ImageView> fullScreenExit;
 
@@ -103,6 +105,8 @@ public class PartyFragment extends NestedCompanionFragment {
     adventure = view.findViewById(R.id.adventure);
     adventure.setVisibility(View.GONE);
     scroll = Wrapper.wrap(view, R.id.scroll);
+    resetEncounter = Wrapper.wrap(view, R.id.reset_encounter);
+    resetEncounter.onClick(this::maybeResetEncounter);
     fullScreen = Wrapper.wrap(view, R.id.full_screen);
     fullScreen.onClick(this::fullScreen);
     fullScreenExit = Wrapper.wrap(view, R.id.full_screen_exit);
@@ -152,6 +156,18 @@ public class PartyFragment extends NestedCompanionFragment {
     fullScreen.visible();
     fullScreenExit.gone();
     adventure.hideDetails();
+  }
+
+  private void maybeResetEncounter() {
+    ConfirmationPrompt.create(getContext()).title("Reset encounter")
+        .message("Do you really want to reset the encounter. Any changes you made will be lost "
+            + "and random values with be newly selected. This cannot be undone.")
+        .yes(this::resetEncounter)
+        .show();
+  }
+
+  private void resetEncounter() {
+    adventure.resetEncounter();
   }
 
   private void createCharacter() {

@@ -2,6 +2,7 @@ template {
   name: "Mud Mephit"
 }
 set: "Monster Menagerie 3"
+rarity: COMMON
 number: 2
 race: "Mud Mephit"
 type: "Elemental"

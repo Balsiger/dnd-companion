@@ -2,6 +2,7 @@ template {
   name: "Treant"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 64
 race: "Treant"
 type: "Plant"

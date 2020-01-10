@@ -2,6 +2,7 @@ template {
   name: "Tavern Brawler"
 }
 set: "War of the Dragon Queen"
+rarity: COMMON
 number: 17
 type: "Humanoid"
 race: "Human"

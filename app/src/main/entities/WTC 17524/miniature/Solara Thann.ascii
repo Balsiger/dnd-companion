@@ -1,7 +1,8 @@
 template {
   name: "Solara Thann"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: RARE
 number: 33
 type: "Humanoid"
 race: "Human"

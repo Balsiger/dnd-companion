@@ -2,6 +2,7 @@ template {
   name: "Dragonblade Ninja"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 17
 type: "Humanoid"
 race: "Human"

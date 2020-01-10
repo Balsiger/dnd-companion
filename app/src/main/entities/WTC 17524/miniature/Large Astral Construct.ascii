@@ -2,6 +2,7 @@ template {
   name: "Large Astral Construct"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 18
 race: "Astral Construct"
 type: "Construct"

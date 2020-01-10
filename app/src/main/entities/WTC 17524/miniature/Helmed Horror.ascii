@@ -2,6 +2,7 @@ template {
   name: "Helmed Horror"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 37
 race: "Helmed Horror"
 type: "Construct"

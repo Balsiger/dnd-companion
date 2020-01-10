@@ -2,6 +2,7 @@ template {
   name: "Iron Dragon Prowler (Adult)"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 60
 race: "Iron Dragon"
 type: "Dragon"

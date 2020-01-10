@@ -2,6 +2,7 @@ template {
   name: "Wraith"
 }
 set: "Harbinger"
+rarity: UNDEFINED
 number: 53
 race: "Wraith"
 type: "Undead"

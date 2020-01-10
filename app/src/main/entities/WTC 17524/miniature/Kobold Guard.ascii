@@ -2,6 +2,7 @@ template {
   name: "Kobold Guard"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 3
 type: "Humanoid"
 race: "Kobold"

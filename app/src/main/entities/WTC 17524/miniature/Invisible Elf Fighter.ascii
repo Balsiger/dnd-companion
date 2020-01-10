@@ -2,6 +2,7 @@ template {
   name: "Invisible Elf Fighter"
 }
 set: "Monster Menagerie 2"
+rarity: ULTRA_RARE
 number: 11
 type: "Humanoid"
 race: "Elf"

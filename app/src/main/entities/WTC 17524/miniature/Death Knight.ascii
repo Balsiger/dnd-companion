@@ -2,6 +2,7 @@ template {
   name: "Death Knight"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 7
 race: "Death Knight"
 type: "Undead"

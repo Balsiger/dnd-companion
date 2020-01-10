@@ -1,0 +1,9 @@
+template {
+  name: "Eidolon Possessed Sacred Statue"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: RARE
+number: 43
+race: "Eidolon"
+type: "Construct"
+size: LARGE

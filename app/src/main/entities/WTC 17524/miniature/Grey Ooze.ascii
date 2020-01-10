@@ -2,6 +2,7 @@ template {
   name: "Grey Ooze"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: COMMON
 number: 12
 race: "Grey Ooze"
 type: "Ooze"

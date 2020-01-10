@@ -2,6 +2,7 @@ template {
   name: "Drunken Master"
 }
 set: "Dragon Eye"
+rarity: UNCOMMON
 number: 17
 type: "Humanoid"
 race: "Human"

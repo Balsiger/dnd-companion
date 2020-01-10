@@ -2,6 +2,7 @@ template {
   name: "Solar"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 10
 race: "Solar"
 type: "Celestial"

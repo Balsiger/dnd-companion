@@ -2,6 +2,7 @@ template {
   name: "Warforged Wizard"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 11
 race: "Warforged"
 type: "Construct"

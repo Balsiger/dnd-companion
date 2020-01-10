@@ -2,6 +2,7 @@ template {
   name: "Artus Cimber (invisible)"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 type: "Humanoid"
 race: "Human"
 class: "Fighter"

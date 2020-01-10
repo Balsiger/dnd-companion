@@ -2,6 +2,7 @@ template {
   name: "Neogi Slaver"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 34
 type: "Aberration"
 race: "Neogi"

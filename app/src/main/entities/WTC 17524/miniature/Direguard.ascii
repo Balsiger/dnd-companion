@@ -2,6 +2,7 @@ template {
   name: "Direguard"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 38
 race: "Direguard"
 type: "Undead"

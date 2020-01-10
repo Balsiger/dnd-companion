@@ -2,6 +2,7 @@ template {
   name: "Djinni (RD)"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 32
 race: "Djinni"
 type: "Elemental"

@@ -2,6 +2,7 @@ template {
   name: "Large Bronze Dragon (Juvenile)"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 7
 race: "Bronze Dragon"
 type: "Dragon"

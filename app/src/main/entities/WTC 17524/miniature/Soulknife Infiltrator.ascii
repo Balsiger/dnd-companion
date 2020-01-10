@@ -2,6 +2,7 @@ template {
   name: "Soulknife Infiltrator"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 44
 type: "Humanoid"
 race: "Human"

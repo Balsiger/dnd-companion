@@ -2,6 +2,7 @@ template {
   name: "Capricious Copper Dragon (Young Adult)"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 23
 race: "Copper Dragon"
 type: "Dragon"

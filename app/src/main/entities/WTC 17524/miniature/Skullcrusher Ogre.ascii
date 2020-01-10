@@ -2,6 +2,7 @@ template {
   name: "Skullcrusher Ogre"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 41
 type: "Giant"
 race: "Ogre"

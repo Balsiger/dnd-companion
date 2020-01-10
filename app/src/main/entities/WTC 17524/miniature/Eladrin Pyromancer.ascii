@@ -2,6 +2,7 @@ template {
   name: "Eladrin Pyromancer"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 45
 type: "Humanoid"
 race: "Eladrin"

@@ -2,6 +2,7 @@ template {
   name: "Ettin Jack-of-Irons"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 38
 race: "Ettin"
 type: "Giant"

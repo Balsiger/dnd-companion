@@ -2,6 +2,7 @@ template {
   name: "Zhentarim Fighter"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 40
 type: "Humanoid"
 race: "Human"

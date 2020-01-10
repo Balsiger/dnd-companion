@@ -2,6 +2,7 @@ template {
   name: "Red Hand War Sorcerer"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 43
 type: "Goblinoid"
 race: "Hobgoblin"

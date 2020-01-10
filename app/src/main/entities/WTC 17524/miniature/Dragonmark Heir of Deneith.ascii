@@ -2,6 +2,7 @@ template {
   name: "Dragonmark Heir of Deneith"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 25
 type: "Humanoid"
 race: "Human"

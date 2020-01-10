@@ -2,6 +2,7 @@ template {
   name: "Ettercap Webspinner"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 48
 race: "Ettercap"
 type: "Monstrosity"

@@ -2,6 +2,7 @@ template {
   name: "Unicorn (AF)"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 22
 race: "Unicorn"
 type: "Celestial"

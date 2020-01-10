@@ -2,6 +2,7 @@ template {
   name: "Death Dog"
 }
 set: "Monster Menagerie 3"
+rarity: COMMON
 number: 9
 race: "Death Dog"
 type: "Monstrosity"

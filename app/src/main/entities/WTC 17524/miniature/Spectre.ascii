@@ -2,6 +2,7 @@ template {
   name: "Spectre"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 42
 race: "Spectre"
 type: "Undead"

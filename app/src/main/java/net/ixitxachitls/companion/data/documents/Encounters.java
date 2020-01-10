@@ -42,6 +42,7 @@ public class Encounters extends Documents<Encounters> {
   protected static final String PATH_ADVENTURES = "adventures";
   protected static final String PATH_ENCOUNTERS = "encounters";
 
+  private final Map<String, Encounter> encountersById = new HashMap<>();
   private final Map<String, List<Encounter>> encountersByCampaignAndAdventureId = new HashMap<>();
 
   public Encounters(CompanionContext context) {
@@ -52,11 +53,11 @@ public class Encounters extends Documents<Encounters> {
     String key = createKey(campaignId, adventureId);
     if (!encountersByCampaignAndAdventureId.containsKey(key)) {
       encountersByCampaignAndAdventureId.put(key, null);
-      CollectionReference reference = db.collection(campaignId + "/" + PATH_ADVENTURES + "/" +
-          adventureId + "/" + PATH_ENCOUNTERS);
+      CollectionReference reference =
+          db.collection(createKey(campaignId, adventureId) + "/" + PATH_ENCOUNTERS);
       reference.addSnapshotListener((s, e) -> {
         if (e == null) {
-          readEncounters(campaignId, adventureId, s.getDocuments());
+          readEncounters(s.getDocuments());
         } else {
           Status.exception("Could not read encounters!", e);
         }
@@ -64,27 +65,40 @@ public class Encounters extends Documents<Encounters> {
     }
   }
 
+  public Optional<Encounter> get(String id) {
+    return Optional.ofNullable(encountersById.get(id));
+  }
+
   public Optional<Encounter> get(String campaignId, String adventureId, String encounterId) {
     return encountersByCampaignAndAdventureId.getOrDefault(createKey(campaignId, adventureId),
-        Collections.emptyList()).stream().filter(e -> e.getId().equals(encounterId)).findFirst();
+        Collections.emptyList()).stream()
+        .filter(e -> e.getEncounterId().equals(encounterId))
+        .findFirst();
   }
 
-  private void readEncounters(String campaignId, String adventureId,
-                              List<DocumentSnapshot> snapshots) {
-    encountersByCampaignAndAdventureId.put(createKey(campaignId, adventureId),
-        snapshots.stream()
-            .map(s -> Encounter.fromData(context, s))
-            .collect(Collectors.toList()));
-    updatedDocuments(snapshots);
+  private void readEncounters(List<DocumentSnapshot> snapshots) {
+    if (!snapshots.isEmpty()) {
+      String path = snapshots.get(0).getReference().getParent().getParent().getPath();
+      List<Encounter> encounters = snapshots.stream()
+          .map(s -> Encounter.fromData(context, s))
+          .collect(Collectors.toList());
+
+      encountersByCampaignAndAdventureId.put(path, encounters);
+      for (Encounter encounter : encounters) {
+        encountersById.put(encounter.getId(), encounter);
+      }
+
+      updatedDocuments(snapshots);
+    }
   }
 
-  private String createKey(String campaignId, String adventureId) {
-    return campaignId + "#" + adventureId;
+  public static String createKey(String campaignId, String adventureId) {
+    return campaignId + "/" + PATH_ADVENTURES + "/" + adventureId;
   }
 
-  public boolean hasEncounter(String campaignId, String adventureId, String encounterId) {
+  public boolean has(String campaignId, String adventureId, String encounterId) {
     return encountersByCampaignAndAdventureId.getOrDefault(createKey(campaignId, adventureId),
-        Collections.emptyList()).stream().anyMatch(e -> e.getId().equals(encounterId));
+        Collections.emptyList()).stream().anyMatch(e -> e.getEncounterId().equals(encounterId));
   }
 
   public boolean hasLoaded(String campaignId, String adventureId) {
@@ -92,14 +106,18 @@ public class Encounters extends Documents<Encounters> {
   }
 
   public Encounter getOrInitialize(String campaignId, String adventureId, String encounterId) {
-    if (context.encounters().hasEncounter(campaignId, adventureId, encounterId)) {
-      return context.encounters().get(campaignId, adventureId, campaignId).get();
+    if (has(campaignId, adventureId, encounterId)) {
+      return get(campaignId, adventureId, encounterId).get();
     } else {
-      // Creating a new encounter and store it.
-      Encounter encounter = Encounter.create(context, campaignId, adventureId, encounterId);
-      encounter.store();
-
-      return encounter;
+      return reset(campaignId, adventureId, encounterId);
     }
+  }
+
+  public Encounter reset(String campaignId, String adventureId, String encounterId) {
+    // Creating a new encounter and store it.
+    Encounter encounter = Encounter.create(context, campaignId, adventureId, encounterId);
+    encounter.store();
+
+    return encounter;
   }
 }

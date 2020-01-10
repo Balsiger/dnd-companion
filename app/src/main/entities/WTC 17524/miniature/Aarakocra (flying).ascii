@@ -2,6 +2,7 @@ template {
   name: "Aarakocra (flying)"
 }
 set: "Tyranny of Dragons"
+rarity: UNDEFINED
 number: 37
 race: "Aarakocra"
 type: "Humanoid"

@@ -2,6 +2,7 @@ template {
   name: "Velociraptor"
 }
 set: "Tomb of Annihilation"
+rarity: UNDEFINED
 number: 5
 race: "Velociraptor"
 type: "Beast"

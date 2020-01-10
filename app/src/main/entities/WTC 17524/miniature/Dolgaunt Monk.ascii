@@ -2,6 +2,7 @@ template {
   name: "Dolgaunt Monk"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 34
 race: "Dolgaunt"
 type: "Aberration"

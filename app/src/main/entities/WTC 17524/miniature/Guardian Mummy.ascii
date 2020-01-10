@@ -2,6 +2,7 @@ template {
   name: "Guardian Mummy"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 28
 race: "Mummy"
 type: "Undead"

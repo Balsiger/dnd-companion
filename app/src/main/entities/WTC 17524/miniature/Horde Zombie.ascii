@@ -2,6 +2,7 @@ template {
   name: "Horde Zombie"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 51
 race: "Zombie"
 type: "Undead"

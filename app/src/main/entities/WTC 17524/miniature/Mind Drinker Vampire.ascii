@@ -2,6 +2,7 @@ template {
   name: "Mind Drinker Vampire"
 }
 set: "Guildmaster\'s Guide to Ravnica"
+rarity: UNDEFINED
 number: 8
 race: "Vampire"
 type: "Undead"

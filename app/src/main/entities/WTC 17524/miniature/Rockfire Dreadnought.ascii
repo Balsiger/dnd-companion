@@ -2,6 +2,7 @@ template {
   name: "Rockfire Dreadnought"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 29
 race: "Rockfire Dreadnought"
 type: "Elemental"

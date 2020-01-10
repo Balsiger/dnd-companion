@@ -2,6 +2,7 @@ template {
   name: "Combat Medic"
 }
 set: "War Drums"
+rarity: UNDEFINED
 number: 5
 type: "Humanoid"
 race: "Human"

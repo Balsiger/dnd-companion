@@ -2,6 +2,7 @@ template {
   name: "Invisible Nilbog"
 }
 set: "Monster Menagerie 3"
+rarity: ULTRA_RARE
 number: 15
 type: "Humanoid"
 race: "Nilbog"

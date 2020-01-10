@@ -2,6 +2,7 @@ template {
   name: "Werewolf Lord (Hybrid Form)"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 60
 race: "Werewolf"
 type: "Humanoid"

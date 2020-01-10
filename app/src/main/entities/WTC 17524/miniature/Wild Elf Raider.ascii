@@ -2,6 +2,7 @@ template {
   name: "Wild Elf Raider"
 }
 set: "Angelfire"
+rarity: UNDEFINED
 number: 29
 type: "Humanoid"
 race: "Elf"

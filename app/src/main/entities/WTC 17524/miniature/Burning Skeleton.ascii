@@ -2,6 +2,7 @@ template {
   name: "Burning Skeleton"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 49
 race: "Burning Skeleton"
 type: "Undead"

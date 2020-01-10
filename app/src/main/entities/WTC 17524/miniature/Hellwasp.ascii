@@ -2,6 +2,7 @@ template {
   name: "Hellwasp"
 }
 set: "Against the Giants"
+rarity: UNCOMMON
 number: 55
 type: "Fiend"
 subtype: "Devil"

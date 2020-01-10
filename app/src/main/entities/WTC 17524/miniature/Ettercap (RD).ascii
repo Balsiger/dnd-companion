@@ -2,6 +2,7 @@ template {
   name: "Ettercap (RD)"
 }
 set: "Rage of Demons"
+rarity: UNDEFINED
 number: 18
 race: "Ettercap"
 type: "Monstrosity"

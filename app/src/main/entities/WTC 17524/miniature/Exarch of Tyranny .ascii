@@ -2,6 +2,7 @@ template {
   name: "Exarch of Tyranny "
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 30
 type: "Humanoid"
 race: "Human"

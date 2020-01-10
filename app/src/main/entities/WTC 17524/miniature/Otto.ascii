@@ -2,6 +2,7 @@ template {
   name: "Otto"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 26
 race: "Fearie Dragon"
 type: "Dragon"

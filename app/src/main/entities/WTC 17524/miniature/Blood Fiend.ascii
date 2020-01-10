@@ -3,6 +3,7 @@ template {
 }
 race: "Blood Fiend"
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 4
 type: "Fiend"
 subtype: "Abomination"

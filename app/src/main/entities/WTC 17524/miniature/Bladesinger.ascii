@@ -2,6 +2,7 @@ template {
   name: "Bladesinger"
 }
 set: "Dragon Eye"
+rarity: RARE
 number: 13
 race: "Elf"
 type: "Humanoid"

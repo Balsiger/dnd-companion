@@ -2,6 +2,7 @@ template {
   name: "Intellect Devourer (DMM)"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: COMMON
 number: 8
 race: "Intellect Devourer"
 type: "Aberration"

@@ -1,0 +1,9 @@
+template {
+  name: "Choker (VMF)"
+}
+set: "Volo's & Mordenkainen's Foes"
+rarity: COMMON
+number: 12
+race: "Choker"
+type: "Aberration"
+size: SMALL

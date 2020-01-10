@@ -2,6 +2,7 @@ template {
   name: "Wererat (a)"
 }
 set: "Dragon Heist"
+rarity: UNDEFINED
 number: 21
 race: "Wererat"
 type: "Humanoid"

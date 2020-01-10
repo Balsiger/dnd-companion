@@ -2,6 +2,7 @@ template {
   name: "Psychic Sentinel"
 }
 set: "Legendary Evils"
+rarity: UNDEFINED
 number: 30
 race: "Psychic Sentinel"
 type: "Construct"

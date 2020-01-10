@@ -2,6 +2,7 @@ template {
   name: "Deathcap"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 54
 race: "Deathcap"
 type: "Plant"

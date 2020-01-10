@@ -2,6 +2,7 @@ template {
   name: "Champion of Elistraee"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 12
 race: "Drow"
 type: "Humanoid"

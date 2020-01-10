@@ -2,6 +2,7 @@ template {
   name: "Warforged Artificer"
 }
 set: "Player\'s Handbook Heroes 2"
+rarity: UNDEFINED
 number: 2
 race: "Warforged"
 type: "Construct"

@@ -2,6 +2,7 @@ template {
   name: "Shadow"
 }
 set: "Night Below"
+rarity: UNDEFINED
 number: 60
 race: "Shadow"
 type: "Undead"

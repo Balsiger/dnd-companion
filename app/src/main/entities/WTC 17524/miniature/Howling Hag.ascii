@@ -2,6 +2,7 @@ template {
   name: "Howling Hag"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 18
 race: "Howling Hag"
 type: "Fey"

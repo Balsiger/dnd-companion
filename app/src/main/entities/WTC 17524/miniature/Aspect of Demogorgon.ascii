@@ -2,6 +2,7 @@ template {
   name: "Aspect of Demogorgon"
 }
 set: "Archfiends"
+rarity: UNDEFINED
 number: 45
 type: "Fiend"
 subtype: "Earth"

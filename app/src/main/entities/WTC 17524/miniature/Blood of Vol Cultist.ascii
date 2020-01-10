@@ -2,6 +2,7 @@ template {
   name: "Blood of Vol Cultist"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 29
 type: "Humanoid"
 race: "Human"

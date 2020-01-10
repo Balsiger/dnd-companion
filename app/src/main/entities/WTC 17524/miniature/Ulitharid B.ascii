@@ -2,6 +2,7 @@ template {
   name: "Ulitharid B"
 }
 set: "Monster Menagerie 3"
+rarity: RARE
 number: 37
 type: "Aberration"
 race: "Ulitharid"

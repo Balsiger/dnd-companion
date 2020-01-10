@@ -2,6 +2,7 @@ template {
   name: "Gelatinous Cube"
 }
 set: "Desert of Desolation"
+rarity: RARE
 number: 20
 race: "Gelatinous Cube"
 type: "Ooze"

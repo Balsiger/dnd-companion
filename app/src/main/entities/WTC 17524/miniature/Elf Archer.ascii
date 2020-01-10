@@ -2,6 +2,7 @@ template {
   name: "Elf Archer"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 6
 type: "Humanoid"
 race: "Elf"

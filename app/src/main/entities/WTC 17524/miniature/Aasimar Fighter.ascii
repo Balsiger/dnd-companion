@@ -2,6 +2,7 @@ template {
   name: "Aasimar Fighter"
 }
 set: "War of the Dragon Queen"
+rarity: COMMON
 number: 1
 type: "Humanoid"
 race: "Aasimar"

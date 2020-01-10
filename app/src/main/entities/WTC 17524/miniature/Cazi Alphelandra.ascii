@@ -1,7 +1,8 @@
 template {
   name: "Cazi Alphelandra"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: COMMON
 number: 6
 race: "Elf"
 type: "Humanoid"

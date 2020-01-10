@@ -2,6 +2,7 @@ template {
   name: "Owlbear Rager"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 57
 race: "Owlbear"
 type: "Monstrosity"

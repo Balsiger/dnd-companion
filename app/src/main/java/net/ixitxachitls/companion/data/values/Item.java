@@ -58,6 +58,7 @@ public class Item extends NestedDocument {
   private static final String FIELD_TIME_LEFT = "time_left";
   private static final String FIELD_IDENTIFIED = "identified";
   private static final String FIELD_CONTENTS = "contents";
+  private static final String FIELD_HISTORY = "history";
 
   private String id;
   private String name;
@@ -73,6 +74,7 @@ public class Item extends NestedDocument {
   private Duration timeLeft;
   private boolean identified;
   private List<Item> contents;
+  private History history;
 
   public Item(String id, String name, List<ItemTemplate> templates, int hp, Money value,
               String appearance, String playerName, String playerNotes, String dmNotes,
@@ -93,6 +95,14 @@ public class Item extends NestedDocument {
     this.timeLeft = timeLeft;
     this.identified = identified;
     this.contents = new ArrayList<>(contents);
+
+    // In case we don't have any templates, try to get the base template derived from the name.
+    if (this.templates.isEmpty()) {
+      Optional<ItemTemplate> template = Templates.get().getItemTemplates().get(name);
+      if (template.isPresent()) {
+        this.templates.add(template.get());
+      }
+    }
   }
 
   public String getAppearance() {
@@ -210,6 +220,10 @@ public class Item extends NestedDocument {
   }
 
   public String getPlayerName() {
+    if (playerName.isEmpty()) {
+      return name;
+    }
+
     return playerName;
   }
 
@@ -248,6 +262,10 @@ public class Item extends NestedDocument {
     }
 
     return totalValue;
+  }
+
+  public Money getRawValue() {
+    return value;
   }
 
   public void setValue(Money value) {
@@ -571,5 +589,14 @@ public class Item extends NestedDocument {
     }
 
     return items;
+  }
+
+  public interface Owner {
+    public Optional<Item> getItem(String id);
+    public boolean amDM();
+    public String getId();
+    public void add(Item item);
+    public void updated(Item item);
+    public boolean isCharacter();
   }
 }

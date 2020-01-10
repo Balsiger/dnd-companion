@@ -2,6 +2,7 @@ template {
   name: "Aspect of Vecna"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 3
 type: "Undead"
 subtype: "Humanoid"

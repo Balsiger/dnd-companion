@@ -2,6 +2,7 @@ template {
   name: "Ogre Executioner"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 43
 type: "Giant"
 race: "Ogre"

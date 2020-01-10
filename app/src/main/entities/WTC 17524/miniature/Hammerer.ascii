@@ -2,6 +2,7 @@ template {
   name: "Hammerer"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 7
 race: "Hammerer"
 type: "Construct"

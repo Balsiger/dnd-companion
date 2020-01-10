@@ -2,6 +2,7 @@ template {
   name: "Flamescorched Kobold"
 }
 set: "Against the Giants"
+rarity: COMMON
 number: 34
 type: "Humanoid"
 race: "Kobold"

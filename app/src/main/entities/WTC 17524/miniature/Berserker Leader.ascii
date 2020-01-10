@@ -2,6 +2,7 @@ template {
   name: "Berserker Leader"
 }
 set: "Waterdeep: Dungeon of the Mad Mage"
+rarity: UNCOMMON
 number: 17
 race: "Human"
 type: "Humanoid"

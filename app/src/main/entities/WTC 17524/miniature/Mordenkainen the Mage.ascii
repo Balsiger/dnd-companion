@@ -2,6 +2,7 @@ template {
   name: "Mordenkainen the Mage"
 }
 set: "Giants of Legend"
+rarity: UNDEFINED
 number: 26
 type: "Humanoid"
 race: "Human"

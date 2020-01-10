@@ -2,6 +2,7 @@ template {
   name: "Battle Plate Marshal"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 1
 type: "Humanoid"
 race: "Dwarf"

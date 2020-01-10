@@ -2,6 +2,7 @@ template {
   name: "Eternal Blade"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 17
 type: "Humanoid"
 race: "Elf"

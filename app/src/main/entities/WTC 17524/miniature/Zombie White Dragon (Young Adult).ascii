@@ -2,6 +2,7 @@ template {
   name: "Zombie White Dragon (Young Adult)"
 }
 set: "Death Knell"
+rarity: UNDEFINED
 number: 60
 type: "Undead"
 race: "Zombie"

@@ -2,6 +2,7 @@ template {
   name: "Drow Elite Warrior"
 }
 set: "Monster Menagerie 2"
+rarity: COMMON
 number: 6
 type: "Humanoid"
 race: "Drow"

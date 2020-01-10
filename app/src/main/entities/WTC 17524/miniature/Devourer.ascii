@@ -2,6 +2,7 @@ template {
   name: "Devourer"
 }
 set: "Unhallowed"
+rarity: UNDEFINED
 number: 36
 race: "Devourer"
 type: "Fiend"

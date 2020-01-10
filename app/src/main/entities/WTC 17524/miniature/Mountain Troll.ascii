@@ -2,6 +2,7 @@ template {
   name: "Mountain Troll"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 50
 race: "Troll"
 type: "Giant"

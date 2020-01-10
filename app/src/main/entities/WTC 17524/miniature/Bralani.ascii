@@ -2,6 +2,7 @@ template {
   name: "Bralani"
 }
 set: "Dungeons of Dread"
+rarity: UNDEFINED
 number: 60
 race: "Eladrin"
 type: "Humanoid"

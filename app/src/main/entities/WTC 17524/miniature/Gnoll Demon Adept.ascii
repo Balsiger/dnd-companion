@@ -2,6 +2,7 @@ template {
   name: "Gnoll Demon Adept"
 }
 set: "Demonweb"
+rarity: UNDEFINED
 number: 28
 type: "Humanoid"
 race: "Gnoll"

@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.ui.fragments;
 import android.os.Bundle;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.FilteredTemplatesStore;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.ProductFilter;
 import net.ixitxachitls.companion.data.templates.ProductTemplate;
@@ -101,5 +102,10 @@ public class ProductsFragment extends TemplatesFragment {
     super.loadedEntities();
     finishLoading(LOADING_PRODUCTS);
     update();
+  }
+
+  @Override
+  protected FilteredTemplatesStore<ProductTemplate, ProductFilter> getTemplates() {
+    return Templates.get().getProductTemplates();
   }
 }

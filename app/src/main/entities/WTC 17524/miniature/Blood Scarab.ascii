@@ -2,6 +2,7 @@ template {
   name: "Blood Scarab"
 }
 set: "Dungeon Delve"
+rarity: UNDEFINED
 number: 8
 race: "Blood Scarab"
 type: "Beast"

@@ -2,6 +2,7 @@ template {
   name: "Chasme"
 }
 set: "Blood War"
+rarity: UNDEFINED
 number: 45
 race: "Chasme"
 type: "Fiend"

@@ -2,6 +2,7 @@ template {
   name: "Spell Weaver"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 46
 race: "Spell Weaver"
 type: "Monstrosity"

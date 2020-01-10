@@ -2,6 +2,7 @@ template {
   name: "Young Green Dragon"
 }
 set: "Dungeons of Dread S"
+rarity: UNDEFINED
 race: "Green Dragon"
 type: "Dragon"
 size: LARGE

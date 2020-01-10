@@ -2,6 +2,7 @@ template {
   name: "Large Fire Elemental"
 }
 set: "Desert of Desolation"
+rarity: UNCOMMON
 number: 51
 race: "Fire Elemental"
 type: "Elemental"

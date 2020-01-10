@@ -1,7 +1,8 @@
 template {
   name: "Bandit"
 }
-set: "Storm King\'s Thunder"
+set: "Storm King's Thunder"
+rarity: UNCOMMON
 number: 15
 type: "Humanoid"
 race: "Human"

@@ -2,6 +2,7 @@ template {
   name: "Human Outrider"
 }
 set: "Savage Encounters"
+rarity: UNDEFINED
 number: 22
 type: "Humanoid"
 race: "Human"

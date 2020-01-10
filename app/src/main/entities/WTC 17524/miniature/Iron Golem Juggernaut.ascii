@@ -2,6 +2,7 @@ template {
   name: "Iron Golem Juggernaut"
 }
 set: "Lords of Madness"
+rarity: UNDEFINED
 number: 23
 race: "Iron Golem"
 type: "Construct"

@@ -2,6 +2,7 @@ template {
   name: "Grimlock Barbarian"
 }
 set: "Underdark"
+rarity: UNDEFINED
 number: 49
 race: "Grimlock"
 type: "Humanoid"

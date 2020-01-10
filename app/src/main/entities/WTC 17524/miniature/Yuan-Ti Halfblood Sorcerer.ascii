@@ -2,6 +2,7 @@ template {
   name: "Yuan-Ti Halfblood Sorcerer"
 }
 set: "War of the Dragon Queen"
+rarity: UNCOMMON
 number: 60
 type: "Humanoid"
 subtype: "Serpent"

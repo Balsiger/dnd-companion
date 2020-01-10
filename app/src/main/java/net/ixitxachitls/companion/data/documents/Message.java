@@ -126,7 +126,7 @@ public class Message extends Document<Message> {
         .set(FIELD_RECIPIENTS, recipientIds)
         .set(FIELD_TYPE, type.toString())
         .setIf(FIELD_XP, xp, xp -> xp != 0)
-        .set(FIELD_ITEM, item)
+        .setNested(FIELD_ITEM, item)
         .set(FIELD_TEXT, text);
   }
 
