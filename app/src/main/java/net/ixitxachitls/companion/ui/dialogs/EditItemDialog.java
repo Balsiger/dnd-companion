@@ -30,12 +30,10 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.Templates;
-import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Encounter;
 import net.ixitxachitls.companion.data.documents.Message;
-import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.data.values.Duration;
+import net.ixitxachitls.companion.data.values.History;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.ui.views.LabelledAutocompleteTextView;
@@ -62,8 +60,7 @@ import androidx.annotation.StringRes;
  */
 public class EditItemDialog extends Dialog {
 
-  private static final String ARG_ENCOUNTER_ID = "encounter_id";
-  private static final String ARG_CREATURE_ID = "creature_id";
+  private static final String ARG_OWNER_ID = "owner_id";
   private static final String ARG_ITEM_ID = "item_id";
 
   private Optional<ItemTemplate> baseTemplate = Optional.empty();
@@ -98,26 +95,13 @@ public class EditItemDialog extends Dialog {
     super.onCreate(savedInstance);
 
     if (getArguments() != null) {
-      String creatureId = getArguments().getString(ARG_CREATURE_ID);
-      Optional<Character> character =
-          CompanionApplication.get(getContext()).characters().get(creatureId);
-      if (character.isPresent()) {
-        owner = character.get();
+      String ownerId = getArguments().getString(ARG_OWNER_ID);
+      Optional<? extends Item.Owner> owner = Item.findOwner(ownerId);
+      if (owner.isPresent()) {
+        this.owner = owner.get();
       } else {
-        Optional<Monster> monster =
-            CompanionApplication.get(getContext()).monsters().get(creatureId);
-        if (monster.isPresent()) {
-          owner = monster.get();
-        } else {
-          String encounterId = getArguments().getString(ARG_ENCOUNTER_ID);
-          Optional<Encounter> encounter = CompanionApplication.get().encounters().get(encounterId);
-          if (encounter.isPresent()) {
-            owner = encounter.get();
-          } else {
-            Status.error("Cannot find an owner for the item!");
-            close();
-          }
-        }
+        Status.error("Cannot find an owner for the item!");
+        close();
       }
 
       String itemId = getArguments().getString(ARG_ITEM_ID);
@@ -126,7 +110,7 @@ public class EditItemDialog extends Dialog {
         close();
       }
 
-      item = owner.getItem(itemId);
+      item = this.owner.getItem(itemId);
     }
   }
 
@@ -251,7 +235,8 @@ public class EditItemDialog extends Dialog {
             baseTemplate.get().getName(),
             templates, parseHp(),
             itemValue.get(), appearance.getText(), "", "", "", parseMultiple(), parseMultiuse(),
-            Duration.ZERO, false, Collections.emptyList()));
+            Duration.ZERO, false, Collections.emptyList(), History.create(me().getId(),
+            campaigns().getCampaignFromNestedId(owner.getId()).getDate())));
       }
     }
 
@@ -342,28 +327,27 @@ public class EditItemDialog extends Dialog {
     }
   }
 
-  protected static Bundle arguments(String encounterId, String creatureId, String itemId,
+  protected static Bundle arguments(String ownerId, String itemId,
                                     @LayoutRes int layoutId, @StringRes int titleId,
                                     @ColorRes int colorId) {
     Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
-    arguments.putString(ARG_ENCOUNTER_ID, encounterId);
-    arguments.putString(ARG_CREATURE_ID, creatureId);
+    arguments.putString(ARG_OWNER_ID, ownerId);
     arguments.putString(ARG_ITEM_ID, itemId);
     return arguments;
   }
 
-  public static EditItemDialog newInstance(String encounterId, String creatureId, String itemId) {
+  public static EditItemDialog newInstance(String ownerId, String itemId) {
     EditItemDialog dialog = new EditItemDialog();
-    dialog.setArguments(arguments(encounterId, creatureId, itemId, R.layout.dialog_edit_item, R.string
+    dialog.setArguments(arguments(ownerId, itemId, R.layout.dialog_edit_item, R.string
             .character_edit_item,
         R.color.item));
 
     return dialog;
   }
 
-  public static EditItemDialog newInstance(String encounterId, String creatureId) {
+  public static EditItemDialog newInstance(String ownerId) {
     EditItemDialog dialog = new EditItemDialog();
-    dialog.setArguments(arguments(encounterId, creatureId, "", R.layout.dialog_edit_item,
+    dialog.setArguments(arguments(ownerId, "", R.layout.dialog_edit_item,
         R.string.character_add_item, R.color.item));
     return dialog;
   }

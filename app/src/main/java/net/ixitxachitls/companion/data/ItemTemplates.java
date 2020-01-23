@@ -25,6 +25,7 @@ import com.google.common.collect.ImmutableList;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
+import net.ixitxachitls.companion.data.values.CampaignDate;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.Money;
 import net.ixitxachitls.companion.data.values.Weight;
@@ -46,28 +47,23 @@ public class ItemTemplates extends TemplatesStore<ItemTemplate> {
     super(ItemTemplate.class);
   }
 
-  public List<String> realItems() {
-    return byName.values().stream()
-        .filter(ItemTemplate::isReal)
-        .map(ItemTemplate::getName)
-        .sorted()
-        .collect(Collectors.toList());
-  }
+  public Optional<Item> lookup(CompanionContext context, Template.ItemLookupProto proto,
+                               String creatorId, CampaignDate date) {
+    List<ItemTemplate> templates = lookupTemplates(proto);
 
-  public List<String> templates() {
-    return byName.values().stream()
-        .filter(ItemTemplate::isTemplate)
-        .map(ItemTemplate::getName)
-        .sorted()
-        .collect(Collectors.toList());
-  }
+    if (templates.isEmpty()) {
+      return Optional.empty();
+    }
 
-  public List<String> weapons() {
-    return byName.values().stream()
-        .filter(ItemTemplate::isWeapon)
-        .map(ItemTemplate::getName)
-        .sorted()
-        .collect(Collectors.toList());
+    int total = totalWeightedProbability(templates);
+    int random = RANDOM.nextInt(total);
+
+    Optional<ItemTemplate> template = randomItemTemplate(templates, random);
+    if (template.isPresent()) {
+      return Optional.of(Item.createLookupItem(context, template.get(), proto, creatorId, date));
+    } else {
+      return Optional.empty();
+    }
   }
 
   public List<ItemTemplate> lookupTemplates(Template.ItemLookupProto proto) {
@@ -139,24 +135,6 @@ public class ItemTemplates extends TemplatesStore<ItemTemplate> {
     return templates;
   }
 
-  public Optional<Item> lookup(CompanionContext context, Template.ItemLookupProto proto) {
-    List<ItemTemplate> templates = lookupTemplates(proto);
-
-    if (templates.isEmpty()) {
-      return Optional.empty();
-    }
-
-    int total = totalWeightedProbability(templates);
-    int random = RANDOM.nextInt(total);
-
-    Optional<ItemTemplate> template = randomItemTemplate(templates, random);
-    if (template.isPresent()) {
-      return Optional.of(Item.createLookupItem(context, template.get(), proto));
-    } else {
-      return Optional.empty();
-    }
-  }
-
   public Optional<ItemTemplate> randomItemTemplate(List<ItemTemplate> templates, int random) {
     // Randomly select a value by rarity.
     int running = 0;
@@ -170,8 +148,32 @@ public class ItemTemplates extends TemplatesStore<ItemTemplate> {
     return Optional.empty();
   }
 
+  public List<String> realItems() {
+    return byName.values().stream()
+        .filter(ItemTemplate::isReal)
+        .map(ItemTemplate::getName)
+        .sorted()
+        .collect(Collectors.toList());
+  }
+
+  public List<String> templates() {
+    return byName.values().stream()
+        .filter(ItemTemplate::isTemplate)
+        .map(ItemTemplate::getName)
+        .sorted()
+        .collect(Collectors.toList());
+  }
+
   public int totalWeightedProbability(List<ItemTemplate> templates) {
     return templates.stream().mapToInt(t -> t.weightedProbability()).sum();
+  }
+
+  public List<String> weapons() {
+    return byName.values().stream()
+        .filter(ItemTemplate::isWeapon)
+        .map(ItemTemplate::getName)
+        .sorted()
+        .collect(Collectors.toList());
   }
 
   private boolean matchAny(List<String> first, List<String> second) {

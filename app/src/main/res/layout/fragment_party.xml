@@ -59,7 +59,7 @@
           android:id="@+id/party"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:background="@color/hs_darkerGreycolor"
+          android:background="@color/location_grey"
           android:minWidth="200dp"
           app:flexWrap="wrap"
           app:layout_constraintStart_toStartOf="parent"

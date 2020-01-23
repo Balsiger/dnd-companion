@@ -129,5 +129,6 @@
   <string name="character_select_quality">Select Quality</string>
   <string name="select_adventure">Select Adventure</string>
   <string name="select_encounter">Select or Initialize Encounter</string>
+  <string name="dialog_item_title">Item</string>
 
 </resources>

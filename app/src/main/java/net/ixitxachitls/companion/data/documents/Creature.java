@@ -71,9 +71,9 @@ import androidx.annotation.CallSuper;
  * The base for all monsters or characters in the game.
  */
 public class Creature<T extends Creature<T>> extends Document<T> implements Item.Owner {
+  protected static final String FIELD_NAME = "name";
   private static final String FIELD_CAMPAIGN = "campaign";
   private static final String DEFAULT_CAMPAIGN = "";
-  protected static final String FIELD_NAME = "name";
   private static final String FIELD_GENDER = "gender";
   private static final String FIELD_RACE = "race";
   private static final String DEFAULT_RACE = "Human";
@@ -252,6 +252,22 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     this.gender = gender;
   }
 
+  public int getHitDice() {
+    if (race.isPresent()) {
+      return race.get().getHitDice();
+    }
+
+    return 0;
+  }
+
+  public int getHitDie() {
+    if (race.isPresent()) {
+      return race.get().getHitDie();
+    }
+
+    return 0;
+  }
+
   public int getHp() {
     return hp;
   }
@@ -313,24 +329,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     this.race = Templates.get().getMonsterTemplates().get(race);
   }
 
-  public void initFromRace(String name) {
-    setRace(name);
-    if (race.isPresent()) {
-      // Abilities.
-      strength = race.get().getStrength();
-      dexterity = race.get().getDexterity();
-      constitution = race.get().getConstitution();
-      intelligence = race.get().getIntelligenec();
-      wisdom = race.get().getWisdom();
-      charisma = race.get().getCharisma();
-
-      // Hit points.
-      maxHp = Dice.rollModifierEach(race.get().getHitDie(), race.get().getHitDice(),
-          getDexterityModifier());
-      hp = maxHp;
-    }
-  }
-
   public Size getSize() {
     if (race.isPresent()) {
       return race.get().getSize();
@@ -382,6 +380,122 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return Ability.modifier(getWisdom().total());
   }
 
+  @Override
+  public boolean isCharacter() {
+    return false;
+  }
+
+  @Override
+  public boolean isWearing(Item item) {
+    return wearing.isWearing(item);
+  }
+
+  @Override
+  public void add(Item item) {
+    if (amPlayer()) {
+      int index = itemIndex(item.getId());
+      if (index < 0) {
+        items.add(item);
+      } else {
+        items.set(index, item);
+      }
+      store();
+    }
+  }
+
+  @Override
+  public boolean amDM() {
+    Optional<Campaign> campaign = context.campaigns().getOptional(campaignId);
+    return campaign.isPresent() && campaign.get().amDM();
+  }
+
+  @Override
+  public boolean canEdit() {
+    return false;
+  }
+
+  @Override
+  public void combine(Item item, Item other) {
+    if (item.similar(other)) {
+      removeItem(other);
+      item.setMultiple(item.getMultiple() + other.getMultiple());
+      store();
+    }
+  }
+
+  @Override
+  public Optional<Item> getItem(String itemId) {
+    for (Item item : items) {
+      if (item.getId().equals(itemId)) {
+        return Optional.of(item);
+      }
+
+      Optional<Item> nested = item.getNestedItem(itemId);
+      if (nested.isPresent()) {
+        return nested;
+      }
+    }
+
+    return Optional.empty();
+  }
+
+  @Override
+  public boolean moveItemAfter(Item item, Item move) {
+    if (isWearing(item)) {
+      wearing.moveItemAfter(item, move);
+    } else if (removeItem(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item) + 1, move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemAfter(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
+    }
+
+    return false;
+  }
+
+  @Override
+  public boolean moveItemBefore(Item item, Item move) {
+    if (isWearing(item)) {
+      wearing.moveItemBefore(item, move);
+    } else if (removeItem(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item), move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemBefore(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
+    }
+
+    return false;
+  }
+
+  @Override
+  public void moveItemInto(Item container, Item item) {
+    if (removeItem(item)) {
+      container.add(item);
+      store();
+    }
+  }
+
+  @Override
+  public void updated(Item item) {
+    store();
+  }
+
   public boolean isWearingDefault() {
     return wearing.name.equals(DEFAULT_DISTRIBUTION);
   }
@@ -410,24 +524,8 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     this.wisdom = wisdom;
   }
 
-  public boolean isWearing(Item item) {
-    return wearing.isWearing(item);
-  }
-
   public boolean isWearing(Item item, Items.Slot slot) {
     return wearing.isWearing(item, slot);
-  }
-
-  public void add(Item item) {
-    if (amPlayer()) {
-      int index = itemIndex(item.getId());
-      if (index < 0) {
-        items.add(item);
-      } else {
-        items.set(index, item);
-      }
-      store();
-    }
   }
 
   public void addCondition(TimedCondition condition) {
@@ -440,11 +538,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
   public void addNonlethalDamage(int number) {
     nonlethalDamage += number;
-  }
-
-  public boolean amDM() {
-    Optional<Campaign> campaign = context.campaigns().getOptional(campaignId);
-    return campaign.isPresent() && campaign.get().amDM();
   }
 
   public boolean amPlayer() {
@@ -508,10 +601,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return attack;
   }
 
-  public boolean canEdit() {
-    return false;
-  }
-
   public void carry(Items.Slot slot, Item item) {
     wearing.carry(slot, item);
   }
@@ -530,14 +619,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     }
 
     return HashMultimap.create();
-  }
-
-  public void combine(Item item, Item other) {
-    removeItem(other);
-    if (item.similar(other)) {
-      item.setMultiple(item.getMultiple() + other.getMultiple());
-      store();
-    }
   }
 
   public Damage damage(Item item) {
@@ -678,21 +759,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return Optional.empty();
   }
 
-  public Optional<Item> getItem(String itemId) {
-    for (Item item : items) {
-      if (item.getId().equals(itemId)) {
-        return Optional.of(item);
-      }
-
-      Optional<Item> nested = item.getNestedItem(itemId);
-      if (nested.isPresent()) {
-        return nested;
-      }
-    }
-
-    return Optional.empty();
-  }
-
   public boolean hasCondition(String name) {
     return context.conditions().hasCondition(getId(), name);
   }
@@ -709,6 +775,24 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     }
 
     return false;
+  }
+
+  public void initFromRace(String name) {
+    setRace(name);
+    if (race.isPresent()) {
+      // Abilities.
+      strength = race.get().getStrength();
+      dexterity = race.get().getDexterity();
+      constitution = race.get().getConstitution();
+      intelligence = race.get().getIntelligenec();
+      wisdom = race.get().getWisdom();
+      charisma = race.get().getCharisma();
+
+      // Hit points.
+      maxHp = Dice.rollModifierEach(race.get().getHitDie(), race.get().getHitDice(),
+          getDexterityModifier());
+      hp = maxHp;
+    }
   }
 
   public ModifiedValue initiative() {
@@ -787,58 +871,9 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
         .orElse(Integer.MAX_VALUE));
   }
 
-  public boolean moveItemAfter(Item item, Item move) {
-    if (isWearing(item)) {
-      wearing.moveItemAfter(item, move);
-    } else if (removeItem(move)) {
-      if (items.contains(item)) {
-        items.add(items.indexOf(item) + 1, move);
-        store();
-        return true;
-      } else {
-        for (Item container : items) {
-          if (container.addItemAfter(item, move)) {
-            store();
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-
-  public boolean moveItemBefore(Item item, Item move) {
-    if (isWearing(item)) {
-      wearing.moveItemBefore(item, move);
-    } else if (removeItem(move)) {
-      if (items.contains(item)) {
-        items.add(items.indexOf(item), move);
-        store();
-        return true;
-      } else {
-        for (Item container : items) {
-          if (container.addItemBefore(item, move)) {
-            store();
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-
   public void moveItemFirst(Item item) {
     if (removeItem(item)) {
       items.add(0, item);
-      store();
-    }
-  }
-
-  public void moveItemInto(Item container, Item item) {
-    if (removeItem(item)) {
-      container.add(item);
       store();
     }
   }
@@ -986,22 +1021,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return value;
   }
 
-  public int getHitDice() {
-    if (race.isPresent()) {
-      return race.get().getHitDice();
-    }
-
-    return 0;
-  }
-
-  public int getHitDie() {
-    if (race.isPresent()) {
-      return race.get().getHitDie();
-    }
-
-    return 0;
-  }
-
   public Money totalValue() {
     Money total = Money.ZERO;
     for (Item item : items) {
@@ -1044,10 +1063,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     }
 
     return value;
-  }
-
-  public void updated(Item item) {
-    store();
   }
 
   public List<String> wearing(Items.Slot slot) {
@@ -1158,11 +1173,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
         .set(FIELD_ENCOUNTER_NUMBER, encounterNumber)
         .setNested(FIELD_ITEMS, items)
         .setNested(FIELD_SLOTS, wearing);
-  }
-
-  @Override
-  public boolean isCharacter() {
-    return false;
   }
 
   public static class InitiativeComparator implements Comparator<Creature> {

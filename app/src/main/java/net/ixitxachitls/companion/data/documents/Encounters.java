@@ -26,7 +26,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.util.Strings;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -39,22 +41,62 @@ import java.util.stream.Collectors;
  */
 public class Encounters extends Documents<Encounters> {
 
-  protected static final String PATH_ADVENTURES = "adventures";
-  protected static final String PATH_ENCOUNTERS = "encounters";
+  protected static final String PATH = "encounters";
 
   private final Map<String, Encounter> encountersById = new HashMap<>();
-  private final Map<String, List<Encounter>> encountersByCampaignAndAdventureId = new HashMap<>();
+  private final Map<String, List<Encounter>> encountersByAdventureId = new HashMap<>();
 
   public Encounters(CompanionContext context) {
     super(context);
   }
 
-  public void loadEncounters(String campaignId, String adventureId) {
-    String key = createKey(campaignId, adventureId);
-    if (!encountersByCampaignAndAdventureId.containsKey(key)) {
-      encountersByCampaignAndAdventureId.put(key, null);
-      CollectionReference reference =
-          db.collection(createKey(campaignId, adventureId) + "/" + PATH_ENCOUNTERS);
+  private void setEncounter(Encounter encounter) {
+    encountersById.put(encounter.getId(), encounter);
+    String adventureId = Adventures.extractId(encounter.getId());
+    List<Encounter> encounters = encountersByAdventureId.get(adventureId);
+    if (encounters == null) {
+      encounters = new ArrayList<>();
+      encountersByAdventureId.put(adventureId, encounters);
+    }
+
+    for (int i = 0; i < encounters.size(); i++) {
+      if (encounters.get(i).getId().equals(encounter.getId())) {
+        encounters.set(i, encounter);
+        return;
+      }
+    }
+
+    encounters.add(encounter);
+  }
+
+  public static boolean isEncounterId(String id) {
+    return id.contains("/" + PATH + "/");
+  }
+
+  public Optional<Encounter> get(String id) {
+    return Optional.ofNullable(encountersById.get(id));
+  }
+
+  public Encounter getOrInitialize(String encounterId) {
+    if (has(encounterId)) {
+      return get(encounterId).get();
+    } else {
+      return reset(encounterId);
+    }
+  }
+
+  public boolean has(String encounterId) {
+    return encountersById.containsKey(encounterId);
+  }
+
+  public boolean hasLoaded(String adventureId) {
+    return encountersByAdventureId.containsKey(adventureId);
+  }
+
+  public void loadEncounters(String adventureId) {
+    if (!encountersByAdventureId.containsKey(adventureId)) {
+      encountersByAdventureId.put(adventureId, Collections.emptyList());
+      CollectionReference reference = db.collection(adventureId + "/" + PATH);
       reference.addSnapshotListener((s, e) -> {
         if (e == null) {
           readEncounters(s.getDocuments());
@@ -65,15 +107,13 @@ public class Encounters extends Documents<Encounters> {
     }
   }
 
-  public Optional<Encounter> get(String id) {
-    return Optional.ofNullable(encountersById.get(id));
-  }
+  public Encounter reset(String encounterId) {
+    // Creating a new encounter and store it.
+    Encounter encounter = Encounter.create(context, encounterId);
+    encounter.store();
+    setEncounter(encounter);
 
-  public Optional<Encounter> get(String campaignId, String adventureId, String encounterId) {
-    return encountersByCampaignAndAdventureId.getOrDefault(createKey(campaignId, adventureId),
-        Collections.emptyList()).stream()
-        .filter(e -> e.getEncounterId().equals(encounterId))
-        .findFirst();
+    return encounter;
   }
 
   private void readEncounters(List<DocumentSnapshot> snapshots) {
@@ -83,7 +123,7 @@ public class Encounters extends Documents<Encounters> {
           .map(s -> Encounter.fromData(context, s))
           .collect(Collectors.toList());
 
-      encountersByCampaignAndAdventureId.put(path, encounters);
+      encountersByAdventureId.put(path, encounters);
       for (Encounter encounter : encounters) {
         encountersById.put(encounter.getId(), encounter);
       }
@@ -92,32 +132,15 @@ public class Encounters extends Documents<Encounters> {
     }
   }
 
-  public static String createKey(String campaignId, String adventureId) {
-    return campaignId + "/" + PATH_ADVENTURES + "/" + adventureId;
+  public static String createId(String adventureId, String encounterShortId) {
+    return adventureId + "/" + PATH + "/" + encounterShortId;
   }
 
-  public boolean has(String campaignId, String adventureId, String encounterId) {
-    return encountersByCampaignAndAdventureId.getOrDefault(createKey(campaignId, adventureId),
-        Collections.emptyList()).stream().anyMatch(e -> e.getEncounterId().equals(encounterId));
-  }
-
-  public boolean hasLoaded(String campaignId, String adventureId) {
-    return encountersByCampaignAndAdventureId.get(createKey(campaignId, adventureId)) != null;
-  }
-
-  public Encounter getOrInitialize(String campaignId, String adventureId, String encounterId) {
-    if (has(campaignId, adventureId, encounterId)) {
-      return get(campaignId, adventureId, encounterId).get();
-    } else {
-      return reset(campaignId, adventureId, encounterId);
+  public static String extractShortId(String id) {
+    if (isEncounterId(id)) {
+      return Strings.extractPattern(id, PATH + "/(.*?)(/|$)");
     }
-  }
 
-  public Encounter reset(String campaignId, String adventureId, String encounterId) {
-    // Creating a new encounter and store it.
-    Encounter encounter = Encounter.create(context, campaignId, adventureId, encounterId);
-    encounter.store();
-
-    return encounter;
+    return "";
   }
 }

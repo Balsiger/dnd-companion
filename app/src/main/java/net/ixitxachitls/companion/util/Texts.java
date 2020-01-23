@@ -65,23 +65,6 @@ public class Texts {
   private static final char MARKER_ESCAPE_START = '\005';
   private static final char MARKER_ESCAPE_END = '\006';
   private static final String SPECIAL = "<>=!~*#$%@?+|";
-  private static Map<String, TextCommand> COMMANDS = ImmutableMap.<String, TextCommand>builder()
-      .put("Class", new ColorCommand(R.color.className))
-      .put("Place", new ColorCommand(R.color.campaign))
-      .put("Spell", new ColorCommand(R.color.spell))
-      .put("Monster", new ColorCommand(R.color.monster))
-      .put("Quality", new ColorCommand(R.color.quality))
-      .put("Item", new ColorCommand(R.color.item))
-      .put("Feat", new ColorCommand(R.color.feat))
-      .put("Product", new ColorCommand(R.color.product))
-      .put("Skill", new ColorCommand(R.color.skill))
-      .put("par", new ParCommand())
-      .put("bold", new BoldCommand())
-      .put("emph", new ItalicsCommand())
-      .put("table", new TableCommand())
-      .put("list", new ListCommand())
-      .build();
-
   // Expressions.
   private static final Pattern EXPRESSSION_PATTERN = Pattern.compile("\\[\\[(.*?)\\]\\]");
   private static final Pattern EXPRESSION_BRACKET =
@@ -90,12 +73,144 @@ public class Texts {
   private static final Pattern EXPRERSSION_NUMBER = Pattern.compile("\\s*([\\+\\-]?\\d+)\\s*");
   private static final Pattern EXPRESSION_MULTDIV = Pattern.compile("(.*)\\s*([\\*\\/])\\s*(.*?)");
   private static final Pattern EXPRESSION_ADDSUB = Pattern.compile("(.*)\\s*([\\+\\-])\\s*(.*?)");
+  private static Map<String, TextCommand> COMMANDS = ImmutableMap.<String, TextCommand>builder()
+      .put("Class", new ColorCommand(R.color.classNameDark))
+      .put("Place", new ColorCommand(R.color.campaignDark))
+      .put("Spell", new ColorCommand(R.color.spellDark))
+      .put("Monster", new ColorCommand(R.color.monsterDark))
+      .put("Quality", new ColorCommand(R.color.qualityDark))
+      .put("Item", new ColorCommand(R.color.itemDark))
+      .put("Feat", new ColorCommand(R.color.featDark))
+      .put("Product", new ColorCommand(R.color.productDark))
+      .put("Skill", new ColorCommand(R.color.skillDark))
+      .put("par", new ParCommand())
+      .put("bold", new BoldCommand())
+      .put("emph", new ItalicsCommand())
+      .put("table", new TableCommand())
+      .put("list", new ListCommand())
+      .build();
 
   protected static String clean(String text) {
     return text.replaceAll(MARKER_START + "<\\d+>", "" + START)
         .replaceAll(MARKER_END + "<\\d+>", "" + END)
         .replaceAll(MARKER_OPTIONAL_START + "<\\d+>", "" + OPTIONAL_START)
         .replaceAll(MARKER_OPTONAL_END + "<\\d+>", "" + OPTIONAL_END);
+  }
+
+  private static String evaluateExpression(String expression, Map<String, Value> values) {
+    for (StringBuffer buffer = new StringBuffer();
+         evaluateExpressionBrackets(buffer, expression, values);
+         buffer = new StringBuffer()) {
+      expression = buffer.toString();
+    }
+
+    return evaluateExpressionPart(expression, values).toString();
+  }
+
+  private static boolean evaluateExpressionBrackets(StringBuffer buffer, String expression,
+                                                    Map<String, Value> values) {
+
+    // Evaluate all brackets.
+    Matcher matcher = EXPRESSION_BRACKET.matcher(expression);
+    boolean found = false;
+    while (matcher.find()) {
+      if (matcher.group(1) == null) {
+        matcher.appendReplacement(buffer, Matcher.quoteReplacement(
+            evaluateExpressionPart(matcher.group(2), values).toString()));
+      } else {
+        matcher.appendReplacement(buffer,
+            Matcher.quoteReplacement(evaluateFunction(matcher.group(1),
+                Arrays.asList(matcher.group(2).split("\\s*,\\s*")).stream()
+                    .map(a -> evaluateExpressionPart(a, values))
+                    .collect(Collectors.toList())).toString()));
+      }
+      found = true;
+    }
+    matcher.appendTail(buffer);
+    return found;
+  }
+
+  private static Value evaluateExpressionPart(String expression, Map<String, Value> values) {
+    // The given expression will not have any brackets.
+
+    // Number.
+    Matcher matcher = EXPRERSSION_NUMBER.matcher(expression);
+    if (matcher.matches()) {
+      return new IntegerValue(Integer.parseInt(matcher.group(1)));
+    }
+
+    // Variable.
+    matcher = EXPRESSION_VARIABLE.matcher(expression);
+    if (matcher.matches()) {
+      String key = matcher.group(1);
+      if (values.containsKey(key)) {
+        return values.get(key);
+      } else {
+        return new StringValue("<$" + key + ">");
+      }
+    }
+
+    // Operations.
+    matcher = EXPRESSION_ADDSUB.matcher(expression);
+    if (matcher.matches()) {
+      Value left = evaluateExpressionPart(matcher.group(1), values);
+      String operator = matcher.group(2);
+      Value right = evaluateExpressionPart(matcher.group(3), values);
+
+      if (left instanceof IntegerValue && right instanceof IntegerValue) {
+        if (operator.equals("+")) {
+          return new IntegerValue(((IntegerValue) left).value + ((IntegerValue) right).value);
+        } else if (operator.equals("-")) {
+          return new IntegerValue(((IntegerValue) left).value - ((IntegerValue) right).value);
+        }
+      }
+
+      return new StringValue("<" + left + operator + right + ">");
+    }
+
+    matcher = EXPRESSION_MULTDIV.matcher(expression);
+    if (matcher.matches()) {
+      Value left = evaluateExpressionPart(matcher.group(1), values);
+      String operator = matcher.group(2);
+      Value right = evaluateExpressionPart(matcher.group(3), values);
+
+      if (left instanceof IntegerValue && right instanceof IntegerValue) {
+        if (operator.equals("*")) {
+          return new IntegerValue(((IntegerValue) left).value * ((IntegerValue) right).value);
+        } else if (operator.equals("/")) {
+          return new IntegerValue(((IntegerValue) left).value / ((IntegerValue) right).value);
+        }
+      }
+
+      return new StringValue("<" + left + operator + right + ">");
+    }
+
+    return new StringValue(expression);
+  }
+
+  private static Value evaluateFunction(String name, List<Value> arguments) {
+    switch (name) {
+      case "identity":
+        return new StringValue(Strings.COMMA_JOINER.join(arguments));
+
+      case "nth":
+        if (arguments.size() == 1 && arguments.get(0) instanceof IntegerValue) {
+          switch (((IntegerValue) arguments.get(0)).value) {
+            case 1:
+              return new StringValue("1st");
+            case 2:
+              return new StringValue("2nd");
+            case 3:
+              return new StringValue("3rd");
+            default:
+              return new StringValue(((IntegerValue) arguments.get(0)).value + "th");
+          }
+        } else {
+          break;
+        }
+    }
+
+    return new StringValue(name + "<" + Strings.COMMA_JOINER.join(arguments) + ">");
   }
 
   @VisibleForTesting
@@ -282,6 +397,18 @@ public class Texts {
     return builder;
   }
 
+  @VisibleForTesting
+  protected static String processExpressions(String text, Map<String, Value> values) {
+    Matcher matcher = EXPRESSSION_PATTERN.matcher(text);
+    StringBuffer buffer = new StringBuffer();
+    while (matcher.find()) {
+      matcher.appendReplacement(buffer,
+          Matcher.quoteReplacement(evaluateExpression(matcher.group(1), values)));
+    }
+    matcher.appendTail(buffer);
+    return buffer.toString();
+  }
+
   public static String processWhitespace(String text) {
     return text.replaceAll("\n\n", "\\\\par ").replaceAll("\n", "").replaceAll(" +", " ");
   }
@@ -319,138 +446,8 @@ public class Texts {
     return toSpanned(context, text, ImmutableMap.of());
   }
 
-
   public static Spanned toSpanned(Context context, String text, Map<String, Value> values) {
     return processCommands(context, processWhitespace(text), values);
-  }
-
-  @VisibleForTesting
-  protected static String processExpressions(String text, Map<String, Value> values) {
-    Matcher matcher = EXPRESSSION_PATTERN.matcher(text);
-    StringBuffer buffer = new StringBuffer();
-    while (matcher.find()) {
-      matcher.appendReplacement(buffer,
-          Matcher.quoteReplacement(evaluateExpression(matcher.group(1), values)));
-    }
-    matcher.appendTail(buffer);
-    return buffer.toString();
-  }
-
-  private static String evaluateExpression(String expression, Map<String, Value> values) {
-    for (StringBuffer buffer = new StringBuffer();
-         evaluateExpressionBrackets(buffer, expression, values);
-         buffer = new StringBuffer()) {
-      expression = buffer.toString();
-    }
-
-    return evaluateExpressionPart(expression, values).toString();
-  }
-
-  private static boolean evaluateExpressionBrackets(StringBuffer buffer, String expression,
-                                                    Map<String, Value> values) {
-
-    // Evaluate all brackets.
-    Matcher matcher = EXPRESSION_BRACKET.matcher(expression);
-    boolean found = false;
-    while (matcher.find()) {
-      if (matcher.group(1) == null) {
-        matcher.appendReplacement(buffer, Matcher.quoteReplacement(
-            evaluateExpressionPart(matcher.group(2), values).toString()));
-      } else {
-        matcher.appendReplacement(buffer,
-            Matcher.quoteReplacement(evaluateFunction(matcher.group(1),
-                Arrays.asList(matcher.group(2).split("\\s*,\\s*")).stream()
-                    .map(a -> evaluateExpressionPart(a, values))
-                    .collect(Collectors.toList())).toString()));
-      }
-      found = true;
-    }
-    matcher.appendTail(buffer);
-    return found;
-  }
-
-  private static Value evaluateFunction(String name, List<Value> arguments) {
-    switch (name) {
-      case "identity":
-        return new StringValue(Strings.COMMA_JOINER.join(arguments));
-
-      case "nth":
-        if (arguments.size() == 1 && arguments.get(0) instanceof IntegerValue) {
-          switch (((IntegerValue) arguments.get(0)).value) {
-            case 1:
-              return new StringValue("1st");
-            case 2:
-              return new StringValue("2nd");
-            case 3:
-              return new StringValue("3rd");
-            default:
-              return new StringValue(((IntegerValue) arguments.get(0)).value + "th");
-          }
-        } else {
-          break;
-        }
-    }
-
-    return new StringValue(name + "<" + Strings.COMMA_JOINER.join(arguments) + ">");
-  }
-
-
-  private static Value evaluateExpressionPart(String expression, Map<String, Value> values) {
-    // The given expression will not have any brackets.
-
-    // Number.
-    Matcher matcher = EXPRERSSION_NUMBER.matcher(expression);
-    if (matcher.matches()) {
-      return new IntegerValue(Integer.parseInt(matcher.group(1)));
-    }
-
-    // Variable.
-    matcher = EXPRESSION_VARIABLE.matcher(expression);
-    if (matcher.matches()) {
-      String key = matcher.group(1);
-      if (values.containsKey(key)) {
-        return values.get(key);
-      } else {
-        return new StringValue("<$" + key + ">");
-      }
-    }
-
-    // Operations.
-    matcher = EXPRESSION_ADDSUB.matcher(expression);
-    if (matcher.matches()) {
-      Value left = evaluateExpressionPart(matcher.group(1), values);
-      String operator = matcher.group(2);
-      Value right = evaluateExpressionPart(matcher.group(3), values);
-
-      if (left instanceof IntegerValue && right instanceof IntegerValue) {
-        if (operator.equals("+")) {
-          return new IntegerValue(((IntegerValue) left).value + ((IntegerValue) right).value);
-        } else if (operator.equals("-")) {
-          return new IntegerValue(((IntegerValue) left).value - ((IntegerValue) right).value);
-        }
-      }
-
-      return new StringValue("<" + left + operator + right + ">");
-    }
-
-    matcher = EXPRESSION_MULTDIV.matcher(expression);
-    if (matcher.matches()) {
-      Value left = evaluateExpressionPart(matcher.group(1), values);
-      String operator = matcher.group(2);
-      Value right = evaluateExpressionPart(matcher.group(3), values);
-
-      if (left instanceof IntegerValue && right instanceof IntegerValue) {
-        if (operator.equals("*")) {
-          return new IntegerValue(((IntegerValue) left).value * ((IntegerValue) right).value);
-        } else if (operator.equals("/")) {
-          return new IntegerValue(((IntegerValue) left).value / ((IntegerValue) right).value);
-        }
-      }
-
-      return new StringValue("<" + left + operator + right + ">");
-    }
-
-    return new StringValue(expression);
   }
 
   public static class Value {

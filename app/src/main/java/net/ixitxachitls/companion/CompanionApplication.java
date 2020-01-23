@@ -47,12 +47,10 @@ import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
-import androidx.multidex.MultiDexApplication;
-
 /**
  * The main application for the companion.
  */
-public class CompanionApplication extends MultiDexApplication
+public class CompanionApplication extends Application
     implements Application.ActivityLifecycleCallbacks {
 
   private static final String PROGRESS_LOADING = "entities";

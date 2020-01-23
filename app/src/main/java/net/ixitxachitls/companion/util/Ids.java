@@ -22,7 +22,7 @@
 package net.ixitxachitls.companion.util;
 
 /**
- * Utility methods for bandling ids.
+ * Utility methods for handling ids.
  */
 public class Ids {
   private Ids() {}

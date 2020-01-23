@@ -76,7 +76,11 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     this.adventureId = adventureId;
     store();
 
-    context.encounters().loadEncounters(getId(), adventureId);
+    context.encounters().loadEncounters(adventureId);
+  }
+
+  public Battle getBattle() {
+    return battle;
   }
 
   public Calendar getCalendar() {
@@ -98,10 +102,6 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
   public User getDm() {
     return dm;
-  }
-
-  public Battle getBattle() {
-    return battle;
   }
 
   public String getEncounterId() {
@@ -139,6 +139,10 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
   public boolean isDefault() {
     return this == DEFAULT;
+  }
+
+  public void setHouseRuleHp(boolean rule) {
+    this.houseRuleHp = rule;
   }
 
   public boolean amDM() {
@@ -181,10 +185,6 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
 
   public boolean hasHouseRuleHp() {
     return houseRuleHp;
-  }
-
-  public void setHouseRuleHp(boolean rule) {
-    this.houseRuleHp = rule;
   }
 
   public void invite(String email) {
@@ -237,7 +237,7 @@ public class Campaign extends Document<Campaign> implements Comparable<Campaign>
     houseRuleHp = data.get(FIELD_HOUSE_RULE_HPT, false);
 
     if (!adventureId.isEmpty()) {
-      context.encounters().loadEncounters(getId(), adventureId);
+      context.encounters().loadEncounters(adventureId);
     }
   }
 

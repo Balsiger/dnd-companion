@@ -26,6 +26,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
+import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,6 +46,10 @@ public class Adventures extends Documents<Adventures> {
 
   public Adventures(CompanionContext context) {
     super(context);
+  }
+
+  public static boolean isAdventureId(String id) {
+    return id.contains("/" + PATH + "/");
   }
 
   @Override
@@ -94,5 +99,25 @@ public class Adventures extends Documents<Adventures> {
 
     adventuresByCampaignId.put(campaignId, adventures);
     updatedDocuments(snapshots);
+  }
+
+  public static String createId(String campaignId, String adventureShortId) {
+    return campaignId + "/" + PATH + "/" + adventureShortId;
+  }
+
+  public static String extractId(String id) {
+    if (isAdventureId(id)) {
+      return Strings.extractPattern(id, "(/" + PATH + "/.*?)(/|$)");
+    }
+
+    return "";
+  }
+
+  public static String extractShortId(String id) {
+    if (isAdventureId(id)) {
+      return Strings.extractPattern(id, PATH + "/(.*?)(/|$)");
+    }
+
+    return "";
   }
 }

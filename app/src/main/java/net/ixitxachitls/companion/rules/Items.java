@@ -197,5 +197,4 @@ public class Items {
   {
     return isBipedal ? bipedalSizeFactor(size) : quadrupedalSizeFactor(size);
   }
-
 }

@@ -126,6 +126,10 @@ public class Campaigns extends Documents<Campaigns> {
     }
   }
 
+  public Campaign getCampaignFromNestedId(String id) {
+    return get(extractCampaignId(id));
+  }
+
   public Optional<Campaign> getOptional(String id) {
     if (Strings.isNullOrEmpty(id)) {
       return Optional.empty();
@@ -155,9 +159,9 @@ public class Campaigns extends Documents<Campaigns> {
   private boolean changedCampaigns(User me) {
     return me.getCampaigns().size() != playerCampaignsById.size()
         || me.getCampaigns().stream()
-           .anyMatch(c -> !playerCampaignsById.containsKey(c))
+        .anyMatch(c -> !playerCampaignsById.containsKey(c))
         || playerCampaignsById.keySet().stream()
-           .anyMatch(c -> !me.getCampaigns().contains(c));
+        .anyMatch(c -> !me.getCampaigns().contains(c));
   }
 
   private void processDMCampaigns(List<DocumentSnapshot> documents) {
@@ -181,7 +185,7 @@ public class Campaigns extends Documents<Campaigns> {
   private void processDMCampaigns() {
     // DM campaigns, from the sub documents of the user.
     dmCampaigns.addSnapshotListener((s, e) -> {
-      if (e == null)  {
+      if (e == null) {
         processDMCampaigns(s.getDocuments());
       } else {
         Status.exception("Cannot read campaigns!", e);
@@ -213,5 +217,13 @@ public class Campaigns extends Documents<Campaigns> {
         ImmutableList.copyOf(campaigns.stream().map(Campaign::getId).collect(Collectors.toList()));
 
     updated(ids);
+  }
+
+  public static String extractCampaignId(String id) {
+    if (isCampaignId(id)) {
+      return id.replaceAll("(.*/" + PATH + "/.*?)(/|$)", "");
+    }
+
+    return "";
   }
 }

@@ -26,6 +26,7 @@ import android.view.View;
 import android.widget.Button;
 
 import net.ixitxachitls.companion.R;
+import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.values.Item;
@@ -92,7 +93,12 @@ public class SellItemDialog extends Dialog {
   }
 
   private Item createCoins(String name, int number) {
-    Item item = Item.create(context(), name);
+    Campaign campaign = Campaign.DEFAULT;
+    if (message.isPresent()) {
+      campaign = campaigns().getCampaignFromNestedId(message.get().getTargetId());
+    }
+
+    Item item = Item.create(context(), me().getId(), campaign.getDate(), name);
     item.setMultiple(number);
     return item;
   }

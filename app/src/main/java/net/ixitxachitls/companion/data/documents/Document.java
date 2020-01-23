@@ -77,6 +77,10 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
     return path;
   }
 
+  public String getShortId() {
+    return id;
+  }
+
   public boolean isReady() {
     return snapshot.isPresent();
   }
@@ -209,8 +213,8 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
                                                           CompanionContext context, String id) {
     D document = factory.create();
     document.context = context;
-    document.id = id;
     document.reference = Optional.of(document.db.document(id));
+    document.id = document.reference.get().getId();
     document.collection = document.reference.get().getParent();
     document.path = document.collection.getPath();
     document.temporary = false;

@@ -26,6 +26,8 @@ import com.google.common.base.Joiner;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -61,6 +63,23 @@ public class Strings {
 
   private Strings() {}
 
+  public static String extractPattern(String text, String patternText) {
+    if (text.isEmpty() || patternText.isEmpty()) {
+      return "";
+    }
+
+    if (patternText.indexOf("(") < 0 || patternText.indexOf(")") < 0) {
+      patternText = "(" + patternText + ")";
+    }
+
+    Matcher matcher = Pattern.compile(patternText).matcher(text);
+    if (matcher.find()) {
+      return matcher.group(1);
+    }
+
+    return "";
+  }
+
   public static String formatAgo(long time) {
     long seconds = (new Date().getTime() - time) / 1000;
 
@@ -90,6 +109,16 @@ public class Strings {
     return "";
   }
 
+  public static String pad(String inText, int inLength, boolean inLeft) {
+    if (inText.length() >= inLength)
+      return inText;
+
+    if (inLeft)
+      return SPACES.substring(0, inLength - inText.length()) + inText;
+    else
+      return inText + SPACES.substring(0, inLength - inText.length());
+  }
+
   public static String pad(long inNumber, int inLength, boolean inLeft)
   {
     String text = Long.toString(inNumber);
@@ -101,17 +130,6 @@ public class Strings {
       return ZEROES.substring(0, inLength - text.length()) + text;
     else
       return text + SPACES.substring(0, inLength - text.length());
-  }
-
-  public static String pad(String inText, int inLength, boolean inLeft)
-  {
-    if(inText.length() >= inLength)
-      return inText;
-
-    if(inLeft)
-      return SPACES.substring(0, inLength - inText.length()) + inText;
-    else
-      return inText + SPACES.substring(0, inLength - inText.length());
   }
 
   public static String signed(int number) {

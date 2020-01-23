@@ -21,10 +21,13 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Data;
+import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.documents.NestedDocument;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.proto.Template;
@@ -79,7 +82,7 @@ public class Item extends NestedDocument {
   public Item(String id, String name, List<ItemTemplate> templates, int hp, Money value,
               String appearance, String playerName, String playerNotes, String dmNotes,
               int multiple, int multiuse, Duration timeLeft, boolean identified,
-              List<Item> contents) {
+              List<Item> contents, History history) {
     this.id = id;
     this.name = name;
     this.templates = new ArrayList<>(templates);
@@ -95,6 +98,7 @@ public class Item extends NestedDocument {
     this.timeLeft = timeLeft;
     this.identified = identified;
     this.contents = new ArrayList<>(contents);
+    this.history = history;
 
     // In case we don't have any templates, try to get the base template derived from the name.
     if (this.templates.isEmpty()) {
@@ -103,6 +107,32 @@ public class Item extends NestedDocument {
         this.templates.add(template.get());
       }
     }
+  }
+
+  public interface Owner {
+    public String getId();
+
+    public boolean isCharacter();
+
+    public boolean isWearing(Item item);
+
+    public void add(Item item);
+
+    public boolean amDM();
+
+    public boolean canEdit();
+
+    public void combine(Item item, Item other);
+
+    public Optional<Item> getItem(String id);
+
+    public boolean moveItemAfter(Item item, Item move);
+
+    public boolean moveItemBefore(Item item, Item move);
+
+    public void moveItemInto(Item container, Item item);
+
+    public void updated(Item item);
   }
 
   public String getAppearance() {
@@ -239,6 +269,10 @@ public class Item extends NestedDocument {
     playerNotes = notes;
   }
 
+  public Money getRawValue() {
+    return value;
+  }
+
   public List<ItemTemplate> getTemplates() {
     return Collections.unmodifiableList(templates);
   }
@@ -262,10 +296,6 @@ public class Item extends NestedDocument {
     }
 
     return totalValue;
-  }
-
-  public Money getRawValue() {
-    return value;
   }
 
   public void setValue(Money value) {
@@ -449,7 +479,8 @@ public class Item extends NestedDocument {
         .set(FIELD_MULTIUSE, multiuse)
         .set(FIELD_TIME_LEFT, timeLeft.write())
         .set(FIELD_IDENTIFIED, identified)
-        .setNested(FIELD_CONTENTS, contents);
+        .setNested(FIELD_CONTENTS, contents)
+        .setNested(FIELD_HISTORY, history);
   }
 
   private boolean similar(List<ItemTemplate> first, List<ItemTemplate> second) {
@@ -473,19 +504,68 @@ public class Item extends NestedDocument {
         .collect(Collectors.toList()));
   }
 
-  public static Item create(CompanionContext context, String... names) {
+  public static Item create(CompanionContext context, String creatorId, CampaignDate date,
+                            String... names) {
     List<ItemTemplate> templates =
         Arrays.asList(names).stream().map(Item::template).collect(Collectors.toList());
     String name = name(templates);
     return new Item(generateId(context), name, templates, hp(templates), value(templates),
         appearance(templates), names[0], "", "", 0, 0, Duration.ZERO, false,
-        Collections.emptyList());
+        Collections.emptyList(), History.create(creatorId, date));
+  }
+
+  public static Item createLookupItem(CompanionContext context, ItemTemplate template,
+                                      Template.ItemLookupProto proto, String creatorId,
+                                      CampaignDate date) {
+    List<ItemTemplate> templates = new ArrayList<>();
+    templates.add(template);
+    templates.addAll(proto.getTemplatesList().stream()
+        .map(Item::template)
+        .collect(Collectors.toList()));
+
+    return new Item(generateId(context), name(templates), Collections.emptyList(),
+        proto.getHp() > 0 ? proto.getHp() : hp(templates),
+        proto.hasValue() ? Money.fromProto(proto.getValue()) : value(templates),
+        proto.getAppearance().isEmpty() ? appearance(templates) : proto.getAppearance(),
+        "", "", proto.getDmNotes(), proto.getMultiple(), proto.getMultiuse(),
+        Duration.fromProto(proto.getTimeLeft()), false,
+        Item.createLookupItems(context, proto.getContentList(), creatorId, date),
+        History.create(creatorId, date));
+  }
+
+  public static List<Item> createLookupItems(CompanionContext context,
+                                             List<Template.ItemLookupProto> protos,
+                                             String creatorId, CampaignDate date) {
+    List<Item> items = new ArrayList<>();
+    for (Template.ItemLookupProto proto : protos) {
+      Optional<Item> item =
+          Templates.get().getItemTemplates().lookup(context, proto, creatorId, date);
+      if (item.isPresent()) {
+        items.add(item.get());
+      }
+    }
+
+    return items;
   }
 
   public static String description(List<ItemTemplate> templates) {
     return Strings.COMMA_JOINER.join(templates.stream()
         .map(ItemTemplate::getDescription)
         .collect(Collectors.toList()));
+  }
+
+  public static Optional<? extends Item.Owner> findOwner(String id) {
+    Optional<Character> character = CompanionApplication.get().characters().get(id);
+    if (character.isPresent()) {
+      return character;
+    } else {
+      Optional<Monster> monster = CompanionApplication.get().monsters().get(id);
+      if (monster.isPresent()) {
+        return monster;
+      } else {
+        return CompanionApplication.get().encounters().get(id);
+      }
+    }
   }
 
   public static String generateId(CompanionContext context) {
@@ -529,9 +609,10 @@ public class Item extends NestedDocument {
     List<Item> contents = data.getNestedList(FIELD_CONTENTS).stream()
         .map(Item::read)
         .collect(Collectors.toList());
+    History history = History.read(data);
 
     return new Item(id, name, templates, hp, value, appearance, playerName, playerNotes, dmNotes,
-        multiple, multiuse, timeLeft, identified, contents);
+        multiple, multiuse, timeLeft, identified, contents, history);
   }
 
   private static ItemTemplate template(String name) {
@@ -559,44 +640,5 @@ public class Item extends NestedDocument {
     }
 
     return total;
-  }
-
-  public static Item createLookupItem(CompanionContext context, ItemTemplate template,
-                                      Template.ItemLookupProto proto) {
-    List<ItemTemplate> templates = new ArrayList<>();
-    templates.add(template);
-    templates.addAll(proto.getTemplatesList().stream()
-        .map(Item::template)
-        .collect(Collectors.toList()));
-
-    return new Item(generateId(context), name(templates), Collections.emptyList(),
-        proto.getHp() > 0 ? proto.getHp() : hp(templates),
-        proto.hasValue() ? Money.fromProto(proto.getValue()) : value(templates),
-        proto.getAppearance().isEmpty() ? appearance(templates) : proto.getAppearance(),
-        "", "", proto.getDmNotes(), proto.getMultiple(), proto.getMultiuse(),
-        Duration.fromProto(proto.getTimeLeft()), false,
-        Item.createLookupItems(context, proto.getContentList()));
-  }
-
-  public static List<Item> createLookupItems(CompanionContext context,
-                                             List<Template.ItemLookupProto> protos) {
-    List<Item> items = new ArrayList<>();
-    for (Template.ItemLookupProto proto : protos) {
-      Optional<Item> item = Templates.get().getItemTemplates().lookup(context, proto);
-      if (item.isPresent()) {
-        items.add(item.get());
-      }
-    }
-
-    return items;
-  }
-
-  public interface Owner {
-    public Optional<Item> getItem(String id);
-    public boolean amDM();
-    public String getId();
-    public void add(Item item);
-    public void updated(Item item);
-    public boolean isCharacter();
   }
 }

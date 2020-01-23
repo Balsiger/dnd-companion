@@ -44,10 +44,15 @@ public abstract class Entry<P extends MessageLite> {
     return name;
   }
 
-  public abstract Set<String> getProductIds();
-
   public void setName(String name) {
     this.name = name;
+  }
+
+  public abstract Set<String> getProductIds();
+
+  @Override
+  public String toString() {
+    return name;
   }
 }
 

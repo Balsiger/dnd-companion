@@ -48,15 +48,6 @@ public class ItemTest {
   }
 
   @Test
-  public void lookupByName() {
-    assertEquals("name lookup",
-        Templates.get().getItemTemplates().lookup(new FakeCompanionContext(),
-            Template.ItemLookupProto.newBuilder()
-                .setName("longsword")
-                .build()).get().getName(), "Longsword");
-  }
-
-  @Test
   public void lookupByCategory() {
     Assert.assertThat(
         Templates.get().getItemTemplates().lookupTemplates(Template.ItemLookupProto.newBuilder()
@@ -67,6 +58,43 @@ public class ItemTest {
             "Arrows", "Bastard Sword", "Composite Longbow", "Composite Shortbow",
             "Dagger of Venom", "Falchion", "Greatsword", "Longbow", "Longsword", "Rapier",
             "Scimitar", "Short Sword", "Shortbow", "Two Bladed Sword"
+        })));
+  }
+
+  @Test
+  public void lookupByMaterial() {
+    Assert.assertThat(
+        Templates.get().getItemTemplates().lookupTemplates(Template.ItemLookupProto.newBuilder()
+            .addMaterialOr(Template.ItemTemplateProto.Substance.Material.BONE)
+            .addMaterialOr(Template.ItemTemplateProto.Substance.Material.ICE)
+            .build()).stream().map(t -> t.getName()).collect(Collectors.toList()),
+        CoreMatchers.is(Arrays.asList(new String[]{
+            "Amulet of Natural Armor +1", "Amulet of Natural Armor +2",
+            "Amulet of Natural Armor +5", "Hand of Kiaransalee's Glory",
+            "Horn of Goodness or Evil", "Spectral Dagger",
+        })));
+  }
+
+  @Test
+  public void lookupByName() {
+    assertEquals("name lookup",
+        Templates.get().getItemTemplates().lookup(new FakeCompanionContext(),
+            Template.ItemLookupProto.newBuilder()
+                .setName("longsword")
+                .build(), "creator", new CampaignDate()).get().getName(), "Longsword");
+  }
+
+  @Test
+  public void lookupBySize() {
+    Assert.assertThat(
+        Templates.get().getItemTemplates().lookupTemplates(Template.ItemLookupProto.newBuilder()
+            .addSizeOr(Value.SizeProto.Size.DIMINUTIVE)
+            .addSizeOr(Value.SizeProto.Size.TINY)
+            .addCategoryOr("gear")
+            .build()).stream().map(t -> t.getName()).collect(Collectors.toList()),
+        CoreMatchers.is(Arrays.asList(new String[]{
+            "Armor Lubricant", "Bullseye Lantern", "Caltrops", "Chain", "Common Lamp", "Hammer",
+            "Hooded Lantern", "Map Case", "Piton", "Spyglass", "Torch", "Trail Ration", "Waterskin",
         })));
   }
 
@@ -133,43 +161,6 @@ public class ItemTest {
   }
 
   @Test
-  public void lookupBySize() {
-    Assert.assertThat(
-        Templates.get().getItemTemplates().lookupTemplates(Template.ItemLookupProto.newBuilder()
-            .addSizeOr(Value.SizeProto.Size.DIMINUTIVE)
-            .addSizeOr(Value.SizeProto.Size.TINY)
-            .addCategoryOr("gear")
-            .build()).stream().map(t -> t.getName()).collect(Collectors.toList()),
-        CoreMatchers.is(Arrays.asList(new String[]{
-            "Armor Lubricant", "Bullseye Lantern", "Caltrops", "Chain", "Common Lamp", "Hammer",
-            "Hooded Lantern", "Map Case", "Piton", "Spyglass", "Torch", "Trail Ration", "Waterskin",
-        })));
-  }
-
-  @Test
-  public void lookupByMaterial() {
-    Assert.assertThat(
-        Templates.get().getItemTemplates().lookupTemplates(Template.ItemLookupProto.newBuilder()
-            .addMaterialOr(Template.ItemTemplateProto.Substance.Material.BONE)
-            .addMaterialOr(Template.ItemTemplateProto.Substance.Material.ICE)
-            .build()).stream().map(t -> t.getName()).collect(Collectors.toList()),
-        CoreMatchers.is(Arrays.asList(new String[]{
-            "Amulet of Natural Armor +1", "Amulet of Natural Armor +2",
-            "Amulet of Natural Armor +5", "Hand of Kiaransalee's Glory",
-            "Horn of Goodness or Evil", "Spectral Dagger",
-        })));
-  }
-
-  @Test
-  public void weightedProbability() {
-    List<ItemTemplate> templates =
-        templates("Longsword", "Short Sword", "Dagger of Venom", "Quilted Silk Box", "Bolas",
-            "Claw of the Revenancer");
-    assertEquals("weighted", 2611,
-        Templates.get().getItemTemplates().totalWeightedProbability(templates));
-  }
-
-  @Test
   public void lookupRandom() {
     List<ItemTemplate> templates =
         templates("Longsword", "Short Sword", "Dagger of Venom", "Quilted Silk Box", "Bolas",
@@ -194,18 +185,6 @@ public class ItemTest {
   }
 
   @Test
-  public void presetValues() {
-    Item item = Templates.get().getItemTemplates().lookup(new FakeCompanionContext(),
-        Template.ItemLookupProto.newBuilder()
-            .setName("Longsword")
-            .setValue(Value.MoneyProto.newBuilder().setGold(100).build())
-            .setHp(42)
-            .build()).get();
-    assertEquals("value", 100, item.getValue().asGold(), 0.1);
-    assertEquals("hp", 42, item.getHp());
-  }
-
-  @Test
   public void nestedContent() {
     Item item = Templates.get().getItemTemplates().lookup(new FakeCompanionContext(),
         Template.ItemLookupProto.newBuilder()
@@ -213,11 +192,23 @@ public class ItemTest {
             .addContent(Template.ItemLookupProto.newBuilder().setName("Candle").build())
             .addContent(Template.ItemLookupProto.newBuilder().setName("Longsword").build())
             .addContent(Template.ItemLookupProto.newBuilder().setName("Chalk").build())
-            .build()).get();
+            .build(), "creator", new CampaignDate()).get();
     Assert.assertThat(item.getContents().stream()
         .map(i -> i.getName())
         .collect(Collectors.toList()),
         CoreMatchers.is(Arrays.asList(new String[]{"Candle", "Longsword", "Chalk"})));
+  }
+
+  @Test
+  public void presetValues() {
+    Item item = Templates.get().getItemTemplates().lookup(new FakeCompanionContext(),
+        Template.ItemLookupProto.newBuilder()
+            .setName("Longsword")
+            .setValue(Value.MoneyProto.newBuilder().setGold(100).build())
+            .setHp(42)
+            .build(), "creator", new CampaignDate()).get();
+    assertEquals("value", 100, item.getValue().asGold(), 0.1);
+    assertEquals("hp", 42, item.getHp());
   }
 
   @Test
@@ -227,9 +218,18 @@ public class ItemTest {
             .setName("Short Sword")
             .addTemplates("Weapon +2")
             .addTemplates("Frost")
-            .build()).get();
+            .build(), "creator", new CampaignDate()).get();
     assertEquals("name", "Short Sword +2 Frost", item.getName());
     assertEquals("value", "8310 gp", item.getValue().toString());
+  }
+
+  @Test
+  public void weightedProbability() {
+    List<ItemTemplate> templates =
+        templates("Longsword", "Short Sword", "Dagger of Venom", "Quilted Silk Box", "Bolas",
+            "Claw of the Revenancer");
+    assertEquals("weighted", 2611,
+        Templates.get().getItemTemplates().totalWeightedProbability(templates));
   }
 
   private String randomItem(List<ItemTemplate> templates, int random) {
