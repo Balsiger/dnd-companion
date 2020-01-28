@@ -52,6 +52,7 @@ import androidx.annotation.CallSuper;
  */
 public class User extends Document<User> {
 
+  private enum LoadingStatus {initial, loading, done,}
   protected static final String PATH = "users";
   private static final String MINIATURE_PATH = "/miniatures";
   private static final String PRODUCT_PATH = "/products";
@@ -68,19 +69,17 @@ public class User extends Document<User> {
   private static final String FIELD_PRODUCTS_HIDDEN_WORLDS = "hidden-worlds";
   private static final String FIELD_PRODUCTS_HIDDEN_SYSTEMS = "hidden-systems";
   private static final String FIELD_PRODUCTS_HIDDEN_TYPES = "hidden-types";
-
-  private enum LoadingStatus { initial, loading, done, };
-
+  ;
+  private final List<Callback> miniatureCallbacks = new ArrayList<>();
+  private final List<Callback> productCallbacks = new ArrayList<>();
   private String nickname;
   private String photoUrl = "";
   private List<String> campaigns = new ArrayList<>();
   private List<String> features = new ArrayList<>();
   private Map<String, Long> miniatures = new HashMap<>();
   private LoadingStatus miniatureStatus = LoadingStatus.initial;
-  private final List<Callback> miniatureCallbacks = new ArrayList<>();
   private Map<String, Product> products = new HashMap<>();
   private LoadingStatus productStatus = LoadingStatus.initial;
-  private final List<Callback> productCallbacks = new ArrayList<>();
   private SortedMap<String, MiniatureLocation> locations = new TreeMap<>();
   private Set<String> hiddenSets = new HashSet<>();
   private Set<String> hiddenProducers = new HashSet<>();
@@ -141,22 +140,6 @@ public class User extends Document<User> {
     Templates.get().getMiniatureTemplates().updateSets(this, hiddenSets);
   }
 
-  public void setHiddenProducts(List<String> producers, List<String> worlds, List<String> systems,
-                                List<String> types) {
-    hiddenProducers.clear();
-    hiddenProducers.addAll(producers);
-    hiddenWorlds.clear();
-    hiddenWorlds.addAll(worlds);
-    hiddenSystems.clear();
-    hiddenSystems.addAll(systems);
-    hiddenTypes.clear();
-    hiddenTypes.addAll(types);
-
-    storeProducts();
-    Templates.get().getProductTemplates().updateHidden(this, hiddenProducers, hiddenWorlds,
-        hiddenSystems, hiddenTypes);
-  }
-
   public static boolean isUser(String id) {
     return id.matches(PATH + "/[^/]*/");
   }
@@ -195,16 +178,12 @@ public class User extends Document<User> {
     return miniatures.getOrDefault(name, 0L);
   }
 
-  public boolean hasSetHidden(String name) {
-    return hiddenSets.contains(name);
-  }
-
   public boolean hasProducerHidden(String name) {
     return hiddenProducers.contains(name);
   }
 
-  public boolean hasWorldHidden(String name) {
-    return hiddenWorlds.contains(name);
+  public boolean hasSetHidden(String name) {
+    return hiddenSets.contains(name);
   }
 
   public boolean hasSystemHidden(String name) {
@@ -213,6 +192,10 @@ public class User extends Document<User> {
 
   public boolean hasTypeHidden(String name) {
     return hiddenTypes.contains(name);
+  }
+
+  public boolean hasWorldHidden(String name) {
+    return hiddenWorlds.contains(name);
   }
 
   public String locationFor(MiniatureTemplate template) {
@@ -233,6 +216,11 @@ public class User extends Document<User> {
 
   public boolean owns(String id) {
     return id.startsWith(getId());
+  }
+
+  public boolean ownsProduct(String id) {
+    Product product = products.get(id.toLowerCase());
+    return product == null ? false : product.isOwned();
   }
 
   public void readMiniatures(Callback callback) {
@@ -313,6 +301,22 @@ public class User extends Document<User> {
     storeMiniatures();
    }
 
+  public void setHiddenProducts(List<String> producers, List<String> worlds, List<String> systems,
+                                List<String> types) {
+    hiddenProducers.clear();
+    hiddenProducers.addAll(producers);
+    hiddenWorlds.clear();
+    hiddenWorlds.addAll(worlds);
+    hiddenSystems.clear();
+    hiddenSystems.addAll(systems);
+    hiddenTypes.clear();
+    hiddenTypes.addAll(types);
+
+    storeProducts();
+    Templates.get().getProductTemplates().updateHidden(this, hiddenProducers, hiddenWorlds,
+        hiddenSystems, hiddenTypes);
+  }
+
   public void setMiniatureCount(String miniature, long count) {
     if (miniatures.getOrDefault(miniature, 0L) != count) {
       if (count == 0) {
@@ -340,6 +344,19 @@ public class User extends Document<User> {
     return getNickname();
   }
 
+  public boolean usesProduct(String id) {
+    Product product = products.get(id.toLowerCase());
+    return product == null ? true : product.isUsed();
+  }
+
+  @Override
+  public Data write() {
+    return Data.empty()
+        .set(FIELD_NICKNAME, nickname)
+        .set(FIELD_PHOTO_URL, photoUrl)
+        .set(FIELD_FEATURES, features);
+  }
+
   public Data writeMiniatures() {
     return Data.empty()
         .set(FIELD_MINIATURE_OWNED, miniatures)
@@ -365,18 +382,10 @@ public class User extends Document<User> {
     features = data.getList(FIELD_FEATURES, new ArrayList<>());
   }
 
-  @Override
-  public Data write() {
-    return Data.empty()
-        .set(FIELD_NICKNAME, nickname)
-        .set(FIELD_PHOTO_URL, photoUrl)
-        .set(FIELD_FEATURES, features);
-  }
-
   private void readCampaigns() {
     context.invites().listenCampaigns(campaigns -> {
       this.campaigns = campaigns;
-      updated(this);
+      CompanionApplication.get().update("user read campaigns");
     });
   }
 
@@ -410,20 +419,10 @@ public class User extends Document<User> {
     User user = Document.getOrCreate(FACTORY, context, PATH + "/" + id);
     user.whenReady(() -> {
       user.readCampaigns();
-      context.users().updated(id);
+      CompanionApplication.get().update("user loaded");
     });
 
     return user;
-  }
-
-  public boolean ownsProduct(String id) {
-    Product product = products.get(id.toLowerCase());
-    return product == null ? false : product.isOwned();
-  }
-
-  public boolean usesProduct(String id) {
-    Product product = products.get(id.toLowerCase());
-    return product == null ? true : product.isUsed();
   }
 
   private static class Factory implements DocumentFactory<User> {

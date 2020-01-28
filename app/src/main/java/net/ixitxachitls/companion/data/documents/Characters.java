@@ -99,7 +99,8 @@ public class Characters extends Documents<Characters> {
       charactersByCharacterId.put(character.getId(), character);
       charactersByCampaignId.put(campaignId, character);
       charactersByPlayerId.put(character.getPlayer().getId(), character);
-      updated(campaignId);
+
+      CompanionApplication.get().update("character created");
     });
 
     return character;
@@ -112,7 +113,7 @@ public class Characters extends Documents<Characters> {
       charactersByCampaignId.remove(character.getCampaignId(), character);
       charactersByPlayerId.remove(character.getPlayer().getId(), character);
 
-      updated(character.getId());
+      CompanionApplication.get().update("character deleted");
     }
   }
 
@@ -220,7 +221,6 @@ public class Characters extends Documents<Characters> {
       charactersByCharacterId.put(character.getId(), character);
     }
 
-    updatedDocuments(snapshots);
     loaded = true;
     CompanionApplication.get().update("characters loaded");
   }

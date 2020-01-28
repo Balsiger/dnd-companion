@@ -140,7 +140,6 @@ public class CreatureConditions extends Documents<CreatureConditions> {
 
     conditionsByCreatureId.put(creatureId, conditions);
     CompanionApplication.get().update("creature conditions loaded");
-    updatedDocuments(snapshots);
   }
 
   private void removeFromList(String id, List<CreatureCondition> conditions) {

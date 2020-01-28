@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.util.Strings;
@@ -98,7 +99,7 @@ public class Adventures extends Documents<Adventures> {
     }
 
     adventuresByCampaignId.put(campaignId, adventures);
-    updatedDocuments(snapshots);
+    CompanionApplication.get().update("adventures loaded");
   }
 
   public static String createId(String campaignId, String adventureShortId) {

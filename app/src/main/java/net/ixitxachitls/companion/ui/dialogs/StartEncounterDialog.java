@@ -32,7 +32,6 @@ import android.widget.LinearLayout;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.ui.views.StartEncounterLineView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -73,24 +72,6 @@ public class StartEncounterDialog extends Dialog {
   }
 
   @Override
-  protected void createContent(View view) {
-    characters = view.findViewById(R.id.characters);
-    monsters = view.findViewById(R.id.monsters);
-    includeAll = Wrapper.<CheckBox>wrap(view, R.id.include_all).onClick(this::toggleIncludeAll);
-    surpriseAll = Wrapper.<CheckBox>wrap(view, R.id.surprise_all).onClick(this::toggleSurpriseAll);
-    addMonster = Wrapper.<ImageView>wrap(view, R.id.add_monster).onClick(this::addMonster);
-    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
-
-    for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
-      characters.addView(new StartEncounterLineView(getContext(), character.getId(),
-          character.getName(), R.color.characterDark, this::update));
-    }
-
-    characters().observe(this, this::refresh);
-    monsters().observe(this, this::refresh);
-  }
-
-  @Override
   public void save() {
     super.save();
 
@@ -125,19 +106,13 @@ public class StartEncounterDialog extends Dialog {
     }
   }
 
-  private void addMonster() {
-    if (campaign.isPresent()) {
-      MonsterInitiativeDialog.newInstance(campaign.get().getId(), -1).display();
-    }
-  }
-
-  private void refresh(Documents.Update update) {
+  public void update() {
     if (campaign.isPresent()) {
       // Characters.
       this.characters.removeAllViews();
       for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
         StartEncounterLineView line = new StartEncounterLineView(getContext(), character.getId(),
-            character.getName(), R.color.characterDark, this::update);
+            character.getName(), R.color.characterDark, this::redraw);
         this.characters.addView(line);
         line.setIncluded(includedCreatures.contains(character.getId()));
         line.setSurprised(surprisedCreatures.contains(character.getId()));
@@ -147,7 +122,7 @@ public class StartEncounterDialog extends Dialog {
       this.monsters.removeAllViews();
       for (Monster monster : monsters().getCampaignMonsters(campaign.get().getId())) {
         StartEncounterLineView line = new StartEncounterLineView(getContext(), monster.getId(),
-            monster.getName(), R.color.monsterDark, this::update);
+            monster.getName(), R.color.monsterDark, this::redraw);
         this.monsters.addView(line);
         line.setIncluded(includedCreatures.contains(monster.getId()));
         line.setSurprised(surprisedCreatures.contains(monster.getId()));
@@ -155,43 +130,28 @@ public class StartEncounterDialog extends Dialog {
     }
   }
 
-  private void toggleIncludeAll() {
-    boolean checked = includeAll.get().isChecked();
-    for (int i = 0; i < characters.getChildCount(); i++) {
-      if (characters.getChildAt(i) instanceof StartEncounterLineView) {
-        StartEncounterLineView line = (StartEncounterLineView) characters.getChildAt(i);
-        line.setIncluded(checked);
-      }
-    }
-    for (int i = 0; i < monsters.getChildCount(); i++) {
-      if (monsters.getChildAt(i) instanceof StartEncounterLineView) {
-        StartEncounterLineView line = (StartEncounterLineView) monsters.getChildAt(i);
-        line.setIncluded(checked);
-      }
+  private void addMonster() {
+    if (campaign.isPresent()) {
+      MonsterInitiativeDialog.newInstance(campaign.get().getId(), -1).display();
     }
   }
 
-  private void toggleSurpriseAll() {
-    boolean checked = surpriseAll.get().isChecked();
-    for (int i = 0; i < characters.getChildCount(); i++) {
-      if (characters.getChildAt(i) instanceof StartEncounterLineView) {
-        StartEncounterLineView line = (StartEncounterLineView) characters.getChildAt(i);
-        if (line.isIncluded()) {
-          line.setSurprised(checked);
-        }
-      }
-    }
-    for (int i = 0; i < monsters.getChildCount(); i++) {
-      if (monsters.getChildAt(i) instanceof StartEncounterLineView) {
-        StartEncounterLineView line = (StartEncounterLineView) monsters.getChildAt(i);
-        if (line.isIncluded()) {
-          line.setSurprised(checked);
-        }
-      }
+  @Override
+  protected void createContent(View view) {
+    characters = view.findViewById(R.id.characters);
+    monsters = view.findViewById(R.id.monsters);
+    includeAll = Wrapper.<CheckBox>wrap(view, R.id.include_all).onClick(this::toggleIncludeAll);
+    surpriseAll = Wrapper.<CheckBox>wrap(view, R.id.surprise_all).onClick(this::toggleSurpriseAll);
+    addMonster = Wrapper.<ImageView>wrap(view, R.id.add_monster).onClick(this::addMonster);
+    save = Wrapper.<Button>wrap(view, R.id.save).onClick(this::save);
+
+    for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
+      characters.addView(new StartEncounterLineView(getContext(), character.getId(),
+          character.getName(), R.color.characterDark, this::redraw));
     }
   }
 
-  private void update() {
+  private void redraw() {
     boolean allIncluded = true;
     boolean noneIncluded = true;
     boolean allSurprised = true;
@@ -236,6 +196,42 @@ public class StartEncounterDialog extends Dialog {
     surpriseAll.get().setButtonTintList(ColorStateList.valueOf(getResources()
         .getColor(allSurprised || noneSurprised ? R.color.battle : R.color.cell, null)));
     save.enabled(!noneIncluded);
+  }
+
+  private void toggleIncludeAll() {
+    boolean checked = includeAll.get().isChecked();
+    for (int i = 0; i < characters.getChildCount(); i++) {
+      if (characters.getChildAt(i) instanceof StartEncounterLineView) {
+        StartEncounterLineView line = (StartEncounterLineView) characters.getChildAt(i);
+        line.setIncluded(checked);
+      }
+    }
+    for (int i = 0; i < monsters.getChildCount(); i++) {
+      if (monsters.getChildAt(i) instanceof StartEncounterLineView) {
+        StartEncounterLineView line = (StartEncounterLineView) monsters.getChildAt(i);
+        line.setIncluded(checked);
+      }
+    }
+  }
+
+  private void toggleSurpriseAll() {
+    boolean checked = surpriseAll.get().isChecked();
+    for (int i = 0; i < characters.getChildCount(); i++) {
+      if (characters.getChildAt(i) instanceof StartEncounterLineView) {
+        StartEncounterLineView line = (StartEncounterLineView) characters.getChildAt(i);
+        if (line.isIncluded()) {
+          line.setSurprised(checked);
+        }
+      }
+    }
+    for (int i = 0; i < monsters.getChildCount(); i++) {
+      if (monsters.getChildAt(i) instanceof StartEncounterLineView) {
+        StartEncounterLineView line = (StartEncounterLineView) monsters.getChildAt(i);
+        if (line.isIncluded()) {
+          line.setSurprised(checked);
+        }
+      }
+    }
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,

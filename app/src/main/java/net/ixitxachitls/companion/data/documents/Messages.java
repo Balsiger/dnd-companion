@@ -98,7 +98,6 @@ public class Messages extends Documents<Messages> {
     }
 
     messagesByOwnerId.put(id, messages);
-    updatedDocuments(snapshots);
     CompanionApplication.get().update("messages loaded");
   }
 }

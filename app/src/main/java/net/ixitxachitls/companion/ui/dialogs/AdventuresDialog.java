@@ -32,7 +32,6 @@ import android.widget.TextView;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Adventure;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -55,27 +54,7 @@ public class AdventuresDialog extends Dialog {
   private LabelledEditTextView name;
   private Wrapper<Button> add;
 
-  private void add() {
-    if (campaign.isPresent() && !name.getText().isEmpty()) {
-      Adventure.create(context(), campaign.get().getId(), name.getText()).store();
-      refresh(Documents.FULL_UPDATE);
-    }
-  }
-
-  @Override
-  protected void createContent(View view) {
-    adventures = view.findViewById(R.id.adventures);
-    name = view.findViewById(R.id.name);
-    add = Wrapper.<Button>wrap(view, R.id.add).onClick(this::add);
-
-    campaign = campaigns().getOptional(getArguments().getString(ARG_ID));
-    refresh(Documents.FULL_UPDATE);
-
-    campaigns().observe(this, this::refresh);
-    adventures().observe(this, this::refresh);
-  }
-
-  private void refresh(Documents.Update update) {
+  public void update() {
     adventures.removeAllViews();
     if (campaign.isPresent()) {
       /*
@@ -86,6 +65,24 @@ public class AdventuresDialog extends Dialog {
       }
       */
     }
+  }
+
+  private void add() {
+    if (campaign.isPresent() && !name.getText().isEmpty()) {
+      Adventure.create(context(), campaign.get().getId(), name.getText()).store();
+      update();
+    }
+  }
+
+  @Override
+  protected void createContent(View view) {
+    adventures = view.findViewById(R.id.adventures);
+    name = view.findViewById(R.id.name);
+    add = Wrapper.<Button>wrap(view, R.id.add).onClick(this::add);
+
+    campaign = campaigns().getOptional(getArguments().getString(ARG_ID));
+
+    update();
   }
 
   protected static Bundle arguments(@LayoutRes int layoutId, @StringRes int titleId,
@@ -124,7 +121,7 @@ public class AdventuresDialog extends Dialog {
 
     private void remove() {
       adventures().delete(adventure.getId());
-      refresh(Documents.FULL_UPDATE);
+      update();
     }
 
     private void select() {

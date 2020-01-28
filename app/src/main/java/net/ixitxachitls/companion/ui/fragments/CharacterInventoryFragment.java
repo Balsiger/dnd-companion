@@ -85,8 +85,6 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   private LabelledEditTextView distributionName;
 
   public CharacterInventoryFragment() {
-    characters().observe(this, this::refresh);
-    images().observe(this, this::refresh);
   }
 
   @Override

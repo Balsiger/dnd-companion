@@ -29,6 +29,7 @@ import android.util.Log;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.collect.ImmutableList;
+import com.google.firebase.storage.FirebaseStorage;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
@@ -37,7 +38,6 @@ import net.ixitxachitls.companion.util.FileCache;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,7 +49,7 @@ import androidx.annotation.Nullable;
 /**
  * Storage for all dynamic images of entries.
  */
-public class Images extends Observable<Documents.Update> {
+public class Images {
 
   public static final int MAX_PX = 500;
 
@@ -64,10 +64,11 @@ public class Images extends Observable<Documents.Update> {
   private final Cache<String, String> inexistentById = CacheBuilder.newBuilder()
       .expireAfterWrite(1, TimeUnit.MINUTES)
       .build();
-
   private final FileCache fileCache;
+  protected FirebaseStorage storage;
 
   public Images(Context context) {
+    storage = FirebaseStorage.getInstance();
     fileCache = new FileCache(context, "images/");
   }
 
@@ -139,7 +140,7 @@ public class Images extends Observable<Documents.Update> {
       Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
       imagesById.put(id, bitmap);
       store(id, bytes);
-      updated(new Documents.Update(Collections.singletonList(id)));
+      CompanionApplication.get().update("image loaded");
       callback(id, Optional.of(bitmap));
     }).addOnFailureListener(e -> {
       Status.silentException("Cannot load file", e);
@@ -166,7 +167,7 @@ public class Images extends Observable<Documents.Update> {
             load(id, name);
             imageHashesById.put(id, hash);
           }
-          updated(new Documents.Update(Collections.singletonList(id)));
+          CompanionApplication.get().update("image loaded");
         })
         .addOnFailureListener(e -> {
           Log.d("Images", "load: failed for " + name);
@@ -195,15 +196,6 @@ public class Images extends Observable<Documents.Update> {
       fileCache.write(id).write(bytes);
     } catch (IOException e) {
       Status.exception("Failed to write image '" + id + "': ", e);
-    }
-  }
-
-  @Override
-  protected void updated(Documents.Update update) {
-    super.updated(update);
-
-    if (pendingById.size() == 0) {
-      CompanionApplication.get().update("image updated");
     }
   }
 

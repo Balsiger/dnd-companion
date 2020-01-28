@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import net.ixitxachitls.companion.CompanionApplication;
@@ -34,18 +35,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import javax.annotation.Nullable;
-
 import androidx.annotation.CallSuper;
 
 /**
  * The base document for all documents stored in firestore.
  */
-public abstract class Document<D extends Document<D>> extends Observable<D> {
+public abstract class Document<D extends Document<D>> {
 
   private final List<Action> whenCompleted = new ArrayList<>();
   private final List<Action> whenReady = new ArrayList<>();
   private final List<Action> whenFailed = new ArrayList<>();
+  protected FirebaseFirestore db;
   protected CompanionContext context;
   protected boolean temporary = true;
   protected String path;
@@ -56,6 +56,10 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   protected Data data = Data.empty();
   private boolean failed = false;
 
+  public Document() {
+    this.db = FirebaseFirestore.getInstance();
+  }
+
   @FunctionalInterface
   protected interface DocumentFactory<D> {
     D create();
@@ -64,6 +68,11 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
   @FunctionalInterface
   public interface Callback {
     void done();
+  }
+
+  @FunctionalInterface
+  public interface Action {
+    void execute();
   }
 
   public CompanionContext getContext() {
@@ -102,7 +111,6 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
       temporary = false;
       read();
       execute(whenReady);
-      updated((D) this);
       CompanionApplication.get().update("document " + getShortId() + " updated");
     } else {
       Status.error("Cannot find data for " + id);
@@ -121,9 +129,8 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
 
     if (reference.isPresent()) {
       reference.get().set(write().asMap());
-      CompanionApplication.get().update(getClass().getCanonicalName() + " updated");
-      updated((D) this);
-      CompanionApplication.get().update("document " + getShortId() + " updated");
+      CompanionApplication.get().update(getClass().getCanonicalName() + " " + getShortId() +
+          " updated");
     } else {
       collection.add(write().asMap()).addOnCompleteListener(task -> {
         if (task.isSuccessful()) {
@@ -174,23 +181,6 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
           this::updated);
     }
     */
-  }
-
-  @SuppressWarnings("unchecked")
-  private void updated(@Nullable DocumentSnapshot snapshot,
-                       @Nullable FirebaseFirestoreException e) {
-    if (e != null) {
-      Status.exception("Cannot update document", e);
-    } else {
-      this.snapshot = Optional.ofNullable(snapshot);
-      if (this.snapshot.isPresent() && this.snapshot.get().exists()) {
-        data = Data.fromSnapshot(snapshot);
-        read();
-        updated((D) this);
-      } else {
-        data = Data.empty();
-      }
-    }
   }
 
   protected abstract Data write();

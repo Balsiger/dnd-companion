@@ -249,9 +249,6 @@ public class PartyFragment extends NestedCompanionFragment {
       String chipId = i.next();
       if (!characterIds.contains(chipId)) {
         CharacterChipView chip = (CharacterChipView) chipsById.remove(chipId);
-        if (chip != null) {
-          chip.getCharacter().unobserve(this);
-        }
       }
     }
 
@@ -261,7 +258,6 @@ public class PartyFragment extends NestedCompanionFragment {
         CharacterChipView chip = new CharacterChipView(getContext(), character,
             getResources().getInteger(R.integer.chipsPerLine));
         chipsById.put(character.getId(), chip);
-        character.observe(this, chip::update);
       }
     }
 

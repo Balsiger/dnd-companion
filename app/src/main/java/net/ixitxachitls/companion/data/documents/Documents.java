@@ -21,28 +21,27 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.util.Strings;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import androidx.annotation.CallSuper;
 
 /**
  * Base class for all document collections.
  */
-public abstract class Documents<D extends Documents<D>> extends Observable<Documents.Update> {
-
-  public final static Update FULL_UPDATE = new FullUpdate();
+public abstract class Documents<D extends Documents<D>> {
 
   protected final CompanionContext context;
+  protected FirebaseFirestore db;
 
   protected Documents(CompanionContext context) {
     this.context = context;
+    this.db = FirebaseFirestore.getInstance();
   }
 
   public CompanionContext getContext() {
@@ -52,20 +51,6 @@ public abstract class Documents<D extends Documents<D>> extends Observable<Docum
   @CallSuper
   protected void delete(String id) {
     db.document(id).delete();
-  }
-
-  protected void updated(String id) {
-    updated(Collections.singletonList(id));
-  }
-
-  protected void updated(List<String> ids) {
-    if (!ids.isEmpty()) {
-      updated(new Update(ids));
-    }
-  }
-
-  protected void updatedDocuments(List<DocumentSnapshot> snapshots) {
-    updated(snapshots.stream().map(d -> d.getReference().getPath()).collect(Collectors.toList()));
   }
 
   public static class Update {
@@ -106,22 +91,6 @@ public abstract class Documents<D extends Documents<D>> extends Observable<Docum
     @Override
     public String toString() {
       return Strings.COMMA_JOINER.join(ids);
-    }
-  }
-
-  private static class FullUpdate extends Update {
-    private FullUpdate() {
-      super(Collections.emptyList());
-    }
-
-    @Override
-    public boolean hasId(String id) {
-      return true;
-    }
-
-    @Override
-    public boolean hasSupId(String sup) {
-      return true;
     }
   }
 }

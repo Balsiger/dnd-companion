@@ -156,7 +156,6 @@ public class Campaigns extends Documents<Campaigns> {
 
   public void loggedIn(User me) {
     this.dmCampaigns = db.collection(me.getId() + "/" + PATH);
-    me.observeForever(u -> processPlayerCampaigns(me));
     Templates.get().executeAfterLoading(() -> {
       processDMCampaigns();
       processPlayerCampaigns(me);
@@ -231,7 +230,7 @@ public class Campaigns extends Documents<Campaigns> {
     this.ids =
         ImmutableList.copyOf(campaigns.stream().map(Campaign::getId).collect(Collectors.toList()));
 
-    updated(ids);
+    CompanionApplication.get().update("multiple campaigns loaded");
   }
 
   public static String extractCampaignId(String id) {
