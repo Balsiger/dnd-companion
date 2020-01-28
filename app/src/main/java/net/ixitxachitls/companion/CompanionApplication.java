@@ -27,6 +27,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import com.google.common.base.Stopwatch;
 import com.tenmiles.helpstack.HSHelpStack;
 import com.tenmiles.helpstack.gears.HSEmailGear;
 
@@ -47,6 +48,8 @@ import net.ixitxachitls.companion.storage.ApplicationAssetAccessor;
 import net.ixitxachitls.companion.storage.AssetAccessor;
 import net.ixitxachitls.companion.ui.activities.MainActivity;
 
+import java.time.Duration;
+
 /**
  * The main application for the companion.
  */
@@ -61,9 +64,16 @@ public class CompanionApplication extends Application
 
   private ApplicationCompanionContext context;
   private Activity currentActivity;
+  private boolean updating = false;
+  private Stopwatch stopwatch = Stopwatch.createUnstarted();
+
 
   public CompanionApplication() {
     this.assetAccessor = new ApplicationAssetAccessor(this);
+  }
+
+  public interface Updatable {
+    public void update();
   }
 
   public AssetAccessor getAssetAccessor() {
@@ -92,6 +102,10 @@ public class CompanionApplication extends Application
 
   public CompanionContext context() {
     return context;
+  }
+
+  public Duration elapsed() {
+    return stopwatch.elapsed();
   }
 
   public Encounters encounters() {
@@ -130,17 +144,11 @@ public class CompanionApplication extends Application
   }
 
   @Override
-  public void onActivityStarted(Activity activity) {
-    if (currentActivity instanceof MainActivity) {
-      MainActivity main = (MainActivity) currentActivity;
-      main.startLoading(PROGRESS_LOADING);
-      AsyncTask.execute(() -> {
-        Templates.init(CompanionApplication.this.getAssetAccessor());
-        main.runOnUiThread(() -> main.finishLoading(PROGRESS_LOADING));
-      });
-    }
+  public void onActivityDestroyed(Activity activity) {
+  }
 
-    currentActivity = activity;
+  @Override
+  public void onActivityPaused(Activity activity) {
   }
 
   @Override
@@ -149,19 +157,25 @@ public class CompanionApplication extends Application
   }
 
   @Override
-  public void onActivityPaused(Activity activity) {
-  }
-
-  @Override
-  public void onActivityStopped(Activity activity) {
-  }
-
-  @Override
   public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
   }
 
   @Override
-  public void onActivityDestroyed(Activity activity) {
+  public void onActivityStarted(Activity activity) {
+    if (currentActivity instanceof MainActivity) {
+      MainActivity main = (MainActivity) currentActivity;
+      main.startLoading(PROGRESS_LOADING);
+      AsyncTask.execute(() -> {
+        Templates.init(CompanionApplication.this.getAssetAccessor());
+        runOnUiThread(() -> main.finishLoading(PROGRESS_LOADING));
+      });
+    }
+
+    currentActivity = activity;
+  }
+
+  @Override
+  public void onActivityStopped(Activity activity) {
   }
 
   @Override
@@ -178,8 +192,43 @@ public class CompanionApplication extends Application
     helpStack.setGear(emailGear);
   }
 
+  public void startWatch() {
+    if (stopwatch.isRunning()) {
+      stopwatch.reset();
+    }
+
+    stopwatch.start();
+  }
+
+  public void update(String source) {
+    runOnUiThread(() -> {
+      if (updating) {
+        Status.error("Cannot update during an update! (" + source + ")");
+      } else {
+        updating = true;
+        Status.update("Starting update: " + source);
+
+        if (currentActivity instanceof MainActivity) {
+          ((MainActivity) currentActivity).update();
+          Status.update("Update done: " + source);
+        } else {
+          Status.error("Don't know how to update " + currentActivity + " (" + source + ")");
+        }
+
+        updating = false;
+      }
+    });
+  }
+
   public Users users() {
     return context.users();
+  }
+
+  private void runOnUiThread(Runnable action) {
+    if (currentActivity instanceof MainActivity) {
+      MainActivity main = (MainActivity) currentActivity;
+      main.runOnUiThread(action);
+    }
   }
 
   public static CompanionApplication get() {

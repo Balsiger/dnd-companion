@@ -62,7 +62,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CompanionApplication.Updatable {
 
   public static final int CODE_SIGN_IN = 1;
   public static final int CODE_DRVIE_AUTH = 2;
@@ -121,11 +121,30 @@ public class MainActivity extends AppCompatActivity {
   }
 
   @Override
+  public void onBackPressed() {
+    if (!CompanionFragments.get().goBack()) {
+      ConfirmationPrompt.create(this).title("Exit?")
+          .message("Do you really want to exit the Roleplay Companion?")
+          .no(this::noExit)
+          .yes(this::exit)
+          .show();
+    }
+  }
+
+  @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
     getMenuInflater().inflate(R.menu.menu_main, menu);
 
     return true;
+  }
+
+  @Override
+  public void onDestroy() {
+    Status.clearView();
+    Status.log("main activity destroyed");
+
+    super.onDestroy();
   }
 
   @Override
@@ -164,6 +183,15 @@ public class MainActivity extends AppCompatActivity {
 
   public void startLoading(String text) {
     actions.startLoading(text);
+  }
+
+  @Override
+  public void update() {
+    Optional<CompanionFragment> fragment = CompanionFragments.get().getCurrentFragment();
+    // The fragment has no context if it already has been unloaded.
+    if (fragment.isPresent() && fragment.get().getContext() != null) {
+      fragment.get().update();
+    }
   }
 
   private void create() {
@@ -269,17 +297,6 @@ public class MainActivity extends AppCompatActivity {
   }
 
   @Override
-  public void onBackPressed() {
-    if (!CompanionFragments.get().goBack()) {
-      ConfirmationPrompt.create(this).title("Exit?")
-          .message("Do you really want to exit the Roleplay Companion?")
-          .no(this::noExit)
-          .yes(this::exit)
-          .show();
-    }
-  }
-
-  @Override
   protected void onCreate(@Nullable Bundle state) {
     CompanionFragments.init(CompanionApplication.get(this).context(),
         getSupportFragmentManager());
@@ -297,20 +314,5 @@ public class MainActivity extends AppCompatActivity {
 
     analytics = FirebaseAnalytics.getInstance(this);
     create();
-  }
-
-  @Override
-  public void onDestroy() {
-    Status.clearView();
-    Status.log("main activity destroyed");
-
-    super.onDestroy();
-  }
-
-  private void refresh() {
-    Optional<CompanionFragment> fragment = CompanionFragments.get().getCurrentFragment();
-    if (fragment.isPresent()) {
-      fragment.get().refresh();
-    }
   }
 }

@@ -33,17 +33,12 @@ import androidx.lifecycle.Observer;
  */
 public abstract class Observable<D> {
 
+  private final MutableLiveData<D> live = new MutableLiveData<>();
   protected FirebaseFirestore db;
   protected FirebaseStorage storage;
-  private final MutableLiveData<D> live = new MutableLiveData<>();
 
   public Observable() {
     init();
-  }
-
-  protected void init() {
-    db = FirebaseFirestore.getInstance();
-    storage = FirebaseStorage.getInstance();
   }
 
   @FunctionalInterface
@@ -51,6 +46,7 @@ public abstract class Observable<D> {
     void execute();
   }
 
+  @Deprecated
   public void observe(LifecycleOwner owner, Observer<D> observer) {
     unobserve(owner);
     live.observe(owner, observer);
@@ -62,6 +58,11 @@ public abstract class Observable<D> {
 
   public void unobserve(LifecycleOwner owner) {
     live.removeObservers(owner);
+  }
+
+  protected void init() {
+    db = FirebaseFirestore.getInstance();
+    storage = FirebaseStorage.getInstance();
   }
 
   protected void updated(D value) {

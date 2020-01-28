@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
@@ -42,9 +43,14 @@ public class Messages extends Documents<Messages> {
 
   private final Map<String, Message> messagesById = new HashMap<>();
   private final Map<String, List<Message>> messagesByOwnerId = new HashMap<>();
+  private boolean loaded = false;
 
   public Messages(CompanionContext context) {
     super(context);
+  }
+
+  public boolean isLoaded() {
+    return loaded;
   }
 
   public void deleteMessage(String messageId) {
@@ -61,6 +67,7 @@ public class Messages extends Documents<Messages> {
 
   public void readMessages(String id) {
     if (!messagesByOwnerId.containsKey(id)) {
+      messagesByOwnerId.put(id, Collections.emptyList());
       Status.log("reading messages for " + id);
       CollectionReference reference = db.collection(id + "/" + PATH);
       reference.addSnapshotListener((s, e) -> {
@@ -77,6 +84,9 @@ public class Messages extends Documents<Messages> {
     for (String id : ids) {
       readMessages(id);
     }
+
+
+    loaded = true;
   }
 
   private void readMessages(String id, List<DocumentSnapshot> snapshots) {
@@ -89,5 +99,6 @@ public class Messages extends Documents<Messages> {
 
     messagesByOwnerId.put(id, messages);
     updatedDocuments(snapshots);
+    CompanionApplication.get().update("messages loaded");
   }
 }

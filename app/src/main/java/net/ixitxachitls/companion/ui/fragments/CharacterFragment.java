@@ -34,10 +34,8 @@ import com.google.android.material.tabs.TabLayout;
 
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
-import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.views.ActionBarView;
@@ -98,15 +96,6 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   @Override
-  public void onResume() {
-    super.onResume();
-
-    if (character.isPresent()) {
-      observe(character.get());
-    }
-  }
-
-  @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
@@ -144,6 +133,15 @@ public class CharacterFragment extends CompanionFragment {
   }
 
   @Override
+  public void onPause() {
+    super.onPause();
+
+    if (storeOnPause && character.isPresent()) {
+      character.get().store();
+    }
+  }
+
+  @Override
   public void onStart() {
     super.onStart();
 
@@ -152,23 +150,19 @@ public class CharacterFragment extends CompanionFragment {
     tabs.getTabAt(1).setIcon(R.drawable.noun_backpack_16138);
   }
 
-  @Override
-  public void onPause() {
-    super.onPause();
-
-    unobserve();
-    if (storeOnPause && character.isPresent()) {
-      character.get().store();
-    }
-  }
-
   public void showCharacter(Character character) {
-    unobserve();
-
     this.character = Optional.of(character);
     this.campaign = campaigns().getOptional(character.getCampaignId());
 
-    observe(character);
+    update();
+  }
+
+  @Override
+  public void update() {
+    if (character.isPresent()) {
+      update(character.get());
+    }
+    title.update();
   }
 
   private void delete() {
@@ -192,35 +186,7 @@ public class CharacterFragment extends CompanionFragment {
     }
   }
 
-  private void observe(Character character) {
-    images().observe(this, title::refresh);
-    characters().observe(this, this::refresh);
-    messages().observe(this, this::refresh);
-    conditions().observe(this, this::refresh);
-
-    character.observe(this, this::update);
-  }
-
-  private void refresh(Documents.Update update) {
-    if (character.isPresent()) {
-      update(character.get());
-    }
-    title.refresh(update);
-  }
-
-  private void unobserve() {
-    images().unobserve(this);
-    characters().unobserve(this);
-    messages().unobserve(this);
-    conditions().unobserve(this);
-
-    if (this.character.isPresent()) {
-      this.character.get().unobserve(this);
-    }
-  }
-
   private void update(Character character) {
-    Status.log("update character");
     this.character = Optional.of(character);
 
     // We did not create the view yet, thus there is no point in updating.
@@ -244,7 +210,7 @@ public class CharacterFragment extends CompanionFragment {
     campaignTitle.text(campaign.isPresent() ? campaign.get().getName() : "");
     title.update(character);
     title.update(images());
-    title.refresh(new Documents.Update(character.getId()));
+    title.update();
   }
 
   public class CharacterPagerAdapter extends FragmentPagerAdapter {

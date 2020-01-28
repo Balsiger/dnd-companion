@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.data.CompanionContext;
 
 import java.util.HashMap;
@@ -72,6 +73,7 @@ public class Users extends Documents<Users> {
       me.get().store();
 
       context.loggedIn(me.get());
+      CompanionApplication.get().update("user loaded");
     });
 
     usersById.put(me.get().getId(), me.get());

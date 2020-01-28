@@ -26,6 +26,7 @@ import com.google.common.collect.TreeMultimap;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
@@ -51,6 +52,8 @@ public class Characters extends Documents<Characters> {
   private final SortedSetMultimap<String, Character> charactersByPlayerId = TreeMultimap.create();
   private final Set<String> userIdsLoading = new HashSet<>();
 
+  private boolean loaded = false;
+
   public Characters(CompanionContext context) {
     super(context);
   }
@@ -59,6 +62,10 @@ public class Characters extends Documents<Characters> {
     return charactersByCharacterId.values().stream()
         .sorted()
         .collect(Collectors.toList());
+  }
+
+  public boolean isLoaded() {
+    return loaded;
   }
 
   public static boolean isCharacterId(String id) {
@@ -214,5 +221,7 @@ public class Characters extends Documents<Characters> {
     }
 
     updatedDocuments(snapshots);
+    loaded = true;
+    CompanionApplication.get().update("characters loaded");
   }
 }

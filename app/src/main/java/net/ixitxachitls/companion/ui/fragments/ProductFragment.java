@@ -115,7 +115,7 @@ public class ProductFragment extends NestedCompanionFragment {
     content = view.findViewById(R.id.content);
     series = view.findViewById(R.id.series);
 
-    refresh();
+    redraw();
     return view;
   }
 
@@ -135,7 +135,7 @@ public class ProductFragment extends NestedCompanionFragment {
     }
   }
 
-  private void refresh() {
+  private void redraw() {
     product = Templates.get().getProductTemplates().get(getArguments().getString(ARG_NAME));
 
     if(product.isPresent()) {

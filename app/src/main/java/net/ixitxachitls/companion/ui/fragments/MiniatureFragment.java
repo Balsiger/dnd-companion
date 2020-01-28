@@ -74,15 +74,8 @@ public class MiniatureFragment extends NestedCompanionFragment {
     location = view.findViewById(R.id.location);
     owned = view.findViewById(R.id.owned);
 
-    refresh();
+    update();
     return view;
-  }
-
-  @Override
-  public void onResume() {
-    super.onResume();
-
-    refresh();
   }
 
   @Override
@@ -96,6 +89,40 @@ public class MiniatureFragment extends NestedCompanionFragment {
       } catch (NumberFormatException e) {
         Status.error("Cannot parse number for owned miniatures: " + e);
       }
+    }
+  }
+
+  @Override
+  public void onResume() {
+    super.onResume();
+
+    update();
+  }
+
+  public void update() {
+    loadMiniature(getArguments().getString(ARG_NAME));
+
+    if (miniature.isPresent()) {
+      image.setName(miniature.get().getName(), miniature.get().getName());
+      image.setNumber(Templates.get().getMiniatureTemplates().getNumber(miniature.get()),
+          Templates.get().getMiniatureTemplates().getFilteredNumber());
+      set.text(formatSet());
+      race.text(miniature.get().getRace());
+      type.text(formatType());
+      classes.text(Strings.COMMA_JOINER.join(miniature.get().getClasses()));
+      classes.setVisibility(miniature.get().getClasses().isEmpty() ? View.GONE : View.VISIBLE);
+      long miniatureCount = me().getMiniatureCount(miniature.get().getName());
+      owned.text(miniatureCount == 0 ? "" : String.valueOf(miniatureCount));
+      location.text(me().locationFor(miniature.get()));
+    } else {
+      image.clearName();
+      image.clearNumber();
+      set.text("");
+      race.text("");
+      type.text("");
+      classes.setVisibility(View.GONE);
+      owned.text("");
+      location.text("");
     }
   }
 
@@ -128,32 +155,5 @@ public class MiniatureFragment extends NestedCompanionFragment {
 
   private void loadMiniature(String name) {
     miniature = Templates.get().getMiniatureTemplates().get(name);
-  }
-
-  private void refresh() {
-    loadMiniature(getArguments().getString(ARG_NAME));
-
-    if (miniature.isPresent()) {
-      image.setName(miniature.get().getName(), miniature.get().getName());
-      image.setNumber(Templates.get().getMiniatureTemplates().getNumber(miniature.get()),
-          Templates.get().getMiniatureTemplates().getFilteredNumber());
-      set.text(formatSet());
-      race.text(miniature.get().getRace());
-      type.text(formatType());
-      classes.text(Strings.COMMA_JOINER.join(miniature.get().getClasses()));
-      classes.setVisibility(miniature.get().getClasses().isEmpty() ? View.GONE : View.VISIBLE);
-      long miniatureCount = me().getMiniatureCount(miniature.get().getName());
-      owned.text(miniatureCount == 0 ? "" : String.valueOf(miniatureCount));
-      location.text(me().locationFor(miniature.get()));
-    } else {
-      image.clearName();
-      image.clearNumber();
-      set.text("");
-      race.text("");
-      type.text("");
-      classes.setVisibility(View.GONE);
-      owned.text("");
-      location.text("");
-    }
   }
 }

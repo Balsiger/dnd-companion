@@ -99,17 +99,21 @@ public class NestedCompanionFragment extends Fragment {
   public void show() {
     Log.d("Encounter", "show: " + this);
     FragmentManager manager = getFragmentManager();
-    manager.beginTransaction()
-        .show(this)
-        .commit();
+    if (manager != null) {
+      manager.beginTransaction()
+          .show(this)
+          .commit();
+    }
   }
 
   public void showAndHide(NestedCompanionFragment toHide) {
     Log.d("Encounter", "showAndHide: " + this + "/" + toHide);
     FragmentManager manager = getFragmentManager();
-    manager.beginTransaction()
-        .show(this)
-        .hide(toHide)
-        .commit();
+    if (manager != null) {
+      manager.beginTransaction()
+          .show(this)
+          .hide(toHide)
+          .commit();
+    }
   }
 }

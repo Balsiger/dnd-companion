@@ -47,7 +47,7 @@ import androidx.fragment.app.Fragment;
 /**
  * Base fragment for all our non-dialog fragments
  */
-public abstract class CompanionFragment extends Fragment {
+public abstract class CompanionFragment extends Fragment implements CompanionApplication.Updatable {
 
   public enum Type {
     settings, campaigns, campaign, character, miniatures, monster, localCharacter, products
@@ -77,10 +77,15 @@ public abstract class CompanionFragment extends Fragment {
     CompanionFragments.get().resumed(this);
   }
 
-  public void refresh() {};
-
   public void toast(String message) {
     Status.toast(message);
+  }
+
+  ;
+
+  @Override
+  public void update() {
+    Status.error("Updating not implemented for " + this);
   }
 
   protected ActionBarView.Action addAction(@DrawableRes int drawable, String title,

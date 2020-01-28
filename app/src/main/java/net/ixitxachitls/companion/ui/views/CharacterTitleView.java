@@ -28,7 +28,6 @@ import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 
@@ -51,11 +50,6 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
         R.drawable.noun_viking_30736);
   }
 
-  public void refresh(Documents.Update update) {
-    // Messages.
-    updateMessages();
-  }
-
   @Override
   public void update(Character character) {
     super.update(character);
@@ -64,6 +58,14 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
     setAction(() -> CompanionFragments.get().showCharacter(character, Optional.of(this)));
 
     updateIcons();
+  }
+
+  @Override
+  public void update() {
+    super.update();
+
+    // Messages.
+    updateMessages();
   }
 
   @Override

@@ -56,10 +56,25 @@ public abstract class TemplatesFragment extends CompanionFragment {
     super(type);
   }
 
+  protected abstract FilteredTemplatesStore<?, ?> getTemplates();
+
+  protected abstract int getTemplatesCount();
+
   @Override
   public boolean goBack() {
     CompanionFragments.get().show(Type.campaigns, Optional.empty());
     return true;
+  }
+
+  @Override
+  public void update() {
+    if (getTemplates().isFiltered()) {
+      filterAction.color(R.color.filtered);
+    } else {
+      filterAction.uncolor();
+    }
+
+    pagerAdapter.notifyDataSetChanged();
   }
 
   @Override
@@ -109,11 +124,22 @@ public abstract class TemplatesFragment extends CompanionFragment {
   }
 
   protected abstract void config();
+
   protected abstract void filter();
-  protected abstract String getTitle(int position);
+
   protected abstract Fragment getTemplateFragment(int position);
-  protected abstract int getTemplatesCount();
-  protected abstract FilteredTemplatesStore<?, ?> getTemplates();
+
+  protected abstract String getTitle(int position);
+
+  @CallSuper
+  protected void loadEntities() {
+    pager.setVisibility(View.GONE);
+  }
+
+  @CallSuper
+  protected void loadedEntities() {
+    pager.setVisibility(View.VISIBLE);
+  }
 
   @CallSuper
   protected void setupActions() {
@@ -126,26 +152,6 @@ public abstract class TemplatesFragment extends CompanionFragment {
     addAction(R.drawable.ic_settings_black_24dp, "Configuration",
         "Configure the miniatures displayed.")
         .onClick(this::config);
-  }
-
-  @CallSuper
-  protected void loadEntities() {
-    pager.setVisibility(View.GONE);
-  }
-
-  @CallSuper
-  protected void loadedEntities() {
-    pager.setVisibility(View.VISIBLE);
-  }
-
-  protected void update() {
-    if (getTemplates().isFiltered()) {
-      filterAction.color(R.color.filtered);
-    } else {
-      filterAction.uncolor();
-    }
-
-    pagerAdapter.notifyDataSetChanged();
   }
 
   public class PagerAdapter extends FragmentStatePagerAdapter {

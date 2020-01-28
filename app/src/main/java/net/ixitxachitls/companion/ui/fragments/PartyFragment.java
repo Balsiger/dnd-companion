@@ -38,7 +38,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.dialogs.CharacterDialog;
@@ -89,12 +88,6 @@ public class PartyFragment extends NestedCompanionFragment {
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
-    campaigns().observe(this, this::refresh);
-    characters().observe(this, this::refresh);
-    images().observe(this, this::refresh);
-    messages().observe(this, this::refresh);
-    conditions().observe(this, this::refresh);
-
     view = (ViewGroup) inflater.inflate(R.layout.fragment_party, container, false);
     view.setLayoutParams(new LinearLayout.LayoutParams(
         LinearLayout.LayoutParams.MATCH_PARENT,
@@ -124,71 +117,17 @@ public class PartyFragment extends NestedCompanionFragment {
   public void onResume() {
     super.onResume();
 
-    refresh();
-  }
-
-  public void refresh() {
-    refresh(Documents.FULL_UPDATE);
+    update();
   }
 
   public void show(Campaign campaign) {
     this.campaign = Optional.of(campaign);
     this.encounter = Optional.empty();
 
-    refresh();
+    update();
   }
 
-  private void fullScreen() {
-    TransitionManager.beginDelayedTransition(view, transition);
-    party.setVisibility(View.GONE);
-    title.gone();
-    addCharacter.gone();
-    fullScreen.gone();
-    fullScreenExit.visible();
-    adventure.showDetails();
-  }
-
-  private void exitFullScreen() {
-    TransitionManager.beginDelayedTransition(view, transition);
-    party.setVisibility(View.VISIBLE);
-    title.visible();
-    addCharacter.visible();
-    fullScreen.visible();
-    fullScreenExit.gone();
-    adventure.hideDetails();
-  }
-
-  private void maybeResetEncounter() {
-    ConfirmationPrompt.create(getContext()).title("Reset encounter")
-        .message("Do you really want to reset the encounter. Any changes you made will be lost "
-            + "and random values with be newly selected. This cannot be undone.")
-        .yes(this::resetEncounter)
-        .show();
-  }
-
-  private void resetEncounter() {
-    adventure.resetEncounter();
-  }
-
-  private void createCharacter() {
-    CharacterDialog.newInstance("", campaign.get().getId()).display();
-  }
-
-  private void redrawChips() {
-    TransitionManager.beginDelayedTransition(view, transition);
-    party.removeAllViews();
-
-    if (campaign.isPresent()) {
-      for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
-        CreatureChipView chip = chipsById.get(character.getId());
-        if (chip != null) {
-          chip.addTo(party);
-        }
-      }
-    }
-  }
-
-  private void refresh(Documents.Update update) {
+  public void update() {
     if (isHidden()) {
       return;
     }
@@ -246,6 +185,56 @@ public class PartyFragment extends NestedCompanionFragment {
         ((CharacterChipView) chip).update(((CharacterChipView) chip).getCharacter());
       }
     }
+  }
+
+  private void createCharacter() {
+    CharacterDialog.newInstance("", campaign.get().getId()).display();
+  }
+
+  private void exitFullScreen() {
+    TransitionManager.beginDelayedTransition(view, transition);
+    party.setVisibility(View.VISIBLE);
+    title.visible();
+    addCharacter.visible();
+    fullScreen.visible();
+    fullScreenExit.gone();
+    adventure.hideDetails();
+  }
+
+  private void fullScreen() {
+    TransitionManager.beginDelayedTransition(view, transition);
+    party.setVisibility(View.GONE);
+    title.gone();
+    addCharacter.gone();
+    fullScreen.gone();
+    fullScreenExit.visible();
+    adventure.showDetails();
+  }
+
+  private void maybeResetEncounter() {
+    ConfirmationPrompt.create(getContext()).title("Reset encounter")
+        .message("Do you really want to reset the encounter. Any changes you made will be lost "
+            + "and random values with be newly selected. This cannot be undone.")
+        .yes(this::resetEncounter)
+        .show();
+  }
+
+  private void redrawChips() {
+    TransitionManager.beginDelayedTransition(view, transition);
+    party.removeAllViews();
+
+    if (campaign.isPresent()) {
+      for (Character character : characters().getCampaignCharacters(campaign.get().getId())) {
+        CreatureChipView chip = chipsById.get(character.getId());
+        if (chip != null) {
+          chip.addTo(party);
+        }
+      }
+    }
+  }
+
+  private void resetEncounter() {
+    adventure.resetEncounter();
   }
 
   private void updateChips() {

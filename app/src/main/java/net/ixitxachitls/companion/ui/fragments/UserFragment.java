@@ -65,6 +65,17 @@ public class UserFragment extends CompanionFragment {
   }
 
   @Override
+  public void update() {
+    if (nickname != null) {
+      if (nickname.getText().length() > 0) {
+        save.get().setVisibility(View.VISIBLE);
+      } else {
+        save.get().setVisibility(View.INVISIBLE);
+      }
+    }
+  }
+
+  @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
                            Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
@@ -115,15 +126,5 @@ public class UserFragment extends CompanionFragment {
     me.store();
 
     CompanionFragments.get().show(Type.campaigns, Optional.empty());
-  }
-
-  private void update() {
-    if (nickname != null) {
-      if (nickname.getText().length() > 0) {
-        save.get().setVisibility(View.VISIBLE);
-      } else {
-        save.get().setVisibility(View.INVISIBLE);
-      }
-    }
   }
 }

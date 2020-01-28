@@ -36,7 +36,6 @@ import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
 import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Creature;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.values.Battle;
 import net.ixitxachitls.companion.ui.views.DiceView;
@@ -82,20 +81,16 @@ public class EncounterFragment extends NestedCompanionFragment {
 
     turn = TextWrapper.wrap(view, R.id.turn);
 
-    characters().observe(this, this::refresh);
-    images().observe(this, this::refresh);
-    conditions().observe(this, this::refresh);
-    monsters().observe(this, this::refresh);
-    messages().observe(this, this::refresh);
-
     return view;
   }
 
-  public void refresh() {
-    refresh(Documents.FULL_UPDATE);
+  public void show(Campaign campaign) {
+    this.encounter = Optional.of(campaign.getBattle());
+
+    update();
   }
 
-  public void refresh(Documents.Update update) {
+  public void update() {
     if (isHidden()) {
       return;
     }
@@ -180,11 +175,5 @@ public class EncounterFragment extends NestedCompanionFragment {
         v.update(v.getCreature().get().getAdjustedConditions());
       }
     });
-  }
-
-  public void show(Campaign campaign) {
-    this.encounter = Optional.of(campaign.getBattle());
-
-    refresh();
   }
 }

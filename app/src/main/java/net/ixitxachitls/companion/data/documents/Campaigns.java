@@ -21,14 +21,15 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableList;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
+import net.ixitxachitls.companion.util.Strings;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -51,6 +52,8 @@ public class Campaigns extends Documents<Campaigns> {
   private ImmutableList<Campaign> campaigns = ImmutableList.of();
   private Map<String, Campaign> dmCampaignsById = new HashMap<>();
   private Map<String, Campaign> playerCampaignsById = new HashMap<>();
+  private boolean loadedDM = false;
+  private boolean loadedPlayer = false;
 
   public Campaigns(CompanionContext context) {
     super(context);
@@ -66,6 +69,10 @@ public class Campaigns extends Documents<Campaigns> {
 
   public ImmutableList<String> getIds() {
     return ids;
+  }
+
+  public boolean isLoaded() {
+    return loadedDM && loadedPlayer;
   }
 
   public static boolean isCampaignId(String id) {
@@ -110,7 +117,7 @@ public class Campaigns extends Documents<Campaigns> {
   }
 
   public Campaign get(String id) {
-    if (Strings.isNullOrEmpty(id)) {
+    if (com.google.common.base.Strings.isNullOrEmpty(id)) {
       return Campaign.DEFAULT;
     }
 
@@ -131,7 +138,7 @@ public class Campaigns extends Documents<Campaigns> {
   }
 
   public Optional<Campaign> getOptional(String id) {
-    if (Strings.isNullOrEmpty(id)) {
+    if (com.google.common.base.Strings.isNullOrEmpty(id)) {
       return Optional.empty();
     }
 
@@ -180,6 +187,10 @@ public class Campaigns extends Documents<Campaigns> {
     }
 
     update(documents.stream().map(d -> d.getReference().getPath()).collect(Collectors.toList()));
+    loadedDM = true;
+    if (isLoaded()) {
+      CompanionApplication.get().update("campaigns loaded");
+    }
   }
 
   private void processDMCampaigns() {
@@ -203,8 +214,12 @@ public class Campaigns extends Documents<Campaigns> {
           playerCampaignsById.put(campaignId, campaign.get());
         }
       }
-
       update(new ArrayList<>(playerCampaignsById.keySet()));
+    }
+
+    loadedPlayer = true;
+    if (isLoaded()) {
+      CompanionApplication.get().update("campaigns loaded");
     }
   }
 
@@ -221,7 +236,7 @@ public class Campaigns extends Documents<Campaigns> {
 
   public static String extractCampaignId(String id) {
     if (isCampaignId(id)) {
-      return id.replaceAll("(.*/" + PATH + "/.*?)(/|$)", "");
+      return Strings.extractPattern(id, "^(.*/" + PATH + "/.*?)(?:/|$)");
     }
 
     return "";

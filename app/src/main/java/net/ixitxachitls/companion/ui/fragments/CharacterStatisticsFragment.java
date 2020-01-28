@@ -209,15 +209,6 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     return view;
   }
 
-  @Override
-  public void onResume() {
-    super.onResume();
-
-    if (character.isPresent()) {
-      update(character.get());
-    }
-  }
-
   public void update(Character character) {
     this.character = Optional.of(character);
 

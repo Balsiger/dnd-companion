@@ -29,7 +29,6 @@ import android.view.View;
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Message;
 import net.ixitxachitls.companion.data.documents.User;
 
@@ -53,11 +52,17 @@ public class CampaignTitleView extends TitleView {
     super(context, attributes);
   }
 
-  public void refresh() {
-    refresh(Documents.FULL_UPDATE);
+  public void setCampaign(Campaign campaign) {
+    this.campaign = Optional.of(campaign);
+    campaign.getContext().messages().readMessages(campaign.getId());
+    update();
   }
 
-  public void refresh(Documents.Update update) {
+  public void setCampaign(User dm) {
+    update();
+  }
+
+  public void update() {
     // Messages.
     updateMessages();
 
@@ -74,16 +79,6 @@ public class CampaignTitleView extends TitleView {
         clearImage(R.drawable.image_filter_hdr);
       }
     }
-  }
-
-  public void update(Campaign campaign) {
-    this.campaign = Optional.of(campaign);
-    campaign.getContext().messages().readMessages(campaign.getId());
-    refresh();
-  }
-
-  public void update(User dm) {
-    refresh();
   }
 
   @Override

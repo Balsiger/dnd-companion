@@ -24,6 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.values.TimedCondition;
@@ -138,6 +139,7 @@ public class CreatureConditions extends Documents<CreatureConditions> {
     }
 
     conditionsByCreatureId.put(creatureId, conditions);
+    CompanionApplication.get().update("creature conditions loaded");
     updatedDocuments(snapshots);
   }
 

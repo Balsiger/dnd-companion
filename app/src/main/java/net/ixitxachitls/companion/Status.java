@@ -119,6 +119,14 @@ public class Status {
     }
   }
 
+  public static void update(String message) {
+    Log.e("Status", message);
+    if (Misc.IN_UNIT_TEST) {
+      System.out.println(message);
+    }
+    runInView(v -> v.addUpdateMessage(message));
+  }
+
   public static void warning(String message) {
     Log.w("Status", message);
     if (Misc.IN_UNIT_TEST) {

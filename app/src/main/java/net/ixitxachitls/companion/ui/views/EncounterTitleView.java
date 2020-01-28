@@ -75,6 +75,16 @@ public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView
     conditions.update(creature);
   }
 
+  public void update(List<CreatureCondition> conditions) {
+    this.conditions.update(conditions);
+    update();
+  }
+
+  public void update(Battle battle, T creature) {
+    this.encounter = Optional.of(battle);
+    update(creature);
+  }
+
   @Override
   protected String formatSubtitle() {
     if (creature.isPresent() && encounter.isPresent()) {
@@ -104,15 +114,5 @@ public class EncounterTitleView<T extends Creature<?>> extends CreatureTitleView
     titleContainer.addView(conditions);
 
     return view;
-  }
-
-  public void update(List<CreatureCondition> conditions) {
-    this.conditions.update(conditions);
-    refresh();
-  }
-
-  public void update(Battle battle, T creature) {
-    this.encounter = Optional.of(battle);
-    update(creature);
   }
 }

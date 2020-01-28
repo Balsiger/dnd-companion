@@ -26,6 +26,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
@@ -102,6 +103,7 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
       read();
       execute(whenReady);
       updated((D) this);
+      CompanionApplication.get().update("document " + getShortId() + " updated");
     } else {
       Status.error("Cannot find data for " + id);
       failed = true;
@@ -119,7 +121,9 @@ public abstract class Document<D extends Document<D>> extends Observable<D> {
 
     if (reference.isPresent()) {
       reference.get().set(write().asMap());
+      CompanionApplication.get().update(getClass().getCanonicalName() + " updated");
       updated((D) this);
+      CompanionApplication.get().update("document " + getShortId() + " updated");
     } else {
       collection.add(write().asMap()).addOnCompleteListener(task -> {
         if (task.isSuccessful()) {

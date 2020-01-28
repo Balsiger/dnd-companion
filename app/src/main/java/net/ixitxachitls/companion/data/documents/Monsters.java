@@ -26,6 +26,7 @@ import com.google.common.collect.Multimap;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 
@@ -127,6 +128,6 @@ public class Monsters extends Documents<Monsters> {
       monstersByMonsterId.put(monster.getId(), monster);
     }
 
-    updatedDocuments(snapshots);
+    CompanionApplication.get().update("monsters loaded");
   }
 }

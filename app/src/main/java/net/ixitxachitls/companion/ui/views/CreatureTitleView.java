@@ -86,7 +86,7 @@ public abstract class CreatureTitleView<T extends Creature> extends TitleView {
   public void update(T creature) {
     this.creature = Optional.of(creature);
 
-    refresh();
+    update();
     update(CompanionApplication.get().images());
   }
 
@@ -128,7 +128,7 @@ public abstract class CreatureTitleView<T extends Creature> extends TitleView {
     return view;
   }
 
-  protected void refresh() {
+  protected void update() {
     setTitle(formatTitle());
     setSubtitle(formatSubtitle());
   }

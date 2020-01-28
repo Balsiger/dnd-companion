@@ -87,6 +87,12 @@ public class StatusView extends LinearLayout {
     messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
   }
 
+  public void addUpdateMessage(String message) {
+    messages.append(Html.fromHtml("<div><b><font color=\"blue\">" + message + "</font></b></div>",
+        Html.FROM_HTML_MODE_COMPACT));
+    messagesScroll.fullScroll(ScrollView.FOCUS_DOWN);
+  }
+
   public void addWarningMessage(String message) {
     messages.append(Html.fromHtml("<div><b>" + message + "</b></div>",
         Html.FROM_HTML_MODE_COMPACT));

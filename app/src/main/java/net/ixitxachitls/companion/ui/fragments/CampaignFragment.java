@@ -26,7 +26,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +36,6 @@ import android.widget.Toast;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Campaign;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.ui.ConfirmationPrompt;
 import net.ixitxachitls.companion.ui.activities.CompanionFragments;
 import net.ixitxachitls.companion.ui.dialogs.DateDialog;
@@ -89,16 +87,6 @@ public class CampaignFragment extends CompanionFragment {
   public boolean goBack() {
     CompanionFragments.get().show(Type.campaigns, Optional.of(title));
     return true;
-  }
-
-  @Override
-  public void refresh() {
-    Status.log("CampaignF refresh");
-    refresh(Documents.FULL_UPDATE);
-    title.refresh(Documents.FULL_UPDATE);
-
-    encounter.refresh();
-    party.refresh();
   }
 
   @Override
@@ -205,16 +193,19 @@ public class CampaignFragment extends CompanionFragment {
     characters().addPlayers(campaign);
     monsters().addCampaign(campaign.getId());
 
-    images().observe(this, title::refresh);
-    messages().observe(this, title::refresh);
-    campaign.observe(this, this::update);
-
-    // The following should be included in the campaign observation above....
-    //refresh(Documents.FULL_UPDATE);
+    update();
   }
 
   public boolean shows(String campaignId) {
     return campaign.isPresent() && campaign.get().getId().equals(campaignId);
+  }
+
+  @Override
+  public void update() {
+    updateCampaigns();
+
+    encounter.update();
+    party.update();
   }
 
   private void addCondition() {
@@ -306,33 +297,6 @@ public class CampaignFragment extends CompanionFragment {
     }
   }
 
-
-  protected void refresh(Documents.Update update) {
-    Status.log("CampaignF refresh: " + update);
-
-    // Campaigns.
-    if (campaign.isPresent()) {
-      title.update(campaign.get());
-      title.refresh(update);
-      date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
-      deleteAction.show(canDeleteCampaign());
-
-      if (campaign.get().getBattle().inBattle()) {
-        Log.d("CampaignF", "show encounter, hide party");
-        encounter.showAndHide(party);
-        encounter.refresh(update);
-        encounterGroup.expand();
-        addConditionAction.show(campaign.get().amDM()
-            || campaign.get().getBattle().amCurrentPlayer());
-      } else {
-        Log.d("CampaignF", "show party, hide encounter");
-        party.showAndHide(encounter);
-        encounterGroup.shrink();
-        addConditionAction.show();
-      }
-    }
-  }
-
   private void sendMessage() {
     if (campaign.isPresent()) {
       MessageDialog.newInstance(campaign.get().getId(), me().getId()).display();
@@ -353,6 +317,26 @@ public class CampaignFragment extends CompanionFragment {
 
   private void update(Campaign campaign) {
     Status.log("CampaignF update: " + campaign.getId());
-    refresh();
+    update();
+  }
+
+  protected void updateCampaigns() {
+    if (campaign.isPresent()) {
+      title.setCampaign(campaign.get());
+      date.text(campaign.get().getCalendar().format(campaign.get().getDate()));
+      deleteAction.show(canDeleteCampaign());
+
+      if (campaign.get().getBattle().inBattle()) {
+        encounter.showAndHide(party);
+        encounter.update();
+        encounterGroup.expand();
+        addConditionAction.show(campaign.get().amDM()
+            || campaign.get().getBattle().amCurrentPlayer());
+      } else {
+        party.showAndHide(encounter);
+        encounterGroup.shrink();
+        addConditionAction.show();
+      }
+    }
   }
 }

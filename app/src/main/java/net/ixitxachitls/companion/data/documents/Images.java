@@ -30,6 +30,7 @@ import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.collect.ImmutableList;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.util.FileCache;
 
@@ -93,6 +94,10 @@ public class Images extends Observable<Documents.Update> {
     return Optional.ofNullable(imagesById.get(id));
   }
 
+  public boolean loaded() {
+    return pendingById.size() == 0;
+  }
+
   public void set(String id, Bitmap bitmap) {
     pendingById.invalidate(id);
     inexistentById.invalidate(id);
@@ -102,7 +107,6 @@ public class Images extends Observable<Documents.Update> {
 
     imagesById.put(id, bitmap);
     storage.getReference(id).putBytes(out.toByteArray())
-        .addOnSuccessListener(task -> updated(new Documents.Update(id)))
         .addOnFailureListener(e -> Status.silentException("Could not upload image", e));
   }
 
@@ -145,22 +149,6 @@ public class Images extends Observable<Documents.Update> {
     });
   }
 
-  private void maybeLoad(String id, @Nullable Callback callback) {
-    if (pendingById.getIfPresent(id) != null) {
-      if (callback != null) {
-        pendingById.getIfPresent(id).add(callback);
-      }
-      return;
-    }
-
-    if (inexistentById.getIfPresent(id) != null) {
-      return;
-    }
-
-    pendingById.put(id, createCallbackList(callback));
-    load(id, ImmutableList.of("", ".jpg", ".png"));
-  }
-
   private void load(String id, ImmutableList<String> extensions) {
     Log.d("Images", "load: " + id + extensions);
     if (extensions.isEmpty()) {
@@ -178,6 +166,7 @@ public class Images extends Observable<Documents.Update> {
             load(id, name);
             imageHashesById.put(id, hash);
           }
+          updated(new Documents.Update(Collections.singletonList(id)));
         })
         .addOnFailureListener(e -> {
           Log.d("Images", "load: failed for " + name);
@@ -185,11 +174,36 @@ public class Images extends Observable<Documents.Update> {
         });
   }
 
+  private void maybeLoad(String id, @Nullable Callback callback) {
+    if (pendingById.getIfPresent(id) != null) {
+      if (callback != null) {
+        pendingById.getIfPresent(id).add(callback);
+      }
+      return;
+    }
+
+    if (inexistentById.getIfPresent(id) != null) {
+      return;
+    }
+
+    pendingById.put(id, createCallbackList(callback));
+    load(id, ImmutableList.of("", ".jpg", ".png"));
+  }
+
   private void store(String id, byte[] bytes) {
     try {
       fileCache.write(id).write(bytes);
     } catch (IOException e) {
       Status.exception("Failed to write image '" + id + "': ", e);
+    }
+  }
+
+  @Override
+  protected void updated(Documents.Update update) {
+    super.updated(update);
+
+    if (pendingById.size() == 0) {
+      CompanionApplication.get().update("image updated");
     }
   }
 
