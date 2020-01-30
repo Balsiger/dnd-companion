@@ -72,6 +72,9 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
   private Optional<Action<T>> onSaved = Optional.empty();
   private View content;
 
+  // UI elements.
+  private TextWrapper<TextView> titleView;
+
   // Required empty constructor, don't add anything here.
   protected Dialog() {}
 
@@ -82,6 +85,11 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
 
   protected T getValue() {
     return null;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+    titleView.text(title);
   }
 
   public void display() {
@@ -109,6 +117,36 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
   }
 
   @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                           Bundle savedInstanceState) {
+    LinearLayout view = (LinearLayout) inflater.inflate(R.layout.dialog, container, false);
+    Wrapper.wrap(view, R.id.close).onClick(this::close);
+    titleView = TextWrapper.wrap(view, R.id.title).text(title);
+    Wrapper.wrap(view, R.id.titlebar).backgroundColor(color);
+    if (textColor != 0) {
+      titleView.textColor(textColor);
+    }
+
+    content = inflater.inflate(layoutId, container, false);
+    createContent(content);
+    view.addView(content);
+
+    return view;
+  }
+
+  @Override
+  public void onDestroyView() {
+    super.onDestroyView();
+  }
+
+  @SuppressWarnings("unchecked")
+  public D onSaved(Action<T> action) {
+    onSaved = Optional.of(action);
+
+    return (D)this;
+  }
+
+  @Override
   public void onStart() {
     ((MainActivity) getActivity()).logDialogEvent(getClass().getSimpleName());
     super.onStart();
@@ -127,36 +165,6 @@ public abstract class Dialog<D extends Dialog, T> extends DialogFragment {
     getDialog().getWindow()
         .setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN
             | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-  }
-
-  @Override
-  public void onDestroyView() {
-    super.onDestroyView();
-  }
-
-  @Override
-  public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                           Bundle savedInstanceState) {
-    LinearLayout view = (LinearLayout) inflater.inflate(R.layout.dialog, container, false);
-    Wrapper.wrap(view, R.id.close).onClick(this::close);
-    TextWrapper<TextView> titleView = TextWrapper.wrap(view, R.id.title).text(title);
-    Wrapper.wrap(view, R.id.titlebar).backgroundColor(color);
-    if (textColor != 0) {
-      titleView.textColor(textColor);
-    }
-
-    content = inflater.inflate(layoutId, container, false);
-    createContent(content);
-    view.addView(content);
-
-    return view;
-  }
-
-  @SuppressWarnings("unchecked")
-  public D onSaved(Action<T> action) {
-    onSaved = Optional.of(action);
-
-    return (D)this;
   }
 
   protected Adventures adventures() {

@@ -46,6 +46,14 @@ public class Status {
     void execute(StatusView view);
   }
 
+  public static boolean isShowing() {
+    if (view.isPresent()) {
+      return view.get().isShowing();
+    }
+
+    return false;
+  }
+
   public static void setView(StatusView view) {
     Status.view = Optional.of(view);
   }

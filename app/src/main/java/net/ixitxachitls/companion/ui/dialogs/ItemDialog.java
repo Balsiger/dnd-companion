@@ -32,10 +32,6 @@ import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
 import java.util.Optional;
 
-import androidx.annotation.ColorRes;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.StringRes;
-
 /**
  * A dialog to show the item summary.
  */
@@ -47,7 +43,7 @@ public class ItemDialog extends Dialog {
   // The following are only set after onCreate.
   private Item.Owner owner;
   private Item item;
-  private TextWrapper<TextView> name;
+  private TextWrapper<TextView> debugId;
 
   @Override
   public void onCreate(Bundle savedInstance) {
@@ -79,7 +75,7 @@ public class ItemDialog extends Dialog {
 
   @Override
   protected void createContent(View view) {
-    name = TextWrapper.wrap(view, R.id.name);
+    debugId = TextWrapper.wrap(view, R.id.debug_id);
 
     update();
   }
@@ -89,16 +85,23 @@ public class ItemDialog extends Dialog {
       return;
     }
 
-    if (owner.amDM()) {
-      name.text(item.getName() + " (" + item.getPlayerName() + ")");
+    if (owner.amDM() && !item.getName().equals(item.getPlayerName())) {
+      setTitle(item.getName() + " (" + item.getPlayerName() + ")");
     } else {
-      name.text(item.getPlayerName());
+      setTitle(item.getPlayerName());
+    }
+
+    if (Status.isShowing()) {
+      debugId.text(item.getId());
+      debugId.visible();
+    } else {
+      debugId.gone();
     }
   }
 
-  protected static Bundle arguments(String itemId, String ownerId, @LayoutRes int layoutId,
-                                    @StringRes int titleId, @ColorRes int colorId) {
-    Bundle arguments = Dialog.arguments(layoutId, titleId, colorId);
+  protected static Bundle arguments(String itemId, String ownerId) {
+    Bundle arguments = Dialog.arguments(R.layout.dialog_item, R.string.dialog_item_title,
+        R.color.item, R.color.itemText);
     arguments.putString(ARG_ITEM_ID, itemId);
     arguments.putString(ARG_OWNER_ID, ownerId);
     return arguments;
@@ -106,8 +109,7 @@ public class ItemDialog extends Dialog {
 
   public static ItemDialog newInstance(String itemId, String ownerId) {
     ItemDialog dialog = new ItemDialog();
-    dialog.setArguments(arguments(itemId, ownerId, R.layout.dialog_item,
-        R.string.dialog_item_title, R.color.item));
+    dialog.setArguments(arguments(itemId, ownerId));
     return dialog;
   }
 }

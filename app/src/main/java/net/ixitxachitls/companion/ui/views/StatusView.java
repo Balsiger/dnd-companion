@@ -68,6 +68,10 @@ public class StatusView extends LinearLayout {
     addView(view);
   }
 
+  public boolean isShowing() {
+    return showDebug;
+  }
+
   public void addErrorMessage(String message) {
     messages.append(Html.fromHtml("<div><b><font color=\"red\">" + message + "</font></b></div>",
         Html.FROM_HTML_MODE_COMPACT));
