@@ -151,7 +151,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
   }
 
   public void showSummary() {
-    ItemDialog.newInstance(item.getId(), owner.getId()).display();
+    ItemDialog.newInstance(item.getId(), owner.getId(), campaign.getId()).display();
   }
 
   public void toggleDetails() {
@@ -164,7 +164,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
     value.text(item.getValue().toString());
     weight.text(item.getWeight().toString());
     appearance.text(item.getAppearance());
-    description.text(Texts.toSpanned(getContext(), item.getDescription()));
+    description.text(Texts.toSpanned(getContext(), item.getDescription(owner.amDM())));
 
     Map<Item, ItemView> views = collectItemViews();
     contents.get().removeAllViews();
@@ -226,7 +226,6 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
 
       case MotionEvent.ACTION_UP:
         showSummary();
-        toggleDetails();
         return true;
 
       default:

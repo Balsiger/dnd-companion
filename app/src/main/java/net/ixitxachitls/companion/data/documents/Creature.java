@@ -48,7 +48,7 @@ import net.ixitxachitls.companion.data.values.Weight;
 import net.ixitxachitls.companion.rules.Armor;
 import net.ixitxachitls.companion.rules.Conditions;
 import net.ixitxachitls.companion.rules.Items;
-import net.ixitxachitls.companion.util.Dice;
+import net.ixitxachitls.companion.util.Die;
 import net.ixitxachitls.companion.util.Optionals;
 import net.ixitxachitls.companion.util.Strings;
 
@@ -385,117 +385,6 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return false;
   }
 
-  @Override
-  public boolean isWearing(Item item) {
-    return wearing.isWearing(item);
-  }
-
-  @Override
-  public void add(Item item) {
-    if (amPlayer()) {
-      int index = itemIndex(item.getId());
-      if (index < 0) {
-        items.add(item);
-      } else {
-        items.set(index, item);
-      }
-      store();
-    }
-  }
-
-  @Override
-  public boolean amDM() {
-    Optional<Campaign> campaign = context.campaigns().getOptional(campaignId);
-    return campaign.isPresent() && campaign.get().amDM();
-  }
-
-  @Override
-  public boolean canEdit() {
-    return false;
-  }
-
-  @Override
-  public void combine(Item item, Item other) {
-    if (item.similar(other)) {
-      removeItem(other);
-      item.setMultiple(item.getMultiple() + other.getMultiple());
-      store();
-    }
-  }
-
-  @Override
-  public Optional<Item> getItem(String itemId) {
-    for (Item item : items) {
-      if (item.getId().equals(itemId)) {
-        return Optional.of(item);
-      }
-
-      Optional<Item> nested = item.getNestedItem(itemId);
-      if (nested.isPresent()) {
-        return nested;
-      }
-    }
-
-    return Optional.empty();
-  }
-
-  @Override
-  public boolean moveItemAfter(Item item, Item move) {
-    if (isWearing(item)) {
-      wearing.moveItemAfter(item, move);
-    } else if (removeItem(move)) {
-      if (items.contains(item)) {
-        items.add(items.indexOf(item) + 1, move);
-        store();
-        return true;
-      } else {
-        for (Item container : items) {
-          if (container.addItemAfter(item, move)) {
-            store();
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-
-  @Override
-  public boolean moveItemBefore(Item item, Item move) {
-    if (isWearing(item)) {
-      wearing.moveItemBefore(item, move);
-    } else if (removeItem(move)) {
-      if (items.contains(item)) {
-        items.add(items.indexOf(item), move);
-        store();
-        return true;
-      } else {
-        for (Item container : items) {
-          if (container.addItemBefore(item, move)) {
-            store();
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-
-  @Override
-  public void moveItemInto(Item container, Item item) {
-    if (removeItem(item)) {
-      container.add(item);
-      store();
-    }
-  }
-
-  @Override
-  public void updated(Item item) {
-    store();
-  }
-
   public boolean isWearingDefault() {
     return wearing.name.equals(DEFAULT_DISTRIBUTION);
   }
@@ -524,8 +413,26 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     this.wisdom = wisdom;
   }
 
+  @Override
+  public boolean isWearing(Item item) {
+    return wearing.isWearing(item);
+  }
+
   public boolean isWearing(Item item, Items.Slot slot) {
     return wearing.isWearing(item, slot);
+  }
+
+  @Override
+  public void add(Item item) {
+    if (amPlayer()) {
+      int index = itemIndex(item.getId());
+      if (index < 0) {
+        items.add(item);
+      } else {
+        items.set(index, item);
+      }
+      store();
+    }
   }
 
   public void addCondition(TimedCondition condition) {
@@ -540,6 +447,12 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     nonlethalDamage += number;
   }
 
+  @Override
+  public boolean amDM() {
+    Optional<Campaign> campaign = context.campaigns().getOptional(campaignId);
+    return campaign.isPresent() && campaign.get().amDM();
+  }
+
   public boolean amPlayer() {
     return false;
   }
@@ -550,8 +463,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
     switch (item.getWeaponStyle()) {
       default:
-      case UNKNOWN_STYLE:
-      case UNRECOGNIZED:
+      case UNKNOWN:
         break;
 
       case TWOHANDED_MELEE:
@@ -601,6 +513,11 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return attack;
   }
 
+  @Override
+  public boolean canEdit() {
+    return false;
+  }
+
   public void carry(Items.Slot slot, Item item) {
     wearing.carry(slot, item);
   }
@@ -621,6 +538,15 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return HashMultimap.create();
   }
 
+  @Override
+  public void combine(Item item, Item other) {
+    if (item.similar(other)) {
+      removeItem(other);
+      item.setMultiple(item.getMultiple() + other.getMultiple());
+      store();
+    }
+  }
+
   public Damage damage(Item item) {
     if (!item.isWeapon()) {
       return new Damage();
@@ -630,8 +556,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
 
     // Strength or dexterity
     switch (item.getWeaponStyle()) {
-      case UNRECOGNIZED:
-      case UNKNOWN_STYLE:
+      case UNKNOWN:
       case TOUCH:
       case RANGED_TOUCH:
       case THROWN_TOUCH:
@@ -759,6 +684,22 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     return Optional.empty();
   }
 
+  @Override
+  public Optional<Item> getItem(String itemId) {
+    for (Item item : items) {
+      if (item.getId().equals(itemId)) {
+        return Optional.of(item);
+      }
+
+      Optional<Item> nested = item.getNestedItem(itemId);
+      if (nested.isPresent()) {
+        return nested;
+      }
+    }
+
+    return Optional.empty();
+  }
+
   public boolean hasCondition(String name) {
     return context.conditions().hasCondition(getId(), name);
   }
@@ -789,7 +730,7 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
       charisma = race.get().getCharisma();
 
       // Hit points.
-      maxHp = Dice.rollModifierEach(race.get().getHitDie(), race.get().getHitDice(),
+      maxHp = Die.rollModifierEach(race.get().getHitDie(), race.get().getHitDice(),
           getDexterityModifier());
       hp = maxHp;
     }
@@ -871,9 +812,61 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
         .orElse(Integer.MAX_VALUE));
   }
 
+  @Override
+  public boolean moveItemAfter(Item item, Item move) {
+    if (isWearing(item)) {
+      wearing.moveItemAfter(item, move);
+    } else if (removeItem(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item) + 1, move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemAfter(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
+    }
+
+    return false;
+  }
+
+  @Override
+  public boolean moveItemBefore(Item item, Item move) {
+    if (isWearing(item)) {
+      wearing.moveItemBefore(item, move);
+    } else if (removeItem(move)) {
+      if (items.contains(item)) {
+        items.add(items.indexOf(item), move);
+        store();
+        return true;
+      } else {
+        for (Item container : items) {
+          if (container.addItemBefore(item, move)) {
+            store();
+            return true;
+          }
+        }
+      }
+    }
+
+    return false;
+  }
+
   public void moveItemFirst(Item item) {
     if (removeItem(item)) {
       items.add(0, item);
+      store();
+    }
+  }
+
+  @Override
+  public void moveItemInto(Item container, Item item) {
+    if (removeItem(item)) {
+      container.add(item);
       store();
     }
   }
@@ -1063,6 +1056,11 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
     }
 
     return value;
+  }
+
+  @Override
+  public void updated(Item item) {
+    store();
   }
 
   public List<String> wearing(Items.Slot slot) {

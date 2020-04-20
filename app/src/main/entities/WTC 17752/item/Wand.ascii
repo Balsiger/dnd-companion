@@ -1,6 +1,7 @@
 template {
   name: "Wand"
   category: "mundane"
+  synonym: ""
   reference {
     name: "WTC 17752"
     pages {
@@ -50,3 +51,6 @@ substance {
  }
 break_dc: 16
 player_name: "Wand"
+multiuse {
+  count: 50;
+}

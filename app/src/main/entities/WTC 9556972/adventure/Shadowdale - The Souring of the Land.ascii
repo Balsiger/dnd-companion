@@ -127,6 +127,25 @@ encounter {
       multiple: 3
     }
     item {
+      name: "Short Sword"
+      templates: "weapon +2"
+      templates: "keen"
+      templates: "frost"
+    }
+    item {
+      name: "Wand of cure light wounds"
+    }
+    item {
+      name: "Longbow"
+      templates: "weapon +1"
+    }
+    item {
+      name: "Full Plate"
+    }
+    item {
+      name: "Ring"
+    }
+    item {
       name: "Backpack"
     }
     item {

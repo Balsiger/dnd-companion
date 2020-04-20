@@ -15,6 +15,7 @@ template {
   world: "Generic"
   description: "This armor consists of shaped and fitted metal plates riveted and interlocked to cover the entire body. The suit includes gauntlets, heavy leather boots, a visored helmet, and a thick layer of padding that is worn underneath the armor. Buckles and straps distribute the weight over the body, so full plate hampers movement less than splint mail even though splint is lighter. Each suit of full plate must be individually fitted to its owner by a master armorsmith, although a captured suit can be resized to fit a new owner at a cost of 200 to 800 (2d4 \342\210\232\303\211\302\254\303\263 100) gold pieces."
   short_description: "Armor of shaped and fitted metal plates covering the entire body."
+  incomplete: "Removing of the armor should take 1d4+1 minutes instead."
 }
 value {
   gold: 1500
@@ -39,8 +40,8 @@ appearance {
   probability: VERY_RARE
   appearance: "A battered suite of full plate."
 }
- player_name: "Full Plate"
-  armor {
+player_name: "Full Plate"
+armor {
   ac_bonus {
     modifier {
       value: 8
@@ -57,4 +58,27 @@ appearance {
 random {
   type: MUNDANE
   item: ""
+}
+wearable {
+  slot: BODY
+  wear: {
+    duration {
+      minutes: 4
+    }
+  }
+  wear_hastily {
+    duration {
+      minutes: 4
+    }
+  }
+  remove {
+    duration {
+      minutes: 4
+    }
+    dice {
+      number: 1
+      dice: 4
+      modifier: 1
+    }
+  }
 }

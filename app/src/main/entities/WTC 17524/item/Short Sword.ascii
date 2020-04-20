@@ -1,7 +1,7 @@
 template {
   name: "Short Sword"
   category: "sword"
-  synonym: "Swords, Short"
+  synonym: "Sword, Short"
   reference {
     name: "WTC 17524"
     pages {

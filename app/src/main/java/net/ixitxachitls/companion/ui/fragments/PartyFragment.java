@@ -79,6 +79,7 @@ public class PartyFragment extends NestedCompanionFragment {
   // State.
   private Map<String, CreatureChipView> chipsById = new ConcurrentHashMap<>();
   private Map<String, Character> charactersNeedingInitiative = new HashMap<>();
+  private boolean fullScreenState = false;
 
   public PartyFragment() {
   }
@@ -145,7 +146,7 @@ public class PartyFragment extends NestedCompanionFragment {
       // Refresh the view buttons and such.
       TransitionManager.beginDelayedTransition(view, transition);
 
-      addCharacter.visible();
+      addCharacter.visible(!fullScreenState);
       if (encounter.isPresent() && encounter.get().inBattle()) {
         title.text("Battle - " +
             (encounter.get().isSurprised() ? "Surprise" : "Turn " + encounter.get().getTurn()))
@@ -192,6 +193,7 @@ public class PartyFragment extends NestedCompanionFragment {
   }
 
   private void exitFullScreen() {
+    fullScreenState = false;
     TransitionManager.beginDelayedTransition(view, transition);
     party.setVisibility(View.VISIBLE);
     title.visible();
@@ -202,6 +204,7 @@ public class PartyFragment extends NestedCompanionFragment {
   }
 
   private void fullScreen() {
+    fullScreenState = true;
     TransitionManager.beginDelayedTransition(view, transition);
     party.setVisibility(View.GONE);
     title.gone();

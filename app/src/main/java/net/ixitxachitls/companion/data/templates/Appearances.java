@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.templates;
 
+import net.ixitxachitls.companion.data.enums.Probability;
 import net.ixitxachitls.companion.proto.Template;
 
 import java.util.Collections;
@@ -74,10 +75,10 @@ public class Appearances {
   }
 
   public static class Appearance {
-    private final ItemTemplate.Probability probability;
+    private final Probability probability;
     private final String description;
 
-    public Appearance(ItemTemplate.Probability probability, String description) {
+    public Appearance(Probability probability, String description) {
       this.probability = probability;
       this.description = description;
     }
@@ -85,35 +86,35 @@ public class Appearances {
     public int probability() {
       switch (probability) {
         default:
-        case unknown:
+        case UNKNOWN:
           return 0;
 
-        case common:
+        case COMMON:
           return 5 * 5 * 5 * 5;
 
-        case uncommon:
+        case UNCOMMON:
           return 5 * 5 * 5;
 
-        case rare:
+        case RARE:
           return 5 * 5;
 
-        case veryRare:
+        case VERY_RARE:
           return 5;
 
-        case unique:
+        case UNIQUE:
           return 1;
       }
     }
 
     public Template.ItemTemplateProto.Appearance toProto() {
       return Template.ItemTemplateProto.Appearance.newBuilder()
-          .setProbability(ItemTemplate.convert(probability))
+          .setProbability(probability.toProto())
           .setAppearance(description)
           .build();
     }
 
     public static Appearance fromProto(Template.ItemTemplateProto.Appearance proto) {
-      return new Appearance(ItemTemplate.convert(proto.getProbability()), proto.getAppearance());
+      return new Appearance(Probability.fromProto(proto.getProbability()), proto.getAppearance());
     }
   }
 }

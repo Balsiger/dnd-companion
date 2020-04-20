@@ -41,6 +41,10 @@ public class Damage {
   public Damage() {
   }
 
+  public boolean isEmpty() {
+    return values.isEmpty();
+  }
+
   public void add(int number, int dice, int modifier, DamageType type, Optional<String> effect,
                     String source) {
     add(new DamageValue(number, dice, modifier, type, effect, source));
@@ -64,6 +68,10 @@ public class Damage {
     return values.stream()
         .map(v -> v.toString() + " (" + v.source + ")")
         .collect(Collectors.toList());
+  }
+
+  public String format() {
+    return Strings.PLUS_JOINER.join(simplified);
   }
 
   @Override

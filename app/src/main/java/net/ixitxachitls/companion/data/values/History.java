@@ -31,6 +31,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -50,11 +51,16 @@ public class History extends NestedDocument {
   private static String FIELD_CAMPAIGN_DATE = "campaign-date";
   private static String FIELD_DATE = "date";
   private static DateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+  private static DateFormat SIMPLE = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
   private List<Entry> entries = new ArrayList<>();
 
   public History(List<Entry> entries) {
     this.entries.addAll(entries);
+  }
+
+  public List<Entry> getEntries() {
+    return Collections.unmodifiableList(entries);
   }
 
   @Override
@@ -100,13 +106,17 @@ public class History extends NestedDocument {
       this.date = date;
     }
 
+    public String format() {
+      return campaignDate + "/" + SIMPLE.format(date) + ": " + type + " (" + subjectId + ")";
+    }
+
     @Override
     public Data write() {
       return Data.empty()
           .set(FIELD_TYPE, type)
           .set(FIELD_SUBJECT, subjectId)
           .set(FIELD_CAMPAIGN_DATE, campaignDate.write())
-          .set(FIELD_DATE, date.toString());
+          .set(FIELD_DATE, FORMAT.format(date));
     }
   }
 }

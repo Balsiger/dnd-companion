@@ -29,8 +29,6 @@ import android.view.View;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
-import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
-import com.google.common.collect.ImmutableMap;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -52,10 +50,8 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.Nullable;
@@ -220,10 +216,11 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
 
   private void export() {
     if (!drive.isPresent()) {
-      drive = Optional.of(new DriveStorage(getApplicationContext()));
+      //drive = Optional.of(new DriveStorage(getApplicationContext()));
     }
 
     CompanionApplication application = CompanionApplication.get();
+    /*
     application.me().readMiniatures(() -> {
       drive.get().save(
           getString(R.string.app_name) + " " + DATE_FORMAT.format(new Date()),
@@ -247,6 +244,8 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
             }
           });
     });
+
+     */
   }
 
   private String formatData(Data data) {

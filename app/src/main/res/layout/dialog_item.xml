@@ -26,11 +26,573 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="debug"
+        android:text="ID: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/debug_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="debug"
+        android:text="... id [debug] ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
   <TextView
-      android:id="@+id/debug_id"
+      android:id="@+id/appearance"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="... id [debug] ..."
+      android:layout_marginBottom="10dp"
+      android:text="... appearance ..."
       android:textStyle="bold"
       android:theme="@style/LargeText" />
+
+  <TextView
+      android:id="@+id/short_description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:text="... short description ..."
+      android:theme="@style/LargeText" />
+
+  <TextView
+      android:id="@+id/description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:text="... description ..."
+      android:theme="@style/LargeText" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... notes ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_dm_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="DM Notes: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... notes [dm] ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="Value: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... value [dm]..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... weight ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HP: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... hp/hardness/break DC ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_weapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weapon: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/weapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... weapon ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_wearable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wearable: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/wearable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... wearable ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_counted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Counted: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/counted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... counted ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_multiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/multiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... multiple ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_multiuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uses: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/multiuse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... multiuse ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_dm_magic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Magic: "
+        android:tag="dm"
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_magic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... magic ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_dm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: "
+        android:tag="dm"
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... time ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Size: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... size ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_substance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Substance: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/substance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="... substace ..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="Identified: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_identified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... identified [dm]..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="Base: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="... base [dm] ..."
+        android:theme="@style/LargeText" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="Worlds: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_worlds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... worlds [dm]..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="Probability: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_probability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="... probability [dm] ..."
+        android:theme="@style/LargeText" />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories: "
+        android:textStyle="bold"
+        android:tag="dm"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... categories [dm]..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/dm_label_synonyms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="Synonyms: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_synonyms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... synonyms [dm]..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/dm_label_references"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="dm"
+        android:text="References: "
+        android:textStyle="bold"
+        android:theme="@style/LargeText" />
+
+    <TextView
+        android:id="@+id/dm_references"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:tag="dm"
+        android:text="... references [dm]..."
+        android:theme="@style/LargeText" />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/dm_incomplete"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:text="... incomplete ..."
+      android:textColor="@color/red"
+      android:theme="@style/LargeText" />
+
+  <TextView
+      android:id="@+id/label_contents"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="5dp"
+      android:text="Contents:"
+      android:textStyle="bold"
+      android:theme="@style/LargeText" />
+
+  <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/contents"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+  </HorizontalScrollView>
+
+  <TextView
+      android:id="@+id/label_history"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="5dp"
+      android:text="History:"
+      android:textStyle="bold"
+      android:theme="@style/LargeText" />
+
+
+  <LinearLayout
+      android:id="@+id/history"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+  </LinearLayout>
+
 </LinearLayout>

@@ -28,11 +28,46 @@ import java.util.Random;
 /**
  * Small utility with dice related methods.
  */
-public class Dice {
+public class Die {
 
   private static final Random RANDOM = new Random();
 
-  private Dice() {}
+  private Die() {
+  }
+
+  public static int d10() {
+    return dX(10);
+  }
+
+  public static int d100() {
+    return dX(100);
+  }
+
+  public static int d12() {
+    return dX(12);
+  }
+
+  public static int d20() {
+    return dX(20);
+  }
+
+  public static int d4() {
+    return dX(4);
+  }
+
+  public static int d6() {
+    return dX(6);
+  }
+
+  public static int d8() {
+    return dX(8);
+  }
+
+  private static int dX(int dice) {
+    int number = RANDOM.nextInt(dice) + 1;
+    Log.d("Dice", "d" + dice + " = " + number);
+    return number;
+  }
 
   public static int roll(int number, int dice, int modifier) {
     int result = modifier;
@@ -48,15 +83,6 @@ public class Dice {
     return result;
   }
 
-  public static int rollModifierEach(int number, int dice, int modifier) {
-    int result = 0;
-    for (int i = 0; i < number; i++) {
-      result += roll(dice, modifier);
-    }
-
-    return result;
-  }
-
   public static int roll(int dice, int modifier) {
     int number = dX(dice) + modifier;
     if (number <= 0) {
@@ -67,37 +93,12 @@ public class Dice {
     return number;
   }
 
-  public static int d100() {
-    return dX(100);
-  }
+  public static int rollModifierEach(int number, int dice, int modifier) {
+    int result = 0;
+    for (int i = 0; i < number; i++) {
+      result += roll(dice, modifier);
+    }
 
-  public static int d20() {
-    return dX(20);
-  }
-
-  public static int d12() {
-    return dX(12);
-  }
-
-  public static int d10() {
-    return dX(10);
-  }
-
-  public static int d8() {
-    return dX(8);
-  }
-
-  public static int d6() {
-    return dX(6);
-  }
-
-  public static int d4() {
-    return dX(4);
-  }
-
-  private static int dX(int dice) {
-    int number = RANDOM.nextInt(dice) + 1;
-    Log.d("Dice", "d" + dice + " = " + number);
-    return number;
+    return result;
   }
 }

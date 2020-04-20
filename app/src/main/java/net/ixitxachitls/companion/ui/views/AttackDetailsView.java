@@ -34,7 +34,6 @@ import net.ixitxachitls.companion.data.values.Damage;
 import net.ixitxachitls.companion.data.values.Distance;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
-import net.ixitxachitls.companion.proto.Value;
 import net.ixitxachitls.companion.ui.MessageDialog;
 import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 import net.ixitxachitls.companion.util.Strings;
@@ -105,7 +104,7 @@ public class AttackDetailsView extends LinearLayout {
     int attacks = character.numberOfAttacks(item);
 
     weapon.text(item.getPlayerName() + ": ");
-    type.text(convert(item.getWeaponStyle()));
+    type.text(item.getWeaponStyle().getName());
     attack.set(bonus);
 
     if (attacks <= 1) {
@@ -149,42 +148,5 @@ public class AttackDetailsView extends LinearLayout {
       notesParts.add("reach " + reach.get());
     }
     notes.text(Strings.COMMA_JOINER.join(notesParts));
-  }
-
-  private String convert(Value.WeaponStyle style) {
-    switch (style) {
-      default:
-      case UNKNOWN_STYLE:
-      case UNRECOGNIZED:
-        return "unknown";
-
-      case TWOHANDED_MELEE:
-        return "two handed melee";
-
-      case LIGHT_MELEE:
-      case ONEHANDED_MELEE:
-        return "melee";
-
-      case UNARMED:
-        return "unarmed melee";
-
-      case RANGED_TOUCH:
-        return "ranged touch";
-
-      case RANGED:
-        return "ranged";
-
-      case THROWN_TOUCH:
-        return "thrown touch";
-
-      case THROWN:
-        return "thrown";
-
-      case TOUCH:
-        return "touch";
-
-      case THROWN_TWO_HANDED:
-        return "thrown two handed";
-    }
   }
 }

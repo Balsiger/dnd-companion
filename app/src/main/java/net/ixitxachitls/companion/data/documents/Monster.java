@@ -24,7 +24,7 @@ package net.ixitxachitls.companion.data.documents;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.util.Dice;
+import net.ixitxachitls.companion.util.Die;
 
 /**
  * A representation of a monster in the game.
@@ -51,7 +51,7 @@ public class Monster extends Creature<Monster> {
   public static Monster create(CompanionContext context, String campaignId, String name,
                                int initiativeModifier, int encounterNumber) {
     Monster monster = create(context, campaignId, name);
-    monster.setEncounterInitiative(encounterNumber, Dice.d20() + initiativeModifier);
+    monster.setEncounterInitiative(encounterNumber, Die.d20() + initiativeModifier);
 
     return monster;
   }

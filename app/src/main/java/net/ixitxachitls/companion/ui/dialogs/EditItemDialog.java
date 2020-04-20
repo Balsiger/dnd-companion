@@ -198,6 +198,7 @@ public class EditItemDialog extends Dialog {
           templates.add(template.get());
         }
       }
+      templates = Item.expandBaseTemplates(templates);
       update(templates);
       add.enabled();
     } else {

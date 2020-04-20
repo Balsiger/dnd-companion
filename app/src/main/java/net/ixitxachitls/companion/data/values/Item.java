@@ -21,6 +21,9 @@
 
 package net.ixitxachitls.companion.data.values;
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+
 import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
@@ -29,6 +32,13 @@ import net.ixitxachitls.companion.data.documents.Character;
 import net.ixitxachitls.companion.data.documents.Data;
 import net.ixitxachitls.companion.data.documents.Monster;
 import net.ixitxachitls.companion.data.documents.NestedDocument;
+import net.ixitxachitls.companion.data.enums.MagicEffectType;
+import net.ixitxachitls.companion.data.enums.Probability;
+import net.ixitxachitls.companion.data.enums.Size;
+import net.ixitxachitls.companion.data.enums.Slot;
+import net.ixitxachitls.companion.data.enums.WeaponProficiency;
+import net.ixitxachitls.companion.data.enums.WeaponStyle;
+import net.ixitxachitls.companion.data.enums.WeaponType;
 import net.ixitxachitls.companion.data.templates.ItemTemplate;
 import net.ixitxachitls.companion.proto.Template;
 import net.ixitxachitls.companion.proto.Value;
@@ -37,9 +47,11 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 /**
@@ -85,7 +97,7 @@ public class Item extends NestedDocument {
               List<Item> contents, History history) {
     this.id = id;
     this.name = name;
-    this.templates = new ArrayList<>(templates);
+    this.templates = templates;
     this.hp = hp;
     this.value = value;
     this.appearance = appearance;
@@ -162,6 +174,14 @@ public class Item extends NestedDocument {
     return Optional.of(templates.get(0));
   }
 
+  public int getBreakDC() {
+    return templates.stream().mapToInt(t -> t.getBreakDC()).max().orElse(0);
+  }
+
+  public Set<String> getCategories() {
+    return templates.stream().flatMap(t -> t.getCategories().stream()).collect(Collectors.toSet());
+  }
+
   public List<Item> getContents() {
     return Collections.unmodifiableList(this.contents);
   }
@@ -180,8 +200,26 @@ public class Item extends NestedDocument {
         .collect(Collectors.toList()));
   }
 
-  public String getDescription() {
-    return description(templates);
+  private RandomDuration getDonDuration() {
+    return templates.stream()
+        .map(t -> t.getDonDuration())
+        .max(RandomDuration::compareTo)
+        .orElse(RandomDuration.NULL);
+  }
+
+  private RandomDuration getDonHastilyDuration() {
+    return templates.stream()
+        .map(t -> t.getDonHastilyDuration())
+        .max(RandomDuration::compareTo)
+        .orElse(RandomDuration.NULL);
+  }
+
+  public int getHardness() {
+    return templates.stream().mapToInt(t -> t.getHardness()).max().orElse(0);
+  }
+
+  public History getHistory() {
+    return history;
   }
 
   public int getHp() {
@@ -202,6 +240,12 @@ public class Item extends NestedDocument {
     this.id = id;
   }
 
+  public String getIncomplete() {
+    return Strings.NEWLINE_JOINER.join(templates.stream()
+        .map(ItemTemplate::getIncomplete)
+        .collect(Collectors.toList()));
+  }
+
   public List<Modifier> getMagicAttackModifiers() {
     List<Modifier> modifiers = new ArrayList<>();
     for (ItemTemplate template : templates) {
@@ -209,6 +253,19 @@ public class Item extends NestedDocument {
     }
 
     return modifiers;
+  }
+
+  public Multimap<MagicEffectType, Modifier> getMagicModifiers() {
+    Multimap<MagicEffectType, Modifier> modifiers = ArrayListMultimap.create();
+    for (ItemTemplate template : templates) {
+      modifiers.putAll(template.getMagicModifiers());
+    }
+
+    return modifiers;
+  }
+
+  public int getMaxAmount() {
+    return maxAmount(templates);
   }
 
   public int getMaxAttacks() {
@@ -223,6 +280,10 @@ public class Item extends NestedDocument {
         .mapToInt(t -> t.getMaxDexterityModifier())
         .min()
         .orElse(Integer.MAX_VALUE);
+  }
+
+  public int getMaxUses() {
+    return maxUses(templates);
   }
 
   public int getMultiple() {
@@ -269,8 +330,84 @@ public class Item extends NestedDocument {
     playerNotes = notes;
   }
 
+  public Probability getProbability() {
+    Probability result = Probability.UNKNOWN;
+    for (ItemTemplate template : templates) {
+      Probability probability = template.getProbability();
+      if (probability.ordinal() > result.ordinal()) {
+        result = probability;
+      }
+    }
+
+    return result;
+  }
+
   public Money getRawValue() {
     return value;
+  }
+
+  public Weight getRawWeight() {
+    return weight(templates);
+  }
+
+  public List<String> getReferences() {
+    return templates.stream().flatMap(t -> t.getReferences().stream()).collect(Collectors.toList());
+  }
+
+  private RandomDuration getRemoveDuration() {
+    return templates.stream()
+        .map(t -> t.getRemoveDuration())
+        .max(RandomDuration::compareTo)
+        .orElse(RandomDuration.NULL);
+  }
+
+  public Damage getSecondaryDamage() {
+    return Damage.from(templates.stream().map(ItemTemplate::getSecondaryDamage)
+        .collect(Collectors.toList()));
+  }
+
+  public Size getSize() {
+    Optional<ItemTemplate> base = getBaseTemplate();
+    if (base.isPresent()) {
+      return base.get().getSize();
+    }
+
+    return Size.UNKNOWN;
+  }
+
+  public Slot getSlot() {
+    return templates.stream()
+        .map(ItemTemplate::getSlot)
+        .filter(s -> s != Slot.UNKNOWN)
+        .findFirst()
+        .orElse(Slot.UNKNOWN);
+  }
+
+  public Damage getSplashDamage() {
+    return Damage.from(templates.stream().map(ItemTemplate::getSplashDamage)
+        .collect(Collectors.toList()));
+  }
+
+  public Substance getSubstance() {
+    Optional<ItemTemplate> base = getBaseTemplate();
+    if (base.isPresent()) {
+      return base.get().getSubstance();
+    }
+
+    return Substance.ZERO;
+  }
+
+  public List<String> getSynonyms() {
+    Optional<ItemTemplate> base = getBaseTemplate();
+    if (base.isPresent()) {
+      return base.get().getSynonyms();
+    } else {
+      return Collections.emptyList();
+    }
+  }
+
+  public List<String> getTemplateNames() {
+    return templates.stream().map(t -> t.getName()).collect(Collectors.toList());
   }
 
   public List<ItemTemplate> getTemplates() {
@@ -302,20 +439,110 @@ public class Item extends NestedDocument {
     this.value = value;
   }
 
-  public Value.WeaponStyle getWeaponStyle() {
-    return templates.stream()
+  public WeaponProficiency getWeaponProficiency() {
+    Optional<Value.Proficiency> type = templates.stream()
+        .map(t -> t.getWeaponProficiency())
+        .filter(s -> s != Value.Proficiency.UNKNOWN_PROFICIENCY
+            && s != Value.Proficiency.UNRECOGNIZED)
+        .findFirst();
+
+    if (type.isPresent()) {
+      return WeaponProficiency.fromProto(type.get());
+    }
+
+    return WeaponProficiency.UNKNOWN;
+  }
+
+  public Distance getWeaponRange() {
+    Optional<Distance> range = templates.stream()
+        .map(ItemTemplate::getRange)
+        .filter(Optional::isPresent)
+        .map(Optional::get)
+        .findFirst();
+
+    if (range.isPresent()) {
+      return range.get();
+    }
+
+    return Distance.ZERO;
+  }
+
+  public Distance getWeaponReach() {
+    Optional<Distance> reach = templates.stream()
+        .map(ItemTemplate::getReach)
+        .filter(Optional::isPresent)
+        .map(Optional::get)
+        .findFirst();
+
+    if (reach.isPresent()) {
+      return reach.get();
+    }
+
+    return Distance.ZERO;
+  }
+
+  public WeaponStyle getWeaponStyle() {
+    Optional<Value.WeaponStyle> style = templates.stream()
         .map(t -> t.getWeaponStyle())
         .filter(s -> s != Value.WeaponStyle.UNRECOGNIZED && s != Value.WeaponStyle.UNKNOWN_STYLE)
-        .findFirst().orElse(Value.WeaponStyle.UNRECOGNIZED);
+        .findFirst();
+
+    if (style.isPresent()) {
+      return WeaponStyle.fromProto(style.get());
+    }
+
+    return WeaponStyle.UNKNOWN;
+  }
+
+  public WeaponType getWeaponType() {
+    Optional<Template.WeaponTemplateProto.Type> type = templates.stream()
+        .map(t -> t.getWeaponType())
+        .filter(s -> s != Template.WeaponTemplateProto.Type.UNKNOWN
+            && s != Template.WeaponTemplateProto.Type.UNRECOGNIZED)
+        .findFirst();
+
+    if (type.isPresent()) {
+      return WeaponType.fromProto(type.get());
+    }
+
+    return WeaponType.UNKNOWN;
+
   }
 
   public Weight getWeight() {
-    Weight weight = weight(templates).multiply(multiple);
+    Weight weight = multiple > 0 ? getRawWeight().multiply(multiple) : getRawWeight();
     for (Item content : contents) {
       weight = weight.add(content.getWeight());
     }
 
     return weight;
+  }
+
+  public Size getWielderSize() {
+    return templates.stream()
+        .map(ItemTemplate::getWielderSize)
+        .filter(s -> s != Size.UNKNOWN)
+        .max((a, b) -> a.ordinal() - b.ordinal())
+        .orElse(Size.UNKNOWN);
+  }
+
+  public List<String> getWorlds() {
+    Optional<ItemTemplate> base = getBaseTemplate();
+    if (base.isPresent()) {
+      return base.get().getWorlds();
+    }
+
+    return Collections.emptyList();
+  }
+
+  public boolean isAmmunition() {
+    for (ItemTemplate template : templates) {
+      if (template.isAmmunition()) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   public boolean isArmor() {
@@ -332,12 +559,20 @@ public class Item extends NestedDocument {
     return false;
   }
 
+  public boolean isIdentified() {
+    return identified;
+  }
+
   public boolean isMonetary() {
     return templates.stream().filter(t -> t.isMonetary()).findAny().isPresent();
   }
 
   public boolean isWeapon() {
     return templates.stream().filter(t -> t.isWeapon()).findAny().isPresent();
+  }
+
+  public boolean isWearable() {
+    return templates.stream().filter(t -> t.isWearable()).findAny().isPresent();
   }
 
   public void add(Item item) {
@@ -374,6 +609,176 @@ public class Item extends NestedDocument {
     return false;
   }
 
+  public int computeMaxHp() {
+    return templates.stream().mapToInt(t -> t.computeHp()).sum();
+  }
+
+  public String formatAmount() {
+    Optional<ItemTemplate> template =
+        templates.stream().filter(ItemTemplate::isMultiple).findFirst();
+    if (template.isPresent()) {
+      ItemTemplate.Count count = template.get().getAmount();
+      return multiple + " / " + count.format();
+    } else {
+      return "";
+    }
+  }
+
+  public String formatCounted() {
+    Optional<ItemTemplate> template =
+        templates.stream().filter(ItemTemplate::isCounted).findFirst();
+    if (template.isPresent()) {
+      ItemTemplate.Count count = template.get().getCounted();
+      return count.format();
+    } else {
+      return "";
+    }
+  }
+
+  public String formatMagic() {
+    List<String> parts = new ArrayList<>();
+    for (Map.Entry<MagicEffectType, Modifier> modifier : getMagicModifiers().entries()) {
+      parts.add(modifier.getKey() + " - " + modifier.getValue());
+    }
+
+    return Strings.SEMICOLON_JOINER.join(parts);
+  }
+
+  public String formatTime() {
+    Optional<ItemTemplate> template = templates.stream().filter(t -> t.isTimed()).findFirst();
+    if (template.isPresent()) {
+      return getTimeLeft() + " of " + template.get().getTimed();
+    }
+
+    return "";
+  }
+
+  public String formatUses() {
+    Optional<ItemTemplate> template =
+        templates.stream().filter(ItemTemplate::isMultiuse).findFirst();
+    if (template.isPresent()) {
+      return multiuse + " / " + template.get().getUses();
+    } else {
+      return "";
+    }
+  }
+
+  public String formatWeapon() {
+    if (!isWeapon()) {
+      return "";
+    }
+
+    List<String> parts = new ArrayList<>();
+
+    // Damage.
+    String damage = getDamage().format();
+    Damage secondaryDamage = getSecondaryDamage();
+    Damage splash = getSplashDamage();
+
+    if (!secondaryDamage.isEmpty()) {
+      damage += "/" + secondaryDamage.format();
+    }
+
+    if (!splash.isEmpty()) {
+      damage += ", splash " + splash.format();
+    }
+
+    if (weaponCriticalLow() < 20 || weaponCriticalMultiplier() != 2) {
+      damage += " (" + weaponCriticalLow() + "-20 x" + weaponCriticalMultiplier() + ")";
+    }
+
+    parts.add(damage);
+
+    // Style & type & proficiency.
+    parts.add(getWeaponStyle().getName());
+    parts.add(getWeaponType().getName());
+    parts.add(getWeaponProficiency().getName());
+
+    // Range.
+    Distance range = getWeaponRange();
+    if (!range.isZero()) {
+      parts.add("range " + range.toString());
+    }
+
+    // Reach.
+    Distance reach = getWeaponReach();
+    if (!reach.isZero() && reach.asFeet() != 5.0) {
+      parts.add("reach " + reach.toString());
+    }
+
+    // Max attacks.
+    int attacks = getMaxAttacks();
+    if (attacks > 0 && attacks != Integer.MAX_VALUE) {
+      if (attacks == 1) {
+        parts.add("maximally 1 attack per round");
+      } else {
+        parts.add("maximally " + attacks + " attacks per round");
+      }
+    }
+
+    return Strings.SEMICOLON_JOINER.join(parts);
+  }
+
+  public String formatWearable() {
+    if (!isWearable()) {
+      return "";
+    }
+
+    List<String> parts = new ArrayList<>();
+
+    // Slot.
+    Slot slot = getSlot();
+    if (slot != Slot.UNKNOWN) {
+      parts.add(slot.getName());
+    }
+
+    // Donning and removing.
+    RandomDuration don = getDonDuration();
+    RandomDuration donHastily = getDonHastilyDuration();
+    RandomDuration remove = getRemoveDuration();
+    if (!don.isNone()) {
+      parts.add("don " + don);
+    }
+    if (!donHastily.isNone()) {
+      parts.add("don hastily " + donHastily);
+    }
+    if (!remove.isNone()) {
+      parts.add("remove " + remove);
+    }
+
+    return Strings.SEMICOLON_JOINER.join(parts);
+  }
+
+  public String getDescription(boolean dm) {
+    if (templates.isEmpty()) {
+      return "";
+    }
+
+    if (dm) {
+      return Strings.NEWLINE_JOINER.join(templates.stream()
+          .map(t -> Strings.ensureSentence(t.getDescription()))
+          .filter(s -> !s.isEmpty())
+          .collect(Collectors.toList()));
+    } else {
+      return templates.get(0).getDescription();
+    }
+  }
+
+  public Optional<Item> getItem(String id) {
+    if (getId().equals(id)) {
+      return Optional.of(this);
+    }
+
+    for (Item item : getContents()) {
+      Optional<Item> found = item.getItem(id);
+      if (found.isPresent()) {
+        return found;
+      }
+    }
+
+    return Optional.empty();
+  }
+
   public int getMaxSpeedSquares(boolean isFast) {
     return templates.stream()
         .mapToInt(t -> t.getMaxSpeedSquares(isFast))
@@ -394,6 +799,35 @@ public class Item extends NestedDocument {
     }
 
     return Optional.empty();
+  }
+
+  public String getShortDescription(boolean dm) {
+    if (templates.isEmpty()) {
+      return "";
+    }
+
+    if (dm) {
+      return Strings.SPACE_JOINER.join(templates.stream()
+          .map(t -> Strings.ensureSentence(t.getShortDescription()))
+          .filter(t -> !t.isEmpty())
+          .collect(Collectors.toList()));
+    } else {
+      return templates.get(0).getShortDescription();
+    }
+  }
+
+  public boolean hasContents() {
+    return !contents.isEmpty();
+  }
+
+  public boolean hasWeaponFiness() {
+    for (ItemTemplate template : templates) {
+      if (template.hasWeaponFiness()) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   public Optional<Distance> range() {
@@ -506,11 +940,12 @@ public class Item extends NestedDocument {
 
   public static Item create(CompanionContext context, String creatorId, CampaignDate date,
                             String... names) {
-    List<ItemTemplate> templates =
-        Arrays.asList(names).stream().map(Item::template).collect(Collectors.toList());
+    List<ItemTemplate> templates = expandBaseTemplates(
+        Arrays.asList(names).stream().map(Item::template).collect(Collectors.toList()));
     String name = name(templates);
     return new Item(generateId(context), name, templates, hp(templates), value(templates),
-        appearance(templates), names[0], "", "", 0, 0, Duration.ZERO, false,
+        appearance(templates), names[0], "", "", Item.maxAmount(templates), Item.maxUses(templates),
+        Item.maxTime(templates), false,
         Collections.emptyList(), History.create(creatorId, date));
   }
 
@@ -522,14 +957,17 @@ public class Item extends NestedDocument {
     templates.addAll(proto.getTemplatesList().stream()
         .map(Item::template)
         .collect(Collectors.toList()));
+    templates = expandBaseTemplates(templates);
 
-    return new Item(generateId(context), name(templates), Collections.emptyList(),
+    return new Item(generateId(context), name(templates), templates,
         proto.getHp() > 0 ? proto.getHp() : hp(templates),
         proto.hasValue() ? Money.fromProto(proto.getValue()) : value(templates),
         proto.getAppearance().isEmpty() ? appearance(templates) : proto.getAppearance(),
-        "", "", proto.getDmNotes(), proto.getMultiple(), proto.getMultiuse(),
-        Duration.fromProto(proto.getTimeLeft()), false,
-        Item.createLookupItems(context, proto.getContentList(), creatorId, date),
+        "", "", proto.getDmNotes(),
+        proto.getMultiple() > 0 ? proto.getMultiple() : Item.maxAmount(templates),
+        proto.getMultiuse() > 0 ? proto.getMultiuse() : Item.maxUses(templates),
+        proto.hasTimeLeft() ? Duration.fromProto(proto.getTimeLeft()) : Item.maxTime(templates),
+        false, Item.createLookupItems(context, proto.getContentList(), creatorId, date),
         History.create(creatorId, date));
   }
 
@@ -548,10 +986,11 @@ public class Item extends NestedDocument {
     return items;
   }
 
-  public static String description(List<ItemTemplate> templates) {
-    return Strings.COMMA_JOINER.join(templates.stream()
-        .map(ItemTemplate::getDescription)
-        .collect(Collectors.toList()));
+  public static List<ItemTemplate> expandBaseTemplates(List<ItemTemplate> templates) {
+    return templates.stream()
+        .flatMap(t -> t.collectTemplates().stream())
+        .distinct()
+        .collect(Collectors.toList());
   }
 
   public static Optional<? extends Item.Owner> findOwner(String id) {
@@ -569,11 +1008,43 @@ public class Item extends NestedDocument {
   }
 
   public static String generateId(CompanionContext context) {
-    return context.me().getId() + "-" + new Date().getTime();
+    return context.me().getId() + "-" + UUID.randomUUID();
   }
 
   public static int hp(List<ItemTemplate> templates) {
     return templates.stream().mapToInt(ItemTemplate::computeHp).sum();
+  }
+
+  public static int maxAmount(List<ItemTemplate> templates) {
+    Optional<ItemTemplate> template =
+        templates.stream().filter(ItemTemplate::isMultiple).findFirst();
+    if (template.isPresent()) {
+      return template.get().getAmount().getCount();
+    }
+
+    return 0;
+  }
+
+  public static Duration maxTime(List<ItemTemplate> templates) {
+    Duration result = Duration.ZERO;
+
+    for (ItemTemplate template : templates) {
+      if (template.isTimed()) {
+        result = result.add(template.getTimed().roll());
+      }
+    }
+
+    return result;
+  }
+
+  public static int maxUses(List<ItemTemplate> templates) {
+    Optional<ItemTemplate> template =
+        templates.stream().filter(ItemTemplate::isMultiuse).findFirst();
+    if (template.isPresent()) {
+      return template.get().getUses();
+    }
+
+    return 0;
   }
 
   public static String name(List<ItemTemplate> templates) {
@@ -609,7 +1080,7 @@ public class Item extends NestedDocument {
     List<Item> contents = data.getNestedList(FIELD_CONTENTS).stream()
         .map(Item::read)
         .collect(Collectors.toList());
-    History history = History.read(data);
+    History history = History.read(data.getNested(FIELD_HISTORY));
 
     return new Item(id, name, templates, hp, value, appearance, playerName, playerNotes, dmNotes,
         multiple, multiuse, timeLeft, identified, contents, history);

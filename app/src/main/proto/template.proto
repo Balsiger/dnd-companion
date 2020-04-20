@@ -523,9 +523,9 @@ message WearableTemplateProto
     EYES = 12;
   }
   Slot slot = 1;
-  DurationProto wear = 2;
-  DurationProto wear_hastily = 3;
-  DurationProto remove = 4;
+  RandomDurationProto wear = 2;
+  RandomDurationProto wear_hastily = 3;
+  RandomDurationProto remove = 4;
 }
 
 message IncompleteTemplateProto

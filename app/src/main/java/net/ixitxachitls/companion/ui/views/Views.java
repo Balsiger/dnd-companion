@@ -21,8 +21,12 @@
 
 package net.ixitxachitls.companion.ui.views;
 
+import android.text.Spannable;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import net.ixitxachitls.companion.ui.views.wrappers.TextWrapper;
 
 import java.util.List;
 
@@ -56,6 +60,7 @@ public class Views {
     void extract(T view);
   }
 
+  @SuppressWarnings("unchecked")
   public static <T extends View> void extractDataFromChildren(ViewGroup group,
                                                               Extractor<T> extractor) {
     for (int i = 0; i < group.getChildCount(); i++) {
@@ -65,6 +70,23 @@ public class Views {
         // Ignore other views.
       }
     }
+  }
+
+  private static boolean hasTag(View view, String tag) {
+    return tag.equals(view.getTag());
+  }
+
+  public static void setOrHide(TextWrapper<TextView> view, String text, View... others) {
+    view.text(text);
+    view.visible(!text.isEmpty());
+    for (View other : others) {
+      other.setVisibility(text.isEmpty() ? View.GONE : View.VISIBLE);
+    }
+  }
+
+  public static void setOrHide(TextWrapper<TextView> view, Spannable text) {
+    view.text(text);
+    view.visible(text.length() > 0);
   }
 
   public static <V extends View> void updateChildren(ViewGroup group, Update<V> update) {
@@ -78,5 +100,19 @@ public class Views {
                                                                 Id<V, String> viewId,
                                                                 UpdateValue<V, T> update,
                                                                 Factory<V, T> factory) {
+  }
+
+  public static void updateVisibility(ViewGroup group, boolean debug, boolean dm) {
+    for (int i = 0; i < group.getChildCount(); i++) {
+      View view = group.getChildAt(i);
+      if (view.getTag() != null) {
+        if (view.getVisibility() == View.VISIBLE) {
+          view.setVisibility((debug || !hasTag(view, "debug")) && (dm || !hasTag(view, "dm"))
+              ? View.VISIBLE : View.GONE);
+        }
+      } else if (view instanceof ViewGroup) {
+        updateVisibility((ViewGroup) view, debug, dm);
+      }
+    }
   }
 }

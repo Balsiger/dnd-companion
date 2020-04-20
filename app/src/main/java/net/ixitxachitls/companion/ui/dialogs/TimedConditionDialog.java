@@ -74,7 +74,7 @@ public class TimedConditionDialog extends Dialog {
   private boolean predefined = false;
 
   // UI Elements.
-  private LabelledAutocompleteTextView condition;
+  private LabelledAutocompleteTextView<?, ?> condition;
   private Wrapper<LinearLayout> party;
   private Map<String, CheckBox> checkboxesByCreatureId = new HashMap<>();
   private LabelledEditTextView rounds;
@@ -106,6 +106,36 @@ public class TimedConditionDialog extends Dialog {
     } else {
       campaign = campaigns().getOptional(id);
     }
+  }
+
+  private void addCheckbox(View view, String creatureId, String name) {
+    CheckBox checkbox = new CheckBox(getContext());
+    checkbox.setText(name);
+    checkbox.setTextAppearance(R.style.LargeText);
+    checkbox.setButtonTintList(ColorStateList.valueOf(view.getResources()
+        .getColor(color, null)));
+    checkbox.setChecked(creature.isPresent() && creatureId.equals(creature.get().getId()));
+    checkbox.setOnCheckedChangeListener((v, c) -> update());
+    party.get().addView(checkbox);
+    checkboxesByCreatureId.put(creatureId, checkbox);
+  }
+
+  private List<String> conditionNames(Creature<?> creature) {
+    return conditions(creature).stream()
+        .map(ConditionData::getName)
+        .collect(Collectors.toList());
+  }
+
+  private List<ConditionData> conditions(Creature<?> creature) {
+    List<ConditionData> conditions = new ArrayList<>();
+
+    if (creature instanceof Character) {
+      conditions.addAll(((Character) creature).getConditionsHistory());
+    }
+
+    conditions.addAll(Conditions.CONDITIONS);
+
+    return conditions;
   }
 
   @Override
@@ -156,75 +186,6 @@ public class TimedConditionDialog extends Dialog {
         }
       }
     }
-  }
-
-  @Override
-  protected void save() {
-    List<String> ids = new ArrayList<>();
-    for (Map.Entry<String, CheckBox> entry : checkboxesByCreatureId.entrySet()) {
-      if (entry.getValue().isChecked()) {
-        ids.add(entry.getKey());
-      }
-    }
-
-    Duration duration = extractDuration();
-    if (!ids.isEmpty() && !duration.isNone()) {
-      ConditionData cond = ConditionData.newBuilder(condition.getText())
-          .description(description.getText())
-          .adjustments(parseAdjustments(summary.getText(), condition.getText()))
-          .duration(duration)
-          .predefined(predefined)
-          .build();
-      TimedCondition timed;
-      if (duration.isRounds()) {
-        timed = new TimedCondition(cond, id, currentRound + duration.getRounds());
-      } else if (duration.isPermanent()) {
-        timed = new TimedCondition(cond, id);
-      } else {
-        timed = new TimedCondition(cond, id,
-            campaign.get().getCalendar().add(campaign.get().getDate(), duration));
-      }
-      for (String id : ids) {
-        Optional<? extends Creature> target = characters().getCreature(id);
-        if (target.isPresent()) {
-          target.get().addCondition(timed);
-        } else {
-          Status.error("Creature " + id + " not found to add condition!");
-        }
-      }
-    }
-
-    super.save();
-  }
-
-  private void addCheckbox(View view, String creatureId, String name) {
-    CheckBox checkbox = new CheckBox(getContext());
-    checkbox.setText(name);
-    checkbox.setTextAppearance(R.style.LargeText);
-    checkbox.setButtonTintList(ColorStateList.valueOf(view.getResources()
-        .getColor(color, null)));
-    checkbox.setChecked(creature.isPresent() && creatureId.equals(creature.get().getId()));
-    checkbox.setOnCheckedChangeListener((v, c) -> update());
-    party.get().addView(checkbox);
-    checkboxesByCreatureId.put(creatureId, checkbox);
-  }
-
-  private List<String> conditionNames(Creature<?> creature) {
-    return conditions(creature).stream()
-        .map(ConditionData::getName)
-        .collect(Collectors.toList());
-  }
-
-  private List<ConditionData> conditions(Creature<?> creature) {
-    List<ConditionData> conditions = new ArrayList<>();
-
-    if (creature instanceof Character) {
-      conditions.addAll(((Character) creature).getConditionsHistory());
-    }
-
-    conditions.addAll(Conditions.CONDITIONS);
-
-    return conditions;
   }
 
   private void displayCondition(Optional<ConditionData> condition) {
@@ -300,6 +261,45 @@ public class TimedConditionDialog extends Dialog {
     }
 
     return adjustments;
+  }
+
+  @Override
+  protected void save() {
+    List<String> ids = new ArrayList<>();
+    for (Map.Entry<String, CheckBox> entry : checkboxesByCreatureId.entrySet()) {
+      if (entry.getValue().isChecked()) {
+        ids.add(entry.getKey());
+      }
+    }
+
+    Duration duration = extractDuration();
+    if (!ids.isEmpty() && !duration.isNone()) {
+      ConditionData cond = ConditionData.newBuilder(condition.getText())
+          .description(description.getText())
+          .adjustments(parseAdjustments(summary.getText(), condition.getText()))
+          .duration(duration)
+          .predefined(predefined)
+          .build();
+      TimedCondition timed;
+      if (duration.isRounds()) {
+        timed = new TimedCondition(cond, id, currentRound + duration.getRounds());
+      } else if (duration.isPermanent()) {
+        timed = new TimedCondition(cond, id);
+      } else {
+        timed = new TimedCondition(cond, id,
+            campaign.get().getCalendar().add(campaign.get().getDate(), duration));
+      }
+      for (String id : ids) {
+        Optional<? extends Creature> target = characters().getCreature(id);
+        if (target.isPresent()) {
+          target.get().addCondition(timed);
+        } else {
+          Status.error("Creature " + id + " not found to add condition!");
+        }
+      }
+    }
+
+    super.save();
   }
 
   private void selectCondition() {

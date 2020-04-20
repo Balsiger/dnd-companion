@@ -39,7 +39,7 @@ import javax.annotation.Nullable;
 /**
  * A duration value.
  */
-public class Duration {
+public class Duration implements Comparable<Duration> {
 
   public static final Duration PERMANENT = new Duration(-1, -1, -1, -1, -1);
   public static final Duration NULL = new Duration(0, 0, 0, 0, 0);
@@ -63,7 +63,7 @@ public class Duration {
   private final int days;
   private final int years;
 
-  private Duration(int rounds, int minutes, int hours, int days, int years) {
+  protected Duration(int rounds, int minutes, int hours, int days, int years) {
     this.rounds = rounds;
     this.minutes = minutes;
     this.hours = hours;
@@ -116,9 +116,44 @@ public class Duration {
     return rounds != 0 && minutes == 0;
   }
 
+  public Duration add(Duration duration) {
+    if (isNone()) {
+      return duration;
+    }
+
+    return new Duration(rounds + duration.rounds, minutes + duration.minutes,
+        hours + duration.hours, days + duration.days, years + duration.years);
+  }
+
   @Override
-  public int hashCode() {
-    return Objects.hash(rounds, minutes, hours, days, years);
+  public int compareTo(Duration other) {
+    // TODO(merlin): This is a simplification, as it does not take into account that
+    // durations could have more days than a year, for example.
+    if (years != other.years) {
+      return years - other.years;
+    }
+
+    if (days != other.days) {
+      return days - other.days;
+    }
+
+    if (hours != other.hours) {
+      return hours - other.hours;
+    }
+
+    if (days != other.days) {
+      return days - other.days;
+    }
+
+    if (minutes != other.minutes) {
+      return minutes - other.minutes;
+    }
+
+    if (rounds != other.rounds) {
+      return rounds - other.rounds;
+    }
+
+    return 0;
   }
 
   @Override
@@ -139,6 +174,30 @@ public class Duration {
   }
 
   @Override
+  public int hashCode() {
+    return Objects.hash(rounds, minutes, hours, days, years);
+  }
+
+  public Duration multiply(int factor) {
+    if (isNone()) {
+      return this;
+    }
+
+    return new Duration(rounds * factor, minutes * factor, hours * factor, days * factor,
+        years * factor);
+  }
+
+  public Value.DurationProto toProto() {
+    return Value.DurationProto.newBuilder()
+        .setRounds(rounds)
+        .setMinutes(minutes)
+        .setHours(hours)
+        .setDays(days)
+        .setYears(years)
+        .build();
+  }
+
+  @Override
   public String toString() {
     if (isNone()) {
       return "ending";
@@ -153,16 +212,6 @@ public class Duration {
     }
 
     return formatUnsigned();
-  }
-
-  public Value.DurationProto toProto() {
-    return Value.DurationProto.newBuilder()
-        .setRounds(rounds)
-        .setMinutes(minutes)
-        .setHours(hours)
-        .setDays(days)
-        .setYears(years)
-        .build();
   }
 
   public Map<String, Object> write() {

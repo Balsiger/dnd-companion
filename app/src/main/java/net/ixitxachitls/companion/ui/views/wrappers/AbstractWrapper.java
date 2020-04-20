@@ -54,7 +54,6 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   // State values that need to be set on attach.
   private int gravity;;
 
-  @SuppressWarnings("unchecked")
   protected AbstractWrapper(View parent, @IdRes int id) {
     this(parent.findViewById(id));
   }
@@ -67,46 +66,46 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     return backgroundColorValue(view.getContext().getColor(color));
   }
 
-  public W backgroundTintColor(@ColorRes int color) {
-    return backgroundTintColorValue(view.getContext().getColor(color));
-  }
-
   public W backgroundColorValue(@ColorInt int color) {
     view.setBackgroundColor(color);
 
-    return (W) this;
+    return self();
+  }
+
+  public W backgroundTintColor(@ColorRes int color) {
+    return backgroundTintColorValue(view.getContext().getColor(color));
   }
 
   public W backgroundTintColorValue(@ColorInt int color) {
     view.setBackgroundTintList(ColorStateList.valueOf(color));
 
-    return (W) this;
+    return self();
   }
 
   public W clearClick() {
     view.setOnClickListener(null);
 
-    return (W) this;
+    return self();
   }
 
   public W clearLongClick() {
     view.setOnLongClickListener(null);
 
-    return (W) this;
+    return self();
   }
 
   public W description(String name, String description) {
     onLongClick(()
         -> MessageDialog.create(get().getContext()).message(description).title(name).show());
 
-    return (W) this;
+    return self();
   }
 
   public W description(String name, @LayoutRes int layout) {
     onLongClick(()
         -> MessageDialog.create(get().getContext()).layout(layout).title(name).show());
 
-    return (W) this;
+    return self();
   }
 
   public W disabled() {
@@ -120,13 +119,13 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
         view.getPaddingRight(),
         view.getPaddingBottom());
 
-    return (W) this;
+    return self();
   }
 
   public W enabled(boolean enabled) {
     view.setEnabled(enabled);
 
-    return (W) this;
+    return self();
   }
 
   public W enabled() {
@@ -140,23 +139,22 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
   public W gone() {
     view.setVisibility(View.GONE);
 
-    return (W) this;
+    return self();
   }
 
   public W height(int height) {
     view.getLayoutParams().height = height;
 
-    return (W) this;
+    return self();
   }
 
   public W invisible() {
     view.setVisibility(View.INVISIBLE);
 
-    return (W) this;
+    return self();
   }
 
   // NOTE: This method _MUST_ be called after adding the view to the parent.
-  @SuppressWarnings("unchecked")
   public W margin(Margin position, int marginDp) {
     int marginPx = dpToPx(marginDp);
     int left = 0;
@@ -192,7 +190,7 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
 
     view.setLayoutParams(params);
 
-    return (W) this;
+    return self();
   }
 
   public W onBlur(Wrapper.Action action) {
@@ -202,7 +200,7 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
       }
     });
 
-    return (W) this;
+    return self();
   }
 
   public W onClick(Wrapper.Action action) {
@@ -214,7 +212,7 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
       }
     }
 
-    return (W) this;
+    return self();
   }
 
   public W onDoubleTap(Wrapper.Action action) {
@@ -224,13 +222,13 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     }
 
     touchListener.get().onDoubleTap(action);
-    return (W) this;
+    return self();
   }
 
   public W onDrag(Wrapper.DragAction action) {
     view.setOnDragListener((v, e) -> action.execute(e));
 
-    return (W) this;
+    return self();
   }
 
   public W onFocusLost(Wrapper.Action action) {
@@ -243,19 +241,19 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
       }
     });
 
-    return (W) this;
+    return self();
   }
 
   public W onLongClick(Wrapper.Action action) {
     view.setOnLongClickListener(v -> { action.execute(); return true; });
 
-    return (W) this;
+    return self();
   }
 
   public W onTouch(Wrapper.TouchAction action) {
     view.setOnTouchListener((v, event) -> action.execute(event));
 
-    return (W) this;
+    return self();
   }
 
   public W onTouch(Wrapper.Action action, int onAction) {
@@ -267,7 +265,7 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
       return false;
     });
 
-    return (W) this;
+    return self();
   }
 
   public W padding(Padding position, int paddingDp) {
@@ -314,13 +312,13 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
 
     view.setPadding(left, top, right, bottom);
 
-    return (W) this;
+    return self();
   }
 
   public W removeClick() {
     view.setOnClickListener(null);
 
-    return (W) this;
+    return self();
   }
 
   public W tint(@ColorRes int color) {
@@ -329,7 +327,7 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
           view.getContext().getColor(color)));
     }
 
-    return (W) this;
+    return self();
   }
 
   public W toggleVisiblity() {
@@ -339,19 +337,19 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
       gone();
     }
 
-    return (W) this;
+    return self();
   }
 
   public W visible(boolean visible) {
     view.setVisibility(visible ? View.VISIBLE : View.GONE);
 
-    return (W) this;
+    return self();
   }
 
   public W visible() {
     view.setVisibility(View.VISIBLE);
 
-    return (W) this;
+    return self();
   }
 
   // NOTE: This method _MUST_ be called after adding the view to the parent.
@@ -365,17 +363,22 @@ public class AbstractWrapper<V extends View, W extends AbstractWrapper<V, W>> {
     }
 
 
-    return (W) this;
+    return self();
   }
 
   public W width(int width) {
     view.getLayoutParams().width = width;
 
-    return (W) this;
+    return self();
   }
 
   private int dpToPx(int dp) {
     DisplayMetrics metrics = view.getContext().getResources().getDisplayMetrics();
     return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, metrics);
+  }
+
+  @SuppressWarnings("unchecked")
+  protected W self() {
+    return (W) this;
   }
 }

@@ -39,6 +39,7 @@ public class Strings {
   public static final Joiner SPACE_JOINER = Joiner.on(" ").skipNulls();
   public static final Joiner SEMICOLON_JOINER = Joiner.on("; ").skipNulls();
   public static final Joiner PIPE_JOINER = Joiner.on("|").skipNulls();
+  public static final Joiner PLUS_JOINER = Joiner.on(" plus ").skipNulls();
   public static final Joiner AND_JOINER = Joiner.on("&").skipNulls();
   private static final String SPACES =
       "                                                                      "
@@ -62,6 +63,20 @@ public class Strings {
           + "0000000000000000000000000000000000000000000000000000000000000000000000";
 
   private Strings() {}
+
+  public static String ensureSentence(String text) {
+    text = text.trim();
+
+    if (text.isEmpty()) {
+      return text;
+    }
+
+    if (text.endsWith(".")) {
+      return text;
+    }
+
+    return text.replaceAll("[,;]$", "") + ".";
+  }
 
   public static String extractPattern(String text, String patternText) {
     if (text.isEmpty() || patternText.isEmpty()) {

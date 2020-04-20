@@ -143,11 +143,6 @@ public class Encounter extends Document<Encounter> implements Item.Owner {
     }
   }
 
-  @Override
-  public void updated(Item item) {
-    store();
-  }
-
   public boolean removeItem(Item item) {
     for (ItemGroup group : itemGroups) {
       if (group.remove(item)) {
@@ -162,6 +157,11 @@ public class Encounter extends Document<Encounter> implements Item.Owner {
   @Override
   public String toString() {
     return getShortId() + " (" + Adventures.extractShortId(getId()) + ")";
+  }
+
+  @Override
+  public void updated(Item item) {
+    store();
   }
 
   private Optional<ItemGroup> getItemGroup(String itemId) {
@@ -277,8 +277,9 @@ public class Encounter extends Document<Encounter> implements Item.Owner {
 
     public Optional<Item> getItem(String id) {
       for (Item item : items) {
-        if (item.getId().equals(id)) {
-          return Optional.of(item);
+        Optional<Item> found = item.getItem(id);
+        if (found.isPresent()) {
+          return found;
         }
       }
 
