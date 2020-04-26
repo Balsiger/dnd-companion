@@ -2,7 +2,7 @@ template {
   name: "Kuyutha, Exarch of Bahamut"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 2
 type: "Humanoid"
 race: "Dragonborn"

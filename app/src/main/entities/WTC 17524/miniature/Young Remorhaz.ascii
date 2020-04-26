@@ -2,7 +2,7 @@ template {
   name: "Young Remorhaz"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: RARE
 number: 44
 type: "Monstrosity"
 race: "Remorhaz"

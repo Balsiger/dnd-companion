@@ -2,7 +2,7 @@ template {
   name: "Doomdreamer"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: COMMON
 number: 11
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Asharra (invisible)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 23
 race: "Aarakocra"
 type: "Humanoid"

@@ -2,7 +2,7 @@ template {
   name: "Vampire Dire Wolf"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 59
 race: "Dire Wolf"
 type: "Undead"

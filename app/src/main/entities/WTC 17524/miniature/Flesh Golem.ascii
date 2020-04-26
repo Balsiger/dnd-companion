@@ -2,7 +2,7 @@ template {
   name: "Flesh Golem"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 45
 race: "Flesh Golem"
 type: "Construct"

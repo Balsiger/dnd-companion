@@ -2,7 +2,7 @@ template {
   name: "Human Blackguard"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 45
 type: "Humanoid"
 race: "Human"

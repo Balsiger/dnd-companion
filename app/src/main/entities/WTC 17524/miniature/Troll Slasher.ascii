@@ -2,7 +2,7 @@ template {
   name: "Troll Slasher"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 59
 type: "Giant"
 race: "Troll"

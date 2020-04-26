@@ -2,7 +2,7 @@ template {
   name: "Hellcat"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: RARE
 number: 33
 race: "Hellcat"
 type: "Fiend"

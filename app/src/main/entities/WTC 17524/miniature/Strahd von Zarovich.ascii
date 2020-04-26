@@ -2,7 +2,7 @@ template {
   name: "Strahd von Zarovich"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: RARE
 number: 40
 race: "Vampire"
 type: "Undead"

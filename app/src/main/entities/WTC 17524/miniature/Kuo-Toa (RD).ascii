@@ -2,7 +2,7 @@ template {
   name: "Kuo-Toa (RD)"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: COMMON
 number: 9
 type: "Humanoid"
 race: "Kuo-Toa"

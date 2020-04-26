@@ -2,7 +2,7 @@ template {
   name: "Gruul Ogre"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: COMMON
 number: 26
 type: "Giant"
 race: "Ogre"

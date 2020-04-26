@@ -2,7 +2,7 @@ template {
   name: "Djinn Stormsword"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 10
 race: "Djinni"
 type: "Elemental"

@@ -2,7 +2,7 @@ template {
   name: "Mummy"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 51
 race: "Mummy"
 type: "Undead"

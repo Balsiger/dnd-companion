@@ -2,7 +2,7 @@ template {
   name: "Dracotaur Rager"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 50
 race: "Dracotaur"
 type: "Dragon"

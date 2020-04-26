@@ -53,7 +53,8 @@ public class MiniatureFragment extends NestedCompanionFragment {
   private LabelledTextView type;
   private LabelledTextView classes;
   private LabelledEditTextView owned;
-  private LabelledTextView location;
+  private LabelledEditTextView location;
+  private LabelledTextView rarity;
 
   public MiniatureFragment() {}
 
@@ -73,6 +74,7 @@ public class MiniatureFragment extends NestedCompanionFragment {
     classes = view.findViewById(R.id.classes);
     location = view.findViewById(R.id.location);
     owned = view.findViewById(R.id.owned);
+    rarity = view.findViewById(R.id.rarity);
 
     update();
     return view;
@@ -86,6 +88,7 @@ public class MiniatureFragment extends NestedCompanionFragment {
       try {
         me().setMiniatureCount(miniature.get().getName(),
             owned.getText().isEmpty() ? 0 : Long.parseLong(owned.getText()));
+        me().setMiniatureSpecificLocation(miniature.get(), location.getText());
       } catch (NumberFormatException e) {
         Status.error("Cannot parse number for owned miniatures: " + e);
       }
@@ -114,6 +117,7 @@ public class MiniatureFragment extends NestedCompanionFragment {
       long miniatureCount = me().getMiniatureCount(miniature.get().getName());
       owned.text(miniatureCount == 0 ? "" : String.valueOf(miniatureCount));
       location.text(me().locationFor(miniature.get()));
+      rarity.text(miniature.get().getRarity().toString());
     } else {
       image.clearName();
       image.clearNumber();
@@ -123,6 +127,7 @@ public class MiniatureFragment extends NestedCompanionFragment {
       classes.setVisibility(View.GONE);
       owned.text("");
       location.text("");
+      rarity.text("");
     }
   }
 

@@ -2,7 +2,7 @@ template {
   name: "Deathjump Spider"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: COMMON
 number: 54
 race: "Deathjump Spider"
 type: "Vermin"

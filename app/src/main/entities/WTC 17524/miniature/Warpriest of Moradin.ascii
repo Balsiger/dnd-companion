@@ -2,7 +2,7 @@ template {
   name: "Warpriest of Moradin"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 14
 type: "Humanoid"
 race: "Dwarf"

@@ -2,7 +2,7 @@ template {
   name: "Gravetouched Ghoul"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: COMMON
 number: 53
 type: "Undead"
 race: "Ghoul"

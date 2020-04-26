@@ -2,7 +2,7 @@ template {
   name: "Halfling Slinger"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 18
 type: "Humanoid"
 race: "Halfling"

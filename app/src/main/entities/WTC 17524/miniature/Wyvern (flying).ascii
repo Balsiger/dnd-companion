@@ -2,7 +2,7 @@ template {
   name: "Wyvern (flying)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 29
 race: "Wyvern"
 type: "Dragon"

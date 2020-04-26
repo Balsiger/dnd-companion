@@ -2,7 +2,7 @@ template {
   name: "Skeletal Dwarf"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: COMMON
 number: 40
 race: "Skeleton"
 type: "Undead"

@@ -2,7 +2,7 @@ template {
   name: "Oni"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 11
 race: "Oni"
 type: "Humanoid"

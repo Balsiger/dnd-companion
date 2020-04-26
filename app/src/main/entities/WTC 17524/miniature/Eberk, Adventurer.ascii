@@ -2,7 +2,7 @@ template {
   name: "Eberk, Adventurer"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 10
 type: "Humanoid"
 race: "Dwarf"

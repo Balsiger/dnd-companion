@@ -2,7 +2,7 @@ template {
   name: "Gruul Anarch"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 type: "Humanoid"
 race: "Human"

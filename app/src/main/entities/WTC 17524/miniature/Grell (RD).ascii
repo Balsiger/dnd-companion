@@ -2,7 +2,7 @@ template {
   name: "Grell (RD)"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 43
 race: "Grell"
 type: "Aberration"

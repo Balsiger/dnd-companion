@@ -2,7 +2,7 @@ template {
   name: "Nightmare (DA)"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: RARE
 number: 44
 race: "Nightmare"
 type: "Fiend"

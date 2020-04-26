@@ -2,7 +2,7 @@ template {
   name: "Efreet Fireblade"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 14
 race: "Efreeti"
 type: "Elemental"

@@ -2,7 +2,7 @@ template {
   name: "Pterafolk"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 28
 race: "Pterafolk"
 type: "Monstrosity"

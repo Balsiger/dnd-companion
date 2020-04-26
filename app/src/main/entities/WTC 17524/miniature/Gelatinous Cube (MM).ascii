@@ -2,7 +2,7 @@ template {
   name: "Gelatinous Cube (MM)"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 30
 race: "Gelatinous Cube"
 type: "Ooze"

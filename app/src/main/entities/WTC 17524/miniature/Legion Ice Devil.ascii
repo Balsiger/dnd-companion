@@ -2,7 +2,7 @@ template {
   name: "Legion Ice Devil"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 29
 race: "Ice Devil"
 type: "Fiend"

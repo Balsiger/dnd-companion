@@ -2,7 +2,7 @@ template {
   name: "Bugbear Footpad"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 42
 type: "Humanoid"
 subtype: "Goblinoid"

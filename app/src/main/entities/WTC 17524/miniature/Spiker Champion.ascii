@@ -2,7 +2,7 @@ template {
   name: "Spiker Champion"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 7
 race: "Spiker"
 type: "Monstrosity"

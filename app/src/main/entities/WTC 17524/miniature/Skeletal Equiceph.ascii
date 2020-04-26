@@ -2,7 +2,7 @@ template {
   name: "Skeletal Equiceph"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 39
 race: "Skeleton"
 type: "Undead"

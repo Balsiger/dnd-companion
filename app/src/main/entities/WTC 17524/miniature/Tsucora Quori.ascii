@@ -2,7 +2,7 @@ template {
   name: "Tsucora Quori"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: RARE
 number: 46
 race: "Quori"
 type: "Aberration"

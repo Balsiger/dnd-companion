@@ -2,7 +2,7 @@ template {
   name: "Wood Elf Skirmisher"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 31
 type: "Humanoid"
 race: "Elf"

@@ -2,7 +2,7 @@ template {
   name: "Spectator"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 44
 race: "Beholder"
 type: "Aberration"

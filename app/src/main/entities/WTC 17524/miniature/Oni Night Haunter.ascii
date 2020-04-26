@@ -2,7 +2,7 @@ template {
   name: "Oni Night Haunter"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 35
 race: "Oni"
 type: "Humanoid"

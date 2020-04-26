@@ -2,7 +2,7 @@ template {
   name: "Bluespawn Ambusher"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: COMMON
 number: 28
 race: "Bluespawn"
 type: "Monstrosity"

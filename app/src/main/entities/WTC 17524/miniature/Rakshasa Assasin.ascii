@@ -2,7 +2,7 @@ template {
   name: "Rakshasa Assasin"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 7
 race: "Rakshasa"
 type: "Fiend"

@@ -2,7 +2,7 @@ template {
   name: "Infernal Armor"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: COMMON
 number: 6
 race: "Infernal Armor"
 type: "Construct"

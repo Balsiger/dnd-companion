@@ -2,7 +2,7 @@ template {
   name: "Blue Slaad"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 41
 race: "Blue Slaad"
 type: "Aberration"

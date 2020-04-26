@@ -2,7 +2,7 @@ template {
   name: "Large Earth Elemental"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 9
 race: "Earth Elemental"
 type: "Elemental"

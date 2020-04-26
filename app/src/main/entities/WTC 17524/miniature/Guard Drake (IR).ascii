@@ -2,7 +2,7 @@ template {
   name: "Guard Drake (IR)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 22
 race: "Drake"
 type: "Dragon"

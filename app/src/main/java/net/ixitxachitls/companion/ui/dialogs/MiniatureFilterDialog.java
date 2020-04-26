@@ -27,6 +27,7 @@ import android.widget.ArrayAdapter;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.data.Templates;
 import net.ixitxachitls.companion.data.documents.MiniatureFilter;
+import net.ixitxachitls.companion.data.enums.Rarity;
 import net.ixitxachitls.companion.ui.views.LabelledEditTextView;
 import net.ixitxachitls.companion.ui.views.LabelledMultiAutocompleteTextView;
 import net.ixitxachitls.companion.ui.views.wrappers.Wrapper;
@@ -56,13 +57,35 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
   private LabelledMultiAutocompleteTextView sizes;
   private LabelledMultiAutocompleteTextView owned;
   private LabelledMultiAutocompleteTextView locations;
+  private LabelledMultiAutocompleteTextView rarities;
 
   @Override
   protected MiniatureFilter getValue() {
     return new MiniatureFilter(name.getText(),
         parseMulti(races.getText()), parseMulti(sets.getText()), parseMulti(types.getText()),
         parseMulti(classes.getText()), parseMulti(sizes.getText()), parseMulti(owned.getText()),
-        parseMulti(locations.getText()));
+        parseMulti(locations.getText()), parseMulti(rarities.getText()));
+  }
+
+  private void setAllowLocations(boolean allowLocations) {
+    this.allowLocation = allowLocations;
+  }
+
+  // TODO(merlin): Check whether we have to remove this and instead set the filter via
+  // setArguments().
+  private void setFilter(MiniatureFilter filter) {
+    this.filter = Optional.of(filter);
+  }
+
+  private void clear() {
+    name.text("");
+    races.text("");
+    types.text("");
+    classes.text("");
+    sizes.text("");
+    owned.text("");
+    locations.text("");
+    sets.text("");
   }
 
   @Override
@@ -116,6 +139,11 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
       owned.gone();
       locations.gone();
     }
+    rarities = view.findViewById(R.id.rarities);
+    rarities.text(formatMulti(Templates.get().getMiniatureTemplates().getFilter().getRarities()))
+        .onFocus(rarities::showDropDown).threshold(1);
+    rarities.setAdapter(new ArrayAdapter<>(getContext(),
+        R.layout.list_item_select, showEmpty(Rarity.names())));
 
     Wrapper.wrap(view, R.id.save).onClick(this::save);
     Wrapper.wrap(view, R.id.clear).onClick(this::clear);
@@ -123,27 +151,6 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     if (filter.isPresent()) {
       setupFilter(filter.get());
     }
-  }
-
-  private void setAllowLocations(boolean allowLocations) {
-    this.allowLocation = allowLocations;
-  }
-
-  // TODO(merlin): Check whether we have to remove this and instead set the filter via
-  // setArguments().
-  private void setFilter(MiniatureFilter filter) {
-    this.filter = Optional.of(filter);
-  }
-
-  private void clear() {
-    name.text("");
-    races.text("");
-    types.text("");
-    classes.text("");
-    sizes.text("");
-    owned.text("");
-    locations.text("");
-    sets.text("");
   }
 
   private String formatMulti(List<String> texts) {

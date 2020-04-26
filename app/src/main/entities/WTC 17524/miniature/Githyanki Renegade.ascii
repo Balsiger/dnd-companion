@@ -2,7 +2,7 @@ template {
   name: "Githyanki Renegade"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 16
 race: "Githyanki"
 type: "Humanoid"

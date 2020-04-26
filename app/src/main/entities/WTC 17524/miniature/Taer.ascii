@@ -2,7 +2,7 @@ template {
   name: "Taer"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 58
 race: "Taer"
 type: "Giant"

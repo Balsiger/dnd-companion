@@ -2,7 +2,7 @@ template {
   name: "Yochlol Tempter"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 40
 race: "Yochlol"
 type: "Fiend"

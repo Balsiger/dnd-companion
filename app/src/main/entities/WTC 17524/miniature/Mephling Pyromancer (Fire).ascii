@@ -2,7 +2,7 @@ template {
   name: "Mephling Pyromancer (Fire)"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 21
 race: "Mephling Pyromancer"
 type: "Humanoid"

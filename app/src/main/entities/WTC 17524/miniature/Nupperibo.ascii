@@ -2,7 +2,7 @@ template {
   name: "Nupperibo"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 18
 race: "Nupperibo"
 type: "Fiend"

@@ -2,7 +2,7 @@ template {
   name: "Bodak Skulk"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 6
 race: "Bodak"
 type: "Undead"

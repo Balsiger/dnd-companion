@@ -2,7 +2,7 @@ template {
   name: "Nanny Pu\'pu (invisible)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 36
 type: "Humanoid"
 race: "Human"

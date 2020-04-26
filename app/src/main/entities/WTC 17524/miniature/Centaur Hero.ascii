@@ -2,7 +2,7 @@ template {
   name: "Centaur Hero"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 15
 race: "Centaur"
 type: "Monstrosity"

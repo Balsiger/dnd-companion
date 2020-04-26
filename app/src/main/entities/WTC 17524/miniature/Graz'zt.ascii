@@ -2,7 +2,7 @@ template {
   name: "Graz\'zt"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: RARE
 number: 19
 race: "Graz\'zt"
 type: "Fiend"

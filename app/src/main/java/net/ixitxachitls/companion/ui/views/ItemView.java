@@ -217,7 +217,7 @@ public class ItemView extends LinearLayout implements View.OnDragListener {
       case MotionEvent.ACTION_MOVE:
         if (owner.canEdit()
             && (Math.abs((int) (touchStartX - event.getX())) > MIN_DRAG_DISTANCE
-                || Math.abs((int) (touchStartY - event.getY())) > MIN_DRAG_DISTANCE)) {
+            || Math.abs((int) (touchStartY - event.getY())) > MIN_DRAG_DISTANCE)) {
           startDragAndDrop(ClipData.newPlainText("name", item.getName()),
               new ItemDragShadowBuilder(this), item, 0);
           ((ViewGroup) getParent()).removeView(this);

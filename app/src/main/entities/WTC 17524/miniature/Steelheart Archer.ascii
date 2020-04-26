@@ -2,7 +2,7 @@ template {
   name: "Steelheart Archer"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 22
 type: "Humanoid"
 race: "Elf"

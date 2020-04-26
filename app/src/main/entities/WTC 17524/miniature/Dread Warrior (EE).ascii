@@ -2,7 +2,7 @@ template {
   name: "Dread Warrior (EE)"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: COMMON
 number: 12
 type: "Humanoid"
 race: "Human"

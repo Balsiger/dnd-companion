@@ -2,7 +2,7 @@ template {
   name: "Quasit (RD)"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: COMMON
 number: 5
 race: "Quasit"
 type: "Fiend"

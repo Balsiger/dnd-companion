@@ -2,7 +2,7 @@ template {
   name: "Derro"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 46
 race: "Derro"
 type: "Humanoid"

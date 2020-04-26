@@ -2,7 +2,7 @@ template {
   name: "Gnoll Claw Fighter"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: COMMON
 number: 53
 type: "Humanoid"
 race: "Gnoll"

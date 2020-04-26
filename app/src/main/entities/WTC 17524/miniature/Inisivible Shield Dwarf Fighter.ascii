@@ -2,7 +2,7 @@ template {
   name: "Inisivible Shield Dwarf Fighter"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 46
 type: "Humanoid"
 race: "Dwarf"

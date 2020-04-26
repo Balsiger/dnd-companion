@@ -2,7 +2,7 @@ template {
   name: "Inspired Shock Trooper"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 41
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Hunched Giant (Maur)"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 51
 race: "Maur"
 type: "Giant"

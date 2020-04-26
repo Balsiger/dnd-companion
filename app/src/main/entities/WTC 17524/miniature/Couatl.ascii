@@ -2,7 +2,7 @@ template {
   name: "Couatl"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 2
 race: "Couatl"
 type: "Celestial"

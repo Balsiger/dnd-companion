@@ -2,7 +2,7 @@ template {
   name: "Shadowbane Inquisitor"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 11
 type: "Humanoid"
 race: "Human"

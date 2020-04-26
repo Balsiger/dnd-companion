@@ -2,7 +2,7 @@ template {
   name: "Dwarf Beguiler"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 13
 type: "Humanoid"
 race: "Dwarf"

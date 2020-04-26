@@ -2,7 +2,7 @@ template {
   name: "Marut"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 9
 race: "Marut"
 type: "Construct"

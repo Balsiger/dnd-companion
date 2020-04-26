@@ -2,7 +2,7 @@ template {
   name: "Shadowdancer"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 22
 type: "Humanoid"
 race: "Human"

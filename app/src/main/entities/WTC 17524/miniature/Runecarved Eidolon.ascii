@@ -2,7 +2,7 @@ template {
   name: "Runecarved Eidolon"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 49
 race: "Eidolon"
 type: "Construct"

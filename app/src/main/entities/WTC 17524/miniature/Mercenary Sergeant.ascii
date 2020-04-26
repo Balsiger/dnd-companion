@@ -2,7 +2,7 @@ template {
   name: "Mercenary Sergeant"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: COMMON
 number: 27
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Movanic Deva Angel (flying)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 race: "Deva"
 type: "Celestial"

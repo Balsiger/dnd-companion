@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (c) 2017-2018 Peter Balsiger
  * All rights reserved
  *
@@ -21,31 +21,32 @@
 
 package net.ixitxachitls.companion.data.documents;
 
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.SetOptions;
+ import com.google.firebase.firestore.DocumentReference;
+ import com.google.firebase.firestore.SetOptions;
 
-import net.ixitxachitls.companion.CompanionApplication;
-import net.ixitxachitls.companion.Status;
-import net.ixitxachitls.companion.data.CompanionContext;
-import net.ixitxachitls.companion.data.Templates;
-import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
+ import net.ixitxachitls.companion.CompanionApplication;
+ import net.ixitxachitls.companion.Status;
+ import net.ixitxachitls.companion.data.CompanionContext;
+ import net.ixitxachitls.companion.data.Templates;
+ import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
-import java.util.SortedMap;
-import java.util.SortedSet;
-import java.util.TreeMap;
-import java.util.TreeSet;
-import java.util.function.Function;
-import java.util.stream.Collectors;
+ import java.util.ArrayList;
+ import java.util.Collections;
+ import java.util.HashMap;
+ import java.util.HashSet;
+ import java.util.Iterator;
+ import java.util.List;
+ import java.util.Map;
+ import java.util.Optional;
+ import java.util.Set;
+ import java.util.SortedMap;
+ import java.util.SortedSet;
+ import java.util.TreeMap;
+ import java.util.TreeSet;
+ import java.util.function.Function;
+ import java.util.stream.Collectors;
 
-import androidx.annotation.CallSuper;
+ import androidx.annotation.CallSuper;
 
 /**
  * The data for a single user.
@@ -62,6 +63,7 @@ public class User extends Document<User> {
   private static final String FIELD_PHOTO_URL = "photoUrl";
   private static final String FIELD_FEATURES = "features";
   private static final String FIELD_MINIATURE_OWNED = "owned";
+  private static final String FIELD_MINIATURE_SPECIFIC_LOCATIONS = "specifc-locations";
   private static final String FIELD_MINIATURE_LOCATIONS = "locations";
   private static final String FIELD_MINIATURE_HIDDEN_SETS = "hidden-sets";
   private static final String FIELD_PRODUCTS = "products";
@@ -77,10 +79,12 @@ public class User extends Document<User> {
   private List<String> campaigns = new ArrayList<>();
   private List<String> features = new ArrayList<>();
   private Map<String, Long> miniatures = new HashMap<>();
+  private Map<String, String> specificLocations = new HashMap<>();
   private LoadingStatus miniatureStatus = LoadingStatus.initial;
   private Map<String, Product> products = new HashMap<>();
   private LoadingStatus productStatus = LoadingStatus.initial;
   private SortedMap<String, MiniatureLocation> locations = new TreeMap<>();
+  private List<MiniatureLocation> locationOrder = new ArrayList<>();
   private Set<String> hiddenSets = new HashSet<>();
   private Set<String> hiddenProducers = new HashSet<>();
   private Set<String> hiddenWorlds = new HashSet<>();
@@ -106,6 +110,10 @@ public class User extends Document<User> {
     return values;
   }
 
+  public List<MiniatureLocation> getLocations() {
+    return locationOrder;
+  }
+
   public String getNickname() {
     return nickname;
   }
@@ -126,10 +134,6 @@ public class User extends Document<User> {
 
   public void setPhotoUrl(String photoUrl) {
     this.photoUrl = photoUrl;
-  }
-
-  public SortedSet<MiniatureLocation> getSortedLocations() {
-    return new TreeSet<>(locations.values());
   }
 
   public void setHiddenSets(List<String> sets) {
@@ -167,6 +171,11 @@ public class User extends Document<User> {
 
   public void deleteLocation(String name) {
     locations.remove(name);
+    for (Iterator<MiniatureLocation> i = locationOrder.iterator(); i.hasNext(); ) {
+      if (i.next().getName().equals(name)) {
+        i.remove();
+      }
+    }
     storeMiniatures();
   }
 
@@ -176,6 +185,10 @@ public class User extends Document<User> {
 
   public long getMiniatureCount(String name) {
     return miniatures.getOrDefault(name, 0L);
+  }
+
+  public String getMiniatureSpecificLocation(String name) {
+    return specificLocations.getOrDefault(name, "");
   }
 
   public boolean hasProducerHidden(String name) {
@@ -199,19 +212,27 @@ public class User extends Document<User> {
   }
 
   public String locationFor(MiniatureTemplate template) {
-    SortedMap<MiniatureFilter, String> filteredLocations = new TreeMap<MiniatureFilter, String>();
-    for (MiniatureLocation location : locations.values()) {
-      Optional<MiniatureFilter> matches = location.matches(this, template);
-      if (matches.isPresent()) {
-        filteredLocations.put(matches.get(), location.getName());
+    String specific = getMiniatureSpecificLocation(template.getName());
+    if (!specific.isEmpty()) {
+      return specific;
+    }
+
+    for (MiniatureLocation location : locationOrder) {
+      if (location.matches(this, template).isPresent()) {
+        return location.getName();
       }
     }
 
-    if (filteredLocations.isEmpty()) {
-      return "";
-    }
+    return "";
+  }
 
-    return filteredLocations.values().iterator().next();
+  public void moveLocation(MiniatureLocation location, int move) {
+    int i = locationOrder.indexOf(location);
+    if (i >= 0 && i + move >= 0 && i + move <= locationOrder.size()) {
+      locationOrder.remove(i);
+      locationOrder.add(i + move, location);
+      storeMiniatures();
+    }
   }
 
   public boolean owns(String id) {
@@ -240,6 +261,7 @@ public class User extends Document<User> {
       if (task.isSuccessful() ) {
         Data data = Data.fromSnapshot(task.getResult());
         miniatures.putAll(data.getMap(FIELD_MINIATURE_OWNED, 0L));
+        specificLocations.putAll(data.getMap(FIELD_MINIATURE_SPECIFIC_LOCATIONS, ""));
 
         for (MiniatureLocation location :
             data.getNestedList(FIELD_MINIATURE_LOCATIONS)
@@ -247,6 +269,7 @@ public class User extends Document<User> {
                 .map(MiniatureLocation::read)
                 .collect(Collectors.toList())) {
           locations.put(location.getName(), location);
+          locationOrder.add(location);
         }
 
         hiddenSets.addAll(data.getList(FIELD_MINIATURE_HIDDEN_SETS, Collections.emptyList()));
@@ -298,6 +321,13 @@ public class User extends Document<User> {
     locations.remove(originalName);
     locations.put(location.getName(), location);
 
+    for (int i = 0; i < locationOrder.size(); i++) {
+      if (locationOrder.get(i).getName().equals(originalName)) {
+        locationOrder.set(i, location);
+        break;
+      }
+    }
+
     storeMiniatures();
    }
 
@@ -324,6 +354,18 @@ public class User extends Document<User> {
       } else{
         miniatures.put(miniature, count);
       }
+      storeMiniatures();
+    }
+  }
+
+  public void setMiniatureSpecificLocation(MiniatureTemplate miniature, String location) {
+    if (!location.equals(locationFor(miniature))) {
+      if (location.isEmpty()) {
+        specificLocations.remove(miniature.getName());
+      } else {
+        specificLocations.put(miniature.getName(), location);
+      }
+
       storeMiniatures();
     }
   }
@@ -360,7 +402,8 @@ public class User extends Document<User> {
   public Data writeMiniatures() {
     return Data.empty()
         .set(FIELD_MINIATURE_OWNED, miniatures)
-        .setNested(FIELD_MINIATURE_LOCATIONS, locations.values())
+        .set(FIELD_MINIATURE_SPECIFIC_LOCATIONS, specificLocations)
+        .setNested(FIELD_MINIATURE_LOCATIONS, locationOrder)
         .set(FIELD_MINIATURE_HIDDEN_SETS, new ArrayList<>(hiddenSets));
   }
 

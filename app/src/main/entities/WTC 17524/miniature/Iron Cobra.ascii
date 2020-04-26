@@ -2,7 +2,7 @@ template {
   name: "Iron Cobra"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 36
 race: "Iron Cobra"
 type: "Construct"

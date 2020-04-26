@@ -2,7 +2,7 @@ template {
   name: "Jarad Golgari Guildmaster"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 23
 type: "Humanoid"
 race: "Human"

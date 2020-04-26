@@ -2,7 +2,7 @@ template {
   name: "Dwarf Caver"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 4
 type: "Humanoid"
 race: "Dwarf"

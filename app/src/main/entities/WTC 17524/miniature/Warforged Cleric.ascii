@@ -2,7 +2,7 @@ template {
   name: "Warforged Cleric"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 5
 race: "Warforged"
 type: "Construct"

@@ -2,7 +2,7 @@ template {
   name: "Immolith"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 15
 race: "Immolith"
 type: "Fiend"

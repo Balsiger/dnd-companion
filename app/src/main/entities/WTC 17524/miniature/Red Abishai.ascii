@@ -2,7 +2,7 @@ template {
   name: "Red Abishai"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: RARE
 number: 40
 race: "Red Abishai"
 type: "Fiend"

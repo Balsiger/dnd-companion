@@ -2,7 +2,7 @@ template {
   name: "Thri-Kreen Mantis Warrior"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 50
 type: "Humanoid"
 race: "Thri-Kreen"

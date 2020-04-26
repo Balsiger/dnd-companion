@@ -2,7 +2,7 @@ template {
   name: "Hell Hound"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: COMMON
 number: 44
 race: "Hell Hound"
 type: "Fiend"

@@ -2,7 +2,7 @@ template {
   name: "Invisible Displacer Beast (mm)"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 25
 race: "Displacer Beat"
 type: "Monstrosity"

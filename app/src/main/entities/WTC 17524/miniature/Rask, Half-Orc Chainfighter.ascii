@@ -2,7 +2,7 @@ template {
   name: "Rask, Half-Orc Chainfighter"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 22
 type: "Humanoid"
 race: "Half-Orc"

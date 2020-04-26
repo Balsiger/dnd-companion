@@ -2,7 +2,7 @@ template {
   name: "Hobgoblin Marshal"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: COMMON
 number: 33
 type: "Humanoid"
 subtype: "Goblinoid"

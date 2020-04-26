@@ -2,7 +2,7 @@ template {
   name: "Gnoll Skeleton"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 52
 type: "Undead"
 race: "Skeleton"

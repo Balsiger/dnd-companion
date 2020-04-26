@@ -2,7 +2,7 @@ template {
   name: "Valiant Cavalry"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 12
 type: "Humanoid"
 race: "Human"

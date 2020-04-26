@@ -2,7 +2,7 @@ template {
   name: "Slayer of Domiel"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 12
 type: "Humanoid"
 race: "Human"

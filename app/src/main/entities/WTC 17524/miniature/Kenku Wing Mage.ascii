@@ -2,7 +2,7 @@ template {
   name: "Kenku Wing Mage"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 26
 type: "Humanoid"
 race: "Kenku"

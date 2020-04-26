@@ -2,7 +2,7 @@ template {
   name: "Shield Guardian"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: RARE
 number: 8
 race: "Shield Guardian"
 type: "Construct"

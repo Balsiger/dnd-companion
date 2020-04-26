@@ -2,7 +2,7 @@ template {
   name: "Aspect of Moradin"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 3
 type: "Celestial"
 subtype: "Extraplanar"

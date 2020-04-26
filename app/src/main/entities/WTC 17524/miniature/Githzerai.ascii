@@ -2,7 +2,7 @@ template {
   name: "Githzerai"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: COMMON
 number: 23
 race: "Githzerai"
 type: "Humanoid"

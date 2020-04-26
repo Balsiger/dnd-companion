@@ -2,7 +2,7 @@ template {
   name: "Deva Fanatic"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 9
 race: "Deva"
 type: "Celestial"

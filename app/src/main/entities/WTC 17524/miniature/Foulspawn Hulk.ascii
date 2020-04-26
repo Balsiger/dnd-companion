@@ -2,7 +2,7 @@ template {
   name: "Foulspawn Hulk"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 17
 race: "Foulspawn"
 type: "Aberration"

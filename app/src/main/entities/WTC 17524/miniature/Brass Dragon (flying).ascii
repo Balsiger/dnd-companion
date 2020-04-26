@@ -2,7 +2,8 @@ template {
   name: "Brass Dragon (flying)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+number: 45
+rarity: UNKNOWN
 race: "Brass Dragon"
 type: "Dragon"
 subtype: "Flying"

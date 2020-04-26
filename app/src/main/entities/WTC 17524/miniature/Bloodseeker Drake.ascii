@@ -1,8 +1,8 @@
 template {
   name: "Bloodseeker Drake"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves Delve"
+rarity: COMMON
 number: 9
 race: "Bloodseeker Drake"
 type: "Dragon"

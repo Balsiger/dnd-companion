@@ -2,7 +2,7 @@ template {
   name: "Gold Dwarf Female Cleric (invisible)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 47
 type: "Humanoid"
 race: "Dwarf"

@@ -1,8 +1,8 @@
 template {
   name: "Hippogriff"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: UNIQUE
 number: 26
 race: "Hippogriff"
 type: "Monstrosity"

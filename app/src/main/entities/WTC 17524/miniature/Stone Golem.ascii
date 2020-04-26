@@ -2,7 +2,7 @@ template {
   name: "Stone Golem"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 4
 race: "Stone Golem"
 type: "Construct"

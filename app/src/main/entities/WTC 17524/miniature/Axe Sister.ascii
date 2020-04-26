@@ -2,7 +2,7 @@ template {
   name: "Axe Sister"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 16
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Phoera"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 21
 race: "Phoera"
 type: "Monstrosity"

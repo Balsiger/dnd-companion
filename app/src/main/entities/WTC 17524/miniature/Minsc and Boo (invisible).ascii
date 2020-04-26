@@ -2,7 +2,7 @@ template {
   name: "Minsc and Boo (invisible)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 40
 type: "Humanoid"
 race: "Human"

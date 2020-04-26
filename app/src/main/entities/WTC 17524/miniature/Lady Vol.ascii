@@ -2,7 +2,7 @@ template {
   name: "Lady Vol"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 type: "Undead"
 size: MEDIUM

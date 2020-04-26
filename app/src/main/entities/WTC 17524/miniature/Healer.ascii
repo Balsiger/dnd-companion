@@ -2,7 +2,7 @@ template {
   name: "Healer"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 9
 type: "Humanoid"
 race: "Human"

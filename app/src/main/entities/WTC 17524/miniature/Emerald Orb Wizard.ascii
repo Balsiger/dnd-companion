@@ -2,7 +2,7 @@ template {
   name: "Emerald Orb Wizard"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 44
 type: "Humanoid"
 race: "Human"

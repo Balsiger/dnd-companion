@@ -2,7 +2,7 @@ template {
   name: "Xeph Soulknife"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 22
 type: "Humanoid"
 race: "Xeph"

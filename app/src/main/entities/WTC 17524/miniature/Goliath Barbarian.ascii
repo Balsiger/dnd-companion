@@ -2,7 +2,7 @@ template {
   name: "Goliath Barbarian"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 18
 race: "Goliath"
 type: "Humanoid"

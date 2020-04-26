@@ -2,7 +2,7 @@ template {
   name: "Snig, Worg Rider"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 40
 type: "Humanoid"
 race: "Goblin"

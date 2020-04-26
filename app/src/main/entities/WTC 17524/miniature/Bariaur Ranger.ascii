@@ -2,7 +2,7 @@ template {
   name: "Bariaur Ranger"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 13
 race: "Bariaur"
 type: "Monstrosity"

@@ -2,7 +2,7 @@ template {
   name: "Drow Fighter"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 45
 type: "Humanoid"
 race: "Drow"

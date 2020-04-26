@@ -2,7 +2,7 @@ template {
   name: "Rust Monster (RD)"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 39
 race: "Rust Monster"
 type: "Monstrosity"

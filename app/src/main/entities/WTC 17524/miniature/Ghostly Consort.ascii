@@ -2,7 +2,7 @@ template {
   name: "Ghostly Consort"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 41
 race: "Ghostly Consort"
 type: "Undead"

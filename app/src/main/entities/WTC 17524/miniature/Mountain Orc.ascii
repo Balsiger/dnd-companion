@@ -2,7 +2,7 @@ template {
   name: "Mountain Orc"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 55
 type: "Humanoid"
 race: "Orc"

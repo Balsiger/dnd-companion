@@ -2,7 +2,7 @@ template {
   name: "Brass Dragon"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: RARE
 number: 42
 race: "Brass Dragon"
 type: "Dragon"

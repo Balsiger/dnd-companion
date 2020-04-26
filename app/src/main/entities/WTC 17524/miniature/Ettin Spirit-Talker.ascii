@@ -2,7 +2,7 @@ template {
   name: "Ettin Spirit-Talker"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 42
 race: "Ettin"
 type: "Giant"

@@ -2,7 +2,7 @@ template {
   name: "Orc Raider (AF)"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: COMMON
 number: 56
 type: "Humanoid"
 race: "Orc"

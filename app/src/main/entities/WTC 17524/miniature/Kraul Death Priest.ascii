@@ -2,7 +2,7 @@ template {
   name: "Kraul Death Priest"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: RARE
 number: 37
 type: "Humanoid"
 race: "Kraul"

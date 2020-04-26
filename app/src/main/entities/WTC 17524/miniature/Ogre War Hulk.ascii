@@ -2,7 +2,7 @@ template {
   name: "Ogre War Hulk"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 54
 type: "Giant"
 race: "Ogre"

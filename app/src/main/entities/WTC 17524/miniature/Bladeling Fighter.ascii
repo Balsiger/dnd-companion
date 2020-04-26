@@ -2,7 +2,7 @@ template {
   name: "Bladeling Fighter"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 28
 race: "Bladeling"
 type: "Monstrosity"

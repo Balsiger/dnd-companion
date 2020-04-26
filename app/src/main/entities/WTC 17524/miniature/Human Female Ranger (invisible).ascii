@@ -2,7 +2,7 @@ template {
   name: "Human Female Ranger (invisible)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 48
 type: "Humanoid"
 race: "Human"

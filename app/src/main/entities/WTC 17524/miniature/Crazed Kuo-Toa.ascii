@@ -2,7 +2,7 @@ template {
   name: "Crazed Kuo-Toa"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: COMMON
 number: 53
 race: "Kuo-Toa"
 type: "Humanoid"

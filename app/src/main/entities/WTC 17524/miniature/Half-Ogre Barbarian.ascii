@@ -2,7 +2,7 @@ template {
   name: "Half-Ogre Barbarian"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 18
 race: "Half-Ogre"
 type: "Giant"

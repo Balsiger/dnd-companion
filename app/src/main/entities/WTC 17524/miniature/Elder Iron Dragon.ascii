@@ -2,7 +2,7 @@ template {
   name: "Elder Iron Dragon"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 16
 race: "Iron Dragon"
 type: "Dragon"

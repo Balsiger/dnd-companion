@@ -2,7 +2,7 @@ template {
   name: "Gray Render"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 48
 race: "Gray Render"
 type: "Monstrosity"

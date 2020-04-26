@@ -2,7 +2,7 @@ template {
   name: "Terror Wight"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 41
 race: "Wight"
 type: "Undead"

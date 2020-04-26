@@ -2,7 +2,7 @@ template {
   name: "Gnoll Champion of Yeenoghu"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 37
 type: "Humanoid"
 race: "Gnoll"

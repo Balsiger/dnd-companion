@@ -2,7 +2,7 @@ template {
   name: "Guard Drake"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: COMMON
 number: 48
 race: "Drake"
 type: "Dragon"

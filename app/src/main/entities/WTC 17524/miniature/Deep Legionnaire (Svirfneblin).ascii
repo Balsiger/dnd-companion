@@ -2,7 +2,7 @@ template {
   name: "Deep Legionnaire (Svirfneblin)"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: COMMON
 number: 4
 race: "Gnome"
 type: "Humanoid"

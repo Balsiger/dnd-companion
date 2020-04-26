@@ -2,7 +2,7 @@ template {
   name: "Krasis (large)"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: COMMON
 number: 27
 type: "Monstrosity"
 race: "Krasis"

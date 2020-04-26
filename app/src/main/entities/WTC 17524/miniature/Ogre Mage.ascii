@@ -2,7 +2,7 @@ template {
   name: "Ogre Mage"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 46
 type: "Giant"
 race: "Ogre"

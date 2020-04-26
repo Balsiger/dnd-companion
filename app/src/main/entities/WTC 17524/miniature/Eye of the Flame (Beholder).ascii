@@ -2,7 +2,7 @@ template {
   name: "Eye of the Flame (Beholder)"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 14
 race: "Beholder"
 type: "Aberration"

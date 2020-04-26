@@ -2,7 +2,7 @@ template {
   name: "Kenku Sneak"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: COMMON
 number: 56
 type: "Humanoid"
 race: "Kenku"

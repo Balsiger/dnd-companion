@@ -2,7 +2,7 @@ template {
   name: "Rakshasa (MM)"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 race: "Rakshasa"
 type: "Fiend"

@@ -2,7 +2,7 @@ template {
   name: "Arcadian Avenger"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 1
 type: "Celestial"
 subtype: "Extraplanar"

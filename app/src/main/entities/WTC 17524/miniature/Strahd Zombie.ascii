@@ -2,7 +2,7 @@ template {
   name: "Strahd Zombie"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: COMMON
 number: 44
 race: "Zombie"
 type: "Undead"

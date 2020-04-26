@@ -2,7 +2,7 @@ template {
   name: "Helmed Horror (RD)"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 42
 race: "Helmed Horror"
 type: "Construct"

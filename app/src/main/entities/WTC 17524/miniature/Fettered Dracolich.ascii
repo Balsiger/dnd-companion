@@ -2,7 +2,7 @@ template {
   name: "Fettered Dracolich"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 17
 race: "Dracolich"
 type: "Undead"

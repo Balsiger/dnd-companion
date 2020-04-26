@@ -2,7 +2,7 @@ template {
   name: "Female Eladrin Fighter"
 }
 set: "Player\'s Handbook Heroes"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 6
 type: "Humanoid"
 race: "Eladrin"

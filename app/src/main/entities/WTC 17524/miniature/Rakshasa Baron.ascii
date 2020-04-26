@@ -2,7 +2,7 @@ template {
   name: "Rakshasa Baron"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 22
 race: "Rakshasa"
 type: "Fiend"

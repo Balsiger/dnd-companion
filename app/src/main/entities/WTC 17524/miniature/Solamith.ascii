@@ -2,7 +2,7 @@ template {
   name: "Solamith"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 16
 race: "Solamith"
 type: "Fiend"

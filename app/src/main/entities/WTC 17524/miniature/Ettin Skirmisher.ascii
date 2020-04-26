@@ -2,7 +2,7 @@ template {
   name: "Ettin Skirmisher"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 52
 race: "Ettin"
 type: "Giant"

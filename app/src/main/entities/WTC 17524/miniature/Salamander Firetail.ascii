@@ -2,7 +2,7 @@ template {
   name: "Salamander Firetail"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 33
 race: "Slamander"
 type: "Elemental"

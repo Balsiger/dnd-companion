@@ -1,8 +1,8 @@
 template {
   name: "Dwarf Battlemaster"
 }
-set: "Dungeons of Dread S"
-rarity: UNDEFINED
+set: "Starter Set"
+rarity: UNIQUE
 type: "Humanoid"
 race: "Dwarf"
 size: MEDIUM

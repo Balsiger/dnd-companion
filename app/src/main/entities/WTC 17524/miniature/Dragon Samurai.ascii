@@ -2,7 +2,7 @@ template {
   name: "Dragon Samurai"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 5
 type: "Humanoid"
 race: "Human"

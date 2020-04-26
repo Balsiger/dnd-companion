@@ -1,8 +1,8 @@
 template {
   name: "Goblin Sharpshooter"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: COMMON
 number: 22
 type: "Humanoid"
 subtype: "Goblinoid"

@@ -2,7 +2,7 @@ template {
   name: "Celestial Pegasus"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 15
 race: "Pegasus"
 type: "Celestial"

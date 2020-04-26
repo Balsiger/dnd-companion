@@ -2,7 +2,7 @@ template {
   name: "Minotaur Warrior"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 43
 race: "Minotaur"
 type: "Monstrosity"

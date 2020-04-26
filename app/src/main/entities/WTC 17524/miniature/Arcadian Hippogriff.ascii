@@ -2,7 +2,7 @@ template {
   name: "Arcadian Hippogriff"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: RARE
 number: 1
 race: "Hippogriff"
 type: "Monstrosity"

@@ -2,7 +2,7 @@ template {
   name: "Celestial Dire Badger"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: COMMON
 number: 13
 race: "Dire Badger"
 type: "Celestial"

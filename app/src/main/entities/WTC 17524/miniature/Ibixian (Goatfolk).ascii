@@ -2,7 +2,7 @@ template {
   name: "Ibixian (Goatfolk)"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: COMMON
 number: 21
 race: "Ibixan"
 type: "Monstrosity"

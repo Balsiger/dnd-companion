@@ -2,7 +2,7 @@ template {
   name: "Trapped Chest"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 51
 type: "Object"
 size: MEDIUM

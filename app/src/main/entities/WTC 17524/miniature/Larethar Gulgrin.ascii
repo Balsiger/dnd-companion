@@ -2,7 +2,7 @@ template {
   name: "Larethar Gulgrin"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: COMMON
 number: 6
 type: "Humanoid"
 race: "Dwarf"

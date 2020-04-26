@@ -2,7 +2,7 @@ template {
   name: "Formian Warrior"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 22
 race: "Formian"
 type: "Aberration"

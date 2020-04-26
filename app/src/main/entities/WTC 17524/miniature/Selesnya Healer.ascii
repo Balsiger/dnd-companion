@@ -2,7 +2,7 @@ template {
   name: "Selesnya Healer"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 type: "Humanoid"
 race: "Human"

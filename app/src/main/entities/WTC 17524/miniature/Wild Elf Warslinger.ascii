@@ -2,7 +2,7 @@ template {
   name: "Wild Elf Warslinger"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: COMMON
 number: 26
 type: "Humanoid"
 race: "Elf"

@@ -2,7 +2,7 @@ template {
   name: "Galvanic Blastseeker"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: RARE
 number: 39
 type: "Humanoid"
 race: "Human"

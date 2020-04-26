@@ -2,7 +2,7 @@ template {
   name: "Guenhwyvar"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 17
 race: "Panther"
 type: "Beast"

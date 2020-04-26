@@ -2,7 +2,7 @@ template {
   name: "Skeleton Key"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: COMMON
 number: 6
 race: "Skeleton"
 type: "Undead"

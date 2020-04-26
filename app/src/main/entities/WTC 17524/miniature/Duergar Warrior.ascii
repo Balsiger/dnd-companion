@@ -2,7 +2,7 @@ template {
   name: "Duergar Warrior"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: COMMON
 number: 32
 type: "Humanoid"
 race: "Duergar"

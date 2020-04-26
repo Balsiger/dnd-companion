@@ -2,7 +2,7 @@ template {
   name: "Orc Skeleton"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: COMMON
 number: 55
 type: "Undead"
 race: "Skeleton"

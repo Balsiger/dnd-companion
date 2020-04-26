@@ -2,7 +2,7 @@ template {
   name: "Wemic Barbarian"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 25
 race: "Wemic"
 type: "Monstrosity"

@@ -2,7 +2,7 @@ template {
   name: "Bugbear (IR)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 21
 type: "Humanoid"
 subtype: "Goblinoid"

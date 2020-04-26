@@ -2,7 +2,7 @@ template {
   name: "Human Cleric of Bane"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: RARE
 number: 35
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Justice Archon"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 5
 race: "Justice Archon"
 type: "Celestial"

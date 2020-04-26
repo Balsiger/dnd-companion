@@ -2,7 +2,7 @@ template {
   name: "Deathlock"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: COMMON
 number: 50
 race: "Deathlock"
 type: "Undead"

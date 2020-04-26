@@ -2,7 +2,7 @@ template {
   name: "Guardian Naga"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 8
 race: "Guardian Naga"
 type: "Monstrosity"

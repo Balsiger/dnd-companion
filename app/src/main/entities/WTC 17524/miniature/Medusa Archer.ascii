@@ -2,7 +2,7 @@ template {
   name: "Medusa Archer"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 37
 race: "Medusa"
 type: "Monstrosity"

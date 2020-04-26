@@ -2,7 +2,7 @@ template {
   name: "Spectral Panther"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 59
 race: "Panther"
 type: "Beast"

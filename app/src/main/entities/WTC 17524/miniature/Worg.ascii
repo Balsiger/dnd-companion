@@ -2,7 +2,7 @@ template {
   name: "Worg"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 80
 race: "Worg"
 type: "Monstrosity"

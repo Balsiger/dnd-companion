@@ -2,7 +2,7 @@ template {
   name: "Death Knight (MM)"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 race: "Death Knight"
 type: "Undead"

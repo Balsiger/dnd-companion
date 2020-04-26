@@ -2,7 +2,7 @@ template {
   name: "Greenspawn Zealot"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 32
 race: "Greenspawn"
 type: "Monstrosity"

@@ -3,7 +3,7 @@ template {
 }
 race: "Gold Dragon"
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 10
 type: "Dragon"
 size: LARGE

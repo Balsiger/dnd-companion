@@ -2,7 +2,7 @@ template {
   name: "Ziraj the Hunter"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: COMMON
 number: 9
 type: "Humanoid"
 race: "Half-Orc"

@@ -2,7 +2,7 @@ template {
   name: "Drow Wand Mage"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 50
 type: "Humanoid"
 race: "Drow"

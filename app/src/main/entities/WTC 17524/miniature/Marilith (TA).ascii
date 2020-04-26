@@ -2,7 +2,7 @@ template {
   name: "Marilith (TA)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: RARE
 number: 41
 race: "Marilith"
 type: "Fiend"

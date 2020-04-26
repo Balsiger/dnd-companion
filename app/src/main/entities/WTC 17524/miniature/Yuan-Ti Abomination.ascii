@@ -2,7 +2,7 @@ template {
   name: "Yuan-Ti Abomination"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 59
 type: "Humanoid"
 subtype: "Serpent"

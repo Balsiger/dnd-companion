@@ -2,7 +2,7 @@ template {
   name: "Fire Myrmidon"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: RARE
 number: 34
 race: "Fire Myrmidon"
 type: "Elemental"

@@ -2,7 +2,7 @@ template {
   name: "Orc Wizard"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 56
 type: "Humanoid"
 race: "Orc"

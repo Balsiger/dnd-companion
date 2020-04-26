@@ -2,7 +2,7 @@ template {
   name: "Flameskull"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 29
 race: "Flameskull"
 type: "Undead"

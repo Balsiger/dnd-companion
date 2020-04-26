@@ -2,7 +2,7 @@ template {
   name: "Greenvise Vine"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 20
 race: "Greenvise Vine"
 type: "Plant"

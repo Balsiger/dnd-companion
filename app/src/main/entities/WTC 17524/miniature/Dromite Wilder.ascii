@@ -2,7 +2,7 @@ template {
   name: "Dromite Wilder"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 14
 race: "Dromite"
 type: "Humanoid"

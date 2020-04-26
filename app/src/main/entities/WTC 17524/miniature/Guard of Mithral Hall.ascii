@@ -2,7 +2,7 @@ template {
   name: "Guard of Mithral Hall"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: COMMON
 number: 7
 type: "Humanoid"
 race: "Dwarf"

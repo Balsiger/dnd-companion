@@ -2,7 +2,7 @@ template {
   name: "Blackscale Lizardfolk"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 32
 type: "Humanoid"
 subtype: "Reptile"

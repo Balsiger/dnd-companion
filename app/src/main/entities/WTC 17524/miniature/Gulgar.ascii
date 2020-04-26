@@ -2,7 +2,7 @@ template {
   name: "Gulgar"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 27
 race: "Gulgar"
 type: "Monstrosity"

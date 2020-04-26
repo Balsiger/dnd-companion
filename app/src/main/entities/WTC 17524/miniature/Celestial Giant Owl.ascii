@@ -2,7 +2,7 @@ template {
   name: "Celestial Giant Owl"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 2
 race: "Giant Owl"
 type: "Celestial"

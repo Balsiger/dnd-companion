@@ -2,7 +2,7 @@ template {
   name: "Vargouille"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 49
 type: "Fiend"
 race: "Vargouille"

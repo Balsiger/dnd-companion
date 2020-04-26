@@ -2,7 +2,7 @@ template {
   name: "Griffon (DD)"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 40
 race: "Griffon"
 type: "Monstrosity"

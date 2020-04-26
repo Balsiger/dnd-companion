@@ -2,7 +2,7 @@ template {
   name: "Khumat"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 35
 race: "Khumat"
 type: "Monstrosity"

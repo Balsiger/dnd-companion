@@ -2,7 +2,7 @@ template {
   name: "Skullclan Hunter"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 8
 type: "Humanoid"
 race: "Halfling"

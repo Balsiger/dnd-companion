@@ -2,7 +2,7 @@ template {
   name: "Legion Devil Legionnaire"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: COMMON
 number: 24
 race: "Legion Devil"
 type: "Fiend"

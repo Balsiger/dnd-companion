@@ -2,7 +2,7 @@ template {
   name: "Hieracosphinx"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 31
 race: "Hieracosphinx"
 type: "Monstrosity"

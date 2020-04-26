@@ -2,7 +2,7 @@ template {
   name: "Female Human Warlord"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 14
 type: "Humanoid"
 race: "Human"

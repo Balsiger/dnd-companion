@@ -2,7 +2,7 @@ template {
   name: "Orc Archer (LM)"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: COMMON
 number: 36
 type: "Humanoid"
 race: "Orc"

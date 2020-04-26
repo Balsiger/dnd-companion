@@ -2,7 +2,7 @@ template {
   name: "Icingdeath, Gargantuan White Dragon (Great Wyrm)"
 }
 set: "Icons"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 3
 race: "White Dragon"
 type: "Dragon"

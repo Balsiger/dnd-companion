@@ -2,7 +2,7 @@ template {
   name: "Whirling Steel Monk"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 12
 type: "Humanoid"
 race: "Human"

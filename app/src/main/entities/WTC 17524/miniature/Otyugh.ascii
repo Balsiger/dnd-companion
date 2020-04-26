@@ -2,7 +2,7 @@ template {
   name: "Otyugh"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 27
 race: "Otyugh"
 type: "Aberration"

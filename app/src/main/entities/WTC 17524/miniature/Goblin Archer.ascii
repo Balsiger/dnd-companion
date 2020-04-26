@@ -2,7 +2,7 @@ template {
   name: "Goblin Archer"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: COMMON
 number: 4
 type: "Humanoid"
 subtype: "Goblinoid"

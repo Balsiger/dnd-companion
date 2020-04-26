@@ -2,7 +2,7 @@ template {
   name: "Moon Elf Ranger"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 18
 type: "Humanoid"
 race: "Elf"

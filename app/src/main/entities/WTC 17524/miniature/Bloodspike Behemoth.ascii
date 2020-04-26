@@ -2,7 +2,7 @@ template {
   name: "Bloodspike Behemoth"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: RARE
 number: 5
 type: "Beast"
 subtype: "Reptile"

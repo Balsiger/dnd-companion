@@ -2,7 +2,7 @@ template {
   name: "Copper Dragon (flying)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 32
 race: "Copper Dragon"
 type: "Dragon"

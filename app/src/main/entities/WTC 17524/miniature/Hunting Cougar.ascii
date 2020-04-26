@@ -2,7 +2,7 @@ template {
   name: "Hunting Cougar"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 19
 race: "Cougar"
 type: "Beast"

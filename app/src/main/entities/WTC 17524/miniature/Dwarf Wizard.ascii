@@ -2,7 +2,7 @@ template {
   name: "Dwarf Wizard"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 4
 type: "Humanoid"
 race: "Dwarf"

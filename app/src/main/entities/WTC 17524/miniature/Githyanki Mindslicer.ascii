@@ -2,7 +2,7 @@ template {
   name: "Githyanki Mindslicer"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: RARE
 number: 15
 race: "Githyanki"
 type: "Humanoid"

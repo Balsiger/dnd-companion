@@ -2,7 +2,7 @@ template {
   name: "Invisible Human Wizard"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 51
 type: "Humanoid"
 race: "Human"

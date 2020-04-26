@@ -2,7 +2,7 @@ template {
   name: "Mind Flayer"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 50
 race: "Mind Flayer"
 type: "Aberration"

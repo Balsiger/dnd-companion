@@ -2,7 +2,7 @@ template {
   name: "Giant Fire Beetle"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: COMMON
 number: 4
 race: "Giant Fire Beetle"
 type: "Beast"

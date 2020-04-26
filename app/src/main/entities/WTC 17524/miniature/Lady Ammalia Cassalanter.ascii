@@ -2,7 +2,7 @@ template {
   name: "Lady Ammalia Cassalanter"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 type: "Humanoid"
 race: "Human"

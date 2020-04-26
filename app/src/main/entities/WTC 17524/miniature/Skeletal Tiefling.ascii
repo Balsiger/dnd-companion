@@ -2,7 +2,7 @@ template {
   name: "Skeletal Tiefling"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: COMMON
 number: 34
 race: "Skeleton"
 type: "Undead"

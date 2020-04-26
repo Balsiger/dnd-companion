@@ -2,7 +2,7 @@ template {
   name: "Azer Raider"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 32
 race: "Azer"
 type: "Elemental"

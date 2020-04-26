@@ -2,7 +2,7 @@ template {
   name: "Blink Dog"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 35
 race: "Blink Dog"
 type: "Fey"

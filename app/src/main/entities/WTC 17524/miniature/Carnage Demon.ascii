@@ -2,7 +2,7 @@ template {
   name: "Carnage Demon"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: COMMON
 number: 47
 race: "Carnage Demon"
 type: "Fiend"

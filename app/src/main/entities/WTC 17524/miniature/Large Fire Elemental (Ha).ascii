@@ -2,7 +2,7 @@ template {
   name: "Large Fire Elemental (Ha)"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 69
 race: "Fire Elemental"
 type: "Elemental"

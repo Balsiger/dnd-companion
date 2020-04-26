@@ -2,7 +2,7 @@ template {
   name: "Sharn Redcloak"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: COMMON
 number: 44
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Young Minotaur"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 59
 race: "Minotaur"
 type: "Monstrosity"

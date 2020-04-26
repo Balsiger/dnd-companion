@@ -2,7 +2,7 @@ template {
   name: "Rot Grub Swarm"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: COMMON
 number: 40
 race: "Rot Grub Swarm"
 type: "Vermin"

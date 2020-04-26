@@ -2,7 +2,7 @@ template {
   name: "Quaggoth Slave"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 57
 race: "Quaggoth"
 type: "Humanoid"

@@ -2,7 +2,7 @@ template {
   name: "Snig the Axe"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: COMMON
 number: 38
 type: "Humanoid"
 subtype: "Goblinoid"

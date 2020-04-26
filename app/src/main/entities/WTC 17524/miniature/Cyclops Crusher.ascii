@@ -1,8 +1,8 @@
 template {
   name: "Cyclops Crusher"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: UNIQUE
 number: 13
 race: "Cyclops"
 type: "Giant"

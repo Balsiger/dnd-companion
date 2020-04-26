@@ -2,7 +2,7 @@ template {
   name: "Brain in a Jar"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 6
 type: "Construct"
 size: SMALL

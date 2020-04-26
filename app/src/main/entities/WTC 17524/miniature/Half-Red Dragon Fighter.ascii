@@ -2,7 +2,7 @@ template {
   name: "Half-Red Dragon Fighter"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 race: "Half-Dragon"
 type: "Dragon"

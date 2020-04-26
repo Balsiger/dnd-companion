@@ -1,8 +1,8 @@
 template {
   name: "Bladerager Troll"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: RARE
 number: 7
 race: "Troll"
 type: "Giant"

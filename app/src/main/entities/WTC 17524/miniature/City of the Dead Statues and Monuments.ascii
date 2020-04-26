@@ -2,6 +2,6 @@ template {
   name: "City of the Dead Statues and Monuments"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 45
 type: "Object"

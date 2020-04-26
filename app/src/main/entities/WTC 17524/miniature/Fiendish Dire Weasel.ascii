@@ -2,7 +2,7 @@ template {
   name: "Fiendish Dire Weasel"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 31
 race: "Dire Weasel"
 type: "Fiend"

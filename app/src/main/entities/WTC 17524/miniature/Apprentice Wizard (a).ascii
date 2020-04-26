@@ -2,7 +2,7 @@ template {
   name: "Apprentice Wizard (a)"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: COMMON
 number: 8
 type: "Humanoid"
 race: "Human"

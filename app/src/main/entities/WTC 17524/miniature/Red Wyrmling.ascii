@@ -2,7 +2,7 @@ template {
   name: "Red Wyrmling"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 58
 race: "Red Dragon"
 type: "Dragon"

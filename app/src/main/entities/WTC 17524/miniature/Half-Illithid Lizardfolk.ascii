@@ -2,7 +2,7 @@ template {
   name: "Half-Illithid Lizardfolk"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 34
 race: "Half-Illithid"
 type: "Aberration"

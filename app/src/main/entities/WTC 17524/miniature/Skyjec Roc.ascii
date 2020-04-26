@@ -2,7 +2,7 @@ template {
   name: "Skyjec Roc"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: COMMON
 number: 30
 type: "Monstrosity"
 subtype: "Winged"

@@ -2,7 +2,7 @@ template {
   name: "Acererak"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 race: "Lich"
 type: "Undead"

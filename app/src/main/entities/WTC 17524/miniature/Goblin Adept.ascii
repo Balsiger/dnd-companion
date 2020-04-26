@@ -2,7 +2,7 @@ template {
   name: "Goblin Adept"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: COMMON
 number: 34
 type: "Humanoid"
 subtype: "Goblinoid"

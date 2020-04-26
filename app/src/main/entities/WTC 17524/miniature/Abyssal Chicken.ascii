@@ -2,7 +2,7 @@ template {
   name: "Abyssal Chicken"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: COMMON
 number: 9
 race: "Abyssal Chicken"
 type: "Fiend"

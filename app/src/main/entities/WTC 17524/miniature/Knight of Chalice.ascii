@@ -2,7 +2,7 @@ template {
   name: "Knight of Chalice"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: COMMON
 number: 5
 type: "Humanoid"
 race: "Elf"

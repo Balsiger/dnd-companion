@@ -2,7 +2,7 @@ template {
   name: "Svirfneblin Rogue"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: COMMON
 number: 3
 race: "Gnome"
 type: "Humanoid"

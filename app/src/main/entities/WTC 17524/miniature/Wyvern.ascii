@@ -2,7 +2,7 @@ template {
   name: "Wyvern"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 25
 race: "Wyvern"
 type: "Dragon"

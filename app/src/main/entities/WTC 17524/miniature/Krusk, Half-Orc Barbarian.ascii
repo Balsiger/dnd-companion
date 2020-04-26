@@ -2,7 +2,7 @@ template {
   name: "Krusk, Half-Orc Barbarian"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 26
 type: "Humanoid"
 race: "Half-Orc"

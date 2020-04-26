@@ -2,7 +2,7 @@ template {
   name: "Yeenoghu's Dretch"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: COMMON
 number: 12
 race: "Dretch"
 type: "Fiend"

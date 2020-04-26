@@ -2,7 +2,7 @@ template {
   name: "Copper Dragon (flying) (RD)"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 41
 race: "Copper Dragon"
 type: "Dragon"

@@ -2,7 +2,7 @@ template {
   name: "Medium Astral Construct"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 20
 race: "Astral Construct"
 type: "Construct"

@@ -2,7 +2,7 @@ template {
   name: "Greyhawk City Militia"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: COMMON
 number: 13
 type: "Humanoid"
 race: "Human"

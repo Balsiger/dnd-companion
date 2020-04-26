@@ -2,7 +2,7 @@ template {
   name: "Ice Troll"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 53
 race: "Ice Troll"
 type: "Giant"

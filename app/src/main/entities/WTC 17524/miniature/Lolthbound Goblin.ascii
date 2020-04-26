@@ -2,7 +2,7 @@ template {
   name: "Lolthbound Goblin"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: COMMON
 number: 13
 type: "Humanoid"
 subtype: "Goblinoid"

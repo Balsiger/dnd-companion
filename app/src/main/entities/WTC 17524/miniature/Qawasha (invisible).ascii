@@ -2,7 +2,7 @@ template {
   name: "Qawasha (invisible)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 7
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Firbolg Druid"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: RARE
 number: 35
 race: "Firbolg"
 type: "Humanoid"

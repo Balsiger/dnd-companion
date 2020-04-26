@@ -2,7 +2,7 @@ template {
   name: "Troglodyte Bonecrusher"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: COMMON
 number: 27
 type: "Humanoid"
 race: "Troglodyte"

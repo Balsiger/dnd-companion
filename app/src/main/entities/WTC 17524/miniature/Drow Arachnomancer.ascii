@@ -2,7 +2,7 @@ template {
   name: "Drow Arachnomancer"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 46
 type: "Humanoid"
 race: "Drow"

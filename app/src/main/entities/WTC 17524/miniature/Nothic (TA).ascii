@@ -2,7 +2,7 @@ template {
   name: "Nothic (TA)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: RARE
 number: 35
 race: "Nothic"
 type: "Aberration"

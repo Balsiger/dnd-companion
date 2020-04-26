@@ -2,7 +2,7 @@ template {
   name: "Efreeti"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 39
 race: "Efreeti"
 type: "Elemental"

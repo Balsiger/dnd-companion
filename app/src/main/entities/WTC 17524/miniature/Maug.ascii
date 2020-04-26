@@ -2,7 +2,7 @@ template {
   name: "Maug"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 26
 race: "Maut"
 type: "Construct"

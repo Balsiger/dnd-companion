@@ -2,7 +2,7 @@ template {
   name: "Drow Elf Ranger Drizzt (invisible)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 46
 type: "Humanoid"
 race: "Drow"

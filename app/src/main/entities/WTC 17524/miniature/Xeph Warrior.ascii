@@ -2,7 +2,7 @@ template {
   name: "Xeph Warrior"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: COMMON
 number: 30
 type: "Humanoid"
 race: "Xeph"

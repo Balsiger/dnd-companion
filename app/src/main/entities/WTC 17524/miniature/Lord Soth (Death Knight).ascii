@@ -2,7 +2,7 @@ template {
   name: "Lord Soth (Death Knight)"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 type: "Humanoid"
 subtype: "Undead"

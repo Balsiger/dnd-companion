@@ -2,7 +2,7 @@ template {
   name: "Bladebearer Hobgoblin"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 27
 type: "Humanoid"
 subtype: "Goblinoid"

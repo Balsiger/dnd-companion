@@ -2,7 +2,7 @@ template {
   name: "Wand Expert"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 27
 type: "Humanoid"
 race: "Elf"

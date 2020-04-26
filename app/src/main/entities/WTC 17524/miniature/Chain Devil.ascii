@@ -2,7 +2,7 @@ template {
   name: "Chain Devil"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 race: "Chain Devil"
 type: "Fiend"

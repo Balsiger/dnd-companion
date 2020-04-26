@@ -2,7 +2,7 @@ template {
   name: "Hook Horror"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 57
 race: "Hook Horror"
 type: "Monstrosity"

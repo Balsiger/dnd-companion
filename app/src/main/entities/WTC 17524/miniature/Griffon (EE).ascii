@@ -2,7 +2,7 @@ template {
   name: "Griffon (EE)"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 32
 race: "Griffon"
 type: "Monstrosity"

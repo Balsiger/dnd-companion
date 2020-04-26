@@ -2,7 +2,7 @@ template {
   name: "Nessian Warhound"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 42
 race: "Nessian Warhound"
 type: "Fiend"

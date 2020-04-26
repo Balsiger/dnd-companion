@@ -2,7 +2,7 @@ template {
   name: "Earth Archon Rumbler"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 14
 race: "Earth Archon"
 type: "Elemental"

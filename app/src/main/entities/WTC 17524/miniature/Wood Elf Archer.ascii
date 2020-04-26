@@ -2,7 +2,7 @@ template {
   name: "Wood Elf Archer"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 34
 type: "Humanoid"
 race: "Elf"

@@ -2,7 +2,7 @@ template {
   name: "Rikka, Angelic Avenger"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 21
 race: "Angelic Avenger"
 type: "Celestial"

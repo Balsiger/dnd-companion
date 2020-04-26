@@ -2,7 +2,7 @@ template {
   name: "Divine Crusader of Corellon"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 16
 type: "Humanoid"
 race: "Elf"

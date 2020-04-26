@@ -2,7 +2,7 @@ template {
   name: "Female Halfling Cleric"
 }
 set: "Player\'s Handbook Heroes"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 14
 type: "Humanoid"
 race: "Halfling"

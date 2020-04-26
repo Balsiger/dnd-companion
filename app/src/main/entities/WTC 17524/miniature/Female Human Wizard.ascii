@@ -2,7 +2,7 @@ template {
   name: "Female Human Wizard"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 1
 type: "Humanoid"
 race: "Human"

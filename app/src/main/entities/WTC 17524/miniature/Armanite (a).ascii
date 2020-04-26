@@ -2,7 +2,7 @@ template {
   name: "Armanite (a)"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 32
 race: "Armanite"
 type: "Fiend"

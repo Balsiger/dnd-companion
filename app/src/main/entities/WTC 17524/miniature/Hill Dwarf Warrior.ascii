@@ -2,7 +2,7 @@ template {
   name: "Hill Dwarf Warrior"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 7
 type: "Humanoid"
 race: "Dwarf"

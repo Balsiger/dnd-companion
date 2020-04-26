@@ -2,7 +2,7 @@ template {
   name: "Ambush Drake"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 30
 type: "Dragon"
 subtype: "Drake"

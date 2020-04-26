@@ -2,7 +2,7 @@ template {
   name: "Zombie (GL)"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 40
 type: "Undead"
 race: "Zombie"

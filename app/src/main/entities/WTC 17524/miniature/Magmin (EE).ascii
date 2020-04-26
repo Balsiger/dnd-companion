@@ -2,7 +2,7 @@ template {
   name: "Magmin (EE)"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: COMMON
 number: 1
 race: "Magmin"
 type: "Elemental"

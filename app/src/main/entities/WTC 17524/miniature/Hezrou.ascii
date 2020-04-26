@@ -2,7 +2,7 @@ template {
   name: "Hezrou"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 25
 race: "Hezrou"
 type: "Fiend"

@@ -2,7 +2,7 @@ template {
   name: "Duergar Cleric of Asmodeus"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 12
 type: "Humanoid"
 race: "Duergar"

@@ -2,7 +2,7 @@ template {
   name: "King Snurre"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 53
 race: "Fire Giant"
 type: "Giant"

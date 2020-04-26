@@ -2,7 +2,7 @@ template {
   name: "Valenar Nomad Charger"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: RARE
 number: 24
 type: "Humanoid"
 race: "Elf"

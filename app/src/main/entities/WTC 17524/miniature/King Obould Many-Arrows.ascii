@@ -2,7 +2,7 @@ template {
   name: "King Obould Many-Arrows"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 53
 type: "Humanoid"
 race: "Orc"

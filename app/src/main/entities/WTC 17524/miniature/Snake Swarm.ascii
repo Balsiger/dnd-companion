@@ -1,8 +1,8 @@
 template {
   name: "Snake Swarm"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: COMMON
 number: 35
 race: "Snake Swarm"
 type: "Beast"

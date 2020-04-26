@@ -2,7 +2,7 @@ template {
   name: "Bullywug Guard"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: COMMON
 number: 7
 race: "Bullywug"
 type: "Humanoid"

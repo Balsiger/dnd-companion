@@ -2,7 +2,7 @@ template {
   name: "Mad Slasher"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 54
 race: "Mad Slasher"
 type: "Aberration"

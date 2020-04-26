@@ -2,7 +2,7 @@ template {
   name: "Chillborn"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: COMMON
 number: 12
 race: "Chillborn"
 type: "Undead"

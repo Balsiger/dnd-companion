@@ -2,7 +2,7 @@ template {
   name: "Frost Dwarf"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 48
 type: "Humanoid"
 race: "Dwarf"

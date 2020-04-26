@@ -2,7 +2,7 @@ template {
   name: "Warforged Hero"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 10
 race: "Warforged"
 type: "Construct"

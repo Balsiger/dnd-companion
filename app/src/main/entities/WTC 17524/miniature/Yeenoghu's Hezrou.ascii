@@ -2,7 +2,7 @@ template {
   name: "Yeenoghu's Hezrou"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 26
 race: "Hezrou"
 type: "Fiend"

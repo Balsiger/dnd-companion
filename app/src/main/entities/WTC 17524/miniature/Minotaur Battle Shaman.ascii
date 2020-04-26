@@ -1,8 +1,8 @@
 template {
   name: "Minotaur Battle Shaman"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: RARE
 number: 30
 race: "Minotaur"
 type: "Monstrosity"

@@ -2,7 +2,7 @@ template {
   name: "Draegloth Abomination"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 11
 race: "Draegloth"
 type: "Fiend"

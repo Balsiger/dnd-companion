@@ -2,7 +2,7 @@ template {
   name: "Frenzied Berserker"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 17
 type: "Humanoid"
 race: "Human"

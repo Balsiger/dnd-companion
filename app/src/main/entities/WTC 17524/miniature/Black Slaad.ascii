@@ -2,7 +2,7 @@ template {
   name: "Black Slaad"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: RARE
 number: 4
 race: "Black Slaad"
 type: "Aberration"

@@ -2,7 +2,7 @@ template {
   name: "Van Richten"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: RARE
 number: 10
 type: "Humanoid"
 race: "Human"

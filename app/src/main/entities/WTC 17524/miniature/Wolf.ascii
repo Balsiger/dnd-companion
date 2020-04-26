@@ -2,7 +2,7 @@ template {
   name: "Wolf"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: COMMON
 number: 37
 type: "Beast"
 subtype: "Animal"

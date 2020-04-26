@@ -2,7 +2,7 @@ template {
   name: "Red Dragon (flying)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: RARE
 number: 44
 race: "Red Dragon"
 type: "Dragon"

@@ -2,7 +2,7 @@ template {
   name: "Goblin Fighter"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: COMMON
 number: 6
 type: "Humanoid"
 race: "Goblin"

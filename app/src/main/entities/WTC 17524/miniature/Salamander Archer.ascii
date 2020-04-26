@@ -2,7 +2,7 @@ template {
   name: "Salamander Archer"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 30
 race: "Salamander"
 type: "Elemental"

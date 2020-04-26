@@ -2,7 +2,7 @@ template {
   name: "Skeletal Cyclops"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 33
 race: "Skeleton"
 type: "Undead"

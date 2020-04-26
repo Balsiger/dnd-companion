@@ -2,7 +2,7 @@ template {
   name: "Niv-mizzet Izzet Guildmaster"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 45
 race: "Red Dragon"
 type: "Dragon"

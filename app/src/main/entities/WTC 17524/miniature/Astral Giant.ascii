@@ -2,7 +2,7 @@ template {
   name: "Astral Giant"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 2
 race: "Astral Giant"
 type: "Giant"

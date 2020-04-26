@@ -2,7 +2,7 @@ template {
   name: "Marilith (SE)"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: RARE
 number: 25
 race: "Marilith"
 type: "Fiend"

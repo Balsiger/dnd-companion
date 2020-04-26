@@ -2,7 +2,7 @@ template {
   name: "Harpy (flying)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: RARE
 number: 39
 race: "Harpy"
 type: "Monstrosity"

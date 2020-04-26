@@ -2,7 +2,7 @@ template {
   name: "Web Golem"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 57
 race: "Web Golem"
 type: "Construct"

@@ -2,7 +2,7 @@ template {
   name: "Drow Spiderguard"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 13
 type: "Humanoid"
 race: "Drow"

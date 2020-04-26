@@ -1,8 +1,8 @@
 template {
   name: "Kobold Wyrmpriest "
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: UNCOMMON
 number: 27
 type: "Humanoid"
 race: "Kobold"

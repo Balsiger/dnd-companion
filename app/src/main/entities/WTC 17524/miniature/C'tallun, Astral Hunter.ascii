@@ -2,7 +2,7 @@ template {
   name: "C\'tallun, Astral Hunter"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 8
 race: "Mind Flayer"
 type: "Aberration"

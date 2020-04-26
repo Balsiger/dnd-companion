@@ -2,7 +2,7 @@ template {
   name: "Goristro"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 24
 race: "Goristro"
 type: "Fiend"

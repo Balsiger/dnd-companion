@@ -2,7 +2,7 @@ template {
   name: "Nightwalker (GL)"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 72
 race: "Nightwalker"
 type: "Undead"

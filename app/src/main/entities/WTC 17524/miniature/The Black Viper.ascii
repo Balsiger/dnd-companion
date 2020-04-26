@@ -2,7 +2,7 @@ template {
   name: "The Black Viper"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 23
 type: "Humanoid"
 race: "Human"

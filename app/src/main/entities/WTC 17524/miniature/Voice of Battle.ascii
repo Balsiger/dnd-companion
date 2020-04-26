@@ -2,7 +2,7 @@ template {
   name: "Voice of Battle"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 25
 type: "Humanoid"
 race: "Human"

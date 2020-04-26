@@ -2,7 +2,7 @@ template {
   name: "Large Copper Dragon (Young Adult)"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 21
 race: "Copper Dragon"
 type: "Dragon"

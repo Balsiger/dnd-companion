@@ -2,7 +2,7 @@ template {
   name: "Orzhov Giant"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: COMMON
 number: 32
 race: "Orzhov Giant"
 type: "Giant"

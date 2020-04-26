@@ -2,7 +2,7 @@ template {
   name: "Hoard Scarab Larva Swarm"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: COMMON
 number: 26
 race: "Hoard Scarab"
 type: "Vermin"

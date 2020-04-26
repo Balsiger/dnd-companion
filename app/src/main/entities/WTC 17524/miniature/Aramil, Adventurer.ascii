@@ -2,7 +2,7 @@ template {
   name: "Aramil, Adventurer"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 9
 race: "Elf"
 type: "Humanoid"

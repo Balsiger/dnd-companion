@@ -3,7 +3,7 @@ template {
 }
 race: "Medusa"
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: RARE
 number: 34
 type: "Monstrosity"
 subtype: "Humanoid"

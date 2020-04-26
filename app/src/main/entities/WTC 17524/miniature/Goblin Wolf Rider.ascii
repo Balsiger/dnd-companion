@@ -2,7 +2,7 @@ template {
   name: "Goblin Wolf Rider"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 17
 type: "Humanoid"
 subtype: "Goblinoid"

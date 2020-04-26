@@ -2,7 +2,7 @@ template {
   name: "Mantrap"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 30
 race: "Mantrap"
 type: "Plant"

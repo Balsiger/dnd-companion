@@ -2,7 +2,7 @@ template {
   name: "Changeling Rogue"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: COMMON
 number: 14
 race: "Changeling"
 type: "Humanoid"

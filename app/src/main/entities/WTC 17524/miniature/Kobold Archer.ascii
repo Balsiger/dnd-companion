@@ -2,7 +2,7 @@ template {
   name: "Kobold Archer"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: COMMON
 number: 41
 type: "Humanoid"
 race: "Kobold"

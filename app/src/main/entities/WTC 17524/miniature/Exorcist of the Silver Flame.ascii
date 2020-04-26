@@ -2,7 +2,7 @@ template {
   name: "Exorcist of the Silver Flame"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 6
 type: "Humanoid"
 race: "Human"

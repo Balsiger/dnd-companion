@@ -2,7 +2,7 @@ template {
   name: "Shade Knight"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 53
 race: "Shade"
 type: "Humanoid"

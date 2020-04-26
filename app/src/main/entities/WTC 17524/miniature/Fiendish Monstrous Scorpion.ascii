@@ -2,7 +2,7 @@ template {
   name: "Fiendish Monstrous Scorpion"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 53
 race: "Fiendish Monstrous Scorpion"
 type: "Fiend"

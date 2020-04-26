@@ -2,7 +2,7 @@ template {
   name: "Vrock"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 20
 race: "Vrock"
 type: "Fiend"

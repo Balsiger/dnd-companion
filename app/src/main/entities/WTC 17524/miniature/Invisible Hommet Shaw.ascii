@@ -2,7 +2,7 @@ template {
   name: "Invisible Hommet Shaw"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 22
 type: "Humanoid"
 race: "Human"

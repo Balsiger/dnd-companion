@@ -2,7 +2,7 @@ template {
   name: "Skeletal Courser"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 41
 race: "Skeleton"
 type: "Undead"

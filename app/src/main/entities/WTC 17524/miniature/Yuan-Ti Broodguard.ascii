@@ -2,7 +2,7 @@ template {
   name: "Yuan-Ti Broodguard"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 24
 type: "Humanoid"
 race: "Yuan-Ti"

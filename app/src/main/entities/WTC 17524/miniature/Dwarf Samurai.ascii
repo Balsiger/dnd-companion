@@ -2,7 +2,7 @@ template {
   name: "Dwarf Samurai"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 6
 type: "Humanoid"
 race: "Dwarf"

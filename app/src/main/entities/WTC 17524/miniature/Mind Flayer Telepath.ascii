@@ -2,7 +2,7 @@ template {
   name: "Mind Flayer Telepath"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 39
 race: "Mind Flayer"
 type: "Aberration"

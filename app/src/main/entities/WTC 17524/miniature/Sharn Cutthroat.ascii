@@ -2,7 +2,7 @@ template {
   name: "Sharn Cutthroat"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 20
 race: "Changeling"
 type: "Humanoid"

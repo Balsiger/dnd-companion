@@ -2,7 +2,7 @@ template {
   name: "Ettin"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 27
 race: "Ettin"
 type: "Giant"

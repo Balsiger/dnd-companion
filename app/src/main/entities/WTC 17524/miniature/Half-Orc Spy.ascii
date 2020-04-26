@@ -2,7 +2,7 @@ template {
   name: "Half-Orc Spy"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 6
 type: "Humanoid"
 race: "Half-Orc"

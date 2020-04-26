@@ -2,7 +2,7 @@ template {
   name: "Dark Talon Champion (Lizardfolk)"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: COMMON
 number: 51
 race: "Lizardfolk"
 type: "Humanoid"

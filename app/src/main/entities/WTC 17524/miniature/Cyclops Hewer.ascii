@@ -2,7 +2,7 @@ template {
   name: "Cyclops Hewer"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 41
 race: "Cyclops"
 type: "Giant"

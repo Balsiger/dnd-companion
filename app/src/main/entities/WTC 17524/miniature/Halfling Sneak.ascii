@@ -2,7 +2,7 @@ template {
   name: "Halfling Sneak"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: COMMON
 number: 19
 type: "Humanoid"
 race: "Halfling"

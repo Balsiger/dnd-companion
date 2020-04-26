@@ -2,7 +2,7 @@ template {
   name: "Orc Raider"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: COMMON
 number: 8
 type: "Humanoid"
 race: "Orc"

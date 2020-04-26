@@ -2,7 +2,7 @@ template {
   name: "Wood Woad"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 29
 race: "Woad"
 type: "Plant"

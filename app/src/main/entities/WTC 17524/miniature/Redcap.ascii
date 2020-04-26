@@ -2,7 +2,7 @@ template {
   name: "Redcap"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: COMMON
 number: 1
 race: "Redcap"
 type: "Fey"

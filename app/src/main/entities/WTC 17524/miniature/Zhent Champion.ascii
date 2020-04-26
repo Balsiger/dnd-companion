@@ -2,7 +2,7 @@ template {
   name: "Zhent Champion"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 59
 type: "Humanoid"
 race: "Human"

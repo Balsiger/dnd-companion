@@ -2,7 +2,7 @@ template {
   name: "Lord of Blades"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: RARE
 number: 39
 race: "Warforged"
 type: "Construct"

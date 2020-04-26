@@ -2,7 +2,7 @@ template {
   name: "Water Cult Warrior"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: COMMON
 number: 13
 type: "Humanoid"
 race: "Human"

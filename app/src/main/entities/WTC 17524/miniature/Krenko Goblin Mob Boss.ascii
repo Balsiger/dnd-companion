@@ -2,7 +2,7 @@ template {
   name: "Krenko Goblin Mob Boss"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: COMMON
 number: 7
 type: "Humanoid"
 subtype: "Goblinoid"

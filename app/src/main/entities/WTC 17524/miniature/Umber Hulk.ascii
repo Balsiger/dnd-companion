@@ -2,7 +2,7 @@ template {
   name: "Umber Hulk"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 78
 race: "Umber Hulk"
 type: "Monstrosity"

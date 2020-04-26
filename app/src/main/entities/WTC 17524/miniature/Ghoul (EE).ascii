@@ -2,7 +2,7 @@ template {
   name: "Ghoul (EE)"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: COMMON
 number: 9
 type: "Undead"
 race: "Ghoul"

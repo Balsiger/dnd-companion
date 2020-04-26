@@ -2,7 +2,7 @@ template {
   name: "Hound Archon"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 7
 race: "Hound Archon"
 type: "Celestial"

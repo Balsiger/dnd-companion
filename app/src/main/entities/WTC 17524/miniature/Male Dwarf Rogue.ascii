@@ -2,7 +2,7 @@ template {
   name: "Male Dwarf Rogue"
 }
 set: "Player\'s Handbook Heroes"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 5
 type: "Humanoid"
 race: "Dwarf"

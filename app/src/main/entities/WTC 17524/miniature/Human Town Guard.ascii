@@ -2,7 +2,7 @@ template {
   name: "Human Town Guard"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: COMMON
 number: 22
 type: "Humanoid"
 race: "Human"

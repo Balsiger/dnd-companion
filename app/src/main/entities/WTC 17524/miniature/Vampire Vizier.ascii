@@ -2,7 +2,7 @@ template {
   name: "Vampire Vizier"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 28
 race: "Vampire"
 type: "Undead"

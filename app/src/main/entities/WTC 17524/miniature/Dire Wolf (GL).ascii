@@ -2,7 +2,7 @@ template {
   name: "Dire Wolf (GL)"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 25
 race: "Dire Wolf"
 type: "Beast"

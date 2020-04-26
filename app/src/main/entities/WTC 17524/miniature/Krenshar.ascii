@@ -2,7 +2,7 @@ template {
   name: "Krenshar"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 43
 race: "Krenshar"
 type: "Monstrosity"

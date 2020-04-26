@@ -2,7 +2,7 @@ template {
   name: "Olanthius"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 race: "Nupperibo"
 type: "Fiend"

@@ -2,7 +2,7 @@ template {
   name: "Warpriest of Hextor"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 45
 type: "Humanoid"
 race: "Human"

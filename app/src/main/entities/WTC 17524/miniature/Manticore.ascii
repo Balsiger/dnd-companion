@@ -2,7 +2,7 @@ template {
   name: "Manticore"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 37
 race: "Manticore"
 type: "Monstrosity"

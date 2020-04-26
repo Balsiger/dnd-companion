@@ -2,7 +2,7 @@ template {
   name: "Warrior Wight"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 17
 race: "Wight"
 type: "Undead"

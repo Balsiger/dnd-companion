@@ -2,7 +2,7 @@ template {
   name: "Achaierai"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 26
 race: "Achaierai"
 type: "Fiend"

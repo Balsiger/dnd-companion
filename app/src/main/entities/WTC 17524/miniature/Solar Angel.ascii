@@ -2,7 +2,7 @@ template {
   name: "Solar Angel"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 30
 race: "Solar"
 type: "Celestial"

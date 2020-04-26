@@ -2,7 +2,7 @@ template {
   name: "Skeleton (TA b)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 16
 race: "Skeleton"
 type: "Undead"

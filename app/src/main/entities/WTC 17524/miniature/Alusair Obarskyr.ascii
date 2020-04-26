@@ -2,7 +2,7 @@ template {
   name: "Alusair Obarskyr"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 1
 type: "Humanoid"
 race: "Human"

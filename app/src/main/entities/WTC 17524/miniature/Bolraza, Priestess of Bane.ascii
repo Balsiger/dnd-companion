@@ -2,7 +2,7 @@ template {
   name: "Bolraza, Priestess of Bane"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 7
 type: "Humanoid"
 subtype: "Goblinoid"

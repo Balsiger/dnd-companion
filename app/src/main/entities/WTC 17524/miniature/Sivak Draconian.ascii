@@ -2,7 +2,7 @@ template {
   name: "Sivak Draconian"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 35
 race: "Draconian"
 type: "Dragon"

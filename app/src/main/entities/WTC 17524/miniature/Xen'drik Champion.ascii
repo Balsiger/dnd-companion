@@ -2,7 +2,7 @@ template {
   name: "Xen\'drik Champion"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 31
 type: "Humanoid"
 race: "Drow"

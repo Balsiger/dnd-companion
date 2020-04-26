@@ -2,7 +2,7 @@ template {
   name: "Thoon Hulk"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 23
 type: "Aberration"
 race: "Mind Flayer"

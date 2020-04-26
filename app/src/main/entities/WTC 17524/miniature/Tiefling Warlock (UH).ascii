@@ -2,7 +2,7 @@ template {
   name: "Tiefling Warlock (UH)"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 58
 type: "Humanoid"
 race: "Tiefling"

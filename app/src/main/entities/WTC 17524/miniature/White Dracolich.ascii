@@ -2,7 +2,7 @@ template {
   name: "White Dracolich"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 50
 race: "White Dracolich"
 type: "Undead"

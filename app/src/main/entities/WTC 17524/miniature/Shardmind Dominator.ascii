@@ -2,7 +2,7 @@ template {
   name: "Shardmind Dominator"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 44
 race: "Shardmind"
 type: "Construct"

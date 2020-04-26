@@ -2,7 +2,7 @@ template {
   name: "Kuo-Toa"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: COMMON
 number: 68
 type: "Humanoid"
 race: "Kuo-Toa"

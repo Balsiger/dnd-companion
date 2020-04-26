@@ -2,7 +2,7 @@ template {
   name: "Druid of the Old Ways"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 24
 type: "Humanoid"
 race: "Centaur"

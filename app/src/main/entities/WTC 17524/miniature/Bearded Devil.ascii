@@ -2,7 +2,7 @@ template {
   name: "Bearded Devil"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 40
 race: "Bearded Devil"
 type: "Fiend"

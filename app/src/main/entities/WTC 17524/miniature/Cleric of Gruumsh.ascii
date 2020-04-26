@@ -2,7 +2,7 @@ template {
   name: "Cleric of Gruumsh"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 59
 race: "Orc"
 type: "Humanoid"

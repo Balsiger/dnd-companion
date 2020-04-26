@@ -1,8 +1,8 @@
 template {
   name: "Human Sellsword"
 }
-set: "Dungeons of Dread S"
-rarity: UNDEFINED
+set: "Starter Set"
+rarity: UNIQUE
 type: "Humanoid"
 race: "Human"
 class: "Fighter"

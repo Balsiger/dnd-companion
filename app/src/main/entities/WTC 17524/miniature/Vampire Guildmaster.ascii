@@ -2,7 +2,7 @@ template {
   name: "Vampire Guildmaster"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 race: "Vampire"
 type: "Undead"

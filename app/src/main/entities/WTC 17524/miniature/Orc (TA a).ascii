@@ -2,7 +2,7 @@ template {
   name: "Orc (TA a)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: COMMON
 number: 8
 type: "Humanoid"
 race: "Orc"

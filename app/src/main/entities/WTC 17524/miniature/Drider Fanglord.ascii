@@ -2,7 +2,7 @@ template {
   name: "Drider Fanglord"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 12
 race: "Drider"
 type: "Monstrosity"

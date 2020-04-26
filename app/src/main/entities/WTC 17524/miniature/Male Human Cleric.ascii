@@ -2,7 +2,7 @@ template {
   name: "Male Human Cleric"
 }
 set: "Player\'s Handbook Heroes"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 15
 type: "Humanoid"
 race: "Human"

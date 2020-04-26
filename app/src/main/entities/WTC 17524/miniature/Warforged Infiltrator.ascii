@@ -2,7 +2,7 @@ template {
   name: "Warforged Infiltrator"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 48
 race: "Warforged"
 type: "Construct"

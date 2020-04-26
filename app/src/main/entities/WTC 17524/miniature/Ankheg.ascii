@@ -2,7 +2,7 @@ template {
   name: "Ankheg"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 30
 race: "Ankheg"
 type: "Monstrosity"

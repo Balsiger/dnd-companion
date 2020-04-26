@@ -2,7 +2,7 @@ template {
   name: "Lich Necromancer"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 53
 type: "Humanoid"
 subtype: "Undead"

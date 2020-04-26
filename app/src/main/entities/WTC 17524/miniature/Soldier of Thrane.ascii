@@ -2,7 +2,7 @@ template {
   name: "Soldier of Thrane"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 9
 type: "Humanoid"
 race: "Human"

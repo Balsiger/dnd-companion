@@ -1,8 +1,8 @@
 template {
   name: "Ghaele of Winter"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: RARE
 number: 17
 type: "Humanoid"
 race: "Eladrin"

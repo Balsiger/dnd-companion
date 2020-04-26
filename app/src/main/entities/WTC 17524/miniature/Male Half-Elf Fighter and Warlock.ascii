@@ -2,7 +2,7 @@ template {
   name: "Male Half-Elf Fighter and Warlock"
 }
 set: "Player\'s Handbook Heroes"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 9
 type: "Humanoid"
 race: "Half-Elf"

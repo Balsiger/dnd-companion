@@ -2,7 +2,7 @@ template {
   name: "Valenar Commander"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 21
 type: "Humanoid"
 race: "Elf"

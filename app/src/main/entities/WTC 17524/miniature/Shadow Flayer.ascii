@@ -2,7 +2,7 @@ template {
   name: "Shadow Flayer"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 21
 race: "Mind Flayer"
 type: "Aberration"

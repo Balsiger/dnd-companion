@@ -2,7 +2,7 @@ template {
   name: "Wood Elf Ranger"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 26
 type: "Humanoid"
 race: "Elf"

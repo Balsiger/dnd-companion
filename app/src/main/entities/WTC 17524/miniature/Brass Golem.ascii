@@ -2,7 +2,7 @@ template {
   name: "Brass Golem"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 2
 race: "Brass Golem"
 type: "Construct"

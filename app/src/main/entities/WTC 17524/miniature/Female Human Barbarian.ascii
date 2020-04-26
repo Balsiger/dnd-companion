@@ -2,7 +2,7 @@ template {
   name: "Female Human Barbarian"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 16
 type: "Humanoid"
 race: "Human"

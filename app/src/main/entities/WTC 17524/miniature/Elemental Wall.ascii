@@ -2,7 +2,7 @@ template {
   name: "Elemental Wall"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 6
 race: "Elemental Wall"
 type: "Elemental"

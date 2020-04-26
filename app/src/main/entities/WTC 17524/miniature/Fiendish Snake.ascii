@@ -2,7 +2,7 @@ template {
   name: "Fiendish Snake"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: COMMON
 number: 50
 race: "Snake"
 type: "Fiend"

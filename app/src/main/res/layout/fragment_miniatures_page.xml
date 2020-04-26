@@ -59,13 +59,21 @@
             app:labelColor="@color/miniatureDark"
             app:labelText="Owned"/>
 
-        <net.ixitxachitls.companion.ui.views.LabelledTextView
+        <net.ixitxachitls.companion.ui.views.LabelledEditTextView
             android:id="@+id/location"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             app:labelColor="@color/miniatureDark"
             app:labelText="Location"/>
+
+        <net.ixitxachitls.companion.ui.views.LabelledTextView
+            android:id="@+id/rarity"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:labelColor="@color/miniatureDark"
+            app:labelText="Rarity"/>
 
       </LinearLayout>
 

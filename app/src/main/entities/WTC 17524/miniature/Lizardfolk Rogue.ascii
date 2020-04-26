@@ -2,7 +2,7 @@ template {
   name: "Lizardfolk Rogue"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 35
 type: "Humanoid"
 subtype: "Reptile"

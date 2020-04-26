@@ -2,7 +2,7 @@ template {
   name: "Wulfgar (NB)"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 25
 type: "Humanoid"
 race: "Human"

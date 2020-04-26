@@ -2,7 +2,7 @@ template {
   name: "Thri-Kreen Ranger"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 race: "Thri-Kreen"
 type: "Humanoid"

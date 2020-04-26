@@ -2,7 +2,7 @@ template {
   name: "Nalfeshnee Demon"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 47
 race: "Nalfeshnee"
 type: "Fiend"

@@ -2,7 +2,7 @@ template {
   name: "Catfolk Wilder"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 14
 race: "Catfolk"
 type: "Humanoid"

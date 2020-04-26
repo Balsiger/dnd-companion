@@ -2,7 +2,7 @@ template {
   name: "Shardsoul Slayer"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 15
 race: "Shardsoul Slayer"
 type: "Construct"

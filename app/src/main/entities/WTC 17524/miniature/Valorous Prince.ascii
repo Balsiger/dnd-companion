@@ -2,7 +2,7 @@ template {
   name: "Valorous Prince"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 10
 type: "Humanoid"
 race: "Human"

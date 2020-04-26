@@ -2,7 +2,7 @@ template {
   name: "Shadowhunter Bat"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 58
 race: "Bat"
 type: "Monstrosity"

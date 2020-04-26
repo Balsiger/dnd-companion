@@ -2,7 +2,7 @@ template {
   name: "City Guard"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 23
 type: "Humanoid"
 race: "Human"

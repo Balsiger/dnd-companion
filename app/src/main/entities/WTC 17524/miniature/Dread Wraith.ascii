@@ -2,7 +2,7 @@ template {
   name: "Dread Wraith"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: RARE
 number: 29
 race: "Dread Wraith"
 type: "Undead"

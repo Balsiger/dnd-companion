@@ -2,7 +2,7 @@ template {
   name: "Slaad Spawn"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: COMMON
 number: 36
 race: "Slaad Spawn"
 type: "Aberration"

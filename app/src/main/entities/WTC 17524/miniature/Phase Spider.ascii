@@ -2,7 +2,7 @@ template {
   name: "Phase Spider"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 28
 race: "Phase Spider"
 type: "Monstrosity"

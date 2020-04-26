@@ -2,7 +2,7 @@ template {
   name: "Mad Maggie"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: RARE
 number: 37
 race: "Night Hag"
 type: "Fey"

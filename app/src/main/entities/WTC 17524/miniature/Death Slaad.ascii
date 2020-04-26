@@ -2,7 +2,7 @@ template {
   name: "Death Slaad"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 43
 race: "Death Slaad"
 type: "Aberration"

@@ -2,7 +2,7 @@ template {
   name: "Legion Pit Fiend"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: RARE
 number: 41
 race: "Pit Fiend"
 type: "Fiend"

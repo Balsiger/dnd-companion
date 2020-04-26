@@ -2,7 +2,7 @@ template {
   name: "Loyal Earth Elemental"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 8
 race: "Earth Elemental"
 type: "Elemental"

@@ -2,7 +2,7 @@ template {
   name: "Female Human Cleric"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 7
 type: "Humanoid"
 race: "Human"

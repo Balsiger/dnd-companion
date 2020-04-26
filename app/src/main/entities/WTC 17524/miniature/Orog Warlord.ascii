@@ -2,7 +2,7 @@ template {
   name: "Orog Warlord"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 47
 type: "Humanoid"
 race: "Orc"

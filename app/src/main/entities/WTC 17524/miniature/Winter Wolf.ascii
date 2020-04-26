@@ -2,7 +2,7 @@ template {
   name: "Winter Wolf"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 60
 race: "Wolf"
 type: "Monstrosity"

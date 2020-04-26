@@ -2,7 +2,7 @@ template {
   name: "Lolth\'s Sting"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: COMMON
 number: 53
 type: "Humanoid"
 race: "Drow"

@@ -2,7 +2,7 @@ template {
   name: "Ravenous Vampire"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 58
 race: "Vampire"
 type: "Undead"

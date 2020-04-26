@@ -2,7 +2,7 @@ template {
   name: "Cleric of Sune"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 15
 type: "Humanoid"
 race: "Human"

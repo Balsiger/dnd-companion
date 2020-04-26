@@ -2,7 +2,7 @@ template {
   name: "Gnoll Barbarian"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 52
 type: "Humanoid"
 race: "Gnoll"

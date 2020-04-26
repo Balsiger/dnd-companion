@@ -1,8 +1,8 @@
 template {
   name: "Yuan-Ti Swiftscale"
 }
-set: "Dungeons of Dread S"
-rarity: UNDEFINED
+set: "Starter Set"
+rarity: UNIQUE
 type: "Humanoid"
 subtype: "Serpent"
 subtype: "Reptile"

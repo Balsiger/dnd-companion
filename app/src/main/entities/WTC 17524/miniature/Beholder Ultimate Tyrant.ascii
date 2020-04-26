@@ -2,7 +2,7 @@ template {
   name: "Beholder Ultimate Tyrant"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 6
 race: "Beholder"
 type: "Aberration"

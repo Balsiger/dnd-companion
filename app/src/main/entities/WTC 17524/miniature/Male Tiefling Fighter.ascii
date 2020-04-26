@@ -2,7 +2,7 @@ template {
   name: "Male Tiefling Fighter"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 15
 type: "Humanoid"
 race: "Tiefling"

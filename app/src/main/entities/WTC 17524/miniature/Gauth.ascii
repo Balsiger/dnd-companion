@@ -2,7 +2,7 @@ template {
   name: "Gauth"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: RARE
 number: 34
 race: "Gauth"
 type: "Aberration"

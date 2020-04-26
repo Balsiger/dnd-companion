@@ -2,7 +2,7 @@ template {
   name: "Male Tiefling Warlock"
 }
 set: "Player\'s Handbook Heroes"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 8
 type: "Humanoid"
 race: "Tiefling"

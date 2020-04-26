@@ -2,7 +2,7 @@ template {
   name: "Girallon (TA)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 31
 race: "Girallon"
 type: "Monstrosity"

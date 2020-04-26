@@ -2,7 +2,7 @@ template {
   name: "Invisible Phase Spider"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 28
 type: "Monstrosity"
 subtype: "Spider"

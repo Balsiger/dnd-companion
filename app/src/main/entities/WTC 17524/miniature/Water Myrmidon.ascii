@@ -2,7 +2,7 @@ template {
   name: "Water Myrmidon"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 19
 race: "Water Myrmidon"
 type: "Elemental"

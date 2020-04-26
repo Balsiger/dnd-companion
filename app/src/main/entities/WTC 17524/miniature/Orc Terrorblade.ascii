@@ -1,8 +1,8 @@
 template {
   name: "Orc Terrorblade"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: COMMON
 number: 32
 type: "Humanoid"
 race: "Orc"

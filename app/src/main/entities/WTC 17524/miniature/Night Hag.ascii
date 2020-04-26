@@ -2,7 +2,7 @@ template {
   name: "Night Hag"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 37
 race: "Night Hag"
 type: "Fey"

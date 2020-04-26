@@ -2,7 +2,7 @@ template {
   name: "Wulfgar"
 }
 set: "Icons"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 2
 type: "Humanoid"
 race: "Human"

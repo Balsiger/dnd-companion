@@ -2,7 +2,7 @@ template {
   name: "Dark Creeper"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: COMMON
 number: 42
 race: "Dark Creeper"
 type: "Humanoid"

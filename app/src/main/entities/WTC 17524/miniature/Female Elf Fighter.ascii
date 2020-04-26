@@ -2,7 +2,7 @@ template {
   name: "Female Elf Fighter"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 11
 type: "Humanoid"
 race: "Elf"

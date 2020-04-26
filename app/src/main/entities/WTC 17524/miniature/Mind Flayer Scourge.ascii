@@ -2,7 +2,7 @@ template {
   name: "Mind Flayer Scourge"
 }
 set: "Dungeons of Dread"
-rarity: UNDEFINED
+rarity: RARE
 number: 26
 race: "Mind Flayer"
 type: "Aberration"

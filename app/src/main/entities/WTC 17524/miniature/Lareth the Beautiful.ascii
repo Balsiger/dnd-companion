@@ -2,7 +2,7 @@ template {
   name: "Lareth the Beautiful"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 52
 type: "Humanoid"
 race: "Human"

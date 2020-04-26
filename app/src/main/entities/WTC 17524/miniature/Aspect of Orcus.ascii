@@ -2,7 +2,7 @@ template {
   name: "Aspect of Orcus"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: RARE
 number: 47
 type: "Fiend"
 subtype: "Chaotic"

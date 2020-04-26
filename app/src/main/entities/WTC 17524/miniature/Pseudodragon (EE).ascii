@@ -2,7 +2,7 @@ template {
   name: "Pseudodragon (EE)"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: COMMON
 number: 6
 race: "Pseudodragon"
 type: "Dragon"

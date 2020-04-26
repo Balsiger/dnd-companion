@@ -2,7 +2,7 @@ template {
   name: "Stone Giant Runecarver"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: RARE
 number: 9
 race: "Stone Giant"
 type: "Giant"

@@ -2,7 +2,7 @@ template {
   name: "Manshoon"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 28
 race: "Lich"
 type: "Undead"

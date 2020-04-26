@@ -2,7 +2,7 @@ template {
   name: "Pit Fiend"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: RARE
 number: 42
 race: "Pit Fiend"
 type: "Fiend"

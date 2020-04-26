@@ -2,7 +2,7 @@ template {
   name: "Vegepygmy"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: COMMON
 number: 3
 race: "Vegepygmy"
 type: "Plant"

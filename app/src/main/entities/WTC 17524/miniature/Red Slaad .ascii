@@ -2,7 +2,7 @@ template {
   name: "Red Slaad "
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: RARE
 number: 33
 race: "Red Slaad"
 type: "Aberration"

@@ -2,7 +2,7 @@ template {
   name: "Shadow Gold Dragon"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 54
 race: "Gold Dragon"
 type: "Dragon"

@@ -2,7 +2,7 @@ template {
   name: "Warrior Skeleton"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: COMMON
 number: 43
 type: "Undead"
 race: "Skeleton"

@@ -2,7 +2,7 @@ template {
   name: "Runespiral Demon"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: COMMON
 number: 14
 race: "Runespiral Demon"
 type: "Fiend"

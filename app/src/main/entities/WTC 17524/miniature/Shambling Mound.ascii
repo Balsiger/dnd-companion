@@ -2,7 +2,7 @@ template {
   name: "Shambling Mound"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 race: "Shambling Mound"
 type: "Plant"

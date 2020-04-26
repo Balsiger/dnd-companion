@@ -2,7 +2,7 @@ template {
   name: "Angel of Valor Legionnaire"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 3
 race: "Angel"
 type: "Celestial"

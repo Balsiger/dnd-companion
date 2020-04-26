@@ -2,7 +2,7 @@ template {
   name: "Concord Illithid"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 25
 race: "Mind Flayer"
 type: "Aberration"

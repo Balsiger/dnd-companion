@@ -2,7 +2,7 @@ template {
   name: "Invisible Bryn Lightfingers"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 21
 type: "Humanoid"
 race: "Halfling"

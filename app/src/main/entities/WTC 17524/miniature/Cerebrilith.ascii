@@ -2,7 +2,7 @@ template {
   name: "Cerebrilith"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 48
 race: "Cerabrilith"
 type: "Fiend"

@@ -2,7 +2,7 @@ template {
   name: "Valindra Shadowmantle"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 18
 type: "Undead"
 race: "Lich"

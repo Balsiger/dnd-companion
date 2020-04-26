@@ -2,7 +2,7 @@ template {
   name: "Death Giant"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: RARE
 number: 9
 race: "Death Giant"
 type: "Giant"

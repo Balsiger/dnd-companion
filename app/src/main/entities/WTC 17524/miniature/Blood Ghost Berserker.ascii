@@ -2,7 +2,7 @@ template {
   name: "Blood Ghost Berserker"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 44
 type: "Humanoid"
 subtype: "Goblinoid"

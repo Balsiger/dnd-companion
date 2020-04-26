@@ -2,7 +2,7 @@ template {
   name: "Darkmantle"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: COMMON
 number: 15
 race: "Darkmantle"
 type: "Monstrosity"

@@ -2,7 +2,7 @@ template {
   name: "Elder Copper Dragon"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 16
 race: "Copper Dragon"
 type: "Dragon"

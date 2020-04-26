@@ -2,7 +2,7 @@ template {
   name: "Lazav Dimir Guildmaster"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: RARE
 number: 33
 type: "Humanoid"
 race: "Human"

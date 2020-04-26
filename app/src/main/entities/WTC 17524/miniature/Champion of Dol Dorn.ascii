@@ -2,7 +2,7 @@ template {
   name: "Champion of Dol Dorn"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 3
 race: "Dwarf"
 type: "Humanoid"

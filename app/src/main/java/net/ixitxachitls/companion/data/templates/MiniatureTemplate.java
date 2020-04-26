@@ -21,6 +21,7 @@
 
 package net.ixitxachitls.companion.data.templates;
 
+import net.ixitxachitls.companion.data.enums.Rarity;
 import net.ixitxachitls.companion.data.enums.Size;
 import net.ixitxachitls.companion.proto.Template;
 
@@ -42,19 +43,6 @@ public class MiniatureTemplate extends StoredTemplate<Template .MiniatureTemplat
     this.proto = proto;
   }
 
-  @Override
-  public Set<String> getProductIds() {
-    return Collections.emptySet();
-  }
-
-  private static String extractProductId(Template.TemplateProto template) {
-    if (template.getReferenceCount() > 0) {
-      return template.getReference(0).getName();
-    }
-
-    return "";
-  }
-
   public List<String> getClasses() {
     return proto.getClass_List();
   }
@@ -67,8 +55,17 @@ public class MiniatureTemplate extends StoredTemplate<Template .MiniatureTemplat
     return proto.getNumberAffix();
   }
 
+  @Override
+  public Set<String> getProductIds() {
+    return Collections.emptySet();
+  }
+
   public String getRace() {
     return proto.getRace();
+  }
+
+  public Rarity getRarity() {
+    return Rarity.fromProto(proto.getRarity());
   }
 
   public String getSet() {
@@ -94,6 +91,14 @@ public class MiniatureTemplate extends StoredTemplate<Template .MiniatureTemplat
 
   public static Template.MiniatureTemplateProto defaultProto() {
     return net.ixitxachitls.companion.proto.Template.MiniatureTemplateProto.getDefaultInstance();
+  }
+
+  private static String extractProductId(Template.TemplateProto template) {
+    if (template.getReferenceCount() > 0) {
+      return template.getReference(0).getName();
+    }
+
+    return "";
   }
 
   public static MiniatureTemplate fromProto(Template.MiniatureTemplateProto proto) {

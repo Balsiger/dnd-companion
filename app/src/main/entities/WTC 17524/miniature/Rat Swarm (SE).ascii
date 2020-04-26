@@ -2,7 +2,7 @@ template {
   name: "Rat Swarm (SE)"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: COMMON
 number: 28
 race: "Rat Swarm"
 type: "Vermin"

@@ -2,7 +2,7 @@ template {
   name: "Rakshasa"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 race: "Rakshasa"
 type: "Fiend"

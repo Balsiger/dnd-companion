@@ -2,7 +2,7 @@ template {
   name: "Human Warlock of the Fiend (b)"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 20
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Duergar Guard"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: COMMON
 number: 13
 type: "Humanoid"
 subtype: "Dwarf (Devil)"

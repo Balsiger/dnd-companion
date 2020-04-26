@@ -2,7 +2,7 @@ template {
   name: "Grick (GL)"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 51
 race: "Grick"
 type: "Monstrosity"

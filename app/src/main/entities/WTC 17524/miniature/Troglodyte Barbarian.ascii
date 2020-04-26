@@ -2,7 +2,7 @@ template {
   name: "Troglodyte Barbarian"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: COMMON
 number: 59
 type: "Humanoid"
 race: "Troglodyte"

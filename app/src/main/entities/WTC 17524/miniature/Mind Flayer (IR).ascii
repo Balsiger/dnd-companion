@@ -2,7 +2,7 @@ template {
   name: "Mind Flayer (IR)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: RARE
 number: 35
 race: "Mind Flayer"
 type: "Aberration"

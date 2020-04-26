@@ -2,7 +2,7 @@ template {
   name: "Annis hag (b)"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 26
 race: "Annis Hag"
 type: "Fey"

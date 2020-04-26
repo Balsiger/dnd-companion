@@ -2,7 +2,7 @@ template {
   name: "Warforged Bodyguard"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 11
 race: "Warforged"
 type: "Construct"

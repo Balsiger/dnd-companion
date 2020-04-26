@@ -2,7 +2,7 @@ template {
   name: "Male Genasi Paladin"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 8
 type: "Humanoid"
 race: "Genasi"

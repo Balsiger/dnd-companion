@@ -2,7 +2,7 @@ template {
   name: "Pegasus (flying)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 28
 race: "Pegasus"
 type: "Celestial"

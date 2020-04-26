@@ -2,7 +2,7 @@ template {
   name: "Man-at-Arms (Ha)"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: COMMON
 number: 10
 type: "Humanoid"
 race: "Human"

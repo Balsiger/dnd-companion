@@ -2,7 +2,7 @@ template {
   name: "Ultroloth (TA invisible)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 34
 race: "Ultroloth"
 type: "Fiend"

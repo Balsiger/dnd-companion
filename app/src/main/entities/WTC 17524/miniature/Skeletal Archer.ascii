@@ -2,7 +2,7 @@ template {
   name: "Skeletal Archer"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: COMMON
 number: 50
 race: "Skeleton"
 type: "Undead"

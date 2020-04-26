@@ -2,7 +2,7 @@ template {
   name: "Invisible Jarhild Stoneforge"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 5
 type: "Humanoid"
 race: "Dwarf"

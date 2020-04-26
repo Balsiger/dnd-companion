@@ -2,7 +2,7 @@ template {
   name: "Axe Soldier"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 4
 type: "Humanoid"
 race: "Human"

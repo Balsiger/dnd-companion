@@ -2,7 +2,7 @@ template {
   name: "Yeenoghu's Barlgura"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 27
 race: "Bar-Lgura"
 type: "Fiend"

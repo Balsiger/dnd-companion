@@ -2,7 +2,7 @@ template {
   name: "Efreet"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 33
 race: "Efreeti"
 type: "Elemental"

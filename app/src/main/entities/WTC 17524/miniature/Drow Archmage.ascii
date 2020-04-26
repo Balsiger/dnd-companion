@@ -2,7 +2,7 @@ template {
   name: "Drow Archmage"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 23
 type: "Humanoid"
 race: "Drow"

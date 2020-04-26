@@ -2,7 +2,7 @@ template {
   name: "Blue"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 29
 race: "Blue"
 type: "Humanoid"

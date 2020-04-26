@@ -2,7 +2,7 @@ template {
   name: "Pseudodragon"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 22
 race: "Pseudodragon"
 type: "Dragon"

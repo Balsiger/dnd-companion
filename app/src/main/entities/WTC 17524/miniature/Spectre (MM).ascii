@@ -2,7 +2,7 @@ template {
   name: "Spectre (MM)"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: COMMON
 number: 7
 race: "Spectre"
 type: "Undead"

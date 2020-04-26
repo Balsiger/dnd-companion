@@ -2,7 +2,7 @@ template {
   name: "Ras Nsi"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: RARE
 number: 33
 race: "Yuan-Ti"
 type: "Humanoid"

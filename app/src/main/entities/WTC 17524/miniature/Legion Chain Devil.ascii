@@ -2,7 +2,7 @@ template {
   name: "Legion Chain Devil"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: RARE
 number: 33
 race: "Chain Devil"
 type: "Fiend"

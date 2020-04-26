@@ -2,7 +2,7 @@ template {
   name: "Dwarf Ancestor"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: RARE
 number: 2
 type: "Humanoid"
 race: "Dwarf"

@@ -2,7 +2,7 @@ template {
   name: "Virtuous Charger"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: RARE
 number: 25
 type: "Humanoid"
 race: "Elf"

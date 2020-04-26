@@ -2,7 +2,7 @@ template {
   name: "Blessed Hunter"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 1
 type: "Monstrosity"
 subtype: "Augmented"

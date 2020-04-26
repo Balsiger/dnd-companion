@@ -2,7 +2,7 @@ template {
   name: "Anvil of Thunder"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 2
 race: "Dwarf"
 type: "Humanoid"

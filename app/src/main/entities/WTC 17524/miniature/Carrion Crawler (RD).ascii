@@ -2,7 +2,7 @@ template {
   name: "Carrion Crawler (RD)"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 27
 race: "Carrion Crawler"
 type: "Monstrosity"

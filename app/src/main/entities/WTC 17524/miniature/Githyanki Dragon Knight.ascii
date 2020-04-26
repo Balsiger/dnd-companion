@@ -2,7 +2,7 @@ template {
   name: "Githyanki Dragon Knight"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: RARE
 number: 51
 race: "Githyanki"
 type: "Humanoid"

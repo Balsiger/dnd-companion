@@ -2,7 +2,7 @@ template {
   name: "Succubus"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: RARE
 number: 59
 race: "Succubus"
 type: "Fiend"

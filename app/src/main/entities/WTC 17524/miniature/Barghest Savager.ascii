@@ -2,7 +2,7 @@ template {
   name: "Barghest Savager"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 5
 race: "Barghest"
 type: "Fiend"

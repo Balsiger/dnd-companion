@@ -2,7 +2,7 @@ template {
   name: "Dolgrim"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 51
 race: "Dolgrim"
 type: "Aberration"

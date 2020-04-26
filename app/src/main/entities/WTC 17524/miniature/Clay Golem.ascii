@@ -1,8 +1,8 @@
 template {
   name: "Clay Golem"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: RARE
 number: 12
 race: "Clay Golem"
 type: "Construct"

@@ -2,7 +2,7 @@ template {
   name: "War Troll (WD)"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 42
 type: "Giant"
 race: "Troll"

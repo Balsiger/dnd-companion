@@ -2,7 +2,7 @@ template {
   name: "Sun Soul Initiate"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 11
 type: "Humanoid"
 race: "Human"

@@ -2,7 +2,7 @@ template {
   name: "Bugbear Hunter"
 }
 set: "Rage of Demons"
-rarity: UNDEFINED
+rarity: RARE
 number: 36
 type: "Humanoid"
 subtype: "Goblinoid"

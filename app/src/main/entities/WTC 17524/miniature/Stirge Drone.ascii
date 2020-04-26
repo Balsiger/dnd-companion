@@ -2,7 +2,7 @@ template {
   name: "Stirge Drone"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 56
 race: "Stirge"
 type: "Beast"

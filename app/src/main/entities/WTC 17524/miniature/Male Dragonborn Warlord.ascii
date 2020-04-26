@@ -2,7 +2,7 @@ template {
   name: "Male Dragonborn Warlord"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 10
 type: "Humanoid"
 race: "Dragonborn"

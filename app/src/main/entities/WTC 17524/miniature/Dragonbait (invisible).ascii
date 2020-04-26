@@ -2,7 +2,7 @@ template {
   name: "Dragonbait (invisible)"
 }
 set: "Tomb of Annihilation"
-rarity: UNDEFINED
+rarity: RARE
 number: 39
 race: "Saurial"
 subtype: "Reptilian"

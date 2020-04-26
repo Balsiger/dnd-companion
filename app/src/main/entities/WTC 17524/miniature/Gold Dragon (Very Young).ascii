@@ -2,7 +2,7 @@ template {
   name: "Gold Dragon (Very Young)"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 7
 race: "Gold Dragon"
 type: "Dragon"

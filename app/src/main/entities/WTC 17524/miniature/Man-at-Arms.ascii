@@ -2,7 +2,7 @@ template {
   name: "Man-at-Arms"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 8
 type: "Humanoid"
 race: "Human"

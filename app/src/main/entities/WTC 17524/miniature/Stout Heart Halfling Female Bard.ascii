@@ -2,7 +2,7 @@ template {
   name: "Stout Heart Halfling Female Bard"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: COMMON
 number: 2
 type: "Humanoid"
 race: "Halfling"

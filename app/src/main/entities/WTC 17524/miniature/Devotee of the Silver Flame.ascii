@@ -2,7 +2,7 @@ template {
   name: "Devotee of the Silver Flame"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: COMMON
 number: 4
 type: "Humanoid"
 race: "Human"

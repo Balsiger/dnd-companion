@@ -2,7 +2,7 @@ template {
   name: "Moon Elf Fighter"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 20
 type: "Humanoid"
 race: "Elf"

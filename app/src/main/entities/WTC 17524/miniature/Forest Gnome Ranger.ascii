@@ -2,7 +2,7 @@ template {
   name: "Forest Gnome Ranger"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: COMMON
 number: 2
 type: "Humanoid"
 race: "Gnome"

@@ -2,7 +2,7 @@ template {
   name: "Pentifex Monolith"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: RARE
 number: 6
 type: "Humanoid"
 race: "Human"

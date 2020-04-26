@@ -2,7 +2,7 @@ template {
   name: "Ettercap"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 47
 race: "Ettercap"
 type: "Monstrosity"

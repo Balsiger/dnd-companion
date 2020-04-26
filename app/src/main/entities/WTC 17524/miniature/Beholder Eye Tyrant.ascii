@@ -1,8 +1,8 @@
 template {
   name: "Beholder Eye Tyrant"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: RARE
 number: 5
 race: "Beholder"
 type: "Aberration"

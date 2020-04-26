@@ -1,8 +1,8 @@
 template {
   name: "Githzerai Zerth"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: RARE
 number: 19
 race: "Githzerai"
 type: "Humanoid"

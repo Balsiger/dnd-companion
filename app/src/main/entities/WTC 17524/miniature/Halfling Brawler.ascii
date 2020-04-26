@@ -2,7 +2,7 @@ template {
   name: "Halfling Brawler"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 17
 type: "Humanoid"
 race: "Halfling"

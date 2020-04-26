@@ -2,7 +2,7 @@ template {
   name: "Inhabited Corpse"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: COMMON
 number: 23
 type: "Humanoid"
 race: "Human"

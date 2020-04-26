@@ -2,7 +2,7 @@ template {
   name: "Draegloth Favored One"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 19
 race: "Draegloth"
 type: "Fiend"

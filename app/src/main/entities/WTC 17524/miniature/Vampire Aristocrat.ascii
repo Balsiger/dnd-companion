@@ -2,7 +2,7 @@ template {
   name: "Vampire Aristocrat"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: RARE
 number: 57
 race: "Vampire"
 type: "Undead"

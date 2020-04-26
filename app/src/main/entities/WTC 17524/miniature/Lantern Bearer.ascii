@@ -2,7 +2,7 @@ template {
   name: "Lantern Bearer"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 7
 type: "Humanoid"
 race: "Human"

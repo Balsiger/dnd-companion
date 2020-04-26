@@ -2,7 +2,7 @@ template {
   name: "Large Blue Dragon (Young)"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 38
 race: "Blue Dragon"
 type: "Dragon"

@@ -2,7 +2,7 @@ template {
   name: "Blood of Vol Divinity Seeker"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 33
 type: "Humanoid"
 race: "Human"

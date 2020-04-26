@@ -1,8 +1,8 @@
 template {
   name: "Berbalang"
 }
-set: "Dungeon Delve"
-rarity: UNDEFINED
+set: "Dangerous Delves"
+rarity: RARE
 number: 6
 race: "Berbalang"
 type: "Aberration"

@@ -2,7 +2,7 @@ template {
   name: "Fire Cult Warrior"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 17
 type: "Humanoid"
 race: "Human"

@@ -45,6 +45,7 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
   private static final String FIELD_SIZES = "sizes";
   private static final String FIELD_OWNED = "owned";
   private static final String FIELD_LOCATIONS = "locations";
+  private static final String FIELD_RARITIES = "rarity";
 
   private final ImmutableList<String> races;
   private final ImmutableList<String> sets;
@@ -53,6 +54,7 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
   private final ImmutableList<String> sizes;
   private final ImmutableList<String> owned;
   private final ImmutableList<String> locations;
+  private final ImmutableList<String> rarities;
 
   public MiniatureFilter() {
     this.races = ImmutableList.of();
@@ -62,11 +64,12 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
     this.sizes = ImmutableList.of();
     this.owned = ImmutableList.of();
     this.locations = ImmutableList.of();
+    this.rarities = ImmutableList.of();
   }
 
   public MiniatureFilter(String name, List<String> races, List<String> sets,
                          List<String> types, List<String> classes, List<String> sizes,
-                         List<String> owned, List<String> locations) {
+                         List<String> owned, List<String> locations, List<String> rarities) {
     super(name);
 
     this.races = ImmutableList.copyOf(races);
@@ -76,6 +79,7 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
     this.sizes = ImmutableList.copyOf(sizes);
     this.owned = ImmutableList.copyOf(owned);
     this.locations = ImmutableList.copyOf(locations);
+    this.rarities = ImmutableList.copyOf(rarities);
   }
 
   public List<String> getClasses() {
@@ -94,6 +98,10 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
     return races;
   }
 
+  public List<String> getRarities() {
+    return rarities;
+  }
+
   public List<String> getSets() {
     return sets;
   }
@@ -102,6 +110,7 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
     return sizes;
   }
 
+  @Override
   public String getSummary() {
     List<String> parts = new ArrayList<>();
     String parent = super.getSummary();
@@ -129,6 +138,9 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
     if (!locations.isEmpty()) {
       parts.add("locations is " + Strings.PIPE_JOINER.join(locations));
     }
+    if (!rarities.isEmpty()) {
+      parts.add("rarities is " + Strings.PIPE_JOINER.join(rarities));
+    }
 
     return Strings.COMMA_JOINER.join(parts);
   }
@@ -149,6 +161,7 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
 
   public String fullText() {
     List<String> texts = new ArrayList<>();
+    texts.addAll(rarities);
     texts.addAll(locations);
     texts.addAll(sets);
     texts.addAll(sizes);
@@ -172,7 +185,8 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
         && (owned.isEmpty()
         || owned.contains(String.valueOf(me.getMiniatureCount(miniature.getName())))
         || owned.contains("> 0") && me.getMiniatureCount(miniature.getName()) > 0)
-        && (locations.isEmpty() || locations.contains(me.locationFor(miniature)));
+        && (locations.isEmpty() || locations.contains(me.locationFor(miniature)))
+        && (rarities.isEmpty() || rarities.contains(miniature.getRarity().toString()));
   }
 
   @Override
@@ -184,7 +198,8 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
         .set(FIELD_CLASSES, classes)
         .set(FIELD_SIZES, sizes)
         .set(FIELD_OWNED, owned)
-        .set(FIELD_LOCATIONS, locations);
+        .set(FIELD_LOCATIONS, locations)
+        .set(FIELD_RARITIES, rarities);
   }
 
   private boolean matchesClass(MiniatureTemplate miniature, List<String> classes) {
@@ -210,7 +225,8 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
   }
 
   private int sortScore() {
-    return locations.size() * 29
+    return rarities.size() * 31
+        + locations.size() * 29
         + sets.size() * 23
         + sizes.size() * 19
         + races.size() * 17
@@ -228,6 +244,7 @@ public class MiniatureFilter extends TemplateFilter<MiniatureTemplate>
         data.getList(FIELD_CLASSES, Collections.emptyList()),
         data.getList(FIELD_SIZES, Collections.emptyList()),
         data.getList(FIELD_OWNED, Collections.emptyList()),
-        data.getList(FIELD_LOCATIONS, Collections.emptyList()));
+        data.getList(FIELD_LOCATIONS, Collections.emptyList()),
+        data.getList(FIELD_RARITIES, Collections.emptyList()));
   }
 }

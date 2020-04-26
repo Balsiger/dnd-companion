@@ -2,7 +2,7 @@ template {
   name: "Fire Bat (EE)"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: COMMON
 number: 5
 race: "Fire Bat"
 type: "Elemental"

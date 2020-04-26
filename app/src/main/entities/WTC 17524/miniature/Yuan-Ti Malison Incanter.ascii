@@ -2,7 +2,7 @@ template {
   name: "Yuan-Ti Malison Incanter"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: RARE
 number: 29
 type: "Humanoid"
 subtype: "Reptile"

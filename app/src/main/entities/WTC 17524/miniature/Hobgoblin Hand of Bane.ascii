@@ -2,7 +2,7 @@ template {
   name: "Hobgoblin Hand of Bane"
 }
 set: "Savage Encounters"
-rarity: UNDEFINED
+rarity: RARE
 number: 21
 type: "Humanoid"
 subtype: "Goblinoid"

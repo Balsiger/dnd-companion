@@ -2,7 +2,7 @@ template {
   name: "Minotaur (GL)"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 54
 race: "Minotaur"
 type: "Monstrosity"

@@ -2,7 +2,7 @@ template {
   name: "Earth Genasi Fighter"
 }
 set: "Elemental Evil"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 24
 race: "Earth Genasi"
 type: "Humanoid"

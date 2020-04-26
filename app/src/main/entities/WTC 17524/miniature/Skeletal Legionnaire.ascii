@@ -2,7 +2,7 @@ template {
   name: "Skeletal Legionnaire"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 39
 race: "Skeleton"
 type: "Undead"

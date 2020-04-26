@@ -2,7 +2,7 @@ template {
   name: "Jarhild Stoneforge"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: COMMON
 number: 5
 type: "Humanoid"
 race: "Dwarf"

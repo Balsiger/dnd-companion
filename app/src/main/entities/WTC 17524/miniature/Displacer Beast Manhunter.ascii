@@ -2,7 +2,7 @@ template {
   name: "Displacer Beast Manhunter"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: RARE
 number: 37
 race: "Displacer Beat"
 type: "Monstrosity"

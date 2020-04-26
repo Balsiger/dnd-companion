@@ -2,7 +2,7 @@ template {
   name: "Gravehound"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: COMMON
 number: 41
 race: "Gravehound"
 type: "Beast"

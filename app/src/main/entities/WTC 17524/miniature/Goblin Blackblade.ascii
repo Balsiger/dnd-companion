@@ -2,7 +2,7 @@ template {
   name: "Goblin Blackblade"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: COMMON
 number: 30
 type: "Humanoid"
 race: "Goblin"

@@ -2,7 +2,7 @@ template {
   name: "Dalelands Militia"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: COMMON
 number: 2
 type: "Humanoid"
 race: "Human"

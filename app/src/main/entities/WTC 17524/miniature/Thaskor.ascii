@@ -2,7 +2,7 @@ template {
   name: "Thaskor"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 44
 race: "Thaskor"
 type: "Monstrosity"

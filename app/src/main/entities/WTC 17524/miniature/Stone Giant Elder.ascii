@@ -2,7 +2,7 @@ template {
   name: "Stone Giant Elder"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 26
 race: "Stone Giant"
 type: "Giant"

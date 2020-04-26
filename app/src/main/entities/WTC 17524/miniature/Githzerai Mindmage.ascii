@@ -2,7 +2,7 @@ template {
   name: "Githzerai Mindmage"
 }
 set: "Legendary Evils"
-rarity: UNDEFINED
+rarity: RARE
 number: 22
 race: "Githzerai"
 type: "Humanoid"

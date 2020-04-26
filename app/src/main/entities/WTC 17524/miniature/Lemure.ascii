@@ -2,7 +2,7 @@ template {
   name: "Lemure"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: COMMON
 number: 34
 race: "Lemure"
 type: "Fiend"

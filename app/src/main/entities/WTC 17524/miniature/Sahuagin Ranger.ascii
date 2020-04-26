@@ -2,7 +2,7 @@ template {
   name: "Sahuagin Ranger"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 42
 type: "Humanoid"
 subtype: "Aquatic"

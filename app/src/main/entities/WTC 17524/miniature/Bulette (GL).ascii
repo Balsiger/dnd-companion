@@ -2,7 +2,7 @@ template {
   name: "Bulette (GL)"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 67
 race: "Bulette"
 type: "Monstrosity"

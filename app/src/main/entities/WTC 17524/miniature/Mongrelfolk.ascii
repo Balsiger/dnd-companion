@@ -2,7 +2,7 @@ template {
   name: "Mongrelfolk"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 40
 race: "Mongrelfolk"
 type: "Humanoid"

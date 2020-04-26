@@ -2,7 +2,7 @@ template {
   name: "Male Human Druid"
 }
 set: "Player\'s Handbook Heroes 2"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 17
 type: "Humanoid"
 race: "Human"

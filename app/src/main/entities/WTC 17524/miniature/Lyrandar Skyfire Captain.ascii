@@ -2,7 +2,7 @@ template {
   name: "Lyrandar Skyfire Captain"
 }
 set: "Unhallowed"
-rarity: UNDEFINED
+rarity: RARE
 number: 20
 type: "Humanoid"
 race: "Half-Elf"

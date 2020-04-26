@@ -2,7 +2,7 @@ template {
   name: "Boros Reckoner"
 }
 set: "Guildmaster\'s Guide to Ravnica"
-rarity: UNDEFINED
+rarity: RARE
 number: 40
 type: "Humanoid"
 race: "Human"

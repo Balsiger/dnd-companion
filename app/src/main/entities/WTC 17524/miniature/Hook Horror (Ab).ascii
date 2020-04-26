@@ -2,7 +2,7 @@ template {
   name: "Hook Horror (Ab)"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 35
 race: "Hook Horror"
 type: "Monstrosity"

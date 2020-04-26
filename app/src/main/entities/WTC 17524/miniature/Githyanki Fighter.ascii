@@ -2,7 +2,7 @@ template {
   name: "Githyanki Fighter"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 51
 race: "Githyanki"
 type: "Humanoid"

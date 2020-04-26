@@ -2,7 +2,7 @@ template {
   name: "Ezmeralda d\'Avenir"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: RARE
 number: 39
 type: "Humanoid"
 race: "Human"

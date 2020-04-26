@@ -2,7 +2,7 @@ template {
   name: "Grim Necromancer"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 36
 type: "Humanoid"
 race: "Human"

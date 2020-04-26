@@ -2,7 +2,7 @@ template {
   name: "Emerald Claw Soldier"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 30
 type: "Humanoid"
 race: "Human"

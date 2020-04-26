@@ -2,7 +2,7 @@ template {
   name: "Troglodyte Curse Chanter"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 52
 type: "Humanoid"
 race: "Troglodyte"

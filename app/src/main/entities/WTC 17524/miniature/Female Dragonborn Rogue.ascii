@@ -2,7 +2,7 @@ template {
   name: "Female Dragonborn Rogue"
 }
 set: "Player\'s Handbook Heroes"
-rarity: UNDEFINED
+rarity: UNIQUE
 number: 2
 type: "Humanoid"
 race: "Dragonborn"

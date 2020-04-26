@@ -2,7 +2,7 @@ template {
   name: "Lion"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 29
 race: "Lion"
 type: "Beast"

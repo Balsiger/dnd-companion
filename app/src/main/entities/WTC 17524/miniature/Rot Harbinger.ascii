@@ -3,7 +3,7 @@ template {
 }
 race: "Rot Harbinger"
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: RARE
 number: 41
 type: "Undead"
 subtype: "Humanoid"

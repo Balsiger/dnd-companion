@@ -2,7 +2,7 @@ template {
   name: "Kruthik Adult"
 }
 set: "Demonweb"
-rarity: UNDEFINED
+rarity: COMMON
 number: 55
 race: "Kruthik"
 type: "Beast"

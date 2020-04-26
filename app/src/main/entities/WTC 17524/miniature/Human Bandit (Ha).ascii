@@ -2,7 +2,7 @@ template {
   name: "Human Bandit (Ha)"
 }
 set: "Harbinger"
-rarity: UNDEFINED
+rarity: COMMON
 number: 66
 type: "Humanoid"
 race: "Human"

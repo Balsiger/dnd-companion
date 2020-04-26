@@ -2,7 +2,7 @@ template {
   name: "Green Slaad"
 }
 set: "Blood War"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 53
 race: "Green Slaad"
 type: "Aberration"

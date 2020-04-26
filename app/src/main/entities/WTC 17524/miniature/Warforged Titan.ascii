@@ -2,7 +2,7 @@ template {
   name: "Warforged Titan"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 65
 race: "Warforged"
 type: "Construct"

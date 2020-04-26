@@ -2,7 +2,7 @@ template {
   name: "Ogre Zombie"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: RARE
 number: 56
 type: "Undead"
 subtype: "Zombie"

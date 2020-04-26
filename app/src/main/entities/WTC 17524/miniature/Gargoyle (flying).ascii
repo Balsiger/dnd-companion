@@ -2,7 +2,7 @@ template {
   name: "Gargoyle (flying)"
 }
 set: "Tyranny of Dragons"
-rarity: UNDEFINED
+rarity: RARE
 number: 40
 race: "Gargoyle"
 type: "Elemental"

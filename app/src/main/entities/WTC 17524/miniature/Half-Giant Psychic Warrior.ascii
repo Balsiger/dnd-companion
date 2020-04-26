@@ -2,7 +2,7 @@ template {
   name: "Half-Giant Psychic Warrior"
 }
 set: "Giants of Legend"
-rarity: UNDEFINED
+rarity: RARE
 number: 17
 race: "Half-Giant"
 type: "Giant"

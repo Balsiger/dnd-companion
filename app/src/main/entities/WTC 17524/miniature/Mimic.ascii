@@ -2,7 +2,7 @@ template {
   name: "Mimic"
 }
 set: "Monster Menagerie"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 14
 race: "Mimic"
 type: "Monstrosity"

@@ -2,7 +2,7 @@ template {
   name: "Warpriest of Vandria"
 }
 set: "Night Below"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 23
 type: "Humanoid"
 race: "Elf"

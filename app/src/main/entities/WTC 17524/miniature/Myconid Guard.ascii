@@ -2,7 +2,7 @@ template {
   name: "Myconid Guard"
 }
 set: "Aberrations"
-rarity: UNDEFINED
+rarity: COMMON
 number: 41
 race: "Myconid"
 type: "Plant"

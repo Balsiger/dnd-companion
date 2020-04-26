@@ -2,7 +2,7 @@ template {
   name: "Durnan"
 }
 set: "Dragon Heist"
-rarity: UNDEFINED
+rarity: RARE
 number: 34
 type: "Humanoid"
 race: "Human"

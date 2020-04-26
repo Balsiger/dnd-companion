@@ -2,7 +2,7 @@ template {
   name: "Swarm of Spiders"
 }
 set: "Underdark"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 58
 race: "Spider"
 type: "Vermin"

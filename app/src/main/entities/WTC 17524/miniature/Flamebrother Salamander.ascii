@@ -2,7 +2,7 @@ template {
   name: "Flamebrother Salamander"
 }
 set: "Angelfire"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 40
 race: "Salamander"
 type: "Elemental"

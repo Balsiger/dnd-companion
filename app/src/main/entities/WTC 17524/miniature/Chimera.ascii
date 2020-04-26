@@ -2,7 +2,7 @@ template {
   name: "Chimera"
 }
 set: "War Drums"
-rarity: UNDEFINED
+rarity: RARE
 number: 45
 race: "Chimera"
 type: "Monstrosity"

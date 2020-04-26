@@ -2,7 +2,7 @@ template {
   name: "Medium Earth Elemental"
 }
 set: "Archfiends"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 6
 race: "Earth Elemental"
 type: "Elemental"

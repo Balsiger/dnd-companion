@@ -2,7 +2,7 @@ template {
   name: "Narzugon"
 }
 set: "Descent into Avernus"
-rarity: UNDEFINED
+rarity: RARE
 number: 45
 race: "Narzugon"
 type: "Fiend"

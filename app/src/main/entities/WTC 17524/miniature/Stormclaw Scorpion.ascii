@@ -2,7 +2,7 @@ template {
   name: "Stormclaw Scorpion"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: UNCOMMON
 number: 48
 race: "Scorpion"
 type: "Beast"

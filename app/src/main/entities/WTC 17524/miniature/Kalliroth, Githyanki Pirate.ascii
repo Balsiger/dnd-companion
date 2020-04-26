@@ -2,7 +2,7 @@ template {
   name: "Kalliroth, Githyanki Pirate"
 }
 set: "Lords of Madness"
-rarity: UNDEFINED
+rarity: ULTRA_RARE
 number: 24
 type: "Humanoid"
 race: "Githyanki"

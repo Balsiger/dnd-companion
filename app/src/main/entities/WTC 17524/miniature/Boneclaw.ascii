@@ -2,7 +2,7 @@ template {
   name: "Boneclaw"
 }
 set: "Death Knell"
-rarity: UNDEFINED
+rarity: RARE
 number: 47
 race: "Boneclaw"
 type: "Undead"
