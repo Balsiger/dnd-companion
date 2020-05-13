@@ -106,6 +106,12 @@ public class LabelledTextView<T extends LabelledTextView, S extends TextView>
     return (T) this;
   }
 
+  public T removeClick() {
+    text.removeClick();
+
+    return (T) this;
+  }
+
   public T text(String text) {
     this.text.text(text);
     doValidate(text);

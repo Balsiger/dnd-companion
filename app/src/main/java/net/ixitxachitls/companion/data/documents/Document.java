@@ -58,6 +58,7 @@ public abstract class Document<D extends Document<D>> {
 
   public Document() {
     this.db = FirebaseFirestore.getInstance();
+    Status.log("firestore setting " + this.db.getFirestoreSettings());
   }
 
   @FunctionalInterface
@@ -129,8 +130,8 @@ public abstract class Document<D extends Document<D>> {
 
     if (reference.isPresent()) {
       reference.get().set(write().asMap());
-      CompanionApplication.get().update(getClass().getCanonicalName() + " " + getShortId() +
-          " updated");
+      //CompanionApplication.get().update(getClass().getCanonicalName() + " " + getShortId() +
+      //    " updated");
     } else {
       collection.add(write().asMap()).addOnCompleteListener(task -> {
         if (task.isSuccessful()) {

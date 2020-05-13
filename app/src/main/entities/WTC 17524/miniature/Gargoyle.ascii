@@ -7,4 +7,5 @@ number: 10
 race: "Gargoyle"
 type: "Elemental"
 subtype: "Earth"
+subtype: "Tall"
 size: MEDIUM

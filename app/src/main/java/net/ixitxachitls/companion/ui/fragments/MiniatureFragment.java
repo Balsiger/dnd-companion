@@ -108,7 +108,8 @@ public class MiniatureFragment extends NestedCompanionFragment {
     if (miniature.isPresent()) {
       image.setName(miniature.get().getName(), miniature.get().getName());
       image.setNumber(Templates.get().getMiniatureTemplates().getNumber(miniature.get()),
-          Templates.get().getMiniatureTemplates().getFilteredNumber());
+          Templates.get().getMiniatureTemplates().getFilteredNumber(),
+          Templates.get().getMiniatureTemplates().getFilteredOwnedNumber(me()));
       set.text(formatSet());
       race.text(miniature.get().getRace());
       type.text(formatType());

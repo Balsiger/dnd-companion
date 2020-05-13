@@ -63,7 +63,7 @@ import androidx.annotation.IdRes;
  */
 public class CharacterInventoryFragment extends NestedCompanionFragment {
 
-  private Optional<Character> character = Optional.empty();
+  private Character character = Character.DEFAULT;
   private boolean moveFirst = true;
 
   private TextWrapper<TextView> wealth;
@@ -103,20 +103,18 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     addItem = Wrapper.<Button>wrap(view, R.id.item_add)
         .onClick(this::addItem)
         .description("Add Item", "Add an item to the characters inventory.")
-        .visible(character.isPresent() &&
-            (character.get().amPlayer() || character.get().amDM()));
+        .visible(character.amPlayer() || character.amDM());
     targetsCharacters = view.findViewById(R.id.targets_characters);
     removeItem = Wrapper.<ImageDropTarget>wrap(view, R.id.item_remove)
         .description("Remove Item", "Drag an item over the trash to remove it");
     removeItem.get().setSupport(i -> i instanceof Item);
     removeItem.get().setDropExecutor(this::removeItem);
-    removeItem.visible(character.isPresent()
-        && (character.get().amPlayer() || character.get().amDM()));
+    removeItem.visible(character.amPlayer() || character.amDM());
     sellItem = Wrapper.<ImageDropTarget>wrap(view, R.id.item_sell)
         .description("Sell Item", "Sell the item, with DM approval.");
     sellItem.get().setSupport(i -> i instanceof Item);
     sellItem.get().setDropExecutor(this::sellItem);
-    sellItem.visible(character.isPresent() && character.get().amPlayer());
+    sellItem.visible(character.amPlayer());
     distributionName = view.findViewById(R.id.name);
 
     setupSlot(Items.Slot.head, R.id.figure_head, R.id.title_head, R.id.items_head);
@@ -131,16 +129,14 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
     setupSlot(Items.Slot.fingers, R.id.figure_fingers, R.id.title_fingers, R.id.items_fingers);
     setupSlot(Items.Slot.feet, R.id.figure_feet, R.id.title_feet, R.id.items_feet);
 
-    if (character.isPresent()) {
-      update(character.get());
-    }
-
     return view;
   }
 
-  public void update(Character character) {
-    this.character = Optional.of(character);
+  public void show(Character character) {
+    this.character = character;
+  }
 
+  public void update() {
     characters().addPlayers(character.getCampaign());
 
     if (this.items != null && getContext() != null) {
@@ -187,11 +183,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private void addItem() {
-    if (character.isPresent()) {
-      EditItemDialog.newInstance(character.get().getId(), "").display();
-    } else {
-      Status.error("No character available!");
-    }
+    EditItemDialog.newInstance(character.getId(), "").display();
   }
 
   private Map<Item, ItemView> collectItemViews() {
@@ -205,7 +197,7 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private ItemView createLine(Item item) {
-    return new ItemView(getContext(), character.get().getCampaign(), character.get(), item);
+    return new ItemView(getContext(), character.getCampaign(), character, item);
   }
 
   private boolean dragSlot(Items.Slot slot, DragEvent event) {
@@ -234,13 +226,8 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
         return true;
 
       case DragEvent.ACTION_DROP:
-        if (character.isPresent()) {
-          character.get().carry(slot, (Item) event.getLocalState());
-
-          return true;
-        } else {
-          return false;
-        }
+        character.carry(slot, (Item) event.getLocalState());
+        return true;
 
       default:
         return false;
@@ -248,9 +235,9 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private boolean moveItem(Object state, Character target) {
-    if (character.isPresent() && state instanceof Item) {
-      character.get().removeItem((Item) state);
-      Message.createForItemAdd(context(), character.get().getId(), target.getId(), (Item) state);
+    if (state instanceof Item) {
+      character.removeItem((Item) state);
+      Message.createForItemAdd(context(), character.getId(), target.getId(), (Item) state);
       return true;
     }
 
@@ -276,12 +263,12 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
         // Fall through to handle like drop!
 
       case DragEvent.ACTION_DROP:
-        if (character.isPresent() && character.get().amPlayer()) {
+        if (character.amPlayer()) {
           Item item = (Item) event.getLocalState();
           if (moveFirst) {
-            character.get().moveItemFirst(item);
+            character.moveItemFirst(item);
           } else {
-            character.get().moveItemLast(item);
+            character.moveItemLast(item);
           }
         }
         return true;
@@ -296,58 +283,54 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private void refreshDropTargets() {
-    if (character.isPresent()) {
-      targetsCharacters.removeAllViews();
-      for (Character other : characters().getCampaignCharacters(character.get().getCampaignId())) {
-        if (!other.equals(character.get())) {
-          Drawable image;
-          if (images().get(other.getId(), 1).isPresent()) {
-            image = new BitmapDrawable(getResources(), images().get(other.getId(), 1).get());
-          } else {
-            image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
-          }
-          ImageDropTarget target = new ImageDropTarget(getContext(), image, other.getName(), true);
-          target.setSupport(i -> i instanceof Item);
-          target.setDropExecutor((i) -> moveItem(i, other));
-          targetsCharacters.addView(target);
+    targetsCharacters.removeAllViews();
+    for (Character other : characters().getCampaignCharacters(character.getCampaignId())) {
+      if (!other.equals(character)) {
+        Drawable image;
+        if (images().get(other.getId(), 1).isPresent()) {
+          image = new BitmapDrawable(getResources(), images().get(other.getId(), 1).get());
+        } else {
+          image = getResources().getDrawable(R.drawable.ic_person_black_48dp, null);
         }
+        ImageDropTarget target = new ImageDropTarget(getContext(), image, other.getName(), true);
+        target.setSupport(i -> i instanceof Item);
+        target.setDropExecutor((i) -> moveItem(i, other));
+        targetsCharacters.addView(target);
       }
     }
   }
 
   private void refreshSlots() {
-    if (character.isPresent()) {
-      distributionName.text(character.get().getWearingName());
-      if (character.get().isWearingDefault()) {
-        distributionName.disabled();
-      } else {
-        distributionName.enabled();
-      }
+    distributionName.text(character.getWearingName());
+    if (character.isWearingDefault()) {
+      distributionName.disabled();
+    } else {
+      distributionName.enabled();
+    }
 
-      for (Items.Slot slot : Items.Slot.values()) {
-        slotItems.get(slot).removeAllViews();
-        slotTitles.get(slot).backgroundColor(R.color.characterDark);
-        for (String id : character.get().wearing(slot)) {
-          Optional<Item> item = character.get().getItem(id);
-          if (item.isPresent()) {
-            slotItems.get(slot).addView(createLine(item.get()));
-            slotTitles.get(slot).backgroundColor(R.color.character);
-          } else {
-            Status.error("Cannot find item " + id + " for slot " + slot);
-          }
+    for (Items.Slot slot : Items.Slot.values()) {
+      slotItems.get(slot).removeAllViews();
+      slotTitles.get(slot).backgroundColor(R.color.characterDark);
+      for (String id : character.wearing(slot)) {
+        Optional<Item> item = character.getItem(id);
+        if (item.isPresent()) {
+          slotItems.get(slot).addView(createLine(item.get()));
+          slotTitles.get(slot).backgroundColor(R.color.character);
+        } else {
+          Status.error("Cannot find item " + id + " for slot " + slot);
         }
       }
     }
   }
 
   private boolean removeItem(Object state) {
-    if (character.isPresent() && state instanceof Item) {
-      if (character.get().amPlayer()) {
-        character.get().removeItem((Item) state);
+    if (state instanceof Item) {
+      if (character.amPlayer()) {
+        character.removeItem((Item) state);
         return true;
-      } else if (character.get().amDM()) {
+      } else if (character.amDM()) {
         Message.createForItemDelete(
-            CompanionApplication.get().context(), character.get().getId(), (Item) state);
+            CompanionApplication.get().context(), character.getId(), (Item) state);
         return true;
       }
     }
@@ -356,11 +339,11 @@ public class CharacterInventoryFragment extends NestedCompanionFragment {
   }
 
   private boolean sellItem(Object state) {
-    if (character.isPresent() && state instanceof Item && character.get().amPlayer()) {
-      character.get().removeItem((Item) state);
+    if (state instanceof Item && character.amPlayer()) {
+      character.removeItem((Item) state);
       Message.createForItemSell(
-          CompanionApplication.get().context(), character.get().getId(),
-          character.get().getCampaign().getId(), (Item) state);
+          CompanionApplication.get().context(), character.getId(),
+          character.getCampaign().getId(), (Item) state);
       Status.toast("Item has been sold.");
     }
 

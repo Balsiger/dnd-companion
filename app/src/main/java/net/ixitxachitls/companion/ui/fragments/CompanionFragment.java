@@ -81,8 +81,6 @@ public abstract class CompanionFragment extends Fragment implements CompanionApp
     Status.toast(message);
   }
 
-  ;
-
   @Override
   public void update() {
     Status.error("Updating not implemented for " + this);

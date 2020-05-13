@@ -44,7 +44,7 @@ public class ItemTest {
 
   @Before
   public void loadEntities() {
-    Templates.init(new TestAssetAccessor());
+    Templates.init(new TestAssetAccessor(), main);
   }
 
   @Test

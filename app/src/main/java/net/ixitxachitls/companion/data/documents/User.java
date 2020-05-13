@@ -22,6 +22,8 @@
 package net.ixitxachitls.companion.data.documents;
 
  import com.google.firebase.firestore.DocumentReference;
+ import com.google.firebase.firestore.DocumentSnapshot;
+ import com.google.firebase.firestore.FirebaseFirestoreException;
  import com.google.firebase.firestore.SetOptions;
 
  import net.ixitxachitls.companion.CompanionApplication;
@@ -183,8 +185,8 @@ public class User extends Document<User> {
     return Optional.ofNullable(locations.get(location));
   }
 
-  public long getMiniatureCount(String name) {
-    return miniatures.getOrDefault(name, 0L);
+  public int getMiniatureCount(String name) {
+    return miniatures.getOrDefault(name, 0L).intValue();
   }
 
   public String getMiniatureSpecificLocation(String name) {
@@ -233,6 +235,12 @@ public class User extends Document<User> {
       locationOrder.add(i + move, location);
       storeMiniatures();
     }
+  }
+
+  @Override
+  public void onUpdate(DocumentSnapshot snapshot, FirebaseFirestoreException e) {
+    Status.log("update of user document: " + snapshot.getMetadata());
+    super.onUpdate(snapshot, e);
   }
 
   public boolean owns(String id) {
@@ -321,11 +329,8 @@ public class User extends Document<User> {
     locations.remove(originalName);
     locations.put(location.getName(), location);
 
-    for (int i = 0; i < locationOrder.size(); i++) {
-      if (locationOrder.get(i).getName().equals(originalName)) {
-        locationOrder.set(i, location);
-        break;
-      }
+    if (!replaceLocationOrder(originalName, location)) {
+      locationOrder.add(location);
     }
 
     storeMiniatures();
@@ -430,6 +435,17 @@ public class User extends Document<User> {
       this.campaigns = campaigns;
       CompanionApplication.get().update("user read campaigns");
     });
+  }
+
+  private boolean replaceLocationOrder(String name, MiniatureLocation location) {
+    for (int i = 0; i < locationOrder.size(); i++) {
+      if (locationOrder.get(i).getName().equals(name)) {
+        locationOrder.set(i, location);
+        return true;
+      }
+    }
+
+    return false;
   }
 
   private void storeMiniatures() {

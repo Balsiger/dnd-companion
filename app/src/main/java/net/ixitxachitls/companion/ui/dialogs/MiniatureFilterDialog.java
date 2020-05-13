@@ -86,6 +86,7 @@ public class MiniatureFilterDialog extends Dialog<MiniatureFilterDialog, Miniatu
     owned.text("");
     locations.text("");
     sets.text("");
+    rarities.text("");
   }
 
   @Override

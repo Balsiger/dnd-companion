@@ -45,33 +45,26 @@ public class ProductTemplates extends FilteredTemplatesStore<ProductTemplate, Pr
     super(ProductTemplate.class, new ProductFilter());
   }
 
-  public SortedSet<String> extractAllProducers() {
-    return byName.values().stream()
-        .map(ProductTemplate::getProducer)
-        .collect(Collectors.toCollection(TreeSet::new));
-  }
-
-  public SortedSet<String> extractAllWorlds() {
-    return byName.values().stream()
-        .flatMap(p -> p.getWorlds().stream())
-        .collect(Collectors.toCollection(TreeSet::new));
-  }
-
-  public SortedSet<String> extractAllSystems() {
-    return Arrays.stream(Template.ProductTemplateProto.System.values())
-        .map(v -> Strings.toWords(v.name()))
-        .collect(Collectors.toCollection(TreeSet::new));
-  }
-
-  public SortedSet<String> extractAllTypes() {
-    return Arrays.stream(Template.ProductTemplateProto.Type.values())
-        .map(v -> Strings.toWords(v.name()))
-        .collect(Collectors.toCollection(TreeSet::new));
-  }
-
-  public List<String> getWorlds() {
+  public List<String> getAudiences() {
     return configured.stream()
-        .flatMap(p -> p.getWorlds().stream())
+        .map(p -> p.getFormattedAudience())
+        .distinct()
+        .sorted()
+        .collect(Collectors.toList());
+  }
+
+  public List<String> getDates() {
+    return configured.stream()
+        .flatMap(p -> ImmutableList.of(p.getFormattedDate(), Integer.toString(p.getYear()))
+            .stream())
+        .distinct()
+        .sorted()
+        .collect(Collectors.toList());
+  }
+
+  public List<String> getLayouts() {
+    return configured.stream()
+        .map(p -> p.getFormattedLayout())
         .distinct()
         .sorted()
         .collect(Collectors.toList());
@@ -85,10 +78,9 @@ public class ProductTemplates extends FilteredTemplatesStore<ProductTemplate, Pr
         .collect(Collectors.toList());
   }
 
-  public List<String> getDates() {
+  public List<String> getStyles() {
     return configured.stream()
-        .flatMap(p -> ImmutableList.of(p.getFormattedDate(), Integer.toString(p.getYear()))
-            .stream())
+        .map(p -> p.getFormattedStyle())
         .distinct()
         .sorted()
         .collect(Collectors.toList());
@@ -110,28 +102,36 @@ public class ProductTemplates extends FilteredTemplatesStore<ProductTemplate, Pr
         .collect(Collectors.toList());
   }
 
-  public List<String> getAudiences() {
+  public List<String> getWorlds() {
     return configured.stream()
-        .map(p -> p.getFormattedAudience())
+        .flatMap(p -> p.getWorlds().stream())
         .distinct()
         .sorted()
         .collect(Collectors.toList());
   }
 
-  public List<String> getStyles() {
-    return configured.stream()
-        .map(p -> p.getFormattedStyle())
-        .distinct()
-        .sorted()
-        .collect(Collectors.toList());
+  public SortedSet<String> extractAllProducers() {
+    return byName.values().stream()
+        .map(ProductTemplate::getProducer)
+        .collect(Collectors.toCollection(TreeSet::new));
   }
 
-  public List<String> getLayouts() {
-    return configured.stream()
-        .map(p -> p.getFormattedLayout())
-        .distinct()
-        .sorted()
-        .collect(Collectors.toList());
+  public SortedSet<String> extractAllSystems() {
+    return Arrays.stream(Template.ProductTemplateProto.System.values())
+        .map(v -> Strings.toWords(v.name()))
+        .collect(Collectors.toCollection(TreeSet::new));
+  }
+
+  public SortedSet<String> extractAllTypes() {
+    return Arrays.stream(Template.ProductTemplateProto.Type.values())
+        .map(v -> Strings.toWords(v.name()))
+        .collect(Collectors.toCollection(TreeSet::new));
+  }
+
+  public SortedSet<String> extractAllWorlds() {
+    return byName.values().stream()
+        .flatMap(p -> p.getWorlds().stream())
+        .collect(Collectors.toCollection(TreeSet::new));
   }
 
   public void updateHidden(User me, Set<String> producers, Set<String> worlds, Set<String> systems,
@@ -144,6 +144,11 @@ public class ProductTemplates extends FilteredTemplatesStore<ProductTemplate, Pr
             && !types.contains(p.getFormattedType()))
         .collect(Collectors.toList()));
     filter(me, filter);
+  }
+
+  @Override
+  protected int computeFilteredOwned(User me) {
+    return (int) filtered.stream().filter(t -> me.ownsProduct(t.getName())).count();
   }
 
   private boolean containsAny(Collection<String> first, Collection<String> second) {

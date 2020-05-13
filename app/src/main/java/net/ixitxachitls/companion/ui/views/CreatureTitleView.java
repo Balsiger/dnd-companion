@@ -128,6 +128,11 @@ public abstract class CreatureTitleView<T extends Creature> extends TitleView {
     return view;
   }
 
+  protected void show(T creature) {
+    this.creature = Optional.of(creature);
+    update();
+  }
+
   protected void update() {
     setTitle(formatTitle());
     setSubtitle(formatSubtitle());

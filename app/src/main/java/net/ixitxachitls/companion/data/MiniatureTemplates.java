@@ -98,6 +98,13 @@ public class MiniatureTemplates extends FilteredTemplatesStore<MiniatureTemplate
     return new ArrayList<>(types);
   }
 
+  public void addDummy(String name) {
+    MiniatureTemplate template =
+        new MiniatureTemplate(name, Template.MiniatureTemplateProto.getDefaultInstance());
+    byName.put(name, template);
+    configured.add(template);
+  }
+
   @Override
   public void filter(User me, MiniatureFilter filter) {
     super.filter(me, filter);
@@ -123,10 +130,8 @@ public class MiniatureTemplates extends FilteredTemplatesStore<MiniatureTemplate
     filter(me, filter);
   }
 
-  public void addDummy(String name) {
-    MiniatureTemplate template =
-        new MiniatureTemplate(name, Template.MiniatureTemplateProto.getDefaultInstance());
-    byName.put(name, template);
-    configured.add(template);
+  @Override
+  protected int computeFilteredOwned(User me) {
+    return filtered.stream().mapToInt(t -> me.getMiniatureCount(t.getName())).sum();
   }
 }

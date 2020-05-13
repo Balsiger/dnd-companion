@@ -67,7 +67,6 @@ public class CompanionApplication extends Application
   private boolean updating = false;
   private Stopwatch stopwatch = Stopwatch.createUnstarted();
 
-
   public CompanionApplication() {
     this.assetAccessor = new ApplicationAssetAccessor(this);
   }
@@ -166,7 +165,7 @@ public class CompanionApplication extends Application
       MainActivity main = (MainActivity) currentActivity;
       main.startLoading(PROGRESS_LOADING);
       AsyncTask.execute(() -> {
-        Templates.init(CompanionApplication.this.getAssetAccessor());
+        Templates.init(CompanionApplication.this.getAssetAccessor(), main);
         runOnUiThread(() -> main.finishLoading(PROGRESS_LOADING));
       });
     }

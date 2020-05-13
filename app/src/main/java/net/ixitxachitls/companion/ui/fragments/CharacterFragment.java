@@ -57,7 +57,7 @@ import androidx.viewpager.widget.ViewPager;
  */
 public class CharacterFragment extends CompanionFragment {
 
-  protected Optional<Character> character = Optional.empty();
+  protected Character character = Character.DEFAULT;
   protected Optional<Campaign> campaign = Optional.empty();
   protected boolean storeOnPause = true;
 
@@ -76,6 +76,9 @@ public class CharacterFragment extends CompanionFragment {
 
   public CharacterFragment() {
     super(Type.character);
+
+    statisticsFragment = new CharacterStatisticsFragment();
+    inventoryFragment = new CharacterInventoryFragment();
   }
 
   @Override
@@ -136,9 +139,16 @@ public class CharacterFragment extends CompanionFragment {
   public void onPause() {
     super.onPause();
 
-    if (storeOnPause && character.isPresent()) {
-      character.get().store();
+    if (storeOnPause) {
+      character.store();
     }
+  }
+
+  @Override
+  public void onResume() {
+    super.onResume();
+
+    update();
   }
 
   @Override
@@ -150,56 +160,24 @@ public class CharacterFragment extends CompanionFragment {
     tabs.getTabAt(1).setIcon(R.drawable.noun_backpack_16138);
   }
 
-  public void showCharacter(Character character) {
-    this.character = Optional.of(character);
+  public void show(Character character) {
+    this.character = character;
     this.campaign = campaigns().getOptional(character.getCampaignId());
 
-    update();
+    title.show(character);
+    statisticsFragment.show(character);
+    inventoryFragment.show(character);
   }
 
   @Override
   public void update() {
-    if (character.isPresent()) {
-      update(character.get());
-    }
     title.update();
-  }
-
-  private void delete() {
-    ConfirmationPrompt.create(getContext())
-        .title(getResources().getString(R.string.character_delete_title))
-        .message(getResources().getString(R.string.character_delete_message))
-        .yes(this::deleteCharacterOk)
-        .show();
-  }
-
-  private void deleteCharacterOk() {
-    if (character.isPresent()) {
-      characters().delete(character.get());
-      Toast.makeText(getActivity(), getString(R.string.character_deleted),
-          Toast.LENGTH_SHORT).show();
-
-      storeOnPause = false;
-      if (campaign.isPresent()) {
-        show(Type.campaign);
-      }
-    }
-  }
-
-  private void update(Character character) {
-    this.character = Optional.of(character);
+    statisticsFragment.update();
+    inventoryFragment.update();
 
     // We did not create the view yet, thus there is no point in updating.
     if (getView() == null) {
       return;
-    }
-
-    if (statisticsFragment != null) {
-      statisticsFragment.update(character);
-    }
-
-    if (inventoryFragment != null) {
-      inventoryFragment.update(character);
     }
 
     campaign = CompanionApplication.get(getContext()).campaigns()
@@ -213,10 +191,29 @@ public class CharacterFragment extends CompanionFragment {
     title.update();
   }
 
+  private void delete() {
+    ConfirmationPrompt.create(getContext())
+        .title(getResources().getString(R.string.character_delete_title))
+        .message(getResources().getString(R.string.character_delete_message))
+        .yes(this::deleteCharacterOk)
+        .show();
+  }
+
+  private void deleteCharacterOk() {
+    characters().delete(character);
+    Toast.makeText(getActivity(), getString(R.string.character_deleted),
+        Toast.LENGTH_SHORT).show();
+
+    storeOnPause = false;
+    if (campaign.isPresent()) {
+      show(Type.campaign);
+    }
+  }
+
   public class CharacterPagerAdapter extends FragmentPagerAdapter {
 
     public CharacterPagerAdapter(FragmentManager manager) {
-      super(manager);
+      super(manager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
     }
 
     @Override
@@ -229,19 +226,9 @@ public class CharacterFragment extends CompanionFragment {
       switch (position) {
         default:
         case 0:
-          if (character.isPresent() && character.get().amPlayer()) {
-            statisticsFragment = new LocalCharacterStatisticsFragment();
-          } else {
-            statisticsFragment = new CharacterStatisticsFragment();
-          }
-          statisticsFragment.update(character.get());
           return statisticsFragment;
 
         case 1:
-          if (character.isPresent()) {
-            inventoryFragment = new CharacterInventoryFragment();
-            inventoryFragment.update(character.get());
-          }
           return inventoryFragment;
       }
     }

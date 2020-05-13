@@ -56,14 +56,6 @@ public class TemplatesStore<T extends Entry<? extends MessageLite>> {
     return new ArrayList<>(byName.keySet());
   }
 
-  public List<T> getValues() {
-    return new ArrayList<>(byName.values());
-  }
-
-  public Optional<T> get(String name) {
-    return Optional.ofNullable(byNormalizedName.get(name.toLowerCase()));
-  }
-
   public Set<String> getProductIds() {
     Set<String> ids = new HashSet<>();
     for (Entry entry : byName.values()) {
@@ -73,12 +65,27 @@ public class TemplatesStore<T extends Entry<? extends MessageLite>> {
     return ids;
   }
 
+  public List<T> getValues() {
+    return new ArrayList<>(byName.values());
+  }
+
+  public Optional<T> get(String name) {
+    return Optional.ofNullable(byNormalizedName.get(name.toLowerCase()));
+  }
+
   public void loaded() {
   }
 
   private MessageLite defaultProto()
       throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
     return (MessageLite) entryClass.getMethod("defaultProto").invoke(null, (Object [])null);
+  }
+
+  protected void ensure(T entry) {
+    if (!byName.containsKey(entry.getName())) {
+      byName.put(entry.getName(), entry);
+      byNormalizedName.put(entry.getName().toLowerCase(), entry);
+    }
   }
 
   @SuppressWarnings("unchecked")
@@ -100,12 +107,5 @@ public class TemplatesStore<T extends Entry<? extends MessageLite>> {
 
     byName.put(entry.getName(), entry);
     byNormalizedName.put(entry.getName().toLowerCase(), entry);
-  }
-
-  protected void ensure(T entry) {
-    if (!byName.containsKey(entry.getName())) {
-      byName.put(entry.getName(), entry);
-      byNormalizedName.put(entry.getName().toLowerCase(), entry);
-    }
   }
 }

@@ -5,6 +5,7 @@ set: "Legendary Evils"
 rarity: COMMON
 number: 13
 type: "Humanoid"
-subtype: "Dwarf (Devil)"
+subtype: "Dwarf"
+subtype: "Devil"
 race: "Duergar"
 size: MEDIUM

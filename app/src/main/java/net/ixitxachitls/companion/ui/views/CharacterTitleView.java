@@ -51,6 +51,11 @@ public class CharacterTitleView extends CreatureTitleView<Character> {
   }
 
   @Override
+  public void show(Character character) {
+    super.show(character);
+  }
+
+  @Override
   public void update(Character character) {
     super.update(character);
 

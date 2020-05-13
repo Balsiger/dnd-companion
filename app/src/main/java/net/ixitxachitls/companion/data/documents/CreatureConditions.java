@@ -119,7 +119,7 @@ public class CreatureConditions extends Documents<CreatureConditions> {
   }
 
   public void readConditions(String creatureId) {
-    if (!conditionsByCreatureId.containsKey(creatureId)) {
+    if (!"null/null".equals(creatureId) && !conditionsByCreatureId.containsKey(creatureId)) {
       conditionsByCreatureId.put(creatureId, Collections.emptyList());
       CollectionReference reference = db.collection(creatureId + "/" + PATH);
       reference.addSnapshotListener((s, e) -> {

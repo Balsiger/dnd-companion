@@ -6,4 +6,5 @@ rarity: UNCOMMON
 number: 14
 type: "Fiend"
 race: "Vargouille"
+subtype: "Tall"
 size: SMALL

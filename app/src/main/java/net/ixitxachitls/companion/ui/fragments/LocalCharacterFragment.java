@@ -54,7 +54,7 @@ public class LocalCharacterFragment extends CharacterFragment {
   private final int PICK_IMAGE = 1;
 
   public boolean canEdit() {
-    return campaign.isPresent() && character.isPresent();
+    return campaign.isPresent();
   }
 
   @Override
@@ -62,11 +62,11 @@ public class LocalCharacterFragment extends CharacterFragment {
     super.onActivityResult(requestCode, resultCode, data);
 
     if (requestCode == PICK_IMAGE && resultCode == RESULT_OK &&
-        data != null && data.getData() != null && character.isPresent()) {
+        data != null && data.getData() != null) {
       try {
         Uri uri = data.getData();
         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), uri);
-        images().set(character.get().getId(), bitmap);
+        images().set(character.getId(), bitmap);
       } catch (IOException e) {
         Status.toast("Cannot load image bitmap: " + e);
       }
@@ -89,23 +89,21 @@ public class LocalCharacterFragment extends CharacterFragment {
   }
 
   private void editBase() {
-    if (!canEdit() || !character.isPresent()) {
+    if (!canEdit()) {
       return;
     }
 
-    CharacterDialog.newInstance(character.get().getId(),
-        character.get().getCampaignId()).display();
+    CharacterDialog.newInstance(character.getId(),
+        character.getCampaignId()).display();
   }
 
   private void editImage() {
-    if (character.isPresent()) {
-      Intent intent = new Intent();
-      // Show only images, no videos or anything else
-      intent.setType("image/*");
-      intent.setAction(Intent.ACTION_GET_CONTENT);
-      // Always show the chooser (if there are multiple options available)
-      startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
-    }
+    Intent intent = new Intent();
+    // Show only images, no videos or anything else
+    intent.setType("image/*");
+    intent.setAction(Intent.ACTION_GET_CONTENT);
+    // Always show the chooser (if there are multiple options available)
+    startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
   }
 
   private void move() {
@@ -120,9 +118,7 @@ public class LocalCharacterFragment extends CharacterFragment {
   }
 
   private void move(List<String> campaignIds) {
-    if (character.isPresent()) {
-      character.get().setCampaignId(campaignIds.get(0));
-    }
+    character.setCampaignId(campaignIds.get(0));
 
     Optional<Campaign> campaign = campaigns().getOptional(campaignIds.get(0));
     if (campaign.isPresent()) {
@@ -131,14 +127,12 @@ public class LocalCharacterFragment extends CharacterFragment {
   }
 
   private void sendMessage() {
-    if (campaign.isPresent() && character.isPresent()) {
-      MessageDialog.newInstance(campaign.get().getId(), character.get().getId()).display();
+    if (campaign.isPresent()) {
+      MessageDialog.newInstance(campaign.get().getId(), character.getId()).display();
     }
   }
 
   private void timed() {
-    if (character.isPresent()) {
-      TimedConditionDialog.newInstance(character.get().getId(), 0).display();
-    }
+    TimedConditionDialog.newInstance(character.getId(), 0).display();
   }
 }

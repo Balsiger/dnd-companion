@@ -36,6 +36,7 @@ import net.ixitxachitls.companion.data.templates.SkillTemplate;
 import net.ixitxachitls.companion.data.templates.SpellTemplate;
 import net.ixitxachitls.companion.data.templates.WorldTemplate;
 import net.ixitxachitls.companion.storage.AssetAccessor;
+import net.ixitxachitls.companion.ui.activities.MainActivity;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -54,6 +55,7 @@ import androidx.annotation.Nullable;
 public class Templates {
 
   private static final String PATH_ENTITIES = "entities";
+  private static final String LOADING_TEMPLATES = "templates";
 
   private static @Nullable Templates singleton = null;
 
@@ -80,6 +82,11 @@ public class Templates {
     this.assetAccessor = assetAccessor;
   }
 
+  @FunctionalInterface
+  public interface Callback {
+    public void call();
+  }
+
   public TemplatesStore<AdventureTemplate> getAdventureTemplates() {
     return adventures;
   }
@@ -100,12 +107,12 @@ public class Templates {
     return miniatures;
   }
 
-  public ProductTemplates getProductTemplates() {
-    return products;
-  }
-
   public MonsterTemplates getMonsterTemplates() {
     return monsterTemplates;
+  }
+
+  public ProductTemplates getProductTemplates() {
+    return products;
   }
 
   public TemplatesStore<QualityTemplate> getQualityTemplates() {
@@ -124,6 +131,14 @@ public class Templates {
     return worlds;
   }
 
+  public void executeAfterLoading(Callback callback) {
+    if (loaded) {
+      callback.call();
+    } else {
+      loadedCallbacks.add(callback);
+    }
+  }
+
   public LevelTemplate getOrCreateLevel(String name) {
     Optional<LevelTemplate> template = getLevelTemplates().get(name);
     if (template.isPresent()) {
@@ -133,7 +148,12 @@ public class Templates {
     return new LevelTemplate(LevelTemplate.defaultProto(), name, 0);
   }
 
-  private void load() {
+  public boolean hasData(String id) {
+    return productsWithData.contains(id);
+  }
+
+  private void load(MainActivity main) {
+    main.startLoading(LOADING_TEMPLATES);
     worlds.ensure(WorldTemplate.DEFAULT);
 
     try {
@@ -205,31 +225,13 @@ public class Templates {
       productsWithData.addAll(spells.getProductIds());
       productsWithData.addAll(adventures.getProductIds());
 
+      main.finishLoading(LOADING_TEMPLATES);
+
       loaded();
     } catch (IOException | NoSuchMethodException | IllegalAccessException
         | InvocationTargetException e) {
       Status.error("Loading of entries from internal storage failed: " + e);
     }
-  }
-
-  public boolean hasData(String id) {
-    return productsWithData.contains(id);
-  }
-
-  public static Templates get() {
-    return singleton;
-  }
-
-  public static void init(AssetAccessor assetAccessor) {
-    if (singleton == null) {
-      singleton = new Templates(assetAccessor);
-      singleton.load();
-    }
-  }
-
-  @FunctionalInterface
-  public interface Callback {
-    public void call();
   }
 
   private void loaded() {
@@ -239,11 +241,14 @@ public class Templates {
     }
   }
 
-  public void executeAfterLoading(Callback callback) {
-    if (loaded) {
-      callback.call();
-    } else {
-      loadedCallbacks.add(callback);
+  public static Templates get() {
+    return singleton;
+  }
+
+  public static void init(AssetAccessor assetAccessor, MainActivity main) {
+    if (singleton == null) {
+      singleton = new Templates(assetAccessor);
+      singleton.load(main);
     }
   }
 }

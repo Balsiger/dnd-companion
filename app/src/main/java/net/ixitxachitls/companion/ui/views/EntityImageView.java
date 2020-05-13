@@ -63,9 +63,13 @@ public class EntityImageView extends LinearLayout {
     addView(view);
   }
 
-  public void setup(String imagePath, @DrawableRes int imagePlaceholder) {
-    this.path = imagePath;
-    this.placeholder = imagePlaceholder;
+  public void clearName() {
+    this.name.text("(no miniatures found)");
+    this.image.get().setImage(placeholder);
+  }
+
+  public void clearNumber() {
+    this.number.text("");
   }
 
   public void setName(String id, String name) {
@@ -73,16 +77,12 @@ public class EntityImageView extends LinearLayout {
     this.image.get().setImage(path + id, placeholder);
   }
 
-  public void clearName() {
-    this.name.text("(no miniatures found)");
-    this.image.get().setImage(placeholder);
+  public void setNumber(int number, int max, int owned) {
+    this.number.text(number + " of " + max + " (" + owned + " owned)");
   }
 
-  public void setNumber(int number, int max) {
-    this.number.text(number + " of " + max);
-  }
-
-  public void clearNumber() {
-    this.number.text("");
+  public void setup(String imagePath, @DrawableRes int imagePlaceholder) {
+    this.path = imagePath;
+    this.placeholder = imagePlaceholder;
   }
 }

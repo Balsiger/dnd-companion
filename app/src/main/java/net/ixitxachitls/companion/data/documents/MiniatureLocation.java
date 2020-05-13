@@ -21,8 +21,11 @@
 
 package net.ixitxachitls.companion.data.documents;
 
+import com.google.common.collect.Lists;
+
 import net.ixitxachitls.companion.data.templates.MiniatureTemplate;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -43,12 +46,12 @@ public class MiniatureLocation extends NestedDocument
   private int color;
 
   public MiniatureLocation() {
-    this("", Collections.emptyList(), 0);
+    this("", new ArrayList<>(), 0);
   }
 
   public MiniatureLocation(String name, List<MiniatureFilter> filters, int color) {
     this.name = name;
-    this.filters = filters;
+    this.filters = Lists.newArrayList(filters);
     this.color = color;
   }
 

@@ -6,6 +6,7 @@ rarity: RARE
 number: 36
 type: "Humanoid"
 subtype: "Goblinoid"
+subtype: "Tall"
 race: "Hobgoblin"
 class: "Fighter"
 size: MEDIUM

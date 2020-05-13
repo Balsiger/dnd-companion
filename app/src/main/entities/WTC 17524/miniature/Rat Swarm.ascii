@@ -8,4 +8,4 @@ race: "Rat Swarm"
 type: "Vermin"
 subtype: "Rat"
 subtype: "Swarm"
-size: TINY
+size: LARGE

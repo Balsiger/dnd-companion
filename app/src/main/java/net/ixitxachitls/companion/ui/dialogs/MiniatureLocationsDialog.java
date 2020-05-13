@@ -22,7 +22,6 @@
 package net.ixitxachitls.companion.ui.dialogs;
 
 import android.content.Context;
-import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,21 +58,8 @@ public class MiniatureLocationsDialog extends Dialog {
   protected void createContent(View view) {
     locationsContainer = view.findViewById(R.id.locations);
     Wrapper.wrap(view, R.id.add).onClick(this::addLocation);
-    locationsContainer.setOnDragListener((v, e) -> onDrag(v, e));
 
     update();
-  }
-
-  private boolean onDrag(View view, DragEvent event) {
-    switch (event.getAction()) {
-      case DragEvent.ACTION_DRAG_STARTED:
-        return true;
-
-      case DragEvent.ACTION_DRAG_LOCATION:
-
-      default:
-        return false;
-    }
   }
 
   private void update() {

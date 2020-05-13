@@ -142,7 +142,8 @@ public class ProductFragment extends NestedCompanionFragment {
       image.setName(product.get().getName(),
           product.get().getName() + ": " + product.get().getFormattedTitle());
       image.setNumber(Templates.get().getProductTemplates().getNumber(product.get()),
-          Templates.get().getProductTemplates().getFilteredNumber());
+          Templates.get().getProductTemplates().getFilteredNumber(),
+          Templates.get().getProductTemplates().getFilteredOwnedNumber(me()));
 
       subtitle.text(Texts.toSpanned(getContext(), product.get().getSubtitle()));
       description.text(Texts.toSpanned(getContext(), product.get().getDescription()));

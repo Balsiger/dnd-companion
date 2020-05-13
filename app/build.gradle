@@ -21,6 +21,14 @@ apply plugin: 'com.google.firebase.firebase-perf'
 
 android {
   compileSdkVersion 28
+
+  viewBinding {
+    enabled = true;
+  }
+  dataBinding {
+    enabled = true;
+  }
+
   def versionFile = file('version.properties')
   Properties version = new Properties()
   if (!versionFile.canRead()) {

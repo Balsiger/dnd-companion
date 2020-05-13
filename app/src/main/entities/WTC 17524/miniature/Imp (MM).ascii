@@ -7,4 +7,5 @@ number: 2
 race: "Imp"
 type: "Fiend"
 subtype: "Devil"
-size: TINY
+subtype: "Tall"
+size: SMALL

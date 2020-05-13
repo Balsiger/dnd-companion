@@ -7,4 +7,4 @@ number: 14
 race: "Homunculus"
 type: "Humanoid"
 subtype: "Construct"
-size: TINY
+size: SMALL

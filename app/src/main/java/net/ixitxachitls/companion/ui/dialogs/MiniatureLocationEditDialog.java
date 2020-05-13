@@ -48,7 +48,8 @@ import androidx.annotation.StringRes;
 /**
  * Dialog for editing a single miniature location.
  */
-public class MiniatureLocationEditDialog extends Dialog {
+public class MiniatureLocationEditDialog
+    extends Dialog<MiniatureLocationEditDialog, MiniatureLocation> {
 
   private static final String ARG_LOCATION = "location";
 
@@ -66,6 +67,14 @@ public class MiniatureLocationEditDialog extends Dialog {
     location.setColor(color);
 
     update();
+  }
+
+  @Override
+  public void save() {
+    location.setName(locationInput.getText());
+    me().replaceLocation(originalName, location);
+
+    super.save();
   }
 
   private void addFilter() {
@@ -110,14 +119,6 @@ public class MiniatureLocationEditDialog extends Dialog {
     Wrapper.wrap(view, R.id.add_filter).onClick(this::addFilter);
 
     update();
-  }
-
-  @Override
-  public void save() {
-    location.setName(locationInput.getText());
-    me().replaceLocation(originalName, location);
-
-    super.save();
   }
 
   private void delete(MiniatureFilter filter) {

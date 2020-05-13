@@ -179,6 +179,10 @@ public class Creature<T extends Creature<T>> extends Document<T> implements Item
   }
 
   public Campaign getCampaign() {
+    if (context == null) {
+      return Campaign.DEFAULT;
+    }
+
     return context.campaigns().get(campaignId);
   }
 

@@ -39,12 +39,17 @@ public class FilteredTemplatesStore
 
   protected List<T> configured = new ArrayList<>();
   protected List<T> filtered = new ArrayList<>();
+  protected int filteredOwned = -1;
   protected F filter;
 
   protected FilteredTemplatesStore(Class<T> entryClass, F defaultFilter) {
     super(entryClass);
 
     this.filter = defaultFilter;
+  }
+
+  public F getFilter() {
+    return filter;
   }
 
   public int getFilteredNumber() {
@@ -55,12 +60,16 @@ public class FilteredTemplatesStore
     return configured.size();
   }
 
-  public F getFilter() {
-    return filter;
-  }
-
   public boolean isFiltered() {
     return filtered.size() != configured.size();
+  }
+
+  public void filter(User me, F filter) {
+    this.filter = filter;
+    filtered = configured.stream()
+        .filter(f -> filter.matches(me, f))
+        .collect(Collectors.toList());
+    filteredOwned = -1;
   }
 
   public Optional<T> get(int index) {
@@ -71,9 +80,19 @@ public class FilteredTemplatesStore
     return Optional.empty();
   }
 
+  public int getFilteredOwnedNumber(User me) {
+    if (filteredOwned < 0) {
+      filteredOwned = computeFilteredOwned(me);
+    }
+
+    return filteredOwned;
+  }
+
   public int getNumber(T miniature) {
     return filtered.indexOf(miniature) + 1;
   }
+
+  ;
 
   @Override
   public void loaded() {
@@ -81,10 +100,7 @@ public class FilteredTemplatesStore
     filtered.addAll(configured);
   }
 
-  public void filter(User me, F filter) {
-    this.filter = filter;
-    filtered = configured.stream()
-        .filter(f -> filter.matches(me, f))
-        .collect(Collectors.toList());
+  protected int computeFilteredOwned(User me) {
+    return 0;
   }
 }

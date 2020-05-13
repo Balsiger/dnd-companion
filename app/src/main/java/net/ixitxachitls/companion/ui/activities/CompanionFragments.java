@@ -177,12 +177,12 @@ public class CompanionFragments {
     if (character.amPlayer()) {
       show(CompanionFragment.Type.localCharacter, shared);
       if (localCharacterFragment.isPresent()) {
-        localCharacterFragment.get().showCharacter(character);
+        localCharacterFragment.get().show(character);
       }
     } else {
       show(CompanionFragment.Type.character, shared);
       if (characterFragment.isPresent()) {
-        characterFragment.get().showCharacter(character);
+        characterFragment.get().show(character);
       }
     }
   }

@@ -65,6 +65,11 @@ public class AbilityView extends LinearLayout {
     value.onClick(action);
   }
 
+  public void removeAction() {
+    setOnClickListener(null);
+    value.removeClick();
+  }
+
   public AbilityView update(Ability ability, ModifiedValue value, ModifiedValue check) {
     this.ability = ability;
     this.modifiedValue = Optional.of(value);

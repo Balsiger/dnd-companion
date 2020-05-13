@@ -30,6 +30,7 @@ import com.google.common.collect.Multimaps;
 import com.google.common.collect.Multiset;
 import com.google.firebase.firestore.DocumentSnapshot;
 
+import net.ixitxachitls.companion.CompanionApplication;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.CompanionContext;
 import net.ixitxachitls.companion.data.Templates;
@@ -63,6 +64,8 @@ import androidx.annotation.CallSuper;
 public class Character extends Creature<Character> implements Comparable<Character> {
 
   public static final String PATH = "characters";
+  public static final Character DEFAULT = createDefault();
+
   private static final DocumentFactory<Character> FACTORY = () -> new Character();
 
   private static final String FIELD_XP = "xpAction";
@@ -98,6 +101,10 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return adjustAbilityCheck(super.getCharismaCheck(), Ability.CHARISMA);
   }
 
+  public List<ConditionData> getConditionsHistory() {
+    return ImmutableList.copyOf(conditionsHistory);
+  }
+
   @Override
   public ModifiedValue getConstitution() {
     return adjustAbility(super.getConstitution(), Ability.CONSTITUTION);
@@ -128,6 +135,23 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return adjustAbilityCheck(super.getIntelligenceCheck(), Ability.INTELLIGENCE);
   }
 
+  public int getLevel() {
+    return levels.size();
+  }
+
+  public void setLevel(int level) {
+    this.level = level;
+  }
+
+  public List<Level> getLevels() {
+    return levels;
+  }
+
+  public void setLevels(List<Level> levels) {
+    this.levels = levels;
+    store();
+  }
+
   @Override
   public int getMaxHp() {
     int hp = 0;
@@ -136,6 +160,14 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return hp;
+  }
+
+  public int getMaxLevel() {
+    return XP.maxLevelForXp(xp);
+  }
+
+  public User getPlayer() {
+    return player;
   }
 
   @Override
@@ -156,6 +188,28 @@ public class Character extends Creature<Character> implements Comparable<Charact
   @Override
   public ModifiedValue getWisdomCheck() {
     return adjustAbilityCheck(super.getWisdomCheck(), Ability.WISDOM);
+  }
+
+  public int getXp() {
+    return xp;
+  }
+
+  public void setXp(int xp) {
+    this.xp = xp;
+  }
+
+  @Override
+  public boolean isCharacter() {
+    return true;
+  }
+
+  public void addLevel() {
+    levels.add(new Level());
+    store();
+  }
+
+  public void addXp(int number) {
+    xp += number;
   }
 
   @Override
@@ -202,6 +256,17 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return feats;
   }
 
+  public Map<String, Texts.Value> collectFormatValues() {
+    return ImmutableMap.<String, Texts.Value>builder()
+        .put("strength_modifier", new Texts.IntegerValue(getStrengthModifier()))
+        .put("dexterity_modifier", new Texts.IntegerValue(getDexterityModifier()))
+        .put("constitution_modifier", new Texts.IntegerValue(getConstitutionModifier()))
+        .put("intelligenve_modifier", new Texts.IntegerValue(getIntelligenceModifier()))
+        .put("widsom_modifier", new Texts.IntegerValue(getWisdomModifier()))
+        .put("charisma_modifier", new Texts.IntegerValue(getCharismaModifier()))
+        .build();
+  }
+
   @Override
   public Multimap<String, Quality> collectQualities() {
     // Need to copy, as super might return an immutable map.
@@ -219,145 +284,6 @@ public class Character extends Creature<Character> implements Comparable<Charact
     // TODO(merlin): Add qualities by items.
 
     return qualities;
-  }
-
-  public Map<String, Texts.Value> collectFormatValues() {
-    return ImmutableMap.<String, Texts.Value>builder()
-        .put("strength_modifier", new Texts.IntegerValue(getStrengthModifier()))
-        .put("dexterity_modifier", new Texts.IntegerValue(getDexterityModifier()))
-        .put("constitution_modifier", new Texts.IntegerValue(getConstitutionModifier()))
-        .put("intelligenve_modifier", new Texts.IntegerValue(getIntelligenceModifier()))
-        .put("widsom_modifier", new Texts.IntegerValue(getWisdomModifier()))
-        .put("charisma_modifier", new Texts.IntegerValue(getCharismaModifier()))
-        .build();
-  }
-
-  @Override
-  public ModifiedValue fortitude() {
-    ModifiedValue value = super.fortitude();
-
-    // Modifiers from class.
-    Multiset<LevelTemplate> counted = Level.countedNames(levels);
-    for (LevelTemplate level : counted.elementSet()) {
-      value.add(new Modifier(level.getFortitudeModifier(counted.count(level)),
-          Modifier.Type.GENERAL, level.getName()));
-    }
-
-    return value;
-  }
-
-  @Override
-  public ModifiedValue initiative() {
-    ModifiedValue value = super.initiative();
-
-    for (Level level : levels) {
-      if (level.getFeat().isPresent()) {
-        value.add(level.getFeat().get().getInitiativeAdjustment());
-      }
-    }
-
-    return value;
-  }
-
-  @Override
-  public ModifiedValue reflex() {
-    ModifiedValue value = super.reflex();
-
-    // Modifiers from class.
-    Multiset<LevelTemplate> counted = Level.countedNames(levels);
-    for (LevelTemplate level : counted.elementSet()) {
-      value.add(new Modifier(level.getReflexModifier(counted.count(level)),
-          Modifier.Type.GENERAL, level.getName()));
-    }
-
-    return value;
-  }
-
-  @Override
-  public ModifiedValue will() {
-    ModifiedValue value = super.will();
-
-    // Modifiers from class.
-    Multiset<LevelTemplate> counted = Level.countedNames(levels);
-    for (LevelTemplate level : counted.elementSet()) {
-      value.add(new Modifier(level.getWillModifier(counted.count(level)),
-          Modifier.Type.GENERAL, level.getName()));
-    }
-
-    return value;
-  }
-
-  @Override
-  protected boolean hasLevels() {
-    return !levels.isEmpty();
-  }
-
-  @Override
-  @CallSuper
-  protected void read() {
-    super.read();
-    xp = data.get(FIELD_XP, 0);
-    level = data.get(FIELD_LEVEL, DEFAULT_LEVEL);
-    levels = new ArrayList<>();
-    int i = 1;
-    for (Data levelData : data.getNestedList(FIELD_LEVELS)) {
-      levels.add(Level.read(levelData, i++));
-    }
-  }
-
-  @Override
-  @CallSuper
-  public Data write() {
-    return super.write()
-        .set(FIELD_XP, xp)
-        .set(FIELD_LEVEL, level)
-        .setNested(FIELD_LEVELS, levels);
-  }
-
-  public List<ConditionData> getConditionsHistory() {
-    return ImmutableList.copyOf(conditionsHistory);
-  }
-
-  public int getLevel() {
-    return levels.size();
-  }
-
-  public void setLevel(int level) {
-    this.level = level;
-  }
-
-  public List<Level> getLevels() {
-    return levels;
-  }
-
-  public void setLevels(List<Level> levels) {
-    this.levels = levels;
-    store();
-  }
-
-  public int getMaxLevel() {
-    return XP.maxLevelForXp(xp);
-  }
-
-  public User getPlayer() {
-    return player;
-  }
-
-  public int getXp() {
-    return xp;
-  }
-
-  public void setXp(int xp) {
-    this.xp = xp;
-  }
-
-  public void addLevel() {
-    levels.add(new Level());
-    store();
-  }
-
-  public void addXp(int number) {
-    xp += number;
   }
 
   // Skills not returned have a total modifier of +0.
@@ -392,6 +318,20 @@ public class Character extends Creature<Character> implements Comparable<Charact
     store();
   }
 
+  @Override
+  public ModifiedValue fortitude() {
+    ModifiedValue value = super.fortitude();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getFortitudeModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    return value;
+  }
+
   public int getClassLevel(String className, int totalLevel) {
     int classLevel = 0;
     for (int i = 0; i < totalLevel && i < levels.size(); i++) {
@@ -410,6 +350,33 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return Optional.empty();
+  }
+
+  @Override
+  public ModifiedValue initiative() {
+    ModifiedValue value = super.initiative();
+
+    for (Level level : levels) {
+      if (level.getFeat().isPresent()) {
+        value.add(level.getFeat().get().getInitiativeAdjustment());
+      }
+    }
+
+    return value;
+  }
+
+  @Override
+  public ModifiedValue reflex() {
+    ModifiedValue value = super.reflex();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getReflexModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    return value;
   }
 
   public void setLevel(int number, Level level) {
@@ -460,6 +427,29 @@ public class Character extends Creature<Character> implements Comparable<Charact
     }
 
     return errors;
+  }
+
+  @Override
+  public ModifiedValue will() {
+    ModifiedValue value = super.will();
+
+    // Modifiers from class.
+    Multiset<LevelTemplate> counted = Level.countedNames(levels);
+    for (LevelTemplate level : counted.elementSet()) {
+      value.add(new Modifier(level.getWillModifier(counted.count(level)),
+          Modifier.Type.GENERAL, level.getName()));
+    }
+
+    return value;
+  }
+
+  @Override
+  @CallSuper
+  public Data write() {
+    return super.write()
+        .set(FIELD_XP, xp)
+        .set(FIELD_LEVEL, level)
+        .setNested(FIELD_LEVELS, levels);
   }
 
   private ModifiedValue adjustAbility(ModifiedValue value, Ability ability) {
@@ -541,11 +531,37 @@ public class Character extends Creature<Character> implements Comparable<Charact
     return ranks;
   }
 
+  @Override
+  protected boolean hasLevels() {
+    return !levels.isEmpty();
+  }
+
+  @Override
+  @CallSuper
+  protected void read() {
+    super.read();
+    xp = data.get(FIELD_XP, 0);
+    level = data.get(FIELD_LEVEL, DEFAULT_LEVEL);
+    levels = new ArrayList<>();
+    int i = 1;
+    for (Data levelData : data.getNestedList(FIELD_LEVELS)) {
+      levels.add(Level.read(levelData, i++));
+    }
+  }
+
   protected static Character create(CompanionContext context, String campaignId) {
     Character character = Document.create(FACTORY, context, context.me().getId() + "/" + PATH);
 
     character.player = context.me();
     character.setCampaignId(campaignId);
+
+    return character;
+  }
+
+  private static Character createDefault() {
+    Character character = new Character();
+    character.context = CompanionApplication.get().context();
+    character.temporary = true;
 
     return character;
   }
@@ -556,10 +572,5 @@ public class Character extends Creature<Character> implements Comparable<Charact
     character.player = player;
 
     return character;
-  }
-
-  @Override
-  public boolean isCharacter() {
-    return true;
   }
 }

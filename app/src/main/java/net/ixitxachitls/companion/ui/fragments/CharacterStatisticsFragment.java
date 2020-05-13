@@ -35,7 +35,6 @@ import com.google.common.collect.Multimap;
 import net.ixitxachitls.companion.R;
 import net.ixitxachitls.companion.Status;
 import net.ixitxachitls.companion.data.documents.Character;
-import net.ixitxachitls.companion.data.documents.Documents;
 import net.ixitxachitls.companion.data.documents.Feat;
 import net.ixitxachitls.companion.data.documents.Level;
 import net.ixitxachitls.companion.data.documents.Quality;
@@ -43,9 +42,12 @@ import net.ixitxachitls.companion.data.enums.Ability;
 import net.ixitxachitls.companion.data.values.Distance;
 import net.ixitxachitls.companion.data.values.Item;
 import net.ixitxachitls.companion.data.values.ModifiedValue;
+import net.ixitxachitls.companion.databinding.FragmentCharacterStatisticsBinding;
 import net.ixitxachitls.companion.rules.Items;
 import net.ixitxachitls.companion.rules.XP;
 import net.ixitxachitls.companion.ui.MessageDialog;
+import net.ixitxachitls.companion.ui.dialogs.LevelsDialog;
+import net.ixitxachitls.companion.ui.dialogs.NumberAdjustDialog;
 import net.ixitxachitls.companion.ui.dialogs.QualityDialog;
 import net.ixitxachitls.companion.ui.views.AbilityView;
 import net.ixitxachitls.companion.ui.views.AttackDetailsView;
@@ -61,7 +63,6 @@ import net.ixitxachitls.companion.util.Strings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 import java.util.SortedMap;
 import java.util.stream.Collectors;
@@ -71,9 +72,10 @@ import java.util.stream.Collectors;
  */
 public class CharacterStatisticsFragment extends NestedCompanionFragment {
 
-  protected Optional<Character> character = Optional.empty();
+  protected Character character = Character.DEFAULT;
 
   // UI elements.
+  protected FragmentCharacterStatisticsBinding views;
   protected ConditionIconsView conditions;
   protected Wrapper<ImageView> abilitiesGroup;
   protected AbilityView strength;
@@ -123,10 +125,10 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle state) {
     super.onCreateView(inflater, container, state);
 
-    ViewGroup view =
-        (ViewGroup) inflater.inflate(R.layout.fragment_character_statistics, container, false);
+    views = FragmentCharacterStatisticsBinding.inflate(inflater, container, false);
+    ViewGroup view = (ViewGroup) views.getRoot();
 
-    LinearLayout conditionsContainer = view.findViewById(R.id.conditions);
+    LinearLayout conditionsContainer = views.conditions;
     conditions = new ConditionIconsView(view.getContext(), LinearLayout.HORIZONTAL,
         R.color.character, R.color.characterDark);
     conditionsContainer.addView(conditions);
@@ -189,7 +191,6 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     reflex = view.findViewById(R.id.reflex);
     reflex.ranged().style(R.style.LargeText);
 
-
     featsGroup = Wrapper.<ImageView>wrap(view, R.id.group_feats)
         .onClick(() -> showSimpleMessage("Feats", "All your current feats.\n"
             + "Press on a feat to get more details."));
@@ -209,13 +210,29 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     return view;
   }
 
-  public void update(Character character) {
-    this.character = Optional.of(character);
+  @Override
+  public void onDestroyView() {
+    super.onDestroyView();
+    views = null;
+  }
 
+  @Override
+  public void onResume() {
+    super.onResume();
+
+    update();
+  }
+
+  public void show(Character character) {
+    this.character = character;
+  }
+
+  public void update() {
     if (getView() == null) {
       return;
     }
 
+    Status.log("updating character " + character.getName());
     strength.update(Ability.STRENGTH, character.getStrength(), character.getStrengthCheck());
     dexterity.update(Ability.DEXTERITY, character.getDexterity(), character.getDexterityCheck());
     constitution.update(Ability.CONSTITUTION, character.getConstitution(),
@@ -235,6 +252,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     ac.set(character.normalArmorClass());
     acTouch.set(character.touchArmorClass());
     acFlat.set(character.flatFootedArmorClass());
+
     // Update attacks.
     attacks.removeAllViews();
     for (Item item : character.getItems()) {
@@ -304,33 +322,141 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       }
     }
 
+    if (character.amPlayer()) {
+      strength.setAction(this::editAbilities);
+      dexterity.setAction(this::editAbilities);
+      constitution.setAction(this::editAbilities);
+      intelligence.setAction(this::editAbilities);
+      wisdom.setAction(this::editAbilities);
+      charisma.setAction(this::editAbilities);
+
+      levels.onClick(this::editLevels);
+
+      xp.onBlur(this::changeXp).enabled(true);
+      xpAdjust.visible().onClick(this::adjustXp);
+      hp.onBlur(this::changeHp).enabled(true);
+      hpAdjust.visible().onClick(this::adjustHp);
+      damageNonlethal.onBlur(this::changeNonlethalDamage).enabled(true);
+      hpNonlethalAdjust.visible().onClick(this::adjustNonlethalDamage);
+    } else {
+      strength.removeAction();
+      dexterity.removeAction();
+      constitution.removeAction();
+      intelligence.removeAction();
+      wisdom.removeAction();
+      charisma.removeAction();
+
+      levels.removeClick();
+
+      xp.enabled(false);
+      xpAdjust.invisible().removeClick();
+      hp.enabled(false);
+      hpAdjust.invisible().removeClick();
+      damageNonlethal.enabled(false);
+      hpNonlethalAdjust.invisible().removeClick();
+    }
+
     redraw();
   }
 
+  private void adjustHp() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
+        "HP Adjustment", "Adjust the current HP value.")
+        .setAdjustAction(this::doAdjustHp)
+        .display();
+  }
+
+  private void adjustNonlethalDamage() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_hp, R.color.character,
+        "Nonlethal Damage Adjustment", "Adjust the current nonlethal damage.")
+        .setAdjustAction(this::doAdjustNonlethalDamage)
+        .display();
+  }
+
+  private void adjustXp() {
+    NumberAdjustDialog.newInstance(R.string.title_dialog_adjust_xp, R.color.character,
+        "XP Adjustment", "Adjust the current XP value.")
+        .setAdjustAction(this::doAdjustXp)
+        .display();
+  }
+
+  private void changeHp() {
+    try {
+      character.setHp(Integer.parseInt(hp.getText()));
+    } catch (NumberFormatException e) {
+      character.setHp(1);
+    }
+    character.store();
+
+    redraw();
+  }
+
+  private void changeNonlethalDamage() {
+    try {
+      character.setNonlethalDamage(Integer.parseInt(damageNonlethal.getText()));
+    } catch (NumberFormatException e) {
+      character.setNonlethalDamage(0);
+    }
+    character.store();
+
+    redraw();
+  }
+
+  private void changeXp() {
+    if (!xp.getText().isEmpty()) {
+      character.setXp(Integer.parseInt(xp.getText()));
+      character.store();
+    }
+  }
+
+  private void doAdjustHp(int value) {
+    character.addHp(value);
+    character.store();
+    redraw();
+  }
+
+  private void doAdjustNonlethalDamage(int value) {
+    character.addNonlethalDamage(value);
+    character.store();
+    redraw();
+  }
+
+  private void doAdjustXp(int value) {
+    character.addXp(value);
+    character.store();
+    redraw();
+  }
+
+  private void editAbilities() {
+    AbilitiesDialog.newInstance(character.getId(), character.getCampaignId()).display();
+  }
+
+  private void editLevels() {
+    LevelsDialog.newInstance(character.getId()).display();
+  }
+
   private boolean hasLevelUp() {
-    return character.isPresent() && character.get().getMaxLevel() > character.get().getLevel();
+    return character.getMaxLevel() > character.getLevel();
   }
 
   protected void redraw() {
-    Status.log("redraw character stats");
-    if (character.isPresent()) {
-      int level = character.get().getLevel();
-      hp.text(String.valueOf(character.get().getHp()));
-      levels.text(Level.summarized(character.get().getLevels()));
-      levels.error(character.get().validateLevels());
+    Status.log("redraw character stats for " + character.getName());
+    int level = character.getLevel();
+    hp.text(String.valueOf(character.getHp()));
+    levels.text(Level.summarized(character.getLevels()));
+    levels.error(character.validateLevels());
 
-      if (hasLevelUp() || !character.get().validateLevels().isEmpty()) {
-        levelGroup.tint(R.color.error);
-        Status.log("level error");
-      } else {
-        levelGroup.tint(R.color.characterDark);
-      }
+    if (hasLevelUp() || !character.validateLevels().isEmpty()) {
+      levelGroup.tint(R.color.error);
+      Status.log("level error");
+    } else {
+      levelGroup.tint(R.color.characterDark);
+    }
 
-      if (!validateHealth().isEmpty()) {
-        healthGroup.tint(R.color.error);
-      } else {
-        healthGroup.tint(R.color.characterDark);
-      }
+    if (!validateHealth().isEmpty()) {
+      healthGroup.tint(R.color.error);
+    } else {
+      healthGroup.tint(R.color.characterDark);
     }
   }
 
@@ -343,12 +469,10 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     List<String> messages = new ArrayList<>();
     List<String> conditions = new ArrayList<>();
 
-    if (character.isPresent()) {
-      messages.addAll(validateHealth());
-      conditions.addAll(character.get().getAdjustedConditions().stream()
-          .map(c -> c.getCondition().getCondition().getName())
-          .collect(Collectors.toList()));
-    }
+    messages.addAll(validateHealth());
+    conditions.addAll(character.getAdjustedConditions().stream()
+        .map(c -> c.getCondition().getCondition().getName())
+        .collect(Collectors.toList()));
 
     if (conditions.isEmpty()) {
       messages.add("No conditions.");
@@ -369,10 +493,8 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
       messages.add("Level Up!");
     }
 
-    if (character.isPresent()) {
-      messages.add("Next level at " + XP.next(character.get().getXp()));
-      messages.addAll(character.get().validateLevels());
-    }
+    messages.add("Next level at " + XP.next(character.getXp()));
+    messages.addAll(character.validateLevels());
 
 
     MessageDialog.create(getContext())
@@ -384,7 +506,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
   private void showQuality(Quality quality, int count) {
     String message = quality.getEntity() + "\n\n" + quality.getTemplate().getDescription();
     MessageDialog.create(getContext()).title(quality.getName())
-        .formatted(message, quality.collectFormatValues(count, character.get())).show();
+        .formatted(message, quality.collectFormatValues(count, character)).show();
   }
 
   private void showSimpleMessage(String title, String message) {
@@ -395,13 +517,7 @@ public class CharacterStatisticsFragment extends NestedCompanionFragment {
     MessageDialog.create(getContext()).title(name).message(ranks.describeModifiers()).show();
   }
 
-  private void update(Documents.Update update) {
-    if (character.isPresent()) {
-      update(character.get());
-    }
-  }
-
   private List<String> validateHealth() {
-    return new Validator.RangeValidator(-20, character.get().getMaxHp()).validate(hp.getText());
+    return new Validator.RangeValidator(-20, character.getMaxHp()).validate(hp.getText());
   }
 }
