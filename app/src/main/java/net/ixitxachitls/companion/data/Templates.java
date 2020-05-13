@@ -200,6 +200,8 @@ public class Templates {
                 Status.error("Unsupported type " + type + " found!");
                 break;
             }
+
+            main.incrementProgress();
           }
         }
       }

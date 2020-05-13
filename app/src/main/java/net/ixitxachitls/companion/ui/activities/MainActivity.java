@@ -99,6 +99,10 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
     actions.finishLoading(text);
   }
 
+  public void incrementProgress() {
+    actions.incrementProgress();
+  }
+
   public void logDialogEvent(String name) {
     if (analytics != null) {
       Bundle bundle = new Bundle();
@@ -175,6 +179,10 @@ public class MainActivity extends AppCompatActivity implements CompanionApplicat
       default:
         return super.onOptionsItemSelected(item);
     }
+  }
+
+  public void startLoading(String text, int count) {
+    actions.startLoading(text, count);
   }
 
   public void startLoading(String text) {

@@ -162,8 +162,11 @@ public class CompanionApplication extends Application
   @Override
   public void onActivityStarted(Activity activity) {
     if (currentActivity instanceof MainActivity) {
+      int entitiesCount = getResources().getInteger(R.integer.app_entities);
+
       MainActivity main = (MainActivity) currentActivity;
-      main.startLoading(PROGRESS_LOADING);
+      main.startLoading(PROGRESS_LOADING, entitiesCount);
+
       AsyncTask.execute(() -> {
         Templates.init(CompanionApplication.this.getAssetAccessor(), main);
         runOnUiThread(() -> main.finishLoading(PROGRESS_LOADING));

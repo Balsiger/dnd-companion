@@ -80,7 +80,7 @@ public class ActionBarView extends LinearLayout {
 
     progress = view.findViewById(R.id.progress);
     progressBar = view.findViewById(R.id.progressBar);
-    progressBar.setIndeterminate(true);
+    progressBar.setIndeterminate(false);
     progressText = TextWrapper.wrap(view, R.id.progressText);
     actionsView = view.findViewById(R.id.actions);
 
@@ -113,9 +113,18 @@ public class ActionBarView extends LinearLayout {
     refreshProgress();
   }
 
+  public void incrementProgress() {
+    progressBar.incrementProgressBy(1);
+  }
+
   public void startLoading(String text) {
     progressGroups.add(text);
     refreshProgress();
+  }
+
+  public void startLoading(String text, int count) {
+    startLoading(text);
+    progressBar.setMax(count);
   }
 
   private void refreshProgress() {
